@@ -97,6 +97,22 @@ Windows users can also launch:
 START_AZALYST.bat
 ```
 
+### Optional: Spyder launcher (Windows)
+
+If you use Spyder for monitoring and interactive inspection, you can launch a dedicated Spyder instance alongside the engine:
+
+```bat
+Azalyst_Spyder.bat
+```
+
+This will:
+
+- Prepare an isolated Spyder config directory (keeps this project independent of your global Spyder settings).
+- Launch Spyder and auto-run `spyder_live_monitor.py` for a lightweight live status view.
+- Start the Azalyst engine by calling `START_AZALYST.bat`.
+
+If Spyder is not detected, launch Spyder manually and open `spyder_live_monitor.py`, then run the engine via `START_AZALYST.bat`.
+
 ## Configuration
 
 The runtime accepts both concise `.env` keys and the existing `AZALYST_*` environment variable names for shell-based overrides.
@@ -165,13 +181,16 @@ The mapping layer is intentionally thesis-oriented rather than exhaustive. Each 
 ```text
 .
 |-- azalyst.py
+|-- Azalyst_Spyder.bat
 |-- config.py
+|-- prepare_spyder_profile.py
 |-- news_fetcher.py
 |-- classifier.py
 |-- scorer.py
 |-- etf_mapper.py
 |-- reporter.py
 |-- state.py
+|-- spyder_live_monitor.py
 |-- requirements.txt
 |-- START_AZALYST.bat
 |-- docs/
