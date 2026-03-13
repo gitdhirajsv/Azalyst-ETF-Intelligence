@@ -1,11 +1,13 @@
 import json
 import datetime
 import os
+from pathlib import Path
 
-# Paths
-PORTFOLIO_FILE = r"d:\Personal Files\Azalyst-ETF-Intelligence\azalyst_portfolio.json"
-STATE_FILE = r"d:\Personal Files\Azalyst-ETF-Intelligence\azalyst_state.json"
-OUTPUT_FILE = r"d:\Personal Files\Azalyst-ETF-Intelligence\dashboard.html"
+# Paths — resolved relative to this script so the dashboard works on any machine
+_ROOT = Path(__file__).resolve().parent
+PORTFOLIO_FILE = str(_ROOT / "azalyst_portfolio.json")
+STATE_FILE     = str(_ROOT / "azalyst_state.json")
+OUTPUT_FILE    = str(_ROOT / "dashboard.html")
 
 def load_json(path):
     if os.path.exists(path):

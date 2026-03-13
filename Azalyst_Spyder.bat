@@ -74,7 +74,14 @@ if defined SPYDER_EXE (
     echo [ERROR] Spyder was not found.
     echo Install Spyder via Anaconda, or launch Spyder manually and open spyder_live_monitor.py.
     echo.
-    pause
+    set /p "CONTINUE_WITHOUT_SPYDER=Run the Azalyst engine anyway without Spyder? [Y/N]: "
+    if /i not "!CONTINUE_WITHOUT_SPYDER!"=="Y" (
+        echo.
+        echo Exiting. Install Spyder first, then re-run this launcher.
+        pause
+        exit /b 0
+    )
+    echo Continuing without Spyder...
 )
 
 echo.

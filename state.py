@@ -47,7 +47,11 @@ class SignalStateManager:
                 for sector_id, record in raw.items():
                     if "sent_at" in record:
                         try:
-                            record["sent_at"] = datetime.fromisoformat(record["sent_at"])
+                            dt = datetime.fromisoformat(record["sent_at"])
+                            # If the timestamp is naive (no explicit offset), assume UTC.
+                            if dt.tzinfo is None:
+                                dt = dt.replace(tzinfo=timezone.utc)
+                            record["sent_at"] = dt
                         except Exception:
                             record["sent_at"] = datetime.now(timezone.utc)
                 log.info(f"Loaded state: {len(raw)} sector records")

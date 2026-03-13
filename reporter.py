@@ -420,31 +420,14 @@ class DiscordReporter:
         """
         Lightweight 30-minute cycle summary.
         Sent every cycle — shows active signal dashboard + whether anything new fired.
-        Suppresses Discord message if 0 new signals and signals haven't changed,
+        Suppresses Discord post if 0 new signals (no new information to deliver),
         but always logs locally.
         """
         now_str = datetime.now(timezone.utc).strftime("%d %b %Y  %H:%M UTC")
 
         if not scored_signals:
-            # Nothing above threshold — send a minimal heartbeat
-            payload = {
-                "embeds": [{
-                    "title": "AZALYST  —  CYCLE COMPLETE",
-                    "description": (
-                        f"```\n"
-                        f"Timestamp        : {now_str}\n"
-                        f"Active Signals   : 0\n"
-                        f"New This Cycle   : 0\n"
-                        f"Status           : No signals above confidence threshold.\n"
-                        f"```"
-                    ),
-                    "color": 0x1A252F,
-                    "footer": {"text": "Azalyst ETF Intelligence  |  Next scan in 30 minutes"},
-                    "timestamp": datetime.now(timezone.utc).isoformat(),
-                }]
-            }
-            self._post(payload)
-            log.info("Cycle digest dispatched — 0 active signals")
+            # Nothing above threshold — log only, no Discord noise
+            log.info("Cycle digest — 0 active signals, nothing dispatched")
             return
 
         # Build signal table rows
@@ -461,6 +444,11 @@ class DiscordReporter:
         table = "\n".join(rows)
         new_label = f"{new_count} NEW signal(s) fired this cycle" if new_count > 0 else "No new signals — all within cooldown"
 
+        # Only post the digest to Discord when something actually changed
+        if new_count == 0:
+            log.info(f"Cycle digest — {len(scored_signals)} active signals, 0 new, digest suppressed")
+            return
+
         payload = {
             "embeds": [{
                 "title": "AZALYST  —  CYCLE DIGEST",
@@ -476,7 +464,7 @@ class DiscordReporter:
                     f"{table}\n"
                     f"```"
                 ),
-                "color": 0x1B3A5C if new_count == 0 else 0xCA6F1E,
+                "color": 0xCA6F1E,
                 "footer": {"text": "Azalyst ETF Intelligence  |  Next scan in 30 minutes"},
                 "timestamp": datetime.now(timezone.utc).isoformat(),
             }]
