@@ -16,7 +16,7 @@ The project exists for a simple reason: global macro events move faster than dis
 
 Live monitor output (generated from the current portfolio/state artifacts):
 
-![Azalyst ETF Intelligence Dashboard](docs/dashboard.png)
+![Azalyst ETF Intelligence Dashboard](docs/dashboard_12pct.png)
 
 Core capabilities:
 
