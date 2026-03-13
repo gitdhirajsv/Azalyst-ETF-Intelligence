@@ -102,7 +102,7 @@ START_AZALYST.bat
 If you use Spyder for monitoring and interactive inspection, you can launch a dedicated Spyder instance alongside the engine:
 
 ```bat
-Azalyst_Spyder.bat
+Azalyst_SPider.bat
 ```
 
 This will:
@@ -181,7 +181,7 @@ The mapping layer is intentionally thesis-oriented rather than exhaustive. Each 
 ```text
 .
 |-- azalyst.py
-|-- Azalyst_Spyder.bat
+|-- Azalyst_SPider.bat
 |-- config.py
 |-- prepare_spyder_profile.py
 |-- news_fetcher.py
