@@ -56,7 +56,7 @@ PORTFOLIO_PATH = ROOT / "azalyst_portfolio.json"
 DEFAULT_INTERVAL = 30
 DEFAULT_THRESHOLD = 62
 DEFAULT_COOLDOWN_HOURS = 4
-REFRESH_SECONDS = int(os.environ.get("AZALYST_MONITOR_REFRESH", "900"))  # default 15 minutes
+REFRESH_SECONDS = int(os.environ.get("AZALYST_MONITOR_REFRESH", "300"))  # default 5 minutes
 CONSOLE_WIDTH = 90
 LOG_LINES = 15
 FIG = None
@@ -534,7 +534,10 @@ def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], us
         ax_log.text(0.02, 0.8, "No log entries yet (waiting for first cycle)", fontsize=9, color="#9ca3af", transform=ax_log.transAxes)
 
     fig.suptitle("Azalyst ETF Intelligence - Live Monitor", fontweight="bold", color=GRAY_DARK, y=0.98)
-    plt.tight_layout(rect=[0.02, 0.02, 0.98, 0.96])
+    try:
+        plt.tight_layout(rect=[0.02, 0.02, 0.98, 0.96])
+    except Exception:
+        plt.tight_layout()
     if "agg" not in BACKEND:
         fig.canvas.draw_idle()
         plt.pause(0.05)
