@@ -90,10 +90,11 @@ def run_intelligence_cycle(
                     if etf and platform:
                         entry = portfolio.enter_position(signal, etf, platform)
                         if entry:
-                            port_reporter.send_trade_entry(entry, signal)
+                            if not entry.get("is_topup"):
+                                port_reporter.send_trade_entry(entry, signal)
                             log.info(f"Paper trade entered: {entry['ticker']}")
 
-        # ── Always send 30-min digest (even if 0 new signals) ────────────────
+        # ── Cycle digest (reporter may suppress to reduce Discord noise) ─────
         # Attach ETF recs to scored signals for digest context
         for sig in scored_signals:
             if "etf_recommendations" not in sig:
@@ -170,7 +171,8 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, cfg):
         if etf and platform:
             entry = portfolio.enter_position(signal, etf, platform)
             if entry:
-                port_reporter.send_trade_entry(entry, signal)
+                if not entry.get("is_topup"):
+                    port_reporter.send_trade_entry(entry, signal)
                 log.info(f"Startup trade seeded: {entry['ticker']} | {sector_label} | conf {confidence}")
                 seeded += 1
                 time.sleep(1)
