@@ -510,11 +510,14 @@ def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], us
     log_title = "Recent Log Tail"
     ax_log.text(0.02, 1.02, log_title, fontsize=10, fontweight="bold", transform=ax_log.transAxes)
     log_lines = tail_lines(LOG_PATH, LOG_LINES)
-    for i, line in enumerate(log_lines[-12:]):
-        ax_log.text(0.02, 0.9 - i * 0.075, short(line, 90), fontsize=8, transform=ax_log.transAxes)
+    if log_lines:
+        for i, line in enumerate(log_lines[-12:]):
+            ax_log.text(0.02, 0.9 - i * 0.075, short(line, 90), fontsize=8, transform=ax_log.transAxes)
+    else:
+        ax_log.text(0.02, 0.8, "No log entries yet (waiting for first cycle)", fontsize=9, color="#9ca3af", transform=ax_log.transAxes)
 
-    fig.suptitle("Azalyst ETF Intelligence - Live Monitor", fontweight="bold", color=GRAY_DARK)
-    plt.tight_layout()
+    fig.suptitle("Azalyst ETF Intelligence - Live Monitor", fontweight="bold", color=GRAY_DARK, y=0.98)
+    plt.tight_layout(rect=[0.02, 0.02, 0.98, 0.96])
     fig.canvas.draw_idle()
     plt.pause(0.05)
 
