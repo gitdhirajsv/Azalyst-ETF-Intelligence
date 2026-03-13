@@ -19,9 +19,23 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 import matplotlib
-# Use non-GUI backend to avoid freezes; still renders to Spyder Plots inline
-matplotlib.use("Agg")
+
+def _choose_backend() -> str:
+    env_backend = os.environ.get("AZALYST_MONITOR_BACKEND")
+    default_backend = "TkAgg"  # lighter than Qt, still gives a window
+    backend = env_backend or default_backend
+    try:
+        matplotlib.use(backend, force=False)
+        return matplotlib.get_backend()
+    except Exception:
+        matplotlib.use("Agg")
+        return "Agg"
+
+BACKEND = _choose_backend().lower()
+
 import matplotlib.pyplot as plt
+if "agg" not in BACKEND:
+    plt.ion()
 from IPython.display import clear_output
 
 # Ensure UTF-8 output even on Windows consoles
