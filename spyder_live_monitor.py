@@ -53,6 +53,8 @@ REFRESH_SECONDS = int(os.environ.get("AZALYST_MONITOR_REFRESH", "30"))
 CONSOLE_WIDTH = 90
 LOG_LINES = 15
 FIG = None
+PRICE_CACHE: Dict[str, Tuple[float, float]] = {}  # symbol -> (price_in_inr, timestamp)
+PRICE_TTL = 120  # seconds
 ORANGE = "#f97316"
 BLUE = "#2563eb"
 GREEN = "#22c55e"
@@ -174,6 +176,12 @@ def ticker_symbol(ticker: str, exchange: Optional[str]) -> str:
 
 def fetch_price_in_inr(ticker: str, exchange: Optional[str], usd_inr: Optional[float], fallback: Optional[float]) -> Optional[float]:
     symbol = ticker_symbol(ticker, exchange)
+    now = time.time()
+    if symbol in PRICE_CACHE:
+        cached_price, ts = PRICE_CACHE[symbol]
+        if now - ts < PRICE_TTL:
+            return cached_price
+
     data = fetch_json(f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?range=1d&interval=5m")
     price: Optional[float] = None
     if data:
@@ -188,11 +196,12 @@ def fetch_price_in_inr(ticker: str, exchange: Optional[str], usd_inr: Optional[f
         return fallback
 
     if symbol.endswith((".NS", ".BO")):
-        return float(price)
+        val = float(price)
+    else:
+        val = float(price) * float(usd_inr) if usd_inr else float(price)
 
-    if usd_inr:
-        return float(price) * float(usd_inr)
-    return float(price)
+    PRICE_CACHE[symbol] = (val, now)
+    return val
 
 
 # ---------------------------------------------------------------------------
