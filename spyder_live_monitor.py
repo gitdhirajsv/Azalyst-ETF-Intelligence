@@ -58,7 +58,7 @@ PORTFOLIO_PATH = ROOT / "azalyst_portfolio.json"
 DEFAULT_INTERVAL = 30
 DEFAULT_THRESHOLD = 62
 DEFAULT_COOLDOWN_HOURS = 4
-REFRESH_SECONDS = int(os.environ.get("AZALYST_MONITOR_REFRESH", "60"))
+REFRESH_SECONDS = int(os.environ.get("AZALYST_MONITOR_REFRESH", "900"))  # default 15 minutes
 CONSOLE_WIDTH = 90
 LOG_LINES = 15
 FIG = None
@@ -73,6 +73,7 @@ GRAY_LIGHT = "#e5e7eb"
 
 matplotlib.rcParams.update(
     {
+        "toolbar": "None",
         "figure.facecolor": "white",
         "axes.facecolor": "white",
         "savefig.facecolor": "white",
