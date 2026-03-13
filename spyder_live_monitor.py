@@ -412,10 +412,10 @@ def render_console(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], l
 def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], usd_inr: Optional[float], threshold: float) -> None:
     plt.close("all")
     fig = plt.figure(figsize=(12, 7))
-    gs = fig.add_gridspec(2, 3, width_ratios=[1, 1, 1], height_ratios=[1, 1], wspace=0.35, hspace=0.35)
+    gs = fig.add_gridspec(2, 3, width_ratios=[1, 1, 1], height_ratios=[1, 1], wspace=0.45, hspace=0.4)
 
-    # KPI cards (top left, span 2 columns)
-    ax_kpi = fig.add_subplot(gs[0, 0:2])
+    # KPI cards (top left)
+    ax_kpi = fig.add_subplot(gs[0, 0])
     ax_kpi.axis("off")
     kpis = [
         ("Portfolio Value", fmt_inr(snapshot.portfolio_value)),
@@ -423,29 +423,17 @@ def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], us
         ("Overall Return", fmt_pct(snapshot.overall_return_pct)),
         ("Unrealised P&L", fmt_inr(snapshot.unrealised_pnl)),
         ("Cash Available", fmt_inr(snapshot.cash)),
+        ("Market Value", fmt_inr(snapshot.market_value)),
         ("Open Positions", str(snapshot.open_count)),
+        ("Closed Trades", str(snapshot.closed_count)),
     ]
     for idx, (label, value) in enumerate(kpis):
-        col = idx % 3
-        row = idx // 3
-        x = col * 0.33 + 0.02
-        y = 0.7 - row * 0.35
-        ax_kpi.text(x, y + 0.12, value, fontsize=13, fontweight="bold", transform=ax_kpi.transAxes)
-        ax_kpi.text(x, y, label, fontsize=10, color="#94a3b8", transform=ax_kpi.transAxes)
+        y = 1 - (idx * 0.11)
+        ax_kpi.text(0.02, y, label, fontsize=9, color="#94a3b8", transform=ax_kpi.transAxes)
+        ax_kpi.text(0.55, y, value, fontsize=11, fontweight="bold", transform=ax_kpi.transAxes)
 
-    # Unrealised P&L per position (bottom left, span 2 columns)
-    ax_pnl = fig.add_subplot(gs[1, 0:2])
-    tickers = [p.ticker for p in snapshot.positions] or ["-"]
-    pnls = [p.unrealised_pnl for p in snapshot.positions] or [0]
-    colors = ["#22c55e" if v > 0 else "#ef4444" if v < 0 else "#94a3b8" for v in pnls]
-    ax_pnl.bar(tickers, pnls, color=colors)
-    ax_pnl.set_title("Unrealised P&L per Position (INR)")
-    ax_pnl.axhline(0, color="#334155", linewidth=1)
-    for x, val in enumerate(pnls):
-        ax_pnl.text(x, val, f"{val:.0f}", ha="center", va="bottom" if val >= 0 else "top", fontsize=9)
-
-    # Allocation pie (top right)
-    ax_pie = fig.add_subplot(gs[0, 2])
+    # Allocation pie (top middle)
+    ax_pie = fig.add_subplot(gs[0, 1])
     values = [p.live_price * p.units for p in snapshot.positions]
     labels = [p.ticker for p in snapshot.positions]
     if snapshot.cash > 0:
@@ -453,10 +441,10 @@ def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], us
         labels.append("CASH")
     if values and sum(values) > 0:
         ax_pie.pie(values, labels=labels, autopct="%1.0f%%", textprops={"color": "#e5e7eb"})
-    ax_pie.set_title("Allocation")
+    ax_pie.set_title("Allocation", pad=10)
 
-    # Confidence per ticker (bottom right)
-    ax_conf = fig.add_subplot(gs[1, 2])
+    # Confidence per ticker (top right)
+    ax_conf = fig.add_subplot(gs[0, 2])
     confs = [p.confidence for p in snapshot.positions] or [0]
     conf_labels = [p.ticker for p in snapshot.positions] or ["-"]
     ax_conf.barh(conf_labels, confs, color="#38bdf8")
@@ -464,9 +452,46 @@ def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], us
     ax_conf.set_xlim(0, 100)
     ax_conf.set_xlabel("Confidence")
     ax_conf.set_title("Position Confidence")
-    ax_conf.legend(loc="lower right")
+    ax_conf.legend(loc="lower right", fontsize=8)
     for i, v in enumerate(confs):
-        ax_conf.text(v + 1, i, f"{v:.1f}", va="center", fontsize=9)
+        ax_conf.text(v + 1, i, f"{v:.1f}", va="center", fontsize=8)
+
+    # Unrealised P&L per position (bottom left, span 1 col)
+    ax_pnl = fig.add_subplot(gs[1, 0])
+    tickers = [p.ticker for p in snapshot.positions] or ["-"]
+    pnls = [p.unrealised_pnl for p in snapshot.positions] or [0]
+    colors = ["#22c55e" if v > 0 else "#ef4444" if v < 0 else "#94a3b8" for v in pnls]
+    ax_pnl.bar(tickers, pnls, color=colors)
+    ax_pnl.set_title("Unrealised P&L per Position (INR)")
+    ax_pnl.axhline(0, color="#334155", linewidth=1)
+    for x, val in enumerate(pnls):
+        ax_pnl.text(x, val, f"{val:.0f}", ha="center", va="bottom" if val >= 0 else "top", fontsize=8)
+
+    # Status panel (bottom middle)
+    ax_status = fig.add_subplot(gs[1, 1])
+    ax_status.axis("off")
+    status_lines = [
+        f"Run state: RUNNING",
+        f"Portfolio value: {fmt_inr(snapshot.portfolio_value)}",
+        f"Deposited: {fmt_inr(snapshot.total_deposited)}",
+        f"Market value: {fmt_inr(snapshot.market_value)}",
+        f"Cash: {fmt_inr(snapshot.cash)}",
+        f"Unrealised P&L: {fmt_inr(snapshot.unrealised_pnl)}",
+        f"Realised P&L: {fmt_inr(snapshot.realised_pnl)}",
+        f"Open positions: {snapshot.open_count}",
+        f"Closed trades: {snapshot.closed_count}",
+        f"USD/INR: {usd_inr:.2f}" if usd_inr else "USD/INR: n/a",
+    ]
+    for i, line in enumerate(status_lines):
+        ax_status.text(0.02, 1 - i * 0.11, line, fontsize=9, transform=ax_status.transAxes)
+
+    # Log tail panel (bottom right)
+    ax_log = fig.add_subplot(gs[1, 2])
+    ax_log.axis("off")
+    log_title = "Recent Log Tail"
+    ax_log.text(0.02, 1.02, log_title, fontsize=10, fontweight="bold", transform=ax_log.transAxes)
+    for i, line in enumerate(logs[-8:] if (logs := tail_lines(LOG_PATH, LOG_LINES)) else []):
+        ax_log.text(0.02, 0.9 - i * 0.1, short(line, 80), fontsize=8, transform=ax_log.transAxes)
 
     fig.suptitle("Azalyst ETF Intelligence - Live Monitor", fontweight="bold")
     plt.tight_layout()
