@@ -12,7 +12,7 @@ if errorlevel 1 (
 
 echo.
 echo [2/2] Starting engine in separate console...
-start "Azalyst Engine" cmd /k "cd /d \"%~dp0\" ^&^& python -u azalyst.py"
+start "Azalyst Engine" cmd /k "cd /d \"%~dp0\" ^& python -u azalyst.py"
 echo Engine is running; it will stay alive even if you close Spyder.
 
 echo.
