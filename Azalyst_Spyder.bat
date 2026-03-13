@@ -89,7 +89,9 @@ echo [3/3] Starting Azalyst engine...
 if "%AZALYST_SPYDER_SKIP_ENGINE%"=="1" (
     echo Skipping engine start because AZALYST_SPYDER_SKIP_ENGINE=1.
 ) else (
-    start "Azalyst Engine" /min cmd /c "call \"%~dp0START_AZALYST.bat\""
+    REM Launch engine in its own console so it keeps running even if Spyder is closed
+    start "Azalyst Engine" cmd /k "call \"%~dp0START_AZALYST.bat\""
+    echo Azalyst engine running in separate console window (will stay alive if Spyder closes).
 )
 
 echo.
