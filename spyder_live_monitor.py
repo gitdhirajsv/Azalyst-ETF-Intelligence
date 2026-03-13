@@ -19,9 +19,14 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 import matplotlib
-# Force a windowed backend so plots pop out like the Alpha monitor
-matplotlib.use("Qt5Agg")
+# Prefer a windowed backend so charts pop out; if Spyder already set one, leave it.
+try:
+    if matplotlib.get_backend().lower() not in {"qt5agg", "qtagg"}:
+        matplotlib.use("Qt5Agg", force=False)
+except Exception:
+    pass
 import matplotlib.pyplot as plt
+plt.ion()
 from IPython.display import clear_output
 
 # Ensure UTF-8 output even on Windows consoles
@@ -47,6 +52,7 @@ DEFAULT_COOLDOWN_HOURS = 4
 REFRESH_SECONDS = int(os.environ.get("AZALYST_MONITOR_REFRESH", "30"))
 CONSOLE_WIDTH = 90
 LOG_LINES = 15
+FIG = None
 
 matplotlib.rcParams.update(
     {
@@ -412,9 +418,13 @@ def render_console(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], l
 
 
 def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], usd_inr: Optional[float], threshold: float) -> None:
-    plt.close("all")
-    fig = plt.figure(figsize=(12, 7))
-    gs = fig.add_gridspec(2, 3, width_ratios=[1, 1, 1], height_ratios=[1, 1], wspace=0.45, hspace=0.4)
+    global FIG
+    if FIG is None or not plt.fignum_exists(FIG.number):
+        FIG = plt.figure(figsize=(12, 7))
+    else:
+        FIG.clf()
+    fig = FIG
+    gs = FIG.add_gridspec(2, 3, width_ratios=[1, 1, 1], height_ratios=[1, 1], wspace=0.45, hspace=0.4)
 
     # KPI cards (top left)
     ax_kpi = fig.add_subplot(gs[0, 0])
@@ -497,8 +507,8 @@ def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], us
 
     fig.suptitle("Azalyst ETF Intelligence - Live Monitor", fontweight="bold")
     plt.tight_layout()
-    plt.show(block=False)
-    plt.pause(0.001)
+    fig.canvas.draw_idle()
+    plt.pause(0.05)
 
 
 # ---------------------------------------------------------------------------
