@@ -22,7 +22,7 @@ import matplotlib
 
 def _choose_backend() -> str:
     env_backend = os.environ.get("AZALYST_MONITOR_BACKEND")
-    default_backend = "Agg"  # safest, non-GUI
+    default_backend = "TkAgg"  # windowed and responsive for Spyder
     backend = env_backend or default_backend
     try:
         matplotlib.use(backend, force=False)
@@ -34,6 +34,8 @@ def _choose_backend() -> str:
 BACKEND = _choose_backend().lower()
 
 import matplotlib.pyplot as plt
+if "agg" not in BACKEND:
+    plt.ion()
 from IPython.display import clear_output
 
 # Ensure UTF-8 output even on Windows consoles
@@ -540,6 +542,7 @@ def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], us
         plt.tight_layout()
     if "agg" not in BACKEND:
         fig.canvas.draw_idle()
+        fig.canvas.flush_events()
         plt.pause(0.05)
     else:
         plt.close(fig)
