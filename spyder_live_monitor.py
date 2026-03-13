@@ -1,204 +1,514 @@
 """
 spyder_live_monitor.py
 
-Live status monitor for Azalyst ETF Intelligence, designed to be auto-run
-inside Spyder. It reads local state/log artifacts and prints a compact status
-view that refreshes periodically.
-
-This file uses only the Python standard library so it can run in Spyder's
-runtime environment without requiring project dependencies to be installed
-into that same environment.
+Institutional-grade live dashboard for Azalyst ETF Intelligence.
+Runs inside Spyder with zero external dependencies beyond matplotlib.
 """
 
 from __future__ import annotations
 
 import json
+import math
 import os
 import time
+import urllib.error
+import urllib.request
+from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional, Tuple
+
+import matplotlib
+import matplotlib.pyplot as plt
+from IPython.display import clear_output
 
 
+# ---------------------------------------------------------------------------
+# Paths and constants
+# ---------------------------------------------------------------------------
 ROOT = Path(__file__).resolve().parent
 LOG_PATH = ROOT / "azalyst.log"
 STATE_PATH = ROOT / "azalyst_state.json"
 PORTFOLIO_PATH = ROOT / "azalyst_portfolio.json"
 
-REFRESH_SECONDS = int(os.environ.get("AZALYST_MONITOR_REFRESH", "10"))
-TAIL_LINES = int(os.environ.get("AZALYST_MONITOR_TAIL_LINES", "25"))
+DEFAULT_INTERVAL = 30
+DEFAULT_THRESHOLD = 62
+DEFAULT_COOLDOWN_HOURS = 4
+REFRESH_SECONDS = int(os.environ.get("AZALYST_MONITOR_REFRESH", "30"))
+CONSOLE_WIDTH = 90
+LOG_LINES = 15
+
+matplotlib.rcParams.update(
+    {
+        "figure.facecolor": "#0f172a",
+        "axes.facecolor": "#0b122a",
+        "savefig.facecolor": "#0f172a",
+        "axes.edgecolor": "#1f2937",
+        "axes.labelcolor": "#e2e8f0",
+        "axes.titleweight": "bold",
+        "axes.titlesize": 12,
+        "figure.titlesize": 14,
+        "grid.color": "#334155",
+        "grid.alpha": 0.35,
+        "xtick.color": "#cbd5e1",
+        "ytick.color": "#cbd5e1",
+        "text.color": "#e5e7eb",
+        "font.family": "monospace",
+    }
+)
 
 
-def _safe_import_cfg() -> Dict[str, Any]:
-    """Best-effort import of config values; keeps monitor dependency-free."""
+# ---------------------------------------------------------------------------
+# Utility functions
+# ---------------------------------------------------------------------------
+def load_json(path: Path) -> Dict[str, Any]:
+    if not path.exists():
+        return {}
     try:
-        from config import Config  # local module, stdlib-only even without python-dotenv
-
-        return {
-            "interval_min": int(getattr(Config, "POLL_INTERVAL_MINUTES", 30)),
-            "threshold": int(getattr(Config, "CONFIDENCE_THRESHOLD", 62)),
-            "cooldown_h": int(getattr(Config, "SIGNAL_COOLDOWN_HOURS", 4)),
-        }
+        return json.loads(path.read_text(encoding="utf-8"))
     except Exception:
-        return {"interval_min": 30, "threshold": 62, "cooldown_h": 4}
+        return {}
 
 
-def _utc_now_str() -> str:
-    return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
-
-
-def _file_mtime(path: Path) -> Optional[datetime]:
+def tail_lines(path: Path, count: int) -> List[str]:
+    if not path.exists():
+        return []
     try:
-        ts = path.stat().st_mtime
-        return datetime.fromtimestamp(ts, tz=timezone.utc)
-    except FileNotFoundError:
+        lines = path.read_text(encoding="utf-8", errors="ignore").splitlines()
+        return lines[-count:]
+    except Exception:
+        return []
+
+
+def parse_dt(value: Optional[str]) -> Optional[datetime]:
+    if not value:
         return None
+    try:
+        dt = datetime.fromisoformat(value)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt
     except Exception:
         return None
 
 
-def _load_json(path: Path) -> Optional[Dict[str, Any]]:
+def fmt_inr(value: float) -> str:
     try:
-        with path.open("r", encoding="utf-8") as f:
-            return json.load(f)
-    except FileNotFoundError:
-        return None
+        return f"INR {value:,.0f}"
     except Exception:
+        return "INR 0"
+
+
+def fmt_pct(value: float) -> str:
+    try:
+        return f"{value:+.2f}%"
+    except Exception:
+        return "0.00%"
+
+
+def bar(value: float, max_value: float, length: int) -> str:
+    if max_value <= 0:
+        return "░" * length
+    ratio = max(0.0, min(1.0, value / max_value))
+    filled = min(length, max(0, int(round(ratio * length))))
+    return "█" * filled + "░" * (length - filled)
+
+
+def short(text: str, width: int) -> str:
+    return text if len(text) <= width else text[: width - 3] + "..."
+
+
+def fetch_json(url: str, timeout: float = 6.0) -> Optional[Dict[str, Any]]:
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            return json.loads(resp.read().decode("utf-8"))
+    except (urllib.error.URLError, json.JSONDecodeError, TimeoutError):
         return None
 
 
-def _tail_text(path: Path, max_lines: int) -> str:
-    if max_lines <= 0:
-        return ""
+def fetch_usd_inr(previous: Optional[float]) -> Optional[float]:
+    data = fetch_json("https://query1.finance.yahoo.com/v8/finance/chart/USDINR=X?range=1d&interval=5m")
+    if not data:
+        return previous
     try:
-        with path.open("rb") as f:
-            f.seek(0, os.SEEK_END)
-            remaining = f.tell()
-            block = 8192
-            buf = b""
-            lines = []
-
-            while remaining > 0 and len(lines) <= max_lines:
-                read_size = min(block, remaining)
-                remaining -= read_size
-                f.seek(remaining)
-                buf = f.read(read_size) + buf
-                lines = buf.splitlines()
-
-            tail = lines[-max_lines:]
-            return b"\n".join(tail).decode("utf-8", errors="replace")
-    except FileNotFoundError:
-        return "(azalyst.log not found yet)"
-    except Exception as e:
-        return f"(unable to read log: {e})"
-
-
-def _clear_output() -> None:
-    # Spyder uses IPython; clear_output keeps the pane readable.
-    try:
-        from IPython.display import clear_output  # type: ignore
-
-        clear_output(wait=True)
+        result = data["chart"]["result"][0]
+        price = result["meta"].get("regularMarketPrice")
+        if price:
+            return float(price)
     except Exception:
         pass
+    return previous
 
 
-def _fmt_mtime(dt: Optional[datetime]) -> str:
-    if not dt:
-        return "missing"
-    return dt.strftime("%Y-%m-%d %H:%M:%S UTC")
+def ticker_symbol(ticker: str, exchange: Optional[str]) -> str:
+    upper = (ticker or "").upper()
+    if upper.endswith((".NS", ".BO")):
+        return upper
+    if exchange and exchange.upper().startswith(("NSE", "BSE")):
+        return upper + ".NS"
+    return upper
 
 
-def _summarize_state(state: Dict[str, Any], cooldown_hours: int) -> Dict[str, Any]:
+def fetch_price_in_inr(ticker: str, exchange: Optional[str], usd_inr: Optional[float], fallback: Optional[float]) -> Optional[float]:
+    symbol = ticker_symbol(ticker, exchange)
+    data = fetch_json(f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?range=1d&interval=5m")
+    price: Optional[float] = None
+    if data:
+        try:
+            result = data["chart"]["result"][0]
+            meta = result["meta"]
+            price = meta.get("regularMarketPrice") or meta.get("previousClose")
+        except Exception:
+            price = None
+
+    if price is None:
+        return fallback
+
+    if symbol.endswith((".NS", ".BO")):
+        return float(price)
+
+    if usd_inr:
+        return float(price) * float(usd_inr)
+    return float(price)
+
+
+# ---------------------------------------------------------------------------
+# Data classes for clarity
+# ---------------------------------------------------------------------------
+@dataclass
+class PositionView:
+    trade_id: str
+    ticker: str
+    sector: str
+    entry_price: float
+    live_price: float
+    units: float
+    invested_inr: float
+    unrealised_pnl: float
+    return_pct: float
+    confidence: float
+
+
+@dataclass
+class PortfolioSnapshot:
+    portfolio_value: float
+    total_deposited: float
+    overall_return_pct: float
+    cash: float
+    capital_deployed: float
+    market_value: float
+    unrealised_pnl: float
+    realised_pnl: float
+    open_count: int
+    closed_count: int
+    positions: List[PositionView]
+
+
+# ---------------------------------------------------------------------------
+# Builders
+# ---------------------------------------------------------------------------
+def build_portfolio_snapshot(portfolio: Dict[str, Any], usd_inr: Optional[float]) -> PortfolioSnapshot:
+    open_positions = portfolio.get("open_positions") or []
+    closed_trades = portfolio.get("closed_trades") or []
+
+    positions: List[PositionView] = []
+    market_value = 0.0
+    unrealised_pnl = 0.0
+    capital_deployed = 0.0
+
+    price_cache: Dict[str, float] = {}
+
+    for pos in open_positions:
+        ticker = pos.get("ticker", "").strip()
+        exchange = pos.get("exchange")
+        units = float(pos.get("units", 0) or 0)
+        entry_price = float(pos.get("entry_price", 0) or 0)
+        invested = float(pos.get("invested_inr", entry_price * units))
+        capital_deployed += invested
+
+        cache_key = ticker_symbol(ticker, exchange)
+        live_price = price_cache.get(cache_key)
+        if live_price is None:
+            live_price = fetch_price_in_inr(
+                ticker=ticker,
+                exchange=exchange,
+                usd_inr=usd_inr,
+                fallback=pos.get("current_price"),
+            )
+            if live_price is not None:
+                price_cache[cache_key] = live_price
+
+        if live_price is None:
+            live_price = entry_price
+
+        market_val = live_price * units
+        pnl = (live_price - entry_price) * units
+        pnl_pct = (pnl / invested * 100) if invested else 0.0
+
+        market_value += market_val
+        unrealised_pnl += pnl
+
+        positions.append(
+            PositionView(
+                trade_id=str(pos.get("trade_id", "")),
+                ticker=ticker,
+                sector=pos.get("sector", "") or pos.get("etf_name", ""),
+                entry_price=entry_price,
+                live_price=live_price,
+                units=units,
+                invested_inr=invested,
+                unrealised_pnl=pnl,
+                return_pct=pnl_pct,
+                confidence=float(pos.get("confidence", 0) or 0),
+            )
+        )
+
+    realised_pnl = sum(float(ct.get("realised_pnl", 0) or 0) for ct in closed_trades)
+    cash = float(portfolio.get("cash_inr", 0) or 0)
+    total_deposited = float(portfolio.get("total_deposited", 0) or 0)
+
+    portfolio_value = cash + market_value
+    overall_return_pct = (
+        ((portfolio_value + realised_pnl) - total_deposited) / total_deposited * 100
+        if total_deposited
+        else 0.0
+    )
+
+    return PortfolioSnapshot(
+        portfolio_value=portfolio_value,
+        total_deposited=total_deposited,
+        overall_return_pct=overall_return_pct,
+        cash=cash,
+        capital_deployed=capital_deployed,
+        market_value=market_value,
+        unrealised_pnl=unrealised_pnl,
+        realised_pnl=realised_pnl,
+        open_count=len(open_positions),
+        closed_count=len(closed_trades),
+        positions=positions,
+    )
+
+
+def build_sector_rows(state: Dict[str, Any], cooldown_hours: int, threshold: float) -> List[Dict[str, Any]]:
+    rows: List[Dict[str, Any]] = []
     now = datetime.now(timezone.utc)
-    tracked = len(state)
-    active = 0
-    latest = None
 
-    for rec in state.values():
-        sent_at = rec.get("sent_at")
-        if not sent_at:
-            continue
-        if isinstance(sent_at, str):
-            try:
-                dt = datetime.fromisoformat(sent_at)
-                if dt.tzinfo is None:
-                    dt = dt.replace(tzinfo=timezone.utc)
-            except Exception:
-                continue
-        else:
-            continue
+    for key, entry in (state or {}).items():
+        confidence = float(entry.get("confidence", 0) or 0)
+        label = entry.get("sector_label") or key.replace("_", " ").title()
+        article_count = int(entry.get("article_count", 0) or 0)
+        sent_at = parse_dt(entry.get("sent_at"))
+        status = "ACTIVE"
+        if sent_at:
+            age_hours = (now - sent_at).total_seconds() / 3600
+            if age_hours < cooldown_hours:
+                remaining = max(0.0, cooldown_hours - age_hours)
+                status = f"COOLDOWN ({remaining:.1f}h)"
+        if confidence < threshold:
+            status = "COOLDOWN" if status.startswith("COOLDOWN") else "BELOW THRESH"
 
-        age_h = (now - dt).total_seconds() / 3600.0
-        if age_h < cooldown_hours:
-            active += 1
-        if latest is None or dt > latest:
-            latest = dt
+        rows.append(
+            {
+                "label": label,
+                "confidence": confidence,
+                "status": status,
+                "articles": article_count,
+            }
+        )
 
-    return {"tracked": tracked, "active_cooldowns": active, "latest_sent_at": latest}
+    rows.sort(key=lambda r: r["confidence"], reverse=True)
+    return rows
 
 
-def _summarize_portfolio(pf: Dict[str, Any]) -> Dict[str, Any]:
-    cash = float(pf.get("cash_inr", 0.0) or 0.0)
-    open_positions = pf.get("open_positions") or []
-    closed_trades = pf.get("closed_trades") or []
-    last_saved = pf.get("last_saved")
-    return {
-        "cash_inr": cash,
-        "open_count": len(open_positions),
-        "closed_count": len(closed_trades),
-        "last_saved": last_saved,
-    }
+# ---------------------------------------------------------------------------
+# Rendering helpers
+# ---------------------------------------------------------------------------
+def render_console(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], logs: List[str], threshold: float) -> None:
+    lines: List[str] = []
+    divider = "─" * CONSOLE_WIDTH
+
+    # Portfolio overview
+    overview_items = [
+        ("Portfolio Value", fmt_inr(snapshot.portfolio_value)),
+        ("Total Deposited", fmt_inr(snapshot.total_deposited)),
+        ("Overall Return", fmt_pct(snapshot.overall_return_pct)),
+        ("Cash Available", fmt_inr(snapshot.cash)),
+        ("Capital Deployed", fmt_inr(snapshot.capital_deployed)),
+        ("Market Value", fmt_inr(snapshot.market_value)),
+        ("Unrealised P&L", fmt_inr(snapshot.unrealised_pnl)),
+        ("Realised P&L", fmt_inr(snapshot.realised_pnl)),
+        ("Open Positions", str(snapshot.open_count)),
+        ("Closed Trades", str(snapshot.closed_count)),
+    ]
+    lines.append("PORTFOLIO OVERVIEW".ljust(CONSOLE_WIDTH))
+    col_width = CONSOLE_WIDTH // 3
+    for i in range(0, len(overview_items), 3):
+        row = overview_items[i : i + 3]
+        formatted = [f"{label}: {value}" for label, value in row]
+        padded = [short(text, col_width - 1).ljust(col_width) for text in formatted]
+        lines.append("".join(padded))
+
+    # Open positions
+    lines.append(divider)
+    lines.append(
+        f"{'ID':<5} {'Ticker':<7} {'Sector':<22} {'Entry':>10} {'Live':>10} {'PnL':>10} {'Ret%':>7} {'Conf':<10}"
+    )
+    lines.append(divider)
+    if snapshot.positions:
+        for pos in snapshot.positions:
+            lines.append(
+                f"{short(pos.trade_id,4):<5} "
+                f"{short(pos.ticker,6):<7} "
+                f"{short(pos.sector,22):<22} "
+                f"{pos.entry_price:>10.2f} "
+                f"{pos.live_price:>10.2f} "
+                f"{pos.unrealised_pnl:>10.2f} "
+                f"{pos.return_pct:>7.2f} "
+                f"{bar(pos.confidence, 100, 10)}"
+            )
+    else:
+        lines.append("No open positions.".ljust(CONSOLE_WIDTH))
+
+    # Signals intelligence
+    lines.append(divider)
+    lines.append(
+        f"{'Sector':<32} {'Conf':>6} {'Status':<18} {'Articles':>8} {'Bar':<15}"
+    )
+    lines.append(divider)
+    if sectors:
+        for row in sectors:
+            lines.append(
+                f"{short(row['label'],32):<32} "
+                f"{row['confidence']:>6.1f} "
+                f"{short(row['status'],18):<18} "
+                f"{row['articles']:>8d} "
+                f"{bar(row['confidence'], 100, 15)}"
+            )
+    else:
+        lines.append("No sector signals loaded.".ljust(CONSOLE_WIDTH))
+
+    # Logs
+    lines.append(divider)
+    lines.append("RECENT LOGS".ljust(CONSOLE_WIDTH))
+    lines.append(divider)
+    if logs:
+        for line in logs[-LOG_LINES:]:
+            lines.append(short(line.strip(), CONSOLE_WIDTH))
+    else:
+        lines.append("Log file not found or empty.".ljust(CONSOLE_WIDTH))
+
+    print("\n".join(lines))
+
+
+def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], usd_inr: Optional[float], threshold: float) -> None:
+    plt.close("all")
+    fig = plt.figure(figsize=(12, 7))
+    gs = fig.add_gridspec(2, 3, width_ratios=[1, 1, 1], height_ratios=[1, 1], wspace=0.35, hspace=0.35)
+
+    # KPI cards (top left, span 2 columns)
+    ax_kpi = fig.add_subplot(gs[0, 0:2])
+    ax_kpi.axis("off")
+    kpis = [
+        ("Portfolio Value", fmt_inr(snapshot.portfolio_value)),
+        ("Total Deposited", fmt_inr(snapshot.total_deposited)),
+        ("Overall Return", fmt_pct(snapshot.overall_return_pct)),
+        ("Unrealised P&L", fmt_inr(snapshot.unrealised_pnl)),
+        ("Cash Available", fmt_inr(snapshot.cash)),
+        ("Open Positions", str(snapshot.open_count)),
+    ]
+    for idx, (label, value) in enumerate(kpis):
+        col = idx % 3
+        row = idx // 3
+        x = col * 0.33 + 0.02
+        y = 0.7 - row * 0.35
+        ax_kpi.text(x, y + 0.12, value, fontsize=13, fontweight="bold", transform=ax_kpi.transAxes)
+        ax_kpi.text(x, y, label, fontsize=10, color="#94a3b8", transform=ax_kpi.transAxes)
+
+    # Unrealised P&L per position (bottom left, span 2 columns)
+    ax_pnl = fig.add_subplot(gs[1, 0:2])
+    tickers = [p.ticker for p in snapshot.positions] or ["-"]
+    pnls = [p.unrealised_pnl for p in snapshot.positions] or [0]
+    colors = ["#22c55e" if v > 0 else "#ef4444" if v < 0 else "#94a3b8" for v in pnls]
+    ax_pnl.bar(tickers, pnls, color=colors)
+    ax_pnl.set_title("Unrealised P&L per Position (INR)")
+    ax_pnl.axhline(0, color="#334155", linewidth=1)
+    for x, val in enumerate(pnls):
+        ax_pnl.text(x, val, f"{val:.0f}", ha="center", va="bottom" if val >= 0 else "top", fontsize=9)
+
+    # Allocation pie (top right)
+    ax_pie = fig.add_subplot(gs[0, 2])
+    values = [p.live_price * p.units for p in snapshot.positions]
+    labels = [p.ticker for p in snapshot.positions]
+    if snapshot.cash > 0:
+        values.append(snapshot.cash)
+        labels.append("CASH")
+    if values and sum(values) > 0:
+        ax_pie.pie(values, labels=labels, autopct="%1.0f%%", textprops={"color": "#e5e7eb"})
+    ax_pie.set_title("Allocation")
+
+    # Confidence per ticker (bottom right)
+    ax_conf = fig.add_subplot(gs[1, 2])
+    confs = [p.confidence for p in snapshot.positions] or [0]
+    conf_labels = [p.ticker for p in snapshot.positions] or ["-"]
+    ax_conf.barh(conf_labels, confs, color="#38bdf8")
+    ax_conf.axvline(threshold, color="#fbbf24", linestyle="--", linewidth=1, label=f"Threshold {threshold}")
+    ax_conf.set_xlim(0, 100)
+    ax_conf.set_xlabel("Confidence")
+    ax_conf.set_title("Position Confidence")
+    ax_conf.legend(loc="lower right")
+    for i, v in enumerate(confs):
+        ax_conf.text(v + 1, i, f"{v:.1f}", va="center", fontsize=9)
+
+    fig.suptitle("Azalyst ETF Intelligence - Live Monitor", fontweight="bold")
+    plt.tight_layout()
+    plt.show(block=False)
+    plt.pause(0.001)
+
+
+# ---------------------------------------------------------------------------
+# Main loop
+# ---------------------------------------------------------------------------
+def load_config() -> Tuple[int, float, int]:
+    interval = DEFAULT_INTERVAL
+    threshold = DEFAULT_THRESHOLD
+    cooldown = DEFAULT_COOLDOWN_HOURS
+    try:
+        import config  # type: ignore
+
+        interval = int(getattr(config, "INTERVAL", interval))
+        threshold = float(getattr(config, "THRESHOLD", threshold))
+        cooldown = int(getattr(config, "COOLDOWN_HOURS", cooldown))
+    except Exception:
+        pass
+    return interval, threshold, cooldown
 
 
 def main() -> None:
-    cfg = _safe_import_cfg()
-    cooldown_h = int(cfg.get("cooldown_h", 4))
-
-    print("Azalyst ETF Intelligence - Spyder live monitor")
-    print(f"Workspace: {ROOT}")
-    print("")
+    _, threshold, cooldown_hours = load_config()
+    usd_inr: Optional[float] = None
 
     while True:
-        _clear_output()
+        start = time.time()
+        try:
+            usd_inr = fetch_usd_inr(usd_inr)
+            portfolio = load_json(PORTFOLIO_PATH)
+            state = load_json(STATE_PATH)
+            logs = tail_lines(LOG_PATH, LOG_LINES)
 
-        print("AZALYST ETF Intelligence - Live Monitor")
-        print(f"Now (UTC):        {_utc_now_str()}")
-        print(f"Interval:         {cfg.get('interval_min', 30)} min")
-        print(f"Threshold:        {cfg.get('threshold', 62)} / 100")
-        print(f"Cooldown:         {cooldown_h} hours")
-        print("")
-        print(f"Log:              {LOG_PATH.name:<22} updated: {_fmt_mtime(_file_mtime(LOG_PATH))}")
-        print(f"State:            {STATE_PATH.name:<22} updated: {_fmt_mtime(_file_mtime(STATE_PATH))}")
-        print(f"Portfolio:         {PORTFOLIO_PATH.name:<21} updated: {_fmt_mtime(_file_mtime(PORTFOLIO_PATH))}")
-        print("")
+            snapshot = build_portfolio_snapshot(portfolio, usd_inr)
+            sectors = build_sector_rows(state, cooldown_hours, threshold)
 
-        state = _load_json(STATE_PATH)
-        if state is not None:
-            s = _summarize_state(state, cooldown_h)
-            latest = s["latest_sent_at"]
-            latest_str = latest.strftime("%Y-%m-%d %H:%M:%S UTC") if latest else "unknown"
-            print(
-                f"Signals tracked:  {s['tracked']}  |  active cooldowns: {s['active_cooldowns']}  |  last sent: {latest_str}"
-            )
-        else:
-            print("Signals tracked:  (state file not found yet)")
+            clear_output(wait=True)
+            render_console(snapshot, sectors, logs, threshold)
+            render_charts(snapshot, sectors, usd_inr, threshold)
+        except Exception as exc:
+            clear_output(wait=True)
+            print(f"Spyder monitor encountered an error: {exc}")
 
-        pf = _load_json(PORTFOLIO_PATH)
-        if pf is not None:
-            p = _summarize_portfolio(pf)
-            print(
-                f"Paper portfolio:  cash INR {p['cash_inr']:,.0f}  |  open {p['open_count']}  |  closed {p['closed_count']}  |  last_saved: {p['last_saved'] or 'unknown'}"
-            )
-        else:
-            print("Paper portfolio:  (portfolio file not found yet)")
-
-        print("")
-        print(f"Last {TAIL_LINES} log lines:")
-        print("-" * 72)
-        print(_tail_text(LOG_PATH, TAIL_LINES))
-
-        time.sleep(max(1, REFRESH_SECONDS))
+        elapsed = time.time() - start
+        sleep_for = max(5.0, REFRESH_SECONDS - elapsed)
+        time.sleep(sleep_for)
 
 
 if __name__ == "__main__":
