@@ -19,6 +19,8 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 import matplotlib
+# Force a windowed backend so plots pop out like the Alpha monitor
+matplotlib.use("Qt5Agg")
 import matplotlib.pyplot as plt
 from IPython.display import clear_output
 
