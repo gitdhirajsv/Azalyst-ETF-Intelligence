@@ -19,14 +19,9 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 import matplotlib
-# Prefer a windowed backend so charts pop out; if Spyder already set one, leave it.
-try:
-    if matplotlib.get_backend().lower() not in {"qt5agg", "qtagg"}:
-        matplotlib.use("Qt5Agg", force=False)
-except Exception:
-    pass
+# Use non-GUI backend to avoid freezes; still renders to Spyder Plots inline
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-plt.ion()
 from IPython.display import clear_output
 
 # Ensure UTF-8 output even on Windows consoles
@@ -49,7 +44,7 @@ PORTFOLIO_PATH = ROOT / "azalyst_portfolio.json"
 DEFAULT_INTERVAL = 30
 DEFAULT_THRESHOLD = 62
 DEFAULT_COOLDOWN_HOURS = 4
-REFRESH_SECONDS = int(os.environ.get("AZALYST_MONITOR_REFRESH", "30"))
+REFRESH_SECONDS = int(os.environ.get("AZALYST_MONITOR_REFRESH", "60"))
 CONSOLE_WIDTH = 90
 LOG_LINES = 15
 FIG = None
