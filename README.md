@@ -1,8 +1,8 @@
 # Azalyst ETF Intelligence
 
-An institutional-style quantitative research platform - built as a personal project.
+> An institutional-style quantitative research platform built as a personal project. Not a hedge fund. Not a financial product. Just a passion for systematic research.
 
-Systematic macro signal detection through disciplined global news analysis and statistical confidence scoring.
+---
 
 ## Overview
 
