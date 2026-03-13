@@ -22,8 +22,12 @@ import matplotlib
 
 def _choose_backend() -> str:
     env_backend = os.environ.get("AZALYST_MONITOR_BACKEND")
+    force_inline = os.environ.get("AZALYST_MONITOR_INLINE", "").strip() == "1"
     default_backend = "TkAgg"  # windowed and responsive for Spyder
-    backend = env_backend or default_backend
+    if force_inline:
+        backend = "module://matplotlib_inline.backend_inline"
+    else:
+        backend = env_backend or default_backend
     try:
         matplotlib.use(backend, force=False)
         return matplotlib.get_backend()
@@ -550,6 +554,10 @@ def build_dashboard_figure(
 def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], usd_inr: Optional[float], threshold: float) -> None:
     log_lines = tail_lines(LOG_PATH, LOG_LINES)
     fig = build_dashboard_figure(snapshot, usd_inr, threshold, log_lines)
+    if "inline" in BACKEND:
+        plt.show()
+        plt.close(fig)
+        return
     if "agg" not in BACKEND:
         fig.canvas.draw_idle()
         fig.canvas.flush_events()
