@@ -12,6 +12,12 @@ At a high level, the platform scans global news feeds, deduplicates and clusters
 
 The project exists for a simple reason: global macro events move faster than discretionary monitoring can reliably keep up with, yet most headline streams are too noisy to act on directly. Azalyst attempts to bridge that gap with disciplined filtering. The system is opinionated about what should qualify as a signal, conservative about what deserves distribution, and explicit about why a given alert cleared the bar.
 
+## Dashboard Preview
+
+Live monitor output (generated from the current portfolio/state artifacts):
+
+![Azalyst ETF Intelligence Dashboard](docs/dashboard.png)
+
 Core capabilities:
 
 - Global news scanning through **[WorldMonitor](https://github.com/koala73/worldmonitor)** and direct RSS feeds.

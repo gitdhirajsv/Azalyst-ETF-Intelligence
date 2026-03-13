@@ -442,14 +442,19 @@ def render_console(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], l
     print("\n".join(lines))
 
 
-def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], usd_inr: Optional[float], threshold: float) -> None:
+def build_dashboard_figure(
+    snapshot: PortfolioSnapshot,
+    usd_inr: Optional[float],
+    threshold: float,
+    log_lines: List[str],
+) -> "matplotlib.figure.Figure":
     global FIG
     if FIG is None or not plt.fignum_exists(FIG.number):
         FIG = plt.figure(figsize=(12, 7))
     else:
         FIG.clf()
     fig = FIG
-    gs = FIG.add_gridspec(2, 3, width_ratios=[1, 1, 1], height_ratios=[1, 1], wspace=0.45, hspace=0.4)
+    gs = fig.add_gridspec(2, 3, width_ratios=[1, 1, 1], height_ratios=[1, 1], wspace=0.45, hspace=0.4)
 
     # KPI cards (top left)
     ax_kpi = fig.add_subplot(gs[0, 0])
@@ -528,7 +533,6 @@ def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], us
     ax_log.axis("off")
     log_title = "Recent Log Tail"
     ax_log.text(0.02, 1.02, log_title, fontsize=10, fontweight="bold", transform=ax_log.transAxes)
-    log_lines = tail_lines(LOG_PATH, LOG_LINES)
     if log_lines:
         for i, line in enumerate(log_lines[-12:]):
             ax_log.text(0.02, 0.9 - i * 0.075, short(line, 90), fontsize=8, transform=ax_log.transAxes)
@@ -540,12 +544,32 @@ def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], us
         plt.tight_layout(rect=[0.02, 0.02, 0.98, 0.96])
     except Exception:
         plt.tight_layout()
+    return fig
+
+
+def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], usd_inr: Optional[float], threshold: float) -> None:
+    log_lines = tail_lines(LOG_PATH, LOG_LINES)
+    fig = build_dashboard_figure(snapshot, usd_inr, threshold, log_lines)
     if "agg" not in BACKEND:
         fig.canvas.draw_idle()
         fig.canvas.flush_events()
         plt.pause(0.05)
     else:
         plt.close(fig)
+
+
+def save_dashboard_image(output_path: str) -> str:
+    _, threshold, _ = load_config()
+    usd_inr = fetch_usd_inr(None)
+    portfolio = load_json(PORTFOLIO_PATH)
+    snapshot = build_portfolio_snapshot(portfolio, usd_inr)
+    log_lines = tail_lines(LOG_PATH, LOG_LINES)
+    fig = build_dashboard_figure(snapshot, usd_inr, threshold, log_lines)
+    path = Path(output_path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(path, dpi=160, bbox_inches="tight")
+    plt.close(fig)
+    return str(path)
 
 
 # ---------------------------------------------------------------------------
