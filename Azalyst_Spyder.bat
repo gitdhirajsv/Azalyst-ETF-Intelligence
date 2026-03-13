@@ -19,7 +19,12 @@ echo Engine is running; it will stay alive even if you close Spyder.
 
 echo.
 echo [3/3] Launching dashboard window...
-start "Azalyst Monitor" /D "%~dp0" cmd /k "set AZALYST_MONITOR_INLINE=0 & set AZALYST_MONITOR_BACKEND=TkAgg & python -u spyder_live_monitor.py"
+set "PYTHONW_EXE=pythonw"
+where %PYTHONW_EXE% >nul 2>nul
+if errorlevel 1 (
+    set "PYTHONW_EXE=python"
+)
+start "Azalyst Monitor" /D "%~dp0" "%PYTHONW_EXE%" spyder_live_monitor.py
 
 echo.
 echo Opening Spyder (optional)...
