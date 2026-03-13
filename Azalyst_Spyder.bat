@@ -20,7 +20,8 @@ echo Engine is running; it will stay alive even if you close Spyder.
 echo.
 echo [3/3] Launching Spyder dashboard (optional)...
 python prepare_spyder_profile.py >nul 2>&1
-set "AZALYST_MONITOR_INLINE=1"
+set "AZALYST_MONITOR_INLINE=0"
+set "AZALYST_MONITOR_BACKEND=TkAgg"
 
 if not defined SPYDER_EXE (
     if exist "C:\ProgramData\spyder-6\envs\spyder-runtime\Scripts\spyder.exe" set "SPYDER_EXE=C:\ProgramData\spyder-6\envs\spyder-runtime\Scripts\spyder.exe"
