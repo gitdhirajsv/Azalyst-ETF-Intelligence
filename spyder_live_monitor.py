@@ -22,6 +22,14 @@ import matplotlib
 import matplotlib.pyplot as plt
 from IPython.display import clear_output
 
+# Ensure UTF-8 output even on Windows consoles
+import sys
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 
 # ---------------------------------------------------------------------------
 # Paths and constants
