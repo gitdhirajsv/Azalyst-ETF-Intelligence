@@ -22,7 +22,7 @@ import matplotlib
 
 def _choose_backend() -> str:
     env_backend = os.environ.get("AZALYST_MONITOR_BACKEND")
-    default_backend = "TkAgg"  # lighter than Qt, still gives a window
+    default_backend = "Agg"  # safest, non-GUI
     backend = env_backend or default_backend
     try:
         matplotlib.use(backend, force=False)
@@ -34,8 +34,6 @@ def _choose_backend() -> str:
 BACKEND = _choose_backend().lower()
 
 import matplotlib.pyplot as plt
-if "agg" not in BACKEND:
-    plt.ion()
 from IPython.display import clear_output
 
 # Ensure UTF-8 output even on Windows consoles
@@ -537,8 +535,11 @@ def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], us
 
     fig.suptitle("Azalyst ETF Intelligence - Live Monitor", fontweight="bold", color=GRAY_DARK, y=0.98)
     plt.tight_layout(rect=[0.02, 0.02, 0.98, 0.96])
-    fig.canvas.draw_idle()
-    plt.pause(0.05)
+    if "agg" not in BACKEND:
+        fig.canvas.draw_idle()
+        plt.pause(0.05)
+    else:
+        plt.close(fig)
 
 
 # ---------------------------------------------------------------------------
