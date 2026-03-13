@@ -53,22 +53,28 @@ REFRESH_SECONDS = int(os.environ.get("AZALYST_MONITOR_REFRESH", "30"))
 CONSOLE_WIDTH = 90
 LOG_LINES = 15
 FIG = None
+ORANGE = "#f97316"
+BLUE = "#2563eb"
+GREEN = "#22c55e"
+RED = "#ef4444"
+GRAY_DARK = "#111827"
+GRAY_LIGHT = "#e5e7eb"
 
 matplotlib.rcParams.update(
     {
-        "figure.facecolor": "#0f172a",
-        "axes.facecolor": "#0b122a",
-        "savefig.facecolor": "#0f172a",
-        "axes.edgecolor": "#1f2937",
-        "axes.labelcolor": "#e2e8f0",
+        "figure.facecolor": "white",
+        "axes.facecolor": "white",
+        "savefig.facecolor": "white",
+        "axes.edgecolor": GRAY_LIGHT,
+        "axes.labelcolor": GRAY_DARK,
         "axes.titleweight": "bold",
         "axes.titlesize": 12,
         "figure.titlesize": 14,
-        "grid.color": "#334155",
-        "grid.alpha": 0.35,
-        "xtick.color": "#cbd5e1",
-        "ytick.color": "#cbd5e1",
-        "text.color": "#e5e7eb",
+        "grid.color": GRAY_LIGHT,
+        "grid.alpha": 0.6,
+        "xtick.color": GRAY_DARK,
+        "ytick.color": GRAY_DARK,
+        "text.color": GRAY_DARK,
         "font.family": "monospace",
     }
 )
@@ -452,15 +458,16 @@ def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], us
         values.append(snapshot.cash)
         labels.append("CASH")
     if values and sum(values) > 0:
-        ax_pie.pie(values, labels=labels, autopct="%1.0f%%", textprops={"color": "#e5e7eb"})
+        colors = [ORANGE, BLUE, "#0ea5e9", "#fcd34d", "#a855f7", "#10b981", "#f97316", "#94a3b8"]
+        ax_pie.pie(values, labels=labels, autopct="%1.0f%%", colors=colors[: len(values)], textprops={"color": GRAY_DARK})
     ax_pie.set_title("Allocation", pad=10)
 
     # Confidence per ticker (top right)
     ax_conf = fig.add_subplot(gs[0, 2])
     confs = [p.confidence for p in snapshot.positions] or [0]
     conf_labels = [p.ticker for p in snapshot.positions] or ["-"]
-    ax_conf.barh(conf_labels, confs, color="#38bdf8")
-    ax_conf.axvline(threshold, color="#fbbf24", linestyle="--", linewidth=1, label=f"Threshold {threshold}")
+    ax_conf.barh(conf_labels, confs, color=ORANGE)
+    ax_conf.axvline(threshold, color="#9ca3af", linestyle="--", linewidth=1, label=f"Threshold {threshold}")
     ax_conf.set_xlim(0, 100)
     ax_conf.set_xlabel("Confidence")
     ax_conf.set_title("Position Confidence")
@@ -472,7 +479,7 @@ def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], us
     ax_pnl = fig.add_subplot(gs[1, 0])
     tickers = [p.ticker for p in snapshot.positions] or ["-"]
     pnls = [p.unrealised_pnl for p in snapshot.positions] or [0]
-    colors = ["#22c55e" if v > 0 else "#ef4444" if v < 0 else "#94a3b8" for v in pnls]
+    colors = [GREEN if v > 0 else RED if v < 0 else GRAY_LIGHT for v in pnls]
     ax_pnl.bar(tickers, pnls, color=colors)
     ax_pnl.set_title("Unrealised P&L per Position (INR)")
     ax_pnl.axhline(0, color="#334155", linewidth=1)
@@ -505,7 +512,7 @@ def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], us
     for i, line in enumerate(logs[-8:] if (logs := tail_lines(LOG_PATH, LOG_LINES)) else []):
         ax_log.text(0.02, 0.9 - i * 0.1, short(line, 80), fontsize=8, transform=ax_log.transAxes)
 
-    fig.suptitle("Azalyst ETF Intelligence - Live Monitor", fontweight="bold")
+    fig.suptitle("Azalyst ETF Intelligence - Live Monitor", fontweight="bold", color=GRAY_DARK)
     plt.tight_layout()
     fig.canvas.draw_idle()
     plt.pause(0.05)
