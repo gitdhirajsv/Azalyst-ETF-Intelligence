@@ -66,36 +66,27 @@ if errorlevel 1 (
 )
 
 echo.
-echo [2/3] Launching Spyder live monitor...
+echo [2/3] Starting Azalyst engine (separate console)...
+if "%AZALYST_SPYDER_SKIP_ENGINE%"=="1" (
+    echo Skipping engine start because AZALYST_SPYDER_SKIP_ENGINE=1.
+) else (
+    REM Launch engine in its own console so it keeps running even if Spyder is closed
+    start "Azalyst Engine" cmd /k "cd /d \"%~dp0\" && call START_AZALYST.bat"
+    echo Azalyst engine running in separate console window (stays alive if Spyder closes).
+)
+
+echo.
+echo [3/3] Launching Spyder live monitor...
 if defined SPYDER_EXE (
     echo Spyder: %SPYDER_EXE%
     start "Spyder Monitor" /D "%~dp0" "%SPYDER_EXE%" --new-instance --conf-dir "%SPYDER_PROFILE%" -w "%~dp0" --window-title "Azalyst ETF Intelligence - Monitor" "%~dp0spyder_live_monitor.py"
 ) else (
     echo [ERROR] Spyder was not found.
     echo Install Spyder via Anaconda, or launch Spyder manually and open spyder_live_monitor.py.
-    echo.
-    set /p "CONTINUE_WITHOUT_SPYDER=Run the Azalyst engine anyway without Spyder? [Y/N]: "
-    if /i not "!CONTINUE_WITHOUT_SPYDER!"=="Y" (
-        echo.
-        echo Exiting. Install Spyder first, then re-run this launcher.
-        pause
-        exit /b 0
-    )
-    echo Continuing without Spyder...
 )
 
 echo.
-echo [3/3] Starting Azalyst engine...
-if "%AZALYST_SPYDER_SKIP_ENGINE%"=="1" (
-    echo Skipping engine start because AZALYST_SPYDER_SKIP_ENGINE=1.
-) else (
-    REM Launch engine in its own console so it keeps running even if Spyder is closed
-    start "Azalyst Engine" cmd /k "call \"%~dp0START_AZALYST.bat\""
-    echo Azalyst engine running in separate console window (will stay alive if Spyder closes).
-)
-
-echo.
-echo Launcher complete.
+echo Launcher complete. Engine console will remain running independently.
 echo Press any key to close this window...
 pause >nul
 
