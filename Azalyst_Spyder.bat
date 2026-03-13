@@ -66,10 +66,20 @@ if errorlevel 1 (
 )
 
 echo.
+echo [2/3] Ensuring no previous engine is running...
+for /f "skip=3 delims=" %%P in ('tasklist /FI "WINDOWTITLE eq Azalyst Engine" /FI "IMAGENAME eq cmd.exe"') do (
+    echo Found prior engine console - closing it...
+    taskkill /FI "WINDOWTITLE eq Azalyst Engine" /T /F >nul 2>&1
+    goto :after_kill
+)
+:after_kill
+
 echo [2/3] Starting Azalyst engine (separate console)...
 if "%AZALYST_SPYDER_SKIP_ENGINE%"=="1" (
     echo Skipping engine start because AZALYST_SPYDER_SKIP_ENGINE=1.
 ) else (
+    REM Save a checkpoint snapshot before launch
+    powershell -Command "New-Item -ItemType Directory -Path '%~dp0checkpoints' -Force | Out-Null; $ts=(Get-Date -Format 'yyyyMMdd_HHmmss'); foreach($f in 'azalyst_portfolio.json','azalyst_state.json'){ if(Test-Path $f){ Copy-Item $f (Join-Path '%~dp0checkpoints' (\"$ts`_\" + $f)) -Force } }" >nul 2>&1
     REM Launch engine in its own console so it keeps running even if Spyder is closed
     start "Azalyst Engine" cmd /k ""cd /d \"%~dp0\" && call START_AZALYST.bat""
     echo Azalyst engine running in separate console window (stays alive if Spyder closes).
