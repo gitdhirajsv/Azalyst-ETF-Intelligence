@@ -4,7 +4,7 @@ setlocal enableextensions enabledelayedexpansion
 title AZALYST ETF INTELLIGENCE - ENGINE
 
 echo ------------------------------------------------------------
-echo   AZALYST ETF INTELLIGENCE  |  Macro Fund Edition
+echo   AZALYST ETF INTELLIGENCE - Macro Fund Edition
 echo   Engine launcher (keeps running even if Spyder is closed)
 echo ------------------------------------------------------------
 echo.
