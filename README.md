@@ -90,6 +90,7 @@ THRESHOLD=62
 COOLDOWN_HOURS=4
 MIN_ARTICLES=
 
+
 ### 4. Run the system
 
 You can run the engine directly with Python:
@@ -116,8 +117,6 @@ When you run it:
 The Spyder window is **only for monitoring**.
 
 If the Spyder window is closed, the **main command prompt will continue running normally**, so the engine will keep running.
-
-
 
 ## Configuration
 
