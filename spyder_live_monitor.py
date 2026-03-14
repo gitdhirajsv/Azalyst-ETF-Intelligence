@@ -68,6 +68,8 @@ LOG_LINES = 15
 FIG = None
 PRICE_CACHE: Dict[str, Tuple[float, float]] = {}  # symbol -> (price_in_inr, timestamp)
 PRICE_TTL = 120  # seconds
+SHOW_READY_POPUP = os.environ.get("AZALYST_MONITOR_READY_POPUP", "1") == "1"
+_POPUP_SHOWN = False
 ORANGE = "#f97316"
 BLUE = "#2563eb"
 GREEN = "#22c55e"
@@ -566,6 +568,28 @@ def render_charts(snapshot: PortfolioSnapshot, sectors: List[Dict[str, Any]], us
         plt.close(fig)
 
 
+def _show_ready_popup_once() -> None:
+    global _POPUP_SHOWN
+    if _POPUP_SHOWN or not SHOW_READY_POPUP:
+        return
+    if "agg" in BACKEND or "inline" in BACKEND:
+        return
+    try:
+        import tkinter as tk
+
+        root = tk.Tk()
+        root.title("Azalyst Monitor")
+        root.geometry("260x90")
+        root.resizable(False, False)
+        label = tk.Label(root, text="Azalyst monitor is running", padx=10, pady=15)
+        label.pack(expand=True, fill="both")
+        root.after(2000, root.destroy)
+        _POPUP_SHOWN = True
+        root.mainloop()
+    except Exception:
+        _POPUP_SHOWN = True
+
+
 def save_dashboard_image(output_path: str) -> str:
     _, threshold, _ = load_config()
     usd_inr = fetch_usd_inr(None)
@@ -616,6 +640,7 @@ def main() -> None:
             clear_output(wait=True)
             render_console(snapshot, sectors, logs, threshold)
             render_charts(snapshot, sectors, usd_inr, threshold)
+            _show_ready_popup_once()
         except Exception as exc:
             clear_output(wait=True)
             print(f"Spyder monitor encountered an error: {exc}")
