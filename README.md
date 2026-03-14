@@ -90,7 +90,6 @@ THRESHOLD=62
 COOLDOWN_HOURS=4
 MIN_ARTICLES=
 
-
 ### 4. Run the system
 
 You can run the engine directly with Python:
