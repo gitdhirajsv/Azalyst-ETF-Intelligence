@@ -88,7 +88,8 @@ WEBHOOK=https://discord.com/api/webhooks/your_webhook_here
 INTERVAL=30
 THRESHOLD=62
 COOLDOWN_HOURS=4
-MIN_ARTICLES=
+MIN_ARTICLES=2
+```
 
 ### 4. Run the system
 
