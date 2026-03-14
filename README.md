@@ -88,36 +88,36 @@ WEBHOOK=https://discord.com/api/webhooks/your_webhook_here
 INTERVAL=30
 THRESHOLD=62
 COOLDOWN_HOURS=4
-MIN_ARTICLES=2
-```
+MIN_ARTICLES=
 
 ### 4. Run the system
+
+You can run the engine directly with Python:
 
 ```bash
 python azalyst.py
 ```
 
-Windows users can also launch:
+### Windows Launcher
+
+Windows users can start the system using:
 
 ```bat
-START_AZALYST.bat
+Azalyst_Spyder.bat
 ```
 
-### Optional: Spyder launcher (Windows)
+This is the **single launcher file** for the project.
 
-If you use Spyder for monitoring and interactive inspection, you can launch a dedicated Spyder instance alongside the engine:
+When you run it:
 
-```bat
-Azalyst_SPider.bat
-```
+- The Azalyst engine starts in a command prompt.
+- A Spyder window opens and runs `spyder_live_monitor.py` to display live dashboard updates.
 
-This will:
+The Spyder window is **only for monitoring**.
 
-- Prepare an isolated Spyder config directory (keeps this project independent of your global Spyder settings).
-- Launch Spyder and auto-run `spyder_live_monitor.py` for a lightweight live status view.
-- Start the Azalyst engine by calling `START_AZALYST.bat`.
+If the Spyder window is closed, the **main command prompt will continue running normally**, so the engine will keep running.
 
-If Spyder is not detected, launch Spyder manually and open `spyder_live_monitor.py`, then run the engine via `START_AZALYST.bat`.
+
 
 ## Configuration
 
