@@ -59,7 +59,7 @@ def calc_metrics(portfolio):
         cash            = round(cash, 2),
         market_value    = round(market_val, 2),
         change          = f"{sign}{overall_pct:.2f}",
-        closed_trades   = int(portfolio.get("closed_trades", 0)),
+        closed_trades   = len(portfolio.get("closed_trades", [])) if isinstance(portfolio.get("closed_trades"), list) else int(portfolio.get("closed_trades", 0)),
     )
 
 def build_allocation(positions, cash):
