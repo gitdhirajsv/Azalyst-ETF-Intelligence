@@ -1,46 +1,115 @@
 {
-  "portfolio_value": 11200,
-  "total_deposited": 10000,
-  "cash": 2000,
-  "market_value": 9200,
-  "change": "+12.00",
-  "closed_trades": 0,
-  "confidence_threshold": 62,
+  "portfolio_value": 10000.0,
+  "total_deposited": 10000.0,
+  "cash": 2460.08,
+  "market_value": 7539.92,
+  "change": "+0.00",
+  "closed_trades": [],
   "positions": [
-    {"symbol": "ITA"},
-    {"symbol": "XLE"},
-    {"symbol": "GLDM"}
+    {
+      "symbol": "ITA"
+    },
+    {
+      "symbol": "XLE"
+    },
+    {
+      "symbol": "IBIT"
+    },
+    {
+      "symbol": "INDA"
+    },
+    {
+      "symbol": "XLF"
+    }
   ],
+  "confidence_threshold": 62,
   "allocation": {
-    "labels": ["ITA", "GLDM", "CASH", "XLE"],
-    "values": [41, 12, 18, 29]
+    "labels": [
+      "ITA",
+      "XLE",
+      "IBIT",
+      "INDA",
+      "XLF",
+      "CASH"
+    ],
+    "values": [
+      28.0,
+      15.8,
+      12.4,
+      12.3,
+      6.9,
+      24.6
+    ]
   },
   "pnl": {
-    "labels": ["ITA", "XLE", "GLDM"],
-    "values": [600, 380, 300]
+    "labels": [
+      "ITA",
+      "XLE",
+      "IBIT",
+      "INDA",
+      "XLF"
+    ],
+    "values": [
+      -0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0
+    ]
   },
   "confidence": [
-    {"symbol": "GLDM", "score": 85.0},
-    {"symbol": "XLE",  "score": 77.0},
-    {"symbol": "ITA",  "score": 92.0}
+    {
+      "symbol": "defense",
+      "score": 81.0
+    },
+    {
+      "symbol": "india_equity",
+      "score": 80.0
+    },
+    {
+      "symbol": "banking_financial|gold_precious_metals",
+      "score": 75.0
+    },
+    {
+      "symbol": "commodities_mining|energy_oil",
+      "score": 73.0
+    },
+    {
+      "symbol": "crypto_digital",
+      "score": 71.0
+    }
   ],
   "articles": [
-    {"tag": "tag-bull", "label": "Bullish", "text": "Defense sector strong — 143 articles · ITA confidence 92%"},
-    {"tag": "tag-bull", "label": "Bullish", "text": "Gold demand rising — GLDM confidence 85%, 98 articles"},
-    {"tag": "tag-neu",  "label": "Neutral", "text": "Energy mixed signals — XLE 77% confidence, 67 articles"},
-    {"tag": "tag-neu",  "label": "Neutral", "text": "299 articles fetched from 19 sources this cycle"},
-    {"tag": "tag-bear", "label": "Watch",   "text": "USD/INR at 92.49 — monitor FX impact on valuations"}
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Defense & Aerospace — 138 articles · defense confidence 81%"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "India Equity Markets — 68 articles · india_equity confidence 80%"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Energy / Oil & Gas + Commodities & Mining — 78 articles · commodities_mining|energy_oil confidence 73%"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Crypto & Digital Assets — 60 articles · crypto_digital confidence 71%"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Banking & Financial Sector + Gold & Precious Metals — 56 articles · banking_financial|gold_precious_metals confidence 75%"
+    }
   ],
   "logs": [
-    "2026-03-14 05:13:26 [INFO] azalyst.reporter — Startup message dispatched to Discord",
-    "2026-03-14 05:13:15 [INFO] AZALYST — Startup: trade seed skipped · 6 positions already",
-    "2026-03-14 05:13:15 [INFO] AZALYST — Intelligence cycle starting...",
-    "2026-03-14 05:13:15 [INFO] azalyst.fetcher — Fetching 19 news sources concurrently...",
-    "2026-03-14 05:13:26 [INFO] AZALYST — Fetched 299 articles",
-    "2026-03-14 05:13:26 [INFO] azalyst.classifier — Classified 299 articles into 10 sectors",
-    "2026-03-14 05:13:26 [INFO] AZALYST — 8 new/updated signals",
-    "2026-03-14 05:13:26 [INFO] AZALYST — Cycle complete",
-    "2026-03-14 05:13:26 [INFO] azalyst.reporter — Cycle digest · 8 active signals, 0 new",
-    "2026-03-14 05:13:26 [INFO] AZALYST — EOD report scheduled at 15:30 UTC (8:30 PM IST)"
+    "2026-03-15 08:42:34 [INFO] AZALYST — Dashboard status.json generated",
+    "2026-03-15 08:42:34 [INFO] AZALYST — 5 active signals in state",
+    "2026-03-15 08:42:34 [INFO] AZALYST — Open positions: ITA, XLE, IBIT, INDA, XLF",
+    "2026-03-15 08:42:34 [INFO] azalyst.classifier — Total articles across signals: 400"
   ]
 }
