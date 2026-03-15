@@ -8,6 +8,7 @@ import logging
 import schedule
 import traceback
 import os
+import sys
 from datetime import datetime, timezone
 
 from news_fetcher       import NewsFetcher
@@ -53,17 +54,17 @@ def _select_etf_for_trade(signal: dict) -> tuple:
 
 def run_intelligence_cycle(
     fetcher, classifier, scorer, mapper,
-    reporter, state, portfolio, port_reporter, cfg
+    reporter, state, portfolio, port_reporter, cfg,
+    raise_on_error=False,
 ):
-
     log.info("--- Intelligence cycle starting ---")
 
     try:
-
         articles = fetcher.fetch_all()
         log.info(f"Fetched {len(articles)} articles")
 
         if not articles:
+            log.warning("No articles fetched — skipping cycle")
             return
 
         sector_signals = classifier.classify_articles(articles)
@@ -71,9 +72,7 @@ def run_intelligence_cycle(
         scored_signals = []
 
         for signal in sector_signals:
-
             score = scorer.score(signal, articles)
-
             signal["confidence"] = score
             signal["confidence_breakdown"] = scorer.breakdown(signal, articles)
 
@@ -85,7 +84,6 @@ def run_intelligence_cycle(
         log.info(f"{len(new_signals)} new/updated signals")
 
         for signal in new_signals:
-
             etf_recs = mapper.get_etfs(signal["sectors"])
             signal["etf_recommendations"] = etf_recs
 
@@ -98,27 +96,21 @@ def run_intelligence_cycle(
             time.sleep(1)
 
             if cfg.PAPER_TRADING_ENABLED and not is_update:
-
                 severity   = signal.get("severity", "LOW")
                 confidence = signal.get("confidence", 0)
 
                 if severity in ("HIGH", "CRITICAL") or confidence >= 75:
-
                     etf, platform = _select_etf_for_trade(signal)
 
                     if etf and platform:
-
                         entry = portfolio.enter_position(signal, etf, platform)
 
                         if entry:
-
                             if not entry.get("is_topup"):
                                 port_reporter.send_trade_entry(entry, signal)
-
                             log.info(f"Paper trade entered: {entry['ticker']}")
 
         for sig in scored_signals:
-
             if "etf_recommendations" not in sig:
                 sig["etf_recommendations"] = mapper.get_etfs(sig["sectors"])
 
@@ -127,7 +119,6 @@ def run_intelligence_cycle(
         log.info("--- Cycle complete ---\n")
 
     except Exception as e:
-
         log.error(f"Cycle error: {e}")
         log.debug(traceback.format_exc())
 
@@ -136,42 +127,38 @@ def run_intelligence_cycle(
         except Exception:
             pass
 
+        # In GitHub Actions, re-raise so the step fails visibly
+        # instead of silently succeeding with no output files written.
+        if raise_on_error:
+            raise
+
 
 def run_mtm_cycle(portfolio, port_reporter):
-
     log.info("--- Mark-to-market ---")
 
     try:
-
         exits = portfolio.mark_to_market()
 
         if exits:
             port_reporter.send_trade_exits(exits)
 
     except Exception as e:
-
         log.error(f"MTM error: {e}")
 
 
 def run_eod_report(portfolio, port_reporter):
-
     log.info("--- EOD report ---")
 
     try:
-
         portfolio.mark_to_market()
-
         summary = portfolio.get_summary()
-
         port_reporter.send_eod_report(summary)
 
     except Exception as e:
-
         log.error(f"EOD report error: {e}")
 
 
 def seed_startup_trades(state, mapper, portfolio, port_reporter, cfg):
-
     if not cfg.PAPER_TRADING_ENABLED:
         return
 
@@ -181,45 +168,41 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, cfg):
 
     log.info("Startup trade seeder running")
 
-    for sector_key, record in state._state.items():
+    # Use public API instead of private _state attribute
+    all_signals = state.get_all_signals() if hasattr(state, "get_all_signals") else state._state
 
+    for sector_key, record in all_signals.items():
         confidence = record.get("confidence", 0)
 
         if confidence < 75:
             continue
 
         sector_label = record.get("sector_label", "Unknown")
-        sectors = sector_key.split("|")
-
-        etf_recs = mapper.get_etfs(sectors)
+        sectors      = sector_key.split("|")
+        etf_recs     = mapper.get_etfs(sectors)
 
         signal = {
-            "sectors": sectors,
-            "sector_label": sector_label,
-            "confidence": confidence,
-            "severity": "HIGH",
-            "top_headlines": [f"Startup seed — {sector_label}"],
+            "sectors":             sectors,
+            "sector_label":        sector_label,
+            "confidence":          confidence,
+            "severity":            "HIGH",
+            "top_headlines":       [f"Startup seed — {sector_label}"],
             "etf_recommendations": etf_recs,
         }
 
         etf, platform = _select_etf_for_trade(signal)
 
         if etf and platform:
-
             entry = portfolio.enter_position(signal, etf, platform)
 
             if entry:
-
                 if not entry.get("is_topup"):
                     port_reporter.send_trade_entry(entry, signal)
-
                 log.info(f"Startup trade seeded: {entry['ticker']}")
-
                 time.sleep(1)
 
 
 def main():
-
     print(BANNER)
 
     cfg = Config()
@@ -234,13 +217,35 @@ def main():
     port_reporter = PortfolioReporter(cfg)
 
     log.info(
-        f"Ready. Interval: {cfg.POLL_INTERVAL_MINUTES}m | Paper trading: {'ON' if cfg.PAPER_TRADING_ENABLED else 'OFF'}"
+        f"Ready. Interval: {cfg.POLL_INTERVAL_MINUTES}m | "
+        f"Paper trading: {'ON' if cfg.PAPER_TRADING_ENABLED else 'OFF'}"
     )
 
     reporter.send_startup_message()
 
     seed_startup_trades(state, mapper, portfolio, port_reporter, cfg)
 
+    # ── GitHub Actions: single cycle, fail hard on error ─────────────────────
+    if os.getenv("GITHUB_ACTIONS") == "true":
+        log.info("GitHub Actions detected — running single cycle only")
+
+        try:
+            run_intelligence_cycle(
+                fetcher, classifier, scorer, mapper,
+                reporter, state, portfolio, port_reporter, cfg,
+                raise_on_error=True,
+            )
+        except Exception as e:
+            log.error(f"Fatal cycle error in Actions: {e}")
+            sys.exit(1)   # Makes the workflow step go red — no more silent failures
+
+        log.info("Single cycle done — exiting cleanly")
+        sys.exit(0)
+
+    # ── Local / server: continuous scheduling loop ────────────────────────────
+    log.info("Running continuous engine (local mode)")
+
+    # Run one cycle immediately on startup, then hand off to scheduler
     run_intelligence_cycle(
         fetcher, classifier, scorer, mapper,
         reporter, state, portfolio, port_reporter, cfg
@@ -257,36 +262,15 @@ def main():
     )
 
     eod_time = f"{cfg.EOD_REPORT_HOUR:02d}:{cfg.EOD_REPORT_MINUTE:02d}"
-
     schedule.every().day.at(eod_time).do(
         run_eod_report, portfolio, port_reporter
     )
 
     log.info(f"EOD report scheduled at {eod_time} UTC")
 
-
-    # -------------------------------
-    # FIX FOR GITHUB ACTIONS
-    # -------------------------------
-
-    if os.getenv("GITHUB_ACTIONS") == "true":
-
-        log.info("GitHub Actions detected — running single cycle only")
-
-        run_intelligence_cycle(
-            fetcher, classifier, scorer, mapper,
-            reporter, state, portfolio, port_reporter, cfg
-        )
-
-    else:
-
-        log.info("Running continuous engine (local mode)")
-
-        while True:
-
-            schedule.run_pending()
-
-            time.sleep(30)
+    while True:
+        schedule.run_pending()
+        time.sleep(30)
 
 
 if __name__ == "__main__":
