@@ -33,6 +33,14 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: python azalyst.py
 
+      - name: Debug - inspect state files
+        run: |
+          echo "=== azalyst_portfolio.json ==="
+          cat azalyst_portfolio.json || echo "MISSING"
+          echo ""
+          echo "=== azalyst_state.json ==="
+          cat azalyst_state.json || echo "MISSING"
+
       - name: Generate status.json
         run: python generate_dashboard.py
 
@@ -41,9 +49,7 @@ jobs:
           python - <<'EOF'
           from playwright.sync_api import sync_playwright
           import os
-
           os.makedirs("docs", exist_ok=True)
-
           with sync_playwright() as p:
               browser = p.chromium.launch()
               page = browser.new_page(viewport={"width": 1280, "height": 900})
@@ -51,7 +57,6 @@ jobs:
               page.wait_for_timeout(3000)
               page.screenshot(path="docs/dashboard_live.png", full_page=True)
               browser.close()
-
           print("Screenshot saved to docs/dashboard_live.png")
           EOF
 
