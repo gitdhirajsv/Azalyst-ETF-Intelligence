@@ -32,8 +32,16 @@ def clean_label(raw_key):
 # ── Helpers ───────────────────────────────────────────────────────────────────
 def load_json(path):
     if os.path.exists(path):
-        with open(path, "r") as f:
-            return json.load(f)
+        try:
+            with open(path, "r") as f:
+                return json.load(f)
+        except json.JSONDecodeError as e:
+            print(f"⚠️  Could not parse {path}: {e}")
+            return {}
+        except Exception as e:
+            print(f"⚠️  Unexpected error reading {path}: {e}")
+            return {}
+    print(f"⚠️  File not found: {path}")
     return {}
 
 def calc_metrics(portfolio):
@@ -132,6 +140,33 @@ def build_logs(portfolio, state):
 def generate_status():
     portfolio = load_json(PORTFOLIO_FILE)
     state     = load_json(STATE_FILE)
+
+    # If azalyst.py found no articles/signals this cycle it won't write
+    # state files — this happens on scheduled runs during quiet news windows.
+    # Write a valid minimal status.json so downstream steps never crash.
+    if not portfolio and not state:
+        now = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+        print("⚠️  No data files found — writing minimal status.json")
+        minimal = {
+            "portfolio_value":    0,
+            "total_deposited":    0,
+            "cash":               0,
+            "market_value":       0,
+            "change":             "+0.00",
+            "closed_trades":      0,
+            "positions":          [],
+            "confidence_threshold": 62,
+            "allocation":         {"labels": [], "values": []},
+            "pnl":                {"labels": [], "values": []},
+            "confidence":         [],
+            "articles":           [],
+            "logs":               [f"{now} [WARN] AZALYST — No data available this cycle (quiet news window)"],
+        }
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+            json.dump(minimal, f, indent=2, ensure_ascii=False)
+        print(f"✅  Minimal status.json written to {OUTPUT_FILE}")
+        return
+
     positions = portfolio.get("open_positions", [])
     cash      = portfolio.get("cash_inr", 0)
 
