@@ -1,9 +1,9 @@
 {
   "portfolio_value": 10000.0,
   "total_deposited": 10000.0,
-  "cash": 1892.37,
-  "market_value": 8107.63,
-  "change": "-0.00",
+  "cash": 1550.05,
+  "market_value": 8449.95,
+  "change": "+0.00",
   "closed_trades": 0,
   "positions": [
     {
@@ -20,6 +20,9 @@
     },
     {
       "symbol": "GLDM"
+    },
+    {
+      "symbol": "SOXX"
     }
   ],
   "confidence_threshold": 62,
@@ -30,15 +33,17 @@
       "IBIT",
       "INDA",
       "GLDM",
+      "SOXX",
       "CASH"
     ],
     "values": [
       35.0,
       14.3,
       14.2,
-      10.2,
-      7.4,
-      18.9
+      8.0,
+      8.0,
+      5.0,
+      15.5
     ]
   },
   "pnl": {
@@ -47,14 +52,16 @@
       "XLE",
       "IBIT",
       "INDA",
-      "GLDM"
+      "GLDM",
+      "SOXX"
     ],
     "values": [
       -0.0,
       -0.0,
       0.0,
-      0.0,
-      -0.0
+      -0.0,
+      -0.0,
+      0.0
     ]
   },
   "confidence": [
@@ -64,10 +71,6 @@
     },
     {
       "symbol": "Crypto & Digital Assets",
-      "score": 85.0
-    },
-    {
-      "symbol": "India Equity Markets",
       "score": 80.0
     },
     {
@@ -77,6 +80,18 @@
     {
       "symbol": "Energy / Oil & Gas + Commodities & Mining",
       "score": 77.0
+    },
+    {
+      "symbol": "India Equity Markets",
+      "score": 75.0
+    },
+    {
+      "symbol": "Cybersecurity",
+      "score": 69.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 62.0
     }
   ],
   "articles": [
@@ -88,28 +103,38 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Crypto & Digital Assets — 58 articles · confidence 85%"
+      "text": "Crypto & Digital Assets — 59 articles · confidence 80%"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "India Equity Markets — 62 articles · confidence 80%"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector — 53 articles · confidence 80%"
+      "text": "Gold & Precious Metals + Banking & Financial Sector — 52 articles · confidence 80%"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas + Commodities & Mining — 76 articles · confidence 77%"
+      "text": "Energy / Oil & Gas + Commodities & Mining — 75 articles · confidence 77%"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "India Equity Markets — 62 articles · confidence 75%"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Cybersecurity — 9 articles · confidence 69%"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Watch",
+      "text": "Technology & AI / Semiconductors — 32 articles · confidence 62%"
     }
   ],
   "logs": [
-    "2026-03-15 13:40:38 [INFO] AZALYST — status.json generated",
-    "2026-03-15 13:40:38 [INFO] AZALYST — 5 active signals in state",
-    "2026-03-15 13:40:38 [INFO] AZALYST — Open positions: ITA, XLE, IBIT, INDA, GLDM",
-    "2026-03-15 13:40:38 [INFO] azalyst.classifier — Total articles: 391"
+    "2026-03-15 14:22:25 [INFO] AZALYST — status.json generated",
+    "2026-03-15 14:22:25 [INFO] AZALYST — 7 active signals in state",
+    "2026-03-15 14:22:25 [INFO] AZALYST — Open positions: ITA, XLE, IBIT, INDA, GLDM, SOXX",
+    "2026-03-15 14:22:25 [INFO] azalyst.classifier — Total articles: 431"
   ]
 }
