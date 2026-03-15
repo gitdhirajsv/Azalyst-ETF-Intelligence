@@ -1,285 +1,189 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-<title>Azalyst Intelligence Terminal</title>
-
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Azalyst ETF Intelligence — Live Monitor</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; background: #f8fafc; color: #0f172a; padding: 24px; }
+  .header { font-size: 16px; font-weight: 600; color: #0f172a; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 10px; }
+  .dot { width: 8px; height: 8px; background: #16a34a; border-radius: 50%; display: inline-block; }
+  .running { font-size: 12px; color: #16a34a; font-weight: 400; }
+  .row { display: grid; gap: 14px; margin-bottom: 14px; }
+  .r2 { grid-template-columns: 1fr 1fr; }
+  .r3 { grid-template-columns: 1fr 1fr 1fr; }
+  .r4 { grid-template-columns: repeat(4, 1fr); }
+  .card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; }
+  .card-title { font-size: 11px; color: #64748b; font-weight: 400; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat-val { font-size: 22px; font-weight: 600; color: #0f172a; }
+  .stat-sub { font-size: 12px; color: #16a34a; margin-top: 4px; }
+  .stat-sub.muted { color: #64748b; }
+  .section-title { font-size: 11px; font-weight: 600; color: #64748b; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .conf-row { margin-bottom: 10px; }
+  .conf-label { display: flex; justify-content: space-between; font-size: 13px; color: #0f172a; margin-bottom: 5px; }
+  .bar-bg { height: 8px; background: #f1f5f9; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; background: #f59e0b; }
+  .threshold-note { font-size: 11px; color: #94a3b8; margin-top: 10px; }
+  .log-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; max-height: 190px; overflow-y: auto; font-family: 'Courier New', monospace; font-size: 11px; color: #475569; line-height: 1.7; }
+  .log-line.info { color: #0369a1; }
+  .log-line.ok { color: #16a34a; }
+  .log-line.warn { color: #b45309; }
+  .msg-box { max-height: 170px; overflow-y: auto; }
+  .msg-item { font-size: 12px; padding: 8px 10px; border-radius: 8px; margin-bottom: 7px; background: #f8fafc; border: 1px solid #e2e8f0; color: #0f172a; line-height: 1.5; }
+  .msg-tag { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 10px; margin-right: 6px; font-weight: 600; }
+  .tag-bull { background: #dcfce7; color: #166534; }
+  .tag-bear { background: #fee2e2; color: #991b1b; }
+  .tag-neu { background: #f1f5f9; color: #475569; }
+  canvas { max-width: 100%; }
 
-body{
-font-family:Arial;
-background:#0f172a;
-color:white;
-padding:30px;
-}
-
-h1{
-margin-bottom:20px;
-}
-
-.section{
-margin-top:40px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-}
-
-.card{
-background:#1e293b;
-padding:20px;
-border-radius:10px;
-}
-
-table{
-width:100%;
-border-collapse:collapse;
-margin-top:20px;
-}
-
-td,th{
-padding:10px;
-border-bottom:1px solid #334155;
-}
-
-.signal{
-background:#1e293b;
-padding:20px;
-border-radius:10px;
-margin-bottom:15px;
-}
-
-.bar{
-height:10px;
-background:#334155;
-border-radius:10px;
-overflow:hidden;
-margin-top:8px;
-}
-
-.fill{
-height:100%;
-background:#f59e0b;
-}
-
-.logs{
-background:#020617;
-padding:20px;
-border-radius:10px;
-font-family:monospace;
-color:#22c55e;
-}
-
+  @media (max-width: 700px) {
+    .r4 { grid-template-columns: 1fr 1fr; }
+    .r2 { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 400px) {
+    .r4 { grid-template-columns: 1fr; }
+  }
 </style>
-
 </head>
-
 <body>
 
+<div class="header">
+  <span>Azalyst ETF Intelligence — Live Monitor</span>
+  <span class="dot"></span>
+  <span class="running">Running</span>
+</div>
 
-<h1>Azalyst Intelligence Terminal</h1>
+<!-- Stat Cards -->
+<div class="row r4">
+  <div class="card">
+    <div class="card-title">Portfolio Value</div>
+    <div class="stat-val">₹11,200</div>
+    <div class="stat-sub">+12.00% overall</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Total Deposited</div>
+    <div class="stat-val">₹10,000</div>
+    <div class="stat-sub muted">Base capital</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Cash Available</div>
+    <div class="stat-val">₹2,000</div>
+    <div class="stat-sub muted">Uninvested</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Market Value</div>
+    <div class="stat-val">₹9,200</div>
+    <div class="stat-sub muted">3 open · 0 closed</div>
+  </div>
+</div>
 
+<!-- Charts Row -->
+<div class="row r2">
+  <div class="card">
+    <div class="section-title">Allocation</div>
+    <canvas id="pieChart" height="200"></canvas>
+  </div>
+  <div class="card">
+    <div class="section-title">Position Confidence</div>
+    <div style="margin-top: 6px;">
+      <div class="conf-row">
+        <div class="conf-label"><span>GLDM</span><span>85.0</span></div>
+        <div class="bar-bg"><div class="bar-fill" style="width:85%"></div></div>
+      </div>
+      <div class="conf-row">
+        <div class="conf-label"><span>XLE</span><span>77.0</span></div>
+        <div class="bar-bg"><div class="bar-fill" style="width:77%"></div></div>
+      </div>
+      <div class="conf-row">
+        <div class="conf-label"><span>ITA</span><span>92.0</span></div>
+        <div class="bar-bg"><div class="bar-fill" style="width:92%"></div></div>
+      </div>
+    </div>
+    <div class="threshold-note">Threshold: 62.0</div>
+  </div>
+</div>
 
-<div class="section">
+<!-- P&L + Article Messages -->
+<div class="row r2">
+  <div class="card">
+    <div class="section-title">Unrealised P&amp;L per Position (INR)</div>
+    <canvas id="barChart" height="180"></canvas>
+  </div>
+  <div class="card">
+    <div class="section-title">Article Updates</div>
+    <div class="msg-box">
+      <div class="msg-item"><span class="msg-tag tag-bull">Bullish</span>Defense sector strong — 143 articles · ITA confidence 92%</div>
+      <div class="msg-item"><span class="msg-tag tag-bull">Bullish</span>Gold demand rising — GLDM confidence 85%, 98 articles</div>
+      <div class="msg-item"><span class="msg-tag tag-neu">Neutral</span>Energy mixed signals — XLE 77% confidence, 67 articles</div>
+      <div class="msg-item"><span class="msg-tag tag-neu">Neutral</span>299 articles fetched from 19 sources this cycle</div>
+      <div class="msg-item"><span class="msg-tag tag-bear">Watch</span>USD/INR at 92.49 — monitor FX impact on valuations</div>
+    </div>
+  </div>
+</div>
 
-<h2>Portfolio</h2>
-
-<div class="grid">
-
+<!-- Log Tail -->
 <div class="card">
-Total Assets
-<br>
-₹10,000
+  <div class="section-title">Recent Log Tail</div>
+  <div class="log-box">
+    <div class="log-line ok">2026-03-14 05:13:26.939 [INFO] AZALYST — EOD report scheduled at 15:30 UTC (8:30 PM IST)</div>
+    <div class="log-line info">2026-03-14 05:13:26.937 [INFO] azalyst.reporter — Cycle digest · 8 active signals, 0 new</div>
+    <div class="log-line ok">2026-03-14 05:13:26.936 [INFO] AZALYST — Cycle complete</div>
+    <div class="log-line info">2026-03-14 05:13:26.935 [INFO] AZALYST — 8 new/updated signals</div>
+    <div class="log-line">2026-03-14 05:13:26.933 [INFO] AZALYST — Total articles after dedup: 299</div>
+    <div class="log-line">2026-03-14 05:13:26.935 [INFO] azalyst.classifier — Classified 299 articles into 10 sectors</div>
+    <div class="log-line">2026-03-14 05:13:26.744 [INFO] AZALYST — Fetched 299 articles</div>
+    <div class="log-line">2026-03-14 05:13:15.846 [INFO] azalyst.fetcher — Fetching 19 news sources concurrently...</div>
+    <div class="log-line info">2026-03-14 05:13:15.846 [INFO] AZALYST — Intelligence cycle starting...</div>
+    <div class="log-line warn">2026-03-14 05:13:15.846 [INFO] AZALYST — Startup: trade seed skipped · 6 positions already</div>
+    <div class="log-line info">2026-03-14 05:13:15.846 [INFO] azalyst.reporter — Startup message dispatched to Discord</div>
+  </div>
 </div>
 
-<div class="card">
-PnL
-<br>
-₹0
-</div>
-
-<div class="card">
-Cash
-<br>
-₹2,270
-</div>
-
-<div class="card">
-Positions
-<br>
-5
-</div>
-
-</div>
-
-</div>
-
-
-<div class="section">
-
-<h2>Open Positions</h2>
-
-<table>
-
-<tr>
-<th>ETF</th>
-<th>Sector</th>
-<th>Units</th>
-<th>Invested</th>
-</tr>
-
-<tr>
-<td>ITA</td>
-<td>Defense</td>
-<td>0.132</td>
-<td>₹2800</td>
-</tr>
-
-<tr>
-<td>XLE</td>
-<td>Energy</td>
-<td>0.296</td>
-<td>₹1584</td>
-</tr>
-
-<tr>
-<td>IBIT</td>
-<td>Crypto</td>
-<td>0.331</td>
-<td>₹1235</td>
-</tr>
-
-<tr>
-<td>INDA</td>
-<td>India Equity</td>
-<td>0.276</td>
-<td>₹1226</td>
-</tr>
-
-<tr>
-<td>XLF</td>
-<td>Financials</td>
-<td>0.195</td>
-<td>₹883</td>
-</tr>
-
-</table>
-
-</div>
-
-
-<div class="section">
-
-<h2>Signals</h2>
-
-<div class="signal">
-
-Crypto & Digital Assets
-
-<br>
-
-Articles: 60
-
-<div class="bar">
-<div class="fill" style="width:71%"></div>
-</div>
-
-Confidence 71%
-
-</div>
-
-
-<div class="signal">
-
-India Equity Markets
-
-<br>
-
-Articles: 67
-
-<div class="bar">
-<div class="fill" style="width:80%"></div>
-</div>
-
-Confidence 80%
-
-</div>
-
-
-<div class="signal">
-
-Defense & Aerospace
-
-<br>
-
-Articles: 143
-
-<div class="bar">
-<div class="fill" style="width:81%"></div>
-</div>
-
-Confidence 81%
-
-</div>
-
-</div>
-
-
-<div class="section">
-
-<h2>Intelligence</h2>
-
-<div class="card">
-
-Supporting Sources
-
-<br><br>
-
-Cointelegraph
-
-<br>
-
-Economic Times
-
-<br>
-
-Crunch Hype
-
-</div>
-
-</div>
-
-
-<div class="section">
-
-<h2>System Monitor</h2>
-
-<div class="logs">
-
-06:54 Fetching sources
-
-<br>
-
-06:54 293 articles processed
-
-<br>
-
-06:54 5 signals detected
-
-<br>
-
-06:54 Portfolio updated
-
-</div>
-
-</div>
-
-
+<script>
+  new Chart(document.getElementById('pieChart'), {
+    type: 'pie',
+    data: {
+      labels: ['ITA', 'GLDM', 'CASH', 'XLE'],
+      datasets: [{
+        data: [41, 12, 18, 29],
+        backgroundColor: ['#3b82f6', '#f59e0b', '#22c55e', '#8b5cf6'],
+        borderWidth: 2,
+        borderColor: '#ffffff'
+      }]
+    },
+    options: {
+      plugins: {
+        legend: {
+          position: 'right',
+          labels: { color: '#475569', font: { size: 12 }, padding: 12, boxWidth: 12 }
+        }
+      },
+      responsive: true
+    }
+  });
+
+  new Chart(document.getElementById('barChart'), {
+    type: 'bar',
+    data: {
+      labels: ['ITA', 'XLE', 'GLDM'],
+      datasets: [{
+        label: 'P&L (INR)',
+        data: [600, 380, 300],
+        backgroundColor: ['#3b82f6', '#3b82f6', '#3b82f6'],
+        borderRadius: 5
+      }]
+    },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { ticks: { color: '#64748b', font: { size: 12 } }, grid: { display: false } },
+        y: { ticks: { color: '#64748b', font: { size: 12 } }, grid: { color: '#f1f5f9' } }
+      },
+      responsive: true
+    }
+  });
+</script>
 </body>
-
 </html>
