@@ -1,259 +1,285 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azalyst ETF Intelligence Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #0f172a;
-            --card-bg: #1e293b;
-            --accent: #3b82f6;
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
-            --success: #10b981;
-            --danger: #ef4444;
-            --warning: #f59e0b;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background: var(--bg); 
-            color: var(--text-main);
-            line-height: 1.5;
-            padding: 2rem;
-        }
 
-        .container { max-width: 1200px; margin: 0 auto; }
-        
-        header { margin-bottom: 2.5rem; border-bottom: 1px solid #334155; padding-bottom: 1.5rem; }
-        h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.025em; }
-        .timestamp { color: var(--text-dim); font-size: 0.875rem; }
+<title>Azalyst Intelligence Terminal</title>
 
-        .metrics-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
-            gap: 1.5rem; 
-            margin-bottom: 2.5rem;
-        }
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-        .card { 
-            background: var(--card-bg); 
-            padding: 1.5rem; 
-            border-radius: 1rem; 
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            border: 1px solid #334155;
-            transition: transform 0.2s;
-        }
-        .card:hover { transform: translateY(-2px); }
+<style>
 
-        .metric-label { font-size: 0.875rem; color: var(--text-dim); margin-bottom: 0.5rem; }
-        .metric-value { font-size: 1.75rem; font-weight: 700; }
-        
-        .section-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem; }
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+padding:30px;
+}
 
-        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th { text-align: left; padding: 1rem; color: var(--text-dim); font-weight: 500; font-size: 0.875rem; border-bottom: 1px solid #334155; }
-        td { padding: 1rem; border-bottom: 1px solid #334155; font-size: 0.9375rem; }
-        
-        .badge { 
-            padding: 0.25rem 0.625rem; 
-            border-radius: 9999px; 
-            font-size: 0.75rem; 
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-        .badge-high { background: rgba(245, 158, 11, 0.1); color: var(--warning); }
-        .badge-critical { background: rgba(239, 68, 68, 0.1); color: var(--danger); }
-        .badge-normal { background: rgba(59, 130, 246, 0.1); color: var(--accent); }
+h1{
+margin-bottom:20px;
+}
 
-        .signal-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 1rem;
-        }
-        
-        .signal-card {
-            background: rgba(30, 41, 59, 0.5);
-            border: 1px solid #334155;
-            border-radius: 0.75rem;
-            padding: 1.25rem;
-        }
-        .signal-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem; }
-        .signal-sector { font-weight: 600; color: var(--accent); }
-        .signal-meta { font-size: 0.8125rem; color: var(--text-dim); }
-    </style>
+.section{
+margin-top:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+td,th{
+padding:10px;
+border-bottom:1px solid #334155;
+}
+
+.signal{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.bar{
+height:10px;
+background:#334155;
+border-radius:10px;
+overflow:hidden;
+margin-top:8px;
+}
+
+.fill{
+height:100%;
+background:#f59e0b;
+}
+
+.logs{
+background:#020617;
+padding:20px;
+border-radius:10px;
+font-family:monospace;
+color:#22c55e;
+}
+
+</style>
+
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <h1>🏦 Azalyst Intelligence Dashboard</h1>
-            <p class="timestamp">Last Updated: 2026-03-15 07:27:54</p>
-        </header>
 
-        <section>
-            <h2 class="section-title">📊 Portfolio Overview</h2>
-            <div class="metrics-grid">
-                <div class="card">
-                    <div class="metric-label">Total Assets</div>
-                    <div class="metric-value">₹10,000.00</div>
-                </div>
-                <div class="card">
-                    <div class="metric-label">Portfolio P&L</div>
-                    <div class="metric-value">₹0.00 (<span style="color: #10b981; font-weight: 600;">+0.00%</span>)</div>
-                </div>
-                <div class="card">
-                    <div class="metric-label">Available Cash</div>
-                    <div class="metric-value">₹2,665.08</div>
-                </div>
-                <div class="card">
-                    <div class="metric-label">Active Positions</div>
-                    <div class="metric-value">5</div>
-                </div>
-            </div>
-        </section>
 
-        <section style="margin-bottom: 3rem;">
-            <h2 class="section-title">💼 Open Positions</h2>
-            <div class="card" style="padding: 0;">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ETF Ticker</th>
-                            <th>Sector</th>
-                            <th>Units</th>
-                            <th>Invested</th>
-                            <th>Current Value</th>
-                            <th>Returns</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            <td><strong>ITA</strong><br><small style="color:var(--text-dim)">iShares U.S. Aerospace & Defense ETF</small></td>
-                            <td>Defense & Aerospace</td>
-                            <td>0.1321</td>
-                            <td>₹2,800.00</td>
-                            <td>₹2,800.00</td>
-                            <td><span style="color: #ef4444; font-weight: 600;">-0.00%</span></td>
-                        </tr>
-                        
-                        <tr>
-                            <td><strong>XLE</strong><br><small style="color:var(--text-dim)">Energy Select Sector SPDR</small></td>
-                            <td>Energy / Oil & Gas + Commodities & Mining</td>
-                            <td>0.2969</td>
-                            <td>₹1,584.00</td>
-                            <td>₹1,584.00</td>
-                            <td><span style="color: #10b981; font-weight: 600;">+0.00%</span></td>
-                        </tr>
-                        
-                        <tr>
-                            <td><strong>IBIT</strong><br><small style="color:var(--text-dim)">iShares Bitcoin Trust ETF</small></td>
-                            <td>Crypto & Digital Assets</td>
-                            <td>0.3310</td>
-                            <td>₹1,235.52</td>
-                            <td>₹1,235.52</td>
-                            <td><span style="color: #10b981; font-weight: 600;">+0.00%</span></td>
-                        </tr>
-                        
-                        <tr>
-                            <td><strong>INDA</strong><br><small style="color:var(--text-dim)">iShares MSCI India ETF</small></td>
-                            <td>India Equity Markets</td>
-                            <td>0.2169</td>
-                            <td>₹963.71</td>
-                            <td>₹963.71</td>
-                            <td><span style="color: #ef4444; font-weight: 600;">-0.00%</span></td>
-                        </tr>
-                        
-                        <tr>
-                            <td><strong>XLF</strong><br><small style="color:var(--text-dim)">Financial Select Sector SPDR</small></td>
-                            <td>Banking & Financial Sector + Gold & Precious Metals</td>
-                            <td>0.1663</td>
-                            <td>₹751.69</td>
-                            <td>₹751.69</td>
-                            <td><span style="color: #ef4444; font-weight: 600;">-0.00%</span></td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-        </section>
+<h1>Azalyst Intelligence Terminal</h1>
 
-        <section>
-            <h2 class="section-title">🔔 Recent Signals</h2>
-            <div class="signal-grid">
-                
-                <div class="signal-card">
-                    <div class="signal-header">
-                        <div class="signal-sector">Banking & Financial Sector + Gold & Precious Metals</div>
-                        <div class="badge badge-high">
-                            75% Conf
-                        </div>
-                    </div>
-                    <div class="signal-meta">
-                        <div>📅 2026-03-15 07:27:51</div>
-                        <div>📰 57 articles analyzed</div>
-                    </div>
-                </div>
-                
-                <div class="signal-card">
-                    <div class="signal-header">
-                        <div class="signal-sector">India Equity Markets</div>
-                        <div class="badge badge-high">
-                            75% Conf
-                        </div>
-                    </div>
-                    <div class="signal-meta">
-                        <div>📅 2026-03-15 07:27:50</div>
-                        <div>📰 67 articles analyzed</div>
-                    </div>
-                </div>
-                
-                <div class="signal-card">
-                    <div class="signal-header">
-                        <div class="signal-sector">Crypto & Digital Assets</div>
-                        <div class="badge badge-normal">
-                            71% Conf
-                        </div>
-                    </div>
-                    <div class="signal-meta">
-                        <div>📅 2026-03-15 07:27:48</div>
-                        <div>📰 60 articles analyzed</div>
-                    </div>
-                </div>
-                
-                <div class="signal-card">
-                    <div class="signal-header">
-                        <div class="signal-sector">Energy / Oil & Gas + Commodities & Mining</div>
-                        <div class="badge badge-normal">
-                            73% Conf
-                        </div>
-                    </div>
-                    <div class="signal-meta">
-                        <div>📅 2026-03-15 07:27:46</div>
-                        <div>📰 77 articles analyzed</div>
-                    </div>
-                </div>
-                
-                <div class="signal-card">
-                    <div class="signal-header">
-                        <div class="signal-sector">Defense & Aerospace</div>
-                        <div class="badge badge-high">
-                            81% Conf
-                        </div>
-                    </div>
-                    <div class="signal-meta">
-                        <div>📅 2026-03-15 07:27:44</div>
-                        <div>📰 138 articles analyzed</div>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-    </div>
+
+<div class="section">
+
+<h2>Portfolio</h2>
+
+<div class="grid">
+
+<div class="card">
+Total Assets
+<br>
+₹10,000
+</div>
+
+<div class="card">
+PnL
+<br>
+₹0
+</div>
+
+<div class="card">
+Cash
+<br>
+₹2,270
+</div>
+
+<div class="card">
+Positions
+<br>
+5
+</div>
+
+</div>
+
+</div>
+
+
+<div class="section">
+
+<h2>Open Positions</h2>
+
+<table>
+
+<tr>
+<th>ETF</th>
+<th>Sector</th>
+<th>Units</th>
+<th>Invested</th>
+</tr>
+
+<tr>
+<td>ITA</td>
+<td>Defense</td>
+<td>0.132</td>
+<td>₹2800</td>
+</tr>
+
+<tr>
+<td>XLE</td>
+<td>Energy</td>
+<td>0.296</td>
+<td>₹1584</td>
+</tr>
+
+<tr>
+<td>IBIT</td>
+<td>Crypto</td>
+<td>0.331</td>
+<td>₹1235</td>
+</tr>
+
+<tr>
+<td>INDA</td>
+<td>India Equity</td>
+<td>0.276</td>
+<td>₹1226</td>
+</tr>
+
+<tr>
+<td>XLF</td>
+<td>Financials</td>
+<td>0.195</td>
+<td>₹883</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<div class="section">
+
+<h2>Signals</h2>
+
+<div class="signal">
+
+Crypto & Digital Assets
+
+<br>
+
+Articles: 60
+
+<div class="bar">
+<div class="fill" style="width:71%"></div>
+</div>
+
+Confidence 71%
+
+</div>
+
+
+<div class="signal">
+
+India Equity Markets
+
+<br>
+
+Articles: 67
+
+<div class="bar">
+<div class="fill" style="width:80%"></div>
+</div>
+
+Confidence 80%
+
+</div>
+
+
+<div class="signal">
+
+Defense & Aerospace
+
+<br>
+
+Articles: 143
+
+<div class="bar">
+<div class="fill" style="width:81%"></div>
+</div>
+
+Confidence 81%
+
+</div>
+
+</div>
+
+
+<div class="section">
+
+<h2>Intelligence</h2>
+
+<div class="card">
+
+Supporting Sources
+
+<br><br>
+
+Cointelegraph
+
+<br>
+
+Economic Times
+
+<br>
+
+Crunch Hype
+
+</div>
+
+</div>
+
+
+<div class="section">
+
+<h2>System Monitor</h2>
+
+<div class="logs">
+
+06:54 Fetching sources
+
+<br>
+
+06:54 293 articles processed
+
+<br>
+
+06:54 5 signals detected
+
+<br>
+
+06:54 Portfolio updated
+
+</div>
+
+</div>
+
+
 </body>
+
 </html>
-    
