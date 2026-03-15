@@ -1,0 +1,46 @@
+{
+  "portfolio_value": 11200,
+  "total_deposited": 10000,
+  "cash": 2000,
+  "market_value": 9200,
+  "change": "+12.00",
+  "closed_trades": 0,
+  "confidence_threshold": 62,
+  "positions": [
+    {"symbol": "ITA"},
+    {"symbol": "XLE"},
+    {"symbol": "GLDM"}
+  ],
+  "allocation": {
+    "labels": ["ITA", "GLDM", "CASH", "XLE"],
+    "values": [41, 12, 18, 29]
+  },
+  "pnl": {
+    "labels": ["ITA", "XLE", "GLDM"],
+    "values": [600, 380, 300]
+  },
+  "confidence": [
+    {"symbol": "GLDM", "score": 85.0},
+    {"symbol": "XLE",  "score": 77.0},
+    {"symbol": "ITA",  "score": 92.0}
+  ],
+  "articles": [
+    {"tag": "tag-bull", "label": "Bullish", "text": "Defense sector strong — 143 articles · ITA confidence 92%"},
+    {"tag": "tag-bull", "label": "Bullish", "text": "Gold demand rising — GLDM confidence 85%, 98 articles"},
+    {"tag": "tag-neu",  "label": "Neutral", "text": "Energy mixed signals — XLE 77% confidence, 67 articles"},
+    {"tag": "tag-neu",  "label": "Neutral", "text": "299 articles fetched from 19 sources this cycle"},
+    {"tag": "tag-bear", "label": "Watch",   "text": "USD/INR at 92.49 — monitor FX impact on valuations"}
+  ],
+  "logs": [
+    "2026-03-14 05:13:26 [INFO] azalyst.reporter — Startup message dispatched to Discord",
+    "2026-03-14 05:13:15 [INFO] AZALYST — Startup: trade seed skipped · 6 positions already",
+    "2026-03-14 05:13:15 [INFO] AZALYST — Intelligence cycle starting...",
+    "2026-03-14 05:13:15 [INFO] azalyst.fetcher — Fetching 19 news sources concurrently...",
+    "2026-03-14 05:13:26 [INFO] AZALYST — Fetched 299 articles",
+    "2026-03-14 05:13:26 [INFO] azalyst.classifier — Classified 299 articles into 10 sectors",
+    "2026-03-14 05:13:26 [INFO] AZALYST — 8 new/updated signals",
+    "2026-03-14 05:13:26 [INFO] AZALYST — Cycle complete",
+    "2026-03-14 05:13:26 [INFO] azalyst.reporter — Cycle digest · 8 active signals, 0 new",
+    "2026-03-14 05:13:26 [INFO] AZALYST — EOD report scheduled at 15:30 UTC (8:30 PM IST)"
+  ]
+}
