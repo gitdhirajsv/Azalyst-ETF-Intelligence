@@ -1,189 +1,259 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Azalyst ETF Intelligence — Live Monitor</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: Arial, sans-serif; background: #f8fafc; color: #0f172a; padding: 24px; }
-  .header { font-size: 16px; font-weight: 600; color: #0f172a; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 10px; }
-  .dot { width: 8px; height: 8px; background: #16a34a; border-radius: 50%; display: inline-block; }
-  .running { font-size: 12px; color: #16a34a; font-weight: 400; }
-  .row { display: grid; gap: 14px; margin-bottom: 14px; }
-  .r2 { grid-template-columns: 1fr 1fr; }
-  .r3 { grid-template-columns: 1fr 1fr 1fr; }
-  .r4 { grid-template-columns: repeat(4, 1fr); }
-  .card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; }
-  .card-title { font-size: 11px; color: #64748b; font-weight: 400; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
-  .stat-val { font-size: 22px; font-weight: 600; color: #0f172a; }
-  .stat-sub { font-size: 12px; color: #16a34a; margin-top: 4px; }
-  .stat-sub.muted { color: #64748b; }
-  .section-title { font-size: 11px; font-weight: 600; color: #64748b; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
-  .conf-row { margin-bottom: 10px; }
-  .conf-label { display: flex; justify-content: space-between; font-size: 13px; color: #0f172a; margin-bottom: 5px; }
-  .bar-bg { height: 8px; background: #f1f5f9; border-radius: 4px; overflow: hidden; }
-  .bar-fill { height: 100%; border-radius: 4px; background: #f59e0b; }
-  .threshold-note { font-size: 11px; color: #94a3b8; margin-top: 10px; }
-  .log-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; max-height: 190px; overflow-y: auto; font-family: 'Courier New', monospace; font-size: 11px; color: #475569; line-height: 1.7; }
-  .log-line.info { color: #0369a1; }
-  .log-line.ok { color: #16a34a; }
-  .log-line.warn { color: #b45309; }
-  .msg-box { max-height: 170px; overflow-y: auto; }
-  .msg-item { font-size: 12px; padding: 8px 10px; border-radius: 8px; margin-bottom: 7px; background: #f8fafc; border: 1px solid #e2e8f0; color: #0f172a; line-height: 1.5; }
-  .msg-tag { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 10px; margin-right: 6px; font-weight: 600; }
-  .tag-bull { background: #dcfce7; color: #166534; }
-  .tag-bear { background: #fee2e2; color: #991b1b; }
-  .tag-neu { background: #f1f5f9; color: #475569; }
-  canvas { max-width: 100%; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azalyst ETF Intelligence Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #3b82f6;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: var(--bg); 
+            color: var(--text-main);
+            line-height: 1.5;
+            padding: 2rem;
+        }
 
-  @media (max-width: 700px) {
-    .r4 { grid-template-columns: 1fr 1fr; }
-    .r2 { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 400px) {
-    .r4 { grid-template-columns: 1fr; }
-  }
-</style>
+        .container { max-width: 1200px; margin: 0 auto; }
+        
+        header { margin-bottom: 2.5rem; border-bottom: 1px solid #334155; padding-bottom: 1.5rem; }
+        h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.025em; }
+        .timestamp { color: var(--text-dim); font-size: 0.875rem; }
+
+        .metrics-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+            gap: 1.5rem; 
+            margin-bottom: 2.5rem;
+        }
+
+        .card { 
+            background: var(--card-bg); 
+            padding: 1.5rem; 
+            border-radius: 1rem; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #334155;
+            transition: transform 0.2s;
+        }
+        .card:hover { transform: translateY(-2px); }
+
+        .metric-label { font-size: 0.875rem; color: var(--text-dim); margin-bottom: 0.5rem; }
+        .metric-value { font-size: 1.75rem; font-weight: 700; }
+        
+        .section-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th { text-align: left; padding: 1rem; color: var(--text-dim); font-weight: 500; font-size: 0.875rem; border-bottom: 1px solid #334155; }
+        td { padding: 1rem; border-bottom: 1px solid #334155; font-size: 0.9375rem; }
+        
+        .badge { 
+            padding: 0.25rem 0.625rem; 
+            border-radius: 9999px; 
+            font-size: 0.75rem; 
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .badge-high { background: rgba(245, 158, 11, 0.1); color: var(--warning); }
+        .badge-critical { background: rgba(239, 68, 68, 0.1); color: var(--danger); }
+        .badge-normal { background: rgba(59, 130, 246, 0.1); color: var(--accent); }
+
+        .signal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1rem;
+        }
+        
+        .signal-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid #334155;
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+        }
+        .signal-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem; }
+        .signal-sector { font-weight: 600; color: var(--accent); }
+        .signal-meta { font-size: 0.8125rem; color: var(--text-dim); }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>🏦 Azalyst Intelligence Dashboard</h1>
+            <p class="timestamp">Last Updated: 2026-03-15 08:00:10</p>
+        </header>
 
-<div class="header">
-  <span>Azalyst ETF Intelligence — Live Monitor</span>
-  <span class="dot"></span>
-  <span class="running">Running</span>
-</div>
+        <section>
+            <h2 class="section-title">📊 Portfolio Overview</h2>
+            <div class="metrics-grid">
+                <div class="card">
+                    <div class="metric-label">Total Assets</div>
+                    <div class="metric-value">₹10,000.00</div>
+                </div>
+                <div class="card">
+                    <div class="metric-label">Portfolio P&L</div>
+                    <div class="metric-value">₹0.00 (<span style="color: #10b981; font-weight: 600;">+0.00%</span>)</div>
+                </div>
+                <div class="card">
+                    <div class="metric-label">Available Cash</div>
+                    <div class="metric-value">₹2,460.08</div>
+                </div>
+                <div class="card">
+                    <div class="metric-label">Active Positions</div>
+                    <div class="metric-value">5</div>
+                </div>
+            </div>
+        </section>
 
-<!-- Stat Cards -->
-<div class="row r4">
-  <div class="card">
-    <div class="card-title">Portfolio Value</div>
-    <div class="stat-val">₹11,200</div>
-    <div class="stat-sub">+12.00% overall</div>
-  </div>
-  <div class="card">
-    <div class="card-title">Total Deposited</div>
-    <div class="stat-val">₹10,000</div>
-    <div class="stat-sub muted">Base capital</div>
-  </div>
-  <div class="card">
-    <div class="card-title">Cash Available</div>
-    <div class="stat-val">₹2,000</div>
-    <div class="stat-sub muted">Uninvested</div>
-  </div>
-  <div class="card">
-    <div class="card-title">Market Value</div>
-    <div class="stat-val">₹9,200</div>
-    <div class="stat-sub muted">3 open · 0 closed</div>
-  </div>
-</div>
+        <section style="margin-bottom: 3rem;">
+            <h2 class="section-title">💼 Open Positions</h2>
+            <div class="card" style="padding: 0;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ETF Ticker</th>
+                            <th>Sector</th>
+                            <th>Units</th>
+                            <th>Invested</th>
+                            <th>Current Value</th>
+                            <th>Returns</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td><strong>ITA</strong><br><small style="color:var(--text-dim)">iShares U.S. Aerospace & Defense ETF</small></td>
+                            <td>Defense & Aerospace</td>
+                            <td>0.1321</td>
+                            <td>₹2,800.00</td>
+                            <td>₹2,800.00</td>
+                            <td><span style="color: #ef4444; font-weight: 600;">-0.00%</span></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><strong>XLE</strong><br><small style="color:var(--text-dim)">Energy Select Sector SPDR</small></td>
+                            <td>Energy / Oil & Gas + Commodities & Mining</td>
+                            <td>0.2969</td>
+                            <td>₹1,584.00</td>
+                            <td>₹1,584.00</td>
+                            <td><span style="color: #10b981; font-weight: 600;">+0.00%</span></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><strong>IBIT</strong><br><small style="color:var(--text-dim)">iShares Bitcoin Trust ETF</small></td>
+                            <td>Crypto & Digital Assets</td>
+                            <td>0.3310</td>
+                            <td>₹1,235.52</td>
+                            <td>₹1,235.52</td>
+                            <td><span style="color: #10b981; font-weight: 600;">+0.00%</span></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><strong>INDA</strong><br><small style="color:var(--text-dim)">iShares MSCI India ETF</small></td>
+                            <td>India Equity Markets</td>
+                            <td>0.2761</td>
+                            <td>₹1,226.53</td>
+                            <td>₹1,226.53</td>
+                            <td><span style="color: #10b981; font-weight: 600;">+0.00%</span></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><strong>XLF</strong><br><small style="color:var(--text-dim)">Financial Select Sector SPDR</small></td>
+                            <td>Banking & Financial Sector + Gold & Precious Metals</td>
+                            <td>0.1535</td>
+                            <td>₹693.87</td>
+                            <td>₹693.87</td>
+                            <td><span style="color: #ef4444; font-weight: 600;">-0.00%</span></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-<!-- Charts Row -->
-<div class="row r2">
-  <div class="card">
-    <div class="section-title">Allocation</div>
-    <canvas id="pieChart" height="200"></canvas>
-  </div>
-  <div class="card">
-    <div class="section-title">Position Confidence</div>
-    <div style="margin-top: 6px;">
-      <div class="conf-row">
-        <div class="conf-label"><span>GLDM</span><span>85.0</span></div>
-        <div class="bar-bg"><div class="bar-fill" style="width:85%"></div></div>
-      </div>
-      <div class="conf-row">
-        <div class="conf-label"><span>XLE</span><span>77.0</span></div>
-        <div class="bar-bg"><div class="bar-fill" style="width:77%"></div></div>
-      </div>
-      <div class="conf-row">
-        <div class="conf-label"><span>ITA</span><span>92.0</span></div>
-        <div class="bar-bg"><div class="bar-fill" style="width:92%"></div></div>
-      </div>
+        <section>
+            <h2 class="section-title">🔔 Recent Signals</h2>
+            <div class="signal-grid">
+                
+                <div class="signal-card">
+                    <div class="signal-header">
+                        <div class="signal-sector">Banking & Financial Sector + Gold & Precious Metals</div>
+                        <div class="badge badge-high">
+                            75% Conf
+                        </div>
+                    </div>
+                    <div class="signal-meta">
+                        <div>📅 2026-03-15 08:00:04</div>
+                        <div>📰 56 articles analyzed</div>
+                    </div>
+                </div>
+                
+                <div class="signal-card">
+                    <div class="signal-header">
+                        <div class="signal-sector">India Equity Markets</div>
+                        <div class="badge badge-high">
+                            80% Conf
+                        </div>
+                    </div>
+                    <div class="signal-meta">
+                        <div>📅 2026-03-15 08:00:01</div>
+                        <div>📰 68 articles analyzed</div>
+                    </div>
+                </div>
+                
+                <div class="signal-card">
+                    <div class="signal-header">
+                        <div class="signal-sector">Crypto & Digital Assets</div>
+                        <div class="badge badge-normal">
+                            71% Conf
+                        </div>
+                    </div>
+                    <div class="signal-meta">
+                        <div>📅 2026-03-15 07:59:59</div>
+                        <div>📰 60 articles analyzed</div>
+                    </div>
+                </div>
+                
+                <div class="signal-card">
+                    <div class="signal-header">
+                        <div class="signal-sector">Energy / Oil & Gas + Commodities & Mining</div>
+                        <div class="badge badge-normal">
+                            73% Conf
+                        </div>
+                    </div>
+                    <div class="signal-meta">
+                        <div>📅 2026-03-15 07:59:58</div>
+                        <div>📰 77 articles analyzed</div>
+                    </div>
+                </div>
+                
+                <div class="signal-card">
+                    <div class="signal-header">
+                        <div class="signal-sector">Defense & Aerospace</div>
+                        <div class="badge badge-high">
+                            81% Conf
+                        </div>
+                    </div>
+                    <div class="signal-meta">
+                        <div>📅 2026-03-15 07:59:55</div>
+                        <div>📰 138 articles analyzed</div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
     </div>
-    <div class="threshold-note">Threshold: 62.0</div>
-  </div>
-</div>
-
-<!-- P&L + Article Messages -->
-<div class="row r2">
-  <div class="card">
-    <div class="section-title">Unrealised P&amp;L per Position (INR)</div>
-    <canvas id="barChart" height="180"></canvas>
-  </div>
-  <div class="card">
-    <div class="section-title">Article Updates</div>
-    <div class="msg-box">
-      <div class="msg-item"><span class="msg-tag tag-bull">Bullish</span>Defense sector strong — 143 articles · ITA confidence 92%</div>
-      <div class="msg-item"><span class="msg-tag tag-bull">Bullish</span>Gold demand rising — GLDM confidence 85%, 98 articles</div>
-      <div class="msg-item"><span class="msg-tag tag-neu">Neutral</span>Energy mixed signals — XLE 77% confidence, 67 articles</div>
-      <div class="msg-item"><span class="msg-tag tag-neu">Neutral</span>299 articles fetched from 19 sources this cycle</div>
-      <div class="msg-item"><span class="msg-tag tag-bear">Watch</span>USD/INR at 92.49 — monitor FX impact on valuations</div>
-    </div>
-  </div>
-</div>
-
-<!-- Log Tail -->
-<div class="card">
-  <div class="section-title">Recent Log Tail</div>
-  <div class="log-box">
-    <div class="log-line ok">2026-03-14 05:13:26.939 [INFO] AZALYST — EOD report scheduled at 15:30 UTC (8:30 PM IST)</div>
-    <div class="log-line info">2026-03-14 05:13:26.937 [INFO] azalyst.reporter — Cycle digest · 8 active signals, 0 new</div>
-    <div class="log-line ok">2026-03-14 05:13:26.936 [INFO] AZALYST — Cycle complete</div>
-    <div class="log-line info">2026-03-14 05:13:26.935 [INFO] AZALYST — 8 new/updated signals</div>
-    <div class="log-line">2026-03-14 05:13:26.933 [INFO] AZALYST — Total articles after dedup: 299</div>
-    <div class="log-line">2026-03-14 05:13:26.935 [INFO] azalyst.classifier — Classified 299 articles into 10 sectors</div>
-    <div class="log-line">2026-03-14 05:13:26.744 [INFO] AZALYST — Fetched 299 articles</div>
-    <div class="log-line">2026-03-14 05:13:15.846 [INFO] azalyst.fetcher — Fetching 19 news sources concurrently...</div>
-    <div class="log-line info">2026-03-14 05:13:15.846 [INFO] AZALYST — Intelligence cycle starting...</div>
-    <div class="log-line warn">2026-03-14 05:13:15.846 [INFO] AZALYST — Startup: trade seed skipped · 6 positions already</div>
-    <div class="log-line info">2026-03-14 05:13:15.846 [INFO] azalyst.reporter — Startup message dispatched to Discord</div>
-  </div>
-</div>
-
-<script>
-  new Chart(document.getElementById('pieChart'), {
-    type: 'pie',
-    data: {
-      labels: ['ITA', 'GLDM', 'CASH', 'XLE'],
-      datasets: [{
-        data: [41, 12, 18, 29],
-        backgroundColor: ['#3b82f6', '#f59e0b', '#22c55e', '#8b5cf6'],
-        borderWidth: 2,
-        borderColor: '#ffffff'
-      }]
-    },
-    options: {
-      plugins: {
-        legend: {
-          position: 'right',
-          labels: { color: '#475569', font: { size: 12 }, padding: 12, boxWidth: 12 }
-        }
-      },
-      responsive: true
-    }
-  });
-
-  new Chart(document.getElementById('barChart'), {
-    type: 'bar',
-    data: {
-      labels: ['ITA', 'XLE', 'GLDM'],
-      datasets: [{
-        label: 'P&L (INR)',
-        data: [600, 380, 300],
-        backgroundColor: ['#3b82f6', '#3b82f6', '#3b82f6'],
-        borderRadius: 5
-      }]
-    },
-    options: {
-      plugins: { legend: { display: false } },
-      scales: {
-        x: { ticks: { color: '#64748b', font: { size: 12 } }, grid: { display: false } },
-        y: { ticks: { color: '#64748b', font: { size: 12 } }, grid: { color: '#f1f5f9' } }
-      },
-      responsive: true
-    }
-  });
-</script>
 </body>
 </html>
+    
