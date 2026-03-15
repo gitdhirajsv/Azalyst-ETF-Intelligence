@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Azalyst ETF Intelligence — Live Monitor</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; background: #f8fafc; color: #0f172a; padding: 24px; }
+
+  .header {
+    font-size: 16px; font-weight: 600; color: #0f172a;
+    margin-bottom: 16px; padding-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .dot { width: 8px; height: 8px; background: #16a34a; border-radius: 50%; display: inline-block; }
+  .running { font-size: 12px; color: #16a34a; font-weight: 400; }
+  .last-updated { font-size: 11px; color: #94a3b8; margin-left: auto; }
+
+  .row { display: grid; gap: 14px; margin-bottom: 14px; }
+  .r2 { grid-template-columns: 1fr 1fr; }
+  .r4 { grid-template-columns: repeat(4, 1fr); }
+
+  .card {
+    background: #ffffff; border: 1px solid #e2e8f0;
+    border-radius: 12px; padding: 16px;
+  }
+  .card-title {
+    font-size: 11px; color: #64748b; font-weight: 400;
+    margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .stat-val { font-size: 22px; font-weight: 600; color: #0f172a; }
+  .stat-sub { font-size: 12px; margin-top: 4px; }
+  .green { color: #16a34a; }
+  .muted { color: #64748b; }
+
+  .section-title {
+    font-size: 11px; font-weight: 600; color: #64748b;
+    margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;
+  }
+
+  .conf-row { margin-bottom: 10px; }
+  .conf-label { display: flex; justify-content: space-between; font-size: 13px; color: #0f172a; margin-bottom: 5px; }
+  .bar-bg { height: 8px; background: #f1f5f9; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; background: #f59e0b; transition: width 0.4s ease; }
+  .threshold-note { font-size: 11px; color: #94a3b8; margin-top: 10px; }
+
+  .log-box {
+    background: #f8fafc; border: 1px solid #e2e8f0;
+    border-radius: 8px; padding: 12px;
+    max-height: 190px; overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 11px; color: #475569; line-height: 1.7;
+  }
+  .log-line.info { color: #0369a1; }
+  .log-line.ok   { color: #16a34a; }
+  .log-line.warn { color: #b45309; }
+
+  .msg-box { max-height: 180px; overflow-y: auto; }
+  .msg-item {
+    font-size: 12px; padding: 8px 10px;
+    border-radius: 8px; margin-bottom: 7px;
+    background: #f8fafc; border: 1px solid #e2e8f0;
+    color: #0f172a; line-height: 1.5;
+  }
+  .msg-tag {
+    display: inline-block; font-size: 10px;
+    padding: 2px 8px; border-radius: 10px;
+    margin-right: 6px; font-weight: 600;
+  }
+  .tag-bull { background: #dcfce7; color: #166534; }
+  .tag-bear { background: #fee2e2; color: #991b1b; }
+  .tag-neu  { background: #f1f5f9; color: #475569; }
+
+  canvas { max-width: 100%; }
+
+  @media (max-width: 700px) {
+    .r4 { grid-template-columns: 1fr 1fr; }
+    .r2 { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 400px) {
+    .r4 { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <span>Azalyst ETF Intelligence — Live Monitor</span>
+  <span class="dot"></span>
+  <span class="running">Running</span>
+  <span class="last-updated" id="lastUpdated">–</span>
+</div>
+
+<!-- Stat Cards -->
+<div class="row r4">
+  <div class="card">
+    <div class="card-title">Portfolio Value</div>
+    <div class="stat-val" id="portfolioValue">–</div>
+    <div class="stat-sub green" id="portfolioChange">–</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Total Deposited</div>
+    <div class="stat-val" id="totalDeposited">–</div>
+    <div class="stat-sub muted">Base capital</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Cash Available</div>
+    <div class="stat-val" id="cashAvailable">–</div>
+    <div class="stat-sub muted">Uninvested</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Market Value</div>
+    <div class="stat-val" id="marketValue">–</div>
+    <div class="stat-sub muted" id="positionsSummary">–</div>
+  </div>
+</div>
+
+<!-- Charts -->
+<div class="row r2">
+  <div class="card">
+    <div class="section-title">Allocation</div>
+    <canvas id="pieChart" height="200"></canvas>
+  </div>
+  <div class="card">
+    <div class="section-title">Position Confidence</div>
+    <div id="confidenceBars" style="margin-top:6px;"></div>
+    <div class="threshold-note" id="thresholdNote">Threshold: –</div>
+  </div>
+</div>
+
+<!-- P&L + Article Updates -->
+<div class="row r2">
+  <div class="card">
+    <div class="section-title">Unrealised P&amp;L per Position (INR)</div>
+    <canvas id="barChart" height="180"></canvas>
+  </div>
+  <div class="card">
+    <div class="section-title">Article Updates</div>
+    <div class="msg-box" id="articleUpdates"></div>
+  </div>
+</div>
+
+<!-- Log Tail -->
+<div class="card">
+  <div class="section-title">Recent Log Tail</div>
+  <div class="log-box" id="logTail"></div>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
