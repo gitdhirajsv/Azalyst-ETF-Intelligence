@@ -3,106 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Azalyst ETF Intelligence Dashboard</title>
+<title>Azalyst Intelligence Dashboard</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
 
 :root{
 --bg:#0f172a;
---card-bg:#1e293b;
---accent:#3b82f6;
---text-main:#f8fafc;
+--card:#1e293b;
+--border:#334155;
+--text:#f8fafc;
 --text-dim:#94a3b8;
+--accent:#3b82f6;
 --success:#10b981;
---danger:#ef4444;
 --warning:#f59e0b;
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
-font-family:'Inter',sans-serif;
+font-family:Inter,sans-serif;
 background:var(--bg);
-color:var(--text-main);
-line-height:1.5;
+color:var(--text);
 padding:2rem;
 }
 
-.container{max-width:1300px;margin:auto}
+.container{
+max-width:1200px;
+margin:auto;
+}
 
 header{
 margin-bottom:2rem;
-border-bottom:1px solid #334155;
+border-bottom:1px solid var(--border);
 padding-bottom:1rem;
 }
 
 h1{
 font-size:2rem;
 font-weight:700;
+letter-spacing:-0.02em;
 }
 
 .timestamp{
 color:var(--text-dim);
-font-size:.9rem;
+margin-top:6px;
+font-size:0.9rem;
+}
+
+.section-title{
+margin:2rem 0 1rem;
+font-size:1.2rem;
+font-weight:600;
+letter-spacing:0.02em;
+color:#e2e8f0;
 }
 
 .metrics-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:1.5rem;
-margin-bottom:2.5rem;
+gap:1rem;
 }
 
 .card{
-background:var(--card-bg);
-padding:1.5rem;
-border-radius:1rem;
-border:1px solid #334155;
+background:var(--card);
+border-radius:14px;
+padding:1.2rem;
+border:1px solid var(--border);
 }
 
 .metric-label{
-font-size:.85rem;
 color:var(--text-dim);
-margin-bottom:.3rem;
+font-size:0.85rem;
 }
 
 .metric-value{
-font-size:1.8rem;
+font-size:1.6rem;
 font-weight:700;
+margin-top:4px;
 }
 
-.section-title{
-font-size:1.2rem;
-font-weight:600;
-margin-bottom:1rem;
-}
-
-.analytics-grid{
+.chart-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:1.5rem;
-margin-bottom:2.5rem;
+margin-top:1rem;
 }
 
-canvas{
-width:100%!important;
-height:300px!important;
-}
-
-.logs{
-font-family:monospace;
-font-size:.8rem;
-background:#020617;
+.chart-card{
+background:var(--card);
 padding:1rem;
-border-radius:.6rem;
-height:200px;
-overflow:auto;
-color:#cbd5f5;
+border-radius:14px;
+border:1px solid var(--border);
+}
+
+.chart-card img{
+width:100%;
+height:auto;
+border-radius:10px;
 }
 
 table{
@@ -113,40 +116,71 @@ border-collapse:collapse;
 th{
 text-align:left;
 padding:1rem;
+border-bottom:1px solid var(--border);
 color:var(--text-dim);
-font-size:.85rem;
-border-bottom:1px solid #334155;
+font-weight:500;
 }
 
 td{
 padding:1rem;
-border-bottom:1px solid #334155;
-font-size:.9rem;
+border-bottom:1px solid var(--border);
 }
 
 .signal-grid{
 display:grid;
-grid-template-columns:repeat(auto-fill,minmax(350px,1fr));
+grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
 gap:1rem;
 }
 
 .signal-card{
-background:rgba(30,41,59,.6);
-border:1px solid #334155;
+background:var(--card);
+border-radius:12px;
 padding:1rem;
-border-radius:.6rem;
+border:1px solid var(--border);
 }
 
-.badge{
-font-size:.75rem;
+.signal-sector{
 font-weight:600;
-padding:.2rem .6rem;
-border-radius:999px;
+margin-bottom:6px;
 }
 
-.badge-high{background:#f59e0b20;color:#f59e0b}
-.badge-normal{background:#3b82f620;color:#3b82f6}
-.badge-critical{background:#ef444420;color:#ef4444}
+.signal-bar{
+height:10px;
+border-radius:6px;
+background:#233047;
+overflow:hidden;
+}
+
+.signal-fill{
+height:100%;
+background:linear-gradient(90deg,#f59e0b,#f97316);
+}
+
+.logs{
+background:#020617;
+padding:1rem;
+border-radius:12px;
+font-family:monospace;
+font-size:0.9rem;
+white-space:pre-line;
+}
+
+footer{
+margin-top:2rem;
+text-align:center;
+color:var(--text-dim);
+font-size:0.85rem;
+}
+
+/* Mobile Fix */
+
+@media(max-width:768px){
+
+.chart-grid{
+grid-template-columns:1fr;
+}
+
+}
 
 </style>
 </head>
@@ -156,14 +190,13 @@ border-radius:999px;
 <div class="container">
 
 <header>
-<h1>🏦 Azalyst Intelligence Dashboard</h1>
-<p class="timestamp">Last Updated: 2026-03-15 06:04:49</p>
+<h1>Azalyst Intelligence Dashboard</h1>
+<div class="timestamp">Last Updated: 2026-03-15 06:04</div>
 </header>
-
 
 <section>
 
-<h2 class="section-title">📊 Portfolio Overview</h2>
+<div class="section-title">Portfolio Overview</div>
 
 <div class="metrics-grid">
 
@@ -174,12 +207,12 @@ border-radius:999px;
 
 <div class="card">
 <div class="metric-label">Portfolio P&L</div>
-<div class="metric-value" style="color:var(--success)">+0.00%</div>
+<div class="metric-value">₹0 (+0%)</div>
 </div>
 
 <div class="card">
 <div class="metric-label">Available Cash</div>
-<div class="metric-value">₹2270</div>
+<div class="metric-value">₹2,270</div>
 </div>
 
 <div class="card">
@@ -191,33 +224,27 @@ border-radius:999px;
 
 </section>
 
-
-
 <section>
 
-<h2 class="section-title">📈 Portfolio Analytics</h2>
+<div class="chart-grid">
 
-<div class="analytics-grid">
-
-<div class="card">
+<div class="chart-card">
 <h3>Allocation</h3>
-<canvas id="allocationChart"></canvas>
+<img src="data/allocation.png">
 </div>
 
-<div class="card">
+<div class="chart-card">
 <h3>Position Confidence</h3>
-<canvas id="confidenceChart"></canvas>
+<img src="data/confidence.png">
 </div>
 
 </div>
 
 </section>
 
-
-
 <section>
 
-<h2 class="section-title">💼 Open Positions</h2>
+<div class="section-title">Open Positions</div>
 
 <div class="card">
 
@@ -229,38 +256,44 @@ border-radius:999px;
 <th>Sector</th>
 <th>Units</th>
 <th>Invested</th>
-<th>Value</th>
-<th>Return</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td><b>ITA</b></td>
+<td>ITA</td>
 <td>Defense</td>
 <td>0.13</td>
 <td>₹2800</td>
-<td>₹2800</td>
-<td style="color:#ef4444">0%</td>
 </tr>
 
 <tr>
-<td><b>XLE</b></td>
+<td>XLE</td>
 <td>Energy</td>
 <td>0.29</td>
 <td>₹1584</td>
-<td>₹1584</td>
-<td style="color:#10b981">0%</td>
 </tr>
 
 <tr>
-<td><b>IBIT</b></td>
+<td>IBIT</td>
 <td>Crypto</td>
 <td>0.33</td>
 <td>₹1235</td>
-<td>₹1235</td>
-<td style="color:#10b981">0%</td>
+</tr>
+
+<tr>
+<td>INDA</td>
+<td>India Equity</td>
+<td>0.27</td>
+<td>₹1226</td>
+</tr>
+
+<tr>
+<td>XLF</td>
+<td>Financial</td>
+<td>0.19</td>
+<td>₹883</td>
 </tr>
 
 </tbody>
@@ -271,78 +304,59 @@ border-radius:999px;
 
 </section>
 
-
-
 <section>
 
-<h2 class="section-title">🔔 Recent Signals</h2>
+<div class="section-title">Signal Monitor</div>
 
 <div class="signal-grid">
 
 <div class="signal-card">
-<b>Defense & Aerospace</b>
-<div class="badge badge-high">81% confidence</div>
+<div class="signal-sector">Defense & Aerospace</div>
+<div>81%</div>
+<div class="signal-bar"><div class="signal-fill" style="width:81%"></div></div>
 </div>
 
 <div class="signal-card">
-<b>India Equity Markets</b>
-<div class="badge badge-high">80%</div>
+<div class="signal-sector">India Equity Markets</div>
+<div>80%</div>
+<div class="signal-bar"><div class="signal-fill" style="width:80%"></div></div>
 </div>
 
 <div class="signal-card">
-<b>Crypto & Digital Assets</b>
-<div class="badge badge-normal">71%</div>
+<div class="signal-sector">Crypto & Digital Assets</div>
+<div>71%</div>
+<div class="signal-bar"><div class="signal-fill" style="width:71%"></div></div>
 </div>
 
 </div>
 
 </section>
 
+<section>
 
-
-<section style="margin-top:2rem">
-
-<h2 class="section-title">🖥 System Logs</h2>
+<div class="section-title">System Logs</div>
 
 <div class="card">
-
 <div class="logs">
 
-2026-03-15 06:04 Starting intelligence cycle  
-2026-03-15 06:04 Fetching news sources  
-2026-03-15 06:04 293 articles processed  
-2026-03-15 06:04 5 active signals detected  
-2026-03-15 06:04 Portfolio updated  
+2026-03-15 06:04 Starting intelligence cycle
+Fetching news sources
+293 articles processed
+5 active signals detected
+Portfolio updated
 
 </div>
-
 </div>
 
 </section>
 
+<footer>
+
+Azalyst Quant Research System
+
+</footer>
+
 </div>
-
-
-
-<script>
-
-new Chart(document.getElementById('allocationChart'),{
-type:'pie',
-data:{
-labels:['ITA','XLE','IBIT','INDA','Cash'],
-datasets:[{data:[28,16,12,12,22]}]
-}
-});
-
-new Chart(document.getElementById('confidenceChart'),{
-type:'bar',
-data:{
-labels:['Defense','Energy','Crypto','India'],
-datasets:[{data:[81,73,71,80]}]
-}
-});
-
-</script>
 
 </body>
 </html>
