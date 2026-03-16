@@ -6,103 +6,121 @@
 <title>Azalyst ETF Intelligence — Live Monitor</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: Arial, sans-serif; background: #f8fafc; color: #0f172a; padding: 24px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #f8fafc; color: #0f172a; padding: 24px; }
 
-  .header {
-    font-size: 16px; font-weight: 600; color: #0f172a;
-    margin-bottom: 20px; padding-bottom: 12px;
-    border-bottom: 1px solid #e2e8f0;
-    display: flex; align-items: center; gap: 10px;
-  }
-  .dot { width: 8px; height: 8px; background: #16a34a; border-radius: 50%; display: inline-block; }
-  .running { font-size: 12px; color: #16a34a; font-weight: 400; }
-  .last-updated { font-size: 11px; color: #94a3b8; margin-left: auto; }
+.header {
+  font-size: 16px; font-weight: 600; color: #0f172a;
+  margin-bottom: 20px; padding-bottom: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex; align-items: center; gap: 10px;
+}
+.dot { width: 8px; height: 8px; background: #16a34a; border-radius: 50%; display: inline-block; }
+.running { font-size: 12px; color: #16a34a; font-weight: 400; }
+.last-updated { font-size: 11px; color: #94a3b8; margin-left: auto; }
 
-  .section-header {
-    display: flex; align-items: center; gap: 12px;
-    margin-bottom: 14px;
-  }
-  .section-badge {
-    font-size: 12px; font-weight: 700; letter-spacing: 0.4px;
-    padding: 4px 12px; border-radius: 20px;
-    background: #dbeafe; color: #1d4ed8;
-  }
-  .portfolio-badge {
-    background: #dcfce7; color: #166534;
-  }
-  .section-desc {
-    font-size: 12px; color: #94a3b8;
-  }
-  .section-divider {
-    border: none; border-top: 1px solid #e2e8f0;
-    margin: 28px 0 20px;
-  }
+.section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.section-badge {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.4px;
+  padding: 4px 12px; border-radius: 20px;
+  background: #dbeafe; color: #1d4ed8;
+}
+.portfolio-badge  { background: #dcfce7; color: #166534; }
+.trading-badge    { background: #fef9c3; color: #854d0e; }
+.track-badge      { background: #f3e8ff; color: #6b21a8; }
+.section-desc     { font-size: 12px; color: #94a3b8; }
+.section-divider  { border: none; border-top: 1px solid #e2e8f0; margin: 28px 0 20px; }
 
-  .row { display: grid; gap: 14px; margin-bottom: 14px; }
-  .r2 { grid-template-columns: 1fr 1fr; }
-  .r4 { grid-template-columns: repeat(4, 1fr); }
+.row { display: grid; gap: 14px; margin-bottom: 14px; }
+.r2  { grid-template-columns: 1fr 1fr; }
+.r3  { grid-template-columns: repeat(3, 1fr); }
+.r4  { grid-template-columns: repeat(4, 1fr); }
+.r5  { grid-template-columns: repeat(5, 1fr); }
 
-  .card {
-    background: #ffffff; border: 1px solid #e2e8f0;
-    border-radius: 12px; padding: 16px;
-  }
-  .card-title {
-    font-size: 11px; color: #64748b; font-weight: 400;
-    margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;
-  }
-  .stat-val { font-size: 22px; font-weight: 600; color: #0f172a; }
-  .stat-sub { font-size: 12px; margin-top: 4px; }
-  .green { color: #16a34a; }
-  .muted { color: #64748b; }
+.card {
+  background: #fff; border: 1px solid #e2e8f0;
+  border-radius: 12px; padding: 16px;
+}
+.card-title { font-size: 11px; color: #64748b; font-weight: 400; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+.stat-val   { font-size: 22px; font-weight: 600; color: #0f172a; }
+.stat-sub   { font-size: 12px; margin-top: 4px; }
+.green  { color: #16a34a; }
+.red    { color: #dc2626; }
+.muted  { color: #64748b; }
 
-  .section-title {
-    font-size: 11px; font-weight: 600; color: #64748b;
-    margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;
-  }
+.section-title { font-size: 11px; font-weight: 600; color: #64748b; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
 
-  .conf-row { margin-bottom: 10px; }
-  .conf-label { display: flex; justify-content: space-between; font-size: 13px; color: #0f172a; margin-bottom: 5px; }
-  .bar-bg { height: 8px; background: #f1f5f9; border-radius: 4px; overflow: hidden; }
-  .bar-fill { height: 100%; border-radius: 4px; background: #f59e0b; transition: width 0.4s ease; }
-  .threshold-note { font-size: 11px; color: #94a3b8; margin-top: 10px; }
+/* Confidence bars */
+.conf-row { margin-bottom: 10px; }
+.conf-label { display: flex; justify-content: space-between; font-size: 13px; color: #0f172a; margin-bottom: 5px; }
+.bar-bg   { height: 8px; background: #f1f5f9; border-radius: 4px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 4px; background: #f59e0b; transition: width 0.4s ease; }
+.threshold-note { font-size: 11px; color: #94a3b8; margin-top: 10px; }
 
-  .log-box {
-    background: #f8fafc; border: 1px solid #e2e8f0;
-    border-radius: 8px; padding: 12px;
-    max-height: 190px; overflow-y: auto;
-    font-family: 'Courier New', monospace;
-    font-size: 11px; color: #475569; line-height: 1.7;
-  }
-  .log-line.info { color: #0369a1; }
-  .log-line.ok   { color: #16a34a; }
-  .log-line.warn { color: #b45309; }
+/* Positions table */
+.tbl-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th { text-align: left; padding: 8px 10px; color: #64748b; font-weight: 600; border-bottom: 1px solid #e2e8f0; white-space: nowrap; }
+td { padding: 8px 10px; border-bottom: 1px solid #f1f5f9; color: #0f172a; white-space: nowrap; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #f8fafc; }
+.badge {
+  display: inline-block; font-size: 10px; padding: 2px 7px;
+  border-radius: 10px; font-weight: 600;
+}
+.badge-crit   { background: #fee2e2; color: #991b1b; }
+.badge-high   { background: #fef3c7; color: #92400e; }
+.badge-med    { background: #dbeafe; color: #1e40af; }
+.badge-low    { background: #f1f5f9; color: #475569; }
+.badge-win    { background: #dcfce7; color: #166534; }
+.badge-loss   { background: #fee2e2; color: #991b1b; }
+.no-data { font-size: 13px; color: #94a3b8; padding: 16px 0; text-align: center; }
 
-  .msg-box { max-height: 200px; overflow-y: auto; }
-  .msg-item {
-    font-size: 12px; padding: 8px 10px;
-    border-radius: 8px; margin-bottom: 7px;
-    background: #f8fafc; border: 1px solid #e2e8f0;
-    color: #0f172a; line-height: 1.5;
-  }
-  .msg-tag {
-    display: inline-block; font-size: 10px;
-    padding: 2px 8px; border-radius: 10px;
-    margin-right: 6px; font-weight: 600;
-  }
-  .tag-bull { background: #dcfce7; color: #166534; }
-  .tag-bear { background: #fee2e2; color: #991b1b; }
-  .tag-neu  { background: #f1f5f9; color: #475569; }
+/* Track record */
+.track-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-bottom: 14px; }
+.track-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px; text-align: center; }
+.track-val  { font-size: 24px; font-weight: 700; color: #0f172a; }
+.track-lbl  { font-size: 11px; color: #64748b; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.4px; }
 
-  canvas { max-width: 100%; }
+/* Log */
+.log-box {
+  background: #f8fafc; border: 1px solid #e2e8f0;
+  border-radius: 8px; padding: 12px;
+  max-height: 190px; overflow-y: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 11px; color: #475569; line-height: 1.7;
+}
+.log-line.info { color: #0369a1; }
+.log-line.ok   { color: #16a34a; }
+.log-line.warn { color: #b45309; }
 
-  @media (max-width: 700px) {
-    .r4 { grid-template-columns: 1fr 1fr; }
-    .r2 { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 400px) {
-    .r4 { grid-template-columns: 1fr; }
-  }
+/* Articles */
+.msg-box { max-height: 200px; overflow-y: auto; }
+.msg-item {
+  font-size: 12px; padding: 8px 10px;
+  border-radius: 8px; margin-bottom: 7px;
+  background: #f8fafc; border: 1px solid #e2e8f0;
+  color: #0f172a; line-height: 1.5;
+}
+.msg-tag { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 10px; margin-right: 6px; font-weight: 600; }
+.tag-bull { background: #dcfce7; color: #166534; }
+.tag-bear { background: #fee2e2; color: #991b1b; }
+.tag-neu  { background: #f1f5f9; color: #475569; }
+
+canvas { max-width: 100%; }
+
+@media (max-width: 900px) {
+  .r5 { grid-template-columns: repeat(3,1fr); }
+  .track-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 700px) {
+  .r4,.r3 { grid-template-columns: 1fr 1fr; }
+  .r2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 400px) {
+  .r4,.r3,.r5 { grid-template-columns: 1fr; }
+  .track-grid { grid-template-columns: 1fr 1fr; }
+}
 </style>
 </head>
 <body>
@@ -114,7 +132,7 @@
   <span class="last-updated" id="lastUpdated">–</span>
 </div>
 
-<!-- ── SECTION 1: MARKET INTELLIGENCE ──────────────────────────────────── -->
+<!-- ── SECTION 1: MARKET INTELLIGENCE ─────────────────────────────────────── -->
 <div class="section-header">
   <span class="section-badge">Market Intelligence</span>
   <span class="section-desc">Live NLP signals from global news · updated every 30 min</span>
@@ -133,17 +151,17 @@
 
 <hr class="section-divider">
 
-<!-- ── SECTION 2: PAPER PORTFOLIO ──────────────────────────────────────── -->
+<!-- ── SECTION 2: PORTFOLIO OVERVIEW ──────────────────────────────────────── -->
 <div class="section-header">
   <span class="section-badge portfolio-badge">Azalyst Paper Portfolio</span>
   <span class="section-desc">Simulated ETF trades based on NLP signal suggestions</span>
 </div>
 
-<div class="row r4" style="margin-bottom:14px;">
+<div class="row r5" style="margin-bottom:14px;">
   <div class="card">
     <div class="card-title">Portfolio Value</div>
     <div class="stat-val" id="portfolioValue">–</div>
-    <div class="stat-sub green" id="portfolioChange">–</div>
+    <div class="stat-sub" id="portfolioChange">–</div>
   </div>
   <div class="card">
     <div class="card-title">Total Deposited</div>
@@ -151,13 +169,18 @@
     <div class="stat-sub muted">Base capital</div>
   </div>
   <div class="card">
-    <div class="card-title">Cash Available</div>
-    <div class="stat-val" id="cashAvailable">–</div>
-    <div class="stat-sub muted">Uninvested</div>
+    <div class="card-title">Unrealised P&amp;L</div>
+    <div class="stat-val" id="unrealisedPnl">–</div>
+    <div class="stat-sub muted">Open positions</div>
   </div>
   <div class="card">
-    <div class="card-title">Market Value</div>
-    <div class="stat-val" id="marketValue">–</div>
+    <div class="card-title">Realised P&amp;L</div>
+    <div class="stat-val" id="realisedPnl">–</div>
+    <div class="stat-sub muted">Closed trades</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Cash Available</div>
+    <div class="stat-val" id="cashAvailable">–</div>
     <div class="stat-sub muted" id="positionsSummary">–</div>
   </div>
 </div>
@@ -173,6 +196,83 @@
   </div>
 </div>
 
+<hr class="section-divider">
+
+<!-- ── SECTION 3: OPEN POSITIONS ──────────────────────────────────────────── -->
+<div class="section-header">
+  <span class="section-badge trading-badge">Open Positions</span>
+  <span class="section-desc">Live paper trades with mark-to-market P&amp;L</span>
+</div>
+
+<div class="card" style="margin-bottom:14px;">
+  <div class="tbl-wrap">
+    <table id="positionsTable">
+      <thead>
+        <tr>
+          <th>ID</th><th>Ticker</th><th>ETF Name</th><th>Sector</th>
+          <th>Entry (INR)</th><th>Current (INR)</th><th>Units</th>
+          <th>Invested</th><th>P&amp;L</th><th>Return</th>
+          <th>Confidence</th><th>Severity</th>
+        </tr>
+      </thead>
+      <tbody id="positionsTbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ── SECTION 4: TRACK RECORD ────────────────────────────────────────────── -->
+<div class="section-header">
+  <span class="section-badge track-badge">Track Record</span>
+  <span class="section-desc">Cumulative performance across all closed trades</span>
+</div>
+
+<div class="track-grid" id="trackGrid">
+  <div class="track-card"><div class="track-val" id="trTotalTrades">–</div><div class="track-lbl">Total Trades</div></div>
+  <div class="track-card"><div class="track-val green" id="trWinners">–</div><div class="track-lbl">Winners</div></div>
+  <div class="track-card"><div class="track-val red" id="trLosers">–</div><div class="track-lbl">Losers</div></div>
+  <div class="track-card"><div class="track-val" id="trWinRate">–</div><div class="track-lbl">Win Rate</div></div>
+</div>
+
+<div class="row r2" style="margin-bottom:14px;">
+  <div class="card">
+    <div class="card-title">Best Trade</div>
+    <div class="stat-val green" id="trBest">–</div>
+    <div class="stat-sub muted" id="trBestTicker">–</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Worst Trade</div>
+    <div class="stat-val red" id="trWorst">–</div>
+    <div class="stat-sub muted" id="trWorstTicker">–</div>
+  </div>
+</div>
+
+<!-- ── SECTION 5: CLOSED TRADES ───────────────────────────────────────────── -->
+<div class="section-header" style="margin-top:28px;">
+  <span class="section-badge track-badge">Closed Trades</span>
+  <span class="section-desc">Full history of completed paper trades</span>
+</div>
+
+<div class="card" style="margin-bottom:28px;">
+  <div class="tbl-wrap">
+    <table id="closedTable">
+      <thead>
+        <tr>
+          <th>ID</th><th>Ticker</th><th>ETF Name</th>
+          <th>Entry (INR)</th><th>Exit (INR)</th>
+          <th>P&amp;L</th><th>Return</th>
+          <th>Days Held</th><th>Exit Reason</th><th>Result</th>
+        </tr>
+      </thead>
+      <tbody id="closedTbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ── SECTION 6: LOG ─────────────────────────────────────────────────────── -->
 <div class="card">
   <div class="section-title">Recent Log Tail</div>
   <div class="log-box" id="logTail"></div>
