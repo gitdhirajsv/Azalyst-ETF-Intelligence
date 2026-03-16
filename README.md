@@ -73,7 +73,7 @@ Every 30 minutes, the system automatically:
 
 The dashboard shows current portfolio value, open positions with live P&L, closed trade history, win rate, and overall return vs capital deposited.
 
-**The goal:** After 6 months, does this system outperform a simple Nifty 50 index fund? If yes, the signal model has demonstrated real edge and real capital deployment becomes worth considering. If not, the experiment saved real money and identified what needs improvement — which is exactly what paper trading is for.
+**The goal:** After 6 months, does this system outperform a simple Nifty 50 index fund? If yes, the signal model has demonstrated real edge and real capital deployment becomes worth considering. If not, the experiment saved real money and identified what needs improvement  which is exactly what paper trading is for.
 
 ---
 
