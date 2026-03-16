@@ -136,13 +136,20 @@ def build_articles(state):
     return sorted(out, key=lambda x: {"tag-bull":0,"tag-neu":1,"tag-bear":2}[x["tag"]])
 
 def build_logs(pf, state):
-    now  = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+    from datetime import timezone as _tz
+    now = datetime.datetime.now(_tz.utc).strftime("%Y-%m-%d %H:%M:%S")
     logs = [f"{now} [INFO] AZALYST — status.json generated"]
-    if state: logs.append(f"{now} [INFO] {len(state)} active signals")
-    pos = pf.get("open_positions",[])
-    if pos: logs.append(f"{now} [INFO] Open: {', '.join(p['ticker'] for p in pos)}")
-    closed = pf.get("closed_trades",[])
-    if closed: logs.append(f"{now} [INFO] Closed trades: {len(closed)}")
+    if state:
+        logs.append(f"{now} [INFO] AZALYST — {len(state)} active signals in state")
+    pos = pf.get("open_positions", [])
+    if pos:
+        logs.append(f"{now} [INFO] AZALYST — Open positions: {', '.join(p['ticker'] for p in pos)}")
+    closed = pf.get("closed_trades", [])
+    if closed:
+        logs.append(f"{now} [INFO] AZALYST — Closed trades: {len(closed)}")
+    total_articles = sum(s.get("article_count", 0) for s in state.values()) if state else 0
+    if total_articles:
+        logs.append(f"{now} [INFO] azalyst.classifier — Total articles: {total_articles}")
     return logs
 
 def generate_status():
