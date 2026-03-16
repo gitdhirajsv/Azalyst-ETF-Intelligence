@@ -49,7 +49,7 @@ def calc_metrics(portfolio):
     total_inv    = sum(p["invested_inr"] for p in positions)
     market_val   = sum(p["current_price"] * p["units"] for p in positions)
     cash         = portfolio.get("cash_inr", 0)
-    deposited    = portfolio.get("total_deposited_inr", total_inv + cash)
+    deposited    = portfolio.get("total_deposited", portfolio.get("total_deposited_inr", total_inv + cash))
     total_assets = market_val + cash
     overall_pct  = ((total_assets - deposited) / deposited * 100) if deposited > 0 else 0
     sign         = "+" if overall_pct >= 0 else ""
