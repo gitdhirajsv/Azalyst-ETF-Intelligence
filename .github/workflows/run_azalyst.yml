@@ -40,6 +40,7 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
-          git add azalyst_portfolio.json azalyst_state.json dashboard.html
+          git add -f azalyst_portfolio.json azalyst_state.json || true
+          git add -f dashboard.html || true
           git diff --staged --quiet || git commit -m "chore: update portfolio and state [skip ci]"
           git push origin main
