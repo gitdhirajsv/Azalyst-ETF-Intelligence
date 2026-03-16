@@ -16,31 +16,26 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: "pip"
-
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-
       - name: Run Azalyst engine (single cycle)
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: python azalyst.py --once
-
       - name: Generate dashboard
         run: python generate_dashboard.py
-
       - name: Commit results
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
-          git add -f azalyst_portfolio.json azalyst_state.json || true
+          git add -f azalyst_portfolio.json azalyst_state.json status.json || true
           git add -f dashboard.html || true
           git diff --staged --quiet || git commit -m "chore: update portfolio and state [skip ci]"
           git push origin main
