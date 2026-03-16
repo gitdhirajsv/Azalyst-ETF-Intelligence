@@ -215,8 +215,13 @@ def main():
         reporter, state, portfolio, port_reporter, cfg
     )
 
-    # --once: single cycle mode for GitHub Actions — exit cleanly after one run
+    # --once: single cycle mode for GitHub Actions
+    # Run MTM to update live prices, check exits, then send EOD report to Discord
     if args.once:
+        log.info("Single-cycle mode — running mark-to-market...")
+        run_mtm_cycle(portfolio, port_reporter)
+        log.info("Single-cycle mode — sending EOD report...")
+        run_eod_report(portfolio, port_reporter)
         log.info("Single-cycle mode complete. Exiting.")
         return
 
