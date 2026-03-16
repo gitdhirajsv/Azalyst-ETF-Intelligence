@@ -64,6 +64,6 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
-          git add status.json
+          git add status.json azalyst_portfolio.json azalyst_state.json docs/
           git commit -m "Update dashboard data" || echo "No changes to commit"
           git push origin main
