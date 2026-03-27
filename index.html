@@ -233,7 +233,7 @@ canvas { max-width: 100%; }
 <div class="row r2" style="margin-bottom:14px;">
   <div class="card">
     <div class="card-title">Best Trade</div>
-    <div class="stat-val green" id="trBest">–</div>
+    <div class="stat-val" id="trBest">–</div>
     <div class="stat-sub muted" id="trBestTicker">–</div>
   </div>
   <div class="card">
@@ -398,18 +398,24 @@ function updateTrackRecord(d) {
   wrEl.textContent = (tr.win_rate || 0) + '%';
   wrEl.className = 'track-val ' + ((tr.win_rate||0) >= 50 ? 'green' : 'red');
 
+  const bestEl = document.getElementById('trBest');
   if (tr.best) {
-    document.getElementById('trBest').textContent       = tr.best.pnl_pct_str;
+    bestEl.textContent = tr.best.pnl_pct_str;
+    bestEl.className = 'stat-val ' + pnlClass(parseFloat(tr.best.pnl_pct_str));
     document.getElementById('trBestTicker').textContent = tr.best.ticker;
   } else {
-    document.getElementById('trBest').textContent       = '–';
+    bestEl.textContent = '–';
+    bestEl.className = 'stat-val';
     document.getElementById('trBestTicker').textContent = 'No closed trades yet';
   }
+  const worstEl = document.getElementById('trWorst');
   if (tr.worst) {
-    document.getElementById('trWorst').textContent       = tr.worst.pnl_pct_str;
+    worstEl.textContent = tr.worst.pnl_pct_str;
+    worstEl.className = 'stat-val ' + pnlClass(parseFloat(tr.worst.pnl_pct_str));
     document.getElementById('trWorstTicker').textContent = tr.worst.ticker;
   } else {
-    document.getElementById('trWorst').textContent       = '–';
+    worstEl.textContent = '–';
+    worstEl.className = 'stat-val';
     document.getElementById('trWorstTicker').textContent = 'No closed trades yet';
   }
 }
