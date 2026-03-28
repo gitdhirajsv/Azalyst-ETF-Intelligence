@@ -2,6 +2,10 @@ name: Run Azalyst
 on:
   push:
     branches: [ beta ]
+    paths-ignore:
+      - "azalyst_portfolio.json"
+      - "azalyst_state.json"
+      - "status.json"
   schedule:
     - cron: "*/30 * * * *"
   workflow_dispatch:
@@ -48,12 +52,20 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
+          tmpdir="$(mktemp -d)"
+          cp index.html "$tmpdir/index.html"
+          cp dashboard.js "$tmpdir/dashboard.js"
+          cp status.json "$tmpdir/status.json"
+
           # Build a clean gh-pages tree with only dashboard files
           git fetch origin gh-pages 2>/dev/null || true
           git checkout --orphan gh-pages-deploy
           git reset --hard
-          cp index.html .
-          cp status.json .
-          git add index.html status.json
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp "$tmpdir/index.html" .
+          cp "$tmpdir/dashboard.js" .
+          cp "$tmpdir/status.json" .
+          touch .nojekyll
+          git add index.html dashboard.js status.json .nojekyll
           git commit -m "deploy: dashboard update $(date -u '+%Y-%m-%d %H:%M UTC')"
           git push origin gh-pages-deploy:gh-pages --force

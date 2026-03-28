@@ -17,6 +17,17 @@ from typing import Dict, List
 log = logging.getLogger("azalyst.state")
 
 
+def _json_safe(value):
+    """Recursively convert runtime objects into JSON-safe values."""
+    if isinstance(value, datetime):
+        return value.isoformat()
+    if isinstance(value, dict):
+        return {k: _json_safe(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [_json_safe(v) for v in value]
+    return value
+
+
 class SignalStateManager:
     """
     Tracks sent signals with timestamps and confidence scores.
@@ -65,10 +76,7 @@ class SignalStateManager:
         try:
             serializable = {}
             for sector_id, record in self._state.items():
-                rec_copy = dict(record)
-                if isinstance(rec_copy.get("sent_at"), datetime):
-                    rec_copy["sent_at"] = rec_copy["sent_at"].isoformat()
-                serializable[sector_id] = rec_copy
+                serializable[sector_id] = _json_safe(record)
 
             with open(self.state_file, "w", encoding="utf-8") as f:
                 json.dump(serializable, f, indent=2)
@@ -135,10 +143,20 @@ class SignalStateManager:
         """Record that a signal was sent, for future deduplication."""
         sector_key = self._sector_key(signal)
         self._state[sector_key] = {
-            "sent_at":     datetime.now(timezone.utc),
-            "confidence":  signal.get("confidence", 0),
+            "sent_at": datetime.now(timezone.utc),
+            "confidence": signal.get("confidence", 0),
             "sector_label": signal.get("sector_label", ""),
             "article_count": signal.get("article_count", 0),
+            "severity": signal.get("severity", ""),
+            "regions": signal.get("regions", [])[:6],
+            "sources": signal.get("sources", [])[:6],
+            "top_headlines": signal.get("top_headlines", [])[:5],
+            "latest_ts": signal.get("latest_ts"),
+            "confidence_breakdown": signal.get("confidence_breakdown", {}),
+            "etf_recommendations": signal.get(
+                "etf_recommendations",
+                {"india": [], "global": []},
+            ),
         }
         self._save()
 

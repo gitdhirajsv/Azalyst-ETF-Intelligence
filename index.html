@@ -3,669 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Azalyst ETF Intelligence — Live Monitor</title>
+<title>Azalyst ETF Intelligence - Live Monitor</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#0d1117;color:#e6edf3;min-height:100vh;}
-
-/* ── TOPBAR ─────────────────────────────── */
-.topbar{background:#161b22;border-bottom:1px solid #30363d;padding:14px 28px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:100;}
-.topbar-logo{font-size:15px;font-weight:700;color:#58a6ff;letter-spacing:.3px;}
-.topbar-sub{font-size:11px;color:#8b949e;}
-.live-dot{width:8px;height:8px;background:#3fb950;border-radius:50%;margin-left:auto;position:relative;}
-.live-dot::after{content:'';position:absolute;top:0;left:0;width:8px;height:8px;background:#3fb950;border-radius:50%;animation:ping 2s infinite;}
-@keyframes ping{0%{transform:scale(1);opacity:1}100%{transform:scale(2.5);opacity:0}}
-.topbar-time{font-size:11px;color:#8b949e;}
-
-.page{max-width:1400px;margin:0 auto;padding:24px 20px;}
-
-/* ── SECTION LABELS ─────────────────────── */
-.section{margin-bottom:32px;}
-.sec-head{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
-.sec-pill{font-size:11px;font-weight:700;letter-spacing:.5px;padding:3px 11px;border-radius:20px;text-transform:uppercase;}
-.pill-market{background:#0d3b66;color:#58a6ff;}
-.pill-risk{background:#3b1f1f;color:#f85149;}
-.pill-port{background:#0d3b2b;color:#3fb950;}
-.pill-trade{background:#3b2e0d;color:#e3b341;}
-.pill-track{background:#2d1f3b;color:#bc8cff;}
-.sec-sub{font-size:12px;color:#8b949e;}
-.sec-rule{border:none;border-top:1px solid #21262d;margin:0 0 24px;}
-
-/* ── GRID HELPERS ───────────────────────── */
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
-.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
-.gfill{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;}
-
-/* ── CARDS ──────────────────────────────── */
-.card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;}
-.card-title{font-size:10px;color:#8b949e;font-weight:600;text-transform:uppercase;letter-spacing:.7px;margin-bottom:10px;}
-.stat-val{font-size:22px;font-weight:700;color:#e6edf3;line-height:1.1;}
-.stat-sub{font-size:12px;margin-top:5px;color:#8b949e;}
-.green{color:#3fb950;}
-.red{color:#f85149;}
-.amber{color:#e3b341;}
-.muted{color:#8b949e;}
-.blue{color:#58a6ff;}
-
-/* ── MARKET SNAPSHOT ────────────────────── */
-.mkt-tile{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:12px 14px;}
-.mkt-label{font-size:10px;color:#8b949e;font-weight:700;letter-spacing:.5px;text-transform:uppercase;}
-.mkt-price{font-size:17px;font-weight:700;color:#e6edf3;margin:4px 0 3px;}
-.mkt-chg{font-size:12px;font-weight:600;}
-
-/* ── RISK CONTROL PANEL ─────────────────── */
-.risk-panel{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:18px;margin-bottom:14px;}
-.risk-panel-title{font-size:11px;font-weight:700;color:#f85149;text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px;}
-.risk-row{display:flex;flex-wrap:wrap;gap:14px;}
-.risk-item{flex:1;min-width:130px;background:#0d1117;border:1px solid #21262d;border-radius:8px;padding:12px;}
-.risk-label{font-size:10px;color:#8b949e;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;}
-.risk-val{font-size:18px;font-weight:700;}
-.risk-sub{font-size:10px;color:#8b949e;margin-top:3px;}
-
-/* VIX regime pill */
-.regime-pill{display:inline-block;font-size:11px;font-weight:700;padding:3px 12px;border-radius:12px;}
-.regime-NORMAL{background:#0d3b2b;color:#3fb950;}
-.regime-ELEVATED{background:#3b2e0d;color:#e3b341;}
-.regime-HIGH{background:#3b1f1f;color:#f85149;}
-.regime-EXTREME{background:#6e1717;color:#ff7b72;}
-.regime-Unknown{background:#21262d;color:#8b949e;}
-
-/* CB pill */
-.cb-on{display:inline-block;font-size:11px;font-weight:700;padding:3px 12px;border-radius:12px;background:#6e1717;color:#ff7b72;}
-.cb-off{display:inline-block;font-size:11px;font-weight:700;padding:3px 12px;border-radius:12px;background:#0d3b2b;color:#3fb950;}
-
-/* Sector bars */
-.sec-conc-row{margin-bottom:10px;}
-.sec-conc-label{display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px;}
-.sec-bar-bg{height:6px;background:#21262d;border-radius:3px;overflow:hidden;}
-.sec-bar-fill{height:100%;border-radius:3px;background:#58a6ff;transition:width .4s;}
-.sec-bar-fill.at-cap{background:#f85149;}
-
-/* ── CONF BARS ───────────────────────────── */
-.conf-row{margin-bottom:10px;}
-.conf-label{display:flex;justify-content:space-between;font-size:13px;color:#e6edf3;margin-bottom:4px;}
-.bar-bg{height:7px;background:#21262d;border-radius:4px;overflow:hidden;}
-.bar-fill{height:100%;border-radius:4px;background:#e3b341;transition:width .4s;}
-.threshold-note{font-size:11px;color:#8b949e;margin-top:10px;}
-
-/* ── TABLE ───────────────────────────────── */
-.tbl-wrap{overflow-x:auto;}
-table{width:100%;border-collapse:collapse;font-size:12px;}
-th{text-align:left;padding:9px 10px;color:#8b949e;font-weight:600;border-bottom:1px solid #21262d;white-space:nowrap;font-size:11px;text-transform:uppercase;letter-spacing:.4px;}
-td{padding:9px 10px;border-bottom:1px solid #161b22;color:#e6edf3;white-space:nowrap;}
-tr:last-child td{border-bottom:none;}
-tr:hover td{background:#1f242c;}
-.badge{display:inline-block;font-size:10px;padding:2px 7px;border-radius:8px;font-weight:600;}
-.badge-crit{background:#6e1717;color:#ff7b72;}
-.badge-high{background:#3b2e0d;color:#e3b341;}
-.badge-med{background:#0d3b66;color:#58a6ff;}
-.badge-low{background:#21262d;color:#8b949e;}
-.badge-win{background:#0d3b2b;color:#3fb950;}
-.badge-loss{background:#3b1f1f;color:#f85149;}
-.badge-half{background:#2d1f3b;color:#bc8cff;font-size:9px;}
-.no-data{font-size:13px;color:#8b949e;padding:20px 0;text-align:center;}
-
-.trail-safe{color:#3fb950;}
-.trail-warn{color:#e3b341;}
-.trail-danger{color:#f85149;}
-
-/* ── TRACK RECORD ───────────────────────── */
-.track-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px;}
-.track-card{background:#0d1117;border:1px solid #21262d;border-radius:10px;padding:14px;text-align:center;}
-.track-val{font-size:24px;font-weight:700;color:#e6edf3;}
-.track-lbl{font-size:10px;color:#8b949e;margin-top:4px;text-transform:uppercase;letter-spacing:.4px;}
-
-.kpi-row{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:14px;}
-.kpi-item{flex:1;min-width:110px;background:#0d1117;border:1px solid #21262d;border-radius:8px;padding:12px;text-align:center;}
-.kpi-val{font-size:20px;font-weight:700;}
-.kpi-lbl{font-size:10px;color:#8b949e;margin-top:3px;text-transform:uppercase;letter-spacing:.4px;}
-
-/* ── MESSAGES ────────────────────────────── */
-.msg-box{max-height:200px;overflow-y:auto;}
-.msg-item{font-size:12px;padding:8px 10px;border-radius:8px;margin-bottom:7px;background:#0d1117;border:1px solid #21262d;color:#e6edf3;line-height:1.5;}
-.msg-tag{display:inline-block;font-size:10px;padding:2px 8px;border-radius:10px;margin-right:6px;font-weight:600;}
-.tag-bull{background:#0d3b2b;color:#3fb950;}
-.tag-bear{background:#3b1f1f;color:#f85149;}
-.tag-neu{background:#21262d;color:#8b949e;}
-
-/* ── LOG BOX ─────────────────────────────── */
-.log-box{background:#0d1117;border:1px solid #21262d;border-radius:8px;padding:12px;max-height:180px;overflow-y:auto;font-family:'JetBrains Mono','Courier New',monospace;font-size:11px;color:#8b949e;line-height:1.7;}
-.log-ok{color:#3fb950;}
-.log-info{color:#58a6ff;}
-.log-warn{color:#e3b341;}
-
-/* ── RESPONSIVE ─────────────────────────── */
-@media(max-width:1000px){.g5{grid-template-columns:repeat(3,1fr);}.track-grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:700px){.g4,.g3{grid-template-columns:1fr 1fr;}.g2{grid-template-columns:1fr;}.risk-row .risk-item{min-width:45%;}}
-@media(max-width:440px){.g4,.g3,.g5{grid-template-columns:1fr;}.track-grid{grid-template-columns:1fr 1fr;}}
-canvas{max-width:100%;}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,sans-serif;background:#f8fafc;color:#0f172a;padding:24px}
+.header{font-size:16px;font-weight:600;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid #e2e8f0;display:flex;align-items:center;gap:10px}.dot{width:8px;height:8px;background:#16a34a;border-radius:50%}.running{font-size:12px;color:#16a34a}.last-updated{font-size:11px;color:#94a3b8;margin-left:auto}
+.section-header{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}.badge-head{font-size:12px;font-weight:700;letter-spacing:.4px;padding:4px 12px;border-radius:20px;background:#dbeafe;color:#1d4ed8}.badge-port{background:#dcfce7;color:#166534}.badge-risk{background:#fee2e2;color:#b91c1c}.badge-trade{background:#fef9c3;color:#854d0e}.badge-track{background:#f3e8ff;color:#6b21a8}.desc{font-size:12px;color:#94a3b8}.divider{border:none;border-top:1px solid #e2e8f0;margin:28px 0 20px}
+.grid2,.grid5,.risk-grid,.track-grid,.kpi-row{display:grid;gap:14px;margin-bottom:14px}.grid2{grid-template-columns:1fr 1fr}.grid5{grid-template-columns:repeat(5,1fr)}.risk-grid{grid-template-columns:repeat(4,1fr)}.track-grid{grid-template-columns:repeat(4,1fr)}.kpi-row{grid-template-columns:repeat(5,1fr)}.auto-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}.signal-stack{display:flex;flex-direction:column;gap:12px}
+.card,.market-tile,.risk-card,.signal-card,.kpi-item,.track-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px}.card-title,.section-title,.risk-label,.market-label,.signal-box-title{font-size:11px;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.4px}.section-title,.card-title{margin-bottom:10px}.stat-val,.risk-value,.market-price,.kpi-val,.track-val{font-size:22px;font-weight:700}.stat-sub,.risk-sub,.market-meta{font-size:12px;margin-top:4px;color:#94a3b8}.green{color:#16a34a}.red{color:#dc2626}.amber{color:#b45309}.muted{color:#64748b}
+.market-price{margin:6px 0 4px}.market-chg{font-size:12px;font-weight:700}.pill,.tag,.msg-tag,.badge{display:inline-block;font-size:10px;padding:3px 8px;border-radius:999px;font-weight:700}.pill-normal,.pill-ok,.tag-green,.tag-bull,.badge-win{background:#dcfce7;color:#166534}.pill-elevated,.tag-gold,.badge-high{background:#fef3c7;color:#92400e}.pill-high{background:#fed7aa;color:#9a3412}.pill-extreme,.pill-bad,.tag-red,.tag-bear,.badge-crit,.badge-loss{background:#fee2e2;color:#991b1b}.pill-unknown,.tag-neu,.badge-low{background:#f1f5f9;color:#475569}.tag-blue,.badge-med{background:#dbeafe;color:#1e40af}.tag-purple,.badge-half{background:#f3e8ff;color:#6b21a8}
+.bar-bg,.conf-bar{height:8px;background:#f1f5f9;border-radius:999px;overflow:hidden}.bar-fill,.conf-fill{height:100%;border-radius:999px;background:#3b82f6}.bar-fill.at-cap{background:#ef4444}.conf-fill{background:#f59e0b}.sector-row,.conf-row{margin-bottom:10px}.sector-head,.conf-label,.breakdown-row{display:flex;justify-content:space-between;gap:10px;font-size:12px;margin-bottom:5px}.breakdown-row{margin-bottom:4px}
+.signal-head{display:flex;justify-content:space-between;gap:10px;margin-bottom:10px}.signal-title{font-size:15px;font-weight:700}.signal-meta,.signal-headline,.signal-box-body,.msg-item{font-size:12px;line-height:1.5}.signal-tags{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.signal-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.signal-box{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:10px}
+.msg-box,.log-box{max-height:220px;overflow-y:auto}.msg-item{padding:8px 10px;border-radius:8px;margin-bottom:7px;background:#f8fafc;border:1px solid #e2e8f0}.msg-tag{margin-right:6px}.threshold-note{font-size:11px;color:#94a3b8;margin-top:10px}
+.tbl-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:12px}th{text-align:left;padding:8px 10px;color:#64748b;font-weight:600;border-bottom:1px solid #e2e8f0;white-space:nowrap}td{padding:8px 10px;border-bottom:1px solid #f1f5f9;white-space:nowrap}tr:last-child td{border-bottom:none}tr:hover td{background:#f8fafc}.no-data{text-align:center;color:#94a3b8;padding:16px 0}
+.track-card,.kpi-item{text-align:center}.track-lbl,.kpi-lbl{font-size:11px;color:#64748b;margin-top:4px;text-transform:uppercase;letter-spacing:.4px}.log-box{background:#f8fafc;border:1px solid #e2e8f0;padding:12px;font-family:"Courier New",monospace;font-size:11px;line-height:1.7}.log-info{color:#0369a1}.log-ok{color:#16a34a}.log-warn{color:#b45309}canvas{max-width:100%}
+@media(max-width:1100px){.grid5,.risk-grid,.kpi-row{grid-template-columns:repeat(3,1fr)}}@media(max-width:900px){.grid2,.signal-grid,.track-grid{grid-template-columns:1fr}.risk-grid,.grid5{grid-template-columns:repeat(2,1fr)}}@media(max-width:700px){.grid5,.risk-grid,.track-grid,.kpi-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+<div class="header"><span>Azalyst ETF Intelligence - Live Monitor</span><span class="dot"></span><span class="running">Running</span><span class="last-updated" id="lastUpdated">-</span></div>
 
-<!-- ── TOPBAR ──────────────────────────────────────────────────────────────── -->
-<div class="topbar">
-  <span class="topbar-logo">&#x26A1; Azalyst ETF Intelligence</span>
-  <span class="topbar-sub">Paper Fund &middot; NLP-Driven Allocation</span>
-  <span class="live-dot" style="margin-left:auto;"></span>
-  <span class="topbar-time" id="lastUpdated">&ndash;</span>
+<div class="section-header"><span class="badge-head">Global Markets</span><span class="desc">Live indices, commodities, crypto, and volatility context for the ETF book</span></div>
+<div class="auto-grid" id="marketSnapshot"></div>
+
+<hr class="divider">
+
+<div class="section-header"><span class="badge-head badge-risk">Risk Controls</span><span class="desc">Drawdown guardrails, trailing stops, sector limits, and volatility regime</span></div>
+<div class="risk-grid">
+  <div class="risk-card"><div class="risk-label">VIX Regime</div><div id="vixPill">-</div><div class="risk-sub" id="vixValue">-</div></div>
+  <div class="risk-card"><div class="risk-label">Circuit Breaker</div><div id="cbPill">-</div><div class="risk-sub">Halts new entries at -12% from peak NAV</div></div>
+  <div class="risk-card"><div class="risk-label">Drawdown From Peak</div><div class="risk-value" id="ddNow">-</div><div class="risk-sub">Current decline from high-water mark</div></div>
+  <div class="risk-card"><div class="risk-label">Max Drawdown</div><div class="risk-value" id="maxDd">-</div><div class="risk-sub">Worst drawdown recorded so far</div></div>
+  <div class="risk-card"><div class="risk-label">Trailing Stop</div><div class="risk-value amber">-8%</div><div class="risk-sub">Activates after +5% from entry</div></div>
+  <div class="risk-card"><div class="risk-label">Partial Profit</div><div class="risk-value green">+15%</div><div class="risk-sub">Books 50% and trails the rest</div></div>
+  <div class="risk-card"><div class="risk-label">Sector Cap</div><div class="risk-value amber">30%</div><div class="risk-sub">Maximum sleeve concentration</div></div>
+  <div class="risk-card"><div class="risk-label">Hard Stop</div><div class="risk-value red">-10%</div><div class="risk-sub">Base protection before trail takeover</div></div>
+</div>
+<div class="card"><div class="section-title">Sector Concentration</div><div id="sectorConc"></div></div>
+
+<hr class="divider">
+
+<div class="section-header"><span class="badge-head">Market Intelligence</span><span class="desc">Macro signal detail pushed closer to the Discord briefing style</span></div>
+<div class="grid2">
+  <div class="card"><div class="section-title">Macro Briefing</div><div class="signal-stack" id="signalCards"></div></div>
+  <div class="card"><div class="section-title">Sector Confidence Scores</div><div id="confidenceBars"></div><div class="threshold-note" id="thresholdNote">Signal threshold: -</div></div>
+</div>
+<div class="card"><div class="section-title">Recent Signal Updates</div><div class="msg-box" id="articleUpdates"></div></div>
+
+<hr class="divider">
+
+<div class="section-header"><span class="badge-head badge-port">Azalyst Paper Portfolio</span><span class="desc">INR-based simulated ETF book with global exposure and risk overlays</span></div>
+<div class="grid5">
+  <div class="card"><div class="card-title">Portfolio Value</div><div class="stat-val" id="portfolioValue">-</div><div class="stat-sub" id="portfolioChange">-</div></div>
+  <div class="card"><div class="card-title">Total Deposited</div><div class="stat-val" id="totalDeposited">-</div><div class="stat-sub muted">Monthly INR capital base</div></div>
+  <div class="card"><div class="card-title">Unrealised P&amp;L</div><div class="stat-val" id="unrealisedPnl">-</div><div class="stat-sub muted">Open position mark-to-market</div></div>
+  <div class="card"><div class="card-title">Realised P&amp;L</div><div class="stat-val" id="realisedPnl">-</div><div class="stat-sub muted" id="realisedSub">Closed trades and partial exits</div></div>
+  <div class="card"><div class="card-title">Cash Available</div><div class="stat-val" id="cashAvailable">-</div><div class="stat-sub muted" id="positionsSummary">-</div></div>
+</div>
+<div class="grid2">
+  <div class="card"><div class="section-title">Allocation</div><canvas id="pieChart" height="200"></canvas></div>
+  <div class="card"><div class="section-title">Unrealised P&amp;L per Position (INR)</div><canvas id="barChart" height="200"></canvas></div>
 </div>
 
-<div class="page">
+<hr class="divider">
 
-<!-- ═══════════════ MARKET SNAPSHOT ════════════════════════════════════════ -->
-<div class="section">
-  <div class="sec-head">
-    <span class="sec-pill pill-market">Global Markets</span>
-    <span class="sec-sub">Live indices, commodities &amp; crypto &middot; refreshed every 30 min</span>
-  </div>
-  <div class="gfill" id="marketSnapshot"></div>
-</div>
-<hr class="sec-rule">
+<div class="section-header"><span class="badge-head badge-trade">Open Positions</span><span class="desc">Live paper trades with peak tracking, trail distance, and conviction context</span></div>
+<div class="card"><div class="tbl-wrap"><table><thead><tr><th>ID</th><th>Ticker</th><th>ETF Name</th><th>Sector</th><th>Entry (INR)</th><th>Current (INR)</th><th>Peak (INR)</th><th>Return</th><th>P&amp;L</th><th>Trail Stop</th><th>Dist to Stop</th><th>Days</th><th>Confidence</th><th>Severity</th><th>Status</th></tr></thead><tbody id="positionsTbody"></tbody></table></div></div>
 
-<!-- ═══════════════ RISK CONTROL PANEL ════════════════════════════════════ -->
-<div class="section">
-  <div class="sec-head">
-    <span class="sec-pill pill-risk">Risk Controls</span>
-    <span class="sec-sub">Institutional overlays: VIX regime sizing &middot; trailing stop &middot; circuit breaker &middot; sector cap</span>
-  </div>
+<hr class="divider">
 
-  <div class="risk-panel">
-    <div class="risk-panel-title">&#9733; Portfolio Risk Dashboard &mdash; BlackRock / Vanguard / 2-sigma style overlays</div>
-    <div class="risk-row">
-      <div class="risk-item">
-        <div class="risk-label">VIX Regime</div>
-        <div id="vixRegimePill">&ndash;</div>
-        <div class="risk-sub" id="vixValue">&ndash;</div>
-      </div>
-      <div class="risk-item">
-        <div class="risk-label">Circuit Breaker</div>
-        <div id="cbPill">&ndash;</div>
-        <div class="risk-sub">Halts entries at &minus;12% from NAV peak</div>
-      </div>
-      <div class="risk-item">
-        <div class="risk-label">Drawdown (Current)</div>
-        <div class="risk-val" id="ddNow">&ndash;</div>
-        <div class="risk-sub">From portfolio peak</div>
-      </div>
-      <div class="risk-item">
-        <div class="risk-label">Max Drawdown</div>
-        <div class="risk-val" id="maxDd">&ndash;</div>
-        <div class="risk-sub">All-time worst from peak</div>
-      </div>
-      <div class="risk-item">
-        <div class="risk-label">Trailing Stop</div>
-        <div class="risk-val amber">&minus;8%</div>
-        <div class="risk-sub">From position ATH &middot; activates at +5%</div>
-      </div>
-      <div class="risk-item">
-        <div class="risk-label">Partial Profit</div>
-        <div class="risk-val green">+15%</div>
-        <div class="risk-sub">50% exits; rest trail-stopped</div>
-      </div>
-      <div class="risk-item">
-        <div class="risk-label">Sector Cap</div>
-        <div class="risk-val amber">30%</div>
-        <div class="risk-sub">Max portfolio weight per sector</div>
-      </div>
-      <div class="risk-item">
-        <div class="risk-label">Hard Stop-Loss</div>
-        <div class="risk-val red">&minus;10%</div>
-        <div class="risk-sub">Minimum guard before trail active</div>
-      </div>
-    </div>
-  </div>
+<div class="section-header"><span class="badge-head badge-track">Track Record</span><span class="desc">Trade quality, payoff discipline, and closed-trade statistics</span></div>
+<div class="track-grid"><div class="track-card"><div class="track-val" id="trTotalTrades">-</div><div class="track-lbl">Total Trades</div></div><div class="track-card"><div class="track-val green" id="trWinners">-</div><div class="track-lbl">Winners</div></div><div class="track-card"><div class="track-val red" id="trLosers">-</div><div class="track-lbl">Losers</div></div><div class="track-card"><div class="track-val" id="trWinRate">-</div><div class="track-lbl">Win Rate</div></div></div>
+<div class="kpi-row"><div class="kpi-item"><div class="kpi-val" id="trAvgWin">-</div><div class="kpi-lbl">Avg Win</div></div><div class="kpi-item"><div class="kpi-val" id="trAvgLoss">-</div><div class="kpi-lbl">Avg Loss</div></div><div class="kpi-item"><div class="kpi-val" id="trPF">-</div><div class="kpi-lbl">Profit Factor</div></div><div class="kpi-item"><div class="kpi-val" id="trSharpe">-</div><div class="kpi-lbl">Sharpe Proxy</div></div><div class="kpi-item"><div class="kpi-val" id="trExpectancy">-</div><div class="kpi-lbl">Expectancy</div></div></div>
+<div class="grid2"><div class="card"><div class="card-title">Best Trade</div><div class="stat-val" id="trBest">-</div><div class="stat-sub muted" id="trBestTicker">-</div><div class="stat-sub muted" id="trBestReason"></div></div><div class="card"><div class="card-title">Worst Trade</div><div class="stat-val red" id="trWorst">-</div><div class="stat-sub muted" id="trWorstTicker">-</div><div class="stat-sub muted" id="trWorstReason"></div></div></div>
 
-  <div class="card">
-    <div class="card-title">Sector Concentration vs 30% cap</div>
-    <div id="sectorConc"><div class="no-data">No open positions</div></div>
-  </div>
-</div>
-<hr class="sec-rule">
+<hr class="divider">
 
-<!-- ═══════════════ MARKET INTELLIGENCE ═══════════════════════════════════ -->
-<div class="section">
-  <div class="sec-head">
-    <span class="sec-pill pill-market">Market Intelligence</span>
-    <span class="sec-sub">NLP signals from global news &middot; confidence scoring</span>
-  </div>
-  <div class="g2" style="margin-bottom:14px;">
-    <div class="card">
-      <div class="card-title">Recent Article Signals</div>
-      <div class="msg-box" id="articleUpdates"></div>
-    </div>
-    <div class="card">
-      <div class="card-title">Sector Confidence Scores</div>
-      <div id="confidenceBars" style="margin-top:4px;"></div>
-      <div class="threshold-note" id="thresholdNote">Signal threshold: &ndash;</div>
-    </div>
-  </div>
-</div>
-<hr class="sec-rule">
+<div class="section-header"><span class="badge-head badge-track">Closed Trades</span><span class="desc">Full history of exits with reasons and realised performance</span></div>
+<div class="card"><div class="tbl-wrap"><table><thead><tr><th>ID</th><th>Ticker</th><th>ETF Name</th><th>Entry (INR)</th><th>Exit (INR)</th><th>P&amp;L</th><th>Return</th><th>Days Held</th><th>Exit Reason</th><th>Result</th></tr></thead><tbody id="closedTbody"></tbody></table></div></div>
 
-<!-- ═══════════════ PORTFOLIO OVERVIEW ════════════════════════════════════ -->
-<div class="section">
-  <div class="sec-head">
-    <span class="sec-pill pill-port">Portfolio</span>
-    <span class="sec-sub">Simulated ETF book &middot; NLP-driven entry &middot; institutional risk exits</span>
-  </div>
-  <div class="g5" style="margin-bottom:14px;">
-    <div class="card">
-      <div class="card-title">Portfolio NAV</div>
-      <div class="stat-val" id="portfolioValue">&ndash;</div>
-      <div class="stat-sub" id="portfolioChange">&ndash;</div>
-    </div>
-    <div class="card">
-      <div class="card-title">Total Deposited</div>
-      <div class="stat-val" id="totalDeposited">&ndash;</div>
-      <div class="stat-sub muted">Monthly SIP capital</div>
-    </div>
-    <div class="card">
-      <div class="card-title">Unrealised P&amp;L</div>
-      <div class="stat-val" id="unrealisedPnl">&ndash;</div>
-      <div class="stat-sub muted">Open positions</div>
-    </div>
-    <div class="card">
-      <div class="card-title">Realised P&amp;L</div>
-      <div class="stat-val" id="realisedPnl">&ndash;</div>
-      <div class="stat-sub muted">Closed trades</div>
-    </div>
-    <div class="card">
-      <div class="card-title">Cash Available</div>
-      <div class="stat-val" id="cashAvailable">&ndash;</div>
-      <div class="stat-sub muted" id="positionsSummary">&ndash;</div>
-    </div>
-  </div>
-  <div class="g2" style="margin-bottom:14px;">
-    <div class="card">
-      <div class="card-title">Position Allocation</div>
-      <canvas id="pieChart" height="210"></canvas>
-    </div>
-    <div class="card">
-      <div class="card-title">Unrealised P&amp;L per Position (&#8377;)</div>
-      <canvas id="barChart" height="210"></canvas>
-    </div>
-  </div>
-</div>
-<hr class="sec-rule">
+<hr class="divider">
 
-<!-- ═══════════════ OPEN POSITIONS ════════════════════════════════════════ -->
-<div class="section">
-  <div class="sec-head">
-    <span class="sec-pill pill-trade">Open Positions</span>
-    <span class="sec-sub">Live MTM &middot; trailing stop levels &middot; partial-profit tracking</span>
-  </div>
-  <div class="card" style="margin-bottom:14px;">
-    <div class="tbl-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th><th>Ticker</th><th>ETF Name</th><th>Sector</th>
-            <th>Entry &#8377;</th><th>Current &#8377;</th><th>Peak &#8377;</th>
-            <th>Return</th><th>P&amp;L &#8377;</th>
-            <th>Trail Stop &#8377;</th><th>Gap to Stop</th>
-            <th>Confidence</th><th>Severity</th><th>Status</th>
-          </tr>
-        </thead>
-        <tbody id="positionsTbody"></tbody>
-      </table>
-    </div>
-  </div>
-</div>
-<hr class="sec-rule">
+<div class="card"><div class="section-title">Recent Log Tail</div><div class="log-box" id="logTail"></div></div>
 
-<!-- ═══════════════ TRACK RECORD ══════════════════════════════════════════ -->
-<div class="section">
-  <div class="sec-head">
-    <span class="sec-pill pill-track">Track Record</span>
-    <span class="sec-sub">Closed trade performance &middot; institutional KPIs</span>
-  </div>
-  <div class="track-grid">
-    <div class="track-card"><div class="track-val" id="trTotalTrades">&ndash;</div><div class="track-lbl">Total Trades</div></div>
-    <div class="track-card"><div class="track-val green" id="trWinners">&ndash;</div><div class="track-lbl">Winners</div></div>
-    <div class="track-card"><div class="track-val red" id="trLosers">&ndash;</div><div class="track-lbl">Losers</div></div>
-    <div class="track-card"><div class="track-val" id="trWinRate">&ndash;</div><div class="track-lbl">Win Rate</div></div>
-  </div>
-  <div class="kpi-row">
-    <div class="kpi-item"><div class="kpi-val green" id="trAvgWin">&ndash;</div><div class="kpi-lbl">Avg Win %</div></div>
-    <div class="kpi-item"><div class="kpi-val red" id="trAvgLoss">&ndash;</div><div class="kpi-lbl">Avg Loss %</div></div>
-    <div class="kpi-item"><div class="kpi-val" id="trPF">&ndash;</div><div class="kpi-lbl">Profit Factor</div></div>
-    <div class="kpi-item"><div class="kpi-val" id="trSharpe">&ndash;</div><div class="kpi-lbl">Sharpe (proxy)</div></div>
-    <div class="kpi-item"><div class="kpi-val" id="trExpectancy">&ndash;</div><div class="kpi-lbl">Expectancy %</div></div>
-  </div>
-  <div class="g2" style="margin-bottom:14px;">
-    <div class="card">
-      <div class="card-title">Best Trade</div>
-      <div class="stat-val green" id="trBest">&ndash;</div>
-      <div class="stat-sub muted" id="trBestTicker">&ndash;</div>
-      <div class="stat-sub" id="trBestReason" style="font-size:10px;margin-top:2px;color:#8b949e;"></div>
-    </div>
-    <div class="card">
-      <div class="card-title">Worst Trade</div>
-      <div class="stat-val red" id="trWorst">&ndash;</div>
-      <div class="stat-sub muted" id="trWorstTicker">&ndash;</div>
-      <div class="stat-sub" id="trWorstReason" style="font-size:10px;margin-top:2px;color:#8b949e;"></div>
-    </div>
-  </div>
-</div>
-<hr class="sec-rule">
-
-<!-- ═══════════════ CLOSED TRADES ═════════════════════════════════════════ -->
-<div class="section">
-  <div class="sec-head">
-    <span class="sec-pill pill-track">Closed Trades</span>
-    <span class="sec-sub">Full exit history with reason codes</span>
-  </div>
-  <div class="card" style="margin-bottom:28px;">
-    <div class="tbl-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th><th>Ticker</th><th>ETF Name</th>
-            <th>Entry &#8377;</th><th>Exit &#8377;</th>
-            <th>P&amp;L &#8377;</th><th>Return</th>
-            <th>Days</th><th>Exit Reason</th><th>Result</th>
-          </tr>
-        </thead>
-        <tbody id="closedTbody"></tbody>
-      </table>
-    </div>
-  </div>
-</div>
-<hr class="sec-rule">
-
-<!-- ═══════════════ LOG ════════════════════════════════════════════════════ -->
-<div class="section">
-  <div class="card">
-    <div class="card-title">System Log</div>
-    <div class="log-box" id="logTail"></div>
-  </div>
-</div>
-
-</div><!-- /page -->
-
-<script>
-const REFRESH_INTERVAL = 30000;
-const STATUS_FILE = 'status.json';
-let pieChart = null, barChart = null;
-
-const rupee = v => '\u20b9' + Number(v).toLocaleString('en-IN', {minimumFractionDigits:2, maximumFractionDigits:2});
-const pnlCls = v => parseFloat(v) >= 0 ? 'green' : 'red';
-const logCls = l => {
-  l = l.toLowerCase();
-  if (l.includes('ok') || l.includes('complete') || l.includes('written')) return 'log-ok';
-  if (l.includes('warn') || l.includes('error')) return 'log-warn';
-  return 'log-info';
-};
-const sevBadge = s => {
-  const m = {CRITICAL:'badge-crit',HIGH:'badge-high',MEDIUM:'badge-med',LOW:'badge-low'};
-  return '<span class="badge ' + (m[s]||'badge-low') + '">' + (s||'&mdash;') + '</span>';
-};
-
-function updateMarketSnapshot(d) {
-  const el = document.getElementById('marketSnapshot');
-  const items = d.market_snapshot || [];
-  if (!items.length) { el.innerHTML = '<span class="muted" style="font-size:12px">Market data unavailable</span>'; return; }
-  el.innerHTML = items.map(m =>
-    '<div class="mkt-tile">' +
-    '<div class="mkt-label">' + m.label + '</div>' +
-    '<div class="mkt-price">' + Number(m.price).toLocaleString('en-IN',{maximumFractionDigits:2}) + '</div>' +
-    '<div class="mkt-chg ' + (m.direction==='up'?'green':'red') + '">' + m.change_str + '</div>' +
-    '</div>'
-  ).join('');
-}
-
-function updateRiskPanel(d) {
-  const rc = d.risk_controls || {};
-  const vix = rc.vix;
-  const regime = rc.vix_regime || 'Unknown';
-  document.getElementById('vixRegimePill').innerHTML = '<span class="regime-pill regime-' + regime + '">' + regime + '</span>';
-  document.getElementById('vixValue').textContent = vix ? 'VIX ' + vix.toFixed(2) : 'VIX unavailable';
-
-  const cb = rc.circuit_breaker_active;
-  document.getElementById('cbPill').innerHTML = cb
-    ? '<span class="cb-on">ACTIVE &mdash; no new entries</span>'
-    : '<span class="cb-off">Clear</span>';
-
-  const ddEl = document.getElementById('ddNow');
-  const dd = rc.drawdown_from_peak_pct || 0;
-  ddEl.textContent = dd.toFixed(2) + '%';
-  ddEl.className = 'risk-val ' + (dd > 8 ? 'red' : dd > 4 ? 'amber' : 'green');
-
-  const mdEl = document.getElementById('maxDd');
-  const md = rc.max_drawdown_pct || d.max_drawdown_pct || 0;
-  mdEl.textContent = md.toFixed(2) + '%';
-  mdEl.className = 'risk-val ' + (md > 12 ? 'red' : md > 6 ? 'amber' : 'green');
-
-  const conc = rc.sector_concentration || [];
-  const concEl = document.getElementById('sectorConc');
-  if (!conc.length) { concEl.innerHTML = '<div class="no-data">No open positions</div>'; return; }
-  concEl.innerHTML = conc.map(s =>
-    '<div class="sec-conc-row">' +
-    '<div class="sec-conc-label"><span>' + s.sector + '</span>' +
-    '<span class="' + (s.at_cap ? 'red' : 'muted') + '">' + s.weight + '%' + (s.at_cap ? ' \u26a0 near cap' : '') + '</span></div>' +
-    '<div class="sec-bar-bg"><div class="sec-bar-fill' + (s.at_cap?' at-cap':'') + '" style="width:' + Math.min(s.weight,100) + '%"></div></div>' +
-    '</div>'
-  ).join('');
-}
-
-function updateStats(d) {
-  document.getElementById('portfolioValue').textContent  = rupee(d.portfolio_value);
-  document.getElementById('totalDeposited').textContent  = rupee(d.total_deposited);
-  document.getElementById('cashAvailable').textContent   = rupee(d.cash);
-
-  const unEl = document.getElementById('unrealisedPnl');
-  unEl.textContent = '\u20b9' + (d.unrealised_str || '0.00');
-  unEl.className = 'stat-val ' + pnlCls(d.unrealised_pnl);
-
-  const reEl = document.getElementById('realisedPnl');
-  reEl.textContent = '\u20b9' + (d.realised_str || '0.00');
-  reEl.className = 'stat-val ' + pnlCls(d.realised_pnl);
-
-  const chEl = document.getElementById('portfolioChange');
-  chEl.textContent = (d.change || '&ndash;') + ' total return';
-  chEl.className = 'stat-sub ' + pnlCls(d.change_raw || 0);
-
-  const pos = d.positions || [];
-  document.getElementById('positionsSummary').textContent = pos.length + ' open \u00b7 ' + (d.closed_trades || 0) + ' closed';
-}
-
-const PALETTE = ['#58a6ff','#e3b341','#3fb950','#bc8cff','#f85149','#06b6d4','#fb923c','#a78bfa','#34d399','#fcd34d'];
-
-function updatePieChart(d) {
-  const alloc = d.allocation || {labels:[],values:[]};
-  const {labels, values} = alloc;
-  if (!labels.length) return;
-  if (!pieChart) {
-    pieChart = new Chart(document.getElementById('pieChart'), {
-      type: 'doughnut',
-      data: {labels, datasets:[{data:values, backgroundColor:PALETTE.slice(0,labels.length), borderWidth:2, borderColor:'#161b22'}]},
-      options:{plugins:{legend:{position:'right',labels:{color:'#8b949e',font:{size:12},padding:12,boxWidth:12}}},cutout:'62%',responsive:true,animation:{duration:400}}
-    });
-  } else {
-    pieChart.data.labels = labels;
-    pieChart.data.datasets[0].data = values;
-    pieChart.data.datasets[0].backgroundColor = PALETTE.slice(0,labels.length);
-    pieChart.update();
-  }
-}
-
-function updateBarChart(d) {
-  const pnl = d.pnl || {labels:[],values:[]};
-  const {labels, values} = pnl;
-  if (!labels.length) return;
-  if (!barChart) {
-    barChart = new Chart(document.getElementById('barChart'), {
-      type:'bar',
-      data:{labels,datasets:[{label:'P&L \u20b9',data:values,backgroundColor:values.map(v=>v>=0?'#3fb950':'#f85149'),borderRadius:5}]},
-      options:{plugins:{legend:{display:false}},scales:{x:{ticks:{color:'#8b949e',font:{size:11}},grid:{display:false}},y:{ticks:{color:'#8b949e',font:{size:11}},grid:{color:'#21262d'}}},responsive:true,animation:{duration:400}}
-    });
-  } else {
-    barChart.data.labels = labels;
-    barChart.data.datasets[0].data = values;
-    barChart.data.datasets[0].backgroundColor = values.map(v=>v>=0?'#3fb950':'#f85149');
-    barChart.update();
-  }
-}
-
-function updatePositions(d) {
-  const tbody = document.getElementById('positionsTbody');
-  const pos = d.positions || [];
-  if (!pos.length) {
-    tbody.innerHTML = '<tr><td colspan="14" class="no-data">No open positions &mdash; awaiting NLP signals</td></tr>';
-    return;
-  }
-  tbody.innerHTML = pos.map(function(p) {
-    const dist = p.dist_to_trail_pct || 0;
-    const distCls = dist > 10 ? 'trail-safe' : dist > 4 ? 'trail-warn' : 'trail-danger';
-    const halfTag = p.half_exited ? '<span class="badge badge-half">\u00bd EXITED</span>' : '';
-    const pct = parseFloat(p.pnl_pct || 0);
-    const status = pct >= 15 ? '<span class="badge badge-win">+15%+</span>'
-                 : pct <= -8 ? '<span class="badge badge-loss">NEAR STOP</span>'
-                 : halfTag || '&mdash;';
-    return '<tr>' +
-      '<td>' + p.trade_id + '</td>' +
-      '<td><strong>' + p.ticker + '</strong></td>' +
-      '<td style="max-width:160px;overflow:hidden;text-overflow:ellipsis">' + p.etf_name + '</td>' +
-      '<td>' + p.sector + '</td>' +
-      '<td>' + rupee(p.entry) + '</td>' +
-      '<td><strong>' + rupee(p.current) + '</strong></td>' +
-      '<td class="muted">' + rupee(p.peak_price || p.current) + '</td>' +
-      '<td class="' + pnlCls(pct) + '"><strong>' + (p.pnl_pct_str || pct.toFixed(2) + '%') + '</strong></td>' +
-      '<td class="' + pnlCls(p.pnl) + '">' + (p.pnl_str ? '\u20b9' + p.pnl_str : rupee(p.pnl)) + '</td>' +
-      '<td class="' + distCls + '">' + rupee(p.trail_stop || p.entry) + '</td>' +
-      '<td class="' + distCls + '">' + dist.toFixed(1) + '%</td>' +
-      '<td>' + p.confidence + '/100</td>' +
-      '<td>' + sevBadge(p.severity) + '</td>' +
-      '<td>' + status + '</td>' +
-      '</tr>';
-  }).join('');
-}
-
-function updateTrackRecord(d) {
-  const tr = d.track_record || {};
-  document.getElementById('trTotalTrades').textContent = tr.total_trades || 0;
-  document.getElementById('trWinners').textContent = tr.winners || 0;
-  document.getElementById('trLosers').textContent  = tr.losers  || 0;
-
-  const wEl = document.getElementById('trWinRate');
-  wEl.textContent = (tr.win_rate || 0) + '%';
-  wEl.className = 'track-val ' + ((tr.win_rate||0) >= 50 ? 'green' : 'red');
-
-  function setKpi(id, val, suffix, cls) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.textContent = (val !== undefined && val !== null && val !== '') ? String(val) + (suffix||'') : '\u2013';
-    if (cls) el.className = 'kpi-val ' + cls;
-  }
-
-  setKpi('trAvgWin',  tr.avg_win  !== undefined ? (tr.avg_win>=0?'+':'') + tr.avg_win.toFixed(2) : '', '%', 'green');
-  setKpi('trAvgLoss', tr.avg_loss !== undefined ? tr.avg_loss.toFixed(2) : '', '%', 'red');
-  const pf = tr.profit_factor || 0;
-  setKpi('trPF', pf ? pf.toFixed(2) : '', '', pf >= 1.5 ? 'green' : pf >= 1 ? 'amber' : 'red');
-  const sh = tr.sharpe_proxy || 0;
-  setKpi('trSharpe', sh ? sh.toFixed(2) : '', '', sh >= 1 ? 'green' : sh >= 0 ? 'amber' : 'red');
-  const ex = tr.expectancy || 0;
-  setKpi('trExpectancy', ex ? (ex>=0?'+':'') + ex.toFixed(2) : '', '%', ex >= 0 ? 'green' : 'red');
-
-  function applyTrade(valId, tickId, rzId, trade) {
-    const vE = document.getElementById(valId), tE = document.getElementById(tickId), rE = document.getElementById(rzId);
-    if (trade) {
-      const pct = typeof trade.pnl_pct === 'number' ? trade.pnl_pct : parseFloat(trade.pnl_pct_str || '0');
-      vE.textContent = (pct>=0?'+':'') + pct.toFixed(2) + '%';
-      vE.className = 'stat-val ' + (pct>=0?'green':'red');
-      tE.textContent = trade.ticker + (trade.etf_name ? ' \u00b7 ' + trade.etf_name : '');
-      if (rE) rE.textContent = trade.exit_reason || '';
-    } else {
-      vE.textContent = '\u2013'; vE.className = 'stat-val';
-      tE.textContent = 'No closed trades yet';
-      if (rE) rE.textContent = '';
-    }
-  }
-  applyTrade('trBest',  'trBestTicker',  'trBestReason',  tr.best);
-  applyTrade('trWorst', 'trWorstTicker', 'trWorstReason', tr.worst);
-}
-
-function updateClosedTrades(d) {
-  const tbody  = document.getElementById('closedTbody');
-  const closed = d.closed_trades_list || [];
-  if (!closed.length) {
-    tbody.innerHTML = '<tr><td colspan="10" class="no-data">No exits yet &mdash; positions closed on trail stop / partial profit / 180-day limit</td></tr>';
-    return;
-  }
-  tbody.innerHTML = closed.slice().reverse().map(function(ct) {
-    return '<tr>' +
-      '<td>' + ct.trade_id + '</td>' +
-      '<td><strong>' + ct.ticker + '</strong></td>' +
-      '<td style="max-width:140px;overflow:hidden;text-overflow:ellipsis">' + ct.etf_name + '</td>' +
-      '<td>' + rupee(ct.entry) + '</td>' +
-      '<td>' + rupee(ct.exit) + '</td>' +
-      '<td class="' + pnlCls(ct.pnl) + '"><strong>' + (ct.pnl_str ? '\u20b9'+ct.pnl_str : rupee(ct.pnl)) + '</strong></td>' +
-      '<td class="' + pnlCls(ct.pnl_pct) + '">' + (ct.pnl_pct_str || ct.pnl_pct+'%') + '</td>' +
-      '<td>' + ct.days_held + 'd</td>' +
-      '<td>' + ct.exit_reason + '</td>' +
-      '<td><span class="badge ' + (ct.winner?'badge-win':'badge-loss') + '">' + (ct.winner?'WIN':'LOSS') + '</span></td>' +
-      '</tr>';
-  }).join('');
-}
-
-function updateConfidence(d) {
-  const el = document.getElementById('confidenceBars');
-  const thr = d.confidence_threshold || 62;
-  document.getElementById('thresholdNote').textContent = 'Signal threshold: ' + thr + ' \u00b7 Higher = stronger conviction';
-  el.innerHTML = (d.confidence||[]).map(item =>
-    '<div class="conf-row">' +
-    '<div class="conf-label"><span>' + item.symbol + '</span><span>' + item.score.toFixed(1) + '</span></div>' +
-    '<div class="bar-bg"><div class="bar-fill" style="width:' + Math.min(item.score,100) + '%"></div></div>' +
-    '</div>'
-  ).join('');
-}
-
-function updateArticles(d) {
-  document.getElementById('articleUpdates').innerHTML = (d.articles||[]).map(a =>
-    '<div class="msg-item"><span class="msg-tag ' + a.tag + '">' + a.label + '</span>' + a.text + '</div>'
-  ).join('');
-}
-
-function updateLogs(d) {
-  document.getElementById('logTail').innerHTML = (d.logs||[]).slice().reverse()
-    .map(l => '<div class="' + logCls(l) + '">' + l + '</div>').join('');
-}
-
-function updateTimestamp(d) {
-  document.getElementById('lastUpdated').textContent =
-    'Live \u00b7 ' + new Date().toLocaleTimeString('en-IN') +
-    (d.generated_at ? ' \u00b7 data ' + d.generated_at : '');
-}
-
-function fetchAndUpdate() {
-  fetch(STATUS_FILE + '?t=' + Date.now())
-    .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-    .then(function(d) {
-      updateMarketSnapshot(d);
-      updateRiskPanel(d);
-      updateStats(d);
-      updatePieChart(d);
-      updateBarChart(d);
-      updatePositions(d);
-      updateTrackRecord(d);
-      updateClosedTrades(d);
-      updateConfidence(d);
-      updateArticles(d);
-      updateLogs(d);
-      updateTimestamp(d);
-    })
-    .catch(function(err) {
-      document.getElementById('lastUpdated').textContent = 'Update failed \u2014 retrying\u2026';
-      console.warn(err.message);
-    });
-}
-
-fetchAndUpdate();
-setInterval(fetchAndUpdate, REFRESH_INTERVAL);
-</script>
+<script src="dashboard.js"></script>
 </body>
 </html>

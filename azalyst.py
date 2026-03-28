@@ -90,6 +90,9 @@ def run_intelligence_cycle(
                     if etf and platform:
                         entry = portfolio.enter_position(signal, etf, platform)
                         if entry:
+                            rotation_exits = entry.get("rotation_exits") or []
+                            if rotation_exits:
+                                port_reporter.send_trade_exits(rotation_exits)
                             if not entry.get("is_topup"):
                                 port_reporter.send_trade_entry(entry, signal)
                             log.info(f"Paper trade {'topped up' if entry.get('is_topup') else 'entered'}: {entry['ticker']}")
@@ -171,6 +174,9 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, cfg):
         if etf and platform:
             entry = portfolio.enter_position(signal, etf, platform)
             if entry:
+                rotation_exits = entry.get("rotation_exits") or []
+                if rotation_exits:
+                    port_reporter.send_trade_exits(rotation_exits)
                 if not entry.get("is_topup"):
                     port_reporter.send_trade_entry(entry, signal)
                 log.info(f"Startup trade seeded: {entry['ticker']} | {sector_label} | conf {confidence}")
