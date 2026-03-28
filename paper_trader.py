@@ -435,10 +435,10 @@ class PaperPortfolio:
         self._update_drawdown_state()
 
         log.info(
-            "CLOSED %s - %s | PnL: INR %+,.2f (%+.1f%%) | %s",
+            "CLOSED %s - %s | PnL: INR %s (%+.1f%%) | %s",
             position.trade_id,
             position.ticker,
-            closed_trade.realised_pnl,
+            f"{closed_trade.realised_pnl:+,.2f}",
             closed_trade.realised_pnl_pct,
             reason,
         )
