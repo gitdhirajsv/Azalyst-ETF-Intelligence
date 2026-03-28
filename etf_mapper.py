@@ -445,7 +445,7 @@ ETF_DATABASE = {
             {
                 "name":      "iShares MSCI Emerging Markets ETF",
                 "ticker":    "EEM",
-                "platform":  "INDmoney / Vested",
+                "platform":  "INDmoney / Vested / IBKR",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "3–12 months",
@@ -454,7 +454,7 @@ ETF_DATABASE = {
             {
                 "name":      "SPDR Portfolio Emerging Markets ETF",
                 "ticker":    "SPEM",
-                "platform":  "INDmoney / Vested",
+                "platform":  "INDmoney / Vested / IBKR",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "3–12 months",
@@ -462,23 +462,330 @@ ETF_DATABASE = {
             },
         ],
     },
+
+    # ── NEW GLOBAL SECTORS ────────────────────────────────────────────────────
+
+    "healthcare_pharma": {
+        "india": [
+            {
+                "name":      "Mirae Asset Nifty Healthcare ETF",
+                "ticker":    "HEALTHCARE",
+                "platform":  "Dhan App",
+                "exchange":  "NSE",
+                "risk":      "Medium",
+                "timeframe": "6–18 months",
+                "thesis":    "India pharma majors — Sun Pharma, Dr Reddy's, Cipla. Generic drug exports + domestic demand.",
+            },
+            {
+                "name":      "Nippon India Nifty Pharma ETF",
+                "ticker":    "PHARMABEES",
+                "platform":  "Dhan App",
+                "exchange":  "NSE",
+                "risk":      "Medium",
+                "timeframe": "6–18 months",
+                "thesis":    "Pure Indian pharma play. Secular demand story — ageing population, US generics market.",
+            },
+        ],
+        "global": [
+            {
+                "name":      "Health Care Select Sector SPDR",
+                "ticker":    "XLV",
+                "platform":  "INDmoney / Vested / IBKR",
+                "exchange":  "NYSE",
+                "risk":      "Low-Medium",
+                "timeframe": "6–18 months",
+                "thesis":    "UnitedHealth, J&J, Eli Lilly, AbbVie. Defensive growth — non-cyclical demand driver.",
+            },
+            {
+                "name":      "iShares Global Healthcare ETF",
+                "ticker":    "IXJ",
+                "platform":  "INDmoney / Vested / IBKR",
+                "exchange":  "NYSE",
+                "risk":      "Low-Medium",
+                "timeframe": "6–18 months",
+                "thesis":    "Global diversification — Roche, Novartis, Novo Nordisk (GLP-1 supercycle). Less US-centric.",
+            },
+            {
+                "name":      "SPDR S&P Biotech ETF",
+                "ticker":    "XBI",
+                "platform":  "INDmoney / Vested / IBKR",
+                "exchange":  "NYSE",
+                "risk":      "High",
+                "timeframe": "3–12 months",
+                "thesis":    "Equal-weighted biotech. High risk/reward. FDA catalyst-driven. For strong macro health signals.",
+            },
+        ],
+    },
+
+    "real_estate_reit": {
+        "india": [
+            {
+                "name":      "Kotak Nifty Realty ETF",
+                "ticker":    "REALTY",
+                "platform":  "Dhan App",
+                "exchange":  "NSE",
+                "risk":      "Medium-High",
+                "timeframe": "6–24 months",
+                "thesis":    "India real estate cycle — DLF, Godrej Properties, Prestige. Rate cut tailwind.",
+            },
+        ],
+        "global": [
+            {
+                "name":      "Vanguard Real Estate ETF",
+                "ticker":    "VNQ",
+                "platform":  "INDmoney / Vested / IBKR",
+                "exchange":  "NYSE",
+                "risk":      "Medium",
+                "timeframe": "6–18 months",
+                "thesis":    "Largest US REIT ETF. 160+ REITs. Rate-sensitive: rallies when Fed cuts. Dividend yield ~4%.",
+            },
+            {
+                "name":      "iShares Global REIT ETF",
+                "ticker":    "REET",
+                "platform":  "INDmoney / Vested / IBKR",
+                "exchange":  "NYSE",
+                "risk":      "Medium",
+                "timeframe": "6–18 months",
+                "thesis":    "Global real estate — US, Japan, Australia, UK. Diversified property exposure with income.",
+            },
+        ],
+    },
+
+    "clean_energy_renewables": {
+        "india": [
+            {
+                "name":      "Nippon India Nifty India New Energy ETF",
+                "ticker":    "NEWENERGY",
+                "platform":  "Dhan App",
+                "exchange":  "NSE",
+                "risk":      "Medium",
+                "timeframe": "6–24 months",
+                "thesis":    "India's energy transition — NTPC Green, Adani Green, solar/wind value chain. 500 GW target by 2030.",
+            },
+        ],
+        "global": [
+            {
+                "name":      "iShares Global Clean Energy ETF",
+                "ticker":    "ICLN",
+                "platform":  "INDmoney / Vested / IBKR",
+                "exchange":  "NASDAQ",
+                "risk":      "Medium-High",
+                "timeframe": "6–24 months",
+                "thesis":    "Solar, wind, renewable utilities globally. Policy tailwind from IRA + EU Green Deal.",
+            },
+            {
+                "name":      "First Trust NASDAQ Clean Edge Green Energy ETF",
+                "ticker":    "QCLN",
+                "platform":  "INDmoney / Vested / IBKR",
+                "exchange":  "NASDAQ",
+                "risk":      "Medium-High",
+                "timeframe": "6–18 months",
+                "thesis":    "EV + clean energy blend — Tesla, ON Semi, Enphase. Captures the electrification megatrend.",
+            },
+            {
+                "name":      "Invesco WilderHill Clean Energy ETF",
+                "ticker":    "PBW",
+                "platform":  "INDmoney / Vested / IBKR",
+                "exchange":  "NYSE",
+                "risk":      "High",
+                "timeframe": "3–12 months",
+                "thesis":    "Pure-play clean energy innovators. High conviction play on renewable energy policy cycle.",
+            },
+        ],
+    },
+
+    "europe_equity": {
+        "india": [],
+        "global": [
+            {
+                "name":      "Vanguard FTSE Europe ETF",
+                "ticker":    "VGK",
+                "platform":  "INDmoney / Vested / IBKR",
+                "exchange":  "NYSE",
+                "risk":      "Medium",
+                "timeframe": "6–18 months",
+                "thesis":    "Broad European equities — UK, France, Germany, Switzerland. Cheap vs US on P/E basis.",
+            },
+            {
+                "name":      "iShares MSCI Germany ETF",
+                "ticker":    "EWG",
+                "platform":  "INDmoney / Vested / IBKR",
+                "exchange":  "NYSE",
+                "risk":      "Medium",
+                "timeframe": "3–12 months",
+                "thesis":    "German re-industrialisation + defence spending surge. DAX is undervalued vs US peers.",
+            },
+            {
+                "name":      "iShares MSCI United Kingdom ETF",
+                "ticker":    "EWU",
+                "platform":  "INDmoney / Vested / IBKR",
+                "exchange":  "NYSE",
+                "risk":      "Medium",
+                "timeframe": "3–12 months",
+                "thesis":    "FTSE-heavy: energy, financials, consumer staples. Value play — FTSE 100 is deeply discounted.",
+            },
+            {
+                "name":      "iShares Europe ETF",
+                "ticker":    "IEV",
+                "platform":  "INDmoney / Vested / IBKR",
+                "exchange":  "NYSE",
+                "risk":      "Medium",
+                "timeframe": "6–18 months",
+                "thesis":    "350+ European large/mid caps. Diversified vs single-country risk. ECB rate cut tailwind.",
+            },
+        ],
+    },
+
+    "asia_pacific": {
+        "india": [],
+        "global": [
+            {
+                "name":      "iShares MSCI Japan ETF",
+                "ticker":    "EWJ",
+                "platform":  "INDmoney / Vested / IBKR",
+                "exchange":  "NYSE",
+                "risk":      "Medium",
+                "timeframe": "3–12 months",
+                "thesis":    "Japan corporate reform + Nikkei record highs. BoJ normalisation adds FX tailwind for USD investors.",
+            },
+            {
+                "name":      "iShares MSCI South Korea ETF",
+                "ticker":    "EWY",
+                "platform":  "INDmoney / Vested / IBKR",
+                "exchange":  "NYSE",
+                "risk":      "Medium-High",
+                "timeframe": "3–12 months",
+                "thesis":    "Korea: Samsung, SK Hynix, POSCO. Memory chip & EV battery cycle play. Korea discount narrowing.",
+            },
+            {
+                "name":      "Franklin FTSE Asia ex Japan ETF",
+                "ticker":    "FLAX",
+                "platform":  "INDmoney / Vested / IBKR",
+                "exchange":  "NYSE",
+                "risk":      "Medium",
+                "timeframe": "6–18 months",
+                "thesis":    "Asia ex-Japan — India, China, Taiwan, Korea, ASEAN. Catch-up trade vs US equities.",
+            },
+            {
+                "name":      "iShares China Large-Cap ETF",
+                "ticker":    "FXI",
+                "platform":  "INDmoney / Vested / IBKR",
+                "exchange":  "NYSE",
+                "risk":      "High",
+                "timeframe": "1–6 months",
+                "thesis":    "China stimulus-driven re-rating potential. Alibaba, Tencent, BYD. High geopolitical risk.",
+            },
+        ],
+    },
+
+    "bonds_fixed_income": {
+        "india": [
+            {
+                "name":      "Bharat Bond ETF — April 2025",
+                "ticker":    "BHARATBOND",
+                "platform":  "Dhan App",
+                "exchange":  "NSE",
+                "risk":      "Low",
+                "timeframe": "3–12 months",
+                "thesis":    "AAA PSU bonds. Safe haven when equities sell off. Capital preservation with 7%+ yield.",
+            },
+        ],
+        "global": [
+            {
+                "name":      "iShares 20+ Year Treasury Bond ETF",
+                "ticker":    "TLT",
+                "platform":  "INDmoney / Vested / IBKR",
+                "exchange":  "NASDAQ",
+                "risk":      "Medium",
+                "timeframe": "3–18 months",
+                "thesis":    "Long-duration US Treasuries. Rallies hard when Fed cuts rates or risk-off hits. Classic safe haven.",
+            },
+            {
+                "name":      "Vanguard Total Bond Market ETF",
+                "ticker":    "BND",
+                "platform":  "INDmoney / Vested / IBKR",
+                "exchange":  "NASDAQ",
+                "risk":      "Low",
+                "timeframe": "6–24 months",
+                "thesis":    "Broad US bond market. Capital preservation with income. Low correlation to equities.",
+            },
+            {
+                "name":      "iShares TIPS Bond ETF",
+                "ticker":    "TIP",
+                "platform":  "INDmoney / Vested / IBKR",
+                "exchange":  "NYSE",
+                "risk":      "Low-Medium",
+                "timeframe": "6–24 months",
+                "thesis":    "Inflation-protected US bonds. Outperforms nominal bonds when CPI surprises to the upside.",
+            },
+        ],
+    },
+}
+
+# ── Sector aliases — map classifier output keys to database keys ──────────────
+_SECTOR_ALIASES: Dict[str, str] = {
+    "defense_aerospace":        "defense",
+    "gold":                     "gold_precious_metals",
+    "precious_metals":          "gold_precious_metals",
+    "tech":                     "technology_ai",
+    "ai":                       "technology_ai",
+    "nuclear":                  "nuclear_uranium",
+    "uranium":                  "nuclear_uranium",
+    "cyber":                    "cybersecurity",
+    "india":                    "india_equity",
+    "crypto":                   "crypto_digital",
+    "digital_assets":           "crypto_digital",
+    "banking":                  "banking_financial",
+    "financials":               "banking_financial",
+    "commodities":              "commodities_mining",
+    "mining":                   "commodities_mining",
+    "em":                       "emerging_markets",
+    "healthcare":               "healthcare_pharma",
+    "pharma":                   "healthcare_pharma",
+    "biotech":                  "healthcare_pharma",
+    "real_estate":              "real_estate_reit",
+    "reit":                     "real_estate_reit",
+    "clean_energy":             "clean_energy_renewables",
+    "renewables":               "clean_energy_renewables",
+    "europe":                   "europe_equity",
+    "european_equity":          "europe_equity",
+    "asia":                     "asia_pacific",
+    "japan":                    "asia_pacific",
+    "china":                    "asia_pacific",
+    "bonds":                    "bonds_fixed_income",
+    "fixed_income":             "bonds_fixed_income",
+    "rates":                    "bonds_fixed_income",
+    "energy":                   "energy_oil",
+    "oil":                      "energy_oil",
+    "oil_gas":                  "energy_oil",
 }
 
 
 class ETFMapper:
-    """Maps sector signals to specific ETF recommendations."""
+    """
+    Maps sector signals to specific ETF recommendations.
+    Supports global ETF database with sector aliasing.
+    """
+
+    @staticmethod
+    def _resolve(sector_id: str) -> str:
+        """Resolve a raw sector key to the canonical database key."""
+        key = sector_id.lower().strip().split("|")[0].strip()
+        return _SECTOR_ALIASES.get(key, key)
 
     def get_etfs(self, sectors: List[str]) -> Dict:
         """
         Get ETF recommendations for a list of sectors.
-        Returns merged India + Global ETF lists.
+        Returns deduplicated India + Global ETF lists.
+        Unknown sector keys are silently ignored.
         """
-        india_etfs = []
-        global_etfs = []
-        seen_tickers = set()
+        india_etfs:  List[Dict] = []
+        global_etfs: List[Dict] = []
+        seen_tickers: set       = set()
 
-        for sector_id in sectors:
-            mapping = ETF_DATABASE.get(sector_id, {})
+        for raw_sector in sectors:
+            canonical = self._resolve(raw_sector)
+            mapping   = ETF_DATABASE.get(canonical, {})
 
             for etf in mapping.get("india", []):
                 if etf["ticker"] not in seen_tickers:
@@ -491,6 +798,15 @@ class ETFMapper:
                     global_etfs.append(etf)
 
         return {
-            "india":  india_etfs[:4],   # Cap to avoid overly long reports
+            "india":  india_etfs[:4],   # Cap per report to keep Discord messages readable
             "global": global_etfs[:5],
         }
+
+    def list_all_tickers(self) -> List[str]:
+        """Return all known tickers across the entire database."""
+        tickers = []
+        for sector_data in ETF_DATABASE.values():
+            for bucket in ("india", "global"):
+                for etf in sector_data.get(bucket, []):
+                    tickers.append(etf["ticker"])
+        return list(dict.fromkeys(tickers))  # preserve insertion order, deduplicate

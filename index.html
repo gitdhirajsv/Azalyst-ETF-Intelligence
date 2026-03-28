@@ -102,6 +102,21 @@ tr:hover td { background: #f8fafc; }
 .tag-bear { background: #fee2e2; color: #991b1b; }
 .tag-neu  { background: #f1f5f9; color: #475569; }
 
+/* ── Market Snapshot ─────────────────── */
+.mkt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.mkt-tile {
+  background: #fff; border: 1px solid #e2e8f0;
+  border-radius: 10px; padding: 12px 14px;
+}
+.mkt-label  { font-size: 11px; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; }
+.mkt-price  { font-size: 16px; font-weight: 700; color: #0f172a; margin: 4px 0 2px; }
+.mkt-change { font-size: 12px; font-weight: 500; }
+
 canvas { max-width: 100%; }
 
 @media (max-width: 900px) {
@@ -126,6 +141,14 @@ canvas { max-width: 100%; }
   <span class="running">Running</span>
   <span class="last-updated" id="lastUpdated">–</span>
 </div>
+
+<!-- ── SECTION 0: MARKET SNAPSHOT ─────────────────────────────────────────── -->
+<div class="section-header">
+  <span class="section-badge">Global Markets</span>
+  <span class="section-desc">Live indices, commodities &amp; crypto · updated every 30 min</span>
+</div>
+<div class="mkt-grid" id="marketSnapshot"></div>
+<hr class="section-divider">
 
 <!-- ── SECTION 1: MARKET INTELLIGENCE ─────────────────────────────────────── -->
 <div class="section-header">
@@ -228,6 +251,8 @@ canvas { max-width: 100%; }
   <div class="track-card"><div class="track-val green" id="trWinners">–</div><div class="track-lbl">Winners</div></div>
   <div class="track-card"><div class="track-val red" id="trLosers">–</div><div class="track-lbl">Losers</div></div>
   <div class="track-card"><div class="track-val" id="trWinRate">–</div><div class="track-lbl">Win Rate</div></div>
+  <div class="track-card"><div class="track-val green" id="trAvgWin">–</div><div class="track-lbl">Avg Win</div></div>
+  <div class="track-card"><div class="track-val red" id="trAvgLoss">–</div><div class="track-lbl">Avg Loss</div></div>
 </div>
 
 <div class="row r2" style="margin-bottom:14px;">
@@ -235,11 +260,13 @@ canvas { max-width: 100%; }
     <div class="card-title">Best Trade</div>
     <div class="stat-val" id="trBest">–</div>
     <div class="stat-sub muted" id="trBestTicker">–</div>
+    <div class="stat-sub muted" id="trBestReason" style="font-size:10px;margin-top:2px;"></div>
   </div>
   <div class="card">
     <div class="card-title">Worst Trade</div>
     <div class="stat-val red" id="trWorst">–</div>
     <div class="stat-sub muted" id="trWorstTicker">–</div>
+    <div class="stat-sub muted" id="trWorstReason" style="font-size:10px;margin-top:2px;"></div>
   </div>
 </div>
 
@@ -398,26 +425,61 @@ function updateTrackRecord(d) {
   wrEl.textContent = (tr.win_rate || 0) + '%';
   wrEl.className = 'track-val ' + ((tr.win_rate||0) >= 50 ? 'green' : 'red');
 
-  const bestEl = document.getElementById('trBest');
-  if (tr.best) {
-    bestEl.textContent = tr.best.pnl_pct_str;
-    bestEl.className = 'stat-val ' + pnlClass(parseFloat(tr.best.pnl_pct_str));
-    document.getElementById('trBestTicker').textContent = tr.best.ticker;
-  } else {
-    bestEl.textContent = '–';
-    bestEl.className = 'stat-val';
-    document.getElementById('trBestTicker').textContent = 'No closed trades yet';
+  const awEl = document.getElementById('trAvgWin');
+  if (awEl) {
+    awEl.textContent = tr.avg_win ? (tr.avg_win >= 0 ? '+' : '') + tr.avg_win.toFixed(2) + '%' : '–';
   }
-  const worstEl = document.getElementById('trWorst');
-  if (tr.worst) {
-    worstEl.textContent = tr.worst.pnl_pct_str;
-    worstEl.className = 'stat-val ' + pnlClass(parseFloat(tr.worst.pnl_pct_str));
-    document.getElementById('trWorstTicker').textContent = tr.worst.ticker;
-  } else {
-    worstEl.textContent = '–';
-    worstEl.className = 'stat-val';
-    document.getElementById('trWorstTicker').textContent = 'No closed trades yet';
+  const alEl = document.getElementById('trAvgLoss');
+  if (alEl) {
+    alEl.textContent = tr.avg_loss !== undefined ? tr.avg_loss.toFixed(2) + '%' : '–';
   }
+
+  function applyTrade(elVal, elTicker, elReason, trade, isGreenIfPositive) {
+    if (trade) {
+      const pct = typeof trade.pnl_pct === 'number' ? trade.pnl_pct : parseFloat(trade.pnl_pct_str || '0');
+      elVal.textContent = (pct >= 0 ? '+' : '') + pct.toFixed(2) + '%';
+      elVal.className   = 'stat-val ' + (pct >= 0 ? 'green' : 'red');
+      elTicker.textContent = trade.ticker + (trade.etf_name ? ' · ' + trade.etf_name : '');
+      if (elReason) elReason.textContent = trade.exit_reason || '';
+    } else {
+      elVal.textContent    = '–';
+      elVal.className      = 'stat-val';
+      elTicker.textContent = 'No closed trades yet';
+      if (elReason) elReason.textContent = '';
+    }
+  }
+
+  applyTrade(
+    document.getElementById('trBest'),
+    document.getElementById('trBestTicker'),
+    document.getElementById('trBestReason'),
+    tr.best, true
+  );
+  applyTrade(
+    document.getElementById('trWorst'),
+    document.getElementById('trWorstTicker'),
+    document.getElementById('trWorstReason'),
+    tr.worst, false
+  );
+}
+
+function updateMarketSnapshot(d) {
+  const container = document.getElementById('marketSnapshot');
+  if (!container) return;
+  const items = d.market_snapshot || [];
+  if (!items.length) {
+    container.innerHTML = '<div class="mkt-tile" style="grid-column:1/-1"><span class="muted">Market data unavailable</span></div>';
+    return;
+  }
+  container.innerHTML = items.map(m => {
+    const cls = m.direction === 'up' ? 'green' : 'red';
+    return `
+      <div class="mkt-tile">
+        <div class="mkt-label">${m.label}</div>
+        <div class="mkt-price">${m.price.toLocaleString('en-IN', {maximumFractionDigits: 2})}</div>
+        <div class="mkt-change ${cls}">${m.change_str}</div>
+      </div>`;
+  }).join('');
 }
 
 function updateClosedTrades(d) {
@@ -483,6 +545,7 @@ function fetchAndUpdate() {
       updateClosedTrades(d);
       updateConfidence(d);
       updateArticles(d);
+      updateMarketSnapshot(d);
       updateLogs(d);
       updateTimestamp(d);
     })

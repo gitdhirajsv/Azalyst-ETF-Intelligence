@@ -1,6 +1,8 @@
 import json
 import os
 import datetime
+import urllib.request
+import urllib.error
 from pathlib import Path
 
 _ROOT          = Path(__file__).resolve().parent
@@ -94,16 +96,34 @@ def build_closed(closed):
 
 def build_track(pf):
     closed  = pf.get("closed_trades", [])
-    winners = [ct for ct in closed if ct.get("realised_pnl",0) > 0]
-    losers  = [ct for ct in closed if ct.get("realised_pnl",0) <= 0]
-    wr      = round(len(winners)/len(closed)*100, 1) if closed else 0
-    best    = max(closed, key=lambda x: x.get("realised_pnl_pct",0), default=None)
-    worst   = min(closed, key=lambda x: x.get("realised_pnl_pct",0), default=None)
+    winners = [ct for ct in closed if ct.get("realised_pnl", 0) > 0]
+    losers  = [ct for ct in closed if ct.get("realised_pnl", 0) <= 0]
+    wr      = round(len(winners) / len(closed) * 100, 1) if closed else 0
+    best    = max(closed, key=lambda x: x.get("realised_pnl_pct", 0), default=None)
+    worst   = min(closed, key=lambda x: x.get("realised_pnl_pct", 0), default=None)
+
+    def _summary(ct):
+        if ct is None:
+            return None
+        pct = float(ct.get("realised_pnl_pct", 0) or 0)
+        return {
+            "ticker":      ct.get("ticker", "–"),
+            "etf_name":    ct.get("etf_name", "–"),
+            "pnl_pct":     round(pct, 2),
+            "pnl_pct_str": signp(pct),
+            "exit_reason": ct.get("exit_reason", "–"),
+            "days_held":   ct.get("days_held", 0),
+        }
+
     return {
-        "total_trades": len(closed), "winners": len(winners),
-        "losers": len(losers), "win_rate": wr,
-        "best":  {"ticker": best["ticker"],  "pnl_pct_str": signp(best["realised_pnl_pct"])}  if best  else None,
-        "worst": {"ticker": worst["ticker"], "pnl_pct_str": signp(worst["realised_pnl_pct"])} if worst else None,
+        "total_trades": len(closed),
+        "winners":      len(winners),
+        "losers":       len(losers),
+        "win_rate":     wr,
+        "avg_win":      round(sum(ct.get("realised_pnl_pct", 0) for ct in winners) / len(winners), 2) if winners else 0,
+        "avg_loss":     round(sum(ct.get("realised_pnl_pct", 0) for ct in losers)  / len(losers),  2) if losers  else 0,
+        "best":         _summary(best),
+        "worst":        _summary(worst),
     }
 
 def build_alloc(pos, cash):
@@ -134,6 +154,62 @@ def build_articles(state):
         badge = "Bullish"  if conf>=80 else "Neutral" if conf>=65 else "Watch"
         out.append({"tag":tag,"label":badge,"text":f"{label} — {count} articles · confidence {conf:.0f}%"})
     return sorted(out, key=lambda x: {"tag-bull":0,"tag-neu":1,"tag-bear":2}[x["tag"]])
+
+
+# ── Market snapshot (Yahoo Finance — free, no key required) ───────────────────
+_MARKET_TICKERS = [
+    ("^GSPC",   "S&P 500",     "US"),
+    ("^IXIC",   "NASDAQ",      "US"),
+    ("^DJI",    "Dow Jones",   "US"),
+    ("^FTSE",   "FTSE 100",    "UK"),
+    ("^GDAXI",  "DAX",         "EU"),
+    ("^N225",   "Nikkei 225",  "JP"),
+    ("^HSI",    "Hang Seng",   "HK"),
+    ("^NSEI",   "Nifty 50",    "IN"),
+    ("GC=F",    "Gold",        "COMMOD"),
+    ("CL=F",    "Crude Oil",   "COMMOD"),
+    ("BTC-USD", "Bitcoin",     "CRYPTO"),
+    ("DX-Y.NYB","USD Index",   "FX"),
+]
+
+
+def fetch_market_snapshot() -> list:
+    """
+    Pull price + 1-day change for major global indices, commodities, crypto.
+    Uses Yahoo Finance public v8 API — no API key required.
+    Gracefully skips any ticker that fails.
+    """
+    results = []
+    for ticker, label, region in _MARKET_TICKERS:
+        try:
+            url = (
+                f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}"
+                f"?interval=1d&range=2d"
+            )
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=6) as resp:
+                data = json.loads(resp.read())
+            meta      = data["chart"]["result"][0]["meta"]
+            price     = float(meta.get("regularMarketPrice") or 0)
+            prev      = float(meta.get("previousClose") or price)
+            chg       = price - prev
+            chg_pct   = (chg / prev * 100) if prev else 0
+            currency  = meta.get("currency", "")
+            results.append({
+                "label":      label,
+                "ticker":     ticker,
+                "region":     region,
+                "price":      round(price, 2),
+                "currency":   currency,
+                "change":     round(chg, 2),
+                "change_pct": round(chg_pct, 2),
+                "change_str": f"+{chg_pct:.2f}%" if chg_pct >= 0 else f"{chg_pct:.2f}%",
+                "direction":  "up" if chg_pct >= 0 else "down",
+            })
+        except Exception:
+            continue
+    return results
+
 
 def build_logs(pf, state):
     from datetime import timezone as _tz
@@ -185,6 +261,7 @@ def generate_status():
         "pnl":                build_pnl(pos),
         "confidence":         build_conf(state),
         "articles":           build_articles(state),
+        "market_snapshot":    fetch_market_snapshot(),
         "logs":               build_logs(pf, state),
         "generated_at":       now,
     }
