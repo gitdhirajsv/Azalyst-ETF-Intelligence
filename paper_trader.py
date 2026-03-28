@@ -36,17 +36,20 @@ log = logging.getLogger("azalyst.trader")
 
 # ── Constants ─────────────────────────────────────────────────────────────────
 MONTHLY_BUDGET_INR  = 10_000
-MAX_POSITIONS       = 6
-STOP_LOSS_PCT       = 0.10     # -10% hard exit
-MAX_HOLD_DAYS       = 180      # 6 months safety net — no profit target, let winners run
+MAX_POSITIONS       = 8       # raised from 6 — allows more diversification
+STOP_LOSS_PCT       = 0.10    # -10% hard exit
+MAX_HOLD_DAYS       = 180     # 6 months safety net
 
-# Position size as fraction of available cash
-SIZING = {
-    (90, 100): 0.35,
-    (80,  89): 0.28,
-    (70,  79): 0.22,
-    (62,  69): 0.15,
+# ── Expected outcome parameters for Kelly sizing ─────────────────────────────
+# Average win by severity bracket (as fraction of capital deployed)
+_AVG_WIN_BY_SEVERITY = {
+    "CRITICAL": 0.20,
+    "HIGH":     0.15,
+    "MEDIUM":   0.12,
+    "LOW":      0.08,
 }
+# Cash floor: keep at least this % of portfolio as cash buffer
+CASH_FLOOR_PCT = 0.05
 
 USD_TO_INR = 83.5   # Fallback rate if live fetch fails
 
@@ -350,14 +353,87 @@ class PaperPortfolio:
         else:
             log.info(f"Monthly deposit already credited for {month_key}")
 
-    # ── Position Sizing ───────────────────────────────────────────────────
+    # ── Position Sizing — Half-Kelly ──────────────────────────────────────
 
-    def _position_size(self, confidence: int) -> float:
-        """Return fraction of available cash to deploy for a given confidence score."""
-        for (lo, hi), fraction in SIZING.items():
-            if lo <= confidence <= hi:
-                return fraction
-        return 0.0
+    def _kelly_fraction(self, confidence: int, severity: str) -> float:
+        """
+        Half-Kelly position sizing.
+
+        Win probability  = confidence / 100
+        Expected win     = severity-driven target (e.g. CRITICAL → 20%)
+        Expected loss    = STOP_LOSS_PCT (10%)
+        Kelly formula    : f* = (b·p − q) / b  where b = avg_win / avg_loss
+        We apply ½-Kelly for safety, then clamp to [5%, 40%].
+        """
+        p        = min(confidence / 100.0, 0.99)
+        q        = 1.0 - p
+        avg_win  = _AVG_WIN_BY_SEVERITY.get(severity, 0.12)
+        b        = avg_win / STOP_LOSS_PCT          # win-to-loss ratio
+        kelly    = (b * p - q) / b
+        fraction = min(max(kelly * 0.5, 0.05), 0.40)  # half-Kelly, clamped
+        return round(fraction, 4)
+
+    def _position_size(self, confidence: int, severity: str = "MEDIUM") -> float:
+        """Wrapper so existing call-sites that pass only confidence still work."""
+        return self._kelly_fraction(confidence, severity)
+
+    # ── Idle Cash Recycling ───────────────────────────────────────────────
+
+    def _recycle_idle_cash(self) -> None:
+        """
+        If cash exceeds 15% of portfolio value AND there are open winners,
+        top up the highest-returning position to put idle capital to work.
+        We keep at least CASH_FLOOR_PCT of portfolio as a permanent buffer.
+        """
+        if not self.open_positions:
+            return
+
+        total_mkt    = sum(p.current_value() for p in self.open_positions)
+        portfolio_v  = total_mkt + self.cash_inr
+        if portfolio_v <= 0:
+            return
+
+        cash_ratio   = self.cash_inr / portfolio_v
+        if cash_ratio < 0.15:
+            return  # cash is already well-deployed
+
+        # Only recycle into an open winner (positive unrealised return)
+        winners = [p for p in self.open_positions if p.unrealised_pnl_pct() > 0]
+        if not winners:
+            return
+
+        best_pos     = max(winners, key=lambda p: p.unrealised_pnl_pct())
+        min_floor    = portfolio_v * CASH_FLOOR_PCT
+        deployable   = round(self.cash_inr - min_floor, 2)
+        if deployable < 500:
+            return
+
+        current_price = get_current_price_inr(best_pos.ticker, best_pos.exchange)
+        if not current_price or current_price <= 0:
+            return
+
+        top_up_inr   = round(min(deployable * 0.80, deployable), 2)  # deploy ≤80% of free cash
+        units_bought = round(top_up_inr / current_price, 6)
+        invested     = round(units_bought * current_price, 2)
+
+        if invested > self.cash_inr or invested < 100:
+            return
+
+        new_invested      = best_pos.invested_inr + invested
+        new_units         = best_pos.units + units_bought
+        avg_price         = round(new_invested / new_units, 4)
+
+        best_pos.entry_price  = avg_price
+        best_pos.units        = new_units
+        best_pos.invested_inr = new_invested
+        self.cash_inr        -= invested
+
+        log.info(
+            f"IDLE CASH RECYCLED → {best_pos.ticker} | "
+            f"+INR {invested:,.2f} | New avg {avg_price:.4f} | "
+            f"Remaining cash INR {self.cash_inr:,.2f}"
+        )
+        self.save()
 
     def _next_trade_id(self) -> str:
         self.trade_counter += 1
@@ -389,7 +465,7 @@ class PaperPortfolio:
             return None
 
         # ── Sizing ──────────────────────────────────────────────────────
-        fraction    = self._position_size(confidence)
+        fraction    = self._position_size(confidence, severity)
         if fraction == 0:
             return None
 
@@ -545,6 +621,11 @@ class PaperPortfolio:
             })
 
         self.save()
+
+        # After closing positions, recycle any idle cash into best open winner
+        if exits:
+            self._recycle_idle_cash()
+
         return exits
 
     # ── Portfolio Summary ─────────────────────────────────────────────────

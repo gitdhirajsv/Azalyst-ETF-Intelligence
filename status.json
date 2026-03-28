@@ -119,13 +119,23 @@
     "winners": 0,
     "losers": 1,
     "win_rate": 0.0,
+    "avg_win": 0,
+    "avg_loss": -10.16,
     "best": {
       "ticker": "GLDM",
-      "pnl_pct_str": "-10.16%"
+      "etf_name": "SPDR Gold MiniShares Trust",
+      "pnl_pct": -10.16,
+      "pnl_pct_str": "-10.16%",
+      "exit_reason": "Stop-loss hit (-10.2%)",
+      "days_held": 7
     },
     "worst": {
       "ticker": "GLDM",
-      "pnl_pct_str": "-10.16%"
+      "etf_name": "SPDR Gold MiniShares Trust",
+      "pnl_pct": -10.16,
+      "pnl_pct_str": "-10.16%",
+      "exit_reason": "Stop-loss hit (-10.2%)",
+      "days_held": 7
     }
   },
   "confidence_threshold": 62,
@@ -329,12 +339,146 @@
       "text": "Emerging Markets + Commodities & Mining \u2014 12 articles \u00b7 confidence 64%"
     }
   ],
-  "logs": [
-    "2026-03-28 16:56:54 [INFO] AZALYST \u2014 status.json generated",
-    "2026-03-28 16:56:54 [INFO] AZALYST \u2014 18 active signals in state",
-    "2026-03-28 16:56:54 [INFO] AZALYST \u2014 Open positions: ITA, XLE, IBIT, INDA, SOXX",
-    "2026-03-28 16:56:54 [INFO] AZALYST \u2014 Closed trades: 1",
-    "2026-03-28 16:56:54 [INFO] azalyst.classifier \u2014 Total articles: 899"
+  "market_snapshot": [
+    {
+      "label": "S&P 500",
+      "ticker": "^GSPC",
+      "region": "US",
+      "price": 6368.85,
+      "currency": "USD",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "change_str": "+0.00%",
+      "direction": "up"
+    },
+    {
+      "label": "NASDAQ",
+      "ticker": "^IXIC",
+      "region": "US",
+      "price": 20948.36,
+      "currency": "USD",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "change_str": "+0.00%",
+      "direction": "up"
+    },
+    {
+      "label": "Dow Jones",
+      "ticker": "^DJI",
+      "region": "US",
+      "price": 45166.64,
+      "currency": "USD",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "change_str": "+0.00%",
+      "direction": "up"
+    },
+    {
+      "label": "FTSE 100",
+      "ticker": "^FTSE",
+      "region": "UK",
+      "price": 9967.35,
+      "currency": "GBP",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "change_str": "+0.00%",
+      "direction": "up"
+    },
+    {
+      "label": "DAX",
+      "ticker": "^GDAXI",
+      "region": "EU",
+      "price": 22300.75,
+      "currency": "EUR",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "change_str": "+0.00%",
+      "direction": "up"
+    },
+    {
+      "label": "Nikkei 225",
+      "ticker": "^N225",
+      "region": "JP",
+      "price": 53373.07,
+      "currency": "JPY",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "change_str": "+0.00%",
+      "direction": "up"
+    },
+    {
+      "label": "Hang Seng",
+      "ticker": "^HSI",
+      "region": "HK",
+      "price": 24951.88,
+      "currency": "HKD",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "change_str": "+0.00%",
+      "direction": "up"
+    },
+    {
+      "label": "Nifty 50",
+      "ticker": "^NSEI",
+      "region": "IN",
+      "price": 22819.6,
+      "currency": "INR",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "change_str": "+0.00%",
+      "direction": "up"
+    },
+    {
+      "label": "Gold",
+      "ticker": "GC=F",
+      "region": "COMMOD",
+      "price": 4524.3,
+      "currency": "USD",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "change_str": "+0.00%",
+      "direction": "up"
+    },
+    {
+      "label": "Crude Oil",
+      "ticker": "CL=F",
+      "region": "COMMOD",
+      "price": 99.64,
+      "currency": "USD",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "change_str": "+0.00%",
+      "direction": "up"
+    },
+    {
+      "label": "Bitcoin",
+      "ticker": "BTC-USD",
+      "region": "CRYPTO",
+      "price": 66848.34,
+      "currency": "USD",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "change_str": "+0.00%",
+      "direction": "up"
+    },
+    {
+      "label": "USD Index",
+      "ticker": "DX-Y.NYB",
+      "region": "FX",
+      "price": 100.19,
+      "currency": "USD",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "change_str": "+0.00%",
+      "direction": "up"
+    }
   ],
-  "generated_at": "2026-03-28 16:56:54 UTC"
+  "logs": [
+    "2026-03-28 20:01:44 [INFO] AZALYST \u2014 status.json generated",
+    "2026-03-28 20:01:44 [INFO] AZALYST \u2014 18 active signals in state",
+    "2026-03-28 20:01:44 [INFO] AZALYST \u2014 Open positions: ITA, XLE, IBIT, INDA, SOXX",
+    "2026-03-28 20:01:44 [INFO] AZALYST \u2014 Closed trades: 1",
+    "2026-03-28 20:01:44 [INFO] azalyst.classifier \u2014 Total articles: 899"
+  ],
+  "generated_at": "2026-03-28 20:01:40 UTC"
 }
