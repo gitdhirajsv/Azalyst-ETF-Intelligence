@@ -221,6 +221,10 @@
   },
   "confidence": [
     {
+      "symbol": "Energy / Oil & Gas",
+      "score": 92.0
+    },
+    {
       "symbol": "Defense & Aerospace + Commodities & Mining",
       "score": 90.0
     },
@@ -247,10 +251,6 @@
     {
       "symbol": "Crypto & Digital Assets",
       "score": 80.0
-    },
-    {
-      "symbol": "Energy / Oil & Gas",
-      "score": 78.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -294,6 +294,41 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 92.0,
+      "severity": "CRITICAL",
+      "article_count": 56,
+      "latest_at": "28 Mar 2026 23:00 UTC",
+      "headline": "Drillers See Triple-Digit Crude and Hit the Brakes",
+      "regions": [
+        "middle_east",
+        "americas"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "Oilprice.com"
+      ],
+      "india_etfs": [
+        "PSUBNKBEES",
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "XLE",
+        "USO",
+        "IXC"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 12.5,
+        "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
     {
       "sector_key": "commodities_mining|defense",
       "sector_label": "Defense & Aerospace + Commodities & Mining",
@@ -454,26 +489,6 @@
         "source_diversity": 5.0,
         "recency": 15.0,
         "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 78.0,
-      "severity": "HIGH",
-      "article_count": 57,
-      "latest_at": "28 Mar 2026 20:04 UTC",
-      "headline": "Energy / Oil & Gas remains active in the signal book.",
-      "regions": [],
-      "sources": [],
-      "india_etfs": [],
-      "global_etfs": [],
-      "breakdown": {
-        "signal_strength": 0.0,
-        "volume_confirmation": 0.0,
-        "source_diversity": 0.0,
-        "recency": 0.0,
-        "geopolitical_severity": 0.0
       }
     },
     {
@@ -681,6 +696,11 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Energy / Oil & Gas - 56 articles - CRITICAL - Drillers See Triple-Digit Crude and Hit the Brakes"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Defense & Aerospace + Commodities & Mining - 113 articles - CRITICAL - Defense & Aerospace + Commodities & Mining remains active in the signal book."
     },
     {
@@ -712,11 +732,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Crypto & Digital Assets - 46 articles - CRITICAL - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Energy / Oil & Gas - 57 articles - HIGH - Energy / Oil & Gas remains active in the signal book."
     },
     {
       "tag": "tag-neu",
@@ -884,12 +899,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66698.47,
+      "price": 66312.07,
       "currency": "USD",
-      "change": 360.1,
-      "change_pct": 0.54,
-      "change_str": "+0.54%",
-      "direction": "up"
+      "change": -26.3,
+      "change_pct": -0.04,
+      "change_str": "-0.04%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
@@ -954,11 +969,11 @@
     "partial_profit_pct": 15
   },
   "logs": [
-    "2026-03-28 22:53:48 [INFO] AZALYST - status.json generated",
-    "2026-03-28 22:53:48 [INFO] PORTFOLIO - NAV INR 10,031.24 | Return +0.31%",
-    "2026-03-28 22:53:48 [INFO] SIGNALS - 18 active signal buckets in state",
-    "2026-03-28 22:53:48 [INFO] TRADER - Open positions: ITA, XLE, INDA, SOXX, IBIT",
-    "2026-03-28 22:53:48 [INFO] TRADER - Closed trades: 2"
+    "2026-03-28 23:21:46 [INFO] AZALYST - status.json generated",
+    "2026-03-28 23:21:46 [INFO] PORTFOLIO - NAV INR 10,031.24 | Return +0.31%",
+    "2026-03-28 23:21:46 [INFO] SIGNALS - 18 active signal buckets in state",
+    "2026-03-28 23:21:46 [INFO] TRADER - Open positions: ITA, XLE, INDA, SOXX, IBIT",
+    "2026-03-28 23:21:46 [INFO] TRADER - Closed trades: 2"
   ],
-  "generated_at": "2026-03-28 22:53:47 UTC"
+  "generated_at": "2026-03-28 23:21:45 UTC"
 }

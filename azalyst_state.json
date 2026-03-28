@@ -6,10 +6,89 @@
     "article_count": 127
   },
   "energy_oil": {
-    "sent_at": "2026-03-28T20:04:01.826030+00:00",
-    "confidence": 78,
+    "sent_at": "2026-03-28T23:21:41.575286+00:00",
+    "confidence": 92,
     "sector_label": "Energy / Oil & Gas",
-    "article_count": 57
+    "article_count": 56,
+    "severity": "CRITICAL",
+    "regions": [
+      "middle_east",
+      "americas"
+    ],
+    "sources": [
+      "US Top News and Analysis",
+      "Bloomberg Markets",
+      "Markets-Economic Times",
+      "Oilprice.com"
+    ],
+    "top_headlines": [
+      "Drillers See Triple-Digit Crude and Hit the Brakes",
+      "Markets drown in Red Sea: Rupee bleeds, bears maul Street",
+      "$100 Oil Is Solving Russia's Budget Problem",
+      "How the Iran War Is Disrupting Global Fertilizer Supply",
+      "Oil prices close at highest level since 2022 as Iran negotiations fail to ease supply fears"
+    ],
+    "latest_ts": "2026-03-28T23:00:00+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 25,
+      "volume_confirmation": 20.0,
+      "source_diversity": 12.5,
+      "recency": 20.0,
+      "geopolitical_severity": 15.0
+    },
+    "etf_recommendations": {
+      "india": [
+        {
+          "name": "Nippon India ETF Nifty PSU Bank BeES",
+          "ticker": "PSUBNKBEES",
+          "note": "PSU banks benefit from energy sector capex",
+          "platform": "Dhan App",
+          "exchange": "NSE/BSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Indian PSU energy companies (ONGC, IOC) drive PSU bank credit. Energy capex cycle benefits."
+        },
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "Direct PSU energy exposure \u2014 ONGC, NTPC, Coal India",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "CPSE ETF holds ONGC, Coal India, NTPC, BHEL. Direct play on India's energy sector."
+        }
+      ],
+      "global": [
+        {
+          "name": "Energy Select Sector SPDR",
+          "ticker": "XLE",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20133 months",
+          "thesis": "Largest US energy ETF. Holds Exxon, Chevron, ConocoPhillips. Direct oil price leverage."
+        },
+        {
+          "name": "United States Oil Fund",
+          "ticker": "USO",
+          "platform": "USCF \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "1\u20134 weeks",
+          "thesis": "Direct WTI crude oil futures exposure. Short-term geopolitical supply-shock play."
+        },
+        {
+          "name": "iShares Global Energy ETF",
+          "ticker": "IXC",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Global energy diversification \u2014 Shell, BP, TotalEnergies, Saudi Aramco. Less US-centric."
+        }
+      ]
+    }
   },
   "crypto_digital": {
     "sent_at": "2026-03-28T22:07:56.170600+00:00",
