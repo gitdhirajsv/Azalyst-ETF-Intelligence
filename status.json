@@ -1,16 +1,20 @@
 {
   "portfolio_value": 10031.24,
   "total_deposited": 10000.0,
-  "cash": 467.77,
-  "market_value": 9563.47,
-  "total_invested": 9420.07,
-  "unrealised_pnl": 143.4,
-  "unrealised_str": "+143.40",
-  "realised_pnl": -112.16,
-  "realised_str": "-112.16",
+  "cash": 1067.57,
+  "market_value": 8963.67,
+  "total_invested": 8759.4,
+  "unrealised_pnl": 204.27,
+  "unrealised_str": "+204.27",
+  "realised_pnl": -173.03,
+  "realised_str": "-173.03",
   "change": "+0.31%",
   "change_raw": 0.31,
-  "closed_trades": 1,
+  "closed_trades": 2,
+  "partial_realised_pnl": 0.0,
+  "portfolio_peak": 10031.24,
+  "drawdown_now_pct": 0.0,
+  "max_drawdown_pct": 0.0,
   "positions": [
     {
       "trade_id": "T0001",
@@ -20,6 +24,9 @@
       "platform": "INDmoney / Vested",
       "entry": 21229.83,
       "current": 20471.3,
+      "peak_price": 21229.83,
+      "trail_stop": 19106.85,
+      "dist_to_trail_pct": 6.67,
       "units": 0.12718,
       "invested": 2700.01,
       "pnl": -96.47,
@@ -27,7 +34,9 @@
       "pnl_pct": -3.57,
       "pnl_pct_str": "-3.57%",
       "confidence": 80,
-      "severity": "CRITICAL"
+      "severity": "CRITICAL",
+      "days_held": 12,
+      "half_exited": false
     },
     {
       "trade_id": "T0002",
@@ -37,6 +46,9 @@
       "platform": "INDmoney / Vested",
       "entry": 5355.28,
       "current": 5928.0,
+      "peak_price": 5928.0,
+      "trail_stop": 5453.76,
+      "dist_to_trail_pct": 8.0,
       "units": 0.594553,
       "invested": 3184.0,
       "pnl": 340.51,
@@ -44,24 +56,9 @@
       "pnl_pct": 10.69,
       "pnl_pct_str": "+10.69%",
       "confidence": 87,
-      "severity": "CRITICAL"
-    },
-    {
-      "trade_id": "T0003",
-      "ticker": "IBIT",
-      "etf_name": "iShares Bitcoin Trust ETF",
-      "sector": "Crypto & Digital Assets",
-      "platform": "INDmoney / Vested",
-      "entry": 3727.56,
-      "current": 3543.91,
-      "units": 0.331455,
-      "invested": 1235.52,
-      "pnl": -60.87,
-      "pnl_str": "-60.87",
-      "pnl_pct": -4.93,
-      "pnl_pct_str": "-4.93%",
-      "confidence": 75,
-      "severity": "CRITICAL"
+      "severity": "CRITICAL",
+      "days_held": 12,
+      "half_exited": false
     },
     {
       "trade_id": "T0004",
@@ -71,6 +68,9 @@
       "platform": "INDmoney / Vested",
       "entry": 4447.07,
       "current": 4341.77,
+      "peak_price": 4447.07,
+      "trail_stop": 4002.36,
+      "dist_to_trail_pct": 7.82,
       "units": 0.38824,
       "invested": 1726.53,
       "pnl": -40.88,
@@ -78,7 +78,9 @@
       "pnl_pct": -2.37,
       "pnl_pct_str": "-2.37%",
       "confidence": 85,
-      "severity": "CRITICAL"
+      "severity": "CRITICAL",
+      "days_held": 12,
+      "half_exited": false
     },
     {
       "trade_id": "T0006",
@@ -88,6 +90,9 @@
       "platform": "INDmoney / Vested",
       "entry": 30592.43,
       "current": 30651.99,
+      "peak_price": 30651.99,
+      "trail_stop": 27533.19,
+      "dist_to_trail_pct": 10.17,
       "units": 0.018763,
       "invested": 574.01,
       "pnl": 1.12,
@@ -95,7 +100,31 @@
       "pnl_pct": 0.19,
       "pnl_pct_str": "+0.19%",
       "confidence": 85,
-      "severity": "CRITICAL"
+      "severity": "CRITICAL",
+      "days_held": 12,
+      "half_exited": false
+    },
+    {
+      "trade_id": "T0007",
+      "ticker": "IBIT",
+      "etf_name": "iShares Bitcoin Trust ETF",
+      "sector": "Crypto & Digital Assets",
+      "platform": "INDmoney / Vested",
+      "entry": 3543.91,
+      "current": 3543.91,
+      "peak_price": 3543.91,
+      "trail_stop": 3189.52,
+      "dist_to_trail_pct": 10.0,
+      "units": 0.162208,
+      "invested": 574.85,
+      "pnl": 0.0,
+      "pnl_str": "+0.00",
+      "pnl_pct": 0.0,
+      "pnl_pct_str": "+0.00%",
+      "confidence": 80,
+      "severity": "CRITICAL",
+      "days_held": 0,
+      "half_exited": false
     }
   ],
   "closed_trades_list": [
@@ -112,20 +141,47 @@
       "days_held": 7,
       "exit_reason": "Stop-loss hit (-10.2%)",
       "winner": false
+    },
+    {
+      "trade_id": "T0003",
+      "ticker": "IBIT",
+      "etf_name": "iShares Bitcoin Trust ETF",
+      "entry": 3727.56,
+      "exit": 3543.91,
+      "pnl": -60.87,
+      "pnl_str": "-60.87",
+      "pnl_pct": -4.93,
+      "pnl_pct_str": "-4.93%",
+      "days_held": 12,
+      "exit_reason": "Capital rotation to stronger Crypto & Digital Assets (80/100)",
+      "winner": false
     }
   ],
   "track_record": {
-    "total_trades": 1,
+    "total_trades": 2,
     "winners": 0,
-    "losers": 1,
+    "losers": 2,
     "win_rate": 0.0,
+    "avg_win": 0.0,
+    "avg_loss": -7.54,
+    "profit_factor": 0.0,
+    "expectancy": -7.54,
+    "sharpe_proxy": -2.89,
     "best": {
-      "ticker": "GLDM",
-      "pnl_pct_str": "-10.16%"
+      "ticker": "IBIT",
+      "etf_name": "iShares Bitcoin Trust ETF",
+      "pnl_pct": -4.93,
+      "pnl_pct_str": "-4.93%",
+      "exit_reason": "Capital rotation to stronger Crypto & Digital Assets (80/100)",
+      "days_held": 12
     },
     "worst": {
       "ticker": "GLDM",
-      "pnl_pct_str": "-10.16%"
+      "etf_name": "SPDR Gold MiniShares Trust",
+      "pnl_pct": -10.16,
+      "pnl_pct_str": "-10.16%",
+      "exit_reason": "Stop-loss hit (-10.2%)",
+      "days_held": 7
     }
   },
   "confidence_threshold": 62,
@@ -133,34 +189,34 @@
     "labels": [
       "ITA",
       "XLE",
-      "IBIT",
       "INDA",
       "SOXX",
+      "IBIT",
       "CASH"
     ],
     "values": [
       26.0,
       35.1,
-      11.7,
       16.8,
       5.7,
-      4.7
+      5.7,
+      10.6
     ]
   },
   "pnl": {
     "labels": [
       "ITA",
       "XLE",
-      "IBIT",
       "INDA",
-      "SOXX"
+      "SOXX",
+      "IBIT"
     ],
     "values": [
       -96.47,
       340.51,
-      -60.87,
       -40.88,
-      1.12
+      1.12,
+      0.0
     ]
   },
   "confidence": [
@@ -181,10 +237,6 @@
       "score": 83.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 82.0
-    },
-    {
       "symbol": "Energy / Oil & Gas + Cybersecurity",
       "score": 82.0
     },
@@ -193,8 +245,16 @@
       "score": 80.0
     },
     {
-      "symbol": "Banking & Financial Sector",
+      "symbol": "Crypto & Digital Assets",
       "score": 80.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 78.0
+    },
+    {
+      "symbol": "Banking & Financial Sector",
+      "score": 76.0
     },
     {
       "symbol": "Emerging Markets + Energy / Oil & Gas",
@@ -203,10 +263,6 @@
     {
       "symbol": "Nuclear Energy & Uranium + Crypto & Digital Assets",
       "score": 73.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 71.0
     },
     {
       "symbol": "India Equity Markets",
@@ -218,7 +274,7 @@
     },
     {
       "symbol": "Technology & AI / Semiconductors",
-      "score": 66.0
+      "score": 70.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -237,104 +293,672 @@
       "score": 62.0
     }
   ],
+  "signals": [
+    {
+      "sector_key": "commodities_mining|defense",
+      "sector_label": "Defense & Aerospace + Commodities & Mining",
+      "confidence": 90.0,
+      "severity": "CRITICAL",
+      "article_count": 113,
+      "latest_at": "25 Mar 2026 14:12 UTC",
+      "headline": "Defense & Aerospace + Commodities & Mining remains active in the signal book.",
+      "regions": [],
+      "sources": [],
+      "india_etfs": [],
+      "global_etfs": [],
+      "breakdown": {
+        "signal_strength": 0.0,
+        "volume_confirmation": 0.0,
+        "source_diversity": 0.0,
+        "recency": 0.0,
+        "geopolitical_severity": 0.0
+      }
+    },
+    {
+      "sector_key": "banking_financial|gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 85.0,
+      "severity": "CRITICAL",
+      "article_count": 43,
+      "latest_at": "28 Mar 2026 09:59 UTC",
+      "headline": "Gold & Precious Metals + Banking & Financial Sector remains active in the signal book.",
+      "regions": [],
+      "sources": [],
+      "india_etfs": [],
+      "global_etfs": [],
+      "breakdown": {
+        "signal_strength": 0.0,
+        "volume_confirmation": 0.0,
+        "source_diversity": 0.0,
+        "recency": 0.0,
+        "geopolitical_severity": 0.0
+      }
+    },
+    {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 84.0,
+      "severity": "HIGH",
+      "article_count": 10,
+      "latest_at": "28 Mar 2026 22:07 UTC",
+      "headline": "What is Blockchain: Everything You Need to Know (2022)",
+      "regions": [
+        "global",
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Crunch Hype",
+        "Cointelegraph.com News",
+        "World News - Breaking international news and headlines | Sky News",
+        "BBC News"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "HACK",
+        "CIBR"
+      ],
+      "breakdown": {
+        "signal_strength": 19.1,
+        "volume_confirmation": 20.0,
+        "source_diversity": 10.0,
+        "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "defense|nuclear_uranium",
+      "sector_label": "Nuclear Energy & Uranium + Defense & Aerospace",
+      "confidence": 83.0,
+      "severity": "CRITICAL",
+      "article_count": 125,
+      "latest_at": "28 Mar 2026 12:33 UTC",
+      "headline": "Nuclear Energy & Uranium + Defense & Aerospace remains active in the signal book.",
+      "regions": [],
+      "sources": [],
+      "india_etfs": [],
+      "global_etfs": [],
+      "breakdown": {
+        "signal_strength": 0.0,
+        "volume_confirmation": 0.0,
+        "source_diversity": 0.0,
+        "recency": 0.0,
+        "geopolitical_severity": 0.0
+      }
+    },
+    {
+      "sector_key": "cybersecurity|energy_oil",
+      "sector_label": "Energy / Oil & Gas + Cybersecurity",
+      "confidence": 82.0,
+      "severity": "CRITICAL",
+      "article_count": 75,
+      "latest_at": "20 Mar 2026 11:01 UTC",
+      "headline": "Energy / Oil & Gas + Cybersecurity remains active in the signal book.",
+      "regions": [],
+      "sources": [],
+      "india_etfs": [],
+      "global_etfs": [],
+      "breakdown": {
+        "signal_strength": 0.0,
+        "volume_confirmation": 0.0,
+        "source_diversity": 0.0,
+        "recency": 0.0,
+        "geopolitical_severity": 0.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 80.0,
+      "severity": "CRITICAL",
+      "article_count": 127,
+      "latest_at": "28 Mar 2026 20:04 UTC",
+      "headline": "Defense & Aerospace remains active in the signal book.",
+      "regions": [],
+      "sources": [],
+      "india_etfs": [],
+      "global_etfs": [],
+      "breakdown": {
+        "signal_strength": 0.0,
+        "volume_confirmation": 0.0,
+        "source_diversity": 0.0,
+        "recency": 0.0,
+        "geopolitical_severity": 0.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 80.0,
+      "severity": "CRITICAL",
+      "article_count": 46,
+      "latest_at": "28 Mar 2026 20:57 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Crunch Hype",
+        "Cointelegraph.com News",
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 5.0,
+        "recency": 15.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 78.0,
+      "severity": "HIGH",
+      "article_count": 57,
+      "latest_at": "28 Mar 2026 20:04 UTC",
+      "headline": "Energy / Oil & Gas remains active in the signal book.",
+      "regions": [],
+      "sources": [],
+      "india_etfs": [],
+      "global_etfs": [],
+      "breakdown": {
+        "signal_strength": 0.0,
+        "volume_confirmation": 0.0,
+        "source_diversity": 0.0,
+        "recency": 0.0,
+        "geopolitical_severity": 0.0
+      }
+    },
+    {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector",
+      "confidence": 76.0,
+      "severity": "HIGH",
+      "article_count": 18,
+      "latest_at": "28 Mar 2026 20:04 UTC",
+      "headline": "Banking & Financial Sector remains active in the signal book.",
+      "regions": [],
+      "sources": [],
+      "india_etfs": [],
+      "global_etfs": [],
+      "breakdown": {
+        "signal_strength": 0.0,
+        "volume_confirmation": 0.0,
+        "source_diversity": 0.0,
+        "recency": 0.0,
+        "geopolitical_severity": 0.0
+      }
+    },
+    {
+      "sector_key": "emerging_markets|energy_oil",
+      "sector_label": "Emerging Markets + Energy / Oil & Gas",
+      "confidence": 75.0,
+      "severity": "HIGH",
+      "article_count": 58,
+      "latest_at": "28 Mar 2026 14:24 UTC",
+      "headline": "Emerging Markets + Energy / Oil & Gas remains active in the signal book.",
+      "regions": [],
+      "sources": [],
+      "india_etfs": [],
+      "global_etfs": [],
+      "breakdown": {
+        "signal_strength": 0.0,
+        "volume_confirmation": 0.0,
+        "source_diversity": 0.0,
+        "recency": 0.0,
+        "geopolitical_severity": 0.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital|nuclear_uranium",
+      "sector_label": "Nuclear Energy & Uranium + Crypto & Digital Assets",
+      "confidence": 73.0,
+      "severity": "HIGH",
+      "article_count": 55,
+      "latest_at": "27 Mar 2026 15:13 UTC",
+      "headline": "Nuclear Energy & Uranium + Crypto & Digital Assets remains active in the signal book.",
+      "regions": [],
+      "sources": [],
+      "india_etfs": [],
+      "global_etfs": [],
+      "breakdown": {
+        "signal_strength": 0.0,
+        "volume_confirmation": 0.0,
+        "source_diversity": 0.0,
+        "recency": 0.0,
+        "geopolitical_severity": 0.0
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 71.0,
+      "severity": "MEDIUM",
+      "article_count": 62,
+      "latest_at": "28 Mar 2026 20:04 UTC",
+      "headline": "India Equity Markets remains active in the signal book.",
+      "regions": [],
+      "sources": [],
+      "india_etfs": [],
+      "global_etfs": [],
+      "breakdown": {
+        "signal_strength": 0.0,
+        "volume_confirmation": 0.0,
+        "source_diversity": 0.0,
+        "recency": 0.0,
+        "geopolitical_severity": 0.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 71.0,
+      "severity": "MEDIUM",
+      "article_count": 29,
+      "latest_at": "28 Mar 2026 20:04 UTC",
+      "headline": "Gold & Precious Metals remains active in the signal book.",
+      "regions": [],
+      "sources": [],
+      "india_etfs": [],
+      "global_etfs": [],
+      "breakdown": {
+        "signal_strength": 0.0,
+        "volume_confirmation": 0.0,
+        "source_diversity": 0.0,
+        "recency": 0.0,
+        "geopolitical_severity": 0.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 70.0,
+      "severity": "MEDIUM",
+      "article_count": 35,
+      "latest_at": "28 Mar 2026 20:04 UTC",
+      "headline": "Technology & AI / Semiconductors remains active in the signal book.",
+      "regions": [],
+      "sources": [],
+      "india_etfs": [],
+      "global_etfs": [],
+      "breakdown": {
+        "signal_strength": 0.0,
+        "volume_confirmation": 0.0,
+        "source_diversity": 0.0,
+        "recency": 0.0,
+        "geopolitical_severity": 0.0
+      }
+    },
+    {
+      "sector_key": "nuclear_uranium",
+      "sector_label": "Nuclear Energy & Uranium",
+      "confidence": 65.0,
+      "severity": "MEDIUM",
+      "article_count": 5,
+      "latest_at": "28 Mar 2026 09:28 UTC",
+      "headline": "Nuclear Energy & Uranium remains active in the signal book.",
+      "regions": [],
+      "sources": [],
+      "india_etfs": [],
+      "global_etfs": [],
+      "breakdown": {
+        "signal_strength": 0.0,
+        "volume_confirmation": 0.0,
+        "source_diversity": 0.0,
+        "recency": 0.0,
+        "geopolitical_severity": 0.0
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 64.0,
+      "severity": "MEDIUM",
+      "article_count": 7,
+      "latest_at": "28 Mar 2026 20:04 UTC",
+      "headline": "Commodities & Mining remains active in the signal book.",
+      "regions": [],
+      "sources": [],
+      "india_etfs": [],
+      "global_etfs": [],
+      "breakdown": {
+        "signal_strength": 0.0,
+        "volume_confirmation": 0.0,
+        "source_diversity": 0.0,
+        "recency": 0.0,
+        "geopolitical_severity": 0.0
+      }
+    },
+    {
+      "sector_key": "commodities_mining|emerging_markets",
+      "sector_label": "Emerging Markets + Commodities & Mining",
+      "confidence": 64.0,
+      "severity": "MEDIUM",
+      "article_count": 12,
+      "latest_at": "24 Mar 2026 01:44 UTC",
+      "headline": "Emerging Markets + Commodities & Mining remains active in the signal book.",
+      "regions": [],
+      "sources": [],
+      "india_etfs": [],
+      "global_etfs": [],
+      "breakdown": {
+        "signal_strength": 0.0,
+        "volume_confirmation": 0.0,
+        "source_diversity": 0.0,
+        "recency": 0.0,
+        "geopolitical_severity": 0.0
+      }
+    },
+    {
+      "sector_key": "emerging_markets",
+      "sector_label": "Emerging Markets",
+      "confidence": 62.0,
+      "severity": "MEDIUM",
+      "article_count": 5,
+      "latest_at": "27 Mar 2026 12:41 UTC",
+      "headline": "Emerging Markets remains active in the signal book.",
+      "regions": [],
+      "sources": [],
+      "india_etfs": [],
+      "global_etfs": [],
+      "breakdown": {
+        "signal_strength": 0.0,
+        "volume_confirmation": 0.0,
+        "source_diversity": 0.0,
+        "recency": 0.0,
+        "geopolitical_severity": 0.0
+      }
+    }
+  ],
   "articles": [
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Defense & Aerospace \u2014 131 articles \u00b7 confidence 80%"
+      "text": "Defense & Aerospace + Commodities & Mining - 113 articles - CRITICAL - Defense & Aerospace + Commodities & Mining remains active in the signal book."
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas \u2014 55 articles \u00b7 confidence 82%"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 43 articles - CRITICAL - Gold & Precious Metals + Banking & Financial Sector remains active in the signal book."
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector \u2014 43 articles \u00b7 confidence 85%"
+      "text": "Cybersecurity - 10 articles - HIGH - What is Blockchain: Everything You Need to Know (2022)"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Cybersecurity \u2014 10 articles \u00b7 confidence 84%"
+      "text": "Nuclear Energy & Uranium + Defense & Aerospace - 125 articles - CRITICAL - Nuclear Energy & Uranium + Defense & Aerospace remains active in the signal book."
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Banking & Financial Sector \u2014 19 articles \u00b7 confidence 80%"
+      "text": "Energy / Oil & Gas + Cybersecurity - 75 articles - CRITICAL - Energy / Oil & Gas + Cybersecurity remains active in the signal book."
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas + Cybersecurity \u2014 75 articles \u00b7 confidence 82%"
+      "text": "Defense & Aerospace - 127 articles - CRITICAL - Defense & Aerospace remains active in the signal book."
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Nuclear Energy & Uranium + Defense & Aerospace \u2014 125 articles \u00b7 confidence 83%"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Defense & Aerospace + Commodities & Mining \u2014 113 articles \u00b7 confidence 90%"
+      "text": "Crypto & Digital Assets - 46 articles - CRITICAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets \u2014 47 articles \u00b7 confidence 71%"
+      "text": "Energy / Oil & Gas - 57 articles - HIGH - Energy / Oil & Gas remains active in the signal book."
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets \u2014 64 articles \u00b7 confidence 71%"
+      "text": "Banking & Financial Sector - 18 articles - HIGH - Banking & Financial Sector remains active in the signal book."
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors \u2014 33 articles \u00b7 confidence 66%"
+      "text": "Emerging Markets + Energy / Oil & Gas - 58 articles - HIGH - Emerging Markets + Energy / Oil & Gas remains active in the signal book."
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals \u2014 29 articles \u00b7 confidence 71%"
+      "text": "Nuclear Energy & Uranium + Crypto & Digital Assets - 55 articles - HIGH - Nuclear Energy & Uranium + Crypto & Digital Assets remains active in the signal book."
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Nuclear Energy & Uranium \u2014 5 articles \u00b7 confidence 65%"
+      "text": "India Equity Markets - 62 articles - MEDIUM - India Equity Markets remains active in the signal book."
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Nuclear Energy & Uranium + Crypto & Digital Assets \u2014 55 articles \u00b7 confidence 73%"
+      "text": "Gold & Precious Metals - 29 articles - MEDIUM - Gold & Precious Metals remains active in the signal book."
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Emerging Markets + Energy / Oil & Gas \u2014 58 articles \u00b7 confidence 75%"
+      "text": "Technology & AI / Semiconductors - 35 articles - MEDIUM - Technology & AI / Semiconductors remains active in the signal book."
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Nuclear Energy & Uranium - 5 articles - MEDIUM - Nuclear Energy & Uranium remains active in the signal book."
     },
     {
       "tag": "tag-bear",
       "label": "Watch",
-      "text": "Commodities & Mining \u2014 7 articles \u00b7 confidence 64%"
+      "text": "Commodities & Mining - 7 articles - MEDIUM - Commodities & Mining remains active in the signal book."
     },
     {
       "tag": "tag-bear",
       "label": "Watch",
-      "text": "Emerging Markets \u2014 5 articles \u00b7 confidence 62%"
+      "text": "Emerging Markets + Commodities & Mining - 12 articles - MEDIUM - Emerging Markets + Commodities & Mining remains active in the signal book."
     },
     {
       "tag": "tag-bear",
       "label": "Watch",
-      "text": "Emerging Markets + Commodities & Mining \u2014 12 articles \u00b7 confidence 64%"
+      "text": "Emerging Markets - 5 articles - MEDIUM - Emerging Markets remains active in the signal book."
     }
   ],
-  "logs": [
-    "2026-03-28 22:19:30 [INFO] AZALYST \u2014 status.json generated",
-    "2026-03-28 22:19:30 [INFO] AZALYST \u2014 18 active signals in state",
-    "2026-03-28 22:19:30 [INFO] AZALYST \u2014 Open positions: ITA, XLE, IBIT, INDA, SOXX",
-    "2026-03-28 22:19:30 [INFO] AZALYST \u2014 Closed trades: 1",
-    "2026-03-28 22:19:30 [INFO] azalyst.classifier \u2014 Total articles: 886"
+  "market_snapshot": [
+    {
+      "label": "S&P 500",
+      "ticker": "^GSPC",
+      "region": "US",
+      "price": 6368.85,
+      "currency": "USD",
+      "change": -108.31,
+      "change_pct": -1.67,
+      "change_str": "-1.67%",
+      "direction": "down"
+    },
+    {
+      "label": "NASDAQ",
+      "ticker": "^IXIC",
+      "region": "US",
+      "price": 20948.36,
+      "currency": "USD",
+      "change": -459.72,
+      "change_pct": -2.15,
+      "change_str": "-2.15%",
+      "direction": "down"
+    },
+    {
+      "label": "Dow Jones",
+      "ticker": "^DJI",
+      "region": "US",
+      "price": 45166.64,
+      "currency": "USD",
+      "change": -793.47,
+      "change_pct": -1.73,
+      "change_str": "-1.73%",
+      "direction": "down"
+    },
+    {
+      "label": "FTSE 100",
+      "ticker": "^FTSE",
+      "region": "UK",
+      "price": 9967.35,
+      "currency": "GBP",
+      "change": -4.85,
+      "change_pct": -0.05,
+      "change_str": "-0.05%",
+      "direction": "down"
+    },
+    {
+      "label": "DAX",
+      "ticker": "^GDAXI",
+      "region": "EU",
+      "price": 22300.75,
+      "currency": "EUR",
+      "change": -312.22,
+      "change_pct": -1.38,
+      "change_str": "-1.38%",
+      "direction": "down"
+    },
+    {
+      "label": "Nikkei 225",
+      "ticker": "^N225",
+      "region": "JP",
+      "price": 53373.07,
+      "currency": "JPY",
+      "change": -230.58,
+      "change_pct": -0.43,
+      "change_str": "-0.43%",
+      "direction": "down"
+    },
+    {
+      "label": "Hang Seng",
+      "ticker": "^HSI",
+      "region": "HK",
+      "price": 24951.88,
+      "currency": "HKD",
+      "change": 95.45,
+      "change_pct": 0.38,
+      "change_str": "+0.38%",
+      "direction": "up"
+    },
+    {
+      "label": "Nifty 50",
+      "ticker": "^NSEI",
+      "region": "IN",
+      "price": 22819.6,
+      "currency": "INR",
+      "change": -486.85,
+      "change_pct": -2.09,
+      "change_str": "-2.09%",
+      "direction": "down"
+    },
+    {
+      "label": "Gold",
+      "ticker": "GC=F",
+      "region": "COMMOD",
+      "price": 4524.3,
+      "currency": "USD",
+      "change": 148.8,
+      "change_pct": 3.4,
+      "change_str": "+3.40%",
+      "direction": "up"
+    },
+    {
+      "label": "Crude Oil",
+      "ticker": "CL=F",
+      "region": "COMMOD",
+      "price": 99.64,
+      "currency": "USD",
+      "change": 5.16,
+      "change_pct": 5.46,
+      "change_str": "+5.46%",
+      "direction": "up"
+    },
+    {
+      "label": "Bitcoin",
+      "ticker": "BTC-USD",
+      "region": "CRYPTO",
+      "price": 66653.89,
+      "currency": "USD",
+      "change": 315.51,
+      "change_pct": 0.48,
+      "change_str": "+0.48%",
+      "direction": "up"
+    },
+    {
+      "label": "USD Index",
+      "ticker": "DX-Y.NYB",
+      "region": "FX",
+      "price": 100.19,
+      "currency": "USD",
+      "change": 0.29,
+      "change_pct": 0.29,
+      "change_str": "+0.29%",
+      "direction": "up"
+    },
+    {
+      "label": "VIX",
+      "ticker": "^VIX",
+      "region": "VOL",
+      "price": 31.05,
+      "currency": "USD",
+      "change": 3.61,
+      "change_pct": 13.16,
+      "change_str": "+13.16%",
+      "direction": "up"
+    }
   ],
-  "generated_at": "2026-03-28 22:19:30 UTC"
+  "risk_controls": {
+    "circuit_breaker_active": false,
+    "drawdown_from_peak_pct": 0.0,
+    "portfolio_peak": 10031.24,
+    "vix": 31.05,
+    "vix_regime": "HIGH",
+    "sector_concentration": [
+      {
+        "sector": "Energy / Oil & Gas",
+        "weight": 35.1,
+        "at_cap": true
+      },
+      {
+        "sector": "Defense & Aerospace",
+        "weight": 26.0,
+        "at_cap": false
+      },
+      {
+        "sector": "India Equity Markets",
+        "weight": 16.8,
+        "at_cap": false
+      },
+      {
+        "sector": "Technology & AI / Semiconductors",
+        "weight": 5.7,
+        "at_cap": false
+      },
+      {
+        "sector": "Crypto & Digital Assets",
+        "weight": 5.7,
+        "at_cap": false
+      }
+    ],
+    "max_drawdown_pct": 0.0,
+    "sector_cap_pct": 30,
+    "trailing_stop_pct": 8,
+    "hard_stop_pct": 10,
+    "partial_profit_pct": 15
+  },
+  "logs": [
+    "2026-03-28 22:11:42 [INFO] AZALYST - status.json generated",
+    "2026-03-28 22:11:42 [INFO] PORTFOLIO - NAV INR 10,031.24 | Return +0.31%",
+    "2026-03-28 22:11:42 [INFO] SIGNALS - 18 active signal buckets in state",
+    "2026-03-28 22:11:42 [INFO] TRADER - Open positions: ITA, XLE, INDA, SOXX, IBIT",
+    "2026-03-28 22:11:42 [INFO] TRADER - Closed trades: 2"
+  ],
+  "generated_at": "2026-03-28 22:11:41 UTC"
 }
