@@ -11,6 +11,9 @@
   "change": "+0.31%",
   "change_raw": 0.31,
   "closed_trades": 1,
+  "portfolio_peak": 10031.24,
+  "drawdown_now_pct": 0.0,
+  "max_drawdown_pct": 0.0,
   "positions": [
     {
       "trade_id": "T0001",
@@ -27,7 +30,11 @@
       "pnl_pct": -3.57,
       "pnl_pct_str": "-3.57%",
       "confidence": 80,
-      "severity": "CRITICAL"
+      "severity": "CRITICAL",
+      "peak_price": 21229.8317,
+      "trail_stop": 19106.8485,
+      "dist_to_trail_pct": 6.67,
+      "half_exited": false
     },
     {
       "trade_id": "T0002",
@@ -44,7 +51,11 @@
       "pnl_pct": 10.69,
       "pnl_pct_str": "+10.69%",
       "confidence": 87,
-      "severity": "CRITICAL"
+      "severity": "CRITICAL",
+      "peak_price": 5927.9979,
+      "trail_stop": 5453.7581,
+      "dist_to_trail_pct": 8.0,
+      "half_exited": false
     },
     {
       "trade_id": "T0003",
@@ -61,7 +72,11 @@
       "pnl_pct": -4.93,
       "pnl_pct_str": "-4.93%",
       "confidence": 75,
-      "severity": "CRITICAL"
+      "severity": "CRITICAL",
+      "peak_price": 3727.5639,
+      "trail_stop": 3354.8075,
+      "dist_to_trail_pct": 5.34,
+      "half_exited": false
     },
     {
       "trade_id": "T0004",
@@ -78,7 +93,11 @@
       "pnl_pct": -2.37,
       "pnl_pct_str": "-2.37%",
       "confidence": 85,
-      "severity": "CRITICAL"
+      "severity": "CRITICAL",
+      "peak_price": 4447.0688,
+      "trail_stop": 4002.3619,
+      "dist_to_trail_pct": 7.82,
+      "half_exited": false
     },
     {
       "trade_id": "T0006",
@@ -95,7 +114,11 @@
       "pnl_pct": 0.19,
       "pnl_pct_str": "+0.19%",
       "confidence": 85,
-      "severity": "CRITICAL"
+      "severity": "CRITICAL",
+      "peak_price": 30651.9944,
+      "trail_stop": 27533.189,
+      "dist_to_trail_pct": 10.17,
+      "half_exited": false
     }
   ],
   "closed_trades_list": [
@@ -136,7 +159,49 @@
       "pnl_pct_str": "-10.16%",
       "exit_reason": "Stop-loss hit (-10.2%)",
       "days_held": 7
-    }
+    },
+    "profit_factor": 0.0,
+    "expectancy": 0,
+    "sharpe_proxy": 0.0
+  },
+  "risk_controls": {
+    "circuit_breaker_active": false,
+    "drawdown_from_peak_pct": 0.0,
+    "portfolio_peak": 10031.24,
+    "vix": 31.05,
+    "vix_regime": "HIGH",
+    "sector_concentration": [
+      {
+        "sector": "Energy / Oil & Gas",
+        "weight": 35.1,
+        "at_cap": true
+      },
+      {
+        "sector": "Defense & Aerospace",
+        "weight": 26.0,
+        "at_cap": false
+      },
+      {
+        "sector": "India Equity Markets",
+        "weight": 16.8,
+        "at_cap": false
+      },
+      {
+        "sector": "Crypto & Digital Assets",
+        "weight": 11.7,
+        "at_cap": false
+      },
+      {
+        "sector": "Technology & AI / Semiconductors",
+        "weight": 5.7,
+        "at_cap": false
+      }
+    ],
+    "max_drawdown_pct": 0,
+    "sector_cap_pct": 30,
+    "trailing_stop_pct": 8,
+    "hard_stop_pct": 10,
+    "partial_profit_pct": 15
   },
   "confidence_threshold": 62,
   "allocation": {
@@ -454,7 +519,7 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66929.38,
+      "price": 66907.72,
       "currency": "USD",
       "change": 0.0,
       "change_pct": 0.0,
@@ -474,11 +539,11 @@
     }
   ],
   "logs": [
-    "2026-03-28 20:17:50 [INFO] AZALYST \u2014 status.json generated",
-    "2026-03-28 20:17:50 [INFO] AZALYST \u2014 18 active signals in state",
-    "2026-03-28 20:17:50 [INFO] AZALYST \u2014 Open positions: ITA, XLE, IBIT, INDA, SOXX",
-    "2026-03-28 20:17:50 [INFO] AZALYST \u2014 Closed trades: 1",
-    "2026-03-28 20:17:50 [INFO] azalyst.classifier \u2014 Total articles: 888"
+    "2026-03-28 20:55:19 [INFO] AZALYST \u2014 status.json generated",
+    "2026-03-28 20:55:19 [INFO] AZALYST \u2014 18 active signals in state",
+    "2026-03-28 20:55:19 [INFO] AZALYST \u2014 Open positions: ITA, XLE, IBIT, INDA, SOXX",
+    "2026-03-28 20:55:19 [INFO] AZALYST \u2014 Closed trades: 1",
+    "2026-03-28 20:55:19 [INFO] azalyst.classifier \u2014 Total articles: 888"
   ],
-  "generated_at": "2026-03-28 20:17:49 UTC"
+  "generated_at": "2026-03-28 20:55:15 UTC"
 }
