@@ -2,7 +2,7 @@
 etf_mapper.py — AZALYST ETF Mapping Engine
 
 Maps detected sectors to specific ETF recommendations.
-Covers both Indian ETFs (Dhan App) and Global ETFs (INDmoney / Vested).
+Covers Indian ETFs (NSE/BSE — Zerodha/Dhan/Groww) and Global ETFs (issuer-branded: iShares/SPDR/Invesco/Vanguard etc. — IBKR/Schwab/Fidelity).
 
 Each ETF entry includes:
   - name, ticker, platform, exchange
@@ -33,7 +33,7 @@ ETF_DATABASE = {
                 "name":      "CPSE ETF",
                 "ticker":    "CPSEETF",
                 "note":      "Direct PSU energy exposure — ONGC, NTPC, Coal India",
-                "platform":  "Dhan App",
+                "platform":  "NSE/BSE listed — Zerodha / Dhan / Groww",
                 "exchange":  "NSE",
                 "risk":      "Medium",
                 "timeframe": "1–6 months",
@@ -44,7 +44,7 @@ ETF_DATABASE = {
             {
                 "name":      "Energy Select Sector SPDR",
                 "ticker":    "XLE",
-                "platform":  "INDmoney / Vested",
+                "platform":  "SPDR by State Street — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "1–3 months",
@@ -53,7 +53,7 @@ ETF_DATABASE = {
             {
                 "name":      "United States Oil Fund",
                 "ticker":    "USO",
-                "platform":  "INDmoney / Vested",
+                "platform":  "USCF — IBKR / Schwab",
                 "exchange":  "NYSE",
                 "risk":      "High",
                 "timeframe": "1–4 weeks",
@@ -62,7 +62,7 @@ ETF_DATABASE = {
             {
                 "name":      "iShares Global Energy ETF",
                 "ticker":    "IXC",
-                "platform":  "INDmoney / Vested",
+                "platform":  "iShares by BlackRock — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "1–6 months",
@@ -77,7 +77,7 @@ ETF_DATABASE = {
                 "name":      "CPSE ETF",
                 "ticker":    "CPSEETF",
                 "note":      "BEL, HAL, BHEL included — India defense capex beneficiaries",
-                "platform":  "Dhan App",
+                "platform":  "NSE/BSE listed — Zerodha / Dhan / Groww",
                 "exchange":  "NSE",
                 "risk":      "Medium",
                 "timeframe": "3–12 months",
@@ -98,7 +98,7 @@ ETF_DATABASE = {
             {
                 "name":      "iShares U.S. Aerospace & Defense ETF",
                 "ticker":    "ITA",
-                "platform":  "INDmoney / Vested",
+                "platform":  "iShares by BlackRock — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "3–12 months",
@@ -107,7 +107,7 @@ ETF_DATABASE = {
             {
                 "name":      "SPDR S&P Aerospace & Defense ETF",
                 "ticker":    "XAR",
-                "platform":  "INDmoney / Vested",
+                "platform":  "SPDR by State Street — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "3–12 months",
@@ -116,7 +116,7 @@ ETF_DATABASE = {
             {
                 "name":      "Invesco Aerospace & Defense ETF",
                 "ticker":    "PPA",
-                "platform":  "INDmoney / Vested",
+                "platform":  "Invesco — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "3–12 months",
@@ -151,7 +151,7 @@ ETF_DATABASE = {
             {
                 "name":      "SPDR Gold MiniShares Trust",
                 "ticker":    "GLDM",
-                "platform":  "INDmoney / Vested",
+                "platform":  "SPDR by State Street — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Low-Medium",
                 "timeframe": "3–18 months",
@@ -160,7 +160,7 @@ ETF_DATABASE = {
             {
                 "name":      "VanEck Gold Miners ETF",
                 "ticker":    "GDX",
-                "platform":  "INDmoney / Vested",
+                "platform":  "VanEck — IBKR / Schwab",
                 "exchange":  "NYSE",
                 "risk":      "Medium-High",
                 "timeframe": "3–9 months",
@@ -169,7 +169,7 @@ ETF_DATABASE = {
             {
                 "name":      "VanEck Junior Gold Miners ETF",
                 "ticker":    "GDXJ",
-                "platform":  "INDmoney / Vested",
+                "platform":  "VanEck — IBKR / Schwab",
                 "exchange":  "NYSE",
                 "risk":      "High",
                 "timeframe": "2–6 months",
@@ -194,7 +194,7 @@ ETF_DATABASE = {
                 "name":      "Nippon India Nifty IT ETF",
                 "ticker":    "NIFTYBEES",
                 "note":      "Broad Nifty 50 — tech-heavy index",
-                "platform":  "Dhan App",
+                "platform":  "NSE/BSE listed — Zerodha / Dhan / Groww",
                 "exchange":  "NSE",
                 "risk":      "Low-Medium",
                 "timeframe": "6–18 months",
@@ -205,7 +205,7 @@ ETF_DATABASE = {
             {
                 "name":      "iShares Semiconductor ETF",
                 "ticker":    "SOXX",
-                "platform":  "INDmoney / Vested",
+                "platform":  "iShares by BlackRock — IBKR / Schwab / Fidelity",
                 "exchange":  "NASDAQ",
                 "risk":      "Medium-High",
                 "timeframe": "3–12 months",
@@ -214,7 +214,7 @@ ETF_DATABASE = {
             {
                 "name":      "Invesco QQQ Trust",
                 "ticker":    "QQQ",
-                "platform":  "INDmoney / Vested",
+                "platform":  "Invesco — IBKR / Schwab / Fidelity",
                 "exchange":  "NASDAQ",
                 "risk":      "Medium",
                 "timeframe": "6–18 months",
@@ -223,7 +223,7 @@ ETF_DATABASE = {
             {
                 "name":      "Global X AI & Technology ETF",
                 "ticker":    "AIQ",
-                "platform":  "INDmoney / Vested",
+                "platform":  "Global X — IBKR / Schwab",
                 "exchange":  "NASDAQ",
                 "risk":      "Medium-High",
                 "timeframe": "3–12 months",
@@ -238,7 +238,7 @@ ETF_DATABASE = {
                 "name":      "CPSE ETF",
                 "ticker":    "CPSEETF",
                 "note":      "NTPC (nuclear expansion) + BHEL included",
-                "platform":  "Dhan App",
+                "platform":  "NSE/BSE listed — Zerodha / Dhan / Groww",
                 "exchange":  "NSE",
                 "risk":      "Medium",
                 "timeframe": "6–24 months",
@@ -249,7 +249,7 @@ ETF_DATABASE = {
             {
                 "name":      "Sprott Uranium Miners ETF",
                 "ticker":    "URNM",
-                "platform":  "INDmoney / Vested",
+                "platform":  "Sprott — IBKR / Schwab",
                 "exchange":  "NYSE",
                 "risk":      "High",
                 "timeframe": "6–24 months",
@@ -258,7 +258,7 @@ ETF_DATABASE = {
             {
                 "name":      "Global X Uranium ETF",
                 "ticker":    "URA",
-                "platform":  "INDmoney / Vested",
+                "platform":  "VanEck — IBKR / Schwab",
                 "exchange":  "NYSE",
                 "risk":      "High",
                 "timeframe": "6–24 months",
@@ -267,7 +267,7 @@ ETF_DATABASE = {
             {
                 "name":      "Sprott Physical Uranium Trust",
                 "ticker":    "SRUUF",
-                "platform":  "INDmoney / Vested",
+                "platform":  "Sprott — IBKR",
                 "exchange":  "OTC",
                 "risk":      "High",
                 "timeframe": "12–36 months",
@@ -282,7 +282,7 @@ ETF_DATABASE = {
             {
                 "name":      "ETFMG Prime Cyber Security ETF",
                 "ticker":    "HACK",
-                "platform":  "INDmoney / Vested",
+                "platform":  "ETFMG — IBKR / Schwab",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "3–12 months",
@@ -291,7 +291,7 @@ ETF_DATABASE = {
             {
                 "name":      "First Trust Nasdaq CEA Cybersecurity ETF",
                 "ticker":    "CIBR",
-                "platform":  "INDmoney / Vested",
+                "platform":  "First Trust — IBKR / Schwab",
                 "exchange":  "NASDAQ",
                 "risk":      "Medium",
                 "timeframe": "3–12 months",
@@ -305,7 +305,7 @@ ETF_DATABASE = {
             {
                 "name":      "Nippon India Nifty 50 BeES",
                 "ticker":    "NIFTYBEES",
-                "platform":  "Dhan App",
+                "platform":  "NSE/BSE listed — Zerodha / Dhan / Groww",
                 "exchange":  "NSE",
                 "risk":      "Low-Medium",
                 "timeframe": "6–18 months",
@@ -314,7 +314,7 @@ ETF_DATABASE = {
             {
                 "name":      "Mirae Asset Nifty Midcap 150 ETF",
                 "ticker":    "MIDCAPETF",
-                "platform":  "Dhan App",
+                "platform":  "NSE/BSE listed — Zerodha / Dhan / Groww",
                 "exchange":  "NSE",
                 "risk":      "Medium-High",
                 "timeframe": "6–18 months",
@@ -325,7 +325,7 @@ ETF_DATABASE = {
             {
                 "name":      "iShares MSCI India ETF",
                 "ticker":    "INDA",
-                "platform":  "INDmoney / Vested",
+                "platform":  "iShares by BlackRock — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "6–18 months",
@@ -340,7 +340,7 @@ ETF_DATABASE = {
             {
                 "name":      "iShares Bitcoin Trust ETF",
                 "ticker":    "IBIT",
-                "platform":  "INDmoney / Vested",
+                "platform":  "iShares by BlackRock — IBKR / Schwab / Fidelity",
                 "exchange":  "NASDAQ",
                 "risk":      "High",
                 "timeframe": "1–6 months",
@@ -349,7 +349,7 @@ ETF_DATABASE = {
             {
                 "name":      "Bitwise Crypto Industry Innovators ETF",
                 "ticker":    "BITQ",
-                "platform":  "INDmoney / Vested",
+                "platform":  "Bitwise — IBKR / Coinbase / Schwab",
                 "exchange":  "NYSE",
                 "risk":      "High",
                 "timeframe": "1–6 months",
@@ -363,7 +363,7 @@ ETF_DATABASE = {
             {
                 "name":      "Nippon India ETF Bank BeES",
                 "ticker":    "BANKBEES",
-                "platform":  "Dhan App",
+                "platform":  "NSE/BSE listed — Zerodha / Dhan / Groww",
                 "exchange":  "NSE",
                 "risk":      "Medium",
                 "timeframe": "1–6 months",
@@ -374,7 +374,7 @@ ETF_DATABASE = {
             {
                 "name":      "Financial Select Sector SPDR",
                 "ticker":    "XLF",
-                "platform":  "INDmoney / Vested",
+                "platform":  "SPDR by State Street — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "1–6 months",
@@ -384,7 +384,7 @@ ETF_DATABASE = {
                 "name":      "SPDR Gold MiniShares Trust",
                 "ticker":    "GLDM",
                 "note":      "Flight to safety during banking stress",
-                "platform":  "INDmoney / Vested",
+                "platform":  "SPDR by State Street — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Low-Medium",
                 "timeframe": "1–3 months",
@@ -399,7 +399,7 @@ ETF_DATABASE = {
                 "name":      "CPSE ETF",
                 "ticker":    "CPSEETF",
                 "note":      "NMDC, Coal India — commodity exposure",
-                "platform":  "Dhan App",
+                "platform":  "NSE/BSE listed — Zerodha / Dhan / Groww",
                 "exchange":  "NSE",
                 "risk":      "Medium",
                 "timeframe": "3–9 months",
@@ -410,7 +410,7 @@ ETF_DATABASE = {
             {
                 "name":      "Invesco DB Commodity Index Tracking Fund",
                 "ticker":    "DBC",
-                "platform":  "INDmoney / Vested",
+                "platform":  "Invesco — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "3–9 months",
@@ -419,7 +419,7 @@ ETF_DATABASE = {
             {
                 "name":      "Sprott Physical Copper Trust",
                 "ticker":    "COPP",
-                "platform":  "INDmoney / Vested",
+                "platform":  "Sprott — IBKR / Schwab",
                 "exchange":  "NYSE",
                 "risk":      "Medium-High",
                 "timeframe": "3–12 months",
@@ -434,7 +434,7 @@ ETF_DATABASE = {
                 "name":      "Nippon India Nifty 50 BeES",
                 "ticker":    "NIFTYBEES",
                 "note":      "India as EM leader",
-                "platform":  "Dhan App",
+                "platform":  "NSE/BSE listed — Zerodha / Dhan / Groww",
                 "exchange":  "NSE",
                 "risk":      "Low-Medium",
                 "timeframe": "6–18 months",
@@ -445,7 +445,7 @@ ETF_DATABASE = {
             {
                 "name":      "iShares MSCI Emerging Markets ETF",
                 "ticker":    "EEM",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "iShares by BlackRock — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "3–12 months",
@@ -454,7 +454,7 @@ ETF_DATABASE = {
             {
                 "name":      "SPDR Portfolio Emerging Markets ETF",
                 "ticker":    "SPEM",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "SPDR by State Street — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "3–12 months",
@@ -470,7 +470,7 @@ ETF_DATABASE = {
             {
                 "name":      "Mirae Asset Nifty Healthcare ETF",
                 "ticker":    "HEALTHCARE",
-                "platform":  "Dhan App",
+                "platform":  "NSE/BSE listed — Zerodha / Dhan / Groww",
                 "exchange":  "NSE",
                 "risk":      "Medium",
                 "timeframe": "6–18 months",
@@ -479,7 +479,7 @@ ETF_DATABASE = {
             {
                 "name":      "Nippon India Nifty Pharma ETF",
                 "ticker":    "PHARMABEES",
-                "platform":  "Dhan App",
+                "platform":  "NSE/BSE listed — Zerodha / Dhan / Groww",
                 "exchange":  "NSE",
                 "risk":      "Medium",
                 "timeframe": "6–18 months",
@@ -490,7 +490,7 @@ ETF_DATABASE = {
             {
                 "name":      "Health Care Select Sector SPDR",
                 "ticker":    "XLV",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "SPDR by State Street — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Low-Medium",
                 "timeframe": "6–18 months",
@@ -499,7 +499,7 @@ ETF_DATABASE = {
             {
                 "name":      "iShares Global Healthcare ETF",
                 "ticker":    "IXJ",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "iShares by BlackRock — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Low-Medium",
                 "timeframe": "6–18 months",
@@ -508,7 +508,7 @@ ETF_DATABASE = {
             {
                 "name":      "SPDR S&P Biotech ETF",
                 "ticker":    "XBI",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "SPDR by State Street — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "High",
                 "timeframe": "3–12 months",
@@ -522,7 +522,7 @@ ETF_DATABASE = {
             {
                 "name":      "Kotak Nifty Realty ETF",
                 "ticker":    "REALTY",
-                "platform":  "Dhan App",
+                "platform":  "NSE/BSE listed — Zerodha / Dhan / Groww",
                 "exchange":  "NSE",
                 "risk":      "Medium-High",
                 "timeframe": "6–24 months",
@@ -533,7 +533,7 @@ ETF_DATABASE = {
             {
                 "name":      "Vanguard Real Estate ETF",
                 "ticker":    "VNQ",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "Vanguard — IBKR / Fidelity / Schwab",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "6–18 months",
@@ -542,7 +542,7 @@ ETF_DATABASE = {
             {
                 "name":      "iShares Global REIT ETF",
                 "ticker":    "REET",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "iShares by BlackRock — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "6–18 months",
@@ -556,7 +556,7 @@ ETF_DATABASE = {
             {
                 "name":      "Nippon India Nifty India New Energy ETF",
                 "ticker":    "NEWENERGY",
-                "platform":  "Dhan App",
+                "platform":  "NSE/BSE listed — Zerodha / Dhan / Groww",
                 "exchange":  "NSE",
                 "risk":      "Medium",
                 "timeframe": "6–24 months",
@@ -567,7 +567,7 @@ ETF_DATABASE = {
             {
                 "name":      "iShares Global Clean Energy ETF",
                 "ticker":    "ICLN",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "iShares by BlackRock — IBKR / Schwab / Fidelity",
                 "exchange":  "NASDAQ",
                 "risk":      "Medium-High",
                 "timeframe": "6–24 months",
@@ -576,7 +576,7 @@ ETF_DATABASE = {
             {
                 "name":      "First Trust NASDAQ Clean Edge Green Energy ETF",
                 "ticker":    "QCLN",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "First Trust — IBKR / Schwab",
                 "exchange":  "NASDAQ",
                 "risk":      "Medium-High",
                 "timeframe": "6–18 months",
@@ -585,7 +585,7 @@ ETF_DATABASE = {
             {
                 "name":      "Invesco WilderHill Clean Energy ETF",
                 "ticker":    "PBW",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "Invesco — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "High",
                 "timeframe": "3–12 months",
@@ -600,7 +600,7 @@ ETF_DATABASE = {
             {
                 "name":      "Vanguard FTSE Europe ETF",
                 "ticker":    "VGK",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "Vanguard — IBKR / Fidelity / Schwab",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "6–18 months",
@@ -609,7 +609,7 @@ ETF_DATABASE = {
             {
                 "name":      "iShares MSCI Germany ETF",
                 "ticker":    "EWG",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "iShares by BlackRock — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "3–12 months",
@@ -618,7 +618,7 @@ ETF_DATABASE = {
             {
                 "name":      "iShares MSCI United Kingdom ETF",
                 "ticker":    "EWU",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "iShares by BlackRock — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "3–12 months",
@@ -627,7 +627,7 @@ ETF_DATABASE = {
             {
                 "name":      "iShares Europe ETF",
                 "ticker":    "IEV",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "iShares by BlackRock — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "6–18 months",
@@ -642,7 +642,7 @@ ETF_DATABASE = {
             {
                 "name":      "iShares MSCI Japan ETF",
                 "ticker":    "EWJ",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "iShares by BlackRock — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "3–12 months",
@@ -651,7 +651,7 @@ ETF_DATABASE = {
             {
                 "name":      "iShares MSCI South Korea ETF",
                 "ticker":    "EWY",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "iShares by BlackRock — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Medium-High",
                 "timeframe": "3–12 months",
@@ -660,7 +660,7 @@ ETF_DATABASE = {
             {
                 "name":      "Franklin FTSE Asia ex Japan ETF",
                 "ticker":    "FLAX",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "Franklin Templeton — IBKR / Schwab",
                 "exchange":  "NYSE",
                 "risk":      "Medium",
                 "timeframe": "6–18 months",
@@ -669,7 +669,7 @@ ETF_DATABASE = {
             {
                 "name":      "iShares China Large-Cap ETF",
                 "ticker":    "FXI",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "iShares by BlackRock — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "High",
                 "timeframe": "1–6 months",
@@ -683,7 +683,7 @@ ETF_DATABASE = {
             {
                 "name":      "Bharat Bond ETF — April 2025",
                 "ticker":    "BHARATBOND",
-                "platform":  "Dhan App",
+                "platform":  "NSE/BSE listed — Zerodha / Dhan / Groww",
                 "exchange":  "NSE",
                 "risk":      "Low",
                 "timeframe": "3–12 months",
@@ -694,7 +694,7 @@ ETF_DATABASE = {
             {
                 "name":      "iShares 20+ Year Treasury Bond ETF",
                 "ticker":    "TLT",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "iShares by BlackRock — IBKR / Schwab / Fidelity",
                 "exchange":  "NASDAQ",
                 "risk":      "Medium",
                 "timeframe": "3–18 months",
@@ -703,7 +703,7 @@ ETF_DATABASE = {
             {
                 "name":      "Vanguard Total Bond Market ETF",
                 "ticker":    "BND",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "Vanguard — IBKR / Fidelity / Schwab",
                 "exchange":  "NASDAQ",
                 "risk":      "Low",
                 "timeframe": "6–24 months",
@@ -712,7 +712,7 @@ ETF_DATABASE = {
             {
                 "name":      "iShares TIPS Bond ETF",
                 "ticker":    "TIP",
-                "platform":  "INDmoney / Vested / IBKR",
+                "platform":  "iShares by BlackRock — IBKR / Schwab / Fidelity",
                 "exchange":  "NYSE",
                 "risk":      "Low-Medium",
                 "timeframe": "6–24 months",
