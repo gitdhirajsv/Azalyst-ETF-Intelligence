@@ -1,43 +1,21 @@
 {
   "portfolio_value": 10031.23,
   "total_deposited": 10000.0,
-  "cash": 296.21,
-  "market_value": 9735.02,
-  "total_invested": 9394.52,
-  "unrealised_pnl": 340.5,
-  "unrealised_str": "+340.50",
-  "realised_pnl": -309.27,
-  "realised_str": "-309.27",
+  "cash": 1987.48,
+  "market_value": 8043.75,
+  "total_invested": 8043.76,
+  "unrealised_pnl": -0.01,
+  "unrealised_str": "-0.01",
+  "realised_pnl": 31.24,
+  "realised_str": "+31.24",
   "change": "+0.31%",
   "change_raw": 0.31,
-  "closed_trades": 6,
+  "closed_trades": 7,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 10031.24,
   "drawdown_now_pct": 0.0,
   "max_drawdown_pct": 0.0,
   "positions": [
-    {
-      "trade_id": "T0002",
-      "ticker": "XLE",
-      "etf_name": "Energy Select Sector SPDR",
-      "sector": "Energy / Oil & Gas",
-      "platform": "INDmoney / Vested",
-      "entry": 5355.28,
-      "current": 5928.0,
-      "peak_price": 5928.0,
-      "trail_stop": 5453.76,
-      "dist_to_trail_pct": 8.0,
-      "units": 0.594553,
-      "invested": 3184.0,
-      "pnl": 340.51,
-      "pnl_str": "+340.51",
-      "pnl_pct": 10.69,
-      "pnl_pct_str": "+10.69%",
-      "confidence": 87,
-      "severity": "CRITICAL",
-      "days_held": 13,
-      "half_exited": false
-    },
     {
       "trade_id": "T0007",
       "ticker": "IBIT",
@@ -147,6 +125,50 @@
       "severity": "CRITICAL",
       "days_held": 0,
       "half_exited": false
+    },
+    {
+      "trade_id": "T0013",
+      "ticker": "GLDM",
+      "etf_name": "SPDR Gold MiniShares Trust",
+      "sector": "Gold & Precious Metals + Banking & Financial Sector",
+      "platform": "INDmoney / Vested",
+      "entry": 8465.59,
+      "current": 8465.59,
+      "peak_price": 8465.59,
+      "trail_stop": 7619.03,
+      "dist_to_trail_pct": 10.0,
+      "units": 0.127498,
+      "invested": 1079.35,
+      "pnl": 0.0,
+      "pnl_str": "+0.00",
+      "pnl_pct": 0.0,
+      "pnl_pct_str": "+0.00%",
+      "confidence": 71,
+      "severity": "CRITICAL",
+      "days_held": 0,
+      "half_exited": false
+    },
+    {
+      "trade_id": "T0014",
+      "ticker": "SOXX",
+      "etf_name": "iShares Semiconductor ETF",
+      "sector": "Technology & AI / Semiconductors",
+      "platform": "INDmoney / Vested",
+      "entry": 30651.99,
+      "current": 30651.99,
+      "peak_price": 30651.99,
+      "trail_stop": 27586.79,
+      "dist_to_trail_pct": 10.0,
+      "units": 0.024595,
+      "invested": 753.89,
+      "pnl": 0.0,
+      "pnl_str": "+0.00",
+      "pnl_pct": 0.0,
+      "pnl_pct_str": "+0.00%",
+      "confidence": 70,
+      "severity": "CRITICAL",
+      "days_held": 0,
+      "half_exited": false
     }
   ],
   "closed_trades_list": [
@@ -233,24 +255,38 @@
       "days_held": 0,
       "exit_reason": "Capital rotation to stronger Cybersecurity (84/100)",
       "winner": true
+    },
+    {
+      "trade_id": "T0002",
+      "ticker": "XLE",
+      "etf_name": "Energy Select Sector SPDR",
+      "entry": 5355.28,
+      "exit": 5928.0,
+      "pnl": 340.51,
+      "pnl_str": "+340.51",
+      "pnl_pct": 10.69,
+      "pnl_pct_str": "+10.69%",
+      "days_held": 13,
+      "exit_reason": "Capital rotation to stronger Gold & Precious Metals + Banking & Financial Sector (71/100)",
+      "winner": true
     }
   ],
   "track_record": {
-    "total_trades": 6,
-    "winners": 2,
+    "total_trades": 7,
+    "winners": 3,
     "losers": 4,
-    "win_rate": 33.3,
-    "avg_win": 0.04,
+    "win_rate": 42.9,
+    "avg_win": 3.59,
     "avg_loss": -5.12,
-    "profit_factor": 0.0,
-    "expectancy": -3.4,
-    "sharpe_proxy": -0.97,
+    "profit_factor": 1.1,
+    "expectancy": -1.39,
+    "sharpe_proxy": -0.24,
     "best": {
-      "ticker": "SOXX",
-      "etf_name": "iShares Semiconductor ETF",
-      "pnl_pct": 0.07,
-      "pnl_pct_str": "+0.07%",
-      "exit_reason": "Capital rotation to stronger Gold & Precious Metals + Banking & Financial Sector (65/100)",
+      "ticker": "XLE",
+      "etf_name": "Energy Select Sector SPDR",
+      "pnl_pct": 10.69,
+      "pnl_pct_str": "+10.69%",
+      "exit_reason": "Capital rotation to stronger Gold & Precious Metals + Banking & Financial Sector (71/100)",
       "days_held": 13
     },
     "worst": {
@@ -265,38 +301,42 @@
   "confidence_threshold": 62,
   "allocation": {
     "labels": [
-      "XLE",
       "IBIT",
       "XLF",
       "HACK",
       "ITA",
       "INDA",
+      "GLDM",
+      "SOXX",
       "CASH"
     ],
     "values": [
-      35.1,
       20.7,
       11.3,
       17.5,
       7.5,
       5.0,
-      3.0
+      10.8,
+      7.5,
+      19.8
     ]
   },
   "pnl": {
     "labels": [
-      "XLE",
       "IBIT",
       "XLF",
       "HACK",
       "ITA",
-      "INDA"
+      "INDA",
+      "GLDM",
+      "SOXX"
     ],
     "values": [
-      340.51,
       0.0,
       -0.0,
       -0.0,
+      0.0,
+      0.0,
       0.0,
       0.0
     ]
@@ -323,10 +363,6 @@
       "score": 82.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 80.0
-    },
-    {
       "symbol": "Gold & Precious Metals",
       "score": 80.0
     },
@@ -343,10 +379,6 @@
       "score": 75.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 75.0
-    },
-    {
       "symbol": "Emerging Markets + Energy / Oil & Gas",
       "score": 75.0
     },
@@ -357,6 +389,14 @@
     {
       "symbol": "Nuclear Energy & Uranium + Crypto & Digital Assets",
       "score": 73.0
+    },
+    {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 71.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 70.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -500,44 +540,6 @@
       }
     },
     {
-      "sector_key": "banking_financial|gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 80.0,
-      "severity": "CRITICAL",
-      "article_count": 41,
-      "latest_at": "29 Mar 2026 06:28 UTC",
-      "headline": "US stocks today: US stocks tumble to lowest close in 6 months as Iran war drags; Nasdaq confirms correction",
-      "regions": [
-        "americas",
-        "global",
-        "europe",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Finance"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD",
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ",
-        "XLF"
-      ],
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 5.0,
-        "recency": 15.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals",
       "confidence": 80.0,
@@ -674,40 +676,6 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 75.0,
-      "severity": "CRITICAL",
-      "article_count": 32,
-      "latest_at": "29 Mar 2026 08:18 UTC",
-      "headline": "TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)",
-      "regions": [
-        "americas",
-        "asia_pacific",
-        "europe",
-        "middle_east"
-      ],
-      "sources": [
-        "Crunch Hype"
-      ],
-      "india_etfs": [
-        "MAFANG",
-        "NIFTYBEES"
-      ],
-      "global_etfs": [
-        "SOXX",
-        "QQQ",
-        "AIQ"
-      ],
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 0.0,
-        "recency": 15.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "emerging_markets|energy_oil",
       "sector_label": "Emerging Markets + Energy / Oil & Gas",
       "confidence": 75.0,
@@ -782,6 +750,78 @@
       }
     },
     {
+      "sector_key": "banking_financial|gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 71.0,
+      "severity": "CRITICAL",
+      "article_count": 43,
+      "latest_at": "29 Mar 2026 06:28 UTC",
+      "headline": "US stocks today: US stocks tumble to lowest close in 6 months as Iran war drags; Nasdaq confirms correction",
+      "regions": [
+        "india",
+        "middle_east",
+        "global",
+        "europe"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Finance",
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD",
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ",
+        "XLF"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 5.0,
+        "recency": 6.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 70.0,
+      "severity": "CRITICAL",
+      "article_count": 29,
+      "latest_at": "29 Mar 2026 08:18 UTC",
+      "headline": "TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "global",
+        "europe"
+      ],
+      "sources": [
+        "Crunch Hype"
+      ],
+      "india_etfs": [
+        "MAFANG",
+        "NIFTYBEES"
+      ],
+      "global_etfs": [
+        "SOXX",
+        "QQQ",
+        "AIQ"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 0.0,
+        "recency": 10.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 65.0,
@@ -807,18 +847,33 @@
       "confidence": 64.0,
       "severity": "MEDIUM",
       "article_count": 7,
-      "latest_at": "28 Mar 2026 20:04 UTC",
-      "headline": "Commodities & Mining remains active in the signal book.",
-      "regions": [],
-      "sources": [],
-      "india_etfs": [],
-      "global_etfs": [],
+      "latest_at": "29 Mar 2026 12:51 UTC",
+      "headline": "Analysis: A new oil shock is building. The next few weeks of war will be decisive for the economy.",
+      "regions": [
+        "india",
+        "global",
+        "europe",
+        "middle_east"
+      ],
+      "sources": [
+        "Finance",
+        "US Top News and Analysis",
+        "Oilprice.com",
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
       "breakdown": {
-        "signal_strength": 0.0,
-        "volume_confirmation": 0.0,
-        "source_diversity": 0.0,
-        "recency": 0.0,
-        "geopolitical_severity": 0.0
+        "signal_strength": 10.3,
+        "volume_confirmation": 16.0,
+        "source_diversity": 7.5,
+        "recency": 20.0,
+        "geopolitical_severity": 11.0
       }
     },
     {
@@ -891,11 +946,6 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 41 articles - CRITICAL - US stocks today: US stocks tumble to lowest close in 6 months as Iran war drags; Nasdaq confirms correction"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "Gold & Precious Metals - 27 articles - CRITICAL - US stocks today: US stocks tumble to lowest close in 6 months as Iran war drags; Nasdaq confirms correction"
     },
     {
@@ -916,11 +966,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 32 articles - CRITICAL - TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Emerging Markets + Energy / Oil & Gas - 58 articles - HIGH - Emerging Markets + Energy / Oil & Gas remains active in the signal book."
     },
     {
@@ -936,12 +981,22 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 43 articles - CRITICAL - US stocks today: US stocks tumble to lowest close in 6 months as Iran war drags; Nasdaq confirms correction"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Technology & AI / Semiconductors - 29 articles - CRITICAL - TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 5 articles - MEDIUM - Nuclear Energy & Uranium remains active in the signal book."
     },
     {
       "tag": "tag-bear",
       "label": "Watch",
-      "text": "Commodities & Mining - 7 articles - MEDIUM - Commodities & Mining remains active in the signal book."
+      "text": "Commodities & Mining - 7 articles - MEDIUM - Analysis: A new oil shock is building. The next few weeks of war will be decisive for the economy."
     },
     {
       "tag": "tag-bear",
@@ -1069,11 +1124,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66745.64,
+      "price": 66615.97,
       "currency": "USD",
-      "change": 425.94,
-      "change_pct": 0.64,
-      "change_str": "+0.64%",
+      "change": 296.27,
+      "change_pct": 0.45,
+      "change_str": "+0.45%",
       "direction": "up"
     },
     {
@@ -1107,11 +1162,6 @@
     "vix_regime": "HIGH",
     "sector_concentration": [
       {
-        "sector": "Energy / Oil & Gas",
-        "weight": 35.1,
-        "at_cap": true
-      },
-      {
         "sector": "Crypto & Digital Assets",
         "weight": 20.7,
         "at_cap": false
@@ -1124,6 +1174,16 @@
       {
         "sector": "Banking & Financial Sector",
         "weight": 11.3,
+        "at_cap": false
+      },
+      {
+        "sector": "Gold & Precious Metals + Banking & Financial Sector",
+        "weight": 10.8,
+        "at_cap": false
+      },
+      {
+        "sector": "Technology & AI / Semiconductors",
+        "weight": 7.5,
         "at_cap": false
       },
       {
@@ -1144,11 +1204,11 @@
     "partial_profit_pct": 15
   },
   "logs": [
-    "2026-03-29 12:34:42 [INFO] AZALYST - status.json generated",
-    "2026-03-29 12:34:42 [INFO] PORTFOLIO - NAV INR 10,031.23 | Return +0.31%",
-    "2026-03-29 12:34:42 [INFO] SIGNALS - 18 active signal buckets in state",
-    "2026-03-29 12:34:42 [INFO] TRADER - Open positions: XLE, IBIT, XLF, HACK, ITA, INDA",
-    "2026-03-29 12:34:42 [INFO] TRADER - Closed trades: 6"
+    "2026-03-29 13:45:35 [INFO] AZALYST - status.json generated",
+    "2026-03-29 13:45:35 [INFO] PORTFOLIO - NAV INR 10,031.23 | Return +0.31%",
+    "2026-03-29 13:45:35 [INFO] SIGNALS - 18 active signal buckets in state",
+    "2026-03-29 13:45:35 [INFO] TRADER - Open positions: IBIT, XLF, HACK, ITA, INDA, GLDM, SOXX",
+    "2026-03-29 13:45:35 [INFO] TRADER - Closed trades: 7"
   ],
-  "generated_at": "2026-03-29 12:34:40 UTC"
+  "generated_at": "2026-03-29 13:45:34 UTC"
 }
