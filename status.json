@@ -1,16 +1,16 @@
 {
   "portfolio_value": 10031.23,
   "total_deposited": 10000.0,
-  "cash": 2022.1,
-  "market_value": 8009.13,
-  "total_invested": 8009.14,
+  "cash": 1804.39,
+  "market_value": 8226.84,
+  "total_invested": 8226.85,
   "unrealised_pnl": -0.01,
   "unrealised_str": "-0.01",
   "realised_pnl": 31.24,
   "realised_str": "+31.24",
   "change": "+0.31%",
   "change_raw": 0.31,
-  "closed_trades": 8,
+  "closed_trades": 10,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 10031.24,
   "drawdown_now_pct": 0.0,
@@ -27,13 +27,13 @@
       "peak_price": 4530.33,
       "trail_stop": 4077.3,
       "dist_to_trail_pct": 10.0,
-      "units": 0.249986,
-      "invested": 1132.52,
-      "pnl": -0.0,
-      "pnl_str": "+-0.00",
-      "pnl_pct": -0.0,
-      "pnl_pct_str": "+-0.00%",
-      "confidence": 76,
+      "units": 0.464452,
+      "invested": 2104.12,
+      "pnl": 0.0,
+      "pnl_str": "+0.00",
+      "pnl_pct": 0.0,
+      "pnl_pct_str": "+0.00%",
+      "confidence": 80,
       "severity": "CRITICAL",
       "days_held": 0,
       "half_exited": false
@@ -122,28 +122,6 @@
       "pnl_pct": 0.0,
       "pnl_pct_str": "+0.00%",
       "confidence": 71,
-      "severity": "CRITICAL",
-      "days_held": 0,
-      "half_exited": false
-    },
-    {
-      "trade_id": "T0014",
-      "ticker": "SOXX",
-      "etf_name": "iShares Semiconductor ETF",
-      "sector": "Technology & AI / Semiconductors",
-      "platform": "INDmoney / Vested",
-      "entry": 30651.99,
-      "current": 30651.99,
-      "peak_price": 30651.99,
-      "trail_stop": 27586.79,
-      "dist_to_trail_pct": 10.0,
-      "units": 0.024595,
-      "invested": 753.89,
-      "pnl": 0.0,
-      "pnl_str": "+0.00",
-      "pnl_pct": 0.0,
-      "pnl_pct_str": "+0.00%",
-      "confidence": 70,
       "severity": "CRITICAL",
       "days_held": 0,
       "half_exited": false
@@ -305,18 +283,46 @@
       "days_held": 1,
       "exit_reason": "Capital rotation to stronger Crypto & Digital Assets (75/100)",
       "winner": false
+    },
+    {
+      "trade_id": "T0014",
+      "ticker": "SOXX",
+      "etf_name": "iShares Semiconductor ETF",
+      "entry": 30651.99,
+      "exit": 30651.99,
+      "pnl": 0.0,
+      "pnl_str": "+0.00",
+      "pnl_pct": 0.0,
+      "pnl_pct_str": "+0.00%",
+      "days_held": 0,
+      "exit_reason": "Capital rotation to stronger Technology & AI / Semiconductors (66/100)",
+      "winner": false
+    },
+    {
+      "trade_id": "T0017",
+      "ticker": "SOXX",
+      "etf_name": "iShares Semiconductor ETF",
+      "entry": 30651.99,
+      "exit": 30651.99,
+      "pnl": 0.0,
+      "pnl_str": "+0.00",
+      "pnl_pct": 0.0,
+      "pnl_pct_str": "+0.00%",
+      "days_held": 0,
+      "exit_reason": "Capital rotation to stronger Banking & Financial Sector + Gold & Precious Metals (80/100)",
+      "winner": false
     }
   ],
   "track_record": {
-    "total_trades": 8,
+    "total_trades": 10,
     "winners": 3,
     "losers": 4,
-    "win_rate": 37.5,
+    "win_rate": 30.0,
     "avg_win": 3.59,
     "avg_loss": -5.12,
     "profit_factor": 1.1,
-    "expectancy": -1.22,
-    "sharpe_proxy": -0.22,
+    "expectancy": -0.97,
+    "sharpe_proxy": -0.2,
     "best": {
       "ticker": "XLE",
       "etf_name": "Energy Select Sector SPDR",
@@ -342,21 +348,19 @@
       "ITA",
       "INDA",
       "GLDM",
-      "SOXX",
       "XLE",
       "IBIT",
       "CASH"
     ],
     "values": [
-      11.3,
+      21.0,
       17.5,
       7.5,
       11.2,
       10.8,
-      7.5,
       5.0,
       9.2,
-      20.2
+      18.0
     ]
   },
   "pnl": {
@@ -366,14 +370,12 @@
       "ITA",
       "INDA",
       "GLDM",
-      "SOXX",
       "XLE",
       "IBIT"
     ],
     "values": [
-      -0.0,
-      -0.0,
       0.0,
+      -0.0,
       0.0,
       0.0,
       0.0,
@@ -397,6 +399,10 @@
     {
       "symbol": "Energy / Oil & Gas + Cybersecurity",
       "score": 82.0
+    },
+    {
+      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
+      "score": 80.0
     },
     {
       "symbol": "Gold & Precious Metals",
@@ -427,16 +433,12 @@
       "score": 73.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 71.0
+      "symbol": "Cybersecurity",
+      "score": 70.0
     },
     {
       "symbol": "Technology & AI / Semiconductors",
-      "score": 70.0
-    },
-    {
-      "symbol": "Cybersecurity",
-      "score": 70.0
+      "score": 66.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -547,6 +549,44 @@
         "source_diversity": 0.0,
         "recency": 0.0,
         "geopolitical_severity": 0.0
+      }
+    },
+    {
+      "sector_key": "banking_financial|gold_precious_metals",
+      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
+      "confidence": 80.0,
+      "severity": "CRITICAL",
+      "article_count": 39,
+      "latest_at": "29 Mar 2026 17:11 UTC",
+      "headline": "The Fed issues its latest interest rate decision Wednesday. Here's what to expect",
+      "regions": [
+        "global",
+        "india",
+        "americas",
+        "europe"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Markets-Economic Times",
+        "Finance"
+      ],
+      "india_etfs": [
+        "BANKBEES",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 5.0,
+        "recency": 15.0,
+        "geopolitical_severity": 15.0
       }
     },
     {
@@ -754,78 +794,6 @@
       }
     },
     {
-      "sector_key": "banking_financial|gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 71.0,
-      "severity": "CRITICAL",
-      "article_count": 43,
-      "latest_at": "29 Mar 2026 06:28 UTC",
-      "headline": "US stocks today: US stocks tumble to lowest close in 6 months as Iran war drags; Nasdaq confirms correction",
-      "regions": [
-        "india",
-        "middle_east",
-        "global",
-        "europe"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Finance",
-        "Markets-Economic Times"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD",
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ",
-        "XLF"
-      ],
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 5.0,
-        "recency": 6.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 70.0,
-      "severity": "CRITICAL",
-      "article_count": 29,
-      "latest_at": "29 Mar 2026 08:18 UTC",
-      "headline": "TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)",
-      "regions": [
-        "asia_pacific",
-        "middle_east",
-        "global",
-        "europe"
-      ],
-      "sources": [
-        "Crunch Hype"
-      ],
-      "india_etfs": [
-        "MAFANG",
-        "NIFTYBEES"
-      ],
-      "global_etfs": [
-        "SOXX",
-        "QQQ",
-        "AIQ"
-      ],
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 0.0,
-        "recency": 10.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
       "confidence": 70.0,
@@ -855,6 +823,40 @@
         "source_diversity": 7.5,
         "recency": 20.0,
         "geopolitical_severity": 11.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 66.0,
+      "severity": "CRITICAL",
+      "article_count": 27,
+      "latest_at": "29 Mar 2026 08:18 UTC",
+      "headline": "TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "india",
+        "americas"
+      ],
+      "sources": [
+        "Crunch Hype"
+      ],
+      "india_etfs": [
+        "MAFANG",
+        "NIFTYBEES"
+      ],
+      "global_etfs": [
+        "SOXX",
+        "QQQ",
+        "AIQ"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 0.0,
+        "recency": 6.0,
+        "geopolitical_severity": 15.0
       }
     },
     {
@@ -977,6 +979,11 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Banking & Financial Sector + Gold & Precious Metals - 39 articles - CRITICAL - The Fed issues its latest interest rate decision Wednesday. Here's what to expect"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Gold & Precious Metals - 27 articles - CRITICAL - US stocks today: US stocks tumble to lowest close in 6 months as Iran war drags; Nasdaq confirms correction"
     },
     {
@@ -1012,17 +1019,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 43 articles - CRITICAL - US stocks today: US stocks tumble to lowest close in 6 months as Iran war drags; Nasdaq confirms correction"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 29 articles - CRITICAL - TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Cybersecurity - 8 articles - MEDIUM - What is Blockchain: Everything You Need to Know (2022)"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Technology & AI / Semiconductors - 27 articles - CRITICAL - TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)"
     },
     {
       "tag": "tag-neu",
@@ -1160,12 +1162,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66192.0,
+      "price": 66346.94,
       "currency": "USD",
-      "change": -127.7,
-      "change_pct": -0.19,
-      "change_str": "-0.19%",
-      "direction": "down"
+      "change": 27.24,
+      "change_pct": 0.04,
+      "change_str": "+0.04%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
@@ -1198,13 +1200,13 @@
     "vix_regime": "HIGH",
     "sector_concentration": [
       {
-        "sector": "Cybersecurity",
-        "weight": 17.5,
+        "sector": "Banking & Financial Sector",
+        "weight": 21.0,
         "at_cap": false
       },
       {
-        "sector": "Banking & Financial Sector",
-        "weight": 11.3,
+        "sector": "Cybersecurity",
+        "weight": 17.5,
         "at_cap": false
       },
       {
@@ -1220,11 +1222,6 @@
       {
         "sector": "Crypto & Digital Assets",
         "weight": 9.2,
-        "at_cap": false
-      },
-      {
-        "sector": "Technology & AI / Semiconductors",
-        "weight": 7.5,
         "at_cap": false
       },
       {
@@ -1245,11 +1242,11 @@
     "partial_profit_pct": 15
   },
   "logs": [
-    "2026-03-29 17:35:09 [INFO] AZALYST - status.json generated",
-    "2026-03-29 17:35:09 [INFO] PORTFOLIO - NAV INR 10,031.23 | Return +0.31%",
-    "2026-03-29 17:35:09 [INFO] SIGNALS - 18 active signal buckets in state",
-    "2026-03-29 17:35:09 [INFO] TRADER - Open positions: XLF, HACK, ITA, INDA, GLDM, SOXX, XLE, IBIT",
-    "2026-03-29 17:35:09 [INFO] TRADER - Closed trades: 8"
+    "2026-03-29 18:28:39 [INFO] AZALYST - status.json generated",
+    "2026-03-29 18:28:39 [INFO] PORTFOLIO - NAV INR 10,031.23 | Return +0.31%",
+    "2026-03-29 18:28:39 [INFO] SIGNALS - 18 active signal buckets in state",
+    "2026-03-29 18:28:39 [INFO] TRADER - Open positions: XLF, HACK, ITA, INDA, GLDM, XLE, IBIT",
+    "2026-03-29 18:28:39 [INFO] TRADER - Closed trades: 10"
   ],
-  "generated_at": "2026-03-29 17:35:09 UTC"
+  "generated_at": "2026-03-29 18:28:38 UTC"
 }
