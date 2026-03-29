@@ -1,16 +1,16 @@
 {
-  "portfolio_value": 10031.24,
+  "portfolio_value": 10031.23,
   "total_deposited": 10000.0,
-  "cash": 344.1,
-  "market_value": 9687.14,
-  "total_invested": 9386.4,
-  "unrealised_pnl": 300.74,
-  "unrealised_str": "+300.74",
-  "realised_pnl": -269.5,
-  "realised_str": "-269.50",
+  "cash": 277.14,
+  "market_value": 9754.09,
+  "total_invested": 9412.48,
+  "unrealised_pnl": 341.61,
+  "unrealised_str": "+341.61",
+  "realised_pnl": -310.38,
+  "realised_str": "-310.38",
   "change": "+0.31%",
   "change_raw": 0.31,
-  "closed_trades": 3,
+  "closed_trades": 4,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 10031.24,
   "drawdown_now_pct": 0.0,
@@ -39,44 +39,22 @@
       "half_exited": false
     },
     {
-      "trade_id": "T0004",
-      "ticker": "INDA",
-      "etf_name": "iShares MSCI India ETF",
-      "sector": "India Equity Markets",
-      "platform": "INDmoney / Vested",
-      "entry": 4422.97,
-      "current": 4341.77,
-      "peak_price": 4447.07,
-      "trail_stop": 3980.68,
-      "dist_to_trail_pct": 8.32,
-      "units": 0.503401,
-      "invested": 2226.53,
-      "pnl": -40.88,
-      "pnl_str": "-40.88",
-      "pnl_pct": -1.84,
-      "pnl_pct_str": "-1.84%",
-      "confidence": 85,
-      "severity": "CRITICAL",
-      "days_held": 12,
-      "half_exited": false
-    },
-    {
       "trade_id": "T0006",
       "ticker": "SOXX",
       "etf_name": "iShares Semiconductor ETF",
       "sector": "Technology & AI / Semiconductors",
       "platform": "INDmoney / Vested",
-      "entry": 30620.38,
+      "entry": 30630.51,
       "current": 30651.99,
       "peak_price": 30651.99,
-      "trail_stop": 27558.35,
-      "dist_to_trail_pct": 10.09,
-      "units": 0.035075,
-      "invested": 1074.01,
-      "pnl": 1.11,
-      "pnl_str": "+1.11",
-      "pnl_pct": 0.1,
-      "pnl_pct_str": "+0.10%",
+      "trail_stop": 27567.46,
+      "dist_to_trail_pct": 10.06,
+      "units": 0.051387,
+      "invested": 1574.01,
+      "pnl": 1.1,
+      "pnl_str": "+1.10",
+      "pnl_pct": 0.07,
+      "pnl_pct_str": "+0.07%",
       "confidence": 85,
       "severity": "CRITICAL",
       "days_held": 12,
@@ -110,13 +88,13 @@
       "etf_name": "SPDR Gold MiniShares Trust",
       "sector": "Gold & Precious Metals",
       "platform": "INDmoney / Vested",
-      "entry": 8465.59,
+      "entry": 8465.56,
       "current": 8465.59,
       "peak_price": 8465.59,
-      "trail_stop": 7619.03,
+      "trail_stop": 7619.0,
       "dist_to_trail_pct": 10.0,
-      "units": 0.082037,
-      "invested": 694.49,
+      "units": 0.1411,
+      "invested": 1194.49,
       "pnl": 0.0,
       "pnl_str": "+0.00",
       "pnl_pct": 0.0,
@@ -137,12 +115,12 @@
       "peak_price": 4530.33,
       "trail_stop": 4077.3,
       "dist_to_trail_pct": 10.0,
-      "units": 0.139619,
-      "invested": 632.52,
-      "pnl": 0.0,
-      "pnl_str": "+0.00",
-      "pnl_pct": 0.0,
-      "pnl_pct_str": "+0.00%",
+      "units": 0.249986,
+      "invested": 1132.52,
+      "pnl": -0.0,
+      "pnl_str": "+-0.00",
+      "pnl_pct": -0.0,
+      "pnl_pct_str": "+-0.00%",
       "confidence": 76,
       "severity": "CRITICAL",
       "days_held": 0,
@@ -167,6 +145,28 @@
       "pnl_pct_str": "+0.00%",
       "confidence": 84,
       "severity": "HIGH",
+      "days_held": 0,
+      "half_exited": false
+    },
+    {
+      "trade_id": "T0011",
+      "ticker": "ITA",
+      "etf_name": "iShares U.S. Aerospace & Defense ETF",
+      "sector": "Defense & Aerospace",
+      "platform": "INDmoney / Vested",
+      "entry": 20471.3,
+      "current": 20471.3,
+      "peak_price": 20471.3,
+      "trail_stop": 18424.17,
+      "dist_to_trail_pct": 10.0,
+      "units": 0.036764,
+      "invested": 752.61,
+      "pnl": 0.0,
+      "pnl_str": "+0.00",
+      "pnl_pct": 0.0,
+      "pnl_pct_str": "+0.00%",
+      "confidence": 73,
+      "severity": "CRITICAL",
       "days_held": 0,
       "half_exited": false
     }
@@ -213,24 +213,38 @@
       "days_held": 13,
       "exit_reason": "Capital rotation to stronger Gold & Precious Metals (68/100)",
       "winner": false
+    },
+    {
+      "trade_id": "T0004",
+      "ticker": "INDA",
+      "etf_name": "iShares MSCI India ETF",
+      "entry": 4422.97,
+      "exit": 4341.77,
+      "pnl": -40.88,
+      "pnl_str": "-40.88",
+      "pnl_pct": -1.84,
+      "pnl_pct_str": "-1.84%",
+      "days_held": 13,
+      "exit_reason": "Capital rotation to stronger Defense & Aerospace (73/100)",
+      "winner": false
     }
   ],
   "track_record": {
-    "total_trades": 3,
+    "total_trades": 4,
     "winners": 0,
-    "losers": 3,
+    "losers": 4,
     "win_rate": 0.0,
     "avg_win": 0.0,
-    "avg_loss": -6.22,
+    "avg_loss": -5.12,
     "profit_factor": 0.0,
-    "expectancy": -6.22,
-    "sharpe_proxy": -2.19,
+    "expectancy": -5.12,
+    "sharpe_proxy": -1.65,
     "best": {
-      "ticker": "ITA",
-      "etf_name": "iShares U.S. Aerospace & Defense ETF",
-      "pnl_pct": -3.57,
-      "pnl_pct_str": "-3.57%",
-      "exit_reason": "Capital rotation to stronger Gold & Precious Metals (68/100)",
+      "ticker": "INDA",
+      "etf_name": "iShares MSCI India ETF",
+      "pnl_pct": -1.84,
+      "pnl_pct_str": "-1.84%",
+      "exit_reason": "Capital rotation to stronger Defense & Aerospace (73/100)",
       "days_held": 13
     },
     "worst": {
@@ -246,41 +260,41 @@
   "allocation": {
     "labels": [
       "XLE",
-      "INDA",
       "SOXX",
       "IBIT",
       "GLDM",
       "XLF",
       "HACK",
+      "ITA",
       "CASH"
     ],
     "values": [
       35.1,
-      21.8,
+      15.7,
       10.7,
-      10.7,
-      6.9,
-      6.3,
+      11.9,
+      11.3,
       5.0,
-      3.4
+      7.5,
+      2.8
     ]
   },
   "pnl": {
     "labels": [
       "XLE",
-      "INDA",
       "SOXX",
       "IBIT",
       "GLDM",
       "XLF",
-      "HACK"
+      "HACK",
+      "ITA"
     ],
     "values": [
       340.51,
-      -40.88,
-      1.11,
+      1.1,
       0.0,
       0.0,
+      -0.0,
       0.0,
       0.0
     ]
@@ -315,15 +329,15 @@
       "score": 82.0
     },
     {
-      "symbol": "Banking & Financial Sector",
-      "score": 76.0
-    },
-    {
       "symbol": "Emerging Markets + Energy / Oil & Gas",
       "score": 75.0
     },
     {
       "symbol": "Defense & Aerospace",
+      "score": 73.0
+    },
+    {
+      "symbol": "Banking & Financial Sector",
       "score": 73.0
     },
     {
@@ -339,10 +353,6 @@
       "score": 68.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 66.0
-    },
-    {
       "symbol": "Nuclear Energy & Uranium",
       "score": 65.0
     },
@@ -353,6 +363,10 @@
     {
       "symbol": "Emerging Markets + Commodities & Mining",
       "score": 64.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 63.0
     },
     {
       "symbol": "Emerging Markets",
@@ -538,40 +552,6 @@
       }
     },
     {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector",
-      "confidence": 76.0,
-      "severity": "CRITICAL",
-      "article_count": 18,
-      "latest_at": "28 Mar 2026 13:30 UTC",
-      "headline": "The Fed issues its latest interest rate decision Wednesday. Here's what to expect",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "Finance"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 10.0,
-        "recency": 6.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "emerging_markets|energy_oil",
       "sector_label": "Emerging Markets + Energy / Oil & Gas",
       "confidence": 75.0,
@@ -596,14 +576,14 @@
       "sector_label": "Defense & Aerospace",
       "confidence": 73.0,
       "severity": "CRITICAL",
-      "article_count": 121,
-      "latest_at": "28 Mar 2026 15:20 UTC",
+      "article_count": 120,
+      "latest_at": "28 Mar 2026 18:57 UTC",
       "headline": "Pentagon reportedly weighs diverting Ukraine military aid to Middle East",
       "regions": [
-        "americas",
-        "middle_east",
         "global",
-        "europe"
+        "americas",
+        "europe",
+        "middle_east"
       ],
       "sources": [
         "Bloomberg Markets",
@@ -623,6 +603,40 @@
         "volume_confirmation": 20.0,
         "source_diversity": 7.5,
         "recency": 6.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector",
+      "confidence": 73.0,
+      "severity": "CRITICAL",
+      "article_count": 18,
+      "latest_at": "28 Mar 2026 13:30 UTC",
+      "headline": "The Fed issues its latest interest rate decision Wednesday. Here's what to expect",
+      "regions": [
+        "americas",
+        "asia_pacific",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Finance",
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 10.0,
+        "recency": 3.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -685,14 +699,14 @@
       "latest_at": "28 Mar 2026 09:00 UTC",
       "headline": "US stocks today: US stocks tumble to lowest close in 6 months as Iran war drags; Nasdaq confirms correction",
       "regions": [
-        "americas",
         "asia_pacific",
-        "middle_east",
-        "global"
+        "global",
+        "americas",
+        "india"
       ],
       "sources": [
-        "Markets-Economic Times",
-        "Finance"
+        "Finance",
+        "Markets-Economic Times"
       ],
       "india_etfs": [
         "GOLDBEES",
@@ -708,40 +722,6 @@
         "volume_confirmation": 20.0,
         "source_diversity": 5.0,
         "recency": 3.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 66.0,
-      "severity": "CRITICAL",
-      "article_count": 33,
-      "latest_at": "28 Mar 2026 14:14 UTC",
-      "headline": "TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)",
-      "regions": [
-        "europe",
-        "americas",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "Crunch Hype"
-      ],
-      "india_etfs": [
-        "MAFANG",
-        "NIFTYBEES"
-      ],
-      "global_etfs": [
-        "SOXX",
-        "QQQ",
-        "AIQ"
-      ],
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 0.0,
-        "recency": 6.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -806,6 +786,40 @@
       }
     },
     {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 63.0,
+      "severity": "CRITICAL",
+      "article_count": 32,
+      "latest_at": "28 Mar 2026 14:14 UTC",
+      "headline": "TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)",
+      "regions": [
+        "india",
+        "global",
+        "americas",
+        "europe"
+      ],
+      "sources": [
+        "Crunch Hype"
+      ],
+      "india_etfs": [
+        "MAFANG",
+        "NIFTYBEES"
+      ],
+      "global_etfs": [
+        "SOXX",
+        "QQQ",
+        "AIQ"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 0.0,
+        "recency": 3.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "emerging_markets",
       "sector_label": "Emerging Markets",
       "confidence": 62.0,
@@ -865,17 +879,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Banking & Financial Sector - 18 articles - CRITICAL - The Fed issues its latest interest rate decision Wednesday. Here's what to expect"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Emerging Markets + Energy / Oil & Gas - 58 articles - HIGH - Emerging Markets + Energy / Oil & Gas remains active in the signal book."
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 121 articles - CRITICAL - Pentagon reportedly weighs diverting Ukraine military aid to Middle East"
+      "text": "Defense & Aerospace - 120 articles - CRITICAL - Pentagon reportedly weighs diverting Ukraine military aid to Middle East"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Banking & Financial Sector - 18 articles - CRITICAL - The Fed issues its latest interest rate decision Wednesday. Here's what to expect"
     },
     {
       "tag": "tag-neu",
@@ -895,11 +909,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 33 articles - CRITICAL - TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 5 articles - MEDIUM - Nuclear Energy & Uranium remains active in the signal book."
     },
     {
@@ -911,6 +920,11 @@
       "tag": "tag-bear",
       "label": "Watch",
       "text": "Emerging Markets + Commodities & Mining - 12 articles - MEDIUM - Emerging Markets + Commodities & Mining remains active in the signal book."
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Watch",
+      "text": "Technology & AI / Semiconductors - 32 articles - CRITICAL - TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)"
     },
     {
       "tag": "tag-bear",
@@ -1033,11 +1047,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66854.53,
+      "price": 66682.2,
       "currency": "USD",
-      "change": 516.15,
-      "change_pct": 0.78,
-      "change_str": "+0.78%",
+      "change": 343.82,
+      "change_pct": 0.52,
+      "change_str": "+0.52%",
       "direction": "up"
     },
     {
@@ -1076,13 +1090,18 @@
         "at_cap": true
       },
       {
-        "sector": "India Equity Markets",
-        "weight": 21.8,
+        "sector": "Technology & AI / Semiconductors",
+        "weight": 15.7,
         "at_cap": false
       },
       {
-        "sector": "Technology & AI / Semiconductors",
-        "weight": 10.7,
+        "sector": "Gold & Precious Metals",
+        "weight": 11.9,
+        "at_cap": false
+      },
+      {
+        "sector": "Banking & Financial Sector",
+        "weight": 11.3,
         "at_cap": false
       },
       {
@@ -1091,13 +1110,8 @@
         "at_cap": false
       },
       {
-        "sector": "Gold & Precious Metals",
-        "weight": 6.9,
-        "at_cap": false
-      },
-      {
-        "sector": "Banking & Financial Sector",
-        "weight": 6.3,
+        "sector": "Defense & Aerospace",
+        "weight": 7.5,
         "at_cap": false
       },
       {
@@ -1113,11 +1127,11 @@
     "partial_profit_pct": 15
   },
   "logs": [
-    "2026-03-29 04:17:11 [INFO] AZALYST - status.json generated",
-    "2026-03-29 04:17:11 [INFO] PORTFOLIO - NAV INR 10,031.24 | Return +0.31%",
-    "2026-03-29 04:17:11 [INFO] SIGNALS - 18 active signal buckets in state",
-    "2026-03-29 04:17:11 [INFO] TRADER - Open positions: XLE, INDA, SOXX, IBIT, GLDM, XLF, HACK",
-    "2026-03-29 04:17:11 [INFO] TRADER - Closed trades: 3"
+    "2026-03-29 05:56:05 [INFO] AZALYST - status.json generated",
+    "2026-03-29 05:56:05 [INFO] PORTFOLIO - NAV INR 10,031.23 | Return +0.31%",
+    "2026-03-29 05:56:05 [INFO] SIGNALS - 18 active signal buckets in state",
+    "2026-03-29 05:56:05 [INFO] TRADER - Open positions: XLE, SOXX, IBIT, GLDM, XLF, HACK, ITA",
+    "2026-03-29 05:56:05 [INFO] TRADER - Closed trades: 4"
   ],
-  "generated_at": "2026-03-29 04:17:10 UTC"
+  "generated_at": "2026-03-29 05:56:04 UTC"
 }
