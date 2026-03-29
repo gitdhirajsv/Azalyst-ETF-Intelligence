@@ -1,16 +1,16 @@
 {
-  "portfolio_value": 10031.23,
+  "portfolio_value": 10031.24,
   "total_deposited": 10000.0,
-  "cash": 1352.25,
-  "market_value": 8678.98,
-  "total_invested": 8338.47,
+  "cash": 1296.21,
+  "market_value": 8735.03,
+  "total_invested": 8394.52,
   "unrealised_pnl": 340.51,
   "unrealised_str": "+340.51",
-  "realised_pnl": -309.28,
-  "realised_str": "-309.28",
+  "realised_pnl": -309.27,
+  "realised_str": "-309.27",
   "change": "+0.31%",
   "change_raw": 0.31,
-  "closed_trades": 5,
+  "closed_trades": 6,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 10031.24,
   "drawdown_now_pct": 0.0,
@@ -49,35 +49,13 @@
       "peak_price": 3543.91,
       "trail_stop": 3189.52,
       "dist_to_trail_pct": 10.0,
-      "units": 0.303295,
-      "invested": 1074.85,
+      "units": 0.444382,
+      "invested": 1574.85,
       "pnl": 0.0,
       "pnl_str": "+0.00",
       "pnl_pct": 0.0,
       "pnl_pct_str": "+0.00%",
       "confidence": 80,
-      "severity": "CRITICAL",
-      "days_held": 0,
-      "half_exited": false
-    },
-    {
-      "trade_id": "T0008",
-      "ticker": "GLDM",
-      "etf_name": "SPDR Gold MiniShares Trust",
-      "sector": "Gold & Precious Metals",
-      "platform": "INDmoney / Vested",
-      "entry": 8465.55,
-      "current": 8465.59,
-      "peak_price": 8465.59,
-      "trail_stop": 7619.0,
-      "dist_to_trail_pct": 10.0,
-      "units": 0.200163,
-      "invested": 1694.49,
-      "pnl": 0.01,
-      "pnl_str": "+0.01",
-      "pnl_pct": 0.0,
-      "pnl_pct_str": "+0.00%",
-      "confidence": 68,
       "severity": "CRITICAL",
       "days_held": 0,
       "half_exited": false
@@ -110,17 +88,17 @@
       "etf_name": "ETFMG Prime Cyber Security ETF",
       "sector": "Cybersecurity",
       "platform": "INDmoney / Vested",
-      "entry": 6885.04,
+      "entry": 6885.06,
       "current": 6885.04,
-      "peak_price": 6885.04,
-      "trail_stop": 6196.54,
+      "peak_price": 6885.06,
+      "trail_stop": 6196.55,
       "dist_to_trail_pct": 10.0,
-      "units": 0.072621,
-      "invested": 500.0,
-      "pnl": 0.0,
-      "pnl_str": "+0.00",
-      "pnl_pct": 0.0,
-      "pnl_pct_str": "+0.00%",
+      "units": 0.181631,
+      "invested": 1250.54,
+      "pnl": -0.0,
+      "pnl_str": "+-0.00",
+      "pnl_pct": -0.0,
+      "pnl_pct_str": "+-0.00%",
       "confidence": 84,
       "severity": "HIGH",
       "days_held": 0,
@@ -144,6 +122,28 @@
       "pnl_pct": 0.0,
       "pnl_pct_str": "+0.00%",
       "confidence": 73,
+      "severity": "CRITICAL",
+      "days_held": 0,
+      "half_exited": false
+    },
+    {
+      "trade_id": "T0012",
+      "ticker": "INDA",
+      "etf_name": "iShares MSCI India ETF",
+      "sector": "India Equity Markets",
+      "platform": "INDmoney / Vested",
+      "entry": 4341.77,
+      "current": 4341.77,
+      "peak_price": 4341.77,
+      "trail_stop": 3907.59,
+      "dist_to_trail_pct": 10.0,
+      "units": 0.115161,
+      "invested": 500.0,
+      "pnl": 0.0,
+      "pnl_str": "+0.00",
+      "pnl_pct": 0.0,
+      "pnl_pct_str": "+0.00%",
+      "confidence": 75,
       "severity": "CRITICAL",
       "days_held": 0,
       "half_exited": false
@@ -219,18 +219,32 @@
       "days_held": 13,
       "exit_reason": "Capital rotation to stronger Gold & Precious Metals + Banking & Financial Sector (65/100)",
       "winner": true
+    },
+    {
+      "trade_id": "T0008",
+      "ticker": "GLDM",
+      "etf_name": "SPDR Gold MiniShares Trust",
+      "entry": 8465.55,
+      "exit": 8465.59,
+      "pnl": 0.01,
+      "pnl_str": "+0.01",
+      "pnl_pct": 0.0,
+      "pnl_pct_str": "+0.00%",
+      "days_held": 0,
+      "exit_reason": "Capital rotation to stronger Cybersecurity (84/100)",
+      "winner": true
     }
   ],
   "track_record": {
-    "total_trades": 5,
-    "winners": 1,
+    "total_trades": 6,
+    "winners": 2,
     "losers": 4,
-    "win_rate": 20.0,
-    "avg_win": 0.07,
+    "win_rate": 33.3,
+    "avg_win": 0.04,
     "avg_loss": -5.12,
     "profit_factor": 0.0,
-    "expectancy": -4.09,
-    "sharpe_proxy": -1.18,
+    "expectancy": -3.4,
+    "sharpe_proxy": -0.97,
     "best": {
       "ticker": "SOXX",
       "etf_name": "iShares Semiconductor ETF",
@@ -253,35 +267,35 @@
     "labels": [
       "XLE",
       "IBIT",
-      "GLDM",
       "XLF",
       "HACK",
       "ITA",
+      "INDA",
       "CASH"
     ],
     "values": [
       35.1,
-      10.7,
-      16.9,
+      15.7,
       11.3,
-      5.0,
+      12.5,
       7.5,
-      13.5
+      5.0,
+      12.9
     ]
   },
   "pnl": {
     "labels": [
       "XLE",
       "IBIT",
-      "GLDM",
       "XLF",
       "HACK",
-      "ITA"
+      "ITA",
+      "INDA"
     ],
     "values": [
       340.51,
       0.0,
-      0.01,
+      -0.0,
       -0.0,
       0.0,
       0.0
@@ -293,8 +307,8 @@
       "score": 90.0
     },
     {
-      "symbol": "India Equity Markets",
-      "score": 85.0
+      "symbol": "Defense & Aerospace",
+      "score": 87.0
     },
     {
       "symbol": "Cybersecurity",
@@ -305,20 +319,24 @@
       "score": 83.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 82.0
-    },
-    {
       "symbol": "Energy / Oil & Gas + Cybersecurity",
       "score": 82.0
     },
     {
-      "symbol": "Emerging Markets + Energy / Oil & Gas",
+      "symbol": "Gold & Precious Metals",
+      "score": 80.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 78.0
+    },
+    {
+      "symbol": "India Equity Markets",
       "score": 75.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 73.0
+      "symbol": "Emerging Markets + Energy / Oil & Gas",
+      "score": 75.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -331,10 +349,6 @@
     {
       "symbol": "Crypto & Digital Assets",
       "score": 71.0
-    },
-    {
-      "symbol": "Gold & Precious Metals",
-      "score": 68.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
@@ -383,31 +397,36 @@
       }
     },
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 85.0,
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 87.0,
       "severity": "CRITICAL",
-      "article_count": 63,
-      "latest_at": "29 Mar 2026 03:40 UTC",
-      "headline": "Dalal Street Week Ahead:  Avoid aggressive long positions; focus on capital preservation",
+      "article_count": 121,
+      "latest_at": "29 Mar 2026 07:45 UTC",
+      "headline": "Pentagon reportedly weighs diverting Ukraine military aid to Middle East",
       "regions": [
+        "americas",
+        "asia_pacific",
         "middle_east",
-        "asia_pacific"
+        "global"
       ],
       "sources": [
-        "Markets-Economic Times"
+        "Bloomberg Markets",
+        "Defense News"
       ],
       "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
+        "CPSEETF",
+        "DEFENCEETF"
       ],
       "global_etfs": [
-        "INDA"
+        "ITA",
+        "XAR",
+        "PPA"
       ],
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 5.0,
+        "source_diversity": 7.5,
         "recency": 20.0,
         "geopolitical_severity": 15.0
       }
@@ -418,18 +437,18 @@
       "confidence": 84.0,
       "severity": "HIGH",
       "article_count": 10,
-      "latest_at": "29 Mar 2026 04:17 UTC",
+      "latest_at": "29 Mar 2026 08:32 UTC",
       "headline": "What is Blockchain: Everything You Need to Know (2022)",
       "regions": [
-        "middle_east",
+        "asia_pacific",
         "global",
-        "asia_pacific"
+        "middle_east"
       ],
       "sources": [
-        "Cointelegraph.com News",
+        "Crunch Hype",
         "Oilprice.com",
-        "BBC News",
-        "Crunch Hype"
+        "Cointelegraph.com News",
+        "BBC News"
       ],
       "india_etfs": [],
       "global_etfs": [
@@ -465,41 +484,6 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 82.0,
-      "severity": "CRITICAL",
-      "article_count": 58,
-      "latest_at": "28 Mar 2026 23:00 UTC",
-      "headline": "Drillers See Triple-Digit Crude and Hit the Brakes",
-      "regions": [
-        "middle_east",
-        "americas"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "Oilprice.com",
-        "US Top News and Analysis"
-      ],
-      "india_etfs": [
-        "PSUBNKBEES",
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "XLE",
-        "USO",
-        "IXC"
-      ],
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 12.5,
-        "recency": 10.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "cybersecurity|energy_oil",
       "sector_label": "Energy / Oil & Gas + Cybersecurity",
       "confidence": 82.0,
@@ -520,6 +504,106 @@
       }
     },
     {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 80.0,
+      "severity": "CRITICAL",
+      "article_count": 27,
+      "latest_at": "29 Mar 2026 06:28 UTC",
+      "headline": "US stocks today: US stocks tumble to lowest close in 6 months as Iran war drags; Nasdaq confirms correction",
+      "regions": [
+        "americas",
+        "asia_pacific",
+        "middle_east",
+        "india"
+      ],
+      "sources": [
+        "Finance",
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 5.0,
+        "recency": 15.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 78.0,
+      "severity": "CRITICAL",
+      "article_count": 59,
+      "latest_at": "28 Mar 2026 23:00 UTC",
+      "headline": "Drillers See Triple-Digit Crude and Hit the Brakes",
+      "regions": [
+        "middle_east",
+        "americas"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
+      ],
+      "india_etfs": [
+        "PSUBNKBEES",
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "XLE",
+        "USO",
+        "IXC"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 12.5,
+        "recency": 6.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 75.0,
+      "severity": "CRITICAL",
+      "article_count": 68,
+      "latest_at": "29 Mar 2026 04:16 UTC",
+      "headline": "Dalal Street Week Ahead:  Avoid aggressive long positions; focus on capital preservation",
+      "regions": [
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 5.0,
+        "recency": 10.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "emerging_markets|energy_oil",
       "sector_label": "Emerging Markets + Energy / Oil & Gas",
       "confidence": 75.0,
@@ -537,41 +621,6 @@
         "source_diversity": 0.0,
         "recency": 0.0,
         "geopolitical_severity": 0.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 73.0,
-      "severity": "CRITICAL",
-      "article_count": 120,
-      "latest_at": "28 Mar 2026 18:57 UTC",
-      "headline": "Pentagon reportedly weighs diverting Ukraine military aid to Middle East",
-      "regions": [
-        "global",
-        "americas",
-        "europe",
-        "middle_east"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Defense News"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 7.5,
-        "recency": 6.0,
-        "geopolitical_severity": 15.0
       }
     },
     {
@@ -633,17 +682,17 @@
       "sector_label": "Crypto & Digital Assets",
       "confidence": 71.0,
       "severity": "CRITICAL",
-      "article_count": 44,
+      "article_count": 43,
       "latest_at": "28 Mar 2026 20:57 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "middle_east",
-        "global"
+        "global",
+        "middle_east"
       ],
       "sources": [
         "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "Crunch Hype"
+        "Crunch Hype",
+        "Cointelegraph.com News"
       ],
       "india_etfs": [],
       "global_etfs": [
@@ -655,41 +704,6 @@
         "volume_confirmation": 20.0,
         "source_diversity": 5.0,
         "recency": 6.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 68.0,
-      "severity": "CRITICAL",
-      "article_count": 27,
-      "latest_at": "28 Mar 2026 09:00 UTC",
-      "headline": "US stocks today: US stocks tumble to lowest close in 6 months as Iran war drags; Nasdaq confirms correction",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "americas",
-        "india"
-      ],
-      "sources": [
-        "Finance",
-        "Markets-Economic Times"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 5.0,
-        "recency": 3.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -854,7 +868,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "India Equity Markets - 63 articles - CRITICAL - Dalal Street Week Ahead:  Avoid aggressive long positions; focus on capital preservation"
+      "text": "Defense & Aerospace - 121 articles - CRITICAL - Pentagon reportedly weighs diverting Ukraine military aid to Middle East"
     },
     {
       "tag": "tag-bull",
@@ -869,22 +883,27 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas - 58 articles - CRITICAL - Drillers See Triple-Digit Crude and Hit the Brakes"
+      "text": "Energy / Oil & Gas + Cybersecurity - 75 articles - CRITICAL - Energy / Oil & Gas + Cybersecurity remains active in the signal book."
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas + Cybersecurity - 75 articles - CRITICAL - Energy / Oil & Gas + Cybersecurity remains active in the signal book."
+      "text": "Gold & Precious Metals - 27 articles - CRITICAL - US stocks today: US stocks tumble to lowest close in 6 months as Iran war drags; Nasdaq confirms correction"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Energy / Oil & Gas - 59 articles - CRITICAL - Drillers See Triple-Digit Crude and Hit the Brakes"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "India Equity Markets - 68 articles - CRITICAL - Dalal Street Week Ahead:  Avoid aggressive long positions; focus on capital preservation"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Emerging Markets + Energy / Oil & Gas - 58 articles - HIGH - Emerging Markets + Energy / Oil & Gas remains active in the signal book."
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Defense & Aerospace - 120 articles - CRITICAL - Pentagon reportedly weighs diverting Ukraine military aid to Middle East"
     },
     {
       "tag": "tag-neu",
@@ -899,12 +918,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 44 articles - CRITICAL - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Gold & Precious Metals - 27 articles - CRITICAL - US stocks today: US stocks tumble to lowest close in 6 months as Iran war drags; Nasdaq confirms correction"
+      "text": "Crypto & Digital Assets - 43 articles - CRITICAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -1052,11 +1066,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66573.59,
+      "price": 66619.05,
       "currency": "USD",
-      "change": 253.89,
-      "change_pct": 0.38,
-      "change_str": "+0.38%",
+      "change": 299.35,
+      "change_pct": 0.45,
+      "change_str": "+0.45%",
       "direction": "up"
     },
     {
@@ -1095,8 +1109,13 @@
         "at_cap": true
       },
       {
-        "sector": "Gold & Precious Metals",
-        "weight": 16.9,
+        "sector": "Crypto & Digital Assets",
+        "weight": 15.7,
+        "at_cap": false
+      },
+      {
+        "sector": "Cybersecurity",
+        "weight": 12.5,
         "at_cap": false
       },
       {
@@ -1105,17 +1124,12 @@
         "at_cap": false
       },
       {
-        "sector": "Crypto & Digital Assets",
-        "weight": 10.7,
-        "at_cap": false
-      },
-      {
         "sector": "Defense & Aerospace",
         "weight": 7.5,
         "at_cap": false
       },
       {
-        "sector": "Cybersecurity",
+        "sector": "India Equity Markets",
         "weight": 5.0,
         "at_cap": false
       }
@@ -1127,11 +1141,11 @@
     "partial_profit_pct": 15
   },
   "logs": [
-    "2026-03-29 07:47:16 [INFO] AZALYST - status.json generated",
-    "2026-03-29 07:47:16 [INFO] PORTFOLIO - NAV INR 10,031.23 | Return +0.31%",
-    "2026-03-29 07:47:16 [INFO] SIGNALS - 18 active signal buckets in state",
-    "2026-03-29 07:47:16 [INFO] TRADER - Open positions: XLE, IBIT, GLDM, XLF, HACK, ITA",
-    "2026-03-29 07:47:16 [INFO] TRADER - Closed trades: 5"
+    "2026-03-29 08:32:16 [INFO] AZALYST - status.json generated",
+    "2026-03-29 08:32:16 [INFO] PORTFOLIO - NAV INR 10,031.24 | Return +0.31%",
+    "2026-03-29 08:32:16 [INFO] SIGNALS - 18 active signal buckets in state",
+    "2026-03-29 08:32:16 [INFO] TRADER - Open positions: XLE, IBIT, XLF, HACK, ITA, INDA",
+    "2026-03-29 08:32:16 [INFO] TRADER - Closed trades: 6"
   ],
-  "generated_at": "2026-03-29 07:47:14 UTC"
+  "generated_at": "2026-03-29 08:32:15 UTC"
 }
