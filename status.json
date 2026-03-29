@@ -1,9 +1,9 @@
 {
   "portfolio_value": 10031.23,
   "total_deposited": 10000.0,
-  "cash": 1987.48,
-  "market_value": 8043.75,
-  "total_invested": 8043.76,
+  "cash": 1366.39,
+  "market_value": 8664.84,
+  "total_invested": 8664.85,
   "unrealised_pnl": -0.01,
   "unrealised_str": "-0.01",
   "realised_pnl": 31.24,
@@ -110,13 +110,13 @@
       "etf_name": "iShares MSCI India ETF",
       "sector": "India Equity Markets",
       "platform": "INDmoney / Vested",
-      "entry": 4341.77,
+      "entry": 4341.76,
       "current": 4341.77,
       "peak_price": 4341.77,
-      "trail_stop": 3907.59,
+      "trail_stop": 3907.58,
       "dist_to_trail_pct": 10.0,
-      "units": 0.115161,
-      "invested": 500.0,
+      "units": 0.258211,
+      "invested": 1121.09,
       "pnl": 0.0,
       "pnl_str": "+0.00",
       "pnl_pct": 0.0,
@@ -315,10 +315,10 @@
       11.3,
       17.5,
       7.5,
-      5.0,
+      11.2,
       10.8,
       7.5,
-      19.8
+      13.6
     ]
   },
   "pnl": {
@@ -347,10 +347,6 @@
       "score": 90.0
     },
     {
-      "symbol": "India Equity Markets",
-      "score": 85.0
-    },
-    {
       "symbol": "Cybersecurity",
       "score": 84.0
     },
@@ -376,6 +372,10 @@
     },
     {
       "symbol": "Crypto & Digital Assets",
+      "score": 75.0
+    },
+    {
+      "symbol": "India Equity Markets",
       "score": 75.0
     },
     {
@@ -434,37 +434,6 @@
         "source_diversity": 0.0,
         "recency": 0.0,
         "geopolitical_severity": 0.0
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 85.0,
-      "severity": "CRITICAL",
-      "article_count": 65,
-      "latest_at": "29 Mar 2026 09:11 UTC",
-      "headline": "Dalal Street Week Ahead:  Avoid aggressive long positions; focus on capital preservation",
-      "regions": [
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 10.0,
-        "recency": 15.0,
-        "geopolitical_severity": 15.0
       }
     },
     {
@@ -666,6 +635,36 @@
       "global_etfs": [
         "IBIT",
         "BITQ"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 5.0,
+        "recency": 10.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 75.0,
+      "severity": "CRITICAL",
+      "article_count": 63,
+      "latest_at": "29 Mar 2026 11:04 UTC",
+      "headline": "Ahead of market: 10 things that will decide stock market action on Monday",
+      "regions": [
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
       ],
       "breakdown": {
         "signal_strength": 25.0,
@@ -926,11 +925,6 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "India Equity Markets - 65 articles - CRITICAL - Dalal Street Week Ahead:  Avoid aggressive long positions; focus on capital preservation"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "Cybersecurity - 10 articles - HIGH - What is Blockchain: Everything You Need to Know (2022)"
     },
     {
@@ -962,6 +956,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Crypto & Digital Assets - 44 articles - CRITICAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "India Equity Markets - 63 articles - CRITICAL - Ahead of market: 10 things that will decide stock market action on Monday"
     },
     {
       "tag": "tag-neu",
@@ -1124,11 +1123,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66548.27,
+      "price": 66489.72,
       "currency": "USD",
-      "change": 228.57,
-      "change_pct": 0.34,
-      "change_str": "+0.34%",
+      "change": 170.02,
+      "change_pct": 0.26,
+      "change_str": "+0.26%",
       "direction": "up"
     },
     {
@@ -1177,6 +1176,11 @@
         "at_cap": false
       },
       {
+        "sector": "India Equity Markets",
+        "weight": 11.2,
+        "at_cap": false
+      },
+      {
         "sector": "Gold & Precious Metals + Banking & Financial Sector",
         "weight": 10.8,
         "at_cap": false
@@ -1190,11 +1194,6 @@
         "sector": "Defense & Aerospace",
         "weight": 7.5,
         "at_cap": false
-      },
-      {
-        "sector": "India Equity Markets",
-        "weight": 5.0,
-        "at_cap": false
       }
     ],
     "max_drawdown_pct": 0.0,
@@ -1204,11 +1203,11 @@
     "partial_profit_pct": 15
   },
   "logs": [
-    "2026-03-29 14:26:29 [INFO] AZALYST - status.json generated",
-    "2026-03-29 14:26:29 [INFO] PORTFOLIO - NAV INR 10,031.23 | Return +0.31%",
-    "2026-03-29 14:26:29 [INFO] SIGNALS - 18 active signal buckets in state",
-    "2026-03-29 14:26:29 [INFO] TRADER - Open positions: IBIT, XLF, HACK, ITA, INDA, GLDM, SOXX",
-    "2026-03-29 14:26:29 [INFO] TRADER - Closed trades: 7"
+    "2026-03-29 14:58:45 [INFO] AZALYST - status.json generated",
+    "2026-03-29 14:58:45 [INFO] PORTFOLIO - NAV INR 10,031.23 | Return +0.31%",
+    "2026-03-29 14:58:45 [INFO] SIGNALS - 18 active signal buckets in state",
+    "2026-03-29 14:58:45 [INFO] TRADER - Open positions: IBIT, XLF, HACK, ITA, INDA, GLDM, SOXX",
+    "2026-03-29 14:58:45 [INFO] TRADER - Closed trades: 7"
   ],
-  "generated_at": "2026-03-29 14:26:27 UTC"
+  "generated_at": "2026-03-29 14:58:44 UTC"
 }
