@@ -1,16 +1,16 @@
 {
   "portfolio_value": 10031.23,
   "total_deposited": 10000.0,
-  "cash": 341.57,
-  "market_value": 9689.66,
-  "total_invested": 9689.67,
+  "cash": 1459.58,
+  "market_value": 8571.65,
+  "total_invested": 8571.66,
   "unrealised_pnl": -0.01,
   "unrealised_str": "-0.01",
   "realised_pnl": 31.24,
   "realised_str": "+31.24",
   "change": "+0.31%",
   "change_raw": 0.31,
-  "closed_trades": 11,
+  "closed_trades": 12,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 10031.25,
   "drawdown_now_pct": 0.0,
@@ -78,28 +78,6 @@
       "pnl_pct": 0.0,
       "pnl_pct_str": "+0.00%",
       "confidence": 73,
-      "severity": "CRITICAL",
-      "days_held": 0,
-      "half_exited": false
-    },
-    {
-      "trade_id": "T0012",
-      "ticker": "INDA",
-      "etf_name": "iShares MSCI India ETF",
-      "sector": "India Equity Markets",
-      "platform": "INDmoney / Vested",
-      "entry": 4341.76,
-      "current": 4341.77,
-      "peak_price": 4341.77,
-      "trail_stop": 3907.58,
-      "dist_to_trail_pct": 10.0,
-      "units": 0.375615,
-      "invested": 1630.83,
-      "pnl": 0.0,
-      "pnl_str": "+0.00",
-      "pnl_pct": 0.0,
-      "pnl_pct_str": "+0.00%",
-      "confidence": 75,
       "severity": "CRITICAL",
       "days_held": 0,
       "half_exited": false
@@ -188,6 +166,28 @@
       "pnl_pct": 0.0,
       "pnl_pct_str": "+0.00%",
       "confidence": 63,
+      "severity": "CRITICAL",
+      "days_held": 0,
+      "half_exited": false
+    },
+    {
+      "trade_id": "T0020",
+      "ticker": "INDA",
+      "etf_name": "iShares MSCI India ETF",
+      "sector": "India Equity Markets",
+      "platform": "INDmoney / Vested",
+      "entry": 4341.77,
+      "current": 4341.77,
+      "peak_price": 4341.77,
+      "trail_stop": 3907.59,
+      "dist_to_trail_pct": 10.0,
+      "units": 0.118113,
+      "invested": 512.82,
+      "pnl": 0.0,
+      "pnl_str": "+0.00",
+      "pnl_pct": 0.0,
+      "pnl_pct_str": "+0.00%",
+      "confidence": 68,
       "severity": "CRITICAL",
       "days_held": 0,
       "half_exited": false
@@ -347,18 +347,32 @@
       "days_held": 0,
       "exit_reason": "Capital rotation to stronger Gold & Precious Metals + Banking & Financial Sector (85/100)",
       "winner": false
+    },
+    {
+      "trade_id": "T0012",
+      "ticker": "INDA",
+      "etf_name": "iShares MSCI India ETF",
+      "entry": 4341.76,
+      "exit": 4341.77,
+      "pnl": 0.0,
+      "pnl_str": "+0.00",
+      "pnl_pct": 0.0,
+      "pnl_pct_str": "+0.00%",
+      "days_held": 0,
+      "exit_reason": "Capital rotation to stronger India Equity Markets (68/100)",
+      "winner": false
     }
   ],
   "track_record": {
-    "total_trades": 11,
+    "total_trades": 12,
     "winners": 3,
     "losers": 4,
-    "win_rate": 27.3,
+    "win_rate": 25.0,
     "avg_win": 3.59,
     "avg_loss": -5.12,
     "profit_factor": 1.1,
-    "expectancy": -0.89,
-    "sharpe_proxy": -0.19,
+    "expectancy": -0.81,
+    "sharpe_proxy": -0.18,
     "best": {
       "ticker": "XLE",
       "etf_name": "Energy Select Sector SPDR",
@@ -382,23 +396,23 @@
       "XLF",
       "HACK",
       "ITA",
-      "INDA",
       "XLE",
       "IBIT",
       "GLDM",
       "SOXX",
+      "INDA",
       "CASH"
     ],
     "values": [
       21.0,
       17.5,
       7.5,
-      16.3,
       10.0,
       14.1,
       5.3,
       5.0,
-      3.4
+      5.1,
+      14.6
     ]
   },
   "pnl": {
@@ -406,19 +420,19 @@
       "XLF",
       "HACK",
       "ITA",
-      "INDA",
       "XLE",
       "IBIT",
       "GLDM",
-      "SOXX"
+      "SOXX",
+      "INDA"
     ],
     "values": [
       0.0,
       -0.0,
       0.0,
-      0.0,
       0.01,
       -0.0,
+      0.0,
       0.0,
       0.0
     ]
@@ -470,7 +484,7 @@
     },
     {
       "symbol": "India Equity Markets",
-      "score": 71.0
+      "score": 68.0
     },
     {
       "symbol": "Cybersecurity",
@@ -809,14 +823,14 @@
     {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
-      "confidence": 71.0,
+      "confidence": 68.0,
       "severity": "CRITICAL",
-      "article_count": 64,
+      "article_count": 60,
       "latest_at": "29 Mar 2026 11:04 UTC",
       "headline": "Ahead of market: 10 things that will decide stock market action on Monday",
       "regions": [
-        "asia_pacific",
-        "middle_east"
+        "middle_east",
+        "asia_pacific"
       ],
       "sources": [
         "Markets-Economic Times"
@@ -832,7 +846,7 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 5.0,
-        "recency": 6.0,
+        "recency": 3.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -1057,7 +1071,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 64 articles - CRITICAL - Ahead of market: 10 things that will decide stock market action on Monday"
+      "text": "India Equity Markets - 60 articles - CRITICAL - Ahead of market: 10 things that will decide stock market action on Monday"
     },
     {
       "tag": "tag-neu",
@@ -1183,44 +1197,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4521.1,
+      "price": 4509.9,
       "currency": "USD",
-      "change": 29.1,
-      "change_pct": 0.65,
-      "change_str": "+0.65%",
+      "change": 17.9,
+      "change_pct": 0.4,
+      "change_str": "+0.40%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 102.59,
+      "price": 102.29,
       "currency": "USD",
-      "change": 2.95,
-      "change_pct": 2.96,
-      "change_str": "+2.96%",
+      "change": 2.65,
+      "change_pct": 2.66,
+      "change_str": "+2.66%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 65350.25,
+      "price": 66110.52,
       "currency": "USD",
-      "change": -969.44,
-      "change_pct": -1.46,
-      "change_str": "-1.46%",
+      "change": -209.18,
+      "change_pct": -0.32,
+      "change_str": "-0.32%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.33,
+      "price": 100.31,
       "currency": "USD",
-      "change": 0.18,
-      "change_pct": 0.18,
-      "change_str": "+0.18%",
+      "change": 0.16,
+      "change_pct": 0.16,
+      "change_str": "+0.16%",
       "direction": "up"
     },
     {
@@ -1253,11 +1267,6 @@
         "at_cap": false
       },
       {
-        "sector": "India Equity Markets",
-        "weight": 16.3,
-        "at_cap": false
-      },
-      {
         "sector": "Crypto & Digital Assets",
         "weight": 14.1,
         "at_cap": false
@@ -1278,6 +1287,11 @@
         "at_cap": false
       },
       {
+        "sector": "India Equity Markets",
+        "weight": 5.1,
+        "at_cap": false
+      },
+      {
         "sector": "Technology & AI / Semiconductors",
         "weight": 5.0,
         "at_cap": false
@@ -1290,11 +1304,11 @@
     "partial_profit_pct": 15
   },
   "logs": [
-    "2026-03-29 22:56:39 [INFO] AZALYST - status.json generated",
-    "2026-03-29 22:56:39 [INFO] PORTFOLIO - NAV INR 10,031.23 | Return +0.31%",
-    "2026-03-29 22:56:39 [INFO] SIGNALS - 18 active signal buckets in state",
-    "2026-03-29 22:56:39 [INFO] TRADER - Open positions: XLF, HACK, ITA, INDA, XLE, IBIT, GLDM, SOXX",
-    "2026-03-29 22:56:39 [INFO] TRADER - Closed trades: 11"
+    "2026-03-29 23:27:13 [INFO] AZALYST - status.json generated",
+    "2026-03-29 23:27:13 [INFO] PORTFOLIO - NAV INR 10,031.23 | Return +0.31%",
+    "2026-03-29 23:27:13 [INFO] SIGNALS - 18 active signal buckets in state",
+    "2026-03-29 23:27:13 [INFO] TRADER - Open positions: XLF, HACK, ITA, XLE, IBIT, GLDM, SOXX, INDA",
+    "2026-03-29 23:27:13 [INFO] TRADER - Closed trades: 12"
   ],
-  "generated_at": "2026-03-29 22:56:38 UTC"
+  "generated_at": "2026-03-29 23:27:11 UTC"
 }
