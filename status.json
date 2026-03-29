@@ -1,11 +1,11 @@
 {
-  "portfolio_value": 10031.24,
+  "portfolio_value": 10031.23,
   "total_deposited": 10000.0,
-  "cash": 1296.21,
-  "market_value": 8735.03,
-  "total_invested": 8394.52,
-  "unrealised_pnl": 340.51,
-  "unrealised_str": "+340.51",
+  "cash": 296.21,
+  "market_value": 9735.02,
+  "total_invested": 9394.52,
+  "unrealised_pnl": 340.5,
+  "unrealised_str": "+340.50",
   "realised_pnl": -309.27,
   "realised_str": "-309.27",
   "change": "+0.31%",
@@ -49,8 +49,8 @@
       "peak_price": 3543.91,
       "trail_stop": 3189.52,
       "dist_to_trail_pct": 10.0,
-      "units": 0.444382,
-      "invested": 1574.85,
+      "units": 0.585469,
+      "invested": 2074.85,
       "pnl": 0.0,
       "pnl_str": "+0.00",
       "pnl_pct": 0.0,
@@ -93,8 +93,8 @@
       "peak_price": 6885.06,
       "trail_stop": 6196.55,
       "dist_to_trail_pct": 10.0,
-      "units": 0.181631,
-      "invested": 1250.54,
+      "units": 0.254252,
+      "invested": 1750.54,
       "pnl": -0.0,
       "pnl_str": "+-0.00",
       "pnl_pct": -0.0,
@@ -275,12 +275,12 @@
     ],
     "values": [
       35.1,
-      15.7,
+      20.7,
       11.3,
-      12.5,
+      17.5,
       7.5,
       5.0,
-      12.9
+      3.0
     ]
   },
   "pnl": {
@@ -307,10 +307,6 @@
       "score": 90.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 87.0
-    },
-    {
       "symbol": "India Equity Markets",
       "score": 85.0
     },
@@ -335,8 +331,16 @@
       "score": 80.0
     },
     {
+      "symbol": "Defense & Aerospace",
+      "score": 77.0
+    },
+    {
       "symbol": "Energy / Oil & Gas",
-      "score": 78.0
+      "score": 75.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 75.0
     },
     {
       "symbol": "Technology & AI / Semiconductors",
@@ -353,10 +357,6 @@
     {
       "symbol": "Nuclear Energy & Uranium + Crypto & Digital Assets",
       "score": 73.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 71.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -397,41 +397,6 @@
       }
     },
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 87.0,
-      "severity": "CRITICAL",
-      "article_count": 121,
-      "latest_at": "29 Mar 2026 07:45 UTC",
-      "headline": "Pentagon reportedly weighs diverting Ukraine military aid to Middle East",
-      "regions": [
-        "americas",
-        "asia_pacific",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Defense News"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 7.5,
-        "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 85.0,
@@ -468,18 +433,18 @@
       "confidence": 84.0,
       "severity": "HIGH",
       "article_count": 10,
-      "latest_at": "29 Mar 2026 08:32 UTC",
+      "latest_at": "29 Mar 2026 12:34 UTC",
       "headline": "What is Blockchain: Everything You Need to Know (2022)",
       "regions": [
-        "asia_pacific",
         "global",
-        "middle_east"
+        "middle_east",
+        "asia_pacific"
       ],
       "sources": [
-        "Crunch Hype",
-        "Oilprice.com",
         "Cointelegraph.com News",
-        "BBC News"
+        "Oilprice.com",
+        "BBC News",
+        "World News - Breaking international news and headlines | Sky News"
       ],
       "india_etfs": [],
       "global_etfs": [
@@ -608,21 +573,56 @@
       }
     },
     {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 77.0,
+      "severity": "CRITICAL",
+      "article_count": 120,
+      "latest_at": "29 Mar 2026 07:45 UTC",
+      "headline": "Pentagon reportedly weighs diverting Ukraine military aid to Middle East",
+      "regions": [
+        "global",
+        "americas",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Defense News"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 7.5,
+        "recency": 10.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 78.0,
+      "confidence": 75.0,
       "severity": "CRITICAL",
       "article_count": 59,
       "latest_at": "28 Mar 2026 23:00 UTC",
       "headline": "Drillers See Triple-Digit Crude and Hit the Brakes",
       "regions": [
-        "middle_east",
-        "americas"
+        "americas",
+        "middle_east"
       ],
       "sources": [
-        "Bloomberg Markets",
         "Oilprice.com",
         "Markets-Economic Times",
+        "Bloomberg Markets",
         "US Top News and Analysis"
       ],
       "india_etfs": [
@@ -638,7 +638,38 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 12.5,
-        "recency": 6.0,
+        "recency": 3.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 75.0,
+      "severity": "CRITICAL",
+      "article_count": 44,
+      "latest_at": "29 Mar 2026 08:05 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "global",
+        "middle_east",
+        "europe"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Crunch Hype",
+        "Cointelegraph.com News"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 5.0,
+        "recency": 10.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -751,36 +782,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 71.0,
-      "severity": "CRITICAL",
-      "article_count": 43,
-      "latest_at": "28 Mar 2026 20:57 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Crunch Hype",
-        "Cointelegraph.com News"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 5.0,
-        "recency": 6.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 65.0,
@@ -870,11 +871,6 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Defense & Aerospace - 121 articles - CRITICAL - Pentagon reportedly weighs diverting Ukraine military aid to Middle East"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "India Equity Markets - 65 articles - CRITICAL - Dalal Street Week Ahead:  Avoid aggressive long positions; focus on capital preservation"
     },
     {
@@ -905,7 +901,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Defense & Aerospace - 120 articles - CRITICAL - Pentagon reportedly weighs diverting Ukraine military aid to Middle East"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Energy / Oil & Gas - 59 articles - CRITICAL - Drillers See Triple-Digit Crude and Hit the Brakes"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Crypto & Digital Assets - 44 articles - CRITICAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -926,11 +932,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Nuclear Energy & Uranium + Crypto & Digital Assets - 55 articles - HIGH - Nuclear Energy & Uranium + Crypto & Digital Assets remains active in the signal book."
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Crypto & Digital Assets - 43 articles - CRITICAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -1068,11 +1069,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66810.7,
+      "price": 66745.64,
       "currency": "USD",
-      "change": 491.0,
-      "change_pct": 0.74,
-      "change_str": "+0.74%",
+      "change": 425.94,
+      "change_pct": 0.64,
+      "change_str": "+0.64%",
       "direction": "up"
     },
     {
@@ -1112,12 +1113,12 @@
       },
       {
         "sector": "Crypto & Digital Assets",
-        "weight": 15.7,
+        "weight": 20.7,
         "at_cap": false
       },
       {
         "sector": "Cybersecurity",
-        "weight": 12.5,
+        "weight": 17.5,
         "at_cap": false
       },
       {
@@ -1143,11 +1144,11 @@
     "partial_profit_pct": 15
   },
   "logs": [
-    "2026-03-29 11:51:54 [INFO] AZALYST - status.json generated",
-    "2026-03-29 11:51:54 [INFO] PORTFOLIO - NAV INR 10,031.24 | Return +0.31%",
-    "2026-03-29 11:51:54 [INFO] SIGNALS - 18 active signal buckets in state",
-    "2026-03-29 11:51:54 [INFO] TRADER - Open positions: XLE, IBIT, XLF, HACK, ITA, INDA",
-    "2026-03-29 11:51:54 [INFO] TRADER - Closed trades: 6"
+    "2026-03-29 12:34:42 [INFO] AZALYST - status.json generated",
+    "2026-03-29 12:34:42 [INFO] PORTFOLIO - NAV INR 10,031.23 | Return +0.31%",
+    "2026-03-29 12:34:42 [INFO] SIGNALS - 18 active signal buckets in state",
+    "2026-03-29 12:34:42 [INFO] TRADER - Open positions: XLE, IBIT, XLF, HACK, ITA, INDA",
+    "2026-03-29 12:34:42 [INFO] TRADER - Closed trades: 6"
   ],
-  "generated_at": "2026-03-29 11:51:53 UTC"
+  "generated_at": "2026-03-29 12:34:40 UTC"
 }
