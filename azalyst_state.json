@@ -286,10 +286,107 @@
     }
   },
   "banking_financial|gold_precious_metals": {
-    "sent_at": "2026-03-28T09:59:42.994768+00:00",
-    "confidence": 85,
+    "sent_at": "2026-03-29T06:55:33.976348+00:00",
+    "confidence": 65,
     "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-    "article_count": 43
+    "article_count": 45,
+    "severity": "CRITICAL",
+    "regions": [
+      "global",
+      "middle_east",
+      "americas",
+      "asia_pacific",
+      "india"
+    ],
+    "sources": [
+      "Markets-Economic Times",
+      "Finance"
+    ],
+    "top_headlines": [
+      "US stocks today: US stocks tumble to lowest close in 6 months as Iran war drags; Nasdaq confirms correction",
+      "Forex kitty slips below $700 billion as bullion loses some sheen",
+      "US Stock Market | Stocks tumble, Dow confirms correction territory, as Middle East tensions drag",
+      "Expectations for the next Fed rate cut get pushed back after hot inflation report",
+      "US stocks: US Fed's Anna Paulson says Iran war increases risks to growth, inflation"
+    ],
+    "latest_ts": "2026-03-28T02:35:59+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 25,
+      "volume_confirmation": 20.0,
+      "source_diversity": 5.0,
+      "recency": 0.0,
+      "geopolitical_severity": 15.0
+    },
+    "etf_recommendations": {
+      "india": [
+        {
+          "name": "Nippon India Gold BeES",
+          "ticker": "GOLDBEES",
+          "note": "Largest Indian gold ETF by AUM",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Tracks physical gold in INR. Double benefit: gold price rise + potential INR depreciation."
+        },
+        {
+          "name": "HDFC Gold ETF",
+          "ticker": "HDFCGOLD",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Physical gold backed. Very liquid. Safe haven in geopolitical or inflation-driven scenarios."
+        },
+        {
+          "name": "Nippon India ETF Bank BeES",
+          "ticker": "BANKBEES",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Top Indian private and PSU banks. Rate cut cycle could re-rate banking sector."
+        }
+      ],
+      "global": [
+        {
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026."
+        },
+        {
+          "name": "VanEck Gold Miners ETF",
+          "ticker": "GDX",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium-High",
+          "timeframe": "3\u20139 months",
+          "thesis": "Gold miners offer 2\u20133x leverage to gold price. If gold surges, miners typically outperform."
+        },
+        {
+          "name": "VanEck Junior Gold Miners ETF",
+          "ticker": "GDXJ",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "2\u20136 months",
+          "thesis": "Smaller miners \u2014 highest leverage to gold. High risk/reward. Use only for strong conviction."
+        },
+        {
+          "name": "Financial Select Sector SPDR",
+          "ticker": "XLF",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play."
+        }
+      ]
+    }
   },
   "technology_ai": {
     "sent_at": "2026-03-29T05:55:58.122974+00:00",
