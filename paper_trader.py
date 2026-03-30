@@ -33,8 +33,9 @@ SECTOR_CAP_PCT = 0.30
 CASH_FLOOR_PCT = 0.05
 MAX_HOLD_DAYS = 180
 CIRCUIT_BREAKER_DRAWDOWN_PCT = 0.12
-ROTATION_CONFIDENCE_DELTA = 6
-ROTATION_MIN_HOLD_DAYS = 3
+ROTATION_CONFIDENCE_DELTA = 15          # new signal must beat existing by >=15 pts
+ROTATION_MIN_HOLD_DAYS = 5             # hard floor: no exit before 5 trading days
+ROTATION_CRITICAL_CONFIDENCE = 55      # emergency-exit if sector confidence drops below this
 
 AVG_WIN_BY_SEVERITY = {
     "CRITICAL": 0.20,
@@ -397,27 +398,42 @@ class PaperPortfolio:
         return self._kelly_fraction(confidence, severity)
 
     def _select_rotation_candidate(self, signal: Dict) -> Optional[Position]:
+        """Pick the weakest position eligible for rotation.
+
+        Hard gates (all must pass):
+          1. Position held >= ROTATION_MIN_HOLD_DAYS
+             (exception: position confidence < ROTATION_CRITICAL_CONFIDENCE)
+          2. Incoming confidence >= position confidence + ROTATION_CONFIDENCE_DELTA
+          3. Incoming signal must be from a DIFFERENT sector
+             (same-sector signals reinforce, never rotate)
+        """
         incoming_conf = signal.get("confidence", 0)
         incoming_sector = signal.get("sector_label", "")
         candidates = []
 
         for pos in self.open_positions:
-            pnl_pct = pos.unrealised_pnl_pct()
-            score = 0.0
+            # ── Gate 1: same-sector signals never trigger rotation ────────
+            if pos.sector == incoming_sector:
+                continue
 
-            if incoming_conf >= pos.confidence + ROTATION_CONFIDENCE_DELTA:
-                score += (incoming_conf - pos.confidence)
+            # ── Gate 2: minimum holding period ────────────────────────────
+            held = pos.days_held()
+            below_critical = pos.confidence < ROTATION_CRITICAL_CONFIDENCE
+            if held < ROTATION_MIN_HOLD_DAYS and not below_critical:
+                continue
+
+            # ── Gate 3: confidence differential ───────────────────────────
+            if incoming_conf < pos.confidence + ROTATION_CONFIDENCE_DELTA:
+                continue
+
+            # ── Scoring (only among qualified candidates) ─────────────────
+            pnl_pct = pos.unrealised_pnl_pct()
+            score = float(incoming_conf - pos.confidence)
             if pnl_pct < 0:
                 score += abs(pnl_pct) * 2.0
-            elif pnl_pct < 2:
-                score += 2.0
-            if pos.days_held() >= ROTATION_MIN_HOLD_DAYS:
-                score += min(pos.days_held(), 20) * 0.3
-            if pos.sector == incoming_sector:
-                score += 1.5
+            score += min(held, 30) * 0.3
 
-            if score > 0:
-                candidates.append((score, pnl_pct, pos.confidence, -pos.days_held(), pos))
+            candidates.append((score, pnl_pct, pos.confidence, -held, pos))
 
         if not candidates:
             return None
@@ -578,6 +594,80 @@ class PaperPortfolio:
         self.trade_counter += 1
         return f"T{self.trade_counter:04d}"
 
+    def _reinforce_same_sector(self, signal: Dict, etf: Dict, platform: str) -> Optional[Dict]:
+        """If there is already an open position in the same sector, treat the
+        new signal as a reinforcement: bump confidence and optionally add to
+        the position if sector capacity allows.  Returns a result dict when
+        reinforcement was applied, None otherwise."""
+        sector = signal.get("sector_label", "Unknown")
+        confidence = signal.get("confidence", 0)
+        severity = signal.get("severity", "LOW")
+        ticker = etf["ticker"]
+        exchange = etf.get("exchange", "NYSE")
+        etf_name = etf["name"]
+
+        existing = next(
+            (pos for pos in self.open_positions if pos.sector == sector),
+            None,
+        )
+        if existing is None:
+            return None
+
+        # ── Confidence reinforcement ──────────────────────────────────────
+        old_conf = existing.confidence
+        existing.confidence = min(old_conf + max(confidence - old_conf, 0), 100)
+        log.info(
+            "REINFORCE %s sector - confidence %d → %d",
+            sector, old_conf, existing.confidence,
+        )
+
+        # ── Optional size add-on if sector capacity remains ───────────────
+        sector_capacity = self._available_sector_capacity_inr(sector)
+        fraction = self._position_size(confidence, severity)
+        addon_inr = round(min(self.cash_inr * fraction, sector_capacity, self.cash_inr), 2)
+
+        topup_done = False
+        if addon_inr >= MIN_TRADE_INR:
+            price = get_current_price_inr(existing.ticker, existing.exchange)
+            if price and price > 0:
+                units = round(addon_inr / price, 6)
+                invested = round(units * price, 2)
+                if invested <= self.cash_inr:
+                    new_invested = round(existing.invested_inr + invested, 2)
+                    new_units = round(existing.units + units, 6)
+                    existing.entry_price = round(new_invested / new_units, 4)
+                    existing.units = new_units
+                    existing.invested_inr = new_invested
+                    existing.current_price = price
+                    self.cash_inr -= invested
+                    self._update_position_risk(existing)
+                    topup_done = True
+                    log.info(
+                        "SECTOR TOP-UP %s - %s | +INR %.2f | Avg price %.4f",
+                        existing.trade_id, existing.ticker, invested, existing.entry_price,
+                    )
+
+        self._update_drawdown_state()
+        self.save()
+
+        return {
+            "trade_id": existing.trade_id,
+            "ticker": existing.ticker,
+            "etf_name": existing.etf_name,
+            "platform": platform,
+            "exchange": existing.exchange,
+            "sector": sector,
+            "entry_price": existing.entry_price,
+            "units": existing.units,
+            "invested_inr": addon_inr if topup_done else 0,
+            "confidence": existing.confidence,
+            "severity": severity,
+            "cash_remaining": self.cash_inr,
+            "is_reinforcement": True,
+            "is_topup": topup_done,
+            "rotation_exits": [],
+        }
+
     def enter_position(self, signal: Dict, etf: Dict, platform: str) -> Optional[Dict]:
         confidence = signal.get("confidence", 0)
         severity = signal.get("severity", "LOW")
@@ -591,6 +681,11 @@ class PaperPortfolio:
         if self._circuit_breaker_active():
             log.info("Position rejected - circuit breaker active")
             return None
+
+        # ── Same-sector reinforcement (never rotate within a sector) ──────
+        reinforcement = self._reinforce_same_sector(signal, etf, platform)
+        if reinforcement is not None:
+            return reinforcement
 
         fraction = self._position_size(confidence, severity)
         if fraction <= 0:
