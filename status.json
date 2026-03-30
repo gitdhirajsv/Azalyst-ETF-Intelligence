@@ -1,16 +1,16 @@
 {
-  "portfolio_value": 10031.23,
+  "portfolio_value": 10031.24,
   "total_deposited": 10000.0,
-  "cash": 1459.58,
-  "market_value": 8571.65,
-  "total_invested": 8571.66,
-  "unrealised_pnl": -0.01,
-  "unrealised_str": "-0.01",
+  "cash": 290.7,
+  "market_value": 9740.54,
+  "total_invested": 9740.54,
+  "unrealised_pnl": -0.0,
+  "unrealised_str": "-0.00",
   "realised_pnl": 31.24,
   "realised_str": "+31.24",
   "change": "+0.31%",
   "change_raw": 0.31,
-  "closed_trades": 12,
+  "closed_trades": 13,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 10031.25,
   "drawdown_now_pct": 0.0,
@@ -35,7 +35,7 @@
       "pnl_pct_str": "+0.00%",
       "confidence": 80,
       "severity": "CRITICAL",
-      "days_held": 0,
+      "days_held": 1,
       "half_exited": false
     },
     {
@@ -66,18 +66,18 @@
       "etf_name": "iShares U.S. Aerospace & Defense ETF",
       "sector": "Defense & Aerospace",
       "platform": "INDmoney / Vested",
-      "entry": 20471.3,
+      "entry": 20471.28,
       "current": 20471.3,
       "peak_price": 20471.3,
-      "trail_stop": 18424.17,
+      "trail_stop": 18424.15,
       "dist_to_trail_pct": 10.0,
-      "units": 0.036764,
-      "invested": 752.61,
+      "units": 0.068113,
+      "invested": 1394.36,
       "pnl": 0.0,
       "pnl_str": "+0.00",
       "pnl_pct": 0.0,
       "pnl_pct_str": "+0.00%",
-      "confidence": 73,
+      "confidence": 77,
       "severity": "CRITICAL",
       "days_held": 0,
       "half_exited": false
@@ -88,18 +88,18 @@
       "etf_name": "Energy Select Sector SPDR",
       "sector": "Energy / Oil & Gas",
       "platform": "INDmoney / Vested",
-      "entry": 5927.96,
+      "entry": 5927.98,
       "current": 5928.0,
       "peak_price": 5928.0,
-      "trail_stop": 5335.17,
+      "trail_stop": 5335.18,
       "dist_to_trail_pct": 10.0,
-      "units": 0.168692,
-      "invested": 1000.0,
+      "units": 0.257614,
+      "invested": 1527.13,
       "pnl": 0.01,
       "pnl_str": "+0.01",
       "pnl_pct": 0.0,
       "pnl_pct_str": "+0.00%",
-      "confidence": 82,
+      "confidence": 87,
       "severity": "CRITICAL",
       "days_held": 0,
       "half_exited": false
@@ -115,8 +115,8 @@
       "peak_price": 3543.92,
       "trail_stop": 3189.52,
       "dist_to_trail_pct": 10.0,
-      "units": 0.400444,
-      "invested": 1419.14,
+      "units": 0.541531,
+      "invested": 1919.14,
       "pnl": -0.0,
       "pnl_str": "+-0.00",
       "pnl_pct": -0.0,
@@ -144,28 +144,6 @@
       "pnl_pct": 0.0,
       "pnl_pct_str": "+0.00%",
       "confidence": 85,
-      "severity": "CRITICAL",
-      "days_held": 0,
-      "half_exited": false
-    },
-    {
-      "trade_id": "T0019",
-      "ticker": "SOXX",
-      "etf_name": "iShares Semiconductor ETF",
-      "sector": "Technology & AI / Semiconductors",
-      "platform": "INDmoney / Vested",
-      "entry": 30651.99,
-      "current": 30651.99,
-      "peak_price": 30651.99,
-      "trail_stop": 27586.79,
-      "dist_to_trail_pct": 10.0,
-      "units": 0.016312,
-      "invested": 500.0,
-      "pnl": 0.0,
-      "pnl_str": "+0.00",
-      "pnl_pct": 0.0,
-      "pnl_pct_str": "+0.00%",
-      "confidence": 63,
       "severity": "CRITICAL",
       "days_held": 0,
       "half_exited": false
@@ -361,18 +339,32 @@
       "days_held": 0,
       "exit_reason": "Capital rotation to stronger India Equity Markets (68/100)",
       "winner": false
+    },
+    {
+      "trade_id": "T0019",
+      "ticker": "SOXX",
+      "etf_name": "iShares Semiconductor ETF",
+      "entry": 30651.99,
+      "exit": 30651.99,
+      "pnl": 0.0,
+      "pnl_str": "+0.00",
+      "pnl_pct": 0.0,
+      "pnl_pct_str": "+0.00%",
+      "days_held": 1,
+      "exit_reason": "Capital rotation to stronger Defense & Aerospace (77/100)",
+      "winner": false
     }
   ],
   "track_record": {
-    "total_trades": 12,
+    "total_trades": 13,
     "winners": 3,
     "losers": 4,
-    "win_rate": 25.0,
+    "win_rate": 23.1,
     "avg_win": 3.59,
     "avg_loss": -5.12,
     "profit_factor": 1.1,
-    "expectancy": -0.81,
-    "sharpe_proxy": -0.18,
+    "expectancy": -0.75,
+    "sharpe_proxy": -0.17,
     "best": {
       "ticker": "XLE",
       "etf_name": "Energy Select Sector SPDR",
@@ -399,20 +391,18 @@
       "XLE",
       "IBIT",
       "GLDM",
-      "SOXX",
       "INDA",
       "CASH"
     ],
     "values": [
       21.0,
       17.5,
-      7.5,
-      10.0,
-      14.1,
+      13.9,
+      15.2,
+      19.1,
       5.3,
-      5.0,
       5.1,
-      14.6
+      2.9
     ]
   },
   "pnl": {
@@ -423,7 +413,6 @@
       "XLE",
       "IBIT",
       "GLDM",
-      "SOXX",
       "INDA"
     ],
     "values": [
@@ -433,7 +422,6 @@
       0.01,
       -0.0,
       0.0,
-      0.0,
       0.0
     ]
   },
@@ -441,6 +429,10 @@
     {
       "symbol": "Defense & Aerospace + Commodities & Mining",
       "score": 90.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 87.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
@@ -455,20 +447,28 @@
       "score": 82.0
     },
     {
+      "symbol": "India Equity Markets",
+      "score": 80.0
+    },
+    {
       "symbol": "Gold & Precious Metals",
       "score": 80.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 78.0
+      "symbol": "Defense & Aerospace",
+      "score": 77.0
+    },
+    {
+      "symbol": "Commodities & Mining",
+      "score": 77.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 75.0
     },
     {
       "symbol": "Emerging Markets + Energy / Oil & Gas",
       "score": 75.0
-    },
-    {
-      "symbol": "Defense & Aerospace",
-      "score": 73.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -479,20 +479,8 @@
       "score": 73.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 71.0
-    },
-    {
-      "symbol": "India Equity Markets",
-      "score": 68.0
-    },
-    {
       "symbol": "Cybersecurity",
-      "score": 68.0
-    },
-    {
-      "symbol": "Commodities & Mining",
-      "score": 67.0
+      "score": 70.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -530,6 +518,41 @@
         "source_diversity": 0.0,
         "recency": 0.0,
         "geopolitical_severity": 0.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 87.0,
+      "severity": "CRITICAL",
+      "article_count": 53,
+      "latest_at": "30 Mar 2026 01:26 UTC",
+      "headline": "Africa Could Emerge As The Biggest Winner In Iran War",
+      "regions": [
+        "americas",
+        "middle_east",
+        "europe"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Oilprice.com",
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [
+        "PSUBNKBEES",
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "XLE",
+        "USO",
+        "IXC"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 7.5,
+        "recency": 20.0,
+        "geopolitical_severity": 15.0
       }
     },
     {
@@ -611,6 +634,36 @@
       }
     },
     {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 80.0,
+      "severity": "CRITICAL",
+      "article_count": 57,
+      "latest_at": "30 Mar 2026 00:41 UTC",
+      "headline": "Stocks in news: TVS Motor Company, Info Edge, NTPC, NHPC, Coal India, Sammaan Capital, Som Distilleries &amp; Breweries",
+      "regions": [
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 5.0,
+        "recency": 15.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals",
       "confidence": 80.0,
@@ -646,37 +699,100 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 78.0,
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 77.0,
       "severity": "CRITICAL",
-      "article_count": 53,
-      "latest_at": "29 Mar 2026 14:16 UTC",
-      "headline": "Drillers See Triple-Digit Crude and Hit the Brakes",
+      "article_count": 117,
+      "latest_at": "29 Mar 2026 22:04 UTC",
+      "headline": "Pentagon reportedly weighs diverting Ukraine military aid to Middle East",
       "regions": [
-        "americas",
+        "asia_pacific",
         "europe",
-        "middle_east"
+        "global",
+        "americas"
       ],
       "sources": [
         "Bloomberg Markets",
-        "Oilprice.com",
-        "Markets-Economic Times"
+        "Defense News"
       ],
       "india_etfs": [
-        "PSUBNKBEES",
-        "CPSEETF"
+        "CPSEETF",
+        "DEFENCEETF"
       ],
       "global_etfs": [
-        "XLE",
-        "USO",
-        "IXC"
+        "ITA",
+        "XAR",
+        "PPA"
       ],
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 12.5,
-        "recency": 6.0,
+        "source_diversity": 7.5,
+        "recency": 10.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 77.0,
+      "severity": "MEDIUM",
+      "article_count": 10,
+      "latest_at": "30 Mar 2026 00:57 UTC",
+      "headline": "Aluminum Surges 6% After Iran Strikes Plants in UAE, Bahrain",
+      "regions": [
+        "global",
+        "india",
+        "middle_east"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "breakdown": {
+        "signal_strength": 16.2,
+        "volume_confirmation": 20.0,
+        "source_diversity": 10.0,
+        "recency": 20.0,
+        "geopolitical_severity": 11.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 75.0,
+      "severity": "CRITICAL",
+      "article_count": 42,
+      "latest_at": "29 Mar 2026 21:09 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Crunch Hype",
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 5.0,
+        "recency": 10.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -698,42 +814,6 @@
         "source_diversity": 0.0,
         "recency": 0.0,
         "geopolitical_severity": 0.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 73.0,
-      "severity": "CRITICAL",
-      "article_count": 115,
-      "latest_at": "29 Mar 2026 07:45 UTC",
-      "headline": "Pentagon reportedly weighs diverting Ukraine military aid to Middle East",
-      "regions": [
-        "europe",
-        "middle_east",
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "Defense News",
-        "World News - Breaking international news and headlines | Sky News",
-        "Bloomberg Markets"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 10.0,
-        "recency": 3.0,
-        "geopolitical_severity": 15.0
       }
     },
     {
@@ -791,83 +871,24 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 71.0,
-      "severity": "CRITICAL",
-      "article_count": 44,
-      "latest_at": "29 Mar 2026 12:45 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Markets-Economic Times",
-        "Crunch Hype"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 5.0,
-        "recency": 6.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 68.0,
-      "severity": "CRITICAL",
-      "article_count": 60,
-      "latest_at": "29 Mar 2026 11:04 UTC",
-      "headline": "Ahead of market: 10 things that will decide stock market action on Monday",
-      "regions": [
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Markets-Economic Times"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 5.0,
-        "recency": 3.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
-      "confidence": 68.0,
+      "confidence": 70.0,
       "severity": "MEDIUM",
-      "article_count": 7,
-      "latest_at": "29 Mar 2026 21:09 UTC",
+      "article_count": 8,
+      "latest_at": "29 Mar 2026 22:45 UTC",
       "headline": "What is Blockchain: Everything You Need to Know (2022)",
       "regions": [
         "asia_pacific",
         "global",
-        "middle_east"
+        "middle_east",
+        "europe"
       ],
       "sources": [
+        "Bloomberg Markets",
         "Cointelegraph.com News",
-        "BBC News",
-        "US Top News and Analysis",
-        "Crunch Hype"
+        "Oilprice.com",
+        "BBC News"
       ],
       "india_etfs": [],
       "global_etfs": [
@@ -875,45 +896,10 @@
         "CIBR"
       ],
       "breakdown": {
-        "signal_strength": 14.1,
+        "signal_strength": 15.6,
         "volume_confirmation": 16.0,
-        "source_diversity": 7.5,
-        "recency": 20.0,
-        "geopolitical_severity": 11.0
-      }
-    },
-    {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 67.0,
-      "severity": "MEDIUM",
-      "article_count": 9,
-      "latest_at": "29 Mar 2026 21:23 UTC",
-      "headline": "Analysis: A new oil shock is building. The next few weeks of war will be decisive for the economy.",
-      "regions": [
-        "india",
-        "middle_east",
-        "global",
-        "europe"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "US Top News and Analysis",
-        "Finance",
-        "Markets-Economic Times"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "breakdown": {
-        "signal_strength": 12.8,
-        "volume_confirmation": 16.0,
-        "source_diversity": 7.5,
-        "recency": 20.0,
+        "source_diversity": 12.5,
+        "recency": 15.0,
         "geopolitical_severity": 11.0
       }
     },
@@ -1021,6 +1007,11 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Energy / Oil & Gas - 53 articles - CRITICAL - Africa Could Emerge As The Biggest Winner In Iran War"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 40 articles - CRITICAL - US stocks today: US stocks tumble to lowest close in 6 months as Iran war drags; Nasdaq confirms correction"
     },
     {
@@ -1036,22 +1027,32 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "India Equity Markets - 57 articles - CRITICAL - Stocks in news: TVS Motor Company, Info Edge, NTPC, NHPC, Coal India, Sammaan Capital, Som Distilleries &amp; Breweries"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Gold & Precious Metals - 27 articles - CRITICAL - US stocks today: US stocks tumble to lowest close in 6 months as Iran war drags; Nasdaq confirms correction"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 53 articles - CRITICAL - Drillers See Triple-Digit Crude and Hit the Brakes"
+      "text": "Defense & Aerospace - 117 articles - CRITICAL - Pentagon reportedly weighs diverting Ukraine military aid to Middle East"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Commodities & Mining - 10 articles - MEDIUM - Aluminum Surges 6% After Iran Strikes Plants in UAE, Bahrain"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Crypto & Digital Assets - 42 articles - CRITICAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Emerging Markets + Energy / Oil & Gas - 58 articles - HIGH - Emerging Markets + Energy / Oil & Gas remains active in the signal book."
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Defense & Aerospace - 115 articles - CRITICAL - Pentagon reportedly weighs diverting Ukraine military aid to Middle East"
     },
     {
       "tag": "tag-neu",
@@ -1066,22 +1067,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 44 articles - CRITICAL - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "India Equity Markets - 60 articles - CRITICAL - Ahead of market: 10 things that will decide stock market action on Monday"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Cybersecurity - 7 articles - MEDIUM - What is Blockchain: Everything You Need to Know (2022)"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Commodities & Mining - 9 articles - MEDIUM - Analysis: A new oil shock is building. The next few weeks of war will be decisive for the economy."
+      "text": "Cybersecurity - 8 articles - MEDIUM - What is Blockchain: Everything You Need to Know (2022)"
     },
     {
       "tag": "tag-neu",
@@ -1164,23 +1150,23 @@
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 53373.07,
+      "price": 50957.29,
       "currency": "JPY",
-      "change": -230.58,
-      "change_pct": -0.43,
-      "change_str": "-0.43%",
+      "change": -2415.78,
+      "change_pct": -4.53,
+      "change_str": "-4.53%",
       "direction": "down"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 24951.88,
+      "price": 24529.34,
       "currency": "HKD",
-      "change": 95.45,
-      "change_pct": 0.38,
-      "change_str": "+0.38%",
-      "direction": "up"
+      "change": -422.54,
+      "change_pct": -1.69,
+      "change_str": "-1.69%",
+      "direction": "down"
     },
     {
       "label": "Nifty 50",
@@ -1197,44 +1183,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4480.7,
+      "price": 4496.3,
       "currency": "USD",
-      "change": -11.3,
-      "change_pct": -0.25,
-      "change_str": "-0.25%",
-      "direction": "down"
+      "change": 4.3,
+      "change_pct": 0.1,
+      "change_str": "+0.10%",
+      "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 102.58,
+      "price": 102.63,
       "currency": "USD",
-      "change": 2.94,
-      "change_pct": 2.95,
-      "change_str": "+2.95%",
+      "change": 2.99,
+      "change_pct": 3.0,
+      "change_str": "+3.00%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 65880.65,
+      "price": 66541.59,
       "currency": "USD",
-      "change": -439.05,
-      "change_pct": -0.66,
-      "change_str": "-0.66%",
-      "direction": "down"
+      "change": 221.89,
+      "change_pct": 0.33,
+      "change_str": "+0.33%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.32,
+      "price": 100.17,
       "currency": "USD",
-      "change": 0.17,
-      "change_pct": 0.17,
-      "change_str": "+0.17%",
+      "change": 0.01,
+      "change_pct": 0.01,
+      "change_str": "+0.01%",
       "direction": "up"
     },
     {
@@ -1262,23 +1248,23 @@
         "at_cap": false
       },
       {
+        "sector": "Crypto & Digital Assets",
+        "weight": 19.1,
+        "at_cap": false
+      },
+      {
         "sector": "Cybersecurity",
         "weight": 17.5,
         "at_cap": false
       },
       {
-        "sector": "Crypto & Digital Assets",
-        "weight": 14.1,
-        "at_cap": false
-      },
-      {
         "sector": "Energy / Oil & Gas",
-        "weight": 10.0,
+        "weight": 15.2,
         "at_cap": false
       },
       {
         "sector": "Defense & Aerospace",
-        "weight": 7.5,
+        "weight": 13.9,
         "at_cap": false
       },
       {
@@ -1290,11 +1276,6 @@
         "sector": "India Equity Markets",
         "weight": 5.1,
         "at_cap": false
-      },
-      {
-        "sector": "Technology & AI / Semiconductors",
-        "weight": 5.0,
-        "at_cap": false
       }
     ],
     "max_drawdown_pct": 0.0,
@@ -1304,11 +1285,11 @@
     "partial_profit_pct": 15
   },
   "logs": [
-    "2026-03-29 23:55:42 [INFO] AZALYST - status.json generated",
-    "2026-03-29 23:55:42 [INFO] PORTFOLIO - NAV INR 10,031.23 | Return +0.31%",
-    "2026-03-29 23:55:42 [INFO] SIGNALS - 18 active signal buckets in state",
-    "2026-03-29 23:55:42 [INFO] TRADER - Open positions: XLF, HACK, ITA, XLE, IBIT, GLDM, SOXX, INDA",
-    "2026-03-29 23:55:42 [INFO] TRADER - Closed trades: 12"
+    "2026-03-30 01:45:04 [INFO] AZALYST - status.json generated",
+    "2026-03-30 01:45:04 [INFO] PORTFOLIO - NAV INR 10,031.24 | Return +0.31%",
+    "2026-03-30 01:45:04 [INFO] SIGNALS - 18 active signal buckets in state",
+    "2026-03-30 01:45:04 [INFO] TRADER - Open positions: XLF, HACK, ITA, XLE, IBIT, GLDM, INDA",
+    "2026-03-30 01:45:04 [INFO] TRADER - Closed trades: 13"
   ],
-  "generated_at": "2026-03-29 23:55:40 UTC"
+  "generated_at": "2026-03-30 01:45:03 UTC"
 }
