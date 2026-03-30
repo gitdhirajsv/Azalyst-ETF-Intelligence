@@ -390,18 +390,17 @@
     }
   },
   "technology_ai": {
-    "sent_at": "2026-03-29T22:56:33.821564+00:00",
-    "confidence": 63,
+    "sent_at": "2026-03-30T08:07:06.781859+00:00",
+    "confidence": 80,
     "sector_label": "Technology & AI / Semiconductors",
     "article_count": 29,
     "severity": "CRITICAL",
     "regions": [
-      "asia_pacific",
-      "middle_east",
-      "americas",
       "global",
       "europe",
-      "india"
+      "india",
+      "americas",
+      "middle_east"
     ],
     "sources": [
       "Crunch Hype"
@@ -413,12 +412,12 @@
       "Top 10 AI Tools That Will Transform Your Content Creation in 2025",
       "Top 10 AI Content Generator & Writer Tools in 2022"
     ],
-    "latest_ts": "2026-03-29T08:18:20+00:00",
+    "latest_ts": "2026-03-30T07:35:00+00:00",
     "confidence_breakdown": {
       "signal_strength": 25,
       "volume_confirmation": 20.0,
       "source_diversity": 0.0,
-      "recency": 3.0,
+      "recency": 20.0,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
@@ -798,5 +797,118 @@
     "confidence": 75,
     "sector_label": "Emerging Markets + Energy / Oil & Gas",
     "article_count": 58
+  },
+  "emerging_markets|gold_precious_metals": {
+    "sent_at": "2026-03-30T08:07:04.781191+00:00",
+    "confidence": 85,
+    "sector_label": "Gold & Precious Metals + Emerging Markets",
+    "article_count": 32,
+    "severity": "CRITICAL",
+    "regions": [
+      "middle_east",
+      "asia_pacific",
+      "global",
+      "india",
+      "americas"
+    ],
+    "sources": [
+      "Markets-Economic Times",
+      "Finance"
+    ],
+    "top_headlines": [
+      "Gold Silver Rate Today Live Updates (30 March 2026): Silver, gold prices slip up to 0.5% on MCX amid weak bullion sentiment. Check prices in Delhi, Mumbai and other major cities",
+      "Global bonds set for steep monthly losses as Iran war stokes stagflation fears",
+      "Expectations for the next Fed rate cut get pushed back after hot inflation report",
+      "Global Markets | Banks, tech weigh down Australian shares; Gulf war keeps energy stocks up",
+      "Gold drops Rs 1,000/10 gms; silver falls 0.5% as Iran-US tensions boost dollar strength: What lies ahead?"
+    ],
+    "latest_ts": "2026-03-30T07:12:38+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 25,
+      "volume_confirmation": 20.0,
+      "source_diversity": 5.0,
+      "recency": 20.0,
+      "geopolitical_severity": 15.0
+    },
+    "etf_recommendations": {
+      "india": [
+        {
+          "name": "Nippon India Gold BeES",
+          "ticker": "GOLDBEES",
+          "note": "Largest Indian gold ETF by AUM",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Tracks physical gold in INR. Double benefit: gold price rise + potential INR depreciation."
+        },
+        {
+          "name": "HDFC Gold ETF",
+          "ticker": "HDFCGOLD",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Physical gold backed. Very liquid. Safe haven in geopolitical or inflation-driven scenarios."
+        },
+        {
+          "name": "Nippon India Nifty 50 BeES",
+          "ticker": "NIFTYBEES",
+          "note": "India as EM leader",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "India is the premier EM destination. Capital inflows support Nifty re-rating."
+        }
+      ],
+      "global": [
+        {
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026."
+        },
+        {
+          "name": "VanEck Gold Miners ETF",
+          "ticker": "GDX",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium-High",
+          "timeframe": "3\u20139 months",
+          "thesis": "Gold miners offer 2\u20133x leverage to gold price. If gold surges, miners typically outperform."
+        },
+        {
+          "name": "VanEck Junior Gold Miners ETF",
+          "ticker": "GDXJ",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "2\u20136 months",
+          "thesis": "Smaller miners \u2014 highest leverage to gold. High risk/reward. Use only for strong conviction."
+        },
+        {
+          "name": "iShares MSCI Emerging Markets ETF",
+          "ticker": "EEM",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Broad EM exposure. China, India, Taiwan, Brazil. EM rotation play vs US equities."
+        },
+        {
+          "name": "SPDR Portfolio Emerging Markets ETF",
+          "ticker": "SPEM",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Lower cost EM alternative (0.07% ER). Similar coverage to EEM."
+        }
+      ]
+    }
   }
 }
