@@ -204,10 +204,6 @@
   },
   "confidence": [
     {
-      "symbol": "Defense & Aerospace",
-      "score": 90.0
-    },
-    {
       "symbol": "Gold & Precious Metals",
       "score": 90.0
     },
@@ -226,6 +222,10 @@
     {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
       "score": 87.0
+    },
+    {
+      "symbol": "Defense & Aerospace",
+      "score": 85.0
     },
     {
       "symbol": "Nuclear Energy & Uranium + Defense & Aerospace",
@@ -281,42 +281,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 90.0,
-      "severity": "CRITICAL",
-      "article_count": 121,
-      "latest_at": "30 Mar 2026 18:28 UTC",
-      "headline": "Pentagon reportedly weighs diverting Ukraine military aid to Middle East",
-      "regions": [
-        "americas",
-        "middle_east",
-        "europe"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Oilprice.com",
-        "Defense News",
-        "US Top News and Analysis"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 10.0,
-        "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
     {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals",
@@ -477,6 +441,41 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 12.5,
+        "recency": 15.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 85.0,
+      "severity": "CRITICAL",
+      "article_count": 129,
+      "latest_at": "30 Mar 2026 20:55 UTC",
+      "headline": "Pentagon reportedly weighs diverting Ukraine military aid to Middle East",
+      "regions": [
+        "americas",
+        "middle_east",
+        "europe"
+      ],
+      "sources": [
+        "Defense News",
+        "Bloomberg Markets",
+        "Oilprice.com"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 10.0,
         "recency": 15.0,
         "geopolitical_severity": 15.0
       }
@@ -825,11 +824,6 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Defense & Aerospace - 121 articles - CRITICAL - Pentagon reportedly weighs diverting Ukraine military aid to Middle East"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "Gold & Precious Metals - 32 articles - CRITICAL - Commodity Radar: Despite gold's Rs 55,000 fall from peak, only limited upside and not a breakaway rally seen: Here's why"
     },
     {
@@ -851,6 +845,11 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Banking & Financial Sector + Gold & Precious Metals - 64 articles - CRITICAL - US Bonds Rally as Traders Bet on Fed Rate Cut in About-Face"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Defense & Aerospace - 129 articles - CRITICAL - Pentagon reportedly weighs diverting Ukraine military aid to Middle East"
     },
     {
       "tag": "tag-bull",
@@ -958,9 +957,9 @@
       "region": "UK",
       "price": 10127.96,
       "currency": "GBP",
-      "change": 160.56,
-      "change_pct": 1.61,
-      "change_str": "+1.61%",
+      "change": 155.76,
+      "change_pct": 1.56,
+      "change_str": "+1.56%",
       "direction": "up"
     },
     {
@@ -1011,33 +1010,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4539.4,
+      "price": 4541.4,
       "currency": "USD",
-      "change": 47.4,
-      "change_pct": 1.06,
-      "change_str": "+1.06%",
+      "change": 49.4,
+      "change_pct": 1.1,
+      "change_str": "+1.10%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 104.82,
+      "price": 104.86,
       "currency": "USD",
-      "change": 5.18,
-      "change_pct": 5.2,
-      "change_str": "+5.20%",
+      "change": 5.22,
+      "change_pct": 5.24,
+      "change_str": "+5.24%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66781.51,
+      "price": 66739.38,
       "currency": "USD",
-      "change": 826.59,
-      "change_pct": 1.25,
-      "change_str": "+1.25%",
+      "change": 784.46,
+      "change_pct": 1.19,
+      "change_str": "+1.19%",
       "direction": "up"
     },
     {
@@ -1108,10 +1107,10 @@
     "partial_profit_pct": 15
   },
   "logs": [
-    "2026-03-30 22:25:53 [INFO] AZALYST - status.json generated",
-    "2026-03-30 22:25:53 [INFO] PORTFOLIO - NAV INR 10,001.60 | Return +0.02%",
-    "2026-03-30 22:25:53 [INFO] SIGNALS - 19 active signal buckets in state",
-    "2026-03-30 22:25:53 [INFO] TRADER - Open positions: ITA, XLE, IBIT, XLF, SOXX, GLDM"
+    "2026-03-30 23:01:46 [INFO] AZALYST - status.json generated",
+    "2026-03-30 23:01:46 [INFO] PORTFOLIO - NAV INR 10,001.60 | Return +0.02%",
+    "2026-03-30 23:01:46 [INFO] SIGNALS - 19 active signal buckets in state",
+    "2026-03-30 23:01:46 [INFO] TRADER - Open positions: ITA, XLE, IBIT, XLF, SOXX, GLDM"
   ],
-  "generated_at": "2026-03-30 22:25:53 UTC"
+  "generated_at": "2026-03-30 23:01:44 UTC"
 }
