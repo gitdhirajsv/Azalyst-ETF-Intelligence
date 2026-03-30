@@ -286,42 +286,50 @@
     }
   },
   "banking_financial|gold_precious_metals": {
-    "sent_at": "2026-03-30T17:44:00.197154+00:00",
-    "confidence": 92,
-    "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-    "article_count": 69,
+    "sent_at": "2026-03-30T22:25:47.761544+00:00",
+    "confidence": 87,
+    "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
+    "article_count": 64,
     "severity": "CRITICAL",
     "regions": [
-      "india",
-      "middle_east",
       "global",
+      "americas",
       "asia_pacific",
-      "americas"
+      "india",
+      "middle_east"
     ],
     "sources": [
       "Bloomberg Markets",
-      "Cointelegraph.com News",
-      "Finance",
+      "Oilprice.com",
       "Markets-Economic Times",
-      "Oilprice.com"
+      "Finance"
     ],
     "top_headlines": [
-      "Commodity Radar: Despite gold's Rs 55,000 fall from peak, only limited upside and not a breakaway rally seen: Here's why",
-      "US Bonds Rally as Traders Bet on Fed Rate Cut Bets in About-Face",
+      "US Bonds Rally as Traders Bet on Fed Rate Cut in About-Face",
+      "The Fed issues its latest interest rate decision Wednesday. Here's what to expect",
       "Powell: Fed Will 'Wait and See' Before Pulling Interest Rate Trigger",
-      "Crypto funds see first outflow in 5 weeks amid inflation fears, Iran tensions",
-      "Expectations for the next Fed rate cut get pushed back after hot inflation report"
+      "Fed\u2019s Williams Says Policy Well Positioned Amid Supply Shock",
+      "Japan's Nikkei sinks on recession fears; benchmark JGB yields hit 27-year high"
     ],
-    "latest_ts": "2026-03-30T17:11:22+00:00",
+    "latest_ts": "2026-03-30T20:00:00+00:00",
     "confidence_breakdown": {
       "signal_strength": 25,
       "volume_confirmation": 20.0,
       "source_diversity": 12.5,
-      "recency": 20.0,
+      "recency": 15.0,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
       "india": [
+        {
+          "name": "Nippon India ETF Bank BeES",
+          "ticker": "BANKBEES",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Top Indian private and PSU banks. Rate cut cycle could re-rate banking sector."
+        },
         {
           "name": "Nippon India Gold BeES",
           "ticker": "GOLDBEES",
@@ -340,26 +348,27 @@
           "risk": "Low-Medium",
           "timeframe": "3\u201318 months",
           "thesis": "Physical gold backed. Very liquid. Safe haven in geopolitical or inflation-driven scenarios."
-        },
-        {
-          "name": "Nippon India ETF Bank BeES",
-          "ticker": "BANKBEES",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "1\u20136 months",
-          "thesis": "Top Indian private and PSU banks. Rate cut cycle could re-rate banking sector."
         }
       ],
       "global": [
         {
+          "name": "Financial Select Sector SPDR",
+          "ticker": "XLF",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play."
+        },
+        {
           "name": "SPDR Gold MiniShares Trust",
           "ticker": "GLDM",
+          "note": "Flight to safety during banking stress",
           "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
           "exchange": "NYSE",
           "risk": "Low-Medium",
-          "timeframe": "3\u201318 months",
-          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026."
+          "timeframe": "1\u20133 months",
+          "thesis": "Banking crisis \u2192 gold safe haven. GLDM benefits from systemic financial stress."
         },
         {
           "name": "VanEck Gold Miners ETF",
@@ -378,50 +387,40 @@
           "risk": "High",
           "timeframe": "2\u20136 months",
           "thesis": "Smaller miners \u2014 highest leverage to gold. High risk/reward. Use only for strong conviction."
-        },
-        {
-          "name": "Financial Select Sector SPDR",
-          "ticker": "XLF",
-          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
-          "exchange": "NYSE",
-          "risk": "Medium",
-          "timeframe": "1\u20136 months",
-          "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play."
         }
       ]
     }
   },
   "technology_ai": {
-    "sent_at": "2026-03-30T17:44:01.596036+00:00",
-    "confidence": 75,
+    "sent_at": "2026-03-30T22:25:48.975659+00:00",
+    "confidence": 66,
     "sector_label": "Technology & AI / Semiconductors",
     "article_count": 32,
     "severity": "CRITICAL",
     "regions": [
-      "india",
+      "americas",
       "middle_east",
       "global",
-      "europe",
-      "americas"
+      "india",
+      "europe"
     ],
     "sources": [
       "Crunch Hype",
-      "US Top News and Analysis",
-      "Bloomberg Markets"
+      "US Top News and Analysis"
     ],
     "top_headlines": [
       "TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)",
       "Top 10 AI Tools in 2023 That Will Make Your Life Easier",
-      "Meta Faces $310 Billion Market Value Drop on Legal, AI Concerns",
       "How I Get Free Traffic from ChatGPT in 2025 (AIO vs SEO)",
-      "Samsung-backed AI chip firm Rebellions raises $400 million ahead of IPO"
+      "Samsung-backed AI chip firm Rebellions raises $400 million ahead of IPO",
+      "Top 10 AI Tools That Will Transform Your Content Creation in 2025"
     ],
     "latest_ts": "2026-03-30T13:05:30+00:00",
     "confidence_breakdown": {
       "signal_strength": 25,
       "volume_confirmation": 20.0,
-      "source_diversity": 5.0,
-      "recency": 10.0,
+      "source_diversity": 0.0,
+      "recency": 6.0,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {

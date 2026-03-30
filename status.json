@@ -204,10 +204,6 @@
   },
   "confidence": [
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 92.0
-    },
-    {
       "symbol": "Defense & Aerospace",
       "score": 90.0
     },
@@ -228,6 +224,10 @@
       "score": 87.0
     },
     {
+      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
+      "score": 87.0
+    },
+    {
       "symbol": "Nuclear Energy & Uranium + Defense & Aerospace",
       "score": 83.0
     },
@@ -244,10 +244,6 @@
       "score": 75.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 75.0
-    },
-    {
       "symbol": "Emerging Markets + Energy / Oil & Gas",
       "score": 75.0
     },
@@ -258,6 +254,10 @@
     {
       "symbol": "India Equity Markets",
       "score": 71.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 66.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -281,45 +281,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "banking_financial|gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 92.0,
-      "severity": "CRITICAL",
-      "article_count": 69,
-      "latest_at": "30 Mar 2026 17:11 UTC",
-      "headline": "Commodity Radar: Despite gold's Rs 55,000 fall from peak, only limited upside and not a breakaway rally seen: Here's why",
-      "regions": [
-        "india",
-        "middle_east",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Cointelegraph.com News",
-        "Finance",
-        "Markets-Economic Times"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD",
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ",
-        "XLF"
-      ],
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 12.5,
-        "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
     {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
@@ -482,6 +443,45 @@
       }
     },
     {
+      "sector_key": "banking_financial|gold_precious_metals",
+      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
+      "confidence": 87.0,
+      "severity": "CRITICAL",
+      "article_count": 64,
+      "latest_at": "30 Mar 2026 20:00 UTC",
+      "headline": "US Bonds Rally as Traders Bet on Fed Rate Cut in About-Face",
+      "regions": [
+        "global",
+        "americas",
+        "asia_pacific",
+        "india"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "Finance"
+      ],
+      "india_etfs": [
+        "BANKBEES",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 12.5,
+        "recency": 15.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "defense|nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium + Defense & Aerospace",
       "confidence": 83.0,
@@ -588,42 +588,6 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 75.0,
-      "severity": "CRITICAL",
-      "article_count": 32,
-      "latest_at": "30 Mar 2026 13:05 UTC",
-      "headline": "TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)",
-      "regions": [
-        "india",
-        "middle_east",
-        "global",
-        "europe"
-      ],
-      "sources": [
-        "Crunch Hype",
-        "US Top News and Analysis",
-        "Bloomberg Markets"
-      ],
-      "india_etfs": [
-        "MAFANG",
-        "NIFTYBEES"
-      ],
-      "global_etfs": [
-        "SOXX",
-        "QQQ",
-        "AIQ"
-      ],
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 5.0,
-        "recency": 10.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "emerging_markets|energy_oil",
       "sector_label": "Emerging Markets + Energy / Oil & Gas",
       "confidence": 75.0,
@@ -690,6 +654,41 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 5.0,
+        "recency": 6.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 66.0,
+      "severity": "CRITICAL",
+      "article_count": 32,
+      "latest_at": "30 Mar 2026 13:05 UTC",
+      "headline": "TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)",
+      "regions": [
+        "americas",
+        "middle_east",
+        "global",
+        "india"
+      ],
+      "sources": [
+        "Crunch Hype",
+        "US Top News and Analysis"
+      ],
+      "india_etfs": [
+        "MAFANG",
+        "NIFTYBEES"
+      ],
+      "global_etfs": [
+        "SOXX",
+        "QQQ",
+        "AIQ"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 0.0,
         "recency": 6.0,
         "geopolitical_severity": 15.0
       }
@@ -826,11 +825,6 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 69 articles - CRITICAL - Commodity Radar: Despite gold's Rs 55,000 fall from peak, only limited upside and not a breakaway rally seen: Here's why"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "Defense & Aerospace - 121 articles - CRITICAL - Pentagon reportedly weighs diverting Ukraine military aid to Middle East"
     },
     {
@@ -856,6 +850,11 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Banking & Financial Sector + Gold & Precious Metals - 64 articles - CRITICAL - US Bonds Rally as Traders Bet on Fed Rate Cut in About-Face"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Nuclear Energy & Uranium + Defense & Aerospace - 125 articles - CRITICAL - Nuclear Energy & Uranium + Defense & Aerospace remains active in the signal book."
     },
     {
@@ -876,11 +875,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 32 articles - CRITICAL - TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Emerging Markets + Energy / Oil & Gas - 58 articles - HIGH - Emerging Markets + Energy / Oil & Gas remains active in the signal book."
     },
     {
@@ -892,6 +886,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "India Equity Markets - 51 articles - CRITICAL - Investors lose Rs 1.34 lakh cr in FY26 as Sensex slumps 7%, Nifty ends 5% lower; PSU banks shine"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Technology & AI / Semiconductors - 32 articles - CRITICAL - TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)"
     },
     {
       "tag": "tag-neu",
@@ -970,10 +969,10 @@
       "region": "EU",
       "price": 22562.88,
       "currency": "EUR",
-      "change": 262.13,
-      "change_pct": 1.18,
-      "change_str": "+1.18%",
-      "direction": "up"
+      "change": -50.09,
+      "change_pct": -0.22,
+      "change_str": "-0.22%",
+      "direction": "down"
     },
     {
       "label": "Nikkei 225",
@@ -1012,44 +1011,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4540.4,
+      "price": 4539.4,
       "currency": "USD",
-      "change": 48.4,
-      "change_pct": 1.08,
-      "change_str": "+1.08%",
+      "change": 47.4,
+      "change_pct": 1.06,
+      "change_str": "+1.06%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 105.01,
+      "price": 104.82,
       "currency": "USD",
-      "change": 5.37,
-      "change_pct": 5.39,
-      "change_str": "+5.39%",
+      "change": 5.18,
+      "change_pct": 5.2,
+      "change_str": "+5.20%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66811.21,
+      "price": 66781.51,
       "currency": "USD",
-      "change": 856.29,
-      "change_pct": 1.3,
-      "change_str": "+1.30%",
+      "change": 826.59,
+      "change_pct": 1.25,
+      "change_str": "+1.25%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.53,
+      "price": 100.49,
       "currency": "USD",
-      "change": 0.38,
-      "change_pct": 0.38,
-      "change_str": "+0.38%",
+      "change": 0.34,
+      "change_pct": 0.34,
+      "change_str": "+0.34%",
       "direction": "up"
     },
     {
@@ -1109,10 +1108,10 @@
     "partial_profit_pct": 15
   },
   "logs": [
-    "2026-03-30 21:34:07 [INFO] AZALYST - status.json generated",
-    "2026-03-30 21:34:07 [INFO] PORTFOLIO - NAV INR 10,001.60 | Return +0.02%",
-    "2026-03-30 21:34:07 [INFO] SIGNALS - 19 active signal buckets in state",
-    "2026-03-30 21:34:07 [INFO] TRADER - Open positions: ITA, XLE, IBIT, XLF, SOXX, GLDM"
+    "2026-03-30 22:25:53 [INFO] AZALYST - status.json generated",
+    "2026-03-30 22:25:53 [INFO] PORTFOLIO - NAV INR 10,001.60 | Return +0.02%",
+    "2026-03-30 22:25:53 [INFO] SIGNALS - 19 active signal buckets in state",
+    "2026-03-30 22:25:53 [INFO] TRADER - Open positions: ITA, XLE, IBIT, XLF, SOXX, GLDM"
   ],
-  "generated_at": "2026-03-30 21:34:06 UTC"
+  "generated_at": "2026-03-30 22:25:53 UTC"
 }
