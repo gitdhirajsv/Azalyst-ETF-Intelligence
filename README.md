@@ -27,12 +27,12 @@ The project exists for a simple reason: global macro events move faster than dis
 
 Live monitor output (generated from the current portfolio/state artifacts):
 
-![Azalyst ETF Intelligence Dashboard](docs/dashboard_12pct.png)
+![Azalyst ETF Intelligence Dashboard](dashboard_12pct.png)
 
 Core capabilities:
 
 - Global news scanning through **[WorldMonitor](https://github.com/koala73/worldmonitor)** and direct RSS feeds.
-- Sector classification across 11 research buckets using weighted keyword rules, negation handling, and article clustering.
+- Sector classification across 14+ research buckets using weighted keyword rules, negation handling, and article clustering.
 - Five-factor confidence scoring with transparent component breakdowns.
 - ETF opportunity mapping for India (NSE/BSE) and global markets (NYSE/NASDAQ) with dynamic broker platform display.
 - Structured Discord delivery via **[Discord Webhooks](https://discord.com/developers/docs/resources/webhook)**.
@@ -44,6 +44,7 @@ Research controls:
 - Conservative delivery threshold: `62+` confidence.
 - Minimum corroboration requirement: `2+` relevant articles.
 - Cooldown mechanism: `4` hours per tracked signal basket.
+- Article age filter: drops articles older than `7 days` (configurable).
 - Update logic: stronger signals can re-issue before cooldown expiry if confidence improves materially.
 - Audit trail logging through `azalyst.log` and persisted sector state in `azalyst_state.json`.
 - **✨ AI-enhanced signal evaluation** with allocation recommendations from Mistral 7B.
@@ -58,7 +59,6 @@ Primary dependencies:
 - **[python-dateutil](https://pypi.org/project/python-dateutil/)**
 - **[python-dotenv](https://pypi.org/project/python-dotenv/)**
 - **[openai](https://pypi.org/project/openai/)** — NVIDIA NIM API client
-- **[langchain-nvidia-ai-endpoints](https://pypi.org/project/langchain-nvidia-ai-endpoints/)** — Optional LangChain integration
 
 ---
 
@@ -246,9 +246,10 @@ See **`LLM_INTEGRATION.md`** for complete setup guide, API reference, and best p
 | `LLM_TOP_P` | `0.7` | `float` | Nucleus sampling parameter |
 | `LLM_MAX_TOKENS` | `1024` | `integer` | Maximum response length |
 | `LLM_ENABLED` | `true` | `boolean` | Enable/disable LLM features |
-| `LLM_ANALYSIS_INTERVAL` | `1440` | `integer` | Analysis frequency in minutes (1440=daily) |
+| `LLM_ANALYSIS_INTERVAL` | `6` | `integer` | Analysis frequency in hours (6=every 6 hours) |
 | `LLM_AUTO_APPLY` | `false` | `boolean` | Auto-apply safe suggestions |
 | `LLM_MIN_CONFIDENCE` | `75` | `integer` | Min confidence for auto-apply |
+| `MAX_ARTICLE_AGE_DAYS` | `7` | `integer` | Drop articles older than this (0=disabled) |
 
 See `.env.example` for the full template including advanced controls.
 
@@ -307,7 +308,6 @@ Each Discord report shows the exact platform information (e.g., "iShares by Blac
 |-- install_autostart.bat         # Auto-start installer
 |-- setup_windows_startup.ps1     # Task Scheduler setup
 |-- config.py                     # Configuration (includes LLM settings)
-|-- prepare_spyder_profile.py     # Spyder IDE setup
 |-- news_fetcher.py               # RSS feed fetching
 |-- classifier.py                 # Sector classification
 |-- scorer.py                     # Confidence scoring
@@ -318,8 +318,9 @@ Each Discord report shows the exact platform information (e.g., "iShares by Blac
 |-- paper_trader.py               # Paper trading engine
 |-- portfolio_reporter.py         # Portfolio reporting
 |-- generate_dashboard.py         # Dashboard generation
-|-- llm_optimizer.py              # NVIDIA NIM client & optimization
-|-- llm_analyzer.py               # LLM workflow integration
+|-- llm_analyzer.py               # LLM analyzer stub
+|-- advanced_llm_analyzer.py      # Advanced multi-model LLM analyzer
+|-- llm_optimizer.py              # NVIDIA NIM portfolio optimizer
 |-- llm_prompts.py                # Prompt templates
 |-- get_mistral_recommendations.py # Quick portfolio analysis
 |-- test_llm_integration.py        # Test script
@@ -330,19 +331,15 @@ Each Discord report shows the exact platform information (e.g., "iShares by Blac
 |-- AUTO_STARTUP_GUIDE.md         # Auto-startup setup guide
 |-- LLM_INTEGRATION.md            # Complete LLM guide
 |-- LLM_QUICKSTART.md             # Quick reference
-|-- LLM_SUMMARY.md                # Visual summary
 |-- HOW_TO_GET_MISTRAL_API_KEY.md # API key setup
-|-- RECOMMENDATIONS_FOR_YOUR_PORTFOLIO.md # Your portfolio analysis
-|-- LLM_IMPLEMENTATION_SUMMARY.md # Implementation details
 |-- index.html                    # Dashboard HTML
 |-- dashboard.js                  # Dashboard JavaScript
-|-- data/                         # Data files
+|-- dashboard_12pct.png           # Dashboard preview image
 +-- runtime artifacts (auto-generated)
     |-- azalyst.log               # System logs
     |-- azalyst_state.json        # Signal state
     |-- azalyst_portfolio.json    # Portfolio data
-    |-- llm_feedback_log.json     # LLM learning data
-    +-- status.json               # Status file
+    +-- status.json               # Dashboard status file
 ```
 
 All files are in the **same folder** for easy access. No subfolders needed!
