@@ -601,10 +601,71 @@
     }
   },
   "emerging_markets": {
-    "sent_at": "2026-03-27T12:41:53.947586+00:00",
-    "confidence": 62,
+    "sent_at": "2026-03-31T09:55:49.325940+00:00",
+    "confidence": 67,
     "sector_label": "Emerging Markets",
-    "article_count": 5
+    "article_count": 7,
+    "severity": "MEDIUM",
+    "regions": [
+      "middle_east",
+      "global",
+      "europe"
+    ],
+    "sources": [
+      "Markets-Economic Times",
+      "World | Deutsche Welle",
+      "Cointelegraph.com News",
+      "Bloomberg Markets"
+    ],
+    "top_headlines": [
+      "Global Market Today | Brent crude set for record monthly gain; shares tentative as Iran war rages",
+      "EU seeks new strategy amid Sahel 'influence' rivalries",
+      "Turkey Restarts FX Swaps to Counter War Impact on Reserves",
+      "Fire Hotspots, Scant Rain Raise Haze Alarm in Southeast Asia",
+      "F2Pool co-founder says Thailand condo bought for 2,900 Bitcoin sold for 7"
+    ],
+    "latest_ts": "2026-03-31T09:55:49.017684+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 10.3,
+      "volume_confirmation": 16.0,
+      "source_diversity": 10.0,
+      "recency": 20.0,
+      "geopolitical_severity": 11
+    },
+    "etf_recommendations": {
+      "india": [
+        {
+          "name": "Nippon India Nifty 50 BeES",
+          "ticker": "NIFTYBEES",
+          "note": "India as EM leader",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "India is the premier EM destination. Capital inflows support Nifty re-rating."
+        }
+      ],
+      "global": [
+        {
+          "name": "iShares MSCI Emerging Markets ETF",
+          "ticker": "EEM",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Broad EM exposure. China, India, Taiwan, Brazil. EM rotation play vs US equities."
+        },
+        {
+          "name": "SPDR Portfolio Emerging Markets ETF",
+          "ticker": "SPEM",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Lower cost EM alternative (0.07% ER). Similar coverage to EEM."
+        }
+      ]
+    }
   },
   "gold_precious_metals": {
     "sent_at": "2026-03-31T01:52:12.980086+00:00",
