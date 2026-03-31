@@ -17,6 +17,26 @@ from typing import Dict, List
 log = logging.getLogger("azalyst.state")
 
 
+def _parse_dt(value) -> datetime:
+    """
+    Parse an ISO-format datetime string into an aware UTC datetime.
+    Returns current UTC time on any failure so callers never receive None.
+    """
+    if isinstance(value, datetime):
+        if value.tzinfo is None:
+            return value.replace(tzinfo=timezone.utc)
+        return value
+    if isinstance(value, str):
+        try:
+            dt = datetime.fromisoformat(value)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            return dt
+        except Exception:
+            pass
+    return datetime.now(timezone.utc)
+
+
 def _json_safe(value):
     """Recursively convert runtime objects into JSON-safe values."""
     if isinstance(value, datetime):
@@ -49,22 +69,21 @@ class SignalStateManager:
     # ── Persistence ───────────────────────────────────────────────────────────
 
     def _load(self) -> Dict:
-        """Load state from disk."""
+        """Load state from disk, deserializing all datetime fields."""
         if os.path.exists(self.state_file):
             try:
                 with open(self.state_file, "r", encoding="utf-8") as f:
                     raw = json.load(f)
-                # Convert string timestamps back to datetime
+
                 for sector_id, record in raw.items():
+                    # FIX: deserialize both sent_at AND latest_ts back to datetime objects.
+                    # Previously only sent_at was converted, causing TypeError in recency
+                    # scoring when scorer.py called (now - latest_ts) on a string value.
                     if "sent_at" in record:
-                        try:
-                            dt = datetime.fromisoformat(record["sent_at"])
-                            # If the timestamp is naive (no explicit offset), assume UTC.
-                            if dt.tzinfo is None:
-                                dt = dt.replace(tzinfo=timezone.utc)
-                            record["sent_at"] = dt
-                        except Exception:
-                            record["sent_at"] = datetime.now(timezone.utc)
+                        record["sent_at"] = _parse_dt(record["sent_at"])
+                    if "latest_ts" in record and record["latest_ts"]:
+                        record["latest_ts"] = _parse_dt(record["latest_ts"])
+
                 log.info(f"Loaded state: {len(raw)} sector records")
                 return raw
             except Exception as e:
@@ -123,7 +142,7 @@ class SignalStateManager:
                         f"UPDATE signal: {signal['sector_label']} "
                         f"conf {prev_conf} → {curr_conf} (+{curr_conf - prev_conf})"
                     )
-                    signal["_is_update"]     = True
+                    signal["_is_update"]       = True
                     signal["_prev_confidence"] = prev_conf
                     to_send.append(signal)
 
@@ -143,17 +162,17 @@ class SignalStateManager:
         """Record that a signal was sent, for future deduplication."""
         sector_key = self._sector_key(signal)
         self._state[sector_key] = {
-            "sent_at": datetime.now(timezone.utc),
-            "confidence": signal.get("confidence", 0),
-            "sector_label": signal.get("sector_label", ""),
-            "article_count": signal.get("article_count", 0),
-            "severity": signal.get("severity", ""),
-            "regions": signal.get("regions", [])[:6],
-            "sources": signal.get("sources", [])[:6],
-            "top_headlines": signal.get("top_headlines", [])[:5],
-            "latest_ts": signal.get("latest_ts"),
+            "sent_at":              datetime.now(timezone.utc),
+            "confidence":           signal.get("confidence", 0),
+            "sector_label":         signal.get("sector_label", ""),
+            "article_count":        signal.get("article_count", 0),
+            "severity":             signal.get("severity", ""),
+            "regions":              signal.get("regions", [])[:6],
+            "sources":              signal.get("sources", [])[:6],
+            "top_headlines":        signal.get("top_headlines", [])[:5],
+            "latest_ts":            signal.get("latest_ts"),
             "confidence_breakdown": signal.get("confidence_breakdown", {}),
-            "etf_recommendations": signal.get(
+            "etf_recommendations":  signal.get(
                 "etf_recommendations",
                 {"india": [], "global": []},
             ),
@@ -169,7 +188,7 @@ class SignalStateManager:
         """Return state statistics."""
         now = datetime.now(timezone.utc)
         stats = {
-            "total_tracked": len(self._state),
+            "total_tracked":    len(self._state),
             "active_cooldowns": 0,
             "expired_cooldowns": 0,
         }

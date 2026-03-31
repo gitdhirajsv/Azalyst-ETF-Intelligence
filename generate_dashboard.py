@@ -5,50 +5,51 @@ import os
 import statistics
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-from typing import Dict
+from typing import Dict, List, Optional, Tuple
 
 ROOT = Path(__file__).resolve().parent
 PORTFOLIO_FILE = ROOT / "azalyst_portfolio.json"
-STATE_FILE = ROOT / "azalyst_state.json"
-OUTPUT_FILE = ROOT / "status.json"
+STATE_FILE     = ROOT / "azalyst_state.json"
+OUTPUT_FILE    = ROOT / "status.json"
 
-TRAIL_ACTIVATION_PCT = 0.05
-TRAILING_STOP_PCT = 0.08
-HARD_STOP_PCT = 0.10
-PARTIAL_PROFIT_PCT = 0.15
-SECTOR_CAP_PCT = 30
+TRAIL_ACTIVATION_PCT        = 0.05
+TRAILING_STOP_PCT           = 0.08
+HARD_STOP_PCT               = 0.10
+PARTIAL_PROFIT_PCT          = 0.15
+SECTOR_CAP_PCT              = 30
 CIRCUIT_BREAKER_DRAWDOWN_PCT = 12
 
 SECTOR_LABELS = {
-    "defense": "Defense & Aerospace",
-    "defense_aerospace": "Defense & Aerospace",
-    "india_equity": "India Equity",
-    "banking_financial": "Banking & Finance",
+    "defense":              "Defense & Aerospace",
+    "defense_aerospace":    "Defense & Aerospace",
+    "india_equity":         "India Equity",
+    "banking_financial":    "Banking & Finance",
     "gold_precious_metals": "Precious Metals",
-    "energy_oil": "Energy & Oil",
-    "commodities_mining": "Commodities",
-    "crypto_digital": "Crypto & Digital",
-    "technology_ai": "Technology & AI",
-    "nuclear_uranium": "Nuclear & Uranium",
-    "cybersecurity": "Cybersecurity",
-    "emerging_markets": "Emerging Markets",
+    "energy_oil":           "Energy & Oil",
+    "commodities_mining":   "Commodities",
+    "crypto_digital":       "Crypto & Digital",
+    "technology_ai":        "Technology & AI",
+    "nuclear_uranium":      "Nuclear & Uranium",
+    "cybersecurity":        "Cybersecurity",
+    "emerging_markets":     "Emerging Markets",
 }
 
 MARKET_TICKERS = [
-    ("^GSPC", "S&P 500", "US"),
-    ("^IXIC", "NASDAQ", "US"),
-    ("^DJI", "Dow Jones", "US"),
-    ("^FTSE", "FTSE 100", "UK"),
-    ("^GDAXI", "DAX", "EU"),
-    ("^N225", "Nikkei 225", "JP"),
-    ("^HSI", "Hang Seng", "HK"),
-    ("^NSEI", "Nifty 50", "IN"),
-    ("GC=F", "Gold", "COMMOD"),
-    ("CL=F", "Crude Oil", "COMMOD"),
-    ("BTC-USD", "Bitcoin", "CRYPTO"),
-    ("DX-Y.NYB", "USD Index", "FX"),
-    ("^VIX", "VIX", "VOL"),
+    ("^GSPC",    "S&P 500",    "US"),
+    ("^IXIC",    "NASDAQ",     "US"),
+    ("^DJI",     "Dow Jones",  "US"),
+    ("^FTSE",    "FTSE 100",   "UK"),
+    ("^GDAXI",   "DAX",        "EU"),
+    ("^N225",    "Nikkei 225", "JP"),
+    ("^HSI",     "Hang Seng",  "HK"),
+    ("^NSEI",    "Nifty 50",   "IN"),
+    ("GC=F",     "Gold",       "COMMOD"),
+    ("CL=F",     "Crude Oil",  "COMMOD"),
+    ("BTC-USD",  "Bitcoin",    "CRYPTO"),
+    ("DX-Y.NYB", "USD Index",  "FX"),
+    ("^VIX",     "VIX",        "VOL"),
 ]
 
 
@@ -106,10 +107,15 @@ def safe_round(value, digits=2):
         return 0.0
 
 
-def fetch_chart_quote(ticker):
-    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(ticker)}?interval=1d&range=5d"
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+# ── Market snapshot (parallelized) ───────────────────────────────────────────
 
+def _fetch_one_quote(ticker: str, label: str, region: str) -> Optional[Dict]:
+    """Fetch a single Yahoo Finance quote. Returns None on any failure."""
+    url = (
+        f"https://query1.finance.yahoo.com/v8/finance/chart/"
+        f"{urllib.parse.quote(ticker)}?interval=1d&range=5d"
+    )
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     try:
         with urllib.request.urlopen(req, timeout=8) as resp:
             payload = json.loads(resp.read())
@@ -121,9 +127,9 @@ def fetch_chart_quote(ticker):
         return None
 
     chart = result[0]
-    meta = chart.get("meta") or {}
+    meta  = chart.get("meta") or {}
     indicator_rows = ((chart.get("indicators") or {}).get("quote") or [{}])[0]
-    closes = [value for value in indicator_rows.get("close", []) if value is not None]
+    closes = [v for v in indicator_rows.get("close", []) if v is not None]
 
     price = meta.get("regularMarketPrice")
     if price is None and closes:
@@ -134,36 +140,54 @@ def fetch_chart_quote(ticker):
     elif prev is None and closes:
         prev = closes[-1]
 
-    return {
-        "price": price,
-        "previous_close": prev,
-        "currency": meta.get("currency", ""),
-    }
+    return {"price": price, "previous_close": prev, "currency": meta.get("currency", "")}
 
 
-def fetch_market_snapshot():
-    rows = []
-    for ticker, label, region in MARKET_TICKERS:
-        quote = fetch_chart_quote(ticker)
+def fetch_market_snapshot() -> List[Dict]:
+    """
+    FIX: Parallelized with ThreadPoolExecutor (was sequential).
+    On a cold CI runner sequential calls took 30-50 s and occasionally timed out.
+    Concurrent execution reduces wall-clock time to ~max(individual_timeout).
+    """
+    rows: List[Dict] = []
+
+    def _worker(args: Tuple) -> Optional[Dict]:
+        ticker, label, region = args
+        quote = _fetch_one_quote(ticker, label, region)
         if not quote:
-            continue
+            return None
         price = quote.get("price")
-        prev = quote.get("previous_close") or price
-        chg = (price - prev) if price is not None and prev is not None else 0.0
+        prev  = quote.get("previous_close") or price
+        chg   = (price - prev) if price is not None and prev is not None else 0.0
         chg_pct = ((chg / prev) * 100) if prev else 0.0
-        rows.append(
-            {
-                "label": label,
-                "ticker": ticker,
-                "region": region,
-                "price": safe_round(price),
-                "currency": quote.get("currency", ""),
-                "change": safe_round(chg),
-                "change_pct": safe_round(chg_pct),
-                "change_str": sign_pct(safe_round(chg_pct)),
-                "direction": "up" if safe_round(chg_pct) >= 0 else "down",
-            }
-        )
+        return {
+            "label":      label,
+            "ticker":     ticker,
+            "region":     region,
+            "price":      safe_round(price),
+            "currency":   quote.get("currency", ""),
+            "change":     safe_round(chg),
+            "change_pct": safe_round(chg_pct),
+            "change_str": sign_pct(safe_round(chg_pct)),
+            "direction":  "up" if safe_round(chg_pct) >= 0 else "down",
+        }
+
+    with ThreadPoolExecutor(max_workers=len(MARKET_TICKERS)) as executor:
+        futures = {executor.submit(_worker, t): t for t in MARKET_TICKERS}
+        # Preserve original ticker ordering in the output
+        ordered: Dict[str, Optional[Dict]] = {}
+        for future in as_completed(futures):
+            ticker, label, region = futures[future]
+            try:
+                ordered[ticker] = future.result()
+            except Exception:
+                ordered[ticker] = None
+
+    for ticker, label, region in MARKET_TICKERS:
+        result = ordered.get(ticker)
+        if result:
+            rows.append(result)
+
     return rows
 
 
@@ -180,16 +204,19 @@ def infer_vix_regime(vix_value):
 
 
 def calc_metrics(portfolio):
-    positions = portfolio.get("open_positions", [])
+    positions     = portfolio.get("open_positions", [])
     total_invested = sum(pos.get("invested_inr", 0) for pos in positions)
-    market_value = sum(pos.get("current_price", pos.get("entry_price", 0)) * pos.get("units", 0) for pos in positions)
-    cash = portfolio.get("cash_inr", 0)
+    market_value  = sum(
+        pos.get("current_price", pos.get("entry_price", 0)) * pos.get("units", 0)
+        for pos in positions
+    )
+    cash      = portfolio.get("cash_inr", 0)
     deposited = portfolio.get("total_deposited", portfolio.get("total_deposited_inr", total_invested + cash))
-    total = market_value + cash
+    total     = market_value + cash
     unrealised = market_value - total_invested
     closed_realised = sum(trade.get("realised_pnl", 0) for trade in portfolio.get("closed_trades", []))
     partial_realised = portfolio.get("partial_realised_pnl_total", 0)
-    realised = closed_realised + partial_realised
+    realised  = closed_realised + partial_realised
     change_raw = ((total - deposited) / deposited * 100) if deposited > 0 else 0
 
     portfolio_peak = portfolio.get("portfolio_peak", total)
@@ -199,22 +226,22 @@ def calc_metrics(portfolio):
     max_drawdown = max(portfolio.get("max_drawdown_pct", 0), drawdown_now)
 
     return {
-        "portfolio_value": safe_round(total),
-        "total_deposited": safe_round(deposited),
-        "cash": safe_round(cash),
-        "market_value": safe_round(market_value),
-        "total_invested": safe_round(total_invested),
-        "unrealised_pnl": safe_round(unrealised),
-        "unrealised_str": sign(unrealised),
-        "realised_pnl": safe_round(realised),
-        "realised_str": sign(realised),
-        "change": sign_pct(change_raw),
-        "change_raw": safe_round(change_raw),
-        "closed_trades": len(portfolio.get("closed_trades", [])),
+        "portfolio_value":   safe_round(total),
+        "total_deposited":   safe_round(deposited),
+        "cash":              safe_round(cash),
+        "market_value":      safe_round(market_value),
+        "total_invested":    safe_round(total_invested),
+        "unrealised_pnl":    safe_round(unrealised),
+        "unrealised_str":    sign(unrealised),
+        "realised_pnl":      safe_round(realised),
+        "realised_str":      sign(realised),
+        "change":            sign_pct(change_raw),
+        "change_raw":        safe_round(change_raw),
+        "closed_trades":     len(portfolio.get("closed_trades", [])),
         "partial_realised_pnl": safe_round(partial_realised),
-        "portfolio_peak": safe_round(portfolio_peak),
-        "drawdown_now_pct": safe_round(drawdown_now),
-        "max_drawdown_pct": safe_round(max_drawdown),
+        "portfolio_peak":    safe_round(portfolio_peak),
+        "drawdown_now_pct":  safe_round(drawdown_now),
+        "max_drawdown_pct":  safe_round(max_drawdown),
     }
 
 
@@ -230,45 +257,45 @@ def days_held(entry_date) -> int:
 def build_positions(positions):
     rows = []
     for pos in positions:
-        entry = safe_round(pos.get("entry_price", 0), 4)
+        entry   = safe_round(pos.get("entry_price", 0), 4)
         current = safe_round(pos.get("current_price", pos.get("entry_price", 0)), 4)
-        units = safe_round(pos.get("units", 0), 6)
+        units   = safe_round(pos.get("units", 0), 6)
         invested = safe_round(pos.get("invested_inr", entry * units))
-        pnl = safe_round((current - entry) * units)
+        pnl     = safe_round((current - entry) * units)
         pnl_pct = safe_round(((current - entry) / entry) * 100) if entry else 0.0
         peak_price = safe_round(pos.get("peak_price", max(current, entry)), 4)
-        hard_stop = entry * (1 - HARD_STOP_PCT)
-        trailing_active = peak_price >= entry * (1 + TRAIL_ACTIVATION_PCT) or pos.get("half_exited", False)
+        hard_stop  = entry * (1 - HARD_STOP_PCT)
+        trailing_active = (
+            peak_price >= entry * (1 + TRAIL_ACTIVATION_PCT) or pos.get("half_exited", False)
+        )
         trail_stop = pos.get("trail_stop")
         if trail_stop is None:
             trail_stop = max(hard_stop, peak_price * (1 - TRAILING_STOP_PCT)) if trailing_active else hard_stop
-        trail_stop = safe_round(trail_stop, 4)
+        trail_stop  = safe_round(trail_stop, 4)
         dist_to_trail = safe_round(((current - trail_stop) / current) * 100) if current else 0.0
 
-        rows.append(
-            {
-                "trade_id": pos.get("trade_id", ""),
-                "ticker": pos.get("ticker", ""),
-                "etf_name": pos.get("etf_name", ""),
-                "sector": pos.get("sector", ""),
-                "platform": pos.get("platform", ""),
-                "entry": safe_round(entry),
-                "current": safe_round(current),
-                "peak_price": safe_round(peak_price),
-                "trail_stop": safe_round(trail_stop),
-                "dist_to_trail_pct": safe_round(dist_to_trail),
-                "units": safe_round(units, 6),
-                "invested": invested,
-                "pnl": pnl,
-                "pnl_str": sign(pnl),
-                "pnl_pct": pnl_pct,
-                "pnl_pct_str": sign_pct(pnl_pct),
-                "confidence": pos.get("confidence", 0),
-                "severity": pos.get("severity", ""),
-                "days_held": days_held(pos.get("entry_date")),
-                "half_exited": bool(pos.get("half_exited", False)),
-            }
-        )
+        rows.append({
+            "trade_id":          pos.get("trade_id", ""),
+            "ticker":            pos.get("ticker", ""),
+            "etf_name":          pos.get("etf_name", ""),
+            "sector":            pos.get("sector", ""),
+            "platform":          pos.get("platform", ""),
+            "entry":             safe_round(entry),
+            "current":           safe_round(current),
+            "peak_price":        safe_round(peak_price),
+            "trail_stop":        safe_round(trail_stop),
+            "dist_to_trail_pct": safe_round(dist_to_trail),
+            "units":             safe_round(units, 6),
+            "invested":          invested,
+            "pnl":               pnl,
+            "pnl_str":           sign(pnl),
+            "pnl_pct":           pnl_pct,
+            "pnl_pct_str":       sign_pct(pnl_pct),
+            "confidence":        pos.get("confidence", 0),
+            "severity":          pos.get("severity", ""),
+            "days_held":         days_held(pos.get("entry_date")),
+            "half_exited":       bool(pos.get("half_exited", False)),
+        })
     return rows
 
 
@@ -277,22 +304,20 @@ def build_closed(closed_trades):
     for trade in closed_trades:
         pnl = safe_round(trade.get("realised_pnl", 0))
         pct = safe_round(trade.get("realised_pnl_pct", 0))
-        rows.append(
-            {
-                "trade_id": trade.get("trade_id", ""),
-                "ticker": trade.get("ticker", ""),
-                "etf_name": trade.get("etf_name", ""),
-                "entry": safe_round(trade.get("entry_price", 0)),
-                "exit": safe_round(trade.get("exit_price", 0)),
-                "pnl": pnl,
-                "pnl_str": sign(pnl),
-                "pnl_pct": pct,
-                "pnl_pct_str": sign_pct(pct),
-                "days_held": trade.get("days_held", 0),
-                "exit_reason": trade.get("exit_reason", ""),
-                "winner": pnl > 0,
-            }
-        )
+        rows.append({
+            "trade_id":    trade.get("trade_id", ""),
+            "ticker":      trade.get("ticker", ""),
+            "etf_name":    trade.get("etf_name", ""),
+            "entry":       safe_round(trade.get("entry_price", 0)),
+            "exit":        safe_round(trade.get("exit_price", 0)),
+            "pnl":         pnl,
+            "pnl_str":     sign(pnl),
+            "pnl_pct":     pct,
+            "pnl_pct_str": sign_pct(pct),
+            "days_held":   trade.get("days_held", 0),
+            "exit_reason": trade.get("exit_reason", ""),
+            "winner":      pnl > 0,
+        })
     return rows
 
 
@@ -301,25 +326,26 @@ def summarise_trade(trade):
         return None
     pct = safe_round(trade.get("realised_pnl_pct", 0))
     return {
-        "ticker": trade.get("ticker", "-"),
-        "etf_name": trade.get("etf_name", "-"),
-        "pnl_pct": pct,
+        "ticker":      trade.get("ticker", "-"),
+        "etf_name":    trade.get("etf_name", "-"),
+        "pnl_pct":     pct,
         "pnl_pct_str": sign_pct(pct),
         "exit_reason": trade.get("exit_reason", "-"),
-        "days_held": trade.get("days_held", 0),
+        "days_held":   trade.get("days_held", 0),
     }
 
 
 def build_track(portfolio):
-    closed = portfolio.get("closed_trades", [])
-    winners = [trade for trade in closed if trade.get("realised_pnl", 0) > 0]
-    losers = [trade for trade in closed if trade.get("realised_pnl", 0) < 0]
-    returns = [safe_round(trade.get("realised_pnl_pct", 0)) for trade in closed]
-    avg_win = safe_round(sum(trade.get("realised_pnl_pct", 0) for trade in winners) / len(winners)) if winners else 0.0
-    avg_loss = safe_round(sum(trade.get("realised_pnl_pct", 0) for trade in losers) / len(losers)) if losers else 0.0
+    closed  = portfolio.get("closed_trades", [])
+    winners = [t for t in closed if t.get("realised_pnl", 0) > 0]
+    losers  = [t for t in closed if t.get("realised_pnl", 0) < 0]
+    returns = [safe_round(t.get("realised_pnl_pct", 0)) for t in closed]
 
-    profit_sum = sum(trade.get("realised_pnl", 0) for trade in winners)
-    loss_sum = abs(sum(trade.get("realised_pnl", 0) for trade in losers))
+    avg_win  = safe_round(sum(t.get("realised_pnl_pct", 0) for t in winners) / len(winners)) if winners else 0.0
+    avg_loss = safe_round(sum(t.get("realised_pnl_pct", 0) for t in losers) / len(losers)) if losers else 0.0
+
+    profit_sum = sum(t.get("realised_pnl", 0) for t in winners)
+    loss_sum   = abs(sum(t.get("realised_pnl", 0) for t in losers))
     if profit_sum > 0 and loss_sum == 0:
         profit_factor = 99.0
     elif loss_sum > 0:
@@ -329,26 +355,26 @@ def build_track(portfolio):
 
     expectancy = safe_round(sum(returns) / len(returns)) if returns else 0.0
     if len(returns) >= 2:
-        std_dev = statistics.pstdev(returns)
+        std_dev      = statistics.pstdev(returns)
         sharpe_proxy = (statistics.mean(returns) / std_dev) if std_dev else 0.0
     else:
         sharpe_proxy = 0.0
 
-    best = max(closed, key=lambda trade: trade.get("realised_pnl_pct", 0), default=None)
-    worst = min(closed, key=lambda trade: trade.get("realised_pnl_pct", 0), default=None)
+    best  = max(closed, key=lambda t: t.get("realised_pnl_pct", 0), default=None)
+    worst = min(closed, key=lambda t: t.get("realised_pnl_pct", 0), default=None)
 
     return {
-        "total_trades": len(closed),
-        "winners": len(winners),
-        "losers": len(losers),
-        "win_rate": safe_round((len(winners) / len(closed) * 100) if closed else 0.0, 1),
-        "avg_win": avg_win,
-        "avg_loss": avg_loss,
+        "total_trades":  len(closed),
+        "winners":       len(winners),
+        "losers":        len(losers),
+        "win_rate":      safe_round((len(winners) / len(closed) * 100) if closed else 0.0, 1),
+        "avg_win":       avg_win,
+        "avg_loss":      avg_loss,
         "profit_factor": safe_round(profit_factor),
-        "expectancy": expectancy,
-        "sharpe_proxy": safe_round(sharpe_proxy),
-        "best": summarise_trade(best),
-        "worst": summarise_trade(worst),
+        "expectancy":    expectancy,
+        "sharpe_proxy":  safe_round(sharpe_proxy),
+        "best":          summarise_trade(best),
+        "worst":         summarise_trade(worst),
     }
 
 
@@ -372,12 +398,10 @@ def build_pnl(positions):
 def build_conf(state):
     rows = []
     for key, signal in state.items():
-        rows.append(
-            {
-                "symbol": signal.get("sector_label") or clean_label(key),
-                "score": safe_round(signal.get("confidence", 0), 1),
-            }
-        )
+        rows.append({
+            "symbol": signal.get("sector_label") or clean_label(key),
+            "score":  safe_round(signal.get("confidence", 0), 1),
+        })
     return sorted(rows, key=lambda item: item["score"], reverse=True)
 
 
@@ -390,40 +414,60 @@ def extract_tickers(bucket):
     return tickers
 
 
+def _breakdown_has_data(breakdown: Dict) -> bool:
+    """Return True if the breakdown contains at least one non-zero component."""
+    return any(v != 0 for v in breakdown.values())
+
+
 def build_signal_cards(state):
+    """
+    FIX: legacy state records (recorded before breakdown tracking was added)
+    have all-zero score components.  We now mark these explicitly so the
+    dashboard can display a 'legacy record' notice instead of zeroed bars,
+    which previously looked like a broken signal.
+    """
     cards = []
     for key, signal in state.items():
-        label = signal.get("sector_label") or clean_label(key)
+        label      = signal.get("sector_label") or clean_label(key)
         confidence = safe_round(signal.get("confidence", 0))
-        severity = signal.get("severity") or ("CRITICAL" if confidence >= 80 else "HIGH" if confidence >= 72 else "MEDIUM")
-        headlines = signal.get("top_headlines") or []
-        regions = signal.get("regions") or []
-        sources = signal.get("sources") or []
-        breakdown = signal.get("confidence_breakdown") or {}
-        recs = signal.get("etf_recommendations") or {"india": [], "global": []}
-
-        cards.append(
-            {
-                "sector_key": key,
-                "sector_label": label,
-                "confidence": confidence,
-                "severity": severity,
-                "article_count": signal.get("article_count", 0),
-                "latest_at": format_timestamp(signal.get("latest_ts") or signal.get("sent_at")),
-                "headline": headlines[0] if headlines else f"{label} remains active in the signal book.",
-                "regions": regions[:4],
-                "sources": sources[:4],
-                "india_etfs": extract_tickers(recs.get("india"))[:3],
-                "global_etfs": extract_tickers(recs.get("global"))[:4],
-                "breakdown": {
-                    "signal_strength": safe_round(breakdown.get("signal_strength", 0), 1),
-                    "volume_confirmation": safe_round(breakdown.get("volume_confirmation", 0), 1),
-                    "source_diversity": safe_round(breakdown.get("source_diversity", 0), 1),
-                    "recency": safe_round(breakdown.get("recency", 0), 1),
-                    "geopolitical_severity": safe_round(breakdown.get("geopolitical_severity", 0), 1),
-                },
-            }
+        severity   = signal.get("severity") or (
+            "CRITICAL" if confidence >= 80 else
+            "HIGH"     if confidence >= 72 else
+            "MEDIUM"
         )
+        headlines  = signal.get("top_headlines") or []
+        regions    = signal.get("regions") or []
+        sources    = signal.get("sources") or []
+        breakdown  = signal.get("confidence_breakdown") or {}
+        recs       = signal.get("etf_recommendations") or {"india": [], "global": []}
+        is_legacy  = not _breakdown_has_data(breakdown)
+
+        cards.append({
+            "sector_key":    key,
+            "sector_label":  label,
+            "confidence":    confidence,
+            "severity":      severity,
+            "article_count": signal.get("article_count", 0),
+            "latest_at":     format_timestamp(signal.get("latest_ts") or signal.get("sent_at")),
+            "headline":      (
+                headlines[0] if headlines
+                else f"{label} — active signal (legacy record, no headline stored)"
+                if is_legacy
+                else f"{label} remains active in the signal book."
+            ),
+            "regions":       regions[:4],
+            "sources":       sources[:4],
+            "india_etfs":    extract_tickers(recs.get("india"))[:3],
+            "global_etfs":   extract_tickers(recs.get("global"))[:4],
+            "is_legacy":     is_legacy,
+            "breakdown": {
+                "signal_strength":       safe_round(breakdown.get("signal_strength", 0), 1),
+                "volume_confirmation":   safe_round(breakdown.get("volume_confirmation", 0), 1),
+                "source_diversity":      safe_round(breakdown.get("source_diversity", 0), 1),
+                "recency":               safe_round(breakdown.get("recency", 0), 1),
+                "geopolitical_severity": safe_round(breakdown.get("geopolitical_severity", 0), 1),
+            },
+        })
 
     return sorted(cards, key=lambda item: item["confidence"], reverse=True)
 
@@ -432,59 +476,56 @@ def build_articles(signal_cards):
     items = []
     for signal in signal_cards:
         confidence = signal["confidence"]
-        tag = "tag-bull" if confidence >= 80 else "tag-neu" if confidence >= 65 else "tag-bear"
-        badge = "Bullish" if confidence >= 80 else "Neutral" if confidence >= 65 else "Watch"
-        items.append(
-            {
-                "tag": tag,
-                "label": badge,
-                "text": (
-                    f"{signal['sector_label']} - {signal['article_count']} articles - "
-                    f"{signal['severity']} - {signal['headline']}"
-                ),
-            }
-        )
+        tag   = "tag-bull" if confidence >= 80 else "tag-neu" if confidence >= 65 else "tag-bear"
+        badge = "Bullish"  if confidence >= 80 else "Neutral"  if confidence >= 65 else "Watch"
+        legacy_note = " [legacy]" if signal.get("is_legacy") else ""
+        items.append({
+            "tag":   tag,
+            "label": badge,
+            "text": (
+                f"{signal['sector_label']} - {signal['article_count']} articles - "
+                f"{signal['severity']}{legacy_note} - {signal['headline']}"
+            ),
+        })
     return items
 
 
 def build_risk_controls(metrics, positions, market_snapshot):
-    vix_row = next((row for row in market_snapshot if row["ticker"] == "^VIX"), None)
+    vix_row   = next((row for row in market_snapshot if row["ticker"] == "^VIX"), None)
     vix_value = vix_row["price"] if vix_row else None
 
-    sector_rows = []
+    sector_rows  = []
     portfolio_value = metrics["portfolio_value"]
     for pos in positions:
         current_value = pos["current"] * pos["units"]
         sector_rows.append((pos["sector"], current_value))
 
-    sector_totals = {}
+    sector_totals: Dict[str, float] = {}
     for sector, value in sector_rows:
         sector_totals[sector] = sector_totals.get(sector, 0.0) + value
 
     concentration = []
     for sector, value in sorted(sector_totals.items(), key=lambda item: item[1], reverse=True):
         weight = safe_round((value / portfolio_value) * 100 if portfolio_value else 0.0, 1)
-        concentration.append(
-            {
-                "sector": sector,
-                "weight": weight,
-                "at_cap": weight >= SECTOR_CAP_PCT,
-            }
-        )
+        concentration.append({
+            "sector": sector,
+            "weight": weight,
+            "at_cap": weight >= SECTOR_CAP_PCT,
+        })
 
     drawdown = metrics.get("drawdown_now_pct", 0.0)
     return {
-        "circuit_breaker_active": drawdown >= CIRCUIT_BREAKER_DRAWDOWN_PCT,
-        "drawdown_from_peak_pct": safe_round(drawdown),
-        "portfolio_peak": metrics.get("portfolio_peak", 0.0),
-        "vix": safe_round(vix_value) if vix_value is not None else None,
-        "vix_regime": infer_vix_regime(vix_value),
-        "sector_concentration": concentration,
-        "max_drawdown_pct": metrics.get("max_drawdown_pct", 0.0),
-        "sector_cap_pct": SECTOR_CAP_PCT,
-        "trailing_stop_pct": int(TRAILING_STOP_PCT * 100),
-        "hard_stop_pct": int(HARD_STOP_PCT * 100),
-        "partial_profit_pct": int(PARTIAL_PROFIT_PCT * 100),
+        "circuit_breaker_active":  drawdown >= CIRCUIT_BREAKER_DRAWDOWN_PCT,
+        "drawdown_from_peak_pct":  safe_round(drawdown),
+        "portfolio_peak":          metrics.get("portfolio_peak", 0.0),
+        "vix":                     safe_round(vix_value) if vix_value is not None else None,
+        "vix_regime":              infer_vix_regime(vix_value),
+        "sector_concentration":    concentration,
+        "max_drawdown_pct":        metrics.get("max_drawdown_pct", 0.0),
+        "sector_cap_pct":          SECTOR_CAP_PCT,
+        "trailing_stop_pct":       int(TRAILING_STOP_PCT * 100),
+        "hard_stop_pct":           int(HARD_STOP_PCT * 100),
+        "partial_profit_pct":      int(PARTIAL_PROFIT_PCT * 100),
     }
 
 
@@ -499,7 +540,7 @@ def build_logs(portfolio, state, metrics):
         logs.append(f"{now} [INFO] SIGNALS - {len(state)} active signal buckets in state")
     positions = portfolio.get("open_positions", [])
     if positions:
-        logs.append(f"{now} [INFO] TRADER - Open positions: {', '.join(pos['ticker'] for pos in positions)}")
+        logs.append(f"{now} [INFO] TRADER - Open positions: {', '.join(p['ticker'] for p in positions)}")
     closed = portfolio.get("closed_trades", [])
     if closed:
         logs.append(f"{now} [INFO] TRADER - Closed trades: {len(closed)}")
@@ -515,62 +556,54 @@ def build_logs(portfolio, state, metrics):
 
 def minimal_status(now_str):
     return {
-        "portfolio_value": 0,
-        "total_deposited": 0,
-        "cash": 0,
-        "market_value": 0,
-        "total_invested": 0,
-        "unrealised_pnl": 0,
-        "unrealised_str": "+0.00",
-        "realised_pnl": 0,
-        "realised_str": "+0.00",
-        "change": "+0.00%",
-        "change_raw": 0,
-        "closed_trades": 0,
-        "positions": [],
+        "portfolio_value":  0,
+        "total_deposited":  0,
+        "cash":             0,
+        "market_value":     0,
+        "total_invested":   0,
+        "unrealised_pnl":   0,
+        "unrealised_str":   "+0.00",
+        "realised_pnl":     0,
+        "realised_str":     "+0.00",
+        "change":           "+0.00%",
+        "change_raw":       0,
+        "closed_trades":    0,
+        "positions":        [],
         "closed_trades_list": [],
         "track_record": {
-            "total_trades": 0,
-            "winners": 0,
-            "losers": 0,
-            "win_rate": 0,
-            "avg_win": 0,
-            "avg_loss": 0,
-            "profit_factor": 0,
-            "expectancy": 0,
-            "sharpe_proxy": 0,
-            "best": None,
-            "worst": None,
+            "total_trades": 0, "winners": 0, "losers": 0, "win_rate": 0,
+            "avg_win": 0, "avg_loss": 0, "profit_factor": 0,
+            "expectancy": 0, "sharpe_proxy": 0, "best": None, "worst": None,
         },
         "confidence_threshold": 62,
-        "allocation": {"labels": [], "values": []},
-        "pnl": {"labels": [], "values": []},
-        "confidence": [],
-        "signals": [],
-        "articles": [],
+        "allocation":    {"labels": [], "values": []},
+        "pnl":           {"labels": [], "values": []},
+        "confidence":    [],
+        "signals":       [],
+        "articles":      [],
         "market_snapshot": [],
         "risk_controls": {
             "circuit_breaker_active": False,
             "drawdown_from_peak_pct": 0,
-            "portfolio_peak": 0,
-            "vix": None,
-            "vix_regime": "Unknown",
-            "sector_concentration": [],
-            "max_drawdown_pct": 0,
-            "sector_cap_pct": SECTOR_CAP_PCT,
-            "trailing_stop_pct": int(TRAILING_STOP_PCT * 100),
-            "hard_stop_pct": int(HARD_STOP_PCT * 100),
-            "partial_profit_pct": int(PARTIAL_PROFIT_PCT * 100),
+            "portfolio_peak":         0,
+            "vix":                    None,
+            "vix_regime":             "Unknown",
+            "sector_concentration":   [],
+            "max_drawdown_pct":       0,
+            "sector_cap_pct":         SECTOR_CAP_PCT,
+            "trailing_stop_pct":      int(TRAILING_STOP_PCT * 100),
+            "hard_stop_pct":          int(HARD_STOP_PCT * 100),
+            "partial_profit_pct":     int(PARTIAL_PROFIT_PCT * 100),
         },
-        "logs": [f"{now_str} [WARN] No data available"],
-        "generated_at": now_str,
+        "logs":          [f"{now_str} [WARN] No data available"],
+        "generated_at":  now_str,
     }
 
 
 def generate_status():
     portfolio = load_json(PORTFOLIO_FILE)
-    state = load_json(STATE_FILE)
-    now_str = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+    state     = load_json(STATE_FILE)
+    now_str   = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
 
     if not portfolio and not state:
         output = minimal_status(now_str)
@@ -580,25 +613,25 @@ def generate_status():
         return
 
     market_snapshot = fetch_market_snapshot()
-    metrics = calc_metrics(portfolio)
-    positions = build_positions(portfolio.get("open_positions", []))
-    signal_cards = build_signal_cards(state)
+    metrics         = calc_metrics(portfolio)
+    positions       = build_positions(portfolio.get("open_positions", []))
+    signal_cards    = build_signal_cards(state)
 
     status = {
         **metrics,
-        "positions": positions,
+        "positions":          positions,
         "closed_trades_list": build_closed(portfolio.get("closed_trades", [])),
-        "track_record": build_track(portfolio),
+        "track_record":       build_track(portfolio),
         "confidence_threshold": 62,
-        "allocation": build_alloc(positions, metrics["cash"]),
-        "pnl": build_pnl(positions),
-        "confidence": build_conf(state),
-        "signals": signal_cards,
-        "articles": build_articles(signal_cards),
+        "allocation":  build_alloc(positions, metrics["cash"]),
+        "pnl":         build_pnl(positions),
+        "confidence":  build_conf(state),
+        "signals":     signal_cards,
+        "articles":    build_articles(signal_cards),
         "market_snapshot": market_snapshot,
-        "risk_controls": build_risk_controls(metrics, positions, market_snapshot),
-        "logs": build_logs(portfolio, state, metrics),
-        "generated_at": now_str,
+        "risk_controls":   build_risk_controls(metrics, positions, market_snapshot),
+        "logs":            build_logs(portfolio, state, metrics),
+        "generated_at":    now_str,
     }
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as fh:

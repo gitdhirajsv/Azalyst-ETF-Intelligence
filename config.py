@@ -82,6 +82,24 @@ class Config:
         _get_env("AZALYST_MTM_INTERVAL", "MTM_INTERVAL", default="60")
     )
 
+    # ── LLM / NVIDIA NIM integration (optional) ───────────────────────────────
+    # Set NVIDIA_API_KEY to enable LLM-powered signal evaluation.
+    # Without this key the system runs in fully rule-based mode.
+    NVIDIA_API_KEY = _get_env("NVIDIA_API_KEY", default="")
+    LLM_ENABLED = bool(_get_env("NVIDIA_API_KEY", default=""))
+    LLM_MODEL = _get_env(
+        "AZALYST_LLM_MODEL", "LLM_MODEL",
+        default="mistralai/mistral-7b-instruct-v0.3",
+    )
+    NVIDIA_API_BASE = _get_env(
+        "NVIDIA_API_BASE",
+        default="https://integrate.api.nvidia.com/v1",
+    )
+    # How many hours between scheduled LLM portfolio analyses (0 = disabled)
+    LLM_ANALYSIS_INTERVAL = int(
+        _get_env("AZALYST_LLM_INTERVAL", "LLM_ANALYSIS_INTERVAL", default="6")
+    )
+
     # News sources
     WORLDMONITOR_RSS_FEEDS = [
         "https://api.worldmonitor.app/api/rss?url=https://feeds.reuters.com/reuters/topNews",
@@ -111,5 +129,9 @@ class Config:
     FETCH_TIMEOUT = int(_get_env("AZALYST_TIMEOUT", "TIMEOUT", default="12"))
     MAX_ARTICLES_PER_CYCLE = int(
         _get_env("AZALYST_MAX_ARTICLES", "MAX_ARTICLES", default="300")
+    )
+    # Drop articles older than this many days before classification (0 = no filter)
+    MAX_ARTICLE_AGE_DAYS = int(
+        _get_env("AZALYST_MAX_ARTICLE_AGE", "MAX_ARTICLE_AGE_DAYS", default="7")
     )
     LOG_LEVEL = _get_env("AZALYST_LOG_LEVEL", "LOG_LEVEL", default="INFO")
