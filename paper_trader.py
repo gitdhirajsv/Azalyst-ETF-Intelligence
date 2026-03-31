@@ -181,7 +181,7 @@ class Position:
             ticker=raw["ticker"],
             etf_name=raw["etf_name"],
             exchange=raw.get("exchange", "NYSE"),
-            platform=raw.get("platform", "INDmoney / Vested"),
+            platform=raw.get("platform", "Broker"),
             sector=raw["sector"],
             entry_price=raw["entry_price"],
             units=raw["units"],
