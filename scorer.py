@@ -19,16 +19,25 @@ from typing import Dict, List
 
 log = logging.getLogger("azalyst.scorer")
 
-# Source credibility tiers (higher tier = more weight in source diversity score)
+# Source credibility tiers (higher tier = more weight in source diversity score).
+#
+# FIX: Replaced exact-substring matching (e.g. "ap ", "ft ") with a set of
+# normalised tokens that are matched against the lowercased source name after
+# stripping punctuation.  The old approach had two failure modes:
+#   1. "ap " missed "AP News", "Associated Press", "AP/" variants.
+#   2. "ft " false-positived on any source containing "ft " (e.g. "left ").
+# Now each entry is a standalone word/phrase that must appear as a word boundary
+# inside the source name, handled by _source_in_tier().
 SOURCE_TIERS = {
     "tier1": {
         "reuters", "bbc", "bloomberg", "wsj", "wall street journal",
-        "financial times", "ft ", "ap ", "associated press", "nyt",
-        "new york times", "economic times", "cnbc",
+        "financial times", "associated press", "ap news",
+        "new york times", "nyt", "economic times", "cnbc",
     },
     "tier2": {
-        "sky news", "dw", "al jazeera", "cnbc", "the guardian", "axios",
+        "sky news", "dw", "al jazeera", "the guardian", "axios",
         "defense news", "oilprice", "worldmonitor", "zero hedge",
+        "zerohedge",
     },
 }
 
@@ -40,14 +49,30 @@ SEVERITY_WEIGHTS = {
 }
 
 REGION_WEIGHTS = {
-    "middle_east": 5,   # high geopolitical impact on commodities
-    "europe":      4,
+    "middle_east":  5,   # high geopolitical impact on commodities
+    "europe":       4,
     "asia_pacific": 4,
-    "americas":    3,
-    "india":       2,
-    "africa":      2,
-    "global":      1,
+    "americas":     3,
+    "india":        2,
+    "africa":       2,
+    "global":       1,
 }
+
+
+def _source_in_tier(source_lower: str, tier_tokens: set) -> bool:
+    """
+    Return True if any tier token appears as a meaningful substring in
+    the source name (lowercased).  Uses word-boundary logic: the token
+    must either start the string, end it, or be surrounded by
+    non-alphanumeric characters.
+    """
+    import re
+    for token in tier_tokens:
+        # Escape for regex, then wrap in word-boundary-like assertion
+        pattern = r"(?<![a-z0-9])" + re.escape(token) + r"(?![a-z0-9])"
+        if re.search(pattern, source_lower):
+            return True
+    return False
 
 
 class ConfidenceScorer:
@@ -116,19 +141,16 @@ class ConfidenceScorer:
         20 pts max. Tier-1 sources worth more.
         """
         sources = {s.lower() for s in signal.get("sources", [])}
-        score = 0.0
-
         tier1_hits = 0
         tier2_hits = 0
+
         for src in sources:
-            if any(t in src for t in SOURCE_TIERS["tier1"]):
+            if _source_in_tier(src, SOURCE_TIERS["tier1"]):
                 tier1_hits += 1
-            elif any(t in src for t in SOURCE_TIERS["tier2"]):
+            elif _source_in_tier(src, SOURCE_TIERS["tier2"]):
                 tier2_hits += 1
 
-        score += tier1_hits * 5.0   # up to 4 tier1 sources = 20pts
-        score += tier2_hits * 2.5
-
+        score = tier1_hits * 5.0 + tier2_hits * 2.5
         return min(score, 20.0)
 
     # ── Factor 4: Recency ─────────────────────────────────────────────────
@@ -142,12 +164,17 @@ class ConfidenceScorer:
         < 12hr → 6pts
         < 24hr → 3pts
         older  → 0pts
+        no ts  → 0pts  (FIX: was 5.0, giving free points for missing data)
         """
         try:
             latest = signal.get("latest_ts")
             if not latest:
-                return 5.0
+                # FIX: Return 0 instead of 5 — no timestamp means no freshness credit.
+                return 0.0
             now = datetime.now(timezone.utc)
+            # Ensure latest is timezone-aware before subtraction
+            if isinstance(latest, datetime) and latest.tzinfo is None:
+                latest = latest.replace(tzinfo=timezone.utc)
             age = now - latest
             if age < timedelta(hours=1):
                 return 20.0
@@ -161,7 +188,7 @@ class ConfidenceScorer:
                 return 3.0
             return 0.0
         except Exception:
-            return 5.0
+            return 0.0
 
     # ── Factor 5: Geopolitical Severity ──────────────────────────────────
     def _factor_geopolitical_severity(self, signal: Dict) -> float:

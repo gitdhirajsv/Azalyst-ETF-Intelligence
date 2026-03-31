@@ -12,7 +12,8 @@ Multi-pass keyword classification with:
 import logging
 import re
 from collections import defaultdict
-from typing import List, Dict
+from datetime import datetime, timezone
+from typing import List, Dict, Optional
 
 log = logging.getLogger("azalyst.classifier")
 
@@ -239,6 +240,21 @@ def _score_text(text: str, keywords: List, negators: List, geo_boost: List) -> f
     return score
 
 
+def _max_ts(*timestamps) -> Optional[datetime]:
+    """Return the latest non-None datetime from an arbitrary list."""
+    valid = [ts for ts in timestamps if ts is not None]
+    if not valid:
+        return None
+    # Normalize all to UTC-aware before comparing
+    aware = []
+    for ts in valid:
+        if isinstance(ts, datetime):
+            if ts.tzinfo is None:
+                ts = ts.replace(tzinfo=timezone.utc)
+            aware.append(ts)
+    return max(aware) if aware else None
+
+
 class SectorClassifier:
     """
     Classifies articles into sector signals.
@@ -285,14 +301,14 @@ class SectorClassifier:
             top_articles = [s["article"] for s in scored_arts[:8]]
             total_score   = sum(s["relevance_score"] for s in scored_arts)
 
-            defn = SECTOR_DEFINITIONS[sector_id]
+            defn     = SECTOR_DEFINITIONS[sector_id]
             severity = self._determine_severity(total_score, len(scored_arts))
 
             signals.append({
                 "sector_id":     sector_id,
                 "sector_label":  defn["label"],
                 "sector_emoji":  defn["emoji"],
-                "sectors":       [sector_id],     # list for multi-sector support
+                "sectors":       [sector_id],
                 "articles":      top_articles,
                 "article_count": len(scored_arts),
                 "total_score":   total_score,
@@ -332,8 +348,6 @@ class SectorClassifier:
         E.g. if defense AND energy both triggered from Middle East news,
         merge them into one combined signal.
         """
-        # Check for article overlap between signals
-        # If two signals share >40% of articles, consider merging
         merged = []
         used = set()
 
@@ -365,6 +379,14 @@ class SectorClassifier:
                     )[:6]
                     combined["regions"] = list(
                         set(combined["regions"]) | set(sig_b["regions"])
+                    )
+                    # FIX: take the latest timestamp across both signals.
+                    # Previously only sig_a's latest_ts was kept, meaning a merged
+                    # signal whose more-recent constituent was sig_b would score
+                    # stale recency points.
+                    combined["latest_ts"] = _max_ts(
+                        combined.get("latest_ts"),
+                        sig_b.get("latest_ts"),
                     )
                     used.add(j)
 

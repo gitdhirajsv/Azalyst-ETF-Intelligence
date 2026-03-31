@@ -22,7 +22,7 @@ import hashlib
 import logging
 import re
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from email.utils import parsedate_to_datetime
 from typing import List, Dict
@@ -113,9 +113,9 @@ def fetch_feed(url: str, timeout: int, source_name: str = None) -> List[Dict]:
             if not title:
                 continue
 
-            raw_text = f"{title} {desc}"
+            raw_text  = f"{title} {desc}"
             published = parse_date(entry)
-            region = infer_region(raw_text)
+            region    = infer_region(raw_text)
 
             articles.append({
                 "id":          hash_id(link, title),
@@ -142,15 +142,25 @@ class NewsFetcher:
     """
     Concurrent multi-source news fetcher.
     Deduplicates by article ID across all sources.
+    Filters out articles older than MAX_ARTICLE_AGE_DAYS to prevent
+    stale evergreen content (e.g. 2022/2023 how-to articles) from
+    inflating signal scores.
     """
 
     def __init__(self, cfg):
         self.cfg = cfg
         self._seen_ids = set()   # Cross-session dedup within a cycle
+        # FIX: age filter — drop articles older than configured threshold
+        self._max_age_days: int = getattr(cfg, "MAX_ARTICLE_AGE_DAYS", 7)
 
     def fetch_all(self) -> List[Dict]:
         all_articles: List[Dict] = []
         seen_this_cycle: set = set()
+        cutoff: datetime = (
+            datetime.now(timezone.utc) - timedelta(days=self._max_age_days)
+            if self._max_age_days > 0
+            else None
+        )
 
         # Combine worldmonitor proxy feeds + direct feeds
         all_feeds = []
@@ -171,9 +181,19 @@ class NewsFetcher:
                 try:
                     articles = future.result()
                     for art in articles:
-                        if art["id"] not in seen_this_cycle:
-                            seen_this_cycle.add(art["id"])
-                            all_articles.append(art)
+                        if art["id"] in seen_this_cycle:
+                            continue
+                        # FIX: drop articles older than the age cutoff.
+                        # This prevents evergreen "best of 2022" style articles
+                        # from scoring as fresh signals.
+                        if cutoff is not None:
+                            pub = art["published"]
+                            if pub.tzinfo is None:
+                                pub = pub.replace(tzinfo=timezone.utc)
+                            if pub < cutoff:
+                                continue
+                        seen_this_cycle.add(art["id"])
+                        all_articles.append(art)
                     if articles:
                         log.debug(f"  ✓ {len(articles)} articles — {url[:60]}")
                 except Exception as e:
@@ -186,7 +206,7 @@ class NewsFetcher:
         all_articles = all_articles[: self.cfg.MAX_ARTICLES_PER_CYCLE]
 
         log.info(
-            f"Total articles after dedup: {len(all_articles)} "
+            f"Total articles after dedup + age filter: {len(all_articles)} "
             f"(from {len(seen_this_cycle)} unique)"
         )
         return all_articles
