@@ -204,10 +204,6 @@
   },
   "confidence": [
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 90.0
-    },
-    {
       "symbol": "Gold & Precious Metals",
       "score": 90.0
     },
@@ -220,8 +216,8 @@
       "score": 87.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 85.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 87.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -232,7 +228,7 @@
       "score": 83.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
+      "symbol": "Technology & AI / Semiconductors",
       "score": 82.0
     },
     {
@@ -240,7 +236,7 @@
       "score": 82.0
     },
     {
-      "symbol": "India Equity Markets",
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 80.0
     },
     {
@@ -258,6 +254,10 @@
     {
       "symbol": "Nuclear Energy & Uranium + Crypto & Digital Assets",
       "score": 73.0
+    },
+    {
+      "symbol": "India Equity Markets",
+      "score": 71.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -281,45 +281,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "banking_financial|gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 90.0,
-      "severity": "CRITICAL",
-      "article_count": 45,
-      "latest_at": "31 Mar 2026 16:49 UTC",
-      "headline": "Gold, silver prices rise 1% but analysts cautious after 15% March drop; here's why",
-      "regions": [
-        "middle_east",
-        "americas",
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "Finance"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD",
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ",
-        "XLF"
-      ],
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 10.0,
-        "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
     {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals",
@@ -413,37 +374,33 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 85.0,
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 87.0,
       "severity": "CRITICAL",
-      "article_count": 38,
-      "latest_at": "31 Mar 2026 17:11 UTC",
-      "headline": "US Stocks: Nvidia bets $2 billion on Marvell as rising AI adoption fuels competition; shares rise",
+      "article_count": 47,
+      "latest_at": "31 Mar 2026 21:50 UTC",
+      "headline": "Oil Price Today (March 31): Oil falls 1% to near $111/bbl after reports of Trump\u2019s push to end war. What lies ahead?",
       "regions": [
-        "middle_east",
-        "americas",
-        "europe",
-        "global"
+        "middle_east"
       ],
       "sources": [
-        "Crunch Hype",
-        "Markets-Economic Times",
-        "US Top News and Analysis"
+        "Oilprice.com",
+        "Markets-Economic Times"
       ],
       "india_etfs": [
-        "MAFANG",
-        "NIFTYBEES"
+        "PSUBNKBEES",
+        "CPSEETF"
       ],
       "global_etfs": [
-        "SOXX",
-        "QQQ",
-        "AIQ"
+        "XLE",
+        "USO",
+        "IXC"
       ],
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 5.0,
+        "source_diversity": 7.5,
         "recency": 20.0,
         "geopolitical_severity": 15.0
       }
@@ -503,28 +460,33 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
       "confidence": 82.0,
       "severity": "CRITICAL",
-      "article_count": 48,
-      "latest_at": "31 Mar 2026 16:42 UTC",
-      "headline": "Oil Price Today (March 31): Oil falls 1% to near $111/bbl after reports of Trump\u2019s push to end war. What lies ahead?",
+      "article_count": 40,
+      "latest_at": "31 Mar 2026 21:00 UTC",
+      "headline": "US Stocks: Nvidia bets $2 billion on Marvell as rising AI adoption fuels competition; shares rise",
       "regions": [
+        "india",
+        "americas",
+        "global",
         "middle_east"
       ],
       "sources": [
+        "Oilprice.com",
+        "Crunch Hype",
         "Markets-Economic Times",
-        "Oilprice.com"
+        "Finance"
       ],
       "india_etfs": [
-        "PSUBNKBEES",
-        "CPSEETF"
+        "MAFANG",
+        "NIFTYBEES"
       ],
       "global_etfs": [
-        "XLE",
-        "USO",
-        "IXC"
+        "SOXX",
+        "QQQ",
+        "AIQ"
       ],
       "breakdown": {
         "signal_strength": 25.0,
@@ -555,33 +517,41 @@
       }
     },
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
+      "sector_key": "banking_financial|gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
       "confidence": 80.0,
       "severity": "CRITICAL",
-      "article_count": 56,
-      "latest_at": "31 Mar 2026 15:45 UTC",
-      "headline": "Ahead of Market: 10 things that will decide stock market action on Wednesday",
+      "article_count": 46,
+      "latest_at": "31 Mar 2026 18:35 UTC",
+      "headline": "Gold, silver prices rise 1% but analysts cautious after 15% March drop; here's why",
       "regions": [
-        "middle_east",
         "americas",
-        "asia_pacific"
+        "asia_pacific",
+        "india",
+        "global"
       ],
       "sources": [
-        "Markets-Economic Times"
+        "Finance",
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
       ],
       "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
+        "GOLDBEES",
+        "HDFCGOLD",
+        "BANKBEES"
       ],
       "global_etfs": [
-        "INDA"
+        "GLDM",
+        "GDX",
+        "GDXJ",
+        "XLF"
       ],
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 5.0,
-        "recency": 15.0,
+        "source_diversity": 10.0,
+        "recency": 10.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -690,6 +660,37 @@
         "source_diversity": 0.0,
         "recency": 0.0,
         "geopolitical_severity": 0.0
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 71.0,
+      "severity": "CRITICAL",
+      "article_count": 55,
+      "latest_at": "31 Mar 2026 15:45 UTC",
+      "headline": "Ahead of Market: 10 things that will decide stock market action on Wednesday",
+      "regions": [
+        "middle_east",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 5.0,
+        "recency": 6.0,
+        "geopolitical_severity": 15.0
       }
     },
     {
@@ -852,11 +853,6 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 45 articles - CRITICAL - Gold, silver prices rise 1% but analysts cautious after 15% March drop; here's why"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "Gold & Precious Metals - 24 articles - CRITICAL - Gold, silver prices rise 1% but analysts cautious after 15% March drop; here's why"
     },
     {
@@ -872,7 +868,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 38 articles - CRITICAL - US Stocks: Nvidia bets $2 billion on Marvell as rising AI adoption fuels competition; shares rise"
+      "text": "Energy / Oil & Gas - 47 articles - CRITICAL - Oil Price Today (March 31): Oil falls 1% to near $111/bbl after reports of Trump\u2019s push to end war. What lies ahead?"
     },
     {
       "tag": "tag-bull",
@@ -887,7 +883,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas - 48 articles - CRITICAL - Oil Price Today (March 31): Oil falls 1% to near $111/bbl after reports of Trump\u2019s push to end war. What lies ahead?"
+      "text": "Technology & AI / Semiconductors - 40 articles - CRITICAL - US Stocks: Nvidia bets $2 billion on Marvell as rising AI adoption fuels competition; shares rise"
     },
     {
       "tag": "tag-bull",
@@ -897,7 +893,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "India Equity Markets - 56 articles - CRITICAL - Ahead of Market: 10 things that will decide stock market action on Wednesday"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 46 articles - CRITICAL - Gold, silver prices rise 1% but analysts cautious after 15% March drop; here's why"
     },
     {
       "tag": "tag-neu",
@@ -918,6 +914,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Nuclear Energy & Uranium + Crypto & Digital Assets - 55 articles - HIGH - Nuclear Energy & Uranium + Crypto & Digital Assets remains active in the signal book."
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "India Equity Markets - 55 articles - CRITICAL - Ahead of Market: 10 things that will decide stock market action on Wednesday"
     },
     {
       "tag": "tag-neu",
@@ -996,9 +997,9 @@
       "region": "EU",
       "price": 22680.04,
       "currency": "EUR",
-      "change": 117.16,
-      "change_pct": 0.52,
-      "change_str": "+0.52%",
+      "change": 379.29,
+      "change_pct": 1.7,
+      "change_str": "+1.70%",
       "direction": "up"
     },
     {
@@ -1038,44 +1039,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4699.6,
+      "price": 4700.6,
       "currency": "USD",
-      "change": 173.6,
-      "change_pct": 3.84,
-      "change_str": "+3.84%",
+      "change": 174.6,
+      "change_pct": 3.86,
+      "change_str": "+3.86%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 101.56,
+      "price": 102.18,
       "currency": "USD",
-      "change": -1.32,
-      "change_pct": -1.28,
-      "change_str": "-1.28%",
+      "change": -0.7,
+      "change_pct": -0.68,
+      "change_str": "-0.68%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 67951.62,
+      "price": 68145.23,
       "currency": "USD",
-      "change": 1260.18,
-      "change_pct": 1.89,
-      "change_str": "+1.89%",
+      "change": 1453.78,
+      "change_pct": 2.18,
+      "change_str": "+2.18%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.88,
+      "price": 99.86,
       "currency": "USD",
-      "change": -0.63,
-      "change_pct": -0.63,
-      "change_str": "-0.63%",
+      "change": -0.65,
+      "change_pct": -0.65,
+      "change_str": "-0.65%",
       "direction": "down"
     },
     {
@@ -1135,10 +1136,10 @@
     "partial_profit_pct": 15
   },
   "logs": [
-    "2026-03-31 21:30:28 [INFO] AZALYST - status.json generated",
-    "2026-03-31 21:30:28 [INFO] PORTFOLIO - NAV INR 10,099.39 | Return +0.99%",
-    "2026-03-31 21:30:28 [INFO] SIGNALS - 19 active signal buckets in state",
-    "2026-03-31 21:30:28 [INFO] TRADER - Open positions: ITA, XLE, IBIT, XLF, SOXX, GLDM"
+    "2026-03-31 22:25:43 [INFO] AZALYST - status.json generated",
+    "2026-03-31 22:25:43 [INFO] PORTFOLIO - NAV INR 10,099.39 | Return +0.99%",
+    "2026-03-31 22:25:43 [INFO] SIGNALS - 19 active signal buckets in state",
+    "2026-03-31 22:25:43 [INFO] TRADER - Open positions: ITA, XLE, IBIT, XLF, SOXX, GLDM"
   ],
-  "generated_at": "2026-03-31 21:30:27 UTC"
+  "generated_at": "2026-03-31 22:25:41 UTC"
 }
