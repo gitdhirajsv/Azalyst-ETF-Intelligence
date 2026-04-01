@@ -3,28 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Azalyst ETF Intelligence - Live Monitor</title>
+<title>Azalyst ETF Intelligence — Global Monitor</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,sans-serif;background:#f8fafc;color:#0f172a;padding:24px}
-.header{font-size:16px;font-weight:600;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid #e2e8f0;display:flex;align-items:center;gap:10px}.dot{width:8px;height:8px;background:#16a34a;border-radius:50%}.running{font-size:12px;color:#16a34a}.last-updated{font-size:11px;color:#94a3b8;margin-left:auto}
-.section-header{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}.badge-head{font-size:12px;font-weight:700;letter-spacing:.4px;padding:4px 12px;border-radius:20px;background:#dbeafe;color:#1d4ed8}.badge-port{background:#dcfce7;color:#166534}.badge-risk{background:#fee2e2;color:#b91c1c}.badge-trade{background:#fef9c3;color:#854d0e}.badge-track{background:#f3e8ff;color:#6b21a8}.desc{font-size:12px;color:#94a3b8}.divider{border:none;border-top:1px solid #e2e8f0;margin:28px 0 20px}
-.grid2,.grid5,.risk-grid,.track-grid,.kpi-row{display:grid;gap:14px;margin-bottom:14px}.grid2{grid-template-columns:1fr 1fr}.grid5{grid-template-columns:repeat(5,1fr)}.risk-grid{grid-template-columns:repeat(4,1fr)}.track-grid{grid-template-columns:repeat(4,1fr)}.kpi-row{grid-template-columns:repeat(5,1fr)}.auto-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}.signal-stack{display:flex;flex-direction:column;gap:12px}
-.card,.market-tile,.risk-card,.signal-card,.kpi-item,.track-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px}.card-title,.section-title,.risk-label,.market-label,.signal-box-title{font-size:11px;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.4px}.section-title,.card-title{margin-bottom:10px}.stat-val,.risk-value,.market-price,.kpi-val,.track-val{font-size:22px;font-weight:700}.stat-sub,.risk-sub,.market-meta{font-size:12px;margin-top:4px;color:#94a3b8}.green{color:#16a34a}.red{color:#dc2626}.amber{color:#b45309}.muted{color:#64748b}
-.market-price{margin:6px 0 4px}.market-chg{font-size:12px;font-weight:700}.pill,.tag,.msg-tag,.badge{display:inline-block;font-size:10px;padding:3px 8px;border-radius:999px;font-weight:700}.pill-normal,.pill-ok,.tag-green,.tag-bull,.badge-win{background:#dcfce7;color:#166534}.pill-elevated,.tag-gold,.badge-high{background:#fef3c7;color:#92400e}.pill-high{background:#fed7aa;color:#9a3412}.pill-extreme,.pill-bad,.tag-red,.tag-bear,.badge-crit,.badge-loss{background:#fee2e2;color:#991b1b}.pill-unknown,.tag-neu,.badge-low{background:#f1f5f9;color:#475569}.tag-blue,.badge-med{background:#dbeafe;color:#1e40af}.tag-purple,.badge-half{background:#f3e8ff;color:#6b21a8}
-.bar-bg,.conf-bar{height:8px;background:#f1f5f9;border-radius:999px;overflow:hidden}.bar-fill,.conf-fill{height:100%;border-radius:999px;background:#3b82f6}.bar-fill.at-cap{background:#ef4444}.conf-fill{background:#f59e0b}.sector-row,.conf-row{margin-bottom:10px}.sector-head,.conf-label,.breakdown-row{display:flex;justify-content:space-between;gap:10px;font-size:12px;margin-bottom:5px}.breakdown-row{margin-bottom:4px}
-.signal-head{display:flex;justify-content:space-between;gap:10px;margin-bottom:10px}.signal-title{font-size:15px;font-weight:700}.signal-meta,.signal-headline,.signal-box-body,.msg-item{font-size:12px;line-height:1.5}.signal-tags{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.signal-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.signal-box{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:10px}
-.msg-box,.log-box{max-height:220px;overflow-y:auto}.msg-item{padding:8px 10px;border-radius:8px;margin-bottom:7px;background:#f8fafc;border:1px solid #e2e8f0}.msg-tag{margin-right:6px}.threshold-note{font-size:11px;color:#94a3b8;margin-top:10px}
-.tbl-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:12px}th{text-align:left;padding:8px 10px;color:#64748b;font-weight:600;border-bottom:1px solid #e2e8f0;white-space:nowrap}td{padding:8px 10px;border-bottom:1px solid #f1f5f9;white-space:nowrap}tr:last-child td{border-bottom:none}tr:hover td{background:#f8fafc}.no-data{text-align:center;color:#94a3b8;padding:16px 0}
-.track-card,.kpi-item{text-align:center}.track-lbl,.kpi-lbl{font-size:11px;color:#64748b;margin-top:4px;text-transform:uppercase;letter-spacing:.4px}.log-box{background:#f8fafc;border:1px solid #e2e8f0;padding:12px;font-family:"Courier New",monospace;font-size:11px;line-height:1.7}.log-info{color:#0369a1}.log-ok{color:#16a34a}.log-warn{color:#b45309}canvas{max-width:100%}
-@media(max-width:1100px){.grid5,.risk-grid,.kpi-row{grid-template-columns:repeat(3,1fr)}}@media(max-width:900px){.grid2,.signal-grid,.track-grid{grid-template-columns:1fr}.risk-grid,.grid5{grid-template-columns:repeat(2,1fr)}}@media(max-width:700px){.grid5,.risk-grid,.track-grid,.kpi-row{grid-template-columns:1fr}}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',Arial,sans-serif;background:#0b1120;color:#e2e8f0;padding:0}
+.dashboard-wrap{max-width:1440px;margin:0 auto;padding:20px 24px}
+.header{font-size:18px;font-weight:700;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid #1e293b;display:flex;align-items:center;gap:12px;color:#f1f5f9}.dot{width:8px;height:8px;background:#22c55e;border-radius:50%;animation:pulse 2s infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}.running{font-size:12px;color:#22c55e;font-weight:600}.last-updated{font-size:11px;color:#64748b;margin-left:auto}.fx-rate{font-size:11px;color:#94a3b8;background:#1e293b;padding:3px 10px;border-radius:6px}
+.section-header{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}.badge-head{font-size:11px;font-weight:700;letter-spacing:.5px;padding:5px 14px;border-radius:20px;background:#1e3a5f;color:#60a5fa;text-transform:uppercase}.badge-port{background:#14532d;color:#4ade80}.badge-risk{background:#450a0a;color:#fca5a5}.badge-trade{background:#422006;color:#fbbf24}.badge-track{background:#3b0764;color:#c084fc}.badge-monitor{background:#0c4a6e;color:#38bdf8}.desc{font-size:12px;color:#64748b}.divider{border:none;border-top:1px solid #1e293b;margin:28px 0 20px}
+.grid2,.grid3,.grid6,.risk-grid,.track-grid,.kpi-row{display:grid;gap:14px;margin-bottom:14px}.grid2{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr 1fr 1fr}.grid6{grid-template-columns:repeat(6,1fr)}.risk-grid{grid-template-columns:repeat(4,1fr)}.track-grid{grid-template-columns:repeat(4,1fr)}.kpi-row{grid-template-columns:repeat(5,1fr)}.auto-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}.signal-stack{display:flex;flex-direction:column;gap:12px}
+.card,.market-tile,.risk-card,.signal-card,.kpi-item,.track-card{background:#111827;border:1px solid #1e293b;border-radius:10px;padding:14px}.card-title,.section-title,.risk-label,.market-label,.signal-box-title{font-size:10px;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.5px}.section-title,.card-title{margin-bottom:10px}.stat-val,.risk-value,.market-price,.kpi-val,.track-val{font-size:22px;font-weight:700;color:#f1f5f9}.stat-sub,.risk-sub,.market-meta{font-size:11px;margin-top:4px;color:#64748b}.stat-secondary{font-size:12px;color:#475569;margin-top:2px}.green{color:#22c55e}.red{color:#ef4444}.amber{color:#f59e0b}.muted{color:#64748b}
+.market-tile{padding:10px 12px}.market-price{margin:4px 0 2px;font-size:16px}.market-chg{font-size:11px;font-weight:700}.pill,.tag,.msg-tag,.badge{display:inline-block;font-size:10px;padding:3px 8px;border-radius:999px;font-weight:700}.pill-normal,.pill-ok,.tag-green,.tag-bull,.badge-win{background:#052e16;color:#4ade80}.pill-elevated,.tag-gold,.badge-high{background:#451a03;color:#fbbf24}.pill-high{background:#431407;color:#fb923c}.pill-extreme,.pill-bad,.tag-red,.tag-bear,.badge-crit,.badge-loss{background:#450a0a;color:#f87171}.pill-unknown,.tag-neu,.badge-low{background:#1e293b;color:#94a3b8}.tag-blue,.badge-med{background:#172554;color:#60a5fa}.tag-purple,.badge-half{background:#3b0764;color:#c084fc}
+.bar-bg,.conf-bar{height:6px;background:#1e293b;border-radius:999px;overflow:hidden}.bar-fill,.conf-fill{height:100%;border-radius:999px;background:#3b82f6}.bar-fill.at-cap{background:#ef4444}.conf-fill{background:#f59e0b}.sector-row,.conf-row{margin-bottom:10px}.sector-head,.conf-label,.breakdown-row{display:flex;justify-content:space-between;gap:10px;font-size:12px;margin-bottom:5px;color:#cbd5e1}.breakdown-row{margin-bottom:4px}
+.signal-head{display:flex;justify-content:space-between;gap:10px;margin-bottom:10px}.signal-title{font-size:14px;font-weight:700;color:#f1f5f9}.signal-meta,.signal-headline,.signal-box-body,.msg-item{font-size:12px;line-height:1.5;color:#94a3b8}.signal-tags{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.signal-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.signal-box{background:#0f172a;border:1px solid #1e293b;border-radius:8px;padding:10px}
+.msg-box,.log-box{max-height:220px;overflow-y:auto}.msg-item{padding:8px 10px;border-radius:8px;margin-bottom:7px;background:#0f172a;border:1px solid #1e293b}.msg-tag{margin-right:6px}.threshold-note{font-size:11px;color:#64748b;margin-top:10px}
+.tbl-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:12px}th{text-align:left;padding:8px 10px;color:#64748b;font-weight:600;border-bottom:1px solid #1e293b;white-space:nowrap}td{padding:8px 10px;border-bottom:1px solid #111827;white-space:nowrap;color:#cbd5e1}tr:last-child td{border-bottom:none}tr:hover td{background:#0f172a}.no-data{text-align:center;color:#64748b;padding:16px 0}
+.track-card,.kpi-item{text-align:center}.track-lbl,.kpi-lbl{font-size:10px;color:#64748b;margin-top:4px;text-transform:uppercase;letter-spacing:.5px}.log-box{background:#0f172a;border:1px solid #1e293b;padding:12px;font-family:'Courier New',monospace;font-size:11px;line-height:1.7;border-radius:8px}.log-info{color:#38bdf8}.log-ok{color:#22c55e}.log-warn{color:#f59e0b}canvas{max-width:100%}
+.opp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-bottom:14px}.opp-card{background:#111827;border:1px solid #1e293b;border-radius:10px;padding:16px;position:relative;overflow:hidden}.opp-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;border-radius:4px 0 0 4px}.opp-card.opp-crit::before{background:#ef4444}.opp-card.opp-high::before{background:#f59e0b}.opp-card.opp-med::before{background:#3b82f6}.opp-card.opp-low::before{background:#22c55e}.opp-title{font-size:14px;font-weight:700;color:#f1f5f9;margin-bottom:4px}.opp-conf{font-size:12px;color:#94a3b8;margin-bottom:8px}.opp-etfs{font-size:11px;color:#64748b;line-height:1.6}.opp-etf-label{font-weight:600;color:#94a3b8}
+@media(max-width:1100px){.grid6,.risk-grid,.kpi-row{grid-template-columns:repeat(3,1fr)}.grid3{grid-template-columns:1fr 1fr}}@media(max-width:900px){.grid2,.signal-grid,.track-grid,.grid3{grid-template-columns:1fr}.risk-grid,.grid6{grid-template-columns:repeat(2,1fr)}}@media(max-width:700px){.grid6,.risk-grid,.track-grid,.kpi-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="header"><span>Azalyst ETF Intelligence - Live Monitor</span><span class="dot"></span><span class="running">Running</span><span class="last-updated" id="lastUpdated">-</span></div>
+<div class="dashboard-wrap">
+
+<div class="header"><span>Azalyst ETF Intelligence — Global Monitor</span><span class="dot"></span><span class="running">Live</span><span class="fx-rate" id="fxRate">USD/INR: -</span><span class="last-updated" id="lastUpdated">-</span></div>
 
 <div class="section-header"><span class="badge-head">Global Markets</span><span class="desc">Live indices, commodities, crypto, and volatility context for the ETF book</span></div>
 <div class="auto-grid" id="marketSnapshot"></div>
+
+<hr class="divider">
+
+<div class="section-header"><span class="badge-head badge-port">Azalyst Paper Portfolio</span><span class="desc">USD-denominated global ETF book with systematic risk overlays — $10,000/month capital plan</span></div>
+<div class="grid6">
+  <div class="card"><div class="card-title">Portfolio Value</div><div class="stat-val" id="portfolioValue">-</div><div class="stat-secondary" id="portfolioValueINR">-</div><div class="stat-sub" id="portfolioChange">-</div></div>
+  <div class="card"><div class="card-title">Total Deposited</div><div class="stat-val" id="totalDeposited">-</div><div class="stat-secondary" id="totalDepositedINR">-</div><div class="stat-sub muted">Monthly USD capital base</div></div>
+  <div class="card"><div class="card-title">Unrealised P&amp;L</div><div class="stat-val" id="unrealisedPnl">-</div><div class="stat-secondary" id="unrealisedPnlINR">-</div><div class="stat-sub muted">Open position mark-to-market</div></div>
+  <div class="card"><div class="card-title">Realised P&amp;L</div><div class="stat-val" id="realisedPnl">-</div><div class="stat-secondary" id="realisedPnlINR">-</div><div class="stat-sub muted" id="realisedSub">Closed trades and partial exits</div></div>
+  <div class="card"><div class="card-title">Cash Available</div><div class="stat-val" id="cashAvailable">-</div><div class="stat-secondary" id="cashAvailableINR">-</div><div class="stat-sub muted" id="positionsSummary">-</div></div>
+  <div class="card"><div class="card-title">Monthly Reserve</div><div class="stat-val" id="monthlyReserve">-</div><div class="stat-secondary" id="monthlyReserveINR">-</div><div class="stat-sub muted">Held for best opportunities</div></div>
+</div>
+<div class="grid2">
+  <div class="card"><div class="section-title">Allocation</div><canvas id="pieChart" height="200"></canvas></div>
+  <div class="card"><div class="section-title">Unrealised P&amp;L per Position (USD)</div><canvas id="barChart" height="200"></canvas></div>
+</div>
 
 <hr class="divider">
 
@@ -43,32 +63,22 @@
 
 <hr class="divider">
 
-<div class="section-header"><span class="badge-head">Market Intelligence</span><span class="desc">Macro signal detail pushed closer to the Discord briefing style</span></div>
+<div class="section-header"><span class="badge-head badge-trade">Open Positions</span><span class="desc">Live paper trades with peak tracking, trail distance, and conviction context</span></div>
+<div class="card"><div class="tbl-wrap"><table><thead><tr><th>ID</th><th>Ticker</th><th>ETF Name</th><th>Platform</th><th>Sector</th><th>Entry (USD)</th><th>Current (USD)</th><th>Peak (USD)</th><th>Return</th><th>P&amp;L (USD)</th><th>Trail Stop</th><th>Dist to Stop</th><th>Days</th><th>Confidence</th><th>Severity</th><th>Status</th></tr></thead><tbody id="positionsTbody"></tbody></table></div></div>
+
+<hr class="divider">
+
+<div class="section-header"><span class="badge-head badge-monitor">Global Opportunity Monitor</span><span class="desc">Macro-driven ETF opportunities ranked by signal strength — where the edge is right now</span></div>
+<div class="opp-grid" id="opportunityGrid"></div>
+
+<hr class="divider">
+
+<div class="section-header"><span class="badge-head">Market Intelligence</span><span class="desc">Macro signal detail — institutional research briefing format</span></div>
 <div class="grid2">
   <div class="card"><div class="section-title">Macro Briefing</div><div class="signal-stack" id="signalCards"></div></div>
   <div class="card"><div class="section-title">Sector Confidence Scores</div><div id="confidenceBars"></div><div class="threshold-note" id="thresholdNote">Signal threshold: -</div></div>
 </div>
 <div class="card"><div class="section-title">Recent Signal Updates</div><div class="msg-box" id="articleUpdates"></div></div>
-
-<hr class="divider">
-
-<div class="section-header"><span class="badge-head badge-port">Azalyst Paper Portfolio</span><span class="desc">INR-based simulated ETF book with global exposure and risk overlays</span></div>
-<div class="grid5">
-  <div class="card"><div class="card-title">Portfolio Value</div><div class="stat-val" id="portfolioValue">-</div><div class="stat-sub" id="portfolioChange">-</div></div>
-  <div class="card"><div class="card-title">Total Deposited</div><div class="stat-val" id="totalDeposited">-</div><div class="stat-sub muted">Monthly INR capital base</div></div>
-  <div class="card"><div class="card-title">Unrealised P&amp;L</div><div class="stat-val" id="unrealisedPnl">-</div><div class="stat-sub muted">Open position mark-to-market</div></div>
-  <div class="card"><div class="card-title">Realised P&amp;L</div><div class="stat-val" id="realisedPnl">-</div><div class="stat-sub muted" id="realisedSub">Closed trades and partial exits</div></div>
-  <div class="card"><div class="card-title">Cash Available</div><div class="stat-val" id="cashAvailable">-</div><div class="stat-sub muted" id="positionsSummary">-</div></div>
-</div>
-<div class="grid2">
-  <div class="card"><div class="section-title">Allocation</div><canvas id="pieChart" height="200"></canvas></div>
-  <div class="card"><div class="section-title">Unrealised P&amp;L per Position (INR)</div><canvas id="barChart" height="200"></canvas></div>
-</div>
-
-<hr class="divider">
-
-<div class="section-header"><span class="badge-head badge-trade">Open Positions</span><span class="desc">Live paper trades with peak tracking, trail distance, and conviction context</span></div>
-<div class="card"><div class="tbl-wrap"><table><thead><tr><th>ID</th><th>Ticker</th><th>ETF Name</th><th>Sector</th><th>Entry (INR)</th><th>Current (INR)</th><th>Peak (INR)</th><th>Return</th><th>P&amp;L</th><th>Trail Stop</th><th>Dist to Stop</th><th>Days</th><th>Confidence</th><th>Severity</th><th>Status</th></tr></thead><tbody id="positionsTbody"></tbody></table></div></div>
 
 <hr class="divider">
 
@@ -80,12 +90,13 @@
 <hr class="divider">
 
 <div class="section-header"><span class="badge-head badge-track">Closed Trades</span><span class="desc">Full history of exits with reasons and realised performance</span></div>
-<div class="card"><div class="tbl-wrap"><table><thead><tr><th>ID</th><th>Ticker</th><th>ETF Name</th><th>Entry (INR)</th><th>Exit (INR)</th><th>P&amp;L</th><th>Return</th><th>Days Held</th><th>Exit Reason</th><th>Result</th></tr></thead><tbody id="closedTbody"></tbody></table></div></div>
+<div class="card"><div class="tbl-wrap"><table><thead><tr><th>ID</th><th>Ticker</th><th>ETF Name</th><th>Platform</th><th>Entry (USD)</th><th>Exit (USD)</th><th>P&amp;L (USD)</th><th>Return</th><th>Days Held</th><th>Exit Reason</th><th>Result</th></tr></thead><tbody id="closedTbody"></tbody></table></div></div>
 
 <hr class="divider">
 
-<div class="card"><div class="section-title">Recent Log Tail</div><div class="log-box" id="logTail"></div></div>
+<div class="card"><div class="section-title">System Log</div><div class="log-box" id="logTail"></div></div>
 
+</div>
 <script src="dashboard.js"></script>
 </body>
 </html>

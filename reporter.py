@@ -35,11 +35,13 @@ def confidence_bar(score: int) -> str:
     return f"[{'|' * filled}{'.' * empty}]  {score} / 100"
 
 
-def build_etf_block(etf: Dict, platform_label: str) -> str:
+def build_etf_block(etf: Dict) -> str:
+    """Build ETF display block using platform info from etf_mapper database."""
     note = f"\nNote     : {etf['note']}" if etf.get("note") else ""
+    platform = etf.get("platform", "N/A")
     return (
         f"**{etf['name']}**  `{etf['ticker']}`\n"
-        f"Platform : {platform_label}  |  Exchange : {etf['exchange']}\n"
+        f"Platform : {platform}  |  Exchange : {etf['exchange']}\n"
         f"Risk     : {etf['risk']}  |  Horizon  : {etf['timeframe']}\n"
         f"Thesis   : {etf['thesis']}"
         + note
@@ -91,8 +93,10 @@ class DiscordReporter:
                     "                   Uranium, Cybersecurity, Banking,\n"
                     "                   India Equity, Commodities, Crypto, EM\n"
                     "Confidence floor : 62 / 100\n"
-                    "India platform   : Dhan App  (NSE / BSE)\n"
-                    "Global platform  : INDmoney / Vested  (US Markets)\n"
+                    "Capital plan     : $10,000 USD / month (50% deploy, 50% reserve)\n"
+                    "Exchanges        : NYSE, NASDAQ, NSE, BSE\n"
+                    "Access via       : IBKR, Schwab, Fidelity, INDmoney,\n"
+                    "                   Vested, Dhan, Groww, Zerodha\n"
                     "```\n\n"
                     "Alerts are issued only when a confirmed macro event meets the "
                     "confidence threshold. No output is generated for noise."
@@ -129,8 +133,8 @@ class DiscordReporter:
 
         Embed 1  —  Report classification header and signal metadata
         Embed 2  —  Supporting headlines
-        Embed 3  —  India ETF recommendations  (Dhan App)
-        Embed 4  —  Global ETF recommendations  (INDmoney / Vested)
+        Embed 3  —  India ETF recommendations  (NSE / BSE brokers)
+        Embed 4  —  Global ETF recommendations  (International brokers)
         Embed 5  —  Macro thesis, suggested posture, confidence score
         """
         confidence    = signal.get("confidence", 0)
@@ -194,7 +198,7 @@ class DiscordReporter:
         # ── Embed 3: India ETF Allocation ─────────────────────────────────
         india_etfs = etf_recs.get("india", [])
         if india_etfs:
-            india_blocks = [build_etf_block(e, "Dhan App") for e in india_etfs[:3]]
+            india_blocks = [build_etf_block(e) for e in india_etfs[:3]]
             india_body   = ("\n" + "─" * 44 + "\n").join(india_blocks)
         else:
             india_body = (
@@ -203,7 +207,7 @@ class DiscordReporter:
             )
 
         embed3 = {
-            "title": "INDIA ETF ALLOCATION  —  DHAN APP  (NSE / BSE)",
+            "title": "INDIA ETF ALLOCATION  —  NSE / BSE (via INDmoney, Vested, Groww, Zerodha)",
             "description": india_body,
             "color": 0x1B3A5C,
         }
@@ -211,13 +215,13 @@ class DiscordReporter:
         # ── Embed 4: Global ETF Allocation ────────────────────────────────
         global_etfs = etf_recs.get("global", [])
         if global_etfs:
-            global_blocks = [build_etf_block(e, "INDmoney  /  Vested") for e in global_etfs[:4]]
+            global_blocks = [build_etf_block(e) for e in global_etfs[:4]]
             global_body   = ("\n" + "─" * 44 + "\n").join(global_blocks)
         else:
             global_body = "No global ETF is mapped for this sector classification."
 
         embed4 = {
-            "title": "GLOBAL ETF ALLOCATION  —  INDMONEY / VESTED  (US MARKETS)",
+            "title": "GLOBAL ETF ALLOCATION  —  NYSE / NASDAQ (via IBKR, Schwab, Fidelity)",
             "description": global_body,
             "color": 0x1B3A5C,
         }
@@ -491,16 +495,44 @@ class DiscordReporter:
 
         best_global = (etf_recs.get("global") or [{}])[0].get("ticker", "")
         best_india  = (etf_recs.get("india")  or [{}])[0].get("ticker", "")
+        
+        # Get platform info from ETF data
+        best_global_platform = (etf_recs.get("global") or [{}])[0].get("platform", "")
+        best_india_platform  = (etf_recs.get("india")  or [{}])[0].get("platform", "")
+        
+        # Extract broker names from platform string (e.g. "iShares by BlackRock — IBKR / Schwab" -> "IBKR / Schwab")
+        global_brokers = ""
+        india_brokers = ""
+        if best_global_platform and "—" in best_global_platform:
+            global_brokers = best_global_platform.split("—")[-1].strip()
+        if best_india_platform and "—" in best_india_platform:
+            india_brokers = best_india_platform.split("—")[-1].strip()
+        elif best_india_platform:
+            india_brokers = best_india_platform
 
         if best_global and best_india:
-            suffix = (
-                f" Primary instruments: **{best_india}** via Dhan App "
-                f"and **{best_global}** via INDmoney or Vested."
-            )
+            if global_brokers and india_brokers:
+                suffix = (
+                    f" Primary instruments: **{best_india}** via {india_brokers} "
+                    f"and **{best_global}** via {global_brokers}."
+                )
+            elif best_global:
+                suffix = (
+                    f" Primary instruments: **{best_india}** (India) "
+                    f"and **{best_global}** (Global)."
+                )
+            else:
+                suffix = ""
         elif best_global:
-            suffix = f" Primary instrument: **{best_global}** via INDmoney or Vested."
+            if global_brokers:
+                suffix = f" Primary instrument: **{best_global}** via {global_brokers}."
+            else:
+                suffix = f" Primary instrument: **{best_global}** (Global)."
         elif best_india:
-            suffix = f" Primary instrument: **{best_india}** via Dhan App."
+            if india_brokers:
+                suffix = f" Primary instrument: **{best_india}** via {india_brokers}."
+            else:
+                suffix = f" Primary instrument: **{best_india}** (India)."
         else:
             suffix = ""
 

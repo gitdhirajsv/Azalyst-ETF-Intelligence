@@ -211,9 +211,8 @@ def calc_metrics(portfolio):
         for pos in positions
     )
     cash      = portfolio.get("cash_inr", 0)
-    reserve   = portfolio.get("monthly_reserve_inr", 0)
     deposited = portfolio.get("total_deposited", portfolio.get("total_deposited_inr", total_invested + cash))
-    total     = market_value + cash + reserve
+    total     = market_value + cash
     unrealised = market_value - total_invested
     closed_realised = sum(trade.get("realised_pnl", 0) for trade in portfolio.get("closed_trades", []))
     partial_realised = portfolio.get("partial_realised_pnl_total", 0)
@@ -230,7 +229,6 @@ def calc_metrics(portfolio):
         "portfolio_value":   safe_round(total),
         "total_deposited":   safe_round(deposited),
         "cash":              safe_round(cash),
-        "monthly_reserve":   safe_round(reserve),
         "market_value":      safe_round(market_value),
         "total_invested":    safe_round(total_invested),
         "unrealised_pnl":    safe_round(unrealised),
@@ -282,7 +280,6 @@ def build_positions(positions):
             "etf_name":          pos.get("etf_name", ""),
             "sector":            pos.get("sector", ""),
             "platform":          pos.get("platform", ""),
-            "exchange":          pos.get("exchange", ""),
             "entry":             safe_round(entry),
             "current":           safe_round(current),
             "peak_price":        safe_round(peak_price),
@@ -311,8 +308,6 @@ def build_closed(closed_trades):
             "trade_id":    trade.get("trade_id", ""),
             "ticker":      trade.get("ticker", ""),
             "etf_name":    trade.get("etf_name", ""),
-            "platform":    trade.get("platform", ""),
-            "exchange":    trade.get("exchange", ""),
             "entry":       safe_round(trade.get("entry_price", 0)),
             "exit":        safe_round(trade.get("exit_price", 0)),
             "pnl":         pnl,
@@ -564,7 +559,6 @@ def minimal_status(now_str):
         "portfolio_value":  0,
         "total_deposited":  0,
         "cash":             0,
-        "monthly_reserve":  0,
         "market_value":     0,
         "total_invested":   0,
         "unrealised_pnl":   0,
@@ -574,7 +568,6 @@ def minimal_status(now_str):
         "change":           "+0.00%",
         "change_raw":       0,
         "closed_trades":    0,
-        "usd_inr_rate":     83.5,
         "positions":        [],
         "closed_trades_list": [],
         "track_record": {
@@ -624,22 +617,13 @@ def generate_status():
     positions       = build_positions(portfolio.get("open_positions", []))
     signal_cards    = build_signal_cards(state)
 
-    # Fetch live USD/INR rate for dual-currency dashboard display
-    usd_inr_rate = None
-    try:
-        from paper_trader import fetch_usd_to_inr
-        usd_inr_rate = fetch_usd_to_inr()
-    except Exception:
-        usd_inr_rate = 83.5  # fallback
-
     status = {
         **metrics,
-        "usd_inr_rate":       safe_round(usd_inr_rate, 4),
         "positions":          positions,
         "closed_trades_list": build_closed(portfolio.get("closed_trades", [])),
         "track_record":       build_track(portfolio),
         "confidence_threshold": 62,
-        "allocation":  build_alloc(positions, metrics["cash"] + metrics.get("monthly_reserve", 0)),
+        "allocation":  build_alloc(positions, metrics["cash"]),
         "pnl":         build_pnl(positions),
         "confidence":  build_conf(state),
         "signals":     signal_cards,

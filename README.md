@@ -1,6 +1,8 @@
 # Azalyst ETF Intelligence
 
 > An institutional-style quantitative research platform built as a personal project. Not a hedge fund. Not a financial product. Just a passion for systematic research.
+> 
+> **Now with AI-powered optimization**: NVIDIA NIM (Mistral 7B) integration for intelligent strategy analysis and macro regime detection.
 
 ---
 
@@ -8,7 +10,16 @@
 
 Azalyst ETF Intelligence is a research infrastructure project for monitoring global news, classifying macro developments into investable sectors, and routing only the highest-conviction observations into a structured alert workflow. It is designed as a disciplined research system rather than a financial product, broker integration layer, or automated trading stack.
 
-At a high level, the platform scans global news feeds, deduplicates and clusters related articles, applies a lightweight NLP-style sector classifier, computes a transparent five-factor confidence score, maps validated sector signals to ETFs across India and global markets, and delivers structured reports to Discord. Every cycle is logged locally, and signal state is persisted so the system can enforce cooldowns, detect stronger updates, and maintain an audit trail across runs.
+At a high level, the platform scans global news feeds, deduplicates and clusters related articles, applies a lightweight NLP-style sector classifier, computes a transparent five-factor confidence score, maps validated sector signals to ETFs across global markets (NYSE, NASDAQ, NSE, BSE), and delivers structured reports to Discord. Every cycle is logged locally, and signal state is persisted so the system can enforce cooldowns, detect stronger updates, and maintain an audit trail across runs.
+
+The system is fully **USD-denominated** — all portfolio values, P&L, and capital tracking display in US dollars with INR shown as a secondary reference. ETF platform information is displayed dynamically, showing which brokers offer each instrument (e.g., "iShares by BlackRock — IBKR / Schwab / Fidelity" for US ETFs, "NSE/BSE listed — Zerodha / Dhan / Groww" for Indian ETFs). Access via IBKR, Schwab, Fidelity, INDmoney, Vested, Dhan, Groww, or Zerodha.
+
+**New in 2026**: LLM-powered optimization using NVIDIA NIM's Mistral 7B Instruct model provides:
+- Automated portfolio performance analysis with actionable improvement suggestions
+- Signal enhancement with AI-driven allocation recommendations
+- Macro regime detection and sector rotation guidance
+- Auto-generated trade documentation for compliance
+- Continuous learning from trade outcomes
 
 The project exists for a simple reason: global macro events move faster than discretionary monitoring can reliably keep up with, yet most headline streams are too noisy to act on directly. Azalyst attempts to bridge that gap with disciplined filtering. The system is opinionated about what should qualify as a signal, conservative about what deserves distribution, and explicit about why a given alert cleared the bar.
 
@@ -16,24 +27,30 @@ The project exists for a simple reason: global macro events move faster than dis
 
 Live monitor output (generated from the current portfolio/state artifacts):
 
-![Azalyst ETF Intelligence Dashboard](docs/dashboard_12pct.png)
+![Azalyst ETF Intelligence Dashboard](dashboard_12pct.png)
 
 Core capabilities:
 
 - Global news scanning through **[WorldMonitor](https://github.com/koala73/worldmonitor)** and direct RSS feeds.
-- Sector classification across 11 research buckets using weighted keyword rules, negation handling, and article clustering.
+- Sector classification across 14+ research buckets using weighted keyword rules, negation handling, and article clustering.
 - Five-factor confidence scoring with transparent component breakdowns.
-- ETF opportunity mapping for India and global markets.
+- ETF opportunity mapping across NYSE, NASDAQ, NSE, and BSE with dynamic broker platform display.
+- **USD-first dashboard** with dark theme, dual-currency display, and Global Opportunity Monitor.
+- **50/50 monthly reserve** — half of each deposit is held for high-conviction opportunities.
+- **Compare-before-deploy** — new signals are ranked against existing positions before capital allocation.
 - Structured Discord delivery via **[Discord Webhooks](https://discord.com/developers/docs/resources/webhook)**.
 - Local state persistence and log-based auditability.
+- **✨ LLM-powered analysis** with NVIDIA NIM (Mistral 7B) for strategy optimization and macro regime detection.
 
 Research controls:
 
 - Conservative delivery threshold: `62+` confidence.
 - Minimum corroboration requirement: `2+` relevant articles.
 - Cooldown mechanism: `4` hours per tracked signal basket.
+- Article age filter: drops articles older than `7 days` (configurable).
 - Update logic: stronger signals can re-issue before cooldown expiry if confidence improves materially.
 - Audit trail logging through `azalyst.log` and persisted sector state in `azalyst_state.json`.
+- **✨ AI-enhanced signal evaluation** with allocation recommendations from Mistral 7B.
 
 Primary dependencies:
 
@@ -44,6 +61,7 @@ Primary dependencies:
 - **[schedule](https://pypi.org/project/schedule/)**
 - **[python-dateutil](https://pypi.org/project/python-dateutil/)**
 - **[python-dotenv](https://pypi.org/project/python-dotenv/)**
+- **[openai](https://pypi.org/project/openai/)** — NVIDIA NIM API client
 
 ---
 
@@ -62,18 +80,20 @@ Every 30 minutes, the system automatically:
 | | |
 |---|---|
 | **Experiment started** | March 2026 |
-| **Monthly capital** | ₹10,000 / month (auto-credited) |
-| **Total after 6 months** | ₹60,000 deposited |
+| **Monthly capital** | $10,000 USD / month (auto-credited) |
+| **Capital strategy** | 50% deployed immediately, 50% held in reserve |
+| **Total after 6 months** | $60,000 deposited |
 | **Stop-loss** | −10% per position |
 | **Max hold period** | 180 days |
 | **Max open positions** | 6 at a time |
+| **Currency** | USD primary, INR secondary |
 
 **Live dashboard (updates every 30 min):**
 👉 https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/
 
 The dashboard shows current portfolio value, open positions with live P&L, closed trade history, win rate, and overall return vs capital deposited.
 
-**The goal:** After 6 months, does this system outperform a simple Nifty 50 index fund? If yes, the signal model has demonstrated real edge and real capital deployment becomes worth considering. If not, the experiment saved real money and identified what needs improvement — which is exactly what paper trading is for.
+**The goal:** After 6 months, does this system outperform a simple S&P 500 index fund? If yes, the signal model has demonstrated real edge and real capital deployment becomes worth considering. If not, the experiment saved real money and identified what needs improvement — which is exactly what paper trading is for.
 
 ---
 
@@ -137,7 +157,81 @@ Azalyst_Spyder.bat
 
 This is the single launcher for the project. It starts the engine in a command prompt and optionally opens Spyder with the live monitor. If the Spyder window is closed, the engine keeps running.
 
+---
+
+## 🤖 LLM Integration (NVIDIA NIM / Mistral 7B)
+
+Azalyst now includes optional AI-powered optimization using **NVIDIA NIM** with Mistral 7B Instruct.
+
+### Quick Setup
+
+**1. Get API Key**
+
+Visit https://build.nvidia.com/explore/discover and get your free NVIDIA API key.
+
+**2. Configure `.env`**
+
+```dotenv
+NVIDIA_API_KEY=nvapi-your_key_here
+LLM_MODEL=mistralai/mistral-7b-instruct-v0.3
+LLM_ENABLED=true
+```
+
+**3. Run with LLM**
+
+```bash
+python azalyst.py
+```
+
+### Features
+
+| Feature | Description |
+|---------|-------------|
+| **Portfolio Analysis** | Automated performance diagnosis with actionable suggestions |
+| **Signal Enhancement** | AI-driven allocation recommendations for each signal |
+| **Macro Regime Detection** | Economic regime interpretation and sector rotation guidance |
+| **Trade Documentation** | Auto-generated rationales for compliance |
+| **Feedback Loop** | Continuous learning from trade outcomes |
+
+### Usage Examples
+
+```bash
+# Normal operation with LLM enhancement
+python azalyst.py
+
+# LLM analysis only mode
+python azalyst.py --llm-analysis
+
+# Test the optimizer
+python llm_optimizer.py
+```
+
+### Sample Output
+
+```
+LLM Analysis mode — running portfolio analysis...
+Analysis complete. Generated 5 suggestions
+
+1. Your win rate of 45% is below target. Consider raising confidence threshold to 70.
+2. Maximum drawdown approaching limit. Reduce position sizing to 15%.
+3. Energy sector outperforming. Consider overweighting energy signals.
+```
+
+### Documentation
+
+See **`LLM_INTEGRATION.md`** for complete setup guide, API reference, and best practices.
+
+### Cost
+
+- **Free tier**: $0.50-1.00/month for typical usage
+- **Latency**: 2-5 seconds per analysis
+- **Privacy**: No PII sent to API, data anonymized
+
+---
+
 ## Configuration
+
+### Core Settings
 
 | Parameter | Default | Type | Description |
 |---|---:|---|---|
@@ -146,6 +240,21 @@ This is the single launcher for the project. It starts the engine in a command p
 | `THRESHOLD` | `62` | `integer` | Minimum confidence score before a signal is delivered. Also supports `AZALYST_THRESHOLD`. |
 | `COOLDOWN_HOURS` | `4` | `integer` | Minimum hours between alerts on the same sector. Also supports `AZALYST_COOLDOWN_HOURS`. |
 | `MIN_ARTICLES` | `2` | `integer` | Minimum corroborating articles to form a signal. Also supports `AZALYST_MIN_ARTICLES`. |
+
+### LLM Settings (Optional)
+
+| Parameter | Default | Type | Description |
+|---|---:|---|---|
+| `NVIDIA_API_KEY` | Required | `string` | NVIDIA NIM API key for Mistral models |
+| `LLM_MODEL` | `mistralai/mistral-7b-instruct-v0.3` | `string` | Model to use for LLM analysis |
+| `LLM_TEMPERATURE` | `0.2` | `float` | Sampling temperature (0.0-1.0) |
+| `LLM_TOP_P` | `0.7` | `float` | Nucleus sampling parameter |
+| `LLM_MAX_TOKENS` | `1024` | `integer` | Maximum response length |
+| `LLM_ENABLED` | `true` | `boolean` | Enable/disable LLM features |
+| `LLM_ANALYSIS_INTERVAL` | `6` | `integer` | Analysis frequency in hours (6=every 6 hours) |
+| `LLM_AUTO_APPLY` | `false` | `boolean` | Auto-apply safe suggestions |
+| `LLM_MIN_CONFIDENCE` | `75` | `integer` | Min confidence for auto-apply |
+| `MAX_ARTICLE_AGE_DAYS` | `7` | `integer` | Drop articles older than this (0=disabled) |
 
 See `.env.example` for the full template including advanced controls.
 
@@ -174,7 +283,7 @@ Example: `Strait of Hormuz airstrike = 92/100`
 
 ## Sector Coverage
 
-| Sector | India (Dhan/Kite) | Global (INDmoney/Vested) |
+| Sector | India (NSE/BSE) | Global (NYSE/NASDAQ) |
 |---|---|---|
 | Energy & Oil | `CPSEETF`, `PSUBNKBEES` | `XLE`, `USO`, `IXC` |
 | Defense & Aerospace | `DEFENCEETF`, `CPSEETF` | `ITA`, `XAR`, `PPA` |
@@ -188,44 +297,105 @@ Example: `Strait of Hormuz airstrike = 92/100`
 | Emerging Markets | `NIFTYBEES` | `EEM`, `SPEM` |
 | Cryptocurrencies | `—` | `IBIT`, `BITQ` |
 
+**Broker flexibility:** The system displays ETFs with their available trading platforms:
+- **US ETFs**: NYSE/NASDAQ listed — tradable via IBKR, Schwab, Fidelity, or any international broker
+- **India ETFs**: NSE/BSE listed — tradable via INDmoney, Vested, Zerodha, Dhan, Groww, or any Indian broker
+
+Each Discord report shows the exact platform information (e.g., "iShares by BlackRock — IBKR / Schwab / Fidelity") so you know where each ETF is available.
+
+**Capital management:**
+- Each monthly $10,000 deposit is split 50/50 — half deployed immediately, half held in reserve.
+- Reserve is released only when a new signal scores higher than all existing open positions.
+- If no new signal beats existing positions, capital tops up the strongest current holding.
+- This ensures capital flows only toward the highest-conviction opportunities.
+
 ## File Structure
 
 ```text
 .
-|-- azalyst.py
-|-- Azalyst_Spyder.bat
-|-- config.py
-|-- prepare_spyder_profile.py
-|-- news_fetcher.py
-|-- classifier.py
-|-- scorer.py
-|-- etf_mapper.py
-|-- reporter.py
-|-- state.py
-|-- spyder_live_monitor.py
-|-- requirements.txt
-|-- docs/
-|-- paper_trader.py
-|-- portfolio_reporter.py
-`-- generate_dashboard.py
+|-- azalyst.py                    # Main engine (LLM-enhanced)
+|-- Azalyst_Spyder.bat            # Windows launcher
+|-- start_azalyst.bat             # Auto-startup script
+|-- install_autostart.bat         # Auto-start installer
+|-- setup_windows_startup.ps1     # Task Scheduler setup
+|-- config.py                     # Configuration (includes LLM settings)
+|-- news_fetcher.py               # RSS feed fetching
+|-- classifier.py                 # Sector classification
+|-- scorer.py                     # Confidence scoring
+|-- etf_mapper.py                 # ETF mapping
+|-- reporter.py                   # Discord reporting
+|-- state.py                      # State management
+|-- spyder_live_monitor.py        # Live dashboard
+|-- paper_trader.py               # Paper trading engine
+|-- portfolio_reporter.py         # Portfolio reporting
+|-- generate_dashboard.py         # Dashboard generation
+|-- llm_analyzer.py               # LLM analyzer stub
+|-- advanced_llm_analyzer.py      # Advanced multi-model LLM analyzer
+|-- llm_optimizer.py              # NVIDIA NIM portfolio optimizer
+|-- llm_prompts.py                # Prompt templates
+|-- get_mistral_recommendations.py # Quick portfolio analysis
+|-- test_llm_integration.py        # Test script
+|-- requirements.txt              # Python dependencies
+|-- .env.example                  # Environment template
+|-- .env                          # Your configuration (API key here)
+|-- README.md                     # Main documentation
+|-- AUTO_STARTUP_GUIDE.md         # Auto-startup setup guide
+|-- LLM_INTEGRATION.md            # Complete LLM guide
+|-- LLM_QUICKSTART.md             # Quick reference
+|-- HOW_TO_GET_MISTRAL_API_KEY.md # API key setup
+|-- index.html                    # Dashboard HTML
+|-- dashboard.js                  # Dashboard JavaScript
+|-- dashboard_12pct.png           # Dashboard preview image
++-- runtime artifacts (auto-generated)
+    |-- azalyst.log               # System logs
+    |-- azalyst_state.json        # Signal state
+    |-- azalyst_portfolio.json    # Portfolio data
+    +-- status.json               # Dashboard status file
 ```
 
-Runtime artifacts (`azalyst.log`, `azalyst_state.json`, `azalyst_portfolio.json`, `status.json`) are generated automatically and should not be treated as source files.
+All files are in the **same folder** for easy access. No subfolders needed!
 
 ## Usage Examples
 
 ```bash
-python azalyst.py                          # run continuously (local)
-python azalyst.py --once                   # single cycle then exit (GitHub Actions)
-AZALYST_THRESHOLD=70 python azalyst.py     # custom confidence threshold
-AZALYST_COOLDOWN_HOURS=8 python azalyst.py # extended cooldown
+# Run continuously with LLM enhancement
+python azalyst.py
+
+# Single cycle mode (GitHub Actions)
+python azalyst.py --once
+
+# LLM analysis only mode
+python azalyst.py --llm-analysis
+
+# Custom confidence threshold
+AZALYST_THRESHOLD=70 python azalyst.py
+
+# Extended cooldown
+AZALYST_COOLDOWN_HOURS=8 python azalyst.py
+
+# Test LLM optimizer directly
+python llm_optimizer.py
+
+# Test LLM analyzer directly
+python llm_analyzer.py
 ```
 
 ## Troubleshooting
 
+### General Issues
+
 - **No alerts firing:** confirm `WEBHOOK` is set, inspect `azalyst.log`, temporarily lower threshold to 50 to test end-to-end delivery.
 - **Too many alerts:** raise `THRESHOLD`, increase `COOLDOWN_HOURS`.
 - **News not loading:** check internet, try without VPN, inspect feed errors in `azalyst.log`.
+
+### LLM Issues
+
+- **"LLM Analyzer disabled: NVIDIA_API_KEY not set"**: Add `NVIDIA_API_KEY=nvapi-your_key` to `.env`
+- **Poor quality suggestions**: Lower `LLM_TEMPERATURE` to 0.1, provide more historical data
+- **API rate limits**: Increase `LLM_ANALYSIS_INTERVAL` (default: 1440 minutes)
+- **JSON parsing errors**: Already handled gracefully; check logs for details
+
+See **`LLM_INTEGRATION.md`** for detailed troubleshooting.
 
 ## Architecture Notes
 

@@ -20,10 +20,9 @@ import urllib.request
 log = logging.getLogger("azalyst.trader")
 
 
-# Monthly budget in USD — converted to INR at runtime via live FX rate.
-# Client capital plan: $10,000/month for 6 months = $60,000 total.
-MONTHLY_BUDGET_USD      = 10_000
-MIN_TRADE_USD           = 50     # ~INR 4,175 at 83.5 — prevents dust trades
+MONTHLY_BUDGET_INR      = 10_000
+MIN_TRADE_INR           = 500
+# FIX: corrected from 8 to 6 — matches README, system spec, and paper trading rules.
 MAX_POSITIONS           = 6
 MAX_SINGLE_POSITION_PCT = 0.40
 STOP_LOSS_PCT           = 0.10
@@ -46,9 +45,6 @@ AVG_WIN_BY_SEVERITY = {
 }
 
 USD_TO_INR = 83.5
-
-# Derived INR minimum — computed once at module load, refreshed at runtime
-MIN_TRADE_INR = round(MIN_TRADE_USD * USD_TO_INR, 2)
 
 
 def fetch_usd_to_inr() -> float:
@@ -227,7 +223,6 @@ class ClosedTrade:
         self.ticker          = position.ticker
         self.etf_name        = position.etf_name
         self.platform        = position.platform
-        self.exchange        = position.exchange
         self.sector          = position.sector
         self.entry_price     = position.entry_price
         self.exit_price      = exit_price
@@ -251,7 +246,6 @@ class ClosedTrade:
             "ticker":            self.ticker,
             "etf_name":          self.etf_name,
             "platform":          self.platform,
-            "exchange":          self.exchange,
             "sector":            self.sector,
             "entry_price":       self.entry_price,
             "exit_price":        self.exit_price,
@@ -282,7 +276,6 @@ class PaperPortfolio:
         self.closed_trades: List[ClosedTrade] = []
         self.monthly_deposits: Dict[str, float] = {}
         self.trade_counter               = 0
-        self.monthly_reserve_inr         = 0.0  # 50% of monthly top-up held for best opportunities
 
         self._load()
         self._process_monthly_deposit()
@@ -306,18 +299,14 @@ class PaperPortfolio:
             self.max_drawdown_pct           = data.get("max_drawdown_pct", 0.0)
             self.monthly_deposits           = data.get("monthly_deposits", {})
             self.trade_counter              = data.get("trade_counter", 0)
-            self.monthly_reserve_inr        = data.get("monthly_reserve_inr", 0.0)
             self.open_positions             = [Position.from_dict(p) for p in data.get("open_positions", [])]
             self.closed_trades              = [ClosedTrade.__new__(ClosedTrade) for _ in data.get("closed_trades", [])]
             for ct, raw in zip(self.closed_trades, data.get("closed_trades", [])):
                 ct.__dict__.update(raw)
-                if not hasattr(ct, "exchange"):
-                    ct.exchange = "NYSE"
 
             log.info(
-                "Portfolio loaded - Cash: INR %.0f | Reserve: INR %.0f | Open: %s | Closed: %s",
+                "Portfolio loaded - Cash: INR %.0f | Open: %s | Closed: %s",
                 self.cash_inr,
-                self.monthly_reserve_inr,
                 len(self.open_positions),
                 len(self.closed_trades),
             )
@@ -334,7 +323,6 @@ class PaperPortfolio:
                 "max_drawdown_pct":            round(self.max_drawdown_pct, 2),
                 "monthly_deposits":            self.monthly_deposits,
                 "trade_counter":               self.trade_counter,
-                "monthly_reserve_inr":         round(self.monthly_reserve_inr, 2),
                 "open_positions":              [p.to_dict() for p in self.open_positions],
                 "closed_trades":               [ct.to_dict() for ct in self.closed_trades],
                 "last_saved":                  datetime.now(timezone.utc).isoformat(),
@@ -350,66 +338,21 @@ class PaperPortfolio:
             log.info(f"Monthly deposit already credited for {month_key}")
             return
 
-        # Convert USD budget to INR at live rate
-        usd_inr_rate   = fetch_usd_to_inr()
-        budget_inr     = round(MONTHLY_BUDGET_USD * usd_inr_rate, 2)
-
-        # 50/50 split: half goes to deployable cash, half held in reserve
-        # Reserve is released only when a signal beats all existing positions
-        deploy_half  = round(budget_inr * 0.50, 2)
-        reserve_half = round(budget_inr - deploy_half, 2)
-
-        self.cash_inr          += deploy_half
-        self.monthly_reserve_inr += reserve_half
-        self.total_deposited   += budget_inr
-        self.monthly_deposits[month_key] = round(budget_inr, 2)
+        self.cash_inr      += MONTHLY_BUDGET_INR
+        self.total_deposited += MONTHLY_BUDGET_INR
+        self.monthly_deposits[month_key] = MONTHLY_BUDGET_INR
         log.info(
-            "Monthly deposit: $%s USD (INR %s at rate %.2f). "
-            "Deployed half: INR %.0f | Reserved half: INR %.0f | Cash: INR %.0f",
-            f"{MONTHLY_BUDGET_USD:,}",
-            f"{budget_inr:,.2f}",
-            usd_inr_rate,
-            deploy_half,
-            reserve_half,
+            "Monthly deposit: INR %s credited. Cash: INR %.0f",
+            f"{MONTHLY_BUDGET_INR:,}",
             self.cash_inr,
         )
         self.save()
-
-    @property
-    def deployable_cash(self) -> float:
-        """Cash available for immediate deployment (excludes monthly reserve)."""
-        return round(self.cash_inr, 2)
-
-    def _release_reserve(self, amount: float) -> float:
-        """Release funds from monthly reserve into deployable cash.
-        Returns the actual amount released (may be less than requested)."""
-        release = round(min(amount, self.monthly_reserve_inr), 2)
-        if release <= 0:
-            return 0.0
-        self.monthly_reserve_inr -= release
-        self.cash_inr += release
-        log.info(
-            "RESERVE RELEASED: INR %.2f | Remaining reserve: INR %.2f | Cash: INR %.2f",
-            release, self.monthly_reserve_inr, self.cash_inr,
-        )
-        return release
-
-    def _should_release_reserve(self, signal: Dict) -> bool:
-        """Release reserve only if the incoming signal is stronger than ALL
-        current open positions — i.e. this is genuinely the best opportunity."""
-        if self.monthly_reserve_inr <= 0:
-            return False
-        incoming_conf = signal.get("confidence", 0)
-        if not self.open_positions:
-            return incoming_conf >= 75  # release for any decent signal if book is empty
-        max_existing_conf = max(pos.confidence for pos in self.open_positions)
-        return incoming_conf > max_existing_conf
 
     def _total_market_value(self) -> float:
         return round(sum(pos.current_value() for pos in self.open_positions), 2)
 
     def _portfolio_value(self) -> float:
-        return round(self.cash_inr + self.monthly_reserve_inr + self._total_market_value(), 2)
+        return round(self.cash_inr + self._total_market_value(), 2)
 
     def _current_drawdown_pct(self) -> float:
         if self.portfolio_peak <= 0:
@@ -656,28 +599,6 @@ class PaperPortfolio:
         self.trade_counter += 1
         return f"T{self.trade_counter:04d}"
 
-    def _best_existing_for_topup(self, signal: Dict) -> Optional[Position]:
-        """If the new signal is NOT better than current invested positions,
-        return the best existing position to top-up instead of opening new."""
-        if not self.open_positions:
-            return None
-        incoming_conf = signal.get("confidence", 0)
-        incoming_sector = signal.get("sector_label", "")
-
-        # Find existing positions with equal or higher confidence
-        stronger = [
-            pos for pos in self.open_positions
-            if pos.confidence >= incoming_conf
-            and pos.unrealised_pnl_pct() >= -2.0  # not deeply underwater
-        ]
-        if not stronger:
-            return None  # new signal IS better — proceed with new entry
-
-        # Prefer same-sector match, then highest confidence
-        same_sector = [p for p in stronger if p.sector == incoming_sector]
-        candidates = same_sector if same_sector else stronger
-        return max(candidates, key=lambda p: (p.confidence, p.unrealised_pnl_pct()))
-
     def enter_position(self, signal: Dict, etf: Dict, platform: str) -> Optional[Dict]:
         confidence = signal.get("confidence", 0)
         severity   = signal.get("severity", "LOW")
@@ -695,30 +616,6 @@ class PaperPortfolio:
         fraction = self._position_size(confidence, severity)
         if fraction <= 0:
             return None
-
-        # ── Reserve release: only tap reserve for best-in-book opportunities ──
-        if self._should_release_reserve(signal):
-            released = self._release_reserve(self.monthly_reserve_inr)
-            if released > 0:
-                log.info(
-                    "Reserve released for superior signal (%s conf %d vs max existing %d)",
-                    sector, confidence,
-                    max((p.confidence for p in self.open_positions), default=0),
-                )
-
-        # ── Compare new vs existing: if new signal is weaker, top-up best existing ──
-        topup_target = self._best_existing_for_topup(signal)
-        if topup_target and not any(p.ticker == ticker for p in self.open_positions):
-            log.info(
-                "New signal %s (conf %d) not better than existing %s (conf %d) — topping up existing",
-                sector, confidence, topup_target.ticker, topup_target.confidence,
-            )
-            # Redirect to top-up the stronger existing position
-            ticker   = topup_target.ticker
-            etf_name = topup_target.etf_name
-            exchange = topup_target.exchange
-            platform = topup_target.platform
-            sector   = topup_target.sector
 
         target_alloc = round(min(self.cash_inr * fraction, self.cash_inr * MAX_SINGLE_POSITION_PCT), 2)
         target_alloc = max(target_alloc, MIN_TRADE_INR)
@@ -905,7 +802,7 @@ class PaperPortfolio:
         unrealised_pnl = round(total_current - total_invested, 2)
         closed_realised = round(sum(ct.realised_pnl for ct in self.closed_trades), 2)
         total_realised  = round(closed_realised + self.partial_realised_pnl_total, 2)
-        portfolio_value = round(self.cash_inr + self.monthly_reserve_inr + total_current, 2)
+        portfolio_value = round(self.cash_inr + total_current, 2)
 
         winners   = [ct for ct in self.closed_trades if ct.realised_pnl > 0]
         losers    = [ct for ct in self.closed_trades if ct.realised_pnl < 0]
@@ -914,12 +811,10 @@ class PaperPortfolio:
         best_trade  = max(self.closed_trades, key=lambda t: t.realised_pnl_pct, default=None)
         worst_trade = min(self.closed_trades, key=lambda t: t.realised_pnl_pct, default=None)
 
-        usd_inr_rate = fetch_usd_to_inr()
         self._update_drawdown_state()
 
         return {
             "cash_inr":              round(self.cash_inr, 2),
-            "monthly_reserve_inr":   round(self.monthly_reserve_inr, 2),
             "total_invested":        total_invested,
             "total_current":         total_current,
             "unrealised_pnl":        unrealised_pnl,
@@ -932,7 +827,6 @@ class PaperPortfolio:
                 if self.total_deposited > 0 else 0,
                 2,
             ),
-            "usd_inr_rate":          usd_inr_rate,
             "open_positions":  [pos.to_dict() for pos in self.open_positions],
             "open_count":      len(self.open_positions),
             "closed_count":    len(self.closed_trades),
