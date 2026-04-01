@@ -1,7 +1,7 @@
 name: Run Azalyst
 on:
   push:
-    branches: [ beta ]
+    branches: [ main ]
     paths-ignore:
       - "azalyst_portfolio.json"
       - "azalyst_state.json"
@@ -25,7 +25,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: beta
+          ref: main
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -47,7 +47,7 @@ jobs:
           git config --global user.email "actions@github.com"
           git add -f azalyst_portfolio.json azalyst_state.json status.json || true
           git diff --staged --quiet || git commit -m "chore: update portfolio and state [skip ci]"
-          git push origin beta
+          git push origin main
       - name: Deploy dashboard to GitHub Pages
         run: |
           git config --global user.name "github-actions"
