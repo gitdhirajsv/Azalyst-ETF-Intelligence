@@ -1,28 +1,29 @@
 {
   "defense": {
-    "sent_at": "2026-04-01T10:47:32.560783+00:00",
+    "sent_at": "2026-04-01T15:53:02.898623+00:00",
     "confidence": 87,
     "sector_label": "Defense & Aerospace",
-    "article_count": 113,
+    "article_count": 103,
     "severity": "CRITICAL",
     "regions": [
       "americas",
       "middle_east",
-      "europe"
+      "europe",
+      "global"
     ],
     "sources": [
+      "Markets-Economic Times",
       "World | Deutsche Welle",
-      "Bloomberg Markets",
       "Defense News"
     ],
     "top_headlines": [
-      "Brent Oil Drops Below $100 As Trump Talks War End | The Opening Trade 4/1/2026",
       "US uses hundreds of Tomahawk missiles on Iran, alarming some at Pentagon",
       "Deterrent or danger: After Iran, are Saudi Arabia and Turkey next in line for nuclear weapons?",
       "Europe must reinvent warfare for \u2018era of shocks,\u2019 NATO\u2019s Vandier says",
-      "Aircraft carrier USS Gerald R. Ford arrives in Croatia for repairs"
+      "Aircraft carrier USS Gerald R. Ford arrives in Croatia for repairs",
+      "Japanese bond yields sink on new portfolio demand, Iran war optimism"
     ],
-    "latest_ts": "2026-04-01T10:47:32.017229+00:00",
+    "latest_ts": "2026-04-01T15:53:02.211510+00:00",
     "confidence_breakdown": {
       "signal_strength": 25,
       "volume_confirmation": 20.0,
@@ -85,35 +86,34 @@
     }
   },
   "energy_oil": {
-    "sent_at": "2026-04-01T10:47:34.452118+00:00",
-    "confidence": 92,
+    "sent_at": "2026-04-01T15:53:04.334872+00:00",
+    "confidence": 82,
     "sector_label": "Energy / Oil & Gas",
-    "article_count": 44,
+    "article_count": 32,
     "severity": "CRITICAL",
     "regions": [
+      "asia_pacific",
       "middle_east",
-      "europe",
-      "asia_pacific"
+      "europe"
     ],
     "sources": [
-      "Bloomberg Markets",
-      "US Top News and Analysis",
       "Markets-Economic Times",
+      "US Top News and Analysis",
       "Oilprice.com"
     ],
     "top_headlines": [
-      "Guyana's Oil Boom Will Boost Energy Security in the Americas",
-      "Brent Oil Drops Below $100 As Trump Talks War End | The Opening Trade 4/1/2026",
-      "Global Market | Oil Shockwave: Iran conflict triggers record surge in 2026 price forecasts",
-      "Oil prices seesaw around $100 in volatile trading after Trump war exit comments",
-      "OPEC Output Plunges by 7 Million Bpd as War Chokes Supply"
+      "Oil prices fall to around $100 after Trump indicates war could end in weeks",
+      "OPEC Output Plunges by 7 Million Bpd as War Chokes Supply",
+      "Brent Oil Dips Below $100 as Trump Signals End to Iran War",
+      "Explained: Why global brokerages are hitting panic button on India. FII exodus, oil shock ringing alarm?",
+      "Iran war puts Middle East Dubai oil benchmark under stress as prices soar"
     ],
-    "latest_ts": "2026-04-01T10:30:00+00:00",
+    "latest_ts": "2026-04-01T14:50:16+00:00",
     "confidence_breakdown": {
       "signal_strength": 25,
       "volume_confirmation": 20.0,
-      "source_diversity": 12.5,
-      "recency": 20.0,
+      "source_diversity": 7.5,
+      "recency": 15.0,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
@@ -225,32 +225,32 @@
     }
   },
   "india_equity": {
-    "sent_at": "2026-04-01T10:47:35.814284+00:00",
-    "confidence": 80,
+    "sent_at": "2026-04-01T15:53:05.689010+00:00",
+    "confidence": 90,
     "sector_label": "India Equity Markets",
-    "article_count": 42,
+    "article_count": 44,
     "severity": "CRITICAL",
     "regions": [
-      "middle_east",
-      "global",
-      "asia_pacific"
+      "asia_pacific",
+      "global"
     ],
     "sources": [
-      "Markets-Economic Times"
+      "Markets-Economic Times",
+      "Bloomberg Markets"
     ],
     "top_headlines": [
-      "Bulls back on D-Street! Sensex soars over 1,200 pts, Nifty closes above 22,650: 5 factors behind Rs 10 lakh crore gains",
-      "Zero returns in 2 years: Should Nifty bulls build a cash fort like Warren Buffett?",
+      "RBI bars banks from offering rupee non-deliverable derivatives to residents, non-residents",
       "Explained: Why global brokerages are hitting panic button on India. FII exodus, oil shock ringing alarm?",
       "Market momentum turning positive, more upside likely: Rohit Srivastava",
-      "PSU banks emerge most resilient in FY26 despite macro headwinds, deliver up to 57% returns"
+      "Gold loan NBFCs have enough buffer for now \u2014 but a second 15% price drop would test them: Fitch Ratings",
+      "India\u2019s Central Bank Tightens Non-Deliverable FX Contract Rules"
     ],
-    "latest_ts": "2026-04-01T09:08:46+00:00",
+    "latest_ts": "2026-04-01T14:54:55+00:00",
     "confidence_breakdown": {
       "signal_strength": 25,
       "volume_confirmation": 20.0,
-      "source_diversity": 5.0,
-      "recency": 15.0,
+      "source_diversity": 10.0,
+      "recency": 20.0,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
@@ -288,37 +288,50 @@
     }
   },
   "banking_financial|gold_precious_metals": {
-    "sent_at": "2026-04-01T10:47:37.522325+00:00",
+    "sent_at": "2026-04-01T15:53:08.645934+00:00",
     "confidence": 90,
-    "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-    "article_count": 32,
-    "severity": "CRITICAL",
+    "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
+    "article_count": 31,
+    "severity": "HIGH",
     "regions": [
-      "americas",
       "middle_east",
-      "europe"
+      "asia_pacific",
+      "americas",
+      "europe",
+      "global"
     ],
     "sources": [
+      "Markets-Economic Times",
       "Bloomberg Markets",
-      "Markets-Economic Times"
+      "Finance",
+      "Cointelegraph.com News"
     ],
     "top_headlines": [
-      "Gold prices rise above Rs 1.51 lakh/10 grams, silver drops around 1% amid hopes of Iran-US war de-escalation",
-      "Global Markets | Australian shares hit 3-week high, gold stocks rally on Iran conflict resolution hopes",
-      "US Stock Market | Rising war costs and inflation risks cloud outlook for US bond market",
-      "US Treasuries Extend Gains Before Retail, Manufacturing Data",
-      "Gold Extends Three-Day Gain After Trump Signals End to Iran War"
+      "Fed\u2019s Musalem Says Current Rate Likely to Remain Appropriate",
+      "Treasuries Rally Stalls as Solid Data Precedes Trump Speech",
+      "Fed Governor Miran still backs cuts, says interest rates could be 'about a point' lower this year",
+      "Who is Kevin Warsh? Trump\u2019s Fed pick wants \u2018regime change\u2019 at central bank",
+      "Bitcoin nears $68K on easing Iran tensions, focus shifts to US jobs data on April 3"
     ],
-    "latest_ts": "2026-04-01T10:25:40+00:00",
+    "latest_ts": "2026-04-01T15:53:02.211415+00:00",
     "confidence_breakdown": {
       "signal_strength": 25,
       "volume_confirmation": 20.0,
       "source_diversity": 10.0,
       "recency": 20.0,
-      "geopolitical_severity": 15.0
+      "geopolitical_severity": 15
     },
     "etf_recommendations": {
       "india": [
+        {
+          "name": "Nippon India ETF Bank BeES",
+          "ticker": "BANKBEES",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Top Indian private and PSU banks. Rate cut cycle could re-rate banking sector."
+        },
         {
           "name": "Nippon India Gold BeES",
           "ticker": "GOLDBEES",
@@ -337,26 +350,27 @@
           "risk": "Low-Medium",
           "timeframe": "3\u201318 months",
           "thesis": "Physical gold backed. Very liquid. Safe haven in geopolitical or inflation-driven scenarios."
-        },
-        {
-          "name": "Nippon India ETF Bank BeES",
-          "ticker": "BANKBEES",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "1\u20136 months",
-          "thesis": "Top Indian private and PSU banks. Rate cut cycle could re-rate banking sector."
         }
       ],
       "global": [
         {
+          "name": "Financial Select Sector SPDR",
+          "ticker": "XLF",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play."
+        },
+        {
           "name": "SPDR Gold MiniShares Trust",
           "ticker": "GLDM",
+          "note": "Flight to safety during banking stress",
           "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
           "exchange": "NYSE",
           "risk": "Low-Medium",
-          "timeframe": "3\u201318 months",
-          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026."
+          "timeframe": "1\u20133 months",
+          "thesis": "Banking crisis \u2192 gold safe haven. GLDM benefits from systemic financial stress."
         },
         {
           "name": "VanEck Gold Miners ETF",
@@ -375,50 +389,40 @@
           "risk": "High",
           "timeframe": "2\u20136 months",
           "thesis": "Smaller miners \u2014 highest leverage to gold. High risk/reward. Use only for strong conviction."
-        },
-        {
-          "name": "Financial Select Sector SPDR",
-          "ticker": "XLF",
-          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
-          "exchange": "NYSE",
-          "risk": "Medium",
-          "timeframe": "1\u20136 months",
-          "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play."
         }
       ]
     }
   },
   "technology_ai": {
-    "sent_at": "2026-04-01T10:47:39.228945+00:00",
-    "confidence": 92,
+    "sent_at": "2026-04-01T15:53:07.301239+00:00",
+    "confidence": 85,
     "sector_label": "Technology & AI / Semiconductors",
-    "article_count": 22,
+    "article_count": 29,
     "severity": "CRITICAL",
     "regions": [
       "americas",
+      "india",
       "middle_east",
-      "global",
-      "asia_pacific"
+      "global"
     ],
     "sources": [
+      "Bloomberg Markets",
       "US Top News and Analysis",
-      "Markets-Economic Times",
       "Finance",
-      "Oilprice.com",
-      "Bloomberg Markets"
+      "The Verge"
     ],
     "top_headlines": [
-      "Microsoft and NVIDIA Are Using AI to Fast-Track Nuclear Power Development",
-      "Global Market | Chip boom drives Korea\u2019s historic export spike amid rising oil tensions",
+      "Intel shares jump 9% after buying back Ireland chip fab in sign of renewed strength",
       "Three niche commodity prices are surging. What they show about China's grip on supply chains",
-      "BOE Warns on Escalating Risks From AI, Fallout From Iran War",
-      "Oracle cutting thousands in latest layoff round as company continues to ramp AI spending"
+      "Gas-Turbine Prices Surge, Crimping Efforts to Power Data Centers",
+      "Oracle layoffs will help cost savings, analysts say",
+      "AI can push your Stream Deck buttons for you"
     ],
-    "latest_ts": "2026-04-01T10:22:24+00:00",
+    "latest_ts": "2026-04-01T15:53:02.091725+00:00",
     "confidence_breakdown": {
       "signal_strength": 25,
       "volume_confirmation": 20.0,
-      "source_diversity": 12.5,
+      "source_diversity": 5.0,
       "recency": 20.0,
       "geopolitical_severity": 15.0
     },
@@ -477,37 +481,33 @@
     }
   },
   "commodities_mining": {
-    "sent_at": "2026-04-01T10:47:42.026130+00:00",
-    "confidence": 75,
+    "sent_at": "2026-04-01T15:53:10.027768+00:00",
+    "confidence": 69,
     "sector_label": "Commodities & Mining",
-    "article_count": 9,
+    "article_count": 8,
     "severity": "MEDIUM",
     "regions": [
       "india",
-      "global",
-      "europe",
       "middle_east",
-      "asia_pacific"
+      "global"
     ],
     "sources": [
-      "Markets-Economic Times",
-      "Oilprice.com",
-      "Finance",
       "Bloomberg Markets",
-      "World | Deutsche Welle"
+      "Finance",
+      "Oilprice.com"
     ],
     "top_headlines": [
       "Three niche commodity prices are surging. What they show about China's grip on supply chains",
       "Pentagon Insider Joins REalloys as Rare Earth Deadline Approaches",
-      "Some French Gas Stations Run Dry as Price Caps Spur Rush to Fill",
-      "After the Iran war, how fast could global trade recover?",
-      "PSU banks emerge most resilient in FY26 despite macro headwinds, deliver up to 57% returns"
+      "Copper Rises as Trump Floats Timeline for US to End Iran Attacks",
+      "Tariffs Are \u2018Killing Us at This Moment,\u2019 Nissan Americas Chairman Says",
+      "Trump Praises Nissan US Manufacturing"
     ],
-    "latest_ts": "2026-04-01T10:47:32.017569+00:00",
+    "latest_ts": "2026-04-01T15:22:06+00:00",
     "confidence_breakdown": {
-      "signal_strength": 16.2,
+      "signal_strength": 15.0,
       "volume_confirmation": 16.0,
-      "source_diversity": 12.5,
+      "source_diversity": 7.5,
       "recency": 20.0,
       "geopolitical_severity": 11
     },
@@ -684,10 +684,10 @@
     }
   },
   "nuclear_uranium": {
-    "sent_at": "2026-04-01T10:47:40.853511+00:00",
-    "confidence": 72,
+    "sent_at": "2026-04-01T15:53:11.382554+00:00",
+    "confidence": 66,
     "sector_label": "Nuclear Energy & Uranium",
-    "article_count": 7,
+    "article_count": 6,
     "severity": "MEDIUM",
     "regions": [
       "americas",
@@ -695,23 +695,24 @@
       "global"
     ],
     "sources": [
+      "Finance",
       "World | Deutsche Welle",
-      "US Top News and Analysis",
+      "BBC News",
       "Oilprice.com",
-      "BBC News"
+      "Defense News"
     ],
     "top_headlines": [
-      "Microsoft and NVIDIA Are Using AI to Fast-Track Nuclear Power Development",
       "Deterrent or danger: After Iran, are Saudi Arabia and Turkey next in line for nuclear weapons?",
       "Trump Media To Merge With Nuclear Fusion Startup",
       "'A million things could go wrong' - why seizing Iran's uranium would be so risky for the US",
-      "Warren Buffett says Iran bomb would make nuclear disaster harder to avoid"
+      "Warren Buffett says Iran bomb would make nuclear disaster harder to avoid",
+      "Limited missions, big risks: What a US ground fight in Iran could become"
     ],
-    "latest_ts": "2026-04-01T10:47:32.017229+00:00",
+    "latest_ts": "2026-04-01T15:53:02.211510+00:00",
     "confidence_breakdown": {
-      "signal_strength": 17.8,
-      "volume_confirmation": 16.0,
-      "source_diversity": 7.5,
+      "signal_strength": 13.4,
+      "volume_confirmation": 12.0,
+      "source_diversity": 10.0,
       "recency": 20.0,
       "geopolitical_severity": 11
     },
