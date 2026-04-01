@@ -1,32 +1,32 @@
 {
   "defense": {
-    "sent_at": "2026-03-31T07:32:59.701571+00:00",
-    "confidence": 80,
+    "sent_at": "2026-04-01T06:29:34.802061+00:00",
+    "confidence": 82,
     "sector_label": "Defense & Aerospace",
-    "article_count": 129,
+    "article_count": 102,
     "severity": "CRITICAL",
     "regions": [
-      "middle_east",
       "americas",
+      "middle_east",
       "europe"
     ],
     "sources": [
-      "Defense News",
-      "Oilprice.com"
+      "World | Deutsche Welle",
+      "Defense News"
     ],
     "top_headlines": [
       "Pentagon reportedly weighs diverting Ukraine military aid to Middle East",
       "US uses hundreds of Tomahawk missiles on Iran, alarming some at Pentagon",
-      "Iran Invasion Would Be America\u2019s Biggest Strategic Mistake Yet",
+      "Deterrent or danger: After Iran, are Saudi Arabia and Turkey next in line for nuclear weapons?",
       "Europe must reinvent warfare for \u2018era of shocks,\u2019 NATO\u2019s Vandier says",
       "Aircraft carrier USS Gerald R. Ford arrives in Croatia for repairs"
     ],
-    "latest_ts": "2026-03-31T06:21:24+00:00",
+    "latest_ts": "2026-04-01T06:29:34.090411+00:00",
     "confidence_breakdown": {
       "signal_strength": 25,
       "volume_confirmation": 20.0,
-      "source_diversity": 5.0,
-      "recency": 15.0,
+      "source_diversity": 2.5,
+      "recency": 20.0,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
@@ -84,34 +84,111 @@
     }
   },
   "energy_oil": {
-    "sent_at": "2026-03-28T20:04:01.826030+00:00",
-    "confidence": 78,
+    "sent_at": "2026-04-01T06:29:36.559188+00:00",
+    "confidence": 92,
     "sector_label": "Energy / Oil & Gas",
-    "article_count": 57
+    "article_count": 36,
+    "severity": "CRITICAL",
+    "regions": [
+      "americas",
+      "middle_east",
+      "europe"
+    ],
+    "sources": [
+      "Markets-Economic Times",
+      "Bloomberg Markets",
+      "Oilprice.com"
+    ],
+    "top_headlines": [
+      "Guyana's Oil Boom Will Boost Energy Security in the Americas",
+      "Global Market | Oil Shockwave: Iran conflict triggers record surge in 2026 price forecasts",
+      "$150 Oil Could Tip World Economy Into Recession",
+      "Oil Prices Post Biggest Monthly Surge in History",
+      "Oil Slides as Traders Weigh Optimism Over Iran War Resolution"
+    ],
+    "latest_ts": "2026-04-01T06:29:34.090812+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 25,
+      "volume_confirmation": 20.0,
+      "source_diversity": 12.5,
+      "recency": 20.0,
+      "geopolitical_severity": 15.0
+    },
+    "etf_recommendations": {
+      "india": [
+        {
+          "name": "Nippon India ETF Nifty PSU Bank BeES",
+          "ticker": "PSUBNKBEES",
+          "note": "PSU banks benefit from energy sector capex",
+          "platform": "Dhan App",
+          "exchange": "NSE/BSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Indian PSU energy companies (ONGC, IOC) drive PSU bank credit. Energy capex cycle benefits."
+        },
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "Direct PSU energy exposure \u2014 ONGC, NTPC, Coal India",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "CPSE ETF holds ONGC, Coal India, NTPC, BHEL. Direct play on India's energy sector."
+        }
+      ],
+      "global": [
+        {
+          "name": "Energy Select Sector SPDR",
+          "ticker": "XLE",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20133 months",
+          "thesis": "Largest US energy ETF. Holds Exxon, Chevron, ConocoPhillips. Direct oil price leverage."
+        },
+        {
+          "name": "United States Oil Fund",
+          "ticker": "USO",
+          "platform": "USCF \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "1\u20134 weeks",
+          "thesis": "Direct WTI crude oil futures exposure. Short-term geopolitical supply-shock play."
+        },
+        {
+          "name": "iShares Global Energy ETF",
+          "ticker": "IXC",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Global energy diversification \u2014 Shell, BP, TotalEnergies, Saudi Aramco. Less US-centric."
+        }
+      ]
+    }
   },
   "crypto_digital": {
-    "sent_at": "2026-03-31T07:33:05.185367+00:00",
+    "sent_at": "2026-04-01T06:29:37.861342+00:00",
     "confidence": 66,
     "sector_label": "Crypto & Digital Assets",
-    "article_count": 50,
+    "article_count": 32,
     "severity": "CRITICAL",
     "regions": [
       "middle_east",
-      "europe",
       "global"
     ],
     "sources": [
-      "Crunch Hype",
       "Cointelegraph.com News"
     ],
     "top_headlines": [
       "Here\u2019s what happened in crypto today",
-      "What is Blockchain: Everything You Need to Know (2022)",
-      "LimeWire AI Studio Review 2023: Details, Pricing & Features",
-      "Price predictions 3/30: SPX, DXY, BTC, ETH, BNB, XRP, SOL, DOGE, ADA, HYPE",
-      "Coinbase survey finds many crypto users still misunderstand taxes"
+      "Crypto awareness tops 80% among young people in UK: Coinbase survey",
+      "Base joins Ethereum, Tron, others in betting big on AI agent future",
+      "Crypto Fear and Greed Index stuck on \u2018extreme fear\u2019 but is there a silver lining?",
+      "Bitcoin hits $68K but BTC futures, macro data show traders remain bearish"
     ],
-    "latest_ts": "2026-03-31T01:27:21+00:00",
+    "latest_ts": "2026-03-31T22:29:21+00:00",
     "confidence_breakdown": {
       "signal_strength": 25,
       "volume_confirmation": 20.0,
@@ -144,31 +221,34 @@
     }
   },
   "india_equity": {
-    "sent_at": "2026-03-31T07:33:03.385442+00:00",
-    "confidence": 80,
+    "sent_at": "2026-04-01T06:29:39.159986+00:00",
+    "confidence": 92,
     "sector_label": "India Equity Markets",
-    "article_count": 52,
+    "article_count": 32,
     "severity": "CRITICAL",
     "regions": [
+      "asia_pacific",
       "middle_east",
-      "asia_pacific"
+      "india"
     ],
     "sources": [
-      "Markets-Economic Times"
+      "Markets-Economic Times",
+      "Bloomberg Markets",
+      "Oilprice.com"
     ],
     "top_headlines": [
-      "Sensex, Nifty to open in green tomorrow? GIFT Nifty rises 90 points on Trump\u2019s reported plans to end Iran war",
-      "War robbing D-Street: M-cap drops further Rs 9.4 lakh crore",
-      "Bank stocks fall as Street factors in lower profits",
-      "India\u2019s soaring oil bill shows limits of RBI\u2019s rupee defense",
-      "New STT, MTF rules kick in from April 1: What changes for stock market traders and brokers"
+      "Bulls back on D-Street! Sensex soars over 1,400 pts, Nifty above 22,700: 4 factors behind Rs 13 lakh crore gains",
+      "Zero returns in 2 years: Should Nifty bulls build a cash fort like Warren Buffett?",
+      "Indian Rupee Set for More Chaos as Banks Unwind $30 Billion in Arbitrage Trades",
+      "India\u2019s Aviation Market Rocked by Wild Jet Fuel Price Swings",
+      "BSE, Groww, Motilal and Angel One shares rally up to 8%. What's the good news?"
     ],
-    "latest_ts": "2026-03-31T05:36:30+00:00",
+    "latest_ts": "2026-04-01T06:29:34.090532+00:00",
     "confidence_breakdown": {
       "signal_strength": 25,
       "volume_confirmation": 20.0,
-      "source_diversity": 5.0,
-      "recency": 15.0,
+      "source_diversity": 12.5,
+      "recency": 20.0,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
@@ -206,41 +286,140 @@
     }
   },
   "banking_financial|gold_precious_metals": {
-    "sent_at": "2026-03-28T09:59:42.994768+00:00",
-    "confidence": 85,
+    "sent_at": "2026-04-01T06:29:41.949227+00:00",
+    "confidence": 90,
     "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-    "article_count": 43
+    "article_count": 25,
+    "severity": "CRITICAL",
+    "regions": [
+      "india",
+      "global",
+      "americas",
+      "middle_east"
+    ],
+    "sources": [
+      "Markets-Economic Times",
+      "Bloomberg Markets",
+      "Finance",
+      "US Top News and Analysis"
+    ],
+    "top_headlines": [
+      "Gold prices rise above Rs 1.51 lakh/10 grams, silver drops around 1% amid hopes of Iran-US war de-escalation",
+      "US Stock Market | Rising war costs and inflation risks cloud outlook for US bond market",
+      "Gold Extends Three-Day Gain After Trump Signals End to Iran War",
+      "Why $4 a gallon gas prices won\u2019t trigger Fed interest rate hikes \u2014 and could lead to cuts",
+      "Powell sees inflation outlook in check, no need to hike rates because of oil shock"
+    ],
+    "latest_ts": "2026-04-01T05:40:12+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 25,
+      "volume_confirmation": 20.0,
+      "source_diversity": 10.0,
+      "recency": 20.0,
+      "geopolitical_severity": 15.0
+    },
+    "etf_recommendations": {
+      "india": [
+        {
+          "name": "Nippon India Gold BeES",
+          "ticker": "GOLDBEES",
+          "note": "Largest Indian gold ETF by AUM",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Tracks physical gold in INR. Double benefit: gold price rise + potential INR depreciation."
+        },
+        {
+          "name": "HDFC Gold ETF",
+          "ticker": "HDFCGOLD",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Physical gold backed. Very liquid. Safe haven in geopolitical or inflation-driven scenarios."
+        },
+        {
+          "name": "Nippon India ETF Bank BeES",
+          "ticker": "BANKBEES",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Top Indian private and PSU banks. Rate cut cycle could re-rate banking sector."
+        }
+      ],
+      "global": [
+        {
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026."
+        },
+        {
+          "name": "VanEck Gold Miners ETF",
+          "ticker": "GDX",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium-High",
+          "timeframe": "3\u20139 months",
+          "thesis": "Gold miners offer 2\u20133x leverage to gold price. If gold surges, miners typically outperform."
+        },
+        {
+          "name": "VanEck Junior Gold Miners ETF",
+          "ticker": "GDXJ",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "2\u20136 months",
+          "thesis": "Smaller miners \u2014 highest leverage to gold. High risk/reward. Use only for strong conviction."
+        },
+        {
+          "name": "Financial Select Sector SPDR",
+          "ticker": "XLF",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play."
+        }
+      ]
+    }
   },
   "technology_ai": {
-    "sent_at": "2026-03-31T07:33:08.454555+00:00",
-    "confidence": 75,
+    "sent_at": "2026-04-01T06:29:40.578744+00:00",
+    "confidence": 87,
     "sector_label": "Technology & AI / Semiconductors",
-    "article_count": 40,
+    "article_count": 23,
     "severity": "CRITICAL",
     "regions": [
       "americas",
       "middle_east",
-      "india",
       "asia_pacific",
-      "europe"
+      "global"
     ],
     "sources": [
-      "Finance",
-      "Crunch Hype",
-      "US Top News and Analysis"
+      "Bloomberg Markets",
+      "Oilprice.com",
+      "US Top News and Analysis",
+      "Markets-Economic Times",
+      "Finance"
     ],
     "top_headlines": [
-      "TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)",
-      "Top 10 AI Tools in 2023 That Will Make Your Life Easier",
+      "Microsoft and NVIDIA Are Using AI to Fast-Track Nuclear Power Development",
+      "Global Market | Chip boom drives Korea\u2019s historic export spike amid rising oil tensions",
       "Three niche commodity prices are surging. What they show about China's grip on supply chains",
-      "How I Get Free Traffic from ChatGPT in 2025 (AIO vs SEO)",
-      "CNBC's The China Connection newsletter: China's AI race enters a new phase"
+      "Ferraris, Advil and AI Chips: 10 Companies to Watch Right Now",
+      "Here is why Nvidia's partnership and investment in Marvell is such a big deal"
     ],
-    "latest_ts": "2026-03-31T05:29:11+00:00",
+    "latest_ts": "2026-04-01T04:01:07+00:00",
     "confidence_breakdown": {
       "signal_strength": 25,
       "volume_confirmation": 20.0,
-      "source_diversity": 0.0,
+      "source_diversity": 12.5,
       "recency": 15.0,
       "geopolitical_severity": 15.0
     },
@@ -299,35 +478,35 @@
     }
   },
   "commodities_mining": {
-    "sent_at": "2026-03-31T07:33:12.142854+00:00",
-    "confidence": 65,
+    "sent_at": "2026-04-01T06:29:44.587443+00:00",
+    "confidence": 70,
     "sector_label": "Commodities & Mining",
-    "article_count": 8,
+    "article_count": 7,
     "severity": "MEDIUM",
     "regions": [
+      "asia_pacific",
       "middle_east",
       "india",
-      "europe",
       "global"
     ],
     "sources": [
-      "Finance",
-      "Oilprice.com",
       "World | Deutsche Welle",
-      "US Top News and Analysis"
+      "Bloomberg Markets",
+      "Oilprice.com",
+      "Finance"
     ],
     "top_headlines": [
       "Three niche commodity prices are surging. What they show about China's grip on supply chains",
-      "How A Magnet Shortage Could Bring The $10 Trillion Tech Sector to a Halt",
-      "China suppliers warn of higher prices for Americans due to Strait of Hormuz closure",
-      "Copper joins gold in broad commodities sell-off. There's a worrying reason behind it",
-      "How US 'Liberation Day' tariffs reshaped global trade"
+      "Iron Ore Extends Gains After Best Month Since September 2024",
+      "Pentagon Insider Joins REalloys as Rare Earth Deadline Approaches",
+      "Copper Rises as Trump Floats Timeline for US to End Iran Attacks",
+      "After the Iran war, how fast could global trade recover?"
     ],
-    "latest_ts": "2026-03-31T07:32:27.650107+00:00",
+    "latest_ts": "2026-04-01T06:29:34.090812+00:00",
     "confidence_breakdown": {
       "signal_strength": 15.6,
       "volume_confirmation": 16.0,
-      "source_diversity": 2.5,
+      "source_diversity": 7.5,
       "recency": 20.0,
       "geopolitical_severity": 11
     },
@@ -502,10 +681,80 @@
     }
   },
   "nuclear_uranium": {
-    "sent_at": "2026-03-28T09:28:04.701789+00:00",
-    "confidence": 65,
+    "sent_at": "2026-04-01T06:29:43.401784+00:00",
+    "confidence": 72,
     "sector_label": "Nuclear Energy & Uranium",
-    "article_count": 5
+    "article_count": 7,
+    "severity": "MEDIUM",
+    "regions": [
+      "americas",
+      "middle_east",
+      "global"
+    ],
+    "sources": [
+      "World | Deutsche Welle",
+      "Oilprice.com",
+      "Finance",
+      "BBC News"
+    ],
+    "top_headlines": [
+      "Microsoft and NVIDIA Are Using AI to Fast-Track Nuclear Power Development",
+      "Deterrent or danger: After Iran, are Saudi Arabia and Turkey next in line for nuclear weapons?",
+      "Trump Media To Merge With Nuclear Fusion Startup",
+      "'A million things could go wrong' - why seizing Iran's uranium would be so risky for the US",
+      "Warren Buffett says Iran bomb would make nuclear disaster harder to avoid"
+    ],
+    "latest_ts": "2026-04-01T06:29:34.090411+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 17.8,
+      "volume_confirmation": 16.0,
+      "source_diversity": 7.5,
+      "recency": 20.0,
+      "geopolitical_severity": 11
+    },
+    "etf_recommendations": {
+      "india": [
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NTPC (nuclear expansion) + BHEL included",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "6\u201324 months",
+          "thesis": "NTPC is building India's first fleet of small modular reactors. CPSE ETF captures this."
+        }
+      ],
+      "global": [
+        {
+          "name": "Sprott Uranium Miners ETF",
+          "ticker": "URNM",
+          "platform": "Sprott \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "6\u201324 months",
+          "thesis": "Physical uranium + major miners. Uranium in structural deficit through 2040. Early-cycle."
+        },
+        {
+          "name": "Global X Uranium ETF",
+          "ticker": "URA",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "6\u201324 months",
+          "thesis": "Broader uranium + nuclear supply chain. Cameco, Kazatomprom. Lower concentration than URNM."
+        },
+        {
+          "name": "Sprott Physical Uranium Trust",
+          "ticker": "SRUUF",
+          "platform": "Sprott \u2014 IBKR",
+          "exchange": "OTC",
+          "risk": "High",
+          "timeframe": "12\u201336 months",
+          "thesis": "Holds physical uranium. Longer-term hold. Acts like gold but for nuclear fuel cycle."
+        }
+      ]
+    }
   },
   "cybersecurity|energy_oil": {
     "sent_at": "2026-03-20T11:01:55.385890+00:00",
