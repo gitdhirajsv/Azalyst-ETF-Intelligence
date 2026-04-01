@@ -610,10 +610,88 @@
     "article_count": 5
   },
   "gold_precious_metals": {
-    "sent_at": "2026-03-28T20:04:05.462787+00:00",
-    "confidence": 71,
+    "sent_at": "2026-04-01T16:45:31.375958+00:00",
+    "confidence": 85,
     "sector_label": "Gold & Precious Metals",
-    "article_count": 29
+    "article_count": 18,
+    "severity": "CRITICAL",
+    "regions": [
+      "global",
+      "americas",
+      "middle_east",
+      "asia_pacific"
+    ],
+    "sources": [
+      "Bloomberg Markets",
+      "Markets-Economic Times"
+    ],
+    "top_headlines": [
+      "Gold prices rise above Rs 1.51 lakh/10 grams, silver drops around 1% amid hopes of Iran-US war de-escalation",
+      "Global Markets | Australian shares hit 3-week high, gold stocks rally on Iran conflict resolution hopes",
+      "Fed\u2019s Musalem Says Current Rate Likely to Remain Appropriate",
+      "Gold loan NBFCs have enough buffer for now \u2014 but a second 15% price drop would test them: Fitch Ratings",
+      "Treasuries Rally Stalls as Solid Data Precedes Trump Speech"
+    ],
+    "latest_ts": "2026-04-01T13:53:55+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 25,
+      "volume_confirmation": 20.0,
+      "source_diversity": 10.0,
+      "recency": 15.0,
+      "geopolitical_severity": 15.0
+    },
+    "etf_recommendations": {
+      "india": [
+        {
+          "name": "Nippon India Gold BeES",
+          "ticker": "GOLDBEES",
+          "note": "Largest Indian gold ETF by AUM",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Tracks physical gold in INR. Double benefit: gold price rise + potential INR depreciation."
+        },
+        {
+          "name": "HDFC Gold ETF",
+          "ticker": "HDFCGOLD",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Physical gold backed. Very liquid. Safe haven in geopolitical or inflation-driven scenarios."
+        }
+      ],
+      "global": [
+        {
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026."
+        },
+        {
+          "name": "VanEck Gold Miners ETF",
+          "ticker": "GDX",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium-High",
+          "timeframe": "3\u20139 months",
+          "thesis": "Gold miners offer 2\u20133x leverage to gold price. If gold surges, miners typically outperform."
+        },
+        {
+          "name": "VanEck Junior Gold Miners ETF",
+          "ticker": "GDXJ",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "2\u20136 months",
+          "thesis": "Smaller miners \u2014 highest leverage to gold. High risk/reward. Use only for strong conviction."
+        }
+      ]
+    }
   },
   "banking_financial": {
     "sent_at": "2026-04-01T12:58:10.354715+00:00",
