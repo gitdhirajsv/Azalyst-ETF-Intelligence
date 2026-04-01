@@ -40,7 +40,7 @@ Core capabilities:
 - **Compare-before-deploy** — new signals are ranked against existing positions before capital allocation.
 - Structured Discord delivery via **[Discord Webhooks](https://discord.com/developers/docs/resources/webhook)**.
 - Local state persistence and log-based auditability.
-- **✨ LLM-powered analysis** with NVIDIA NIM (Mistral 7B) for strategy optimization and macro regime detection.
+- ** LLM-powered analysis** with NVIDIA NIM (Mistral 7B) for strategy optimization and macro regime detection.
 
 Research controls:
 
@@ -50,7 +50,7 @@ Research controls:
 - Article age filter: drops articles older than `7 days` (configurable).
 - Update logic: stronger signals can re-issue before cooldown expiry if confidence improves materially.
 - Audit trail logging through `azalyst.log` and persisted sector state in `azalyst_state.json`.
-- **✨ AI-enhanced signal evaluation** with allocation recommendations from Mistral 7B.
+- ** AI-enhanced signal evaluation** with allocation recommendations from Mistral 7B.
 
 Primary dependencies:
 
