@@ -1,6 +1,6 @@
 const REFRESH_INTERVAL = 30000;
 const STATUS_FILE = "status.json";
-const CHART_COLORS = ["#3b82f6", "#f59e0b", "#22c55e", "#8b5cf6", "#ef4444", "#06b6d4", "#f97316", "#14b8a6"];
+const CHART_COLORS = ["#F97316", "#0EA5E9", "#8B5CF6", "#10B981", "#EF4444", "#6366F1", "#F59E0B", "#14B8A6"];
 
 let pieChart = null;
 let barChart = null;
@@ -244,8 +244,8 @@ function ensurePieChart(labels, values) {
   if (!pieChart) {
     pieChart = new Chart(document.getElementById("pieChart"), {
       type: "doughnut",
-      data: { labels, datasets: [{ data: values, backgroundColor: CHART_COLORS.slice(0, labels.length), borderWidth: 2, borderColor: "#111827" }] },
-      options: { plugins: { legend: { position: "right", labels: { color: "#94a3b8", font: { size: 12 }, padding: 12, boxWidth: 12 } } }, cutout: "62%", responsive: true, animation: { duration: 400 } }
+      data: { labels, datasets: [{ data: values, backgroundColor: CHART_COLORS.slice(0, labels.length), borderWidth: 2, borderColor: "#FFFFFF" }] },
+      options: { plugins: { legend: { position: "right", labels: { color: "#334155", font: { size: 12 }, padding: 12, boxWidth: 12 } } }, cutout: "62%", responsive: true, animation: { duration: 400 } }
     });
     return;
   }
@@ -257,13 +257,13 @@ function ensurePieChart(labels, values) {
 
 function ensureBarChart(labels, values) {
   if (!labels.length) return;
-  const colors = values.map(value => Number(value || 0) >= 0 ? "#22c55e" : "#ef4444");
+  const colors = values.map(value => Number(value || 0) >= 0 ? "#10B981" : "#EF4444");
   const usdValues = values.map(v => Number((v || 0) / usdInrRate).toFixed(2));
   if (!barChart) {
     barChart = new Chart(document.getElementById("barChart"), {
       type: "bar",
       data: { labels, datasets: [{ label: "P&L (USD)", data: usdValues, backgroundColor: colors, borderRadius: 5 }] },
-      options: { plugins: { legend: { display: false } }, scales: { x: { ticks: { color: "#94a3b8", font: { size: 12 } }, grid: { display: false } }, y: { ticks: { color: "#94a3b8", font: { size: 12 } }, grid: { color: "#1e293b" } } }, responsive: true, animation: { duration: 400 } }
+      options: { plugins: { legend: { display: false } }, scales: { x: { ticks: { color: "#64748B", font: { size: 12 } }, grid: { display: false } }, y: { ticks: { color: "#64748B", font: { size: 12 } }, grid: { color: "#F1F5F9" } } }, responsive: true, animation: { duration: 400 } }
     });
     return;
   }
