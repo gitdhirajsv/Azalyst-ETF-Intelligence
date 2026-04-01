@@ -93,8 +93,10 @@ class DiscordReporter:
                     "                   Uranium, Cybersecurity, Banking,\n"
                     "                   India Equity, Commodities, Crypto, EM\n"
                     "Confidence floor : 62 / 100\n"
-                    "India platform   : NSE / BSE  (Zerodha / Dhan / Groww)\n"
-                    "Global platform  : NYSE / NASDAQ  (IBKR / Schwab / Fidelity)\n"
+                    "Capital plan     : $10,000 USD / month (50% deploy, 50% reserve)\n"
+                    "Exchanges        : NYSE, NASDAQ, NSE, BSE\n"
+                    "Access via       : IBKR, Schwab, Fidelity, INDmoney,\n"
+                    "                   Vested, Dhan, Groww, Zerodha\n"
                     "```\n\n"
                     "Alerts are issued only when a confirmed macro event meets the "
                     "confidence threshold. No output is generated for noise."
@@ -205,7 +207,7 @@ class DiscordReporter:
             )
 
         embed3 = {
-            "title": "INDIA ETF ALLOCATION  —  NSE / BSE",
+            "title": "INDIA ETF ALLOCATION  —  NSE / BSE (via INDmoney, Vested, Groww, Zerodha)",
             "description": india_body,
             "color": 0x1B3A5C,
         }
@@ -219,7 +221,7 @@ class DiscordReporter:
             global_body = "No global ETF is mapped for this sector classification."
 
         embed4 = {
-            "title": "GLOBAL ETF ALLOCATION  —  INTERNATIONAL",
+            "title": "GLOBAL ETF ALLOCATION  —  NYSE / NASDAQ (via IBKR, Schwab, Fidelity)",
             "description": global_body,
             "color": 0x1B3A5C,
         }
