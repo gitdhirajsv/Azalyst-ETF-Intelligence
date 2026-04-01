@@ -73,6 +73,10 @@ class PortfolioReporter:
         trade_id    = entry["trade_id"]
         cash_left   = entry["cash_remaining"]
         headline    = (signal.get("top_headlines") or ["—"])[0]
+        rate        = entry.get("usd_inr_rate", 83.5)
+        price_usd   = price / rate
+        invested_usd = invested / rate
+        cash_usd    = cash_left / rate
 
         embed = {
             "title": "AZALYST PAPER PORTFOLIO  —  TRADE ENTRY",
@@ -84,10 +88,10 @@ class PortfolioReporter:
                 f"Platform         : {platform}\n"
                 f"Sector           : {sector}\n"
                 f"{'─' * 44}\n"
-                f"Entry Price      : INR {price:,.4f}\n"
+                f"Entry Price      : ${price_usd:,.4f}  (INR {price:,.4f})\n"
                 f"Units            : {units:.4f}\n"
-                f"Capital Deployed : INR {invested:,.2f}\n"
-                f"Cash Remaining   : INR {cash_left:,.2f}\n"
+                f"Capital Deployed : ${invested_usd:,.2f}  (INR {invested:,.2f})\n"
+                f"Cash Remaining   : ${cash_usd:,.2f}  (INR {cash_left:,.2f})\n"
                 f"{'─' * 44}\n"
                 f"Signal Confidence: {confidence} / 100\n"
                 f"Severity         : {severity}\n"
@@ -101,7 +105,7 @@ class PortfolioReporter:
         }
 
         self._post({
-            "content": f"**AZALYST PAPER TRADE  |  ENTRY  |  {ticker}  |  INR {invested:,.0f} DEPLOYED**",
+            "content": f"**AZALYST PAPER TRADE  |  ENTRY  |  {ticker}  |  ${invested_usd:,.0f} DEPLOYED**",
             "embeds": [embed],
         })
 
@@ -116,6 +120,10 @@ class PortfolioReporter:
             pnl     = ex["realised_pnl"]
             pnl_pct = ex["realised_pnl_pct"]
             color   = _pnl_color(pnl)
+            rate    = ex.get("usd_inr_rate", 83.5)
+            pnl_usd = pnl / rate
+            exit_usd = ex["exit_price"] / rate
+            exchange = ex.get("exchange", "—")
 
             embed = {
                 "title": "AZALYST PAPER PORTFOLIO  —  POSITION CLOSED",
@@ -123,13 +131,14 @@ class PortfolioReporter:
                     f"```\n"
                     f"Trade ID         : {ex['trade_id']}\n"
                     f"ETF              : {ex['etf_name']}  ({ex['ticker']})\n"
+                    f"Exchange         : {exchange}\n"
                     f"Platform         : {ex['platform']}\n"
                     f"{'─' * 44}\n"
-                    f"Exit Price       : INR {ex['exit_price']:,.4f}\n"
+                    f"Exit Price       : ${exit_usd:,.4f}  (INR {ex['exit_price']:,.4f})\n"
                     f"Days Held        : {ex['days_held']}\n"
                     f"Exit Reason      : {ex['exit_reason']}\n"
                     f"{'─' * 44}\n"
-                    f"Realised PnL     : INR {_sign(pnl)}\n"
+                    f"Realised PnL     : ${_sign(pnl_usd)}  (INR {_sign(pnl)})\n"
                     f"Return           : {_sign_pct(pnl_pct)}\n"
                     f"```"
                 ),
@@ -141,7 +150,7 @@ class PortfolioReporter:
             self._post({
                 "content": (
                     f"**AZALYST PAPER TRADE  |  CLOSED  |  {ex['ticker']}  "
-                    f"|  PnL: INR {_sign(pnl)}  ({_sign_pct(pnl_pct)})**"
+                    f"|  PnL: ${_sign(pnl_usd)}  ({_sign_pct(pnl_pct)})**"
                 ),
                 "embeds": [embed],
             })
@@ -169,9 +178,19 @@ class PortfolioReporter:
         positions     = summary["open_positions"]
         best          = summary.get("best_trade")
         worst         = summary.get("worst_trade")
+        rate          = summary.get("usd_inr_rate", 83.5)
 
         today_str = datetime.now(timezone.utc).strftime("%d %b %Y")
         color     = _pnl_color(unrealised + realised)
+
+        # USD equivalents
+        pv_usd    = port_value / rate
+        dep_usd   = deposited / rate
+        cash_usd  = cash / rate
+        inv_usd   = invested / rate
+        cur_usd   = current_val / rate
+        unr_usd   = unrealised / rate
+        rel_usd   = realised / rate
 
         # ── Embed 1: Portfolio Overview ───────────────────────────────────
         embed1 = {
@@ -179,20 +198,21 @@ class PortfolioReporter:
             "description": (
                 f"**{today_str}**\n\n"
                 f"```\n"
-                f"Portfolio Value      : INR {port_value:>12,.2f}\n"
-                f"Total Deposited      : INR {deposited:>12,.2f}\n"
+                f"Portfolio Value      : ${pv_usd:>12,.2f}  (INR {port_value:>12,.2f})\n"
+                f"Total Deposited      : ${dep_usd:>12,.2f}  (INR {deposited:>12,.2f})\n"
                 f"Overall Return       : {_sign_pct(total_ret_pct):>12}\n"
-                f"{'─' * 44}\n"
-                f"Cash Available       : INR {cash:>12,.2f}\n"
-                f"Capital Deployed     : INR {invested:>12,.2f}\n"
-                f"Current Market Value : INR {current_val:>12,.2f}\n"
-                f"Unrealised PnL       : INR {_sign(unrealised):>12}\n"
-                f"Realised PnL (total) : INR {_sign(realised):>12}\n"
-                f"{'─' * 44}\n"
+                f"{'─' * 56}\n"
+                f"Cash Available       : ${cash_usd:>12,.2f}\n"
+                f"Capital Deployed     : ${inv_usd:>12,.2f}\n"
+                f"Current Market Value : ${cur_usd:>12,.2f}\n"
+                f"Unrealised PnL       : ${_sign(unr_usd):>12}\n"
+                f"Realised PnL (total) : ${_sign(rel_usd):>12}\n"
+                f"{'─' * 56}\n"
                 f"Open Positions       : {open_count:>12}\n"
                 f"Closed Trades        : {closed_count:>12}\n"
                 f"Win Rate             : {win_rate:>11.1f}%\n"
                 f"Winners / Losers     : {winners} / {losers}\n"
+                f"USD/INR Rate         : {rate:>12.2f}\n"
                 f"```"
             ),
             "color": color,
@@ -265,7 +285,7 @@ class PortfolioReporter:
                     f"```\n"
                     f"  Total Closed Trades  : {closed_count}\n"
                     f"  Win Rate             : {win_rate:.1f}%\n"
-                    f"  Total Realised PnL   : INR {_sign(realised)}\n"
+                    f"  Total Realised PnL   : ${_sign(realised / rate)}  (INR {_sign(realised)})\n"
                     f"  {'─' * 46}\n"
                     f"{track_block}\n"
                     f"```"
@@ -302,10 +322,10 @@ class PortfolioReporter:
         self._post({
             "content": (
                 f"**AZALYST  |  END OF DAY  |  {today_str}  "
-                f"|  PORTFOLIO: INR {port_value:,.0f}  "
+                f"|  PORTFOLIO: ${pv_usd:,.0f}  "
                 f"|  RETURN: {_sign_pct(total_ret_pct)}**"
             ),
             "embeds": [embed1, embed2, embed3],
         })
 
-        log.info(f"EOD report sent — Portfolio: INR {port_value:,.2f} | Return: {total_ret_pct:+.2f}%")
+        log.info(f"EOD report sent — Portfolio: ${pv_usd:,.2f} | Return: {total_ret_pct:+.2f}%")

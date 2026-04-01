@@ -10,9 +10,9 @@
 
 Azalyst ETF Intelligence is a research infrastructure project for monitoring global news, classifying macro developments into investable sectors, and routing only the highest-conviction observations into a structured alert workflow. It is designed as a disciplined research system rather than a financial product, broker integration layer, or automated trading stack.
 
-At a high level, the platform scans global news feeds, deduplicates and clusters related articles, applies a lightweight NLP-style sector classifier, computes a transparent five-factor confidence score, maps validated sector signals to ETFs across India (NSE/BSE) and global markets (NYSE/NASDAQ), and delivers structured reports to Discord. Every cycle is logged locally, and signal state is persisted so the system can enforce cooldowns, detect stronger updates, and maintain an audit trail across runs.
+At a high level, the platform scans global news feeds, deduplicates and clusters related articles, applies a lightweight NLP-style sector classifier, computes a transparent five-factor confidence score, maps validated sector signals to ETFs across global markets (NYSE, NASDAQ, NSE, BSE), and delivers structured reports to Discord. Every cycle is logged locally, and signal state is persisted so the system can enforce cooldowns, detect stronger updates, and maintain an audit trail across runs.
 
-The system displays ETF platform information dynamically — showing which brokers offer each instrument (e.g., "iShares by BlackRock — IBKR / Schwab / Fidelity" for US ETFs, "NSE/BSE listed — Zerodha / Dhan / Groww" for Indian ETFs). This allows you to trade instruments through your preferred broker while maintaining consistent signal quality.
+The system is fully **USD-denominated** — all portfolio values, P&L, and capital tracking display in US dollars with INR shown as a secondary reference. ETF platform information is displayed dynamically, showing which brokers offer each instrument (e.g., "iShares by BlackRock — IBKR / Schwab / Fidelity" for US ETFs, "NSE/BSE listed — Zerodha / Dhan / Groww" for Indian ETFs). Access via IBKR, Schwab, Fidelity, INDmoney, Vested, Dhan, Groww, or Zerodha.
 
 **New in 2026**: LLM-powered optimization using NVIDIA NIM's Mistral 7B Instruct model provides:
 - Automated portfolio performance analysis with actionable improvement suggestions
@@ -34,7 +34,10 @@ Core capabilities:
 - Global news scanning through **[WorldMonitor](https://github.com/koala73/worldmonitor)** and direct RSS feeds.
 - Sector classification across 14+ research buckets using weighted keyword rules, negation handling, and article clustering.
 - Five-factor confidence scoring with transparent component breakdowns.
-- ETF opportunity mapping for India (NSE/BSE) and global markets (NYSE/NASDAQ) with dynamic broker platform display.
+- ETF opportunity mapping across NYSE, NASDAQ, NSE, and BSE with dynamic broker platform display.
+- **USD-first dashboard** with dark theme, dual-currency display, and Global Opportunity Monitor.
+- **50/50 monthly reserve** — half of each deposit is held for high-conviction opportunities.
+- **Compare-before-deploy** — new signals are ranked against existing positions before capital allocation.
 - Structured Discord delivery via **[Discord Webhooks](https://discord.com/developers/docs/resources/webhook)**.
 - Local state persistence and log-based auditability.
 - **✨ LLM-powered analysis** with NVIDIA NIM (Mistral 7B) for strategy optimization and macro regime detection.
@@ -77,18 +80,20 @@ Every 30 minutes, the system automatically:
 | | |
 |---|---|
 | **Experiment started** | March 2026 |
-| **Monthly capital** | ₹10,000 / month (auto-credited) |
-| **Total after 6 months** | ₹60,000 deposited |
+| **Monthly capital** | $10,000 USD / month (auto-credited) |
+| **Capital strategy** | 50% deployed immediately, 50% held in reserve |
+| **Total after 6 months** | $60,000 deposited |
 | **Stop-loss** | −10% per position |
 | **Max hold period** | 180 days |
 | **Max open positions** | 6 at a time |
+| **Currency** | USD primary, INR secondary |
 
 **Live dashboard (updates every 30 min):**
 👉 https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/
 
 The dashboard shows current portfolio value, open positions with live P&L, closed trade history, win rate, and overall return vs capital deposited.
 
-**The goal:** After 6 months, does this system outperform a simple Nifty 50 index fund? If yes, the signal model has demonstrated real edge and real capital deployment becomes worth considering. If not, the experiment saved real money and identified what needs improvement — which is exactly what paper trading is for.
+**The goal:** After 6 months, does this system outperform a simple S&P 500 index fund? If yes, the signal model has demonstrated real edge and real capital deployment becomes worth considering. If not, the experiment saved real money and identified what needs improvement — which is exactly what paper trading is for.
 
 ---
 
@@ -293,10 +298,16 @@ Example: `Strait of Hormuz airstrike = 92/100`
 | Cryptocurrencies | `—` | `IBIT`, `BITQ` |
 
 **Broker flexibility:** The system displays ETFs with their available trading platforms:
-- **India ETFs**: NSE/BSE listed — tradable via Zerodha, Dhan, Groww, or any Indian broker
-- **Global ETFs**: NYSE/NASDAQ listed — tradable via IBKR, Schwab, Fidelity, or any international broker
+- **US ETFs**: NYSE/NASDAQ listed — tradable via IBKR, Schwab, Fidelity, or any international broker
+- **India ETFs**: NSE/BSE listed — tradable via INDmoney, Vested, Zerodha, Dhan, Groww, or any Indian broker
 
 Each Discord report shows the exact platform information (e.g., "iShares by BlackRock — IBKR / Schwab / Fidelity") so you know where each ETF is available.
+
+**Capital management:**
+- Each monthly $10,000 deposit is split 50/50 — half deployed immediately, half held in reserve.
+- Reserve is released only when a new signal scores higher than all existing open positions.
+- If no new signal beats existing positions, capital tops up the strongest current holding.
+- This ensures capital flows only toward the highest-conviction opportunities.
 
 ## File Structure
 

@@ -4,6 +4,7 @@ const CHART_COLORS = ["#3b82f6", "#f59e0b", "#22c55e", "#8b5cf6", "#ef4444", "#0
 
 let pieChart = null;
 let barChart = null;
+let usdInrRate = 83.5;
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -12,6 +13,13 @@ function escapeHtml(value) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
+}
+
+function usd(value) {
+  return "$" + Number((value || 0) / usdInrRate).toLocaleString("en-US", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
 }
 
 function rupee(value) {
@@ -71,7 +79,7 @@ function updateMarketSnapshot(data) {
   container.innerHTML = items.map(item => `
     <div class="market-tile">
       <div class="market-label">${escapeHtml(item.label)}</div>
-      <div class="market-price">${Number(item.price || 0).toLocaleString("en-IN", { maximumFractionDigits: 2 })}</div>
+      <div class="market-price">${Number(item.price || 0).toLocaleString("en-US", { maximumFractionDigits: 2 })}</div>
       <div class="market-chg ${item.direction === "up" ? "green" : "red"}">${escapeHtml(item.change_str || "-")}</div>
       <div class="market-meta">${escapeHtml(item.region || "")}</div>
     </div>
@@ -199,24 +207,35 @@ function updateConfidence(data) {
 }
 
 function updateStats(data) {
-  document.getElementById("portfolioValue").textContent = rupee(data.portfolio_value);
-  document.getElementById("totalDeposited").textContent = rupee(data.total_deposited);
-  document.getElementById("cashAvailable").textContent = rupee(data.cash);
+  document.getElementById("portfolioValue").textContent = usd(data.portfolio_value);
+  document.getElementById("portfolioValueINR").textContent = rupee(data.portfolio_value);
+  document.getElementById("totalDeposited").textContent = usd(data.total_deposited);
+  document.getElementById("totalDepositedINR").textContent = rupee(data.total_deposited);
+  document.getElementById("cashAvailable").textContent = usd(data.cash);
+  document.getElementById("cashAvailableINR").textContent = rupee(data.cash);
+
+  const reserve = Number(data.monthly_reserve || 0);
+  document.getElementById("monthlyReserve").textContent = usd(reserve);
+  document.getElementById("monthlyReserveINR").textContent = rupee(reserve);
 
   const unrealised = document.getElementById("unrealisedPnl");
   const realised = document.getElementById("realisedPnl");
-  unrealised.textContent = `\u20B9${data.unrealised_str || "0.00"}`;
-  realised.textContent = `\u20B9${data.realised_str || "0.00"}`;
-  unrealised.className = `stat-val ${pnlClass(data.unrealised_pnl)}`;
-  realised.className = `stat-val ${pnlClass(data.realised_pnl)}`;
+  const unrealisedVal = Number(data.unrealised_pnl || 0);
+  const realisedVal = Number(data.realised_pnl || 0);
+  unrealised.textContent = `${unrealisedVal >= 0 ? "+" : ""}${usd(unrealisedVal)}`;
+  realised.textContent = `${realisedVal >= 0 ? "+" : ""}${usd(realisedVal)}`;
+  unrealised.className = `stat-val ${pnlClass(unrealisedVal)}`;
+  realised.className = `stat-val ${pnlClass(realisedVal)}`;
+  document.getElementById("unrealisedPnlINR").textContent = rupee(unrealisedVal);
+  document.getElementById("realisedPnlINR").textContent = rupee(realisedVal);
 
   document.getElementById("portfolioChange").textContent = `${data.change || "-"} total return`;
   document.getElementById("portfolioChange").className = `stat-sub ${pnlClass(data.change_raw)}`;
-  document.getElementById("positionsSummary").textContent = `${(data.positions || []).length} open - ${Number(data.closed_trades || 0)} closed`;
+  document.getElementById("positionsSummary").textContent = `${(data.positions || []).length} open \u2014 ${Number(data.closed_trades || 0)} closed`;
 
   const partial = Number(data.partial_realised_pnl || 0);
   document.getElementById("realisedSub").textContent = partial !== 0
-    ? `Closed trades + partial exits (${rupee(partial)} partial)`
+    ? `Closed trades + partial exits (${usd(partial)} partial)`
     : "Closed trades and partial exits";
 }
 
@@ -225,8 +244,8 @@ function ensurePieChart(labels, values) {
   if (!pieChart) {
     pieChart = new Chart(document.getElementById("pieChart"), {
       type: "doughnut",
-      data: { labels, datasets: [{ data: values, backgroundColor: CHART_COLORS.slice(0, labels.length), borderWidth: 2, borderColor: "#ffffff" }] },
-      options: { plugins: { legend: { position: "right", labels: { color: "#475569", font: { size: 12 }, padding: 12, boxWidth: 12 } } }, cutout: "62%", responsive: true, animation: { duration: 400 } }
+      data: { labels, datasets: [{ data: values, backgroundColor: CHART_COLORS.slice(0, labels.length), borderWidth: 2, borderColor: "#111827" }] },
+      options: { plugins: { legend: { position: "right", labels: { color: "#94a3b8", font: { size: 12 }, padding: 12, boxWidth: 12 } } }, cutout: "62%", responsive: true, animation: { duration: 400 } }
     });
     return;
   }
@@ -239,16 +258,17 @@ function ensurePieChart(labels, values) {
 function ensureBarChart(labels, values) {
   if (!labels.length) return;
   const colors = values.map(value => Number(value || 0) >= 0 ? "#22c55e" : "#ef4444");
+  const usdValues = values.map(v => Number((v || 0) / usdInrRate).toFixed(2));
   if (!barChart) {
     barChart = new Chart(document.getElementById("barChart"), {
       type: "bar",
-      data: { labels, datasets: [{ label: "P&L (INR)", data: values, backgroundColor: colors, borderRadius: 5 }] },
-      options: { plugins: { legend: { display: false } }, scales: { x: { ticks: { color: "#64748b", font: { size: 12 } }, grid: { display: false } }, y: { ticks: { color: "#64748b", font: { size: 12 } }, grid: { color: "#f1f5f9" } } }, responsive: true, animation: { duration: 400 } }
+      data: { labels, datasets: [{ label: "P&L (USD)", data: usdValues, backgroundColor: colors, borderRadius: 5 }] },
+      options: { plugins: { legend: { display: false } }, scales: { x: { ticks: { color: "#94a3b8", font: { size: 12 } }, grid: { display: false } }, y: { ticks: { color: "#94a3b8", font: { size: 12 } }, grid: { color: "#1e293b" } } }, responsive: true, animation: { duration: 400 } }
     });
     return;
   }
   barChart.data.labels = labels;
-  barChart.data.datasets[0].data = values;
+  barChart.data.datasets[0].data = usdValues;
   barChart.data.datasets[0].backgroundColor = colors;
   barChart.update();
 }
@@ -271,7 +291,7 @@ function updatePositions(data) {
   const tbody = document.getElementById("positionsTbody");
   const positions = data.positions || [];
   if (!positions.length) {
-    tbody.innerHTML = `<tr><td colspan="15" class="no-data">No open positions yet</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="16" class="no-data">No open positions yet</td></tr>`;
     return;
   }
 
@@ -280,13 +300,14 @@ function updatePositions(data) {
       <td>${escapeHtml(position.trade_id)}</td>
       <td><strong>${escapeHtml(position.ticker)}</strong></td>
       <td style="max-width:170px;overflow:hidden;text-overflow:ellipsis;">${escapeHtml(position.etf_name)}</td>
+      <td>${escapeHtml(position.exchange || "NYSE")}</td>
       <td>${escapeHtml(position.sector)}</td>
-      <td>${rupee(position.entry)}</td>
-      <td>${rupee(position.current)}</td>
-      <td>${rupee(position.peak_price)}</td>
+      <td>${usd(position.entry)}</td>
+      <td>${usd(position.current)}</td>
+      <td>${usd(position.peak_price)}</td>
       <td class="${pnlClass(position.pnl_pct)}">${escapeHtml(position.pnl_pct_str)}</td>
-      <td class="${pnlClass(position.pnl)}"><strong>\u20B9${escapeHtml(position.pnl_str)}</strong></td>
-      <td>${rupee(position.trail_stop)}</td>
+      <td class="${pnlClass(position.pnl)}"><strong>${usd(position.pnl)}</strong></td>
+      <td>${usd(position.trail_stop)}</td>
       <td class="${Number(position.dist_to_trail_pct || 0) <= 3 ? "red" : Number(position.dist_to_trail_pct || 0) <= 6 ? "amber" : "green"}">${Number(position.dist_to_trail_pct || 0).toFixed(2)}%</td>
       <td>${escapeHtml(String(position.days_held || 0))}d</td>
       <td>${escapeHtml(String(position.confidence || 0))}/100</td>
@@ -353,7 +374,7 @@ function updateClosedTrades(data) {
   const tbody = document.getElementById("closedTbody");
   const trades = data.closed_trades_list || [];
   if (!trades.length) {
-    tbody.innerHTML = `<tr><td colspan="10" class="no-data">No closed trades yet</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="11" class="no-data">No closed trades yet</td></tr>`;
     return;
   }
 
@@ -362,9 +383,10 @@ function updateClosedTrades(data) {
       <td>${escapeHtml(trade.trade_id)}</td>
       <td><strong>${escapeHtml(trade.ticker)}</strong></td>
       <td style="max-width:170px;overflow:hidden;text-overflow:ellipsis;">${escapeHtml(trade.etf_name)}</td>
-      <td>${rupee(trade.entry)}</td>
-      <td>${rupee(trade.exit)}</td>
-      <td class="${pnlClass(trade.pnl)}"><strong>\u20B9${escapeHtml(trade.pnl_str)}</strong></td>
+      <td>${escapeHtml(trade.platform || trade.exchange || "NYSE")}</td>
+      <td>${usd(trade.entry)}</td>
+      <td>${usd(trade.exit)}</td>
+      <td class="${pnlClass(trade.pnl)}"><strong>${usd(trade.pnl)}</strong></td>
       <td class="${pnlClass(trade.pnl_pct)}">${escapeHtml(trade.pnl_pct_str)}</td>
       <td>${escapeHtml(String(trade.days_held || 0))}d</td>
       <td>${escapeHtml(trade.exit_reason)}</td>
@@ -384,9 +406,41 @@ function updateLogs(data) {
 }
 
 function updateTimestamp(data) {
-  const localTime = new Date().toLocaleTimeString("en-IN");
-  const generated = data.generated_at ? ` - data ${data.generated_at}` : "";
-  document.getElementById("lastUpdated").textContent = `Page updated ${localTime}${generated}`;
+  const localTime = new Date().toLocaleTimeString("en-US");
+  const generated = data.generated_at ? ` \u2014 data ${data.generated_at}` : "";
+  document.getElementById("lastUpdated").textContent = `Updated ${localTime}${generated}`;
+}
+
+function updateFxRate(data) {
+  usdInrRate = Number(data.usd_inr_rate || 83.5);
+  document.getElementById("fxRate").textContent = `USD/INR: ${usdInrRate.toFixed(2)}`;
+}
+
+function updateGlobalMonitor(data) {
+  const container = document.getElementById("opportunityGrid");
+  const signals = data.signals || [];
+  if (!signals.length) {
+    container.innerHTML = `<div class="card" style="grid-column:1/-1"><div class="no-data">No active opportunities \u2014 waiting for signal cycle</div></div>`;
+    return;
+  }
+
+  const sorted = signals.slice().sort((a, b) => Number(b.confidence || 0) - Number(a.confidence || 0));
+  container.innerHTML = sorted.slice(0, 6).map(signal => {
+    const conf = Number(signal.confidence || 0);
+    const tier = conf >= 80 ? "opp-crit" : conf >= 70 ? "opp-high" : conf >= 60 ? "opp-med" : "opp-low";
+    const global = (signal.global_etfs || []).slice(0, 3).join(", ") || "-";
+    const india = (signal.india_etfs || []).slice(0, 3).join(", ") || "-";
+    return `
+      <div class="opp-card ${tier}">
+        <div class="opp-title">${escapeHtml(signal.sector_label)}</div>
+        <div class="opp-conf">${severityBadge(signal.severity)} <span style="margin-left:8px;color:#f1f5f9;font-weight:700">${conf}/100</span></div>
+        <div class="opp-etfs">
+          <span class="opp-etf-label">Global:</span> ${escapeHtml(global)}<br>
+          <span class="opp-etf-label">India:</span> ${escapeHtml(india)}
+        </div>
+      </div>
+    `;
+  }).join("");
 }
 
 function fetchAndUpdate() {
@@ -396,14 +450,16 @@ function fetchAndUpdate() {
       return response.json();
     })
     .then(data => {
+      updateFxRate(data);
       updateMarketSnapshot(data);
       updateRiskPanel(data);
-      updateSignalCards(data);
-      updateArticles(data);
-      updateConfidence(data);
       updateStats(data);
       updateCharts(data);
       updatePositions(data);
+      updateGlobalMonitor(data);
+      updateSignalCards(data);
+      updateArticles(data);
+      updateConfidence(data);
       updateTrackRecord(data);
       updateClosedTrades(data);
       updateLogs(data);
@@ -411,7 +467,7 @@ function fetchAndUpdate() {
     })
     .catch(error => {
       console.warn(error.message);
-      document.getElementById("lastUpdated").textContent = "Update failed - retrying...";
+      document.getElementById("lastUpdated").textContent = "Update failed \u2014 retrying...";
     });
 }
 
