@@ -6,26 +6,166 @@
 <title>Azalyst ETF Intelligence — Global Monitor</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',Arial,sans-serif;background:#0b1120;color:#e2e8f0;padding:0}
-.dashboard-wrap{max-width:1440px;margin:0 auto;padding:20px 24px}
-.header{font-size:18px;font-weight:700;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid #1e293b;display:flex;align-items:center;gap:12px;color:#f1f5f9}.dot{width:8px;height:8px;background:#22c55e;border-radius:50%;animation:pulse 2s infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}.running{font-size:12px;color:#22c55e;font-weight:600}.last-updated{font-size:11px;color:#64748b;margin-left:auto}.fx-rate{font-size:11px;color:#94a3b8;background:#1e293b;padding:3px 10px;border-radius:6px}
-.section-header{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}.badge-head{font-size:11px;font-weight:700;letter-spacing:.5px;padding:5px 14px;border-radius:20px;background:#1e3a5f;color:#60a5fa;text-transform:uppercase}.badge-port{background:#14532d;color:#4ade80}.badge-risk{background:#450a0a;color:#fca5a5}.badge-trade{background:#422006;color:#fbbf24}.badge-track{background:#3b0764;color:#c084fc}.badge-monitor{background:#0c4a6e;color:#38bdf8}.desc{font-size:12px;color:#64748b}.divider{border:none;border-top:1px solid #1e293b;margin:28px 0 20px}
-.grid2,.grid3,.grid6,.risk-grid,.track-grid,.kpi-row{display:grid;gap:14px;margin-bottom:14px}.grid2{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr 1fr 1fr}.grid6{grid-template-columns:repeat(6,1fr)}.risk-grid{grid-template-columns:repeat(4,1fr)}.track-grid{grid-template-columns:repeat(4,1fr)}.kpi-row{grid-template-columns:repeat(5,1fr)}.auto-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}.signal-stack{display:flex;flex-direction:column;gap:12px}
-.card,.market-tile,.risk-card,.signal-card,.kpi-item,.track-card{background:#111827;border:1px solid #1e293b;border-radius:10px;padding:14px}.card-title,.section-title,.risk-label,.market-label,.signal-box-title{font-size:10px;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.5px}.section-title,.card-title{margin-bottom:10px}.stat-val,.risk-value,.market-price,.kpi-val,.track-val{font-size:22px;font-weight:700;color:#f1f5f9}.stat-sub,.risk-sub,.market-meta{font-size:11px;margin-top:4px;color:#64748b}.stat-secondary{font-size:12px;color:#475569;margin-top:2px}.green{color:#22c55e}.red{color:#ef4444}.amber{color:#f59e0b}.muted{color:#64748b}
-.market-tile{padding:10px 12px}.market-price{margin:4px 0 2px;font-size:16px}.market-chg{font-size:11px;font-weight:700}.pill,.tag,.msg-tag,.badge{display:inline-block;font-size:10px;padding:3px 8px;border-radius:999px;font-weight:700}.pill-normal,.pill-ok,.tag-green,.tag-bull,.badge-win{background:#052e16;color:#4ade80}.pill-elevated,.tag-gold,.badge-high{background:#451a03;color:#fbbf24}.pill-high{background:#431407;color:#fb923c}.pill-extreme,.pill-bad,.tag-red,.tag-bear,.badge-crit,.badge-loss{background:#450a0a;color:#f87171}.pill-unknown,.tag-neu,.badge-low{background:#1e293b;color:#94a3b8}.tag-blue,.badge-med{background:#172554;color:#60a5fa}.tag-purple,.badge-half{background:#3b0764;color:#c084fc}
-.bar-bg,.conf-bar{height:6px;background:#1e293b;border-radius:999px;overflow:hidden}.bar-fill,.conf-fill{height:100%;border-radius:999px;background:#3b82f6}.bar-fill.at-cap{background:#ef4444}.conf-fill{background:#f59e0b}.sector-row,.conf-row{margin-bottom:10px}.sector-head,.conf-label,.breakdown-row{display:flex;justify-content:space-between;gap:10px;font-size:12px;margin-bottom:5px;color:#cbd5e1}.breakdown-row{margin-bottom:4px}
-.signal-head{display:flex;justify-content:space-between;gap:10px;margin-bottom:10px}.signal-title{font-size:14px;font-weight:700;color:#f1f5f9}.signal-meta,.signal-headline,.signal-box-body,.msg-item{font-size:12px;line-height:1.5;color:#94a3b8}.signal-tags{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.signal-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.signal-box{background:#0f172a;border:1px solid #1e293b;border-radius:8px;padding:10px}
-.msg-box,.log-box{max-height:220px;overflow-y:auto}.msg-item{padding:8px 10px;border-radius:8px;margin-bottom:7px;background:#0f172a;border:1px solid #1e293b}.msg-tag{margin-right:6px}.threshold-note{font-size:11px;color:#64748b;margin-top:10px}
-.tbl-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:12px}th{text-align:left;padding:8px 10px;color:#64748b;font-weight:600;border-bottom:1px solid #1e293b;white-space:nowrap}td{padding:8px 10px;border-bottom:1px solid #111827;white-space:nowrap;color:#cbd5e1}tr:last-child td{border-bottom:none}tr:hover td{background:#0f172a}.no-data{text-align:center;color:#64748b;padding:16px 0}
-.track-card,.kpi-item{text-align:center}.track-lbl,.kpi-lbl{font-size:10px;color:#64748b;margin-top:4px;text-transform:uppercase;letter-spacing:.5px}.log-box{background:#0f172a;border:1px solid #1e293b;padding:12px;font-family:'Courier New',monospace;font-size:11px;line-height:1.7;border-radius:8px}.log-info{color:#38bdf8}.log-ok{color:#22c55e}.log-warn{color:#f59e0b}canvas{max-width:100%}
-.opp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-bottom:14px}.opp-card{background:#111827;border:1px solid #1e293b;border-radius:10px;padding:16px;position:relative;overflow:hidden}.opp-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;border-radius:4px 0 0 4px}.opp-card.opp-crit::before{background:#ef4444}.opp-card.opp-high::before{background:#f59e0b}.opp-card.opp-med::before{background:#3b82f6}.opp-card.opp-low::before{background:#22c55e}.opp-title{font-size:14px;font-weight:700;color:#f1f5f9;margin-bottom:4px}.opp-conf{font-size:12px;color:#94a3b8;margin-bottom:8px}.opp-etfs{font-size:11px;color:#64748b;line-height:1.6}.opp-etf-label{font-weight:600;color:#94a3b8}
-@media(max-width:1100px){.grid6,.risk-grid,.kpi-row{grid-template-columns:repeat(3,1fr)}.grid3{grid-template-columns:1fr 1fr}}@media(max-width:900px){.grid2,.signal-grid,.track-grid,.grid3{grid-template-columns:1fr}.risk-grid,.grid6{grid-template-columns:repeat(2,1fr)}}@media(max-width:700px){.grid6,.risk-grid,.track-grid,.kpi-row{grid-template-columns:1fr}}
+/* ── RESET ── */
+*{box-sizing:border-box;margin:0;padding:0}
+
+/* ── BASE ── */
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#F1F5F9;color:#0F172A;padding:0;font-size:14px;line-height:1.5}
+
+/* ── LAYOUT ── */
+.dashboard-wrap{max-width:1440px;margin:0 auto}
+
+/* ── HEADER ── */
+.header{background:#0C1B33;padding:0 28px;height:60px;display:flex;align-items:center;gap:14px;border-bottom:3px solid #F97316;color:#F8FAFC;font-size:15px;font-weight:700;letter-spacing:-.2px}
+.header-brand{display:flex;align-items:center;gap:8px}
+.header-brand .brand-name{font-size:17px;font-weight:800;letter-spacing:-.5px;color:#FFFFFF}
+.header-brand .brand-accent{color:#F97316}
+.header-brand .brand-sub{font-size:12px;font-weight:400;color:#64748B;margin-left:4px}
+.dot{width:8px;height:8px;background:#22C55E;border-radius:50%;animation:pulse 2s infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.running{font-size:10px;font-weight:700;color:#22C55E;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);padding:3px 10px;border-radius:4px;letter-spacing:.8px;text-transform:uppercase}
+.last-updated{font-size:11px;color:#64748B;margin-left:auto;font-weight:400}
+.fx-rate{font-size:12px;font-weight:700;color:#F97316;background:rgba(249,115,22,.1);border:1px solid rgba(249,115,22,.25);padding:4px 12px;border-radius:4px}
+
+/* ── PAGE BODY ── */
+.page-body{padding:28px 28px 48px 28px}
+
+/* ── SECTION HEADERS ── */
+.section-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.badge-head{font-size:10px;font-weight:800;letter-spacing:1px;padding:5px 14px;border-radius:3px;text-transform:uppercase;background:#0C1B33;color:#FFFFFF}
+.badge-port{background:#0C1B33;color:#FFFFFF;border-left:3px solid #0EA5E9}
+.badge-risk{background:#0C1B33;color:#FFFFFF;border-left:3px solid #EF4444}
+.badge-trade{background:#0C1B33;color:#FFFFFF;border-left:3px solid #F97316}
+.badge-track{background:#0C1B33;color:#FFFFFF;border-left:3px solid #8B5CF6}
+.badge-monitor{background:#F97316;color:#FFFFFF}
+.desc{font-size:12px;color:#64748B}
+.divider{border:none;border-top:1px solid #E2E8F0;margin:32px 0}
+
+/* ── GRIDS ── */
+.grid2,.grid3,.grid6,.risk-grid,.track-grid,.kpi-row{display:grid;gap:14px;margin-bottom:16px}
+.grid2{grid-template-columns:1fr 1fr}
+.grid3{grid-template-columns:1fr 1fr 1fr}
+.grid6{grid-template-columns:repeat(6,1fr)}
+.risk-grid{grid-template-columns:repeat(4,1fr)}
+.track-grid{grid-template-columns:repeat(4,1fr)}
+.kpi-row{grid-template-columns:repeat(5,1fr)}
+.auto-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.signal-stack{display:flex;flex-direction:column;gap:12px}
+
+/* ── CARDS ── */
+.card,.risk-card,.signal-card,.kpi-item,.track-card{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:8px;padding:16px;box-shadow:0 1px 3px rgba(15,23,42,.06)}
+
+/* ── MARKET TILES ── */
+.market-tile{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:8px;padding:12px 14px;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.market-label{font-size:10px;color:#94A3B8;font-weight:700;text-transform:uppercase;letter-spacing:.6px}
+.market-price{font-size:17px;font-weight:700;color:#0F172A;margin:5px 0 2px;font-variant-numeric:tabular-nums}
+.market-chg{font-size:11px;font-weight:700}
+.market-meta{font-size:10px;color:#CBD5E1;margin-top:2px;font-weight:600;letter-spacing:.4px}
+
+/* ── CARD LABELS ── */
+.card-title,.section-title,.risk-label,.market-label,.signal-box-title{font-size:10px;color:#94A3B8;font-weight:700;text-transform:uppercase;letter-spacing:.7px}
+.section-title,.card-title{margin-bottom:12px}
+
+/* ── VALUES ── */
+.stat-val,.risk-value,.market-price,.kpi-val,.track-val{font-size:24px;font-weight:700;color:#0F172A;font-variant-numeric:tabular-nums;letter-spacing:-.5px}
+.stat-sub,.risk-sub,.market-meta{font-size:11px;margin-top:5px;color:#94A3B8}
+.stat-secondary{font-size:12px;color:#94A3B8;margin-top:3px;font-variant-numeric:tabular-nums}
+
+/* ── SEMANTIC COLORS ── */
+.green{color:#059669}
+.red{color:#DC2626}
+.amber{color:#D97706}
+.muted{color:#94A3B8}
+
+/* ── PILLS & TAGS & BADGES ── */
+.pill,.tag,.msg-tag,.badge{display:inline-block;font-size:10px;padding:3px 8px;border-radius:3px;font-weight:700;letter-spacing:.3px}
+.pill-normal,.pill-ok,.tag-green,.tag-bull,.badge-win{background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0}
+.pill-elevated,.tag-gold,.badge-high{background:#FFFBEB;color:#D97706;border:1px solid #FDE68A}
+.pill-high{background:#FFF7ED;color:#EA580C;border:1px solid #FDBA74}
+.pill-extreme,.pill-bad,.tag-red,.tag-bear,.badge-crit,.badge-loss{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
+.pill-unknown,.tag-neu,.badge-low{background:#F8FAFC;color:#64748B;border:1px solid #CBD5E1}
+.tag-blue,.badge-med{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE}
+.tag-purple,.badge-half{background:#F5F3FF;color:#7C3AED;border:1px solid #DDD6FE}
+
+/* ── BARS ── */
+.bar-bg,.conf-bar{height:5px;background:#F1F5F9;border-radius:999px;overflow:hidden}
+.bar-fill,.conf-fill{height:100%;border-radius:999px;background:#F97316}
+.bar-fill.at-cap{background:#DC2626}
+.conf-fill{background:#F97316}
+.sector-row,.conf-row{margin-bottom:12px}
+.sector-head,.conf-label,.breakdown-row{display:flex;justify-content:space-between;gap:10px;font-size:12px;margin-bottom:5px;color:#334155}
+.breakdown-row{margin-bottom:4px;font-size:11px;color:#64748B}
+
+/* ── SIGNAL CARDS ── */
+.signal-head{display:flex;justify-content:space-between;gap:10px;margin-bottom:10px}
+.signal-title{font-size:13px;font-weight:700;color:#0F172A}
+.signal-meta,.signal-headline,.signal-box-body,.msg-item{font-size:12px;line-height:1.5;color:#475569}
+.signal-tags{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.signal-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.signal-box{background:#F8FAFC;border:1px solid #E2E8F0;border-radius:6px;padding:10px}
+
+/* ── MSG BOX ── */
+.msg-box,.log-box{max-height:220px;overflow-y:auto}
+.msg-item{padding:10px 12px;border-radius:6px;margin-bottom:7px;background:#FAFAFA;border:1px solid #E2E8F0;border-left:3px solid #F97316}
+.msg-tag{margin-right:6px}
+.threshold-note{font-size:11px;color:#94A3B8;margin-top:10px}
+
+/* ── TABLES ── */
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{text-align:left;padding:10px 12px;color:#64748B;font-weight:700;font-size:10px;letter-spacing:.5px;text-transform:uppercase;border-bottom:2px solid #F1F5F9;white-space:nowrap;background:#FAFAFA}
+td{padding:10px 12px;border-bottom:1px solid #F8FAFC;white-space:nowrap;color:#334155;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#FFF7ED}
+.no-data{text-align:center;color:#94A3B8;padding:24px 0;font-size:13px}
+
+/* ── TRACK / KPI ── */
+.track-card,.kpi-item{text-align:center}
+.track-lbl,.kpi-lbl{font-size:10px;color:#94A3B8;margin-top:5px;text-transform:uppercase;letter-spacing:.6px;font-weight:700}
+
+/* ── LOG BOX (keep dark for readability) ── */
+.log-box{background:#0C1B33;border:1px solid #1E3A5F;padding:14px;font-family:'Cascadia Code','Courier New',monospace;font-size:11px;line-height:1.8;border-radius:8px}
+.log-info{color:#38BDF8}
+.log-ok{color:#34D399}
+.log-warn{color:#FCD34D}
+
+/* ── CHARTS ── */
+canvas{max-width:100%}
+
+/* ── OPPORTUNITY GRID ── */
+.opp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-bottom:16px}
+.opp-card{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:8px;padding:18px;position:relative;overflow:hidden;box-shadow:0 1px 3px rgba(15,23,42,.06)}
+.opp-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%}
+.opp-card.opp-crit::before{background:#DC2626}
+.opp-card.opp-high::before{background:#F59E0B}
+.opp-card.opp-med::before{background:#3B82F6}
+.opp-card.opp-low::before{background:#10B981}
+.opp-title{font-size:13px;font-weight:700;color:#0F172A;margin-bottom:6px}
+.opp-conf{font-size:12px;color:#64748B;margin-bottom:10px}
+.opp-etfs{font-size:11px;color:#64748B;line-height:1.7}
+.opp-etf-label{font-weight:700;color:#0F172A}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){.grid6,.risk-grid,.kpi-row{grid-template-columns:repeat(3,1fr)}.grid3{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.grid2,.signal-grid,.track-grid,.grid3{grid-template-columns:1fr}.risk-grid,.grid6{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.grid6,.risk-grid,.track-grid,.kpi-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="dashboard-wrap">
 
-<div class="header"><span>Azalyst ETF Intelligence — Global Monitor</span><span class="dot"></span><span class="running">Live</span><span class="fx-rate" id="fxRate">USD/INR: -</span><span class="last-updated" id="lastUpdated">-</span></div>
+<div class="header">
+  <div class="header-brand">
+    <span class="brand-name">Azalyst<span class="brand-accent">.</span></span>
+    <span class="brand-sub">ETF Intelligence — Global Monitor</span>
+  </div>
+  <span class="dot"></span>
+  <span class="running">Live</span>
+  <span class="fx-rate" id="fxRate">USD/INR: -</span>
+  <span class="last-updated" id="lastUpdated">-</span>
+</div>
+
+<div class="page-body">
 
 <div class="section-header"><span class="badge-head">Global Markets</span><span class="desc">Live indices, commodities, crypto, and volatility context for the ETF book</span></div>
 <div class="auto-grid" id="marketSnapshot"></div>
@@ -96,6 +236,7 @@
 
 <div class="card"><div class="section-title">System Log</div><div class="log-box" id="logTail"></div></div>
 
+</div><!-- end page-body -->
 </div>
 <script src="dashboard.js"></script>
 </body>
