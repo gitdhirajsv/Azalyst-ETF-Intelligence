@@ -616,35 +616,37 @@
     "article_count": 29
   },
   "banking_financial": {
-    "sent_at": "2026-03-31T07:33:10.293355+00:00",
-    "confidence": 82,
+    "sent_at": "2026-04-01T12:58:10.354715+00:00",
+    "confidence": 83,
     "sector_label": "Banking & Financial Sector",
-    "article_count": 28,
-    "severity": "CRITICAL",
+    "article_count": 10,
+    "severity": "HIGH",
     "regions": [
-      "middle_east",
       "americas",
-      "india",
-      "global"
+      "global",
+      "middle_east",
+      "europe"
     ],
     "sources": [
       "Markets-Economic Times",
-      "Oilprice.com"
+      "Bloomberg Markets",
+      "Finance",
+      "Cointelegraph.com News"
     ],
     "top_headlines": [
-      "Powell: Fed Will 'Wait and See' Before Pulling Interest Rate Trigger",
-      "US Stock Market | Fed stays put as Powell flags uncertainty from energy shock",
-      "Dollar surges in Asia as war's safe-haven shelter",
-      "Gold, silver prices rise 1% but analysts cautious after 15% March drop; here's why",
-      "Gold set for worst month in more than 17 years as US rate-cut hopes fade"
+      "US Stock Market | Rising war costs and inflation risks cloud outlook for US bond market",
+      "Fed Governor Miran still backs cuts, says interest rates could be 'about a point' lower this year",
+      "Who is Kevin Warsh? Trump\u2019s Fed pick wants \u2018regime change\u2019 at central bank",
+      "Morgan Stanley\u2019s Zentner Urges Stock Picking, Warns on US Recession Risks",
+      "Bitcoin nears $68K on easing Iran tensions, focus shifts to US jobs data on April 3"
     ],
-    "latest_ts": "2026-03-31T05:51:43+00:00",
+    "latest_ts": "2026-04-01T12:58:07.994221+00:00",
     "confidence_breakdown": {
-      "signal_strength": 25,
+      "signal_strength": 18.1,
       "volume_confirmation": 20.0,
-      "source_diversity": 7.5,
-      "recency": 15.0,
-      "geopolitical_severity": 15.0
+      "source_diversity": 10.0,
+      "recency": 20.0,
+      "geopolitical_severity": 15
     },
     "etf_recommendations": {
       "india": [
@@ -913,6 +915,120 @@
           "risk": "Medium",
           "timeframe": "1\u20136 months",
           "thesis": "Global energy diversification \u2014 Shell, BP, TotalEnergies, Saudi Aramco. Less US-centric."
+        }
+      ]
+    }
+  },
+  "emerging_markets|gold_precious_metals": {
+    "sent_at": "2026-04-01T12:58:08.897291+00:00",
+    "confidence": 80,
+    "sector_label": "Emerging Markets + Gold & Precious Metals",
+    "article_count": 22,
+    "severity": "LOW",
+    "regions": [
+      "americas",
+      "india",
+      "middle_east",
+      "global",
+      "asia_pacific"
+    ],
+    "sources": [
+      "World | Deutsche Welle",
+      "Markets-Economic Times",
+      "Oilprice.com"
+    ],
+    "top_headlines": [
+      "How China's propaganda is spinning the Iran war",
+      "Asian LNG Demand Plunges as Qatar Outages and Hormuz Chaos Bite",
+      "Global Markets | Greek stocks set for MSCI developed market return by 2027, marking post-crisis milestone",
+      "Global Market | Investors balancing fear and opportunity in current geopolitical uncertainty: Cameron Brandt",
+      "Gold prices rise above Rs 1.51 lakh/10 grams, silver drops around 1% amid hopes of Iran-US war de-escalation"
+    ],
+    "latest_ts": "2026-04-01T12:58:07.994666+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 25,
+      "volume_confirmation": 20.0,
+      "source_diversity": 7.5,
+      "recency": 20.0,
+      "geopolitical_severity": 8
+    },
+    "etf_recommendations": {
+      "india": [
+        {
+          "name": "Nippon India Nifty 50 BeES",
+          "ticker": "NIFTYBEES",
+          "note": "India as EM leader",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "India is the premier EM destination. Capital inflows support Nifty re-rating."
+        },
+        {
+          "name": "Nippon India Gold BeES",
+          "ticker": "GOLDBEES",
+          "note": "Largest Indian gold ETF by AUM",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Tracks physical gold in INR. Double benefit: gold price rise + potential INR depreciation."
+        },
+        {
+          "name": "HDFC Gold ETF",
+          "ticker": "HDFCGOLD",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Physical gold backed. Very liquid. Safe haven in geopolitical or inflation-driven scenarios."
+        }
+      ],
+      "global": [
+        {
+          "name": "iShares MSCI Emerging Markets ETF",
+          "ticker": "EEM",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Broad EM exposure. China, India, Taiwan, Brazil. EM rotation play vs US equities."
+        },
+        {
+          "name": "SPDR Portfolio Emerging Markets ETF",
+          "ticker": "SPEM",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Lower cost EM alternative (0.07% ER). Similar coverage to EEM."
+        },
+        {
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026."
+        },
+        {
+          "name": "VanEck Gold Miners ETF",
+          "ticker": "GDX",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium-High",
+          "timeframe": "3\u20139 months",
+          "thesis": "Gold miners offer 2\u20133x leverage to gold price. If gold surges, miners typically outperform."
+        },
+        {
+          "name": "VanEck Junior Gold Miners ETF",
+          "ticker": "GDXJ",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "2\u20136 months",
+          "thesis": "Smaller miners \u2014 highest leverage to gold. High risk/reward. Use only for strong conviction."
         }
       ]
     }
