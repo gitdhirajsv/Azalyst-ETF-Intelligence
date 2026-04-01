@@ -89,7 +89,7 @@ Every 30 minutes, the system automatically:
 | **Currency** | USD primary, INR secondary |
 
 **Live dashboard (updates every 30 min):**
-👉 https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/
+https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/
 
 The dashboard shows current portfolio value, open positions with live P&L, closed trade history, win rate, and overall return vs capital deposited.
 
@@ -159,7 +159,7 @@ This is the single launcher for the project. It starts the engine in a command p
 
 ---
 
-## 🤖 LLM Integration (NVIDIA NIM / Mistral 7B)
+##  LLM Integration (NVIDIA NIM / Mistral 7B)
 
 Azalyst now includes optional AI-powered optimization using **NVIDIA NIM** with Mistral 7B Instruct.
 
