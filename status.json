@@ -84,7 +84,7 @@
       "pnl_pct_str": "+0.15%",
       "confidence": 85,
       "severity": "CRITICAL",
-      "days_held": 3,
+      "days_held": 4,
       "half_exited": false
     },
     {
@@ -292,6 +292,10 @@
       "score": 85.0
     },
     {
+      "symbol": "Banking & Financial Sector",
+      "score": 85.0
+    },
+    {
       "symbol": "Cybersecurity",
       "score": 84.0
     },
@@ -324,16 +328,12 @@
       "score": 73.0
     },
     {
-      "symbol": "Banking & Financial Sector",
-      "score": 72.0
+      "symbol": "Nuclear Energy & Uranium",
+      "score": 69.0
     },
     {
       "symbol": "Commodities & Mining",
-      "score": 69.0
-    },
-    {
-      "symbol": "Nuclear Energy & Uranium",
-      "score": 69.0
+      "score": 67.0
     },
     {
       "symbol": "Emerging Markets + Commodities & Mining",
@@ -549,14 +549,14 @@
       "sector_label": "Gold & Precious Metals",
       "confidence": 85.0,
       "severity": "CRITICAL",
-      "article_count": 18,
-      "latest_at": "01 Apr 2026 13:53 UTC",
+      "article_count": 15,
+      "latest_at": "01 Apr 2026 20:27 UTC",
       "headline": "Gold prices rise above Rs 1.51 lakh/10 grams, silver drops around 1% amid hopes of Iran-US war de-escalation",
       "regions": [
+        "asia_pacific",
         "global",
-        "americas",
         "middle_east",
-        "asia_pacific"
+        "americas"
       ],
       "sources": [
         "Bloomberg Markets",
@@ -577,6 +577,41 @@
         "volume_confirmation": 20.0,
         "source_diversity": 10.0,
         "recency": 15.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector",
+      "confidence": 85.0,
+      "severity": "HIGH",
+      "article_count": 13,
+      "latest_at": "01 Apr 2026 22:00 UTC",
+      "headline": "Treasuries Rally Stalls as Investors Await Trump\u2019s Iran Speech",
+      "regions": [
+        "global",
+        "middle_east",
+        "americas"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Bloomberg Markets",
+        "Finance",
+        "Cointelegraph.com News"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 23.1,
+        "volume_confirmation": 20.0,
+        "source_diversity": 7.5,
+        "recency": 20.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -807,75 +842,6 @@
       }
     },
     {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector",
-      "confidence": 72.0,
-      "severity": "MEDIUM",
-      "article_count": 9,
-      "latest_at": "01 Apr 2026 18:48 UTC",
-      "headline": "Fed Governor Miran still backs cuts, says interest rates could be 'about a point' lower this year",
-      "regions": [
-        "middle_east",
-        "europe",
-        "americas"
-      ],
-      "sources": [
-        "Finance",
-        "Cointelegraph.com News",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 15.6,
-        "volume_confirmation": 16.0,
-        "source_diversity": 10.0,
-        "recency": 20.0,
-        "geopolitical_severity": 11.0
-      }
-    },
-    {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 69.0,
-      "severity": "MEDIUM",
-      "article_count": 8,
-      "latest_at": "01 Apr 2026 15:22 UTC",
-      "headline": "Three niche commodity prices are surging. What they show about China's grip on supply chains",
-      "regions": [
-        "india",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Finance",
-        "Oilprice.com"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 15.0,
-        "volume_confirmation": 16.0,
-        "source_diversity": 7.5,
-        "recency": 20.0,
-        "geopolitical_severity": 11.0
-      }
-    },
-    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 69.0,
@@ -904,6 +870,41 @@
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 14.4,
+        "volume_confirmation": 12.0,
+        "source_diversity": 12.5,
+        "recency": 20.0,
+        "geopolitical_severity": 11.0
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 67.0,
+      "severity": "MEDIUM",
+      "article_count": 5,
+      "latest_at": "01 Apr 2026 22:00 UTC",
+      "headline": "China Is Taking On Mining Giants to Reorder a $190 Billion\u00a0Market",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "Finance"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.2,
         "volume_confirmation": 12.0,
         "source_diversity": 12.5,
         "recency": 20.0,
@@ -987,7 +988,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Gold & Precious Metals - 18 articles - CRITICAL - Gold prices rise above Rs 1.51 lakh/10 grams, silver drops around 1% amid hopes of Iran-US war de-escalation"
+      "text": "Gold & Precious Metals - 15 articles - CRITICAL - Gold prices rise above Rs 1.51 lakh/10 grams, silver drops around 1% amid hopes of Iran-US war de-escalation"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Banking & Financial Sector - 13 articles - HIGH - Treasuries Rally Stalls as Investors Await Trump\u2019s Iran Speech"
     },
     {
       "tag": "tag-bull",
@@ -1032,17 +1038,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Banking & Financial Sector - 9 articles - MEDIUM - Fed Governor Miran still backs cuts, says interest rates could be 'about a point' lower this year"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Commodities & Mining - 8 articles - MEDIUM - Three niche commodity prices are surging. What they show about China's grip on supply chains"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 6 articles - MEDIUM - Deterrent or danger: After Iran, are Saudi Arabia and Turkey next in line for nuclear weapons?"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Commodities & Mining - 5 articles - MEDIUM - China Is Taking On Mining Giants to Reorder a $190 Billion\u00a0Market"
     },
     {
       "tag": "tag-bear",
@@ -1106,9 +1107,9 @@
       "region": "EU",
       "price": 23298.89,
       "currency": "EUR",
-      "change": 618.85,
-      "change_pct": 2.73,
-      "change_str": "+2.73%",
+      "change": 736.01,
+      "change_pct": 3.26,
+      "change_str": "+3.26%",
       "direction": "up"
     },
     {
@@ -1148,44 +1149,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4784.6,
+      "price": 4787.4,
       "currency": "USD",
-      "change": 137.0,
-      "change_pct": 2.95,
-      "change_str": "+2.95%",
+      "change": 139.8,
+      "change_pct": 3.01,
+      "change_str": "+3.01%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 98.91,
+      "price": 98.85,
       "currency": "USD",
-      "change": -2.47,
-      "change_pct": -2.44,
-      "change_str": "-2.44%",
+      "change": -2.53,
+      "change_pct": -2.5,
+      "change_str": "-2.50%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 68417.11,
+      "price": 68217.07,
       "currency": "USD",
-      "change": 183.8,
-      "change_pct": 0.27,
-      "change_str": "+0.27%",
-      "direction": "up"
+      "change": -16.24,
+      "change_pct": -0.02,
+      "change_str": "-0.02%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.56,
+      "price": 99.55,
       "currency": "USD",
-      "change": -0.4,
-      "change_pct": -0.4,
-      "change_str": "-0.40%",
+      "change": -0.41,
+      "change_pct": -0.41,
+      "change_str": "-0.41%",
       "direction": "down"
     },
     {
@@ -1240,11 +1241,11 @@
     "partial_profit_pct": 15
   },
   "logs": [
-    "2026-04-01 21:35:19 [INFO] AZALYST - status.json generated",
-    "2026-04-01 21:35:19 [INFO] PORTFOLIO - NAV INR 941,092.48 | Return -0.30%",
-    "2026-04-01 21:35:19 [INFO] SIGNALS - 20 active signal buckets in state",
-    "2026-04-01 21:35:19 [INFO] TRADER - Open positions: XLE, SOXX, IBIT, EEM, XLF",
-    "2026-04-01 21:35:19 [INFO] TRADER - Closed trades: 4"
+    "2026-04-01 22:29:45 [INFO] AZALYST - status.json generated",
+    "2026-04-01 22:29:45 [INFO] PORTFOLIO - NAV INR 941,092.48 | Return -0.30%",
+    "2026-04-01 22:29:45 [INFO] SIGNALS - 20 active signal buckets in state",
+    "2026-04-01 22:29:45 [INFO] TRADER - Open positions: XLE, SOXX, IBIT, EEM, XLF",
+    "2026-04-01 22:29:45 [INFO] TRADER - Closed trades: 4"
   ],
-  "generated_at": "2026-04-01 21:35:19 UTC"
+  "generated_at": "2026-04-01 22:29:45 UTC"
 }
