@@ -1,10 +1,10 @@
 {
   "portfolio_value": 941092.48,
   "total_deposited": 943970.0,
-  "cash": 11436.13,
+  "cash": 7261.13,
   "monthly_reserve": 0.0,
-  "market_value": 929656.35,
-  "total_invested": 932166.84,
+  "market_value": 933831.35,
+  "total_invested": 936341.84,
   "unrealised_pnl": -2510.49,
   "unrealised_str": "-2,510.49",
   "realised_pnl": -367.03,
@@ -71,13 +71,13 @@
       "sector": "Crypto & Digital Assets",
       "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NASDAQ",
-      "entry": 3595.17,
+      "entry": 3595.28,
       "current": 3600.71,
       "peak_price": 3644.59,
-      "trail_stop": 3235.65,
+      "trail_stop": 3235.75,
       "dist_to_trail_pct": 10.14,
-      "units": 59.094388,
-      "invested": 212454.36,
+      "units": 60.253883,
+      "invested": 216629.36,
       "pnl": 327.22,
       "pnl_str": "+327.22",
       "pnl_pct": 0.15,
@@ -240,10 +240,10 @@
     "values": [
       30.1,
       30.9,
-      22.6,
+      23.1,
       6.4,
       8.8,
-      1.2
+      0.8
     ]
   },
   "pnl": {
@@ -264,6 +264,10 @@
   },
   "confidence": [
     {
+      "symbol": "India Equity Markets",
+      "score": 90.0
+    },
+    {
       "symbol": "Defense & Aerospace + Commodities & Mining",
       "score": 90.0
     },
@@ -277,10 +281,6 @@
     },
     {
       "symbol": "Defense & Aerospace",
-      "score": 85.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
       "score": 85.0
     },
     {
@@ -308,16 +308,16 @@
       "score": 82.0
     },
     {
+      "symbol": "Crypto & Digital Assets",
+      "score": 80.0
+    },
+    {
       "symbol": "Emerging Markets + Gold & Precious Metals",
       "score": 80.0
     },
     {
       "symbol": "Emerging Markets + Energy / Oil & Gas + Gold & Precious Metals",
       "score": 78.0
-    },
-    {
-      "symbol": "India Equity Markets",
-      "score": 75.0
     },
     {
       "symbol": "Emerging Markets + Energy / Oil & Gas",
@@ -345,6 +345,39 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 90.0,
+      "severity": "CRITICAL",
+      "article_count": 39,
+      "latest_at": "01 Apr 2026 22:40 UTC",
+      "headline": "Ahead of Market: 10 things that will decide stock market action on Thursday",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Bloomberg Markets"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 10.0,
+        "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
     {
       "sector_key": "commodities_mining|defense",
       "sector_label": "Defense & Aerospace + Commodities & Mining",
@@ -465,37 +498,6 @@
         "ITA",
         "XAR",
         "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 5.0,
-        "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 85.0,
-      "severity": "CRITICAL",
-      "article_count": 40,
-      "latest_at": "01 Apr 2026 17:56 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "india",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
       ],
       "is_legacy": false,
       "breakdown": {
@@ -691,6 +693,37 @@
       }
     },
     {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 80.0,
+      "severity": "CRITICAL",
+      "article_count": 44,
+      "latest_at": "01 Apr 2026 20:08 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "india",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 5.0,
+        "recency": 15.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "emerging_markets|gold_precious_metals",
       "sector_label": "Emerging Markets + Gold & Precious Metals",
       "confidence": 80.0,
@@ -765,38 +798,6 @@
         "source_diversity": 5.0,
         "recency": 20.0,
         "geopolitical_severity": 8.0
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 75.0,
-      "severity": "CRITICAL",
-      "article_count": 39,
-      "latest_at": "01 Apr 2026 16:40 UTC",
-      "headline": "Ahead of Market: 10 things that will decide stock market action on Thursday",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 5.0,
-        "recency": 10.0,
-        "geopolitical_severity": 15.0
       }
     },
     {
@@ -958,6 +959,11 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "India Equity Markets - 39 articles - CRITICAL - Ahead of Market: 10 things that will decide stock market action on Thursday"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Defense & Aerospace + Commodities & Mining - 113 articles - CRITICAL [legacy] - Defense & Aerospace + Commodities & Mining \u2014 active signal (legacy record, no headline stored)"
     },
     {
@@ -974,11 +980,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Defense & Aerospace - 103 articles - CRITICAL - Deterrent or danger: After Iran, are Saudi Arabia and Turkey next in line for nuclear weapons?"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Crypto & Digital Assets - 40 articles - CRITICAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
@@ -1013,17 +1014,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Crypto & Digital Assets - 44 articles - CRITICAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Emerging Markets + Gold & Precious Metals - 22 articles - LOW - How China's propaganda is spinning the Iran war"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Emerging Markets + Energy / Oil & Gas + Gold & Precious Metals - 99 articles - LOW - Global Market Today | Brent crude set for record monthly gain; shares tentative as Iran war rages"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "India Equity Markets - 39 articles - CRITICAL - Ahead of Market: 10 things that will decide stock market action on Thursday"
     },
     {
       "tag": "tag-neu",
@@ -1096,9 +1097,9 @@
       "region": "UK",
       "price": 10364.79,
       "currency": "GBP",
-      "change": 188.29,
-      "change_pct": 1.85,
-      "change_str": "+1.85%",
+      "change": 236.79,
+      "change_pct": 2.34,
+      "change_str": "+2.34%",
       "direction": "up"
     },
     {
@@ -1149,33 +1150,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4787.4,
+      "price": 4803.1,
       "currency": "USD",
-      "change": 139.8,
-      "change_pct": 3.01,
-      "change_str": "+3.01%",
+      "change": 155.5,
+      "change_pct": 3.35,
+      "change_str": "+3.35%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 98.85,
+      "price": 98.99,
       "currency": "USD",
-      "change": -2.53,
-      "change_pct": -2.5,
-      "change_str": "-2.50%",
+      "change": -2.39,
+      "change_pct": -2.36,
+      "change_str": "-2.36%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 68217.07,
+      "price": 68197.03,
       "currency": "USD",
-      "change": -16.24,
-      "change_pct": -0.02,
-      "change_str": "-0.02%",
+      "change": -36.28,
+      "change_pct": -0.05,
+      "change_str": "-0.05%",
       "direction": "down"
     },
     {
@@ -1220,7 +1221,7 @@
       },
       {
         "sector": "Crypto & Digital Assets",
-        "weight": 22.6,
+        "weight": 23.1,
         "at_cap": false
       },
       {
@@ -1241,11 +1242,11 @@
     "partial_profit_pct": 15
   },
   "logs": [
-    "2026-04-01 22:29:45 [INFO] AZALYST - status.json generated",
-    "2026-04-01 22:29:45 [INFO] PORTFOLIO - NAV INR 941,092.48 | Return -0.30%",
-    "2026-04-01 22:29:45 [INFO] SIGNALS - 20 active signal buckets in state",
-    "2026-04-01 22:29:45 [INFO] TRADER - Open positions: XLE, SOXX, IBIT, EEM, XLF",
-    "2026-04-01 22:29:45 [INFO] TRADER - Closed trades: 4"
+    "2026-04-01 23:06:05 [INFO] AZALYST - status.json generated",
+    "2026-04-01 23:06:05 [INFO] PORTFOLIO - NAV INR 941,092.48 | Return -0.30%",
+    "2026-04-01 23:06:05 [INFO] SIGNALS - 20 active signal buckets in state",
+    "2026-04-01 23:06:05 [INFO] TRADER - Open positions: XLE, SOXX, IBIT, EEM, XLF",
+    "2026-04-01 23:06:05 [INFO] TRADER - Closed trades: 4"
   ],
-  "generated_at": "2026-04-01 22:29:45 UTC"
+  "generated_at": "2026-04-01 23:06:04 UTC"
 }
