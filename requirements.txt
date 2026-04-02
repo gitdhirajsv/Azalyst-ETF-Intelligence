@@ -16,29 +16,6 @@ python-dateutil>=2.8.2
 # Local .env loading for repo-safe configuration
 python-dotenv>=1.0.1
 
-# ── LLM Integration (NVIDIA NIM / Mistral) ───────────────────────────────────
-
-# OpenAI-compatible API client for NVIDIA NIM
-openai>=1.12.0
-
-# LangChain NVIDIA AI Endpoints (optional, for advanced workflows)
-langchain-nvidia-ai-endpoints>=0.1.0
-
-# LangChain core (optional, for prompt chaining and RAG)
-langchain>=0.1.0
-langchain-core>=0.1.0
-
-# ── Optional: Local Model Deployment ─────────────────────────────────────────
-
-# Hugging Face Transformers (for local model deployment)
-transformers>=4.38.0
-
-# Accelerated inference
-accelerate>=0.27.0
-
-# Quantization support (4-bit, 8-bit)
-bitsandbytes>=0.42.0
-
 # PEFT for efficient fine-tuning (LoRA)
 peft>=0.9.0
 

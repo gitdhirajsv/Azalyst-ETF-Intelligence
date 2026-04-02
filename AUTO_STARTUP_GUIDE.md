@@ -62,11 +62,6 @@ setup_windows_startup.ps1
 ### Current Settings (from `.env`):
 
 ```dotenv
-# LLM Analysis
-NVIDIA_API_KEY=nvapi-6RA7q1Z-...  ✓ Configured
-LLM_ENABLED=true                   ✓ Enabled
-LLM_ANALYSIS_INTERVAL=1440         # Daily analysis
-
 # Trading Settings
 AZALYST_THRESHOLD=62               # Confidence threshold
 AZALYST_MIN_ARTICLES=2             # Minimum articles
@@ -75,20 +70,14 @@ PAPER_TRADING=true                 # Paper trading enabled
 
 ### What Happens on Startup:
 
-1. **LLM Portfolio Analysis** (5-10 seconds)
-   - Analyzes your current positions
-   - Fetches macro indicators (VIX, yields, USD/INR)
-   - Generates improvement suggestions
-   - Logs to `azalyst.log`
-
-2. **News Monitoring** (every 30 minutes)
+1. **News Monitoring** (every 30 minutes)
    - Scans global news feeds
    - Classifies into sectors
    - Scores confidence (0-100)
    - Maps to ETFs
 
 3. **Signal Evaluation** (per signal)
-   - LLM evaluates high-confidence signals
+   - Evaluates high-confidence signals
    - Provides allocation recommendations
    - Logs rationale
 
@@ -234,14 +223,6 @@ taskschd.msc
 
 ## 🎯 Customization
 
-### Change Analysis Frequency:
-
-Edit `.env`:
-```dotenv
-# Run LLM analysis every 6 hours instead of daily
-LLM_ANALYSIS_INTERVAL=360
-```
-
 ### Change Confidence Threshold:
 
 Edit `.env`:
@@ -311,14 +292,7 @@ notepad azalyst.log
 ### API Key Error:
 
 **Check `.env` file:**
-```dotenv
-NVIDIA_API_KEY=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
-```
-
-**Test API:**
-```bash
-python test_llm_integration.py
-```
+Ensure your Discord webhook is correctly set.
 
 ### High CPU Usage:
 
@@ -337,13 +311,7 @@ INTERVAL=60  # Scan every 60 min instead of 30
 notepad azalyst.log
 ```
 
-### 2. Review LLM Suggestions Weekly
-```bash
-# Run manual analysis
-python azalyst.py --llm-analysis
-```
-
-### 3. Monitor Portfolio Performance
+### 2. Monitor Portfolio Performance
 - Visit dashboard: https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/
 - Check `azalyst_portfolio.json`
 
@@ -354,59 +322,4 @@ Based on win rate:
 - **Too many trades**: Raise MIN_ARTICLES
 - **Too few trades**: Lower THRESHOLD
 
-### 5. Keep API Key Secure
-- Never commit `.env` to git
-- Rotate key every 3-6 months
-- Monitor usage at: https://build.nvidia.com/profile/api-usage
-
 ---
-
-## 📞 Quick Commands
-
-```bash
-# Start manually
-start_azalyst.bat
-
-# Run LLM analysis only
-python azalyst.py --llm-analysis
-
-# Test integration
-python test_llm_integration.py
-
-# Get recommendations
-python get_mistral_recommendations.py
-
-# View logs (PowerShell)
-Get-Content azalyst.log -Wait -Tail 50
-
-# View feedback stats
-python -c "from llm_analyzer import *; from config import *; cfg=Config(); a=LLMAnalyzer(cfg); print(a.get_feedback_statistics())"
-```
-
----
-
-## ✅ Setup Checklist
-
-- [ ] Run `install_autostart.bat`
-- [ ] Verify shortcut in Startup folder
-- [ ] Test with `start_azalyst.bat`
-- [ ] Check `azalyst.log` for errors
-- [ ] Verify API key in `.env`
-- [ ] Run `test_llm_integration.py`
-- [ ] Check Discord webhook (if using)
-- [ ] Review initial LLM recommendations
-
----
-
-**That's it! Azalyst will now run automatically every day.** 🎉
-
-Just start your laptop and Azalyst will:
-1. ✅ Start automatically
-2. ✅ Run LLM analysis
-3. ✅ Monitor news 24/7
-4. ✅ Send alerts to Discord
-5. ✅ Track your portfolio
-
----
-
-*For more details, see `docs/LLM_INTEGRATION.md`*

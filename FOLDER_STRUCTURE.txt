@@ -21,20 +21,10 @@ setup_windows_startup.ps1   - Advanced setup (Run as Administrator)
 Azalyst_Spyder.bat          - Start with Spyder IDE
 
 ====================================================================
-  🤖 LLM FILES (AI Integration)
-====================================================================
-
-llm_optimizer.py            - NVIDIA NIM API client
-llm_analyzer.py             - LLM workflow integration
-llm_prompts.py              - Prompt templates
-get_mistral_recommendations.py - Quick portfolio analysis
-test_llm_integration.py     - Test script
-
-====================================================================
   ⚙️ CORE SYSTEM FILES (Python)
 ====================================================================
 
-azalyst.py                  - Main engine (LLM-enhanced)
+azalyst.py                  - Main engine
 config.py                   - Configuration loader
 news_fetcher.py             - RSS feed fetching
 classifier.py               - Sector classification
@@ -54,13 +44,8 @@ analyze_azalyst_output.py   - Output analysis
 
 START_HERE.md                      👈 START HERE!
 README.md                          - Main project documentation
-LLM_QUICKSTART.md                  - Quick reference (1 page)
-LLM_INTEGRATION.md                 - Complete LLM guide
 AUTO_STARTUP_GUIDE.md              - Auto-startup setup
-HOW_TO_GET_MISTRAL_API_KEY.md      - API key guide
 RECOMMENDATIONS_FOR_YOUR_PORTFOLIO.md - Your portfolio analysis
-LLM_SUMMARY.md                     - Visual summary
-LLM_IMPLEMENTATION_SUMMARY.md      - Implementation details
 
 ====================================================================
   ⚙️ CONFIGURATION FILES
@@ -76,7 +61,6 @@ requirements.txt      - Python dependencies
 
 azalyst_portfolio.json       - Your portfolio (live)
 azalyst_state.json           - Signal state
-llm_feedback_log.json        - LLM suggestions & outcomes
 azalyst.log                  - System logs
 status.json                  - Status file
 
@@ -103,12 +87,6 @@ START AZALYST:
   Double-click: start_azalyst.bat
   Or run: python azalyst.py
 
-GET LLM RECOMMENDATIONS:
-  python get_mistral_recommendations.py
-
-TEST INTEGRATION:
-  python test_llm_integration.py
-
 VIEW LOGS:
   notepad azalyst.log
   Or: Get-Content azalyst.log -Wait -Tail 50 (PowerShell)
@@ -117,8 +95,6 @@ VIEW LOGS:
   ✅ SETUP STATUS
 ====================================================================
 
-[✓] NVIDIA API Key configured
-[✓] LLM integration tested
 [✓] Auto-startup installed
 [✓] All files in same folder
 [✓] Documentation complete
