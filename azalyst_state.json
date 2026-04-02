@@ -1,30 +1,31 @@
 {
   "defense": {
-    "sent_at": "2026-04-02T12:52:25.668453+00:00",
+    "sent_at": "2026-04-02T17:43:01.357057+00:00",
     "confidence": 85,
     "sector_label": "Defense & Aerospace",
     "article_count": 101,
     "severity": "CRITICAL",
     "regions": [
-      "asia_pacific",
-      "americas",
       "europe",
       "middle_east",
+      "americas",
+      "asia_pacific",
       "global"
     ],
     "sources": [
       "Defense News",
+      "Oilprice.com",
       "World | Deutsche Welle",
-      "Oilprice.com"
+      "US Top News and Analysis"
     ],
     "top_headlines": [
-      "Deterrent or danger: After Iran, are Saudi Arabia and Turkey next in line for nuclear weapons?",
-      "Oil Prices Surge 6% as Trump Signals Prolonged Iran Conflict",
       "5 Defense Stocks Rebuilding the Military Supply Chain From the Ground Up",
       "Europe must reinvent warfare for \u2018era of shocks,\u2019 NATO\u2019s Vandier says",
-      "Aircraft carrier USS Gerald R. Ford arrives in Croatia for repairs"
+      "Aircraft carrier USS Gerald R. Ford arrives in Croatia for repairs",
+      "U.S. oil prices soar 10% as Trump's Iran war speech stokes fears of further escalation",
+      "Iran war: How long can Tehran's asymmetric strategy hold?"
     ],
-    "latest_ts": "2026-04-02T12:52:22.928943+00:00",
+    "latest_ts": "2026-04-02T17:43:00.629814+00:00",
     "confidence_breakdown": {
       "signal_strength": 25,
       "volume_confirmation": 20.0,
@@ -223,32 +224,32 @@
     }
   },
   "india_equity": {
-    "sent_at": "2026-04-02T12:52:29.089284+00:00",
-    "confidence": 85,
+    "sent_at": "2026-04-02T17:43:03.565498+00:00",
+    "confidence": 75,
     "sector_label": "India Equity Markets",
-    "article_count": 54,
+    "article_count": 47,
     "severity": "CRITICAL",
     "regions": [
+      "middle_east",
       "asia_pacific",
-      "middle_east"
+      "india"
     ],
     "sources": [
-      "Markets-Economic Times",
-      "Bloomberg Markets"
+      "Markets-Economic Times"
     ],
     "top_headlines": [
       "Sensex rebounds 1,800 pts from day\u2019s low, settles in green; Nifty above 22,700 as rupee strengthens",
       "More missiles or no war? How markets are reading Trump's latest signals",
-      "Bank stocks fall up to 4% as RBI's forex rules may deliver Rs 5,000 crore shock",
       "Nifty\u2019s December bull case target at 29,480, says Axis Direct; names 15 stocks to ride Iran war-driven volatility",
-      "Rupee Surges After India\u2019s Offshore Crackdown"
+      "Indian rupee soars to best day in over a decade as RBI clamps down on speculation",
+      "Rupee records sharpest rise in over 12 years after RBI\u2019s tough crackdown on forex speculation: What lies ahead?"
     ],
-    "latest_ts": "2026-04-02T10:52:04+00:00",
+    "latest_ts": "2026-04-02T14:05:41+00:00",
     "confidence_breakdown": {
       "signal_strength": 25,
       "volume_confirmation": 20.0,
-      "source_diversity": 10.0,
-      "recency": 15.0,
+      "source_diversity": 5.0,
+      "recency": 10.0,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
@@ -600,10 +601,71 @@
     }
   },
   "emerging_markets": {
-    "sent_at": "2026-03-27T12:41:53.947586+00:00",
-    "confidence": 62,
+    "sent_at": "2026-04-02T17:43:06.776330+00:00",
+    "confidence": 65,
     "sector_label": "Emerging Markets",
-    "article_count": 5
+    "article_count": 5,
+    "severity": "LOW",
+    "regions": [
+      "middle_east",
+      "asia_pacific",
+      "americas"
+    ],
+    "sources": [
+      "Bloomberg Markets",
+      "Markets-Economic Times",
+      "Oilprice.com",
+      "BBC News"
+    ],
+    "top_headlines": [
+      "More missiles or no war? How markets are reading Trump's latest signals",
+      "Aegea Bonds Hit as Traders Sell First, Ask Later in Brazil Rout",
+      "China Directs Private Refiners to Maintain Fuel Output Even At A Loss",
+      "5 Defense Stocks Rebuilding the Military Supply Chain From the Ground Up",
+      "Brazil grants joint custody over pets in new law for separated couples"
+    ],
+    "latest_ts": "2026-04-02T16:48:15+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 8.1,
+      "volume_confirmation": 12.0,
+      "source_diversity": 17.5,
+      "recency": 20.0,
+      "geopolitical_severity": 8
+    },
+    "etf_recommendations": {
+      "india": [
+        {
+          "name": "Nippon India Nifty 50 BeES",
+          "ticker": "NIFTYBEES",
+          "note": "India as EM leader",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "India is the premier EM destination. Capital inflows support Nifty re-rating."
+        }
+      ],
+      "global": [
+        {
+          "name": "iShares MSCI Emerging Markets ETF",
+          "ticker": "EEM",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Broad EM exposure. China, India, Taiwan, Brazil. EM rotation play vs US equities."
+        },
+        {
+          "name": "SPDR Portfolio Emerging Markets ETF",
+          "ticker": "SPEM",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Lower cost EM alternative (0.07% ER). Similar coverage to EEM."
+        }
+      ]
+    }
   },
   "gold_precious_metals": {
     "sent_at": "2026-04-02T04:06:12.250143+00:00",
