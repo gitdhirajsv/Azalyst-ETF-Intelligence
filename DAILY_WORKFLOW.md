@@ -201,29 +201,11 @@ Edit `start_azalyst.bat` - comment out this line:
 REM python etf_llm_optimizer.py
 ```
 
-### Skip Standard LLM Analysis:
-
-Edit `start_azalyst.bat` - comment out this line:
-```batch
-REM python azalyst.py --llm-analysis
-```
-
 ### Disable Auto-Start Completely:
 
 1. Press `Win+R`
 2. Type: `shell:startup`
 3. Delete `Azalyst ETF Intelligence.lnk`
-
-### Change Analysis Frequency:
-
-Edit `.env`:
-```dotenv
-# Run ETF analysis only on Mondays (10080 minutes = 1 week)
-LLM_ANALYSIS_INTERVAL=10080
-
-# Or daily (1440 minutes)
-LLM_ANALYSIS_INTERVAL=1440
-```
 
 ---
 

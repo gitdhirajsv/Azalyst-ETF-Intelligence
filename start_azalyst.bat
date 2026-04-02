@@ -1,10 +1,9 @@
 @echo off
 REM Azalyst ETF Intelligence - Auto Startup Script
-REM This script starts Azalyst with LLM analysis enabled
 
 echo ============================================================
 echo   AZALYST ETF INTELLIGENCE - STARTING
-echo   LLM-Powered Portfolio Analysis
+echo   Aladdin Risk Engine + Paper Trading
 echo ============================================================
 echo.
 
@@ -22,24 +21,12 @@ if errorlevel 1 (
 echo [%DATE% %TIME%] Starting Azalyst...
 echo.
 
-REM Step 1: Run ETF-specialized LLM analysis FIRST (institutional insights)
-echo [%DATE% %TIME%] Running ETF-Specialized LLM Analysis...
-echo ============================================================
-python etf_llm_optimizer.py
-echo.
-
-REM Step 2: Run standard LLM portfolio analysis
-echo [%DATE% %TIME%] Running Standard LLM Portfolio Analysis...
-echo ============================================================
-python azalyst.py --llm-analysis
-echo.
-
-REM Step 3: Continue with normal Azalyst operation
+REM Start Azalyst continuous monitoring
 echo [%DATE% %TIME%] Starting Continuous Monitoring...
 echo ============================================================
-echo Azalyst is now running in the background.
+echo Azalyst is now running.
 echo - News scanning every 30 minutes
-echo - LLM signal evaluation active
+echo - Signal evaluation active
 echo - Paper trading enabled
 echo - Mark-to-market every 60 minutes
 echo.
@@ -47,8 +34,7 @@ echo Logs: azalyst.log
 echo Portfolio: azalyst_portfolio.json
 echo.
 
-REM Run Azalyst with LLM analysis
-REM --llm-analysis runs portfolio analysis first, then continues normal operation
+REM Run Azalyst
 python azalyst.py
 
 REM If the script exits, pause to show any error messages

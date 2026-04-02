@@ -1,7 +1,7 @@
 """
 AZALYST ETF INTELLIGENCE — CORE ENGINE
 Macro hedge fund-grade global news + paper trading track record system
-+ LLM-powered optimization with NVIDIA NIM (Mistral 7B)
++ Aladdin-grade risk engine (correlation, benchmark, vol-sizing, rebalancing, stress testing)
 """
 
 import time
@@ -19,7 +19,6 @@ from state              import SignalStateManager
 from paper_trader       import PaperPortfolio
 from portfolio_reporter import PortfolioReporter
 from config             import Config
-from llm_analyzer       import LLMAnalyzer, create_llm_analyzer
 
 logging.basicConfig(
     level=logging.INFO,
@@ -35,7 +34,7 @@ BANNER = """
 +--------------------------------------------------------------+
 |   AZALYST  ETF INTELLIGENCE + PAPER TRADING SYSTEM          |
 |   Macro Fund Edition  .  Track Record Engine                 |
-|   + LLM Optimization (NVIDIA NIM / Mistral 7B)               |
+|   + Aladdin Risk Engine (Institutional Analytics)             |
 +--------------------------------------------------------------+
 """
 
@@ -60,7 +59,7 @@ def _select_etf_for_trade(signal: dict) -> tuple:
 
 def run_intelligence_cycle(
     fetcher, classifier, scorer, mapper,
-    reporter, state, portfolio, port_reporter, cfg, llm_analyzer=None
+    reporter, state, portfolio, port_reporter, cfg
 ):
     log.info("--- Intelligence cycle starting ---")
     try:
@@ -80,19 +79,6 @@ def run_intelligence_cycle(
 
         new_signals = state.filter_new_or_updated(scored_signals)
         log.info(f"{len(new_signals)} new/updated signals")
-
-        # LLM-enhanced signal evaluation (if enabled)
-        if llm_analyzer and llm_analyzer.enabled:
-            log.info("LLM enhancement enabled for signal evaluation")
-            for signal in new_signals:
-                portfolio_context = {
-                    "cash": portfolio.cash_inr,
-                    "open_positions_count": len(portfolio.open_positions),
-                    "sector_exposure": {},
-                }
-                llm_rec = llm_analyzer.evaluate_signal(signal, portfolio_context)
-                signal["llm_recommendation"] = llm_rec
-                log.info(f"LLM recommendation for {signal.get('sector_label')}: {llm_rec.get('action', 'N/A')}")
 
         for signal in new_signals:
             etf_recs = mapper.get_etfs(signal["sectors"])
@@ -137,57 +123,24 @@ def run_intelligence_cycle(
             pass
 
 
-def run_mtm_cycle(portfolio, port_reporter, llm_analyzer=None):
+def run_mtm_cycle(portfolio, port_reporter):
     log.info("--- Mark-to-market ---")
     try:
         exits = portfolio.mark_to_market()
         if exits:
             port_reporter.send_trade_exits(exits)
-            
-            # Log trade outcomes for LLM feedback
-            if llm_analyzer and llm_analyzer.enabled:
-                for exit_data in exits:
-                    llm_analyzer.log_trade_outcome(exit_data)
     except Exception as e:
         log.error(f"MTM error: {e}")
 
 
-def run_eod_report(portfolio, port_reporter, llm_analyzer=None):
+def run_eod_report(portfolio, port_reporter):
     log.info("--- EOD report ---")
     try:
         portfolio.mark_to_market()
         summary = portfolio.get_summary()
         port_reporter.send_eod_report(summary)
-        
-        # Run LLM analysis periodically (e.g., daily)
-        if llm_analyzer and llm_analyzer.enabled and llm_analyzer.should_run_analysis():
-            log.info("Running scheduled LLM portfolio analysis...")
-            analysis_result = llm_analyzer.run_portfolio_analysis()
-            
-            # Log analysis results
-            if "suggestions" in analysis_result:
-                log.info(f"LLM generated {len(analysis_result['suggestions'])} suggestions")
-                for i, suggestion in enumerate(analysis_result["suggestions"][:3], 1):
-                    log.info(f"  Suggestion #{i}: {suggestion[:150]}...")
     except Exception as e:
         log.error(f"EOD report error: {e}")
-
-
-def run_llm_macro_analysis(llm_analyzer, reporter):
-    """Run LLM macro regime analysis and send to Discord."""
-    if not llm_analyzer or not llm_analyzer.enabled:
-        return
-    
-    try:
-        log.info("Running LLM macro regime analysis...")
-        regime_result = llm_analyzer.interpret_macro_regime()
-        
-        if "interpretation" in regime_result and regime_result["interpretation"]:
-            log.info(f"Macro regime: {regime_result.get('regime', 'unknown')}")
-            # Could send to Discord if desired
-            # reporter.send_macro_analysis(regime_result)
-    except Exception as e:
-        log.error(f"LLM macro analysis error: {e}")
 
 
 def seed_startup_trades(state, mapper, portfolio, port_reporter, cfg):
@@ -252,11 +205,6 @@ def main():
         action="store_true",
         help="Run a single intelligence cycle then exit (used by GitHub Actions)",
     )
-    parser.add_argument(
-        "--llm-analysis",
-        action="store_true",
-        help="Run LLM portfolio analysis immediately then exit",
-    )
     args = parser.parse_args()
 
     print(BANNER)
@@ -270,69 +218,42 @@ def main():
     state         = SignalStateManager(cfg)
     portfolio     = PaperPortfolio(cfg.PORTFOLIO_FILE)
     port_reporter = PortfolioReporter(cfg)
-    
-    # Initialize LLM analyzer
-    llm_analyzer = create_llm_analyzer(cfg) if cfg.LLM_ENABLED else None
-    
-    if llm_analyzer:
-        log.info(f"LLM Analyzer: ENABLED (Model: {cfg.LLM_MODEL})")
-    else:
-        log.info("LLM Analyzer: DISABLED (Set NVIDIA_API_KEY in .env to enable)")
 
-    log.info(f"Ready. Interval: {cfg.POLL_INTERVAL_MINUTES}m | Paper trading: {'ON' if cfg.PAPER_TRADING_ENABLED else 'OFF'} | LLM: {'ON' if llm_analyzer else 'OFF'}")
+    log.info(f"Ready. Interval: {cfg.POLL_INTERVAL_MINUTES}m | Paper trading: {'ON' if cfg.PAPER_TRADING_ENABLED else 'OFF'}")
 
     reporter.send_startup_message()
 
     # Seed paper trades from existing state signals (fixes cold-start / restart)
     seed_startup_trades(state, mapper, portfolio, port_reporter, cfg)
 
-    # --llm-analysis: run LLM analysis only mode
-    if args.llm_analysis:
-        if not llm_analyzer:
-            log.error("LLM Analyzer not configured. Set NVIDIA_API_KEY in .env")
-            return
-        log.info("LLM Analysis mode — running portfolio analysis...")
-        result = llm_analyzer.run_portfolio_analysis()
-        log.info(f"Analysis complete. Generated {len(result.get('suggestions', []))} suggestions")
-        for i, suggestion in enumerate(result.get("suggestions", []), 1):
-            print(f"\n{i}. {suggestion}")
-        return
-
     run_intelligence_cycle(
         fetcher, classifier, scorer, mapper,
-        reporter, state, portfolio, port_reporter, cfg, llm_analyzer
+        reporter, state, portfolio, port_reporter, cfg
     )
 
     # --once: single cycle mode for GitHub Actions
     # Run MTM to update live prices, check exits, then send EOD report to Discord
     if args.once:
         log.info("Single-cycle mode — running mark-to-market...")
-        run_mtm_cycle(portfolio, port_reporter, llm_analyzer)
+        run_mtm_cycle(portfolio, port_reporter)
         log.info("Single-cycle mode — sending EOD report...")
-        run_eod_report(portfolio, port_reporter, llm_analyzer)
+        run_eod_report(portfolio, port_reporter)
         log.info("Single-cycle mode complete. Exiting.")
         return
 
     schedule.every(cfg.POLL_INTERVAL_MINUTES).minutes.do(
         run_intelligence_cycle,
         fetcher, classifier, scorer, mapper,
-        reporter, state, portfolio, port_reporter, cfg, llm_analyzer
+        reporter, state, portfolio, port_reporter, cfg
     )
     schedule.every(cfg.MTM_INTERVAL_MINUTES).minutes.do(
-        run_mtm_cycle, portfolio, port_reporter, llm_analyzer
+        run_mtm_cycle, portfolio, port_reporter
     )
     eod_time = f"{cfg.EOD_REPORT_HOUR:02d}:{cfg.EOD_REPORT_MINUTE:02d}"
     schedule.every().day.at(eod_time).do(
-        run_eod_report, portfolio, port_reporter, llm_analyzer
+        run_eod_report, portfolio, port_reporter
     )
     log.info(f"EOD report scheduled at {eod_time} UTC (8:30 PM IST)")
-    
-    # Optional: Schedule LLM macro analysis (e.g., every 6 hours)
-    if llm_analyzer and cfg.LLM_ANALYSIS_INTERVAL > 0:
-        schedule.every(6).hours.do(
-            run_llm_macro_analysis, llm_analyzer, reporter
-        )
-        log.info(f"LLM macro analysis scheduled every 6 hours")
 
     while True:
         schedule.run_pending()
