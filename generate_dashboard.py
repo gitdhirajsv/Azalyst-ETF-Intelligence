@@ -9,6 +9,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
+# Aladdin-grade risk engine
+try:
+    import risk_engine
+except ImportError:
+    risk_engine = None
+
 ROOT = Path(__file__).resolve().parent
 PORTFOLIO_FILE = ROOT / "azalyst_portfolio.json"
 STATE_FILE     = ROOT / "azalyst_state.json"
@@ -17,7 +23,7 @@ OUTPUT_FILE    = ROOT / "status.json"
 TRAIL_ACTIVATION_PCT        = 0.05
 TRAILING_STOP_PCT           = 0.08
 HARD_STOP_PCT               = 0.10
-PARTIAL_PROFIT_PCT          = 0.15
+PARTIAL_PROFIT_PCT          = 0.08
 SECTOR_CAP_PCT              = 30
 CIRCUIT_BREAKER_DRAWDOWN_PCT = 12
 
@@ -602,6 +608,13 @@ def minimal_status(now_str):
             "hard_stop_pct":          int(HARD_STOP_PCT * 100),
             "partial_profit_pct":     int(PARTIAL_PROFIT_PCT * 100),
         },
+        "aladdin_risk": {
+            "correlation": {"matrix": {}, "tickers": [], "max_corr": 0, "max_corr_pair": [], "status": "OK"},
+            "volatility": {"per_ticker": {}, "portfolio_avg_vol_pct": 0, "target_vol_pct": 15},
+            "benchmark": {"benchmark_return_pct": 0, "benchmark_price_start": 0, "benchmark_price_now": 0, "benchmark_ticker": "SPY", "portfolio_return_pct": 0, "alpha": 0},
+            "rebalance": {"alerts": [], "drift_threshold_pct": 5, "needs_rebalance": False},
+            "stress_test": {"scenarios": {}, "worst_scenario": "", "worst_loss_pct": 0},
+        },
         "logs":          [f"{now_str} [WARN] No data available"],
         "generated_at":  now_str,
     }
@@ -632,6 +645,20 @@ def generate_status():
     except Exception:
         usd_inr_rate = 83.5  # fallback
 
+    # ── Aladdin Risk Engine ──────────────────────────────────────────────
+    aladdin_risk = {}
+    if risk_engine:
+        try:
+            portfolio_return_pct = metrics.get("change_raw", 0.0)
+            aladdin_risk = risk_engine.generate_risk_report(
+                portfolio,
+                metrics["portfolio_value"],
+                portfolio_return_pct,
+            )
+        except Exception as exc:
+            print(f"WARNING: risk_engine failed: {exc}")
+            aladdin_risk = risk_engine._empty_report() if risk_engine else {}
+
     status = {
         **metrics,
         "usd_inr_rate":       safe_round(usd_inr_rate, 4),
@@ -646,6 +673,7 @@ def generate_status():
         "articles":    build_articles(signal_cards),
         "market_snapshot": market_snapshot,
         "risk_controls":   build_risk_controls(metrics, positions, market_snapshot),
+        "aladdin_risk":    aladdin_risk,
         "logs":            build_logs(portfolio, state, metrics),
         "generated_at":    now_str,
     }

@@ -319,12 +319,47 @@ body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-
       <div style="display:flex;gap:10px;margin-top:6px;font-size:9px;flex-wrap:wrap">
         <span style="color:#444">TRAIL STOP: <span class="neu">-8%</span></span>
         <span style="color:#444">HARD STOP: <span class="dn">-10%</span></span>
-        <span style="color:#444">PROFIT: <span class="up">+15%</span></span>
+        <span style="color:#444">PROFIT: <span class="up">+8%</span></span>
         <span style="color:#444">MAX POS: <span class="neu">6</span></span>
       </div>
     </div>
 
-    <!-- Panel 7: Macro full width -->
+    <!-- Panel 7: ALADDIN Risk Engine -->
+    <div class="panel span3">
+      <div class="panel-header">ALADDIN RISK ENGINE — INSTITUTIONAL ANALYTICS <span class="live-dot" style="font-size:11px;color:#ff9900">◆</span></div>
+
+      <!-- Row 1: Benchmark + Alpha + Portfolio Vol + Worst Stress -->
+      <div class="mgrid" style="grid-template-columns:repeat(4,1fr);margin-bottom:10px" id="aladdinStats"></div>
+
+      <!-- Row 2: Correlation Matrix + Volatility Bars -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+        <div>
+          <div style="font-size:8px;color:#ff9900;margin-bottom:4px;font-weight:700">CORRELATION MATRIX (30-DAY)</div>
+          <div id="corrMatrix" style="font-size:8px"></div>
+        </div>
+        <div>
+          <div style="font-size:8px;color:#ff9900;margin-bottom:4px;font-weight:700">ANNUALISED VOLATILITY</div>
+          <div id="volBars"></div>
+        </div>
+      </div>
+
+      <!-- Row 3: Stress Test Scenarios -->
+      <div style="margin-bottom:10px">
+        <div style="font-size:8px;color:#ff9900;margin-bottom:4px;font-weight:700">STRESS TEST — SCENARIO ANALYSIS</div>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:4px;font-size:8px;color:#444;border-bottom:1px solid #222;padding-bottom:3px;margin-bottom:3px">
+          <span>SCENARIO</span><span style="text-align:right">PORTFOLIO IMPACT</span><span style="text-align:right">LOSS %</span><span style="text-align:right">WORST HIT</span><span style="text-align:right">STATUS</span>
+        </div>
+        <div id="stressRows"></div>
+      </div>
+
+      <!-- Row 4: Rebalance Alerts -->
+      <div>
+        <div style="font-size:8px;color:#ff9900;margin-bottom:4px;font-weight:700">REBALANCE MONITOR — DRIFT DETECTION</div>
+        <div id="rebalanceAlerts"></div>
+      </div>
+    </div>
+
+    <!-- Panel 8: Macro full width -->
     <div class="panel span3">
       <div class="panel-header">MACRO ECONOMIC INDICATORS — GLOBAL SNAPSHOT <span class="live-dot" style="font-size:11px">▌</span></div>
       <div class="mgrid" id="macroGrid"></div>
@@ -552,6 +587,7 @@ function renderAll() {
   if (!DATA) return;
   renderTape();
   renderMktdPage();
+  renderAladdin();
   renderPortPage();
   renderNewsPage();
   renderStatusBar();
@@ -716,6 +752,111 @@ function renderMktdPage() {
   document.getElementById('macroGrid').innerHTML = macroData.map(m =>
     `<div class="mbox"><div class="mlabel">${m.label}</div><div class="mval ${m.cls}">${m.val}</div><div class="mchg ${m.cls}">${m.chg}</div></div>`
   ).join('');
+}
+
+    `<div class="mbox"><div class="mlabel">${m.label}</div><div class="mval ${m.cls}">${m.val}</div><div class="mchg ${m.cls}">${m.chg}</div></div>`
+  ).join('');
+}
+
+function renderAladdin() {
+  const ar = DATA.aladdin_risk;
+  if (!ar) {
+    document.getElementById('aladdinStats').innerHTML = '<div class="mbox"><div class="mval neu">No data</div></div>';
+    return;
+  }
+
+  // ── Stats boxes: Benchmark Alpha, Portfolio Vol, Max Correlation, Worst Stress ──
+  const bm = ar.benchmark || {};
+  const vol = ar.volatility || {};
+  const corr = ar.correlation || {};
+  const stress = ar.stress_test || {};
+  const alphaVal = bm.alpha || 0;
+  const alphaCls = alphaVal >= 0 ? 'up' : 'dn';
+  const corrStatus = corr.status === 'HIGH' ? 'dn' : 'up';
+  const worstLoss = stress.worst_loss_pct || 0;
+
+  document.getElementById('aladdinStats').innerHTML = `
+    <div class="mbox"><div class="mlabel">SPY Benchmark</div><div class="mval neu">${fmt.pct(bm.benchmark_return_pct||0)}</div><div class="mchg" style="color:#444">${bm.benchmark_ticker||'SPY'}</div></div>
+    <div class="mbox"><div class="mlabel">Alpha (vs SPY)</div><div class="mval ${alphaCls}">${alphaVal>=0?'+':''}${alphaVal.toFixed(2)}%</div><div class="mchg ${alphaCls}">${alphaVal>=0?'OUTPERFORM':'UNDERPERFORM'}</div></div>
+    <div class="mbox"><div class="mlabel">Portfolio Vol</div><div class="mval neu">${(vol.portfolio_avg_vol_pct||0).toFixed(1)}%</div><div class="mchg" style="color:#444">target ${vol.target_vol_pct||15}%</div></div>
+    <div class="mbox"><div class="mlabel">Max Correlation</div><div class="mval ${corrStatus}">${(corr.max_corr||0).toFixed(2)}</div><div class="mchg ${corrStatus}">${(corr.max_corr_pair||[]).join(' ↔ ')||'--'}</div></div>`;
+
+  // ── Correlation Matrix ──
+  const tickers = corr.tickers || [];
+  const matrix = corr.matrix || {};
+  if (tickers.length >= 2) {
+    let html = '<table style="border-collapse:collapse;font-size:8px;width:100%"><tr><th></th>';
+    tickers.forEach(t => { html += `<th style="color:#888;padding:2px 4px;text-align:center">${t.substring(0,6)}</th>`; });
+    html += '</tr>';
+    tickers.forEach(t1 => {
+      html += `<tr><td style="color:#888;padding:2px 4px;font-weight:700">${t1.substring(0,6)}</td>`;
+      tickers.forEach(t2 => {
+        const val = (matrix[t1]||{})[t2];
+        const v = val != null ? val : 0;
+        const abs_v = Math.abs(v);
+        let bg = 'transparent';
+        if (t1 === t2) bg = '#111';
+        else if (abs_v > 0.8) bg = 'rgba(255,0,0,0.3)';
+        else if (abs_v > 0.6) bg = 'rgba(255,153,0,0.2)';
+        else if (abs_v > 0.3) bg = 'rgba(255,255,0,0.1)';
+        const cls = abs_v > 0.6 ? 'dn' : 'neu';
+        html += `<td style="text-align:center;padding:2px 4px;background:${bg}" class="${cls}">${v.toFixed(2)}</td>`;
+      });
+      html += '</tr>';
+    });
+    html += '</table>';
+    document.getElementById('corrMatrix').innerHTML = html;
+  } else {
+    document.getElementById('corrMatrix').innerHTML = '<div style="color:#444;font-size:9px">Need 2+ positions for correlation matrix</div>';
+  }
+
+  // ── Volatility Bars ──
+  const volTickers = vol.per_ticker || {};
+  const volEntries = Object.entries(volTickers).sort((a,b) => b[1] - a[1]);
+  const targetV = vol.target_vol_pct || 15;
+  document.getElementById('volBars').innerHTML = volEntries.map(([ticker, v]) => {
+    const w = Math.min((v / 50) * 100, 100);
+    const cls = v > targetV * 1.5 ? 'dn' : v > targetV ? 'neu' : 'up';
+    return `<div class="sector-row">
+      <div class="sector-head"><span style="font-size:8px">${ticker}</span><span class="${cls}" style="font-size:8px">${v.toFixed(1)}%</span></div>
+      <div class="bar-bg"><div class="bar-fill" style="width:${w}%;background:${v>targetV*1.5?'#ff3333':v>targetV?'#ffaa00':'#00ff41'}"></div></div>
+    </div>`;
+  }).join('') || '<div style="color:#444;font-size:9px">No volatility data</div>';
+
+  // ── Stress Test Rows ──
+  const scenarios = stress.scenarios || {};
+  const worstScenario = stress.worst_scenario || '';
+  document.getElementById('stressRows').innerHTML = Object.entries(scenarios).map(([name, data]) => {
+    const impact = data.total_impact || 0;
+    const lossPct = data.portfolio_loss_pct || 0;
+    const isWorst = name === worstScenario;
+    const worstHit = (data.position_impacts||[]).sort((a,b)=>a.impact-b.impact)[0];
+    const statusLabel = lossPct < -20 ? 'SEVERE' : lossPct < -10 ? 'HIGH' : lossPct < -5 ? 'MODERATE' : 'LOW';
+    const statusCls = lossPct < -20 ? 'dn' : lossPct < -10 ? 'dn' : lossPct < -5 ? 'neu' : 'up';
+    return `<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:4px;font-size:9px;padding:3px 0;border-bottom:1px solid #111;${isWorst?'background:#0d0000;border-left:2px solid #ff3333':''}">
+      <span style="color:#aaa">${name.replace(/_/g,' ')}</span>
+      <span style="text-align:right" class="dn">$${(impact/USD_INR).toFixed(0)}</span>
+      <span style="text-align:right" class="dn">${lossPct.toFixed(1)}%</span>
+      <span style="text-align:right;color:#888">${worstHit?worstHit.ticker+' ('+worstHit.shock_pct+'%)':'--'}</span>
+      <span style="text-align:right" class="${statusCls}">${statusLabel}</span>
+    </div>`;
+  }).join('') || '<div style="color:#444;font-size:9px">No stress scenarios</div>';
+
+  // ── Rebalance Alerts ──
+  const rebal = ar.rebalance || {};
+  const alerts = rebal.alerts || [];
+  if (alerts.length > 0) {
+    document.getElementById('rebalanceAlerts').innerHTML = alerts.map(a => {
+      const actionCls = a.action === 'TRIM' ? 'dn' : 'up';
+      return `<div style="display:flex;justify-content:space-between;font-size:9px;padding:3px 0;border-bottom:1px solid #111">
+        <span style="color:#aaa">${a.ticker} <span style="color:#555">(${a.etf_name||''})</span></span>
+        <span style="color:#888">actual ${a.actual_weight_pct.toFixed(1)}% → target ${a.target_weight_pct.toFixed(1)}%</span>
+        <span class="${actionCls}">${a.action} $${(a.amount/USD_INR).toFixed(0)} <span style="color:#555">(drift ${a.drift_pct>0?'+':''}${a.drift_pct.toFixed(1)}%)</span></span>
+      </div>`;
+    }).join('');
+  } else {
+    document.getElementById('rebalanceAlerts').innerHTML = '<div style="color:#00ff41;font-size:9px">✓ All positions within drift tolerance (±' + (rebal.drift_threshold_pct||5) + '%)</div>';
+  }
 }
 
 function renderPortPage() {
