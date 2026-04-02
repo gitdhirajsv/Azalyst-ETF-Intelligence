@@ -3,6 +3,8 @@
 > An institutional-style quantitative research platform built as a personal project. Not a hedge fund. Not a financial product. Just a passion for systematic research.
 > 
 > **Now with AI-powered optimization**: NVIDIA NIM (Mistral 7B) integration for intelligent strategy analysis and macro regime detection.
+>
+> **Aladdin-grade Risk Engine**: Institutional portfolio analytics — correlation matrix, benchmark alpha, volatility-adjusted sizing, systematic rebalancing, and multi-scenario stress testing.
 
 ---
 
@@ -41,6 +43,7 @@ Core capabilities:
 - Structured Discord delivery via **[Discord Webhooks](https://discord.com/developers/docs/resources/webhook)**.
 - Local state persistence and log-based auditability.
 - ** LLM-powered analysis** with NVIDIA NIM (Mistral 7B) for strategy optimization and macro regime detection.
+- **Aladdin Risk Engine** — correlation matrix, benchmark tracking (SPY alpha), vol-adjusted sizing, rebalance drift monitor, and stress testing across 5 scenarios.
 
 Research controls:
 
@@ -229,6 +232,47 @@ See **`LLM_INTEGRATION.md`** for complete setup guide, API reference, and best p
 
 ---
 
+## Aladdin Risk Engine
+
+Inspired by BlackRock's Aladdin platform, Azalyst now includes an institutional-grade risk analytics engine (`risk_engine.py`) that runs on every dashboard refresh and trading cycle.
+
+### 5 Institutional Features
+
+| Feature | What It Does | Threshold |
+|---|---|---|
+| **Correlation Matrix** | 30-day rolling pairwise Pearson correlation across all open positions. Blocks new entries if max correlation exceeds threshold. | Block > 0.80, Warn > 0.60 |
+| **Benchmark Tracking** | Tracks SPY total return from portfolio inception date. Computes alpha (portfolio return − benchmark return). | — |
+| **Vol-Adjusted Sizing** | Fetches 30-day realised volatility per ETF. Scales position size inversely — high-vol ETFs get smaller allocations (clamped 0.3x–2.0x). | Target vol: 15% annualised |
+| **Systematic Rebalancing** | Equal-weight target (90% equity / 10% cash). Flags any position drifting beyond threshold from target weight. | Drift > ±5% |
+| **Stress Testing** | Runs portfolio through 5 historical/hypothetical shock scenarios. Maps each ETF to a factor (equities, gold, oil, crypto) and computes P&L impact. | — |
+
+### Stress Test Scenarios
+
+| Scenario | Equities | Gold | Oil | Crypto |
+|---|---|---|---|---|
+| 2008 GFC | −40% | +25% | −55% | −60% |
+| 2020 COVID | −34% | +3% | −65% | −40% |
+| Rates +2% | −15% | −5% | −10% | −20% |
+| USD +10% | −8% | −12% | −15% | −10% |
+| VIX Spike 40 | −18% | +8% | −20% | −25% |
+
+### Integration Points
+
+- **`paper_trader.py`** — Correlation gate blocks overly-correlated entries. Vol-adjusted sizing scales allocation. Rebalance alerts logged during mark-to-market.
+- **`generate_dashboard.py`** — Full risk report included in `status.json` under `aladdin_risk` field.
+- **`index.html`** — Dedicated "ALADDIN RISK ENGINE" panel on the Market Data tab showing correlation heatmap, volatility bars, stress test table, benchmark alpha, and rebalance alerts.
+
+### Dashboard Panel
+
+The Aladdin panel displays:
+- **Stats row**: SPY benchmark return, Alpha vs SPY, Portfolio volatility, Max correlation
+- **Correlation matrix**: Color-coded heatmap (red > 0.80, orange > 0.60, yellow > 0.30)
+- **Volatility bars**: Per-ETF annualised vol with target line
+- **Stress test table**: All 5 scenarios with portfolio-level $ impact, loss %, and worst-hit position
+- **Rebalance monitor**: Drift alerts with TRIM/ADD recommendations and dollar amounts
+
+---
+
 ## Configuration
 
 ### Core Settings
@@ -257,6 +301,20 @@ See **`LLM_INTEGRATION.md`** for complete setup guide, API reference, and best p
 | `MAX_ARTICLE_AGE_DAYS` | `7` | `integer` | Drop articles older than this (0=disabled) |
 
 See `.env.example` for the full template including advanced controls.
+
+### Risk Engine Parameters
+
+These are configured in `risk_engine.py` and `paper_trader.py`:
+
+| Parameter | Default | Description |
+|---|---:|---|
+| `CORRELATION_BLOCK_THRESHOLD` | `0.80` | Block new entry if max pairwise correlation exceeds this |
+| `CORRELATION_WARN_THRESHOLD` | `0.60` | Dashboard warning level |
+| `TARGET_VOL` | `15%` | Target annualised volatility for position scaling |
+| `REBALANCE_DRIFT_PCT` | `5%` | Trigger rebalance alert if position drifts beyond this |
+| `MAX_SINGLE_POSITION_PCT` | `22%` | Hard cap on any single position |
+| `PARTIAL_PROFIT_PCT` | `8%` | Take 50% profit at this return threshold |
+| `ROTATION_MIN_HOLD_DAYS` | `14` | Minimum days before position eligible for rotation |
 
 ## Confidence Score Model
 
@@ -329,6 +387,7 @@ Each Discord report shows the exact platform information (e.g., "iShares by Blac
 |-- paper_trader.py               # Paper trading engine
 |-- portfolio_reporter.py         # Portfolio reporting
 |-- generate_dashboard.py         # Dashboard generation
+|-- risk_engine.py                # Aladdin risk engine (correlation, vol, stress)
 |-- llm_analyzer.py               # LLM analyzer stub
 |-- advanced_llm_analyzer.py      # Advanced multi-model LLM analyzer
 |-- llm_optimizer.py              # NVIDIA NIM portfolio optimizer
