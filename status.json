@@ -257,12 +257,12 @@
       "score": 90.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
+      "symbol": "Defense & Aerospace",
       "score": 87.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 85.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 87.0
     },
     {
       "symbol": "Gold & Precious Metals",
@@ -309,10 +309,6 @@
       "score": 75.0
     },
     {
-      "symbol": "India Equity Markets",
-      "score": 75.0
-    },
-    {
       "symbol": "Nuclear Energy & Uranium",
       "score": 75.0
     },
@@ -327,6 +323,10 @@
     {
       "symbol": "Nuclear Energy & Uranium + Crypto & Digital Assets",
       "score": 73.0
+    },
+    {
+      "symbol": "India Equity Markets",
+      "score": 71.0
     },
     {
       "symbol": "Emerging Markets",
@@ -360,6 +360,44 @@
       }
     },
     {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 87.0,
+      "severity": "CRITICAL",
+      "article_count": 105,
+      "latest_at": "02 Apr 2026 21:58 UTC",
+      "headline": "Trump Threatens to Escalate Iran War But Says End Is Very Close",
+      "regions": [
+        "middle_east",
+        "europe",
+        "americas",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "Defense News",
+        "World | Deutsche Welle"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 7.5,
+        "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
       "confidence": 87.0,
@@ -389,44 +427,6 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 7.5,
-        "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 85.0,
-      "severity": "CRITICAL",
-      "article_count": 101,
-      "latest_at": "02 Apr 2026 17:43 UTC",
-      "headline": "5 Defense Stocks Rebuilding the Military Supply Chain From the Ground Up",
-      "regions": [
-        "europe",
-        "middle_east",
-        "americas",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Defense News",
-        "Oilprice.com",
-        "World | Deutsche Welle",
-        "US Top News and Analysis"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 5.0,
         "recency": 20.0,
         "geopolitical_severity": 15.0
       }
@@ -798,38 +798,6 @@
       }
     },
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 75.0,
-      "severity": "CRITICAL",
-      "article_count": 47,
-      "latest_at": "02 Apr 2026 14:05 UTC",
-      "headline": "Sensex rebounds 1,800 pts from day\u2019s low, settles in green; Nifty above 22,700 as rupee strengthens",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "india"
-      ],
-      "sources": [
-        "Markets-Economic Times"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 5.0,
-        "recency": 10.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 75.0,
@@ -940,6 +908,38 @@
       }
     },
     {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 71.0,
+      "severity": "CRITICAL",
+      "article_count": 44,
+      "latest_at": "02 Apr 2026 14:05 UTC",
+      "headline": "Sensex rebounds 1,800 pts from day\u2019s low, settles in green; Nifty above 22,700 as rupee strengthens",
+      "regions": [
+        "middle_east",
+        "asia_pacific",
+        "india"
+      ],
+      "sources": [
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 5.0,
+        "recency": 6.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "emerging_markets",
       "sector_label": "Emerging Markets",
       "confidence": 65.0,
@@ -1005,12 +1005,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas - 51 articles - CRITICAL - OPEC+ Prepares Paper Oil Barrels While Exports Stall"
+      "text": "Defense & Aerospace - 105 articles - CRITICAL - Trump Threatens to Escalate Iran War But Says End Is Very Close"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Defense & Aerospace - 101 articles - CRITICAL - 5 Defense Stocks Rebuilding the Military Supply Chain From the Ground Up"
+      "text": "Energy / Oil & Gas - 51 articles - CRITICAL - OPEC+ Prepares Paper Oil Barrels While Exports Stall"
     },
     {
       "tag": "tag-bull",
@@ -1070,11 +1070,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 47 articles - CRITICAL - Sensex rebounds 1,800 pts from day\u2019s low, settles in green; Nifty above 22,700 as rupee strengthens"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 7 articles - MEDIUM - Deterrent or danger: After Iran, are Saudi Arabia and Turkey next in line for nuclear weapons?"
     },
     {
@@ -1091,6 +1086,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Nuclear Energy & Uranium + Crypto & Digital Assets - 55 articles - HIGH [legacy] - Nuclear Energy & Uranium + Crypto & Digital Assets \u2014 active signal (legacy record, no headline stored)"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "India Equity Markets - 44 articles - CRITICAL - Sensex rebounds 1,800 pts from day\u2019s low, settles in green; Nifty above 22,700 as rupee strengthens"
     },
     {
       "tag": "tag-neu",
@@ -1196,44 +1196,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4697.0,
+      "price": 4702.7,
       "currency": "USD",
-      "change": -86.2,
-      "change_pct": -1.8,
-      "change_str": "-1.80%",
+      "change": -80.5,
+      "change_pct": -1.68,
+      "change_str": "-1.68%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 111.76,
+      "price": 112.06,
       "currency": "USD",
-      "change": 11.64,
-      "change_pct": 11.63,
-      "change_str": "+11.63%",
+      "change": 11.94,
+      "change_pct": 11.93,
+      "change_str": "+11.93%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66940.75,
+      "price": 66868.45,
       "currency": "USD",
-      "change": -1137.8,
-      "change_pct": -1.67,
-      "change_str": "-1.67%",
+      "change": -1210.11,
+      "change_pct": -1.78,
+      "change_str": "-1.78%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.01,
+      "price": 100.0,
       "currency": "USD",
-      "change": 0.36,
-      "change_pct": 0.36,
-      "change_str": "+0.36%",
+      "change": 0.35,
+      "change_pct": 0.35,
+      "change_str": "+0.35%",
       "direction": "up"
     },
     {
@@ -1532,11 +1532,11 @@
     }
   },
   "logs": [
-    "2026-04-02 21:01:59 [INFO] AZALYST - status.json generated",
-    "2026-04-02 21:01:59 [INFO] PORTFOLIO - NAV USD 936,112.50 | Return -0.83%",
-    "2026-04-02 21:01:59 [INFO] SIGNALS - 21 active signal buckets in state",
-    "2026-04-02 21:01:59 [INFO] TRADER - Open positions: SOXX, IBIT, EEM, XLF",
-    "2026-04-02 21:01:59 [INFO] TRADER - Closed trades: 5"
+    "2026-04-02 21:59:00 [INFO] AZALYST - status.json generated",
+    "2026-04-02 21:59:00 [INFO] PORTFOLIO - NAV USD 936,112.50 | Return -0.83%",
+    "2026-04-02 21:59:00 [INFO] SIGNALS - 21 active signal buckets in state",
+    "2026-04-02 21:59:00 [INFO] TRADER - Open positions: SOXX, IBIT, EEM, XLF",
+    "2026-04-02 21:59:00 [INFO] TRADER - Closed trades: 5"
   ],
-  "generated_at": "2026-04-02 21:01:58 UTC"
+  "generated_at": "2026-04-02 21:58:59 UTC"
 }
