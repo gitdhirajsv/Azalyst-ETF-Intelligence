@@ -263,7 +263,7 @@ body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-
         <div class="stat-box">
           <div class="stat-label">Cash Available</div>
           <div class="stat-val" id="m-cash">--</div>
-          <div class="stat-sub" id="m-cash-sub">INR</div>
+          <div class="stat-sub" id="m-cash-sub">USD</div>
         </div>
         <div class="stat-box">
           <div class="stat-label">Win Rate</div>
@@ -345,7 +345,7 @@ body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-
     <div class="panel">
       <div class="panel-header">OPEN POSITIONS</div>
       <div style="display:grid;grid-template-columns:55px 120px 70px 70px 70px 70px 60px 55px;gap:0;font-size:8px;color:#444;border-bottom:1px solid #333;padding-bottom:3px;margin-bottom:3px">
-        <span>ID</span><span>ETF NAME</span><span style="text-align:right">ENTRY</span><span style="text-align:right">CURRENT</span><span style="text-align:right">P&L INR</span><span style="text-align:right">RET%</span><span style="text-align:right">STOP</span><span style="text-align:right">DAYS</span>
+        <span>ID</span><span>ETF NAME</span><span style="text-align:right">ENTRY</span><span style="text-align:right">CURRENT</span><span style="text-align:right">P&L USD</span><span style="text-align:right">RET%</span><span style="text-align:right">STOP</span><span style="text-align:right">DAYS</span>
       </div>
       <div id="portPositions"></div>
     </div>
@@ -353,7 +353,7 @@ body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-
     <div class="panel">
       <div class="panel-header">CLOSED TRADES — TRACK RECORD</div>
       <div style="display:grid;grid-template-columns:45px 80px 65px 65px 70px 60px 1fr;gap:0;font-size:8px;color:#444;border-bottom:1px solid #333;padding-bottom:3px;margin-bottom:3px">
-        <span>ID</span><span>TICKER</span><span style="text-align:right">ENTRY</span><span style="text-align:right">EXIT</span><span style="text-align:right">P&L INR</span><span style="text-align:right">RET%</span><span style="padding-left:6px">REASON</span>
+        <span>ID</span><span>TICKER</span><span style="text-align:right">ENTRY</span><span style="text-align:right">EXIT</span><span style="text-align:right">P&L USD</span><span style="text-align:right">RET%</span><span style="padding-left:6px">REASON</span>
       </div>
       <div id="closedTrades"></div>
       <div style="margin-top:10px;padding-top:8px;border-top:1px solid #222" id="trackStats"></div>
@@ -603,11 +603,11 @@ function renderMktdPage() {
   document.getElementById('m-nav-sub').textContent = 'deposited $' + Number(dep_usd).toLocaleString();
   document.getElementById('m-ret').textContent = DATA.change || '--%';
   document.getElementById('m-ret').className = 'stat-val ' + colorClass(DATA.change_raw);
-  document.getElementById('m-ret-sub').textContent = fmt.inr(DATA.unrealised_pnl) + ' unreal';
+  document.getElementById('m-ret-sub').textContent = fmt.usd(DATA.unrealised_pnl) + ' unreal';
   const cashPct = DATA.portfolio_value ? ((DATA.cash / DATA.portfolio_value) * 100).toFixed(1) : '--';
   document.getElementById('m-cash').textContent = cashPct + '%';
   document.getElementById('m-cash').className = 'stat-val neu';
-  document.getElementById('m-cash-sub').textContent = fmt.inr(DATA.cash);
+  document.getElementById('m-cash-sub').textContent = fmt.usd(DATA.cash);
   const tr = DATA.track_record || {};
   document.getElementById('m-wr').textContent = (tr.win_rate || 0).toFixed(1) + '%';
   document.getElementById('m-wr').className = 'stat-val ' + (tr.win_rate > 50 ? 'up' : 'dn');
@@ -622,7 +622,7 @@ function renderMktdPage() {
     return `<div class="${rowCls}">
       <span class="pticker">${p.ticker}</span>
       <span class="psector">${(p.sector||'').substring(0,30)}</span>
-      <span class="ppnl ${colorClass(p.pnl)}">${fmt.inr(p.pnl)}</span>
+      <span class="ppnl ${colorClass(p.pnl)}">${fmt.usd(p.pnl)}</span>
       <span class="ppct ${colorClass(p.pnl_pct)}">${p.pnl_pct_str}</span>
       <span class="pconf" style="color:${p.confidence>=80?'#ff9900':p.confidence>=70?'#ffcc00':'#666'}">${p.confidence}/100</span>
     </div>`;
@@ -721,11 +721,11 @@ function renderMktdPage() {
 function renderPortPage() {
   const tr = DATA.track_record || {};
   const stats = [
-    {label:'Portfolio NAV',  val:'$'+(DATA.portfolio_value/USD_INR).toFixed(0), sub:fmt.inr(DATA.portfolio_value), cls:colorClass(DATA.change_raw)},
-    {label:'Total Deposited',val:'$'+(DATA.total_deposited/USD_INR).toFixed(0), sub:fmt.inr(DATA.total_deposited), cls:'neu'},
+    {label:'Portfolio NAV',  val:'$'+(DATA.portfolio_value/USD_INR).toFixed(0), sub:'deposited $'+(DATA.total_deposited/USD_INR).toFixed(0), cls:colorClass(DATA.change_raw)},
+    {label:'Total Deposited',val:'$'+(DATA.total_deposited/USD_INR).toFixed(0), sub:'', cls:'neu'},
     {label:'Total Return',   val:DATA.change||'--', sub:'overall P&L', cls:colorClass(DATA.change_raw)},
-    {label:'Unrealised P&L', val:fmt.inr(DATA.unrealised_pnl), sub:'open positions', cls:colorClass(DATA.unrealised_pnl)},
-    {label:'Realised P&L',   val:fmt.inr(DATA.realised_pnl), sub:'closed trades', cls:colorClass(DATA.realised_pnl)},
+    {label:'Unrealised P&L', val:fmt.usd(DATA.unrealised_pnl), sub:'open positions', cls:colorClass(DATA.unrealised_pnl)},
+    {label:'Realised P&L',   val:fmt.usd(DATA.realised_pnl), sub:'closed trades', cls:colorClass(DATA.realised_pnl)},
     {label:'Win Rate',       val:(tr.win_rate||0).toFixed(1)+'%', sub:(tr.winners||0)+'W / '+(tr.losers||0)+'L', cls:tr.win_rate>50?'up':'dn'},
   ];
   document.getElementById('portStats').innerHTML = stats.map(s =>
@@ -741,7 +741,7 @@ function renderPortPage() {
       <span style="color:#888;font-size:9px">${(p.etf_name||'').substring(0,22)}</span>
       <span style="text-align:right;color:#aaa">${fmt.num(p.entry)}</span>
       <span style="text-align:right;color:#fff">${fmt.num(p.current)}</span>
-      <span style="text-align:right" class="${colorClass(p.pnl)}">${fmt.inr(p.pnl)}</span>
+      <span style="text-align:right" class="${colorClass(p.pnl)}">${fmt.usd(p.pnl)}</span>
       <span style="text-align:right" class="${colorClass(p.pnl_pct)}">${p.pnl_pct_str}</span>
       <span style="text-align:right;color:#555">${fmt.num(p.trail_stop)}</span>
       <span style="text-align:right;color:#555">${p.days_held}d</span>
@@ -754,7 +754,7 @@ function renderPortPage() {
       <span style="color:#aaa;font-weight:700">${t.ticker}</span>
       <span style="text-align:right;color:#555">${fmt.num(t.entry)}</span>
       <span style="text-align:right;color:#555">${fmt.num(t.exit)}</span>
-      <span style="text-align:right" class="${colorClass(t.pnl)}">${fmt.inr(t.pnl)}</span>
+      <span style="text-align:right" class="${colorClass(t.pnl)}">${fmt.usd(t.pnl)}</span>
       <span style="text-align:right" class="${colorClass(t.pnl_pct)}">${t.pnl_pct_str}</span>
       <span style="padding-left:6px;color:#444;font-size:8px">${(t.exit_reason||'').substring(0,40)}</span>
     </div>`).join('');

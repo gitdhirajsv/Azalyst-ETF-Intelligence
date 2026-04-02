@@ -208,15 +208,15 @@ function updateConfidence(data) {
 
 function updateStats(data) {
   document.getElementById("portfolioValue").textContent = usd(data.portfolio_value);
-  document.getElementById("portfolioValueINR").textContent = rupee(data.portfolio_value);
+  document.getElementById("portfolioValueINR").textContent = usd(data.portfolio_value);
   document.getElementById("totalDeposited").textContent = usd(data.total_deposited);
-  document.getElementById("totalDepositedINR").textContent = rupee(data.total_deposited);
+  document.getElementById("totalDepositedINR").textContent = usd(data.total_deposited);
   document.getElementById("cashAvailable").textContent = usd(data.cash);
-  document.getElementById("cashAvailableINR").textContent = rupee(data.cash);
+  document.getElementById("cashAvailableINR").textContent = usd(data.cash);
 
   const reserve = Number(data.monthly_reserve || 0);
   document.getElementById("monthlyReserve").textContent = usd(reserve);
-  document.getElementById("monthlyReserveINR").textContent = rupee(reserve);
+  document.getElementById("monthlyReserveINR").textContent = usd(reserve);
 
   const unrealised = document.getElementById("unrealisedPnl");
   const realised = document.getElementById("realisedPnl");
@@ -226,8 +226,8 @@ function updateStats(data) {
   realised.textContent = `${realisedVal >= 0 ? "+" : ""}${usd(realisedVal)}`;
   unrealised.className = `stat-val ${pnlClass(unrealisedVal)}`;
   realised.className = `stat-val ${pnlClass(realisedVal)}`;
-  document.getElementById("unrealisedPnlINR").textContent = rupee(unrealisedVal);
-  document.getElementById("realisedPnlINR").textContent = rupee(realisedVal);
+  document.getElementById("unrealisedPnlINR").textContent = usd(unrealisedVal);
+  document.getElementById("realisedPnlINR").textContent = usd(realisedVal);
 
   document.getElementById("portfolioChange").textContent = `${data.change || "-"} total return`;
   document.getElementById("portfolioChange").className = `stat-sub ${pnlClass(data.change_raw)}`;

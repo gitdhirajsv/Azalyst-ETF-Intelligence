@@ -2,12 +2,13 @@
 paper_trader.py - AZALYST Paper Trading Engine
 
 Institution-style paper trading with:
-  - INR-denominated accounting
+  - USD-denominated accounting
   - monthly capital top-ups
   - half-Kelly sizing
   - sector caps, drawdown guardrails, and trailing stops
-  - partial profit-taking
-  - capital rotation into stronger signals when cash is trapped
+  - partial profit-taking at +8%
+  - capital rotation into stronger signals (min 14-day hold)
+  - max single position cap at 22%
 """
 
 import json
@@ -25,18 +26,18 @@ log = logging.getLogger("azalyst.trader")
 MONTHLY_BUDGET_USD      = 10_000
 MIN_TRADE_USD           = 50     # ~INR 4,175 at 83.5 — prevents dust trades
 MAX_POSITIONS           = 6
-MAX_SINGLE_POSITION_PCT = 0.40
+MAX_SINGLE_POSITION_PCT = 0.22
 STOP_LOSS_PCT           = 0.10
 TRAILING_STOP_PCT       = 0.08
 TRAIL_ACTIVATION_PCT    = 0.05
-PARTIAL_PROFIT_PCT      = 0.15
+PARTIAL_PROFIT_PCT      = 0.08
 PARTIAL_PROFIT_FRACTION = 0.50
 SECTOR_CAP_PCT          = 0.30
 CASH_FLOOR_PCT          = 0.05
 MAX_HOLD_DAYS           = 180
 CIRCUIT_BREAKER_DRAWDOWN_PCT = 0.12
-ROTATION_CONFIDENCE_DELTA    = 6
-ROTATION_MIN_HOLD_DAYS       = 3
+ROTATION_CONFIDENCE_DELTA    = 10
+ROTATION_MIN_HOLD_DAYS       = 14
 
 AVG_WIN_BY_SEVERITY = {
     "CRITICAL": 0.20,
@@ -315,7 +316,7 @@ class PaperPortfolio:
                     ct.exchange = "NYSE"
 
             log.info(
-                "Portfolio loaded - Cash: INR %.0f | Reserve: INR %.0f | Open: %s | Closed: %s",
+                "Portfolio loaded - Cash: %.0f | Reserve: %.0f | Open: %s | Closed: %s",
                 self.cash_inr,
                 self.monthly_reserve_inr,
                 len(self.open_positions),
@@ -364,11 +365,9 @@ class PaperPortfolio:
         self.total_deposited   += budget_inr
         self.monthly_deposits[month_key] = round(budget_inr, 2)
         log.info(
-            "Monthly deposit: $%s USD (INR %s at rate %.2f). "
-            "Deployed half: INR %.0f | Reserved half: INR %.0f | Cash: INR %.0f",
+            "Monthly deposit: $%s USD. "
+            "Deployed half: %.0f | Reserved half: %.0f | Cash: %.0f",
             f"{MONTHLY_BUDGET_USD:,}",
-            f"{budget_inr:,.2f}",
-            usd_inr_rate,
             deploy_half,
             reserve_half,
             self.cash_inr,
@@ -389,7 +388,7 @@ class PaperPortfolio:
         self.monthly_reserve_inr -= release
         self.cash_inr += release
         log.info(
-            "RESERVE RELEASED: INR %.2f | Remaining reserve: INR %.2f | Cash: INR %.2f",
+            "RESERVE RELEASED: %.2f | Remaining reserve: %.2f | Cash: %.2f",
             release, self.monthly_reserve_inr, self.cash_inr,
         )
         return release
@@ -472,6 +471,10 @@ class PaperPortfolio:
         candidates = []
 
         for pos in self.open_positions:
+            # Enforce minimum hold period before any rotation
+            if pos.days_held() < ROTATION_MIN_HOLD_DAYS:
+                continue
+
             pnl_pct = pos.unrealised_pnl_pct()
             score   = 0.0
 
@@ -511,7 +514,7 @@ class PaperPortfolio:
         self._update_drawdown_state()
 
         log.info(
-            "CLOSED %s - %s | PnL: INR %s (%+.1f%%) | %s",
+            "CLOSED %s - %s | PnL: %s (%+.1f%%) | %s",
             position.trade_id,
             position.ticker,
             f"{ct.realised_pnl:+,.2f}",
@@ -586,7 +589,7 @@ class PaperPortfolio:
         self._update_drawdown_state()
 
         log.info(
-            "PARTIAL PROFIT - %s | Sold 50%% | Realised INR %+,.2f | Remaining units %.6f",
+            "PARTIAL PROFIT - %s | Sold 50%% | Realised %+,.2f | Remaining units %.6f",
             position.ticker,
             realised_pnl,
             position.units,
@@ -647,7 +650,7 @@ class PaperPortfolio:
         self._update_drawdown_state()
 
         log.info(
-            "IDLE CASH RECYCLED - %s | +INR %.2f | New avg %.4f | Cash INR %.2f",
+            "IDLE CASH RECYCLED - %s | +%.2f | New avg %.4f | Cash %.2f",
             best_pos.ticker, invested, best_pos.entry_price, self.cash_inr,
         )
         self.save()
@@ -728,7 +731,7 @@ class PaperPortfolio:
             rotation_exits = self._rotate_for_signal(signal, target_alloc)
 
         if self.cash_inr < MIN_TRADE_INR:
-            log.info("Position rejected - insufficient cash (INR %.0f)", self.cash_inr)
+            log.info("Position rejected - insufficient cash (%.0f)", self.cash_inr)
             return None
 
         # FIX: fetch rate once for entry (avoids redundant call in get_current_price_inr)
@@ -771,7 +774,7 @@ class PaperPortfolio:
             self.save()
 
             log.info(
-                "TOPPED UP %s - %s | +INR %.2f | Avg price %.4f",
+                "TOPPED UP %s - %s | +%.2f | Avg price %.4f",
                 existing.trade_id, ticker, invested, existing.entry_price,
             )
 
@@ -819,7 +822,7 @@ class PaperPortfolio:
         self.save()
 
         log.info(
-            "ENTERED %s - %s | INR %.2f | Price %.4f | Units %.4f",
+            "ENTERED %s - %s | %.2f | Price %.4f | Units %.4f",
             position.trade_id, ticker, invested, entry_price, units,
         )
 
