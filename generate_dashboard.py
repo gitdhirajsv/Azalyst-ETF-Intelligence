@@ -538,7 +538,7 @@ def build_logs(portfolio, state, metrics):
     now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
     logs = [f"{now} [INFO] AZALYST - status.json generated"]
     logs.append(
-        f"{now} [INFO] PORTFOLIO - NAV INR {metrics['portfolio_value']:,.2f} | "
+        f"{now} [INFO] PORTFOLIO - NAV USD {metrics['portfolio_value']:,.2f} | "
         f"Return {metrics['change']}"
     )
     if state:
@@ -551,7 +551,7 @@ def build_logs(portfolio, state, metrics):
         logs.append(f"{now} [INFO] TRADER - Closed trades: {len(closed)}")
     if portfolio.get("partial_realised_pnl_total", 0):
         logs.append(
-            f"{now} [INFO] RISK - Partial profits realised: INR "
+            f"{now} [INFO] RISK - Partial profits realised: USD "
             f"{portfolio.get('partial_realised_pnl_total', 0):,.2f}"
         )
     if metrics.get("drawdown_now_pct", 0) >= CIRCUIT_BREAKER_DRAWDOWN_PCT:
