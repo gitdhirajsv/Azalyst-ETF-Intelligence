@@ -17,7 +17,7 @@ OUTPUT_FILE    = ROOT / "status.json"
 TRAIL_ACTIVATION_PCT        = 0.05
 TRAILING_STOP_PCT           = 0.08
 HARD_STOP_PCT               = 0.10
-PARTIAL_PROFIT_PCT          = 0.15
+PARTIAL_PROFIT_PCT          = 0.08
 SECTOR_CAP_PCT              = 30
 CIRCUIT_BREAKER_DRAWDOWN_PCT = 12
 

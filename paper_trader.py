@@ -20,6 +20,18 @@ import urllib.request
 
 log = logging.getLogger("azalyst.trader")
 
+# Lazy import to avoid circular dependency — loaded on first use
+_risk_engine = None
+def _get_risk_engine():
+    global _risk_engine
+    if _risk_engine is None:
+        try:
+            import risk_engine as _re
+            _risk_engine = _re
+        except ImportError:
+            _risk_engine = None
+    return _risk_engine
+
 
 # Monthly budget in USD — converted to INR at runtime via live FX rate.
 # Client capital plan: $10,000/month for 6 months = $60,000 total.
@@ -695,9 +707,34 @@ class PaperPortfolio:
             log.info("Position rejected - circuit breaker active")
             return None
 
+        # ── Aladdin: Correlation gate — block if new ticker is >0.80 correlated ──
+        re = _get_risk_engine()
+        if re and not any(p.ticker == ticker for p in self.open_positions):
+            existing_tickers = [p.ticker for p in self.open_positions]
+            if existing_tickers:
+                corr_result = re.check_portfolio_correlation(existing_tickers, ticker)
+                if corr_result.get("blocked"):
+                    log.info(
+                        "Position rejected - correlation %.2f with %s exceeds threshold",
+                        corr_result["max_corr"], corr_result["corr_with"],
+                    )
+                    return None
+
         fraction = self._position_size(confidence, severity)
         if fraction <= 0:
             return None
+
+        # ── Aladdin: Volatility-adjusted sizing — scale inversely with realised vol ──
+        if re:
+            closes = re.fetch_historical_closes([ticker], "1mo")
+            if closes.get(ticker):
+                vol_map = re.compute_volatility(closes)
+                ticker_vol = vol_map.get(ticker, re.TARGET_VOL)
+                fraction = re.vol_adjusted_sizing(fraction, ticker_vol)
+                log.info(
+                    "Vol-adjusted sizing for %s: vol=%.1f%%, fraction=%.4f",
+                    ticker, ticker_vol * 100, fraction,
+                )
 
         # ── Reserve release: only tap reserve for best-in-book opportunities ──
         if self._should_release_reserve(signal):
@@ -899,6 +936,20 @@ class PaperPortfolio:
 
         if exits:
             self._recycle_idle_cash()
+
+        # ── Aladdin: Systematic Rebalancing — check drift and log alerts ──
+        re = _get_risk_engine()
+        if re and self.open_positions:
+            pos_dicts = [p.to_dict() for p in self.open_positions]
+            pv = self._portfolio_value()
+            drift_alerts = re.check_rebalance_drift(pos_dicts, self.cash_inr, pv)
+            for alert in drift_alerts:
+                log.info(
+                    "REBALANCE ALERT: %s drifted %+.1f%% (actual %.1f%% vs target %.1f%%) — %s $%.0f",
+                    alert["ticker"], alert["drift_pct"],
+                    alert["actual_weight_pct"], alert["target_weight_pct"],
+                    alert["action"], alert["amount"],
+                )
 
         return exits
 
