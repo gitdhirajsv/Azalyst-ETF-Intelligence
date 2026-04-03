@@ -1,22 +1,22 @@
 {
-  "portfolio_value": 7639.89,
-  "total_deposited": 107.9,
-  "cash": 3432.61,
+  "portfolio_value": 7640.3,
+  "total_deposited": 7639.77,
+  "cash": 3433.02,
   "monthly_reserve": 0.0,
   "market_value": 4207.28,
-  "total_invested": 4206.25,
-  "unrealised_pnl": 1.03,
-  "unrealised_str": "+1.03",
+  "total_invested": 4206.75,
+  "unrealised_pnl": 0.53,
+  "unrealised_str": "+0.53",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "+6980.73%",
-  "change_raw": 6980.73,
+  "change": "+0.01%",
+  "change_raw": 0.01,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 7639.98,
-  "drawdown_now_pct": 0.0,
-  "max_drawdown_pct": 0.0,
-  "usd_inr_rate": 92.681,
+  "portfolio_peak": 7640.89,
+  "drawdown_now_pct": 0.01,
+  "max_drawdown_pct": 0.01,
+  "usd_inr_rate": 92.67,
   "positions": [
     {
       "trade_id": "T0001",
@@ -25,17 +25,17 @@
       "sector": "Defense & Aerospace",
       "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 221.85,
+      "entry": 221.88,
       "current": 221.91,
-      "peak_price": 221.91,
-      "trail_stop": 199.67,
-      "dist_to_trail_pct": 10.02,
+      "peak_price": 221.94,
+      "trail_stop": 199.69,
+      "dist_to_trail_pct": 10.01,
       "units": 8.629968,
-      "invested": 1914.6,
-      "pnl": 0.48,
-      "pnl_str": "+0.48",
-      "pnl_pct": 0.02,
-      "pnl_pct_str": "+0.02%",
+      "invested": 1914.83,
+      "pnl": 0.25,
+      "pnl_str": "+0.25",
+      "pnl_pct": 0.01,
+      "pnl_pct_str": "+0.01%",
       "confidence": 85,
       "severity": "CRITICAL",
       "days_held": 0,
@@ -50,15 +50,15 @@
       "exchange": "NYSE",
       "entry": 59.24,
       "current": 59.25,
-      "peak_price": 59.25,
-      "trail_stop": 53.31,
-      "dist_to_trail_pct": 10.02,
+      "peak_price": 59.26,
+      "trail_stop": 53.32,
+      "dist_to_trail_pct": 10.01,
       "units": 38.687021,
-      "invested": 2291.65,
-      "pnl": 0.55,
-      "pnl_str": "+0.55",
-      "pnl_pct": 0.02,
-      "pnl_pct_str": "+0.02%",
+      "invested": 2291.92,
+      "pnl": 0.28,
+      "pnl_str": "+0.28",
+      "pnl_pct": 0.01,
+      "pnl_pct_str": "+0.01%",
       "confidence": 87,
       "severity": "CRITICAL",
       "days_held": 0,
@@ -98,8 +98,8 @@
       "XLE"
     ],
     "values": [
-      0.48,
-      0.55
+      0.25,
+      0.28
     ]
   },
   "confidence": [
@@ -572,22 +572,22 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66881.37,
+      "price": 66941.38,
       "currency": "USD",
-      "change": -7.2,
-      "change_pct": -0.01,
-      "change_str": "-0.01%",
-      "direction": "down"
+      "change": 52.81,
+      "change_pct": 0.08,
+      "change_str": "+0.08%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.18,
+      "price": 100.19,
       "currency": "USD",
-      "change": 0.15,
-      "change_pct": 0.15,
-      "change_str": "+0.15%",
+      "change": 0.16,
+      "change_pct": 0.16,
+      "change_str": "+0.16%",
       "direction": "up"
     },
     {
@@ -604,8 +604,8 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.0,
-    "portfolio_peak": 7639.98,
+    "drawdown_from_peak_pct": 0.01,
+    "portfolio_peak": 7640.89,
     "vix": 23.87,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
@@ -620,7 +620,7 @@
         "at_cap": false
       }
     ],
-    "max_drawdown_pct": 0.0,
+    "max_drawdown_pct": 0.01,
     "sector_cap_pct": 30,
     "trailing_stop_pct": 8,
     "hard_stop_pct": 10,
@@ -662,8 +662,8 @@
       "benchmark_price_start": 680.33,
       "benchmark_price_now": 655.83,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": 6980.73,
-      "alpha": 6984.33
+      "portfolio_return_pct": 0.01,
+      "alpha": 3.61
     },
     "rebalance": {
       "alerts": [
@@ -673,7 +673,7 @@
           "target_weight_pct": 10.0,
           "drift_pct": 34.93,
           "action": "DEPLOY",
-          "amount": 2668.62,
+          "amount": 2668.99,
           "etf_name": "Cash Reserve"
         },
         {
@@ -682,7 +682,7 @@
           "target_weight_pct": 45.0,
           "drift_pct": -19.93,
           "action": "ADD",
-          "amount": 1522.87,
+          "amount": 1523.06,
           "etf_name": "iShares U.S. Aerospace & Defense ETF"
         },
         {
@@ -691,7 +691,7 @@
           "target_weight_pct": 45.0,
           "drift_pct": -15.0,
           "action": "ADD",
-          "amount": 1145.74,
+          "amount": 1145.93,
           "etf_name": "Energy Select Sector SPDR"
         }
       ],
@@ -796,10 +796,10 @@
     }
   },
   "logs": [
-    "2026-04-03 17:27:29 [INFO] AZALYST - status.json generated",
-    "2026-04-03 17:27:29 [INFO] PORTFOLIO - NAV USD 7,639.89 | Return +6980.73%",
-    "2026-04-03 17:27:29 [INFO] SIGNALS - 8 active signal buckets in state",
-    "2026-04-03 17:27:29 [INFO] TRADER - Open positions: ITA, XLE"
+    "2026-04-03 17:34:39 [INFO] AZALYST - status.json generated",
+    "2026-04-03 17:34:39 [INFO] PORTFOLIO - NAV USD 7,640.30 | Return +0.01%",
+    "2026-04-03 17:34:39 [INFO] SIGNALS - 8 active signal buckets in state",
+    "2026-04-03 17:34:39 [INFO] TRADER - Open positions: ITA, XLE"
   ],
-  "generated_at": "2026-04-03 17:27:29 UTC"
+  "generated_at": "2026-04-03 17:34:39 UTC"
 }
