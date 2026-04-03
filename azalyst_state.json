@@ -285,49 +285,41 @@
     }
   },
   "banking_financial|gold_precious_metals": {
-    "sent_at": "2026-04-03T04:06:52.354435+00:00",
-    "confidence": 81,
-    "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
-    "article_count": 27,
-    "severity": "MEDIUM",
+    "sent_at": "2026-04-03T13:00:38.011333+00:00",
+    "confidence": 90,
+    "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+    "article_count": 25,
+    "severity": "CRITICAL",
     "regions": [
-      "asia_pacific",
-      "middle_east",
       "americas",
+      "middle_east",
+      "asia_pacific",
       "india",
-      "europe",
       "global"
     ],
     "sources": [
+      "Bloomberg Markets",
       "Markets-Economic Times",
-      "Finance"
+      "Finance",
+      "Cointelegraph.com News"
     ],
     "top_headlines": [
-      "Fed Governor Miran still backs cuts, says interest rates could be 'about a point' lower this year",
-      "RBI clears Emirates NBD to acquire up to 74% stake in RBL Bank; lender to become foreign bank post acquisition",
-      "Beyond Iran war, what drove sharp equity selloff in March? Aswath Damodaran explains",
-      "Rising yields amid Middle East crisis trigger Rs 17,689 cr FPI outflow from FAR G-Sec",
-      "BlackRock cuts US stocks to neutral and warns of rate hikes \u2014 but sees a buying opportunity in India"
+      "Gold slides 3% as oil surges on dimming hopes of end to Iran war",
+      "Ex-Fidelity staff target retail investors with onchain gold arbitrage product",
+      "Powell sees inflation outlook in check, no need to hike rates because of oil shock",
+      "De-dollarisation, war, and debt: Why gold is regaining monetary relevance",
+      "Treasuries Fall as Strong Jobs Data Undermines Fed Cut Outlook"
     ],
-    "latest_ts": "2026-04-03T04:06:48.084865+00:00",
+    "latest_ts": "2026-04-03T12:47:13+00:00",
     "confidence_breakdown": {
       "signal_strength": 25,
       "volume_confirmation": 20.0,
-      "source_diversity": 5.0,
+      "source_diversity": 10.0,
       "recency": 20.0,
-      "geopolitical_severity": 11
+      "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
       "india": [
-        {
-          "name": "Nippon India ETF Bank BeES",
-          "ticker": "BANKBEES",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "1\u20136 months",
-          "thesis": "Top Indian private and PSU banks. Rate cut cycle could re-rate banking sector."
-        },
         {
           "name": "Nippon India Gold BeES",
           "ticker": "GOLDBEES",
@@ -346,27 +338,26 @@
           "risk": "Low-Medium",
           "timeframe": "3\u201318 months",
           "thesis": "Physical gold backed. Very liquid. Safe haven in geopolitical or inflation-driven scenarios."
+        },
+        {
+          "name": "Nippon India ETF Bank BeES",
+          "ticker": "BANKBEES",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Top Indian private and PSU banks. Rate cut cycle could re-rate banking sector."
         }
       ],
       "global": [
         {
-          "name": "Financial Select Sector SPDR",
-          "ticker": "XLF",
-          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
-          "exchange": "NYSE",
-          "risk": "Medium",
-          "timeframe": "1\u20136 months",
-          "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play."
-        },
-        {
           "name": "SPDR Gold MiniShares Trust",
           "ticker": "GLDM",
-          "note": "Flight to safety during banking stress",
           "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
           "exchange": "NYSE",
           "risk": "Low-Medium",
-          "timeframe": "1\u20133 months",
-          "thesis": "Banking crisis \u2192 gold safe haven. GLDM benefits from systemic financial stress."
+          "timeframe": "3\u201318 months",
+          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026."
         },
         {
           "name": "VanEck Gold Miners ETF",
@@ -385,6 +376,15 @@
           "risk": "High",
           "timeframe": "2\u20136 months",
           "thesis": "Smaller miners \u2014 highest leverage to gold. High risk/reward. Use only for strong conviction."
+        },
+        {
+          "name": "Financial Select Sector SPDR",
+          "ticker": "XLF",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play."
         }
       ]
     }
