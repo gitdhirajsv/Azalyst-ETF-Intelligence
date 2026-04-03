@@ -70,7 +70,7 @@ Every 30 minutes, the system automatically:
 
 | | |
 |---|---|
-| **Experiment started** | March 2026 |
+| **Experiment started** | April 2026 |
 | **Monthly capital** | $10,000 USD / month (auto-credited) |
 | **Capital strategy** | 50% deployed immediately, 50% held in reserve |
 | **Total after 6 months** | $60,000 deposited |
@@ -289,14 +289,20 @@ Each Discord report shows the exact platform information (e.g., "iShares by Blac
 |-- portfolio_reporter.py         # Portfolio reporting
 |-- generate_dashboard.py         # Dashboard generation
 |-- risk_engine.py                # Aladdin risk engine (correlation, vol, stress)
+|-- migrate_portfolio_platforms.py # Platform migration utility
+|-- migrate_state_platforms.py    # State migration utility
+|-- prepare_spyder_profile.py     # Spyder profile setup
 |-- requirements.txt              # Python dependencies
 |-- .env.example                  # Environment template
-|-- .env                          # Your configuration (API key here)
+|-- .env                          # Your configuration (not committed)
 |-- README.md                     # Main documentation
 |-- AUTO_STARTUP_GUIDE.md         # Auto-startup setup guide
+|-- GLOBAL_ETF_PLATFORM_FIX.md   # Platform mapping docs
+|-- FOLDER_STRUCTURE.txt          # File listing reference
 |-- index.html                    # Dashboard HTML
 |-- dashboard.js                  # Dashboard JavaScript
 |-- dashboard_12pct.png           # Dashboard preview image
+|-- LICENSE                       # MIT License
 +-- runtime artifacts (auto-generated)
     |-- azalyst.log               # System logs
     |-- azalyst_state.json        # Signal state
