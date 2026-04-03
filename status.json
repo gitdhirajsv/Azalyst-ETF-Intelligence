@@ -1,22 +1,22 @@
 {
-  "portfolio_value": 7639.93,
+  "portfolio_value": 7639.89,
   "total_deposited": 107.9,
-  "cash": 3432.65,
+  "cash": 3432.61,
   "monthly_reserve": 0.0,
   "market_value": 4207.28,
-  "total_invested": 4206.3,
-  "unrealised_pnl": 0.98,
-  "unrealised_str": "+0.98",
+  "total_invested": 4206.25,
+  "unrealised_pnl": 1.03,
+  "unrealised_str": "+1.03",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "+6980.69%",
-  "change_raw": 6980.69,
+  "change": "+6980.73%",
+  "change_raw": 6980.73,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 7640.07,
+  "portfolio_peak": 7639.98,
   "drawdown_now_pct": 0.0,
   "max_drawdown_pct": 0.0,
-  "usd_inr_rate": 92.68,
+  "usd_inr_rate": 92.681,
   "positions": [
     {
       "trade_id": "T0001",
@@ -25,15 +25,15 @@
       "sector": "Defense & Aerospace",
       "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 221.86,
+      "entry": 221.85,
       "current": 221.91,
-      "peak_price": 221.92,
+      "peak_price": 221.91,
       "trail_stop": 199.67,
       "dist_to_trail_pct": 10.02,
       "units": 8.629968,
-      "invested": 1914.62,
-      "pnl": 0.45,
-      "pnl_str": "+0.45",
+      "invested": 1914.6,
+      "pnl": 0.48,
+      "pnl_str": "+0.48",
       "pnl_pct": 0.02,
       "pnl_pct_str": "+0.02%",
       "confidence": 85,
@@ -54,9 +54,9 @@
       "trail_stop": 53.31,
       "dist_to_trail_pct": 10.02,
       "units": 38.687021,
-      "invested": 2291.68,
-      "pnl": 0.53,
-      "pnl_str": "+0.53",
+      "invested": 2291.65,
+      "pnl": 0.55,
+      "pnl_str": "+0.55",
       "pnl_pct": 0.02,
       "pnl_pct_str": "+0.02%",
       "confidence": 87,
@@ -98,8 +98,8 @@
       "XLE"
     ],
     "values": [
-      0.45,
-      0.53
+      0.48,
+      0.55
     ]
   },
   "confidence": [
@@ -572,12 +572,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66952.05,
+      "price": 66881.37,
       "currency": "USD",
-      "change": 63.48,
-      "change_pct": 0.09,
-      "change_str": "+0.09%",
-      "direction": "up"
+      "change": -7.2,
+      "change_pct": -0.01,
+      "change_str": "-0.01%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
@@ -605,7 +605,7 @@
   "risk_controls": {
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
-    "portfolio_peak": 7640.07,
+    "portfolio_peak": 7639.98,
     "vix": 23.87,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
@@ -662,8 +662,8 @@
       "benchmark_price_start": 680.33,
       "benchmark_price_now": 655.83,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": 6980.69,
-      "alpha": 6984.29
+      "portfolio_return_pct": 6980.73,
+      "alpha": 6984.33
     },
     "rebalance": {
       "alerts": [
@@ -673,7 +673,7 @@
           "target_weight_pct": 10.0,
           "drift_pct": 34.93,
           "action": "DEPLOY",
-          "amount": 2668.65,
+          "amount": 2668.62,
           "etf_name": "Cash Reserve"
         },
         {
@@ -682,7 +682,7 @@
           "target_weight_pct": 45.0,
           "drift_pct": -19.93,
           "action": "ADD",
-          "amount": 1522.89,
+          "amount": 1522.87,
           "etf_name": "iShares U.S. Aerospace & Defense ETF"
         },
         {
@@ -691,7 +691,7 @@
           "target_weight_pct": 45.0,
           "drift_pct": -15.0,
           "action": "ADD",
-          "amount": 1145.76,
+          "amount": 1145.74,
           "etf_name": "Energy Select Sector SPDR"
         }
       ],
@@ -796,10 +796,10 @@
     }
   },
   "logs": [
-    "2026-04-03 16:47:56 [INFO] AZALYST - status.json generated",
-    "2026-04-03 16:47:56 [INFO] PORTFOLIO - NAV USD 7,639.93 | Return +6980.69%",
-    "2026-04-03 16:47:56 [INFO] SIGNALS - 8 active signal buckets in state",
-    "2026-04-03 16:47:56 [INFO] TRADER - Open positions: ITA, XLE"
+    "2026-04-03 17:27:29 [INFO] AZALYST - status.json generated",
+    "2026-04-03 17:27:29 [INFO] PORTFOLIO - NAV USD 7,639.89 | Return +6980.73%",
+    "2026-04-03 17:27:29 [INFO] SIGNALS - 8 active signal buckets in state",
+    "2026-04-03 17:27:29 [INFO] TRADER - Open positions: ITA, XLE"
   ],
-  "generated_at": "2026-04-03 16:47:56 UTC"
+  "generated_at": "2026-04-03 17:27:29 UTC"
 }
