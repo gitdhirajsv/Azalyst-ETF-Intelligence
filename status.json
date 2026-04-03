@@ -132,16 +132,16 @@
       "score": 75.0
     },
     {
-      "symbol": "Banking & Financial Sector",
-      "score": 72.0
-    },
-    {
       "symbol": "Cybersecurity",
       "score": 71.0
     },
     {
       "symbol": "India Equity Markets",
       "score": 68.0
+    },
+    {
+      "symbol": "Banking & Financial Sector",
+      "score": 62.0
     }
   ],
   "signals": [
@@ -335,8 +335,8 @@
       "headline": "Gold slides 3% as oil surges on dimming hopes of end to Iran war",
       "regions": [
         "americas",
-        "global",
-        "middle_east"
+        "middle_east",
+        "global"
       ],
       "sources": [
         "Bloomberg Markets",
@@ -388,41 +388,6 @@
         "source_diversity": 5.0,
         "recency": 10.0,
         "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector",
-      "confidence": 72.0,
-      "severity": "MEDIUM",
-      "article_count": 9,
-      "latest_at": "03 Apr 2026 19:00 UTC",
-      "headline": "US Bonds Fall as Strong Jobs Data Undermines Fed Cut Outlook",
-      "regions": [
-        "global",
-        "india",
-        "asia_pacific",
-        "americas"
-      ],
-      "sources": [
-        "Finance",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 15.6,
-        "volume_confirmation": 16.0,
-        "source_diversity": 10.0,
-        "recency": 20.0,
-        "geopolitical_severity": 11.0
       }
     },
     {
@@ -490,6 +455,41 @@
         "recency": 3.0,
         "geopolitical_severity": 15.0
       }
+    },
+    {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector",
+      "confidence": 62.0,
+      "severity": "MEDIUM",
+      "article_count": 9,
+      "latest_at": "03 Apr 2026 19:00 UTC",
+      "headline": "US Bonds Fall as Strong Jobs Data Undermines Fed Cut Outlook",
+      "regions": [
+        "india",
+        "middle_east",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Finance",
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 15.6,
+        "volume_confirmation": 16.0,
+        "source_diversity": 10.0,
+        "recency": 10.0,
+        "geopolitical_severity": 11.0
+      }
     }
   ],
   "articles": [
@@ -531,17 +531,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Banking & Financial Sector - 9 articles - MEDIUM - US Bonds Fall as Strong Jobs Data Undermines Fed Cut Outlook"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Cybersecurity - 8 articles - MEDIUM - Hungary's government accused of spying on opposition as key election nears"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "India Equity Markets - 56 articles - CRITICAL - Indices plunge 2%, then ride rupee rebound to log gains"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Watch",
+      "text": "Banking & Financial Sector - 9 articles - MEDIUM - US Bonds Fall as Strong Jobs Data Undermines Fed Cut Outlook"
     }
   ],
   "market_snapshot": [
@@ -659,12 +659,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66898.31,
+      "price": 66879.55,
       "currency": "USD",
-      "change": 9.74,
-      "change_pct": 0.01,
-      "change_str": "+0.01%",
-      "direction": "up"
+      "change": -9.02,
+      "change_pct": -0.01,
+      "change_str": "-0.01%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
@@ -883,10 +883,10 @@
     }
   },
   "logs": [
-    "2026-04-03 23:00:05 [INFO] AZALYST - status.json generated",
-    "2026-04-03 23:00:05 [INFO] PORTFOLIO - NAV USD 7,640.30 | Return +0.01%",
-    "2026-04-03 23:00:05 [INFO] SIGNALS - 10 active signal buckets in state",
-    "2026-04-03 23:00:05 [INFO] TRADER - Open positions: ITA, XLE"
+    "2026-04-03 23:36:21 [INFO] AZALYST - status.json generated",
+    "2026-04-03 23:36:21 [INFO] PORTFOLIO - NAV USD 7,640.30 | Return +0.01%",
+    "2026-04-03 23:36:21 [INFO] SIGNALS - 10 active signal buckets in state",
+    "2026-04-03 23:36:21 [INFO] TRADER - Open positions: ITA, XLE"
   ],
-  "generated_at": "2026-04-03 23:00:05 UTC"
+  "generated_at": "2026-04-03 23:36:20 UTC"
 }
