@@ -1,22 +1,22 @@
 {
-  "portfolio_value": 708064.44,
-  "total_deposited": 10000.0,
-  "cash": 318137.74,
+  "portfolio_value": 7639.93,
+  "total_deposited": 107.9,
+  "cash": 3432.65,
   "monthly_reserve": 0.0,
-  "market_value": 389926.7,
-  "total_invested": 389839.76,
-  "unrealised_pnl": 86.94,
-  "unrealised_str": "+86.94",
+  "market_value": 4207.28,
+  "total_invested": 4206.3,
+  "unrealised_pnl": 0.98,
+  "unrealised_str": "+0.98",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "+6980.64%",
-  "change_raw": 6980.64,
+  "change": "+6980.69%",
+  "change_raw": 6980.69,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 708081.28,
+  "portfolio_peak": 7640.07,
   "drawdown_now_pct": 0.0,
   "max_drawdown_pct": 0.0,
-  "usd_inr_rate": 92.679,
+  "usd_inr_rate": 92.68,
   "positions": [
     {
       "trade_id": "T0001",
@@ -25,15 +25,15 @@
       "sector": "Defense & Aerospace",
       "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 20561.74,
-      "current": 20566.4,
-      "peak_price": 20567.28,
-      "trail_stop": 18505.56,
+      "entry": 221.86,
+      "current": 221.91,
+      "peak_price": 221.92,
+      "trail_stop": 199.67,
       "dist_to_trail_pct": 10.02,
       "units": 8.629968,
-      "invested": 177447.14,
-      "pnl": 40.21,
-      "pnl_str": "+40.21",
+      "invested": 1914.62,
+      "pnl": 0.45,
+      "pnl_str": "+0.45",
       "pnl_pct": 0.02,
       "pnl_pct_str": "+0.02%",
       "confidence": 85,
@@ -48,15 +48,15 @@
       "sector": "Energy / Oil & Gas",
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 5490.02,
-      "current": 5491.23,
-      "peak_price": 5491.47,
-      "trail_stop": 4941.02,
+      "entry": 59.24,
+      "current": 59.25,
+      "peak_price": 59.25,
+      "trail_stop": 53.31,
       "dist_to_trail_pct": 10.02,
       "units": 38.687021,
-      "invested": 212392.62,
-      "pnl": 46.74,
-      "pnl_str": "+46.74",
+      "invested": 2291.68,
+      "pnl": 0.53,
+      "pnl_str": "+0.53",
       "pnl_pct": 0.02,
       "pnl_pct_str": "+0.02%",
       "confidence": 87,
@@ -98,8 +98,8 @@
       "XLE"
     ],
     "values": [
-      40.21,
-      46.74
+      0.45,
+      0.53
     ]
   },
   "confidence": [
@@ -572,11 +572,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66933.4,
+      "price": 66949.32,
       "currency": "USD",
-      "change": 44.83,
-      "change_pct": 0.07,
-      "change_str": "+0.07%",
+      "change": 60.75,
+      "change_pct": 0.09,
+      "change_str": "+0.09%",
       "direction": "up"
     },
     {
@@ -605,7 +605,7 @@
   "risk_controls": {
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
-    "portfolio_peak": 708081.28,
+    "portfolio_peak": 7640.07,
     "vix": 23.87,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
@@ -662,8 +662,8 @@
       "benchmark_price_start": 680.33,
       "benchmark_price_now": 655.83,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": 6980.64,
-      "alpha": 6984.24
+      "portfolio_return_pct": 6980.69,
+      "alpha": 6984.29
     },
     "rebalance": {
       "alerts": [
@@ -673,7 +673,7 @@
           "target_weight_pct": 10.0,
           "drift_pct": 34.93,
           "action": "DEPLOY",
-          "amount": 247331.3,
+          "amount": 2668.65,
           "etf_name": "Cash Reserve"
         },
         {
@@ -682,7 +682,7 @@
           "target_weight_pct": 45.0,
           "drift_pct": -19.93,
           "action": "ADD",
-          "amount": 141141.65,
+          "amount": 1522.89,
           "etf_name": "iShares U.S. Aerospace & Defense ETF"
         },
         {
@@ -691,7 +691,7 @@
           "target_weight_pct": 45.0,
           "drift_pct": -15.0,
           "action": "ADD",
-          "amount": 106189.64,
+          "amount": 1145.76,
           "etf_name": "Energy Select Sector SPDR"
         }
       ],
@@ -701,92 +701,92 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -155970.68,
+          "total_impact": -1682.91,
           "portfolio_loss_pct": -22.03,
           "position_impacts": [
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -70994.94
+              "impact": -766.03
             },
             {
               "ticker": "XLE",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -84975.74
+              "impact": -916.88
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -132575.08,
+          "total_impact": -1430.48,
           "portfolio_loss_pct": -18.72,
           "position_impacts": [
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -60345.7
+              "impact": -651.13
             },
             {
               "ticker": "XLE",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -72229.38
+              "impact": -779.35
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -58489.0,
+          "total_impact": -631.09,
           "portfolio_loss_pct": -8.26,
           "position_impacts": [
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -26623.1
+              "impact": -287.26
             },
             {
               "ticker": "XLE",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -31865.9
+              "impact": -343.83
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -31194.14,
+          "total_impact": -336.58,
           "portfolio_loss_pct": -4.41,
           "position_impacts": [
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -14198.99
+              "impact": -153.21
             },
             {
               "ticker": "XLE",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -16995.15
+              "impact": -183.38
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -70186.8,
+          "total_impact": -757.31,
           "portfolio_loss_pct": -9.91,
           "position_impacts": [
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -31947.72
+              "impact": -344.71
             },
             {
               "ticker": "XLE",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -38239.08
+              "impact": -412.6
             }
           ]
         }
@@ -796,10 +796,10 @@
     }
   },
   "logs": [
-    "2026-04-03 16:40:36 [INFO] AZALYST - status.json generated",
-    "2026-04-03 16:40:36 [INFO] PORTFOLIO - NAV USD 708,064.44 | Return +6980.64%",
-    "2026-04-03 16:40:36 [INFO] SIGNALS - 8 active signal buckets in state",
-    "2026-04-03 16:40:36 [INFO] TRADER - Open positions: ITA, XLE"
+    "2026-04-03 16:46:23 [INFO] AZALYST - status.json generated",
+    "2026-04-03 16:46:23 [INFO] PORTFOLIO - NAV USD 7,639.93 | Return +6980.69%",
+    "2026-04-03 16:46:23 [INFO] SIGNALS - 8 active signal buckets in state",
+    "2026-04-03 16:46:23 [INFO] TRADER - Open positions: ITA, XLE"
   ],
-  "generated_at": "2026-04-03 16:40:36 UTC"
+  "generated_at": "2026-04-03 16:46:22 UTC"
 }
