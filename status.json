@@ -1,13 +1,805 @@
 {
-  "last_updated": "2026-04-03T15:58:40.091006+00:00",
-  "portfolio": {
-    "total_deposited_usd": 10000,
-    "current_value_usd": 10000,
-    "cash_usd": 5000,
-    "reserve_usd": 5000,
-    "total_return_pct": 0.0,
+  "portfolio_value": 707980.3,
+  "total_deposited": 10000.0,
+  "cash": 318137.74,
+  "monthly_reserve": 0.0,
+  "market_value": 389842.56,
+  "total_invested": 389839.76,
+  "unrealised_pnl": 2.8,
+  "unrealised_str": "+2.80",
+  "realised_pnl": 0.0,
+  "realised_str": "+0.00",
+  "change": "+6979.80%",
+  "change_raw": 6979.8,
+  "closed_trades": 0,
+  "partial_realised_pnl": 0.0,
+  "portfolio_peak": 707980.31,
+  "drawdown_now_pct": 0.0,
+  "max_drawdown_pct": 0.0,
+  "usd_inr_rate": 92.659,
+  "positions": [
+    {
+      "trade_id": "T0001",
+      "ticker": "ITA",
+      "etf_name": "iShares U.S. Aerospace & Defense ETF",
+      "sector": "Defense & Aerospace",
+      "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NYSE",
+      "entry": 20561.74,
+      "current": 20561.96,
+      "peak_price": 20561.96,
+      "trail_stop": 18505.56,
+      "dist_to_trail_pct": 10.0,
+      "units": 8.629968,
+      "invested": 177447.14,
+      "pnl": 1.91,
+      "pnl_str": "+1.91",
+      "pnl_pct": 0.0,
+      "pnl_pct_str": "+0.00%",
+      "confidence": 85,
+      "severity": "CRITICAL",
+      "days_held": 0,
+      "half_exited": false
+    },
+    {
+      "trade_id": "T0002",
+      "ticker": "XLE",
+      "etf_name": "Energy Select Sector SPDR",
+      "sector": "Energy / Oil & Gas",
+      "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NYSE",
+      "entry": 5490.02,
+      "current": 5490.05,
+      "peak_price": 5490.05,
+      "trail_stop": 4941.02,
+      "dist_to_trail_pct": 10.0,
+      "units": 38.687021,
+      "invested": 212392.62,
+      "pnl": 0.9,
+      "pnl_str": "+0.90",
+      "pnl_pct": 0.0,
+      "pnl_pct_str": "+0.00%",
+      "confidence": 87,
+      "severity": "CRITICAL",
+      "days_held": 0,
+      "half_exited": false
+    }
+  ],
+  "closed_trades_list": [],
+  "track_record": {
+    "total_trades": 0,
+    "winners": 0,
+    "losers": 0,
+    "win_rate": 0.0,
+    "avg_win": 0.0,
+    "avg_loss": 0.0,
+    "profit_factor": 0.0,
+    "expectancy": 0.0,
+    "sharpe_proxy": 0.0,
+    "best": null,
+    "worst": null
+  },
+  "confidence_threshold": 62,
+  "allocation": {
+    "labels": [
+      "ITA",
+      "XLE",
+      "CASH"
+    ],
+    "values": [
+      25.1,
+      30.0,
+      44.9
+    ]
+  },
+  "pnl": {
+    "labels": [
+      "ITA",
+      "XLE"
+    ],
+    "values": [
+      1.91,
+      0.9
+    ]
+  },
+  "confidence": [
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 87.0
+    },
+    {
+      "symbol": "Defense & Aerospace",
+      "score": 85.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 85.0
+    },
+    {
+      "symbol": "Commodities & Mining",
+      "score": 82.0
+    },
+    {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 80.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 80.0
+    },
+    {
+      "symbol": "India Equity Markets",
+      "score": 71.0
+    },
+    {
+      "symbol": "Cybersecurity",
+      "score": 71.0
+    }
+  ],
+  "signals": [
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 87.0,
+      "severity": "CRITICAL",
+      "article_count": 43,
+      "latest_at": "03 Apr 2026 15:43 UTC",
+      "headline": "JP Morgan Sees $150 Oil if Hormuz Remains Closed Through Mid-May",
+      "regions": [
+        "global",
+        "americas",
+        "middle_east"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Bloomberg Markets"
+      ],
+      "india_etfs": [
+        "PSUBNKBEES",
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "XLE",
+        "USO",
+        "IXC"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 7.5,
+        "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 85.0,
+      "severity": "CRITICAL",
+      "article_count": 93,
+      "latest_at": "03 Apr 2026 16:00 UTC",
+      "headline": "Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages",
+      "regions": [
+        "india",
+        "global",
+        "europe",
+        "middle_east"
+      ],
+      "sources": [
+        "Defense News",
+        "Oilprice.com",
+        "World | Deutsche Welle"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 5.0,
+        "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 85.0,
+      "severity": "CRITICAL",
+      "article_count": 39,
+      "latest_at": "03 Apr 2026 15:28 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "global"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 5.0,
+        "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 82.0,
+      "severity": "HIGH",
+      "article_count": 11,
+      "latest_at": "03 Apr 2026 16:00 UTC",
+      "headline": "Three niche commodity prices are surging. What they show about China's grip on supply chains",
+      "regions": [
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Finance",
+        "Oilprice.com",
+        "Bloomberg Markets"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 20.3,
+        "volume_confirmation": 20.0,
+        "source_diversity": 7.5,
+        "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "banking_financial|gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 80.0,
+      "severity": "CRITICAL",
+      "article_count": 22,
+      "latest_at": "03 Apr 2026 12:47 UTC",
+      "headline": "Gold slides 3% as oil surges on dimming hopes of end to Iran war",
+      "regions": [
+        "global",
+        "americas",
+        "asia_pacific",
+        "india"
+      ],
+      "sources": [
+        "Finance",
+        "Bloomberg Markets",
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD",
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ",
+        "XLF"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 10.0,
+        "recency": 10.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 80.0,
+      "severity": "CRITICAL",
+      "article_count": 17,
+      "latest_at": "03 Apr 2026 16:00 UTC",
+      "headline": "Three niche commodity prices are surging. What they show about China's grip on supply chains",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "US Top News and Analysis",
+        "Finance",
+        "World | Deutsche Welle"
+      ],
+      "india_etfs": [
+        "MAFANG",
+        "NIFTYBEES"
+      ],
+      "global_etfs": [
+        "SOXX",
+        "QQQ",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 0.0,
+        "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 71.0,
+      "severity": "CRITICAL",
+      "article_count": 54,
+      "latest_at": "03 Apr 2026 08:00 UTC",
+      "headline": "Indices plunge 2%, then ride rupee rebound to log gains",
+      "regions": [
+        "asia_pacific",
+        "india",
+        "middle_east"
+      ],
+      "sources": [
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 5.0,
+        "recency": 6.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 71.0,
+      "severity": "MEDIUM",
+      "article_count": 8,
+      "latest_at": "03 Apr 2026 16:00 UTC",
+      "headline": "Hungary's government accused of spying on opposition as key election nears",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "europe",
+        "middle_east"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "World | Deutsche Welle",
+        "BBC News",
+        "Bloomberg Markets"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "HACK",
+        "CIBR"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.9,
+        "volume_confirmation": 16.0,
+        "source_diversity": 12.5,
+        "recency": 20.0,
+        "geopolitical_severity": 11.0
+      }
+    }
+  ],
+  "articles": [
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Energy / Oil & Gas - 43 articles - CRITICAL - JP Morgan Sees $150 Oil if Hormuz Remains Closed Through Mid-May"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Defense & Aerospace - 93 articles - CRITICAL - Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Crypto & Digital Assets - 39 articles - CRITICAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Commodities & Mining - 11 articles - HIGH - Three niche commodity prices are surging. What they show about China's grip on supply chains"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 22 articles - CRITICAL - Gold slides 3% as oil surges on dimming hopes of end to Iran war"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Technology & AI / Semiconductors - 17 articles - CRITICAL - Three niche commodity prices are surging. What they show about China's grip on supply chains"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "India Equity Markets - 54 articles - CRITICAL - Indices plunge 2%, then ride rupee rebound to log gains"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Cybersecurity - 8 articles - MEDIUM - Hungary's government accused of spying on opposition as key election nears"
+    }
+  ],
+  "market_snapshot": [
+    {
+      "label": "S&P 500",
+      "ticker": "^GSPC",
+      "region": "US",
+      "price": 6582.69,
+      "currency": "USD",
+      "change": 7.37,
+      "change_pct": 0.11,
+      "change_str": "+0.11%",
+      "direction": "up"
+    },
+    {
+      "label": "NASDAQ",
+      "ticker": "^IXIC",
+      "region": "US",
+      "price": 21879.18,
+      "currency": "USD",
+      "change": 38.23,
+      "change_pct": 0.18,
+      "change_str": "+0.18%",
+      "direction": "up"
+    },
+    {
+      "label": "Dow Jones",
+      "ticker": "^DJI",
+      "region": "US",
+      "price": 46504.67,
+      "currency": "USD",
+      "change": -61.07,
+      "change_pct": -0.13,
+      "change_str": "-0.13%",
+      "direction": "down"
+    },
+    {
+      "label": "FTSE 100",
+      "ticker": "^FTSE",
+      "region": "UK",
+      "price": 10436.29,
+      "currency": "GBP",
+      "change": 71.49,
+      "change_pct": 0.69,
+      "change_str": "+0.69%",
+      "direction": "up"
+    },
+    {
+      "label": "DAX",
+      "ticker": "^GDAXI",
+      "region": "EU",
+      "price": 23168.08,
+      "currency": "EUR",
+      "change": -130.81,
+      "change_pct": -0.56,
+      "change_str": "-0.56%",
+      "direction": "down"
+    },
+    {
+      "label": "Nikkei 225",
+      "ticker": "^N225",
+      "region": "JP",
+      "price": 53123.49,
+      "currency": "JPY",
+      "change": -616.19,
+      "change_pct": -1.15,
+      "change_str": "-1.15%",
+      "direction": "down"
+    },
+    {
+      "label": "Hang Seng",
+      "ticker": "^HSI",
+      "region": "HK",
+      "price": 25116.53,
+      "currency": "HKD",
+      "change": -177.5,
+      "change_pct": -0.7,
+      "change_str": "-0.70%",
+      "direction": "down"
+    },
+    {
+      "label": "Nifty 50",
+      "ticker": "^NSEI",
+      "region": "IN",
+      "price": 22713.1,
+      "currency": "INR",
+      "change": 33.7,
+      "change_pct": 0.15,
+      "change_str": "+0.15%",
+      "direction": "up"
+    },
+    {
+      "label": "Gold",
+      "ticker": "GC=F",
+      "region": "COMMOD",
+      "price": 4702.7,
+      "currency": "USD",
+      "change": -80.5,
+      "change_pct": -1.68,
+      "change_str": "-1.68%",
+      "direction": "down"
+    },
+    {
+      "label": "Crude Oil",
+      "ticker": "CL=F",
+      "region": "COMMOD",
+      "price": 112.06,
+      "currency": "USD",
+      "change": 11.94,
+      "change_pct": 11.93,
+      "change_str": "+11.93%",
+      "direction": "up"
+    },
+    {
+      "label": "Bitcoin",
+      "ticker": "BTC-USD",
+      "region": "CRYPTO",
+      "price": 66852.52,
+      "currency": "USD",
+      "change": -36.05,
+      "change_pct": -0.05,
+      "change_str": "-0.05%",
+      "direction": "down"
+    },
+    {
+      "label": "USD Index",
+      "ticker": "DX-Y.NYB",
+      "region": "FX",
+      "price": 100.16,
+      "currency": "USD",
+      "change": 0.13,
+      "change_pct": 0.13,
+      "change_str": "+0.13%",
+      "direction": "up"
+    },
+    {
+      "label": "VIX",
+      "ticker": "^VIX",
+      "region": "VOL",
+      "price": 23.87,
+      "currency": "USD",
+      "change": -0.67,
+      "change_pct": -2.73,
+      "change_str": "-2.73%",
+      "direction": "down"
+    }
+  ],
+  "risk_controls": {
+    "circuit_breaker_active": false,
+    "drawdown_from_peak_pct": 0.0,
+    "portfolio_peak": 707980.31,
+    "vix": 23.87,
+    "vix_regime": "ELEVATED",
+    "sector_concentration": [
+      {
+        "sector": "Energy / Oil & Gas",
+        "weight": 30.0,
+        "at_cap": true
+      },
+      {
+        "sector": "Defense & Aerospace",
+        "weight": 25.1,
+        "at_cap": false
+      }
+    ],
     "max_drawdown_pct": 0.0,
-    "open_positions": [],
-    "closed_trades": []
-  }
+    "sector_cap_pct": 30,
+    "trailing_stop_pct": 8,
+    "hard_stop_pct": 10,
+    "partial_profit_pct": 8
+  },
+  "aladdin_risk": {
+    "correlation": {
+      "matrix": {
+        "ITA": {
+          "ITA": 1.0,
+          "XLE": -0.469
+        },
+        "XLE": {
+          "ITA": -0.469,
+          "XLE": 1.0
+        }
+      },
+      "tickers": [
+        "ITA",
+        "XLE"
+      ],
+      "max_corr": 0.469,
+      "max_corr_pair": [
+        "ITA",
+        "XLE"
+      ],
+      "status": "OK"
+    },
+    "volatility": {
+      "per_ticker": {
+        "ITA": 27.17,
+        "XLE": 21.11
+      },
+      "portfolio_avg_vol_pct": 24.14,
+      "target_vol_pct": 15.0
+    },
+    "benchmark": {
+      "benchmark_return_pct": -3.6,
+      "benchmark_price_start": 680.33,
+      "benchmark_price_now": 655.83,
+      "benchmark_ticker": "SPY",
+      "portfolio_return_pct": 6979.8,
+      "alpha": 6983.4
+    },
+    "rebalance": {
+      "alerts": [
+        {
+          "ticker": "CASH",
+          "actual_weight_pct": 44.94,
+          "target_weight_pct": 10.0,
+          "drift_pct": 34.94,
+          "action": "DEPLOY",
+          "amount": 247339.71,
+          "etf_name": "Cash Reserve"
+        },
+        {
+          "ticker": "ITA",
+          "actual_weight_pct": 25.06,
+          "target_weight_pct": 45.0,
+          "drift_pct": -19.94,
+          "action": "ADD",
+          "amount": 141142.09,
+          "etf_name": "iShares U.S. Aerospace & Defense ETF"
+        },
+        {
+          "ticker": "XLE",
+          "actual_weight_pct": 30.0,
+          "target_weight_pct": 45.0,
+          "drift_pct": -15.0,
+          "action": "ADD",
+          "amount": 106197.62,
+          "etf_name": "Energy Select Sector SPDR"
+        }
+      ],
+      "drift_threshold_pct": 5.0,
+      "needs_rebalance": true
+    },
+    "stress_test": {
+      "scenarios": {
+        "2008_GFC": {
+          "total_impact": -155937.03,
+          "portfolio_loss_pct": -22.03,
+          "position_impacts": [
+            {
+              "ticker": "ITA",
+              "factor": "equities",
+              "shock_pct": -40.0,
+              "impact": -70979.62
+            },
+            {
+              "ticker": "XLE",
+              "factor": "equities",
+              "shock_pct": -40.0,
+              "impact": -84957.41
+            }
+          ]
+        },
+        "2020_COVID": {
+          "total_impact": -132546.48,
+          "portfolio_loss_pct": -18.72,
+          "position_impacts": [
+            {
+              "ticker": "ITA",
+              "factor": "equities",
+              "shock_pct": -34.0,
+              "impact": -60332.68
+            },
+            {
+              "ticker": "XLE",
+              "factor": "equities",
+              "shock_pct": -34.0,
+              "impact": -72213.8
+            }
+          ]
+        },
+        "RATES_SHOCK_+2%": {
+          "total_impact": -58476.39,
+          "portfolio_loss_pct": -8.26,
+          "position_impacts": [
+            {
+              "ticker": "ITA",
+              "factor": "equities",
+              "shock_pct": -15.0,
+              "impact": -26617.36
+            },
+            {
+              "ticker": "XLE",
+              "factor": "equities",
+              "shock_pct": -15.0,
+              "impact": -31859.03
+            }
+          ]
+        },
+        "USD_SPIKE_+10%": {
+          "total_impact": -31187.4,
+          "portfolio_loss_pct": -4.41,
+          "position_impacts": [
+            {
+              "ticker": "ITA",
+              "factor": "equities",
+              "shock_pct": -8.0,
+              "impact": -14195.92
+            },
+            {
+              "ticker": "XLE",
+              "factor": "equities",
+              "shock_pct": -8.0,
+              "impact": -16991.48
+            }
+          ]
+        },
+        "VIX_SPIKE_40": {
+          "total_impact": -70171.66,
+          "portfolio_loss_pct": -9.91,
+          "position_impacts": [
+            {
+              "ticker": "ITA",
+              "factor": "equities",
+              "shock_pct": -18.0,
+              "impact": -31940.83
+            },
+            {
+              "ticker": "XLE",
+              "factor": "equities",
+              "shock_pct": -18.0,
+              "impact": -38230.83
+            }
+          ]
+        }
+      },
+      "worst_scenario": "2008_GFC",
+      "worst_loss_pct": -22.03
+    }
+  },
+  "logs": [
+    "2026-04-03 16:01:11 [INFO] AZALYST - status.json generated",
+    "2026-04-03 16:01:11 [INFO] PORTFOLIO - NAV USD 707,980.30 | Return +6979.80%",
+    "2026-04-03 16:01:11 [INFO] SIGNALS - 8 active signal buckets in state",
+    "2026-04-03 16:01:11 [INFO] TRADER - Open positions: ITA, XLE"
+  ],
+  "generated_at": "2026-04-03 16:01:11 UTC"
 }
