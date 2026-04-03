@@ -108,7 +108,7 @@ flowchart LR
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/Azalyst-ETF-Intelligence.git
+git clone https://github.com/gitdhirajsv/Azalyst-ETF-Intelligence.git
 cd Azalyst-ETF-Intelligence
 ```
 
@@ -132,6 +132,17 @@ INTERVAL=30
 THRESHOLD=62
 COOLDOWN_HOURS=4
 MIN_ARTICLES=2
+
+# Optional advanced controls
+UPDATE_HOURS=2
+UPDATE_DELTA=10
+PAPER_TRADING=true
+EOD_REPORT_HOUR=15
+EOD_REPORT_MINUTE=30
+MTM_INTERVAL=60
+MAX_ARTICLES=300
+MAX_ARTICLE_AGE_DAYS=7
+LOG_LEVEL=INFO
 ```
 
 ### 4. Run the system
@@ -303,6 +314,9 @@ Each Discord report shows the exact platform information (e.g., "iShares by Blac
 |-- dashboard.js                  # Dashboard JavaScript
 |-- dashboard_12pct.png           # Dashboard preview image
 |-- LICENSE                       # MIT License
++-- data/                         # Data directory
++-- .github/workflows/            # GitHub Actions CI
+    +-- run_azalyst.yml           # 30-min auto-run workflow
 +-- runtime artifacts (auto-generated)
     |-- azalyst.log               # System logs
     |-- azalyst_state.json        # Signal state
