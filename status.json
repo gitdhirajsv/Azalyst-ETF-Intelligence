@@ -1,22 +1,22 @@
 {
-  "portfolio_value": 7640.67,
-  "total_deposited": 7640.59,
-  "cash": 3433.39,
+  "portfolio_value": 7640.78,
+  "total_deposited": 7640.84,
+  "cash": 3433.5,
   "monthly_reserve": 0.0,
   "market_value": 4207.28,
-  "total_invested": 4207.21,
-  "unrealised_pnl": 0.08,
-  "unrealised_str": "+0.08",
+  "total_invested": 4207.34,
+  "unrealised_pnl": -0.06,
+  "unrealised_str": "-0.06",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "+0.00%",
-  "change_raw": 0.0,
+  "change": "-0.00%",
+  "change_raw": -0.0,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 7641.71,
-  "drawdown_now_pct": 0.01,
+  "portfolio_peak": 7641.96,
+  "drawdown_now_pct": 0.02,
   "max_drawdown_pct": 0.02,
-  "usd_inr_rate": 92.66,
+  "usd_inr_rate": 92.657,
   "positions": [
     {
       "trade_id": "T0001",
@@ -28,14 +28,14 @@
       "entry": 221.91,
       "current": 221.91,
       "peak_price": 221.97,
-      "trail_stop": 199.71,
+      "trail_stop": 199.72,
       "dist_to_trail_pct": 10.0,
       "units": 8.629968,
-      "invested": 1915.03,
-      "pnl": 0.04,
-      "pnl_str": "+0.04",
-      "pnl_pct": 0.0,
-      "pnl_pct_str": "+0.00%",
+      "invested": 1915.1,
+      "pnl": -0.02,
+      "pnl_str": "-0.02",
+      "pnl_pct": -0.0,
+      "pnl_pct_str": "+-0.00%",
       "confidence": 85,
       "severity": "CRITICAL",
       "days_held": 0,
@@ -50,15 +50,15 @@
       "exchange": "NYSE",
       "entry": 59.25,
       "current": 59.25,
-      "peak_price": 59.26,
-      "trail_stop": 53.32,
+      "peak_price": 59.27,
+      "trail_stop": 53.33,
       "dist_to_trail_pct": 10.0,
       "units": 38.687021,
-      "invested": 2292.17,
-      "pnl": 0.03,
-      "pnl_str": "+0.03",
-      "pnl_pct": 0.0,
-      "pnl_pct_str": "+0.00%",
+      "invested": 2292.25,
+      "pnl": -0.04,
+      "pnl_str": "-0.04",
+      "pnl_pct": -0.0,
+      "pnl_pct_str": "+-0.00%",
       "confidence": 87,
       "severity": "CRITICAL",
       "days_held": 0,
@@ -98,8 +98,8 @@
       "XLE"
     ],
     "values": [
-      0.04,
-      0.03
+      -0.02,
+      -0.04
     ]
   },
   "confidence": [
@@ -126,6 +126,14 @@
     {
       "symbol": "Technology & AI / Semiconductors",
       "score": 80.0
+    },
+    {
+      "symbol": "Gold & Precious Metals",
+      "score": 76.0
+    },
+    {
+      "symbol": "Banking & Financial Sector",
+      "score": 72.0
     },
     {
       "symbol": "India Equity Markets",
@@ -349,6 +357,77 @@
       }
     },
     {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 76.0,
+      "severity": "CRITICAL",
+      "article_count": 13,
+      "latest_at": "03 Apr 2026 12:47 UTC",
+      "headline": "Gold slides 3% as oil surges on dimming hopes of end to Iran war",
+      "regions": [
+        "americas",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Finance",
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 10.0,
+        "recency": 6.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector",
+      "confidence": 72.0,
+      "severity": "MEDIUM",
+      "article_count": 9,
+      "latest_at": "03 Apr 2026 19:00 UTC",
+      "headline": "US Bonds Fall as Strong Jobs Data Undermines Fed Cut Outlook",
+      "regions": [
+        "global",
+        "india",
+        "asia_pacific",
+        "americas"
+      ],
+      "sources": [
+        "Finance",
+        "Bloomberg Markets",
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 15.6,
+        "volume_confirmation": 16.0,
+        "source_diversity": 10.0,
+        "recency": 20.0,
+        "geopolitical_severity": 11.0
+      }
+    },
+    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 71.0,
@@ -445,6 +524,16 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Technology & AI / Semiconductors - 17 articles - CRITICAL - Three niche commodity prices are surging. What they show about China's grip on supply chains"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Gold & Precious Metals - 13 articles - CRITICAL - Gold slides 3% as oil surges on dimming hopes of end to Iran war"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Banking & Financial Sector - 9 articles - MEDIUM - US Bonds Fall as Strong Jobs Data Undermines Fed Cut Outlook"
     },
     {
       "tag": "tag-neu",
@@ -572,22 +661,22 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66844.32,
+      "price": 66777.01,
       "currency": "USD",
-      "change": -44.25,
-      "change_pct": -0.07,
-      "change_str": "-0.07%",
+      "change": -111.56,
+      "change_pct": -0.17,
+      "change_str": "-0.17%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.19,
+      "price": 100.22,
       "currency": "USD",
-      "change": 0.16,
-      "change_pct": 0.16,
-      "change_str": "+0.16%",
+      "change": 0.19,
+      "change_pct": 0.19,
+      "change_str": "+0.19%",
       "direction": "up"
     },
     {
@@ -604,8 +693,8 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.01,
-    "portfolio_peak": 7641.71,
+    "drawdown_from_peak_pct": 0.02,
+    "portfolio_peak": 7641.96,
     "vix": 23.87,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
@@ -662,7 +751,7 @@
       "benchmark_price_start": 680.33,
       "benchmark_price_now": 655.83,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": 0.0,
+      "portfolio_return_pct": -0.0,
       "alpha": 3.6
     },
     "rebalance": {
@@ -673,7 +762,7 @@
           "target_weight_pct": 10.0,
           "drift_pct": 34.94,
           "action": "DEPLOY",
-          "amount": 2669.32,
+          "amount": 2669.42,
           "etf_name": "Cash Reserve"
         },
         {
@@ -682,7 +771,7 @@
           "target_weight_pct": 45.0,
           "drift_pct": -19.94,
           "action": "ADD",
-          "amount": 1523.23,
+          "amount": 1523.27,
           "etf_name": "iShares U.S. Aerospace & Defense ETF"
         },
         {
@@ -691,7 +780,7 @@
           "target_weight_pct": 45.0,
           "drift_pct": -15.0,
           "action": "ADD",
-          "amount": 1146.1,
+          "amount": 1146.15,
           "etf_name": "Energy Select Sector SPDR"
         }
       ],
@@ -796,10 +885,10 @@
     }
   },
   "logs": [
-    "2026-04-03 18:48:21 [INFO] AZALYST - status.json generated",
-    "2026-04-03 18:48:21 [INFO] PORTFOLIO - NAV USD 7,640.67 | Return +0.00%",
-    "2026-04-03 18:48:21 [INFO] SIGNALS - 8 active signal buckets in state",
-    "2026-04-03 18:48:21 [INFO] TRADER - Open positions: ITA, XLE"
+    "2026-04-03 19:34:03 [INFO] AZALYST - status.json generated",
+    "2026-04-03 19:34:03 [INFO] PORTFOLIO - NAV USD 7,640.78 | Return -0.00%",
+    "2026-04-03 19:34:03 [INFO] SIGNALS - 10 active signal buckets in state",
+    "2026-04-03 19:34:03 [INFO] TRADER - Open positions: ITA, XLE"
   ],
-  "generated_at": "2026-04-03 18:48:20 UTC"
+  "generated_at": "2026-04-03 19:34:02 UTC"
 }
