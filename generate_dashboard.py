@@ -225,6 +225,14 @@ def calc_metrics(portfolio, usd_inr_rate=83.5):
     closed_realised = sum(trade.get("realised_pnl", 0) for trade in portfolio.get("closed_trades", []))
     partial_realised = portfolio.get("partial_realised_pnl_total", 0)
     realised  = closed_realised + partial_realised
+
+    # Sanity check: total_deposited should be roughly (total - unrealised - realised).
+    # If it is far below that figure it was almost certainly stored in the wrong currency
+    # (e.g. raw USD instead of INR), so recompute it from the actual portfolio data.
+    expected_deposited = total - unrealised - realised
+    if deposited > 0 and expected_deposited > 0 and deposited < expected_deposited * 0.5:
+        deposited = expected_deposited
+
     change_raw = ((total - deposited) / deposited * 100) if deposited > 0 else 0
 
     portfolio_peak = portfolio.get("portfolio_peak", total)
