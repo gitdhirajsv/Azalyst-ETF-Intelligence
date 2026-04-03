@@ -43,7 +43,7 @@ setup_windows_startup.ps1
 1. **`start_azalyst.bat`** - Startup script
    - Changes to Azalyst directory
    - Checks Python installation
-   - Runs `azalyst.py` with LLM analysis
+   - Runs `azalyst.py`
 
 2. **Windows Startup Shortcut** (Option 1)
    - Location: `%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup`
@@ -112,16 +112,6 @@ PAPER_TRADING=true                 # Paper trading enabled
                     │
                     ↓
 ┌─────────────────────────────────────────────────────────────┐
-│  LLM Portfolio Analysis Runs                                │
-│  • Loads your portfolio (azalyst_portfolio.json)            │
-│  • Fetches macro data (VIX, yields, USD/INR)                │
-│  • Calls NVIDIA NIM API (Mistral 7B)                        │
-│  • Generates 3-5 recommendations                            │
-│  • Logs to azalyst.log                                      │
-└───────────────────┬─────────────────────────────────────────┘
-                    │
-                    ↓
-┌─────────────────────────────────────────────────────────────┐
 │  News Monitoring Starts (30-min cycle)                      │
 │  • Fetches 50-100 articles                                  │
 │  • Classifies into 11 sectors                               │
@@ -134,7 +124,6 @@ PAPER_TRADING=true                 # Paper trading enabled
 │  Continuous Operation                                       │
 │  • Every 30 min: News scan                                  │
 │  • Every 60 min: Mark-to-market                             │
-│  • Every 6 hours: LLM macro analysis                        │
 │  • Daily 9 PM IST: EOD report                               │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -146,24 +135,8 @@ PAPER_TRADING=true                 # Paper trading enabled
 ### Log Files:
 
 1. **`azalyst.log`** - Main system log
-   ```
-   2026-03-31 12:25:42 [INFO] LLM Optimizer initialized
-   2026-03-31 12:26:01 [INFO] Running LLM portfolio analysis...
-   2026-03-31 12:26:15 [INFO] LLM Suggestion #1: 1. Identify Underperformance...
-   ```
 
-2. **`llm_feedback_log.json`** - LLM analysis history
-   ```json
-   {
-     "timestamp": "2026-03-31T12:26:15Z",
-     "ticker": "XLE",
-     "pnl_pct": 10.7,
-     "llm_suggested": true,
-     "llm_rationale": "..."
-   }
-   ```
-
-3. **`azalyst_portfolio.json`** - Live portfolio state
+2. **`azalyst_portfolio.json`** - Live portfolio state
    - Updated every trade
    - Includes open positions, closed trades
    - Can be viewed in dashboard
@@ -254,10 +227,7 @@ PAPER_TRADING=false
 | Task | Frequency | Time |
 |------|-----------|------|
 | **News Scan** | Every 30 min | All day |
-| **LLM Signal Evaluation** | Per signal | When 75+ confidence |
 | **Mark-to-Market** | Every 60 min | All day |
-| **LLM Macro Analysis** | Every 6 hours | 00:00, 06:00, 12:00, 18:00 |
-| **LLM Portfolio Analysis** | Daily | On startup |
 | **EOD Report** | Daily | 9:00 PM IST |
 
 ---

@@ -32,7 +32,7 @@ Write-Host ""
 
 # Define task name
 $taskName = "Azalyst ETF Intelligence"
-$taskDescription = "Automatically starts Azalyst ETF Intelligence with LLM analysis on user login. Runs portfolio analysis and monitors global news for trading signals."
+$taskDescription = "Automatically starts Azalyst ETF Intelligence on user login. Monitors global news for trading signals."
 
 # Check if task already exists
 $existingTask = Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue
@@ -121,7 +121,7 @@ if ($task) {
     Write-Host ""
     Write-Host "Logs will be saved to:" -ForegroundColor Yellow
     Write-Host "  - $azalystPath\azalyst.log"
-    Write-Host "  - $azalystPath\llm_feedback_log.json"
+
     Write-Host ""
 } else {
     Write-Host "ERROR: Task verification failed" -ForegroundColor Red
