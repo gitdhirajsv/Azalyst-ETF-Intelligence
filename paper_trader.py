@@ -334,6 +334,31 @@ class PaperPortfolio:
                 len(self.open_positions),
                 len(self.closed_trades),
             )
+
+            # Sanity check: if total_deposited is much smaller than the actual
+            # portfolio value (cash + reserve + invested), it was likely stored
+            # in USD instead of INR.  Recompute from monthly_deposits if possible,
+            # otherwise derive from the current portfolio state.
+            total_invested_inr = sum(pos.invested_inr for pos in self.open_positions)
+            portfolio_approx   = self.cash_inr + self.monthly_reserve_inr + total_invested_inr
+            if self.total_deposited > 0 and portfolio_approx > 0 and self.total_deposited < portfolio_approx * 0.5:
+                original_deposited = data.get("total_deposited", 0)
+                corrected = sum(self.monthly_deposits.values())
+                if corrected > self.total_deposited:
+                    self.total_deposited = corrected
+                else:
+                    realised_pnl = sum(getattr(ct, "realised_pnl", 0) for ct in self.closed_trades)
+                    unrealised   = sum(
+                        (pos.current_price - pos.entry_price) * pos.units
+                        for pos in self.open_positions
+                    )
+                    self.total_deposited = portfolio_approx - unrealised - realised_pnl
+                log.warning(
+                    "Corrected total_deposited from %.2f to %.2f (was likely stored in wrong currency)",
+                    original_deposited,
+                    self.total_deposited,
+                )
+                self.save()
         except Exception as exc:
             log.error(f"Portfolio load error: {exc}")
 
