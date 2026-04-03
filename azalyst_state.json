@@ -596,5 +596,157 @@
         }
       ]
     }
+  },
+  "gold_precious_metals": {
+    "sent_at": "2026-04-03T19:33:58.873787+00:00",
+    "confidence": 76,
+    "sector_label": "Gold & Precious Metals",
+    "article_count": 13,
+    "severity": "CRITICAL",
+    "regions": [
+      "americas",
+      "global",
+      "middle_east"
+    ],
+    "sources": [
+      "Bloomberg Markets",
+      "Finance",
+      "Markets-Economic Times"
+    ],
+    "top_headlines": [
+      "Gold slides 3% as oil surges on dimming hopes of end to Iran war",
+      "Powell sees inflation outlook in check, no need to hike rates because of oil shock",
+      "US Bonds Fall as Strong Jobs Data Undermines Fed Cut Outlook",
+      "De-dollarisation, war, and debt: Why gold is regaining monetary relevance",
+      "Turkish Disinflation Unscathed by Iran War in March"
+    ],
+    "latest_ts": "2026-04-03T12:47:13+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 25,
+      "volume_confirmation": 20.0,
+      "source_diversity": 10.0,
+      "recency": 6.0,
+      "geopolitical_severity": 15.0
+    },
+    "etf_recommendations": {
+      "india": [
+        {
+          "name": "Nippon India Gold BeES",
+          "ticker": "GOLDBEES",
+          "note": "Largest Indian gold ETF by AUM",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Tracks physical gold in INR. Double benefit: gold price rise + potential INR depreciation."
+        },
+        {
+          "name": "HDFC Gold ETF",
+          "ticker": "HDFCGOLD",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Physical gold backed. Very liquid. Safe haven in geopolitical or inflation-driven scenarios."
+        }
+      ],
+      "global": [
+        {
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026."
+        },
+        {
+          "name": "VanEck Gold Miners ETF",
+          "ticker": "GDX",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium-High",
+          "timeframe": "3\u20139 months",
+          "thesis": "Gold miners offer 2\u20133x leverage to gold price. If gold surges, miners typically outperform."
+        },
+        {
+          "name": "VanEck Junior Gold Miners ETF",
+          "ticker": "GDXJ",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "2\u20136 months",
+          "thesis": "Smaller miners \u2014 highest leverage to gold. High risk/reward. Use only for strong conviction."
+        }
+      ]
+    }
+  },
+  "banking_financial": {
+    "sent_at": "2026-04-03T19:34:00.586942+00:00",
+    "confidence": 72,
+    "sector_label": "Banking & Financial Sector",
+    "article_count": 9,
+    "severity": "MEDIUM",
+    "regions": [
+      "global",
+      "india",
+      "asia_pacific",
+      "americas",
+      "middle_east"
+    ],
+    "sources": [
+      "Finance",
+      "Bloomberg Markets",
+      "Markets-Economic Times"
+    ],
+    "top_headlines": [
+      "US Bonds Fall as Strong Jobs Data Undermines Fed Cut Outlook",
+      "Fed Governor Miran still backs cuts, says interest rates could be 'about a point' lower this year",
+      "Q4 impact: Bank stocks slump up to 32% in 3 months, but brokerages bet on SBI, HDFC Bank, 6 more stocks. Check why",
+      "RBI clears Emirates NBD to acquire up to 74% stake in RBL Bank; lender to become foreign bank post acquisition",
+      "Treasury Bonds Fall on Strength in March Payrolls: Markets Wrap"
+    ],
+    "latest_ts": "2026-04-03T19:00:32+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 15.6,
+      "volume_confirmation": 16.0,
+      "source_diversity": 10.0,
+      "recency": 20.0,
+      "geopolitical_severity": 11
+    },
+    "etf_recommendations": {
+      "india": [
+        {
+          "name": "Nippon India ETF Bank BeES",
+          "ticker": "BANKBEES",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Top Indian private and PSU banks. Rate cut cycle could re-rate banking sector."
+        }
+      ],
+      "global": [
+        {
+          "name": "Financial Select Sector SPDR",
+          "ticker": "XLF",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play."
+        },
+        {
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
+          "note": "Flight to safety during banking stress",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "1\u20133 months",
+          "thesis": "Banking crisis \u2192 gold safe haven. GLDM benefits from systemic financial stress."
+        }
+      ]
+    }
   }
 }
