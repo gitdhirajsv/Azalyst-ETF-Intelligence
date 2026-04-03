@@ -16,7 +16,7 @@ function escapeHtml(value) {
 }
 
 function usd(value) {
-  return "$" + Number((value || 0) / usdInrRate).toLocaleString("en-US", {
+  return "$" + Number(value || 0).toLocaleString("en-US", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2
   });
@@ -258,7 +258,7 @@ function ensurePieChart(labels, values) {
 function ensureBarChart(labels, values) {
   if (!labels.length) return;
   const colors = values.map(value => Number(value || 0) >= 0 ? "#10B981" : "#EF4444");
-  const usdValues = values.map(v => Number((v || 0) / usdInrRate).toFixed(2));
+  const usdValues = values.map(v => Number(v || 0).toFixed(2));
   if (!barChart) {
     barChart = new Chart(document.getElementById("barChart"), {
       type: "bar",
