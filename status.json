@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 932777.05,
+  "portfolio_value": 932728.7,
   "total_deposited": 943970.0,
   "cash": 36831.03,
   "monthly_reserve": 0.0,
-  "market_value": 895946.02,
+  "market_value": 895897.67,
   "total_invested": 895780.13,
-  "unrealised_pnl": 165.89,
-  "unrealised_str": "+165.89",
+  "unrealised_pnl": 117.54,
+  "unrealised_str": "+117.54",
   "realised_pnl": -11358.84,
   "realised_str": "-11,358.84",
   "change": "-1.19%",
@@ -14,9 +14,9 @@
   "closed_trades": 5,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 946735.17,
-  "drawdown_now_pct": 1.47,
+  "drawdown_now_pct": 1.48,
   "max_drawdown_pct": 2.1,
-  "usd_inr_rate": 92.642,
+  "usd_inr_rate": 92.637,
   "positions": [
     {
       "trade_id": "T0006",
@@ -26,14 +26,14 @@
       "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NASDAQ",
       "entry": 30685.15,
-      "current": 31462.15,
+      "current": 31460.45,
       "peak_price": 31913.36,
       "trail_stop": 27616.64,
       "dist_to_trail_pct": 12.22,
       "units": 9.227233,
       "invested": 283139.03,
-      "pnl": 7169.56,
-      "pnl_str": "+7,169.56",
+      "pnl": 7153.89,
+      "pnl_str": "+7,153.89",
       "pnl_pct": 2.53,
       "pnl_pct_str": "+2.53%",
       "confidence": 92,
@@ -49,14 +49,14 @@
       "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NASDAQ",
       "entry": 3588.95,
-      "current": 3517.62,
+      "current": 3517.43,
       "peak_price": 3644.59,
       "trail_stop": 3230.06,
       "dist_to_trail_pct": 8.17,
       "units": 72.783258,
       "invested": 261215.59,
-      "pnl": -5191.99,
-      "pnl_str": "-5,191.99",
+      "pnl": -5205.8,
+      "pnl_str": "-5,205.80",
       "pnl_pct": -1.99,
       "pnl_pct_str": "-1.99%",
       "confidence": 85,
@@ -72,14 +72,14 @@
       "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 5303.54,
-      "current": 5242.61,
+      "current": 5242.33,
       "peak_price": 5387.89,
       "trail_stop": 4773.18,
       "dist_to_trail_pct": 8.95,
       "units": 11.206131,
       "invested": 59432.11,
-      "pnl": -682.73,
-      "pnl_str": "-682.73",
+      "pnl": -685.9,
+      "pnl_str": "-685.90",
       "pnl_pct": -1.15,
       "pnl_pct_str": "-1.15%",
       "confidence": 80,
@@ -95,14 +95,14 @@
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 4606.37,
-      "current": 4588.56,
+      "current": 4588.31,
       "peak_price": 4630.88,
       "trail_stop": 4145.73,
       "dist_to_trail_pct": 9.65,
       "units": 63.389071,
       "invested": 291993.4,
-      "pnl": -1128.95,
-      "pnl_str": "-1,128.95",
+      "pnl": -1144.65,
+      "pnl_str": "-1,144.65",
       "pnl_pct": -0.39,
       "pnl_pct_str": "-0.39%",
       "confidence": 90,
@@ -245,10 +245,10 @@
       "XLF"
     ],
     "values": [
-      7169.56,
-      -5191.99,
-      -682.73,
-      -1128.95
+      7153.89,
+      -5205.8,
+      -685.9,
+      -1144.65
     ]
   },
   "confidence": [
@@ -266,6 +266,10 @@
     },
     {
       "symbol": "India Equity Markets",
+      "score": 85.0
+    },
+    {
+      "symbol": "Gold & Precious Metals",
       "score": 85.0
     },
     {
@@ -297,16 +301,16 @@
       "score": 80.0
     },
     {
+      "symbol": "Banking & Financial Sector",
+      "score": 78.0
+    },
+    {
       "symbol": "Emerging Markets + Energy / Oil & Gas + Gold & Precious Metals",
       "score": 78.0
     },
     {
       "symbol": "Energy / Oil & Gas",
       "score": 77.0
-    },
-    {
-      "symbol": "Gold & Precious Metals",
-      "score": 75.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -323,10 +327,6 @@
     {
       "symbol": "Nuclear Energy & Uranium + Crypto & Digital Assets",
       "score": 73.0
-    },
-    {
-      "symbol": "Banking & Financial Sector",
-      "score": 67.0
     },
     {
       "symbol": "Emerging Markets",
@@ -455,6 +455,44 @@
         "volume_confirmation": 20.0,
         "source_diversity": 5.0,
         "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 85.0,
+      "severity": "CRITICAL",
+      "article_count": 18,
+      "latest_at": "03 Apr 2026 05:25 UTC",
+      "headline": "Gold slides 3% as oil surges on dimming hopes of end to Iran war",
+      "regions": [
+        "global",
+        "india",
+        "americas",
+        "middle_east"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "Finance",
+        "Bloomberg Markets"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 10.0,
+        "recency": 15.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -685,6 +723,41 @@
       }
     },
     {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector",
+      "confidence": 78.0,
+      "severity": "HIGH",
+      "article_count": 10,
+      "latest_at": "03 Apr 2026 05:39 UTC",
+      "headline": "Westpac CEO Warns Iran War May Spark Recession in Australia",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "india",
+        "middle_east"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "Finance"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 18.1,
+        "volume_confirmation": 20.0,
+        "source_diversity": 10.0,
+        "recency": 15.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "emerging_markets|energy_oil|gold_precious_metals",
       "sector_label": "Emerging Markets + Energy / Oil & Gas + Gold & Precious Metals",
       "confidence": 78.0,
@@ -752,41 +825,6 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 7.5,
-        "recency": 10.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 75.0,
-      "severity": "CRITICAL",
-      "article_count": 20,
-      "latest_at": "02 Apr 2026 20:31 UTC",
-      "headline": "Gold slides 3% as oil surges on dimming hopes of end to Iran war",
-      "regions": [
-        "india",
-        "americas",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 5.0,
         "recency": 10.0,
         "geopolitical_severity": 15.0
       }
@@ -902,39 +940,6 @@
       }
     },
     {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector",
-      "confidence": 67.0,
-      "severity": "HIGH",
-      "article_count": 12,
-      "latest_at": "02 Apr 2026 15:32 UTC",
-      "headline": "India bonds fall before first FY27 debt sale as war keeps oil high",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Finance"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 21.6,
-        "volume_confirmation": 20.0,
-        "source_diversity": 5.0,
-        "recency": 6.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "emerging_markets",
       "sector_label": "Emerging Markets",
       "confidence": 65.0,
@@ -1015,6 +1020,11 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Gold & Precious Metals - 18 articles - CRITICAL - Gold slides 3% as oil surges on dimming hopes of end to Iran war"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Cybersecurity + Commodities & Mining - 18 articles - LOW - Hungary's Watergate: Secret service tried to infiltrate the political opposition"
     },
     {
@@ -1050,17 +1060,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Banking & Financial Sector - 10 articles - HIGH - Westpac CEO Warns Iran War May Spark Recession in Australia"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Emerging Markets + Energy / Oil & Gas + Gold & Precious Metals - 99 articles - LOW - Global Market Today | Brent crude set for record monthly gain; shares tentative as Iran war rages"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Energy / Oil & Gas - 46 articles - CRITICAL - OPEC+ Prepares Paper Oil Barrels While Exports Stall"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Gold & Precious Metals - 20 articles - CRITICAL - Gold slides 3% as oil surges on dimming hopes of end to Iran war"
     },
     {
       "tag": "tag-neu",
@@ -1081,11 +1091,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Nuclear Energy & Uranium + Crypto & Digital Assets - 55 articles - HIGH [legacy] - Nuclear Energy & Uranium + Crypto & Digital Assets \u2014 active signal (legacy record, no headline stored)"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Banking & Financial Sector - 12 articles - HIGH - India bonds fall before first FY27 debt sale as war keeps oil high"
     },
     {
       "tag": "tag-neu",
@@ -1158,11 +1163,11 @@
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 53142.85,
+      "price": 53123.49,
       "currency": "JPY",
-      "change": 679.58,
-      "change_pct": 1.3,
-      "change_str": "+1.30%",
+      "change": 660.22,
+      "change_pct": 1.26,
+      "change_str": "+1.26%",
       "direction": "up"
     },
     {
@@ -1213,23 +1218,23 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66584.88,
+      "price": 66743.52,
       "currency": "USD",
-      "change": -1493.67,
-      "change_pct": -2.19,
-      "change_str": "-2.19%",
+      "change": -145.05,
+      "change_pct": -0.22,
+      "change_str": "-0.22%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.03,
+      "price": 100.0,
       "currency": "USD",
-      "change": -0.0,
-      "change_pct": -0.0,
-      "change_str": "+-0.00%",
-      "direction": "up"
+      "change": -0.03,
+      "change_pct": -0.03,
+      "change_str": "-0.03%",
+      "direction": "down"
     },
     {
       "label": "VIX",
@@ -1245,7 +1250,7 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 1.47,
+    "drawdown_from_peak_pct": 1.48,
     "portfolio_peak": 946735.17,
     "vix": 23.87,
     "vix_regime": "ELEVATED",
@@ -1344,7 +1349,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": -16.2,
           "action": "ADD",
-          "amount": 151125.45,
+          "amount": 151117.75,
           "etf_name": "iShares MSCI Emerging Markets ETF"
         },
         {
@@ -1353,7 +1358,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": 8.68,
           "action": "TRIM",
-          "amount": 80989.61,
+          "amount": 80984.79,
           "etf_name": "Financial Select Sector SPDR"
         },
         {
@@ -1362,7 +1367,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": 8.62,
           "action": "TRIM",
-          "amount": 80433.75,
+          "amount": 80428.96,
           "etf_name": "iShares Semiconductor ETF"
         },
         {
@@ -1371,7 +1376,7 @@
           "target_weight_pct": 10.0,
           "drift_pct": -6.05,
           "action": "RAISE",
-          "amount": 56446.68,
+          "amount": 56441.84,
           "etf_name": "Cash Reserve"
         }
       ],
@@ -1381,152 +1386,152 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -358378.4,
+          "total_impact": -358359.07,
           "portfolio_loss_pct": -38.42,
           "position_impacts": [
             {
               "ticker": "SOXX",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -116123.43
+              "impact": -116117.17
             },
             {
               "ticker": "IBIT",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -102409.44
+              "impact": -102403.92
             },
             {
               "ticker": "EEM",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -23499.75
+              "impact": -23498.48
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -116345.78
+              "impact": -116339.5
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -304621.65,
+          "total_impact": -304605.2,
           "portfolio_loss_pct": -32.66,
           "position_impacts": [
             {
               "ticker": "SOXX",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -98704.92
+              "impact": -98699.59
             },
             {
               "ticker": "IBIT",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -87048.03
+              "impact": -87043.33
             },
             {
               "ticker": "EEM",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -19974.79
+              "impact": -19973.71
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -98893.91
+              "impact": -98888.57
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -134391.91,
+          "total_impact": -134384.65,
           "portfolio_loss_pct": -14.41,
           "position_impacts": [
             {
               "ticker": "SOXX",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -43546.29
+              "impact": -43543.94
             },
             {
               "ticker": "IBIT",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -38403.54
+              "impact": -38401.47
             },
             {
               "ticker": "EEM",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -8812.41
+              "impact": -8811.93
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -43629.67
+              "impact": -43627.31
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -71675.69,
+          "total_impact": -71671.81,
           "portfolio_loss_pct": -7.68,
           "position_impacts": [
             {
               "ticker": "SOXX",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -23224.69
+              "impact": -23223.43
             },
             {
               "ticker": "IBIT",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -20481.89
+              "impact": -20480.78
             },
             {
               "ticker": "EEM",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -4699.95
+              "impact": -4699.7
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -23269.16
+              "impact": -23267.9
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -161270.29,
+          "total_impact": -161261.58,
           "portfolio_loss_pct": -17.29,
           "position_impacts": [
             {
               "ticker": "SOXX",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -52255.55
+              "impact": -52252.73
             },
             {
               "ticker": "IBIT",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -46084.25
+              "impact": -46081.76
             },
             {
               "ticker": "EEM",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -10574.89
+              "impact": -10574.32
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -52355.6
+              "impact": -52352.77
             }
           ]
         }
@@ -1536,11 +1541,11 @@
     }
   },
   "logs": [
-    "2026-04-03 05:56:23 [INFO] AZALYST - status.json generated",
-    "2026-04-03 05:56:23 [INFO] PORTFOLIO - NAV USD 932,777.05 | Return -1.19%",
-    "2026-04-03 05:56:23 [INFO] SIGNALS - 21 active signal buckets in state",
-    "2026-04-03 05:56:23 [INFO] TRADER - Open positions: SOXX, IBIT, EEM, XLF",
-    "2026-04-03 05:56:23 [INFO] TRADER - Closed trades: 5"
+    "2026-04-03 06:59:10 [INFO] AZALYST - status.json generated",
+    "2026-04-03 06:59:10 [INFO] PORTFOLIO - NAV USD 932,728.70 | Return -1.19%",
+    "2026-04-03 06:59:10 [INFO] SIGNALS - 21 active signal buckets in state",
+    "2026-04-03 06:59:10 [INFO] TRADER - Open positions: SOXX, IBIT, EEM, XLF",
+    "2026-04-03 06:59:10 [INFO] TRADER - Closed trades: 5"
   ],
-  "generated_at": "2026-04-03 05:56:22 UTC"
+  "generated_at": "2026-04-03 06:59:09 UTC"
 }
