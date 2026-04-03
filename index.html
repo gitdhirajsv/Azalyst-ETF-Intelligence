@@ -496,8 +496,7 @@ function startCountdown() {
 }
 
 const fmt = {
-  inr: v => v == null ? '--' : '₹' + Number(v).toLocaleString('en-IN', {maximumFractionDigits:0}),
-  usd: v => v == null ? '--' : '$' + (Number(v) / USD_INR).toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2}),
+  usd: v => v == null ? '--' : '$' + Number(v).toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2}),
   pct: v => v == null ? '--%' : (Number(v) >= 0 ? '+' : '') + Number(v).toFixed(2) + '%',
   num: (v, d=2) => v == null ? '--' : Number(v).toFixed(d),
 };
@@ -631,9 +630,9 @@ function renderTape() {
 }
 
 function renderMktdPage() {
-  // Portfolio stats
-  const nav_usd = DATA.portfolio_value ? (DATA.portfolio_value / USD_INR).toFixed(0) : '--';
-  const dep_usd = DATA.total_deposited ? (DATA.total_deposited / USD_INR).toFixed(0) : '--';
+  // Portfolio stats (all values already in USD from status.json)
+  const nav_usd = DATA.portfolio_value ? Number(DATA.portfolio_value).toFixed(0) : '--';
+  const dep_usd = DATA.total_deposited ? Number(DATA.total_deposited).toFixed(0) : '--';
   document.getElementById('m-nav').textContent = '$' + Number(nav_usd).toLocaleString();
   document.getElementById('m-nav').className = 'stat-val ' + (DATA.change_raw >= 0 ? 'up' : 'dn');
   document.getElementById('m-nav-sub').textContent = 'deposited $' + Number(dep_usd).toLocaleString();
@@ -831,7 +830,7 @@ function renderAladdin() {
     const statusCls = lossPct < -20 ? 'dn' : lossPct < -10 ? 'dn' : lossPct < -5 ? 'neu' : 'up';
     return `<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:4px;font-size:9px;padding:3px 0;border-bottom:1px solid #111;${isWorst?'background:#0d0000;border-left:2px solid #ff3333':''}">
       <span style="color:#aaa">${name.replace(/_/g,' ')}</span>
-      <span style="text-align:right" class="dn">$${(impact/USD_INR).toFixed(0)}</span>
+      <span style="text-align:right" class="dn">$${impact.toFixed(0)}</span>
       <span style="text-align:right" class="dn">${lossPct.toFixed(1)}%</span>
       <span style="text-align:right;color:#888">${worstHit?worstHit.ticker+' ('+worstHit.shock_pct+'%)':'--'}</span>
       <span style="text-align:right" class="${statusCls}">${statusLabel}</span>
@@ -847,7 +846,7 @@ function renderAladdin() {
       return `<div style="display:flex;justify-content:space-between;font-size:9px;padding:3px 0;border-bottom:1px solid #111">
         <span style="color:#aaa">${a.ticker} <span style="color:#555">(${a.etf_name||''})</span></span>
         <span style="color:#888">actual ${a.actual_weight_pct.toFixed(1)}% → target ${a.target_weight_pct.toFixed(1)}%</span>
-        <span class="${actionCls}">${a.action} $${(a.amount/USD_INR).toFixed(0)} <span style="color:#555">(drift ${a.drift_pct>0?'+':''}${a.drift_pct.toFixed(1)}%)</span></span>
+        <span class="${actionCls}">${a.action} $${a.amount.toFixed(0)} <span style="color:#555">(drift ${a.drift_pct>0?'+':''}${a.drift_pct.toFixed(1)}%)</span></span>
       </div>`;
     }).join('');
   } else {
@@ -858,8 +857,8 @@ function renderAladdin() {
 function renderPortPage() {
   const tr = DATA.track_record || {};
   const stats = [
-    {label:'Portfolio NAV',  val:'$'+(DATA.portfolio_value/USD_INR).toFixed(0), sub:'deposited $'+(DATA.total_deposited/USD_INR).toFixed(0), cls:colorClass(DATA.change_raw)},
-    {label:'Total Deposited',val:'$'+(DATA.total_deposited/USD_INR).toFixed(0), sub:'', cls:'neu'},
+    {label:'Portfolio NAV',  val:'$'+Number(DATA.portfolio_value).toFixed(0), sub:'deposited $'+Number(DATA.total_deposited).toFixed(0), cls:colorClass(DATA.change_raw)},
+    {label:'Total Deposited',val:'$'+Number(DATA.total_deposited).toFixed(0), sub:'', cls:'neu'},
     {label:'Total Return',   val:DATA.change||'--', sub:'overall P&L', cls:colorClass(DATA.change_raw)},
     {label:'Unrealised P&L', val:fmt.usd(DATA.unrealised_pnl), sub:'open positions', cls:colorClass(DATA.unrealised_pnl)},
     {label:'Realised P&L',   val:fmt.usd(DATA.realised_pnl), sub:'closed trades', cls:colorClass(DATA.realised_pnl)},

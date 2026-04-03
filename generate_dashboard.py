@@ -209,7 +209,8 @@ def infer_vix_regime(vix_value):
     return "EXTREME"
 
 
-def calc_metrics(portfolio):
+def calc_metrics(portfolio, usd_inr_rate=83.5):
+    """Compute portfolio metrics and output everything in USD."""
     positions     = portfolio.get("open_positions", [])
     total_invested = sum(pos.get("invested_inr", 0) for pos in positions)
     market_value  = sum(
@@ -232,22 +233,23 @@ def calc_metrics(portfolio):
     drawdown_now = ((portfolio_peak - total) / portfolio_peak * 100) if portfolio_peak else 0
     max_drawdown = max(portfolio.get("max_drawdown_pct", 0), drawdown_now)
 
+    r = usd_inr_rate  # convert all monetary values from INR to USD
     return {
-        "portfolio_value":   safe_round(total),
-        "total_deposited":   safe_round(deposited),
-        "cash":              safe_round(cash),
-        "monthly_reserve":   safe_round(reserve),
-        "market_value":      safe_round(market_value),
-        "total_invested":    safe_round(total_invested),
-        "unrealised_pnl":    safe_round(unrealised),
-        "unrealised_str":    sign(unrealised),
-        "realised_pnl":      safe_round(realised),
-        "realised_str":      sign(realised),
+        "portfolio_value":   safe_round(total / r),
+        "total_deposited":   safe_round(deposited / r),
+        "cash":              safe_round(cash / r),
+        "monthly_reserve":   safe_round(reserve / r),
+        "market_value":      safe_round(market_value / r),
+        "total_invested":    safe_round(total_invested / r),
+        "unrealised_pnl":    safe_round(unrealised / r),
+        "unrealised_str":    sign(unrealised / r),
+        "realised_pnl":      safe_round(realised / r),
+        "realised_str":      sign(realised / r),
         "change":            sign_pct(change_raw),
         "change_raw":        safe_round(change_raw),
         "closed_trades":     len(portfolio.get("closed_trades", [])),
-        "partial_realised_pnl": safe_round(partial_realised),
-        "portfolio_peak":    safe_round(portfolio_peak),
+        "partial_realised_pnl": safe_round(partial_realised / r),
+        "portfolio_peak":    safe_round(portfolio_peak / r),
         "drawdown_now_pct":  safe_round(drawdown_now),
         "max_drawdown_pct":  safe_round(max_drawdown),
     }
@@ -262,7 +264,9 @@ def days_held(entry_date) -> int:
     return max((datetime.datetime.now(datetime.timezone.utc) - dt).days, 0)
 
 
-def build_positions(positions):
+def build_positions(positions, usd_inr_rate=83.5):
+    """Build position rows with all monetary values in USD."""
+    r = usd_inr_rate
     rows = []
     for pos in positions:
         entry   = safe_round(pos.get("entry_price", 0), 4)
@@ -289,15 +293,15 @@ def build_positions(positions):
             "sector":            pos.get("sector", ""),
             "platform":          pos.get("platform", ""),
             "exchange":          pos.get("exchange", ""),
-            "entry":             safe_round(entry),
-            "current":           safe_round(current),
-            "peak_price":        safe_round(peak_price),
-            "trail_stop":        safe_round(trail_stop),
+            "entry":             safe_round(entry / r),
+            "current":           safe_round(current / r),
+            "peak_price":        safe_round(peak_price / r),
+            "trail_stop":        safe_round(trail_stop / r),
             "dist_to_trail_pct": safe_round(dist_to_trail),
             "units":             safe_round(units, 6),
-            "invested":          invested,
-            "pnl":               pnl,
-            "pnl_str":           sign(pnl),
+            "invested":          safe_round(invested / r),
+            "pnl":               safe_round(pnl / r),
+            "pnl_str":           sign(pnl / r),
             "pnl_pct":           pnl_pct,
             "pnl_pct_str":       sign_pct(pnl_pct),
             "confidence":        pos.get("confidence", 0),
@@ -308,10 +312,12 @@ def build_positions(positions):
     return rows
 
 
-def build_closed(closed_trades):
+def build_closed(closed_trades, usd_inr_rate=83.5):
+    """Build closed trade rows with all monetary values in USD."""
+    r = usd_inr_rate
     rows = []
     for trade in closed_trades:
-        pnl = safe_round(trade.get("realised_pnl", 0))
+        pnl = safe_round(trade.get("realised_pnl", 0) / r)
         pct = safe_round(trade.get("realised_pnl_pct", 0))
         rows.append({
             "trade_id":    trade.get("trade_id", ""),
@@ -319,8 +325,8 @@ def build_closed(closed_trades):
             "etf_name":    trade.get("etf_name", ""),
             "platform":    trade.get("platform", ""),
             "exchange":    trade.get("exchange", ""),
-            "entry":       safe_round(trade.get("entry_price", 0)),
-            "exit":        safe_round(trade.get("exit_price", 0)),
+            "entry":       safe_round(trade.get("entry_price", 0) / r),
+            "exit":        safe_round(trade.get("exit_price", 0) / r),
             "pnl":         pnl,
             "pnl_str":     sign(pnl),
             "pnl_pct":     pct,
@@ -501,6 +507,22 @@ def build_articles(signal_cards):
     return items
 
 
+def _convert_aladdin_to_usd(aladdin_risk, usd_inr_rate):
+    """Convert Aladdin risk engine monetary outputs from INR to USD."""
+    r = usd_inr_rate
+    # Stress test scenario impacts
+    for scenario_data in (aladdin_risk.get("stress_test", {}).get("scenarios", {}) or {}).values():
+        if "total_impact" in scenario_data:
+            scenario_data["total_impact"] = safe_round(scenario_data["total_impact"] / r)
+        for pi in scenario_data.get("position_impacts", []):
+            if "impact" in pi:
+                pi["impact"] = safe_round(pi["impact"] / r)
+    # Rebalance alert amounts
+    for alert in (aladdin_risk.get("rebalance", {}).get("alerts", []) or []):
+        if "amount" in alert:
+            alert["amount"] = safe_round(alert["amount"] / r)
+
+
 def build_risk_controls(metrics, positions, market_snapshot):
     vix_row   = next((row for row in market_snapshot if row["ticker"] == "^VIX"), None)
     vix_value = vix_row["price"] if vix_row else None
@@ -632,18 +654,18 @@ def generate_status():
         print(f"Written minimal dashboard status -> {OUTPUT_FILE}")
         return
 
-    market_snapshot = fetch_market_snapshot()
-    metrics         = calc_metrics(portfolio)
-    positions       = build_positions(portfolio.get("open_positions", []))
-    signal_cards    = build_signal_cards(state)
-
-    # Fetch live USD/INR rate for dual-currency dashboard display
+    # Fetch live USD/INR rate FIRST — needed for INR→USD conversion
     usd_inr_rate = None
     try:
         from paper_trader import fetch_usd_to_inr
         usd_inr_rate = fetch_usd_to_inr()
     except Exception:
         usd_inr_rate = 83.5  # fallback
+
+    market_snapshot = fetch_market_snapshot()
+    metrics         = calc_metrics(portfolio, usd_inr_rate)
+    positions       = build_positions(portfolio.get("open_positions", []), usd_inr_rate)
+    signal_cards    = build_signal_cards(state)
 
     # ── Aladdin Risk Engine ──────────────────────────────────────────────
     aladdin_risk = {}
@@ -652,9 +674,11 @@ def generate_status():
             portfolio_return_pct = metrics.get("change_raw", 0.0)
             aladdin_risk = risk_engine.generate_risk_report(
                 portfolio,
-                metrics["portfolio_value"],
+                metrics["portfolio_value"] * usd_inr_rate,  # engine expects INR
                 portfolio_return_pct,
             )
+            # Convert Aladdin monetary outputs from INR to USD
+            _convert_aladdin_to_usd(aladdin_risk, usd_inr_rate)
         except Exception as exc:
             print(f"WARNING: risk_engine failed: {exc}")
             aladdin_risk = risk_engine._empty_report() if risk_engine else {}
@@ -663,7 +687,7 @@ def generate_status():
         **metrics,
         "usd_inr_rate":       safe_round(usd_inr_rate, 4),
         "positions":          positions,
-        "closed_trades_list": build_closed(portfolio.get("closed_trades", [])),
+        "closed_trades_list": build_closed(portfolio.get("closed_trades", []), usd_inr_rate),
         "track_record":       build_track(portfolio),
         "confidence_threshold": 62,
         "allocation":  build_alloc(positions, metrics["cash"] + metrics.get("monthly_reserve", 0)),
