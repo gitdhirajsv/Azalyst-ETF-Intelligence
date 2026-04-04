@@ -39,13 +39,56 @@ def build_etf_block(etf: Dict) -> str:
     """Build ETF display block using platform info from etf_mapper database."""
     note = f"\nNote     : {etf['note']}" if etf.get("note") else ""
     platform = etf.get("platform", "N/A")
+    market_scope = etf.get("market_scope", "Mapped Market")
+    selection_score = etf.get("selection_score")
+    selection_line = ""
+    if selection_score is not None:
+        selection_line = f"\nSelector : {selection_score:.1f}  |  Market : {market_scope}"
+    notes = etf.get("selection_notes") or []
+    note_line = ""
+    if notes:
+        note_line = f"\nWhy now  : {', '.join(notes)}"
     return (
         f"**{etf['name']}**  `{etf['ticker']}`\n"
         f"Platform : {platform}  |  Exchange : {etf['exchange']}\n"
         f"Risk     : {etf['risk']}  |  Horizon  : {etf['timeframe']}\n"
         f"Thesis   : {etf['thesis']}"
+        + selection_line
+        + note_line
         + note
     )
+
+
+def _ranked_recommendations(etf_recs: Dict) -> List[Dict]:
+    ranked = etf_recs.get("ranked") or etf_recs.get("top_etfs") or []
+    if ranked:
+        return ranked
+
+    combined = []
+    for bucket in ("global", "india"):
+        combined.extend(etf_recs.get(bucket, []))
+    return combined
+
+
+def _primary_recommendation(etf_recs: Dict) -> Dict:
+    primary = etf_recs.get("primary")
+    if primary:
+        return primary
+    ranked = _ranked_recommendations(etf_recs)
+    return ranked[0] if ranked else {}
+
+
+def _regional_alternatives(etf_recs: Dict) -> Dict[str, List[Dict]]:
+    regional = etf_recs.get("regional_alternatives") or {}
+    if regional:
+        return regional
+
+    fallback = {}
+    if etf_recs.get("global"):
+        fallback["International-listed"] = etf_recs.get("global", [])
+    if etf_recs.get("india"):
+        fallback["India-listed"] = etf_recs.get("india", [])
+    return fallback
 
 
 class DiscordReporter:
@@ -89,14 +132,12 @@ class DiscordReporter:
                     "The macro monitoring system has initialised and is running.\n\n"
                     "```\n"
                     "Scan interval    : Every 30 minutes\n"
-                    "Sectors covered  : Energy, Defense, Gold, Technology,\n"
-                    "                   Uranium, Cybersecurity, Banking,\n"
-                    "                   India Equity, Commodities, Crypto, EM\n"
+                    "Coverage         : Global sector, regional, commodity,\n"
+                    "                   fixed income, and thematic ETFs\n"
                     "Confidence floor : 62 / 100\n"
                     "Capital plan     : $10,000 USD / month (50% deploy, 50% reserve)\n"
-                    "Exchanges        : NYSE, NASDAQ, NSE, BSE\n"
-                    "Access via       : IBKR, Schwab, Fidelity, INDmoney,\n"
-                    "                   Vested, Dhan, Groww, Zerodha\n"
+                    "Trading venues   : US, Europe, Asia, India, commodity-linked\n"
+                    "Access via       : Multi-broker and multi-exchange ETF routing\n"
                     "```\n\n"
                     "Alerts are issued only when a confirmed macro event meets the "
                     "confidence threshold. No output is generated for noise."
@@ -133,8 +174,8 @@ class DiscordReporter:
 
         Embed 1  —  Report classification header and signal metadata
         Embed 2  —  Supporting headlines
-        Embed 3  —  India ETF recommendations  (NSE / BSE brokers)
-        Embed 4  —  Global ETF recommendations  (International brokers)
+        Embed 3  —  Unified global ETF ranking
+        Embed 4  —  Market-specific alternatives
         Embed 5  —  Macro thesis, suggested posture, confidence score
         """
         confidence    = signal.get("confidence", 0)
@@ -144,7 +185,15 @@ class DiscordReporter:
         regions       = signal.get("regions", [])
         article_count = signal.get("article_count", 0)
         sources       = signal.get("sources", [])
-        etf_recs      = signal.get("etf_recommendations", {"india": [], "global": []})
+        etf_recs      = signal.get(
+            "etf_recommendations",
+            {
+                "selection_method": "global-ranked",
+                "primary": None,
+                "ranked": [],
+                "regional_alternatives": {},
+            },
+        )
         breakdown     = signal.get("confidence_breakdown", {})
         latest_ts     = signal.get("latest_ts")
         ts_str        = latest_ts.strftime("%d %b %Y  %H:%M UTC") if latest_ts else "—"
@@ -167,10 +216,12 @@ class DiscordReporter:
                 f"```\n"
                 f"Report Type          : {report_type}\n"
                 f"Severity             : {sev_label}\n"
+                f"Direction            : {signal.get('direction', 'NEUTRAL')}\n"
                 f"Sector               : {sector_label.upper()}\n"
                 f"Region               : {region_str}\n"
                 f"Articles Detected    : {article_count}\n"
                 f"Sources              : {source_str}\n"
+                f"ML Sentiment         : {signal.get('ml_sentiment_label', 'NEUTRAL')} ({signal.get('ml_sentiment_mode', 'rules-only')})\n"
                 f"Signal Timestamp     : {ts_str}\n"
                 f"{prev_line}"
                 f"```"
@@ -195,34 +246,48 @@ class DiscordReporter:
             "color": color,
         }
 
-        # ── Embed 3: India ETF Allocation ─────────────────────────────────
-        india_etfs = etf_recs.get("india", [])
-        if india_etfs:
-            india_blocks = [build_etf_block(e) for e in india_etfs[:3]]
-            india_body   = ("\n" + "─" * 44 + "\n").join(india_blocks)
+        # ── Embed 3: Unified ETF Ranking ──────────────────────────────────
+        ranked_etfs = _ranked_recommendations(etf_recs)
+        if ranked_etfs:
+            ranked_blocks = [build_etf_block(e) for e in ranked_etfs[:4]]
+            ranked_body = ("\n" + "─" * 44 + "\n").join(ranked_blocks)
         else:
-            india_body = (
-                "No India ETF is mapped for this sector classification. "
-                "Refer to the global instruments below."
-            )
+            ranked_body = "No ETF candidates are mapped for this sector classification."
 
         embed3 = {
-            "title": "INDIA ETF ALLOCATION  —  NSE / BSE (via INDmoney, Vested, Groww, Zerodha)",
-            "description": india_body,
+            "title": "TOP ETF CANDIDATES  —  GLOBAL RANKING",
+            "description": ranked_body,
             "color": 0x1B3A5C,
         }
 
-        # ── Embed 4: Global ETF Allocation ────────────────────────────────
-        global_etfs = etf_recs.get("global", [])
-        if global_etfs:
-            global_blocks = [build_etf_block(e) for e in global_etfs[:4]]
-            global_body   = ("\n" + "─" * 44 + "\n").join(global_blocks)
+        # ── Embed 4: Market Alternatives ──────────────────────────────────
+        regional_alts = _regional_alternatives(etf_recs)
+        if regional_alts:
+            lines = []
+            for market, market_etfs in regional_alts.items():
+                tickers = []
+                for etf in market_etfs[:3]:
+                    ticker = etf.get("ticker", "-")
+                    score = etf.get("selection_score")
+                    if score is None:
+                        tickers.append(ticker)
+                    else:
+                        tickers.append(f"{ticker} ({score:.1f})")
+                joined = ", ".join(tickers) or "-"
+                lines.append(f"{market:<20}  {joined}")
+            regional_body = (
+                "```\n"
+                "Market Access         Ranked Candidates\n"
+                f"{'─' * 58}\n"
+                + "\n".join(lines)
+                + "\n```"
+            )
         else:
-            global_body = "No global ETF is mapped for this sector classification."
+            regional_body = "No market-specific alternatives are available."
 
         embed4 = {
-            "title": "GLOBAL ETF ALLOCATION  —  NYSE / NASDAQ (via IBKR, Schwab, Fidelity)",
-            "description": global_body,
+            "title": "MARKET ACCESS ALTERNATIVES",
+            "description": regional_body,
             "color": 0x1B3A5C,
         }
 
@@ -493,46 +558,28 @@ class DiscordReporter:
         etf_recs = signal.get("etf_recommendations", {})
         base     = self.POSTURE_TEMPLATES.get(severity, self.POSTURE_TEMPLATES["LOW"])
 
-        best_global = (etf_recs.get("global") or [{}])[0].get("ticker", "")
-        best_india  = (etf_recs.get("india")  or [{}])[0].get("ticker", "")
-        
-        # Get platform info from ETF data
-        best_global_platform = (etf_recs.get("global") or [{}])[0].get("platform", "")
-        best_india_platform  = (etf_recs.get("india")  or [{}])[0].get("platform", "")
-        
-        # Extract broker names from platform string (e.g. "iShares by BlackRock — IBKR / Schwab" -> "IBKR / Schwab")
-        global_brokers = ""
-        india_brokers = ""
-        if best_global_platform and "—" in best_global_platform:
-            global_brokers = best_global_platform.split("—")[-1].strip()
-        if best_india_platform and "—" in best_india_platform:
-            india_brokers = best_india_platform.split("—")[-1].strip()
-        elif best_india_platform:
-            india_brokers = best_india_platform
+        primary = _primary_recommendation(etf_recs)
+        ticker = primary.get("ticker", "")
+        platform = primary.get("platform", "")
+        market_scope = primary.get("market_scope", "")
+        selection_notes = primary.get("selection_notes") or []
 
-        if best_global and best_india:
-            if global_brokers and india_brokers:
-                suffix = (
-                    f" Primary instruments: **{best_india}** via {india_brokers} "
-                    f"and **{best_global}** via {global_brokers}."
-                )
-            elif best_global:
-                suffix = (
-                    f" Primary instruments: **{best_india}** (India) "
-                    f"and **{best_global}** (Global)."
-                )
+        brokers = ""
+        if platform and "—" in platform:
+            brokers = platform.split("—")[-1].strip()
+        elif platform:
+            brokers = platform
+
+        if ticker:
+            suffix = f" Primary instrument: **{ticker}**"
+            if market_scope:
+                suffix += f" ({market_scope})"
+            if brokers:
+                suffix += f" via {brokers}"
+            if selection_notes:
+                suffix += f". Selection logic favors {', '.join(selection_notes[:2])}"
             else:
-                suffix = ""
-        elif best_global:
-            if global_brokers:
-                suffix = f" Primary instrument: **{best_global}** via {global_brokers}."
-            else:
-                suffix = f" Primary instrument: **{best_global}** (Global)."
-        elif best_india:
-            if india_brokers:
-                suffix = f" Primary instrument: **{best_india}** via {india_brokers}."
-            else:
-                suffix = f" Primary instrument: **{best_india}** (India)."
+                suffix += "."
         else:
             suffix = ""
 

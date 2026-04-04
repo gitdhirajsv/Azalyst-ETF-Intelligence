@@ -133,6 +133,11 @@ function updateSignalCards(data) {
     const breakdown = signal.breakdown || {};
     const confidence = Number(signal.confidence || 0);
     const confidenceClass = confidence >= 80 ? "tag-bull" : confidence >= 65 ? "tag-neu" : "tag-bear";
+    const topEtfs = (signal.top_etfs || signal.global_etfs || signal.india_etfs || []).join(", ") || "-";
+    const accessMarkets = (signal.access_markets || []).join(", ") || "Mapped markets";
+    const direction = signal.direction || "NEUTRAL";
+    const mlSentiment = signal.ml_sentiment_label || "NEUTRAL";
+    const mlMode = signal.ml_sentiment_mode || "rules-only";
     return `
       <div class="signal-card">
         <div class="signal-head">
@@ -152,10 +157,11 @@ function updateSignalCards(data) {
         </div>
         <div class="signal-grid">
           <div class="signal-box">
-            <div class="signal-box-title">ETF Routing</div>
+            <div class="signal-box-title">ETF Ranking</div>
             <div class="signal-box-body">
-              <strong>India:</strong> ${escapeHtml((signal.india_etfs || []).join(", ") || "-")}<br>
-              <strong>Global:</strong> ${escapeHtml((signal.global_etfs || []).join(", ") || "-")}
+              <strong>Top:</strong> ${escapeHtml(topEtfs)}<br>
+              <strong>Access:</strong> ${escapeHtml(accessMarkets)}<br>
+              <strong>Bias:</strong> ${escapeHtml(direction)} / ${escapeHtml(mlSentiment)} (${escapeHtml(mlMode)})
             </div>
           </div>
           <div class="signal-box">
@@ -428,15 +434,17 @@ function updateGlobalMonitor(data) {
   container.innerHTML = sorted.slice(0, 6).map(signal => {
     const conf = Number(signal.confidence || 0);
     const tier = conf >= 80 ? "opp-crit" : conf >= 70 ? "opp-high" : conf >= 60 ? "opp-med" : "opp-low";
-    const global = (signal.global_etfs || []).slice(0, 3).join(", ") || "-";
-    const india = (signal.india_etfs || []).slice(0, 3).join(", ") || "-";
+    const topEtfs = (signal.top_etfs || signal.global_etfs || signal.india_etfs || []).slice(0, 3).join(", ") || "-";
+    const accessMarkets = (signal.access_markets || []).join(", ") || "Mapped markets";
+    const direction = signal.direction || "NEUTRAL";
     return `
       <div class="opp-card ${tier}">
         <div class="opp-title">${escapeHtml(signal.sector_label)}</div>
         <div class="opp-conf">${severityBadge(signal.severity)} <span style="margin-left:8px;color:#f1f5f9;font-weight:700">${conf}/100</span></div>
         <div class="opp-etfs">
-          <span class="opp-etf-label">Global:</span> ${escapeHtml(global)}<br>
-          <span class="opp-etf-label">India:</span> ${escapeHtml(india)}
+          <span class="opp-etf-label">Top:</span> ${escapeHtml(topEtfs)}<br>
+          <span class="opp-etf-label">Access:</span> ${escapeHtml(accessMarkets)}<br>
+          <span class="opp-etf-label">Bias:</span> ${escapeHtml(direction)}
         </div>
       </div>
     `;

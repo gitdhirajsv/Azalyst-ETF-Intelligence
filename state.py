@@ -174,7 +174,15 @@ class SignalStateManager:
             "confidence_breakdown": signal.get("confidence_breakdown", {}),
             "etf_recommendations":  signal.get(
                 "etf_recommendations",
-                {"india": [], "global": []},
+                {
+                    "selection_method": "global-ranked",
+                    "primary": None,
+                    "ranked": [],
+                    "top_etfs": [],
+                    "regional_alternatives": {},
+                    "india": [],
+                    "global": [],
+                },
             ),
         }
         self._save()

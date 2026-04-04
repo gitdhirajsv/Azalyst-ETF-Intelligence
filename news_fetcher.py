@@ -22,6 +22,7 @@ import hashlib
 import logging
 import re
 import time
+from difflib import SequenceMatcher
 from datetime import datetime, timezone, timedelta
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from email.utils import parsedate_to_datetime
@@ -66,19 +67,42 @@ def infer_region(text: str) -> str:
 
 def parse_date(entry) -> datetime:
     """Parse RSS date fields into UTC datetime."""
+    now = datetime.now(timezone.utc)
     for field in ("published", "updated", "created"):
         val = getattr(entry, field, None) or entry.get(field)
         if val:
             try:
-                return parsedate_to_datetime(val).astimezone(timezone.utc)
+                parsed = parsedate_to_datetime(val).astimezone(timezone.utc)
+                if parsed > now + timedelta(days=1):
+                    return now
+                if parsed.year < 2000:
+                    return now
+                return parsed
             except Exception:
                 pass
-    return datetime.now(timezone.utc)
+    return now
 
 
 def hash_id(url: str, title: str) -> str:
     key = (url or "") + "|" + (title or "")
     return hashlib.sha256(key.encode()).hexdigest()[:16]
+
+
+def _normalise_title(title: str) -> str:
+    text = re.sub(r"<[^>]+>", " ", title or "")
+    text = re.sub(r"[^a-z0-9\s]", " ", text.lower())
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+
+def _titles_too_similar(title_a: str, title_b: str, threshold: float) -> bool:
+    if not title_a or not title_b:
+        return False
+    if title_a == title_b:
+        return True
+    if len(title_a) < 18 or len(title_b) < 18:
+        return False
+    return SequenceMatcher(None, title_a, title_b).ratio() >= threshold
 
 
 def fetch_feed(url: str, timeout: int, source_name: str = None) -> List[Dict]:
@@ -152,10 +176,15 @@ class NewsFetcher:
         self._seen_ids = set()   # Cross-session dedup within a cycle
         # FIX: age filter — drop articles older than configured threshold
         self._max_age_days: int = getattr(cfg, "MAX_ARTICLE_AGE_DAYS", 7)
+        self._title_similarity_threshold: float = max(
+            0.80,
+            min(float(getattr(cfg, "FUZZY_TITLE_DEDUP_THRESHOLD", 0.92)), 0.99),
+        )
 
     def fetch_all(self) -> List[Dict]:
         all_articles: List[Dict] = []
         seen_this_cycle: set = set()
+        seen_titles: List[str] = []
         cutoff: datetime = (
             datetime.now(timezone.utc) - timedelta(days=self._max_age_days)
             if self._max_age_days > 0
@@ -183,6 +212,12 @@ class NewsFetcher:
                     for art in articles:
                         if art["id"] in seen_this_cycle:
                             continue
+                        norm_title = _normalise_title(art.get("title", ""))
+                        if norm_title and any(
+                            _titles_too_similar(norm_title, prior, self._title_similarity_threshold)
+                            for prior in seen_titles
+                        ):
+                            continue
                         # FIX: drop articles older than the age cutoff.
                         # This prevents evergreen "best of 2022" style articles
                         # from scoring as fresh signals.
@@ -193,6 +228,8 @@ class NewsFetcher:
                             if pub < cutoff:
                                 continue
                         seen_this_cycle.add(art["id"])
+                        if norm_title:
+                            seen_titles.append(norm_title)
                         all_articles.append(art)
                     if articles:
                         log.debug(f"  ✓ {len(articles)} articles — {url[:60]}")

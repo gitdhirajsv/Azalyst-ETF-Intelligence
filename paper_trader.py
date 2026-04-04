@@ -4,11 +4,12 @@ paper_trader.py - AZALYST Paper Trading Engine
 Institution-style paper trading with:
   - USD-denominated accounting
   - monthly capital top-ups
-  - half-Kelly sizing
+  - empirical risk-budget sizing
   - sector caps, drawdown guardrails, and trailing stops
   - partial profit-taking at +8%
   - capital rotation into stronger signals (min 14-day hold)
   - max single position cap at 22%
+  - modeled slippage and trading costs
 """
 
 import json
@@ -51,17 +52,126 @@ CIRCUIT_BREAKER_DRAWDOWN_PCT = 0.12
 ROTATION_CONFIDENCE_DELTA    = 10
 ROTATION_MIN_HOLD_DAYS       = 14
 
-AVG_WIN_BY_SEVERITY = {
-    "CRITICAL": 0.20,
-    "HIGH":     0.15,
-    "MEDIUM":   0.12,
-    "LOW":      0.08,
+BASE_RISK_BUDGET_BY_SEVERITY = {
+    "CRITICAL": 0.13,
+    "HIGH":     0.10,
+    "MEDIUM":   0.07,
+    "LOW":      0.04,
+}
+MIN_RISK_BUDGET_PCT = 0.04
+EMPIRICAL_MIN_TRADES = 8
+
+VENUE_EXPLICIT_COST_BPS = {
+    "US": {
+        "commission_bps": 1.0,
+        "tax_bps": 0.0,
+    },
+    "INDIA": {
+        "commission_bps": 4.0,
+        "tax_bps": 4.0,
+    },
+}
+
+RISK_SLIPPAGE_BPS = {
+    "LOW": 4.0,
+    "LOW-MEDIUM": 6.0,
+    "MEDIUM": 10.0,
+    "MEDIUM-HIGH": 16.0,
+    "HIGH": 28.0,
 }
 
 USD_TO_INR = 83.5
 
 # Derived INR minimum — computed once at module load, refreshed at runtime
 MIN_TRADE_INR = round(MIN_TRADE_USD * USD_TO_INR, 2)
+
+
+def _venue_key(exchange: str) -> str:
+    exchange_upper = (exchange or "").upper()
+    if "NSE" in exchange_upper or "BSE" in exchange_upper:
+        return "INDIA"
+    return "US"
+
+
+def estimate_execution_cost_model(exchange: str, risk: str = "MEDIUM") -> Dict[str, float]:
+    venue_key = _venue_key(exchange)
+    venue_model = VENUE_EXPLICIT_COST_BPS.get(venue_key, VENUE_EXPLICIT_COST_BPS["US"])
+    slippage_bps = RISK_SLIPPAGE_BPS.get((risk or "MEDIUM").upper(), RISK_SLIPPAGE_BPS["MEDIUM"])
+    explicit_bps = venue_model["commission_bps"] + venue_model["tax_bps"]
+    return {
+        "venue": venue_key,
+        "commission_bps": venue_model["commission_bps"],
+        "tax_bps": venue_model["tax_bps"],
+        "explicit_bps": explicit_bps,
+        "slippage_bps": slippage_bps,
+        "round_trip_bps": explicit_bps * 2 + slippage_bps * 2,
+    }
+
+
+def build_entry_execution(
+    quote_price: float,
+    cash_budget_inr: float,
+    exchange: str,
+    risk: str = "MEDIUM",
+) -> Optional[Dict[str, float]]:
+    if quote_price <= 0 or cash_budget_inr <= 0:
+        return None
+
+    model = estimate_execution_cost_model(exchange, risk)
+    explicit_rate = model["explicit_bps"] / 10000.0
+    slippage_rate = model["slippage_bps"] / 10000.0
+    fill_price = round(quote_price * (1 + slippage_rate), 4)
+    gross_budget = cash_budget_inr / (1 + explicit_rate)
+    units = round(gross_budget / fill_price, 6)
+    if units <= 0:
+        return None
+
+    gross_notional = round(units * fill_price, 2)
+    fees = round(gross_notional * explicit_rate, 2)
+    slippage_cost = round(units * max(fill_price - quote_price, 0.0), 2)
+    total_cash = round(gross_notional + fees, 2)
+
+    return {
+        "quote_price": round(quote_price, 4),
+        "fill_price": fill_price,
+        "units": units,
+        "gross_notional": gross_notional,
+        "fees_inr": fees,
+        "slippage_inr": slippage_cost,
+        "total_cash_inr": total_cash,
+        "total_cost_inr": round(fees + slippage_cost, 2),
+        "cost_model": model,
+    }
+
+
+def build_exit_execution(
+    quote_price: float,
+    units: float,
+    exchange: str,
+    risk: str = "MEDIUM",
+) -> Optional[Dict[str, float]]:
+    if quote_price <= 0 or units <= 0:
+        return None
+
+    model = estimate_execution_cost_model(exchange, risk)
+    explicit_rate = model["explicit_bps"] / 10000.0
+    slippage_rate = model["slippage_bps"] / 10000.0
+    fill_price = round(quote_price * (1 - slippage_rate), 4)
+    gross_proceeds = round(units * fill_price, 2)
+    fees = round(gross_proceeds * explicit_rate, 2)
+    slippage_cost = round(units * max(quote_price - fill_price, 0.0), 2)
+    net_proceeds = round(gross_proceeds - fees, 2)
+
+    return {
+        "quote_price": round(quote_price, 4),
+        "fill_price": fill_price,
+        "gross_proceeds": gross_proceeds,
+        "fees_inr": fees,
+        "slippage_inr": slippage_cost,
+        "net_proceeds_inr": net_proceeds,
+        "total_cost_inr": round(fees + slippage_cost, 2),
+        "cost_model": model,
+    }
 
 
 def fetch_usd_to_inr() -> float:
@@ -144,6 +254,9 @@ class Position:
         confidence: int,
         severity: str,
         signal_headline: str,
+        instrument_risk: str = "MEDIUM",
+        entry_reference_price: Optional[float] = None,
+        cumulative_costs_inr: float = 0.0,
     ):
         self.trade_id       = trade_id
         self.ticker         = ticker
@@ -158,6 +271,9 @@ class Position:
         self.confidence     = confidence
         self.severity       = severity
         self.signal_headline = signal_headline
+        self.instrument_risk = instrument_risk
+        self.entry_reference_price = entry_reference_price or entry_price
+        self.cumulative_costs_inr = cumulative_costs_inr
         self.current_price  = entry_price
         self.last_updated   = entry_date
         self.peak_price     = entry_price
@@ -197,6 +313,9 @@ class Position:
             "confidence":     self.confidence,
             "severity":       self.severity,
             "signal_headline": self.signal_headline,
+            "instrument_risk": self.instrument_risk,
+            "entry_reference_price": self.entry_reference_price,
+            "cumulative_costs_inr": self.cumulative_costs_inr,
             "current_price":  self.current_price,
             "last_updated":   self.last_updated,
             "peak_price":     self.peak_price,
@@ -220,6 +339,9 @@ class Position:
             confidence      = raw["confidence"],
             severity        = raw["severity"],
             signal_headline = raw.get("signal_headline", ""),
+            instrument_risk = raw.get("instrument_risk", "MEDIUM"),
+            entry_reference_price = raw.get("entry_reference_price", raw["entry_price"]),
+            cumulative_costs_inr = raw.get("cumulative_costs_inr", 0.0),
         )
         pos.current_price = raw.get("current_price", raw["entry_price"])
         pos.last_updated  = raw.get("last_updated", raw["entry_date"])
@@ -235,7 +357,16 @@ class Position:
 class ClosedTrade:
     """Record of one completed position close."""
 
-    def __init__(self, position: Position, exit_price: float, exit_date: str, exit_reason: str):
+    def __init__(
+        self,
+        position: Position,
+        quote_exit_price: float,
+        fill_exit_price: float,
+        net_proceeds_inr: float,
+        execution_costs_inr: float,
+        exit_date: str,
+        exit_reason: str,
+    ):
         self.trade_id        = position.trade_id
         self.ticker          = position.ticker
         self.etf_name        = position.etf_name
@@ -243,7 +374,8 @@ class ClosedTrade:
         self.exchange        = position.exchange
         self.sector          = position.sector
         self.entry_price     = position.entry_price
-        self.exit_price      = exit_price
+        self.exit_price      = fill_exit_price
+        self.quote_exit_price = quote_exit_price
         self.units           = position.units
         self.invested_inr    = position.invested_inr
         self.exit_date       = exit_date
@@ -251,9 +383,14 @@ class ClosedTrade:
         self.entry_date      = position.entry_date
         self.confidence      = position.confidence
         self.severity        = position.severity
-        self.realised_pnl    = round((exit_price - position.entry_price) * position.units, 2)
+        self.execution_costs_inr = round(execution_costs_inr, 2)
+        self.gross_realised_pnl = round(
+            (fill_exit_price - position.entry_price) * position.units,
+            2,
+        )
+        self.realised_pnl    = round(net_proceeds_inr - position.invested_inr, 2)
         self.realised_pnl_pct = round(
-            ((exit_price - position.entry_price) / position.entry_price) * 100,
+            (self.realised_pnl / position.invested_inr) * 100 if position.invested_inr else 0.0,
             2,
         )
         self.days_held = position.days_held()
@@ -270,8 +407,11 @@ class ClosedTrade:
             "exit_price":        self.exit_price,
             "units":             self.units,
             "invested_inr":      self.invested_inr,
+            "quote_exit_price":  self.quote_exit_price,
             "realised_pnl":      self.realised_pnl,
+            "gross_realised_pnl": self.gross_realised_pnl,
             "realised_pnl_pct":  self.realised_pnl_pct,
+            "execution_costs_inr": self.execution_costs_inr,
             "days_held":         self.days_held,
             "entry_date":        self.entry_date,
             "exit_date":         self.exit_date,
@@ -289,6 +429,7 @@ class PaperPortfolio:
         self.cash_inr                    = 0.0
         self.total_deposited             = 0.0
         self.partial_realised_pnl_total  = 0.0
+        self.total_execution_costs_inr   = 0.0
         self.portfolio_peak              = 0.0
         self.max_drawdown_pct            = 0.0
         self.open_positions: List[Position]   = []
@@ -315,6 +456,7 @@ class PaperPortfolio:
             self.cash_inr                   = data.get("cash_inr", 0.0)
             self.total_deposited            = data.get("total_deposited", 0.0)
             self.partial_realised_pnl_total = data.get("partial_realised_pnl_total", 0.0)
+            self.total_execution_costs_inr  = data.get("total_execution_costs_inr", 0.0)
             self.portfolio_peak             = data.get("portfolio_peak", 0.0)
             self.max_drawdown_pct           = data.get("max_drawdown_pct", 0.0)
             self.monthly_deposits           = data.get("monthly_deposits", {})
@@ -368,6 +510,7 @@ class PaperPortfolio:
                 "cash_inr":                    self.cash_inr,
                 "total_deposited":             self.total_deposited,
                 "partial_realised_pnl_total":  round(self.partial_realised_pnl_total, 2),
+                "total_execution_costs_inr":   round(self.total_execution_costs_inr, 2),
                 "portfolio_peak":              round(self.portfolio_peak, 2),
                 "max_drawdown_pct":            round(self.max_drawdown_pct, 2),
                 "monthly_deposits":            self.monthly_deposits,
@@ -491,16 +634,39 @@ class PaperPortfolio:
         else:
             position.trail_stop = round(hard_stop, 4)
 
-    def _kelly_fraction(self, confidence: int, severity: str) -> float:
-        p        = min(confidence / 100.0, 0.99)
-        q        = 1.0 - p
-        avg_win  = AVG_WIN_BY_SEVERITY.get(severity, 0.12)
-        b        = avg_win / STOP_LOSS_PCT
-        kelly    = (b * p - q) / b
-        return round(min(max(kelly * 0.5, 0.05), MAX_SINGLE_POSITION_PCT), 4)
+    def _empirical_edge_multiplier(self, severity: str) -> float:
+        trades = [ct for ct in self.closed_trades if getattr(ct, "severity", "") == severity]
+        if len(trades) < EMPIRICAL_MIN_TRADES:
+            return 1.0
+
+        winners = [ct.realised_pnl_pct for ct in trades if ct.realised_pnl_pct > 0]
+        losers = [abs(ct.realised_pnl_pct) for ct in trades if ct.realised_pnl_pct < 0]
+        if not winners or not losers:
+            return 0.9
+
+        win_rate = len(winners) / len(trades)
+        avg_win = sum(winners) / len(winners)
+        avg_loss = sum(losers) / len(losers)
+        expectancy = (win_rate * avg_win) - ((1 - win_rate) * avg_loss)
+
+        if expectancy <= 0:
+            return 0.65
+        if expectancy < 1.0:
+            return 0.85
+        if expectancy > 3.0 and win_rate >= 0.55:
+            return 1.15
+        return 1.0
 
     def _position_size(self, confidence: int, severity: str = "MEDIUM") -> float:
-        return self._kelly_fraction(confidence, severity)
+        base_fraction = BASE_RISK_BUDGET_BY_SEVERITY.get(severity, BASE_RISK_BUDGET_BY_SEVERITY["MEDIUM"])
+        confidence_scalar = 0.75 + max(confidence - 60, 0) / 100.0
+        slot_scalar = 1.0 if len(self.open_positions) < 3 else 0.9
+        empirical_scalar = self._empirical_edge_multiplier(severity)
+        fraction = base_fraction * confidence_scalar * slot_scalar * empirical_scalar
+        return round(
+            min(max(fraction, MIN_RISK_BUDGET_PCT), MAX_SINGLE_POSITION_PCT),
+            4,
+        )
 
     def _select_rotation_candidate(self, signal: Dict) -> Optional[Position]:
         incoming_conf   = signal.get("confidence", 0)
@@ -542,20 +708,39 @@ class PaperPortfolio:
         exit_date: str,
         reason: str,
     ) -> Dict:
+        execution = build_exit_execution(
+            exit_price,
+            position.units,
+            position.exchange,
+            getattr(position, "instrument_risk", "MEDIUM"),
+        )
+        if not execution:
+            raise ValueError(f"Cannot build exit execution for {position.ticker}")
+
         if position in self.open_positions:
             self.open_positions.remove(position)
 
-        ct = ClosedTrade(position, exit_price, exit_date, reason)
+        ct = ClosedTrade(
+            position,
+            execution["quote_price"],
+            execution["fill_price"],
+            execution["net_proceeds_inr"],
+            execution["total_cost_inr"],
+            exit_date,
+            reason,
+        )
         self.closed_trades.append(ct)
-        self.cash_inr += round(exit_price * position.units, 2)
+        self.cash_inr += execution["net_proceeds_inr"]
+        self.total_execution_costs_inr += execution["total_cost_inr"]
         self._update_drawdown_state()
 
         log.info(
-            "CLOSED %s - %s | PnL: %s (%+.1f%%) | %s",
+            "CLOSED %s - %s | PnL: %s (%+.1f%%) | Costs %.2f | %s",
             position.trade_id,
             position.ticker,
             f"{ct.realised_pnl:+,.2f}",
             ct.realised_pnl_pct,
+            execution["total_cost_inr"],
             reason,
         )
 
@@ -566,6 +751,7 @@ class PaperPortfolio:
             "platform":         ct.platform,
             "realised_pnl":     ct.realised_pnl,
             "realised_pnl_pct": ct.realised_pnl_pct,
+            "execution_costs_inr": ct.execution_costs_inr,
             "days_held":        ct.days_held,
             "exit_reason":      ct.exit_reason,
             "exit_price":       ct.exit_price,
@@ -613,22 +799,41 @@ class PaperPortfolio:
         if sell_units <= 0 or remaining_units <= 0:
             return None
 
-        sale_value       = round(sell_units * position.current_price, 2)
-        cost_basis_sold  = round(sell_units * position.entry_price, 2)
-        realised_pnl     = round(sale_value - cost_basis_sold, 2)
+        execution = build_exit_execution(
+            position.current_price,
+            sell_units,
+            position.exchange,
+            getattr(position, "instrument_risk", "MEDIUM"),
+        )
+        if not execution:
+            return None
+
+        prior_units = position.units
+        cost_basis_sold = round(
+            position.invested_inr * (sell_units / prior_units),
+            2,
+        )
+        sale_value = execution["net_proceeds_inr"]
+        realised_pnl = round(sale_value - cost_basis_sold, 2)
 
         position.units        = remaining_units
         position.invested_inr = round(max(position.invested_inr - cost_basis_sold, 0.0), 2)
         position.half_exited  = True
+        position.cumulative_costs_inr = round(
+            position.cumulative_costs_inr + execution["total_cost_inr"],
+            2,
+        )
         self.cash_inr                   += sale_value
         self.partial_realised_pnl_total += realised_pnl
+        self.total_execution_costs_inr  += execution["total_cost_inr"]
         self._update_position_risk(position)
         self._update_drawdown_state()
 
         log.info(
-            "PARTIAL PROFIT - %s | Sold 50%% | Realised %+,.2f | Remaining units %.6f",
+            "PARTIAL PROFIT - %s | Sold 50%% | Realised %+,.2f | Costs %.2f | Remaining units %.6f",
             position.ticker,
             realised_pnl,
+            execution["total_cost_inr"],
             position.units,
         )
 
@@ -637,6 +842,7 @@ class PaperPortfolio:
             "ticker":      position.ticker,
             "realised_pnl": realised_pnl,
             "sale_value":  sale_value,
+            "execution_costs_inr": execution["total_cost_inr"],
         }
 
     def _recycle_idle_cash(self):
@@ -671,8 +877,17 @@ class PaperPortfolio:
         if top_up_inr < MIN_TRADE_INR:
             return
 
-        units_bought = round(top_up_inr / current_price, 6)
-        invested     = round(units_bought * current_price, 2)
+        execution = build_entry_execution(
+            current_price,
+            top_up_inr,
+            best_pos.exchange,
+            getattr(best_pos, "instrument_risk", "MEDIUM"),
+        )
+        if not execution:
+            return
+
+        units_bought = execution["units"]
+        invested = execution["total_cash_inr"]
         if invested > self.cash_inr or invested < MIN_TRADE_INR:
             return
 
@@ -681,14 +896,20 @@ class PaperPortfolio:
         best_pos.entry_price  = round(new_invested / new_units, 4)
         best_pos.units        = new_units
         best_pos.invested_inr = new_invested
-        best_pos.current_price = current_price
+        best_pos.current_price = execution["fill_price"]
+        best_pos.entry_reference_price = execution["quote_price"]
+        best_pos.cumulative_costs_inr = round(
+            best_pos.cumulative_costs_inr + execution["total_cost_inr"],
+            2,
+        )
         self.cash_inr         -= invested
+        self.total_execution_costs_inr += execution["total_cost_inr"]
         self._update_position_risk(best_pos)
         self._update_drawdown_state()
 
         log.info(
-            "IDLE CASH RECYCLED - %s | +%.2f | New avg %.4f | Cash %.2f",
-            best_pos.ticker, invested, best_pos.entry_price, self.cash_inr,
+            "IDLE CASH RECYCLED - %s | +%.2f | New avg %.4f | Costs %.2f | Cash %.2f",
+            best_pos.ticker, invested, best_pos.entry_price, execution["total_cost_inr"], self.cash_inr,
         )
         self.save()
 
@@ -724,6 +945,7 @@ class PaperPortfolio:
         ticker     = etf["ticker"]
         exchange   = etf.get("exchange", "NYSE")
         etf_name   = etf["name"]
+        instrument_risk = etf.get("risk", "MEDIUM")
         sector     = signal.get("sector_label", "Unknown")
         headline   = (signal.get("top_headlines") or [""])[0]
 
@@ -784,6 +1006,7 @@ class PaperPortfolio:
             exchange = topup_target.exchange
             platform = topup_target.platform
             sector   = topup_target.sector
+            instrument_risk = getattr(topup_target, "instrument_risk", instrument_risk)
 
         target_alloc = round(min(self.cash_inr * fraction, self.cash_inr * MAX_SINGLE_POSITION_PCT), 2)
         target_alloc = max(target_alloc, MIN_TRADE_INR)
@@ -812,8 +1035,13 @@ class PaperPortfolio:
             log.info("Position rejected - sector cap reached for %s", sector)
             return None
 
-        units    = round(alloc_inr / entry_price, 6)
-        invested = round(units * entry_price, 2)
+        execution = build_entry_execution(entry_price, alloc_inr, exchange, instrument_risk)
+        if not execution:
+            log.warning("Cannot build entry execution for %s", ticker)
+            return None
+
+        units = execution["units"]
+        invested = execution["total_cash_inr"]
         if invested > self.cash_inr or invested < MIN_TRADE_INR:
             log.warning(
                 "Insufficient cash for %s - need %.2f, have %.2f",
@@ -829,15 +1057,21 @@ class PaperPortfolio:
             existing.units        = new_units
             existing.invested_inr = new_invested
             existing.confidence   = max(existing.confidence, confidence)
-            existing.current_price = entry_price
+            existing.current_price = execution["fill_price"]
+            existing.entry_reference_price = execution["quote_price"]
+            existing.cumulative_costs_inr = round(
+                existing.cumulative_costs_inr + execution["total_cost_inr"],
+                2,
+            )
             self.cash_inr -= invested
+            self.total_execution_costs_inr += execution["total_cost_inr"]
             self._update_position_risk(existing)
             self._update_drawdown_state()
             self.save()
 
             log.info(
-                "TOPPED UP %s - %s | +%.2f | Avg price %.4f",
-                existing.trade_id, ticker, invested, existing.entry_price,
+                "TOPPED UP %s - %s | +%.2f | Avg price %.4f | Costs %.2f",
+                existing.trade_id, ticker, invested, existing.entry_price, execution["total_cost_inr"],
             )
 
             return {
@@ -850,6 +1084,7 @@ class PaperPortfolio:
                 "entry_price":    existing.entry_price,
                 "units":          new_units,
                 "invested_inr":   invested,
+                "execution_costs_inr": execution["total_cost_inr"],
                 "confidence":     confidence,
                 "severity":       severity,
                 "cash_remaining": self.cash_inr,
@@ -869,23 +1104,27 @@ class PaperPortfolio:
             exchange        = exchange,
             platform        = platform,
             sector          = sector,
-            entry_price     = entry_price,
+            entry_price     = execution["fill_price"],
             units           = units,
             invested_inr    = invested,
             entry_date      = datetime.now(timezone.utc).isoformat(),
             confidence      = confidence,
             severity        = severity,
             signal_headline = headline[:120],
+            instrument_risk = instrument_risk,
+            entry_reference_price = execution["quote_price"],
+            cumulative_costs_inr = execution["total_cost_inr"],
         )
-        position.current_price = entry_price
+        position.current_price = execution["fill_price"]
         self._update_position_risk(position)
         self.open_positions.append(position)
+        self.total_execution_costs_inr += execution["total_cost_inr"]
         self._update_drawdown_state()
         self.save()
 
         log.info(
-            "ENTERED %s - %s | %.2f | Price %.4f | Units %.4f",
-            position.trade_id, ticker, invested, entry_price, units,
+            "ENTERED %s - %s | %.2f | Fill %.4f | Units %.4f | Costs %.2f",
+            position.trade_id, ticker, invested, execution["fill_price"], units, execution["total_cost_inr"],
         )
 
         return {
@@ -895,9 +1134,10 @@ class PaperPortfolio:
             "platform":       platform,
             "exchange":       exchange,
             "sector":         sector,
-            "entry_price":    entry_price,
+            "entry_price":    execution["fill_price"],
             "units":          units,
             "invested_inr":   invested,
+            "execution_costs_inr": execution["total_cost_inr"],
             "confidence":     confidence,
             "severity":       severity,
             "cash_remaining": self.cash_inr,
@@ -1004,6 +1244,7 @@ class PaperPortfolio:
             "unrealised_pnl":        unrealised_pnl,
             "total_realised":        total_realised,
             "partial_realised_pnl":  round(self.partial_realised_pnl_total, 2),
+            "total_execution_costs_inr": round(self.total_execution_costs_inr, 2),
             "portfolio_value":       portfolio_value,
             "total_deposited":       round(self.total_deposited, 2),
             "total_return_pct":      round(

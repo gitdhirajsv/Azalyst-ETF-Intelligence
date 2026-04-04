@@ -40,20 +40,27 @@ BANNER = """
 
 
 def _select_etf_for_trade(signal: dict) -> tuple:
-    """Pick best ETF from signal recommendations. Global first, then India."""
-    etf_recs    = signal.get("etf_recommendations", {})
+    """Pick the highest-ranked ETF from the unified recommendation set."""
+    etf_recs = signal.get("etf_recommendations", {})
+
+    primary = etf_recs.get("primary")
+    if primary:
+        return primary, primary.get("platform", "Broker")
+
+    ranked = etf_recs.get("ranked", [])
+    if ranked:
+        etf = ranked[0]
+        return etf, etf.get("platform", "Broker")
+
+    # Legacy fallback for older state records.
     global_etfs = etf_recs.get("global", [])
-    india_etfs  = etf_recs.get("india",  [])
-    
-    # Return ETF with its platform info from the database
+    india_etfs = etf_recs.get("india", [])
     if global_etfs:
         etf = global_etfs[0]
-        platform = etf.get("platform", "Global Broker")
-        return etf, platform
-    elif india_etfs:
+        return etf, etf.get("platform", "Global Broker")
+    if india_etfs:
         etf = india_etfs[0]
-        platform = etf.get("platform", "Indian Broker")
-        return etf, platform
+        return etf, etf.get("platform", "Indian Broker")
     return None, None
 
 
@@ -81,7 +88,7 @@ def run_intelligence_cycle(
         log.info(f"{len(new_signals)} new/updated signals")
 
         for signal in new_signals:
-            etf_recs = mapper.get_etfs(signal["sectors"])
+            etf_recs = mapper.get_etfs(signal["sectors"], signal)
             signal["etf_recommendations"] = etf_recs
             is_update = state.is_update(signal)
 
@@ -109,7 +116,7 @@ def run_intelligence_cycle(
         # Attach ETF recs to scored signals for digest context
         for sig in scored_signals:
             if "etf_recommendations" not in sig:
-                sig["etf_recommendations"] = mapper.get_etfs(sig["sectors"])
+                sig["etf_recommendations"] = mapper.get_etfs(sig["sectors"], sig)
         reporter.send_cycle_digest(scored_signals, new_count=len(new_signals))
 
         log.info("--- Cycle complete ---\n")
@@ -168,7 +175,7 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, cfg):
         severity     = "CRITICAL" if confidence >= 80 else "HIGH"
 
         # Build minimal signal dict from state record
-        etf_recs = mapper.get_etfs(sectors)
+        etf_recs = mapper.get_etfs(sectors, record)
         signal = {
             "sectors":              sectors,
             "sector_label":         sector_label,
