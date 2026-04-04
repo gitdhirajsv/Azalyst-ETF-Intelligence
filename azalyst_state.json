@@ -1,37 +1,113 @@
 {
   "defense": {
-    "sent_at": "2026-04-04T05:46:57.003710+00:00",
-    "confidence": 85,
+    "sent_at": "2026-04-04T08:32:33.156838+00:00",
+    "confidence": 97,
     "sector_label": "Defense & Aerospace",
-    "article_count": 97,
-    "severity": "CRITICAL",
+    "article_count": 72,
+    "severity": "HIGH",
     "regions": [
       "middle_east",
       "europe",
-      "global"
+      "americas",
+      "asia_pacific",
+      "global",
+      "india"
     ],
     "sources": [
       "Oilprice.com",
+      "BBC News",
+      "Finance",
+      "World News - Breaking international news and headlines | Sky News",
       "World | Deutsche Welle",
-      "Defense News"
+      "Markets-Economic Times"
     ],
     "top_headlines": [
       "Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages",
-      "How the Iran War Became NATO\u2019s Biggest Crisis",
-      "India to acquire more air defense systems and drones for modern warfare",
-      "Iran war: How long can Tehran's asymmetric strategy hold?",
-      "Trump Threatens to Expand Iran Strikes as War Escalates"
+      "Missile-wielding Airbus interceptor engages one-way attack drone in test",
+      "Experts dispute US account of deadly Iran sports hall strike in Lamerd",
+      "Trump\u2019s Contradictions on Iran Rattle Both Markets and Allies",
+      "How the Iran War Became NATO\u2019s Biggest Crisis"
     ],
-    "latest_ts": "2026-04-04T05:46:55.956922+00:00",
+    "latest_ts": "2026-04-04T07:50:46+00:00",
     "confidence_breakdown": {
-      "signal_strength": 25,
+      "signal_strength": 25.0,
       "volume_confirmation": 20.0,
-      "source_diversity": 5.0,
-      "recency": 20.0,
+      "source_diversity": 18.4,
+      "recency": 18.7,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
-      "india": [
+      "selection_method": "global-ranked",
+      "primary": {
+        "name": "iShares U.S. Aerospace & Defense ETF",
+        "ticker": "ITA",
+        "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+        "exchange": "NYSE",
+        "risk": "Medium",
+        "timeframe": "3\u201312 months",
+        "thesis": "$16B fund. RTX, GE Aerospace, Boeing, L3Harris. NATO rearmament cycle locked in for years.",
+        "sector_key": "defense",
+        "market_bucket": "global",
+        "market_scope": "International-listed",
+        "selection_score": 116.5,
+        "selection_notes": [
+          "clean thematic exposure",
+          "matches international access"
+        ]
+      },
+      "ranked": [
+        {
+          "name": "iShares U.S. Aerospace & Defense ETF",
+          "ticker": "ITA",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "$16B fund. RTX, GE Aerospace, Boeing, L3Harris. NATO rearmament cycle locked in for years.",
+          "sector_key": "defense",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 116.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "SPDR S&P Aerospace & Defense ETF",
+          "ticker": "XAR",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Equal-weighted defense ETF \u2014 less concentration risk than ITA. Good diversification.",
+          "sector_key": "defense",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 104.5,
+          "selection_notes": [
+            "broad diversification",
+            "reduced single-name concentration",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Invesco Aerospace & Defense ETF",
+          "ticker": "PPA",
+          "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Broader definition includes cyber + space. Lockheed, Northrop, Raytheon core holdings.",
+          "sector_key": "defense",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 101.5,
+          "selection_notes": [
+            "broad exposure",
+            "matches international access"
+          ]
+        },
         {
           "name": "CPSE ETF",
           "ticker": "CPSEETF",
@@ -40,7 +116,14 @@
           "exchange": "NSE",
           "risk": "Medium",
           "timeframe": "3\u201312 months",
-          "thesis": "India's defense indigenization (Make in India) drives HAL, BEL, Hindustan Aeronautics revenue."
+          "thesis": "India's defense indigenization (Make in India) drives HAL, BEL, Hindustan Aeronautics revenue.",
+          "sector_key": "defense",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 72.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         },
         {
           "name": "Mirae Asset Nifty India Defence ETF",
@@ -50,7 +133,199 @@
           "exchange": "NSE",
           "risk": "Medium-High",
           "timeframe": "3\u201312 months",
-          "thesis": "India's \u20b96+ lakh crore defense budget. HAL, BEL, DRDO suppliers benefit directly."
+          "thesis": "India's \u20b96+ lakh crore defense budget. HAL, BEL, DRDO suppliers benefit directly.",
+          "sector_key": "defense",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 71.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "matches India-listed access"
+          ]
+        }
+      ],
+      "top_etfs": [
+        {
+          "name": "iShares U.S. Aerospace & Defense ETF",
+          "ticker": "ITA",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "$16B fund. RTX, GE Aerospace, Boeing, L3Harris. NATO rearmament cycle locked in for years.",
+          "sector_key": "defense",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 116.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "SPDR S&P Aerospace & Defense ETF",
+          "ticker": "XAR",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Equal-weighted defense ETF \u2014 less concentration risk than ITA. Good diversification.",
+          "sector_key": "defense",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 104.5,
+          "selection_notes": [
+            "broad diversification",
+            "reduced single-name concentration",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Invesco Aerospace & Defense ETF",
+          "ticker": "PPA",
+          "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Broader definition includes cyber + space. Lockheed, Northrop, Raytheon core holdings.",
+          "sector_key": "defense",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 101.5,
+          "selection_notes": [
+            "broad exposure",
+            "matches international access"
+          ]
+        }
+      ],
+      "regional_alternatives": {
+        "India-listed": [
+          {
+            "name": "CPSE ETF",
+            "ticker": "CPSEETF",
+            "note": "BEL, HAL, BHEL included \u2014 India defense capex beneficiaries",
+            "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+            "exchange": "NSE",
+            "risk": "Medium",
+            "timeframe": "3\u201312 months",
+            "thesis": "India's defense indigenization (Make in India) drives HAL, BEL, Hindustan Aeronautics revenue.",
+            "sector_key": "defense",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 72.0,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
+          },
+          {
+            "name": "Mirae Asset Nifty India Defence ETF",
+            "ticker": "DEFENCEETF",
+            "note": "Pure-play India defense ETF",
+            "platform": "Dhan App",
+            "exchange": "NSE",
+            "risk": "Medium-High",
+            "timeframe": "3\u201312 months",
+            "thesis": "India's \u20b96+ lakh crore defense budget. HAL, BEL, DRDO suppliers benefit directly.",
+            "sector_key": "defense",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 71.0,
+            "selection_notes": [
+              "clean thematic exposure",
+              "matches India-listed access"
+            ]
+          }
+        ],
+        "International-listed": [
+          {
+            "name": "iShares U.S. Aerospace & Defense ETF",
+            "ticker": "ITA",
+            "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Medium",
+            "timeframe": "3\u201312 months",
+            "thesis": "$16B fund. RTX, GE Aerospace, Boeing, L3Harris. NATO rearmament cycle locked in for years.",
+            "sector_key": "defense",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 116.5,
+            "selection_notes": [
+              "clean thematic exposure",
+              "matches international access"
+            ]
+          },
+          {
+            "name": "SPDR S&P Aerospace & Defense ETF",
+            "ticker": "XAR",
+            "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Medium",
+            "timeframe": "3\u201312 months",
+            "thesis": "Equal-weighted defense ETF \u2014 less concentration risk than ITA. Good diversification.",
+            "sector_key": "defense",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 104.5,
+            "selection_notes": [
+              "broad diversification",
+              "reduced single-name concentration",
+              "matches international access"
+            ]
+          },
+          {
+            "name": "Invesco Aerospace & Defense ETF",
+            "ticker": "PPA",
+            "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Medium",
+            "timeframe": "3\u201312 months",
+            "thesis": "Broader definition includes cyber + space. Lockheed, Northrop, Raytheon core holdings.",
+            "sector_key": "defense",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 101.5,
+            "selection_notes": [
+              "broad exposure",
+              "matches international access"
+            ]
+          }
+        ]
+      },
+      "india": [
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "BEL, HAL, BHEL included \u2014 India defense capex beneficiaries",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "India's defense indigenization (Make in India) drives HAL, BEL, Hindustan Aeronautics revenue.",
+          "sector_key": "defense",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 72.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        },
+        {
+          "name": "Mirae Asset Nifty India Defence ETF",
+          "ticker": "DEFENCEETF",
+          "note": "Pure-play India defense ETF",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Medium-High",
+          "timeframe": "3\u201312 months",
+          "thesis": "India's \u20b96+ lakh crore defense budget. HAL, BEL, DRDO suppliers benefit directly.",
+          "sector_key": "defense",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 71.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "matches India-listed access"
+          ]
         }
       ],
       "global": [
@@ -61,7 +336,15 @@
           "exchange": "NYSE",
           "risk": "Medium",
           "timeframe": "3\u201312 months",
-          "thesis": "$16B fund. RTX, GE Aerospace, Boeing, L3Harris. NATO rearmament cycle locked in for years."
+          "thesis": "$16B fund. RTX, GE Aerospace, Boeing, L3Harris. NATO rearmament cycle locked in for years.",
+          "sector_key": "defense",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 116.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "matches international access"
+          ]
         },
         {
           "name": "SPDR S&P Aerospace & Defense ETF",
@@ -70,7 +353,16 @@
           "exchange": "NYSE",
           "risk": "Medium",
           "timeframe": "3\u201312 months",
-          "thesis": "Equal-weighted defense ETF \u2014 less concentration risk than ITA. Good diversification."
+          "thesis": "Equal-weighted defense ETF \u2014 less concentration risk than ITA. Good diversification.",
+          "sector_key": "defense",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 104.5,
+          "selection_notes": [
+            "broad diversification",
+            "reduced single-name concentration",
+            "matches international access"
+          ]
         },
         {
           "name": "Invesco Aerospace & Defense ETF",
@@ -79,7 +371,15 @@
           "exchange": "NYSE",
           "risk": "Medium",
           "timeframe": "3\u201312 months",
-          "thesis": "Broader definition includes cyber + space. Lockheed, Northrop, Raytheon core holdings."
+          "thesis": "Broader definition includes cyber + space. Lockheed, Northrop, Raytheon core holdings.",
+          "sector_key": "defense",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 101.5,
+          "selection_notes": [
+            "broad exposure",
+            "matches international access"
+          ]
         }
       ]
     }
