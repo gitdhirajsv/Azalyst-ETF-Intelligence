@@ -1,16 +1,16 @@
 {
-  "portfolio_value": 7639.56,
+  "portfolio_value": 7639.25,
   "total_deposited": 7639.77,
-  "cash": 1663.59,
+  "cash": 1378.73,
   "monthly_reserve": 0.0,
-  "market_value": 5975.97,
-  "total_invested": 5976.18,
-  "unrealised_pnl": -0.21,
-  "unrealised_str": "-0.21",
+  "market_value": 6260.52,
+  "total_invested": 6261.04,
+  "unrealised_pnl": -0.52,
+  "unrealised_str": "-0.52",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "-0.00%",
-  "change_raw": -0.0,
+  "change": "-0.01%",
+  "change_raw": -0.01,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 7641.0,
@@ -71,17 +71,17 @@
       "sector": "Gold & Precious Metals + Banking & Financial Sector",
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 92.53,
+      "entry": 92.54,
       "current": 92.48,
       "peak_price": 92.57,
       "trail_stop": 83.28,
-      "dist_to_trail_pct": 9.95,
-      "units": 15.047439,
-      "invested": 1392.32,
-      "pnl": -0.74,
-      "pnl_str": "-0.74",
-      "pnl_pct": -0.05,
-      "pnl_pct_str": "-0.05%",
+      "dist_to_trail_pct": 9.94,
+      "units": 18.124265,
+      "invested": 1677.18,
+      "pnl": -1.05,
+      "pnl_str": "-1.05",
+      "pnl_pct": -0.06,
+      "pnl_pct_str": "-0.06%",
       "confidence": 90,
       "severity": "CRITICAL",
       "days_held": 0,
@@ -113,8 +113,8 @@
     "values": [
       30.0,
       30.0,
-      18.2,
-      21.8
+      21.9,
+      18.0
     ]
   },
   "pnl": {
@@ -126,7 +126,7 @@
     "values": [
       0.25,
       0.28,
-      -0.74
+      -1.05
     ]
   },
   "confidence": [
@@ -135,24 +135,28 @@
       "score": 97.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 90.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 90.0
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 87.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 86.0
     },
     {
       "symbol": "Crypto & Digital Assets",
       "score": 85.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 85.0
+      "symbol": "India Equity Markets",
+      "score": 80.0
     },
     {
-      "symbol": "India Equity Markets",
-      "score": 84.0
+      "symbol": "Banking & Financial Sector",
+      "score": 77.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -165,10 +169,6 @@
     {
       "symbol": "Gold & Precious Metals",
       "score": 69.0
-    },
-    {
-      "symbol": "Banking & Financial Sector",
-      "score": 67.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -230,59 +230,6 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 90.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 48,
-      "latest_at": "04 Apr 2026 09:46 UTC",
-      "headline": "Trump Says US Could \u2018Take the Oil\u2019 in Hormuz Push",
-      "regions": [
-        "global",
-        "europe",
-        "americas",
-        "middle_east"
-      ],
-      "sources": [
-        "Defense News",
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "BBC News"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 17.9,
-        "recency": 12.5,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "banking_financial|gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
       "confidence": 90.0,
@@ -338,6 +285,112 @@
       }
     },
     {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 87.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 15,
+      "latest_at": "04 Apr 2026 18:29 UTC",
+      "headline": "Chinese chip firms hit record high revenue driven by the AI boom and U.S. curbs",
+      "regions": [
+        "global",
+        "europe",
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Finance",
+        "The Verge",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 20.2,
+        "volume_confirmation": 20.0,
+        "source_diversity": 14.3,
+        "recency": 20.0,
+        "geopolitical_severity": 12.8
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 45,
+      "latest_at": "04 Apr 2026 10:15 UTC",
+      "headline": "Trump Says US Could \u2018Take the Oil\u2019 in Hormuz Push",
+      "regions": [
+        "middle_east",
+        "global",
+        "india",
+        "americas"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "World | Deutsche Welle",
+        "Markets-Economic Times",
+        "Defense News"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 17.9,
+        "recency": 8.8,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 85.0,
@@ -384,61 +437,9 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 85.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 14,
-      "latest_at": "04 Apr 2026 14:27 UTC",
-      "headline": "Chinese chip firms hit record high revenue driven by the AI boom and U.S. curbs",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Finance",
-        "The Verge",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 19.3,
-        "volume_confirmation": 20.0,
-        "source_diversity": 14.3,
-        "recency": 20.0,
-        "geopolitical_severity": 11.8
-      }
-    },
-    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
-      "confidence": 84.0,
+      "confidence": 80.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
@@ -449,15 +450,15 @@
       "latest_at": "04 Apr 2026 06:38 UTC",
       "headline": "Indices plunge 2%, then ride rupee rebound to log gains",
       "regions": [
-        "india",
-        "europe",
         "asia_pacific",
-        "global"
+        "middle_east",
+        "global",
+        "india"
       ],
       "sources": [
+        "Defense News",
         "Markets-Economic Times",
         "Bloomberg Markets",
-        "Defense News",
         "Oilprice.com"
       ],
       "primary_etf": "INDA",
@@ -482,8 +483,58 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 14.5,
-        "recency": 9.8,
+        "recency": 6.1,
         "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector",
+      "confidence": 77.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "04 Apr 2026 18:02 UTC",
+      "headline": "Sleijpen Says ECB Discussion Will Be Rate Hike or Hold: Podcast",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "global",
+        "india"
+      ],
+      "sources": [
+        "Finance",
+        "Bloomberg Markets",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "BANKBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 14.9,
+        "volume_confirmation": 16.2,
+        "source_diversity": 12.3,
+        "recency": 19.1,
+        "geopolitical_severity": 14.6
       }
     },
     {
@@ -636,57 +687,6 @@
       }
     },
     {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector",
-      "confidence": 67.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "04 Apr 2026 09:30 UTC",
-      "headline": "AU Small Finance Bank Q4 business update: Deposits up 23% YoY at Rs 1.52 lk cr, advances rise 25%",
-      "regions": [
-        "global",
-        "americas",
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Cointelegraph.com News",
-        "Markets-Economic Times",
-        "Finance"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "BANKBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 13.1,
-        "volume_confirmation": 16.2,
-        "source_diversity": 13.3,
-        "recency": 12.2,
-        "geopolitical_severity": 12.7
-      }
-    },
-    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 65.0,
@@ -745,12 +745,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 48 articles - HIGH / NEUTRAL - Trump Says US Could \u2018Take the Oil\u2019 in Hormuz Push"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 23 articles - CRITICAL / NEUTRAL - Gold slides 3% as oil surges on dimming hopes of end to Iran war"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 23 articles - CRITICAL / NEUTRAL - Gold slides 3% as oil surges on dimming hopes of end to Iran war"
+      "text": "Technology & AI / Semiconductors - 15 articles - MEDIUM / NEUTRAL - Chinese chip firms hit record high revenue driven by the AI boom and U.S. curbs"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Energy / Oil & Gas - 45 articles - HIGH / NEUTRAL - Trump Says US Could \u2018Take the Oil\u2019 in Hormuz Push"
     },
     {
       "tag": "tag-neu",
@@ -760,12 +765,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 14 articles - MEDIUM / NEUTRAL - Chinese chip firms hit record high revenue driven by the AI boom and U.S. curbs"
+      "text": "India Equity Markets - 31 articles - HIGH / NEUTRAL - Indices plunge 2%, then ride rupee rebound to log gains"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 31 articles - HIGH / NEUTRAL - Indices plunge 2%, then ride rupee rebound to log gains"
+      "text": "Banking & Financial Sector - 8 articles - HIGH / NEUTRAL - Sleijpen Says ECB Discussion Will Be Rate Hike or Hold: Podcast"
     },
     {
       "tag": "tag-neu",
@@ -781,11 +786,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Gold & Precious Metals - 10 articles - MEDIUM / NEUTRAL - Powell sees inflation outlook in check, no need to hike rates because of oil shock"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Banking & Financial Sector - 8 articles - MEDIUM / NEUTRAL - AU Small Finance Bank Q4 business update: Deposits up 23% YoY at Rs 1.52 lk cr, advances rise 25%"
     },
     {
       "tag": "tag-neu",
@@ -908,11 +908,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 67384.52,
+      "price": 67350.62,
       "currency": "USD",
-      "change": 453.41,
-      "change_pct": 0.68,
-      "change_str": "+0.68%",
+      "change": 419.52,
+      "change_pct": 0.63,
+      "change_str": "+0.63%",
       "direction": "up"
     },
     {
@@ -957,7 +957,7 @@
       },
       {
         "sector": "Gold & Precious Metals + Banking & Financial Sector",
-        "weight": 18.2,
+        "weight": 21.9,
         "at_cap": false
       }
     ],
@@ -1017,27 +1017,27 @@
       "benchmark_price_start": 631.97,
       "benchmark_price_now": 655.83,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.0,
-      "alpha": -3.78
+      "portfolio_return_pct": -0.01,
+      "alpha": -3.79
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "GLDM",
-          "actual_weight_pct": 18.22,
+          "actual_weight_pct": 21.94,
           "target_weight_pct": 30.0,
-          "drift_pct": -11.78,
+          "drift_pct": -8.06,
           "action": "ADD",
-          "amount": 900.28,
+          "amount": 615.64,
           "etf_name": "SPDR Gold MiniShares Trust"
         },
         {
           "ticker": "CASH",
-          "actual_weight_pct": 21.78,
+          "actual_weight_pct": 18.05,
           "target_weight_pct": 10.0,
-          "drift_pct": 11.78,
+          "drift_pct": 8.05,
           "action": "DEPLOY",
-          "amount": 899.63,
+          "amount": 614.8,
           "etf_name": "Cash Reserve"
         }
       ],
@@ -1047,8 +1047,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -1829.69,
-          "portfolio_loss_pct": -23.95,
+          "total_impact": -1758.55,
+          "portfolio_loss_pct": -23.02,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1066,13 +1066,13 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": 25.0,
-              "impact": 347.9
+              "impact": 419.03
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -2227.53,
-          "portfolio_loss_pct": -29.16,
+          "total_impact": -2218.99,
+          "portfolio_loss_pct": -29.05,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1090,13 +1090,13 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": 3.0,
-              "impact": 41.75
+              "impact": 50.28
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -642.63,
-          "portfolio_loss_pct": -8.41,
+          "total_impact": -656.85,
+          "portfolio_loss_pct": -8.6,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1114,13 +1114,13 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": -5.0,
-              "impact": -69.58
+              "impact": -83.81
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -694.2,
-          "portfolio_loss_pct": -9.09,
+          "total_impact": -728.34,
+          "portfolio_loss_pct": -9.53,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1138,13 +1138,13 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": -12.0,
-              "impact": -166.99
+              "impact": -201.14
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -759.71,
-          "portfolio_loss_pct": -9.94,
+          "total_impact": -736.94,
+          "portfolio_loss_pct": -9.65,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1162,20 +1162,20 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": 8.0,
-              "impact": 111.33
+              "impact": 134.09
             }
           ]
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -29.16
+      "worst_loss_pct": -29.05
     }
   },
   "logs": [
-    "2026-04-04 17:36:38 [INFO] AZALYST - status.json generated",
-    "2026-04-04 17:36:38 [INFO] PORTFOLIO - NAV USD 7,639.56 | Return -0.00%",
-    "2026-04-04 17:36:38 [INFO] SIGNALS - 11 active signal buckets in state",
-    "2026-04-04 17:36:38 [INFO] TRADER - Open positions: ITA, XLE, GLDM"
+    "2026-04-04 18:30:27 [INFO] AZALYST - status.json generated",
+    "2026-04-04 18:30:27 [INFO] PORTFOLIO - NAV USD 7,639.25 | Return -0.01%",
+    "2026-04-04 18:30:27 [INFO] SIGNALS - 11 active signal buckets in state",
+    "2026-04-04 18:30:27 [INFO] TRADER - Open positions: ITA, XLE, GLDM"
   ],
-  "generated_at": "2026-04-04 17:36:37 UTC"
+  "generated_at": "2026-04-04 18:30:26 UTC"
 }
