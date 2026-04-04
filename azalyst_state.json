@@ -148,18 +148,26 @@
     }
   },
   "energy_oil": {
-    "sent_at": "2026-04-04T05:46:58.359775+00:00",
-    "confidence": 73,
+    "sent_at": "2026-04-04T08:02:43.196118+00:00",
+    "confidence": 83,
     "sector_label": "Energy / Oil & Gas",
     "article_count": 47,
-    "severity": "CRITICAL",
+    "severity": "HIGH",
     "regions": [
+      "europe",
+      "asia_pacific",
       "middle_east",
-      "global"
+      "global",
+      "india",
+      "americas"
     ],
     "sources": [
+      "Bloomberg Markets",
       "Oilprice.com",
-      "Bloomberg Markets"
+      "Markets-Economic Times",
+      "US Top News and Analysis",
+      "World News - Breaking international news and headlines | Sky News",
+      "BBC News"
     ],
     "top_headlines": [
       "Trump Says US Could \u2018Take the Oil\u2019 in Hormuz Push",
@@ -170,23 +178,67 @@
     ],
     "latest_ts": "2026-04-03T18:30:00+00:00",
     "confidence_breakdown": {
-      "signal_strength": 25,
+      "signal_strength": 25.0,
       "volume_confirmation": 20.0,
-      "source_diversity": 7.5,
-      "recency": 6.0,
+      "source_diversity": 17.9,
+      "recency": 5.2,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
-      "india": [
+      "selection_method": "global-ranked",
+      "primary": {
+        "name": "Energy Select Sector SPDR",
+        "ticker": "XLE",
+        "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+        "exchange": "NYSE",
+        "risk": "Medium",
+        "timeframe": "1\u20133 months",
+        "thesis": "Largest US energy ETF. Holds Exxon, Chevron, ConocoPhillips. Direct oil price leverage.",
+        "sector_key": "energy_oil",
+        "market_bucket": "global",
+        "market_scope": "International-listed",
+        "selection_score": 124.0,
+        "selection_notes": [
+          "deep liquidity",
+          "strong cost profile",
+          "high implementation stability"
+        ]
+      },
+      "ranked": [
         {
-          "name": "Nippon India ETF Nifty PSU Bank BeES",
-          "ticker": "PSUBNKBEES",
-          "note": "PSU banks benefit from energy sector capex",
-          "platform": "Dhan App",
-          "exchange": "NSE/BSE",
+          "name": "Energy Select Sector SPDR",
+          "ticker": "XLE",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20133 months",
+          "thesis": "Largest US energy ETF. Holds Exxon, Chevron, ConocoPhillips. Direct oil price leverage.",
+          "sector_key": "energy_oil",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 124.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "high implementation stability"
+          ]
+        },
+        {
+          "name": "iShares Global Energy ETF",
+          "ticker": "IXC",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
           "risk": "Medium",
           "timeframe": "1\u20136 months",
-          "thesis": "Indian PSU energy companies (ONGC, IOC) drive PSU bank credit. Energy capex cycle benefits."
+          "thesis": "Global energy diversification \u2014 Shell, BP, TotalEnergies, Saudi Aramco. Less US-centric.",
+          "sector_key": "energy_oil",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 112.5,
+          "selection_notes": [
+            "broad diversification",
+            "matches international access"
+          ]
         },
         {
           "name": "CPSE ETF",
@@ -196,7 +248,232 @@
           "exchange": "NSE",
           "risk": "Medium",
           "timeframe": "1\u20136 months",
-          "thesis": "CPSE ETF holds ONGC, Coal India, NTPC, BHEL. Direct play on India's energy sector."
+          "thesis": "CPSE ETF holds ONGC, Coal India, NTPC, BHEL. Direct play on India's energy sector.",
+          "sector_key": "energy_oil",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 69.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        },
+        {
+          "name": "United States Oil Fund",
+          "ticker": "USO",
+          "platform": "USCF \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "1\u20134 weeks",
+          "thesis": "Direct WTI crude oil futures exposure. Short-term geopolitical supply-shock play.",
+          "sector_key": "energy_oil",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 56.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "futures roll-cost risk",
+            "short holding window"
+          ]
+        },
+        {
+          "name": "Nippon India ETF Nifty PSU Bank BeES",
+          "ticker": "PSUBNKBEES",
+          "note": "PSU banks benefit from energy sector capex",
+          "platform": "Dhan App",
+          "exchange": "NSE/BSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Indian PSU energy companies (ONGC, IOC) drive PSU bank credit. Energy capex cycle benefits.",
+          "sector_key": "energy_oil",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 48.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        }
+      ],
+      "top_etfs": [
+        {
+          "name": "Energy Select Sector SPDR",
+          "ticker": "XLE",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20133 months",
+          "thesis": "Largest US energy ETF. Holds Exxon, Chevron, ConocoPhillips. Direct oil price leverage.",
+          "sector_key": "energy_oil",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 124.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "high implementation stability"
+          ]
+        },
+        {
+          "name": "iShares Global Energy ETF",
+          "ticker": "IXC",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Global energy diversification \u2014 Shell, BP, TotalEnergies, Saudi Aramco. Less US-centric.",
+          "sector_key": "energy_oil",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 112.5,
+          "selection_notes": [
+            "broad diversification",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "Direct PSU energy exposure \u2014 ONGC, NTPC, Coal India",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "CPSE ETF holds ONGC, Coal India, NTPC, BHEL. Direct play on India's energy sector.",
+          "sector_key": "energy_oil",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 69.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        }
+      ],
+      "regional_alternatives": {
+        "India-listed": [
+          {
+            "name": "CPSE ETF",
+            "ticker": "CPSEETF",
+            "note": "Direct PSU energy exposure \u2014 ONGC, NTPC, Coal India",
+            "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+            "exchange": "NSE",
+            "risk": "Medium",
+            "timeframe": "1\u20136 months",
+            "thesis": "CPSE ETF holds ONGC, Coal India, NTPC, BHEL. Direct play on India's energy sector.",
+            "sector_key": "energy_oil",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 69.0,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
+          },
+          {
+            "name": "Nippon India ETF Nifty PSU Bank BeES",
+            "ticker": "PSUBNKBEES",
+            "note": "PSU banks benefit from energy sector capex",
+            "platform": "Dhan App",
+            "exchange": "NSE/BSE",
+            "risk": "Medium",
+            "timeframe": "1\u20136 months",
+            "thesis": "Indian PSU energy companies (ONGC, IOC) drive PSU bank credit. Energy capex cycle benefits.",
+            "sector_key": "energy_oil",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 48.0,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
+          }
+        ],
+        "International-listed": [
+          {
+            "name": "Energy Select Sector SPDR",
+            "ticker": "XLE",
+            "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Medium",
+            "timeframe": "1\u20133 months",
+            "thesis": "Largest US energy ETF. Holds Exxon, Chevron, ConocoPhillips. Direct oil price leverage.",
+            "sector_key": "energy_oil",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 124.0,
+            "selection_notes": [
+              "deep liquidity",
+              "strong cost profile",
+              "high implementation stability"
+            ]
+          },
+          {
+            "name": "iShares Global Energy ETF",
+            "ticker": "IXC",
+            "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Medium",
+            "timeframe": "1\u20136 months",
+            "thesis": "Global energy diversification \u2014 Shell, BP, TotalEnergies, Saudi Aramco. Less US-centric.",
+            "sector_key": "energy_oil",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 112.5,
+            "selection_notes": [
+              "broad diversification",
+              "matches international access"
+            ]
+          },
+          {
+            "name": "United States Oil Fund",
+            "ticker": "USO",
+            "platform": "USCF \u2014 IBKR / Schwab",
+            "exchange": "NYSE",
+            "risk": "High",
+            "timeframe": "1\u20134 weeks",
+            "thesis": "Direct WTI crude oil futures exposure. Short-term geopolitical supply-shock play.",
+            "sector_key": "energy_oil",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 56.0,
+            "selection_notes": [
+              "clean thematic exposure",
+              "futures roll-cost risk",
+              "short holding window"
+            ]
+          }
+        ]
+      },
+      "india": [
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "Direct PSU energy exposure \u2014 ONGC, NTPC, Coal India",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "CPSE ETF holds ONGC, Coal India, NTPC, BHEL. Direct play on India's energy sector.",
+          "sector_key": "energy_oil",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 69.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        },
+        {
+          "name": "Nippon India ETF Nifty PSU Bank BeES",
+          "ticker": "PSUBNKBEES",
+          "note": "PSU banks benefit from energy sector capex",
+          "platform": "Dhan App",
+          "exchange": "NSE/BSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Indian PSU energy companies (ONGC, IOC) drive PSU bank credit. Energy capex cycle benefits.",
+          "sector_key": "energy_oil",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 48.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "global": [
@@ -207,16 +484,16 @@
           "exchange": "NYSE",
           "risk": "Medium",
           "timeframe": "1\u20133 months",
-          "thesis": "Largest US energy ETF. Holds Exxon, Chevron, ConocoPhillips. Direct oil price leverage."
-        },
-        {
-          "name": "United States Oil Fund",
-          "ticker": "USO",
-          "platform": "USCF \u2014 IBKR / Schwab",
-          "exchange": "NYSE",
-          "risk": "High",
-          "timeframe": "1\u20134 weeks",
-          "thesis": "Direct WTI crude oil futures exposure. Short-term geopolitical supply-shock play."
+          "thesis": "Largest US energy ETF. Holds Exxon, Chevron, ConocoPhillips. Direct oil price leverage.",
+          "sector_key": "energy_oil",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 124.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "high implementation stability"
+          ]
         },
         {
           "name": "iShares Global Energy ETF",
@@ -225,40 +502,201 @@
           "exchange": "NYSE",
           "risk": "Medium",
           "timeframe": "1\u20136 months",
-          "thesis": "Global energy diversification \u2014 Shell, BP, TotalEnergies, Saudi Aramco. Less US-centric."
+          "thesis": "Global energy diversification \u2014 Shell, BP, TotalEnergies, Saudi Aramco. Less US-centric.",
+          "sector_key": "energy_oil",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 112.5,
+          "selection_notes": [
+            "broad diversification",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "United States Oil Fund",
+          "ticker": "USO",
+          "platform": "USCF \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "1\u20134 weeks",
+          "thesis": "Direct WTI crude oil futures exposure. Short-term geopolitical supply-shock play.",
+          "sector_key": "energy_oil",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 56.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "futures roll-cost risk",
+            "short holding window"
+          ]
         }
       ]
     }
   },
   "crypto_digital": {
-    "sent_at": "2026-04-04T05:47:00.186010+00:00",
-    "confidence": 68,
+    "sent_at": "2026-04-04T08:02:44.566337+00:00",
+    "confidence": 89,
     "sector_label": "Crypto & Digital Assets",
-    "article_count": 41,
-    "severity": "CRITICAL",
+    "article_count": 28,
+    "severity": "HIGH",
     "regions": [
-      "global"
+      "europe",
+      "asia_pacific",
+      "middle_east",
+      "global",
+      "india"
     ],
     "sources": [
       "Cointelegraph.com News",
+      "World News - Breaking international news and headlines | Sky News",
+      "US Top News and Analysis",
       "Markets-Economic Times"
     ],
     "top_headlines": [
       "Here\u2019s what happened in crypto today",
-      "Circle to launch cirBTC wrapped Bitcoin, challenging BitGo and Coinbase",
+      "Bitcoin holds near $67K as crypto markets stay muted; volatility seen rising ahead",
       "Crypto Biz: Bitcoin treasuries break ranks as BTC dips below $70K",
       "Price predictions 4/3: BTC, ETH, BNB, XRP, SOL, DOGE, HYPE, ADA, BCH, LINK",
-      "Crypto Price Today: Macro worries, geopolitical risks weigh on Bitcoin, altcoins as Good Friday trade remains lacklustre"
+      "Bitcoin\u2019s \u2018no direction\u2019 action may lead to heavier breakout: Analyst"
     ],
-    "latest_ts": "2026-04-03T15:28:48+00:00",
+    "latest_ts": "2026-04-04T06:37:59+00:00",
     "confidence_breakdown": {
-      "signal_strength": 25,
+      "signal_strength": 25.0,
       "volume_confirmation": 20.0,
-      "source_diversity": 5.0,
-      "recency": 3.0,
+      "source_diversity": 12.3,
+      "recency": 17.4,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
+      "selection_method": "global-ranked",
+      "primary": {
+        "name": "iShares Bitcoin Trust ETF",
+        "ticker": "IBIT",
+        "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+        "exchange": "NASDAQ",
+        "risk": "High",
+        "timeframe": "1\u20136 months",
+        "thesis": "Spot Bitcoin ETF \u2014 regulated, institutional-grade BTC exposure. BlackRock backed.",
+        "sector_key": "crypto_digital",
+        "market_bucket": "global",
+        "market_scope": "International-listed",
+        "selection_score": 96.0,
+        "selection_notes": [
+          "deep liquidity",
+          "clean thematic exposure",
+          "matches international access"
+        ]
+      },
+      "ranked": [
+        {
+          "name": "iShares Bitcoin Trust ETF",
+          "ticker": "IBIT",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NASDAQ",
+          "risk": "High",
+          "timeframe": "1\u20136 months",
+          "thesis": "Spot Bitcoin ETF \u2014 regulated, institutional-grade BTC exposure. BlackRock backed.",
+          "sector_key": "crypto_digital",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 96.0,
+          "selection_notes": [
+            "deep liquidity",
+            "clean thematic exposure",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Bitwise Crypto Industry Innovators ETF",
+          "ticker": "BITQ",
+          "platform": "Bitwise \u2014 IBKR / Coinbase / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "1\u20136 months",
+          "thesis": "Crypto ecosystem companies \u2014 Coinbase, miners, blockchain infrastructure.",
+          "sector_key": "crypto_digital",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 66.0,
+          "selection_notes": [
+            "matches international access"
+          ]
+        }
+      ],
+      "top_etfs": [
+        {
+          "name": "iShares Bitcoin Trust ETF",
+          "ticker": "IBIT",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NASDAQ",
+          "risk": "High",
+          "timeframe": "1\u20136 months",
+          "thesis": "Spot Bitcoin ETF \u2014 regulated, institutional-grade BTC exposure. BlackRock backed.",
+          "sector_key": "crypto_digital",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 96.0,
+          "selection_notes": [
+            "deep liquidity",
+            "clean thematic exposure",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Bitwise Crypto Industry Innovators ETF",
+          "ticker": "BITQ",
+          "platform": "Bitwise \u2014 IBKR / Coinbase / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "1\u20136 months",
+          "thesis": "Crypto ecosystem companies \u2014 Coinbase, miners, blockchain infrastructure.",
+          "sector_key": "crypto_digital",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 66.0,
+          "selection_notes": [
+            "matches international access"
+          ]
+        }
+      ],
+      "regional_alternatives": {
+        "International-listed": [
+          {
+            "name": "iShares Bitcoin Trust ETF",
+            "ticker": "IBIT",
+            "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NASDAQ",
+            "risk": "High",
+            "timeframe": "1\u20136 months",
+            "thesis": "Spot Bitcoin ETF \u2014 regulated, institutional-grade BTC exposure. BlackRock backed.",
+            "sector_key": "crypto_digital",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 96.0,
+            "selection_notes": [
+              "deep liquidity",
+              "clean thematic exposure",
+              "matches international access"
+            ]
+          },
+          {
+            "name": "Bitwise Crypto Industry Innovators ETF",
+            "ticker": "BITQ",
+            "platform": "Bitwise \u2014 IBKR / Coinbase / Schwab",
+            "exchange": "NYSE",
+            "risk": "High",
+            "timeframe": "1\u20136 months",
+            "thesis": "Crypto ecosystem companies \u2014 Coinbase, miners, blockchain infrastructure.",
+            "sector_key": "crypto_digital",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 66.0,
+            "selection_notes": [
+              "matches international access"
+            ]
+          }
+        ]
+      },
       "india": [],
       "global": [
         {
@@ -268,7 +706,16 @@
           "exchange": "NASDAQ",
           "risk": "High",
           "timeframe": "1\u20136 months",
-          "thesis": "Spot Bitcoin ETF \u2014 regulated, institutional-grade BTC exposure. BlackRock backed."
+          "thesis": "Spot Bitcoin ETF \u2014 regulated, institutional-grade BTC exposure. BlackRock backed.",
+          "sector_key": "crypto_digital",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 96.0,
+          "selection_notes": [
+            "deep liquidity",
+            "clean thematic exposure",
+            "matches international access"
+          ]
         },
         {
           "name": "Bitwise Crypto Industry Innovators ETF",
@@ -277,7 +724,14 @@
           "exchange": "NYSE",
           "risk": "High",
           "timeframe": "1\u20136 months",
-          "thesis": "Crypto ecosystem companies \u2014 Coinbase, miners, blockchain infrastructure."
+          "thesis": "Crypto ecosystem companies \u2014 Coinbase, miners, blockchain infrastructure.",
+          "sector_key": "crypto_digital",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 66.0,
+          "selection_notes": [
+            "matches international access"
+          ]
         }
       ]
     }
@@ -596,37 +1050,300 @@
     }
   },
   "gold_precious_metals": {
-    "sent_at": "2026-04-04T03:55:06.807654+00:00",
-    "confidence": 73,
+    "sent_at": "2026-04-04T08:02:45.855393+00:00",
+    "confidence": 79,
     "sector_label": "Gold & Precious Metals",
-    "article_count": 13,
-    "severity": "CRITICAL",
+    "article_count": 11,
+    "severity": "MEDIUM",
     "regions": [
+      "asia_pacific",
       "middle_east",
-      "global",
-      "americas"
+      "americas",
+      "global"
     ],
     "sources": [
-      "Finance",
       "Bloomberg Markets",
-      "Markets-Economic Times"
+      "Markets-Economic Times",
+      "Cointelegraph.com News",
+      "US Top News and Analysis",
+      "World News - Breaking international news and headlines | Sky News",
+      "Finance"
     ],
     "top_headlines": [
-      "Gold slides 3% as oil surges on dimming hopes of end to Iran war",
       "Powell sees inflation outlook in check, no need to hike rates because of oil shock",
-      "US Bonds Fall as Strong Jobs Data Undermines Fed Cut Outlook",
       "De-dollarisation, war, and debt: Why gold is regaining monetary relevance",
+      "Global markets at an inflexion point: Q2 could reward patience over prediction",
+      "Wall Street Week Ahead: Inflation in focus for markets jostled by Middle East war signals",
       "Turkish Disinflation Unscathed by Iran War in March"
     ],
-    "latest_ts": "2026-04-03T12:47:13+00:00",
+    "latest_ts": "2026-04-04T04:40:54+00:00",
     "confidence_breakdown": {
-      "signal_strength": 25,
-      "volume_confirmation": 20.0,
-      "source_diversity": 10.0,
-      "recency": 3.0,
-      "geopolitical_severity": 15.0
+      "signal_strength": 18.3,
+      "volume_confirmation": 18.7,
+      "source_diversity": 15.5,
+      "recency": 14.3,
+      "geopolitical_severity": 12.9
     },
     "etf_recommendations": {
+      "selection_method": "global-ranked",
+      "primary": {
+        "name": "SPDR Gold MiniShares Trust",
+        "ticker": "GLDM",
+        "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+        "exchange": "NYSE",
+        "risk": "Low-Medium",
+        "timeframe": "3\u201318 months",
+        "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026.",
+        "sector_key": "gold_precious_metals",
+        "market_bucket": "global",
+        "market_scope": "International-listed",
+        "selection_score": 134.0,
+        "selection_notes": [
+          "deep liquidity",
+          "strong cost profile",
+          "clean thematic exposure"
+        ]
+      },
+      "ranked": [
+        {
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 134.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "Nippon India Gold BeES",
+          "ticker": "GOLDBEES",
+          "note": "Largest Indian gold ETF by AUM",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Tracks physical gold in INR. Double benefit: gold price rise + potential INR depreciation.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 99.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "institutional depth"
+          ]
+        },
+        {
+          "name": "HDFC Gold ETF",
+          "ticker": "HDFCGOLD",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Physical gold backed. Very liquid. Safe haven in geopolitical or inflation-driven scenarios.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 95.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "strong trading liquidity",
+            "defensive profile"
+          ]
+        },
+        {
+          "name": "VanEck Gold Miners ETF",
+          "ticker": "GDX",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium-High",
+          "timeframe": "3\u20139 months",
+          "thesis": "Gold miners offer 2\u20133x leverage to gold price. If gold surges, miners typically outperform.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 94.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "VanEck Junior Gold Miners ETF",
+          "ticker": "GDXJ",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "2\u20136 months",
+          "thesis": "Smaller miners \u2014 highest leverage to gold. High risk/reward. Use only for strong conviction.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 60.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "very high beta",
+            "narrow tactical profile"
+          ]
+        }
+      ],
+      "top_etfs": [
+        {
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 134.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "Nippon India Gold BeES",
+          "ticker": "GOLDBEES",
+          "note": "Largest Indian gold ETF by AUM",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Tracks physical gold in INR. Double benefit: gold price rise + potential INR depreciation.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 99.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "institutional depth"
+          ]
+        },
+        {
+          "name": "HDFC Gold ETF",
+          "ticker": "HDFCGOLD",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Physical gold backed. Very liquid. Safe haven in geopolitical or inflation-driven scenarios.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 95.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "strong trading liquidity",
+            "defensive profile"
+          ]
+        }
+      ],
+      "regional_alternatives": {
+        "India-listed": [
+          {
+            "name": "Nippon India Gold BeES",
+            "ticker": "GOLDBEES",
+            "note": "Largest Indian gold ETF by AUM",
+            "platform": "Dhan App",
+            "exchange": "NSE",
+            "risk": "Low-Medium",
+            "timeframe": "3\u201318 months",
+            "thesis": "Tracks physical gold in INR. Double benefit: gold price rise + potential INR depreciation.",
+            "sector_key": "gold_precious_metals",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 99.0,
+            "selection_notes": [
+              "clean thematic exposure",
+              "institutional depth"
+            ]
+          },
+          {
+            "name": "HDFC Gold ETF",
+            "ticker": "HDFCGOLD",
+            "platform": "Dhan App",
+            "exchange": "NSE",
+            "risk": "Low-Medium",
+            "timeframe": "3\u201318 months",
+            "thesis": "Physical gold backed. Very liquid. Safe haven in geopolitical or inflation-driven scenarios.",
+            "sector_key": "gold_precious_metals",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 95.5,
+            "selection_notes": [
+              "clean thematic exposure",
+              "strong trading liquidity",
+              "defensive profile"
+            ]
+          }
+        ],
+        "International-listed": [
+          {
+            "name": "SPDR Gold MiniShares Trust",
+            "ticker": "GLDM",
+            "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Low-Medium",
+            "timeframe": "3\u201318 months",
+            "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026.",
+            "sector_key": "gold_precious_metals",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 134.0,
+            "selection_notes": [
+              "deep liquidity",
+              "strong cost profile",
+              "clean thematic exposure"
+            ]
+          },
+          {
+            "name": "VanEck Gold Miners ETF",
+            "ticker": "GDX",
+            "platform": "VanEck \u2014 IBKR / Schwab",
+            "exchange": "NYSE",
+            "risk": "Medium-High",
+            "timeframe": "3\u20139 months",
+            "thesis": "Gold miners offer 2\u20133x leverage to gold price. If gold surges, miners typically outperform.",
+            "sector_key": "gold_precious_metals",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 94.5,
+            "selection_notes": [
+              "matches international access"
+            ]
+          },
+          {
+            "name": "VanEck Junior Gold Miners ETF",
+            "ticker": "GDXJ",
+            "platform": "VanEck \u2014 IBKR / Schwab",
+            "exchange": "NYSE",
+            "risk": "High",
+            "timeframe": "2\u20136 months",
+            "thesis": "Smaller miners \u2014 highest leverage to gold. High risk/reward. Use only for strong conviction.",
+            "sector_key": "gold_precious_metals",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 60.0,
+            "selection_notes": [
+              "clean thematic exposure",
+              "very high beta",
+              "narrow tactical profile"
+            ]
+          }
+        ]
+      },
       "india": [
         {
           "name": "Nippon India Gold BeES",
@@ -636,7 +1353,15 @@
           "exchange": "NSE",
           "risk": "Low-Medium",
           "timeframe": "3\u201318 months",
-          "thesis": "Tracks physical gold in INR. Double benefit: gold price rise + potential INR depreciation."
+          "thesis": "Tracks physical gold in INR. Double benefit: gold price rise + potential INR depreciation.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 99.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "institutional depth"
+          ]
         },
         {
           "name": "HDFC Gold ETF",
@@ -645,7 +1370,16 @@
           "exchange": "NSE",
           "risk": "Low-Medium",
           "timeframe": "3\u201318 months",
-          "thesis": "Physical gold backed. Very liquid. Safe haven in geopolitical or inflation-driven scenarios."
+          "thesis": "Physical gold backed. Very liquid. Safe haven in geopolitical or inflation-driven scenarios.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 95.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "strong trading liquidity",
+            "defensive profile"
+          ]
         }
       ],
       "global": [
@@ -656,7 +1390,16 @@
           "exchange": "NYSE",
           "risk": "Low-Medium",
           "timeframe": "3\u201318 months",
-          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026."
+          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 134.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
         },
         {
           "name": "VanEck Gold Miners ETF",
@@ -665,7 +1408,14 @@
           "exchange": "NYSE",
           "risk": "Medium-High",
           "timeframe": "3\u20139 months",
-          "thesis": "Gold miners offer 2\u20133x leverage to gold price. If gold surges, miners typically outperform."
+          "thesis": "Gold miners offer 2\u20133x leverage to gold price. If gold surges, miners typically outperform.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 94.5,
+          "selection_notes": [
+            "matches international access"
+          ]
         },
         {
           "name": "VanEck Junior Gold Miners ETF",
@@ -674,7 +1424,16 @@
           "exchange": "NYSE",
           "risk": "High",
           "timeframe": "2\u20136 months",
-          "thesis": "Smaller miners \u2014 highest leverage to gold. High risk/reward. Use only for strong conviction."
+          "thesis": "Smaller miners \u2014 highest leverage to gold. High risk/reward. Use only for strong conviction.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 60.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "very high beta",
+            "narrow tactical profile"
+          ]
         }
       ]
     }
