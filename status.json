@@ -1,10 +1,10 @@
 {
   "portfolio_value": 7640.3,
   "total_deposited": 7639.77,
-  "cash": 2767.13,
+  "cash": 2356.63,
   "monthly_reserve": 0.0,
-  "market_value": 4873.17,
-  "total_invested": 4872.64,
+  "market_value": 5283.67,
+  "total_invested": 5283.14,
   "unrealised_pnl": 0.53,
   "unrealised_str": "+0.53",
   "realised_pnl": 0.0,
@@ -76,8 +76,8 @@
       "peak_price": 92.48,
       "trail_stop": 83.23,
       "dist_to_trail_pct": 10.0,
-      "units": 3.122662,
-      "invested": 288.78,
+      "units": 7.561446,
+      "invested": 699.28,
       "pnl": 0.0,
       "pnl_str": "+0.00",
       "pnl_pct": 0.0,
@@ -113,8 +113,8 @@
     "values": [
       30.0,
       30.0,
-      3.8,
-      36.2
+      9.2,
+      30.8
     ]
   },
   "pnl": {
@@ -159,12 +159,12 @@
       "score": 73.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
+      "symbol": "Cybersecurity",
       "score": 71.0
     },
     {
-      "symbol": "Cybersecurity",
-      "score": 71.0
+      "symbol": "Crypto & Digital Assets",
+      "score": 68.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -216,13 +216,13 @@
       "sector_label": "Defense & Aerospace",
       "confidence": 85.0,
       "severity": "CRITICAL",
-      "article_count": 96,
-      "latest_at": "04 Apr 2026 01:19 UTC",
+      "article_count": 97,
+      "latest_at": "04 Apr 2026 05:46 UTC",
       "headline": "Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages",
       "regions": [
+        "middle_east",
         "europe",
-        "global",
-        "middle_east"
+        "global"
       ],
       "sources": [
         "Oilprice.com",
@@ -252,19 +252,19 @@
       "sector_label": "Technology & AI / Semiconductors",
       "confidence": 85.0,
       "severity": "CRITICAL",
-      "article_count": 16,
-      "latest_at": "04 Apr 2026 01:19 UTC",
+      "article_count": 17,
+      "latest_at": "04 Apr 2026 05:46 UTC",
       "headline": "Three niche commodity prices are surging. What they show about China's grip on supply chains",
       "regions": [
-        "global",
+        "middle_east",
         "india",
-        "middle_east"
+        "global"
       ],
       "sources": [
-        "Cointelegraph.com News",
-        "Bloomberg Markets",
         "US Top News and Analysis",
-        "Finance"
+        "Finance",
+        "Bloomberg Markets",
+        "Cointelegraph.com News"
       ],
       "india_etfs": [
         "MAFANG",
@@ -359,12 +359,12 @@
       "latest_at": "03 Apr 2026 18:30 UTC",
       "headline": "Trump Says US Could \u2018Take the Oil\u2019 in Hormuz Push",
       "regions": [
-        "global",
-        "middle_east"
+        "middle_east",
+        "global"
       ],
       "sources": [
-        "Bloomberg Markets",
-        "Oilprice.com"
+        "Oilprice.com",
+        "Bloomberg Markets"
       ],
       "india_etfs": [
         "PSUBNKBEES",
@@ -421,11 +421,45 @@
       }
     },
     {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 71.0,
+      "severity": "MEDIUM",
+      "article_count": 8,
+      "latest_at": "04 Apr 2026 05:46 UTC",
+      "headline": "Hungary's government accused of spying on opposition as key election nears",
+      "regions": [
+        "middle_east",
+        "asia_pacific",
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "World | Deutsche Welle",
+        "Bloomberg Markets",
+        "BBC News"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "HACK",
+        "CIBR"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.9,
+        "volume_confirmation": 16.0,
+        "source_diversity": 12.5,
+        "recency": 20.0,
+        "geopolitical_severity": 11.0
+      }
+    },
+    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
-      "confidence": 71.0,
+      "confidence": 68.0,
       "severity": "CRITICAL",
-      "article_count": 39,
+      "article_count": 41,
       "latest_at": "03 Apr 2026 15:28 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
@@ -445,42 +479,8 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 5.0,
-        "recency": 6.0,
+        "recency": 3.0,
         "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 71.0,
-      "severity": "MEDIUM",
-      "article_count": 8,
-      "latest_at": "04 Apr 2026 01:19 UTC",
-      "headline": "Hungary's government accused of spying on opposition as key election nears",
-      "regions": [
-        "europe",
-        "middle_east",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Oilprice.com",
-        "World | Deutsche Welle",
-        "BBC News"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "HACK",
-        "CIBR"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.9,
-        "volume_confirmation": 16.0,
-        "source_diversity": 12.5,
-        "recency": 20.0,
-        "geopolitical_severity": 11.0
       }
     },
     {
@@ -528,12 +528,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Defense & Aerospace - 96 articles - CRITICAL - Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages"
+      "text": "Defense & Aerospace - 97 articles - CRITICAL - Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 16 articles - CRITICAL - Three niche commodity prices are surging. What they show about China's grip on supply chains"
+      "text": "Technology & AI / Semiconductors - 17 articles - CRITICAL - Three niche commodity prices are surging. What they show about China's grip on supply chains"
     },
     {
       "tag": "tag-bull",
@@ -558,12 +558,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 39 articles - CRITICAL - Here\u2019s what happened in crypto today"
+      "text": "Cybersecurity - 8 articles - MEDIUM - Hungary's government accused of spying on opposition as key election nears"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity - 8 articles - MEDIUM - Hungary's government accused of spying on opposition as key election nears"
+      "text": "Crypto & Digital Assets - 41 articles - CRITICAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
@@ -686,12 +686,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66870.46,
+      "price": 66893.08,
       "currency": "USD",
-      "change": -18.11,
-      "change_pct": -0.03,
-      "change_str": "-0.03%",
-      "direction": "down"
+      "change": 4.51,
+      "change_pct": 0.01,
+      "change_str": "+0.01%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
@@ -735,7 +735,7 @@
       },
       {
         "sector": "Gold & Precious Metals + Banking & Financial Sector",
-        "weight": 3.8,
+        "weight": 9.2,
         "at_cap": false
       }
     ],
@@ -797,20 +797,20 @@
       "alerts": [
         {
           "ticker": "GLDM",
-          "actual_weight_pct": 3.78,
+          "actual_weight_pct": 9.15,
           "target_weight_pct": 30.0,
-          "drift_pct": -26.22,
+          "drift_pct": -20.85,
           "action": "ADD",
-          "amount": 2003.31,
+          "amount": 1592.81,
           "etf_name": "SPDR Gold MiniShares Trust"
         },
         {
           "ticker": "CASH",
-          "actual_weight_pct": 36.22,
+          "actual_weight_pct": 30.84,
           "target_weight_pct": 10.0,
-          "drift_pct": 26.22,
+          "drift_pct": 20.84,
           "action": "DEPLOY",
-          "amount": 2003.1,
+          "amount": 1592.6,
           "etf_name": "Cash Reserve"
         }
       ],
@@ -820,8 +820,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -1949.27,
-          "portfolio_loss_pct": -25.51,
+          "total_impact": -2113.47,
+          "portfolio_loss_pct": -27.66,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -839,13 +839,13 @@
               "ticker": "GLDM",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -115.51
+              "impact": -279.71
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -1656.88,
-          "portfolio_loss_pct": -21.69,
+          "total_impact": -1796.45,
+          "portfolio_loss_pct": -23.51,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -863,13 +863,13 @@
               "ticker": "GLDM",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -98.19
+              "impact": -237.76
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -730.98,
-          "portfolio_loss_pct": -9.57,
+          "total_impact": -792.55,
+          "portfolio_loss_pct": -10.37,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -887,13 +887,13 @@
               "ticker": "GLDM",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -43.32
+              "impact": -104.89
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -389.85,
-          "portfolio_loss_pct": -5.1,
+          "total_impact": -422.69,
+          "portfolio_loss_pct": -5.53,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -911,13 +911,13 @@
               "ticker": "GLDM",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -23.1
+              "impact": -55.94
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -877.17,
-          "portfolio_loss_pct": -11.48,
+          "total_impact": -951.06,
+          "portfolio_loss_pct": -12.45,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -935,20 +935,20 @@
               "ticker": "GLDM",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -51.98
+              "impact": -125.87
             }
           ]
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -25.51
+      "worst_loss_pct": -27.66
     }
   },
   "logs": [
-    "2026-04-04 05:19:02 [INFO] AZALYST - status.json generated",
-    "2026-04-04 05:19:02 [INFO] PORTFOLIO - NAV USD 7,640.30 | Return +0.01%",
-    "2026-04-04 05:19:02 [INFO] SIGNALS - 10 active signal buckets in state",
-    "2026-04-04 05:19:02 [INFO] TRADER - Open positions: ITA, XLE, GLDM"
+    "2026-04-04 05:47:06 [INFO] AZALYST - status.json generated",
+    "2026-04-04 05:47:06 [INFO] PORTFOLIO - NAV USD 7,640.30 | Return +0.01%",
+    "2026-04-04 05:47:06 [INFO] SIGNALS - 10 active signal buckets in state",
+    "2026-04-04 05:47:06 [INFO] TRADER - Open positions: ITA, XLE, GLDM"
   ],
-  "generated_at": "2026-04-04 05:19:01 UTC"
+  "generated_at": "2026-04-04 05:47:05 UTC"
 }
