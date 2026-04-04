@@ -120,11 +120,11 @@
       "score": 76.0
     },
     {
-      "symbol": "Gold & Precious Metals",
-      "score": 76.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 73.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
+      "symbol": "Gold & Precious Metals",
       "score": 73.0
     },
     {
@@ -292,42 +292,6 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 76.0,
-      "severity": "CRITICAL",
-      "article_count": 13,
-      "latest_at": "03 Apr 2026 12:47 UTC",
-      "headline": "Gold slides 3% as oil surges on dimming hopes of end to Iran war",
-      "regions": [
-        "americas",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Finance",
-        "Markets-Economic Times"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 10.0,
-        "recency": 6.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
       "confidence": 73.0,
@@ -358,6 +322,42 @@
         "volume_confirmation": 20.0,
         "source_diversity": 7.5,
         "recency": 6.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 73.0,
+      "severity": "CRITICAL",
+      "article_count": 13,
+      "latest_at": "03 Apr 2026 12:47 UTC",
+      "headline": "Gold slides 3% as oil surges on dimming hopes of end to Iran war",
+      "regions": [
+        "middle_east",
+        "global",
+        "americas"
+      ],
+      "sources": [
+        "Finance",
+        "Bloomberg Markets",
+        "Markets-Economic Times"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 10.0,
+        "recency": 3.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -516,12 +516,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals - 13 articles - CRITICAL - Gold slides 3% as oil surges on dimming hopes of end to Iran war"
+      "text": "Energy / Oil & Gas - 47 articles - CRITICAL - Trump Says US Could \u2018Take the Oil\u2019 in Hormuz Push"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 47 articles - CRITICAL - Trump Says US Could \u2018Take the Oil\u2019 in Hormuz Push"
+      "text": "Gold & Precious Metals - 13 articles - CRITICAL - Gold slides 3% as oil surges on dimming hopes of end to Iran war"
     },
     {
       "tag": "tag-neu",
@@ -606,10 +606,10 @@
       "region": "JP",
       "price": 53123.49,
       "currency": "JPY",
-      "change": -616.19,
-      "change_pct": -1.15,
-      "change_str": "-1.15%",
-      "direction": "down"
+      "change": 660.22,
+      "change_pct": 1.26,
+      "change_str": "+1.26%",
+      "direction": "up"
     },
     {
       "label": "Hang Seng",
@@ -659,9 +659,9 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66848.66,
+      "price": 66846.93,
       "currency": "USD",
-      "change": -39.91,
+      "change": -41.64,
       "change_pct": -0.06,
       "change_str": "-0.06%",
       "direction": "down"
@@ -883,10 +883,10 @@
     }
   },
   "logs": [
-    "2026-04-04 01:19:33 [INFO] AZALYST - status.json generated",
-    "2026-04-04 01:19:33 [INFO] PORTFOLIO - NAV USD 7,640.30 | Return +0.01%",
-    "2026-04-04 01:19:33 [INFO] SIGNALS - 10 active signal buckets in state",
-    "2026-04-04 01:19:33 [INFO] TRADER - Open positions: ITA, XLE"
+    "2026-04-04 03:55:10 [INFO] AZALYST - status.json generated",
+    "2026-04-04 03:55:10 [INFO] PORTFOLIO - NAV USD 7,640.30 | Return +0.01%",
+    "2026-04-04 03:55:10 [INFO] SIGNALS - 10 active signal buckets in state",
+    "2026-04-04 03:55:10 [INFO] TRADER - Open positions: ITA, XLE"
   ],
-  "generated_at": "2026-04-04 01:19:32 UTC"
+  "generated_at": "2026-04-04 03:55:09 UTC"
 }
