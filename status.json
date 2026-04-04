@@ -131,6 +131,10 @@
   },
   "confidence": [
     {
+      "symbol": "Energy / Oil & Gas",
+      "score": 97.0
+    },
+    {
       "symbol": "Defense & Aerospace",
       "score": 92.0
     },
@@ -141,10 +145,6 @@
     {
       "symbol": "Technology & AI / Semiconductors",
       "score": 87.0
-    },
-    {
-      "symbol": "Energy / Oil & Gas",
-      "score": 86.0
     },
     {
       "symbol": "Gold & Precious Metals",
@@ -176,6 +176,59 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 97.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 44,
+      "latest_at": "04 Apr 2026 21:56 UTC",
+      "headline": "Trump Says US Could \u2018Take the Oil\u2019 in Hormuz Push",
+      "regions": [
+        "middle_east",
+        "americas",
+        "india",
+        "global"
+      ],
+      "sources": [
+        "World News - Breaking international news and headlines | Sky News",
+        "Oilprice.com",
+        "World | Deutsche Welle",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 17.9,
+        "recency": 19.2,
+        "geopolitical_severity": 15.0
+      }
+    },
     {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
@@ -335,59 +388,6 @@
         "source_diversity": 14.3,
         "recency": 20.0,
         "geopolitical_severity": 12.8
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 86.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 45,
-      "latest_at": "04 Apr 2026 10:15 UTC",
-      "headline": "Trump Says US Could \u2018Take the Oil\u2019 in Hormuz Push",
-      "regions": [
-        "middle_east",
-        "global",
-        "india",
-        "americas"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "World | Deutsche Welle",
-        "Markets-Economic Times",
-        "Defense News"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 17.9,
-        "recency": 8.8,
-        "geopolitical_severity": 15.0
       }
     },
     {
@@ -740,6 +740,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Energy / Oil & Gas - 44 articles - HIGH / NEUTRAL - Trump Says US Could \u2018Take the Oil\u2019 in Hormuz Push"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Defense & Aerospace - 70 articles - HIGH / NEUTRAL - Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages"
     },
     {
@@ -751,11 +756,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Technology & AI / Semiconductors - 15 articles - MEDIUM / NEUTRAL - Chinese chip firms hit record high revenue driven by the AI boom and U.S. curbs"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Energy / Oil & Gas - 45 articles - HIGH / NEUTRAL - Trump Says US Could \u2018Take the Oil\u2019 in Hormuz Push"
     },
     {
       "tag": "tag-neu",
@@ -908,11 +908,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 67341.35,
+      "price": 67392.8,
       "currency": "USD",
-      "change": 410.25,
-      "change_pct": 0.61,
-      "change_str": "+0.61%",
+      "change": 461.7,
+      "change_pct": 0.69,
+      "change_str": "+0.69%",
       "direction": "up"
     },
     {
@@ -1172,10 +1172,10 @@
     }
   },
   "logs": [
-    "2026-04-04 21:54:29 [INFO] AZALYST - status.json generated",
-    "2026-04-04 21:54:29 [INFO] PORTFOLIO - NAV USD 7,639.19 | Return -0.01%",
-    "2026-04-04 21:54:29 [INFO] SIGNALS - 11 active signal buckets in state",
-    "2026-04-04 21:54:29 [INFO] TRADER - Open positions: ITA, XLE, GLDM"
+    "2026-04-04 22:21:46 [INFO] AZALYST - status.json generated",
+    "2026-04-04 22:21:46 [INFO] PORTFOLIO - NAV USD 7,639.19 | Return -0.01%",
+    "2026-04-04 22:21:46 [INFO] SIGNALS - 11 active signal buckets in state",
+    "2026-04-04 22:21:46 [INFO] TRADER - Open positions: ITA, XLE, GLDM"
   ],
-  "generated_at": "2026-04-04 21:54:28 UTC"
+  "generated_at": "2026-04-04 22:21:45 UTC"
 }
