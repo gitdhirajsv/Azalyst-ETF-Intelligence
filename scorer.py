@@ -14,6 +14,7 @@ Only signals >= threshold (default 62) are reported.
 """
 
 import logging
+import math
 from datetime import datetime, timezone, timedelta
 from typing import Dict, List
 
@@ -107,103 +108,90 @@ class ConfidenceScorer:
     # ── Factor 1: Signal Strength ─────────────────────────────────────────
     def _factor_signal_strength(self, signal: Dict) -> float:
         """
-        Normalized from total keyword score.
+        Smoothly saturating score from total keyword intensity.
         25 pts max.
         """
-        ts = signal.get("total_score", 0)
-        # Normalize: score of 80+ → full 25 pts
-        return min(ts / 80 * 25, 25)
+        total_score = max(float(signal.get("total_score", 0) or 0), 0.0)
+        avg_score = max(float(signal.get("avg_article_score", 0) or 0), 0.0)
+        if total_score <= 0:
+            return 0.0
+        score = 25.0 * (1 - math.exp(-total_score / 55.0))
+        if avg_score > 0:
+            score += min(avg_score / 15.0, 1.0) * 2.0
+        return min(score, 25.0)
 
     # ── Factor 2: Volume Confirmation ─────────────────────────────────────
     def _factor_volume(self, signal: Dict) -> float:
         """
-        More articles covering same theme = stronger signal.
+        More corroborating articles help, but with diminishing returns.
         20 pts max.
-        Scale: 2 articles → 5pts, 5 → 12pts, 10+ → 20pts
         """
         count = signal.get("article_count", 0)
-        if count >= 10:
-            return 20.0
-        elif count >= 7:
-            return 16.0
-        elif count >= 5:
-            return 12.0
-        elif count >= 3:
-            return 8.0
-        elif count >= 2:
-            return 5.0
-        return 0.0
+        if count < 2:
+            return 0.0
+        normalized = math.log1p(max(count - 1, 0)) / math.log1p(12)
+        return min(max(normalized, 0.0) * 20.0, 20.0)
 
     # ── Factor 3: Source Diversity ────────────────────────────────────────
     def _factor_source_diversity(self, signal: Dict) -> float:
         """
         Independent source confirmation raises confidence.
-        20 pts max. Tier-1 sources worth more.
+        20 pts max. Higher-quality sources count more, but breadth matters too.
         """
         sources = {s.lower() for s in signal.get("sources", [])}
         tier1_hits = 0
         tier2_hits = 0
+        tier3_hits = 0
 
         for src in sources:
             if _source_in_tier(src, SOURCE_TIERS["tier1"]):
                 tier1_hits += 1
             elif _source_in_tier(src, SOURCE_TIERS["tier2"]):
                 tier2_hits += 1
+            elif src:
+                tier3_hits += 1
 
-        score = tier1_hits * 5.0 + tier2_hits * 2.5
-        return min(score, 20.0)
+        weighted_sources = tier1_hits * 1.6 + tier2_hits * 1.0 + tier3_hits * 0.6
+        return min(20.0 * (1 - math.exp(-weighted_sources / 4.0)), 20.0)
 
     # ── Factor 4: Recency ─────────────────────────────────────────────────
     def _factor_recency(self, signal: Dict) -> float:
         """
-        How fresh is the most recent article?
-        20 pts max.
-        < 1hr  → 20pts
-        < 3hr  → 15pts
-        < 6hr  → 10pts
-        < 12hr → 6pts
-        < 24hr → 3pts
-        older  → 0pts
-        no ts  → 0pts  (FIX: was 5.0, giving free points for missing data)
+        Exponential time decay from the latest supporting article.
         """
         try:
             latest = signal.get("latest_ts")
             if not latest:
-                # FIX: Return 0 instead of 5 — no timestamp means no freshness credit.
                 return 0.0
             now = datetime.now(timezone.utc)
-            # Ensure latest is timezone-aware before subtraction
             if isinstance(latest, datetime) and latest.tzinfo is None:
                 latest = latest.replace(tzinfo=timezone.utc)
             age = now - latest
-            if age < timedelta(hours=1):
-                return 20.0
-            elif age < timedelta(hours=3):
-                return 15.0
-            elif age < timedelta(hours=6):
-                return 10.0
-            elif age < timedelta(hours=12):
-                return 6.0
-            elif age < timedelta(hours=24):
-                return 3.0
-            return 0.0
+            age_hours = max(age.total_seconds() / 3600.0, 0.0)
+            if age_hours > 24 * 7:
+                return 0.0
+            return min(20.0 * math.exp(-age_hours / 10.0), 20.0)
         except Exception:
             return 0.0
 
     # ── Factor 5: Geopolitical Severity ──────────────────────────────────
     def _factor_geopolitical_severity(self, signal: Dict) -> float:
         """
-        Severity tag + region impact.
+        Event intensity + region impact.
         15 pts max.
         """
         severity = signal.get("severity", "LOW")
         sev_score = SEVERITY_WEIGHTS.get(severity, 3)
+        event_intensity = float(signal.get("event_intensity", 0.0) or 0.0)
 
-        # Best region score from detected regions
         regions = signal.get("regions", ["global"])
-        reg_score = max(
+        max_region = max(
             (REGION_WEIGHTS.get(r, 1) for r in regions),
             default=1,
         )
+        cross_region_bonus = min(max(len(set(regions)) - 1, 0), 2) * 0.75
+        intensity_component = min(event_intensity / 2.0, 8.5)
+        severity_component = min(sev_score * 0.25, 3.0)
+        region_component = min(max_region * 0.75, 3.5)
 
-        return min(sev_score + reg_score, 15.0)
+        return min(intensity_component + severity_component + region_component + cross_region_bonus, 15.0)

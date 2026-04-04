@@ -116,4 +116,34 @@ class Config:
     MAX_ARTICLE_AGE_DAYS = int(
         _get_env("AZALYST_MAX_ARTICLE_AGE", "MAX_ARTICLE_AGE_DAYS", default="7")
     )
+    FUZZY_TITLE_DEDUP_THRESHOLD = float(
+        _get_env(
+            "AZALYST_FUZZY_TITLE_DEDUP_THRESHOLD",
+            "FUZZY_TITLE_DEDUP_THRESHOLD",
+            default="0.92",
+        )
+    )
+
+    # Optional ML sentiment layer
+    ML_SENTIMENT_ENABLED = (
+        _get_env("AZALYST_ML_SENTIMENT_ENABLED", "ML_SENTIMENT_ENABLED", default="true").lower()
+        == "true"
+    )
+    ML_SENTIMENT_MODE = _get_env(
+        "AZALYST_ML_SENTIMENT_MODE",
+        "ML_SENTIMENT_MODE",
+        default="shadow",
+    ).lower()
+    ML_SENTIMENT_MODEL = _get_env(
+        "AZALYST_ML_SENTIMENT_MODEL",
+        "ML_SENTIMENT_MODEL",
+        default="ProsusAI/finbert",
+    )
+    ML_SENTIMENT_MIN_CONFIDENCE = float(
+        _get_env(
+            "AZALYST_ML_SENTIMENT_MIN_CONFIDENCE",
+            "ML_SENTIMENT_MIN_CONFIDENCE",
+            default="0.58",
+        )
+    )
     LOG_LEVEL = _get_env("AZALYST_LOG_LEVEL", "LOG_LEVEL", default="INFO")

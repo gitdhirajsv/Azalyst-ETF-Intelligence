@@ -13,7 +13,8 @@ import logging
 import re
 from collections import defaultdict
 from datetime import datetime, timezone
-from typing import List, Dict, Optional
+from functools import lru_cache
+from typing import Dict, List, Optional, Tuple
 
 log = logging.getLogger("azalyst.classifier")
 
@@ -216,6 +217,272 @@ SECTOR_DEFINITIONS = {
     },
 }
 
+SECTOR_DIRECTION_TERMS = {
+    "energy_oil": {
+        "bullish": [
+            ("surge", 2.0), ("spike", 2.0), ("jump", 1.5), ("rally", 1.5),
+            ("shortage", 2.0), ("supply disruption", 2.5), ("production cuts", 2.0),
+            ("embargo", 2.0), ("sanctions", 1.5),
+        ],
+        "bearish": [
+            ("fall", 2.0), ("drop", 2.0), ("slump", 2.0), ("decline", 1.5),
+            ("oversupply", 2.0), ("glut", 2.0), ("ceasefire", 1.5),
+            ("production increase", 2.0), ("supply recovery", 1.5),
+        ],
+    },
+    "gold_precious_metals": {
+        "bullish": [
+            ("safe haven", 2.0), ("flight to safety", 2.0), ("inflation surge", 2.0),
+            ("rate cut", 1.5), ("dollar weakness", 2.0), ("banking stress", 2.0),
+        ],
+        "bearish": [
+            ("rate hike", 2.0), ("dollar strength", 2.0), ("real yields rise", 2.0),
+            ("risk appetite", 1.5), ("disinflation", 1.5),
+        ],
+    },
+    "technology_ai": {
+        "bullish": [
+            ("beat estimates", 2.0), ("capex increase", 2.0), ("ai demand", 2.0),
+            ("chip demand", 2.0), ("orders surge", 1.5), ("investment boom", 1.5),
+        ],
+        "bearish": [
+            ("export controls tighten", 2.0), ("guidance cut", 2.0), ("slowdown", 1.5),
+            ("inventory glut", 2.0), ("demand weakness", 2.0), ("chip restrictions", 2.0),
+        ],
+    },
+    "nuclear_uranium": {
+        "bullish": [
+            ("reactor approval", 2.0), ("supply deficit", 2.0), ("contracting cycle", 1.5),
+            ("buildout", 1.5), ("energy security", 1.5),
+        ],
+        "bearish": [
+            ("mine restart", 1.5), ("oversupply", 2.0), ("project delay", 1.5),
+            ("shutdown", 2.0),
+        ],
+    },
+    "cybersecurity": {
+        "bullish": [
+            ("breach", 2.0), ("cyberattack", 2.0), ("ransomware", 2.0),
+            ("security spending", 1.5), ("nation-state", 1.5),
+        ],
+        "bearish": [
+            ("budget cuts", 2.0), ("spending slowdown", 1.5), ("deal cancellation", 1.5),
+        ],
+    },
+    "india_equity": {
+        "bullish": [
+            ("rate cut", 1.5), ("inflows", 2.0), ("gdp growth", 1.5),
+            ("budget boost", 1.5), ("manufacturing expansion", 1.5),
+        ],
+        "bearish": [
+            ("outflows", 2.0), ("inflation spike", 1.5), ("rate hike", 1.5),
+            ("rupee weakness", 1.5), ("earnings miss", 1.5),
+        ],
+    },
+    "crypto_digital": {
+        "bullish": [
+            ("etf inflows", 2.0), ("approval", 1.5), ("adoption", 1.5),
+            ("halving", 1.5), ("institutional buying", 2.0),
+        ],
+        "bearish": [
+            ("ban", 2.0), ("hack", 2.0), ("liquidation", 1.5),
+            ("outflows", 1.5), ("enforcement action", 2.0),
+        ],
+    },
+    "banking_financial": {
+        "bullish": [
+            ("rate cuts", 1.5), ("soft landing", 1.5), ("credit growth", 1.5),
+            ("capital return", 1.5), ("deposit growth", 1.5),
+        ],
+        "bearish": [
+            ("bank run", 2.0), ("defaults rise", 2.0), ("credit stress", 2.0),
+            ("yield curve inversion", 1.5), ("funding stress", 2.0),
+        ],
+    },
+    "commodities_mining": {
+        "bullish": [
+            ("supply disruption", 2.0), ("inventory draw", 1.5), ("demand surge", 1.5),
+            ("export restrictions", 2.0),
+        ],
+        "bearish": [
+            ("oversupply", 2.0), ("inventory build", 1.5), ("demand slowdown", 2.0),
+            ("price collapse", 2.0),
+        ],
+    },
+    "emerging_markets": {
+        "bullish": [
+            ("inflows", 2.0), ("dollar weakness", 2.0), ("rate cuts", 1.5),
+            ("growth acceleration", 1.5),
+        ],
+        "bearish": [
+            ("outflows", 2.0), ("dollar strength", 2.0), ("devaluation", 2.0),
+            ("capital flight", 2.0),
+        ],
+    },
+}
+
+ML_DIRECTION_ALIGNMENTS = {
+    "asia_pacific": 1.0,
+    "banking_financial": 1.0,
+    "clean_energy_renewables": 1.0,
+    "crypto_digital": 1.0,
+    "emerging_markets": 1.0,
+    "europe_equity": 1.0,
+    "healthcare_pharma": 1.0,
+    "india_equity": 1.0,
+    "real_estate_reit": 1.0,
+    "technology_ai": 1.0,
+}
+
+ML_HYBRID_DIRECTION_WEIGHT = 2.5
+
+
+class FinancialSentimentModel:
+    """Optional finance-tuned sentiment layer with graceful fallback."""
+
+    def __init__(self, cfg):
+        self.enabled = bool(getattr(cfg, "ML_SENTIMENT_ENABLED", False))
+        self.mode = getattr(cfg, "ML_SENTIMENT_MODE", "shadow")
+        self.model_name = getattr(cfg, "ML_SENTIMENT_MODEL", "ProsusAI/finbert")
+        self.min_confidence = float(getattr(cfg, "ML_SENTIMENT_MIN_CONFIDENCE", 0.58))
+        self._pipeline = None
+        self._disabled_reason = ""
+        self._cache: Dict[str, Dict] = {}
+
+    def _ensure_pipeline(self):
+        if not self.enabled:
+            return None
+        if self._pipeline is not None:
+            return self._pipeline
+        if self._disabled_reason:
+            return None
+        try:
+            from transformers import pipeline
+
+            self._pipeline = pipeline(
+                "text-classification",
+                model=self.model_name,
+                tokenizer=self.model_name,
+            )
+        except Exception as exc:  # pragma: no cover - optional dependency/runtime
+            self._disabled_reason = str(exc)
+            log.warning("ML sentiment disabled, using rules-only fallback: %s", exc)
+            return None
+        return self._pipeline
+
+    def analyze(self, text: str) -> Dict:
+        cleaned = re.sub(r"\s+", " ", (text or "").strip())[:1000]
+        if not cleaned:
+            return {
+                "enabled": False,
+                "available": False,
+                "model": self.model_name,
+                "label": "NEUTRAL",
+                "confidence": 0.0,
+                "signed_score": 0.0,
+            }
+        if cleaned in self._cache:
+            return dict(self._cache[cleaned])
+
+        pipe = self._ensure_pipeline()
+        if not pipe:
+            result = {
+                "enabled": self.enabled,
+                "available": False,
+                "model": self.model_name,
+                "label": "NEUTRAL",
+                "confidence": 0.0,
+                "signed_score": 0.0,
+            }
+            self._cache[cleaned] = result
+            return dict(result)
+
+        try:  # pragma: no cover - depends on optional model runtime
+            raw = pipe(cleaned, truncation=True)[0]
+            label_raw = str(raw.get("label", "neutral")).upper()
+            confidence = float(raw.get("score", 0.0) or 0.0)
+        except Exception as exc:  # pragma: no cover
+            log.warning("ML sentiment inference failed, reverting to rules-only: %s", exc)
+            self._disabled_reason = str(exc)
+            result = {
+                "enabled": self.enabled,
+                "available": False,
+                "model": self.model_name,
+                "label": "NEUTRAL",
+                "confidence": 0.0,
+                "signed_score": 0.0,
+            }
+            self._cache[cleaned] = result
+            return dict(result)
+
+        if "POS" in label_raw:
+            label = "POSITIVE"
+            sign = 1.0
+        elif "NEG" in label_raw:
+            label = "NEGATIVE"
+            sign = -1.0
+        else:
+            label = "NEUTRAL"
+            sign = 0.0
+
+        signed_score = sign * confidence if confidence >= self.min_confidence else 0.0
+        if signed_score == 0.0:
+            label = "NEUTRAL"
+
+        result = {
+            "enabled": True,
+            "available": True,
+            "model": self.model_name,
+            "label": label,
+            "confidence": round(confidence, 4),
+            "signed_score": round(signed_score, 4),
+        }
+        self._cache[cleaned] = result
+        return dict(result)
+
+    def directional_bias(self, sector_id: str, analysis: Dict) -> float:
+        if self.mode != "hybrid":
+            return 0.0
+        alignment = ML_DIRECTION_ALIGNMENTS.get(sector_id, 0.0)
+        if alignment == 0.0:
+            return 0.0
+        return round(float(analysis.get("signed_score", 0.0) or 0.0) * ML_HYBRID_DIRECTION_WEIGHT * alignment, 2)
+
+
+@lru_cache(maxsize=512)
+def _compile_term_pattern(term: str) -> re.Pattern:
+    escaped = re.escape(term.strip().lower())
+    escaped = escaped.replace(r"\ ", r"\s+")
+    return re.compile(rf"(?<![a-z0-9]){escaped}(?![a-z0-9])")
+
+
+def _contains_term(text_lower: str, term: str) -> bool:
+    return bool(_compile_term_pattern(term).search(text_lower))
+
+
+def _directional_score(text: str, sector_id: str) -> float:
+    text_lower = text.lower()
+    terms = SECTOR_DIRECTION_TERMS.get(sector_id, {})
+    bullish = sum(weight for term, weight in terms.get("bullish", []) if _contains_term(text_lower, term))
+    bearish = sum(weight for term, weight in terms.get("bearish", []) if _contains_term(text_lower, term))
+    return round(bullish - bearish, 2)
+
+
+def _direction_label(score: float) -> str:
+    if score >= 2.0:
+        return "BULLISH"
+    if score <= -2.0:
+        return "BEARISH"
+    return "NEUTRAL"
+
+
+def _sentiment_label(score: float) -> str:
+    if score >= 0.15:
+        return "POSITIVE"
+    if score <= -0.15:
+        return "NEGATIVE"
+    return "NEUTRAL"
+
 
 def _score_text(text: str, keywords: List, negators: List, geo_boost: List) -> float:
     """Score a piece of text against a sector's keyword list."""
@@ -223,17 +490,17 @@ def _score_text(text: str, keywords: List, negators: List, geo_boost: List) -> f
     text_lower = text.lower()
 
     for kw, weight in keywords:
-        if kw in text_lower:
+        if _contains_term(text_lower, kw):
             score += weight
 
     # Apply negation dampening
     for neg in negators:
-        if neg in text_lower:
+        if _contains_term(text_lower, neg):
             score *= 0.6
 
     # Geopolitical context boost
     for gk in geo_boost:
-        if gk in text_lower:
+        if _contains_term(text_lower, gk):
             score += 2.0
             break  # One boost per article max
 
@@ -264,6 +531,7 @@ class SectorClassifier:
     def __init__(self, cfg):
         self.cfg = cfg
         self.min_articles = cfg.MIN_ARTICLES_FOR_SIGNAL
+        self.sentiment_model = FinancialSentimentModel(cfg)
 
     def classify_articles(self, articles: List[Dict]) -> List[Dict]:
         """
@@ -275,6 +543,9 @@ class SectorClassifier:
 
         for art in articles:
             text = art["raw_text"]
+            sentiment = self.sentiment_model.analyze(
+                f"{art.get('title', '')}. {art.get('description', '')}"
+            )
             for sector_id, defn in SECTOR_DEFINITIONS.items():
                 score = _score_text(
                     text,
@@ -282,10 +553,19 @@ class SectorClassifier:
                     defn.get("negators", []),
                     defn.get("geopolitical_boost", []),
                 )
+                rule_direction_score = _directional_score(text, sector_id)
+                ml_direction_score = self.sentiment_model.directional_bias(sector_id, sentiment)
+                direction_score = round(rule_direction_score + ml_direction_score, 2)
                 if score >= 4.0:   # Minimum relevance threshold
                     sector_scores[sector_id].append({
                         "article": art,
                         "relevance_score": score,
+                        "rule_direction_score": rule_direction_score,
+                        "ml_direction_score": ml_direction_score,
+                        "direction_score": direction_score,
+                        "ml_sentiment_label": sentiment.get("label", "NEUTRAL"),
+                        "ml_sentiment_confidence": sentiment.get("confidence", 0.0),
+                        "ml_sentiment_score": sentiment.get("signed_score", 0.0),
                     })
 
         # Build signal clusters
@@ -299,10 +579,16 @@ class SectorClassifier:
 
             # Top headlines (highest relevance)
             top_articles = [s["article"] for s in scored_arts[:8]]
-            total_score   = sum(s["relevance_score"] for s in scored_arts)
+            total_score = sum(s["relevance_score"] for s in scored_arts)
+            avg_article_score = round(total_score / max(len(scored_arts), 1), 2)
+            direction_score = round(sum(s.get("direction_score", 0.0) for s in scored_arts), 2)
+            ml_sentiment_score = round(
+                sum(s.get("ml_sentiment_score", 0.0) for s in scored_arts) / max(len(scored_arts), 1),
+                4,
+            )
 
-            defn     = SECTOR_DEFINITIONS[sector_id]
-            severity = self._determine_severity(total_score, len(scored_arts))
+            defn = SECTOR_DEFINITIONS[sector_id]
+            severity, event_intensity = self._determine_severity(scored_arts, direction_score)
 
             signals.append({
                 "sector_id":     sector_id,
@@ -312,10 +598,18 @@ class SectorClassifier:
                 "articles":      top_articles,
                 "article_count": len(scored_arts),
                 "total_score":   total_score,
+                "avg_article_score": avg_article_score,
+                "direction_score": direction_score,
+                "direction":     _direction_label(direction_score),
                 "severity":      severity,
+                "event_intensity": event_intensity,
+                "ml_sentiment_label": _sentiment_label(ml_sentiment_score),
+                "ml_sentiment_score": ml_sentiment_score,
+                "ml_sentiment_model": self.sentiment_model.model_name,
+                "ml_sentiment_mode": self.sentiment_model.mode,
                 "top_headlines": [a["title"] for a in top_articles[:5]],
-                "regions":       list({a["region"] for a in top_articles}),
-                "sources":       list({a["source"] for a in top_articles[:5]}),
+                "regions":       list({s["article"]["region"] for s in scored_arts}),
+                "sources":       list({s["article"]["source"] for s in scored_arts}),
                 "latest_ts":     max(a["published"] for a in top_articles),
             })
 
@@ -330,17 +624,41 @@ class SectorClassifier:
         )
         return signals
 
-    def _determine_severity(self, total_score: float, article_count: int) -> str:
-        """Severity based on aggregate score + volume."""
-        adjusted = total_score * (1 + min(article_count, 20) / 20)
-        if adjusted >= 150:
+    @staticmethod
+    def _severity_from_intensity(intensity: float) -> str:
+        if intensity >= 20:
             return "CRITICAL"
-        elif adjusted >= 80:
+        elif intensity >= 13:
             return "HIGH"
-        elif adjusted >= 40:
+        elif intensity >= 7:
             return "MEDIUM"
-        else:
-            return "LOW"
+        return "LOW"
+
+    def _determine_severity(self, scored_arts: List[Dict], direction_score: float) -> Tuple[str, float]:
+        """Severity from signal quality, geographic breadth, and directional conviction."""
+        if not scored_arts:
+            return "LOW", 0.0
+
+        relevance_scores = [float(item.get("relevance_score", 0.0) or 0.0) for item in scored_arts]
+        avg_score = sum(relevance_scores) / len(relevance_scores)
+        regions = {
+            item.get("article", {}).get("region", "global")
+            for item in scored_arts
+            if item.get("article", {}).get("region")
+        }
+        non_global_regions = {region for region in regions if region != "global"}
+        high_conviction_ratio = (
+            sum(1 for score in relevance_scores if score >= 10.0) / len(relevance_scores)
+        )
+        avg_direction_strength = abs(direction_score) / len(scored_arts)
+        intensity = (
+            avg_score * 1.35
+            + min(len(non_global_regions), 4) * 1.5
+            + min(avg_direction_strength, 4.0) * 1.1
+            + high_conviction_ratio * 4.0
+        )
+        intensity = round(intensity, 2)
+        return self._severity_from_intensity(intensity), intensity
 
     def _merge_correlated_signals(self, signals: List[Dict]) -> List[Dict]:
         """
@@ -367,19 +685,47 @@ class SectorClassifier:
 
                 if overlap >= 0.35:
                     # Merge
+                    original_count = max(combined.get("article_count", 1), 1)
+                    other_count = max(sig_b.get("article_count", 1), 1)
                     combined["sectors"].extend(sig_b["sectors"])
                     combined["sector_label"] += f" + {sig_b['sector_label']}"
                     combined["sector_emoji"] += sig_b["sector_emoji"]
-                    combined["total_score"]   += sig_b["total_score"] * 0.5
-                    combined["article_count"] += sig_b["article_count"]
+                    combined["total_score"] += sig_b["total_score"] * 0.5
+                    combined["direction_score"] = round(
+                        combined.get("direction_score", 0.0) + sig_b.get("direction_score", 0.0),
+                        2,
+                    )
+                    combined["direction"] = _direction_label(combined["direction_score"])
+                    combined_articles = list(combined.get("articles", []))
+                    combined_articles.extend(
+                        article for article in sig_b.get("articles", [])
+                        if article.get("id") not in combined_ids_a
+                    )
+                    combined["articles"] = combined_articles[:12]
+                    combined_ids_a |= ids_b
+                    combined["article_count"] = len(combined_articles)
+                    combined["avg_article_score"] = round(
+                        combined["total_score"] / max(combined["article_count"], 1),
+                        2,
+                    )
+                    weighted_ml = (
+                        combined.get("ml_sentiment_score", 0.0) * original_count
+                        + sig_b.get("ml_sentiment_score", 0.0) * other_count
+                    ) / max(original_count + other_count, 1)
+                    combined["ml_sentiment_score"] = round(weighted_ml, 4)
+                    combined["ml_sentiment_label"] = _sentiment_label(combined["ml_sentiment_score"])
+                    combined["event_intensity"] = round(
+                        max(combined.get("event_intensity", 0.0), sig_b.get("event_intensity", 0.0)) + 1.0,
+                        2,
+                    )
+                    combined["severity"] = self._severity_from_intensity(combined["event_intensity"])
                     combined["top_headlines"] = list(
                         dict.fromkeys(
                             combined["top_headlines"] + sig_b["top_headlines"]
                         )
                     )[:6]
-                    combined["regions"] = list(
-                        set(combined["regions"]) | set(sig_b["regions"])
-                    )
+                    combined["regions"] = list(dict.fromkeys(combined["regions"] + sig_b["regions"]))
+                    combined["sources"] = list(dict.fromkeys(combined.get("sources", []) + sig_b.get("sources", [])))
                     # FIX: take the latest timestamp across both signals.
                     # Previously only sig_a's latest_ts was kept, meaning a merged
                     # signal whose more-recent constituent was sig_b would score

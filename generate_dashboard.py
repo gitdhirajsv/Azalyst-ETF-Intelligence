@@ -439,6 +439,39 @@ def extract_tickers(bucket):
     return tickers
 
 
+def extract_ranked_tickers(recs: Dict, limit: int = 4) -> List[str]:
+    ranked = recs.get("top_etfs") or recs.get("ranked") or []
+    if ranked:
+        return extract_tickers(ranked)[:limit]
+
+    combined = []
+    combined.extend(recs.get("global", []))
+    combined.extend(recs.get("india", []))
+    return extract_tickers(combined)[:limit]
+
+
+def extract_primary_ticker(recs: Dict) -> str:
+    primary = recs.get("primary") or {}
+    ticker = primary.get("ticker")
+    if ticker:
+        return ticker
+    ranked = extract_ranked_tickers(recs, limit=1)
+    return ranked[0] if ranked else ""
+
+
+def extract_market_labels(recs: Dict) -> List[str]:
+    labels = list((recs.get("regional_alternatives") or {}).keys())
+    if labels:
+        return labels[:3]
+
+    fallback = []
+    if recs.get("global"):
+        fallback.append("International-listed")
+    if recs.get("india"):
+        fallback.append("India-listed")
+    return fallback[:3]
+
+
 def _breakdown_has_data(breakdown: Dict) -> bool:
     """Return True if the breakdown contains at least one non-zero component."""
     return any(v != 0 for v in breakdown.values())
@@ -464,7 +497,14 @@ def build_signal_cards(state):
         regions    = signal.get("regions") or []
         sources    = signal.get("sources") or []
         breakdown  = signal.get("confidence_breakdown") or {}
-        recs       = signal.get("etf_recommendations") or {"india": [], "global": []}
+        recs       = signal.get("etf_recommendations") or {
+            "selection_method": "global-ranked",
+            "primary": None,
+            "ranked": [],
+            "regional_alternatives": {},
+            "india": [],
+            "global": [],
+        }
         is_legacy  = not _breakdown_has_data(breakdown)
 
         cards.append({
@@ -472,6 +512,11 @@ def build_signal_cards(state):
             "sector_label":  label,
             "confidence":    confidence,
             "severity":      severity,
+            "direction":     signal.get("direction", "NEUTRAL"),
+            "direction_score": safe_round(signal.get("direction_score", 0), 2),
+            "ml_sentiment_label": signal.get("ml_sentiment_label", "NEUTRAL"),
+            "ml_sentiment_score": safe_round(signal.get("ml_sentiment_score", 0), 4),
+            "ml_sentiment_mode": signal.get("ml_sentiment_mode", "rules-only"),
             "article_count": signal.get("article_count", 0),
             "latest_at":     format_timestamp(signal.get("latest_ts") or signal.get("sent_at")),
             "headline":      (
@@ -482,6 +527,9 @@ def build_signal_cards(state):
             ),
             "regions":       regions[:4],
             "sources":       sources[:4],
+            "primary_etf":   extract_primary_ticker(recs),
+            "top_etfs":      extract_ranked_tickers(recs)[:4],
+            "access_markets": extract_market_labels(recs),
             "india_etfs":    extract_tickers(recs.get("india"))[:3],
             "global_etfs":   extract_tickers(recs.get("global"))[:4],
             "is_legacy":     is_legacy,
@@ -500,16 +548,23 @@ def build_signal_cards(state):
 def build_articles(signal_cards):
     items = []
     for signal in signal_cards:
-        confidence = signal["confidence"]
-        tag   = "tag-bull" if confidence >= 80 else "tag-neu" if confidence >= 65 else "tag-bear"
-        badge = "Bullish"  if confidence >= 80 else "Neutral"  if confidence >= 65 else "Watch"
+        direction = signal.get("direction", "NEUTRAL")
+        if direction == "BULLISH":
+            tag = "tag-bull"
+            badge = "Bullish"
+        elif direction == "BEARISH":
+            tag = "tag-bear"
+            badge = "Bearish"
+        else:
+            tag = "tag-neu"
+            badge = "Neutral"
         legacy_note = " [legacy]" if signal.get("is_legacy") else ""
         items.append({
             "tag":   tag,
             "label": badge,
             "text": (
                 f"{signal['sector_label']} - {signal['article_count']} articles - "
-                f"{signal['severity']}{legacy_note} - {signal['headline']}"
+                f"{signal['severity']} / {direction}{legacy_note} - {signal['headline']}"
             ),
         })
     return items

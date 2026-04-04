@@ -12,9 +12,10 @@ Aladdin-grade portfolio risk analytics:
 import json
 import logging
 import math
+import re
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional, Tuple
 
 log = logging.getLogger("azalyst.risk")
@@ -53,26 +54,74 @@ SECTOR_FACTOR_MAP = {
     "crypto_digital":       "crypto",
 }
 
+TICKER_FACTOR_MAP = {
+    "AGG": "bonds",
+    "BHARATBOND": "bonds",
+    "BND": "bonds",
+    "BOND": "bonds",
+    "GLDM": "gold",
+    "GDX": "gold",
+    "GDXJ": "gold",
+    "GOLDBEES": "gold",
+    "HDFCGOLD": "gold",
+    "IBIT": "crypto",
+    "BITQ": "crypto",
+    "TIP": "bonds",
+    "TLT": "bonds",
+    "USO": "oil",
+    "IXC": "oil",
+    "XLE": "oil",
+}
+
 # ── Yahoo Finance Helpers ────────────────────────────────────────────────────
 
-def _fetch_chart(ticker: str, range_str: str = "1mo", interval: str = "1d") -> Optional[List[float]]:
-    """Fetch historical closing prices from Yahoo Finance."""
+def _fetch_chart_points(
+    ticker: str,
+    range_str: Optional[str] = "1mo",
+    interval: str = "1d",
+    start_dt: Optional[datetime] = None,
+    end_dt: Optional[datetime] = None,
+) -> Optional[List[Tuple[datetime, float]]]:
+    """Fetch dated historical closes from Yahoo Finance."""
     try:
-        url = (
-            f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}"
-            f"?interval={interval}&range={range_str}"
-        )
+        if start_dt and end_dt:
+            period1 = int((start_dt - timedelta(days=5)).timestamp())
+            period2 = int((end_dt + timedelta(days=5)).timestamp())
+            url = (
+                f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}"
+                f"?interval={interval}&period1={period1}&period2={period2}"
+            )
+        else:
+            url = (
+                f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}"
+                f"?interval={interval}&range={range_str}"
+            )
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
         with urllib.request.urlopen(req, timeout=10) as resp:
             data = json.loads(resp.read())
         result = data.get("chart", {}).get("result", [])
         if not result:
             return None
-        closes = result[0].get("indicators", {}).get("quote", [{}])[0].get("close", [])
-        return [c for c in closes if c is not None]
+        chart = result[0]
+        closes = chart.get("indicators", {}).get("quote", [{}])[0].get("close", [])
+        timestamps = chart.get("timestamp", [])
+        output = []
+        for ts, close in zip(timestamps, closes):
+            if close is None:
+                continue
+            output.append((datetime.fromtimestamp(ts, tz=timezone.utc), float(close)))
+        return output
     except Exception as exc:
         log.warning("Chart fetch failed for %s: %s", ticker, exc)
         return None
+
+
+def _fetch_chart(ticker: str, range_str: str = "1mo", interval: str = "1d") -> Optional[List[float]]:
+    """Fetch historical closing prices from Yahoo Finance."""
+    points = _fetch_chart_points(ticker, range_str=range_str, interval=interval)
+    if not points:
+        return None
+    return [close for _, close in points]
 
 
 def fetch_historical_closes(tickers: List[str], range_str: str = "1mo") -> Dict[str, List[float]]:
@@ -156,8 +205,10 @@ def check_portfolio_correlation(
         return {"blocked": False, "max_corr": 0.0, "corr_with": "", "all_corrs": {}}
 
     new_returns = _daily_returns(closes_dict[new_ticker])
-    max_corr = 0.0
+    max_positive_corr = 0.0
     corr_with = ""
+    most_negative_corr = 0.0
+    negative_with = ""
     all_corrs = {}
 
     for ticker in existing_tickers:
@@ -166,20 +217,25 @@ def check_portfolio_correlation(
         existing_returns = _daily_returns(closes_dict[ticker])
         corr = _pearson_correlation(new_returns, existing_returns)
         all_corrs[ticker] = corr
-        if abs(corr) > abs(max_corr):
-            max_corr = corr
+        if corr > max_positive_corr:
+            max_positive_corr = corr
             corr_with = ticker
+        if corr < most_negative_corr:
+            most_negative_corr = corr
+            negative_with = ticker
 
-    blocked = abs(max_corr) > CORRELATION_BLOCK_THRESHOLD
+    blocked = max_positive_corr > CORRELATION_BLOCK_THRESHOLD
     if blocked:
         log.warning(
             "CORRELATION BLOCK: %s has %.2f correlation with %s (threshold: %.2f)",
-            new_ticker, max_corr, corr_with, CORRELATION_BLOCK_THRESHOLD,
+            new_ticker, max_positive_corr, corr_with, CORRELATION_BLOCK_THRESHOLD,
         )
     return {
         "blocked": blocked,
-        "max_corr": round(max_corr, 4),
+        "max_corr": round(max_positive_corr, 4),
         "corr_with": corr_with,
+        "most_negative_corr": round(most_negative_corr, 4),
+        "negative_corr_with": negative_with,
         "all_corrs": {k: round(v, 4) for k, v in all_corrs.items()},
     }
 
@@ -194,23 +250,27 @@ def fetch_benchmark_return(start_date: str, benchmark: str = BENCHMARK_TICKER) -
     try:
         start_dt = datetime.fromisoformat(start_date.replace("Z", "+00:00"))
         now = datetime.now(timezone.utc)
-        delta_days = (now - start_dt).days
-        if delta_days < 1:
-            delta_days = 1
+        if start_dt.tzinfo is None:
+            start_dt = start_dt.replace(tzinfo=timezone.utc)
 
-        range_map = {30: "1mo", 90: "3mo", 180: "6mo", 365: "1y", 730: "2y"}
-        range_str = "5y"
-        for threshold, rng in sorted(range_map.items()):
-            if delta_days <= threshold:
-                range_str = rng
-                break
-
-        closes = _fetch_chart(benchmark, range_str)
-        if not closes or len(closes) < 2:
+        points = _fetch_chart_points(
+            benchmark,
+            interval="1d",
+            start_dt=start_dt,
+            end_dt=now,
+        )
+        if not points or len(points) < 2:
             return {"benchmark_return_pct": 0.0, "benchmark_price_start": 0, "benchmark_price_now": 0}
 
-        start_price = closes[0]
-        end_price = closes[-1]
+        start_price = 0.0
+        for ts, close in points:
+            if ts.date() >= start_dt.date():
+                start_price = close
+                break
+        if start_price <= 0:
+            start_price = points[0][1]
+
+        end_price = points[-1][1]
         ret_pct = round(((end_price - start_price) / start_price) * 100, 2) if start_price > 0 else 0.0
 
         return {
@@ -337,13 +397,39 @@ def check_rebalance_drift(
 
 # ── 5. Stress Testing / Scenario Analysis ────────────────────────────────────
 
-def _get_factor(sector: str) -> str:
-    """Map a sector to its primary factor for stress testing."""
-    sector_lower = (sector or "").lower().replace(" ", "_").replace("&", "").replace("/", "_")
-    for key, factor in SECTOR_FACTOR_MAP.items():
-        if key in sector_lower:
-            return factor
-    return "equities"  # default assumption
+def _normalise_sector_tokens(sector: str) -> List[str]:
+    raw = (sector or "").lower()
+    for token in ("+", "|", ","):
+        raw = raw.replace(token, "/")
+    raw = raw.replace("&", " ")
+    parts = [part.strip() for part in raw.split("/") if part.strip()]
+    tokens = []
+    for part in parts:
+        token = re.sub(r"[^a-z0-9]+", "_", part).strip("_")
+        if token:
+            tokens.append(token)
+    return tokens
+
+
+def _get_factor(sector: str, ticker: str = "") -> str:
+    """Map a position to its primary factor for stress testing."""
+    ticker_key = (ticker or "").upper()
+    if ticker_key in TICKER_FACTOR_MAP:
+        return TICKER_FACTOR_MAP[ticker_key]
+
+    factor_votes: Dict[str, int] = {}
+    for token in _normalise_sector_tokens(sector):
+        for key, factor in SECTOR_FACTOR_MAP.items():
+            if key in token or token in key:
+                factor_votes[factor] = factor_votes.get(factor, 0) + 1
+
+    if factor_votes:
+        return sorted(
+            factor_votes.items(),
+            key=lambda item: (item[1], item[0] != "equities"),
+            reverse=True,
+        )[0][0]
+    return "equities"
 
 
 def stress_test_portfolio(positions: List[Dict], portfolio_value: float) -> Dict:
@@ -364,7 +450,7 @@ def stress_test_portfolio(positions: List[Dict], portfolio_value: float) -> Dict
 
         for pos in positions:
             current_value = pos.get("current_price", pos.get("entry_price", 0)) * pos.get("units", 0)
-            factor = _get_factor(pos.get("sector", ""))
+            factor = _get_factor(pos.get("sector", ""), pos.get("ticker", ""))
             shock = shocks.get(factor, -0.10)
             impact = round(current_value * shock, 2)
             total_impact += impact
@@ -423,14 +509,19 @@ def generate_risk_report(
     # Find max off-diagonal correlation
     max_corr = 0.0
     max_corr_pair = ("", "")
+    most_negative_corr = 0.0
+    most_negative_pair = ("", "")
     corr_tickers = sorted(corr_matrix.keys())
     for i, t1 in enumerate(corr_tickers):
         for j, t2 in enumerate(corr_tickers):
             if i < j:
-                c = abs(corr_matrix.get(t1, {}).get(t2, 0))
+                c = corr_matrix.get(t1, {}).get(t2, 0)
                 if c > max_corr:
                     max_corr = c
                     max_corr_pair = (t1, t2)
+                if c < most_negative_corr:
+                    most_negative_corr = c
+                    most_negative_pair = (t1, t2)
 
     # 3. Volatility
     vol_map = compute_volatility(portfolio_closes) if portfolio_closes else {}
@@ -462,6 +553,8 @@ def generate_risk_report(
             "tickers": corr_tickers,
             "max_corr": round(max_corr, 3),
             "max_corr_pair": list(max_corr_pair),
+            "most_negative_corr": round(most_negative_corr, 3),
+            "most_negative_pair": list(most_negative_pair),
             "status": "HIGH" if max_corr > CORRELATION_WARN_THRESHOLD else "OK",
         },
         "volatility": {
@@ -491,6 +584,8 @@ def _empty_report() -> Dict:
             "tickers": [],
             "max_corr": 0.0,
             "max_corr_pair": [],
+            "most_negative_corr": 0.0,
+            "most_negative_pair": [],
             "status": "OK",
         },
         "volatility": {

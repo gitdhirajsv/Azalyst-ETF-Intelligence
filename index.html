@@ -913,14 +913,16 @@ function renderPortPage() {
   document.getElementById('opportunityGrid').innerHTML = sorted.slice(0,6).map(sig => {
     const conf = Number(sig.confidence||0);
     const tier = conf>=80?'opp-crit':conf>=70?'opp-high':conf>=60?'opp-med':'opp-low';
-    const global = (sig.global_etfs||[]).slice(0,3).join(', ') || '-';
-    const india = (sig.india_etfs||[]).slice(0,3).join(', ') || '-';
+    const topEtfs = (sig.top_etfs||sig.global_etfs||sig.india_etfs||[]).slice(0,3).join(', ') || '-';
+    const accessMarkets = (sig.access_markets||[]).join(', ') || 'Mapped markets';
+    const direction = sig.direction || 'NEUTRAL';
     return `<div class="opp-card ${tier}">
       <div class="opp-title">${sig.sector_label}</div>
       <div class="opp-conf">${severityBadge(sig.severity)} <span style="margin-left:8px;color:#f1f5f9;font-weight:700">${conf}/100</span></div>
       <div class="opp-etfs">
-        <span class="opp-etf-label">Global:</span> ${global}<br>
-        <span class="opp-etf-label">India:</span> ${india}
+        <span class="opp-etf-label">Top:</span> ${topEtfs}<br>
+        <span class="opp-etf-label">Access:</span> ${accessMarkets}<br>
+        <span class="opp-etf-label">Bias:</span> ${direction}
       </div>
     </div>`;
   }).join('');
@@ -971,7 +973,8 @@ function renderNewsPage() {
         <span style="color:#444">REC: <span style="color:#aaa">${(bd.recency||0).toFixed(1)}</span></span>
         <span style="color:#444">GEO: <span style="color:#aaa">${(bd.geopolitical_severity||0).toFixed(1)}</span></span>
       </div>
-      <div style="font-size:8px;color:#333;margin-top:2px">ETF: ${(sig.global_etfs||[]).join(', ')||'--'}</div>
+      <div style="font-size:8px;color:#333;margin-top:2px">ETF: ${(sig.top_etfs||sig.global_etfs||sig.india_etfs||[]).join(', ')||'--'}</div>
+      <div style="font-size:8px;color:#333;margin-top:2px">Bias: ${sig.direction||'NEUTRAL'} | ML: ${sig.ml_sentiment_label||'NEUTRAL'} (${sig.ml_sentiment_mode||'rules-only'})</div>
     </div>`;
   }).join('');
 }
