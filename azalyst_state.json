@@ -662,40 +662,39 @@
     }
   },
   "energy_oil": {
-    "sent_at": "2026-04-04T08:02:43.196118+00:00",
-    "confidence": 83,
+    "sent_at": "2026-04-04T10:03:34.578742+00:00",
+    "confidence": 97,
     "sector_label": "Energy / Oil & Gas",
-    "article_count": 47,
+    "article_count": 46,
     "severity": "HIGH",
     "regions": [
       "europe",
-      "asia_pacific",
-      "middle_east",
       "global",
+      "americas",
       "india",
-      "americas"
+      "middle_east"
     ],
     "sources": [
       "Bloomberg Markets",
-      "Oilprice.com",
-      "Markets-Economic Times",
       "US Top News and Analysis",
+      "Oilprice.com",
       "World News - Breaking international news and headlines | Sky News",
+      "World | Deutsche Welle",
       "BBC News"
     ],
     "top_headlines": [
       "Trump Says US Could \u2018Take the Oil\u2019 in Hormuz Push",
       "First LNG Tanker Exits Strait of Hormuz Along Omani Coast",
       "India's Russian Crude Imports Jump 90% in March After U.S. Waiver",
-      "Trump Loses Grip as Oil Surge Signals Deeper Crisis",
-      "UAE Gas Plant, Kuwait Oil Refinery Hit in Latest Iran Attacks"
+      "India Acknowledges Iranian Oil Purchases, Dismisses Payment Woes",
+      "Trump Loses Grip as Oil Surge Signals Deeper Crisis"
     ],
-    "latest_ts": "2026-04-03T18:30:00+00:00",
+    "latest_ts": "2026-04-04T09:46:18+00:00",
     "confidence_breakdown": {
       "signal_strength": 25.0,
       "volume_confirmation": 20.0,
       "source_diversity": 17.9,
-      "recency": 5.2,
+      "recency": 19.4,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
@@ -1355,48 +1354,95 @@
     }
   },
   "technology_ai": {
-    "sent_at": "2026-04-04T05:47:01.851658+00:00",
+    "sent_at": "2026-04-04T10:03:35.836713+00:00",
     "confidence": 85,
     "sector_label": "Technology & AI / Semiconductors",
-    "article_count": 17,
-    "severity": "CRITICAL",
+    "article_count": 13,
+    "severity": "MEDIUM",
     "regions": [
       "middle_east",
-      "india",
+      "asia_pacific",
       "global"
     ],
     "sources": [
+      "Bloomberg Markets",
       "US Top News and Analysis",
       "Finance",
-      "Bloomberg Markets",
-      "Cointelegraph.com News"
+      "Cointelegraph.com News",
+      "Markets-Economic Times",
+      "The Verge"
     ],
     "top_headlines": [
-      "Three niche commodity prices are surging. What they show about China's grip on supply chains",
       "Chinese chip firms hit record high revenue driven by the AI boom and U.S. curbs",
       "Huawei's cloud computing revenue dropped in 2025 as Chinese AI lagged U.S. rivals",
+      "Three niche commodity prices are surging. What they show about China's grip on supply chains",
       "Songyee Yoon on Power of Compounding",
       "Big Tech firms back new x402 Foundation to advance agentic AI adoption"
     ],
-    "latest_ts": "2026-04-04T05:46:56.081129+00:00",
+    "latest_ts": "2026-04-04T10:03:03.793750+00:00",
     "confidence_breakdown": {
-      "signal_strength": 25,
+      "signal_strength": 18.9,
       "volume_confirmation": 20.0,
-      "source_diversity": 5.0,
+      "source_diversity": 15.1,
       "recency": 20.0,
-      "geopolitical_severity": 15.0
+      "geopolitical_severity": 11.8
     },
     "etf_recommendations": {
-      "india": [
+      "selection_method": "global-ranked",
+      "primary": {
+        "name": "Invesco QQQ Trust",
+        "ticker": "QQQ",
+        "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
+        "exchange": "NASDAQ",
+        "risk": "Medium",
+        "timeframe": "6\u201318 months",
+        "thesis": "Top 100 NASDAQ companies. 50%+ tech. Diversified AI exposure with lower volatility than SOXX.",
+        "sector_key": "technology_ai",
+        "market_bucket": "global",
+        "market_scope": "International-listed",
+        "selection_score": 121.5,
+        "selection_notes": [
+          "deep liquidity",
+          "broad diversification",
+          "high implementation stability"
+        ]
+      },
+      "ranked": [
         {
-          "name": "Mirae Asset Nifty IT ETF",
-          "ticker": "MAFANG",
-          "note": "India IT sector ETF \u2014 TCS, Infosys, Wipro, HCL",
-          "platform": "Dhan App",
-          "exchange": "NSE",
+          "name": "Invesco QQQ Trust",
+          "ticker": "QQQ",
+          "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NASDAQ",
           "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Top 100 NASDAQ companies. 50%+ tech. Diversified AI exposure with lower volatility than SOXX.",
+          "sector_key": "technology_ai",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 121.5,
+          "selection_notes": [
+            "deep liquidity",
+            "broad diversification",
+            "high implementation stability"
+          ]
+        },
+        {
+          "name": "iShares Semiconductor ETF",
+          "ticker": "SOXX",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NASDAQ",
+          "risk": "Medium-High",
           "timeframe": "3\u201312 months",
-          "thesis": "Indian IT majors benefit from global AI spend. USD-earning companies \u2014 rupee hedge embedded."
+          "thesis": "The semiconductor cycle. Nvidia, Broadcom, AMD, TSMC ADR. AI infrastructure backbone.",
+          "sector_key": "technology_ai",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 107.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "broad exposure",
+            "matches international access"
+          ]
         },
         {
           "name": "Nippon India Nifty IT ETF",
@@ -1406,27 +1452,15 @@
           "exchange": "NSE",
           "risk": "Low-Medium",
           "timeframe": "6\u201318 months",
-          "thesis": "Nifty 50 is ~14% IT. Indirect India tech exposure with large-cap safety."
-        }
-      ],
-      "global": [
-        {
-          "name": "iShares Semiconductor ETF",
-          "ticker": "SOXX",
-          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
-          "exchange": "NASDAQ",
-          "risk": "Medium-High",
-          "timeframe": "3\u201312 months",
-          "thesis": "The semiconductor cycle. Nvidia, Broadcom, AMD, TSMC ADR. AI infrastructure backbone."
-        },
-        {
-          "name": "Invesco QQQ Trust",
-          "ticker": "QQQ",
-          "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
-          "exchange": "NASDAQ",
-          "risk": "Medium",
-          "timeframe": "6\u201318 months",
-          "thesis": "Top 100 NASDAQ companies. 50%+ tech. Diversified AI exposure with lower volatility than SOXX."
+          "thesis": "Nifty 50 is ~14% IT. Indirect India tech exposure with large-cap safety.",
+          "sector_key": "technology_ai",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 102.0,
+          "selection_notes": [
+            "broad diversification",
+            "broad exposure"
+          ]
         },
         {
           "name": "Global X AI & Technology ETF",
@@ -1435,7 +1469,265 @@
           "exchange": "NASDAQ",
           "risk": "Medium-High",
           "timeframe": "3\u201312 months",
-          "thesis": "AI applications layer \u2014 includes software, cloud, robotics alongside chips."
+          "thesis": "AI applications layer \u2014 includes software, cloud, robotics alongside chips.",
+          "sector_key": "technology_ai",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 85.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Mirae Asset Nifty IT ETF",
+          "ticker": "MAFANG",
+          "note": "India IT sector ETF \u2014 TCS, Infosys, Wipro, HCL",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Indian IT majors benefit from global AI spend. USD-earning companies \u2014 rupee hedge embedded.",
+          "sector_key": "technology_ai",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 69.5,
+          "selection_notes": []
+        }
+      ],
+      "top_etfs": [
+        {
+          "name": "Invesco QQQ Trust",
+          "ticker": "QQQ",
+          "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NASDAQ",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Top 100 NASDAQ companies. 50%+ tech. Diversified AI exposure with lower volatility than SOXX.",
+          "sector_key": "technology_ai",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 121.5,
+          "selection_notes": [
+            "deep liquidity",
+            "broad diversification",
+            "high implementation stability"
+          ]
+        },
+        {
+          "name": "iShares Semiconductor ETF",
+          "ticker": "SOXX",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NASDAQ",
+          "risk": "Medium-High",
+          "timeframe": "3\u201312 months",
+          "thesis": "The semiconductor cycle. Nvidia, Broadcom, AMD, TSMC ADR. AI infrastructure backbone.",
+          "sector_key": "technology_ai",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 107.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "broad exposure",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Nippon India Nifty IT ETF",
+          "ticker": "NIFTYBEES",
+          "note": "Broad Nifty 50 \u2014 tech-heavy index",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Nifty 50 is ~14% IT. Indirect India tech exposure with large-cap safety.",
+          "sector_key": "technology_ai",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 102.0,
+          "selection_notes": [
+            "broad diversification",
+            "broad exposure"
+          ]
+        }
+      ],
+      "regional_alternatives": {
+        "India-listed": [
+          {
+            "name": "Nippon India Nifty IT ETF",
+            "ticker": "NIFTYBEES",
+            "note": "Broad Nifty 50 \u2014 tech-heavy index",
+            "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+            "exchange": "NSE",
+            "risk": "Low-Medium",
+            "timeframe": "6\u201318 months",
+            "thesis": "Nifty 50 is ~14% IT. Indirect India tech exposure with large-cap safety.",
+            "sector_key": "technology_ai",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 102.0,
+            "selection_notes": [
+              "broad diversification",
+              "broad exposure"
+            ]
+          },
+          {
+            "name": "Mirae Asset Nifty IT ETF",
+            "ticker": "MAFANG",
+            "note": "India IT sector ETF \u2014 TCS, Infosys, Wipro, HCL",
+            "platform": "Dhan App",
+            "exchange": "NSE",
+            "risk": "Medium",
+            "timeframe": "3\u201312 months",
+            "thesis": "Indian IT majors benefit from global AI spend. USD-earning companies \u2014 rupee hedge embedded.",
+            "sector_key": "technology_ai",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 69.5,
+            "selection_notes": []
+          }
+        ],
+        "International-listed": [
+          {
+            "name": "Invesco QQQ Trust",
+            "ticker": "QQQ",
+            "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NASDAQ",
+            "risk": "Medium",
+            "timeframe": "6\u201318 months",
+            "thesis": "Top 100 NASDAQ companies. 50%+ tech. Diversified AI exposure with lower volatility than SOXX.",
+            "sector_key": "technology_ai",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 121.5,
+            "selection_notes": [
+              "deep liquidity",
+              "broad diversification",
+              "high implementation stability"
+            ]
+          },
+          {
+            "name": "iShares Semiconductor ETF",
+            "ticker": "SOXX",
+            "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NASDAQ",
+            "risk": "Medium-High",
+            "timeframe": "3\u201312 months",
+            "thesis": "The semiconductor cycle. Nvidia, Broadcom, AMD, TSMC ADR. AI infrastructure backbone.",
+            "sector_key": "technology_ai",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 107.5,
+            "selection_notes": [
+              "clean thematic exposure",
+              "broad exposure",
+              "matches international access"
+            ]
+          },
+          {
+            "name": "Global X AI & Technology ETF",
+            "ticker": "AIQ",
+            "platform": "Global X \u2014 IBKR / Schwab",
+            "exchange": "NASDAQ",
+            "risk": "Medium-High",
+            "timeframe": "3\u201312 months",
+            "thesis": "AI applications layer \u2014 includes software, cloud, robotics alongside chips.",
+            "sector_key": "technology_ai",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 85.5,
+            "selection_notes": [
+              "matches international access"
+            ]
+          }
+        ]
+      },
+      "india": [
+        {
+          "name": "Nippon India Nifty IT ETF",
+          "ticker": "NIFTYBEES",
+          "note": "Broad Nifty 50 \u2014 tech-heavy index",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Nifty 50 is ~14% IT. Indirect India tech exposure with large-cap safety.",
+          "sector_key": "technology_ai",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 102.0,
+          "selection_notes": [
+            "broad diversification",
+            "broad exposure"
+          ]
+        },
+        {
+          "name": "Mirae Asset Nifty IT ETF",
+          "ticker": "MAFANG",
+          "note": "India IT sector ETF \u2014 TCS, Infosys, Wipro, HCL",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Indian IT majors benefit from global AI spend. USD-earning companies \u2014 rupee hedge embedded.",
+          "sector_key": "technology_ai",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 69.5,
+          "selection_notes": []
+        }
+      ],
+      "global": [
+        {
+          "name": "Invesco QQQ Trust",
+          "ticker": "QQQ",
+          "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NASDAQ",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Top 100 NASDAQ companies. 50%+ tech. Diversified AI exposure with lower volatility than SOXX.",
+          "sector_key": "technology_ai",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 121.5,
+          "selection_notes": [
+            "deep liquidity",
+            "broad diversification",
+            "high implementation stability"
+          ]
+        },
+        {
+          "name": "iShares Semiconductor ETF",
+          "ticker": "SOXX",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NASDAQ",
+          "risk": "Medium-High",
+          "timeframe": "3\u201312 months",
+          "thesis": "The semiconductor cycle. Nvidia, Broadcom, AMD, TSMC ADR. AI infrastructure backbone.",
+          "sector_key": "technology_ai",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 107.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "broad exposure",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Global X AI & Technology ETF",
+          "ticker": "AIQ",
+          "platform": "Global X \u2014 IBKR / Schwab",
+          "exchange": "NASDAQ",
+          "risk": "Medium-High",
+          "timeframe": "3\u201312 months",
+          "thesis": "AI applications layer \u2014 includes software, cloud, robotics alongside chips.",
+          "sector_key": "technology_ai",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 85.5,
+          "selection_notes": [
+            "matches international access"
+          ]
         }
       ]
     }
@@ -1953,39 +2245,228 @@
     }
   },
   "banking_financial": {
-    "sent_at": "2026-04-03T23:36:18.264929+00:00",
-    "confidence": 62,
+    "sent_at": "2026-04-04T10:03:37.699584+00:00",
+    "confidence": 74,
     "sector_label": "Banking & Financial Sector",
-    "article_count": 9,
+    "article_count": 8,
     "severity": "MEDIUM",
     "regions": [
-      "india",
-      "middle_east",
-      "americas",
       "asia_pacific",
-      "global"
+      "global",
+      "americas",
+      "india",
+      "middle_east"
     ],
     "sources": [
       "Bloomberg Markets",
-      "Finance",
-      "Markets-Economic Times"
+      "Cointelegraph.com News",
+      "Markets-Economic Times",
+      "Finance"
     ],
     "top_headlines": [
-      "US Bonds Fall as Strong Jobs Data Undermines Fed Cut Outlook",
-      "Fed Governor Miran still backs cuts, says interest rates could be 'about a point' lower this year",
+      "AU Small Finance Bank Q4 business update: Deposits up 23% YoY at Rs 1.52 lk cr, advances rise 25%",
       "Q4 impact: Bank stocks slump up to 32% in 3 months, but brokerages bet on SBI, HDFC Bank, 6 more stocks. Check why",
       "RBI clears Emirates NBD to acquire up to 74% stake in RBL Bank; lender to become foreign bank post acquisition",
-      "Treasury Bonds Fall on Strength in March Payrolls: Markets Wrap"
+      "US Judge Denies Pirro Motion to Revive Quashed Fed Subpoenas",
+      "US Bonds Fall as Strong Jobs Data Undermines Fed Cut Outlook"
     ],
-    "latest_ts": "2026-04-03T19:00:32+00:00",
+    "latest_ts": "2026-04-04T09:30:28+00:00",
     "confidence_breakdown": {
-      "signal_strength": 15.6,
-      "volume_confirmation": 16.0,
-      "source_diversity": 10.0,
-      "recency": 10.0,
-      "geopolitical_severity": 11
+      "signal_strength": 13.1,
+      "volume_confirmation": 16.2,
+      "source_diversity": 13.3,
+      "recency": 18.9,
+      "geopolitical_severity": 12.7
     },
     "etf_recommendations": {
+      "selection_method": "global-ranked",
+      "primary": {
+        "name": "Financial Select Sector SPDR",
+        "ticker": "XLF",
+        "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+        "exchange": "NYSE",
+        "risk": "Medium",
+        "timeframe": "1\u20136 months",
+        "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play.",
+        "sector_key": "banking_financial",
+        "market_bucket": "global",
+        "market_scope": "International-listed",
+        "selection_score": 130.0,
+        "selection_notes": [
+          "deep liquidity",
+          "strong cost profile",
+          "clean thematic exposure"
+        ]
+      },
+      "ranked": [
+        {
+          "name": "Financial Select Sector SPDR",
+          "ticker": "XLF",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play.",
+          "sector_key": "banking_financial",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 130.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
+          "note": "Flight to safety during banking stress",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "1\u20133 months",
+          "thesis": "Banking crisis \u2192 gold safe haven. GLDM benefits from systemic financial stress.",
+          "sector_key": "banking_financial",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 130.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "Nippon India ETF Bank BeES",
+          "ticker": "BANKBEES",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Top Indian private and PSU banks. Rate cut cycle could re-rate banking sector.",
+          "sector_key": "banking_financial",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 83.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        }
+      ],
+      "top_etfs": [
+        {
+          "name": "Financial Select Sector SPDR",
+          "ticker": "XLF",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play.",
+          "sector_key": "banking_financial",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 130.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
+          "note": "Flight to safety during banking stress",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "1\u20133 months",
+          "thesis": "Banking crisis \u2192 gold safe haven. GLDM benefits from systemic financial stress.",
+          "sector_key": "banking_financial",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 130.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "Nippon India ETF Bank BeES",
+          "ticker": "BANKBEES",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Top Indian private and PSU banks. Rate cut cycle could re-rate banking sector.",
+          "sector_key": "banking_financial",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 83.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        }
+      ],
+      "regional_alternatives": {
+        "India-listed": [
+          {
+            "name": "Nippon India ETF Bank BeES",
+            "ticker": "BANKBEES",
+            "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+            "exchange": "NSE",
+            "risk": "Medium",
+            "timeframe": "1\u20136 months",
+            "thesis": "Top Indian private and PSU banks. Rate cut cycle could re-rate banking sector.",
+            "sector_key": "banking_financial",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 83.0,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
+          }
+        ],
+        "International-listed": [
+          {
+            "name": "Financial Select Sector SPDR",
+            "ticker": "XLF",
+            "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Medium",
+            "timeframe": "1\u20136 months",
+            "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play.",
+            "sector_key": "banking_financial",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 130.0,
+            "selection_notes": [
+              "deep liquidity",
+              "strong cost profile",
+              "clean thematic exposure"
+            ]
+          },
+          {
+            "name": "SPDR Gold MiniShares Trust",
+            "ticker": "GLDM",
+            "note": "Flight to safety during banking stress",
+            "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Low-Medium",
+            "timeframe": "1\u20133 months",
+            "thesis": "Banking crisis \u2192 gold safe haven. GLDM benefits from systemic financial stress.",
+            "sector_key": "banking_financial",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 130.0,
+            "selection_notes": [
+              "deep liquidity",
+              "strong cost profile",
+              "clean thematic exposure"
+            ]
+          }
+        ]
+      },
       "india": [
         {
           "name": "Nippon India ETF Bank BeES",
@@ -1994,7 +2475,14 @@
           "exchange": "NSE",
           "risk": "Medium",
           "timeframe": "1\u20136 months",
-          "thesis": "Top Indian private and PSU banks. Rate cut cycle could re-rate banking sector."
+          "thesis": "Top Indian private and PSU banks. Rate cut cycle could re-rate banking sector.",
+          "sector_key": "banking_financial",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 83.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "global": [
@@ -2005,7 +2493,16 @@
           "exchange": "NYSE",
           "risk": "Medium",
           "timeframe": "1\u20136 months",
-          "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play."
+          "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play.",
+          "sector_key": "banking_financial",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 130.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
         },
         {
           "name": "SPDR Gold MiniShares Trust",
@@ -2015,7 +2512,16 @@
           "exchange": "NYSE",
           "risk": "Low-Medium",
           "timeframe": "1\u20133 months",
-          "thesis": "Banking crisis \u2192 gold safe haven. GLDM benefits from systemic financial stress."
+          "thesis": "Banking crisis \u2192 gold safe haven. GLDM benefits from systemic financial stress.",
+          "sector_key": "banking_financial",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 130.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
         }
       ]
     }
