@@ -378,4 +378,8 @@ Released under the **MIT License**. See `LICENSE`.
 
 This is a personal research and learning project. Azalyst is not a financial service, investment advisor, or trading algorithm. Nothing here is financial advice. Use entirely at your own risk. Past signal performance does not guarantee future results. Consult a qualified financial advisor before making investment decisions.
 
-Built by **Azalyst** | Azalyst Quant Research
+<div align="center">
+
+Built by [Azalyst](https://github.com/gitdhirajsv) | Azalyst Quant Research
+
+</div>
