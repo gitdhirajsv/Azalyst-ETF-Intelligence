@@ -147,6 +147,10 @@
       "score": 86.0
     },
     {
+      "symbol": "Gold & Precious Metals",
+      "score": 86.0
+    },
+    {
       "symbol": "Crypto & Digital Assets",
       "score": 85.0
     },
@@ -165,10 +169,6 @@
     {
       "symbol": "Cybersecurity",
       "score": 71.0
-    },
-    {
-      "symbol": "Gold & Precious Metals",
-      "score": 69.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -388,6 +388,59 @@
         "source_diversity": 17.9,
         "recency": 8.8,
         "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "04 Apr 2026 20:00 UTC",
+      "headline": "Powell sees inflation outlook in check, no need to hike rates because of oil shock",
+      "regions": [
+        "europe",
+        "americas",
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "World News - Breaking international news and headlines | Sky News",
+        "Bloomberg Markets",
+        "Cointelegraph.com News",
+        "Finance"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 18.0,
+        "volume_confirmation": 18.7,
+        "source_diversity": 15.5,
+        "recency": 19.3,
+        "geopolitical_severity": 14.5
       }
     },
     {
@@ -634,59 +687,6 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 69.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "04 Apr 2026 04:40 UTC",
-      "headline": "Powell sees inflation outlook in check, no need to hike rates because of oil shock",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "middle_east",
-        "americas"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "US Top News and Analysis",
-        "World News - Breaking international news and headlines | Sky News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 17.4,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.5,
-        "recency": 5.8,
-        "geopolitical_severity": 12.8
-      }
-    },
-    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 65.0,
@@ -760,6 +760,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Gold & Precious Metals - 11 articles - HIGH / NEUTRAL - Powell sees inflation outlook in check, no need to hike rates because of oil shock"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Crypto & Digital Assets - 24 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
@@ -781,11 +786,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Cybersecurity - 8 articles - MEDIUM / NEUTRAL - Hungary's government accused of spying on opposition as key election nears"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Gold & Precious Metals - 10 articles - MEDIUM / NEUTRAL - Powell sees inflation outlook in check, no need to hike rates because of oil shock"
     },
     {
       "tag": "tag-neu",
@@ -908,11 +908,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 67306.15,
+      "price": 67246.09,
       "currency": "USD",
-      "change": 375.05,
-      "change_pct": 0.56,
-      "change_str": "+0.56%",
+      "change": 314.99,
+      "change_pct": 0.47,
+      "change_str": "+0.47%",
       "direction": "up"
     },
     {
@@ -1172,10 +1172,10 @@
     }
   },
   "logs": [
-    "2026-04-04 19:53:02 [INFO] AZALYST - status.json generated",
-    "2026-04-04 19:53:02 [INFO] PORTFOLIO - NAV USD 7,639.25 | Return -0.01%",
-    "2026-04-04 19:53:02 [INFO] SIGNALS - 11 active signal buckets in state",
-    "2026-04-04 19:53:02 [INFO] TRADER - Open positions: ITA, XLE, GLDM"
+    "2026-04-04 20:21:39 [INFO] AZALYST - status.json generated",
+    "2026-04-04 20:21:39 [INFO] PORTFOLIO - NAV USD 7,639.25 | Return -0.01%",
+    "2026-04-04 20:21:39 [INFO] SIGNALS - 11 active signal buckets in state",
+    "2026-04-04 20:21:39 [INFO] TRADER - Open positions: ITA, XLE, GLDM"
   ],
-  "generated_at": "2026-04-04 19:53:01 UTC"
+  "generated_at": "2026-04-04 20:21:38 UTC"
 }
