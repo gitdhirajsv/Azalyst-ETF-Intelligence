@@ -1,10 +1,10 @@
 {
   "portfolio_value": 7640.3,
   "total_deposited": 7639.77,
-  "cash": 3055.91,
+  "cash": 2767.13,
   "monthly_reserve": 0.0,
-  "market_value": 4584.39,
-  "total_invested": 4583.86,
+  "market_value": 4873.17,
+  "total_invested": 4872.64,
   "unrealised_pnl": 0.53,
   "unrealised_str": "+0.53",
   "realised_pnl": 0.0,
@@ -63,6 +63,29 @@
       "severity": "CRITICAL",
       "days_held": 0,
       "half_exited": false
+    },
+    {
+      "trade_id": "T0003",
+      "ticker": "GLDM",
+      "etf_name": "SPDR Gold MiniShares Trust",
+      "sector": "Gold & Precious Metals + Banking & Financial Sector",
+      "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NYSE",
+      "entry": 92.48,
+      "current": 92.48,
+      "peak_price": 92.48,
+      "trail_stop": 83.23,
+      "dist_to_trail_pct": 10.0,
+      "units": 3.122662,
+      "invested": 288.78,
+      "pnl": 0.0,
+      "pnl_str": "+0.00",
+      "pnl_pct": 0.0,
+      "pnl_pct_str": "+0.00%",
+      "confidence": 90,
+      "severity": "CRITICAL",
+      "days_held": 0,
+      "half_exited": false
     }
   ],
   "closed_trades_list": [],
@@ -84,25 +107,33 @@
     "labels": [
       "ITA",
       "XLE",
+      "GLDM",
       "CASH"
     ],
     "values": [
       30.0,
       30.0,
-      40.0
+      3.8,
+      36.2
     ]
   },
   "pnl": {
     "labels": [
       "ITA",
-      "XLE"
+      "XLE",
+      "GLDM"
     ],
     "values": [
       0.25,
-      0.28
+      0.28,
+      0.0
     ]
   },
   "confidence": [
+    {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 90.0
+    },
     {
       "symbol": "Defense & Aerospace",
       "score": 85.0
@@ -112,7 +143,7 @@
       "score": 85.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "symbol": "India Equity Markets",
       "score": 80.0
     },
     {
@@ -136,15 +167,50 @@
       "score": 71.0
     },
     {
-      "symbol": "India Equity Markets",
-      "score": 68.0
-    },
-    {
       "symbol": "Banking & Financial Sector",
       "score": 62.0
     }
   ],
   "signals": [
+    {
+      "sector_key": "banking_financial|gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 90.0,
+      "severity": "CRITICAL",
+      "article_count": 23,
+      "latest_at": "04 Apr 2026 04:40 UTC",
+      "headline": "Gold slides 3% as oil surges on dimming hopes of end to Iran war",
+      "regions": [
+        "global",
+        "middle_east",
+        "americas",
+        "india"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Finance",
+        "Bloomberg Markets"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD",
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ",
+        "XLF"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 10.0,
+        "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
     {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
@@ -219,41 +285,34 @@
       }
     },
     {
-      "sector_key": "banking_financial|gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
       "confidence": 80.0,
       "severity": "CRITICAL",
-      "article_count": 22,
-      "latest_at": "03 Apr 2026 12:47 UTC",
-      "headline": "Gold slides 3% as oil surges on dimming hopes of end to Iran war",
+      "article_count": 55,
+      "latest_at": "04 Apr 2026 04:17 UTC",
+      "headline": "Indices plunge 2%, then ride rupee rebound to log gains",
       "regions": [
-        "global",
-        "americas",
+        "india",
         "asia_pacific",
-        "india"
+        "middle_east"
       ],
       "sources": [
-        "Finance",
-        "Bloomberg Markets",
         "Markets-Economic Times"
       ],
       "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD",
-        "BANKBEES"
+        "NIFTYBEES",
+        "MIDCAPETF"
       ],
       "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ",
-        "XLF"
+        "INDA"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 10.0,
-        "recency": 10.0,
+        "source_diversity": 5.0,
+        "recency": 15.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -425,38 +484,6 @@
       }
     },
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 68.0,
-      "severity": "CRITICAL",
-      "article_count": 56,
-      "latest_at": "03 Apr 2026 08:00 UTC",
-      "headline": "Indices plunge 2%, then ride rupee rebound to log gains",
-      "regions": [
-        "india",
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Markets-Economic Times"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 5.0,
-        "recency": 3.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector",
       "confidence": 62.0,
@@ -496,6 +523,11 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 23 articles - CRITICAL - Gold slides 3% as oil surges on dimming hopes of end to Iran war"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Defense & Aerospace - 96 articles - CRITICAL - Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages"
     },
     {
@@ -506,7 +538,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 22 articles - CRITICAL - Gold slides 3% as oil surges on dimming hopes of end to Iran war"
+      "text": "India Equity Markets - 55 articles - CRITICAL - Indices plunge 2%, then ride rupee rebound to log gains"
     },
     {
       "tag": "tag-neu",
@@ -532,11 +564,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Cybersecurity - 8 articles - MEDIUM - Hungary's government accused of spying on opposition as key election nears"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "India Equity Markets - 56 articles - CRITICAL - Indices plunge 2%, then ride rupee rebound to log gains"
     },
     {
       "tag": "tag-bear",
@@ -659,11 +686,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66846.93,
+      "price": 66870.46,
       "currency": "USD",
-      "change": -41.64,
-      "change_pct": -0.06,
-      "change_str": "-0.06%",
+      "change": -18.11,
+      "change_pct": -0.03,
+      "change_str": "-0.03%",
       "direction": "down"
     },
     {
@@ -705,6 +732,11 @@
         "sector": "Defense & Aerospace",
         "weight": 30.0,
         "at_cap": true
+      },
+      {
+        "sector": "Gold & Precious Metals + Banking & Financial Sector",
+        "weight": 3.8,
+        "at_cap": false
       }
     ],
     "max_drawdown_pct": 0.02,
@@ -716,32 +748,41 @@
   "aladdin_risk": {
     "correlation": {
       "matrix": {
+        "GLDM": {
+          "GLDM": 1.0,
+          "ITA": 0.601,
+          "XLE": -0.37
+        },
         "ITA": {
+          "GLDM": 0.601,
           "ITA": 1.0,
           "XLE": -0.469
         },
         "XLE": {
+          "GLDM": -0.37,
           "ITA": -0.469,
           "XLE": 1.0
         }
       },
       "tickers": [
+        "GLDM",
         "ITA",
         "XLE"
       ],
-      "max_corr": 0.469,
+      "max_corr": 0.601,
       "max_corr_pair": [
-        "ITA",
-        "XLE"
+        "GLDM",
+        "ITA"
       ],
-      "status": "OK"
+      "status": "HIGH"
     },
     "volatility": {
       "per_ticker": {
         "ITA": 27.17,
-        "XLE": 21.11
+        "XLE": 21.11,
+        "GLDM": 34.91
       },
-      "portfolio_avg_vol_pct": 24.14,
+      "portfolio_avg_vol_pct": 27.73,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -755,31 +796,22 @@
     "rebalance": {
       "alerts": [
         {
+          "ticker": "GLDM",
+          "actual_weight_pct": 3.78,
+          "target_weight_pct": 30.0,
+          "drift_pct": -26.22,
+          "action": "ADD",
+          "amount": 2003.31,
+          "etf_name": "SPDR Gold MiniShares Trust"
+        },
+        {
           "ticker": "CASH",
-          "actual_weight_pct": 40.0,
+          "actual_weight_pct": 36.22,
           "target_weight_pct": 10.0,
-          "drift_pct": 30.0,
+          "drift_pct": 26.22,
           "action": "DEPLOY",
-          "amount": 2291.88,
+          "amount": 2003.1,
           "etf_name": "Cash Reserve"
-        },
-        {
-          "ticker": "ITA",
-          "actual_weight_pct": 30.0,
-          "target_weight_pct": 45.0,
-          "drift_pct": -15.0,
-          "action": "ADD",
-          "amount": 1145.95,
-          "etf_name": "iShares U.S. Aerospace & Defense ETF"
-        },
-        {
-          "ticker": "XLE",
-          "actual_weight_pct": 30.0,
-          "target_weight_pct": 45.0,
-          "drift_pct": -15.0,
-          "action": "ADD",
-          "amount": 1145.93,
-          "etf_name": "Energy Select Sector SPDR"
         }
       ],
       "drift_threshold_pct": 5.0,
@@ -788,8 +820,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -1833.76,
-          "portfolio_loss_pct": -24.0,
+          "total_impact": -1949.27,
+          "portfolio_loss_pct": -25.51,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -802,12 +834,18 @@
               "factor": "equities",
               "shock_pct": -40.0,
               "impact": -916.88
+            },
+            {
+              "ticker": "GLDM",
+              "factor": "equities",
+              "shock_pct": -40.0,
+              "impact": -115.51
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -1558.69,
-          "portfolio_loss_pct": -20.4,
+          "total_impact": -1656.88,
+          "portfolio_loss_pct": -21.69,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -820,12 +858,18 @@
               "factor": "equities",
               "shock_pct": -34.0,
               "impact": -779.35
+            },
+            {
+              "ticker": "GLDM",
+              "factor": "equities",
+              "shock_pct": -34.0,
+              "impact": -98.19
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -687.66,
-          "portfolio_loss_pct": -9.0,
+          "total_impact": -730.98,
+          "portfolio_loss_pct": -9.57,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -838,12 +882,18 @@
               "factor": "equities",
               "shock_pct": -15.0,
               "impact": -343.83
+            },
+            {
+              "ticker": "GLDM",
+              "factor": "equities",
+              "shock_pct": -15.0,
+              "impact": -43.32
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -366.75,
-          "portfolio_loss_pct": -4.8,
+          "total_impact": -389.85,
+          "portfolio_loss_pct": -5.1,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -856,12 +906,18 @@
               "factor": "equities",
               "shock_pct": -8.0,
               "impact": -183.38
+            },
+            {
+              "ticker": "GLDM",
+              "factor": "equities",
+              "shock_pct": -8.0,
+              "impact": -23.1
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -825.19,
-          "portfolio_loss_pct": -10.8,
+          "total_impact": -877.17,
+          "portfolio_loss_pct": -11.48,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -874,19 +930,25 @@
               "factor": "equities",
               "shock_pct": -18.0,
               "impact": -412.6
+            },
+            {
+              "ticker": "GLDM",
+              "factor": "equities",
+              "shock_pct": -18.0,
+              "impact": -51.98
             }
           ]
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -24.0
+      "worst_loss_pct": -25.51
     }
   },
   "logs": [
-    "2026-04-04 03:55:10 [INFO] AZALYST - status.json generated",
-    "2026-04-04 03:55:10 [INFO] PORTFOLIO - NAV USD 7,640.30 | Return +0.01%",
-    "2026-04-04 03:55:10 [INFO] SIGNALS - 10 active signal buckets in state",
-    "2026-04-04 03:55:10 [INFO] TRADER - Open positions: ITA, XLE"
+    "2026-04-04 05:19:02 [INFO] AZALYST - status.json generated",
+    "2026-04-04 05:19:02 [INFO] PORTFOLIO - NAV USD 7,640.30 | Return +0.01%",
+    "2026-04-04 05:19:02 [INFO] SIGNALS - 10 active signal buckets in state",
+    "2026-04-04 05:19:02 [INFO] TRADER - Open positions: ITA, XLE, GLDM"
   ],
-  "generated_at": "2026-04-04 03:55:09 UTC"
+  "generated_at": "2026-04-04 05:19:01 UTC"
 }
