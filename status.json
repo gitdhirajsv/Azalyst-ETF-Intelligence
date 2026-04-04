@@ -131,16 +131,16 @@
   },
   "confidence": [
     {
+      "symbol": "Defense & Aerospace",
+      "score": 97.0
+    },
+    {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 90.0
     },
     {
       "symbol": "Crypto & Digital Assets",
       "score": 89.0
-    },
-    {
-      "symbol": "Defense & Aerospace",
-      "score": 85.0
     },
     {
       "symbol": "Technology & AI / Semiconductors",
@@ -172,6 +172,59 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 97.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 72,
+      "latest_at": "04 Apr 2026 07:50 UTC",
+      "headline": "Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages",
+      "regions": [
+        "middle_east",
+        "europe",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "BBC News",
+        "Finance",
+        "World News - Breaking international news and headlines | Sky News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 18.4,
+        "recency": 18.7,
+        "geopolitical_severity": 15.0
+      }
+    },
     {
       "sector_key": "banking_financial|gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
@@ -271,58 +324,6 @@
         "volume_confirmation": 20.0,
         "source_diversity": 12.3,
         "recency": 17.4,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 85.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 97,
-      "latest_at": "04 Apr 2026 05:46 UTC",
-      "headline": "Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages",
-      "regions": [
-        "middle_east",
-        "europe",
-        "global"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "World | Deutsche Welle",
-        "Defense News"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "International-listed",
-        "India-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 5.0,
-        "recency": 20.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -683,17 +684,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Defense & Aerospace - 72 articles - HIGH / NEUTRAL - Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 23 articles - CRITICAL / NEUTRAL - Gold slides 3% as oil surges on dimming hopes of end to Iran war"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Crypto & Digital Assets - 28 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Defense & Aerospace - 97 articles - CRITICAL / NEUTRAL - Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages"
     },
     {
       "tag": "tag-neu",
@@ -846,11 +847,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 67011.63,
+      "price": 67030.69,
       "currency": "USD",
-      "change": 80.53,
-      "change_pct": 0.12,
-      "change_str": "+0.12%",
+      "change": 99.59,
+      "change_pct": 0.15,
+      "change_str": "+0.15%",
       "direction": "up"
     },
     {
@@ -1110,10 +1111,10 @@
     }
   },
   "logs": [
-    "2026-04-04 08:02:49 [INFO] AZALYST - status.json generated",
-    "2026-04-04 08:02:49 [INFO] PORTFOLIO - NAV USD 7,640.26 | Return +0.01%",
-    "2026-04-04 08:02:49 [INFO] SIGNALS - 10 active signal buckets in state",
-    "2026-04-04 08:02:49 [INFO] TRADER - Open positions: ITA, XLE, GLDM"
+    "2026-04-04 08:32:38 [INFO] AZALYST - status.json generated",
+    "2026-04-04 08:32:38 [INFO] PORTFOLIO - NAV USD 7,640.26 | Return +0.01%",
+    "2026-04-04 08:32:38 [INFO] SIGNALS - 10 active signal buckets in state",
+    "2026-04-04 08:32:38 [INFO] TRADER - Open positions: ITA, XLE, GLDM"
   ],
-  "generated_at": "2026-04-04 08:02:48 UTC"
+  "generated_at": "2026-04-04 08:32:37 UTC"
 }
