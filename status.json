@@ -1,19 +1,19 @@
 {
-  "portfolio_value": 7640.26,
+  "portfolio_value": 7640.1,
   "total_deposited": 7639.77,
-  "cash": 2296.77,
+  "cash": 2157.36,
   "monthly_reserve": 0.0,
-  "market_value": 5343.49,
-  "total_invested": 5343.0,
-  "unrealised_pnl": 0.49,
-  "unrealised_str": "+0.49",
+  "market_value": 5482.75,
+  "total_invested": 5482.41,
+  "unrealised_pnl": 0.33,
+  "unrealised_str": "+0.33",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "+0.01%",
-  "change_raw": 0.01,
+  "change": "+0.00%",
+  "change_raw": 0.0,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 7640.89,
+  "portfolio_peak": 7641.0,
   "drawdown_now_pct": 0.01,
   "max_drawdown_pct": 0.02,
   "usd_inr_rate": 92.67,
@@ -71,17 +71,17 @@
       "sector": "Gold & Precious Metals + Banking & Financial Sector",
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 92.49,
+      "entry": 92.5,
       "current": 92.48,
-      "peak_price": 92.54,
-      "trail_stop": 83.24,
-      "dist_to_trail_pct": 10.0,
-      "units": 8.208251,
-      "invested": 759.14,
-      "pnl": -0.04,
-      "pnl_str": "-0.04",
-      "pnl_pct": -0.01,
-      "pnl_pct_str": "-0.01%",
+      "peak_price": 92.57,
+      "trail_stop": 83.25,
+      "dist_to_trail_pct": 9.98,
+      "units": 9.714099,
+      "invested": 898.55,
+      "pnl": -0.19,
+      "pnl_str": "-0.19",
+      "pnl_pct": -0.02,
+      "pnl_pct_str": "-0.02%",
       "confidence": 90,
       "severity": "CRITICAL",
       "days_held": 0,
@@ -113,8 +113,8 @@
     "values": [
       30.0,
       30.0,
-      9.9,
-      30.1
+      11.8,
+      28.2
     ]
   },
   "pnl": {
@@ -126,7 +126,7 @@
     "values": [
       0.25,
       0.28,
-      -0.04
+      -0.19
     ]
   },
   "confidence": [
@@ -143,16 +143,16 @@
       "score": 89.0
     },
     {
+      "symbol": "India Equity Markets",
+      "score": 86.0
+    },
+    {
       "symbol": "Technology & AI / Semiconductors",
       "score": 85.0
     },
     {
       "symbol": "Energy / Oil & Gas",
       "score": 83.0
-    },
-    {
-      "symbol": "India Equity Markets",
-      "score": 80.0
     },
     {
       "symbol": "Gold & Precious Metals",
@@ -328,6 +328,56 @@
       }
     },
     {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 30,
+      "latest_at": "04 Apr 2026 06:38 UTC",
+      "headline": "Indices plunge 2%, then ride rupee rebound to log gains",
+      "regions": [
+        "asia_pacific",
+        "india",
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Defense News",
+        "Oilprice.com"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 11.9,
+        "recency": 15.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
       "confidence": 85.0,
@@ -430,53 +480,6 @@
         "volume_confirmation": 20.0,
         "source_diversity": 17.9,
         "recency": 5.2,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 80.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 55,
-      "latest_at": "04 Apr 2026 04:17 UTC",
-      "headline": "Indices plunge 2%, then ride rupee rebound to log gains",
-      "regions": [
-        "india",
-        "asia_pacific",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "International-listed",
-        "India-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 5.0,
-        "recency": 15.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -699,17 +702,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "India Equity Markets - 30 articles - HIGH / NEUTRAL - Indices plunge 2%, then ride rupee rebound to log gains"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Technology & AI / Semiconductors - 17 articles - CRITICAL / NEUTRAL - Three niche commodity prices are surging. What they show about China's grip on supply chains"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Energy / Oil & Gas - 47 articles - HIGH / NEUTRAL - Trump Says US Could \u2018Take the Oil\u2019 in Hormuz Push"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "India Equity Markets - 55 articles - CRITICAL / NEUTRAL - Indices plunge 2%, then ride rupee rebound to log gains"
     },
     {
       "tag": "tag-neu",
@@ -847,11 +850,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 67030.69,
+      "price": 66958.77,
       "currency": "USD",
-      "change": 99.59,
-      "change_pct": 0.15,
-      "change_str": "+0.15%",
+      "change": 27.66,
+      "change_pct": 0.04,
+      "change_str": "+0.04%",
       "direction": "up"
     },
     {
@@ -880,7 +883,7 @@
   "risk_controls": {
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.01,
-    "portfolio_peak": 7640.89,
+    "portfolio_peak": 7641.0,
     "vix": 23.87,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
@@ -896,7 +899,7 @@
       },
       {
         "sector": "Gold & Precious Metals + Banking & Financial Sector",
-        "weight": 9.9,
+        "weight": 11.8,
         "at_cap": false
       }
     ],
@@ -956,27 +959,27 @@
       "benchmark_price_start": 631.97,
       "benchmark_price_now": 655.83,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": 0.01,
-      "alpha": -3.77
+      "portfolio_return_pct": 0.0,
+      "alpha": -3.78
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "GLDM",
-          "actual_weight_pct": 9.94,
+          "actual_weight_pct": 11.76,
           "target_weight_pct": 30.0,
-          "drift_pct": -20.06,
+          "drift_pct": -18.24,
           "action": "ADD",
-          "amount": 1532.98,
+          "amount": 1393.67,
           "etf_name": "SPDR Gold MiniShares Trust"
         },
         {
           "ticker": "CASH",
-          "actual_weight_pct": 30.06,
+          "actual_weight_pct": 28.24,
           "target_weight_pct": 10.0,
-          "drift_pct": 20.06,
+          "drift_pct": 18.24,
           "action": "DEPLOY",
-          "amount": 1532.75,
+          "amount": 1393.35,
           "etf_name": "Cash Reserve"
         }
       ],
@@ -986,8 +989,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -1987.81,
-          "portfolio_loss_pct": -26.02,
+          "total_impact": -1953.0,
+          "portfolio_loss_pct": -25.56,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1005,13 +1008,13 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": 25.0,
-              "impact": 189.77
+              "impact": 224.59
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -2246.5,
-          "portfolio_loss_pct": -29.4,
+          "total_impact": -2242.32,
+          "portfolio_loss_pct": -29.35,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1029,13 +1032,13 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": 3.0,
-              "impact": 22.77
+              "impact": 26.95
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -611.0,
-          "portfolio_loss_pct": -8.0,
+          "total_impact": -617.97,
+          "portfolio_loss_pct": -8.09,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1053,13 +1056,13 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": -5.0,
-              "impact": -37.96
+              "impact": -44.92
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -618.3,
-          "portfolio_loss_pct": -8.09,
+          "total_impact": -635.01,
+          "portfolio_loss_pct": -8.31,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1077,13 +1080,13 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": -12.0,
-              "impact": -91.09
+              "impact": -107.8
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -810.31,
-          "portfolio_loss_pct": -10.61,
+          "total_impact": -799.17,
+          "portfolio_loss_pct": -10.46,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1101,20 +1104,20 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": 8.0,
-              "impact": 60.73
+              "impact": 71.87
             }
           ]
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -29.4
+      "worst_loss_pct": -29.35
     }
   },
   "logs": [
-    "2026-04-04 08:32:38 [INFO] AZALYST - status.json generated",
-    "2026-04-04 08:32:38 [INFO] PORTFOLIO - NAV USD 7,640.26 | Return +0.01%",
-    "2026-04-04 08:32:38 [INFO] SIGNALS - 10 active signal buckets in state",
-    "2026-04-04 08:32:38 [INFO] TRADER - Open positions: ITA, XLE, GLDM"
+    "2026-04-04 09:30:37 [INFO] AZALYST - status.json generated",
+    "2026-04-04 09:30:37 [INFO] PORTFOLIO - NAV USD 7,640.10 | Return +0.00%",
+    "2026-04-04 09:30:37 [INFO] SIGNALS - 10 active signal buckets in state",
+    "2026-04-04 09:30:37 [INFO] TRADER - Open positions: ITA, XLE, GLDM"
   ],
-  "generated_at": "2026-04-04 08:32:37 UTC"
+  "generated_at": "2026-04-04 09:30:36 UTC"
 }

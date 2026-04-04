@@ -385,36 +385,77 @@
     }
   },
   "india_equity": {
-    "sent_at": "2026-04-04T05:18:58.006768+00:00",
-    "confidence": 80,
+    "sent_at": "2026-04-04T09:30:33.453880+00:00",
+    "confidence": 86,
     "sector_label": "India Equity Markets",
-    "article_count": 55,
-    "severity": "CRITICAL",
+    "article_count": 30,
+    "severity": "HIGH",
     "regions": [
-      "india",
       "asia_pacific",
+      "india",
+      "europe",
+      "global",
       "middle_east"
     ],
     "sources": [
-      "Markets-Economic Times"
+      "Markets-Economic Times",
+      "Defense News",
+      "Oilprice.com"
     ],
     "top_headlines": [
       "Indices plunge 2%, then ride rupee rebound to log gains",
       "RBI curbs widen dollar-rupee forwards-NDF spread",
-      "Rupee logs biggest gain in 12 years",
-      "Bajaj Finserv, ICICI Bank among 5 Sensex stocks hit 52-week lows; slip up to 15% in a month",
-      "F&amp;O Talk: Is rebound from Thursday's low a sign of reversal or a bull trap? Sudeep Shah's take on market mood"
+      "F&amp;O Talk: Is rebound from Thursday's low a sign of reversal or a bull trap? Sudeep Shah's take on market mood",
+      "Raamdeo Agrawal's portfolio is down 17\u201318% \u2014 and he says this is not the time to panic",
+      "RBI clears Emirates NBD to acquire up to 74% stake in RBL Bank; lender to become foreign bank post acquisition"
     ],
-    "latest_ts": "2026-04-04T04:17:22+00:00",
+    "latest_ts": "2026-04-04T06:38:59+00:00",
     "confidence_breakdown": {
-      "signal_strength": 25,
+      "signal_strength": 25.0,
       "volume_confirmation": 20.0,
-      "source_diversity": 5.0,
+      "source_diversity": 11.9,
       "recency": 15.0,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
-      "india": [
+      "selection_method": "global-ranked",
+      "primary": {
+        "name": "iShares MSCI India ETF",
+        "ticker": "INDA",
+        "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+        "exchange": "NYSE",
+        "risk": "Medium",
+        "timeframe": "6\u201318 months",
+        "thesis": "US-listed India equity ETF. USD-denominated India large-cap exposure.",
+        "sector_key": "india_equity",
+        "market_bucket": "global",
+        "market_scope": "International-listed",
+        "selection_score": 120.0,
+        "selection_notes": [
+          "clean thematic exposure",
+          "broad diversification",
+          "matches international access"
+        ]
+      },
+      "ranked": [
+        {
+          "name": "iShares MSCI India ETF",
+          "ticker": "INDA",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "US-listed India equity ETF. USD-denominated India large-cap exposure.",
+          "sector_key": "india_equity",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 120.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "broad diversification",
+            "matches international access"
+          ]
+        },
         {
           "name": "Nippon India Nifty 50 BeES",
           "ticker": "NIFTYBEES",
@@ -422,7 +463,16 @@
           "exchange": "NSE",
           "risk": "Low-Medium",
           "timeframe": "6\u201318 months",
-          "thesis": "Broadest India equity exposure. Liquid, low cost. Core India macro play."
+          "thesis": "Broadest India equity exposure. Liquid, low cost. Core India macro play.",
+          "sector_key": "india_equity",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 105.0,
+          "selection_notes": [
+            "broad diversification",
+            "broad exposure",
+            "matches India-listed access"
+          ]
         },
         {
           "name": "Mirae Asset Nifty Midcap 150 ETF",
@@ -431,7 +481,162 @@
           "exchange": "NSE",
           "risk": "Medium-High",
           "timeframe": "6\u201318 months",
-          "thesis": "India mid-cap growth. Higher beta than Nifty 50. Better for India growth thesis."
+          "thesis": "India mid-cap growth. Higher beta than Nifty 50. Better for India growth thesis.",
+          "sector_key": "india_equity",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 66.5,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        }
+      ],
+      "top_etfs": [
+        {
+          "name": "iShares MSCI India ETF",
+          "ticker": "INDA",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "US-listed India equity ETF. USD-denominated India large-cap exposure.",
+          "sector_key": "india_equity",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 120.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "broad diversification",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Nippon India Nifty 50 BeES",
+          "ticker": "NIFTYBEES",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Broadest India equity exposure. Liquid, low cost. Core India macro play.",
+          "sector_key": "india_equity",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 105.0,
+          "selection_notes": [
+            "broad diversification",
+            "broad exposure",
+            "matches India-listed access"
+          ]
+        },
+        {
+          "name": "Mirae Asset Nifty Midcap 150 ETF",
+          "ticker": "MIDCAPETF",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium-High",
+          "timeframe": "6\u201318 months",
+          "thesis": "India mid-cap growth. Higher beta than Nifty 50. Better for India growth thesis.",
+          "sector_key": "india_equity",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 66.5,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        }
+      ],
+      "regional_alternatives": {
+        "India-listed": [
+          {
+            "name": "Nippon India Nifty 50 BeES",
+            "ticker": "NIFTYBEES",
+            "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+            "exchange": "NSE",
+            "risk": "Low-Medium",
+            "timeframe": "6\u201318 months",
+            "thesis": "Broadest India equity exposure. Liquid, low cost. Core India macro play.",
+            "sector_key": "india_equity",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 105.0,
+            "selection_notes": [
+              "broad diversification",
+              "broad exposure",
+              "matches India-listed access"
+            ]
+          },
+          {
+            "name": "Mirae Asset Nifty Midcap 150 ETF",
+            "ticker": "MIDCAPETF",
+            "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+            "exchange": "NSE",
+            "risk": "Medium-High",
+            "timeframe": "6\u201318 months",
+            "thesis": "India mid-cap growth. Higher beta than Nifty 50. Better for India growth thesis.",
+            "sector_key": "india_equity",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 66.5,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
+          }
+        ],
+        "International-listed": [
+          {
+            "name": "iShares MSCI India ETF",
+            "ticker": "INDA",
+            "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Medium",
+            "timeframe": "6\u201318 months",
+            "thesis": "US-listed India equity ETF. USD-denominated India large-cap exposure.",
+            "sector_key": "india_equity",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 120.0,
+            "selection_notes": [
+              "clean thematic exposure",
+              "broad diversification",
+              "matches international access"
+            ]
+          }
+        ]
+      },
+      "india": [
+        {
+          "name": "Nippon India Nifty 50 BeES",
+          "ticker": "NIFTYBEES",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Broadest India equity exposure. Liquid, low cost. Core India macro play.",
+          "sector_key": "india_equity",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 105.0,
+          "selection_notes": [
+            "broad diversification",
+            "broad exposure",
+            "matches India-listed access"
+          ]
+        },
+        {
+          "name": "Mirae Asset Nifty Midcap 150 ETF",
+          "ticker": "MIDCAPETF",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium-High",
+          "timeframe": "6\u201318 months",
+          "thesis": "India mid-cap growth. Higher beta than Nifty 50. Better for India growth thesis.",
+          "sector_key": "india_equity",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 66.5,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "global": [
@@ -442,7 +647,16 @@
           "exchange": "NYSE",
           "risk": "Medium",
           "timeframe": "6\u201318 months",
-          "thesis": "US-listed India equity ETF. USD-denominated India large-cap exposure."
+          "thesis": "US-listed India equity ETF. USD-denominated India large-cap exposure.",
+          "sector_key": "india_equity",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 120.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "broad diversification",
+            "matches international access"
+          ]
         }
       ]
     }
