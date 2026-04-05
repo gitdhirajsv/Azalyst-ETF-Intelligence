@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 7638.03,
+  "portfolio_value": 7637.95,
   "total_deposited": 7639.77,
-  "cash": 191.57,
+  "cash": 101.46,
   "monthly_reserve": 0.0,
-  "market_value": 7446.47,
-  "total_invested": 7448.2,
-  "unrealised_pnl": -1.74,
-  "unrealised_str": "-1.74",
+  "market_value": 7536.49,
+  "total_invested": 7538.31,
+  "unrealised_pnl": -1.82,
+  "unrealised_str": "-1.82",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
   "change": "-0.02%",
@@ -76,13 +76,13 @@
       "peak_price": 92.57,
       "trail_stop": 83.29,
       "dist_to_trail_pct": 9.94,
-      "units": 24.018743,
-      "invested": 2222.81,
-      "pnl": -1.56,
-      "pnl_str": "-1.56",
+      "units": 24.50556,
+      "invested": 2267.87,
+      "pnl": -1.59,
+      "pnl_str": "-1.59",
       "pnl_pct": -0.07,
       "pnl_pct_str": "-0.07%",
-      "confidence": 90,
+      "confidence": 91,
       "severity": "CRITICAL",
       "days_held": 1,
       "half_exited": false
@@ -99,10 +99,10 @@
       "peak_price": 46.7,
       "trail_stop": 42.03,
       "dist_to_trail_pct": 9.9,
-      "units": 13.736854,
-      "invested": 641.53,
-      "pnl": -0.7,
-      "pnl_str": "-0.70",
+      "units": 14.701545,
+      "invested": 686.58,
+      "pnl": -0.75,
+      "pnl_str": "-0.75",
       "pnl_pct": -0.11,
       "pnl_pct_str": "-0.11%",
       "confidence": 95,
@@ -137,9 +137,9 @@
     "values": [
       30.0,
       30.0,
-      29.1,
-      8.4,
-      2.5
+      29.7,
+      9.0,
+      1.3
     ]
   },
   "pnl": {
@@ -152,8 +152,8 @@
     "values": [
       0.25,
       0.28,
-      -1.56,
-      -0.7
+      -1.59,
+      -0.75
     ]
   },
   "confidence": [
@@ -170,19 +170,19 @@
       "score": 92.0
     },
     {
+      "symbol": "Gold & Precious Metals",
+      "score": 91.0
+    },
+    {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 90.0
     },
     {
-      "symbol": "Gold & Precious Metals",
-      "score": 82.0
+      "symbol": "Crypto & Digital Assets",
+      "score": 86.0
     },
     {
       "symbol": "India Equity Markets",
-      "score": 79.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
       "score": 79.0
     },
     {
@@ -363,6 +363,59 @@
       }
     },
     {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 91.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 17,
+      "latest_at": "05 Apr 2026 22:14 UTC",
+      "headline": "Powell sees inflation outlook in check, no need to hike rates because of oil shock",
+      "regions": [
+        "americas",
+        "global",
+        "middle_east",
+        "europe"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "World News - Breaking international news and headlines | Sky News",
+        "Finance",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.9,
+        "volume_confirmation": 20.0,
+        "source_diversity": 16.5,
+        "recency": 18.6,
+        "geopolitical_severity": 14.6
+      }
+    },
+    {
       "sector_key": "banking_financial|gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
       "confidence": 90.0,
@@ -418,56 +471,48 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 82.0,
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 86.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 15,
-      "latest_at": "05 Apr 2026 12:17 UTC",
-      "headline": "Powell sees inflation outlook in check, no need to hike rates because of oil shock",
+      "article_count": 23,
+      "latest_at": "05 Apr 2026 21:46 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "europe",
+        "global",
         "middle_east",
-        "americas",
-        "global"
+        "india",
+        "asia_pacific"
       ],
       "sources": [
-        "World News - Breaking international news and headlines | Sky News",
-        "Markets-Economic Times",
         "Cointelegraph.com News",
-        "Bloomberg Markets"
+        "Markets-Economic Times"
       ],
-      "primary_etf": "GLDM",
+      "primary_etf": "IBIT",
       "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
+        "IBIT",
+        "BITQ"
       ],
       "access_markets": [
-        "India-listed",
         "International-listed"
       ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
+      "india_etfs": [],
       "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
+        "IBIT",
+        "BITQ"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 20.9,
+        "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 16.5,
-        "recency": 10.7,
-        "geopolitical_severity": 14.6
+        "source_diversity": 8.5,
+        "recency": 17.7,
+        "geopolitical_severity": 15.0
       }
     },
     {
@@ -517,50 +562,6 @@
         "volume_confirmation": 20.0,
         "source_diversity": 13.0,
         "recency": 6.2,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 79.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "05 Apr 2026 12:25 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "india",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 8.5,
-        "recency": 10.9,
         "geopolitical_severity": 15.0
       }
     },
@@ -779,22 +780,22 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Gold & Precious Metals - 17 articles - HIGH / NEUTRAL - Powell sees inflation outlook in check, no need to hike rates because of oil shock"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 23 articles - CRITICAL / NEUTRAL - Gold slides 3% as oil surges on dimming hopes of end to Iran war"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals - 15 articles - HIGH / NEUTRAL - Powell sees inflation outlook in check, no need to hike rates because of oil shock"
+      "text": "Crypto & Digital Assets - 23 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "India Equity Markets - 28 articles - HIGH / NEUTRAL - Ahead of Market: 10 things that will decide D-Street action on Monday"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -910,44 +911,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4653.7,
+      "price": 4669.6,
       "currency": "USD",
-      "change": 2.2,
-      "change_pct": 0.05,
-      "change_str": "+0.05%",
+      "change": 18.1,
+      "change_pct": 0.39,
+      "change_str": "+0.39%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 114.84,
+      "price": 114.54,
       "currency": "USD",
-      "change": 3.3,
-      "change_pct": 2.96,
-      "change_str": "+2.96%",
+      "change": 3.0,
+      "change_pct": 2.69,
+      "change_str": "+2.69%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 67423.7,
+      "price": 68088.91,
       "currency": "USD",
-      "change": 133.18,
-      "change_pct": 0.2,
-      "change_str": "+0.20%",
+      "change": 798.39,
+      "change_pct": 1.19,
+      "change_str": "+1.19%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.25,
+      "price": 100.22,
       "currency": "USD",
-      "change": 0.22,
-      "change_pct": 0.22,
-      "change_str": "+0.22%",
+      "change": 0.19,
+      "change_pct": 0.19,
+      "change_str": "+0.19%",
       "direction": "up"
     },
     {
@@ -981,12 +982,12 @@
       },
       {
         "sector": "Gold & Precious Metals + Banking & Financial Sector",
-        "weight": 29.1,
+        "weight": 29.7,
         "at_cap": false
       },
       {
         "sector": "India Equity Markets",
-        "weight": 8.4,
+        "weight": 9.0,
         "at_cap": false
       }
     ],
@@ -1064,12 +1065,21 @@
       "alerts": [
         {
           "ticker": "INDA",
-          "actual_weight_pct": 8.39,
+          "actual_weight_pct": 8.98,
           "target_weight_pct": 22.5,
-          "drift_pct": -14.11,
+          "drift_pct": -13.52,
           "action": "ADD",
-          "amount": 1077.73,
+          "amount": 1032.71,
           "etf_name": "iShares MSCI India ETF"
+        },
+        {
+          "ticker": "CASH",
+          "actual_weight_pct": 1.33,
+          "target_weight_pct": 10.0,
+          "drift_pct": -8.67,
+          "action": "RAISE",
+          "amount": 662.33,
+          "etf_name": "Cash Reserve"
         },
         {
           "ticker": "ITA",
@@ -1077,7 +1087,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": 7.51,
           "action": "TRIM",
-          "amount": 573.62,
+          "amount": 573.64,
           "etf_name": "iShares U.S. Aerospace & Defense ETF"
         },
         {
@@ -1086,25 +1096,16 @@
           "target_weight_pct": 22.5,
           "drift_pct": 7.51,
           "action": "TRIM",
-          "amount": 573.65,
+          "amount": 573.67,
           "etf_name": "Energy Select Sector SPDR"
         },
         {
-          "ticker": "CASH",
-          "actual_weight_pct": 2.51,
-          "target_weight_pct": 10.0,
-          "drift_pct": -7.49,
-          "action": "RAISE",
-          "amount": 572.23,
-          "etf_name": "Cash Reserve"
-        },
-        {
           "ticker": "GLDM",
-          "actual_weight_pct": 29.08,
+          "actual_weight_pct": 29.67,
           "target_weight_pct": 22.5,
-          "drift_pct": 6.58,
+          "drift_pct": 7.17,
           "action": "TRIM",
-          "amount": 502.7,
+          "amount": 547.74,
           "etf_name": "SPDR Gold MiniShares Trust"
         }
       ],
@@ -1114,8 +1115,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -1878.6,
-          "portfolio_loss_pct": -24.6,
+          "total_impact": -1885.35,
+          "portfolio_loss_pct": -24.68,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1133,19 +1134,19 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": 25.0,
-              "impact": 555.31
+              "impact": 566.57
             },
             {
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -256.33
+              "impact": -274.33
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -2420.52,
-          "portfolio_loss_pct": -31.69,
+          "total_impact": -2434.47,
+          "portfolio_loss_pct": -31.87,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1163,19 +1164,19 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": 3.0,
-              "impact": 66.64
+              "impact": 67.99
             },
             {
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -217.88
+              "impact": -233.18
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -780.23,
-          "portfolio_loss_pct": -10.22,
+          "total_impact": -789.24,
+          "portfolio_loss_pct": -10.33,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1193,19 +1194,19 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": -5.0,
-              "impact": -111.06
+              "impact": -113.31
             },
             {
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -96.12
+              "impact": -102.87
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -845.02,
-          "portfolio_loss_pct": -11.06,
+          "total_impact": -854.02,
+          "portfolio_loss_pct": -11.18,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1223,19 +1224,19 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": -12.0,
-              "impact": -266.55
+              "impact": -271.95
             },
             {
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -51.27
+              "impact": -54.87
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -808.68,
-          "portfolio_loss_pct": -10.59,
+          "total_impact": -813.18,
+          "portfolio_loss_pct": -10.65,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1253,26 +1254,26 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": 8.0,
-              "impact": 177.7
+              "impact": 181.3
             },
             {
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -115.35
+              "impact": -123.45
             }
           ]
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -31.69
+      "worst_loss_pct": -31.87
     }
   },
   "logs": [
-    "2026-04-05 22:23:42 [INFO] AZALYST - status.json generated",
-    "2026-04-05 22:23:42 [INFO] PORTFOLIO - NAV USD 7,638.03 | Return -0.02%",
-    "2026-04-05 22:23:42 [INFO] SIGNALS - 11 active signal buckets in state",
-    "2026-04-05 22:23:42 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-05 22:59:11 [INFO] AZALYST - status.json generated",
+    "2026-04-05 22:59:11 [INFO] PORTFOLIO - NAV USD 7,637.95 | Return -0.02%",
+    "2026-04-05 22:59:11 [INFO] SIGNALS - 11 active signal buckets in state",
+    "2026-04-05 22:59:11 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-05 22:23:42 UTC"
+  "generated_at": "2026-04-05 22:59:10 UTC"
 }
