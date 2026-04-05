@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 7638.39,
+  "portfolio_value": 7638.31,
   "total_deposited": 7639.77,
-  "cash": 551.99,
+  "cash": 461.88,
   "monthly_reserve": 0.0,
-  "market_value": 7086.41,
-  "total_invested": 7087.78,
-  "unrealised_pnl": -1.38,
-  "unrealised_str": "-1.38",
+  "market_value": 7176.43,
+  "total_invested": 7177.89,
+  "unrealised_pnl": -1.46,
+  "unrealised_str": "-1.46",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
   "change": "-0.02%",
@@ -14,8 +14,8 @@
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 7641.0,
-  "drawdown_now_pct": 0.03,
-  "max_drawdown_pct": 0.03,
+  "drawdown_now_pct": 0.04,
+  "max_drawdown_pct": 0.04,
   "usd_inr_rate": 92.67,
   "positions": [
     {
@@ -76,10 +76,10 @@
       "peak_price": 92.57,
       "trail_stop": 83.29,
       "dist_to_trail_pct": 9.94,
-      "units": 23.045109,
-      "invested": 2132.71,
-      "pnl": -1.5,
-      "pnl_str": "-1.50",
+      "units": 23.531926,
+      "invested": 2177.76,
+      "pnl": -1.53,
+      "pnl_str": "-1.53",
       "pnl_pct": -0.07,
       "pnl_pct_str": "-0.07%",
       "confidence": 90,
@@ -99,10 +99,10 @@
       "peak_price": 46.7,
       "trail_stop": 42.03,
       "dist_to_trail_pct": 9.9,
-      "units": 7.948708,
-      "invested": 371.22,
-      "pnl": -0.41,
-      "pnl_str": "-0.41",
+      "units": 8.913399,
+      "invested": 416.27,
+      "pnl": -0.46,
+      "pnl_str": "-0.46",
       "pnl_pct": -0.11,
       "pnl_pct_str": "-0.11%",
       "confidence": 95,
@@ -137,9 +137,9 @@
     "values": [
       30.0,
       30.0,
-      27.9,
-      4.9,
-      7.2
+      28.5,
+      5.4,
+      6.0
     ]
   },
   "pnl": {
@@ -152,8 +152,8 @@
     "values": [
       0.25,
       0.28,
-      -1.5,
-      -0.41
+      -1.53,
+      -0.46
     ]
   },
   "confidence": [
@@ -174,20 +174,20 @@
       "score": 90.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 85.0
+      "symbol": "Gold & Precious Metals",
+      "score": 88.0
     },
     {
-      "symbol": "Gold & Precious Metals",
-      "score": 81.0
+      "symbol": "Crypto & Digital Assets",
+      "score": 84.0
+    },
+    {
+      "symbol": "Defense & Aerospace",
+      "score": 82.0
     },
     {
       "symbol": "Banking & Financial Sector",
       "score": 77.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 76.0
     },
     {
       "symbol": "Cybersecurity",
@@ -416,29 +416,126 @@
       }
     },
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 85.0,
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 88.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 67,
-      "latest_at": "04 Apr 2026 23:00 UTC",
-      "headline": "Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages",
+      "article_count": 16,
+      "latest_at": "05 Apr 2026 12:17 UTC",
+      "headline": "Powell sees inflation outlook in check, no need to hike rates because of oil shock",
       "regions": [
-        "asia_pacific",
         "americas",
+        "europe",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "World News - Breaking international news and headlines | Sky News",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.3,
+        "volume_confirmation": 20.0,
+        "source_diversity": 16.5,
+        "recency": 16.1,
+        "geopolitical_severity": 14.6
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 84.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 23,
+      "latest_at": "05 Apr 2026 12:25 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "middle_east",
         "global",
         "india"
       ],
       "sources": [
-        "BBC News",
-        "Defense News",
-        "World | Deutsche Welle",
-        "Cointelegraph.com News"
+        "Cointelegraph.com News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 8.5,
+        "recency": 16.3,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 82.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 64,
+      "latest_at": "04 Apr 2026 23:00 UTC",
+      "headline": "Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages",
+      "regions": [
+        "europe",
+        "americas",
+        "india",
+        "global"
+      ],
+      "sources": [
+        "World News - Breaking international news and headlines | Sky News",
+        "Cointelegraph.com News",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -464,61 +561,8 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 18.4,
-        "recency": 6.6,
+        "recency": 4.2,
         "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 81.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "05 Apr 2026 03:50 UTC",
-      "headline": "Powell sees inflation outlook in check, no need to hike rates because of oil shock",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Oilprice.com",
-        "Finance",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 19.5,
-        "volume_confirmation": 20.0,
-        "source_diversity": 16.5,
-        "recency": 10.8,
-        "geopolitical_severity": 14.5
       }
     },
     {
@@ -569,52 +613,6 @@
         "source_diversity": 12.3,
         "recency": 16.5,
         "geopolitical_severity": 14.8
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 76.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "04 Apr 2026 21:41 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "middle_east",
-        "europe",
-        "india",
-        "global"
-      ],
-      "sources": [
-        "World News - Breaking international news and headlines | Sky News",
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 11.0,
-        "recency": 5.8,
-        "geopolitical_severity": 15.0
       }
     },
     {
@@ -787,22 +785,22 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 67 articles - HIGH / NEUTRAL - Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Gold & Precious Metals - 13 articles - HIGH / NEUTRAL - Powell sees inflation outlook in check, no need to hike rates because of oil shock"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Banking & Financial Sector - 9 articles - HIGH / NEUTRAL - Sleijpen Says ECB Discussion Will Be Rate Hike or Hold: Podcast"
+      "text": "Gold & Precious Metals - 16 articles - HIGH / NEUTRAL - Powell sees inflation outlook in check, no need to hike rates because of oil shock"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Crypto & Digital Assets - 23 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Defense & Aerospace - 64 articles - HIGH / NEUTRAL - Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Banking & Financial Sector - 9 articles - HIGH / NEUTRAL - Sleijpen Says ECB Discussion Will Be Rate Hike or Hold: Podcast"
     },
     {
       "tag": "tag-neu",
@@ -935,11 +933,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66841.81,
+      "price": 66885.36,
       "currency": "USD",
-      "change": -448.71,
-      "change_pct": -0.67,
-      "change_str": "-0.67%",
+      "change": -405.16,
+      "change_pct": -0.6,
+      "change_str": "-0.60%",
       "direction": "down"
     },
     {
@@ -967,7 +965,7 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.03,
+    "drawdown_from_peak_pct": 0.04,
     "portfolio_peak": 7641.0,
     "vix": 23.87,
     "vix_regime": "ELEVATED",
@@ -984,16 +982,16 @@
       },
       {
         "sector": "Gold & Precious Metals + Banking & Financial Sector",
-        "weight": 27.9,
+        "weight": 28.5,
         "at_cap": false
       },
       {
         "sector": "India Equity Markets",
-        "weight": 4.9,
+        "weight": 5.4,
         "at_cap": false
       }
     ],
-    "max_drawdown_pct": 0.03,
+    "max_drawdown_pct": 0.04,
     "sector_cap_pct": 30,
     "trailing_stop_pct": 8,
     "hard_stop_pct": 10,
@@ -1067,11 +1065,11 @@
       "alerts": [
         {
           "ticker": "INDA",
-          "actual_weight_pct": 4.85,
+          "actual_weight_pct": 5.44,
           "target_weight_pct": 22.5,
-          "drift_pct": -17.65,
+          "drift_pct": -17.06,
           "action": "ADD",
-          "amount": 1347.83,
+          "amount": 1302.81,
           "etf_name": "iShares MSCI India ETF"
         },
         {
@@ -1080,7 +1078,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": 7.51,
           "action": "TRIM",
-          "amount": 573.54,
+          "amount": 573.56,
           "etf_name": "iShares U.S. Aerospace & Defense ETF"
         },
         {
@@ -1089,16 +1087,16 @@
           "target_weight_pct": 22.5,
           "drift_pct": 7.51,
           "action": "TRIM",
-          "amount": 573.57,
+          "amount": 573.59,
           "etf_name": "Energy Select Sector SPDR"
         },
         {
           "ticker": "GLDM",
-          "actual_weight_pct": 27.9,
+          "actual_weight_pct": 28.49,
           "target_weight_pct": 22.5,
-          "drift_pct": 5.4,
+          "drift_pct": 5.99,
           "action": "TRIM",
-          "amount": 412.57,
+          "amount": 457.61,
           "etf_name": "SPDR Gold MiniShares Trust"
         }
       ],
@@ -1108,8 +1106,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -1793.11,
-          "portfolio_loss_pct": -23.47,
+          "total_impact": -1799.85,
+          "portfolio_loss_pct": -23.56,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1127,19 +1125,19 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": 25.0,
-              "impact": 532.8
+              "impact": 544.06
             },
             {
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -148.32
+              "impact": -166.32
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -2331.41,
-          "portfolio_loss_pct": -30.52,
+          "total_impact": -2345.36,
+          "portfolio_loss_pct": -30.71,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1157,19 +1155,19 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": 3.0,
-              "impact": 63.94
+              "impact": 65.29
             },
             {
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -126.07
+              "impact": -141.38
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -735.23,
-          "portfolio_loss_pct": -9.63,
+          "total_impact": -744.23,
+          "portfolio_loss_pct": -9.74,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1187,19 +1185,19 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": -5.0,
-              "impact": -106.56
+              "impact": -108.81
             },
             {
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -55.62
+              "impact": -62.37
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -812.62,
-          "portfolio_loss_pct": -10.64,
+          "total_impact": -821.62,
+          "portfolio_loss_pct": -10.76,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1217,19 +1215,19 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": -12.0,
-              "impact": -255.75
+              "impact": -261.15
             },
             {
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -29.66
+              "impact": -33.26
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -767.28,
-          "portfolio_loss_pct": -10.05,
+          "total_impact": -771.78,
+          "portfolio_loss_pct": -10.1,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1247,26 +1245,26 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": 8.0,
-              "impact": 170.5
+              "impact": 174.1
             },
             {
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -66.75
+              "impact": -74.85
             }
           ]
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -30.52
+      "worst_loss_pct": -30.71
     }
   },
   "logs": [
-    "2026-04-05 13:50:09 [INFO] AZALYST - status.json generated",
-    "2026-04-05 13:50:09 [INFO] PORTFOLIO - NAV USD 7,638.39 | Return -0.02%",
-    "2026-04-05 13:50:09 [INFO] SIGNALS - 11 active signal buckets in state",
-    "2026-04-05 13:50:09 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-05 14:29:45 [INFO] AZALYST - status.json generated",
+    "2026-04-05 14:29:45 [INFO] PORTFOLIO - NAV USD 7,638.31 | Return -0.02%",
+    "2026-04-05 14:29:45 [INFO] SIGNALS - 11 active signal buckets in state",
+    "2026-04-05 14:29:45 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-05 13:50:08 UTC"
+  "generated_at": "2026-04-05 14:29:44 UTC"
 }
