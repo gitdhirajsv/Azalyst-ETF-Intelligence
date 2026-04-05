@@ -186,16 +186,16 @@
       "score": 79.0
     },
     {
+      "symbol": "Banking & Financial Sector",
+      "score": 76.0
+    },
+    {
       "symbol": "Cybersecurity",
       "score": 71.0
     },
     {
       "symbol": "Commodities & Mining",
       "score": 67.0
-    },
-    {
-      "symbol": "Banking & Financial Sector",
-      "score": 65.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -568,6 +568,56 @@
       }
     },
     {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector",
+      "confidence": 76.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "05 Apr 2026 07:03 UTC",
+      "headline": "Sleijpen Says ECB Discussion Will Be Rate Hike or Hold: Podcast",
+      "regions": [
+        "global",
+        "india",
+        "middle_east",
+        "europe"
+      ],
+      "sources": [
+        "Finance",
+        "Markets-Economic Times",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "BANKBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 15.1,
+        "volume_confirmation": 16.2,
+        "source_diversity": 12.3,
+        "recency": 18.0,
+        "geopolitical_severity": 14.7
+      }
+    },
+    {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
       "confidence": 71.0,
@@ -664,56 +714,6 @@
       }
     },
     {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector",
-      "confidence": 65.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "04 Apr 2026 18:02 UTC",
-      "headline": "Sleijpen Says ECB Discussion Will Be Rate Hike or Hold: Podcast",
-      "regions": [
-        "americas",
-        "global",
-        "india",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Finance",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "BANKBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.9,
-        "volume_confirmation": 16.2,
-        "source_diversity": 12.3,
-        "recency": 7.1,
-        "geopolitical_severity": 14.6
-      }
-    },
-    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 65.0,
@@ -802,17 +802,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Banking & Financial Sector - 8 articles - HIGH / NEUTRAL - Sleijpen Says ECB Discussion Will Be Rate Hike or Hold: Podcast"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Cybersecurity - 8 articles - MEDIUM / NEUTRAL - Hungary's government accused of spying on opposition as key election nears"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Commodities & Mining - 5 articles - MEDIUM / NEUTRAL - Trump tariff fallout: Some industries grapple with lingering effects one year later"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Banking & Financial Sector - 8 articles - HIGH / NEUTRAL - Sleijpen Says ECB Discussion Will Be Rate Hike or Hold: Podcast"
     },
     {
       "tag": "tag-neu",
@@ -935,11 +935,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66853.45,
+      "price": 66810.52,
       "currency": "USD",
-      "change": -437.07,
-      "change_pct": -0.65,
-      "change_str": "-0.65%",
+      "change": -480.0,
+      "change_pct": -0.71,
+      "change_str": "-0.71%",
       "direction": "down"
     },
     {
@@ -1254,10 +1254,10 @@
     }
   },
   "logs": [
-    "2026-04-05 07:05:06 [INFO] AZALYST - status.json generated",
-    "2026-04-05 07:05:06 [INFO] PORTFOLIO - NAV USD 7,638.64 | Return -0.01%",
-    "2026-04-05 07:05:06 [INFO] SIGNALS - 11 active signal buckets in state",
-    "2026-04-05 07:05:06 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-05 08:05:15 [INFO] AZALYST - status.json generated",
+    "2026-04-05 08:05:15 [INFO] PORTFOLIO - NAV USD 7,638.64 | Return -0.01%",
+    "2026-04-05 08:05:15 [INFO] SIGNALS - 11 active signal buckets in state",
+    "2026-04-05 08:05:15 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-05 07:05:05 UTC"
+  "generated_at": "2026-04-05 08:05:13 UTC"
 }
