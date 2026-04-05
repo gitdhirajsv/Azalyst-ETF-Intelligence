@@ -158,6 +158,10 @@
   },
   "confidence": [
     {
+      "symbol": "Defense & Aerospace",
+      "score": 96.0
+    },
+    {
       "symbol": "Technology & AI / Semiconductors",
       "score": 92.0
     },
@@ -176,10 +180,6 @@
     {
       "symbol": "Gold & Precious Metals",
       "score": 82.0
-    },
-    {
-      "symbol": "Defense & Aerospace",
-      "score": 81.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -203,6 +203,59 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 96.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 62,
+      "latest_at": "05 Apr 2026 20:00 UTC",
+      "headline": "Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages",
+      "regions": [
+        "middle_east",
+        "asia_pacific",
+        "americas",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Defense News",
+        "Finance",
+        "Oilprice.com"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 18.4,
+        "recency": 18.2,
+        "geopolitical_severity": 15.0
+      }
+    },
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
@@ -469,59 +522,6 @@
       }
     },
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 81.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 61,
-      "latest_at": "04 Apr 2026 23:00 UTC",
-      "headline": "Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages",
-      "regions": [
-        "europe",
-        "india",
-        "middle_east",
-        "americas"
-      ],
-      "sources": [
-        "World News - Breaking international news and headlines | Sky News",
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 18.4,
-        "recency": 2.8,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 79.0,
@@ -765,6 +765,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Defense & Aerospace - 62 articles - HIGH / NEUTRAL - Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Technology & AI / Semiconductors - 18 articles - HIGH / NEUTRAL - Chinese chip firms hit record high revenue driven by the AI boom and U.S. curbs"
     },
     {
@@ -786,11 +791,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Gold & Precious Metals - 15 articles - HIGH / NEUTRAL - Powell sees inflation outlook in check, no need to hike rates because of oil shock"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Defense & Aerospace - 61 articles - HIGH / NEUTRAL - Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages"
     },
     {
       "tag": "tag-neu",
@@ -933,11 +933,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 67386.65,
+      "price": 67601.67,
       "currency": "USD",
-      "change": 96.13,
-      "change_pct": 0.14,
-      "change_str": "+0.14%",
+      "change": 311.15,
+      "change_pct": 0.46,
+      "change_str": "+0.46%",
       "direction": "up"
     },
     {
@@ -1270,10 +1270,10 @@
     }
   },
   "logs": [
-    "2026-04-05 20:24:28 [INFO] AZALYST - status.json generated",
-    "2026-04-05 20:24:28 [INFO] PORTFOLIO - NAV USD 7,638.13 | Return -0.02%",
-    "2026-04-05 20:24:28 [INFO] SIGNALS - 11 active signal buckets in state",
-    "2026-04-05 20:24:28 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-05 20:57:35 [INFO] AZALYST - status.json generated",
+    "2026-04-05 20:57:35 [INFO] PORTFOLIO - NAV USD 7,638.13 | Return -0.02%",
+    "2026-04-05 20:57:35 [INFO] SIGNALS - 11 active signal buckets in state",
+    "2026-04-05 20:57:35 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-05 20:24:27 UTC"
+  "generated_at": "2026-04-05 20:57:34 UTC"
 }
