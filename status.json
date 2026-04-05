@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 7638.08,
+  "portfolio_value": 7638.03,
   "total_deposited": 7639.77,
-  "cash": 236.62,
+  "cash": 191.57,
   "monthly_reserve": 0.0,
-  "market_value": 7401.46,
-  "total_invested": 7403.15,
-  "unrealised_pnl": -1.69,
-  "unrealised_str": "-1.69",
+  "market_value": 7446.47,
+  "total_invested": 7448.2,
+  "unrealised_pnl": -1.74,
+  "unrealised_str": "-1.74",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
   "change": "-0.02%",
@@ -99,10 +99,10 @@
       "peak_price": 46.7,
       "trail_stop": 42.03,
       "dist_to_trail_pct": 9.9,
-      "units": 12.772163,
-      "invested": 596.48,
-      "pnl": -0.66,
-      "pnl_str": "-0.66",
+      "units": 13.736854,
+      "invested": 641.53,
+      "pnl": -0.7,
+      "pnl_str": "-0.70",
       "pnl_pct": -0.11,
       "pnl_pct_str": "-0.11%",
       "confidence": 95,
@@ -138,8 +138,8 @@
       30.0,
       30.0,
       29.1,
-      7.8,
-      3.1
+      8.4,
+      2.5
     ]
   },
   "pnl": {
@@ -153,7 +153,7 @@
       0.25,
       0.28,
       -1.56,
-      -0.66
+      -0.7
     ]
   },
   "confidence": [
@@ -162,24 +162,24 @@
       "score": 96.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 92.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 96.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 91.0
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 92.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 90.0
     },
     {
-      "symbol": "India Equity Markets",
-      "score": 86.0
-    },
-    {
       "symbol": "Gold & Precious Metals",
       "score": 82.0
+    },
+    {
+      "symbol": "India Equity Markets",
+      "score": 79.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -257,6 +257,59 @@
       }
     },
     {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 96.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 47,
+      "latest_at": "05 Apr 2026 21:30 UTC",
+      "headline": "What Beijing Is Learning From Operation Epic Fury",
+      "regions": [
+        "middle_east",
+        "india",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "World News - Breaking international news and headlines | Sky News",
+        "BBC News",
+        "World | Deutsche Welle",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 17.9,
+        "recency": 18.3,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
       "confidence": 92.0,
@@ -267,19 +320,19 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 18,
-      "latest_at": "05 Apr 2026 17:55 UTC",
+      "latest_at": "05 Apr 2026 22:22 UTC",
       "headline": "Chinese chip firms hit record high revenue driven by the AI boom and U.S. curbs",
       "regions": [
-        "asia_pacific",
-        "global",
         "middle_east",
-        "india"
+        "india",
+        "asia_pacific",
+        "global"
       ],
       "sources": [
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "The Verge"
+        "Finance",
+        "The Verge",
+        "BBC News",
+        "Cointelegraph.com News"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -307,59 +360,6 @@
         "source_diversity": 16.7,
         "recency": 20.0,
         "geopolitical_severity": 14.4
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 91.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 46,
-      "latest_at": "05 Apr 2026 13:56 UTC",
-      "headline": "What Beijing Is Learning From Operation Epic Fury",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "middle_east",
-        "india"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "US Top News and Analysis",
-        "Defense News"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 17.9,
-        "recency": 13.4,
-        "geopolitical_severity": 15.0
       }
     },
     {
@@ -418,57 +418,6 @@
       }
     },
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 86.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 30,
-      "latest_at": "05 Apr 2026 10:45 UTC",
-      "headline": "Ahead of Market: 10 things that will decide D-Street action on Monday",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "middle_east",
-        "india"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "Defense News",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 16.3,
-        "recency": 9.8,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals",
       "confidence": 82.0,
@@ -519,6 +468,56 @@
         "source_diversity": 16.5,
         "recency": 10.7,
         "geopolitical_severity": 14.6
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 79.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 28,
+      "latest_at": "05 Apr 2026 10:45 UTC",
+      "headline": "Ahead of Market: 10 things that will decide D-Street action on Monday",
+      "regions": [
+        "middle_east",
+        "india",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "BBC News",
+        "Defense News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 13.0,
+        "recency": 6.2,
+        "geopolitical_severity": 15.0
       }
     },
     {
@@ -770,12 +769,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 18 articles - HIGH / NEUTRAL - Chinese chip firms hit record high revenue driven by the AI boom and U.S. curbs"
+      "text": "Energy / Oil & Gas - 47 articles - HIGH / NEUTRAL - What Beijing Is Learning From Operation Epic Fury"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 46 articles - HIGH / NEUTRAL - What Beijing Is Learning From Operation Epic Fury"
+      "text": "Technology & AI / Semiconductors - 18 articles - HIGH / NEUTRAL - Chinese chip firms hit record high revenue driven by the AI boom and U.S. curbs"
     },
     {
       "tag": "tag-neu",
@@ -785,12 +784,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 30 articles - HIGH / NEUTRAL - Ahead of Market: 10 things that will decide D-Street action on Monday"
+      "text": "Gold & Precious Metals - 15 articles - HIGH / NEUTRAL - Powell sees inflation outlook in check, no need to hike rates because of oil shock"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals - 15 articles - HIGH / NEUTRAL - Powell sees inflation outlook in check, no need to hike rates because of oil shock"
+      "text": "India Equity Markets - 28 articles - HIGH / NEUTRAL - Ahead of Market: 10 things that will decide D-Street action on Monday"
     },
     {
       "tag": "tag-neu",
@@ -911,44 +910,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4702.7,
+      "price": 4653.7,
       "currency": "USD",
-      "change": -80.5,
-      "change_pct": -1.68,
-      "change_str": "-1.68%",
-      "direction": "down"
+      "change": 2.2,
+      "change_pct": 0.05,
+      "change_str": "+0.05%",
+      "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 112.06,
+      "price": 114.84,
       "currency": "USD",
-      "change": 11.94,
-      "change_pct": 11.93,
-      "change_str": "+11.93%",
+      "change": 3.3,
+      "change_pct": 2.96,
+      "change_str": "+2.96%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 67554.48,
+      "price": 67423.7,
       "currency": "USD",
-      "change": 263.97,
-      "change_pct": 0.39,
-      "change_str": "+0.39%",
+      "change": 133.18,
+      "change_pct": 0.2,
+      "change_str": "+0.20%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.19,
+      "price": 100.25,
       "currency": "USD",
-      "change": 0.54,
-      "change_pct": 0.54,
-      "change_str": "+0.54%",
+      "change": 0.22,
+      "change_pct": 0.22,
+      "change_str": "+0.22%",
       "direction": "up"
     },
     {
@@ -987,7 +986,7 @@
       },
       {
         "sector": "India Equity Markets",
-        "weight": 7.8,
+        "weight": 8.4,
         "at_cap": false
       }
     ],
@@ -1065,11 +1064,11 @@
       "alerts": [
         {
           "ticker": "INDA",
-          "actual_weight_pct": 7.8,
+          "actual_weight_pct": 8.39,
           "target_weight_pct": 22.5,
-          "drift_pct": -14.7,
+          "drift_pct": -14.11,
           "action": "ADD",
-          "amount": 1122.75,
+          "amount": 1077.73,
           "etf_name": "iShares MSCI India ETF"
         },
         {
@@ -1078,7 +1077,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": 7.51,
           "action": "TRIM",
-          "amount": 573.61,
+          "amount": 573.62,
           "etf_name": "iShares U.S. Aerospace & Defense ETF"
         },
         {
@@ -1087,16 +1086,16 @@
           "target_weight_pct": 22.5,
           "drift_pct": 7.51,
           "action": "TRIM",
-          "amount": 573.64,
+          "amount": 573.65,
           "etf_name": "Energy Select Sector SPDR"
         },
         {
           "ticker": "CASH",
-          "actual_weight_pct": 3.1,
+          "actual_weight_pct": 2.51,
           "target_weight_pct": 10.0,
-          "drift_pct": -6.9,
+          "drift_pct": -7.49,
           "action": "RAISE",
-          "amount": 527.19,
+          "amount": 572.23,
           "etf_name": "Cash Reserve"
         },
         {
@@ -1105,7 +1104,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": 6.58,
           "action": "TRIM",
-          "amount": 502.69,
+          "amount": 502.7,
           "etf_name": "SPDR Gold MiniShares Trust"
         }
       ],
@@ -1115,8 +1114,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -1860.6,
-          "portfolio_loss_pct": -24.36,
+          "total_impact": -1878.6,
+          "portfolio_loss_pct": -24.6,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1140,13 +1139,13 @@
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -238.33
+              "impact": -256.33
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -2405.22,
-          "portfolio_loss_pct": -31.49,
+          "total_impact": -2420.52,
+          "portfolio_loss_pct": -31.69,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1170,13 +1169,13 @@
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -202.58
+              "impact": -217.88
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -773.48,
-          "portfolio_loss_pct": -10.13,
+          "total_impact": -780.23,
+          "portfolio_loss_pct": -10.22,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1200,13 +1199,13 @@
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -89.37
+              "impact": -96.12
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -841.42,
-          "portfolio_loss_pct": -11.02,
+          "total_impact": -845.02,
+          "portfolio_loss_pct": -11.06,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1230,13 +1229,13 @@
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -47.67
+              "impact": -51.27
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -800.58,
-          "portfolio_loss_pct": -10.48,
+          "total_impact": -808.68,
+          "portfolio_loss_pct": -10.59,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1260,20 +1259,20 @@
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -107.25
+              "impact": -115.35
             }
           ]
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -31.49
+      "worst_loss_pct": -31.69
     }
   },
   "logs": [
-    "2026-04-05 21:54:43 [INFO] AZALYST - status.json generated",
-    "2026-04-05 21:54:43 [INFO] PORTFOLIO - NAV USD 7,638.08 | Return -0.02%",
-    "2026-04-05 21:54:43 [INFO] SIGNALS - 11 active signal buckets in state",
-    "2026-04-05 21:54:43 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-05 22:23:42 [INFO] AZALYST - status.json generated",
+    "2026-04-05 22:23:42 [INFO] PORTFOLIO - NAV USD 7,638.03 | Return -0.02%",
+    "2026-04-05 22:23:42 [INFO] SIGNALS - 11 active signal buckets in state",
+    "2026-04-05 22:23:42 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-05 21:54:42 UTC"
+  "generated_at": "2026-04-05 22:23:42 UTC"
 }
