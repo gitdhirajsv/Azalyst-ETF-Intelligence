@@ -1,16 +1,16 @@
 {
-  "portfolio_value": 7638.64,
+  "portfolio_value": 7638.58,
   "total_deposited": 7639.77,
-  "cash": 790.08,
+  "cash": 739.27,
   "monthly_reserve": 0.0,
-  "market_value": 6848.56,
-  "total_invested": 6849.69,
-  "unrealised_pnl": -1.13,
-  "unrealised_str": "-1.13",
+  "market_value": 6899.31,
+  "total_invested": 6900.5,
+  "unrealised_pnl": -1.19,
+  "unrealised_str": "-1.19",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "-0.01%",
-  "change_raw": -0.01,
+  "change": "-0.02%",
+  "change_raw": -0.02,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 7641.0,
@@ -99,10 +99,10 @@
       "peak_price": 46.7,
       "trail_stop": 42.03,
       "dist_to_trail_pct": 9.9,
-      "units": 3.815316,
-      "invested": 178.18,
-      "pnl": -0.2,
-      "pnl_str": "-0.20",
+      "units": 4.90312,
+      "invested": 228.98,
+      "pnl": -0.25,
+      "pnl_str": "-0.25",
       "pnl_pct": -0.11,
       "pnl_pct_str": "-0.11%",
       "confidence": 95,
@@ -138,8 +138,8 @@
       30.0,
       30.0,
       27.3,
-      2.3,
-      10.3
+      3.0,
+      9.7
     ]
   },
   "pnl": {
@@ -153,17 +153,21 @@
       0.25,
       0.28,
       -1.47,
-      -0.2
+      -0.25
     ]
   },
   "confidence": [
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 96.0
+      "score": 94.0
     },
     {
       "symbol": "India Equity Markets",
-      "score": 95.0
+      "score": 92.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 91.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
@@ -172,10 +176,6 @@
     {
       "symbol": "Defense & Aerospace",
       "score": 88.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 87.0
     },
     {
       "symbol": "Gold & Precious Metals",
@@ -206,27 +206,27 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 96.0,
+      "confidence": 94.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 45,
-      "latest_at": "05 Apr 2026 03:50 UTC",
+      "article_count": 43,
+      "latest_at": "05 Apr 2026 07:30 UTC",
       "headline": "What Beijing Is Learning From Operation Epic Fury",
       "regions": [
-        "americas",
-        "global",
+        "middle_east",
+        "asia_pacific",
         "india",
-        "middle_east"
+        "europe"
       ],
       "sources": [
-        "World News - Breaking international news and headlines | Sky News",
         "BBC News",
-        "World | Deutsche Welle",
-        "Defense News"
+        "Defense News",
+        "US Top News and Analysis",
+        "Oilprice.com"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -252,34 +252,34 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 17.9,
-        "recency": 19.1,
+        "recency": 17.0,
         "geopolitical_severity": 15.0
       }
     },
     {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
-      "confidence": 95.0,
+      "confidence": 92.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 31,
-      "latest_at": "05 Apr 2026 03:50 UTC",
-      "headline": "Indices plunge 2%, then ride rupee rebound to log gains",
+      "article_count": 28,
+      "latest_at": "05 Apr 2026 07:03 UTC",
+      "headline": "RBI curbs widen dollar-rupee forwards-NDF spread",
       "regions": [
-        "global",
-        "india",
+        "middle_east",
         "asia_pacific",
-        "middle_east"
+        "india",
+        "europe"
       ],
       "sources": [
         "BBC News",
         "Defense News",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
+        "Oilprice.com",
+        "Bloomberg Markets"
       ],
       "primary_etf": "INDA",
       "top_etfs": [
@@ -303,8 +303,61 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 16.3,
-        "recency": 19.1,
+        "recency": 16.3,
         "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 91.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 17,
+      "latest_at": "05 Apr 2026 09:05 UTC",
+      "headline": "Chinese chip firms hit record high revenue driven by the AI boom and U.S. curbs",
+      "regions": [
+        "middle_east",
+        "asia_pacific",
+        "india",
+        "europe"
+      ],
+      "sources": [
+        "BBC News",
+        "US Top News and Analysis",
+        "The Verge",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 20.9,
+        "volume_confirmation": 20.0,
+        "source_diversity": 16.7,
+        "recency": 20.0,
+        "geopolitical_severity": 14.3
       }
     },
     {
@@ -413,59 +466,6 @@
         "source_diversity": 18.4,
         "recency": 9.9,
         "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 87.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 15,
-      "latest_at": "05 Apr 2026 04:18 UTC",
-      "headline": "Chinese chip firms hit record high revenue driven by the AI boom and U.S. curbs",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "middle_east",
-        "europe"
-      ],
-      "sources": [
-        "Finance",
-        "The Verge",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 20.2,
-        "volume_confirmation": 20.0,
-        "source_diversity": 14.3,
-        "recency": 20.0,
-        "geopolitical_severity": 12.8
       }
     },
     {
@@ -767,12 +767,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 45 articles - HIGH / NEUTRAL - What Beijing Is Learning From Operation Epic Fury"
+      "text": "Energy / Oil & Gas - 43 articles - HIGH / NEUTRAL - What Beijing Is Learning From Operation Epic Fury"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 31 articles - HIGH / NEUTRAL - Indices plunge 2%, then ride rupee rebound to log gains"
+      "text": "India Equity Markets - 28 articles - HIGH / NEUTRAL - RBI curbs widen dollar-rupee forwards-NDF spread"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Technology & AI / Semiconductors - 17 articles - HIGH / NEUTRAL - Chinese chip firms hit record high revenue driven by the AI boom and U.S. curbs"
     },
     {
       "tag": "tag-neu",
@@ -783,11 +788,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Defense & Aerospace - 68 articles - HIGH / NEUTRAL - Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 15 articles - MEDIUM / NEUTRAL - Chinese chip firms hit record high revenue driven by the AI boom and U.S. curbs"
     },
     {
       "tag": "tag-neu",
@@ -935,11 +935,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66810.52,
+      "price": 66944.29,
       "currency": "USD",
-      "change": -480.0,
-      "change_pct": -0.71,
-      "change_str": "-0.71%",
+      "change": -346.23,
+      "change_pct": -0.51,
+      "change_str": "-0.51%",
       "direction": "down"
     },
     {
@@ -989,7 +989,7 @@
       },
       {
         "sector": "India Equity Markets",
-        "weight": 2.3,
+        "weight": 3.0,
         "at_cap": false
       }
     ],
@@ -1060,18 +1060,18 @@
       "benchmark_price_start": 631.97,
       "benchmark_price_now": 655.83,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.01,
-      "alpha": -3.79
+      "portfolio_return_pct": -0.02,
+      "alpha": -3.8
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "INDA",
-          "actual_weight_pct": 2.33,
+          "actual_weight_pct": 2.99,
           "target_weight_pct": 22.5,
-          "drift_pct": -20.17,
+          "drift_pct": -19.51,
           "action": "ADD",
-          "amount": 1540.71,
+          "amount": 1489.95,
           "etf_name": "iShares MSCI India ETF"
         },
         {
@@ -1080,7 +1080,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": 7.51,
           "action": "TRIM",
-          "amount": 573.49,
+          "amount": 573.5,
           "etf_name": "iShares U.S. Aerospace & Defense ETF"
         },
         {
@@ -1089,7 +1089,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": 7.51,
           "action": "TRIM",
-          "amount": 573.51,
+          "amount": 573.53,
           "etf_name": "Energy Select Sector SPDR"
         }
       ],
@@ -1099,8 +1099,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -1727.23,
-          "portfolio_loss_pct": -22.61,
+          "total_impact": -1747.53,
+          "portfolio_loss_pct": -22.88,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1124,13 +1124,13 @@
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -71.19
+              "impact": -91.49
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -2267.2,
-          "portfolio_loss_pct": -29.68,
+          "total_impact": -2284.46,
+          "portfolio_loss_pct": -29.91,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1154,13 +1154,13 @@
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -60.51
+              "impact": -77.77
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -704.06,
-          "portfolio_loss_pct": -9.22,
+          "total_impact": -711.67,
+          "portfolio_loss_pct": -9.32,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1184,13 +1184,13 @@
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -26.7
+              "impact": -34.31
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -791.79,
-          "portfolio_loss_pct": -10.37,
+          "total_impact": -795.85,
+          "portfolio_loss_pct": -10.42,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1214,13 +1214,13 @@
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -14.24
+              "impact": -18.3
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -736.18,
-          "portfolio_loss_pct": -9.64,
+          "total_impact": -745.31,
+          "portfolio_loss_pct": -9.76,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1244,20 +1244,20 @@
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -32.04
+              "impact": -41.17
             }
           ]
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -29.68
+      "worst_loss_pct": -29.91
     }
   },
   "logs": [
-    "2026-04-05 08:05:15 [INFO] AZALYST - status.json generated",
-    "2026-04-05 08:05:15 [INFO] PORTFOLIO - NAV USD 7,638.64 | Return -0.01%",
-    "2026-04-05 08:05:15 [INFO] SIGNALS - 11 active signal buckets in state",
-    "2026-04-05 08:05:15 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-05 09:06:37 [INFO] AZALYST - status.json generated",
+    "2026-04-05 09:06:37 [INFO] PORTFOLIO - NAV USD 7,638.58 | Return -0.02%",
+    "2026-04-05 09:06:37 [INFO] SIGNALS - 11 active signal buckets in state",
+    "2026-04-05 09:06:37 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-05 08:05:13 UTC"
+  "generated_at": "2026-04-05 09:06:36 UTC"
 }
