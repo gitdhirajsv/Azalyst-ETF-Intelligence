@@ -162,28 +162,28 @@
       "score": 96.0
     },
     {
+      "symbol": "Defense & Aerospace",
+      "score": 93.0
+    },
+    {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 92.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 90.0
-    },
-    {
       "symbol": "Technology & AI / Semiconductors",
-      "score": 90.0
+      "score": 92.0
     },
     {
       "symbol": "Crypto & Digital Assets",
       "score": 89.0
     },
     {
-      "symbol": "India Equity Markets",
+      "symbol": "Gold & Precious Metals",
       "score": 88.0
     },
     {
-      "symbol": "Gold & Precious Metals",
-      "score": 88.0
+      "symbol": "India Equity Markets",
+      "score": 84.0
     },
     {
       "symbol": "Cybersecurity",
@@ -218,19 +218,19 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 39,
-      "latest_at": "06 Apr 2026 19:00 UTC",
+      "latest_at": "06 Apr 2026 23:00 UTC",
       "headline": "Oil Price Shocks Make Brazil Key to Energy Security in the Americas",
       "regions": [
-        "global",
         "asia_pacific",
-        "middle_east",
-        "europe"
+        "europe",
+        "global",
+        "middle_east"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "World News - Breaking international news and headlines | Sky News"
+        "World News - Breaking international news and headlines | Sky News",
+        "World | Deutsche Welle",
+        "Bloomberg Markets",
+        "Defense News"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -256,7 +256,60 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 18.2,
-        "recency": 18.5,
+        "recency": 18.1,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 93.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 62,
+      "latest_at": "06 Apr 2026 20:47 UTC",
+      "headline": "Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages",
+      "regions": [
+        "africa",
+        "india",
+        "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "World News - Breaking international news and headlines | Sky News",
+        "World | Deutsche Welle",
+        "The Verge",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 18.7,
+        "recency": 14.5,
         "geopolitical_severity": 15.0
       }
     },
@@ -316,82 +369,29 @@
       }
     },
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 90.0,
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 92.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 64,
-      "latest_at": "06 Apr 2026 14:29 UTC",
-      "headline": "Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages",
+      "article_count": 19,
+      "latest_at": "06 Apr 2026 23:02 UTC",
+      "headline": "CNBC's The China Connection newsletter: Why AI isn't replacing jobs in China (yet)",
       "regions": [
-        "europe",
         "americas",
+        "asia_pacific",
         "global",
-        "africa"
+        "middle_east"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "Finance",
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 18.7,
-        "recency": 11.8,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 90.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 18,
-      "latest_at": "06 Apr 2026 19:46 UTC",
-      "headline": "AI may replace your financial advisor, MIT professor says \u2014 but there's one big hurdle",
-      "regions": [
-        "global",
-        "americas",
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Finance",
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
+        "The Verge",
+        "Bloomberg Markets",
+        "Cointelegraph.com News",
+        "Finance"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -414,11 +414,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 21.6,
+        "signal_strength": 23.2,
         "volume_confirmation": 20.0,
         "source_diversity": 16.2,
-        "recency": 20.0,
-        "geopolitical_severity": 12.6
+        "recency": 18.2,
+        "geopolitical_severity": 14.5
       }
     },
     {
@@ -464,57 +464,6 @@
         "volume_confirmation": 20.0,
         "source_diversity": 12.3,
         "recency": 17.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 88.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "06 Apr 2026 15:58 UTC",
-      "headline": "'This too shall pass': Prashant Jain's case for staying invested and where he Is putting money now",
-      "regions": [
-        "asia_pacific",
-        "middle_east",
-        "india",
-        "europe"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "BBC News",
-        "Oilprice.com"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 15.3,
-        "recency": 13.7,
         "geopolitical_severity": 15.0
       }
     },
@@ -568,6 +517,57 @@
         "volume_confirmation": 20.0,
         "source_diversity": 16.5,
         "recency": 13.7,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 84.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 21,
+      "latest_at": "06 Apr 2026 15:58 UTC",
+      "headline": "'This too shall pass': Prashant Jain's case for staying invested and where he is putting money now",
+      "regions": [
+        "india",
+        "asia_pacific",
+        "europe",
+        "middle_east"
+      ],
+      "sources": [
+        "BBC News",
+        "Defense News",
+        "US Top News and Analysis",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 15.3,
+        "recency": 9.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -824,17 +824,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Defense & Aerospace - 62 articles - HIGH / NEUTRAL - Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / NEUTRAL - Wells Fargo no longer expects Fed rate cuts in 2026 as Iran war drags on"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 64 articles - HIGH / NEUTRAL - Hegseth asks Army\u2019s top general to retire, fires two others as Iran war rages"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 18 articles - MEDIUM / NEUTRAL - AI may replace your financial advisor, MIT professor says \u2014 but there's one big hurdle"
+      "text": "Technology & AI / Semiconductors - 19 articles - HIGH / NEUTRAL - CNBC's The China Connection newsletter: Why AI isn't replacing jobs in China (yet)"
     },
     {
       "tag": "tag-neu",
@@ -844,12 +844,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 23 articles - HIGH / NEUTRAL - 'This too shall pass': Prashant Jain's case for staying invested and where he Is putting money now"
+      "text": "Gold & Precious Metals - 20 articles - HIGH / NEUTRAL - Citigroup pushes back Fed rate cut timeline after strong job numbers"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals - 20 articles - HIGH / NEUTRAL - Citigroup pushes back Fed rate cut timeline after strong job numbers"
+      "text": "India Equity Markets - 21 articles - HIGH / NEUTRAL - 'This too shall pass': Prashant Jain's case for staying invested and where he is putting money now"
     },
     {
       "tag": "tag-neu",
@@ -970,44 +970,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4686.3,
+      "price": 4682.5,
       "currency": "USD",
-      "change": 34.8,
-      "change_pct": 0.75,
-      "change_str": "+0.75%",
+      "change": 31.0,
+      "change_pct": 0.67,
+      "change_str": "+0.67%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 113.35,
+      "price": 113.62,
       "currency": "USD",
-      "change": 1.81,
-      "change_pct": 1.62,
-      "change_str": "+1.62%",
+      "change": 2.08,
+      "change_pct": 1.86,
+      "change_str": "+1.86%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 68611.72,
+      "price": 68890.25,
       "currency": "USD",
-      "change": -370.18,
-      "change_pct": -0.54,
-      "change_str": "-0.54%",
-      "direction": "down"
+      "change": 1599.73,
+      "change_pct": 2.38,
+      "change_str": "+2.38%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.99,
+      "price": 100.01,
       "currency": "USD",
-      "change": -0.04,
-      "change_pct": -0.04,
-      "change_str": "-0.04%",
+      "change": -0.02,
+      "change_pct": -0.02,
+      "change_str": "-0.02%",
       "direction": "down"
     },
     {
@@ -1329,10 +1329,10 @@
     }
   },
   "logs": [
-    "2026-04-06 23:29:18 [INFO] AZALYST - status.json generated",
-    "2026-04-06 23:29:18 [INFO] PORTFOLIO - NAV USD 7,689.88 | Return +1.06%",
-    "2026-04-06 23:29:18 [INFO] SIGNALS - 12 active signal buckets in state",
-    "2026-04-06 23:29:18 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-07 00:00:20 [INFO] AZALYST - status.json generated",
+    "2026-04-07 00:00:20 [INFO] PORTFOLIO - NAV USD 7,689.88 | Return +1.06%",
+    "2026-04-07 00:00:20 [INFO] SIGNALS - 12 active signal buckets in state",
+    "2026-04-07 00:00:20 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-06 23:29:17 UTC"
+  "generated_at": "2026-04-07 00:00:19 UTC"
 }
