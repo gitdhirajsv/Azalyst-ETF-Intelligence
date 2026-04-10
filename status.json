@@ -162,32 +162,32 @@
       "score": 98.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 97.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 97.0
-    },
-    {
       "symbol": "India Equity Markets + Banking & Financial Sector",
       "score": 95.0
     },
     {
+      "symbol": "Energy / Oil & Gas",
+      "score": 93.0
+    },
+    {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 92.0
+      "score": 93.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 93.0
     },
     {
       "symbol": "Crypto & Digital Assets",
       "score": 85.0
     },
     {
-      "symbol": "India Equity Markets",
+      "symbol": "Cybersecurity + Crypto & Digital Assets",
       "score": 83.0
     },
     {
-      "symbol": "Cybersecurity + Crypto & Digital Assets",
-      "score": 83.0
+      "symbol": "India Equity Markets",
+      "score": 81.0
     },
     {
       "symbol": "Gold & Precious Metals",
@@ -269,112 +269,6 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 97.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 45,
-      "latest_at": "10 Apr 2026 18:57 UTC",
-      "headline": "Oil Ignores Escalation, Logs Biggest Weekly Drop Since 2025",
-      "regions": [
-        "asia_pacific",
-        "middle_east",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "BBC News",
-        "World News - Breaking international news and headlines | Sky News",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 18.2,
-        "recency": 19.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 97.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 29,
-      "latest_at": "10 Apr 2026 19:26 UTC",
-      "headline": "TSMC posts 35% jump in revenue to new record high as AI chip demand stays strong",
-      "regions": [
-        "india",
-        "asia_pacific",
-        "middle_east",
-        "americas"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "BBC News",
-        "The Verge",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 24.7,
-        "volume_confirmation": 20.0,
-        "source_diversity": 18.3,
-        "recency": 20.0,
-        "geopolitical_severity": 14.9
-      }
-    },
-    {
       "sector_key": "banking_financial|india_equity",
       "sector_label": "India Equity Markets + Banking & Financial Sector",
       "confidence": 95.0,
@@ -429,29 +323,82 @@
       }
     },
     {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 93.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 53,
+      "latest_at": "10 Apr 2026 21:22 UTC",
+      "headline": "Strait of Hormuz Constraints Keep Oil Prices Elevated",
+      "regions": [
+        "americas",
+        "asia_pacific",
+        "global",
+        "europe"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Finance",
+        "Defense News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 18.2,
+        "recency": 15.4,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "banking_financial|gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 92.0,
+      "confidence": 93.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "10 Apr 2026 18:34 UTC",
-      "headline": "Treasuries Fall as Inflation Data Erode Fed Rate-Cut Wager",
+      "article_count": 11,
+      "latest_at": "10 Apr 2026 23:13 UTC",
+      "headline": "US CPI comes in lower than expected, but April rate cut still unlikely",
       "regions": [
-        "middle_east",
-        "americas",
         "global",
-        "asia_pacific"
+        "americas",
+        "asia_pacific",
+        "middle_east"
       ],
       "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
+        "Bloomberg Markets",
         "Finance",
-        "US Top News and Analysis"
+        "Markets-Economic Times",
+        "Oilprice.com"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -476,10 +423,63 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 18.0,
+        "signal_strength": 24.7,
+        "volume_confirmation": 18.7,
         "source_diversity": 16.5,
-        "recency": 18.3,
+        "recency": 18.5,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 93.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 29,
+      "latest_at": "10 Apr 2026 21:09 UTC",
+      "headline": "TSMC posts 35% jump in revenue to new record high as AI chip demand stays strong",
+      "regions": [
+        "americas",
+        "asia_pacific",
+        "global",
+        "india"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Finance",
+        "Defense News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 18.3,
+        "recency": 15.1,
         "geopolitical_severity": 15.0
       }
     },
@@ -529,56 +529,6 @@
       }
     },
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 83.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 22,
-      "latest_at": "10 Apr 2026 14:36 UTC",
-      "headline": "Railway infra company Vishal Nirmiti gets Sebi nod for IPO",
-      "regions": [
-        "middle_east",
-        "americas",
-        "india",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "BBC News"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 24.4,
-        "volume_confirmation": 20.0,
-        "source_diversity": 12.3,
-        "recency": 12.3,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "crypto_digital|cybersecurity",
       "sector_label": "Cybersecurity + Crypto & Digital Assets",
       "confidence": 83.0,
@@ -624,6 +574,57 @@
         "volume_confirmation": 17.1,
         "source_diversity": 10.1,
         "recency": 19.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 81.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 22,
+      "latest_at": "10 Apr 2026 14:36 UTC",
+      "headline": "Railway infra company Vishal Nirmiti gets Sebi nod for IPO",
+      "regions": [
+        "middle_east",
+        "americas",
+        "india",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "BBC News",
+        "Oilprice.com",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 24.4,
+        "volume_confirmation": 20.0,
+        "source_diversity": 14.0,
+        "recency": 7.8,
         "geopolitical_severity": 15.0
       }
     },
@@ -933,7 +934,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 45 articles - HIGH / NEUTRAL - Oil Ignores Escalation, Logs Biggest Weekly Drop Since 2025"
+      "text": "India Equity Markets + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - LIC share price jumps 8%. Will PSU issue bonus shares next week?"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Energy / Oil & Gas - 53 articles - CRITICAL / NEUTRAL - Strait of Hormuz Constraints Keep Oil Prices Elevated"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - US CPI comes in lower than expected, but April rate cut still unlikely"
     },
     {
       "tag": "tag-neu",
@@ -943,27 +954,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - LIC share price jumps 8%. Will PSU issue bonus shares next week?"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 10 articles - HIGH / NEUTRAL - Treasuries Fall as Inflation Data Erode Fed Rate-Cut Wager"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Crypto & Digital Assets - 20 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 22 articles - HIGH / NEUTRAL - Railway infra company Vishal Nirmiti gets Sebi nod for IPO"
+      "text": "Cybersecurity + Crypto & Digital Assets - 9 articles - HIGH / NEUTRAL - Powell, Bessent discussed Anthropic's Mythos AI cyber threat with major U.S. banks"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity + Crypto & Digital Assets - 9 articles - HIGH / NEUTRAL - Powell, Bessent discussed Anthropic's Mythos AI cyber threat with major U.S. banks"
+      "text": "India Equity Markets - 22 articles - HIGH / NEUTRAL - Railway infra company Vishal Nirmiti gets Sebi nod for IPO"
     },
     {
       "tag": "tag-neu",
@@ -1111,11 +1112,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 72908.98,
+      "price": 72971.15,
       "currency": "USD",
-      "change": 1141.16,
-      "change_pct": 1.59,
-      "change_str": "+1.59%",
+      "change": 1203.32,
+      "change_pct": 1.68,
+      "change_str": "+1.68%",
       "direction": "up"
     },
     {
@@ -1448,10 +1449,10 @@
     }
   },
   "logs": [
-    "2026-04-10 23:03:16 [INFO] AZALYST - status.json generated",
-    "2026-04-10 23:03:16 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
-    "2026-04-10 23:03:16 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-04-10 23:03:16 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-10 23:59:13 [INFO] AZALYST - status.json generated",
+    "2026-04-10 23:59:13 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
+    "2026-04-10 23:59:13 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-04-10 23:59:13 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-10 23:03:16 UTC"
+  "generated_at": "2026-04-10 23:59:12 UTC"
 }
