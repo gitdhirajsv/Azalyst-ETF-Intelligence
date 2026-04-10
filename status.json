@@ -159,11 +159,7 @@
   "confidence": [
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 97.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 97.0
+      "score": 95.0
     },
     {
       "symbol": "India Equity Markets + Banking & Financial Sector",
@@ -174,20 +170,24 @@
       "score": 93.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 89.0
+      "symbol": "India Equity Markets",
+      "score": 92.0
     },
     {
-      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
-      "score": 89.0
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 91.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 90.0
     },
     {
       "symbol": "Gold & Precious Metals",
       "score": 85.0
     },
     {
-      "symbol": "India Equity Markets",
-      "score": 84.0
+      "symbol": "Crypto & Digital Assets",
+      "score": 82.0
     },
     {
       "symbol": "Cybersecurity",
@@ -214,7 +214,7 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 97.0,
+      "confidence": 95.0,
       "severity": "CRITICAL",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
@@ -222,18 +222,18 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 47,
-      "latest_at": "09 Apr 2026 19:29 UTC",
-      "headline": "Goldman: Another Month of Hormuz Closure Means Over $100 Brent Throughout 2026",
+      "latest_at": "10 Apr 2026 00:00 UTC",
+      "headline": "Standard Chartered: Oil Price Correction Is Likely Overdone",
       "regions": [
-        "americas",
         "global",
-        "asia_pacific",
-        "middle_east"
+        "americas",
+        "middle_east",
+        "europe"
       ],
       "sources": [
-        "World News - Breaking international news and headlines | Sky News",
-        "Oilprice.com",
-        "Finance",
+        "Defense News",
+        "World | Deutsche Welle",
+        "Bloomberg Markets",
         "US Top News and Analysis"
       ],
       "primary_etf": "XLE",
@@ -260,61 +260,8 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 18.2,
-        "recency": 19.0,
+        "recency": 17.2,
         "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 97.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
-      "latest_at": "09 Apr 2026 19:59 UTC",
-      "headline": "Outpaced by the US, China\u2019s military places selective bets on artificial intelligence",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "middle_east",
-        "europe"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "US Top News and Analysis",
-        "Finance",
-        "Defense News"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 24.5,
-        "volume_confirmation": 20.0,
-        "source_diversity": 18.0,
-        "recency": 20.0,
-        "geopolitical_severity": 14.8
       }
     },
     {
@@ -381,20 +328,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 55,
-      "latest_at": "09 Apr 2026 17:11 UTC",
+      "article_count": 47,
+      "latest_at": "09 Apr 2026 23:00 UTC",
       "headline": "US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027",
       "regions": [
-        "americas",
         "global",
-        "asia_pacific",
+        "americas",
+        "india",
         "middle_east"
       ],
       "sources": [
-        "World News - Breaking international news and headlines | Sky News",
-        "Oilprice.com",
-        "US Top News and Analysis",
-        "Finance"
+        "Defense News",
+        "World | Deutsche Welle",
+        "Bloomberg Markets",
+        "US Top News and Analysis"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -419,86 +366,89 @@
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 18.4,
-        "recency": 15.1,
+        "source_diversity": 18.2,
+        "recency": 15.6,
         "geopolitical_severity": 15.0
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 89.0,
-      "severity": "CRITICAL",
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 92.0,
+      "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 21,
-      "latest_at": "09 Apr 2026 18:41 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
+      "article_count": 20,
+      "latest_at": "10 Apr 2026 01:00 UTC",
+      "headline": "Ahead of Market: 10 things that will decide stock market action on Friday",
       "regions": [
-        "americas",
-        "global",
-        "asia_pacific",
-        "middle_east"
+        "middle_east",
+        "india",
+        "asia_pacific"
       ],
       "sources": [
-        "Cointelegraph.com News",
         "Bloomberg Markets",
-        "Markets-Economic Times"
+        "Markets-Economic Times",
+        "Oilprice.com"
       ],
-      "primary_etf": "IBIT",
+      "primary_etf": "INDA",
       "top_etfs": [
-        "IBIT",
-        "BITQ"
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
       ],
       "access_markets": [
+        "India-listed",
         "International-listed"
       ],
-      "india_etfs": [],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
       "global_etfs": [
-        "IBIT",
-        "BITQ"
+        "INDA"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 12.3,
-        "recency": 17.5,
+        "source_diversity": 13.0,
+        "recency": 19.0,
         "geopolitical_severity": 15.0
       }
     },
     {
       "sector_key": "banking_financial|gold_precious_metals",
-      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
-      "confidence": 89.0,
-      "severity": "CRITICAL",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 91.0,
+      "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "09 Apr 2026 19:27 UTC",
+      "article_count": 12,
+      "latest_at": "09 Apr 2026 23:18 UTC",
       "headline": "US stocks today: US stocks slip as ceasefire doubts, inflation keep investors cautious",
       "regions": [
-        "middle_east",
-        "americas",
         "global",
-        "asia_pacific"
+        "americas",
+        "india",
+        "middle_east"
       ],
       "sources": [
-        "World News - Breaking international news and headlines | Sky News",
+        "Bloomberg Markets",
         "US Top News and Analysis",
-        "Finance",
-        "Markets-Economic Times"
+        "Markets-Economic Times",
+        "BBC News"
       ],
-      "primary_etf": "XLF",
+      "primary_etf": "GLDM",
       "top_etfs": [
-        "XLF",
         "GLDM",
+        "XLF",
         "GOLDBEES"
       ],
       "access_markets": [
@@ -511,18 +461,71 @@
         "BANKBEES"
       ],
       "global_etfs": [
-        "XLF",
         "GLDM",
+        "XLF",
         "GDX",
         "GDXJ"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 20.4,
-        "volume_confirmation": 18.7,
-        "source_diversity": 17.0,
-        "recency": 18.9,
+        "signal_strength": 23.6,
+        "volume_confirmation": 19.4,
+        "source_diversity": 17.7,
+        "recency": 16.1,
         "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 90.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 21,
+      "latest_at": "10 Apr 2026 00:45 UTC",
+      "headline": "Outpaced by the US, China\u2019s military places selective bets on artificial intelligence",
+      "regions": [
+        "india",
+        "americas",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Defense News",
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "Oilprice.com"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 23.1,
+        "volume_confirmation": 20.0,
+        "source_diversity": 14.8,
+        "recency": 18.6,
+        "geopolitical_severity": 13.6
       }
     },
     {
@@ -578,52 +581,47 @@
       }
     },
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 84.0,
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 82.0,
       "severity": "CRITICAL",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 15,
-      "latest_at": "09 Apr 2026 16:06 UTC",
-      "headline": "Ahead of Market: 10 things that will decide stock market action on Friday",
+      "article_count": 23,
+      "latest_at": "09 Apr 2026 21:46 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "middle_east",
+        "global",
+        "americas",
         "india",
-        "europe",
-        "asia_pacific"
+        "middle_east"
       ],
       "sources": [
         "Markets-Economic Times",
-        "Defense News",
-        "Oilprice.com"
+        "Cointelegraph.com News"
       ],
-      "primary_etf": "INDA",
+      "primary_etf": "IBIT",
       "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
+        "IBIT",
+        "BITQ"
       ],
       "access_markets": [
-        "India-listed",
         "International-listed"
       ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
+      "india_etfs": [],
       "global_etfs": [
-        "INDA"
+        "IBIT",
+        "BITQ"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 24.2,
+        "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 11.9,
-        "recency": 13.6,
+        "source_diversity": 8.5,
+        "recency": 13.8,
         "geopolitical_severity": 15.0
       }
     },
@@ -875,12 +873,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 47 articles - CRITICAL / NEUTRAL - Goldman: Another Month of Hormuz Closure Means Over $100 Brent Throughout 2026"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 28 articles - HIGH / NEUTRAL - Outpaced by the US, China\u2019s military places selective bets on artificial intelligence"
+      "text": "Energy / Oil & Gas - 47 articles - CRITICAL / NEUTRAL - Standard Chartered: Oil Price Correction Is Likely Overdone"
     },
     {
       "tag": "tag-neu",
@@ -890,17 +883,22 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 55 articles - HIGH / NEUTRAL - US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027"
+      "text": "Defense & Aerospace - 47 articles - HIGH / NEUTRAL - US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 21 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
+      "text": "India Equity Markets - 20 articles - HIGH / NEUTRAL - Ahead of Market: 10 things that will decide stock market action on Friday"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Banking & Financial Sector + Gold & Precious Metals - 11 articles - CRITICAL / NEUTRAL - US stocks today: US stocks slip as ceasefire doubts, inflation keep investors cautious"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - US stocks today: US stocks slip as ceasefire doubts, inflation keep investors cautious"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Technology & AI / Semiconductors - 21 articles - HIGH / NEUTRAL - Outpaced by the US, China\u2019s military places selective bets on artificial intelligence"
     },
     {
       "tag": "tag-neu",
@@ -910,7 +908,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 15 articles - CRITICAL / NEUTRAL - Ahead of Market: 10 things that will decide stock market action on Friday"
+      "text": "Crypto & Digital Assets - 23 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -998,11 +996,11 @@
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 55895.32,
+      "price": 56794.17,
       "currency": "JPY",
-      "change": 2465.76,
-      "change_pct": 4.61,
-      "change_str": "+4.61%",
+      "change": 485.75,
+      "change_pct": 0.86,
+      "change_str": "+0.86%",
       "direction": "up"
     },
     {
@@ -1031,44 +1029,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4781.5,
+      "price": 4787.5,
       "currency": "USD",
-      "change": 32.0,
-      "change_pct": 0.67,
-      "change_str": "+0.67%",
-      "direction": "up"
+      "change": -4.7,
+      "change_pct": -0.1,
+      "change_str": "-0.10%",
+      "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 98.3,
+      "price": 98.76,
       "currency": "USD",
-      "change": 3.89,
-      "change_pct": 4.12,
-      "change_str": "+4.12%",
+      "change": 0.89,
+      "change_pct": 0.91,
+      "change_str": "+0.91%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 71637.81,
+      "price": 71866.37,
       "currency": "USD",
-      "change": 514.45,
-      "change_pct": 0.72,
-      "change_str": "+0.72%",
+      "change": 743.01,
+      "change_pct": 1.04,
+      "change_str": "+1.04%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.79,
+      "price": 98.92,
       "currency": "USD",
-      "change": -0.34,
-      "change_pct": -0.34,
-      "change_str": "-0.34%",
+      "change": -0.21,
+      "change_pct": -0.22,
+      "change_str": "-0.22%",
       "direction": "down"
     },
     {
@@ -1390,10 +1388,10 @@
     }
   },
   "logs": [
-    "2026-04-09 23:33:04 [INFO] AZALYST - status.json generated",
-    "2026-04-09 23:33:04 [INFO] PORTFOLIO - NAV USD 7,752.21 | Return +1.22%",
-    "2026-04-09 23:33:04 [INFO] SIGNALS - 13 active signal buckets in state",
-    "2026-04-09 23:33:04 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-10 01:29:30 [INFO] AZALYST - status.json generated",
+    "2026-04-10 01:29:30 [INFO] PORTFOLIO - NAV USD 7,752.21 | Return +1.22%",
+    "2026-04-10 01:29:30 [INFO] SIGNALS - 13 active signal buckets in state",
+    "2026-04-10 01:29:30 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-09 23:33:04 UTC"
+  "generated_at": "2026-04-10 01:29:29 UTC"
 }
