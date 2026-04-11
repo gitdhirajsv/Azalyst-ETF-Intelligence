@@ -158,6 +158,10 @@
   },
   "confidence": [
     {
+      "symbol": "Defense & Aerospace",
+      "score": 98.0
+    },
+    {
       "symbol": "Technology & AI / Semiconductors",
       "score": 96.0
     },
@@ -167,14 +171,6 @@
     },
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 94.0
-    },
-    {
-      "symbol": "India Equity Markets",
-      "score": 90.0
-    },
-    {
-      "symbol": "Defense & Aerospace",
       "score": 89.0
     },
     {
@@ -182,8 +178,12 @@
       "score": 89.0
     },
     {
+      "symbol": "India Equity Markets",
+      "score": 84.0
+    },
+    {
       "symbol": "Crypto & Digital Assets",
-      "score": 86.0
+      "score": 84.0
     },
     {
       "symbol": "Cybersecurity + Crypto & Digital Assets",
@@ -215,6 +215,59 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 98.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 52,
+      "latest_at": "11 Apr 2026 15:00 UTC",
+      "headline": "US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027",
+      "regions": [
+        "india",
+        "global",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Finance",
+        "The Verge",
+        "World News - Breaking international news and headlines | Sky News",
+        "BBC News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 18.7,
+        "recency": 19.8,
+        "geopolitical_severity": 15.0
+      }
+    },
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
@@ -325,27 +378,27 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 94.0,
+      "confidence": 89.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 47,
+      "article_count": 50,
       "latest_at": "11 Apr 2026 09:38 UTC",
       "headline": "Strait of Hormuz Constraints Keep Oil Prices Elevated",
       "regions": [
         "global",
-        "europe",
         "asia_pacific",
-        "middle_east"
+        "middle_east",
+        "americas"
       ],
       "sources": [
         "Finance",
-        "Defense News",
-        "Bloomberg Markets",
-        "World News - Breaking international news and headlines | Sky News"
+        "World News - Breaking international news and headlines | Sky News",
+        "Cointelegraph.com News",
+        "Markets-Economic Times"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -370,112 +423,8 @@
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 17.3,
-        "recency": 17.4,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 90.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "11 Apr 2026 09:58 UTC",
-      "headline": "F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?",
-      "regions": [
-        "india",
-        "middle_east",
-        "americas",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Oilprice.com",
-        "Markets-Economic Times",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 12.3,
-        "recency": 18.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 89.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 53,
-      "latest_at": "11 Apr 2026 05:00 UTC",
-      "headline": "US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027",
-      "regions": [
-        "india",
-        "global",
-        "europe",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Finance",
-        "Defense News",
-        "Bloomberg Markets",
-        "The Verge"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 18.7,
-        "recency": 10.9,
+        "source_diversity": 18.2,
+        "recency": 11.6,
         "geopolitical_severity": 15.0
       }
     },
@@ -535,9 +484,60 @@
       }
     },
     {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 84.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "11 Apr 2026 09:58 UTC",
+      "headline": "F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?",
+      "regions": [
+        "americas",
+        "middle_east",
+        "india",
+        "asia_pacific"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Cointelegraph.com News",
+        "Oilprice.com",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 12.3,
+        "recency": 12.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
-      "confidence": 86.0,
+      "confidence": 84.0,
       "severity": "CRITICAL",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
@@ -545,17 +545,17 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 17,
-      "latest_at": "11 Apr 2026 10:02 UTC",
+      "latest_at": "11 Apr 2026 12:42 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
         "india",
         "global",
-        "europe",
-        "asia_pacific"
+        "asia_pacific",
+        "middle_east"
       ],
       "sources": [
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
+        "Markets-Economic Times",
+        "Cointelegraph.com News"
       ],
       "primary_etf": "IBIT",
       "top_etfs": [
@@ -575,7 +575,7 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 8.5,
-        "recency": 18.1,
+        "recency": 15.8,
         "geopolitical_severity": 15.0
       }
     },
@@ -931,6 +931,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Defense & Aerospace - 52 articles - HIGH / NEUTRAL - US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Technology & AI / Semiconductors - 24 articles - HIGH / NEUTRAL - Outpaced by the US, China\u2019s military places selective bets on artificial intelligence"
     },
     {
@@ -941,22 +946,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 47 articles - HIGH / NEUTRAL - Strait of Hormuz Constraints Keep Oil Prices Elevated"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "India Equity Markets - 23 articles - HIGH / NEUTRAL - F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Defense & Aerospace - 53 articles - HIGH / NEUTRAL - US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027"
+      "text": "Energy / Oil & Gas - 50 articles - HIGH / NEUTRAL - Strait of Hormuz Constraints Keep Oil Prices Elevated"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - US CPI comes in lower than expected, but April rate cut still unlikely"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "India Equity Markets - 24 articles - HIGH / NEUTRAL - F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?"
     },
     {
       "tag": "tag-neu",
@@ -1114,9 +1114,9 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 72747.33,
+      "price": 72745.24,
       "currency": "USD",
-      "change": -231.72,
+      "change": -233.81,
       "change_pct": -0.32,
       "change_str": "-0.32%",
       "direction": "down"
@@ -1451,10 +1451,10 @@
     }
   },
   "logs": [
-    "2026-04-11 14:31:06 [INFO] AZALYST - status.json generated",
-    "2026-04-11 14:31:06 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
-    "2026-04-11 14:31:06 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-04-11 14:31:06 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-11 15:05:04 [INFO] AZALYST - status.json generated",
+    "2026-04-11 15:05:04 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
+    "2026-04-11 15:05:04 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-04-11 15:05:04 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-11 14:31:05 UTC"
+  "generated_at": "2026-04-11 15:05:04 UTC"
 }
