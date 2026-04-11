@@ -159,7 +159,7 @@
   "confidence": [
     {
       "symbol": "Defense & Aerospace",
-      "score": 98.0
+      "score": 97.0
     },
     {
       "symbol": "Technology & AI / Semiconductors",
@@ -174,16 +174,12 @@
       "score": 90.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 89.0
-    },
-    {
-      "symbol": "India Equity Markets",
-      "score": 84.0
-    },
-    {
       "symbol": "Crypto & Digital Assets",
-      "score": 84.0
+      "score": 86.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 85.0
     },
     {
       "symbol": "Cybersecurity + Crypto & Digital Assets",
@@ -192,6 +188,10 @@
     {
       "symbol": "Gold & Precious Metals",
       "score": 81.0
+    },
+    {
+      "symbol": "India Equity Markets",
+      "score": 79.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -218,27 +218,27 @@
     {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
-      "confidence": 98.0,
+      "confidence": 97.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 52,
-      "latest_at": "11 Apr 2026 15:00 UTC",
+      "article_count": 51,
+      "latest_at": "11 Apr 2026 19:00 UTC",
       "headline": "US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027",
       "regions": [
-        "india",
-        "global",
         "asia_pacific",
-        "middle_east"
+        "americas",
+        "middle_east",
+        "europe"
       ],
       "sources": [
-        "Finance",
-        "The Verge",
+        "BBC News",
         "World News - Breaking international news and headlines | Sky News",
-        "BBC News"
+        "World | Deutsche Welle",
+        "US Top News and Analysis"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -264,7 +264,7 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 18.7,
-        "recency": 19.8,
+        "recency": 19.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -431,29 +431,74 @@
       }
     },
     {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 86.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 16,
+      "latest_at": "11 Apr 2026 18:28 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "europe",
+        "global",
+        "india",
+        "middle_east"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 8.5,
+        "recency": 18.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 89.0,
+      "confidence": 85.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 50,
+      "article_count": 51,
       "latest_at": "11 Apr 2026 09:38 UTC",
       "headline": "Strait of Hormuz Constraints Keep Oil Prices Elevated",
       "regions": [
-        "global",
         "asia_pacific",
+        "americas",
         "middle_east",
-        "americas"
+        "europe"
       ],
       "sources": [
-        "Finance",
+        "BBC News",
         "World News - Breaking international news and headlines | Sky News",
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
+        "US Top News and Analysis",
+        "Cointelegraph.com News"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -479,103 +524,7 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 18.2,
-        "recency": 11.6,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 84.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "11 Apr 2026 09:58 UTC",
-      "headline": "F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?",
-      "regions": [
-        "americas",
-        "middle_east",
-        "india",
-        "asia_pacific"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "Oilprice.com",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 12.3,
-        "recency": 12.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 84.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 17,
-      "latest_at": "11 Apr 2026 12:42 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "india",
-        "global",
-        "asia_pacific",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 8.5,
-        "recency": 15.8,
+        "recency": 7.5,
         "geopolitical_severity": 15.0
       }
     },
@@ -679,6 +628,57 @@
         "source_diversity": 16.2,
         "recency": 12.5,
         "geopolitical_severity": 14.8
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 79.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "11 Apr 2026 09:58 UTC",
+      "headline": "F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?",
+      "regions": [
+        "asia_pacific",
+        "americas",
+        "india",
+        "middle_east"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Cointelegraph.com News",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 12.3,
+        "recency": 7.7,
+        "geopolitical_severity": 15.0
       }
     },
     {
@@ -931,7 +931,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 52 articles - HIGH / NEUTRAL - US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027"
+      "text": "Defense & Aerospace - 51 articles - HIGH / NEUTRAL - US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027"
     },
     {
       "tag": "tag-neu",
@@ -951,17 +951,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 50 articles - HIGH / NEUTRAL - Strait of Hormuz Constraints Keep Oil Prices Elevated"
+      "text": "Crypto & Digital Assets - 16 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 24 articles - HIGH / NEUTRAL - F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Crypto & Digital Assets - 17 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
+      "text": "Energy / Oil & Gas - 51 articles - HIGH / NEUTRAL - Strait of Hormuz Constraints Keep Oil Prices Elevated"
     },
     {
       "tag": "tag-neu",
@@ -972,6 +967,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Gold & Precious Metals - 11 articles - HIGH / NEUTRAL - Silver dips Rs 2,000/kg, gold at Rs 1.53 lakh/10g as ceasefire uncertainty weighs on sentiment. Key levels to watch"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "India Equity Markets - 24 articles - HIGH / NEUTRAL - F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?"
     },
     {
       "tag": "tag-neu",
@@ -1114,11 +1114,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 73220.62,
+      "price": 73624.11,
       "currency": "USD",
-      "change": 241.58,
-      "change_pct": 0.33,
-      "change_str": "+0.33%",
+      "change": 645.06,
+      "change_pct": 0.88,
+      "change_str": "+0.88%",
       "direction": "up"
     },
     {
@@ -1451,10 +1451,10 @@
     }
   },
   "logs": [
-    "2026-04-11 18:32:24 [INFO] AZALYST - status.json generated",
-    "2026-04-11 18:32:24 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
-    "2026-04-11 18:32:24 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-04-11 18:32:24 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-11 19:30:51 [INFO] AZALYST - status.json generated",
+    "2026-04-11 19:30:51 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
+    "2026-04-11 19:30:51 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-04-11 19:30:51 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-11 18:32:23 UTC"
+  "generated_at": "2026-04-11 19:30:50 UTC"
 }
