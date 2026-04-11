@@ -163,18 +163,18 @@
     },
     {
       "symbol": "Technology & AI / Semiconductors",
-      "score": 96.0
+      "score": 95.0
     },
     {
       "symbol": "India Equity Markets + Banking & Financial Sector",
       "score": 95.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 89.0
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 90.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "symbol": "Energy / Oil & Gas",
       "score": 89.0
     },
     {
@@ -271,7 +271,7 @@
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 96.0,
+      "confidence": 95.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
@@ -279,19 +279,19 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 24,
-      "latest_at": "11 Apr 2026 12:37 UTC",
-      "headline": "Outpaced by the US, China\u2019s military places selective bets on artificial intelligence",
+      "latest_at": "11 Apr 2026 17:03 UTC",
+      "headline": "From complexity to clarity: How AI is transforming insurance for customers",
       "regions": [
-        "asia_pacific",
-        "americas",
+        "europe",
         "india",
+        "asia_pacific",
         "global"
       ],
       "sources": [
-        "Oilprice.com",
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
         "The Verge",
-        "US Top News and Analysis",
-        "Defense News"
+        "Bloomberg Markets"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -314,11 +314,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 24.5,
+        "signal_strength": 23.7,
         "volume_confirmation": 20.0,
         "source_diversity": 17.4,
         "recency": 20.0,
-        "geopolitical_severity": 15.0
+        "geopolitical_severity": 14.7
       }
     },
     {
@@ -376,6 +376,61 @@
       }
     },
     {
+      "sector_key": "banking_financial|gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 90.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "11 Apr 2026 14:15 UTC",
+      "headline": "US CPI comes in lower than expected, but April rate cut still unlikely",
+      "regions": [
+        "global",
+        "middle_east",
+        "asia_pacific",
+        "americas"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "BBC News",
+        "Finance"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "XLF",
+        "GOLDBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD",
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "XLF",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 24.0,
+        "volume_confirmation": 19.4,
+        "source_diversity": 17.0,
+        "recency": 15.1,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
       "confidence": 89.0,
@@ -425,61 +480,6 @@
         "volume_confirmation": 20.0,
         "source_diversity": 18.2,
         "recency": 11.6,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "banking_financial|gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 89.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "11 Apr 2026 10:02 UTC",
-      "headline": "US CPI comes in lower than expected, but April rate cut still unlikely",
-      "regions": [
-        "americas",
-        "global",
-        "asia_pacific",
-        "middle_east"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "XLF",
-        "GOLDBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD",
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "XLF",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 24.5,
-        "volume_confirmation": 19.4,
-        "source_diversity": 15.5,
-        "recency": 15.4,
         "geopolitical_severity": 15.0
       }
     },
@@ -936,7 +936,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 24 articles - HIGH / NEUTRAL - Outpaced by the US, China\u2019s military places selective bets on artificial intelligence"
+      "text": "Technology & AI / Semiconductors - 24 articles - HIGH / NEUTRAL - From complexity to clarity: How AI is transforming insurance for customers"
     },
     {
       "tag": "tag-neu",
@@ -946,12 +946,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 50 articles - HIGH / NEUTRAL - Strait of Hormuz Constraints Keep Oil Prices Elevated"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - US CPI comes in lower than expected, but April rate cut still unlikely"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - US CPI comes in lower than expected, but April rate cut still unlikely"
+      "text": "Energy / Oil & Gas - 50 articles - HIGH / NEUTRAL - Strait of Hormuz Constraints Keep Oil Prices Elevated"
     },
     {
       "tag": "tag-neu",
@@ -1114,12 +1114,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 72887.06,
+      "price": 73055.38,
       "currency": "USD",
-      "change": -91.99,
-      "change_pct": -0.13,
-      "change_str": "-0.13%",
-      "direction": "down"
+      "change": 76.33,
+      "change_pct": 0.1,
+      "change_str": "+0.10%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
@@ -1451,10 +1451,10 @@
     }
   },
   "logs": [
-    "2026-04-11 16:28:07 [INFO] AZALYST - status.json generated",
-    "2026-04-11 16:28:07 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
-    "2026-04-11 16:28:07 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-04-11 16:28:07 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-11 17:04:23 [INFO] AZALYST - status.json generated",
+    "2026-04-11 17:04:23 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
+    "2026-04-11 17:04:23 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-04-11 17:04:23 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-11 16:28:06 UTC"
+  "generated_at": "2026-04-11 17:04:22 UTC"
 }
