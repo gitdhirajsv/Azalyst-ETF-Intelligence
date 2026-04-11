@@ -158,6 +158,10 @@
   },
   "confidence": [
     {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 96.0
+    },
+    {
       "symbol": "India Equity Markets + Banking & Financial Sector",
       "score": 95.0
     },
@@ -166,19 +170,15 @@
       "score": 94.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 93.0
-    },
-    {
-      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
-      "score": 91.0
-    },
-    {
       "symbol": "India Equity Markets",
       "score": 90.0
     },
     {
       "symbol": "Defense & Aerospace",
+      "score": 89.0
+    },
+    {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 89.0
     },
     {
@@ -203,7 +203,7 @@
     },
     {
       "symbol": "Nuclear Energy & Uranium",
-      "score": 64.0
+      "score": 68.0
     },
     {
       "symbol": "Emerging Markets",
@@ -215,6 +215,59 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 96.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "11 Apr 2026 12:37 UTC",
+      "headline": "Outpaced by the US, China\u2019s military places selective bets on artificial intelligence",
+      "regions": [
+        "asia_pacific",
+        "americas",
+        "india",
+        "global"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "The Verge",
+        "US Top News and Analysis",
+        "Defense News"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 24.5,
+        "volume_confirmation": 20.0,
+        "source_diversity": 17.4,
+        "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
     {
       "sector_key": "banking_financial|india_equity",
       "sector_label": "India Equity Markets + Banking & Financial Sector",
@@ -323,114 +376,6 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 93.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "11 Apr 2026 06:23 UTC",
-      "headline": "TSMC posts 35% jump in revenue to new record high as AI chip demand stays strong",
-      "regions": [
-        "americas",
-        "middle_east",
-        "global",
-        "europe"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "Finance",
-        "Defense News"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 17.4,
-        "recency": 16.1,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "banking_financial|gold_precious_metals",
-      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
-      "confidence": 91.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "11 Apr 2026 08:00 UTC",
-      "headline": "Wall Street Week | Iran Oil Fallout",
-      "regions": [
-        "americas",
-        "middle_east",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "Finance",
-        "World News - Breaking international news and headlines | Sky News"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "GOLDBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD",
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 21.7,
-        "volume_confirmation": 19.4,
-        "source_diversity": 16.5,
-        "recency": 18.9,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 90.0,
@@ -531,6 +476,61 @@
         "volume_confirmation": 20.0,
         "source_diversity": 18.7,
         "recency": 10.9,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "banking_financial|gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 89.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "11 Apr 2026 10:02 UTC",
+      "headline": "US CPI comes in lower than expected, but April rate cut still unlikely",
+      "regions": [
+        "americas",
+        "global",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "US Top News and Analysis",
+        "Markets-Economic Times",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "XLF",
+        "GOLDBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD",
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "XLF",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 24.5,
+        "volume_confirmation": 19.4,
+        "source_diversity": 15.5,
+        "recency": 15.4,
         "geopolitical_severity": 15.0
       }
     },
@@ -782,23 +782,24 @@
     {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
-      "confidence": 64.0,
+      "confidence": 68.0,
       "severity": "CRITICAL",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 2,
-      "latest_at": "10 Apr 2026 20:00 UTC",
+      "article_count": 3,
+      "latest_at": "11 Apr 2026 12:30 UTC",
       "headline": "India\u2019s Nuclear Bet Is Starting To Pay Off",
       "regions": [
-        "middle_east",
-        "asia_pacific"
+        "asia_pacific",
+        "global",
+        "europe"
       ],
       "sources": [
         "Oilprice.com",
-        "BBC News"
+        "Bloomberg Markets"
       ],
       "primary_etf": "URA",
       "top_etfs": [
@@ -820,10 +821,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 14.5,
-        "volume_confirmation": 5.4,
+        "signal_strength": 15.2,
+        "volume_confirmation": 8.6,
         "source_diversity": 9.6,
-        "recency": 19.9,
+        "recency": 19.7,
         "geopolitical_severity": 15.0
       }
     },
@@ -930,6 +931,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Technology & AI / Semiconductors - 24 articles - HIGH / NEUTRAL - Outpaced by the US, China\u2019s military places selective bets on artificial intelligence"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "India Equity Markets + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - LIC share price jumps 8%. Will PSU issue bonus shares next week?"
     },
     {
@@ -940,22 +946,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 25 articles - HIGH / NEUTRAL - TSMC posts 35% jump in revenue to new record high as AI chip demand stays strong"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Banking & Financial Sector + Gold & Precious Metals - 12 articles - HIGH / NEUTRAL - Wall Street Week | Iran Oil Fallout"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "India Equity Markets - 23 articles - HIGH / NEUTRAL - F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Defense & Aerospace - 53 articles - HIGH / NEUTRAL - US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - US CPI comes in lower than expected, but April rate cut still unlikely"
     },
     {
       "tag": "tag-neu",
@@ -985,7 +986,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Nuclear Energy & Uranium - 2 articles - CRITICAL / NEUTRAL - India\u2019s Nuclear Bet Is Starting To Pay Off"
+      "text": "Nuclear Energy & Uranium - 3 articles - CRITICAL / NEUTRAL - India\u2019s Nuclear Bet Is Starting To Pay Off"
     },
     {
       "tag": "tag-neu",
@@ -1113,11 +1114,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 72880.62,
+      "price": 72937.95,
       "currency": "USD",
-      "change": -98.43,
-      "change_pct": -0.13,
-      "change_str": "-0.13%",
+      "change": -41.1,
+      "change_pct": -0.06,
+      "change_str": "-0.06%",
       "direction": "down"
     },
     {
@@ -1450,10 +1451,10 @@
     }
   },
   "logs": [
-    "2026-04-11 11:52:48 [INFO] AZALYST - status.json generated",
-    "2026-04-11 11:52:48 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
-    "2026-04-11 11:52:48 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-04-11 11:52:48 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-11 12:38:14 [INFO] AZALYST - status.json generated",
+    "2026-04-11 12:38:14 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
+    "2026-04-11 12:38:14 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-04-11 12:38:14 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-11 11:52:47 UTC"
+  "generated_at": "2026-04-11 12:38:13 UTC"
 }
