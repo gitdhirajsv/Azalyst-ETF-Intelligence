@@ -166,20 +166,20 @@
       "score": 95.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 88.0
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 93.0
+    },
+    {
+      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
+      "score": 91.0
     },
     {
       "symbol": "India Equity Markets",
       "score": 87.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 87.0
-    },
-    {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 86.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 83.0
     },
     {
       "symbol": "Cybersecurity + Crypto & Digital Assets",
@@ -195,7 +195,7 @@
     },
     {
       "symbol": "Crypto & Digital Assets",
-      "score": 78.0
+      "score": 75.0
     },
     {
       "symbol": "Cybersecurity",
@@ -323,55 +323,110 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 88.0,
-      "severity": "CRITICAL",
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 93.0,
+      "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 52,
-      "latest_at": "10 Apr 2026 21:22 UTC",
-      "headline": "Strait of Hormuz Constraints Keep Oil Prices Elevated",
+      "article_count": 25,
+      "latest_at": "11 Apr 2026 06:23 UTC",
+      "headline": "TSMC posts 35% jump in revenue to new record high as AI chip demand stays strong",
       "regions": [
-        "asia_pacific",
-        "europe",
+        "americas",
         "middle_east",
-        "global"
+        "global",
+        "europe"
       ],
       "sources": [
+        "US Top News and Analysis",
         "Cointelegraph.com News",
-        "Markets-Economic Times",
-        "World News - Breaking international news and headlines | Sky News",
-        "US Top News and Analysis"
+        "Finance",
+        "Defense News"
       ],
-      "primary_etf": "XLE",
+      "primary_etf": "QQQ",
       "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
+        "NIFTYBEES",
+        "MAFANG"
       ],
       "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
+        "QQQ",
+        "SOXX",
+        "AIQ"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 18.2,
-        "recency": 9.9,
+        "source_diversity": 17.4,
+        "recency": 16.1,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "banking_financial|gold_precious_metals",
+      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
+      "confidence": 91.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "11 Apr 2026 08:00 UTC",
+      "headline": "Wall Street Week | Iran Oil Fallout",
+      "regions": [
+        "americas",
+        "middle_east",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Cointelegraph.com News",
+        "Finance",
+        "World News - Breaking international news and headlines | Sky News"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "GOLDBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD",
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.7,
+        "volume_confirmation": 19.4,
+        "source_diversity": 16.5,
+        "recency": 18.9,
         "geopolitical_severity": 15.0
       }
     },
@@ -427,110 +482,55 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 87.0,
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 83.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
-      "latest_at": "10 Apr 2026 21:09 UTC",
-      "headline": "TSMC posts 35% jump in revenue to new record high as AI chip demand stays strong",
+      "article_count": 47,
+      "latest_at": "10 Apr 2026 21:22 UTC",
+      "headline": "Strait of Hormuz Constraints Keep Oil Prices Elevated",
       "regions": [
-        "asia_pacific",
-        "europe",
+        "americas",
         "middle_east",
-        "india"
+        "global",
+        "europe"
       ],
       "sources": [
-        "Cointelegraph.com News",
-        "Markets-Economic Times",
         "US Top News and Analysis",
+        "Cointelegraph.com News",
+        "Finance",
         "Defense News"
       ],
-      "primary_etf": "QQQ",
+      "primary_etf": "XLE",
       "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
+        "XLE",
+        "IXC",
+        "CPSEETF"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
+        "CPSEETF",
+        "PSUBNKBEES"
       ],
       "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
+        "XLE",
+        "IXC",
+        "USO"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 18.3,
-        "recency": 9.7,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "banking_financial|gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 86.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "10 Apr 2026 23:13 UTC",
-      "headline": "US CPI comes in lower than expected, but April rate cut still unlikely",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "US Top News and Analysis",
-        "Oilprice.com"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "XLF",
-        "GOLDBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD",
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "XLF",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 24.4,
-        "volume_confirmation": 18.7,
-        "source_diversity": 16.5,
-        "recency": 11.9,
+        "source_diversity": 17.3,
+        "recency": 6.5,
         "geopolitical_severity": 15.0
       }
     },
@@ -690,25 +690,25 @@
     {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
-      "confidence": 78.0,
-      "severity": "HIGH",
+      "confidence": 75.0,
+      "severity": "CRITICAL",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 21,
+      "article_count": 17,
       "latest_at": "10 Apr 2026 21:42 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "asia_pacific",
-        "europe",
         "middle_east",
-        "india"
+        "global",
+        "europe",
+        "asia_pacific"
       ],
       "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
+        "Cointelegraph.com News",
+        "Markets-Economic Times"
       ],
       "primary_etf": "IBIT",
       "top_etfs": [
@@ -728,7 +728,7 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 8.5,
-        "recency": 10.2,
+        "recency": 6.8,
         "geopolitical_severity": 15.0
       }
     },
@@ -940,7 +940,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 52 articles - CRITICAL / NEUTRAL - Strait of Hormuz Constraints Keep Oil Prices Elevated"
+      "text": "Technology & AI / Semiconductors - 25 articles - HIGH / NEUTRAL - TSMC posts 35% jump in revenue to new record high as AI chip demand stays strong"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Banking & Financial Sector + Gold & Precious Metals - 12 articles - HIGH / NEUTRAL - Wall Street Week | Iran Oil Fallout"
     },
     {
       "tag": "tag-neu",
@@ -950,12 +955,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 28 articles - HIGH / NEUTRAL - TSMC posts 35% jump in revenue to new record high as AI chip demand stays strong"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - US CPI comes in lower than expected, but April rate cut still unlikely"
+      "text": "Energy / Oil & Gas - 47 articles - HIGH / NEUTRAL - Strait of Hormuz Constraints Keep Oil Prices Elevated"
     },
     {
       "tag": "tag-neu",
@@ -975,7 +975,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 21 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+      "text": "Crypto & Digital Assets - 17 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -1113,11 +1113,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 72803.77,
+      "price": 72789.07,
       "currency": "USD",
-      "change": -175.28,
-      "change_pct": -0.24,
-      "change_str": "-0.24%",
+      "change": -189.98,
+      "change_pct": -0.26,
+      "change_str": "-0.26%",
       "direction": "down"
     },
     {
@@ -1450,10 +1450,10 @@
     }
   },
   "logs": [
-    "2026-04-11 07:45:34 [INFO] AZALYST - status.json generated",
-    "2026-04-11 07:45:34 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
-    "2026-04-11 07:45:34 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-04-11 07:45:34 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-11 08:34:15 [INFO] AZALYST - status.json generated",
+    "2026-04-11 08:34:15 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
+    "2026-04-11 08:34:15 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-04-11 08:34:15 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-11 07:45:32 UTC"
+  "generated_at": "2026-04-11 08:34:14 UTC"
 }
