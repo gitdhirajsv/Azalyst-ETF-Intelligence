@@ -158,12 +158,12 @@
   },
   "confidence": [
     {
-      "symbol": "Defense & Aerospace",
+      "symbol": "India Equity Markets + Banking & Financial Sector",
       "score": 95.0
     },
     {
-      "symbol": "India Equity Markets + Banking & Financial Sector",
-      "score": 95.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 94.0
     },
     {
       "symbol": "Technology & AI / Semiconductors",
@@ -175,11 +175,15 @@
     },
     {
       "symbol": "India Equity Markets",
-      "score": 87.0
+      "score": 90.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 83.0
+      "symbol": "Defense & Aerospace",
+      "score": 89.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 86.0
     },
     {
       "symbol": "Cybersecurity + Crypto & Digital Assets",
@@ -192,10 +196,6 @@
     {
       "symbol": "Banking & Financial Sector",
       "score": 79.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 75.0
     },
     {
       "symbol": "Cybersecurity",
@@ -215,59 +215,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 95.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 52,
-      "latest_at": "11 Apr 2026 05:00 UTC",
-      "headline": "US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027",
-      "regions": [
-        "asia_pacific",
-        "middle_east",
-        "india",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "Defense News",
-        "Oilprice.com"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 18.7,
-        "recency": 16.6,
-        "geopolitical_severity": 15.0
-      }
-    },
     {
       "sector_key": "banking_financial|india_equity",
       "sector_label": "India Equity Markets + Banking & Financial Sector",
@@ -319,6 +266,59 @@
         "volume_confirmation": 19.4,
         "source_diversity": 16.5,
         "recency": 19.2,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 94.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 47,
+      "latest_at": "11 Apr 2026 09:38 UTC",
+      "headline": "Strait of Hormuz Constraints Keep Oil Prices Elevated",
+      "regions": [
+        "global",
+        "europe",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Finance",
+        "Defense News",
+        "Bloomberg Markets",
+        "World News - Breaking international news and headlines | Sky News"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 17.3,
+        "recency": 17.4,
         "geopolitical_severity": 15.0
       }
     },
@@ -433,7 +433,7 @@
     {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
-      "confidence": 87.0,
+      "confidence": 90.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
@@ -441,19 +441,19 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 23,
-      "latest_at": "11 Apr 2026 04:07 UTC",
-      "headline": "D-Street goes green after streak of red",
+      "latest_at": "11 Apr 2026 09:58 UTC",
+      "headline": "F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?",
       "regions": [
-        "americas",
         "india",
-        "asia_pacific",
-        "middle_east"
+        "middle_east",
+        "americas",
+        "asia_pacific"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "Oilprice.com",
         "Cointelegraph.com News",
-        "Markets-Economic Times"
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
       ],
       "primary_etf": "INDA",
       "top_etfs": [
@@ -474,43 +474,43 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 24.7,
+        "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 12.3,
-        "recency": 15.2,
+        "recency": 18.0,
         "geopolitical_severity": 15.0
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 83.0,
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 89.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 47,
-      "latest_at": "10 Apr 2026 21:22 UTC",
-      "headline": "Strait of Hormuz Constraints Keep Oil Prices Elevated",
+      "article_count": 53,
+      "latest_at": "11 Apr 2026 05:00 UTC",
+      "headline": "US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027",
       "regions": [
-        "americas",
-        "middle_east",
+        "india",
         "global",
-        "europe"
+        "europe",
+        "asia_pacific"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "Cointelegraph.com News",
         "Finance",
-        "Defense News"
+        "Defense News",
+        "Bloomberg Markets",
+        "The Verge"
       ],
-      "primary_etf": "XLE",
+      "primary_etf": "ITA",
       "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
+        "ITA",
+        "XAR",
+        "PPA"
       ],
       "access_markets": [
         "India-listed",
@@ -518,19 +518,64 @@
       ],
       "india_etfs": [
         "CPSEETF",
-        "PSUBNKBEES"
+        "DEFENCEETF"
       ],
       "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
+        "ITA",
+        "XAR",
+        "PPA"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 17.3,
-        "recency": 6.5,
+        "source_diversity": 18.7,
+        "recency": 10.9,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 86.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 17,
+      "latest_at": "11 Apr 2026 10:02 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "india",
+        "global",
+        "europe",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 8.5,
+        "recency": 18.1,
         "geopolitical_severity": 15.0
       }
     },
@@ -685,51 +730,6 @@
         "source_diversity": 16.5,
         "recency": 16.3,
         "geopolitical_severity": 12.3
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 75.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 17,
-      "latest_at": "10 Apr 2026 21:42 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "middle_east",
-        "global",
-        "europe",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 8.5,
-        "recency": 6.8,
-        "geopolitical_severity": 15.0
       }
     },
     {
@@ -930,12 +930,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 52 articles - HIGH / NEUTRAL - US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027"
+      "text": "India Equity Markets + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - LIC share price jumps 8%. Will PSU issue bonus shares next week?"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - LIC share price jumps 8%. Will PSU issue bonus shares next week?"
+      "text": "Energy / Oil & Gas - 47 articles - HIGH / NEUTRAL - Strait of Hormuz Constraints Keep Oil Prices Elevated"
     },
     {
       "tag": "tag-neu",
@@ -950,12 +950,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 23 articles - HIGH / NEUTRAL - D-Street goes green after streak of red"
+      "text": "India Equity Markets - 23 articles - HIGH / NEUTRAL - F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 47 articles - HIGH / NEUTRAL - Strait of Hormuz Constraints Keep Oil Prices Elevated"
+      "text": "Defense & Aerospace - 53 articles - HIGH / NEUTRAL - US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Crypto & Digital Assets - 17 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -971,11 +976,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Banking & Financial Sector - 10 articles - MEDIUM / NEUTRAL - U.S. Postal Service seeks hike in price of first-class mail stamps to 82 cents in July"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Crypto & Digital Assets - 17 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -1113,11 +1113,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 72875.05,
+      "price": 72864.7,
       "currency": "USD",
-      "change": -103.99,
-      "change_pct": -0.14,
-      "change_str": "-0.14%",
+      "change": -114.35,
+      "change_pct": -0.16,
+      "change_str": "-0.16%",
       "direction": "down"
     },
     {
@@ -1450,10 +1450,10 @@
     }
   },
   "logs": [
-    "2026-04-11 10:27:12 [INFO] AZALYST - status.json generated",
-    "2026-04-11 10:27:12 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
-    "2026-04-11 10:27:12 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-04-11 10:27:12 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-11 11:02:28 [INFO] AZALYST - status.json generated",
+    "2026-04-11 11:02:28 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
+    "2026-04-11 11:02:28 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-04-11 11:02:28 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-11 10:27:11 UTC"
+  "generated_at": "2026-04-11 11:02:28 UTC"
 }
