@@ -158,16 +158,16 @@
   },
   "confidence": [
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 97.0
-    },
-    {
-      "symbol": "India Equity Markets",
-      "score": 96.0
+      "symbol": "Defense & Aerospace",
+      "score": 98.0
     },
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 95.0
+      "score": 97.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 97.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
@@ -178,20 +178,20 @@
       "score": 95.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 91.0
+      "symbol": "India Equity Markets",
+      "score": 94.0
     },
     {
       "symbol": "Crypto & Digital Assets",
-      "score": 85.0
+      "score": 87.0
+    },
+    {
+      "symbol": "Gold & Precious Metals",
+      "score": 86.0
     },
     {
       "symbol": "Cybersecurity + Crypto & Digital Assets",
       "score": 83.0
-    },
-    {
-      "symbol": "Gold & Precious Metals",
-      "score": 81.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -206,15 +206,121 @@
       "score": 70.0
     },
     {
-      "symbol": "Emerging Markets",
-      "score": 64.0
+      "symbol": "Commodities & Mining",
+      "score": 68.0
     },
     {
-      "symbol": "Commodities & Mining",
-      "score": 62.0
+      "symbol": "Emerging Markets",
+      "score": 64.0
     }
   ],
   "signals": [
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 98.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 60,
+      "latest_at": "12 Apr 2026 22:22 UTC",
+      "headline": "US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027",
+      "regions": [
+        "india",
+        "americas",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Finance",
+        "Bloomberg Markets",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 18.4,
+        "recency": 19.9,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 97.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 52,
+      "latest_at": "12 Apr 2026 22:08 UTC",
+      "headline": "Colombia\u2019s Energy Crisis Deepens as Oil Output Falls and Imports Rise",
+      "regions": [
+        "americas",
+        "middle_east",
+        "global",
+        "europe"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Finance",
+        "Cointelegraph.com News",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 18.0,
+        "recency": 19.4,
+        "geopolitical_severity": 15.0
+      }
+    },
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
@@ -265,110 +371,6 @@
         "volume_confirmation": 20.0,
         "source_diversity": 18.7,
         "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 96.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "12 Apr 2026 18:01 UTC",
-      "headline": "F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?",
-      "regions": [
-        "middle_east",
-        "global",
-        "asia_pacific",
-        "india"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "BBC News",
-        "World | Deutsche Welle",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 16.5,
-        "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 95.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 47,
-      "latest_at": "12 Apr 2026 17:00 UTC",
-      "headline": "Colombia\u2019s Energy Crisis Deepens as Oil Output Falls and Imports Rise",
-      "regions": [
-        "global",
-        "americas",
-        "europe",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Defense News",
-        "Finance",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 17.0,
-        "recency": 18.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -482,74 +484,73 @@
       }
     },
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 91.0,
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 94.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 52,
-      "latest_at": "12 Apr 2026 14:03 UTC",
-      "headline": "US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027",
+      "article_count": 23,
+      "latest_at": "12 Apr 2026 22:25 UTC",
+      "headline": "F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?",
       "regions": [
+        "asia_pacific",
+        "middle_east",
         "global",
-        "americas",
-        "europe",
-        "middle_east"
+        "india"
       ],
       "sources": [
-        "Markets-Economic Times",
-        "World News - Breaking international news and headlines | Sky News",
-        "Defense News",
-        "BBC News"
+        "World | Deutsche Welle",
+        "BBC News",
+        "US Top News and Analysis",
+        "Oilprice.com"
       ],
-      "primary_etf": "ITA",
+      "primary_etf": "INDA",
       "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
+        "NIFTYBEES",
+        "MIDCAPETF"
       ],
       "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
+        "INDA"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 25.0,
+        "signal_strength": 24.7,
         "volume_confirmation": 20.0,
-        "source_diversity": 18.4,
-        "recency": 13.4,
+        "source_diversity": 14.8,
+        "recency": 20.0,
         "geopolitical_severity": 15.0
       }
     },
     {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
-      "confidence": 85.0,
+      "confidence": 87.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 19,
-      "latest_at": "12 Apr 2026 16:35 UTC",
+      "article_count": 21,
+      "latest_at": "12 Apr 2026 21:50 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
         "middle_east",
-        "global"
+        "global",
+        "europe"
       ],
       "sources": [
         "Markets-Economic Times",
@@ -573,8 +574,60 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 8.5,
-        "recency": 17.3,
+        "recency": 18.9,
         "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 17,
+      "latest_at": "12 Apr 2026 19:00 UTC",
+      "headline": "Gold surges as US\u2013Iran ceasefire weakens US dollar and fuels safe haven demand",
+      "regions": [
+        "global",
+        "middle_east",
+        "americas"
+      ],
+      "sources": [
+        "Finance",
+        "Bloomberg Markets",
+        "BBC News",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 23.1,
+        "volume_confirmation": 20.0,
+        "source_diversity": 15.5,
+        "recency": 14.2,
+        "geopolitical_severity": 14.1
       }
     },
     {
@@ -624,59 +677,6 @@
         "source_diversity": 10.1,
         "recency": 19.0,
         "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 81.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "10 Apr 2026 05:03 UTC",
-      "headline": "Silver dips Rs 2,000/kg, gold at Rs 1.53 lakh/10g as ceasefire uncertainty weighs on sentiment. Key levels to watch",
-      "regions": [
-        "americas",
-        "asia_pacific",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "BBC News",
-        "Bloomberg Markets",
-        "Finance"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 19.6,
-        "volume_confirmation": 18.7,
-        "source_diversity": 16.2,
-        "recency": 12.5,
-        "geopolitical_severity": 14.8
       }
     },
     {
@@ -827,6 +827,54 @@
       }
     },
     {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 68.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "12 Apr 2026 21:36 UTC",
+      "headline": "Copper claws higher to three-week peak as investors balance Iran with Chinese demand",
+      "regions": [
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Oilprice.com",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.7,
+        "volume_confirmation": 14.0,
+        "source_diversity": 13.0,
+        "recency": 18.4,
+        "geopolitical_severity": 11.0
+      }
+    },
+    {
       "sector_key": "emerging_markets",
       "sector_label": "Emerging Markets",
       "confidence": 64.0,
@@ -874,71 +922,23 @@
         "recency": 19.3,
         "geopolitical_severity": 11.0
       }
-    },
-    {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 62.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "12 Apr 2026 12:03 UTC",
-      "headline": "Copper claws higher to three-week peak as investors balance Iran with Chinese demand",
-      "regions": [
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Oilprice.com",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 8.6,
-        "volume_confirmation": 10.8,
-        "source_diversity": 13.0,
-        "recency": 18.8,
-        "geopolitical_severity": 10.8
-      }
     }
   ],
   "articles": [
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Defense & Aerospace - 60 articles - HIGH / NEUTRAL - US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Energy / Oil & Gas - 52 articles - HIGH / NEUTRAL - Colombia\u2019s Energy Crisis Deepens as Oil Output Falls and Imports Rise"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Technology & AI / Semiconductors - 22 articles - HIGH / NEUTRAL - From complexity to clarity: How AI is transforming insurance for customers"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "India Equity Markets - 24 articles - HIGH / NEUTRAL - F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Energy / Oil & Gas - 47 articles - HIGH / NEUTRAL - Colombia\u2019s Energy Crisis Deepens as Oil Output Falls and Imports Rise"
     },
     {
       "tag": "tag-neu",
@@ -953,22 +953,22 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 52 articles - HIGH / NEUTRAL - US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027"
+      "text": "India Equity Markets - 23 articles - HIGH / NEUTRAL - F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 19 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+      "text": "Crypto & Digital Assets - 21 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Gold & Precious Metals - 17 articles - HIGH / NEUTRAL - Gold surges as US\u2013Iran ceasefire weakens US dollar and fuels safe haven demand"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Cybersecurity + Crypto & Digital Assets - 9 articles - HIGH / NEUTRAL - Powell, Bessent discussed Anthropic's Mythos AI cyber threat with major U.S. banks"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Gold & Precious Metals - 11 articles - HIGH / NEUTRAL - Silver dips Rs 2,000/kg, gold at Rs 1.53 lakh/10g as ceasefire uncertainty weighs on sentiment. Key levels to watch"
     },
     {
       "tag": "tag-neu",
@@ -988,12 +988,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Emerging Markets - 4 articles - MEDIUM / NEUTRAL - Apple pulls Jack Dorsey's Bitchat from China at Beijing\u2019s request"
+      "text": "Commodities & Mining - 6 articles - MEDIUM / NEUTRAL - Copper claws higher to three-week peak as investors balance Iran with Chinese demand"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Commodities & Mining - 4 articles - MEDIUM / NEUTRAL - Copper claws higher to three-week peak as investors balance Iran with Chinese demand"
+      "text": "Emerging Markets - 4 articles - MEDIUM / NEUTRAL - Apple pulls Jack Dorsey's Bitchat from China at Beijing\u2019s request"
     }
   ],
   "market_snapshot": [
@@ -1089,45 +1089,45 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4787.4,
+      "price": 4694.7,
       "currency": "USD",
-      "change": -4.8,
-      "change_pct": -0.1,
-      "change_str": "-0.10%",
+      "change": -67.2,
+      "change_pct": -1.41,
+      "change_str": "-1.41%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 96.57,
+      "price": 104.18,
       "currency": "USD",
-      "change": -1.3,
-      "change_pct": -1.33,
-      "change_str": "-1.33%",
-      "direction": "down"
+      "change": 7.61,
+      "change_pct": 7.88,
+      "change_str": "+7.88%",
+      "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 71243.98,
+      "price": 70772.45,
       "currency": "USD",
-      "change": -1810.29,
-      "change_pct": -2.48,
-      "change_str": "-2.48%",
+      "change": -2281.82,
+      "change_pct": -3.12,
+      "change_str": "-3.12%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.7,
+      "price": 99.11,
       "currency": "USD",
-      "change": -0.12,
-      "change_pct": -0.12,
-      "change_str": "-0.12%",
-      "direction": "down"
+      "change": 0.46,
+      "change_pct": 0.47,
+      "change_str": "+0.47%",
+      "direction": "up"
     },
     {
       "label": "VIX",
@@ -1448,10 +1448,10 @@
     }
   },
   "logs": [
-    "2026-04-12 21:57:00 [INFO] AZALYST - status.json generated",
-    "2026-04-12 21:57:00 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
-    "2026-04-12 21:57:00 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-04-12 21:57:00 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-12 22:26:14 [INFO] AZALYST - status.json generated",
+    "2026-04-12 22:26:14 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
+    "2026-04-12 22:26:14 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-04-12 22:26:14 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-12 21:56:59 UTC"
+  "generated_at": "2026-04-12 22:26:13 UTC"
 }
