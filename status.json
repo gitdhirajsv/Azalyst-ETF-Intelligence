@@ -158,7 +158,7 @@
   },
   "confidence": [
     {
-      "symbol": "Defense & Aerospace",
+      "symbol": "India Equity Markets",
       "score": 96.0
     },
     {
@@ -174,20 +174,20 @@
       "score": 94.0
     },
     {
-      "symbol": "India Equity Markets",
-      "score": 93.0
+      "symbol": "Defense & Aerospace",
+      "score": 87.0
     },
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 93.0
+      "score": 87.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 86.0
     },
     {
       "symbol": "Cybersecurity + Crypto & Digital Assets",
       "score": 83.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 81.0
     },
     {
       "symbol": "Gold & Precious Metals",
@@ -216,8 +216,8 @@
   ],
   "signals": [
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
       "confidence": 96.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
@@ -225,46 +225,44 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 51,
-      "latest_at": "12 Apr 2026 08:27 UTC",
-      "headline": "US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027",
+      "article_count": 24,
+      "latest_at": "12 Apr 2026 13:55 UTC",
+      "headline": "F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?",
       "regions": [
-        "asia_pacific",
-        "americas",
+        "india",
         "middle_east",
-        "india"
+        "global",
+        "asia_pacific"
       ],
       "sources": [
-        "BBC News",
-        "Finance",
         "Bloomberg Markets",
+        "World | Deutsche Welle",
+        "BBC News",
         "US Top News and Analysis"
       ],
-      "primary_etf": "ITA",
+      "primary_etf": "INDA",
       "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
+        "NIFTYBEES",
+        "MIDCAPETF"
       ],
       "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
+        "INDA"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 18.7,
-        "recency": 17.7,
+        "source_diversity": 16.5,
+        "recency": 20.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -431,80 +429,82 @@
       }
     },
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 93.0,
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 87.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "12 Apr 2026 08:12 UTC",
-      "headline": "F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?",
+      "article_count": 49,
+      "latest_at": "12 Apr 2026 05:42 UTC",
+      "headline": "US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027",
       "regions": [
-        "global",
-        "india",
+        "americas",
         "middle_east",
-        "asia_pacific"
+        "asia_pacific",
+        "india"
       ],
       "sources": [
-        "BBC News",
+        "Defense News",
+        "Finance",
         "Bloomberg Markets",
-        "US Top News and Analysis",
-        "Markets-Economic Times"
+        "World News - Breaking international news and headlines | Sky News"
       ],
-      "primary_etf": "INDA",
+      "primary_etf": "ITA",
       "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
+        "ITA",
+        "XAR",
+        "PPA"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
+        "CPSEETF",
+        "DEFENCEETF"
       ],
       "global_etfs": [
-        "INDA"
+        "ITA",
+        "XAR",
+        "PPA"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 16.0,
-        "recency": 17.3,
+        "source_diversity": 18.4,
+        "recency": 8.8,
         "geopolitical_severity": 15.0
       }
     },
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 93.0,
+      "confidence": 87.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 52,
+      "article_count": 48,
       "latest_at": "12 Apr 2026 07:25 UTC",
       "headline": "Strait of Hormuz Constraints Keep Oil Prices Elevated",
       "regions": [
-        "asia_pacific",
         "americas",
         "middle_east",
-        "global"
+        "asia_pacific",
+        "europe"
       ],
       "sources": [
         "Finance",
+        "Defense News",
         "Bloomberg Markets",
-        "US Top News and Analysis",
-        "World News - Breaking international news and headlines | Sky News"
+        "World | Deutsche Welle"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -529,8 +529,52 @@
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 17.7,
-        "recency": 16.0,
+        "source_diversity": 17.0,
+        "recency": 10.4,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 18,
+      "latest_at": "12 Apr 2026 12:51 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "middle_east",
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 8.5,
+        "recency": 18.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -580,50 +624,6 @@
         "volume_confirmation": 17.1,
         "source_diversity": 10.1,
         "recency": 19.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 81.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 18,
-      "latest_at": "12 Apr 2026 05:26 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "global",
-        "europe",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 8.5,
-        "recency": 13.1,
         "geopolitical_severity": 15.0
       }
     },
@@ -929,7 +929,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 51 articles - HIGH / NEUTRAL - US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027"
+      "text": "India Equity Markets - 24 articles - HIGH / NEUTRAL - F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?"
     },
     {
       "tag": "tag-neu",
@@ -949,22 +949,22 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 25 articles - HIGH / NEUTRAL - F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?"
+      "text": "Defense & Aerospace - 49 articles - HIGH / NEUTRAL - US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 52 articles - HIGH / NEUTRAL - Strait of Hormuz Constraints Keep Oil Prices Elevated"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Cybersecurity + Crypto & Digital Assets - 9 articles - HIGH / NEUTRAL - Powell, Bessent discussed Anthropic's Mythos AI cyber threat with major U.S. banks"
+      "text": "Energy / Oil & Gas - 48 articles - HIGH / NEUTRAL - Strait of Hormuz Constraints Keep Oil Prices Elevated"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Crypto & Digital Assets - 18 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Cybersecurity + Crypto & Digital Assets - 9 articles - HIGH / NEUTRAL - Powell, Bessent discussed Anthropic's Mythos AI cyber threat with major U.S. banks"
     },
     {
       "tag": "tag-neu",
@@ -1112,11 +1112,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 71438.36,
+      "price": 70934.22,
       "currency": "USD",
-      "change": -1615.91,
-      "change_pct": -2.21,
-      "change_str": "-2.21%",
+      "change": -2120.05,
+      "change_pct": -2.9,
+      "change_str": "-2.90%",
       "direction": "down"
     },
     {
@@ -1449,10 +1449,10 @@
     }
   },
   "logs": [
-    "2026-04-12 12:41:38 [INFO] AZALYST - status.json generated",
-    "2026-04-12 12:41:38 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
-    "2026-04-12 12:41:38 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-04-12 12:41:38 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-12 13:56:29 [INFO] AZALYST - status.json generated",
+    "2026-04-12 13:56:29 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
+    "2026-04-12 13:56:29 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-04-12 13:56:29 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-12 12:41:37 UTC"
+  "generated_at": "2026-04-12 13:56:28 UTC"
 }
