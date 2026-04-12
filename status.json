@@ -158,11 +158,11 @@
   },
   "confidence": [
     {
-      "symbol": "India Equity Markets",
-      "score": 96.0
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 97.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
+      "symbol": "India Equity Markets",
       "score": 96.0
     },
     {
@@ -170,8 +170,8 @@
       "score": 95.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 94.0
+      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
+      "score": 91.0
     },
     {
       "symbol": "Defense & Aerospace",
@@ -215,6 +215,59 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 97.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 23,
+      "latest_at": "12 Apr 2026 14:35 UTC",
+      "headline": "From complexity to clarity: How AI is transforming insurance for customers",
+      "regions": [
+        "middle_east",
+        "india",
+        "europe",
+        "asia_pacific"
+      ],
+      "sources": [
+        "BBC News",
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 24.2,
+        "volume_confirmation": 20.0,
+        "source_diversity": 18.7,
+        "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
     {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
@@ -264,59 +317,6 @@
         "source_diversity": 16.5,
         "recency": 20.0,
         "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 96.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "12 Apr 2026 10:31 UTC",
-      "headline": "From complexity to clarity: How AI is transforming insurance for customers",
-      "regions": [
-        "india",
-        "global",
-        "asia_pacific",
-        "americas"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "BBC News",
-        "Cointelegraph.com News",
-        "World | Deutsche Welle"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 23.8,
-        "volume_confirmation": 20.0,
-        "source_diversity": 18.3,
-        "recency": 20.0,
-        "geopolitical_severity": 14.9
       }
     },
     {
@@ -375,8 +375,8 @@
     },
     {
       "sector_key": "banking_financial|gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 94.0,
+      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
+      "confidence": 91.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
@@ -384,24 +384,24 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 13,
-      "latest_at": "12 Apr 2026 09:17 UTC",
-      "headline": "Gold surges as US\u2013Iran ceasefire weakens US dollar and fuels safe haven demand",
+      "latest_at": "12 Apr 2026 12:41 UTC",
+      "headline": "RBNZ to Announce Next Steps on Cash-Rate Decision Transparency",
       "regions": [
-        "global",
-        "americas",
         "middle_east",
-        "asia_pacific"
+        "asia_pacific",
+        "global",
+        "americas"
       ],
       "sources": [
+        "Oilprice.com",
+        "Bloomberg Markets",
         "Markets-Economic Times",
-        "BBC News",
-        "Cointelegraph.com News",
-        "Finance"
+        "Cointelegraph.com News"
       ],
-      "primary_etf": "GLDM",
+      "primary_etf": "XLF",
       "top_etfs": [
-        "GLDM",
         "XLF",
+        "GLDM",
         "GOLDBEES"
       ],
       "access_markets": [
@@ -414,18 +414,18 @@
         "BANKBEES"
       ],
       "global_etfs": [
-        "GLDM",
         "XLF",
+        "GLDM",
         "GDX",
         "GDXJ"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 25.0,
+        "signal_strength": 23.3,
         "volume_confirmation": 20.0,
         "source_diversity": 17.0,
-        "recency": 17.7,
-        "geopolitical_severity": 14.8
+        "recency": 16.5,
+        "geopolitical_severity": 14.9
       }
     },
     {
@@ -929,12 +929,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 24 articles - HIGH / NEUTRAL - F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?"
+      "text": "Technology & AI / Semiconductors - 23 articles - HIGH / NEUTRAL - From complexity to clarity: How AI is transforming insurance for customers"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 23 articles - HIGH / NEUTRAL - From complexity to clarity: How AI is transforming insurance for customers"
+      "text": "India Equity Markets - 24 articles - HIGH / NEUTRAL - F&amp;O Talk: Nifty's 6% gains are strongest since February 2021. Is it pullback or trend-reversal?"
     },
     {
       "tag": "tag-neu",
@@ -944,7 +944,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / NEUTRAL - Gold surges as US\u2013Iran ceasefire weakens US dollar and fuels safe haven demand"
+      "text": "Banking & Financial Sector + Gold & Precious Metals - 13 articles - HIGH / NEUTRAL - RBNZ to Announce Next Steps on Cash-Rate Decision Transparency"
     },
     {
       "tag": "tag-neu",
@@ -1112,11 +1112,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 70934.22,
+      "price": 71052.65,
       "currency": "USD",
-      "change": -2120.05,
-      "change_pct": -2.9,
-      "change_str": "-2.90%",
+      "change": -2001.62,
+      "change_pct": -2.74,
+      "change_str": "-2.74%",
       "direction": "down"
     },
     {
@@ -1449,10 +1449,10 @@
     }
   },
   "logs": [
-    "2026-04-12 13:56:29 [INFO] AZALYST - status.json generated",
-    "2026-04-12 13:56:29 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
-    "2026-04-12 13:56:29 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-04-12 13:56:29 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-12 14:36:19 [INFO] AZALYST - status.json generated",
+    "2026-04-12 14:36:19 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
+    "2026-04-12 14:36:19 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-04-12 14:36:19 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-12 13:56:28 UTC"
+  "generated_at": "2026-04-12 14:36:18 UTC"
 }
