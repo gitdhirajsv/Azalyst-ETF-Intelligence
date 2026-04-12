@@ -158,11 +158,11 @@
   },
   "confidence": [
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 96.0
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 97.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
+      "symbol": "Energy / Oil & Gas",
       "score": 96.0
     },
     {
@@ -170,12 +170,12 @@
       "score": 95.0
     },
     {
-      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
-      "score": 93.0
-    },
-    {
       "symbol": "Defense & Aerospace",
       "score": 91.0
+    },
+    {
+      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
+      "score": 90.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -215,6 +215,59 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 97.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 27,
+      "latest_at": "12 Apr 2026 01:45 UTC",
+      "headline": "From complexity to clarity: How AI is transforming insurance for customers",
+      "regions": [
+        "india",
+        "middle_east",
+        "americas",
+        "europe"
+      ],
+      "sources": [
+        "Finance",
+        "World | Deutsche Welle",
+        "BBC News",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 24.3,
+        "volume_confirmation": 20.0,
+        "source_diversity": 18.3,
+        "recency": 20.0,
+        "geopolitical_severity": 14.7
+      }
+    },
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
@@ -266,59 +319,6 @@
         "source_diversity": 17.3,
         "recency": 18.8,
         "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 96.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "11 Apr 2026 21:32 UTC",
-      "headline": "From complexity to clarity: How AI is transforming insurance for customers",
-      "regions": [
-        "asia_pacific",
-        "middle_east",
-        "india",
-        "americas"
-      ],
-      "sources": [
-        "World | Deutsche Welle",
-        "The Verge",
-        "Cointelegraph.com News",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 24.1,
-        "volume_confirmation": 20.0,
-        "source_diversity": 17.4,
-        "recency": 20.0,
-        "geopolitical_severity": 14.9
       }
     },
     {
@@ -376,61 +376,6 @@
       }
     },
     {
-      "sector_key": "banking_financial|gold_precious_metals",
-      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
-      "confidence": 93.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "11 Apr 2026 20:50 UTC",
-      "headline": "The IMF Meetings Were Supposed to Be About Trade. Then Came the Iran War.",
-      "regions": [
-        "americas",
-        "global",
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "Bloomberg Markets",
-        "Finance"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "GOLDBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD",
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.6,
-        "volume_confirmation": 20.0,
-        "source_diversity": 17.0,
-        "recency": 18.6,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
       "confidence": 91.0,
@@ -480,6 +425,61 @@
         "volume_confirmation": 20.0,
         "source_diversity": 18.4,
         "recency": 12.6,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "banking_financial|gold_precious_metals",
+      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
+      "confidence": 90.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "11 Apr 2026 23:22 UTC",
+      "headline": "RBNZ to Announce Next Steps on Cash-Rate Decision Transparency",
+      "regions": [
+        "americas",
+        "asia_pacific",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Finance",
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "Oilprice.com"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "GOLDBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD",
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.9,
+        "volume_confirmation": 20.0,
+        "source_diversity": 17.0,
+        "recency": 15.7,
         "geopolitical_severity": 15.0
       }
     },
@@ -927,12 +927,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 50 articles - HIGH / NEUTRAL - Strait of Hormuz Constraints Keep Oil Prices Elevated"
+      "text": "Technology & AI / Semiconductors - 27 articles - HIGH / NEUTRAL - From complexity to clarity: How AI is transforming insurance for customers"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 25 articles - HIGH / NEUTRAL - From complexity to clarity: How AI is transforming insurance for customers"
+      "text": "Energy / Oil & Gas - 50 articles - HIGH / NEUTRAL - Strait of Hormuz Constraints Keep Oil Prices Elevated"
     },
     {
       "tag": "tag-neu",
@@ -942,12 +942,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Banking & Financial Sector + Gold & Precious Metals - 13 articles - HIGH / NEUTRAL - The IMF Meetings Were Supposed to Be About Trade. Then Came the Iran War."
+      "text": "Defense & Aerospace - 47 articles - HIGH / NEUTRAL - US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 47 articles - HIGH / NEUTRAL - US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027"
+      "text": "Banking & Financial Sector + Gold & Precious Metals - 13 articles - HIGH / NEUTRAL - RBNZ to Announce Next Steps on Cash-Rate Decision Transparency"
     },
     {
       "tag": "tag-neu",
@@ -1110,12 +1110,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 73131.33,
+      "price": 71963.06,
       "currency": "USD",
-      "change": 152.28,
-      "change_pct": 0.21,
-      "change_str": "+0.21%",
-      "direction": "up"
+      "change": -1015.99,
+      "change_pct": -1.39,
+      "change_str": "-1.39%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
@@ -1447,10 +1447,10 @@
     }
   },
   "logs": [
-    "2026-04-11 23:37:25 [INFO] AZALYST - status.json generated",
-    "2026-04-11 23:37:25 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
-    "2026-04-11 23:37:25 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-04-11 23:37:25 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-12 01:46:18 [INFO] AZALYST - status.json generated",
+    "2026-04-12 01:46:18 [INFO] PORTFOLIO - NAV USD 7,715.47 | Return +1.40%",
+    "2026-04-12 01:46:18 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-04-12 01:46:18 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-11 23:37:25 UTC"
+  "generated_at": "2026-04-12 01:46:17 UTC"
 }
