@@ -158,10 +158,6 @@
   },
   "confidence": [
     {
-      "symbol": "Defense & Aerospace",
-      "score": 98.0
-    },
-    {
       "symbol": "Energy / Oil & Gas",
       "score": 95.0
     },
@@ -174,10 +170,6 @@
       "score": 94.0
     },
     {
-      "symbol": "Gold & Precious Metals + India Equity Markets",
-      "score": 93.0
-    },
-    {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 91.0
     },
@@ -186,23 +178,35 @@
       "score": 91.0
     },
     {
-      "symbol": "Gold & Precious Metals",
+      "symbol": "Defense & Aerospace",
       "score": 89.0
     },
     {
       "symbol": "Crypto & Digital Assets",
-      "score": 83.0
+      "score": 89.0
+    },
+    {
+      "symbol": "Gold & Precious Metals",
+      "score": 89.0
     },
     {
       "symbol": "Cybersecurity + Crypto & Digital Assets",
       "score": 83.0
     },
     {
+      "symbol": "Gold & Precious Metals + India Equity Markets",
+      "score": 81.0
+    },
+    {
+      "symbol": "Nuclear Energy & Uranium",
+      "score": 72.0
+    },
+    {
       "symbol": "Cybersecurity",
       "score": 71.0
     },
     {
-      "symbol": "Nuclear Energy & Uranium",
+      "symbol": "Banking & Financial Sector",
       "score": 70.0
     },
     {
@@ -212,66 +216,9 @@
     {
       "symbol": "Emerging Markets",
       "score": 64.0
-    },
-    {
-      "symbol": "Banking & Financial Sector",
-      "score": 62.0
     }
   ],
   "signals": [
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 98.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 68,
-      "latest_at": "13 Apr 2026 16:55 UTC",
-      "headline": "Citadel Securities Sees Market Rally as Extreme Risks of War Ebb",
-      "regions": [
-        "india",
-        "africa",
-        "global",
-        "americas"
-      ],
-      "sources": [
-        "The Verge",
-        "World News - Breaking international news and headlines | Sky News",
-        "Oilprice.com",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 18.7,
-        "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
@@ -282,20 +229,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 53,
-      "latest_at": "13 Apr 2026 15:35 UTC",
+      "article_count": 46,
+      "latest_at": "13 Apr 2026 20:00 UTC",
       "headline": "Oil Soars 7%, OPEC Cuts Demand Forecast As Trump Moves to Block Iran Ports",
       "regions": [
+        "middle_east",
         "africa",
         "global",
-        "middle_east",
         "europe"
       ],
       "sources": [
-        "The Verge",
+        "World | Deutsche Welle",
         "Oilprice.com",
-        "US Top News and Analysis",
-        "Cointelegraph.com News"
+        "Defense News",
+        "US Top News and Analysis"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -320,8 +267,8 @@
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 18.0,
-        "recency": 17.5,
+        "source_diversity": 17.7,
+        "recency": 17.6,
         "geopolitical_severity": 15.0
       }
     },
@@ -427,61 +374,6 @@
         "volume_confirmation": 20.0,
         "source_diversity": 14.8,
         "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals|india_equity",
-      "sector_label": "Gold & Precious Metals + India Equity Markets",
-      "confidence": 93.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "13 Apr 2026 16:37 UTC",
-      "headline": "Fed officials still foresee rate cut this year, despite war impacts, minutes show",
-      "regions": [
-        "india",
-        "americas",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "Markets-Economic Times",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "INDA",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "INDA",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 23.8,
-        "volume_confirmation": 20.0,
-        "source_diversity": 15.5,
-        "recency": 19.4,
         "geopolitical_severity": 15.0
       }
     },
@@ -594,6 +486,105 @@
       }
     },
     {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 89.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 65,
+      "latest_at": "13 Apr 2026 15:27 UTC",
+      "headline": "US Stocks Extend Gains, Erasing the Losses Caused by Iran War",
+      "regions": [
+        "middle_east",
+        "europe",
+        "africa",
+        "global"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Oilprice.com",
+        "World News - Breaking international news and headlines | Sky News",
+        "Defense News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 18.4,
+        "recency": 11.2,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 89.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 25,
+      "latest_at": "13 Apr 2026 20:00 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "middle_east",
+        "asia_pacific",
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 12.3,
+        "recency": 17.6,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals",
       "confidence": 89.0,
@@ -647,51 +638,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 83.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "13 Apr 2026 14:09 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "india",
-        "global",
-        "middle_east",
-        "europe"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 8.5,
-        "recency": 15.1,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "crypto_digital|cybersecurity",
       "sector_label": "Cybersecurity + Crypto & Digital Assets",
       "confidence": 83.0,
@@ -737,6 +683,111 @@
         "volume_confirmation": 17.1,
         "source_diversity": 10.1,
         "recency": 19.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals|india_equity",
+      "sector_label": "Gold & Precious Metals + India Equity Markets",
+      "confidence": 81.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "13 Apr 2026 13:38 UTC",
+      "headline": "Gold Eases as US Plan to Blockade Hormuz Raises Inflation Risks",
+      "regions": [
+        "global",
+        "middle_east",
+        "india",
+        "americas"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "Finance",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "INDA",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "INDA",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 23.6,
+        "volume_confirmation": 20.0,
+        "source_diversity": 13.3,
+        "recency": 9.3,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "nuclear_uranium",
+      "sector_label": "Nuclear Energy & Uranium",
+      "confidence": 72.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "13 Apr 2026 21:00 UTC",
+      "headline": "US Won\u2019t Leave Without Iran\u2019s Uranium, Bass Says",
+      "regions": [
+        "europe",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Bloomberg Markets",
+        "Oilprice.com"
+      ],
+      "primary_etf": "URA",
+      "top_etfs": [
+        "URA",
+        "URNM",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "URA",
+        "URNM",
+        "SRUUF"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 14.5,
+        "volume_confirmation": 12.5,
+        "source_diversity": 11.0,
+        "recency": 19.5,
         "geopolitical_severity": 15.0
       }
     },
@@ -788,52 +839,53 @@
       }
     },
     {
-      "sector_key": "nuclear_uranium",
-      "sector_label": "Nuclear Energy & Uranium",
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector",
       "confidence": 70.0,
-      "severity": "CRITICAL",
+      "severity": "MEDIUM",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "12 Apr 2026 05:42 UTC",
-      "headline": "India\u2019s Nuclear Bet Is Starting To Pay Off",
+      "article_count": 5,
+      "latest_at": "13 Apr 2026 21:02 UTC",
+      "headline": "How bond market's private credit crisis fears are playing out in fixed-income ETFs",
       "regions": [
-        "asia_pacific",
-        "middle_east",
-        "global"
+        "europe",
+        "global",
+        "americas"
       ],
       "sources": [
-        "Oilprice.com",
-        "Bloomberg Markets"
+        "US Top News and Analysis",
+        "Finance",
+        "Cointelegraph.com News",
+        "Markets-Economic Times"
       ],
-      "primary_etf": "URA",
+      "primary_etf": "XLF",
       "top_etfs": [
-        "URA",
-        "URNM",
-        "CPSEETF"
+        "XLF",
+        "GLDM",
+        "BANKBEES"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "CPSEETF"
+        "BANKBEES"
       ],
       "global_etfs": [
-        "URA",
-        "URNM",
-        "SRUUF"
+        "XLF",
+        "GLDM"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 16.8,
-        "volume_confirmation": 10.8,
-        "source_diversity": 9.6,
-        "recency": 18.8,
-        "geopolitical_severity": 15.0
+        "signal_strength": 11.9,
+        "volume_confirmation": 12.5,
+        "source_diversity": 14.3,
+        "recency": 19.6,
+        "geopolitical_severity": 11.8
       }
     },
     {
@@ -934,67 +986,13 @@
         "recency": 19.3,
         "geopolitical_severity": 11.0
       }
-    },
-    {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector",
-      "confidence": 62.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "13 Apr 2026 13:46 UTC",
-      "headline": "Bank stocks vs consumer discretionary: Sunil Subramaniam\u2019s top watchlist for the summer season",
-      "regions": [
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Finance"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "BANKBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 10.0,
-        "volume_confirmation": 10.8,
-        "source_diversity": 13.3,
-        "recency": 19.1,
-        "geopolitical_severity": 9.5
-      }
     }
   ],
   "articles": [
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 68 articles - HIGH / NEUTRAL - Citadel Securities Sees Market Rally as Extreme Risks of War Ebb"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Energy / Oil & Gas - 53 articles - CRITICAL / NEUTRAL - Oil Soars 7%, OPEC Cuts Demand Forecast As Trump Moves to Block Iran Ports"
+      "text": "Energy / Oil & Gas - 46 articles - CRITICAL / NEUTRAL - Oil Soars 7%, OPEC Cuts Demand Forecast As Trump Moves to Block Iran Ports"
     },
     {
       "tag": "tag-neu",
@@ -1009,11 +1007,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + India Equity Markets - 13 articles - HIGH / NEUTRAL - Fed officials still foresee rate cut this year, despite war impacts, minutes show"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - Gold falls on strong dollar, dimming Fed rate cut hopes"
     },
     {
@@ -1024,12 +1017,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals - 13 articles - HIGH / NEUTRAL - Gold Eases as US Plan to Blockade Hormuz Raises Inflation Risks"
+      "text": "Defense & Aerospace - 65 articles - HIGH / NEUTRAL - US Stocks Extend Gains, Erasing the Losses Caused by Iran War"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+      "text": "Crypto & Digital Assets - 25 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Gold & Precious Metals - 13 articles - HIGH / NEUTRAL - Gold Eases as US Plan to Blockade Hormuz Raises Inflation Risks"
     },
     {
       "tag": "tag-neu",
@@ -1039,12 +1037,22 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Gold & Precious Metals + India Equity Markets - 13 articles - HIGH / NEUTRAL - Gold Eases as US Plan to Blockade Hormuz Raises Inflation Risks"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Nuclear Energy & Uranium - 5 articles - HIGH / NEUTRAL - US Won\u2019t Leave Without Iran\u2019s Uranium, Bass Says"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Cybersecurity - 8 articles - MEDIUM / NEUTRAL - Hungary's government accused of spying on opposition as key election nears"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Nuclear Energy & Uranium - 4 articles - CRITICAL / NEUTRAL - India\u2019s Nuclear Bet Is Starting To Pay Off"
+      "text": "Banking & Financial Sector - 5 articles - MEDIUM / NEUTRAL - How bond market's private credit crisis fears are playing out in fixed-income ETFs"
     },
     {
       "tag": "tag-neu",
@@ -1055,11 +1063,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Emerging Markets - 4 articles - MEDIUM / NEUTRAL - Apple pulls Jack Dorsey's Bitchat from China at Beijing\u2019s request"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Banking & Financial Sector - 4 articles - MEDIUM / NEUTRAL - Bank stocks vs consumer discretionary: Sunil Subramaniam\u2019s top watchlist for the summer season"
     }
   ],
   "market_snapshot": [
@@ -1155,44 +1158,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4767.3,
+      "price": 4766.6,
       "currency": "USD",
-      "change": 5.4,
-      "change_pct": 0.11,
-      "change_str": "+0.11%",
+      "change": 4.7,
+      "change_pct": 0.1,
+      "change_str": "+0.10%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 98.11,
+      "price": 98.01,
       "currency": "USD",
-      "change": 1.54,
-      "change_pct": 1.59,
-      "change_str": "+1.59%",
+      "change": 1.44,
+      "change_pct": 1.49,
+      "change_str": "+1.49%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 73117.3,
+      "price": 73274.58,
       "currency": "USD",
-      "change": 2363.89,
-      "change_pct": 3.34,
-      "change_str": "+3.34%",
+      "change": 2521.17,
+      "change_pct": 3.56,
+      "change_str": "+3.56%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.39,
+      "price": 98.43,
       "currency": "USD",
-      "change": -0.26,
-      "change_pct": -0.26,
-      "change_str": "-0.26%",
+      "change": -0.22,
+      "change_pct": -0.22,
+      "change_str": "-0.22%",
       "direction": "down"
     },
     {
@@ -1514,10 +1517,10 @@
     }
   },
   "logs": [
-    "2026-04-13 20:31:19 [INFO] AZALYST - status.json generated",
-    "2026-04-13 20:31:19 [INFO] PORTFOLIO - NAV USD 7,745.85 | Return +2.15%",
-    "2026-04-13 20:31:19 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-04-13 20:31:19 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-13 21:15:29 [INFO] AZALYST - status.json generated",
+    "2026-04-13 21:15:29 [INFO] PORTFOLIO - NAV USD 7,745.85 | Return +2.15%",
+    "2026-04-13 21:15:29 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-04-13 21:15:29 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-13 20:31:18 UTC"
+  "generated_at": "2026-04-13 21:15:28 UTC"
 }
