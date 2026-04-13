@@ -1,38 +1,39 @@
 {
   "defense": {
-    "sent_at": "2026-04-13T07:50:27.783731+00:00",
-    "confidence": 95,
+    "sent_at": "2026-04-13T12:14:59.650974+00:00",
+    "confidence": 97,
     "sector_label": "Defense & Aerospace",
-    "article_count": 68,
+    "article_count": 70,
     "severity": "HIGH",
     "regions": [
-      "europe",
-      "middle_east",
+      "africa",
       "global",
+      "americas",
       "india",
-      "americas"
+      "asia_pacific",
+      "middle_east"
     ],
     "sources": [
       "Oilprice.com",
-      "Finance",
-      "Defense News",
       "Cointelegraph.com News",
-      "BBC News",
-      "Bloomberg Markets"
+      "Bloomberg Markets",
+      "Defense News",
+      "US Top News and Analysis",
+      "Finance"
     ],
     "top_headlines": [
       "US Navy seeks 1,200% increase in Tomahawk missile procurement for 2027",
       "Iran conflict threatens market stability after failed US peace negotiations",
-      "Oil Rallies as US Blockade of Iran Spells \u2018Dangerous\u2019 Escalation",
       "Trump weighs pulling some US troops from Europe amid NATO strains, official says",
-      "Bitcoin dips to $70.6K, oil rises after US announces Hormuz blockade"
+      "Iran War: Trump Vows to Blockade Hormuz & Hungary's Orban Concedes Defeat | The Pulse 4/13",
+      "Nigeria Air Force orders investigation after dozens killed in airstrike"
     ],
-    "latest_ts": "2026-04-13T06:08:19+00:00",
+    "latest_ts": "2026-04-13T12:00:00+00:00",
     "confidence_breakdown": {
       "signal_strength": 25.0,
       "volume_confirmation": 20.0,
       "source_diversity": 18.4,
-      "recency": 16.9,
+      "recency": 19.5,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
@@ -384,13 +385,15 @@
     }
   },
   "india_equity": {
-    "sent_at": "2026-04-13T07:50:31.870294+00:00",
-    "confidence": 87,
+    "sent_at": "2026-04-13T12:15:09.197658+00:00",
+    "confidence": 94,
     "sector_label": "India Equity Markets",
-    "article_count": 9,
+    "article_count": 19,
     "severity": "HIGH",
     "regions": [
+      "india",
       "asia_pacific",
+      "global",
       "middle_east"
     ],
     "sources": [
@@ -402,15 +405,15 @@
     ],
     "top_headlines": [
       "India bonds slump after US-Iran peace talks falter",
+      "Why stock markets crashed today? Sensex tumbles 700 pts, Nifty ends below 23,850. 7 key factors explained",
       "BSE loses \u2018cheap\u2019 tag post 80% rally in one year. Can Q4 performance, NSE IPO drive rerating?",
-      "Why is stock market crashing today? Sensex drops over 800 pts, Nifty below 23,800. 7 key factors explained",
-      "India: Legendary playback singer Asha Bhosle dies at 92",
-      "China\u2019s TCL Is Said to Consider Stake Sale in India TV Business"
+      "NSE gets govt approval to name new subsidiary 'National Coal Exchange of India'",
+      "Stock market holiday on Tuesday, April 14: Are NSE &amp; BSE closed for Dr. Ambedkar Jayanti? Check now"
     ],
-    "latest_ts": "2026-04-13T07:49:55.735361+00:00",
+    "latest_ts": "2026-04-13T12:14:21.259806+00:00",
     "confidence_breakdown": {
-      "signal_strength": 20.2,
-      "volume_confirmation": 17.1,
+      "signal_strength": 24.2,
+      "volume_confirmation": 20.0,
       "source_diversity": 14.8,
       "recency": 20.0,
       "geopolitical_severity": 15.0
@@ -465,10 +468,11 @@
           "sector_key": "india_equity",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 102.0,
+          "selection_score": 105.0,
           "selection_notes": [
             "broad diversification",
-            "broad exposure"
+            "broad exposure",
+            "matches India-listed access"
           ]
         },
         {
@@ -482,8 +486,10 @@
           "sector_key": "india_equity",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 63.5,
-          "selection_notes": []
+          "selection_score": 66.5,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "top_etfs": [
@@ -516,10 +522,11 @@
           "sector_key": "india_equity",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 102.0,
+          "selection_score": 105.0,
           "selection_notes": [
             "broad diversification",
-            "broad exposure"
+            "broad exposure",
+            "matches India-listed access"
           ]
         },
         {
@@ -533,8 +540,10 @@
           "sector_key": "india_equity",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 63.5,
-          "selection_notes": []
+          "selection_score": 66.5,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "regional_alternatives": {
@@ -550,10 +559,11 @@
             "sector_key": "india_equity",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 102.0,
+            "selection_score": 105.0,
             "selection_notes": [
               "broad diversification",
-              "broad exposure"
+              "broad exposure",
+              "matches India-listed access"
             ]
           },
           {
@@ -567,8 +577,10 @@
             "sector_key": "india_equity",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 63.5,
-            "selection_notes": []
+            "selection_score": 66.5,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
           }
         ],
         "International-listed": [
@@ -604,10 +616,11 @@
           "sector_key": "india_equity",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 102.0,
+          "selection_score": 105.0,
           "selection_notes": [
             "broad diversification",
-            "broad exposure"
+            "broad exposure",
+            "matches India-listed access"
           ]
         },
         {
@@ -621,8 +634,10 @@
           "sector_key": "india_equity",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 63.5,
-          "selection_notes": []
+          "selection_score": 66.5,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "global": [
@@ -648,38 +663,38 @@
     }
   },
   "energy_oil": {
-    "sent_at": "2026-04-13T07:50:25.673494+00:00",
-    "confidence": 96,
+    "sent_at": "2026-04-13T12:14:58.167281+00:00",
+    "confidence": 92,
     "sector_label": "Energy / Oil & Gas",
-    "article_count": 55,
+    "article_count": 50,
     "severity": "CRITICAL",
     "regions": [
-      "europe",
-      "middle_east",
+      "global",
       "asia_pacific",
-      "global"
+      "middle_east",
+      "europe"
     ],
     "sources": [
       "Oilprice.com",
-      "Finance",
-      "Defense News",
       "Cointelegraph.com News",
-      "BBC News",
-      "Bloomberg Markets"
+      "Finance",
+      "Bloomberg Markets",
+      "US Top News and Analysis",
+      "Defense News"
     ],
     "top_headlines": [
-      "Oil Price Today (April 13): Crude oil reclaims $100 as failed peace talks trigger US move to block Iran-linked Hormuz flows. What\u2019s next?",
       "Oil Prices Surge Past $100 as Trump Threatens to Blockade the Strait of Hormuz",
       "Colombia\u2019s Energy Crisis Deepens as Oil Output Falls and Imports Rise",
-      "Strait of Hormuz Constraints Keep Oil Prices Elevated",
-      "HPCL, BPCL and IOCL shares slide up to 4% as crude oil reclaims $100. Where are prices headed?"
+      "HPCL, BPCL and IOCL shares slide up to 4% as crude oil reclaims $100. Where are prices headed?",
+      "Oil price surges 8% on Iran tensions: Five things to know in Bitcoin this week",
+      "Oil Tanker Confusion as Trump Announces Blockade"
     ],
-    "latest_ts": "2026-04-13T07:08:45+00:00",
+    "latest_ts": "2026-04-13T08:47:32+00:00",
     "confidence_breakdown": {
       "signal_strength": 25.0,
       "volume_confirmation": 20.0,
       "source_diversity": 18.0,
-      "recency": 18.7,
+      "recency": 14.2,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
@@ -1018,35 +1033,35 @@
     }
   },
   "crypto_digital": {
-    "sent_at": "2026-04-13T07:50:30.272138+00:00",
-    "confidence": 85,
+    "sent_at": "2026-04-13T12:15:01.085977+00:00",
+    "confidence": 88,
     "sector_label": "Crypto & Digital Assets",
-    "article_count": 21,
+    "article_count": 25,
     "severity": "HIGH",
     "regions": [
-      "europe",
       "global",
-      "middle_east",
+      "india",
       "asia_pacific",
-      "india"
+      "middle_east",
+      "europe"
     ],
     "sources": [
-      "Cointelegraph.com News",
-      "Markets-Economic Times"
+      "Markets-Economic Times",
+      "Cointelegraph.com News"
     ],
     "top_headlines": [
       "Here\u2019s what happened in crypto today",
+      "Nigel Farage-backed Stack BTC adds $2.7M in Bitcoin to treasury",
       "Crypto crashed six months ago: Have markets improved, or are bears still in charge?",
-      "Bank of Korea floats crypto \u2018circuit breakers\u2019 after Bithumb blunder",
-      "Bitcoin stays firm above $71K after CPI-led rally triggers profit booking",
-      "Strategy's Michael Saylor signals impending Bitcoin purchase"
+      "Crypto ETPs see $1.1B inflows, strongest gains since January",
+      "Bank of Korea floats crypto \u2018circuit breakers\u2019 after Bithumb blunder"
     ],
-    "latest_ts": "2026-04-13T06:21:05+00:00",
+    "latest_ts": "2026-04-13T12:09:54+00:00",
     "confidence_breakdown": {
       "signal_strength": 25.0,
       "volume_confirmation": 20.0,
       "source_diversity": 8.5,
-      "recency": 17.2,
+      "recency": 19.8,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
@@ -2058,34 +2073,36 @@
     }
   },
   "commodities_mining": {
-    "sent_at": "2026-04-13T05:35:07.273586+00:00",
-    "confidence": 65,
+    "sent_at": "2026-04-13T12:15:11.601098+00:00",
+    "confidence": 64,
     "sector_label": "Commodities & Mining",
     "article_count": 6,
     "severity": "MEDIUM",
     "regions": [
+      "global",
       "asia_pacific",
-      "middle_east",
-      "global"
+      "middle_east"
     ],
     "sources": [
       "Oilprice.com",
-      "Bloomberg Markets"
+      "Cointelegraph.com News",
+      "Bloomberg Markets",
+      "US Top News and Analysis"
     ],
     "top_headlines": [
-      "Copper Falls, Aluminum Spreads Spike as US Plans Hormuz Blockade",
-      "Chinese Rare Earth Companies Jump After Quarterly Price Hike",
-      "Western Australia Mulls Own Diesel Reserve After War Disruptions",
+      "Trump threatens 50% tariffs on China as report suggests plans for arms shipment to Iran",
+      "Indonesia Hikes Nickel Ore Benchmark Price in Hit to Processors",
+      "Bitcoin mining and AI may be on opposite decentralization paths: Researcher",
       "LNG Shock Hits Supply Chains as War Disrupts Global Flows",
       "Three Energy Stories That Actually Matter Right Now"
     ],
-    "latest_ts": "2026-04-13T05:20:25+00:00",
+    "latest_ts": "2026-04-13T11:04:24+00:00",
     "confidence_breakdown": {
-      "signal_strength": 11.2,
+      "signal_strength": 10.0,
       "volume_confirmation": 14.0,
-      "source_diversity": 9.6,
-      "recency": 19.5,
-      "geopolitical_severity": 11.4
+      "source_diversity": 12.3,
+      "recency": 17.8,
+      "geopolitical_severity": 10.9
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
