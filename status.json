@@ -206,16 +206,16 @@
       "score": 79.0
     },
     {
-      "symbol": "Commodities & Mining",
-      "score": 75.0
-    },
-    {
       "symbol": "Nuclear Energy & Uranium",
       "score": 72.0
     },
     {
       "symbol": "Cybersecurity",
       "score": 71.0
+    },
+    {
+      "symbol": "Commodities & Mining",
+      "score": 70.0
     },
     {
       "symbol": "Emerging Markets",
@@ -847,56 +847,6 @@
       }
     },
     {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 75.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "14 Apr 2026 17:10 UTC",
-      "headline": "Copper hits one-month high as US-Iran talk hopes lift metal prices",
-      "regions": [
-        "middle_east",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Oilprice.com",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.5,
-        "volume_confirmation": 12.5,
-        "source_diversity": 14.0,
-        "recency": 19.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 72.0,
@@ -991,6 +941,54 @@
         "source_diversity": 12.5,
         "recency": 20.0,
         "geopolitical_severity": 11.0
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 70.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 4,
+      "latest_at": "15 Apr 2026 00:00 UTC",
+      "headline": "Copper hits one-month high as US-Iran talk hopes lift metal prices",
+      "regions": [
+        "middle_east",
+        "europe"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "Oilprice.com"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.7,
+        "volume_confirmation": 10.8,
+        "source_diversity": 13.0,
+        "recency": 19.8,
+        "geopolitical_severity": 14.5
       }
     },
     {
@@ -1107,17 +1105,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Commodities & Mining - 5 articles - HIGH / NEUTRAL - Copper hits one-month high as US-Iran talk hopes lift metal prices"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 5 articles - HIGH / NEUTRAL - US Won\u2019t Leave Without Iran\u2019s Uranium, Bass Says"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Cybersecurity - 8 articles - MEDIUM / NEUTRAL - Hungary's government accused of spying on opposition as key election nears"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Commodities & Mining - 4 articles - HIGH / NEUTRAL - Copper hits one-month high as US-Iran talk hopes lift metal prices"
     },
     {
       "tag": "tag-neu",
@@ -1218,44 +1216,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4857.9,
+      "price": 4862.7,
       "currency": "USD",
-      "change": 115.5,
-      "change_pct": 2.44,
-      "change_str": "+2.44%",
+      "change": 120.3,
+      "change_pct": 2.54,
+      "change_str": "+2.54%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 91.74,
+      "price": 89.9,
       "currency": "USD",
-      "change": -7.34,
-      "change_pct": -7.41,
-      "change_str": "-7.41%",
+      "change": -9.18,
+      "change_pct": -9.27,
+      "change_str": "-9.27%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 74081.55,
+      "price": 74670.48,
       "currency": "USD",
-      "change": -403.09,
-      "change_pct": -0.54,
-      "change_str": "-0.54%",
-      "direction": "down"
+      "change": 185.84,
+      "change_pct": 0.25,
+      "change_str": "+0.25%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.11,
+      "price": 98.08,
       "currency": "USD",
-      "change": -0.26,
-      "change_pct": -0.27,
-      "change_str": "-0.27%",
+      "change": -0.3,
+      "change_pct": -0.3,
+      "change_str": "-0.30%",
       "direction": "down"
     },
     {
@@ -1577,10 +1575,10 @@
     }
   },
   "logs": [
-    "2026-04-14 23:10:27 [INFO] AZALYST - status.json generated",
-    "2026-04-14 23:10:27 [INFO] PORTFOLIO - NAV USD 7,784.37 | Return +2.39%",
-    "2026-04-14 23:10:27 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-04-14 23:10:27 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-15 00:06:02 [INFO] AZALYST - status.json generated",
+    "2026-04-15 00:06:02 [INFO] PORTFOLIO - NAV USD 7,784.37 | Return +2.39%",
+    "2026-04-15 00:06:02 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-04-15 00:06:02 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-14 23:10:26 UTC"
+  "generated_at": "2026-04-15 00:06:01 UTC"
 }
