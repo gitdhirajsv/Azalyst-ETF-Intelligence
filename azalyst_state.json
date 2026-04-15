@@ -1,24 +1,24 @@
 {
   "defense": {
-    "sent_at": "2026-04-15T09:01:06.998631+00:00",
+    "sent_at": "2026-04-15T13:03:36.460676+00:00",
     "confidence": 98,
     "sector_label": "Defense & Aerospace",
-    "article_count": 67,
+    "article_count": 63,
     "severity": "HIGH",
     "regions": [
       "middle_east",
-      "europe",
+      "asia_pacific",
+      "africa",
       "americas",
       "india",
-      "asia_pacific",
-      "africa"
+      "global"
     ],
     "sources": [
-      "Cointelegraph.com News",
       "US Top News and Analysis",
-      "Bloomberg Markets",
-      "World | Deutsche Welle",
-      "Defense News",
+      "Finance",
+      "Oilprice.com",
+      "Cointelegraph.com News",
+      "Markets-Economic Times",
       "World News - Breaking international news and headlines | Sky News"
     ],
     "top_headlines": [
@@ -26,9 +26,9 @@
       "North Korea tests cruise missiles from new warship as Kim Jong Un watches",
       "Turkey pushes for larger role in Europe\u2019s defense as Trump questions NATO",
       "Trump weighs pulling some US troops from Europe amid NATO strains, official says",
-      "Gold Wavers as Traders Assess Renewed Push for US-Iran Talks"
+      "The US blockade of Iran is a gamble. Will it work?"
     ],
-    "latest_ts": "2026-04-15T09:00:24.622126+00:00",
+    "latest_ts": "2026-04-15T13:02:54.869151+00:00",
     "confidence_breakdown": {
       "signal_strength": 25.0,
       "volume_confirmation": 20.0,
@@ -662,39 +662,40 @@
     }
   },
   "energy_oil": {
-    "sent_at": "2026-04-15T09:01:08.576134+00:00",
-    "confidence": 96,
+    "sent_at": "2026-04-15T13:03:51.474394+00:00",
+    "confidence": 98,
     "sector_label": "Energy / Oil & Gas",
-    "article_count": 46,
+    "article_count": 42,
     "severity": "HIGH",
     "regions": [
       "middle_east",
-      "europe",
-      "americas",
       "asia_pacific",
-      "global"
+      "americas",
+      "india",
+      "global",
+      "europe"
     ],
     "sources": [
       "US Top News and Analysis",
-      "Bloomberg Markets",
-      "World | Deutsche Welle",
-      "Defense News",
+      "Finance",
+      "Oilprice.com",
+      "Markets-Economic Times",
       "World News - Breaking international news and headlines | Sky News",
-      "BBC News"
+      "World | Deutsche Welle"
     ],
     "top_headlines": [
-      "Oil Price Today (April 15): Crude oil below $95, falls for second consecutive day. What\u2019s behind the decline?",
       "Global Markets | Australian shares edge higher on US-Iran talks resumption",
-      "Paper Oil Blinks While Physical Supply Tightens",
-      "U.S. crude trades lower as possible Washington-Tehran talks raise hopes for Mideast peace deal",
-      "Oil Swings as Traders Decode Talk Signals With Hormuz Closed"
+      "Indonesia Turns to Russia for Oil as Middle East Risks Mount",
+      "Amid focus on Strait of Hormuz, experts sound warning on Yemen\u2019s Houthis and Red Sea",
+      "Supertanker Tests Blockade With Second Gulf Entry Attempt",
+      "Iran war: US blockade of Hormuz tests China's restraint"
     ],
-    "latest_ts": "2026-04-15T08:11:29+00:00",
+    "latest_ts": "2026-04-15T13:02:54.869151+00:00",
     "confidence_breakdown": {
       "signal_strength": 25.0,
       "volume_confirmation": 20.0,
       "source_diversity": 18.2,
-      "recency": 18.4,
+      "recency": 20.0,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
@@ -765,8 +766,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 66.0,
-          "selection_notes": []
+          "selection_score": 69.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         },
         {
           "name": "United States Oil Fund",
@@ -798,8 +801,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 45.0,
-          "selection_notes": []
+          "selection_score": 48.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "top_etfs": [
@@ -850,8 +855,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 66.0,
-          "selection_notes": []
+          "selection_score": 69.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "regional_alternatives": {
@@ -868,8 +875,10 @@
             "sector_key": "energy_oil",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 66.0,
-            "selection_notes": []
+            "selection_score": 69.0,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
           },
           {
             "name": "Nippon India ETF Nifty PSU Bank BeES",
@@ -883,8 +892,10 @@
             "sector_key": "energy_oil",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 45.0,
-            "selection_notes": []
+            "selection_score": 48.0,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
           }
         ],
         "International-listed": [
@@ -956,8 +967,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 66.0,
-          "selection_notes": []
+          "selection_score": 69.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         },
         {
           "name": "Nippon India ETF Nifty PSU Bank BeES",
@@ -971,8 +984,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 45.0,
-          "selection_notes": []
+          "selection_score": 48.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "global": [
@@ -1033,35 +1048,37 @@
     }
   },
   "crypto_digital": {
-    "sent_at": "2026-04-15T09:01:09.948823+00:00",
-    "confidence": 85,
+    "sent_at": "2026-04-15T13:03:52.919019+00:00",
+    "confidence": 88,
     "sector_label": "Crypto & Digital Assets",
-    "article_count": 25,
+    "article_count": 26,
     "severity": "HIGH",
     "regions": [
       "middle_east",
-      "global",
+      "asia_pacific",
       "americas",
+      "global",
       "europe"
     ],
     "sources": [
-      "Markets-Economic Times",
       "Cointelegraph.com News",
-      "US Top News and Analysis"
+      "Markets-Economic Times",
+      "US Top News and Analysis",
+      "Bloomberg Markets"
     ],
     "top_headlines": [
       "Here\u2019s what happened in crypto today",
+      "EToro to acquire Zengo in self-custody push as CEO predicts $250K Bitcoin",
+      "Bitcoin ETFs post $412M in inflows as Goldman Sachs files for BTC ETF",
       "Bitcoin hits $76,000 before easing to $74,500 as whales accumulate, profit booking caps rally",
-      "Bitcoin hits $76K after US PPI inflation stays tame: Will BTC hold its gains?",
-      "X product chief Nikita Bier teases a crypto \u2018fix\u2019 amid market slump",
       "Crypto, banks continue Senate bill spat with new proposal concerns: Report"
     ],
-    "latest_ts": "2026-04-15T06:14:41+00:00",
+    "latest_ts": "2026-04-15T10:06:08+00:00",
     "confidence_breakdown": {
       "signal_strength": 25.0,
       "volume_confirmation": 20.0,
-      "source_diversity": 10.1,
-      "recency": 15.2,
+      "source_diversity": 13.3,
+      "recency": 14.9,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
@@ -1697,40 +1714,41 @@
     }
   },
   "technology_ai": {
-    "sent_at": "2026-04-15T09:01:11.459885+00:00",
-    "confidence": 94,
+    "sent_at": "2026-04-15T13:03:55.588081+00:00",
+    "confidence": 97,
     "sector_label": "Technology & AI / Semiconductors",
-    "article_count": 20,
+    "article_count": 27,
     "severity": "HIGH",
     "regions": [
       "middle_east",
+      "asia_pacific",
       "americas",
       "india",
-      "asia_pacific",
-      "global"
+      "global",
+      "europe"
     ],
     "sources": [
-      "Cointelegraph.com News",
       "US Top News and Analysis",
-      "Bloomberg Markets",
-      "World | Deutsche Welle",
-      "Defense News",
-      "World News - Breaking international news and headlines | Sky News"
+      "Finance",
+      "Cointelegraph.com News",
+      "Markets-Economic Times",
+      "World News - Breaking international news and headlines | Sky News",
+      "Defense News"
     ],
     "top_headlines": [
+      "Aixtron Surges to 25-Year High as AI Spurs Demand for Its Tools",
       "Chip giant ASML raises 2026 guidance as AI semiconductor demand stays strong",
-      "Pentagon\u2019s ouster of Anthropic opens\u00a0doors for small AI rivals",
-      "Quantum computing: A tech race Europe could win?",
-      "MTAR Tech shares soar 10%, double investor money in 2026! What\u2019s behind the latest surge?",
-      "Michael Burry says he's still betting against Palantir after Trump post boosts stock"
+      "South Korea Overtook China as ASML\u2019s Largest Market Last Quarter",
+      "AI-Exposed Lenders Show Early Credit Warning Signs, Moody\u2019s Says",
+      "Pentagon\u2019s ouster of Anthropic opens\u00a0doors for small AI rivals"
     ],
-    "latest_ts": "2026-04-15T09:00:24.742278+00:00",
+    "latest_ts": "2026-04-15T13:02:54.304602+00:00",
     "confidence_breakdown": {
-      "signal_strength": 22.0,
+      "signal_strength": 24.5,
       "volume_confirmation": 20.0,
       "source_diversity": 18.3,
       "recency": 20.0,
-      "geopolitical_severity": 14.2
+      "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -2355,50 +2373,56 @@
     }
   },
   "cybersecurity": {
-    "sent_at": "2026-04-04T05:47:03.331918+00:00",
-    "confidence": 71,
+    "sent_at": "2026-04-15T13:04:01.217114+00:00",
+    "confidence": 62,
     "sector_label": "Cybersecurity",
-    "article_count": 8,
+    "article_count": 4,
     "severity": "MEDIUM",
     "regions": [
       "middle_east",
-      "asia_pacific",
-      "europe",
       "global"
     ],
     "sources": [
-      "Oilprice.com",
-      "World | Deutsche Welle",
+      "Markets-Economic Times",
+      "US Top News and Analysis",
       "Bloomberg Markets",
-      "BBC News"
+      "The Verge"
     ],
     "top_headlines": [
-      "Hungary's government accused of spying on opposition as key election nears",
-      "Trump\u2019s Contradictions on Iran Rattle Both Markets and Allies",
-      "When will the Iran war end? Tracing the Trump administration's timelines",
-      "Italy Deficit at 3.1% Breaches EU Ceiling in Setback for Meloni",
-      "France Weighs Targeted Fuel Aid as Iran War Pushes Up Costs"
+      "HSBC Private Bank slashes India stock exposure to buy gold amid Iran war",
+      "Microsoft faces fresh Windows Recall security concerns",
+      "Is Middle East Unrest Driving Wealth Back to Europe?",
+      "Jamie Dimon says Anthropic's Mythos reveals 'a lot more vulnerabilities' for cyberattacks"
     ],
-    "latest_ts": "2026-04-04T05:46:55.956833+00:00",
+    "latest_ts": "2026-04-15T13:02:54.304461+00:00",
     "confidence_breakdown": {
-      "signal_strength": 11.9,
-      "volume_confirmation": 16.0,
-      "source_diversity": 12.5,
+      "signal_strength": 8.3,
+      "volume_confirmation": 10.8,
+      "source_diversity": 13.3,
       "recency": 20.0,
-      "geopolitical_severity": 11
+      "geopolitical_severity": 9.9
     },
     "etf_recommendations": {
-      "india": [],
-      "global": [
-        {
-          "name": "ETFMG Prime Cyber Security ETF",
-          "ticker": "HACK",
-          "platform": "ETFMG \u2014 IBKR / Schwab",
-          "exchange": "NYSE",
-          "risk": "Medium",
-          "timeframe": "3\u201312 months",
-          "thesis": "Palo Alto, CrowdStrike, Fortinet core holdings. Non-cyclical growth. Every geopolitical event drives demand."
-        },
+      "selection_method": "global-ranked",
+      "primary": {
+        "name": "First Trust Nasdaq CEA Cybersecurity ETF",
+        "ticker": "CIBR",
+        "platform": "First Trust \u2014 IBKR / Schwab",
+        "exchange": "NASDAQ",
+        "risk": "Medium",
+        "timeframe": "3\u201312 months",
+        "thesis": "Larger, more diversified cyber ETF. Cisco, Broadcom's security arm, Palo Alto, Zscaler.",
+        "sector_key": "cybersecurity",
+        "market_bucket": "global",
+        "market_scope": "International-listed",
+        "selection_score": 119.5,
+        "selection_notes": [
+          "clean thematic exposure",
+          "broad exposure",
+          "diversified exposure"
+        ]
+      },
+      "ranked": [
         {
           "name": "First Trust Nasdaq CEA Cybersecurity ETF",
           "ticker": "CIBR",
@@ -2406,41 +2430,178 @@
           "exchange": "NASDAQ",
           "risk": "Medium",
           "timeframe": "3\u201312 months",
-          "thesis": "Larger, more diversified cyber ETF. Cisco, Broadcom's security arm, Palo Alto, Zscaler."
+          "thesis": "Larger, more diversified cyber ETF. Cisco, Broadcom's security arm, Palo Alto, Zscaler.",
+          "sector_key": "cybersecurity",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 119.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "broad exposure",
+            "diversified exposure"
+          ]
+        },
+        {
+          "name": "ETFMG Prime Cyber Security ETF",
+          "ticker": "HACK",
+          "platform": "ETFMG \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Palo Alto, CrowdStrike, Fortinet core holdings. Non-cyclical growth. Every geopolitical event drives demand.",
+          "sector_key": "cybersecurity",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 96.0,
+          "selection_notes": [
+            "matches international access"
+          ]
+        }
+      ],
+      "top_etfs": [
+        {
+          "name": "First Trust Nasdaq CEA Cybersecurity ETF",
+          "ticker": "CIBR",
+          "platform": "First Trust \u2014 IBKR / Schwab",
+          "exchange": "NASDAQ",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Larger, more diversified cyber ETF. Cisco, Broadcom's security arm, Palo Alto, Zscaler.",
+          "sector_key": "cybersecurity",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 119.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "broad exposure",
+            "diversified exposure"
+          ]
+        },
+        {
+          "name": "ETFMG Prime Cyber Security ETF",
+          "ticker": "HACK",
+          "platform": "ETFMG \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Palo Alto, CrowdStrike, Fortinet core holdings. Non-cyclical growth. Every geopolitical event drives demand.",
+          "sector_key": "cybersecurity",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 96.0,
+          "selection_notes": [
+            "matches international access"
+          ]
+        }
+      ],
+      "regional_alternatives": {
+        "International-listed": [
+          {
+            "name": "First Trust Nasdaq CEA Cybersecurity ETF",
+            "ticker": "CIBR",
+            "platform": "First Trust \u2014 IBKR / Schwab",
+            "exchange": "NASDAQ",
+            "risk": "Medium",
+            "timeframe": "3\u201312 months",
+            "thesis": "Larger, more diversified cyber ETF. Cisco, Broadcom's security arm, Palo Alto, Zscaler.",
+            "sector_key": "cybersecurity",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 119.5,
+            "selection_notes": [
+              "clean thematic exposure",
+              "broad exposure",
+              "diversified exposure"
+            ]
+          },
+          {
+            "name": "ETFMG Prime Cyber Security ETF",
+            "ticker": "HACK",
+            "platform": "ETFMG \u2014 IBKR / Schwab",
+            "exchange": "NYSE",
+            "risk": "Medium",
+            "timeframe": "3\u201312 months",
+            "thesis": "Palo Alto, CrowdStrike, Fortinet core holdings. Non-cyclical growth. Every geopolitical event drives demand.",
+            "sector_key": "cybersecurity",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 96.0,
+            "selection_notes": [
+              "matches international access"
+            ]
+          }
+        ]
+      },
+      "india": [],
+      "global": [
+        {
+          "name": "First Trust Nasdaq CEA Cybersecurity ETF",
+          "ticker": "CIBR",
+          "platform": "First Trust \u2014 IBKR / Schwab",
+          "exchange": "NASDAQ",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Larger, more diversified cyber ETF. Cisco, Broadcom's security arm, Palo Alto, Zscaler.",
+          "sector_key": "cybersecurity",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 119.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "broad exposure",
+            "diversified exposure"
+          ]
+        },
+        {
+          "name": "ETFMG Prime Cyber Security ETF",
+          "ticker": "HACK",
+          "platform": "ETFMG \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Palo Alto, CrowdStrike, Fortinet core holdings. Non-cyclical growth. Every geopolitical event drives demand.",
+          "sector_key": "cybersecurity",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 96.0,
+          "selection_notes": [
+            "matches international access"
+          ]
         }
       ]
     }
   },
   "gold_precious_metals": {
-    "sent_at": "2026-04-15T10:19:33.511365+00:00",
-    "confidence": 79,
+    "sent_at": "2026-04-15T13:03:59.931741+00:00",
+    "confidence": 89,
     "sector_label": "Gold & Precious Metals",
-    "article_count": 10,
+    "article_count": 13,
     "severity": "HIGH",
     "regions": [
       "americas",
       "middle_east",
-      "global",
-      "asia_pacific"
+      "asia_pacific",
+      "global"
     ],
     "sources": [
-      "Markets-Economic Times",
       "Cointelegraph.com News",
+      "Markets-Economic Times",
+      "Bloomberg Markets",
       "Finance"
     ],
     "top_headlines": [
+      "Gold rises 60% since last Akshaya Tritiya. Should you invest this year amid Iran war uncertainty?",
       "Silver rises Rs 2,200, gold at Rs 1.54 lakh as Iran war peace talks, falling oil lifts mood. Key levels to watch today",
       "Fed officials still foresee rate cut this year, despite war impacts, minutes show",
       "India's 30-year economic model is over; time to pivot from IT to manufacturing:  Saurabh Mukherjea",
-      "HSBC Private Bank slashes India stock exposure to buy gold amid Iran war",
-      "Iran conflict hints Bitcoin\u2019s addressable market could exceed gold: Bitwise"
+      "HSBC Private Bank slashes India stock exposure to buy gold amid Iran war"
     ],
-    "latest_ts": "2026-04-15T08:57:18+00:00",
+    "latest_ts": "2026-04-15T13:00:49+00:00",
     "confidence_breakdown": {
-      "signal_strength": 19.2,
-      "volume_confirmation": 18.0,
-      "source_diversity": 10.1,
-      "recency": 17.4,
+      "signal_strength": 21.3,
+      "volume_confirmation": 20.0,
+      "source_diversity": 13.3,
+      "recency": 19.9,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
