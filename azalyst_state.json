@@ -385,34 +385,33 @@
     }
   },
   "india_equity": {
-    "sent_at": "2026-04-15T14:53:25.198889+00:00",
-    "confidence": 87,
+    "sent_at": "2026-04-15T20:01:36.093922+00:00",
+    "confidence": 81,
     "sector_label": "India Equity Markets",
-    "article_count": 22,
+    "article_count": 19,
     "severity": "HIGH",
     "regions": [
       "asia_pacific",
-      "middle_east",
-      "global",
-      "india"
+      "india",
+      "middle_east"
     ],
     "sources": [
       "Markets-Economic Times",
       "World | Deutsche Welle"
     ],
     "top_headlines": [
+      "Ahead of Market: 10 things that will decide stock market action on Thursday",
       "7 stocks where DIIs are trimming their stakes in March quarter",
       "Smallcap stocks have already erased Iran war losses. Is a bluechip breakout next?",
-      "Adani Green Energy, Groww among 10 largecap stocks that have risen up to 34% so far in April",
       "Board should consider Tata Sons listing amid RBI, SP Group IPO push: Shriram Subramanian",
       "Sebi, DoT join forces to curb market frauds via real-time data sharing platform"
     ],
-    "latest_ts": "2026-04-15T14:14:51+00:00",
+    "latest_ts": "2026-04-15T15:34:45+00:00",
     "confidence_breakdown": {
-      "signal_strength": 25.0,
+      "signal_strength": 24.9,
       "volume_confirmation": 20.0,
       "source_diversity": 8.5,
-      "recency": 18.8,
+      "recency": 12.8,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
@@ -1249,54 +1248,55 @@
     }
   },
   "banking_financial|gold_precious_metals": {
-    "sent_at": "2026-04-15T11:34:07.402131+00:00",
-    "confidence": 90,
-    "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
+    "sent_at": "2026-04-15T20:01:37.475293+00:00",
+    "confidence": 92,
+    "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
     "article_count": 13,
     "severity": "HIGH",
     "regions": [
-      "india",
-      "asia_pacific",
-      "middle_east",
       "global",
+      "asia_pacific",
+      "india",
+      "middle_east",
       "americas"
     ],
     "sources": [
-      "Finance",
       "Markets-Economic Times",
+      "Bloomberg Markets",
       "Cointelegraph.com News",
+      "Finance",
       "US Top News and Analysis",
-      "Bloomberg Markets"
+      "Oilprice.com"
     ],
     "top_headlines": [
-      "How bond market's private credit crisis fears are playing out in fixed-income ETFs",
       "Gold rises 60% since last Akshaya Tritiya. Should you invest this year amid Iran war uncertainty?",
-      "Federal Reserve chair nominee's disclosure includes crypto and AI holdings",
-      "Bank of America tops estimates as CEO Brian Moynihan says consumer banking is 'healthy'",
-      "HDFC Bank, BSE and Tata Motors among top stocks mutual funds bought and sold during March crash"
+      "Iran war puts US companies in wait-and-see mode, Fed Beige Book says",
+      "India's 30-year economic model is over; time to pivot from IT to manufacturing:  Saurabh Mukherjea",
+      "Bitcoin can grow 'probably a lot bigger' than $30T+ gold market \u2014 Analysis",
+      "Iran conflict hints Bitcoin\u2019s addressable market could exceed gold: Bitwise"
     ],
-    "latest_ts": "2026-04-15T11:24:31+00:00",
+    "latest_ts": "2026-04-15T19:09:21+00:00",
     "confidence_breakdown": {
-      "signal_strength": 22.0,
+      "signal_strength": 24.2,
       "volume_confirmation": 20.0,
-      "source_diversity": 14.3,
-      "recency": 19.7,
-      "geopolitical_severity": 15.0
+      "source_diversity": 15.5,
+      "recency": 18.3,
+      "geopolitical_severity": 14.8
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
       "primary": {
-        "name": "Financial Select Sector SPDR",
-        "ticker": "XLF",
+        "name": "SPDR Gold MiniShares Trust",
+        "ticker": "GLDM",
         "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
         "exchange": "NYSE",
-        "risk": "Medium",
-        "timeframe": "1\u20136 months",
-        "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play.",
-        "sector_key": "banking_financial",
+        "risk": "Low-Medium",
+        "timeframe": "3\u201318 months",
+        "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026.",
+        "sector_key": "gold_precious_metals",
         "market_bucket": "global",
         "market_scope": "International-listed",
-        "selection_score": 130.0,
+        "selection_score": 134.0,
         "selection_notes": [
           "deep liquidity",
           "strong cost profile",
@@ -1305,17 +1305,17 @@
       },
       "ranked": [
         {
-          "name": "Financial Select Sector SPDR",
-          "ticker": "XLF",
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
           "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
           "exchange": "NYSE",
-          "risk": "Medium",
-          "timeframe": "1\u20136 months",
-          "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play.",
-          "sector_key": "banking_financial",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026.",
+          "sector_key": "gold_precious_metals",
           "market_bucket": "global",
           "market_scope": "International-listed",
-          "selection_score": 130.0,
+          "selection_score": 134.0,
           "selection_notes": [
             "deep liquidity",
             "strong cost profile",
@@ -1323,14 +1323,13 @@
           ]
         },
         {
-          "name": "SPDR Gold MiniShares Trust",
-          "ticker": "GLDM",
-          "note": "Flight to safety during banking stress",
+          "name": "Financial Select Sector SPDR",
+          "ticker": "XLF",
           "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
           "exchange": "NYSE",
-          "risk": "Low-Medium",
-          "timeframe": "1\u20133 months",
-          "thesis": "Banking crisis \u2192 gold safe haven. GLDM benefits from systemic financial stress.",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play.",
           "sector_key": "banking_financial",
           "market_bucket": "global",
           "market_scope": "International-listed",
@@ -1413,17 +1412,17 @@
       ],
       "top_etfs": [
         {
-          "name": "Financial Select Sector SPDR",
-          "ticker": "XLF",
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
           "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
           "exchange": "NYSE",
-          "risk": "Medium",
-          "timeframe": "1\u20136 months",
-          "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play.",
-          "sector_key": "banking_financial",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026.",
+          "sector_key": "gold_precious_metals",
           "market_bucket": "global",
           "market_scope": "International-listed",
-          "selection_score": 130.0,
+          "selection_score": 134.0,
           "selection_notes": [
             "deep liquidity",
             "strong cost profile",
@@ -1431,14 +1430,13 @@
           ]
         },
         {
-          "name": "SPDR Gold MiniShares Trust",
-          "ticker": "GLDM",
-          "note": "Flight to safety during banking stress",
+          "name": "Financial Select Sector SPDR",
+          "ticker": "XLF",
           "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
           "exchange": "NYSE",
-          "risk": "Low-Medium",
-          "timeframe": "1\u20133 months",
-          "thesis": "Banking crisis \u2192 gold safe haven. GLDM benefits from systemic financial stress.",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play.",
           "sector_key": "banking_financial",
           "market_bucket": "global",
           "market_scope": "International-listed",
@@ -1527,17 +1525,17 @@
         ],
         "International-listed": [
           {
-            "name": "Financial Select Sector SPDR",
-            "ticker": "XLF",
+            "name": "SPDR Gold MiniShares Trust",
+            "ticker": "GLDM",
             "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
             "exchange": "NYSE",
-            "risk": "Medium",
-            "timeframe": "1\u20136 months",
-            "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play.",
-            "sector_key": "banking_financial",
+            "risk": "Low-Medium",
+            "timeframe": "3\u201318 months",
+            "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026.",
+            "sector_key": "gold_precious_metals",
             "market_bucket": "global",
             "market_scope": "International-listed",
-            "selection_score": 130.0,
+            "selection_score": 134.0,
             "selection_notes": [
               "deep liquidity",
               "strong cost profile",
@@ -1545,14 +1543,13 @@
             ]
           },
           {
-            "name": "SPDR Gold MiniShares Trust",
-            "ticker": "GLDM",
-            "note": "Flight to safety during banking stress",
+            "name": "Financial Select Sector SPDR",
+            "ticker": "XLF",
             "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
             "exchange": "NYSE",
-            "risk": "Low-Medium",
-            "timeframe": "1\u20133 months",
-            "thesis": "Banking crisis \u2192 gold safe haven. GLDM benefits from systemic financial stress.",
+            "risk": "Medium",
+            "timeframe": "1\u20136 months",
+            "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play.",
             "sector_key": "banking_financial",
             "market_bucket": "global",
             "market_scope": "International-listed",
@@ -1638,17 +1635,17 @@
       ],
       "global": [
         {
-          "name": "Financial Select Sector SPDR",
-          "ticker": "XLF",
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
           "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
           "exchange": "NYSE",
-          "risk": "Medium",
-          "timeframe": "1\u20136 months",
-          "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play.",
-          "sector_key": "banking_financial",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026.",
+          "sector_key": "gold_precious_metals",
           "market_bucket": "global",
           "market_scope": "International-listed",
-          "selection_score": 130.0,
+          "selection_score": 134.0,
           "selection_notes": [
             "deep liquidity",
             "strong cost profile",
@@ -1656,14 +1653,13 @@
           ]
         },
         {
-          "name": "SPDR Gold MiniShares Trust",
-          "ticker": "GLDM",
-          "note": "Flight to safety during banking stress",
+          "name": "Financial Select Sector SPDR",
+          "ticker": "XLF",
           "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
           "exchange": "NYSE",
-          "risk": "Low-Medium",
-          "timeframe": "1\u20133 months",
-          "thesis": "Banking crisis \u2192 gold safe haven. GLDM benefits from systemic financial stress.",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play.",
           "sector_key": "banking_financial",
           "market_bucket": "global",
           "market_scope": "International-listed",
@@ -2091,35 +2087,32 @@
     }
   },
   "commodities_mining": {
-    "sent_at": "2026-04-15T16:01:11.192704+00:00",
-    "confidence": 73,
+    "sent_at": "2026-04-15T20:01:39.069587+00:00",
+    "confidence": 63,
     "sector_label": "Commodities & Mining",
-    "article_count": 4,
+    "article_count": 3,
     "severity": "HIGH",
     "regions": [
       "global",
-      "middle_east",
-      "europe"
+      "middle_east"
     ],
     "sources": [
-      "BBC News",
-      "Oilprice.com",
       "Markets-Economic Times",
-      "Bloomberg Markets"
+      "Oilprice.com",
+      "BBC News"
     ],
     "top_headlines": [
       "Australia's richest person must share part of her mining fortunes, court rules",
       "Commodity Radar: Why is copper in a bullish trade set-up and offers buy on dips opportunity? Religare analyst decodes",
-      "The Rare Earth Trap: How China Outmaneuvered the Entire Western Defense Industry",
-      "AI Pivot Pushes Bitcoin Miners Toward a 70% Revenue Milestone"
+      "Iran War Sends Shockwaves Through Central Asia\u2019s Fragile Economies"
     ],
-    "latest_ts": "2026-04-15T15:49:28+00:00",
+    "latest_ts": "2026-04-15T18:00:00+00:00",
     "confidence_breakdown": {
-      "signal_strength": 12.7,
-      "volume_confirmation": 10.8,
-      "source_diversity": 15.3,
-      "recency": 19.6,
-      "geopolitical_severity": 15.0
+      "signal_strength": 10.6,
+      "volume_confirmation": 8.6,
+      "source_diversity": 13.0,
+      "recency": 16.3,
+      "geopolitical_severity": 14.7
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
