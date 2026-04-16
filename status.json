@@ -162,28 +162,24 @@
       "score": 98.0
     },
     {
+      "symbol": "Defense & Aerospace",
+      "score": 97.0
+    },
+    {
       "symbol": "Energy / Oil & Gas",
       "score": 97.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 96.0
     },
     {
       "symbol": "India Equity Markets + Banking & Financial Sector",
       "score": 95.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 94.0
-    },
-    {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 92.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 92.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 85.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -191,19 +187,23 @@
     },
     {
       "symbol": "Gold & Precious Metals",
-      "score": 84.0
+      "score": 83.0
     },
     {
       "symbol": "Cybersecurity + Crypto & Digital Assets",
       "score": 83.0
     },
     {
-      "symbol": "India Equity Markets",
+      "symbol": "Gold & Precious Metals + India Equity Markets",
       "score": 81.0
     },
     {
-      "symbol": "Gold & Precious Metals + India Equity Markets",
-      "score": 81.0
+      "symbol": "Crypto & Digital Assets",
+      "score": 78.0
+    },
+    {
+      "symbol": "India Equity Markets",
+      "score": 77.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -279,29 +279,82 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
       "confidence": 97.0,
-      "severity": "CRITICAL",
+      "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 38,
-      "latest_at": "15 Apr 2026 21:23 UTC",
+      "article_count": 72,
+      "latest_at": "16 Apr 2026 01:14 UTC",
+      "headline": "South Korea Has An Oil Problem. Canada Is Helping To Fix It",
+      "regions": [
+        "europe",
+        "global",
+        "india",
+        "americas"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "World | Deutsche Welle",
+        "Bloomberg Markets",
+        "World News - Breaking international news and headlines | Sky News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 18.2,
+        "recency": 18.8,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 97.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 48,
+      "latest_at": "16 Apr 2026 01:36 UTC",
       "headline": "Norway\u2019s Oil Export Earnings Surge 68% Amid Iran War",
       "regions": [
         "india",
-        "middle_east",
         "global",
+        "middle_east",
         "asia_pacific"
       ],
       "sources": [
-        "BBC News",
-        "Oilprice.com",
+        "US Top News and Analysis",
         "World | Deutsche Welle",
-        "Bloomberg Markets"
+        "Bloomberg Markets",
+        "World News - Breaking international news and headlines | Sky News"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -327,8 +380,61 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 18.2,
-        "recency": 19.3,
+        "recency": 19.5,
         "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 96.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 23,
+      "latest_at": "16 Apr 2026 01:49 UTC",
+      "headline": "TSMC Rides Retail Frenzy to New Stock Highs as AI Boom Returns",
+      "regions": [
+        "americas",
+        "global",
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "World | Deutsche Welle",
+        "Bloomberg Markets",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 24.1,
+        "volume_confirmation": 20.0,
+        "source_diversity": 18.3,
+        "recency": 20.0,
+        "geopolitical_severity": 14.2
       }
     },
     {
@@ -382,59 +488,6 @@
         "volume_confirmation": 19.4,
         "source_diversity": 16.5,
         "recency": 19.2,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 94.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 64,
-      "latest_at": "15 Apr 2026 19:57 UTC",
-      "headline": "South Korea Has An Oil Problem. Canada Is Helping To Fix It",
-      "regions": [
-        "india",
-        "middle_east",
-        "africa",
-        "europe"
-      ],
-      "sources": [
-        "BBC News",
-        "Oilprice.com",
-        "World | Deutsche Welle",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 18.2,
-        "recency": 16.7,
         "geopolitical_severity": 15.0
       }
     },
@@ -494,105 +547,6 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 92.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "15 Apr 2026 21:43 UTC",
-      "headline": "CoreWeave signs $6B deal with Jane Street to provide AI compute power",
-      "regions": [
-        "asia_pacific",
-        "middle_east",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "BBC News",
-        "Oilprice.com",
-        "World | Deutsche Welle",
-        "The Verge"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.7,
-        "volume_confirmation": 20.0,
-        "source_diversity": 17.8,
-        "recency": 20.0,
-        "geopolitical_severity": 12.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 85.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 26,
-      "latest_at": "15 Apr 2026 18:55 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "middle_east",
-        "europe",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 10.1,
-        "recency": 15.1,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector",
       "confidence": 85.0,
@@ -602,20 +556,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "15 Apr 2026 20:08 UTC",
-      "headline": "How bond market's private credit crisis fears are playing out in fixed-income ETFs",
+      "article_count": 14,
+      "latest_at": "16 Apr 2026 00:00 UTC",
+      "headline": "IMF Warns Of Potential Global Recession Amid High Oil Prices",
       "regions": [
-        "americas",
-        "asia_pacific",
         "global",
-        "india"
+        "india",
+        "americas",
+        "middle_east"
       ],
       "sources": [
         "US Top News and Analysis",
+        "Bloomberg Markets",
         "Markets-Economic Times",
-        "Finance",
-        "Oilprice.com"
+        "Finance"
       ],
       "primary_etf": "XLF",
       "top_etfs": [
@@ -636,35 +590,35 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 18.3,
-        "volume_confirmation": 19.4,
+        "signal_strength": 19.9,
+        "volume_confirmation": 20.0,
         "source_diversity": 14.8,
-        "recency": 18.8,
-        "geopolitical_severity": 14.3
+        "recency": 16.6,
+        "geopolitical_severity": 14.4
       }
     },
     {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals",
-      "confidence": 84.0,
-      "severity": "MEDIUM",
+      "confidence": 83.0,
+      "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "15 Apr 2026 21:23 UTC",
-      "headline": "Gold rises 60% since last Akshaya Tritiya. Should you invest this year amid Iran war uncertainty?",
+      "article_count": 12,
+      "latest_at": "16 Apr 2026 00:15 UTC",
+      "headline": "Gold Rises as Push for US-Iran Diplomacy Eases Inflation Risk",
       "regions": [
-        "asia_pacific",
+        "global",
         "middle_east",
-        "global"
+        "asia_pacific"
       ],
       "sources": [
-        "Bloomberg Markets",
         "Markets-Economic Times",
-        "Cointelegraph.com News"
+        "Cointelegraph.com News",
+        "Bloomberg Markets"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -688,10 +642,10 @@
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 20.8,
-        "volume_confirmation": 20.0,
+        "volume_confirmation": 19.4,
         "source_diversity": 12.3,
-        "recency": 19.3,
-        "geopolitical_severity": 12.7
+        "recency": 17.1,
+        "geopolitical_severity": 14.2
       }
     },
     {
@@ -740,54 +694,6 @@
         "volume_confirmation": 17.1,
         "source_diversity": 10.1,
         "recency": 19.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 81.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 19,
-      "latest_at": "15 Apr 2026 15:34 UTC",
-      "headline": "Ahead of Market: 10 things that will decide stock market action on Thursday",
-      "regions": [
-        "asia_pacific",
-        "india",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "World | Deutsche Welle"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 24.9,
-        "volume_confirmation": 20.0,
-        "source_diversity": 8.5,
-        "recency": 12.8,
         "geopolitical_severity": 15.0
       }
     },
@@ -843,6 +749,100 @@
         "volume_confirmation": 20.0,
         "source_diversity": 13.3,
         "recency": 9.3,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 78.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "15 Apr 2026 21:29 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "europe",
+        "global",
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 5.2,
+        "recency": 12.9,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 77.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 20,
+      "latest_at": "15 Apr 2026 15:34 UTC",
+      "headline": "Ahead of Market: 10 things that will decide stock market action on Thursday",
+      "regions": [
+        "india",
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "World | Deutsche Welle"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 10.1,
+        "recency": 7.2,
         "geopolitical_severity": 15.0
       }
     },
@@ -1050,7 +1050,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 38 articles - CRITICAL / NEUTRAL - Norway\u2019s Oil Export Earnings Surge 68% Amid Iran War"
+      "text": "Defense & Aerospace - 72 articles - HIGH / NEUTRAL - South Korea Has An Oil Problem. Canada Is Helping To Fix It"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Energy / Oil & Gas - 48 articles - HIGH / NEUTRAL - Norway\u2019s Oil Export Earnings Surge 68% Amid Iran War"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Technology & AI / Semiconductors - 23 articles - HIGH / NEUTRAL - TSMC Rides Retail Frenzy to New Stock Highs as AI Boom Returns"
     },
     {
       "tag": "tag-neu",
@@ -1060,32 +1070,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 64 articles - HIGH / NEUTRAL - South Korea Has An Oil Problem. Canada Is Helping To Fix It"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / NEUTRAL - Gold rises 60% since last Akshaya Tritiya. Should you invest this year amid Iran war uncertainty?"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 24 articles - MEDIUM / NEUTRAL - CoreWeave signs $6B deal with Jane Street to provide AI compute power"
+      "text": "Banking & Financial Sector - 14 articles - HIGH / NEUTRAL - IMF Warns Of Potential Global Recession Amid High Oil Prices"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 26 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - How bond market's private credit crisis fears are playing out in fixed-income ETFs"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Gold & Precious Metals - 13 articles - MEDIUM / NEUTRAL - Gold rises 60% since last Akshaya Tritiya. Should you invest this year amid Iran war uncertainty?"
+      "text": "Gold & Precious Metals - 12 articles - HIGH / NEUTRAL - Gold Rises as Push for US-Iran Diplomacy Eases Inflation Risk"
     },
     {
       "tag": "tag-neu",
@@ -1095,12 +1090,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 19 articles - HIGH / NEUTRAL - Ahead of Market: 10 things that will decide stock market action on Thursday"
+      "text": "Gold & Precious Metals + India Equity Markets - 13 articles - HIGH / NEUTRAL - Gold Eases as US Plan to Blockade Hormuz Raises Inflation Risks"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + India Equity Markets - 13 articles - HIGH / NEUTRAL - Gold Eases as US Plan to Blockade Hormuz Raises Inflation Risks"
+      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "India Equity Markets - 20 articles - HIGH / NEUTRAL - Ahead of Market: 10 things that will decide stock market action on Thursday"
     },
     {
       "tag": "tag-neu",
@@ -1163,9 +1163,9 @@
       "region": "UK",
       "price": 10559.58,
       "currency": "GBP",
-      "change": -23.42,
-      "change_pct": -0.22,
-      "change_str": "-0.22%",
+      "change": -49.52,
+      "change_pct": -0.47,
+      "change_str": "-0.47%",
       "direction": "down"
     },
     {
@@ -1174,31 +1174,31 @@
       "region": "EU",
       "price": 24066.7,
       "currency": "EUR",
-      "change": 324.26,
-      "change_pct": 1.37,
-      "change_str": "+1.37%",
+      "change": 22.48,
+      "change_pct": 0.09,
+      "change_str": "+0.09%",
       "direction": "up"
     },
     {
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 58134.24,
+      "price": 59073.6,
       "currency": "JPY",
-      "change": 1631.47,
-      "change_pct": 2.89,
-      "change_str": "+2.89%",
+      "change": 939.36,
+      "change_pct": 1.62,
+      "change_str": "+1.62%",
       "direction": "up"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 25947.32,
+      "price": 26135.42,
       "currency": "HKD",
-      "change": 286.47,
-      "change_pct": 1.12,
-      "change_str": "+1.12%",
+      "change": 188.1,
+      "change_pct": 0.72,
+      "change_str": "+0.72%",
       "direction": "up"
     },
     {
@@ -1207,42 +1207,42 @@
       "region": "IN",
       "price": 24231.3,
       "currency": "INR",
-      "change": 180.7,
-      "change_pct": 0.75,
-      "change_str": "+0.75%",
+      "change": 388.65,
+      "change_pct": 1.63,
+      "change_str": "+1.63%",
       "direction": "up"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4836.2,
+      "price": 4837.4,
       "currency": "USD",
-      "change": 11.2,
-      "change_pct": 0.23,
-      "change_str": "+0.23%",
+      "change": 37.4,
+      "change_pct": 0.78,
+      "change_str": "+0.78%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 90.88,
+      "price": 91.35,
       "currency": "USD",
-      "change": -0.4,
-      "change_pct": -0.44,
-      "change_str": "-0.44%",
-      "direction": "down"
+      "change": 0.06,
+      "change_pct": 0.07,
+      "change_str": "+0.07%",
+      "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 74682.07,
+      "price": 74711.89,
       "currency": "USD",
-      "change": 500.46,
-      "change_pct": 0.67,
-      "change_str": "+0.67%",
+      "change": 530.28,
+      "change_pct": 0.71,
+      "change_str": "+0.71%",
       "direction": "up"
     },
     {
@@ -1251,9 +1251,9 @@
       "region": "FX",
       "price": 98.05,
       "currency": "USD",
-      "change": -0.07,
-      "change_pct": -0.07,
-      "change_str": "-0.07%",
+      "change": -0.01,
+      "change_pct": -0.02,
+      "change_str": "-0.02%",
       "direction": "down"
     },
     {
@@ -1575,10 +1575,10 @@
     }
   },
   "logs": [
-    "2026-04-15 23:36:37 [INFO] AZALYST - status.json generated",
-    "2026-04-15 23:36:37 [INFO] PORTFOLIO - NAV USD 7,742.62 | Return +2.07%",
-    "2026-04-15 23:36:37 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-04-15 23:36:37 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
+    "2026-04-16 01:50:59 [INFO] AZALYST - status.json generated",
+    "2026-04-16 01:50:59 [INFO] PORTFOLIO - NAV USD 7,742.62 | Return +2.07%",
+    "2026-04-16 01:50:59 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-04-16 01:50:59 [INFO] TRADER - Open positions: ITA, XLE, GLDM, INDA"
   ],
-  "generated_at": "2026-04-15 23:36:36 UTC"
+  "generated_at": "2026-04-16 01:50:58 UTC"
 }
