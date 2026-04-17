@@ -1233,55 +1233,56 @@
     }
   },
   "banking_financial|gold_precious_metals": {
-    "sent_at": "2026-04-15T20:01:37.475293+00:00",
-    "confidence": 92,
-    "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+    "sent_at": "2026-04-17T16:46:18.575431+00:00",
+    "confidence": 93,
+    "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
     "article_count": 13,
     "severity": "HIGH",
     "regions": [
-      "global",
-      "asia_pacific",
+      "europe",
+      "americas",
       "india",
+      "global",
       "middle_east",
-      "americas"
+      "asia_pacific"
     ],
     "sources": [
-      "Markets-Economic Times",
       "Bloomberg Markets",
-      "Cointelegraph.com News",
+      "World | Deutsche Welle",
+      "Markets-Economic Times",
       "Finance",
-      "US Top News and Analysis",
-      "Oilprice.com"
+      "Oilprice.com",
+      "Cointelegraph.com News"
     ],
     "top_headlines": [
-      "Gold rises 60% since last Akshaya Tritiya. Should you invest this year amid Iran war uncertainty?",
-      "Iran war puts US companies in wait-and-see mode, Fed Beige Book says",
-      "India's 30-year economic model is over; time to pivot from IT to manufacturing:  Saurabh Mukherjea",
-      "Bitcoin can grow 'probably a lot bigger' than $30T+ gold market \u2014 Analysis",
-      "Iran conflict hints Bitcoin\u2019s addressable market could exceed gold: Bitwise"
+      "US Treasuries Rally as Falling Oil Boosts Rate-Cut Bets",
+      "How bond market's private credit crisis fears are playing out in fixed-income ETFs",
+      "IMF, World Bank restore relations with Venezuela",
+      "Warsh Hearing Will Test How Far He\u2019ll Push Balance Sheet Reform",
+      "Fed's Daly Says Too Early to Tell If War Will Create Long-Term Shock"
     ],
-    "latest_ts": "2026-04-15T19:09:21+00:00",
+    "latest_ts": "2026-04-17T16:45:37.689862+00:00",
     "confidence_breakdown": {
-      "signal_strength": 24.2,
+      "signal_strength": 23.2,
       "volume_confirmation": 20.0,
       "source_diversity": 15.5,
-      "recency": 18.3,
-      "geopolitical_severity": 14.8
+      "recency": 20.0,
+      "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
       "primary": {
-        "name": "SPDR Gold MiniShares Trust",
-        "ticker": "GLDM",
+        "name": "Financial Select Sector SPDR",
+        "ticker": "XLF",
         "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
         "exchange": "NYSE",
-        "risk": "Low-Medium",
-        "timeframe": "3\u201318 months",
-        "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026.",
-        "sector_key": "gold_precious_metals",
+        "risk": "Medium",
+        "timeframe": "1\u20136 months",
+        "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play.",
+        "sector_key": "banking_financial",
         "market_bucket": "global",
         "market_scope": "International-listed",
-        "selection_score": 134.0,
+        "selection_score": 130.0,
         "selection_notes": [
           "deep liquidity",
           "strong cost profile",
@@ -1290,24 +1291,6 @@
       },
       "ranked": [
         {
-          "name": "SPDR Gold MiniShares Trust",
-          "ticker": "GLDM",
-          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
-          "exchange": "NYSE",
-          "risk": "Low-Medium",
-          "timeframe": "3\u201318 months",
-          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026.",
-          "sector_key": "gold_precious_metals",
-          "market_bucket": "global",
-          "market_scope": "International-listed",
-          "selection_score": 134.0,
-          "selection_notes": [
-            "deep liquidity",
-            "strong cost profile",
-            "clean thematic exposure"
-          ]
-        },
-        {
           "name": "Financial Select Sector SPDR",
           "ticker": "XLF",
           "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
@@ -1315,6 +1298,25 @@
           "risk": "Medium",
           "timeframe": "1\u20136 months",
           "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play.",
+          "sector_key": "banking_financial",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 130.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
+          "note": "Flight to safety during banking stress",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "1\u20133 months",
+          "thesis": "Banking crisis \u2192 gold safe haven. GLDM benefits from systemic financial stress.",
           "sector_key": "banking_financial",
           "market_bucket": "global",
           "market_scope": "International-listed",
@@ -1397,24 +1399,6 @@
       ],
       "top_etfs": [
         {
-          "name": "SPDR Gold MiniShares Trust",
-          "ticker": "GLDM",
-          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
-          "exchange": "NYSE",
-          "risk": "Low-Medium",
-          "timeframe": "3\u201318 months",
-          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026.",
-          "sector_key": "gold_precious_metals",
-          "market_bucket": "global",
-          "market_scope": "International-listed",
-          "selection_score": 134.0,
-          "selection_notes": [
-            "deep liquidity",
-            "strong cost profile",
-            "clean thematic exposure"
-          ]
-        },
-        {
           "name": "Financial Select Sector SPDR",
           "ticker": "XLF",
           "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
@@ -1422,6 +1406,25 @@
           "risk": "Medium",
           "timeframe": "1\u20136 months",
           "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play.",
+          "sector_key": "banking_financial",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 130.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
+          "note": "Flight to safety during banking stress",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "1\u20133 months",
+          "thesis": "Banking crisis \u2192 gold safe haven. GLDM benefits from systemic financial stress.",
           "sector_key": "banking_financial",
           "market_bucket": "global",
           "market_scope": "International-listed",
@@ -1510,24 +1513,6 @@
         ],
         "International-listed": [
           {
-            "name": "SPDR Gold MiniShares Trust",
-            "ticker": "GLDM",
-            "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
-            "exchange": "NYSE",
-            "risk": "Low-Medium",
-            "timeframe": "3\u201318 months",
-            "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026.",
-            "sector_key": "gold_precious_metals",
-            "market_bucket": "global",
-            "market_scope": "International-listed",
-            "selection_score": 134.0,
-            "selection_notes": [
-              "deep liquidity",
-              "strong cost profile",
-              "clean thematic exposure"
-            ]
-          },
-          {
             "name": "Financial Select Sector SPDR",
             "ticker": "XLF",
             "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
@@ -1535,6 +1520,25 @@
             "risk": "Medium",
             "timeframe": "1\u20136 months",
             "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play.",
+            "sector_key": "banking_financial",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 130.0,
+            "selection_notes": [
+              "deep liquidity",
+              "strong cost profile",
+              "clean thematic exposure"
+            ]
+          },
+          {
+            "name": "SPDR Gold MiniShares Trust",
+            "ticker": "GLDM",
+            "note": "Flight to safety during banking stress",
+            "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Low-Medium",
+            "timeframe": "1\u20133 months",
+            "thesis": "Banking crisis \u2192 gold safe haven. GLDM benefits from systemic financial stress.",
             "sector_key": "banking_financial",
             "market_bucket": "global",
             "market_scope": "International-listed",
@@ -1620,24 +1624,6 @@
       ],
       "global": [
         {
-          "name": "SPDR Gold MiniShares Trust",
-          "ticker": "GLDM",
-          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
-          "exchange": "NYSE",
-          "risk": "Low-Medium",
-          "timeframe": "3\u201318 months",
-          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026.",
-          "sector_key": "gold_precious_metals",
-          "market_bucket": "global",
-          "market_scope": "International-listed",
-          "selection_score": 134.0,
-          "selection_notes": [
-            "deep liquidity",
-            "strong cost profile",
-            "clean thematic exposure"
-          ]
-        },
-        {
           "name": "Financial Select Sector SPDR",
           "ticker": "XLF",
           "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
@@ -1645,6 +1631,25 @@
           "risk": "Medium",
           "timeframe": "1\u20136 months",
           "thesis": "US financials ETF. JPMorgan, BofA, Wells Fargo. Rate and credit cycle play.",
+          "sector_key": "banking_financial",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 130.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
+          "note": "Flight to safety during banking stress",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "1\u20133 months",
+          "thesis": "Banking crisis \u2192 gold safe haven. GLDM benefits from systemic financial stress.",
           "sector_key": "banking_financial",
           "market_bucket": "global",
           "market_scope": "International-listed",
