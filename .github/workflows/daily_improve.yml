@@ -1,0 +1,51 @@
+name: Daily Self-Improvement
+
+on:
+  schedule:
+    # 2:00 AM UTC daily — after markets close, before the 30-min scan wakes up
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+    # Also triggerable manually from the Actions tab
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+concurrency:
+  group: azalyst-improve
+  cancel-in-progress: false   # never cancel a running improvement mid-write
+
+jobs:
+  improve:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run self-improvement engine
+        env:
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+        run: python self_improve.py
+
+      - name: Commit improvements if any
+        run: |
+          git config --global user.name "azalyst-improver"
+          git config --global user.email "improver@azalyst.ai"
+          git add scorer.py classifier.py paper_trader.py etf_mapper.py \
+                  news_fetcher.py reporter.py improvement_log.jsonl || true
+          git diff --staged --quiet && echo "Nothing to commit" || \
+            git commit -m "improve: autonomous code update $(date -u '+%Y-%m-%d')"
+          git push origin main || echo "Nothing to push"
