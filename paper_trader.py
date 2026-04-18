@@ -50,7 +50,7 @@ CASH_FLOOR_PCT          = 0.05
 MAX_HOLD_DAYS           = 180
 CIRCUIT_BREAKER_DRAWDOWN_PCT = 0.12
 ROTATION_CONFIDENCE_DELTA    = 10
-ROTATION_MIN_HOLD_DAYS       = 30
+ROTATION_MIN_HOLD_DAYS       = 14
 
 BASE_RISK_BUDGET_BY_SEVERITY = {
     "CRITICAL": 0.13,
@@ -681,12 +681,10 @@ class PaperPortfolio:
             pnl_pct = pos.unrealised_pnl_pct()
             score   = 0.0
 
-            if incoming_conf >= pos.confidence + ROTATION_CONFIDENCE_DELTA:
-                score += (incoming_conf - pos.confidence)
+            # HARD RULE: Never rotate out of a losing position.
+            # Crystallizing losses to chase new signals destroys alpha.
             if pnl_pct < 0:
-                score += abs(pnl_pct) * 2.0
-            elif pnl_pct < 2:
-                score += 2.0
+                continue
             if pos.days_held() >= ROTATION_MIN_HOLD_DAYS:
                 score += min(pos.days_held(), 20) * 0.3
             if pos.sector == incoming_sector:
