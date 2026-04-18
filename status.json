@@ -1,21 +1,21 @@
 {
-  "portfolio_value": 9995.68,
+  "portfolio_value": 9995.45,
   "total_deposited": 10000.0,
-  "cash": 6067.97,
+  "cash": 5862.47,
   "monthly_reserve": 0.0,
-  "market_value": 3927.71,
-  "total_invested": 3932.03,
-  "unrealised_pnl": -4.32,
-  "unrealised_str": "-4.32",
+  "market_value": 4132.98,
+  "total_invested": 4137.53,
+  "unrealised_pnl": -4.55,
+  "unrealised_str": "-4.55",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "-0.04%",
-  "change_raw": -0.04,
+  "change": "-0.05%",
+  "change_raw": -0.05,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 10000.0,
-  "drawdown_now_pct": 0.04,
-  "max_drawdown_pct": 0.04,
+  "drawdown_now_pct": 0.05,
+  "max_drawdown_pct": 0.05,
   "usd_inr_rate": 92.575,
   "positions": [
     {
@@ -30,10 +30,10 @@
       "peak_price": 55.08,
       "trail_stop": 49.57,
       "dist_to_trail_pct": 9.9,
-      "units": 31.596703,
-      "invested": 1740.36,
-      "pnl": -1.91,
-      "pnl_str": "-1.91",
+      "units": 45.613196,
+      "invested": 2512.4,
+      "pnl": -2.76,
+      "pnl_str": "-2.76",
       "pnl_pct": -0.11,
       "pnl_pct_str": "-0.11%",
       "confidence": 90,
@@ -53,14 +53,14 @@
       "peak_price": 649.56,
       "trail_stop": 584.61,
       "dist_to_trail_pct": 9.9,
-      "units": 3.374057,
-      "invested": 2191.67,
-      "pnl": -2.41,
-      "pnl_str": "-2.41",
+      "units": 2.501883,
+      "invested": 1625.13,
+      "pnl": -1.79,
+      "pnl_str": "-1.79",
       "pnl_pct": -0.11,
       "pnl_pct_str": "-0.11%",
       "confidence": 94,
-      "severity": "HIGH",
+      "severity": "CRITICAL",
       "days_held": 0,
       "half_exited": false
     }
@@ -87,9 +87,9 @@
       "CASH"
     ],
     "values": [
-      17.4,
-      21.9,
-      60.7
+      25.1,
+      16.2,
+      58.7
     ]
   },
   "pnl": {
@@ -98,8 +98,8 @@
       "QQQ"
     ],
     "values": [
-      -1.91,
-      -2.41
+      -2.76,
+      -1.79
     ]
   },
   "confidence": [
@@ -822,11 +822,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 76673.75,
+      "price": 76272.98,
       "currency": "USD",
-      "change": -453.12,
-      "change_pct": -0.59,
-      "change_str": "-0.59%",
+      "change": -853.9,
+      "change_pct": -1.11,
+      "change_str": "-1.11%",
       "direction": "down"
     },
     {
@@ -854,23 +854,23 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.04,
+    "drawdown_from_peak_pct": 0.05,
     "portfolio_peak": 10000.0,
     "vix": 17.48,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
-        "sector": "Technology & AI / Semiconductors",
-        "weight": 21.9,
+        "sector": "Energy / Oil & Gas",
+        "weight": 25.1,
         "at_cap": false
       },
       {
-        "sector": "Energy / Oil & Gas",
-        "weight": 17.4,
+        "sector": "Technology & AI / Semiconductors",
+        "weight": 16.2,
         "at_cap": false
       }
     ],
-    "max_drawdown_pct": 0.04,
+    "max_drawdown_pct": 0.05,
     "sector_cap_pct": 30,
     "trailing_stop_pct": 8,
     "hard_stop_pct": 10,
@@ -917,37 +917,37 @@
       "benchmark_price_start": 686.1,
       "benchmark_price_now": 710.14,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.04,
-      "alpha": -3.54
+      "portfolio_return_pct": -0.05,
+      "alpha": -3.55
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 60.71,
+          "actual_weight_pct": 58.65,
           "target_weight_pct": 10.0,
-          "drift_pct": 50.71,
+          "drift_pct": 48.65,
           "action": "DEPLOY",
-          "amount": 5068.4,
+          "amount": 4862.92,
           "etf_name": "Cash Reserve"
         },
         {
-          "ticker": "XLE",
-          "actual_weight_pct": 17.39,
+          "ticker": "QQQ",
+          "actual_weight_pct": 16.24,
           "target_weight_pct": 45.0,
-          "drift_pct": -27.61,
+          "drift_pct": -28.76,
           "action": "ADD",
-          "amount": 2759.61,
-          "etf_name": "Energy Select Sector SPDR"
+          "amount": 2874.61,
+          "etf_name": "Invesco QQQ Trust"
         },
         {
-          "ticker": "QQQ",
-          "actual_weight_pct": 21.9,
+          "ticker": "XLE",
+          "actual_weight_pct": 25.11,
           "target_weight_pct": 45.0,
-          "drift_pct": -23.1,
+          "drift_pct": -19.89,
           "action": "ADD",
-          "amount": 2308.8,
-          "etf_name": "Invesco QQQ Trust"
+          "amount": 1988.31,
+          "etf_name": "Energy Select Sector SPDR"
         }
       ],
       "drift_threshold_pct": 5.0,
@@ -956,105 +956,105 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -1831.85,
-          "portfolio_loss_pct": -18.33,
+          "total_impact": -2029.64,
+          "portfolio_loss_pct": -20.31,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -956.15
+              "impact": -1380.3
             },
             {
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -875.7
+              "impact": -649.34
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -1874.34,
-          "portfolio_loss_pct": -18.75,
+          "total_impact": -2183.2,
+          "portfolio_loss_pct": -21.84,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -1129.99
+              "impact": -1631.26
             },
             {
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -744.35
+              "impact": -551.94
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -502.23,
-          "portfolio_loss_pct": -5.02,
+          "total_impact": -494.47,
+          "portfolio_loss_pct": -4.95,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -173.85
+              "impact": -250.96
             },
             {
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -328.39
+              "impact": -243.5
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -435.91,
-          "portfolio_loss_pct": -4.36,
+          "total_impact": -506.31,
+          "portfolio_loss_pct": -5.07,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -260.77
+              "impact": -376.45
             },
             {
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -175.14
+              "impact": -129.87
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -741.76,
-          "portfolio_loss_pct": -7.42,
+          "total_impact": -794.13,
+          "portfolio_loss_pct": -7.94,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -347.69
+              "impact": -501.93
             },
             {
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -394.07
+              "impact": -292.2
             }
           ]
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -18.75
+      "worst_loss_pct": -21.84
     }
   },
   "logs": [
-    "2026-04-18 09:41:26 [INFO] AZALYST - status.json generated",
-    "2026-04-18 09:41:26 [INFO] PORTFOLIO - NAV USD 9,995.68 | Return -0.04%",
-    "2026-04-18 09:41:26 [INFO] SIGNALS - 10 active signal buckets in state",
-    "2026-04-18 09:41:26 [INFO] TRADER - Open positions: XLE, QQQ"
+    "2026-04-18 10:34:13 [INFO] AZALYST - status.json generated",
+    "2026-04-18 10:34:13 [INFO] PORTFOLIO - NAV USD 9,995.45 | Return -0.05%",
+    "2026-04-18 10:34:13 [INFO] SIGNALS - 10 active signal buckets in state",
+    "2026-04-18 10:34:13 [INFO] TRADER - Open positions: XLE, QQQ"
   ],
-  "generated_at": "2026-04-18 09:41:25 UTC"
+  "generated_at": "2026-04-18 10:34:12 UTC"
 }
