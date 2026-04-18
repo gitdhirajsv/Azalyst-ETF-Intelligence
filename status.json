@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 9994.29,
+  "portfolio_value": 9993.83,
   "total_deposited": 10000.0,
-  "cash": 4803.44,
+  "cash": 4382.18,
   "monthly_reserve": 0.0,
-  "market_value": 5190.85,
-  "total_invested": 5196.56,
-  "unrealised_pnl": -5.71,
-  "unrealised_str": "-5.71",
+  "market_value": 5611.65,
+  "total_invested": 5617.82,
+  "unrealised_pnl": -6.17,
+  "unrealised_str": "-6.17",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
   "change": "-0.06%",
@@ -53,10 +53,10 @@
       "peak_price": 649.56,
       "trail_stop": 584.61,
       "dist_to_trail_pct": 9.9,
-      "units": 3.41745,
-      "invested": 2219.85,
-      "pnl": -2.44,
-      "pnl_str": "-2.44",
+      "units": 4.06598,
+      "invested": 2641.11,
+      "pnl": -2.9,
+      "pnl_str": "-2.90",
       "pnl_pct": -0.11,
       "pnl_pct_str": "-0.11%",
       "confidence": 94,
@@ -88,8 +88,8 @@
     ],
     "values": [
       29.8,
-      22.2,
-      48.1
+      26.4,
+      43.8
     ]
   },
   "pnl": {
@@ -99,7 +99,7 @@
     ],
     "values": [
       -3.27,
-      -2.44
+      -2.9
     ]
   },
   "confidence": [
@@ -120,10 +120,6 @@
       "score": 90.0
     },
     {
-      "symbol": "Banking & Financial Sector",
-      "score": 87.0
-    },
-    {
       "symbol": "Crypto & Digital Assets",
       "score": 85.0
     },
@@ -132,12 +128,16 @@
       "score": 84.0
     },
     {
-      "symbol": "Bonds & Fixed Income",
-      "score": 79.0
+      "symbol": "Banking & Financial Sector",
+      "score": 83.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
       "score": 70.0
+    },
+    {
+      "symbol": "Bonds & Fixed Income",
+      "score": 69.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -364,57 +364,6 @@
       }
     },
     {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector",
-      "confidence": 87.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "18 Apr 2026 12:23 UTC",
-      "headline": "IMF, World Bank Navigate Economic Fallout From Iran War",
-      "regions": [
-        "asia_pacific",
-        "india",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "Finance",
-        "US Top News and Analysis",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "BANKBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 19.2,
-        "volume_confirmation": 19.4,
-        "source_diversity": 14.8,
-        "recency": 19.0,
-        "geopolitical_severity": 14.7
-      }
-    },
-    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 85.0,
@@ -512,54 +461,54 @@
       }
     },
     {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
-      "confidence": 79.0,
-      "severity": "MEDIUM",
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector",
+      "confidence": 83.0,
+      "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 13,
-      "latest_at": "18 Apr 2026 12:04 UTC",
-      "headline": "Rosner on Credit Markets Amid Geopolitical Tension",
+      "latest_at": "18 Apr 2026 14:00 UTC",
+      "headline": "How bond market's private credit crisis fears are playing out in fixed-income ETFs",
       "regions": [
         "middle_east",
-        "americas",
-        "global"
+        "india",
+        "global",
+        "americas"
       ],
       "sources": [
-        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "Oilprice.com",
         "Finance",
-        "Cointelegraph.com News",
-        "Bloomberg Markets"
+        "US Top News and Analysis"
       ],
-      "primary_etf": "BND",
+      "primary_etf": "XLF",
       "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
+        "XLF",
+        "GLDM",
+        "BANKBEES"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "BHARATBOND"
+        "BANKBEES"
       ],
       "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
+        "XLF",
+        "GLDM"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 19.0,
+        "signal_strength": 19.4,
         "volume_confirmation": 20.0,
-        "source_diversity": 10.2,
-        "recency": 18.4,
-        "geopolitical_severity": 11.8
+        "source_diversity": 14.8,
+        "recency": 14.7,
+        "geopolitical_severity": 14.5
       }
     },
     {
@@ -610,6 +559,57 @@
         "source_diversity": 14.0,
         "recency": 18.7,
         "geopolitical_severity": 14.3
+      }
+    },
+    {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 69.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "18 Apr 2026 12:04 UTC",
+      "headline": "How bond market's private credit crisis fears are playing out in fixed-income ETFs",
+      "regions": [
+        "middle_east",
+        "americas",
+        "global"
+      ],
+      "sources": [
+        "Finance",
+        "US Top News and Analysis",
+        "Cointelegraph.com News",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 17.0,
+        "volume_confirmation": 18.7,
+        "source_diversity": 10.2,
+        "recency": 12.1,
+        "geopolitical_severity": 11.7
       }
     },
     {
@@ -785,11 +785,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - IMF, World Bank Navigate Economic Fallout From Iran War"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
@@ -800,12 +795,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Bonds & Fixed Income - 13 articles - MEDIUM / NEUTRAL - Rosner on Credit Markets Amid Geopolitical Tension"
+      "text": "Banking & Financial Sector - 13 articles - HIGH / NEUTRAL - How bond market's private credit crisis fears are playing out in fixed-income ETFs"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 4 articles - HIGH / NEUTRAL - Trump Sees Iran Deal as Imminent, Nuclear Issue Remains in Limbo"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Bonds & Fixed Income - 11 articles - MEDIUM / NEUTRAL - How bond market's private credit crisis fears are playing out in fixed-income ETFs"
     },
     {
       "tag": "tag-neu",
@@ -938,11 +938,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 76067.1,
+      "price": 75875.08,
       "currency": "USD",
-      "change": -1059.77,
-      "change_pct": -1.37,
-      "change_str": "-1.37%",
+      "change": -1251.79,
+      "change_pct": -1.62,
+      "change_str": "-1.62%",
       "direction": "down"
     },
     {
@@ -982,7 +982,7 @@
       },
       {
         "sector": "Technology & AI / Semiconductors",
-        "weight": 22.2,
+        "weight": 26.4,
         "at_cap": false
       }
     ],
@@ -1040,20 +1040,20 @@
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 48.06,
+          "actual_weight_pct": 43.85,
           "target_weight_pct": 10.0,
-          "drift_pct": 38.06,
+          "drift_pct": 33.85,
           "action": "DEPLOY",
-          "amount": 3804.01,
+          "amount": 3382.8,
           "etf_name": "Cash Reserve"
         },
         {
           "ticker": "QQQ",
-          "actual_weight_pct": 22.19,
+          "actual_weight_pct": 26.4,
           "target_weight_pct": 45.0,
-          "drift_pct": -22.81,
+          "drift_pct": -18.6,
           "action": "ADD",
-          "amount": 2280.02,
+          "amount": 1859.01,
           "etf_name": "Invesco QQQ Trust"
         },
         {
@@ -1062,7 +1062,7 @@
           "target_weight_pct": 45.0,
           "drift_pct": -15.25,
           "action": "ADD",
-          "amount": 1524.0,
+          "amount": 1523.79,
           "etf_name": "Energy Select Sector SPDR"
         }
       ],
@@ -1072,8 +1072,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -2522.35,
-          "portfolio_loss_pct": -25.24,
+          "total_impact": -2690.67,
+          "portfolio_loss_pct": -26.92,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1085,13 +1085,13 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -886.96
+              "impact": -1055.28
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -2686.65,
-          "portfolio_loss_pct": -26.88,
+          "total_impact": -2829.72,
+          "portfolio_loss_pct": -28.31,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1103,13 +1103,13 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -753.92
+              "impact": -896.99
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -629.96,
-          "portfolio_loss_pct": -6.3,
+          "total_impact": -693.08,
+          "portfolio_loss_pct": -6.94,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1121,13 +1121,13 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -332.61
+              "impact": -395.73
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -623.41,
-          "portfolio_loss_pct": -6.24,
+          "total_impact": -657.07,
+          "portfolio_loss_pct": -6.57,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1139,13 +1139,13 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -177.39
+              "impact": -211.06
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -993.82,
-          "portfolio_loss_pct": -9.94,
+          "total_impact": -1069.57,
+          "portfolio_loss_pct": -10.7,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1157,20 +1157,20 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -399.13
+              "impact": -474.88
             }
           ]
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -26.88
+      "worst_loss_pct": -28.31
     }
   },
   "logs": [
-    "2026-04-18 16:04:54 [INFO] AZALYST - status.json generated",
-    "2026-04-18 16:04:54 [INFO] PORTFOLIO - NAV USD 9,994.29 | Return -0.06%",
-    "2026-04-18 16:04:54 [INFO] SIGNALS - 12 active signal buckets in state",
-    "2026-04-18 16:04:54 [INFO] TRADER - Open positions: XLE, QQQ"
+    "2026-04-18 17:05:52 [INFO] AZALYST - status.json generated",
+    "2026-04-18 17:05:52 [INFO] PORTFOLIO - NAV USD 9,993.83 | Return -0.06%",
+    "2026-04-18 17:05:52 [INFO] SIGNALS - 12 active signal buckets in state",
+    "2026-04-18 17:05:52 [INFO] TRADER - Open positions: XLE, QQQ"
   ],
-  "generated_at": "2026-04-18 16:04:53 UTC"
+  "generated_at": "2026-04-18 17:05:51 UTC"
 }
