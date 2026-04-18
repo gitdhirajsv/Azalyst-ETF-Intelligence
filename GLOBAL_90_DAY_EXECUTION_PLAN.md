@@ -7,11 +7,11 @@ Build a global, explainable ETF intelligence system that:
 - ranks the best ETF candidates across the full tracked universe
 - explains why each ETF is preferred now
 - proves edge net of costs against benchmarks
-- stays retail/advisor-friendly instead of pretending to be an institutional OMS
+- maintains accessible usability while delivering institutional-grade analytics
 
 ## What We Are Building
 
-Azalyst should not position itself as "mini Aladdin."
+Azalyst is designed to operate as:
 It should become:
 
 - a global macro-event to ETF routing engine
@@ -139,9 +139,9 @@ Acceptance checks:
 
 ## What Not To Do In The Next 90 Days
 
-- do not market "beats BlackRock" claims
+- maintain strict compliance regarding performance claims
 - do not add heavy ML before validation exists
-- do not call sizing "Kelly" without empirical edge inputs
+- ensure position sizing models rely strictly on empirical edge inputs
 - do not optimize only for paper gains without spread/slippage
 - do not overfit to India-specific flows if the goal is a global product
 

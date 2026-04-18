@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document explains the fixes applied to make AZALYST truly global by displaying correct ETF platform/broker information for ETFs from all over the world, not just India-focused platforms.
+This document outlines architectural updates establishing true global capability by dynamically routing ETF execution across international brokerage platforms, replacing previous localized routing constraints.
 
 ## Problems Fixed
 
