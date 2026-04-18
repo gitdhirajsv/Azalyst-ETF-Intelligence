@@ -48,6 +48,13 @@ Azalyst improves itself daily without any manual intervention. Every day at 2 AM
 
 Every cycle is logged to `improvement_log.jsonl` for a full audit trail whether a change was applied or not.
 
+### Agentic Intelligence (AGENTS.md)
+This repository contains an `AGENTS.md` file, which is automatically picked up by OpenCode IDE and the autonomous Qwen models running in GitHub Actions. This file enforces elite "Claude Code" guidelines, ensuring the AI operates with:
+- **Minimal Complexity**: Prevents unnecessary code additions and gold-plating.
+- **Faithful Reporting**: Ensures the AI doesn't hallucinate test successes.
+- **Actionable Execution**: Guides the AI to synthesize findings and execute targeted fixes.
+
+
 ### Safety Guardrails
 
 The improvement engine can only modify these files:
