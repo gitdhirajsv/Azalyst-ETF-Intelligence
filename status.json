@@ -140,6 +140,10 @@
       "score": 70.0
     },
     {
+      "symbol": "Commodities & Mining",
+      "score": 68.0
+    },
+    {
       "symbol": "Europe Equity",
       "score": 63.0
     },
@@ -159,20 +163,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 55,
-      "latest_at": "18 Apr 2026 09:49 UTC",
+      "article_count": 60,
+      "latest_at": "18 Apr 2026 14:14 UTC",
       "headline": "France nears rocket artillery decision, plans ballistic missile by 2035",
       "regions": [
         "india",
-        "global",
-        "americas",
-        "europe"
+        "europe",
+        "middle_east",
+        "asia_pacific"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "Markets-Economic Times",
-        "Defense News"
+        "Oilprice.com",
+        "BBC News",
+        "World | Deutsche Welle",
+        "Cointelegraph.com News"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -198,7 +202,7 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 18.2,
-        "recency": 16.1,
+        "recency": 16.6,
         "geopolitical_severity": 15.0
       }
     },
@@ -609,6 +613,55 @@
       }
     },
     {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 68.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "18 Apr 2026 16:04 UTC",
+      "headline": "Crude oil, copper, gold: The 3 commodities every beginner should track (and why they move!)",
+      "regions": [
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "Defense News",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 10.3,
+        "volume_confirmation": 14.0,
+        "source_diversity": 14.8,
+        "recency": 20.0,
+        "geopolitical_severity": 9.7
+      }
+    },
+    {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity",
       "confidence": 63.0,
@@ -712,7 +765,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 55 articles - HIGH / NEUTRAL - France nears rocket artillery decision, plans ballistic missile by 2035"
+      "text": "Defense & Aerospace - 60 articles - HIGH / NEUTRAL - France nears rocket artillery decision, plans ballistic missile by 2035"
     },
     {
       "tag": "tag-neu",
@@ -753,6 +806,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 4 articles - HIGH / NEUTRAL - Trump Sees Iran Deal as Imminent, Nuclear Issue Remains in Limbo"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Commodities & Mining - 6 articles - MEDIUM / NEUTRAL - Crude oil, copper, gold: The 3 commodities every beginner should track (and why they move!)"
     },
     {
       "tag": "tag-neu",
@@ -880,11 +938,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 76239.87,
+      "price": 76067.1,
       "currency": "USD",
-      "change": -887.01,
-      "change_pct": -1.15,
-      "change_str": "-1.15%",
+      "change": -1059.77,
+      "change_pct": -1.37,
+      "change_str": "-1.37%",
       "direction": "down"
     },
     {
@@ -1109,10 +1167,10 @@
     }
   },
   "logs": [
-    "2026-04-18 15:32:12 [INFO] AZALYST - status.json generated",
-    "2026-04-18 15:32:12 [INFO] PORTFOLIO - NAV USD 9,994.29 | Return -0.06%",
-    "2026-04-18 15:32:12 [INFO] SIGNALS - 11 active signal buckets in state",
-    "2026-04-18 15:32:12 [INFO] TRADER - Open positions: XLE, QQQ"
+    "2026-04-18 16:04:54 [INFO] AZALYST - status.json generated",
+    "2026-04-18 16:04:54 [INFO] PORTFOLIO - NAV USD 9,994.29 | Return -0.06%",
+    "2026-04-18 16:04:54 [INFO] SIGNALS - 12 active signal buckets in state",
+    "2026-04-18 16:04:54 [INFO] TRADER - Open positions: XLE, QQQ"
   ],
-  "generated_at": "2026-04-18 15:32:11 UTC"
+  "generated_at": "2026-04-18 16:04:53 UTC"
 }
