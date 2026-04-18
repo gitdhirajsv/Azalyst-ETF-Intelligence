@@ -9,13 +9,29 @@ Live dashboard: [https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/](https:
 ## What It Does
 
 - Scans global news feeds and direct RSS sources.
-- Classifies articles into ETF-relevant sectors such as energy, defense, gold, AI, banking, crypto, India, emerging markets, and more.
+- Classifies articles into 11 strictly defined ETF-relevant sectors (see Supported Sectors below).
 - Uses a transparent confidence model with signal strength, corroboration, source quality, recency, and event intensity.
 - Evaluates and ranks ETF candidates objectively across comprehensive global markets.
 - Simulates paper trades with explicit fees, slippage, stops, partial profit-taking, sector caps, and reserve cash.
 - Generates a static dashboard from local state for GitHub Pages.
 - Replays dated historical signals through a backtester to compare results with benchmarks.
 - **Integrates an autonomous LLM-driven engine** for daily self-optimization of analytical models.
+
+## Supported Sectors
+
+The classification engine actively monitors and routes signals for the following 11 intelligence categories:
+
+- 🛢️ Energy / Oil & Gas
+- 🛡️ Defense & Aerospace
+- 🥇 Gold & Precious Metals
+- 💻 Technology & AI / Semiconductors
+- ⚛️ Nuclear Energy & Uranium
+- 🔐 Cybersecurity
+- 🇮🇳 India Equity Markets
+- ₿ Crypto & Digital Assets
+- 🏦 Banking & Financial Sector
+- ⛏️ Commodities & Mining
+- 🌏 Emerging Markets
 
 ## Current Architecture
 
