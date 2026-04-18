@@ -215,6 +215,109 @@ SECTOR_DEFINITIONS = {
         "negators": [],
         "geopolitical_boost": ["fed", "dollar", "rate"],
     },
+
+    "healthcare_pharma": {
+        "label": "Healthcare & Pharma",
+        "emoji": "💊",
+        "keywords": [
+            ("pharma", 4), ("pharmaceutical", 4), ("drug", 3), ("fda", 6),
+            ("clinical trial", 5), ("vaccine", 5), ("biotech", 5), ("biopharmaceutical", 4),
+            ("healthcare", 3), ("hospital", 3), ("medical device", 4), ("health insurance", 3),
+            ("drug approval", 7), ("drug patent", 5), ("generic drug", 4),
+            ("pandemic", 6), ("epidemic", 5), ("outbreak", 5), ("who", 3),
+            ("cancer treatment", 5), ("gene therapy", 5), ("mrna", 5),
+            ("medicare", 4), ("medicaid", 4), ("health reform", 4),
+            ("drug pricing", 5), ("obesity drug", 6), ("glp-1", 6),
+            ("novo nordisk", 5), ("eli lilly", 5), ("pfizer", 4), ("moderna", 4),
+        ],
+        "negators": [],
+        "geopolitical_boost": ["pandemic", "outbreak", "health crisis"],
+    },
+
+    "clean_energy_renewables": {
+        "label": "Clean Energy & Renewables",
+        "emoji": "🌱",
+        "keywords": [
+            ("solar", 5), ("wind energy", 5), ("renewable", 4), ("clean energy", 5),
+            ("ev", 4), ("electric vehicle", 5), ("battery", 4), ("lithium battery", 5),
+            ("hydrogen", 5), ("green hydrogen", 6), ("fuel cell", 5),
+            ("carbon neutral", 4), ("net zero", 5), ("carbon credit", 5),
+            ("climate", 3), ("paris agreement", 4), ("carbon tax", 5),
+            ("wind farm", 5), ("solar panel", 4), ("photovoltaic", 4),
+            ("energy storage", 5), ("grid storage", 4), ("offshore wind", 5),
+            ("tesla", 3), ("charging station", 3), ("decarbonization", 4),
+            ("ira", 4), ("inflation reduction act", 6), ("green subsidy", 5),
+        ],
+        "negators": ["oil", "coal", "natural gas"],
+        "geopolitical_boost": ["climate summit", "cop", "subsidy", "mandate"],
+    },
+
+    "real_estate_reit": {
+        "label": "Real Estate & REITs",
+        "emoji": "🏠",
+        "keywords": [
+            ("real estate", 5), ("reit", 6), ("property", 3), ("housing", 4),
+            ("mortgage", 5), ("mortgage rate", 6), ("home price", 5),
+            ("commercial real estate", 6), ("office vacancy", 5), ("rent", 3),
+            ("housing market", 5), ("home sales", 4), ("construction", 3),
+            ("housing bubble", 6), ("foreclosure", 5), ("landlord", 3),
+            ("data center reit", 6), ("industrial reit", 5), ("warehouse", 3),
+            ("zoning", 3), ("housing starts", 4), ("building permits", 4),
+        ],
+        "negators": [],
+        "geopolitical_boost": ["rate cut", "rate hike", "fed", "mortgage crisis"],
+    },
+
+    "bonds_fixed_income": {
+        "label": "Bonds & Fixed Income",
+        "emoji": "📈",
+        "keywords": [
+            ("bond", 4), ("treasury", 5), ("yield", 4), ("fixed income", 5),
+            ("10-year", 5), ("2-year", 4), ("30-year", 4), ("yield curve", 6),
+            ("inversion", 5), ("bond auction", 5), ("coupon", 3),
+            ("corporate bond", 5), ("high yield", 5), ("junk bond", 5),
+            ("credit spread", 5), ("investment grade", 4), ("sovereign bond", 5),
+            ("tips", 4), ("inflation-linked", 4), ("duration", 3),
+            ("fed funds rate", 6), ("rate decision", 5), ("pivot", 4),
+            ("quantitative tightening", 5), ("balance sheet", 3),
+            ("debt issuance", 4), ("bond market", 5),
+        ],
+        "negators": [],
+        "geopolitical_boost": ["fed", "ecb", "boj", "rbi", "recession", "default"],
+    },
+
+    "asia_pacific": {
+        "label": "Asia Pacific Equity",
+        "emoji": "🌏",
+        "keywords": [
+            ("japan", 4), ("nikkei", 6), ("boj", 5), ("yen", 4),
+            ("south korea", 4), ("kospi", 5), ("samsung", 3),
+            ("australia", 3), ("asx", 4), ("new zealand", 2),
+            ("asean", 4), ("asia pacific", 5), ("pacific rim", 3),
+            ("japan stimulus", 5), ("yen weakness", 5), ("carry trade", 5),
+            ("abenomics", 4), ("japan rate", 5), ("ycc", 5),
+            ("hong kong", 3), ("hang seng", 5), ("shanghai", 3),
+            ("china gdp", 4), ("china stimulus", 5), ("china property", 5),
+        ],
+        "negators": [],
+        "geopolitical_boost": ["taiwan", "south china sea", "boj", "pboc"],
+    },
+
+    "europe_equity": {
+        "label": "Europe Equity",
+        "emoji": "🇪🇺",
+        "keywords": [
+            ("europe", 3), ("eurozone", 5), ("ecb", 5), ("euro", 3),
+            ("dax", 5), ("ftse", 4), ("cac", 4), ("stoxx", 5),
+            ("germany", 3), ("france", 3), ("uk", 2), ("britain", 3),
+            ("european central bank", 5), ("ecb rate", 6), ("eu fiscal", 4),
+            ("eu regulation", 4), ("eu tariff", 5), ("brexit", 4),
+            ("european defense", 5), ("eu spending", 4), ("eu gdp", 4),
+            ("bank of england", 4), ("boe", 4), ("gilt", 4),
+        ],
+        "negators": [],
+        "geopolitical_boost": ["ukraine", "russia", "ecb", "nato", "energy crisis"],
+    },
 }
 
 SECTOR_DIRECTION_TERMS = {
@@ -317,6 +420,66 @@ SECTOR_DIRECTION_TERMS = {
         "bearish": [
             ("outflows", 2.0), ("dollar strength", 2.0), ("devaluation", 2.0),
             ("capital flight", 2.0),
+        ],
+    },
+    "healthcare_pharma": {
+        "bullish": [
+            ("fda approval", 2.0), ("drug approval", 2.0), ("breakthrough", 1.5),
+            ("clinical success", 2.0), ("patent", 1.5), ("obesity drug demand", 2.0),
+        ],
+        "bearish": [
+            ("drug recall", 2.0), ("trial failure", 2.0), ("patent cliff", 2.0),
+            ("pricing regulation", 1.5), ("fda rejection", 2.0),
+        ],
+    },
+    "clean_energy_renewables": {
+        "bullish": [
+            ("subsidy", 2.0), ("mandate", 1.5), ("investment boom", 2.0),
+            ("capacity expansion", 1.5), ("cost reduction", 1.5),
+        ],
+        "bearish": [
+            ("subsidy cut", 2.0), ("tariff", 2.0), ("overcapacity", 1.5),
+            ("policy reversal", 2.0), ("funding pulled", 1.5),
+        ],
+    },
+    "real_estate_reit": {
+        "bullish": [
+            ("rate cut", 2.0), ("housing demand", 1.5), ("rent growth", 1.5),
+            ("occupancy", 1.5), ("construction boom", 1.5),
+        ],
+        "bearish": [
+            ("rate hike", 2.0), ("vacancy", 2.0), ("foreclosure", 2.0),
+            ("office downturn", 2.0), ("mortgage stress", 2.0),
+        ],
+    },
+    "bonds_fixed_income": {
+        "bullish": [
+            ("rate cut", 2.0), ("pivot", 2.0), ("flight to safety", 2.0),
+            ("dovish", 1.5), ("recession fear", 1.5),
+        ],
+        "bearish": [
+            ("rate hike", 2.0), ("hawkish", 1.5), ("inflation surprise", 2.0),
+            ("bond selloff", 2.0), ("yield surge", 2.0),
+        ],
+    },
+    "asia_pacific": {
+        "bullish": [
+            ("stimulus", 2.0), ("yen weakness", 1.5), ("reform", 1.5),
+            ("earnings beat", 1.5), ("inflows", 2.0),
+        ],
+        "bearish": [
+            ("yen strength", 2.0), ("china slowdown", 2.0), ("outflows", 2.0),
+            ("property crisis", 2.0), ("deflation", 1.5),
+        ],
+    },
+    "europe_equity": {
+        "bullish": [
+            ("ecb cut", 2.0), ("fiscal stimulus", 2.0), ("defense spending", 1.5),
+            ("growth surprise", 1.5), ("inflows", 2.0),
+        ],
+        "bearish": [
+            ("energy crisis", 2.0), ("recession", 2.0), ("fragmentation", 1.5),
+            ("ecb hike", 2.0), ("political crisis", 1.5),
         ],
     },
 }
