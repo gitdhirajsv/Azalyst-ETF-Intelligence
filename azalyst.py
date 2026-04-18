@@ -19,6 +19,7 @@ from state              import SignalStateManager
 from paper_trader       import PaperPortfolio
 from portfolio_reporter import PortfolioReporter
 from config             import Config
+from quant_fetcher      import QuantFetcher
 
 logging.basicConfig(
     level=logging.INFO,
@@ -66,7 +67,7 @@ def _select_etf_for_trade(signal: dict) -> tuple:
 
 def run_intelligence_cycle(
     fetcher, classifier, scorer, mapper,
-    reporter, state, portfolio, port_reporter, cfg
+    reporter, state, portfolio, port_reporter, quant_fetcher, cfg
 ):
     log.info("--- Intelligence cycle starting ---")
     try:
@@ -103,6 +104,12 @@ def run_intelligence_cycle(
                 if severity in ("HIGH", "CRITICAL") or confidence >= 75:
                     etf, platform = _select_etf_for_trade(signal)
                     if etf and platform:
+                        # QUANT BLOCKER: Check if the ETF is mathematically broken
+                        ticker = etf.get("ticker")
+                        if ticker and not quant_fetcher.check_trend_approval(ticker):
+                            log.warning(f"Trade skipped: News is bullish, but {ticker} is structurally broken (Quant Blocker).")
+                            continue
+
                         entry = portfolio.enter_position(signal, etf, platform)
                         if entry:
                             rotation_exits = entry.get("rotation_exits") or []
@@ -225,6 +232,7 @@ def main():
     state         = SignalStateManager(cfg)
     portfolio     = PaperPortfolio(cfg.PORTFOLIO_FILE)
     port_reporter = PortfolioReporter(cfg)
+    quant_fetcher = QuantFetcher()
 
     log.info(f"Ready. Interval: {cfg.POLL_INTERVAL_MINUTES}m | Paper trading: {'ON' if cfg.PAPER_TRADING_ENABLED else 'OFF'}")
 
@@ -235,7 +243,7 @@ def main():
 
     run_intelligence_cycle(
         fetcher, classifier, scorer, mapper,
-        reporter, state, portfolio, port_reporter, cfg
+        reporter, state, portfolio, port_reporter, quant_fetcher, cfg
     )
 
     # --once: single cycle mode for GitHub Actions
@@ -251,7 +259,7 @@ def main():
     schedule.every(cfg.POLL_INTERVAL_MINUTES).minutes.do(
         run_intelligence_cycle,
         fetcher, classifier, scorer, mapper,
-        reporter, state, portfolio, port_reporter, cfg
+        reporter, state, portfolio, port_reporter, quant_fetcher, cfg
     )
     schedule.every(cfg.MTM_INTERVAL_MINUTES).minutes.do(
         run_mtm_cycle, portfolio, port_reporter
