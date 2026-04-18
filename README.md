@@ -140,71 +140,30 @@ The free NVIDIA NIM endpoint for Qwen3 Coder 480B covers the daily volume with n
 - `index.html`: GitHub Pages dashboard
 - `improvement_log.jsonl`: audit log of all daily improvement cycles
 
-## Setup
+## Autonomous Deployment (No Local Setup Required)
 
-### 1. Clone
+Azalyst is entirely serverless and autonomous. You do not need to download the repository, run `.bat` files, or use local IDEs like Spyder to operate the engine.
 
-```bash
-git clone https://github.com/gitdhirajsv/Azalyst-ETF-Intelligence.git
-cd Azalyst-ETF-Intelligence
-```
+### 1. Fork The Repository
+Fork this repository to your own GitHub account.
 
-### 2. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Configure Environment
-
-Create `.env` from `.env.example` and set at least your Discord webhook if you want alerts.
-
-Example settings:
-
-```dotenv
-WEBHOOK=https://discord.com/api/webhooks/your_webhook_here
-INTERVAL=30
-THRESHOLD=62
-COOLDOWN_HOURS=4
-MIN_ARTICLES=2
-MAX_ARTICLES=300
-MAX_ARTICLE_AGE_DAYS=7
-PAPER_TRADING=true
-
-# Optional ML sentiment layer
-ML_SENTIMENT_ENABLED=true
-ML_SENTIMENT_MODE=shadow
-ML_SENTIMENT_MODEL=ProsusAI/finbert
-ML_SENTIMENT_MIN_CONFIDENCE=0.58
-
-# Optional fuzzy title dedup tuning
-FUZZY_TITLE_DEDUP_THRESHOLD=0.92
-```
-
-### 4. Add GitHub Secrets
-
-Two secrets are needed for the full automated pipeline:
+### 2. Add Secrets
+The engine requires two API keys to run its daily news fetch and self-improvement cycles.
+Go to: **Settings → Secrets and variables → Actions → New repository secret**
 
 | Secret | Purpose |
 |---|---|
-| `DISCORD_WEBHOOK_URL` | Signal and portfolio alerts to Discord |
-| `NVIDIA_API_KEY` | Daily self-improvement engine via NVIDIA NIM |
+| `DISCORD_WEBHOOK_URL` | Live signal and portfolio trade alerts to Discord |
+| `NVIDIA_API_KEY` | Daily self-improvement engine via NVIDIA NIM (Qwen Coder) |
 
-Add them at: GitHub → Settings → Secrets and variables → Actions
+### 3. Enable GitHub Actions & Pages
+1. Go to the **Actions** tab and click **"I understand my workflows, go ahead and enable them"**.
+2. Go to **Settings → Pages**, set the source to **Deploy from a branch**, and select the `gh-pages` branch.
 
-### 5. Run The Engine
-
-```bash
-python azalyst.py
-```
-
-### 6. Regenerate The Dashboard
-
-```bash
-python generate_dashboard.py
-```
-
-This writes `status.json`, which powers the GitHub Pages site.
+### 4. Let It Run
+The engine is now fully autonomous:
+- **Every 30 Minutes:** `run_azalyst.yml` fetches news, scores ETFs, executes paper trades, and deploys the live dashboard.
+- **Every Night:** `daily_improve.yml` runs the Qwen self-improvement audit on the codebase.
 
 ## Backtesting And Walk-Forward
 
