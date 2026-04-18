@@ -274,6 +274,10 @@ Note: The public simulation record serves as a transparent research log for ongo
 - Add live monitoring around stop-gap risk and execution windows.
 - Review `improvement_log.jsonl` weekly to audit what the engine changed and why.
 
+## Acknowledgments
+
+- News ingestion and basic classifier concepts were inspired by and migrated from [koala73/worldmonitor](https://github.com/koala73/worldmonitor).
+
 ## License
 
 MIT
