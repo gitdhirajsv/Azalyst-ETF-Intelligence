@@ -17,6 +17,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional, Tuple
+import numpy as np
 
 log = logging.getLogger("azalyst.risk")
 
@@ -156,19 +157,18 @@ def _daily_returns(closes: List[float]) -> List[float]:
 
 
 def _pearson_correlation(x: List[float], y: List[float]) -> float:
-    """Compute Pearson correlation between two return series."""
+    """Compute Pearson correlation between two return series using NumPy (VectorBT style)."""
     n = min(len(x), len(y))
     if n < 5:
         return 0.0
-    x, y = x[:n], y[:n]
-    mean_x = sum(x) / n
-    mean_y = sum(y) / n
-    cov = sum((x[i] - mean_x) * (y[i] - mean_y) for i in range(n)) / n
-    std_x = math.sqrt(sum((xi - mean_x) ** 2 for xi in x) / n)
-    std_y = math.sqrt(sum((yi - mean_y) ** 2 for yi in y) / n)
+    arr_x = np.array(x[:n])
+    arr_y = np.array(y[:n])
+    std_x = np.std(arr_x)
+    std_y = np.std(arr_y)
     if std_x == 0 or std_y == 0:
         return 0.0
-    return round(cov / (std_x * std_y), 4)
+    corr = np.corrcoef(arr_x, arr_y)[0, 1]
+    return round(float(corr), 4)
 
 
 def compute_correlation_matrix(closes_dict: Dict[str, List[float]]) -> Dict[str, Dict[str, float]]:

@@ -274,9 +274,18 @@ Note: The public simulation record serves as a transparent research log for ongo
 - Add live monitoring around stop-gap risk and execution windows.
 - Review `improvement_log.jsonl` weekly to audit what the engine changed and why.
 
-## Acknowledgments
+## Acknowledgments & "All-in-One" Architecture
 
-- News ingestion and basic classifier concepts were inspired by and migrated from [koala73/worldmonitor](https://github.com/koala73/worldmonitor).
+Azalyst is designed as an all-in-one institutional macro engine, migrating and combining the best concepts from the world's top open-source quantitative repositories:
+- **[koala73/worldmonitor](https://github.com/koala73/worldmonitor)**: Inspired the core news ingestion and classification heuristics.
+- **[OpenBB-finance/OpenBB](https://github.com/OpenBB-finance/OpenBB)**: Inspired the integration of fundamental mathematical models and macro regime filters.
+- **[freqtrade/freqtrade](https://github.com/freqtrade/freqtrade)**: Inspired the dynamic Step-ROI and time-based unclogging execution logic in our paper trader.
+- **[AI4Finance-Foundation/FinRL](https://github.com/AI4Finance-Foundation/FinRL)**: Inspired the volatility-adjusted position sizing and transaction-cost penalty models.
+- **[quantopian/zipline](https://github.com/quantopian/zipline)**: Inspired the event-driven historical backtesting architecture.
+- **[ccxt/ccxt](https://github.com/ccxt/ccxt)**: Inspired the unified exchange and live execution routing concepts.
+- **[polakowo/vectorbt](https://github.com/polakowo/vectorbt)**: Inspired the vectorized matrix-math risk correlation engine.
+- **[Hudson-and-Thames/mlfinlab](https://github.com/Hudson-and-Thames/mlfinlab)**: Inspired the meta-labeling machine learning reinforcement loop.
+- **[TA-Lib/ta-lib-python](https://github.com/TA-Lib/ta-lib-python)**: Inspired the quantitative and technical indicator generation layer.
 
 ## License
 
