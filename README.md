@@ -21,17 +21,17 @@ Live dashboard: [https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/](https:
 
 The classification engine actively monitors and routes signals for the following 11 intelligence categories:
 
-- 🛢️ Energy / Oil & Gas
-- 🛡️ Defense & Aerospace
-- 🥇 Gold & Precious Metals
-- 💻 Technology & AI / Semiconductors
-- ⚛️ Nuclear Energy & Uranium
-- 🔐 Cybersecurity
-- 🇮🇳 India Equity Markets
-- ₿ Crypto & Digital Assets
-- 🏦 Banking & Financial Sector
-- ⛏️ Commodities & Mining
-- 🌏 Emerging Markets
+- Energy / Oil & Gas
+- Defense & Aerospace
+- Gold & Precious Metals
+- Technology & AI / Semiconductors
+- Nuclear Energy & Uranium
+- Cybersecurity
+- India Equity Markets
+- Crypto & Digital Assets
+- Banking & Financial Sector
+- Commodities & Mining
+- Emerging Markets
 
 ## Current Architecture
 
