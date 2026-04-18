@@ -50,7 +50,7 @@ CASH_FLOOR_PCT          = 0.05
 MAX_HOLD_DAYS           = 180
 CIRCUIT_BREAKER_DRAWDOWN_PCT = 0.12
 ROTATION_CONFIDENCE_DELTA    = 10
-ROTATION_MIN_HOLD_DAYS       = 14
+ROTATION_MIN_HOLD_DAYS       = 30
 
 BASE_RISK_BUDGET_BY_SEVERITY = {
     "CRITICAL": 0.13,
@@ -690,7 +690,7 @@ class PaperPortfolio:
             if pos.days_held() >= ROTATION_MIN_HOLD_DAYS:
                 score += min(pos.days_held(), 20) * 0.3
             if pos.sector == incoming_sector:
-                score += 1.5
+                score -= 3.0  # PROTECT same-sector positions — they benefit from the same catalyst
 
             if score > 0:
                 candidates.append((score, pnl_pct, pos.confidence, -pos.days_held(), pos))
@@ -925,19 +925,18 @@ class PaperPortfolio:
         incoming_conf = signal.get("confidence", 0)
         incoming_sector = signal.get("sector_label", "")
 
-        # Find existing positions with equal or higher confidence
+        # Find existing positions with equal or higher confidence — SAME SECTOR ONLY
+        # Cross-sector top-ups dilute signal conviction and cause misrouted capital
         stronger = [
             pos for pos in self.open_positions
             if pos.confidence >= incoming_conf
             and pos.unrealised_pnl_pct() >= -2.0  # not deeply underwater
+            and pos.sector == incoming_sector      # MUST match sector
         ]
         if not stronger:
-            return None  # new signal IS better — proceed with new entry
+            return None  # no same-sector match — proceed with new entry
 
-        # Prefer same-sector match, then highest confidence
-        same_sector = [p for p in stronger if p.sector == incoming_sector]
-        candidates = same_sector if same_sector else stronger
-        return max(candidates, key=lambda p: (p.confidence, p.unrealised_pnl_pct()))
+        return max(stronger, key=lambda p: (p.confidence, p.unrealised_pnl_pct()))
 
     def enter_position(self, signal: Dict, etf: Dict, platform: str) -> Optional[Dict]:
         confidence = signal.get("confidence", 0)
