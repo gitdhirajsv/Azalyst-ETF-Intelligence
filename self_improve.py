@@ -156,7 +156,7 @@ def call_nim(context: str, api_key: str) -> dict:
     }
 
     print(f"  Calling {NIM_MODEL} ...")
-    resp = requests.post(NIM_URL, headers=headers, json=payload, timeout=180)
+    resp = requests.post(NIM_URL, headers=headers, json=payload, timeout=600)
     resp.raise_for_status()
 
     raw = resp.json()["choices"][0]["message"]["content"].strip()
