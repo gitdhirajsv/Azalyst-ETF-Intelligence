@@ -104,10 +104,6 @@
   },
   "confidence": [
     {
-      "symbol": "Defense & Aerospace",
-      "score": 94.0
-    },
-    {
       "symbol": "India Equity Markets",
       "score": 92.0
     },
@@ -118,6 +114,10 @@
     {
       "symbol": "Energy / Oil & Gas",
       "score": 90.0
+    },
+    {
+      "symbol": "Defense & Aerospace",
+      "score": 88.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -132,6 +132,10 @@
       "score": 79.0
     },
     {
+      "symbol": "Commodities & Mining",
+      "score": 74.0
+    },
+    {
       "symbol": "Europe Equity",
       "score": 71.0
     },
@@ -144,10 +148,6 @@
       "score": 69.0
     },
     {
-      "symbol": "Commodities & Mining",
-      "score": 68.0
-    },
-    {
       "symbol": "Real Estate & REITs + Clean Energy & Renewables",
       "score": 64.0
     },
@@ -157,59 +157,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 94.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 60,
-      "latest_at": "18 Apr 2026 14:14 UTC",
-      "headline": "France nears rocket artillery decision, plans ballistic missile by 2035",
-      "regions": [
-        "india",
-        "europe",
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "BBC News",
-        "World | Deutsche Welle",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 18.2,
-        "recency": 16.6,
-        "geopolitical_severity": 15.0
-      }
-    },
     {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
@@ -367,6 +314,59 @@
       }
     },
     {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 88.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 60,
+      "latest_at": "18 Apr 2026 14:14 UTC",
+      "headline": "France nears rocket artillery decision, plans ballistic missile by 2035",
+      "regions": [
+        "middle_east",
+        "asia_pacific",
+        "europe",
+        "india"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Defense News",
+        "Cointelegraph.com News",
+        "World News - Breaking international news and headlines | Sky News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 18.2,
+        "recency": 10.7,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector",
       "confidence": 83.0,
@@ -512,6 +512,56 @@
         "source_diversity": 8.5,
         "recency": 11.4,
         "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 74.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "18 Apr 2026 20:27 UTC",
+      "headline": "Inside the Race to Control the World\u2019s Lithium Supply",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "The Verge",
+        "Defense News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.9,
+        "volume_confirmation": 15.2,
+        "source_diversity": 14.1,
+        "recency": 20.0,
+        "geopolitical_severity": 12.0
       }
     },
     {
@@ -664,55 +714,6 @@
       }
     },
     {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 68.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "18 Apr 2026 16:04 UTC",
-      "headline": "Crude oil, copper, gold: The 3 commodities every beginner should track (and why they move!)",
-      "regions": [
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Defense News",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 10.3,
-        "volume_confirmation": 14.0,
-        "source_diversity": 14.8,
-        "recency": 20.0,
-        "geopolitical_severity": 9.7
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables|real_estate_reit",
       "sector_label": "Real Estate & REITs + Clean Energy & Renewables",
       "confidence": 64.0,
@@ -819,11 +820,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 60 articles - HIGH / NEUTRAL - France nears rocket artillery decision, plans ballistic missile by 2035"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "India Equity Markets - 15 articles - HIGH / NEUTRAL - RBI\u2019s oil forex window set to fuel rupee recovery"
     },
     {
@@ -835,6 +831,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Energy / Oil & Gas - 45 articles - CRITICAL / NEUTRAL - LNG Ships Move Toward Hormuz as Iran Gives Mixed Signals"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Defense & Aerospace - 60 articles - HIGH / NEUTRAL - France nears rocket artillery decision, plans ballistic missile by 2035"
     },
     {
       "tag": "tag-neu",
@@ -854,6 +855,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Commodities & Mining - 7 articles - MEDIUM / NEUTRAL - Inside the Race to Control the World\u2019s Lithium Supply"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Europe Equity - 5 articles - HIGH / NEUTRAL - ECB Moves Away From April Hike as Peace Talks Progress"
     },
     {
@@ -865,11 +871,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Bonds & Fixed Income - 11 articles - MEDIUM / NEUTRAL - How bond market's private credit crisis fears are playing out in fixed-income ETFs"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Commodities & Mining - 6 articles - MEDIUM / NEUTRAL - Crude oil, copper, gold: The 3 commodities every beginner should track (and why they move!)"
     },
     {
       "tag": "tag-neu",
@@ -997,11 +998,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 75615.8,
+      "price": 75751.28,
       "currency": "USD",
-      "change": -1511.07,
-      "change_pct": -1.96,
-      "change_str": "-1.96%",
+      "change": -1375.6,
+      "change_pct": -1.78,
+      "change_str": "-1.78%",
       "direction": "down"
     },
     {
@@ -1226,10 +1227,10 @@
     }
   },
   "logs": [
-    "2026-04-18 19:37:02 [INFO] AZALYST - status.json generated",
-    "2026-04-18 19:37:02 [INFO] PORTFOLIO - NAV USD 9,993.43 | Return -0.07%",
-    "2026-04-18 19:37:02 [INFO] SIGNALS - 13 active signal buckets in state",
-    "2026-04-18 19:37:02 [INFO] TRADER - Open positions: XLE, QQQ"
+    "2026-04-18 20:28:24 [INFO] AZALYST - status.json generated",
+    "2026-04-18 20:28:24 [INFO] PORTFOLIO - NAV USD 9,993.43 | Return -0.07%",
+    "2026-04-18 20:28:24 [INFO] SIGNALS - 13 active signal buckets in state",
+    "2026-04-18 20:28:24 [INFO] TRADER - Open positions: XLE, QQQ"
   ],
-  "generated_at": "2026-04-18 19:37:00 UTC"
+  "generated_at": "2026-04-18 20:28:23 UTC"
 }
