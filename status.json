@@ -1,21 +1,21 @@
 {
-  "portfolio_value": 9995.45,
+  "portfolio_value": 9994.29,
   "total_deposited": 10000.0,
-  "cash": 5862.47,
+  "cash": 4803.44,
   "monthly_reserve": 0.0,
-  "market_value": 4132.98,
-  "total_invested": 4137.53,
-  "unrealised_pnl": -4.55,
-  "unrealised_str": "-4.55",
+  "market_value": 5190.85,
+  "total_invested": 5196.56,
+  "unrealised_pnl": -5.71,
+  "unrealised_str": "-5.71",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "-0.05%",
-  "change_raw": -0.05,
+  "change": "-0.06%",
+  "change_raw": -0.06,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 10000.0,
-  "drawdown_now_pct": 0.05,
-  "max_drawdown_pct": 0.05,
+  "drawdown_now_pct": 0.06,
+  "max_drawdown_pct": 0.06,
   "usd_inr_rate": 92.575,
   "positions": [
     {
@@ -30,13 +30,13 @@
       "peak_price": 55.08,
       "trail_stop": 49.57,
       "dist_to_trail_pct": 9.9,
-      "units": 45.613196,
-      "invested": 2512.4,
-      "pnl": -2.76,
-      "pnl_str": "-2.76",
+      "units": 54.042809,
+      "invested": 2976.71,
+      "pnl": -3.27,
+      "pnl_str": "-3.27",
       "pnl_pct": -0.11,
       "pnl_pct_str": "-0.11%",
-      "confidence": 90,
+      "confidence": 92,
       "severity": "CRITICAL",
       "days_held": 0,
       "half_exited": false
@@ -53,10 +53,10 @@
       "peak_price": 649.56,
       "trail_stop": 584.61,
       "dist_to_trail_pct": 9.9,
-      "units": 2.501883,
-      "invested": 1625.13,
-      "pnl": -1.79,
-      "pnl_str": "-1.79",
+      "units": 3.41745,
+      "invested": 2219.85,
+      "pnl": -2.44,
+      "pnl_str": "-2.44",
       "pnl_pct": -0.11,
       "pnl_pct_str": "-0.11%",
       "confidence": 94,
@@ -87,9 +87,9 @@
       "CASH"
     ],
     "values": [
-      25.1,
-      16.2,
-      58.7
+      29.8,
+      22.2,
+      48.1
     ]
   },
   "pnl": {
@@ -98,8 +98,8 @@
       "QQQ"
     ],
     "values": [
-      -2.76,
-      -1.79
+      -3.27,
+      -2.44
     ]
   },
   "confidence": [
@@ -108,20 +108,16 @@
       "score": 94.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 94.0
-    },
-    {
       "symbol": "Energy / Oil & Gas",
-      "score": 90.0
+      "score": 92.0
     },
     {
       "symbol": "India Equity Markets",
-      "score": 90.0
+      "score": 92.0
     },
     {
-      "symbol": "Gold & Precious Metals",
-      "score": 87.0
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 90.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -132,12 +128,20 @@
       "score": 85.0
     },
     {
+      "symbol": "Gold & Precious Metals",
+      "score": 84.0
+    },
+    {
       "symbol": "Bonds & Fixed Income",
       "score": 79.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
       "score": 70.0
+    },
+    {
+      "symbol": "Europe Equity",
+      "score": 63.0
     },
     {
       "symbol": "Healthcare & Pharma",
@@ -199,82 +203,29 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 94.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 20,
-      "latest_at": "18 Apr 2026 09:40 UTC",
-      "headline": "AMD, Oracle, Microsoft and the IGV lead a monster week for tech stocks",
-      "regions": [
-        "americas",
-        "europe",
-        "asia_pacific",
-        "india"
-      ],
-      "sources": [
-        "BBC News",
-        "Finance",
-        "Defense News",
-        "World | Deutsche Welle"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 23.3,
-        "volume_confirmation": 20.0,
-        "source_diversity": 16.2,
-        "recency": 20.0,
-        "geopolitical_severity": 14.7
-      }
-    },
-    {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 90.0,
+      "confidence": 92.0,
       "severity": "CRITICAL",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 43,
-      "latest_at": "18 Apr 2026 05:12 UTC",
-      "headline": "LNG Ships Move Toward Hormuz After Iran Says Strait Is Open",
+      "article_count": 42,
+      "latest_at": "18 Apr 2026 11:47 UTC",
+      "headline": "LNG Ships Move Toward Hormuz as Iran Gives Mixed Signals",
       "regions": [
-        "global",
-        "middle_east",
         "asia_pacific",
-        "americas"
+        "global",
+        "americas",
+        "middle_east"
       ],
       "sources": [
-        "BBC News",
-        "Finance",
+        "Markets-Economic Times",
         "Oilprice.com",
-        "Defense News"
+        "US Top News and Analysis",
+        "Bloomberg Markets"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -299,34 +250,35 @@
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 17.7,
-        "recency": 12.8,
+        "source_diversity": 16.6,
+        "recency": 16.1,
         "geopolitical_severity": 15.0
       }
     },
     {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
-      "confidence": 90.0,
+      "confidence": 92.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 17,
-      "latest_at": "18 Apr 2026 09:40 UTC",
+      "article_count": 16,
+      "latest_at": "18 Apr 2026 13:57 UTC",
       "headline": "RBI\u2019s oil forex window set to fuel rupee recovery",
       "regions": [
+        "asia_pacific",
         "india",
-        "middle_east",
         "europe",
-        "asia_pacific"
+        "middle_east"
       ],
       "sources": [
         "Markets-Economic Times",
+        "Oilprice.com",
         "World | Deutsche Welle",
-        "Oilprice.com"
+        "Bloomberg Markets"
       ],
       "primary_etf": "INDA",
       "top_etfs": [
@@ -347,63 +299,64 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 24.3,
+        "signal_strength": 23.8,
         "volume_confirmation": 20.0,
-        "source_diversity": 11.0,
+        "source_diversity": 14.0,
         "recency": 20.0,
         "geopolitical_severity": 15.0
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 87.0,
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 90.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 14,
-      "latest_at": "18 Apr 2026 09:21 UTC",
-      "headline": "Crude oil, copper, gold: The 3 commodities every beginner should track (and why they move!)",
+      "article_count": 22,
+      "latest_at": "18 Apr 2026 12:00 UTC",
+      "headline": "AMD, Oracle, Microsoft and the IGV lead a monster week for tech stocks",
       "regions": [
-        "global",
-        "middle_east",
-        "asia_pacific"
+        "asia_pacific",
+        "americas",
+        "europe",
+        "global"
       ],
       "sources": [
-        "Markets-Economic Times",
         "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "Bloomberg Markets"
+        "Bloomberg Markets",
+        "World | Deutsche Welle",
+        "Finance"
       ],
-      "primary_etf": "GLDM",
+      "primary_etf": "QQQ",
       "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
+        "NIFTYBEES",
+        "MAFANG"
       ],
       "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
+        "QQQ",
+        "SOXX",
+        "AIQ"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 22.0,
+        "signal_strength": 23.4,
         "volume_confirmation": 20.0,
-        "source_diversity": 12.4,
-        "recency": 19.4,
-        "geopolitical_severity": 14.2
+        "source_diversity": 16.2,
+        "recency": 16.4,
+        "geopolitical_severity": 14.3
       }
     },
     {
@@ -467,14 +420,14 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "18 Apr 2026 07:54 UTC",
+      "article_count": 24,
+      "latest_at": "18 Apr 2026 12:24 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "middle_east",
         "europe",
-        "asia_pacific",
-        "india"
+        "global",
+        "india",
+        "middle_east"
       ],
       "sources": [
         "Markets-Economic Times",
@@ -498,8 +451,60 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 8.5,
-        "recency": 16.7,
+        "recency": 17.1,
         "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 84.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 14,
+      "latest_at": "18 Apr 2026 12:04 UTC",
+      "headline": "Crude oil, copper, gold: The 3 commodities every beginner should track (and why they move!)",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.9,
+        "volume_confirmation": 20.0,
+        "source_diversity": 12.4,
+        "recency": 16.5,
+        "geopolitical_severity": 14.2
       }
     },
     {
@@ -604,6 +609,54 @@
       }
     },
     {
+      "sector_key": "europe_equity",
+      "sector_label": "Europe Equity",
+      "confidence": 63.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 4,
+      "latest_at": "18 Apr 2026 13:57 UTC",
+      "headline": "Europe looks to secure shipping in Strait of Hormuz",
+      "regions": [
+        "europe",
+        "middle_east",
+        "africa"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Oilprice.com",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "VGK",
+      "top_etfs": [
+        "VGK",
+        "IEV",
+        "EWU"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "VGK",
+        "IEV",
+        "EWU",
+        "EWG"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 9.3,
+        "volume_confirmation": 10.8,
+        "source_diversity": 11.0,
+        "recency": 20.0,
+        "geopolitical_severity": 12.6
+      }
+    },
+    {
       "sector_key": "healthcare_pharma",
       "sector_label": "Healthcare & Pharma",
       "confidence": 62.0,
@@ -664,22 +717,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 20 articles - HIGH / NEUTRAL - AMD, Oracle, Microsoft and the IGV lead a monster week for tech stocks"
+      "text": "Energy / Oil & Gas - 42 articles - CRITICAL / NEUTRAL - LNG Ships Move Toward Hormuz as Iran Gives Mixed Signals"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 43 articles - CRITICAL / NEUTRAL - LNG Ships Move Toward Hormuz After Iran Says Strait Is Open"
+      "text": "India Equity Markets - 16 articles - HIGH / NEUTRAL - RBI\u2019s oil forex window set to fuel rupee recovery"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 17 articles - HIGH / NEUTRAL - RBI\u2019s oil forex window set to fuel rupee recovery"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Gold & Precious Metals - 14 articles - HIGH / NEUTRAL - Crude oil, copper, gold: The 3 commodities every beginner should track (and why they move!)"
+      "text": "Technology & AI / Semiconductors - 22 articles - HIGH / NEUTRAL - AMD, Oracle, Microsoft and the IGV lead a monster week for tech stocks"
     },
     {
       "tag": "tag-neu",
@@ -689,7 +737,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 25 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Gold & Precious Metals - 14 articles - HIGH / NEUTRAL - Crude oil, copper, gold: The 3 commodities every beginner should track (and why they move!)"
     },
     {
       "tag": "tag-neu",
@@ -700,6 +753,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 4 articles - HIGH / NEUTRAL - Trump Sees Iran Deal as Imminent, Nuclear Issue Remains in Limbo"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Europe Equity - 4 articles - MEDIUM / NEUTRAL - Europe looks to secure shipping in Strait of Hormuz"
     },
     {
       "tag": "tag-neu",
@@ -822,11 +880,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 76282.05,
+      "price": 76144.2,
       "currency": "USD",
-      "change": -844.82,
-      "change_pct": -1.1,
-      "change_str": "-1.10%",
+      "change": -982.68,
+      "change_pct": -1.27,
+      "change_str": "-1.27%",
       "direction": "down"
     },
     {
@@ -854,23 +912,23 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.05,
+    "drawdown_from_peak_pct": 0.06,
     "portfolio_peak": 10000.0,
     "vix": 17.48,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
         "sector": "Energy / Oil & Gas",
-        "weight": 25.1,
+        "weight": 29.8,
         "at_cap": false
       },
       {
         "sector": "Technology & AI / Semiconductors",
-        "weight": 16.2,
+        "weight": 22.2,
         "at_cap": false
       }
     ],
-    "max_drawdown_pct": 0.05,
+    "max_drawdown_pct": 0.06,
     "sector_cap_pct": 30,
     "trailing_stop_pct": 8,
     "hard_stop_pct": 10,
@@ -917,36 +975,36 @@
       "benchmark_price_start": 686.1,
       "benchmark_price_now": 710.14,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.05,
-      "alpha": -3.55
+      "portfolio_return_pct": -0.06,
+      "alpha": -3.56
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 58.65,
+          "actual_weight_pct": 48.06,
           "target_weight_pct": 10.0,
-          "drift_pct": 48.65,
+          "drift_pct": 38.06,
           "action": "DEPLOY",
-          "amount": 4862.92,
+          "amount": 3804.01,
           "etf_name": "Cash Reserve"
         },
         {
           "ticker": "QQQ",
-          "actual_weight_pct": 16.24,
+          "actual_weight_pct": 22.19,
           "target_weight_pct": 45.0,
-          "drift_pct": -28.76,
+          "drift_pct": -22.81,
           "action": "ADD",
-          "amount": 2874.61,
+          "amount": 2280.02,
           "etf_name": "Invesco QQQ Trust"
         },
         {
           "ticker": "XLE",
-          "actual_weight_pct": 25.11,
+          "actual_weight_pct": 29.75,
           "target_weight_pct": 45.0,
-          "drift_pct": -19.89,
+          "drift_pct": -15.25,
           "action": "ADD",
-          "amount": 1988.31,
+          "amount": 1524.0,
           "etf_name": "Energy Select Sector SPDR"
         }
       ],
@@ -956,105 +1014,105 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -2029.64,
-          "portfolio_loss_pct": -20.31,
+          "total_impact": -2522.35,
+          "portfolio_loss_pct": -25.24,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -1380.3
+              "impact": -1635.39
             },
             {
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -649.34
+              "impact": -886.96
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -2183.2,
-          "portfolio_loss_pct": -21.84,
+          "total_impact": -2686.65,
+          "portfolio_loss_pct": -26.88,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -1631.26
+              "impact": -1932.73
             },
             {
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -551.94
+              "impact": -753.92
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -494.47,
-          "portfolio_loss_pct": -4.95,
+          "total_impact": -629.96,
+          "portfolio_loss_pct": -6.3,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -250.96
+              "impact": -297.34
             },
             {
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -243.5
+              "impact": -332.61
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -506.31,
-          "portfolio_loss_pct": -5.07,
+          "total_impact": -623.41,
+          "portfolio_loss_pct": -6.24,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -376.45
+              "impact": -446.02
             },
             {
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -129.87
+              "impact": -177.39
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -794.13,
-          "portfolio_loss_pct": -7.94,
+          "total_impact": -993.82,
+          "portfolio_loss_pct": -9.94,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -501.93
+              "impact": -594.69
             },
             {
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -292.2
+              "impact": -399.13
             }
           ]
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -21.84
+      "worst_loss_pct": -26.88
     }
   },
   "logs": [
-    "2026-04-18 12:55:39 [INFO] AZALYST - status.json generated",
-    "2026-04-18 12:55:39 [INFO] PORTFOLIO - NAV USD 9,995.45 | Return -0.05%",
-    "2026-04-18 12:55:39 [INFO] SIGNALS - 10 active signal buckets in state",
-    "2026-04-18 12:55:39 [INFO] TRADER - Open positions: XLE, QQQ"
+    "2026-04-18 13:58:35 [INFO] AZALYST - status.json generated",
+    "2026-04-18 13:58:35 [INFO] PORTFOLIO - NAV USD 9,994.29 | Return -0.06%",
+    "2026-04-18 13:58:35 [INFO] SIGNALS - 11 active signal buckets in state",
+    "2026-04-18 13:58:35 [INFO] TRADER - Open positions: XLE, QQQ"
   ],
-  "generated_at": "2026-04-18 12:55:39 UTC"
+  "generated_at": "2026-04-18 13:58:35 UTC"
 }
