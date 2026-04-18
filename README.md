@@ -15,6 +15,7 @@ Live dashboard: [https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/](https:
 - Simulates paper trades with explicit fees, slippage, stops, partial profit-taking, sector caps, and reserve cash.
 - Generates a static dashboard from local state for GitHub Pages.
 - Replays dated historical signals through a backtester to compare results with benchmarks.
+- **Improves its own code daily** using an autonomous AI engine — no manual intervention needed.
 
 ## Current Architecture
 
@@ -29,7 +30,48 @@ flowchart LR
     G --> H["Risk Engine"]
     H --> I["Dashboard + Reports"]
     E --> J["Historical Replay / Walk-Forward"]
+    K["Daily Improvement Engine"] --> C
+    K --> E
+    K --> G
 ```
+
+## Autonomous Self-Improvement
+
+Azalyst improves itself daily without any manual intervention. Every day at 2 AM UTC, a separate GitHub Actions workflow runs `self_improve.py`, which:
+
+1. Reads the latest performance data — portfolio P&L, alpha vs SPY, signal accuracy, open positions
+2. Reads the relevant source files — scorer, classifier, paper trader, ETF mapper
+3. Calls **Qwen3 Coder 480B** via the NVIDIA NIM free API endpoint
+4. Receives one targeted, validated code change
+5. Applies it if it passes a syntax check and exact-match guard
+6. Commits the changed file back to `main` — the next 30-minute scan runs with the improved code
+
+Every cycle is logged to `improvement_log.jsonl` for a full audit trail whether a change was applied or not.
+
+### Safety Guardrails
+
+The improvement engine can only modify these files:
+
+- `scorer.py` — confidence scoring model
+- `classifier.py` — sector keyword classifier
+- `paper_trader.py` — trading logic
+- `etf_mapper.py` — ETF database and ranking
+- `news_fetcher.py` — RSS ingestion
+- `reporter.py` — Discord formatting
+
+Core orchestration files (`azalyst.py`, `config.py`, `risk_engine.py`) are read-only context — the engine cannot touch them. Every proposed change must match the existing code verbatim before it is applied, and is syntax-checked in a temporary file before writing to disk.
+
+### Setup
+
+Add your NVIDIA NIM API key as a repository secret:
+
+```
+GitHub → Settings → Secrets and variables → Actions → New repository secret
+Name:  NVIDIA_API_KEY
+Value: your key from build.nvidia.com
+```
+
+The free NVIDIA NIM endpoint for Qwen3 Coder 480B covers the daily volume with no cost.
 
 ## What Changed In This Version
 
@@ -56,10 +98,14 @@ flowchart LR
 - Better validation:
   - Historical replay backtester added.
   - Walk-forward window summaries supported for dated signal files.
+- Autonomous improvement:
+  - Daily self-improvement engine added using Qwen3 Coder 480B on NVIDIA NIM.
+  - Audit log maintained in `improvement_log.jsonl`.
 
 ## Key Files
 
 - `azalyst.py`: live engine orchestration
+- `self_improve.py`: daily autonomous code improvement engine
 - `news_fetcher.py`: ingestion, date parsing, dedup
 - `classifier.py`: rule engine plus optional ML sentiment layer
 - `scorer.py`: confidence scoring
@@ -69,6 +115,7 @@ flowchart LR
 - `backtester.py`: historical replay and walk-forward evaluation
 - `generate_dashboard.py`: builds `status.json`
 - `index.html`: GitHub Pages dashboard
+- `improvement_log.jsonl`: audit log of all daily improvement cycles
 
 ## Setup
 
@@ -111,19 +158,24 @@ ML_SENTIMENT_MIN_CONFIDENCE=0.58
 FUZZY_TITLE_DEDUP_THRESHOLD=0.92
 ```
 
-Notes:
+### 4. Add GitHub Secrets
 
-- `ML_SENTIMENT_MODE=shadow` logs and surfaces ML sentiment without letting it change direction bias.
-- `ML_SENTIMENT_MODE=hybrid` lets the ML layer influence direction on selected sectors where positive and negative sentiment maps cleanly to ETF direction.
-- The default FinBERT path expects a recent `torch` build. Keep `torch>=2.6.0` to avoid model-loading security restrictions in newer `transformers`.
+Two secrets are needed for the full automated pipeline:
 
-### 4. Run The Engine
+| Secret | Purpose |
+|---|---|
+| `DISCORD_WEBHOOK_URL` | Signal and portfolio alerts to Discord |
+| `NVIDIA_API_KEY` | Daily self-improvement engine via NVIDIA NIM |
+
+Add them at: GitHub → Settings → Secrets and variables → Actions
+
+### 5. Run The Engine
 
 ```bash
 python azalyst.py
 ```
 
-### 5. Regenerate The Dashboard
+### 6. Regenerate The Dashboard
 
 ```bash
 python generate_dashboard.py
@@ -181,6 +233,7 @@ Important: the public live paper record is still short. Treat it as a transparen
 - ML added carefully, with fallback behavior.
 - Execution realism matters: costs, slippage, gaps, diversification, and volatility.
 - Validation matters as much as signal generation.
+- The system improves itself — human oversight is audit, not operation.
 
 ## What This Is Not Yet
 
@@ -196,6 +249,7 @@ Important: the public live paper record is still short. Treat it as a transparen
 - Expand ETF metadata with live liquidity, spread, and expense-ratio feeds.
 - Add a model registry for comparing rule-only vs hybrid ML variants.
 - Add live monitoring around stop-gap risk and execution windows.
+- Review `improvement_log.jsonl` weekly to audit what the engine changed and why.
 
 ## License
 
