@@ -149,7 +149,13 @@ class ConfidenceScorer:
             elif _source_in_tier(src, SOURCE_TIERS["tier2"]):
                 tier2_hits += 1
             elif src:
-                tier3_hits += 1
+                # Penalize crypto sources in non-crypto sectors
+                is_crypto_source = any(crypto_term in src for crypto_term in ["cointelegraph", "coinbase", "crypto", "bitcoin"])
+                is_crypto_sector = "crypto" in signal.get("sector_label", "").lower() or "crypto" in "".join(signal.get("sectors", [])).lower()
+                if is_crypto_source and not is_crypto_sector:
+                    tier3_hits += 0.1  # Minimal weight for irrelevant crypto sources
+                else:
+                    tier3_hits += 1    # Normal weight
 
         weighted_sources = tier1_hits * 1.6 + tier2_hits * 1.0 + tier3_hits * 0.6
         return min(20.0 * (1 - math.exp(-weighted_sources / 4.0)), 20.0)
