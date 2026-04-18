@@ -1,20 +1,20 @@
 {
-  "portfolio_value": 7834.66,
+  "portfolio_value": 7834.53,
   "total_deposited": 7647.61,
-  "cash": 55.19,
+  "cash": 10.1,
   "monthly_reserve": 0.0,
-  "market_value": 7779.46,
-  "total_invested": 7493.83,
-  "unrealised_pnl": 285.63,
-  "unrealised_str": "+285.63",
+  "market_value": 7824.43,
+  "total_invested": 7538.93,
+  "unrealised_pnl": 285.5,
+  "unrealised_str": "+285.50",
   "realised_pnl": -98.58,
   "realised_str": "-98.58",
-  "change": "+2.45%",
-  "change_raw": 2.45,
+  "change": "+2.44%",
+  "change_raw": 2.44,
   "closed_trades": 1,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 7879.97,
-  "drawdown_now_pct": 0.57,
+  "drawdown_now_pct": 0.58,
   "max_drawdown_pct": 1.6,
   "usd_inr_rate": 92.575,
   "positions": [
@@ -109,6 +109,29 @@
       "severity": "CRITICAL",
       "days_held": 0,
       "half_exited": false
+    },
+    {
+      "trade_id": "T0006",
+      "ticker": "IBIT",
+      "etf_name": "iShares Bitcoin Trust ETF",
+      "sector": "Crypto & Digital Assets",
+      "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NASDAQ",
+      "entry": 44.06,
+      "current": 43.94,
+      "peak_price": 44.06,
+      "trail_stop": 39.66,
+      "dist_to_trail_pct": 9.75,
+      "units": 1.023399,
+      "invested": 45.1,
+      "pnl": -0.13,
+      "pnl_str": "-0.13",
+      "pnl_pct": -0.28,
+      "pnl_pct_str": "-0.28%",
+      "confidence": 75,
+      "severity": "HIGH",
+      "days_held": 0,
+      "half_exited": false
     }
   ],
   "closed_trades_list": [
@@ -163,6 +186,7 @@
       "GLDM",
       "INDA",
       "XLE",
+      "IBIT",
       "CASH"
     ],
     "values": [
@@ -170,7 +194,8 @@
       33.3,
       28.0,
       7.4,
-      0.7
+      0.6,
+      0.1
     ]
   },
   "pnl": {
@@ -178,13 +203,15 @@
       "ITA",
       "GLDM",
       "INDA",
-      "XLE"
+      "XLE",
+      "IBIT"
     ],
     "values": [
       101.5,
       84.13,
       97.88,
-      2.12
+      2.12,
+      -0.13
     ]
   },
   "confidence": [
@@ -217,10 +244,6 @@
       "score": 85.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 83.0
-    },
-    {
       "symbol": "Cybersecurity + Crypto & Digital Assets",
       "score": 83.0
     },
@@ -235,6 +258,10 @@
     {
       "symbol": "Gold & Precious Metals + India Equity Markets",
       "score": 81.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 75.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -626,52 +653,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 83.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "17 Apr 2026 21:50 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "europe",
-        "middle_east",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Markets-Economic Times",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 12.3,
-        "recency": 11.2,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "crypto_digital|cybersecurity",
       "sector_label": "Cybersecurity + Crypto & Digital Assets",
       "confidence": 83.0,
@@ -877,6 +858,51 @@
         "volume_confirmation": 20.0,
         "source_diversity": 13.3,
         "recency": 9.3,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 75.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "17 Apr 2026 21:50 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "india",
+        "europe",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 8.5,
+        "recency": 7.3,
         "geopolitical_severity": 15.0
       }
     },
@@ -1111,11 +1137,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Cybersecurity + Crypto & Digital Assets - 9 articles - HIGH / NEUTRAL - Powell, Bessent discussed Anthropic's Mythos AI cyber threat with major U.S. banks"
     },
     {
@@ -1132,6 +1153,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Gold & Precious Metals + India Equity Markets - 13 articles - HIGH / NEUTRAL - Gold Eases as US Plan to Blockade Hormuz Raises Inflation Risks"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -1269,11 +1295,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77074.91,
+      "price": 77021.25,
       "currency": "USD",
-      "change": -51.96,
-      "change_pct": -0.07,
-      "change_str": "-0.07%",
+      "change": -105.62,
+      "change_pct": -0.14,
+      "change_str": "-0.14%",
       "direction": "down"
     },
     {
@@ -1301,7 +1327,7 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.57,
+    "drawdown_from_peak_pct": 0.58,
     "portfolio_peak": 7879.97,
     "vix": 17.48,
     "vix_regime": "ELEVATED",
@@ -1325,6 +1351,11 @@
         "sector": "Energy / Oil & Gas",
         "weight": 7.4,
         "at_cap": false
+      },
+      {
+        "sector": "Crypto & Digital Assets",
+        "weight": 0.6,
+        "at_cap": false
       }
     ],
     "max_drawdown_pct": 1.6,
@@ -1338,24 +1369,35 @@
       "matrix": {
         "GLDM": {
           "GLDM": 1.0,
+          "IBIT": 0.3,
           "INDA": 0.353,
           "ITA": 0.533,
           "XLE": -0.414
         },
+        "IBIT": {
+          "GLDM": 0.3,
+          "IBIT": 1.0,
+          "INDA": 0.767,
+          "ITA": 0.659,
+          "XLE": -0.633
+        },
         "INDA": {
           "GLDM": 0.353,
+          "IBIT": 0.767,
           "INDA": 1.0,
           "ITA": 0.762,
           "XLE": -0.55
         },
         "ITA": {
           "GLDM": 0.533,
+          "IBIT": 0.659,
           "INDA": 0.762,
           "ITA": 1.0,
           "XLE": -0.649
         },
         "XLE": {
           "GLDM": -0.414,
+          "IBIT": -0.633,
           "INDA": -0.55,
           "ITA": -0.649,
           "XLE": 1.0
@@ -1363,14 +1405,15 @@
       },
       "tickers": [
         "GLDM",
+        "IBIT",
         "INDA",
         "ITA",
         "XLE"
       ],
-      "max_corr": 0.762,
+      "max_corr": 0.767,
       "max_corr_pair": [
-        "INDA",
-        "ITA"
+        "IBIT",
+        "INDA"
       ],
       "most_negative_corr": -0.649,
       "most_negative_pair": [
@@ -1384,9 +1427,10 @@
         "ITA": 29.8,
         "GLDM": 34.22,
         "INDA": 26.72,
-        "XLE": 26.33
+        "XLE": 26.33,
+        "IBIT": 31.55
       },
-      "portfolio_avg_vol_pct": 29.27,
+      "portfolio_avg_vol_pct": 29.72,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -1394,55 +1438,64 @@
       "benchmark_price_start": 658.93,
       "benchmark_price_now": 710.14,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": 2.45,
-      "alpha": -5.32
+      "portfolio_return_pct": 2.44,
+      "alpha": -5.33
     },
     "rebalance": {
       "alerts": [
         {
-          "ticker": "XLE",
-          "actual_weight_pct": 7.43,
-          "target_weight_pct": 22.5,
-          "drift_pct": -15.07,
+          "ticker": "IBIT",
+          "actual_weight_pct": 0.57,
+          "target_weight_pct": 18.0,
+          "drift_pct": -17.43,
           "action": "ADD",
-          "amount": 1180.39,
-          "etf_name": "Energy Select Sector SPDR"
+          "amount": 1365.25,
+          "etf_name": "iShares Bitcoin Trust ETF"
         },
         {
           "ticker": "GLDM",
           "actual_weight_pct": 33.25,
-          "target_weight_pct": 22.5,
-          "drift_pct": 10.75,
+          "target_weight_pct": 18.0,
+          "drift_pct": 15.25,
           "action": "TRIM",
-          "amount": 842.49,
+          "amount": 1195.08,
           "etf_name": "SPDR Gold MiniShares Trust"
-        },
-        {
-          "ticker": "CASH",
-          "actual_weight_pct": 0.7,
-          "target_weight_pct": 10.0,
-          "drift_pct": -9.3,
-          "action": "RAISE",
-          "amount": 728.27,
-          "etf_name": "Cash Reserve"
         },
         {
           "ticker": "ITA",
           "actual_weight_pct": 30.58,
-          "target_weight_pct": 22.5,
-          "drift_pct": 8.08,
+          "target_weight_pct": 18.0,
+          "drift_pct": 12.58,
           "action": "TRIM",
-          "amount": 632.99,
+          "amount": 985.57,
           "etf_name": "iShares U.S. Aerospace & Defense ETF"
+        },
+        {
+          "ticker": "XLE",
+          "actual_weight_pct": 7.43,
+          "target_weight_pct": 18.0,
+          "drift_pct": -10.57,
+          "action": "ADD",
+          "amount": 827.81,
+          "etf_name": "Energy Select Sector SPDR"
         },
         {
           "ticker": "INDA",
           "actual_weight_pct": 28.03,
-          "target_weight_pct": 22.5,
-          "drift_pct": 5.53,
+          "target_weight_pct": 18.0,
+          "drift_pct": 10.03,
           "action": "TRIM",
-          "amount": 433.18,
+          "amount": 785.76,
           "etf_name": "iShares MSCI India ETF"
+        },
+        {
+          "ticker": "CASH",
+          "actual_weight_pct": 0.13,
+          "target_weight_pct": 10.0,
+          "drift_pct": -9.87,
+          "action": "RAISE",
+          "amount": 773.36,
+          "etf_name": "Cash Reserve"
         }
       ],
       "drift_threshold_pct": 5.0,
@@ -1451,8 +1504,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -1505.71,
-          "portfolio_loss_pct": -19.22,
+          "total_impact": -1532.69,
+          "portfolio_loss_pct": -19.56,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1477,12 +1530,18 @@
               "factor": "oil",
               "shock_pct": -55.0,
               "impact": -320.32
+            },
+            {
+              "ticker": "IBIT",
+              "factor": "crypto",
+              "shock_pct": -60.0,
+              "impact": -26.98
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -1861.61,
-          "portfolio_loss_pct": -23.76,
+          "total_impact": -1879.59,
+          "portfolio_loss_pct": -23.99,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1507,12 +1566,18 @@
               "factor": "oil",
               "shock_pct": -65.0,
               "impact": -378.57
+            },
+            {
+              "ticker": "IBIT",
+              "factor": "crypto",
+              "shock_pct": -40.0,
+              "impact": -17.99
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -877.27,
-          "portfolio_loss_pct": -11.2,
+          "total_impact": -886.26,
+          "portfolio_loss_pct": -11.31,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1537,12 +1602,18 @@
               "factor": "oil",
               "shock_pct": -10.0,
               "impact": -58.24
+            },
+            {
+              "ticker": "IBIT",
+              "factor": "crypto",
+              "shock_pct": -20.0,
+              "impact": -8.99
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -767.34,
-          "portfolio_loss_pct": -9.79,
+          "total_impact": -771.83,
+          "portfolio_loss_pct": -9.85,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1567,12 +1638,18 @@
               "factor": "oil",
               "shock_pct": -15.0,
               "impact": -87.36
+            },
+            {
+              "ticker": "IBIT",
+              "factor": "crypto",
+              "shock_pct": -10.0,
+              "impact": -4.5
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -734.58,
-          "portfolio_loss_pct": -9.38,
+          "total_impact": -745.82,
+          "portfolio_loss_pct": -9.52,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1597,20 +1674,26 @@
               "factor": "oil",
               "shock_pct": -20.0,
               "impact": -116.48
+            },
+            {
+              "ticker": "IBIT",
+              "factor": "crypto",
+              "shock_pct": -25.0,
+              "impact": -11.24
             }
           ]
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -23.76
+      "worst_loss_pct": -23.99
     }
   },
   "logs": [
-    "2026-04-18 07:19:53 [INFO] AZALYST - status.json generated",
-    "2026-04-18 07:19:53 [INFO] PORTFOLIO - NAV USD 7,834.66 | Return +2.45%",
-    "2026-04-18 07:19:53 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-04-18 07:19:53 [INFO] TRADER - Open positions: ITA, GLDM, INDA, XLE",
-    "2026-04-18 07:19:53 [INFO] TRADER - Closed trades: 1"
+    "2026-04-18 07:58:27 [INFO] AZALYST - status.json generated",
+    "2026-04-18 07:58:27 [INFO] PORTFOLIO - NAV USD 7,834.53 | Return +2.44%",
+    "2026-04-18 07:58:27 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-04-18 07:58:27 [INFO] TRADER - Open positions: ITA, GLDM, INDA, XLE, IBIT",
+    "2026-04-18 07:58:27 [INFO] TRADER - Closed trades: 1"
   ],
-  "generated_at": "2026-04-18 07:19:52 UTC"
+  "generated_at": "2026-04-18 07:58:27 UTC"
 }
