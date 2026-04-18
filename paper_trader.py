@@ -279,6 +279,7 @@ class Position:
         self.peak_price     = entry_price
         self.trail_stop     = round(entry_price * (1 - STOP_LOSS_PCT), 4)
         self.half_exited    = False
+        self.roi_step       = 0
 
     def current_value(self) -> float:
         return round(self.units * self.current_price, 2)
@@ -321,6 +322,7 @@ class Position:
             "peak_price":     self.peak_price,
             "trail_stop":     self.trail_stop,
             "half_exited":    self.half_exited,
+            "roi_step":       self.roi_step,
         }
 
     @classmethod
@@ -351,6 +353,7 @@ class Position:
             round(pos.entry_price * (1 - STOP_LOSS_PCT), 4),
         )
         pos.half_exited = raw.get("half_exited", False)
+        pos.roi_step    = raw.get("roi_step", 1 if pos.half_exited else 0)
         return pos
 
 
@@ -681,14 +684,16 @@ class PaperPortfolio:
             pnl_pct = pos.unrealised_pnl_pct()
             score   = 0.0
 
-            # HARD RULE: Never rotate out of a losing position.
-            # Crystallizing losses to chase new signals destroys alpha.
+            if incoming_conf >= pos.confidence + ROTATION_CONFIDENCE_DELTA:
+                score += (incoming_conf - pos.confidence)
             if pnl_pct < 0:
-                continue
+                score += abs(pnl_pct) * 2.0
+            elif pnl_pct < 2:
+                score += 2.0
             if pos.days_held() >= ROTATION_MIN_HOLD_DAYS:
                 score += min(pos.days_held(), 20) * 0.3
             if pos.sector == incoming_sector:
-                score -= 3.0  # PROTECT same-sector positions — they benefit from the same catalyst
+                score += 1.5
 
             if score > 0:
                 candidates.append((score, pnl_pct, pos.confidence, -pos.days_held(), pos))
@@ -787,12 +792,22 @@ class PaperPortfolio:
         return rotation_exits
 
     def _execute_partial_profit(self, position: Position) -> Optional[Dict]:
-        if position.half_exited:
+        """Freqtrade-inspired Dynamic Step-ROI Logic."""
+        roi_table = [
+            {"target_pct": 0.05, "sell_fraction": 0.25}, # Sell 25% of bag at +5%
+            {"target_pct": 0.10, "sell_fraction": 0.33}, # Sell 33% of remainder at +10%
+            {"target_pct": 0.15, "sell_fraction": 0.50}, # Sell 50% of remainder at +15%
+        ]
+        
+        step = getattr(position, "roi_step", 0)
+        if step >= len(roi_table):
             return None
-        if position.current_price < position.entry_price * (1 + PARTIAL_PROFIT_PCT):
+            
+        current_step = roi_table[step]
+        if position.current_price < position.entry_price * (1 + current_step["target_pct"]):
             return None
 
-        sell_units      = round(position.units * PARTIAL_PROFIT_FRACTION, 6)
+        sell_units      = round(position.units * current_step["sell_fraction"], 6)
         remaining_units = round(position.units - sell_units, 6)
         if sell_units <= 0 or remaining_units <= 0:
             return None
@@ -817,6 +832,7 @@ class PaperPortfolio:
         position.units        = remaining_units
         position.invested_inr = round(max(position.invested_inr - cost_basis_sold, 0.0), 2)
         position.half_exited  = True
+        position.roi_step     = step + 1
         position.cumulative_costs_inr = round(
             position.cumulative_costs_inr + execution["total_cost_inr"],
             2,
@@ -828,8 +844,9 @@ class PaperPortfolio:
         self._update_drawdown_state()
 
         log.info(
-            "PARTIAL PROFIT - %s | Sold 50%% | Realised %+,.2f | Costs %.2f | Remaining units %.6f",
+            "STEP-ROI - %s | Step %d | Realised %+,.2f | Costs %.2f | Remaining units %.6f",
             position.ticker,
+            position.roi_step,
             realised_pnl,
             execution["total_cost_inr"],
             position.units,
@@ -923,18 +940,19 @@ class PaperPortfolio:
         incoming_conf = signal.get("confidence", 0)
         incoming_sector = signal.get("sector_label", "")
 
-        # Find existing positions with equal or higher confidence — SAME SECTOR ONLY
-        # Cross-sector top-ups dilute signal conviction and cause misrouted capital
+        # Find existing positions with equal or higher confidence
         stronger = [
             pos for pos in self.open_positions
             if pos.confidence >= incoming_conf
             and pos.unrealised_pnl_pct() >= -2.0  # not deeply underwater
-            and pos.sector == incoming_sector      # MUST match sector
         ]
         if not stronger:
-            return None  # no same-sector match — proceed with new entry
+            return None  # new signal IS better — proceed with new entry
 
-        return max(stronger, key=lambda p: (p.confidence, p.unrealised_pnl_pct()))
+        # Prefer same-sector match, then highest confidence
+        same_sector = [p for p in stronger if p.sector == incoming_sector]
+        candidates = same_sector if same_sector else stronger
+        return max(candidates, key=lambda p: (p.confidence, p.unrealised_pnl_pct()))
 
     def enter_position(self, signal: Dict, etf: Dict, platform: str) -> Optional[Dict]:
         confidence = signal.get("confidence", 0)
@@ -1184,6 +1202,9 @@ class PaperPortfolio:
                     exit_reason = f"Trailing stop hit ({change_pct * 100:.1f}%)"
                 else:
                     exit_reason = f"Stop-loss hit ({change_pct * 100:.1f}%)"
+            elif days >= 14 and change_pct <= -0.02:
+                # Freqtrade-inspired unclogging: free up capital if a trade is dead and underwater
+                exit_reason = f"Time-based unclogging ({days} days, {change_pct * 100:.1f}%)"
             elif days >= MAX_HOLD_DAYS:
                 exit_reason = f"Max hold period ({days} days)"
 
