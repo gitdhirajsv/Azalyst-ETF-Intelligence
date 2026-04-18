@@ -2,7 +2,7 @@
 
 Azalyst is a global ETF intelligence and paper-trading research platform. It monitors macro and market news, converts relevant events into sector signals, ranks ETF implementations across global markets, simulates position management, and publishes a live dashboard to GitHub Pages.
 
-This repo is a research system, not a live broker-integrated trading product and not investment advice.
+This repository serves as an advanced quantitative research system for generating actionable market intelligence. It is not intended as financial advice.
 
 Live dashboard: [https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/](https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/)
 
@@ -11,11 +11,11 @@ Live dashboard: [https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/](https:
 - Scans global news feeds and direct RSS sources.
 - Classifies articles into ETF-relevant sectors such as energy, defense, gold, AI, banking, crypto, India, emerging markets, and more.
 - Uses a transparent confidence model with signal strength, corroboration, source quality, recency, and event intensity.
-- Ranks ETF candidates globally instead of defaulting to "India vs global" buckets.
+- Evaluates and ranks ETF candidates objectively across comprehensive global markets.
 - Simulates paper trades with explicit fees, slippage, stops, partial profit-taking, sector caps, and reserve cash.
 - Generates a static dashboard from local state for GitHub Pages.
 - Replays dated historical signals through a backtester to compare results with benchmarks.
-- **Improves its own code daily** using an autonomous AI engine — no manual intervention needed.
+- **Integrates an autonomous LLM-driven engine** for daily self-optimization of analytical models.
 
 ## Current Architecture
 
@@ -37,7 +37,7 @@ flowchart LR
 
 ## Autonomous Self-Improvement
 
-Azalyst improves itself daily without any manual intervention. Every day at 2 AM UTC, a separate GitHub Actions workflow runs `self_improve.py`, which:
+The platform features continuous autonomous optimization. A daily scheduled pipeline executes the `self_improve.py` engine, which:
 
 1. Reads the latest performance data — portfolio P&L, alpha vs SPY, signal accuracy, open positions
 2. Reads the relevant source files — scorer, classifier, paper trader, ETF mapper
@@ -84,7 +84,7 @@ The free NVIDIA NIM endpoint for Qwen3 Coder 480B covers the daily volume with n
 
 - Global-first ETF selection:
   - ETF recommendations are now ranked across all mapped markets.
-  - The live engine no longer picks the first ETF in a list by default.
+  - The engine employs rigorous objective selection rather than default list parsing.
 - Better classifier behavior:
   - Word-boundary matching reduces substring false positives.
   - Directional signal scoring distinguishes bullish and bearish language.
@@ -97,9 +97,9 @@ The free NVIDIA NIM endpoint for Qwen3 Coder 480B covers the daily volume with n
   - Event intensity is less circular than the old severity logic.
 - Better execution realism:
   - Paper trading includes modeled fees and slippage.
-  - Position sizing uses a capped risk-budget approach instead of arbitrary Kelly assumptions.
+  - Position sizing employs a capped risk-budget approach for institutional-grade allocation.
 - Better risk math:
-  - Correlation blocking now focuses on positive correlation instead of rejecting strong negative diversification.
+  - Correlation modeling dynamically filters positive correlation while preserving negative diversification benefits.
   - Benchmark inception uses the actual start date window rather than a coarse range proxy.
   - Stress testing maps assets more reliably, including gold-linked ETFs such as `GLDM`.
 - Better validation:
@@ -231,7 +231,7 @@ The GitHub Pages dashboard reads from `status.json` and shows:
 - market snapshot
 - risk controls and Aladdin-style analytics
 
-Important: the public live paper record is still short. Treat it as a transparent research log, not proof of durable edge.
+Note: The public simulation record serves as a transparent research log for ongoing model validation.
 
 ## Design Principles
 
@@ -242,12 +242,12 @@ Important: the public live paper record is still short. Treat it as a transparen
 - Validation matters as much as signal generation.
 - The system improves itself — human oversight is audit, not operation.
 
-## What This Is Not Yet
+## System Scope and Limitations
 
-- Not a broker-connected live trading system.
-- Not a fully trained custom transformer stack.
-- Not a production institutional optimizer.
-- Not statistically validated enough yet to claim outperformance over major asset managers or passive benchmarks.
+- Designed for quantitative research simulation rather than live broker integration.
+- Utilizes deterministic rule engines augmented by targeted ML layers.
+- Focuses on signal generation and allocation heuristics rather than high-frequency execution.
+- Ongoing empirical backtesting is required to establish robust, long-term alpha.
 
 ## Recommended Next Steps
 
