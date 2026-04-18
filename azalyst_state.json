@@ -2008,23 +2008,23 @@
     }
   },
   "banking_financial": {
-    "sent_at": "2026-04-18T17:05:44.804800+00:00",
-    "confidence": 83,
+    "sent_at": "2026-04-18T21:57:29.416036+00:00",
+    "confidence": 77,
     "sector_label": "Banking & Financial Sector",
     "article_count": 13,
     "severity": "HIGH",
     "regions": [
       "middle_east",
-      "india",
       "global",
-      "americas",
-      "asia_pacific"
+      "asia_pacific",
+      "india",
+      "americas"
     ],
     "sources": [
-      "Bloomberg Markets",
       "Oilprice.com",
-      "Finance",
       "US Top News and Analysis",
+      "Bloomberg Markets",
+      "Finance",
       "Markets-Economic Times"
     ],
     "top_headlines": [
@@ -2039,7 +2039,7 @@
       "signal_strength": 19.4,
       "volume_confirmation": 20.0,
       "source_diversity": 14.8,
-      "recency": 14.7,
+      "recency": 9.0,
       "geopolitical_severity": 14.5
     },
     "etf_recommendations": {
@@ -2291,21 +2291,21 @@
     }
   },
   "bonds_fixed_income": {
-    "sent_at": "2026-04-18T17:05:47.762545+00:00",
-    "confidence": 69,
+    "sent_at": "2026-04-18T21:57:33.127070+00:00",
+    "confidence": 65,
     "sector_label": "Bonds & Fixed Income",
     "article_count": 11,
     "severity": "MEDIUM",
     "regions": [
       "middle_east",
-      "americas",
-      "global"
+      "global",
+      "americas"
     ],
     "sources": [
-      "Finance",
-      "US Top News and Analysis",
       "Cointelegraph.com News",
-      "Bloomberg Markets"
+      "Bloomberg Markets",
+      "US Top News and Analysis",
+      "Finance"
     ],
     "top_headlines": [
       "How bond market's private credit crisis fears are playing out in fixed-income ETFs",
@@ -2319,7 +2319,7 @@
       "signal_strength": 17.0,
       "volume_confirmation": 18.7,
       "source_diversity": 10.2,
-      "recency": 12.1,
+      "recency": 7.4,
       "geopolitical_severity": 11.7
     },
     "etf_recommendations": {
@@ -4278,6 +4278,298 @@
           "selection_score": 73.0,
           "selection_notes": [
             "clean thematic exposure",
+            "matches international access"
+          ]
+        }
+      ]
+    }
+  },
+  "asia_pacific": {
+    "sent_at": "2026-04-18T21:57:34.736555+00:00",
+    "confidence": 66,
+    "sector_label": "Asia Pacific Equity",
+    "article_count": 4,
+    "severity": "MEDIUM",
+    "regions": [
+      "middle_east",
+      "global",
+      "asia_pacific"
+    ],
+    "sources": [
+      "The Verge",
+      "BBC News",
+      "Defense News",
+      "Markets-Economic Times"
+    ],
+    "top_headlines": [
+      "The RAM shortage could last years",
+      "Global Market: Japan says recent yen moves driven by speculative trade",
+      "Moment wolf on the run in South Korea is found",
+      "Rattled by Trump, US allies eye Japan\u2019s biggest arms opening since WWII"
+    ],
+    "latest_ts": "2026-04-18T21:56:41.842482+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 10.0,
+      "volume_confirmation": 10.8,
+      "source_diversity": 14.0,
+      "recency": 20.0,
+      "geopolitical_severity": 12.2
+    },
+    "etf_recommendations": {
+      "selection_method": "global-ranked",
+      "primary": {
+        "name": "iShares MSCI Japan ETF",
+        "ticker": "EWJ",
+        "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+        "exchange": "NYSE",
+        "risk": "Medium",
+        "timeframe": "3\u201312 months",
+        "thesis": "Japan corporate reform + Nikkei record highs. BoJ normalisation adds FX tailwind for USD investors.",
+        "sector_key": "asia_pacific",
+        "market_bucket": "global",
+        "market_scope": "International-listed",
+        "selection_score": 108.5,
+        "selection_notes": [
+          "matches international access"
+        ]
+      },
+      "ranked": [
+        {
+          "name": "iShares MSCI Japan ETF",
+          "ticker": "EWJ",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Japan corporate reform + Nikkei record highs. BoJ normalisation adds FX tailwind for USD investors.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 108.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "iShares MSCI South Korea ETF",
+          "ticker": "EWY",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium-High",
+          "timeframe": "3\u201312 months",
+          "thesis": "Korea: Samsung, SK Hynix, POSCO. Memory chip & EV battery cycle play. Korea discount narrowing.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 101.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Franklin FTSE Asia ex Japan ETF",
+          "ticker": "FLAX",
+          "platform": "Franklin Templeton \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Asia ex-Japan \u2014 India, China, Taiwan, Korea, ASEAN. Catch-up trade vs US equities.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 94.5,
+          "selection_notes": [
+            "broad diversification",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "iShares China Large-Cap ETF",
+          "ticker": "FXI",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "1\u20136 months",
+          "thesis": "China stimulus-driven re-rating potential. Alibaba, Tencent, BYD. High geopolitical risk.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 87.5,
+          "selection_notes": [
+            "elevated geopolitical risk",
+            "matches international access"
+          ]
+        }
+      ],
+      "top_etfs": [
+        {
+          "name": "iShares MSCI Japan ETF",
+          "ticker": "EWJ",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Japan corporate reform + Nikkei record highs. BoJ normalisation adds FX tailwind for USD investors.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 108.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "iShares MSCI South Korea ETF",
+          "ticker": "EWY",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium-High",
+          "timeframe": "3\u201312 months",
+          "thesis": "Korea: Samsung, SK Hynix, POSCO. Memory chip & EV battery cycle play. Korea discount narrowing.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 101.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Franklin FTSE Asia ex Japan ETF",
+          "ticker": "FLAX",
+          "platform": "Franklin Templeton \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Asia ex-Japan \u2014 India, China, Taiwan, Korea, ASEAN. Catch-up trade vs US equities.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 94.5,
+          "selection_notes": [
+            "broad diversification",
+            "matches international access"
+          ]
+        }
+      ],
+      "regional_alternatives": {
+        "International-listed": [
+          {
+            "name": "iShares MSCI Japan ETF",
+            "ticker": "EWJ",
+            "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Medium",
+            "timeframe": "3\u201312 months",
+            "thesis": "Japan corporate reform + Nikkei record highs. BoJ normalisation adds FX tailwind for USD investors.",
+            "sector_key": "asia_pacific",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 108.5,
+            "selection_notes": [
+              "matches international access"
+            ]
+          },
+          {
+            "name": "iShares MSCI South Korea ETF",
+            "ticker": "EWY",
+            "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Medium-High",
+            "timeframe": "3\u201312 months",
+            "thesis": "Korea: Samsung, SK Hynix, POSCO. Memory chip & EV battery cycle play. Korea discount narrowing.",
+            "sector_key": "asia_pacific",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 101.5,
+            "selection_notes": [
+              "matches international access"
+            ]
+          },
+          {
+            "name": "Franklin FTSE Asia ex Japan ETF",
+            "ticker": "FLAX",
+            "platform": "Franklin Templeton \u2014 IBKR / Schwab",
+            "exchange": "NYSE",
+            "risk": "Medium",
+            "timeframe": "6\u201318 months",
+            "thesis": "Asia ex-Japan \u2014 India, China, Taiwan, Korea, ASEAN. Catch-up trade vs US equities.",
+            "sector_key": "asia_pacific",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 94.5,
+            "selection_notes": [
+              "broad diversification",
+              "matches international access"
+            ]
+          }
+        ]
+      },
+      "india": [],
+      "global": [
+        {
+          "name": "iShares MSCI Japan ETF",
+          "ticker": "EWJ",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Japan corporate reform + Nikkei record highs. BoJ normalisation adds FX tailwind for USD investors.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 108.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "iShares MSCI South Korea ETF",
+          "ticker": "EWY",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium-High",
+          "timeframe": "3\u201312 months",
+          "thesis": "Korea: Samsung, SK Hynix, POSCO. Memory chip & EV battery cycle play. Korea discount narrowing.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 101.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Franklin FTSE Asia ex Japan ETF",
+          "ticker": "FLAX",
+          "platform": "Franklin Templeton \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Asia ex-Japan \u2014 India, China, Taiwan, Korea, ASEAN. Catch-up trade vs US equities.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 94.5,
+          "selection_notes": [
+            "broad diversification",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "iShares China Large-Cap ETF",
+          "ticker": "FXI",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "1\u20136 months",
+          "thesis": "China stimulus-driven re-rating potential. Alibaba, Tencent, BYD. High geopolitical risk.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 87.5,
+          "selection_notes": [
+            "elevated geopolitical risk",
             "matches international access"
           ]
         }
