@@ -28,18 +28,24 @@ SECTOR_CAP_PCT              = 30
 CIRCUIT_BREAKER_DRAWDOWN_PCT = 12
 
 SECTOR_LABELS = {
-    "defense":              "Defense & Aerospace",
-    "defense_aerospace":    "Defense & Aerospace",
-    "india_equity":         "India Equity",
-    "banking_financial":    "Banking & Finance",
-    "gold_precious_metals": "Precious Metals",
-    "energy_oil":           "Energy & Oil",
-    "commodities_mining":   "Commodities",
-    "crypto_digital":       "Crypto & Digital",
-    "technology_ai":        "Technology & AI",
-    "nuclear_uranium":      "Nuclear & Uranium",
-    "cybersecurity":        "Cybersecurity",
-    "emerging_markets":     "Emerging Markets",
+    "defense":                "Defense & Aerospace",
+    "defense_aerospace":      "Defense & Aerospace",
+    "india_equity":           "India Equity",
+    "banking_financial":      "Banking & Finance",
+    "gold_precious_metals":   "Precious Metals",
+    "energy_oil":             "Energy & Oil",
+    "commodities_mining":     "Commodities",
+    "crypto_digital":         "Crypto & Digital",
+    "technology_ai":          "Technology & AI",
+    "nuclear_uranium":        "Nuclear & Uranium",
+    "cybersecurity":          "Cybersecurity",
+    "emerging_markets":       "Emerging Markets",
+    "healthcare_pharma":      "Healthcare & Pharma",
+    "clean_energy_renewables": "Clean Energy",
+    "real_estate_reit":       "Real Estate & REITs",
+    "bonds_fixed_income":     "Bonds & Fixed Income",
+    "asia_pacific":           "Asia Pacific",
+    "europe_equity":          "Europe Equity",
 }
 
 MARKET_TICKERS = [
