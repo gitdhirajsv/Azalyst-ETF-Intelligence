@@ -263,7 +263,7 @@ def main() -> int:
     api_key = os.environ.get("NVIDIA_API_KEY", "").strip()
     if not api_key:
         print("ERROR: NVIDIA_API_KEY environment variable not set")
-        print("Add it as a repository secret: Settings → Secrets → NVIDIA_API_KEY")
+        print("Add it as a repository secret: Settings -> Secrets -> NVIDIA_API_KEY")
         return 1
 
     ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
