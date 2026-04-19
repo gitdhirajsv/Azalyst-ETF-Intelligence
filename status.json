@@ -105,31 +105,35 @@
   "confidence": [
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 94.0
+      "score": 97.0
     },
     {
       "symbol": "India Equity Markets",
       "score": 93.0
     },
     {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 91.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 86.0
+    },
+    {
       "symbol": "Real Estate & REITs + India Equity Markets",
       "score": 86.0
+    },
+    {
+      "symbol": "Banking & Financial Sector",
+      "score": 84.0
     },
     {
       "symbol": "Defense & Aerospace",
       "score": 80.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 78.0
-    },
-    {
       "symbol": "Commodities & Mining",
       "score": 76.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 73.0
     },
     {
       "symbol": "Gold & Precious Metals",
@@ -152,10 +156,6 @@
       "score": 67.0
     },
     {
-      "symbol": "Banking & Financial Sector",
-      "score": 66.0
-    },
-    {
       "symbol": "Asia Pacific Equity",
       "score": 66.0
     },
@@ -172,27 +172,27 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 94.0,
+      "confidence": 97.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 43,
-      "latest_at": "19 Apr 2026 07:55 UTC",
-      "headline": "LNG Ships Move Toward Hormuz as Iran Gives Mixed Signals",
+      "article_count": 41,
+      "latest_at": "19 Apr 2026 13:55 UTC",
+      "headline": "Oil Slides but the Real Test Comes This Weekend",
       "regions": [
-        "americas",
-        "global",
         "middle_east",
+        "global",
+        "americas",
         "asia_pacific"
       ],
       "sources": [
-        "World | Deutsche Welle",
-        "Bloomberg Markets",
+        "Defense News",
+        "Cointelegraph.com News",
         "Markets-Economic Times",
-        "Defense News"
+        "Bloomberg Markets"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -217,8 +217,8 @@
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 16.6,
-        "recency": 17.6,
+        "source_diversity": 17.7,
+        "recency": 20.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -270,6 +270,104 @@
         "volume_confirmation": 20.0,
         "source_diversity": 14.0,
         "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 91.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 18,
+      "latest_at": "19 Apr 2026 12:00 UTC",
+      "headline": "AMD, Oracle, Microsoft and the IGV lead a monster week for tech stocks",
+      "regions": [
+        "middle_east",
+        "europe",
+        "india",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Defense News",
+        "Cointelegraph.com News",
+        "The Verge",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.9,
+        "volume_confirmation": 20.0,
+        "source_diversity": 17.1,
+        "recency": 16.5,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "19 Apr 2026 12:49 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "middle_east",
+        "global",
+        "europe",
+        "india"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 8.5,
+        "recency": 17.9,
         "geopolitical_severity": 15.0
       }
     },
@@ -328,6 +426,57 @@
       }
     },
     {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector",
+      "confidence": 84.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "19 Apr 2026 12:38 UTC",
+      "headline": "How bond market's private credit crisis fears are playing out in fixed-income ETFs",
+      "regions": [
+        "middle_east",
+        "india",
+        "asia_pacific",
+        "americas"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "Oilprice.com"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "BANKBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 18.4,
+        "volume_confirmation": 18.7,
+        "source_diversity": 14.8,
+        "recency": 17.6,
+        "geopolitical_severity": 14.7
+      }
+    },
+    {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
       "confidence": 80.0,
@@ -381,59 +530,6 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 78.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 19,
-      "latest_at": "18 Apr 2026 16:25 UTC",
-      "headline": "AMD, Oracle, Microsoft and the IGV lead a monster week for tech stocks",
-      "regions": [
-        "asia_pacific",
-        "middle_east",
-        "americas",
-        "europe"
-      ],
-      "sources": [
-        "Finance",
-        "Cointelegraph.com News",
-        "The Verge",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.8,
-        "volume_confirmation": 20.0,
-        "source_diversity": 17.5,
-        "recency": 3.1,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "commodities_mining",
       "sector_label": "Commodities & Mining",
       "confidence": 76.0,
@@ -481,51 +577,6 @@
         "source_diversity": 14.1,
         "recency": 20.0,
         "geopolitical_severity": 12.1
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 73.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "18 Apr 2026 22:11 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "india",
-        "europe",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 8.5,
-        "recency": 5.5,
-        "geopolitical_severity": 15.0
       }
     },
     {
@@ -780,57 +831,6 @@
       }
     },
     {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector",
-      "confidence": 66.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "18 Apr 2026 14:00 UTC",
-      "headline": "How bond market's private credit crisis fears are playing out in fixed-income ETFs",
-      "regions": [
-        "asia_pacific",
-        "india",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Finance",
-        "Oilprice.com",
-        "Bloomberg Markets",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "BANKBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 18.1,
-        "volume_confirmation": 18.7,
-        "source_diversity": 14.8,
-        "recency": 2.4,
-        "geopolitical_severity": 12.8
-      }
-    },
-    {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
       "confidence": 66.0,
@@ -889,19 +889,17 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "18 Apr 2026 12:04 UTC",
+      "article_count": 9,
+      "latest_at": "19 Apr 2026 11:37 UTC",
       "headline": "How bond market's private credit crisis fears are playing out in fixed-income ETFs",
       "regions": [
         "global",
-        "americas",
-        "middle_east"
+        "americas"
       ],
       "sources": [
-        "Bloomberg Markets",
         "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "Finance"
+        "Finance",
+        "Cointelegraph.com News"
       ],
       "primary_etf": "BND",
       "top_etfs": [
@@ -923,11 +921,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 17.0,
-        "volume_confirmation": 18.7,
-        "source_diversity": 10.2,
-        "recency": 4.7,
-        "geopolitical_severity": 11.7
+        "signal_strength": 15.3,
+        "volume_confirmation": 17.1,
+        "source_diversity": 5.4,
+        "recency": 15.9,
+        "geopolitical_severity": 9.0
       }
     },
     {
@@ -986,7 +984,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 43 articles - HIGH / NEUTRAL - LNG Ships Move Toward Hormuz as Iran Gives Mixed Signals"
+      "text": "Energy / Oil & Gas - 41 articles - HIGH / NEUTRAL - Oil Slides but the Real Test Comes This Weekend"
     },
     {
       "tag": "tag-neu",
@@ -996,7 +994,22 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Technology & AI / Semiconductors - 18 articles - HIGH / NEUTRAL - AMD, Oracle, Microsoft and the IGV lead a monster week for tech stocks"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Real Estate & REITs + India Equity Markets - 9 articles - HIGH / NEUTRAL - Displaced by Iran war: out of Lebanon, into Syrian crisis"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - How bond market's private credit crisis fears are playing out in fixed-income ETFs"
     },
     {
       "tag": "tag-neu",
@@ -1006,17 +1019,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 19 articles - HIGH / NEUTRAL - AMD, Oracle, Microsoft and the IGV lead a monster week for tech stocks"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Commodities & Mining - 8 articles - MEDIUM / NEUTRAL - Inside the Race to Control the World\u2019s Lithium Supply"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -1046,17 +1049,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Banking & Financial Sector - 11 articles - MEDIUM / NEUTRAL - How bond market's private credit crisis fears are playing out in fixed-income ETFs"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Asia Pacific Equity - 4 articles - MEDIUM / NEUTRAL - The RAM shortage could last years"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Bonds & Fixed Income - 11 articles - MEDIUM / NEUTRAL - How bond market's private credit crisis fears are playing out in fixed-income ETFs"
+      "text": "Bonds & Fixed Income - 9 articles - MEDIUM / NEUTRAL - How bond market's private credit crisis fears are playing out in fixed-income ETFs"
     },
     {
       "tag": "tag-neu",
@@ -1179,12 +1177,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 75550.49,
+      "price": 75947.99,
       "currency": "USD",
-      "change": -175.72,
-      "change_pct": -0.23,
-      "change_str": "-0.23%",
-      "direction": "down"
+      "change": 221.78,
+      "change_pct": 0.29,
+      "change_str": "+0.29%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
@@ -1408,10 +1406,10 @@
     }
   },
   "logs": [
-    "2026-04-19 12:44:06 [INFO] AZALYST - status.json generated",
-    "2026-04-19 12:44:06 [INFO] PORTFOLIO - NAV USD 9,993.43 | Return -0.07%",
-    "2026-04-19 12:44:06 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-04-19 12:44:06 [INFO] TRADER - Open positions: XLE, QQQ"
+    "2026-04-19 13:56:12 [INFO] AZALYST - status.json generated",
+    "2026-04-19 13:56:12 [INFO] PORTFOLIO - NAV USD 9,993.43 | Return -0.07%",
+    "2026-04-19 13:56:12 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-04-19 13:56:12 [INFO] TRADER - Open positions: XLE, QQQ"
   ],
-  "generated_at": "2026-04-19 12:44:05 UTC"
+  "generated_at": "2026-04-19 13:56:12 UTC"
 }
