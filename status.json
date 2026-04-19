@@ -108,6 +108,10 @@
       "score": 97.0
     },
     {
+      "symbol": "Europe Equity + Energy / Oil & Gas",
+      "score": 94.0
+    },
+    {
       "symbol": "Defense & Aerospace",
       "score": 85.0
     },
@@ -217,6 +221,60 @@
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
+        "source_diversity": 17.7,
+        "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "energy_oil|europe_equity",
+      "sector_label": "Europe Equity + Energy / Oil & Gas",
+      "confidence": 94.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 9,
+      "latest_at": "19 Apr 2026 21:03 UTC",
+      "headline": "Europe looks to secure shipping in Strait of Hormuz",
+      "regions": [
+        "europe",
+        "middle_east",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Markets-Economic Times",
+        "BBC News",
+        "Finance"
+      ],
+      "primary_etf": "VGK",
+      "top_etfs": [
+        "VGK",
+        "XLE",
+        "IEV"
+      ],
+      "access_markets": [
+        "International-listed",
+        "India-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "VGK",
+        "XLE",
+        "IEV",
+        "IXC"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 17.1,
         "source_diversity": 17.7,
         "recency": 20.0,
         "geopolitical_severity": 15.0
@@ -991,6 +1049,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Europe Equity + Energy / Oil & Gas - 9 articles - HIGH / NEUTRAL - Europe looks to secure shipping in Strait of Hormuz"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Defense & Aerospace - 55 articles - HIGH / NEUTRAL - France nears rocket artillery decision, plans ballistic missile by 2035"
     },
     {
@@ -1179,11 +1242,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 74785.25,
+      "price": 74684.06,
       "currency": "USD",
-      "change": -940.96,
-      "change_pct": -1.24,
-      "change_str": "-1.24%",
+      "change": -1042.15,
+      "change_pct": -1.38,
+      "change_str": "-1.38%",
       "direction": "down"
     },
     {
@@ -1408,10 +1471,10 @@
     }
   },
   "logs": [
-    "2026-04-19 20:29:30 [INFO] AZALYST - status.json generated",
-    "2026-04-19 20:29:30 [INFO] PORTFOLIO - NAV USD 9,993.43 | Return -0.07%",
-    "2026-04-19 20:29:30 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-04-19 20:29:30 [INFO] TRADER - Open positions: XLE, QQQ"
+    "2026-04-19 21:04:40 [INFO] AZALYST - status.json generated",
+    "2026-04-19 21:04:40 [INFO] PORTFOLIO - NAV USD 9,993.43 | Return -0.07%",
+    "2026-04-19 21:04:40 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-04-19 21:04:40 [INFO] TRADER - Open positions: XLE, QQQ"
   ],
-  "generated_at": "2026-04-19 20:29:29 UTC"
+  "generated_at": "2026-04-19 21:04:39 UTC"
 }
