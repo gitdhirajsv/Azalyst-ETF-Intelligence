@@ -38,7 +38,7 @@
       "pnl_pct_str": "-0.11%",
       "confidence": 92,
       "severity": "CRITICAL",
-      "days_held": 0,
+      "days_held": 1,
       "half_exited": false
     },
     {
@@ -61,7 +61,7 @@
       "pnl_pct_str": "-0.11%",
       "confidence": 94,
       "severity": "CRITICAL",
-      "days_held": 0,
+      "days_held": 1,
       "half_exited": false
     }
   ],
@@ -113,23 +113,23 @@
     },
     {
       "symbol": "Defense & Aerospace",
-      "score": 81.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
       "score": 80.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 76.0
-    },
-    {
-      "symbol": "Gold & Precious Metals",
-      "score": 75.0
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 78.0
     },
     {
       "symbol": "Commodities & Mining",
-      "score": 74.0
+      "score": 76.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 73.0
+    },
+    {
+      "symbol": "Gold & Precious Metals",
+      "score": 73.0
     },
     {
       "symbol": "Europe Equity",
@@ -140,12 +140,12 @@
       "score": 70.0
     },
     {
-      "symbol": "Banking & Financial Sector",
-      "score": 69.0
-    },
-    {
       "symbol": "Real Estate & REITs + Clean Energy & Renewables",
       "score": 67.0
+    },
+    {
+      "symbol": "Banking & Financial Sector",
+      "score": 66.0
     },
     {
       "symbol": "Asia Pacific Equity",
@@ -224,19 +224,19 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 17,
-      "latest_at": "19 Apr 2026 06:56 UTC",
+      "article_count": 18,
+      "latest_at": "19 Apr 2026 11:05 UTC",
       "headline": "Can Sensex, Nifty extend gains on Monday? Oil prices, 5 factors to guide Dalal Street this week",
       "regions": [
-        "middle_east",
-        "europe",
         "india",
-        "asia_pacific"
+        "europe",
+        "asia_pacific",
+        "middle_east"
       ],
       "sources": [
-        "Bloomberg Markets",
         "World | Deutsche Welle",
         "Markets-Economic Times",
+        "Bloomberg Markets",
         "Oilprice.com"
       ],
       "primary_etf": "INDA",
@@ -258,7 +258,7 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 24.3,
+        "signal_strength": 24.4,
         "volume_confirmation": 20.0,
         "source_diversity": 14.0,
         "recency": 20.0,
@@ -268,26 +268,26 @@
     {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
-      "confidence": 81.0,
+      "confidence": 80.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 54,
+      "article_count": 55,
       "latest_at": "18 Apr 2026 14:14 UTC",
       "headline": "France nears rocket artillery decision, plans ballistic missile by 2035",
       "regions": [
-        "middle_east",
-        "global",
+        "asia_pacific",
+        "africa",
         "india",
-        "asia_pacific"
+        "middle_east"
       ],
       "sources": [
-        "World | Deutsche Welle",
+        "Finance",
         "Cointelegraph.com News",
-        "BBC News",
+        "Oilprice.com",
         "Bloomberg Markets"
       ],
       "primary_etf": "ITA",
@@ -314,34 +314,34 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 18.2,
-        "recency": 3.8,
+        "recency": 2.5,
         "geopolitical_severity": 15.0
       }
     },
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 80.0,
+      "confidence": 78.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 20,
+      "article_count": 19,
       "latest_at": "18 Apr 2026 16:25 UTC",
       "headline": "AMD, Oracle, Microsoft and the IGV lead a monster week for tech stocks",
       "regions": [
-        "americas",
+        "asia_pacific",
         "middle_east",
-        "global",
-        "india"
+        "americas",
+        "europe"
       ],
       "sources": [
-        "The Verge",
-        "World | Deutsche Welle",
+        "Finance",
         "Cointelegraph.com News",
-        "BBC News"
+        "The Verge",
+        "Bloomberg Markets"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -364,35 +364,85 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 23.0,
+        "signal_strength": 22.8,
         "volume_confirmation": 20.0,
         "source_diversity": 17.5,
-        "recency": 4.7,
-        "geopolitical_severity": 14.9
+        "recency": 3.1,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 76.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "19 Apr 2026 11:05 UTC",
+      "headline": "Inside the Race to Control the World\u2019s Lithium Supply",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "The Verge",
+        "Oilprice.com",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 14.5,
+        "volume_confirmation": 16.2,
+        "source_diversity": 14.1,
+        "recency": 20.0,
+        "geopolitical_severity": 12.1
       }
     },
     {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
-      "confidence": 76.0,
+      "confidence": 73.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
+      "article_count": 24,
       "latest_at": "18 Apr 2026 22:11 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "middle_east",
-        "global",
         "india",
-        "europe"
+        "europe",
+        "global",
+        "middle_east"
       ],
       "sources": [
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
+        "Markets-Economic Times",
+        "Cointelegraph.com News"
       ],
       "primary_etf": "IBIT",
       "top_etfs": [
@@ -412,31 +462,31 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 8.5,
-        "recency": 8.3,
+        "recency": 5.5,
         "geopolitical_severity": 15.0
       }
     },
     {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals",
-      "confidence": 75.0,
+      "confidence": 73.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 15,
+      "article_count": 14,
       "latest_at": "18 Apr 2026 20:00 UTC",
       "headline": "Crude oil, copper, gold: The 3 commodities every beginner should track (and why they move!)",
       "regions": [
-        "middle_east",
+        "asia_pacific",
         "global",
-        "asia_pacific"
+        "middle_east"
       ],
       "sources": [
-        "Bloomberg Markets",
         "Markets-Economic Times",
+        "Bloomberg Markets",
         "US Top News and Analysis"
       ],
       "primary_etf": "GLDM",
@@ -460,61 +510,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 22.5,
+        "signal_strength": 22.1,
         "volume_confirmation": 20.0,
         "source_diversity": 12.3,
-        "recency": 6.7,
-        "geopolitical_severity": 14.2
-      }
-    },
-    {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 74.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "19 Apr 2026 06:56 UTC",
-      "headline": "Inside the Race to Control the World\u2019s Lithium Supply",
-      "regions": [
-        "middle_east",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "The Verge",
-        "Cointelegraph.com News",
-        "Markets-Economic Times",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 12.9,
-        "volume_confirmation": 15.2,
-        "source_diversity": 14.1,
-        "recency": 20.0,
-        "geopolitical_severity": 12.0
+        "recency": 4.4,
+        "geopolitical_severity": 14.3
       }
     },
     {
@@ -528,17 +528,17 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 5,
-      "latest_at": "19 Apr 2026 06:56 UTC",
+      "latest_at": "19 Apr 2026 11:05 UTC",
       "headline": "ECB Moves Away From April Hike as Peace Talks Progress",
       "regions": [
-        "middle_east",
         "europe",
-        "africa"
+        "africa",
+        "middle_east"
       ],
       "sources": [
-        "Bloomberg Markets",
         "World | Deutsche Welle",
-        "Oilprice.com"
+        "Oilprice.com",
+        "Bloomberg Markets"
       ],
       "primary_etf": "VGK",
       "top_etfs": [
@@ -616,57 +616,6 @@
       }
     },
     {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector",
-      "confidence": 69.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "18 Apr 2026 14:00 UTC",
-      "headline": "How bond market's private credit crisis fears are playing out in fixed-income ETFs",
-      "regions": [
-        "middle_east",
-        "global",
-        "india",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Oilprice.com"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "BANKBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 18.9,
-        "volume_confirmation": 19.4,
-        "source_diversity": 14.8,
-        "recency": 3.7,
-        "geopolitical_severity": 12.8
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables|real_estate_reit",
       "sector_label": "Real Estate & REITs + Clean Energy & Renewables",
       "confidence": 67.0,
@@ -716,6 +665,57 @@
         "source_diversity": 11.0,
         "recency": 20.0,
         "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector",
+      "confidence": 66.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "18 Apr 2026 14:00 UTC",
+      "headline": "How bond market's private credit crisis fears are playing out in fixed-income ETFs",
+      "regions": [
+        "asia_pacific",
+        "india",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Finance",
+        "Oilprice.com",
+        "Bloomberg Markets",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "BANKBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 18.1,
+        "volume_confirmation": 18.7,
+        "source_diversity": 14.8,
+        "recency": 2.4,
+        "geopolitical_severity": 12.8
       }
     },
     {
@@ -879,32 +879,32 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 17 articles - HIGH / NEUTRAL - Can Sensex, Nifty extend gains on Monday? Oil prices, 5 factors to guide Dalal Street this week"
+      "text": "India Equity Markets - 18 articles - HIGH / NEUTRAL - Can Sensex, Nifty extend gains on Monday? Oil prices, 5 factors to guide Dalal Street this week"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 54 articles - HIGH / NEUTRAL - France nears rocket artillery decision, plans ballistic missile by 2035"
+      "text": "Defense & Aerospace - 55 articles - HIGH / NEUTRAL - France nears rocket artillery decision, plans ballistic missile by 2035"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 20 articles - HIGH / NEUTRAL - AMD, Oracle, Microsoft and the IGV lead a monster week for tech stocks"
+      "text": "Technology & AI / Semiconductors - 19 articles - HIGH / NEUTRAL - AMD, Oracle, Microsoft and the IGV lead a monster week for tech stocks"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 23 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+      "text": "Commodities & Mining - 8 articles - MEDIUM / NEUTRAL - Inside the Race to Control the World\u2019s Lithium Supply"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals - 15 articles - HIGH / NEUTRAL - Crude oil, copper, gold: The 3 commodities every beginner should track (and why they move!)"
+      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Commodities & Mining - 7 articles - MEDIUM / NEUTRAL - Inside the Race to Control the World\u2019s Lithium Supply"
+      "text": "Gold & Precious Metals - 14 articles - HIGH / NEUTRAL - Crude oil, copper, gold: The 3 commodities every beginner should track (and why they move!)"
     },
     {
       "tag": "tag-neu",
@@ -919,12 +919,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Banking & Financial Sector - 12 articles - MEDIUM / NEUTRAL - How bond market's private credit crisis fears are playing out in fixed-income ETFs"
+      "text": "Real Estate & REITs + Clean Energy & Renewables - 5 articles - HIGH / NEUTRAL - Displaced by Iran war: out of Lebanon, into Syrian crisis"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Real Estate & REITs + Clean Energy & Renewables - 5 articles - HIGH / NEUTRAL - Displaced by Iran war: out of Lebanon, into Syrian crisis"
+      "text": "Banking & Financial Sector - 11 articles - MEDIUM / NEUTRAL - How bond market's private credit crisis fears are playing out in fixed-income ETFs"
     },
     {
       "tag": "tag-neu",
@@ -1057,11 +1057,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 75041.99,
+      "price": 75278.45,
       "currency": "USD",
-      "change": -684.22,
-      "change_pct": -0.9,
-      "change_str": "-0.90%",
+      "change": -447.76,
+      "change_pct": -0.59,
+      "change_str": "-0.59%",
       "direction": "down"
     },
     {
@@ -1286,10 +1286,10 @@
     }
   },
   "logs": [
-    "2026-04-19 10:07:33 [INFO] AZALYST - status.json generated",
-    "2026-04-19 10:07:33 [INFO] PORTFOLIO - NAV USD 9,993.43 | Return -0.07%",
-    "2026-04-19 10:07:33 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-04-19 10:07:33 [INFO] TRADER - Open positions: XLE, QQQ"
+    "2026-04-19 11:06:22 [INFO] AZALYST - status.json generated",
+    "2026-04-19 11:06:22 [INFO] PORTFOLIO - NAV USD 9,993.43 | Return -0.07%",
+    "2026-04-19 11:06:22 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-04-19 11:06:22 [INFO] TRADER - Open positions: XLE, QQQ"
   ],
-  "generated_at": "2026-04-19 10:07:33 UTC"
+  "generated_at": "2026-04-19 11:06:21 UTC"
 }
