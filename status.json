@@ -1,22 +1,22 @@
 {
-  "portfolio_value": 9993.74,
-  "total_deposited": 10000.76,
-  "cash": 4024.37,
+  "portfolio_value": 9977.2,
+  "total_deposited": 9959.66,
+  "cash": 4007.83,
   "monthly_reserve": 0.0,
   "market_value": 5969.36,
-  "total_invested": 5976.38,
-  "unrealised_pnl": -7.02,
-  "unrealised_str": "-7.02",
+  "total_invested": 5951.82,
+  "unrealised_pnl": 17.54,
+  "unrealised_str": "+17.54",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "-0.07%",
-  "change_raw": -0.07,
+  "change": "+0.18%",
+  "change_raw": 0.18,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 10000.76,
-  "drawdown_now_pct": 0.07,
+  "portfolio_peak": 9977.2,
+  "drawdown_now_pct": 0.0,
   "max_drawdown_pct": 0.07,
-  "usd_inr_rate": 92.568,
+  "usd_inr_rate": 92.95,
   "positions": [
     {
       "trade_id": "T0001",
@@ -25,17 +25,17 @@
       "sector": "Energy / Oil & Gas",
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 55.08,
+      "entry": 54.86,
       "current": 55.02,
-      "peak_price": 55.08,
-      "trail_stop": 49.58,
-      "dist_to_trail_pct": 9.89,
+      "peak_price": 55.02,
+      "trail_stop": 49.37,
+      "dist_to_trail_pct": 10.26,
       "units": 54.042809,
-      "invested": 2976.93,
-      "pnl": -3.5,
-      "pnl_str": "-3.50",
-      "pnl_pct": -0.12,
-      "pnl_pct_str": "-0.12%",
+      "invested": 2964.7,
+      "pnl": 8.74,
+      "pnl_str": "+8.74",
+      "pnl_pct": 0.29,
+      "pnl_pct_str": "+0.29%",
       "confidence": 92,
       "severity": "CRITICAL",
       "days_held": 1,
@@ -48,17 +48,17 @@
       "sector": "Technology & AI / Semiconductors",
       "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NASDAQ",
-      "entry": 649.61,
+      "entry": 646.94,
       "current": 648.85,
-      "peak_price": 649.61,
-      "trail_stop": 584.65,
-      "dist_to_trail_pct": 9.89,
+      "peak_price": 648.85,
+      "trail_stop": 582.25,
+      "dist_to_trail_pct": 10.26,
       "units": 4.617291,
-      "invested": 2999.45,
-      "pnl": -3.52,
-      "pnl_str": "-3.52",
-      "pnl_pct": -0.12,
-      "pnl_pct_str": "-0.12%",
+      "invested": 2987.13,
+      "pnl": 8.8,
+      "pnl_str": "+8.80",
+      "pnl_pct": 0.29,
+      "pnl_pct_str": "+0.29%",
       "confidence": 94,
       "severity": "CRITICAL",
       "days_held": 1,
@@ -89,7 +89,7 @@
     "values": [
       29.8,
       30.0,
-      40.3
+      40.2
     ]
   },
   "pnl": {
@@ -98,18 +98,18 @@
       "QQQ"
     ],
     "values": [
-      -3.5,
-      -3.52
+      8.74,
+      8.8
     ]
   },
   "confidence": [
     {
-      "symbol": "Energy / Oil & Gas",
+      "symbol": "Defense & Aerospace",
       "score": 97.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 97.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 95.0
     },
     {
       "symbol": "Europe Equity + Energy / Oil & Gas",
@@ -122,6 +122,10 @@
     {
       "symbol": "India Equity Markets",
       "score": 89.0
+    },
+    {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 84.0
     },
     {
       "symbol": "Gold & Precious Metals",
@@ -148,6 +152,10 @@
       "score": 76.0
     },
     {
+      "symbol": "Commodities & Mining",
+      "score": 75.0
+    },
+    {
       "symbol": "Banking & Financial Sector",
       "score": 72.0
     },
@@ -156,16 +164,12 @@
       "score": 71.0
     },
     {
-      "symbol": "Commodities & Mining",
-      "score": 71.0
-    },
-    {
       "symbol": "Clean Energy & Renewables",
       "score": 71.0
     },
     {
       "symbol": "Asia Pacific Equity",
-      "score": 66.0
+      "score": 64.0
     },
     {
       "symbol": "Healthcare & Pharma",
@@ -173,59 +177,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 97.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 39,
-      "latest_at": "19 Apr 2026 23:00 UTC",
-      "headline": "Oil prices jump after Iran and U.S. attack commercial ships as tensions escalate over Strait of Hormuz",
-      "regions": [
-        "asia_pacific",
-        "middle_east",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "World | Deutsche Welle",
-        "BBC News",
-        "Oilprice.com"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 17.7,
-        "recency": 19.8,
-        "geopolitical_severity": 15.0
-      }
-    },
     {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
@@ -276,6 +227,58 @@
         "volume_confirmation": 20.0,
         "source_diversity": 18.2,
         "recency": 19.1,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 95.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 41,
+      "latest_at": "20 Apr 2026 04:38 UTC",
+      "headline": "European Natural Gas Rises as Iran Closes Strait of Hormuz Again",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "World | Deutsche Welle",
+        "Finance",
+        "Defense News"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 17.7,
+        "recency": 18.2,
         "geopolitical_severity": 15.0
       }
     },
@@ -432,6 +435,61 @@
         "volume_confirmation": 20.0,
         "source_diversity": 13.0,
         "recency": 18.3,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "banking_financial|gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 84.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "20 Apr 2026 04:37 UTC",
+      "headline": "Silver tanks nearly Rs 4,000, gold slips Rs 1,600 as Strait of Hormuz tensions reignite inflation fears. Time to sell?",
+      "regions": [
+        "americas",
+        "global",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "Finance"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "XLF",
+        "GOLDBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD",
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "XLF",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 19.5,
+        "volume_confirmation": 18.7,
+        "source_diversity": 13.3,
+        "recency": 18.2,
         "geopolitical_severity": 15.0
       }
     },
@@ -743,6 +801,56 @@
       }
     },
     {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 75.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "20 Apr 2026 05:33 UTC",
+      "headline": "Inside the Race to Control the World\u2019s Lithium Supply",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Defense News",
+        "Oilprice.com",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 14.8,
+        "volume_confirmation": 15.2,
+        "source_diversity": 13.1,
+        "recency": 20.0,
+        "geopolitical_severity": 12.9
+      }
+    },
+    {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector",
       "confidence": 72.0,
@@ -841,56 +949,6 @@
       }
     },
     {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 71.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "19 Apr 2026 23:59 UTC",
-      "headline": "Inside the Race to Control the World\u2019s Lithium Supply",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Markets-Economic Times",
-        "The Verge",
-        "Oilprice.com"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 12.5,
-        "volume_confirmation": 14.0,
-        "source_diversity": 13.1,
-        "recency": 20.0,
-        "geopolitical_severity": 12.3
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 71.0,
@@ -943,7 +1001,7 @@
     {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
-      "confidence": 66.0,
+      "confidence": 64.0,
       "severity": "MEDIUM",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
@@ -951,18 +1009,17 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 4,
-      "latest_at": "19 Apr 2026 06:56 UTC",
-      "headline": "The RAM shortage could last years",
+      "latest_at": "20 Apr 2026 05:33 UTC",
+      "headline": "Global Markets | Japan's Nikkei climbs as AI optimism outweighs Mideast concerns",
       "regions": [
-        "middle_east",
         "global",
         "asia_pacific"
       ],
       "sources": [
         "The Verge",
-        "BBC News",
+        "Defense News",
         "Markets-Economic Times",
-        "Defense News"
+        "US Top News and Analysis"
       ],
       "primary_etf": "EWJ",
       "top_etfs": [
@@ -982,11 +1039,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 10.0,
+        "signal_strength": 10.6,
         "volume_confirmation": 10.8,
-        "source_diversity": 14.0,
+        "source_diversity": 12.3,
         "recency": 20.0,
-        "geopolitical_severity": 12.2
+        "geopolitical_severity": 11.1
       }
     },
     {
@@ -1045,12 +1102,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 39 articles - HIGH / NEUTRAL - Oil prices jump after Iran and U.S. attack commercial ships as tensions escalate over Strait of Hormuz"
+      "text": "Defense & Aerospace - 56 articles - HIGH / NEUTRAL - France nears rocket artillery decision, plans ballistic missile by 2035"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 56 articles - HIGH / NEUTRAL - France nears rocket artillery decision, plans ballistic missile by 2035"
+      "text": "Energy / Oil & Gas - 41 articles - HIGH / NEUTRAL - European Natural Gas Rises as Iran Closes Strait of Hormuz Again"
     },
     {
       "tag": "tag-neu",
@@ -1066,6 +1123,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "India Equity Markets - 16 articles - HIGH / NEUTRAL - Can Sensex, Nifty extend gains on Monday? Oil prices, 5 factors to guide Dalal Street this week"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - Silver tanks nearly Rs 4,000, gold slips Rs 1,600 as Strait of Hormuz tensions reignite inflation fears. Time to sell?"
     },
     {
       "tag": "tag-neu",
@@ -1100,6 +1162,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Commodities & Mining - 7 articles - MEDIUM / NEUTRAL - Inside the Race to Control the World\u2019s Lithium Supply"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Banking & Financial Sector - 8 articles - MEDIUM / NEUTRAL - How bond market's private credit crisis fears are playing out in fixed-income ETFs"
     },
     {
@@ -1110,17 +1177,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Commodities & Mining - 6 articles - MEDIUM / NEUTRAL - Inside the Race to Control the World\u2019s Lithium Supply"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Clean Energy & Renewables - 6 articles - HIGH / NEUTRAL - Britain\u2019s Renewable Energy Glut"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Asia Pacific Equity - 4 articles - MEDIUM / NEUTRAL - The RAM shortage could last years"
+      "text": "Asia Pacific Equity - 4 articles - MEDIUM / NEUTRAL - Global Markets | Japan's Nikkei climbs as AI optimism outweighs Mideast concerns"
     },
     {
       "tag": "tag-neu",
@@ -1188,22 +1250,22 @@
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 59033.46,
+      "price": 58899.49,
       "currency": "JPY",
-      "change": 557.56,
-      "change_pct": 0.95,
-      "change_str": "+0.95%",
+      "change": 423.59,
+      "change_pct": 0.72,
+      "change_str": "+0.72%",
       "direction": "up"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 26356.55,
+      "price": 26376.98,
       "currency": "HKD",
-      "change": 196.22,
-      "change_pct": 0.75,
-      "change_str": "+0.75%",
+      "change": 216.65,
+      "change_pct": 0.83,
+      "change_str": "+0.83%",
       "direction": "up"
     },
     {
@@ -1221,12 +1283,12 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4819.5,
+      "price": 4813.3,
       "currency": "USD",
-      "change": -38.1,
-      "change_pct": -0.78,
-      "change_str": "-0.78%",
-      "direction": "down"
+      "change": 27.9,
+      "change_pct": 0.58,
+      "change_str": "+0.58%",
+      "direction": "up"
     },
     {
       "label": "Crude Oil",
@@ -1243,22 +1305,22 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 74466.01,
+      "price": 74199.41,
       "currency": "USD",
-      "change": -1260.2,
-      "change_pct": -1.66,
-      "change_str": "-1.66%",
+      "change": -1526.8,
+      "change_pct": -2.02,
+      "change_str": "-2.02%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.28,
+      "price": 98.3,
       "currency": "USD",
-      "change": 0.18,
-      "change_pct": 0.18,
-      "change_str": "+0.18%",
+      "change": 0.2,
+      "change_pct": 0.21,
+      "change_str": "+0.21%",
       "direction": "up"
     },
     {
@@ -1275,8 +1337,8 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.07,
-    "portfolio_peak": 10000.76,
+    "drawdown_from_peak_pct": 0.0,
+    "portfolio_peak": 9977.2,
     "vix": 17.48,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
@@ -1338,36 +1400,36 @@
       "benchmark_price_start": 686.1,
       "benchmark_price_now": 710.14,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.07,
-      "alpha": -3.57
+      "portfolio_return_pct": 0.18,
+      "alpha": -3.32
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 40.27,
+          "actual_weight_pct": 40.17,
           "target_weight_pct": 10.0,
-          "drift_pct": 30.27,
+          "drift_pct": 30.17,
           "action": "DEPLOY",
-          "amount": 3025.0,
+          "amount": 3010.11,
           "etf_name": "Cash Reserve"
         },
         {
           "ticker": "XLE",
-          "actual_weight_pct": 29.75,
+          "actual_weight_pct": 29.8,
           "target_weight_pct": 45.0,
-          "drift_pct": -15.25,
+          "drift_pct": -15.2,
           "action": "ADD",
-          "amount": 1523.75,
+          "amount": 1516.3,
           "etf_name": "Energy Select Sector SPDR"
         },
         {
           "ticker": "QQQ",
-          "actual_weight_pct": 29.98,
+          "actual_weight_pct": 30.03,
           "target_weight_pct": 45.0,
-          "drift_pct": -15.02,
+          "drift_pct": -14.97,
           "action": "ADD",
-          "amount": 1501.25,
+          "amount": 1493.81,
           "etf_name": "Invesco QQQ Trust"
         }
       ],
@@ -1378,7 +1440,7 @@
       "scenarios": {
         "2008_GFC": {
           "total_impact": -2833.76,
-          "portfolio_loss_pct": -28.36,
+          "portfolio_loss_pct": -28.4,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1396,7 +1458,7 @@
         },
         "2020_COVID": {
           "total_impact": -2951.35,
-          "portfolio_loss_pct": -29.53,
+          "portfolio_loss_pct": -29.58,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1414,7 +1476,7 @@
         },
         "RATES_SHOCK_+2%": {
           "total_impact": -746.73,
-          "portfolio_loss_pct": -7.47,
+          "portfolio_loss_pct": -7.48,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1432,7 +1494,7 @@
         },
         "USD_SPIKE_+10%": {
           "total_impact": -685.69,
-          "portfolio_loss_pct": -6.86,
+          "portfolio_loss_pct": -6.87,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1450,7 +1512,7 @@
         },
         "VIX_SPIKE_40": {
           "total_impact": -1133.95,
-          "portfolio_loss_pct": -11.35,
+          "portfolio_loss_pct": -11.37,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1468,14 +1530,14 @@
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -29.53
+      "worst_loss_pct": -29.58
     }
   },
   "logs": [
-    "2026-04-20 02:43:56 [INFO] AZALYST - status.json generated",
-    "2026-04-20 02:43:56 [INFO] PORTFOLIO - NAV USD 9,993.74 | Return -0.07%",
-    "2026-04-20 02:43:56 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-04-20 02:43:56 [INFO] TRADER - Open positions: XLE, QQQ"
+    "2026-04-20 05:34:27 [INFO] AZALYST - status.json generated",
+    "2026-04-20 05:34:27 [INFO] PORTFOLIO - NAV USD 9,977.20 | Return +0.18%",
+    "2026-04-20 05:34:27 [INFO] SIGNALS - 18 active signal buckets in state",
+    "2026-04-20 05:34:27 [INFO] TRADER - Open positions: XLE, QQQ"
   ],
-  "generated_at": "2026-04-20 02:43:55 UTC"
+  "generated_at": "2026-04-20 05:34:25 UTC"
 }
