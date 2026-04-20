@@ -692,8 +692,10 @@ class PaperPortfolio:
                 score += 2.0
             if pos.days_held() >= ROTATION_MIN_HOLD_DAYS:
                 score += min(pos.days_held(), 20) * 0.3
-            if pos.sector == incoming_sector:
-                score += 1.5
+            # No bonus for same-sector candidates - avoid unnecessary rotation
+            # within the same sector to reduce churn and transaction costs.
+            # if pos.sector == incoming_sector:
+            #     score += 1.5  # Removed: was incorrectly rewarding same-sector rotation
 
             if score > 0:
                 candidates.append((score, pnl_pct, pos.confidence, -pos.days_held(), pos))
