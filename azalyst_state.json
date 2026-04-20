@@ -371,26 +371,26 @@
     }
   },
   "defense": {
-    "sent_at": "2026-04-20T11:15:02.679365+00:00",
-    "confidence": 93,
+    "sent_at": "2026-04-20T15:54:37.168681+00:00",
+    "confidence": 96,
     "sector_label": "Defense & Aerospace",
-    "article_count": 58,
+    "article_count": 53,
     "severity": "HIGH",
     "regions": [
-      "europe",
       "middle_east",
       "india",
-      "americas",
       "global",
+      "africa",
+      "europe",
       "asia_pacific"
     ],
     "sources": [
-      "Oilprice.com",
+      "US Top News and Analysis",
       "World | Deutsche Welle",
-      "Defense News",
       "Cointelegraph.com News",
       "Bloomberg Markets",
-      "Markets-Economic Times"
+      "Markets-Economic Times",
+      "Finance"
     ],
     "top_headlines": [
       "Oil Prices Surge After U.S. Seizes Iranian Vessel Near Hormuz",
@@ -399,12 +399,12 @@
       "EU pumps over $1 billion into defense R&D, centered around  Ukraine war lessons",
       "Starlink outage hit drone tests, exposing Pentagon\u2019s growing reliance on SpaceX"
     ],
-    "latest_ts": "2026-04-20T08:36:48+00:00",
+    "latest_ts": "2026-04-20T15:30:00+00:00",
     "confidence_breakdown": {
       "signal_strength": 25.0,
       "volume_confirmation": 20.0,
       "source_diversity": 17.7,
-      "recency": 15.4,
+      "recency": 19.2,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
@@ -756,33 +756,35 @@
     }
   },
   "crypto_digital": {
-    "sent_at": "2026-04-20T11:15:04.530470+00:00",
-    "confidence": 86,
+    "sent_at": "2026-04-20T15:54:38.996907+00:00",
+    "confidence": 90,
     "sector_label": "Crypto & Digital Assets",
-    "article_count": 21,
+    "article_count": 22,
     "severity": "HIGH",
     "regions": [
       "global",
       "middle_east",
-      "europe"
+      "europe",
+      "asia_pacific"
     ],
     "sources": [
+      "Bloomberg Markets",
       "Markets-Economic Times",
       "Cointelegraph.com News"
     ],
     "top_headlines": [
       "Here\u2019s what happened in crypto today",
+      "Coinbase rolls out UK crypto-backed loans as FCA shapes rules",
       "The quantum gap: Why Bitcoin and Ethereum are taking different paths on security",
-      "BTC price due 'new highs:' Five things to know in Bitcoin this week",
-      "Saylor teases 'bigger' BTC buy days after floating semi-monthly dividends",
-      "2024 BTC cycle 'dramatically' underperforming previous halvings: Analyst"
+      "Bitcoin daily gains near 3% as stocks ignore US-Iran war threat, oil drops",
+      "Strategy buys 34,164 Bitcoin for $2.5B, holdings top 800,000 BTC"
     ],
-    "latest_ts": "2026-04-20T10:18:21+00:00",
+    "latest_ts": "2026-04-20T15:14:52+00:00",
     "confidence_breakdown": {
       "signal_strength": 25.0,
       "volume_confirmation": 20.0,
-      "source_diversity": 8.5,
-      "recency": 18.2,
+      "source_diversity": 12.3,
+      "recency": 18.7,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
@@ -955,35 +957,35 @@
     }
   },
   "india_equity": {
-    "sent_at": "2026-04-20T11:15:06.207986+00:00",
-    "confidence": 94,
+    "sent_at": "2026-04-20T15:54:40.958148+00:00",
+    "confidence": 91,
     "sector_label": "India Equity Markets",
-    "article_count": 20,
+    "article_count": 18,
     "severity": "HIGH",
     "regions": [
-      "europe",
       "asia_pacific",
-      "middle_east"
+      "middle_east",
+      "europe",
+      "india"
     ],
     "sources": [
-      "BBC News",
-      "Bloomberg Markets",
       "Markets-Economic Times",
+      "BBC News",
       "Oilprice.com"
     ],
     "top_headlines": [
       "Why is stock market rising today? Sensex jumps 400 points, Nifty above 24,450. 4 key factors explained",
+      "Cummins India among 7 stocks that hit 52-week high; rally up to 32% in a month",
       "Buy every dip, markets have turned a corner; 2 trading calls for near-term gains: CA Rudramurthy BV",
-      "Sensex settles with marginal gains, Nifty closes above 24,350 as Iran-US war escalations keep sentiment fragile",
-      "India\u2019s RBI Eases Some Curbs on Banks\u2019 Forex Market Trades",
-      "Sector rotation underway: 3 themes to watch for your portfolio, says  Devang Mehta"
+      "Sector rotation underway: 3 themes to watch for your portfolio, says  Devang Mehta",
+      "Indian market faces AI narrative problem; it'll be smallcaps over largecaps for next 5 years: Manish Gunwani"
     ],
-    "latest_ts": "2026-04-20T10:43:44+00:00",
+    "latest_ts": "2026-04-20T15:08:50+00:00",
     "confidence_breakdown": {
-      "signal_strength": 25.0,
+      "signal_strength": 24.7,
       "volume_confirmation": 20.0,
-      "source_diversity": 15.3,
-      "recency": 19.0,
+      "source_diversity": 13.0,
+      "recency": 18.5,
       "geopolitical_severity": 15.0
     },
     "etf_recommendations": {
@@ -1036,10 +1038,11 @@
           "sector_key": "india_equity",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 102.0,
+          "selection_score": 105.0,
           "selection_notes": [
             "broad diversification",
-            "broad exposure"
+            "broad exposure",
+            "matches India-listed access"
           ]
         },
         {
@@ -1053,8 +1056,10 @@
           "sector_key": "india_equity",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 63.5,
-          "selection_notes": []
+          "selection_score": 66.5,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "top_etfs": [
@@ -1087,10 +1092,11 @@
           "sector_key": "india_equity",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 102.0,
+          "selection_score": 105.0,
           "selection_notes": [
             "broad diversification",
-            "broad exposure"
+            "broad exposure",
+            "matches India-listed access"
           ]
         },
         {
@@ -1104,8 +1110,10 @@
           "sector_key": "india_equity",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 63.5,
-          "selection_notes": []
+          "selection_score": 66.5,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "regional_alternatives": {
@@ -1121,10 +1129,11 @@
             "sector_key": "india_equity",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 102.0,
+            "selection_score": 105.0,
             "selection_notes": [
               "broad diversification",
-              "broad exposure"
+              "broad exposure",
+              "matches India-listed access"
             ]
           },
           {
@@ -1138,8 +1147,10 @@
             "sector_key": "india_equity",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 63.5,
-            "selection_notes": []
+            "selection_score": 66.5,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
           }
         ],
         "International-listed": [
@@ -1175,10 +1186,11 @@
           "sector_key": "india_equity",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 102.0,
+          "selection_score": 105.0,
           "selection_notes": [
             "broad diversification",
-            "broad exposure"
+            "broad exposure",
+            "matches India-listed access"
           ]
         },
         {
@@ -1192,8 +1204,10 @@
           "sector_key": "india_equity",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 63.5,
-          "selection_notes": []
+          "selection_score": 66.5,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "global": [
@@ -1219,39 +1233,37 @@
     }
   },
   "technology_ai": {
-    "sent_at": "2026-04-20T11:15:07.809773+00:00",
-    "confidence": 96,
+    "sent_at": "2026-04-20T15:54:42.423532+00:00",
+    "confidence": 95,
     "sector_label": "Technology & AI / Semiconductors",
-    "article_count": 19,
+    "article_count": 18,
     "severity": "HIGH",
     "regions": [
-      "europe",
-      "middle_east",
-      "india",
-      "americas",
+      "asia_pacific",
       "global",
-      "asia_pacific"
+      "india",
+      "americas"
     ],
     "sources": [
-      "Oilprice.com",
+      "US Top News and Analysis",
+      "The Verge",
       "World | Deutsche Welle",
-      "Defense News",
       "Cointelegraph.com News",
       "Bloomberg Markets",
       "Markets-Economic Times"
     ],
     "top_headlines": [
-      "Robots Are Quietly Building the Future of Renewable Energy",
-      "How China is reshaping the global chip industry",
-      "German Banks Aren\u2019t Panicking Over Mythos AI Threat, Sewing Says",
+      "How China's chip expansion puts pressure on global rivals",
+      "US Stocks: Marvell shares jump 5% on report of deal talks with Google to develop two AI chips",
+      "US stocks: Adobe shares rises after it launches AI suite for corporate clients as competition heats up",
       "Global Markets | Japan's Nikkei climbs as AI optimism outweighs Mideast concerns",
       "Indian market faces AI narrative problem; it'll be smallcaps over largecaps for next 5 years: Manish Gunwani"
     ],
-    "latest_ts": "2026-04-20T11:14:21.334859+00:00",
+    "latest_ts": "2026-04-20T15:53:48.720725+00:00",
     "confidence_breakdown": {
-      "signal_strength": 24.6,
+      "signal_strength": 24.1,
       "volume_confirmation": 20.0,
-      "source_diversity": 16.6,
+      "source_diversity": 16.2,
       "recency": 20.0,
       "geopolitical_severity": 15.0
     },
@@ -1611,10 +1623,10 @@
     }
   },
   "gold_precious_metals": {
-    "sent_at": "2026-04-20T11:15:11.409266+00:00",
-    "confidence": 84,
+    "sent_at": "2026-04-20T15:54:45.752223+00:00",
+    "confidence": 80,
     "sector_label": "Gold & Precious Metals",
-    "article_count": 11,
+    "article_count": 10,
     "severity": "HIGH",
     "regions": [
       "global",
@@ -1624,23 +1636,22 @@
     ],
     "sources": [
       "Bloomberg Markets",
-      "Markets-Economic Times",
-      "US Top News and Analysis"
+      "Markets-Economic Times"
     ],
     "top_headlines": [
-      "Silver tanks nearly Rs 4,000, gold slips Rs 1,600 as Strait of Hormuz tensions reignite inflation fears. Time to sell?",
       "Gold Falls as Renewed Hormuz Disruption Stokes Inflation Concern",
-      "Is the RBI fighting the wrong battle? Why rate hikes may not solve India\u2019s current inflation problem",
       "Global Markets | Australian shares end largely unchanged as investors remain wary of Mideast risks",
-      "We spoke to over 30 central bankers, policymakers and politicians. Here are their top concerns"
+      "Bank of Canada Surveys Show War Hitting Inflation Expectations",
+      "Treasury Yields Rise Amid Inflation Concerns: Deepali Bhargava",
+      "Fed nominee Warsh prepares for monetary policy road test before Senate panel"
     ],
-    "latest_ts": "2026-04-20T10:15:21+00:00",
+    "latest_ts": "2026-04-20T15:30:00+00:00",
     "confidence_breakdown": {
-      "signal_strength": 20.1,
-      "volume_confirmation": 18.7,
-      "source_diversity": 12.3,
-      "recency": 18.1,
-      "geopolitical_severity": 15.0
+      "signal_strength": 17.7,
+      "volume_confirmation": 18.0,
+      "source_diversity": 11.0,
+      "recency": 19.2,
+      "geopolitical_severity": 14.1
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -2279,40 +2290,39 @@
     }
   },
   "bonds_fixed_income": {
-    "sent_at": "2026-04-20T11:15:09.603041+00:00",
+    "sent_at": "2026-04-20T15:54:43.990291+00:00",
     "confidence": 88,
     "sector_label": "Bonds & Fixed Income",
-    "article_count": 17,
-    "severity": "HIGH",
+    "article_count": 16,
+    "severity": "MEDIUM",
     "regions": [
+      "global",
       "middle_east",
       "europe",
-      "americas",
-      "global",
-      "asia_pacific"
+      "americas"
     ],
     "sources": [
-      "Oilprice.com",
+      "US Top News and Analysis",
+      "The Verge",
       "Cointelegraph.com News",
       "Bloomberg Markets",
       "Markets-Economic Times",
-      "US Top News and Analysis",
       "Finance"
     ],
     "top_headlines": [
       "How bond market's private credit crisis fears are playing out in fixed-income ETFs",
-      "Bond Bulls Look to Warsh for Next Leg of Rally",
       "Treasury Secretary Bessent backs rate cuts but says he understands if the Fed wants to wait",
-      "Warsh\u2019s Fed Confirmation Hearing Is Next Driver for US Debt",
+      "Treasury Yields Rise Amid Inflation Concerns: Deepali Bhargava",
+      "Strategy Buys $2.54 Billion of Bitcoin, Most Since Late 2024",
       "U.S. Extends Sanction Waiver on Russian Oil for India"
     ],
-    "latest_ts": "2026-04-20T10:07:52+00:00",
+    "latest_ts": "2026-04-20T15:53:49.408158+00:00",
     "confidence_breakdown": {
-      "signal_strength": 21.0,
+      "signal_strength": 20.1,
       "volume_confirmation": 20.0,
-      "source_diversity": 14.9,
-      "recency": 17.9,
-      "geopolitical_severity": 14.4
+      "source_diversity": 15.6,
+      "recency": 20.0,
+      "geopolitical_severity": 12.5
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -4283,35 +4293,35 @@
     }
   },
   "asia_pacific": {
-    "sent_at": "2026-04-20T09:51:35.290064+00:00",
-    "confidence": 71,
+    "sent_at": "2026-04-20T15:54:47.432208+00:00",
+    "confidence": 67,
     "sector_label": "Asia Pacific Equity",
-    "article_count": 7,
+    "article_count": 6,
     "severity": "MEDIUM",
     "regions": [
-      "global",
       "asia_pacific"
     ],
     "sources": [
-      "Bloomberg Markets",
-      "The Verge",
       "US Top News and Analysis",
-      "Markets-Economic Times"
+      "Cointelegraph.com News",
+      "Bloomberg Markets",
+      "Markets-Economic Times",
+      "BBC News"
     ],
     "top_headlines": [
       "Global Markets | Japan's Nikkei climbs as AI optimism outweighs Mideast concerns",
-      "The RAM shortage could last years",
-      "Japan Protests China\u2019s Work on New Structure in East China Sea",
-      "India, South Korea Aim to Double Trade, Deepen Shipbuilding Ties",
-      "China\u2019s Rare Earth Exports to Japan Show Marked Drop in March"
+      "Japan on high alert for 'huge' second quake after issuing tsunami warning",
+      "Cleveland-Cliffs \u2018No Longer in a Hurry\u2019 on POSCO Deal, CEO Says",
+      "BNP Paribas\u2019 Bigos: Growth Drivers vs. Volatility",
+      "Japan to test government bonds as digital collateral on Canton"
     ],
-    "latest_ts": "2026-04-20T09:50:43.988863+00:00",
+    "latest_ts": "2026-04-20T14:54:21+00:00",
     "confidence_breakdown": {
-      "signal_strength": 13.4,
-      "volume_confirmation": 15.2,
-      "source_diversity": 13.3,
-      "recency": 20.0,
-      "geopolitical_severity": 10.0
+      "signal_strength": 11.2,
+      "volume_confirmation": 14.0,
+      "source_diversity": 14.9,
+      "recency": 18.1,
+      "geopolitical_severity": 9.0
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
