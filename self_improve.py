@@ -43,10 +43,13 @@ SOURCE_FILES = [
     "azalyst.py",
 ]
 
+# FIX: Added improvement_log.jsonl so Qwen reads its own history before
+# proposing a change — prevents re-proposing fixes that were already applied.
 DATA_FILES = [
     "status.json",
     "azalyst_portfolio.json",
     "azalyst_state.json",
+    "improvement_log.jsonl",
 ]
 
 # ── NVIDIA NIM ───────────────────────────────────────────────────────────────
@@ -59,13 +62,16 @@ macro ETF intelligence and paper-trading system.
 
 Your job each day:
 1. Read the performance data (portfolio P&L, alpha vs SPY, signal accuracy)
-2. Read the source code
-3. Identify the SINGLE highest-impact improvement you can make TODAY
-4. Output it as a precise, safe, syntactically valid code change
+2. Read the improvement_log.jsonl to see what has ALREADY been applied — never re-propose these
+3. Read the source code
+4. Identify the SINGLE highest-impact improvement you can make TODAY that has NOT been applied before
+5. Output it as a precise, safe, syntactically valid code change
 
 HARD RULES — violating any of these makes your output unusable:
 - Output ONLY raw JSON. No markdown, no triple backticks, no prose outside the JSON.
 - Propose exactly ONE change per run — the best one.
+- Check improvement_log.jsonl first. If your proposed change_description closely matches
+  any entry where applied=true, pick a DIFFERENT improvement instead.
 - old_code must be a VERBATIM exact match of text currently in the file (including
   all whitespace, indentation, and comments). Copy it character-for-character.
 - Only edit files in this allowed set: scorer.py, classifier.py, paper_trader.py,
@@ -75,16 +81,13 @@ HARD RULES — violating any of these makes your output unusable:
 - Keep changes focused and minimal — fix one thing cleanly.
 
 WHAT TO LOOK FOR (priority order):
-1. Source diversity scoring — Cointelegraph appearing in defense/energy signals
-   inflates scores. Consider penalising crypto-specialist outlets for non-crypto sectors.
+1. Check improvement_log.jsonl — skip anything already marked applied=true.
 2. The _best_existing_for_topup function routing new sector signals into existing
    positions in DIFFERENT sectors — it should only redirect within the same sector.
-3. Same-sector rotation guard — _select_rotation_candidate currently rewards
-   same-sector rotation with score += 1.5, which is backwards.
-4. bonds_fixed_income sector missing from SECTOR_DEFINITIONS entirely — rate
-   headlines are being misrouted into banking/equity ETFs.
-5. Recency scoring — articles older than 48h should decay more aggressively.
-6. Any other genuine improvement you identify from the performance data.
+3. bonds_fixed_income sector missing from SECTOR_DEFINITIONS in classifier.py entirely
+   — rate headlines are being misrouted into banking/equity ETFs.
+4. Recency scoring — articles older than 48h should decay more aggressively.
+5. Any other genuine improvement you identify from the performance data.
 
 OUTPUT FORMAT (strict — no deviations):
 {
@@ -118,7 +121,7 @@ def build_context() -> str:
     parts = []
 
     parts.append("=" * 60)
-    parts.append("PERFORMANCE DATA")
+    parts.append("PERFORMANCE DATA & IMPROVEMENT HISTORY")
     parts.append("=" * 60)
     for fname in DATA_FILES:
         content = _read(ROOT / fname)
@@ -151,7 +154,7 @@ def call_nim(context: str, api_key: str) -> dict:
             {"role": "user", "content": f"Analyze and improve Azalyst:\n\n{context}"},
         ],
         "max_tokens": 4096,
-        "temperature": 0.15,   # low temperature for precise code edits
+        "temperature": 0.15,
         "top_p": 0.7,
     }
 
@@ -164,7 +167,6 @@ def call_nim(context: str, api_key: str) -> dict:
     # Strip markdown code fences if the model wrapped output anyway
     if raw.startswith("```"):
         lines = raw.splitlines()
-        # drop first line (```json or ```) and last line (```)
         raw = "\n".join(lines[1:] if lines[-1] != "```" else lines[1:-1])
 
     return json.loads(raw)
@@ -190,7 +192,6 @@ def apply_change(change: dict) -> bool:
     new_code    = change.get("new_code", "")
     description = change.get("description", "")
 
-    # Guard: only allowed files
     if filename not in MUTABLE_FILES:
         print(f"  BLOCKED: {filename} is not in the mutable file set")
         return False
@@ -206,7 +207,6 @@ def apply_change(change: dict) -> bool:
 
     content = filepath.read_text(encoding="utf-8")
 
-    # Exact match required
     occurrences = content.count(old_code)
     if occurrences == 0:
         print(f"  BLOCKED: old_code not found verbatim in {filename}")
@@ -218,7 +218,6 @@ def apply_change(change: dict) -> bool:
 
     new_content = content.replace(old_code, new_code, 1)
 
-    # Validate syntax in a temp file before writing to disk
     with tempfile.NamedTemporaryFile(
         mode="w", suffix=".py", delete=False, encoding="utf-8"
     ) as tmp:
@@ -233,7 +232,6 @@ def apply_change(change: dict) -> bool:
     finally:
         tmp_path.unlink(missing_ok=True)
 
-    # Safe to write
     filepath.write_text(new_content, encoding="utf-8")
     print(f"  APPLIED: {description}  →  {filename}")
     return True
@@ -271,12 +269,10 @@ def main() -> int:
     print(f"  AZALYST SELF-IMPROVEMENT ENGINE  |  {ts}")
     print(f"{'=' * 60}\n")
 
-    # 1. Build context
     print("Step 1: Building context from source files and performance data ...")
     context = build_context()
     print(f"  Context size: {len(context):,} characters\n")
 
-    # 2. Call Qwen3 Coder
     print("Step 2: Calling Qwen3 Coder 480B on NVIDIA NIM ...")
     try:
         result = call_nim(context, api_key)
@@ -295,7 +291,6 @@ def main() -> int:
     print(f"  Confidence: {result.get('confidence', 0)}/100")
     print(f"  Target metric: {result.get('target_metric', 'n/a')}\n")
 
-    # 3. Apply change
     print("Step 3: Applying change ...")
     change = result.get("change")
     applied = False
@@ -308,7 +303,6 @@ def main() -> int:
     else:
         print("  No change proposed this cycle — system is performing well")
 
-    # 4. Log
     print("\nStep 4: Writing audit log ...")
     write_log(result, applied)
 

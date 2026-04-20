@@ -120,7 +120,6 @@ def run_intelligence_cycle(
                             log.info(f"Paper trade {'topped up' if entry.get('is_topup') else 'entered'}: {entry['ticker']}")
 
         # ── Always send 30-min digest (even if 0 new signals) ────────────────
-        # Attach ETF recs to scored signals for digest context
         for sig in scored_signals:
             if "etf_recommendations" not in sig:
                 sig["etf_recommendations"] = mapper.get_etfs(sig["sectors"], sig)
@@ -157,7 +156,9 @@ def run_eod_report(portfolio, port_reporter):
         log.error(f"EOD report error: {e}")
 
 
-def seed_startup_trades(state, mapper, portfolio, port_reporter, cfg):
+# FIX: Added quant_fetcher parameter so seed trades go through the same
+# trend-approval gate as live intelligence cycle trades.
+def seed_startup_trades(state, mapper, portfolio, port_reporter, quant_fetcher, cfg):
     """
     On startup, enter paper trades for any HIGH/CRITICAL signals already in state
     that don't yet have open positions. Fixes the cold-start problem where all
@@ -181,7 +182,6 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, cfg):
         sectors      = sector_key.split("|")
         severity     = "CRITICAL" if confidence >= 80 else "HIGH"
 
-        # Build minimal signal dict from state record
         etf_recs = mapper.get_etfs(sectors, record)
         signal = {
             "sectors":              sectors,
@@ -194,6 +194,15 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, cfg):
 
         etf, platform = _select_etf_for_trade(signal)
         if etf and platform:
+            # FIX: Apply the same quant blocker used in run_intelligence_cycle.
+            # Previously seed trades bypassed the 200-day MA trend check entirely.
+            ticker = etf.get("ticker")
+            if ticker and not quant_fetcher.check_trend_approval(ticker):
+                log.warning(
+                    f"Seed trade skipped: {ticker} is in a structural downtrend (Quant Blocker)."
+                )
+                continue
+
             entry = portfolio.enter_position(signal, etf, platform)
             if entry:
                 rotation_exits = entry.get("rotation_exits") or []
@@ -238,16 +247,14 @@ def main():
 
     reporter.send_startup_message()
 
-    # Seed paper trades from existing state signals (fixes cold-start / restart)
-    seed_startup_trades(state, mapper, portfolio, port_reporter, cfg)
+    # FIX: Pass quant_fetcher so seeded trades go through trend-approval gate.
+    seed_startup_trades(state, mapper, portfolio, port_reporter, quant_fetcher, cfg)
 
     run_intelligence_cycle(
         fetcher, classifier, scorer, mapper,
         reporter, state, portfolio, port_reporter, quant_fetcher, cfg
     )
 
-    # --once: single cycle mode for GitHub Actions
-    # Run MTM to update live prices, check exits, then send EOD report to Discord
     if args.once:
         log.info("Single-cycle mode — running mark-to-market...")
         run_mtm_cycle(portfolio, port_reporter)
