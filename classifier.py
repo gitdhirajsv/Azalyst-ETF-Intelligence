@@ -268,6 +268,11 @@ SECTOR_DEFINITIONS = {
         "geopolitical_boost": ["rate cut", "rate hike", "fed", "mortgage crisis"],
     },
 
+    # FIX: Added bonds_fixed_income to SECTOR_DEFINITIONS.
+    # Previously this sector existed in etf_mapper.py (BND, TLT, TIP, BHARATBOND)
+    # and in SECTOR_DIRECTION_TERMS below, but was missing here — so bond/rate
+    # headlines were being misclassified into banking_financial and routed to
+    # bank ETFs (XLF) instead of the correct fixed-income ETFs.
     "bonds_fixed_income": {
         "label": "Bonds & Fixed Income",
         "emoji": "📈",
@@ -280,7 +285,8 @@ SECTOR_DEFINITIONS = {
             ("tips", 4), ("inflation-linked", 4), ("duration", 3),
             ("fed funds rate", 6), ("rate decision", 5), ("pivot", 4),
             ("quantitative tightening", 5), ("balance sheet", 3),
-            ("debt issuance", 4), ("bond market", 5),
+            ("debt issuance", 4), ("bond market", 5), ("private credit", 5),
+            ("bnd", 4), ("tlt", 4), ("treasury bond", 5),
         ],
         "negators": [],
         "geopolitical_boost": ["fed", "ecb", "boj", "rbi", "recession", "default"],
@@ -487,6 +493,7 @@ SECTOR_DIRECTION_TERMS = {
 ML_DIRECTION_ALIGNMENTS = {
     "asia_pacific": 1.0,
     "banking_financial": 1.0,
+    "bonds_fixed_income": 1.0,
     "clean_energy_renewables": 1.0,
     "crypto_digital": 1.0,
     "emerging_markets": 1.0,
@@ -521,13 +528,12 @@ class FinancialSentimentModel:
             return None
         try:
             from transformers import pipeline
-
             self._pipeline = pipeline(
                 "text-classification",
                 model=self.model_name,
                 tokenizer=self.model_name,
             )
-        except Exception as exc:  # pragma: no cover - optional dependency/runtime
+        except Exception as exc:
             self._disabled_reason = str(exc)
             log.warning("ML sentiment disabled, using rules-only fallback: %s", exc)
             return None
@@ -560,11 +566,11 @@ class FinancialSentimentModel:
             self._cache[cleaned] = result
             return dict(result)
 
-        try:  # pragma: no cover - depends on optional model runtime
+        try:
             raw = pipe(cleaned, truncation=True)[0]
             label_raw = str(raw.get("label", "neutral")).upper()
             confidence = float(raw.get("score", 0.0) or 0.0)
-        except Exception as exc:  # pragma: no cover
+        except Exception as exc:
             log.warning("ML sentiment inference failed, reverting to rules-only: %s", exc)
             self._disabled_reason = str(exc)
             result = {
@@ -656,16 +662,14 @@ def _score_text(text: str, keywords: List, negators: List, geo_boost: List) -> f
         if _contains_term(text_lower, kw):
             score += weight
 
-    # Apply negation dampening
     for neg in negators:
         if _contains_term(text_lower, neg):
             score *= 0.6
 
-    # Geopolitical context boost
     for gk in geo_boost:
         if _contains_term(text_lower, gk):
             score += 2.0
-            break  # One boost per article max
+            break
 
     return score
 
@@ -675,7 +679,6 @@ def _max_ts(*timestamps) -> Optional[datetime]:
     valid = [ts for ts in timestamps if ts is not None]
     if not valid:
         return None
-    # Normalize all to UTC-aware before comparing
     aware = []
     for ts in valid:
         if isinstance(ts, datetime):
@@ -701,7 +704,6 @@ class SectorClassifier:
         Main classification pass.
         Returns list of sector signal clusters.
         """
-        # Score every article against every sector
         sector_scores: Dict[str, List] = defaultdict(list)
 
         for art in articles:
@@ -719,7 +721,7 @@ class SectorClassifier:
                 rule_direction_score = _directional_score(text, sector_id)
                 ml_direction_score = self.sentiment_model.directional_bias(sector_id, sentiment)
                 direction_score = round(rule_direction_score + ml_direction_score, 2)
-                if score >= 4.0:   # Minimum relevance threshold
+                if score >= 4.0:
                     sector_scores[sector_id].append({
                         "article": art,
                         "relevance_score": score,
@@ -731,16 +733,13 @@ class SectorClassifier:
                         "ml_sentiment_score": sentiment.get("signed_score", 0.0),
                     })
 
-        # Build signal clusters
         signals = []
         for sector_id, scored_arts in sector_scores.items():
             if len(scored_arts) < self.min_articles:
                 continue
 
-            # Sort articles by relevance
             scored_arts.sort(key=lambda x: x["relevance_score"], reverse=True)
 
-            # Top headlines (highest relevance)
             top_articles = [s["article"] for s in scored_arts[:8]]
             total_score = sum(s["relevance_score"] for s in scored_arts)
             avg_article_score = round(total_score / max(len(scored_arts), 1), 2)
@@ -776,10 +775,7 @@ class SectorClassifier:
                 "latest_ts":     max(a["published"] for a in top_articles),
             })
 
-        # Merge overlapping sector signals (e.g. war → defense + oil)
         signals = self._merge_correlated_signals(signals)
-
-        # Sort by total score descending
         signals.sort(key=lambda x: x["total_score"], reverse=True)
 
         log.info(
@@ -798,7 +794,6 @@ class SectorClassifier:
         return "LOW"
 
     def _determine_severity(self, scored_arts: List[Dict], direction_score: float) -> Tuple[str, float]:
-        """Severity from signal quality, geographic breadth, and directional conviction."""
         if not scored_arts:
             return "LOW", 0.0
 
@@ -824,11 +819,6 @@ class SectorClassifier:
         return self._severity_from_intensity(intensity), intensity
 
     def _merge_correlated_signals(self, signals: List[Dict]) -> List[Dict]:
-        """
-        Combine correlated signals into multi-sector alerts.
-        E.g. if defense AND energy both triggered from Middle East news,
-        merge them into one combined signal.
-        """
         merged = []
         used = set()
 
@@ -847,7 +837,6 @@ class SectorClassifier:
                 overlap = len(combined_ids_a & ids_b) / max(len(combined_ids_a), 1)
 
                 if overlap >= 0.35:
-                    # Merge
                     original_count = max(combined.get("article_count", 1), 1)
                     other_count = max(sig_b.get("article_count", 1), 1)
                     combined["sectors"].extend(sig_b["sectors"])
@@ -889,10 +878,6 @@ class SectorClassifier:
                     )[:6]
                     combined["regions"] = list(dict.fromkeys(combined["regions"] + sig_b["regions"]))
                     combined["sources"] = list(dict.fromkeys(combined.get("sources", []) + sig_b.get("sources", [])))
-                    # FIX: take the latest timestamp across both signals.
-                    # Previously only sig_a's latest_ts was kept, meaning a merged
-                    # signal whose more-recent constituent was sig_b would score
-                    # stale recency points.
                     combined["latest_ts"] = _max_ts(
                         combined.get("latest_ts"),
                         sig_b.get("latest_ts"),

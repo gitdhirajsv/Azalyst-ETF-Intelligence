@@ -34,10 +34,8 @@ def _get_risk_engine():
     return _risk_engine
 
 
-# Monthly budget in USD — converted to INR at runtime via live FX rate.
-# Client capital plan: $10,000/month for 6 months = $60,000 total.
 MONTHLY_BUDGET_USD      = 10_000
-MIN_TRADE_USD           = 50     # ~INR 4,175 at 83.5 — prevents dust trades
+MIN_TRADE_USD           = 50
 MAX_POSITIONS           = 6
 MAX_SINGLE_POSITION_PCT = 0.22
 STOP_LOSS_PCT           = 0.10
@@ -82,7 +80,6 @@ RISK_SLIPPAGE_BPS = {
 
 USD_TO_INR = 83.5
 
-# Derived INR minimum — computed once at module load, refreshed at runtime
 MIN_TRADE_INR = round(MIN_TRADE_USD * USD_TO_INR, 2)
 
 
@@ -218,14 +215,6 @@ def get_current_price_inr(
     exchange: str,
     usd_inr_rate: Optional[float] = None,
 ) -> Optional[float]:
-    """
-    Return the latest ETF price in INR regardless of listing venue.
-
-    FIX: Accept an optional pre-fetched usd_inr_rate to avoid redundant
-    USD/INR API calls when pricing a batch of positions.  If not supplied,
-    the rate is fetched on-demand (preserving backwards compatibility for
-    single-position calls).
-    """
     exchange_upper = (exchange or "").upper()
     if "NSE" in exchange_upper or "BSE" in exchange_upper:
         return fetch_price_inr(ticker)
@@ -439,7 +428,7 @@ class PaperPortfolio:
         self.closed_trades: List[ClosedTrade] = []
         self.monthly_deposits: Dict[str, float] = {}
         self.trade_counter               = 0
-        self.monthly_reserve_inr         = 0.0  # 50% of monthly top-up held for best opportunities
+        self.monthly_reserve_inr         = 0.0
 
         self._load()
         self._process_monthly_deposit()
@@ -480,10 +469,6 @@ class PaperPortfolio:
                 len(self.closed_trades),
             )
 
-            # Sanity check: if total_deposited is much smaller than the actual
-            # portfolio value (cash + reserve + invested), it was likely stored
-            # in USD instead of INR.  Recompute from monthly_deposits if possible,
-            # otherwise derive from the current portfolio state.
             total_invested_inr = sum(pos.invested_inr for pos in self.open_positions)
             portfolio_approx   = self.cash_inr + self.monthly_reserve_inr + total_invested_inr
             if self.total_deposited > 0 and portfolio_approx > 0 and self.total_deposited < portfolio_approx * 0.5:
@@ -534,12 +519,8 @@ class PaperPortfolio:
             log.info(f"Monthly deposit already credited for {month_key}")
             return
 
-        # Convert USD budget to INR at live rate
         usd_inr_rate   = fetch_usd_to_inr()
         budget_inr     = round(MONTHLY_BUDGET_USD * usd_inr_rate, 2)
-
-        # 50/50 split: half goes to deployable cash, half held in reserve
-        # Reserve is released only when a signal beats all existing positions
         deploy_half  = round(budget_inr * 0.50, 2)
         reserve_half = round(budget_inr - deploy_half, 2)
 
@@ -559,12 +540,9 @@ class PaperPortfolio:
 
     @property
     def deployable_cash(self) -> float:
-        """Cash available for immediate deployment (excludes monthly reserve)."""
         return round(self.cash_inr, 2)
 
     def _release_reserve(self, amount: float) -> float:
-        """Release funds from monthly reserve into deployable cash.
-        Returns the actual amount released (may be less than requested)."""
         release = round(min(amount, self.monthly_reserve_inr), 2)
         if release <= 0:
             return 0.0
@@ -577,13 +555,11 @@ class PaperPortfolio:
         return release
 
     def _should_release_reserve(self, signal: Dict) -> bool:
-        """Release reserve only if the incoming signal is stronger than ALL
-        current open positions — i.e. this is genuinely the best opportunity."""
         if self.monthly_reserve_inr <= 0:
             return False
         incoming_conf = signal.get("confidence", 0)
         if not self.open_positions:
-            return incoming_conf >= 75  # release for any decent signal if book is empty
+            return incoming_conf >= 75
         max_existing_conf = max(pos.confidence for pos in self.open_positions)
         return incoming_conf > max_existing_conf
 
@@ -677,7 +653,6 @@ class PaperPortfolio:
         candidates = []
 
         for pos in self.open_positions:
-            # Enforce minimum hold period before any rotation
             if pos.days_held() < ROTATION_MIN_HOLD_DAYS:
                 continue
 
@@ -692,10 +667,6 @@ class PaperPortfolio:
                 score += 2.0
             if pos.days_held() >= ROTATION_MIN_HOLD_DAYS:
                 score += min(pos.days_held(), 20) * 0.3
-            # No bonus for same-sector candidates - avoid unnecessary rotation
-            # within the same sector to reduce churn and transaction costs.
-            # if pos.sector == incoming_sector:
-            #     score += 1.5  # Removed: was incorrectly rewarding same-sector rotation
 
             if score > 0:
                 candidates.append((score, pnl_pct, pos.confidence, -pos.days_held(), pos))
@@ -765,8 +736,6 @@ class PaperPortfolio:
     def _rotate_for_signal(self, signal: Dict, min_cash_needed: float) -> List[Dict]:
         rotation_exits: List[Dict] = []
         attempts = 0
-
-        # FIX: fetch USD/INR once for the rotation loop rather than once per position
         usd_inr = fetch_usd_to_inr()
 
         while (self.cash_inr < min_cash_needed or len(self.open_positions) >= MAX_POSITIONS) and attempts < 2:
@@ -796,15 +765,15 @@ class PaperPortfolio:
     def _execute_partial_profit(self, position: Position) -> Optional[Dict]:
         """Freqtrade-inspired Dynamic Step-ROI Logic."""
         roi_table = [
-            {"target_pct": 0.05, "sell_fraction": 0.25}, # Sell 25% of bag at +5%
-            {"target_pct": 0.10, "sell_fraction": 0.33}, # Sell 33% of remainder at +10%
-            {"target_pct": 0.15, "sell_fraction": 0.50}, # Sell 50% of remainder at +15%
+            {"target_pct": 0.05, "sell_fraction": 0.25},
+            {"target_pct": 0.10, "sell_fraction": 0.33},
+            {"target_pct": 0.15, "sell_fraction": 0.50},
         ]
-        
+
         step = getattr(position, "roi_step", 0)
         if step >= len(roi_table):
             return None
-            
+
         current_step = roi_table[step]
         if position.current_price < position.entry_price * (1 + current_step["target_pct"]):
             return None
@@ -883,7 +852,6 @@ class PaperPortfolio:
         if deployable < MIN_TRADE_INR:
             return
 
-        # FIX: fetch rate once
         usd_inr       = fetch_usd_to_inr()
         current_price = get_current_price_inr(best_pos.ticker, best_pos.exchange, usd_inr)
         if current_price is None or current_price <= 0:
@@ -935,26 +903,30 @@ class PaperPortfolio:
         return f"T{self.trade_counter:04d}"
 
     def _best_existing_for_topup(self, signal: Dict) -> Optional[Position]:
-        """If the new signal is NOT better than current invested positions,
-        return the best existing position to top-up instead of opening new."""
+        """If the new signal is NOT better than a current position IN THE SAME SECTOR,
+        return that position to top-up instead of opening a new one.
+
+        FIX: Cross-sector redirect intentionally removed. The previous logic would
+        route capital from a new Energy signal into a higher-confidence Tech position,
+        which defeats the purpose of sector-targeted signal routing entirely.
+        Only same-sector positions qualify for top-up consideration.
+        """
         if not self.open_positions:
             return None
         incoming_conf = signal.get("confidence", 0)
         incoming_sector = signal.get("sector_label", "")
 
-        # Find existing positions with equal or higher confidence
-        stronger = [
+        # Only consider same-sector positions — never redirect across sectors.
+        same_sector_stronger = [
             pos for pos in self.open_positions
-            if pos.confidence >= incoming_conf
+            if pos.sector == incoming_sector
+            and pos.confidence >= incoming_conf
             and pos.unrealised_pnl_pct() >= -2.0  # not deeply underwater
         ]
-        if not stronger:
-            return None  # new signal IS better — proceed with new entry
+        if not same_sector_stronger:
+            return None  # no same-sector candidate — open a new position
 
-        # Prefer same-sector match, then highest confidence
-        same_sector = [p for p in stronger if p.sector == incoming_sector]
-        candidates = same_sector if same_sector else stronger
-        return max(candidates, key=lambda p: (p.confidence, p.unrealised_pnl_pct()))
+        return max(same_sector_stronger, key=lambda p: (p.confidence, p.unrealised_pnl_pct()))
 
     def enter_position(self, signal: Dict, etf: Dict, platform: str) -> Optional[Dict]:
         confidence = signal.get("confidence", 0)
@@ -971,7 +943,6 @@ class PaperPortfolio:
             log.info("Position rejected - circuit breaker active")
             return None
 
-        # ── Aladdin: Correlation gate — block if new ticker is >0.80 correlated ──
         re = _get_risk_engine()
         if re and not any(p.ticker == ticker for p in self.open_positions):
             existing_tickers = [p.ticker for p in self.open_positions]
@@ -988,7 +959,6 @@ class PaperPortfolio:
         if fraction <= 0:
             return None
 
-        # ── Aladdin: Volatility-adjusted sizing — scale inversely with realised vol ──
         if re:
             closes = re.fetch_historical_closes([ticker], "1mo")
             if closes.get(ticker):
@@ -1000,7 +970,6 @@ class PaperPortfolio:
                     ticker, ticker_vol * 100, fraction,
                 )
 
-        # ── Reserve release: only tap reserve for best-in-book opportunities ──
         if self._should_release_reserve(signal):
             released = self._release_reserve(self.monthly_reserve_inr)
             if released > 0:
@@ -1010,14 +979,12 @@ class PaperPortfolio:
                     max((p.confidence for p in self.open_positions), default=0),
                 )
 
-        # ── Compare new vs existing: if new signal is weaker, top-up best existing ──
         topup_target = self._best_existing_for_topup(signal)
         if topup_target and not any(p.ticker == ticker for p in self.open_positions):
             log.info(
-                "New signal %s (conf %d) not better than existing %s (conf %d) — topping up existing",
+                "New signal %s (conf %d) not better than existing same-sector %s (conf %d) — topping up",
                 sector, confidence, topup_target.ticker, topup_target.confidence,
             )
-            # Redirect to top-up the stronger existing position
             ticker   = topup_target.ticker
             etf_name = topup_target.etf_name
             exchange = topup_target.exchange
@@ -1036,7 +1003,6 @@ class PaperPortfolio:
             log.info("Position rejected - insufficient cash (%.0f)", self.cash_inr)
             return None
 
-        # FIX: fetch rate once for entry (avoids redundant call in get_current_price_inr)
         usd_inr     = fetch_usd_to_inr()
         entry_price = get_current_price_inr(ticker, exchange, usd_inr)
         if entry_price is None or entry_price <= 0:
@@ -1162,18 +1128,11 @@ class PaperPortfolio:
         }
 
     def mark_to_market(self) -> List[Dict]:
-        """
-        Update all open position prices and check exit conditions.
-
-        FIX: Fetch USD/INR once before iterating positions to avoid one API
-        call per position in the previous implementation.
-        """
         exits: List[Dict] = []
         now_str = datetime.now(timezone.utc).isoformat()
         today   = date.today().isoformat()
         positions_to_close = []
 
-        # FIX: single USD/INR fetch for the entire MTM cycle
         usd_inr = fetch_usd_to_inr()
 
         for position in list(self.open_positions):
@@ -1205,7 +1164,6 @@ class PaperPortfolio:
                 else:
                     exit_reason = f"Stop-loss hit ({change_pct * 100:.1f}%)"
             elif days >= 14 and change_pct <= -0.02:
-                # Freqtrade-inspired unclogging: free up capital if a trade is dead and underwater
                 exit_reason = f"Time-based unclogging ({days} days, {change_pct * 100:.1f}%)"
             elif days >= MAX_HOLD_DAYS:
                 exit_reason = f"Max hold period ({days} days)"
@@ -1222,7 +1180,6 @@ class PaperPortfolio:
         if exits:
             self._recycle_idle_cash()
 
-        # ── Aladdin: Systematic Rebalancing — check drift and log alerts ──
         re = _get_risk_engine()
         if re and self.open_positions:
             pos_dicts = [p.to_dict() for p in self.open_positions]
