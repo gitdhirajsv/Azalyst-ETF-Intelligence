@@ -216,16 +216,16 @@
       "score": 96.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 94.0
-    },
-    {
       "symbol": "Europe Equity + Energy / Oil & Gas",
       "score": 94.0
     },
     {
       "symbol": "Technology & AI / Semiconductors",
       "score": 92.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 91.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
@@ -268,15 +268,11 @@
       "score": 67.0
     },
     {
-      "symbol": "Nuclear Energy & Uranium",
-      "score": 65.0
-    },
-    {
       "symbol": "Commodities & Mining",
-      "score": 65.0
+      "score": 66.0
     },
     {
-      "symbol": "Clean Energy & Renewables",
+      "symbol": "Nuclear Energy & Uranium",
       "score": 65.0
     },
     {
@@ -285,6 +281,10 @@
     },
     {
       "symbol": "Healthcare & Pharma",
+      "score": 62.0
+    },
+    {
+      "symbol": "Clean Energy & Renewables",
       "score": 62.0
     }
   ],
@@ -339,59 +339,6 @@
         "volume_confirmation": 20.0,
         "source_diversity": 17.7,
         "recency": 18.3,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 94.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 42,
-      "latest_at": "20 Apr 2026 17:00 UTC",
-      "headline": "Oil Prices Rally as U.S.-Iran Tensions Escalate",
-      "regions": [
-        "europe",
-        "americas",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Defense News",
-        "Finance",
-        "Oilprice.com",
-        "BBC News"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 17.7,
-        "recency": 16.5,
         "geopolitical_severity": 15.0
       }
     },
@@ -499,6 +446,59 @@
         "volume_confirmation": 20.0,
         "source_diversity": 14.4,
         "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 91.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 42,
+      "latest_at": "20 Apr 2026 20:02 UTC",
+      "headline": "Oil Prices Rally as U.S.-Iran Tensions Escalate",
+      "regions": [
+        "global",
+        "americas",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "World | Deutsche Welle",
+        "Bloomberg Markets",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 17.7,
+        "recency": 14.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -1015,6 +1015,56 @@
       }
     },
     {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 66.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "20 Apr 2026 22:34 UTC",
+      "headline": "Rio Tinto Pilbara Iron Ore Output Rises in First Quarter",
+      "regions": [
+        "americas",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Cointelegraph.com News",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.2,
+        "volume_confirmation": 14.0,
+        "source_diversity": 12.4,
+        "recency": 18.0,
+        "geopolitical_severity": 10.9
+      }
+    },
+    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 65.0,
@@ -1062,107 +1112,6 @@
         "source_diversity": 11.9,
         "recency": 18.1,
         "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 65.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "20 Apr 2026 17:52 UTC",
-      "headline": "Aluminum giant Alcoa to sell dormant smelter to Bitcoin miner NYDIG: Report",
-      "regions": [
-        "americas",
-        "global",
-        "asia_pacific",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "US Top News and Analysis",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 10.1,
-        "volume_confirmation": 12.5,
-        "source_diversity": 12.4,
-        "recency": 18.0,
-        "geopolitical_severity": 12.3
-      }
-    },
-    {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables",
-      "confidence": 65.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "20 Apr 2026 17:53 UTC",
-      "headline": "China calls for \u2018concerted\u2019 industry efforts to tackle excess solar production",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "ICLN",
-      "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NEWENERGY"
-      ],
-      "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.7,
-        "volume_confirmation": 12.5,
-        "source_diversity": 11.0,
-        "recency": 18.0,
-        "geopolitical_severity": 12.2
       }
     },
     {
@@ -1262,6 +1211,56 @@
         "recency": 5.6,
         "geopolitical_severity": 15.0
       }
+    },
+    {
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables",
+      "confidence": 62.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "20 Apr 2026 22:00 UTC",
+      "headline": "China calls for \u2018concerted\u2019 industry efforts to tackle excess solar production",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "ICLN",
+      "top_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NEWENERGY"
+      ],
+      "global_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 10.5,
+        "volume_confirmation": 12.5,
+        "source_diversity": 11.0,
+        "recency": 17.0,
+        "geopolitical_severity": 11.7
+      }
     }
   ],
   "articles": [
@@ -1273,17 +1272,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 42 articles - CRITICAL / NEUTRAL - Oil Prices Rally as U.S.-Iran Tensions Escalate"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Europe Equity + Energy / Oil & Gas - 9 articles - HIGH / NEUTRAL - Europe looks to secure shipping in Strait of Hormuz"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Technology & AI / Semiconductors - 16 articles - HIGH / NEUTRAL - How China's chip expansion puts pressure on global rivals"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Energy / Oil & Gas - 42 articles - HIGH / NEUTRAL - Oil Prices Rally as U.S.-Iran Tensions Escalate"
     },
     {
       "tag": "tag-neu",
@@ -1338,17 +1337,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Commodities & Mining - 6 articles - MEDIUM / NEUTRAL - Rio Tinto Pilbara Iron Ore Output Rises in First Quarter"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 3 articles - HIGH / NEUTRAL - India Adds a new Nuke To Its Fleet"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Commodities & Mining - 5 articles - MEDIUM / NEUTRAL - Aluminum giant Alcoa to sell dormant smelter to Bitcoin miner NYDIG: Report"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Clean Energy & Renewables - 5 articles - MEDIUM / NEUTRAL - China calls for \u2018concerted\u2019 industry efforts to tackle excess solar production"
     },
     {
       "tag": "tag-neu",
@@ -1359,6 +1353,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Healthcare & Pharma - 4 articles - CRITICAL / NEUTRAL - US Stocks | Kailera soars over 60% in Nasdaq debut as weight-loss drug race heats up"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Clean Energy & Renewables - 5 articles - MEDIUM / NEUTRAL - China calls for \u2018concerted\u2019 industry efforts to tackle excess solar production"
     }
   ],
   "market_snapshot": [
@@ -1401,10 +1400,10 @@
       "region": "UK",
       "price": 10609.08,
       "currency": "GBP",
-      "change": -58.52,
-      "change_pct": -0.55,
-      "change_str": "-0.55%",
-      "direction": "down"
+      "change": 19.08,
+      "change_pct": 0.18,
+      "change_str": "+0.18%",
+      "direction": "up"
     },
     {
       "label": "DAX",
@@ -1454,33 +1453,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4852.9,
+      "price": 4846.3,
       "currency": "USD",
-      "change": -4.7,
-      "change_pct": -0.1,
-      "change_str": "-0.10%",
+      "change": -11.3,
+      "change_pct": -0.23,
+      "change_str": "-0.23%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 86.12,
+      "price": 86.42,
       "currency": "USD",
-      "change": 2.27,
-      "change_pct": 2.71,
-      "change_str": "+2.71%",
+      "change": 2.57,
+      "change_pct": 3.06,
+      "change_str": "+3.06%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 76070.45,
+      "price": 75805.29,
       "currency": "USD",
-      "change": 2214.1,
-      "change_pct": 3.0,
-      "change_str": "+3.00%",
+      "change": 1948.94,
+      "change_pct": 2.64,
+      "change_str": "+2.64%",
       "direction": "up"
     },
     {
@@ -1911,10 +1910,10 @@
     }
   },
   "logs": [
-    "2026-04-20 22:36:40 [INFO] AZALYST - status.json generated",
-    "2026-04-20 22:36:40 [INFO] PORTFOLIO - NAV USD 9,964.16 | Return +0.20%",
-    "2026-04-20 22:36:40 [INFO] SIGNALS - 19 active signal buckets in state",
-    "2026-04-20 22:36:40 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC"
+    "2026-04-20 23:37:09 [INFO] AZALYST - status.json generated",
+    "2026-04-20 23:37:09 [INFO] PORTFOLIO - NAV USD 9,964.16 | Return +0.20%",
+    "2026-04-20 23:37:09 [INFO] SIGNALS - 19 active signal buckets in state",
+    "2026-04-20 23:37:09 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC"
   ],
-  "generated_at": "2026-04-20 22:36:39 UTC"
+  "generated_at": "2026-04-20 23:37:08 UTC"
 }
