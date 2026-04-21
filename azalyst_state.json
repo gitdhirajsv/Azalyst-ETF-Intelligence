@@ -2296,10 +2296,10 @@
     }
   },
   "bonds_fixed_income": {
-    "sent_at": "2026-04-21T12:14:11.597961+00:00",
+    "sent_at": "2026-04-21T16:50:59.562325+00:00",
     "confidence": 67,
     "sector_label": "Bonds & Fixed Income",
-    "article_count": 8,
+    "article_count": 6,
     "severity": "MEDIUM",
     "regions": [
       "europe",
@@ -2307,23 +2307,24 @@
       "global"
     ],
     "sources": [
+      "Bloomberg Markets",
       "Finance",
-      "Bloomberg Markets"
+      "Markets-Economic Times"
     ],
     "top_headlines": [
-      "Treasury Secretary Bessent backs rate cuts but says he understands if the Fed wants to wait",
+      "Tax-the-Rich Boosts Appeal of Bonds That Give Shelter to Wealthy",
+      "US equities regulator 'closely monitoring' shaky private credit market",
       "Morgan Stanley tops estimates as trading revenue exceeds expectations by nearly $1 billion",
-      "Citigroup beats estimates, boosted by gains in fixed income",
-      "Hybrid Bond Buybacks Return After War Paused Riskier Debt Deals",
-      "BofA\u2019s Doan Says Hungarian Bonds to Rally on Bid to Join Euro"
+      "Hybrid Bond Buybacks Return After War Paused Riskier Deals",
+      "Retail traders pile into Allbirds after odd AI pivot. History shows it won't end well"
     ],
-    "latest_ts": "2026-04-21T11:35:36+00:00",
+    "latest_ts": "2026-04-21T16:00:25+00:00",
     "confidence_breakdown": {
-      "signal_strength": 12.9,
-      "volume_confirmation": 16.2,
-      "source_diversity": 8.5,
-      "recency": 18.8,
-      "geopolitical_severity": 10.8
+      "signal_strength": 11.5,
+      "volume_confirmation": 14.0,
+      "source_diversity": 12.3,
+      "recency": 18.4,
+      "geopolitical_severity": 11.2
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -6845,6 +6846,315 @@
           "market_bucket": "global",
           "market_scope": "International-listed",
           "selection_score": 96.0,
+          "selection_notes": [
+            "matches international access"
+          ]
+        }
+      ]
+    }
+  },
+  "crypto_digital|cybersecurity": {
+    "sent_at": "2026-04-21T16:50:57.388394+00:00",
+    "confidence": 89,
+    "sector_label": "Cybersecurity + Crypto & Digital Assets",
+    "article_count": 10,
+    "severity": "HIGH",
+    "regions": [
+      "americas",
+      "global",
+      "asia_pacific",
+      "middle_east",
+      "india",
+      "europe"
+    ],
+    "sources": [
+      "Bloomberg Markets",
+      "Defense News",
+      "Finance",
+      "Cointelegraph.com News",
+      "Markets-Economic Times"
+    ],
+    "top_headlines": [
+      "After watchdog slams understaffing, AI to vet Pentagon-backed professors\u2019 China ties",
+      "Wall Street\u2019s Crypto Ambitions Dealt a Setback by Latest Hack",
+      "Crypto hackers stole $17B over past 10 years: DefiLlama",
+      "Jamie Dimon says Anthropic's Mythos reveals 'a lot more vulnerabilities' for cyberattacks",
+      "Here\u2019s what happened in crypto today"
+    ],
+    "latest_ts": "2026-04-21T16:03:05+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 23.1,
+      "volume_confirmation": 18.0,
+      "source_diversity": 14.8,
+      "recency": 18.5,
+      "geopolitical_severity": 15.0
+    },
+    "etf_recommendations": {
+      "selection_method": "global-ranked",
+      "primary": {
+        "name": "First Trust Nasdaq CEA Cybersecurity ETF",
+        "ticker": "CIBR",
+        "platform": "First Trust \u2014 IBKR / Schwab",
+        "exchange": "NASDAQ",
+        "risk": "Medium",
+        "timeframe": "3\u201312 months",
+        "thesis": "Larger, more diversified cyber ETF. Cisco, Broadcom's security arm, Palo Alto, Zscaler.",
+        "sector_key": "cybersecurity",
+        "market_bucket": "global",
+        "market_scope": "International-listed",
+        "selection_score": 119.5,
+        "selection_notes": [
+          "clean thematic exposure",
+          "broad exposure",
+          "diversified exposure"
+        ]
+      },
+      "ranked": [
+        {
+          "name": "First Trust Nasdaq CEA Cybersecurity ETF",
+          "ticker": "CIBR",
+          "platform": "First Trust \u2014 IBKR / Schwab",
+          "exchange": "NASDAQ",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Larger, more diversified cyber ETF. Cisco, Broadcom's security arm, Palo Alto, Zscaler.",
+          "sector_key": "cybersecurity",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 119.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "broad exposure",
+            "diversified exposure"
+          ]
+        },
+        {
+          "name": "iShares Bitcoin Trust ETF",
+          "ticker": "IBIT",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NASDAQ",
+          "risk": "High",
+          "timeframe": "1\u20136 months",
+          "thesis": "Spot Bitcoin ETF \u2014 regulated, institutional-grade BTC exposure. BlackRock backed.",
+          "sector_key": "crypto_digital",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 96.0,
+          "selection_notes": [
+            "deep liquidity",
+            "clean thematic exposure",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "ETFMG Prime Cyber Security ETF",
+          "ticker": "HACK",
+          "platform": "ETFMG \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Palo Alto, CrowdStrike, Fortinet core holdings. Non-cyclical growth. Every geopolitical event drives demand.",
+          "sector_key": "cybersecurity",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 96.0,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Bitwise Crypto Industry Innovators ETF",
+          "ticker": "BITQ",
+          "platform": "Bitwise \u2014 IBKR / Coinbase / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "1\u20136 months",
+          "thesis": "Crypto ecosystem companies \u2014 Coinbase, miners, blockchain infrastructure.",
+          "sector_key": "crypto_digital",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 66.0,
+          "selection_notes": [
+            "matches international access"
+          ]
+        }
+      ],
+      "top_etfs": [
+        {
+          "name": "First Trust Nasdaq CEA Cybersecurity ETF",
+          "ticker": "CIBR",
+          "platform": "First Trust \u2014 IBKR / Schwab",
+          "exchange": "NASDAQ",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Larger, more diversified cyber ETF. Cisco, Broadcom's security arm, Palo Alto, Zscaler.",
+          "sector_key": "cybersecurity",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 119.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "broad exposure",
+            "diversified exposure"
+          ]
+        },
+        {
+          "name": "iShares Bitcoin Trust ETF",
+          "ticker": "IBIT",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NASDAQ",
+          "risk": "High",
+          "timeframe": "1\u20136 months",
+          "thesis": "Spot Bitcoin ETF \u2014 regulated, institutional-grade BTC exposure. BlackRock backed.",
+          "sector_key": "crypto_digital",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 96.0,
+          "selection_notes": [
+            "deep liquidity",
+            "clean thematic exposure",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "ETFMG Prime Cyber Security ETF",
+          "ticker": "HACK",
+          "platform": "ETFMG \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Palo Alto, CrowdStrike, Fortinet core holdings. Non-cyclical growth. Every geopolitical event drives demand.",
+          "sector_key": "cybersecurity",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 96.0,
+          "selection_notes": [
+            "matches international access"
+          ]
+        }
+      ],
+      "regional_alternatives": {
+        "International-listed": [
+          {
+            "name": "First Trust Nasdaq CEA Cybersecurity ETF",
+            "ticker": "CIBR",
+            "platform": "First Trust \u2014 IBKR / Schwab",
+            "exchange": "NASDAQ",
+            "risk": "Medium",
+            "timeframe": "3\u201312 months",
+            "thesis": "Larger, more diversified cyber ETF. Cisco, Broadcom's security arm, Palo Alto, Zscaler.",
+            "sector_key": "cybersecurity",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 119.5,
+            "selection_notes": [
+              "clean thematic exposure",
+              "broad exposure",
+              "diversified exposure"
+            ]
+          },
+          {
+            "name": "iShares Bitcoin Trust ETF",
+            "ticker": "IBIT",
+            "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NASDAQ",
+            "risk": "High",
+            "timeframe": "1\u20136 months",
+            "thesis": "Spot Bitcoin ETF \u2014 regulated, institutional-grade BTC exposure. BlackRock backed.",
+            "sector_key": "crypto_digital",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 96.0,
+            "selection_notes": [
+              "deep liquidity",
+              "clean thematic exposure",
+              "matches international access"
+            ]
+          },
+          {
+            "name": "ETFMG Prime Cyber Security ETF",
+            "ticker": "HACK",
+            "platform": "ETFMG \u2014 IBKR / Schwab",
+            "exchange": "NYSE",
+            "risk": "Medium",
+            "timeframe": "3\u201312 months",
+            "thesis": "Palo Alto, CrowdStrike, Fortinet core holdings. Non-cyclical growth. Every geopolitical event drives demand.",
+            "sector_key": "cybersecurity",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 96.0,
+            "selection_notes": [
+              "matches international access"
+            ]
+          }
+        ]
+      },
+      "india": [],
+      "global": [
+        {
+          "name": "First Trust Nasdaq CEA Cybersecurity ETF",
+          "ticker": "CIBR",
+          "platform": "First Trust \u2014 IBKR / Schwab",
+          "exchange": "NASDAQ",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Larger, more diversified cyber ETF. Cisco, Broadcom's security arm, Palo Alto, Zscaler.",
+          "sector_key": "cybersecurity",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 119.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "broad exposure",
+            "diversified exposure"
+          ]
+        },
+        {
+          "name": "iShares Bitcoin Trust ETF",
+          "ticker": "IBIT",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NASDAQ",
+          "risk": "High",
+          "timeframe": "1\u20136 months",
+          "thesis": "Spot Bitcoin ETF \u2014 regulated, institutional-grade BTC exposure. BlackRock backed.",
+          "sector_key": "crypto_digital",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 96.0,
+          "selection_notes": [
+            "deep liquidity",
+            "clean thematic exposure",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "ETFMG Prime Cyber Security ETF",
+          "ticker": "HACK",
+          "platform": "ETFMG \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Palo Alto, CrowdStrike, Fortinet core holdings. Non-cyclical growth. Every geopolitical event drives demand.",
+          "sector_key": "cybersecurity",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 96.0,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Bitwise Crypto Industry Innovators ETF",
+          "ticker": "BITQ",
+          "platform": "Bitwise \u2014 IBKR / Coinbase / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "1\u20136 months",
+          "thesis": "Crypto ecosystem companies \u2014 Coinbase, miners, blockchain infrastructure.",
+          "sector_key": "crypto_digital",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 66.0,
           "selection_notes": [
             "matches international access"
           ]
