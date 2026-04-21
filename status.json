@@ -1,20 +1,20 @@
 {
-  "portfolio_value": 9966.56,
+  "portfolio_value": 9967.34,
   "total_deposited": 9903.19,
   "cash": 988.65,
   "monthly_reserve": 0.0,
-  "market_value": 8977.91,
+  "market_value": 8978.69,
   "total_invested": 8914.53,
-  "unrealised_pnl": 63.37,
-  "unrealised_str": "+63.37",
+  "unrealised_pnl": 64.16,
+  "unrealised_str": "+64.16",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "+0.64%",
-  "change_raw": 0.64,
+  "change": "+0.65%",
+  "change_raw": 0.65,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 9978.15,
-  "drawdown_now_pct": 0.12,
+  "drawdown_now_pct": 0.11,
   "max_drawdown_pct": 0.25,
   "usd_inr_rate": 93.48,
   "positions": [
@@ -26,16 +26,16 @@
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 54.55,
-      "current": 55.85,
-      "peak_price": 55.85,
+      "current": 55.87,
+      "peak_price": 55.87,
       "trail_stop": 49.09,
-      "dist_to_trail_pct": 12.11,
+      "dist_to_trail_pct": 12.13,
       "units": 54.042809,
       "invested": 2947.89,
-      "pnl": 70.67,
-      "pnl_str": "+70.67",
-      "pnl_pct": 2.4,
-      "pnl_pct_str": "+2.40%",
+      "pnl": 71.48,
+      "pnl_str": "+71.48",
+      "pnl_pct": 2.42,
+      "pnl_pct_str": "+2.42%",
       "confidence": 92,
       "severity": "CRITICAL",
       "days_held": 3,
@@ -144,13 +144,13 @@
       "current": 29.21,
       "peak_price": 29.21,
       "trail_stop": 25.53,
-      "dist_to_trail_pct": 12.62,
+      "dist_to_trail_pct": 12.6,
       "units": 5.590562,
       "invested": 158.58,
-      "pnl": 4.75,
-      "pnl_str": "+4.75",
-      "pnl_pct": 3.0,
-      "pnl_pct_str": "+3.00%",
+      "pnl": 4.72,
+      "pnl_str": "+4.72",
+      "pnl_pct": 2.98,
+      "pnl_pct_str": "+2.98%",
       "confidence": 77,
       "severity": "MEDIUM",
       "days_held": 1,
@@ -184,7 +184,7 @@
     ],
     "values": [
       30.3,
-      29.9,
+      29.8,
       19.8,
       6.3,
       2.2,
@@ -202,12 +202,12 @@
       "DBC"
     ],
     "values": [
-      70.67,
+      71.48,
       4.87,
       0.97,
       -17.45,
       -0.44,
-      4.75
+      4.72
     ]
   },
   "confidence": [
@@ -268,16 +268,16 @@
       "score": 73.0
     },
     {
+      "symbol": "Bonds & Fixed Income",
+      "score": 72.0
+    },
+    {
       "symbol": "Gold & Precious Metals",
       "score": 70.0
     },
     {
       "symbol": "Healthcare & Pharma",
       "score": 69.0
-    },
-    {
-      "symbol": "Bonds & Fixed Income",
-      "score": 67.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -1019,6 +1019,56 @@
       }
     },
     {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 72.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "21 Apr 2026 20:36 UTC",
+      "headline": "Bond Traders Bet on Post-War Calm to Keep Rates in Tight Range",
+      "regions": [
+        "global",
+        "americas",
+        "middle_east"
+      ],
+      "sources": [
+        "Finance",
+        "Markets-Economic Times",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 14.2,
+        "volume_confirmation": 15.2,
+        "source_diversity": 12.3,
+        "recency": 18.9,
+        "geopolitical_severity": 12.2
+      }
+    },
+    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals",
       "confidence": 70.0,
@@ -1120,56 +1170,6 @@
         "source_diversity": 14.0,
         "recency": 19.5,
         "geopolitical_severity": 14.2
-      }
-    },
-    {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
-      "confidence": 67.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "21 Apr 2026 16:00 UTC",
-      "headline": "Tax-the-Rich Boosts Appeal of Bonds That Give Shelter to Wealthy",
-      "regions": [
-        "europe",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Finance",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.5,
-        "volume_confirmation": 14.0,
-        "source_diversity": 12.3,
-        "recency": 18.4,
-        "geopolitical_severity": 11.2
       }
     },
     {
@@ -1438,17 +1438,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Bonds & Fixed Income - 7 articles - MEDIUM / NEUTRAL - Bond Traders Bet on Post-War Calm to Keep Rates in Tight Range"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Gold & Precious Metals - 5 articles - HIGH / NEUTRAL - Gold Falls as Traders Weigh Next Round of US-Iran Peace Talks"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Healthcare & Pharma - 4 articles - HIGH / NEUTRAL - Amazon launches GLP-1 weight loss program, promising 'fast, convenient' access"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Bonds & Fixed Income - 6 articles - MEDIUM / NEUTRAL - Tax-the-Rich Boosts Appeal of Bonds That Give Shelter to Wealthy"
     },
     {
       "tag": "tag-neu",
@@ -1564,63 +1564,63 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4698.9,
+      "price": 4738.5,
       "currency": "USD",
-      "change": -107.7,
-      "change_pct": -2.24,
-      "change_str": "-2.24%",
+      "change": -68.1,
+      "change_pct": -1.42,
+      "change_str": "-1.42%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 92.02,
+      "price": 90.22,
       "currency": "USD",
-      "change": 2.41,
-      "change_pct": 2.69,
-      "change_str": "+2.69%",
+      "change": 0.61,
+      "change_pct": 0.68,
+      "change_str": "+0.68%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 75130.89,
+      "price": 75607.29,
       "currency": "USD",
-      "change": -741.63,
-      "change_pct": -0.98,
-      "change_str": "-0.98%",
+      "change": -265.23,
+      "change_pct": -0.35,
+      "change_str": "-0.35%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.53,
+      "price": 98.38,
       "currency": "USD",
-      "change": 0.48,
-      "change_pct": 0.49,
-      "change_str": "+0.49%",
+      "change": 0.33,
+      "change_pct": 0.34,
+      "change_str": "+0.34%",
       "direction": "up"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 20.47,
+      "price": 19.5,
       "currency": "USD",
-      "change": 1.6,
-      "change_pct": 8.48,
-      "change_str": "+8.48%",
+      "change": 0.63,
+      "change_pct": 3.34,
+      "change_str": "+3.34%",
       "direction": "up"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.12,
+    "drawdown_from_peak_pct": 0.11,
     "portfolio_peak": 9978.15,
-    "vix": 20.47,
+    "vix": 19.5,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -1630,7 +1630,7 @@
       },
       {
         "sector": "Technology & AI / Semiconductors",
-        "weight": 29.9,
+        "weight": 29.8,
         "at_cap": false
       },
       {
@@ -1669,23 +1669,23 @@
           "GLDM": 0.528,
           "ICLN": 0.466,
           "QQQ": 0.423,
-          "XLE": -0.404
+          "XLE": -0.405
         },
         "DBC": {
           "BND": -0.335,
           "DBC": 1.0,
-          "GLDM": -0.396,
+          "GLDM": -0.395,
           "ICLN": -0.509,
           "QQQ": -0.672,
           "XLE": 0.808
         },
         "GLDM": {
           "BND": 0.528,
-          "DBC": -0.396,
+          "DBC": -0.395,
           "GLDM": 1.0,
           "ICLN": 0.656,
           "QQQ": 0.441,
-          "XLE": -0.402
+          "XLE": -0.403
         },
         "ICLN": {
           "BND": 0.466,
@@ -1704,9 +1704,9 @@
           "XLE": -0.689
         },
         "XLE": {
-          "BND": -0.404,
+          "BND": -0.405,
           "DBC": 0.808,
-          "GLDM": -0.402,
+          "GLDM": -0.403,
           "ICLN": -0.514,
           "QQQ": -0.689,
           "XLE": 1.0
@@ -1734,23 +1734,23 @@
     },
     "volatility": {
       "per_ticker": {
-        "XLE": 26.7,
+        "XLE": 26.73,
         "QQQ": 21.72,
         "BND": 4.34,
         "GLDM": 30.1,
         "ICLN": 32.99,
-        "DBC": 22.78
+        "DBC": 22.76
       },
       "portfolio_avg_vol_pct": 23.11,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": -0.64,
+      "benchmark_return_pct": -0.65,
       "benchmark_price_start": 708.72,
-      "benchmark_price_now": 704.15,
+      "benchmark_price_now": 704.08,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": 0.64,
-      "alpha": 1.28
+      "portfolio_return_pct": 0.65,
+      "alpha": 1.3
     },
     "rebalance": {
       "alerts": [
@@ -1760,7 +1760,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": 15.29,
           "action": "TRIM",
-          "amount": 1523.58,
+          "amount": 1524.27,
           "etf_name": "Energy Select Sector SPDR"
         },
         {
@@ -1769,7 +1769,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": 14.85,
           "action": "TRIM",
-          "amount": 1480.08,
+          "amount": 1479.96,
           "etf_name": "Invesco QQQ Trust"
         },
         {
@@ -1778,7 +1778,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -13.36,
           "action": "ADD",
-          "amount": 1331.66,
+          "amount": 1331.8,
           "etf_name": "Invesco DB Commodity Index Tracking Fund"
         },
         {
@@ -1787,7 +1787,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -12.78,
           "action": "ADD",
-          "amount": 1273.89,
+          "amount": 1274.01,
           "etf_name": "iShares Global Clean Energy ETF"
         },
         {
@@ -1796,7 +1796,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -8.74,
           "action": "ADD",
-          "amount": 871.39,
+          "amount": 871.51,
           "etf_name": "SPDR Gold MiniShares Trust"
         }
       ],
@@ -1806,14 +1806,14 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -2674.97,
+          "total_impact": -2675.4,
           "portfolio_loss_pct": -26.84,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -1660.21
+              "impact": -1660.65
             },
             {
               "ticker": "QQQ",
@@ -1843,19 +1843,19 @@
               "ticker": "DBC",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -89.83
+              "impact": -89.82
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -3037.4,
+          "total_impact": -3037.91,
           "portfolio_loss_pct": -30.48,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -1962.06
+              "impact": -1962.59
             },
             {
               "ticker": "QQQ",
@@ -1885,19 +1885,19 @@
               "ticker": "DBC",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -106.16
+              "impact": -106.15
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1065.94,
+          "total_impact": -1066.02,
           "portfolio_loss_pct": -10.7,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -301.86
+              "impact": -301.94
             },
             {
               "ticker": "QQQ",
@@ -1932,14 +1932,14 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -768.28,
+          "total_impact": -768.4,
           "portfolio_loss_pct": -7.71,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -452.78
+              "impact": -452.91
             },
             {
               "ticker": "QQQ",
@@ -1974,14 +1974,14 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1082.75,
+          "total_impact": -1082.9,
           "portfolio_loss_pct": -10.86,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -603.71
+              "impact": -603.87
             },
             {
               "ticker": "QQQ",
@@ -2011,7 +2011,7 @@
               "ticker": "DBC",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -32.67
+              "impact": -32.66
             }
           ]
         }
@@ -2021,10 +2021,10 @@
     }
   },
   "logs": [
-    "2026-04-21 20:04:52 [INFO] AZALYST - status.json generated",
-    "2026-04-21 20:04:52 [INFO] PORTFOLIO - NAV USD 9,966.56 | Return +0.64%",
-    "2026-04-21 20:04:52 [INFO] SIGNALS - 21 active signal buckets in state",
-    "2026-04-21 20:04:52 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC"
+    "2026-04-21 21:11:07 [INFO] AZALYST - status.json generated",
+    "2026-04-21 21:11:07 [INFO] PORTFOLIO - NAV USD 9,967.34 | Return +0.65%",
+    "2026-04-21 21:11:07 [INFO] SIGNALS - 21 active signal buckets in state",
+    "2026-04-21 21:11:07 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC"
   ],
-  "generated_at": "2026-04-21 20:04:52 UTC"
+  "generated_at": "2026-04-21 21:11:06 UTC"
 }
