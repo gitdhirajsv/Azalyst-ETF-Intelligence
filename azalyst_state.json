@@ -2007,34 +2007,35 @@
     }
   },
   "banking_financial": {
-    "sent_at": "2026-04-22T07:12:05.754503+00:00",
-    "confidence": 62,
+    "sent_at": "2026-04-22T13:04:38.384638+00:00",
+    "confidence": 63,
     "sector_label": "Banking & Financial Sector",
     "article_count": 4,
     "severity": "MEDIUM",
     "regions": [
-      "americas",
+      "global",
       "india",
-      "asia_pacific"
+      "americas",
+      "middle_east"
     ],
     "sources": [
-      "Finance",
       "Bloomberg Markets",
-      "Markets-Economic Times"
+      "Markets-Economic Times",
+      "Finance"
     ],
     "top_headlines": [
-      "US Stock Market: Warsh signals push for smaller Fed balance sheet with Treasury coordination",
-      "PBOC Injects Cash Despite Flush Liquidity, Fueling Bond Rally",
+      "ECB Officials Say April Is Too Early to Decide on Rate Hikes",
+      "Moldovan Tycoon Gets 19 Years in Prison in $1B Bank Fraud Case",
       "Bank of America tops estimates as CEO Brian Moynihan says consumer banking is 'healthy'",
       "US Stock Market: Warsh walks tightrope as confirmation hangs on political standoff"
     ],
-    "latest_ts": "2026-04-22T05:52:11+00:00",
+    "latest_ts": "2026-04-22T12:23:49+00:00",
     "confidence_breakdown": {
-      "signal_strength": 9.6,
+      "signal_strength": 9.3,
       "volume_confirmation": 10.8,
       "source_diversity": 12.3,
-      "recency": 17.5,
-      "geopolitical_severity": 12.3
+      "recency": 18.7,
+      "geopolitical_severity": 12.6
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -3294,32 +3295,36 @@
     }
   },
   "europe_equity": {
-    "sent_at": "2026-04-20T14:31:01.355938+00:00",
-    "confidence": 63,
+    "sent_at": "2026-04-22T13:04:35.146650+00:00",
+    "confidence": 74,
     "sector_label": "Europe Equity",
-    "article_count": 3,
+    "article_count": 5,
     "severity": "HIGH",
     "regions": [
-      "middle_east",
-      "europe"
+      "europe",
+      "middle_east"
     ],
     "sources": [
-      "Cointelegraph.com News",
-      "Oilprice.com",
-      "Bloomberg Markets"
+      "Bloomberg Markets",
+      "Defense News",
+      "Markets-Economic Times",
+      "World | Deutsche Welle",
+      "Oilprice.com"
     ],
     "top_headlines": [
-      "ECB\u2019s Pereira Says Economic Damage of Iran War Has Yet to Show",
-      "Germany Moves to Privatize Ex-Gazprom Unit SEFE",
-      "Coinbase rolls out UK crypto-backed loans as FCA shapes rules"
+      "ECB Officials Say April Is Too Early to Decide on Rate Hikes",
+      "Oil Flows via Druzhba Set To Restart Today",
+      "Germany unveils strategy for becoming Europe\u2019s strongest military by 2039",
+      "Russia to block Kazakh oil flows on key pipeline supplying Berlin",
+      "Crude spikes past $100/bbl again on reports of gunfire targeting vessels in Strait of Hormuz"
     ],
-    "latest_ts": "2026-04-20T13:53:17+00:00",
+    "latest_ts": "2026-04-22T13:03:48.613587+00:00",
     "confidence_breakdown": {
-      "signal_strength": 11.2,
-      "volume_confirmation": 8.6,
-      "source_diversity": 9.7,
-      "recency": 18.8,
-      "geopolitical_severity": 15.0
+      "signal_strength": 13.0,
+      "volume_confirmation": 12.5,
+      "source_diversity": 15.3,
+      "recency": 20.0,
+      "geopolitical_severity": 13.5
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -7406,6 +7411,384 @@
           "selection_notes": [
             "broad diversification",
             "diversified exposure",
+            "matches international access"
+          ]
+        }
+      ]
+    }
+  },
+  "asia_pacific|nuclear_uranium": {
+    "sent_at": "2026-04-22T13:04:37.127722+00:00",
+    "confidence": 72,
+    "sector_label": "Nuclear Energy & Uranium + Asia Pacific Equity",
+    "article_count": 7,
+    "severity": "MEDIUM",
+    "regions": [
+      "europe",
+      "asia_pacific",
+      "global",
+      "middle_east"
+    ],
+    "sources": [
+      "Bloomberg Markets",
+      "Defense News",
+      "BBC News",
+      "Markets-Economic Times"
+    ],
+    "top_headlines": [
+      "Vietnam, South Korea Ink Deals on Security, Nuclear Power Plants",
+      "For Germany, the plot thickens toward a US-optional nuclear deterrent",
+      "Global Markets | Australian shares close at two-week low, Cochlear crashes 41%",
+      "Iran War to Impact Shipping Long After It Ends, Japan\u2019s MOL Says",
+      "Hyundai, ST Engineering Bid for $530 Million Thai Frigate Order"
+    ],
+    "latest_ts": "2026-04-22T12:33:43+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 9.9,
+      "volume_confirmation": 15.2,
+      "source_diversity": 15.3,
+      "recency": 19.0,
+      "geopolitical_severity": 12.9
+    },
+    "etf_recommendations": {
+      "selection_method": "global-ranked",
+      "primary": {
+        "name": "iShares MSCI Japan ETF",
+        "ticker": "EWJ",
+        "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+        "exchange": "NYSE",
+        "risk": "Medium",
+        "timeframe": "3\u201312 months",
+        "thesis": "Japan corporate reform + Nikkei record highs. BoJ normalisation adds FX tailwind for USD investors.",
+        "sector_key": "asia_pacific",
+        "market_bucket": "global",
+        "market_scope": "International-listed",
+        "selection_score": 108.5,
+        "selection_notes": [
+          "matches international access"
+        ]
+      },
+      "ranked": [
+        {
+          "name": "iShares MSCI Japan ETF",
+          "ticker": "EWJ",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Japan corporate reform + Nikkei record highs. BoJ normalisation adds FX tailwind for USD investors.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 108.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "iShares MSCI South Korea ETF",
+          "ticker": "EWY",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium-High",
+          "timeframe": "3\u201312 months",
+          "thesis": "Korea: Samsung, SK Hynix, POSCO. Memory chip & EV battery cycle play. Korea discount narrowing.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 101.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Franklin FTSE Asia ex Japan ETF",
+          "ticker": "FLAX",
+          "platform": "Franklin Templeton \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Asia ex-Japan \u2014 India, China, Taiwan, Korea, ASEAN. Catch-up trade vs US equities.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 94.5,
+          "selection_notes": [
+            "broad diversification",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Global X Uranium ETF",
+          "ticker": "URA",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "6\u201324 months",
+          "thesis": "Broader uranium + nuclear supply chain. Cameco, Kazatomprom. Lower concentration than URNM.",
+          "sector_key": "nuclear_uranium",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 94.0,
+          "selection_notes": [
+            "broad exposure",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "iShares China Large-Cap ETF",
+          "ticker": "FXI",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "1\u20136 months",
+          "thesis": "China stimulus-driven re-rating potential. Alibaba, Tencent, BYD. High geopolitical risk.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 87.5,
+          "selection_notes": [
+            "elevated geopolitical risk",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Sprott Uranium Miners ETF",
+          "ticker": "URNM",
+          "platform": "Sprott \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "6\u201324 months",
+          "thesis": "Physical uranium + major miners. Uranium in structural deficit through 2040. Early-cycle.",
+          "sector_key": "nuclear_uranium",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 77.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "matches international access"
+          ]
+        }
+      ],
+      "top_etfs": [
+        {
+          "name": "iShares MSCI Japan ETF",
+          "ticker": "EWJ",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Japan corporate reform + Nikkei record highs. BoJ normalisation adds FX tailwind for USD investors.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 108.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "iShares MSCI South Korea ETF",
+          "ticker": "EWY",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium-High",
+          "timeframe": "3\u201312 months",
+          "thesis": "Korea: Samsung, SK Hynix, POSCO. Memory chip & EV battery cycle play. Korea discount narrowing.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 101.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Franklin FTSE Asia ex Japan ETF",
+          "ticker": "FLAX",
+          "platform": "Franklin Templeton \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Asia ex-Japan \u2014 India, China, Taiwan, Korea, ASEAN. Catch-up trade vs US equities.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 94.5,
+          "selection_notes": [
+            "broad diversification",
+            "matches international access"
+          ]
+        }
+      ],
+      "regional_alternatives": {
+        "India-listed": [
+          {
+            "name": "CPSE ETF",
+            "ticker": "CPSEETF",
+            "note": "NTPC (nuclear expansion) + BHEL included",
+            "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+            "exchange": "NSE",
+            "risk": "Medium",
+            "timeframe": "6\u201324 months",
+            "thesis": "NTPC is building India's first fleet of small modular reactors. CPSE ETF captures this.",
+            "sector_key": "nuclear_uranium",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 69.0,
+            "selection_notes": []
+          }
+        ],
+        "International-listed": [
+          {
+            "name": "iShares MSCI Japan ETF",
+            "ticker": "EWJ",
+            "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Medium",
+            "timeframe": "3\u201312 months",
+            "thesis": "Japan corporate reform + Nikkei record highs. BoJ normalisation adds FX tailwind for USD investors.",
+            "sector_key": "asia_pacific",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 108.5,
+            "selection_notes": [
+              "matches international access"
+            ]
+          },
+          {
+            "name": "iShares MSCI South Korea ETF",
+            "ticker": "EWY",
+            "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Medium-High",
+            "timeframe": "3\u201312 months",
+            "thesis": "Korea: Samsung, SK Hynix, POSCO. Memory chip & EV battery cycle play. Korea discount narrowing.",
+            "sector_key": "asia_pacific",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 101.5,
+            "selection_notes": [
+              "matches international access"
+            ]
+          },
+          {
+            "name": "Franklin FTSE Asia ex Japan ETF",
+            "ticker": "FLAX",
+            "platform": "Franklin Templeton \u2014 IBKR / Schwab",
+            "exchange": "NYSE",
+            "risk": "Medium",
+            "timeframe": "6\u201318 months",
+            "thesis": "Asia ex-Japan \u2014 India, China, Taiwan, Korea, ASEAN. Catch-up trade vs US equities.",
+            "sector_key": "asia_pacific",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 94.5,
+            "selection_notes": [
+              "broad diversification",
+              "matches international access"
+            ]
+          }
+        ]
+      },
+      "india": [
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NTPC (nuclear expansion) + BHEL included",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "6\u201324 months",
+          "thesis": "NTPC is building India's first fleet of small modular reactors. CPSE ETF captures this.",
+          "sector_key": "nuclear_uranium",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 69.0,
+          "selection_notes": []
+        }
+      ],
+      "global": [
+        {
+          "name": "iShares MSCI Japan ETF",
+          "ticker": "EWJ",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Japan corporate reform + Nikkei record highs. BoJ normalisation adds FX tailwind for USD investors.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 108.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "iShares MSCI South Korea ETF",
+          "ticker": "EWY",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium-High",
+          "timeframe": "3\u201312 months",
+          "thesis": "Korea: Samsung, SK Hynix, POSCO. Memory chip & EV battery cycle play. Korea discount narrowing.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 101.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Franklin FTSE Asia ex Japan ETF",
+          "ticker": "FLAX",
+          "platform": "Franklin Templeton \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Asia ex-Japan \u2014 India, China, Taiwan, Korea, ASEAN. Catch-up trade vs US equities.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 94.5,
+          "selection_notes": [
+            "broad diversification",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Global X Uranium ETF",
+          "ticker": "URA",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "6\u201324 months",
+          "thesis": "Broader uranium + nuclear supply chain. Cameco, Kazatomprom. Lower concentration than URNM.",
+          "sector_key": "nuclear_uranium",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 94.0,
+          "selection_notes": [
+            "broad exposure",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "iShares China Large-Cap ETF",
+          "ticker": "FXI",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "1\u20136 months",
+          "thesis": "China stimulus-driven re-rating potential. Alibaba, Tencent, BYD. High geopolitical risk.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 87.5,
+          "selection_notes": [
+            "elevated geopolitical risk",
             "matches international access"
           ]
         }
