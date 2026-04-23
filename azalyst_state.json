@@ -3597,35 +3597,35 @@
     }
   },
   "commodities_mining": {
-    "sent_at": "2026-04-23T03:53:25.787949+00:00",
-    "confidence": 64,
+    "sent_at": "2026-04-23T17:53:58.533321+00:00",
+    "confidence": 62,
     "sector_label": "Commodities & Mining",
-    "article_count": 6,
+    "article_count": 5,
     "severity": "MEDIUM",
     "regions": [
-      "middle_east",
-      "asia_pacific",
-      "global"
+      "global",
+      "middle_east"
     ],
     "sources": [
+      "Cointelegraph.com News",
       "Oilprice.com",
       "Bloomberg Markets",
-      "Cointelegraph.com News"
+      "Markets-Economic Times"
     ],
     "top_headlines": [
-      "Brazil\u2019s Trade Surplus Surges To A Record $14.2 Billion Amid High Oil Prices",
-      "Copper Falls From Highest Since February With Iran War in Limbo",
-      "China \"Aggressively\" Dumps Oil In Tenders As Iran War Reshapes Flows",
-      "Trump-linked American Bitcoin energizes 11,298 new ASICs",
-      "FTSE 100 Miners Lead the Market as Gold Holds Near $4,800"
+      "Freeport delays Grasberg recovery due to wetter ore; shares fall",
+      "Iran War Created Biggest Ever Energy Security Threat, IEA Says",
+      "Avis Stock Collapse Sparks Plunge in Dow Transports It Lifted",
+      "Phishing, deepfakes, supply chain attacks to fuel 2026's biggest crypto hacks: CertiK",
+      "Trump-linked American Bitcoin energizes 11,298 new ASICs"
     ],
-    "latest_ts": "2026-04-23T03:24:06+00:00",
+    "latest_ts": "2026-04-23T17:06:46+00:00",
     "confidence_breakdown": {
-      "signal_strength": 10.6,
-      "volume_confirmation": 14.0,
-      "source_diversity": 9.7,
-      "recency": 19.1,
-      "geopolitical_severity": 11.2
+      "signal_strength": 8.8,
+      "volume_confirmation": 12.5,
+      "source_diversity": 13.1,
+      "recency": 18.5,
+      "geopolitical_severity": 9.7
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -4283,34 +4283,35 @@
     }
   },
   "asia_pacific": {
-    "sent_at": "2026-04-23T12:14:59.045592+00:00",
-    "confidence": 73,
+    "sent_at": "2026-04-23T17:53:54.344299+00:00",
+    "confidence": 72,
     "sector_label": "Asia Pacific Equity",
     "article_count": 5,
     "severity": "HIGH",
     "regions": [
-      "asia_pacific"
+      "asia_pacific",
+      "middle_east"
     ],
     "sources": [
+      "Oilprice.com",
       "Defense News",
-      "Bloomberg Markets",
-      "World | Deutsche Welle",
-      "Markets-Economic Times"
+      "Markets-Economic Times",
+      "Bloomberg Markets"
     ],
     "top_headlines": [
-      "BlackRock\u2019s Shigekawa Sees Risk to Yen on BOJ Miscommunication",
+      "Japan Expert Sees Risk to the Yen",
       "Global Markets | Japan's Nikkei reverses below 60,000 level as profit-taking steps in",
-      "Japan\u2019s Katayama Reiterates Constant Close Contact With US on FX",
-      "Japan: South Korean arrested outside Yasukuni Shrine ceremony for war dead",
+      "Japan\u2019s Katayama on Constant Close Contact With US on FX",
+      "Japan Asks Saudi Arabia for More Oil Supply",
       "US did not move defense system from Korea, general says"
     ],
-    "latest_ts": "2026-04-23T12:13:59.209067+00:00",
+    "latest_ts": "2026-04-23T16:51:35+00:00",
     "confidence_breakdown": {
-      "signal_strength": 14.2,
+      "signal_strength": 13.2,
       "volume_confirmation": 12.5,
-      "source_diversity": 14.0,
-      "recency": 20.0,
-      "geopolitical_severity": 12.6
+      "source_diversity": 14.5,
+      "recency": 18.0,
+      "geopolitical_severity": 14.0
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -9450,6 +9451,482 @@
           "selection_score": 118.5,
           "selection_notes": [
             "clean thematic exposure",
+            "matches international access"
+          ]
+        }
+      ]
+    }
+  },
+  "bonds_fixed_income|gold_precious_metals": {
+    "sent_at": "2026-04-23T17:53:56.450951+00:00",
+    "confidence": 68,
+    "sector_label": "Bonds & Fixed Income + Gold & Precious Metals",
+    "article_count": 7,
+    "severity": "HIGH",
+    "regions": [
+      "global",
+      "middle_east",
+      "europe"
+    ],
+    "sources": [
+      "Bloomberg Markets",
+      "Markets-Economic Times"
+    ],
+    "top_headlines": [
+      "Euro zone short-dated yields climb for fourth day amid Iran-US stalemate",
+      "Treasuries Headed for Tightest Monthly Trading Range Since 2020",
+      "Gold Falls as US-Iran Hormuz Standoff Heightens Inflation Risk",
+      "Be cautious on IT stocks, back energy and telecom: Neeraj Dewan",
+      "India bonds sink as oil tops $100/bbl on US-Iran standoff"
+    ],
+    "latest_ts": "2026-04-23T15:49:41+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 11.4,
+      "volume_confirmation": 15.2,
+      "source_diversity": 11.0,
+      "recency": 16.3,
+      "geopolitical_severity": 14.3
+    },
+    "etf_recommendations": {
+      "selection_method": "global-ranked",
+      "primary": {
+        "name": "Vanguard Total Bond Market ETF",
+        "ticker": "BND",
+        "platform": "Vanguard \u2014 IBKR / Fidelity / Schwab",
+        "exchange": "NASDAQ",
+        "risk": "Low",
+        "timeframe": "6\u201324 months",
+        "thesis": "Broad US bond market. Capital preservation with income. Low correlation to equities.",
+        "sector_key": "bonds_fixed_income",
+        "market_bucket": "global",
+        "market_scope": "International-listed",
+        "selection_score": 139.0,
+        "selection_notes": [
+          "deep liquidity",
+          "strong cost profile",
+          "clean thematic exposure"
+        ]
+      },
+      "ranked": [
+        {
+          "name": "Vanguard Total Bond Market ETF",
+          "ticker": "BND",
+          "platform": "Vanguard \u2014 IBKR / Fidelity / Schwab",
+          "exchange": "NASDAQ",
+          "risk": "Low",
+          "timeframe": "6\u201324 months",
+          "thesis": "Broad US bond market. Capital preservation with income. Low correlation to equities.",
+          "sector_key": "bonds_fixed_income",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 139.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 134.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "iShares 20+ Year Treasury Bond ETF",
+          "ticker": "TLT",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NASDAQ",
+          "risk": "Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Long-duration US Treasuries. Rallies hard when Fed cuts rates or risk-off hits. Classic safe haven.",
+          "sector_key": "bonds_fixed_income",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 123.0,
+          "selection_notes": [
+            "deep liquidity",
+            "clean thematic exposure",
+            "defensive profile"
+          ]
+        },
+        {
+          "name": "iShares TIPS Bond ETF",
+          "ticker": "TIP",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "6\u201324 months",
+          "thesis": "Inflation-protected US bonds. Outperforms nominal bonds when CPI surprises to the upside.",
+          "sector_key": "bonds_fixed_income",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 118.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Bharat Bond ETF \u2014 April 2025",
+          "ticker": "BHARATBOND",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Low",
+          "timeframe": "3\u201312 months",
+          "thesis": "AAA PSU bonds. Safe haven when equities sell off. Capital preservation with 7%+ yield.",
+          "sector_key": "bonds_fixed_income",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 105.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "high implementation stability",
+            "defensive profile"
+          ]
+        },
+        {
+          "name": "Nippon India Gold BeES",
+          "ticker": "GOLDBEES",
+          "note": "Largest Indian gold ETF by AUM",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Tracks physical gold in INR. Double benefit: gold price rise + potential INR depreciation.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 99.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "institutional depth"
+          ]
+        }
+      ],
+      "top_etfs": [
+        {
+          "name": "Vanguard Total Bond Market ETF",
+          "ticker": "BND",
+          "platform": "Vanguard \u2014 IBKR / Fidelity / Schwab",
+          "exchange": "NASDAQ",
+          "risk": "Low",
+          "timeframe": "6\u201324 months",
+          "thesis": "Broad US bond market. Capital preservation with income. Low correlation to equities.",
+          "sector_key": "bonds_fixed_income",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 139.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 134.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "iShares 20+ Year Treasury Bond ETF",
+          "ticker": "TLT",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NASDAQ",
+          "risk": "Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Long-duration US Treasuries. Rallies hard when Fed cuts rates or risk-off hits. Classic safe haven.",
+          "sector_key": "bonds_fixed_income",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 123.0,
+          "selection_notes": [
+            "deep liquidity",
+            "clean thematic exposure",
+            "defensive profile"
+          ]
+        }
+      ],
+      "regional_alternatives": {
+        "India-listed": [
+          {
+            "name": "Bharat Bond ETF \u2014 April 2025",
+            "ticker": "BHARATBOND",
+            "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+            "exchange": "NSE",
+            "risk": "Low",
+            "timeframe": "3\u201312 months",
+            "thesis": "AAA PSU bonds. Safe haven when equities sell off. Capital preservation with 7%+ yield.",
+            "sector_key": "bonds_fixed_income",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 105.5,
+            "selection_notes": [
+              "clean thematic exposure",
+              "high implementation stability",
+              "defensive profile"
+            ]
+          },
+          {
+            "name": "Nippon India Gold BeES",
+            "ticker": "GOLDBEES",
+            "note": "Largest Indian gold ETF by AUM",
+            "platform": "Dhan App",
+            "exchange": "NSE",
+            "risk": "Low-Medium",
+            "timeframe": "3\u201318 months",
+            "thesis": "Tracks physical gold in INR. Double benefit: gold price rise + potential INR depreciation.",
+            "sector_key": "gold_precious_metals",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 99.0,
+            "selection_notes": [
+              "clean thematic exposure",
+              "institutional depth"
+            ]
+          },
+          {
+            "name": "HDFC Gold ETF",
+            "ticker": "HDFCGOLD",
+            "platform": "Dhan App",
+            "exchange": "NSE",
+            "risk": "Low-Medium",
+            "timeframe": "3\u201318 months",
+            "thesis": "Physical gold backed. Very liquid. Safe haven in geopolitical or inflation-driven scenarios.",
+            "sector_key": "gold_precious_metals",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 95.5,
+            "selection_notes": [
+              "clean thematic exposure",
+              "strong trading liquidity",
+              "defensive profile"
+            ]
+          }
+        ],
+        "International-listed": [
+          {
+            "name": "Vanguard Total Bond Market ETF",
+            "ticker": "BND",
+            "platform": "Vanguard \u2014 IBKR / Fidelity / Schwab",
+            "exchange": "NASDAQ",
+            "risk": "Low",
+            "timeframe": "6\u201324 months",
+            "thesis": "Broad US bond market. Capital preservation with income. Low correlation to equities.",
+            "sector_key": "bonds_fixed_income",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 139.0,
+            "selection_notes": [
+              "deep liquidity",
+              "strong cost profile",
+              "clean thematic exposure"
+            ]
+          },
+          {
+            "name": "SPDR Gold MiniShares Trust",
+            "ticker": "GLDM",
+            "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Low-Medium",
+            "timeframe": "3\u201318 months",
+            "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026.",
+            "sector_key": "gold_precious_metals",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 134.0,
+            "selection_notes": [
+              "deep liquidity",
+              "strong cost profile",
+              "clean thematic exposure"
+            ]
+          },
+          {
+            "name": "iShares 20+ Year Treasury Bond ETF",
+            "ticker": "TLT",
+            "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NASDAQ",
+            "risk": "Medium",
+            "timeframe": "3\u201318 months",
+            "thesis": "Long-duration US Treasuries. Rallies hard when Fed cuts rates or risk-off hits. Classic safe haven.",
+            "sector_key": "bonds_fixed_income",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 123.0,
+            "selection_notes": [
+              "deep liquidity",
+              "clean thematic exposure",
+              "defensive profile"
+            ]
+          }
+        ]
+      },
+      "india": [
+        {
+          "name": "Bharat Bond ETF \u2014 April 2025",
+          "ticker": "BHARATBOND",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Low",
+          "timeframe": "3\u201312 months",
+          "thesis": "AAA PSU bonds. Safe haven when equities sell off. Capital preservation with 7%+ yield.",
+          "sector_key": "bonds_fixed_income",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 105.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "high implementation stability",
+            "defensive profile"
+          ]
+        },
+        {
+          "name": "Nippon India Gold BeES",
+          "ticker": "GOLDBEES",
+          "note": "Largest Indian gold ETF by AUM",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Tracks physical gold in INR. Double benefit: gold price rise + potential INR depreciation.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 99.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "institutional depth"
+          ]
+        },
+        {
+          "name": "HDFC Gold ETF",
+          "ticker": "HDFCGOLD",
+          "platform": "Dhan App",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Physical gold backed. Very liquid. Safe haven in geopolitical or inflation-driven scenarios.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 95.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "strong trading liquidity",
+            "defensive profile"
+          ]
+        }
+      ],
+      "global": [
+        {
+          "name": "Vanguard Total Bond Market ETF",
+          "ticker": "BND",
+          "platform": "Vanguard \u2014 IBKR / Fidelity / Schwab",
+          "exchange": "NASDAQ",
+          "risk": "Low",
+          "timeframe": "6\u201324 months",
+          "thesis": "Broad US bond market. Capital preservation with income. Low correlation to equities.",
+          "sector_key": "bonds_fixed_income",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 139.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "SPDR Gold MiniShares Trust",
+          "ticker": "GLDM",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Lowest-cost physical gold ETF (0.10% ER). JPMorgan targets $5,000/oz by Q4 2026.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 134.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "iShares 20+ Year Treasury Bond ETF",
+          "ticker": "TLT",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NASDAQ",
+          "risk": "Medium",
+          "timeframe": "3\u201318 months",
+          "thesis": "Long-duration US Treasuries. Rallies hard when Fed cuts rates or risk-off hits. Classic safe haven.",
+          "sector_key": "bonds_fixed_income",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 123.0,
+          "selection_notes": [
+            "deep liquidity",
+            "clean thematic exposure",
+            "defensive profile"
+          ]
+        },
+        {
+          "name": "iShares TIPS Bond ETF",
+          "ticker": "TIP",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "6\u201324 months",
+          "thesis": "Inflation-protected US bonds. Outperforms nominal bonds when CPI surprises to the upside.",
+          "sector_key": "bonds_fixed_income",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 118.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "VanEck Gold Miners ETF",
+          "ticker": "GDX",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium-High",
+          "timeframe": "3\u20139 months",
+          "thesis": "Gold miners offer 2\u20133x leverage to gold price. If gold surges, miners typically outperform.",
+          "sector_key": "gold_precious_metals",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 94.5,
+          "selection_notes": [
             "matches international access"
           ]
         }
