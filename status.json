@@ -280,10 +280,6 @@
       "score": 75.0
     },
     {
-      "symbol": "Asia Pacific Equity",
-      "score": 72.0
-    },
-    {
       "symbol": "Nuclear Energy & Uranium + Asia Pacific Equity",
       "score": 72.0
     },
@@ -298,6 +294,10 @@
     {
       "symbol": "Bonds & Fixed Income + Gold & Precious Metals",
       "score": 68.0
+    },
+    {
+      "symbol": "Asia Pacific Equity",
+      "score": 66.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -1214,54 +1214,6 @@
       }
     },
     {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 72.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "23 Apr 2026 16:51 UTC",
-      "headline": "Japan Expert Sees Risk to the Yen",
-      "regions": [
-        "asia_pacific",
-        "middle_east"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "Defense News",
-        "Markets-Economic Times",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 13.2,
-        "volume_confirmation": 12.5,
-        "source_diversity": 14.5,
-        "recency": 18.0,
-        "geopolitical_severity": 14.0
-      }
-    },
-    {
       "sector_key": "asia_pacific|nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium + Asia Pacific Equity",
       "confidence": 72.0,
@@ -1459,6 +1411,54 @@
         "source_diversity": 11.0,
         "recency": 16.3,
         "geopolitical_severity": 14.3
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 66.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 4,
+      "latest_at": "23 Apr 2026 21:49 UTC",
+      "headline": "Global Markets | Japan's Nikkei reverses below 60,000 level as profit-taking steps in",
+      "regions": [
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Defense News",
+        "Markets-Economic Times",
+        "Oilprice.com"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 10.0,
+        "volume_confirmation": 10.8,
+        "source_diversity": 14.5,
+        "recency": 19.4,
+        "geopolitical_severity": 12.0
       }
     },
     {
@@ -1847,11 +1847,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Asia Pacific Equity - 5 articles - HIGH / NEUTRAL - Japan Expert Sees Risk to the Yen"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Nuclear Energy & Uranium + Asia Pacific Equity - 7 articles - MEDIUM / NEUTRAL - Vietnam, South Korea Ink Deals on Security, Nuclear Power Plants"
     },
     {
@@ -1868,6 +1863,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Bonds & Fixed Income + Gold & Precious Metals - 7 articles - HIGH / NEUTRAL - Euro zone short-dated yields climb for fourth day amid Iran-US stalemate"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Asia Pacific Equity - 4 articles - MEDIUM / NEUTRAL - Global Markets | Japan's Nikkei reverses below 60,000 level as profit-taking steps in"
     },
     {
       "tag": "tag-neu",
@@ -1951,9 +1951,9 @@
       "region": "EU",
       "price": 24155.45,
       "currency": "EUR",
-      "change": -39.45,
-      "change_pct": -0.16,
-      "change_str": "-0.16%",
+      "change": -115.42,
+      "change_pct": -0.48,
+      "change_str": "-0.48%",
       "direction": "down"
     },
     {
@@ -2015,11 +2015,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77935.96,
+      "price": 78063.54,
       "currency": "USD",
-      "change": -267.14,
-      "change_pct": -0.34,
-      "change_str": "-0.34%",
+      "change": -139.56,
+      "change_pct": -0.18,
+      "change_str": "-0.18%",
       "direction": "down"
     },
     {
@@ -2029,8 +2029,8 @@
       "price": 98.8,
       "currency": "USD",
       "change": 0.21,
-      "change_pct": 0.21,
-      "change_str": "+0.21%",
+      "change_pct": 0.22,
+      "change_str": "+0.22%",
       "direction": "up"
     },
     {
@@ -2459,11 +2459,11 @@
     }
   },
   "logs": [
-    "2026-04-23 21:14:11 [INFO] AZALYST - status.json generated",
-    "2026-04-23 21:14:11 [INFO] PORTFOLIO - NAV USD 10,069.30 | Return +2.34%",
-    "2026-04-23 21:14:11 [INFO] SIGNALS - 28 active signal buckets in state",
-    "2026-04-23 21:14:11 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-23 21:14:11 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-23 22:07:16 [INFO] AZALYST - status.json generated",
+    "2026-04-23 22:07:16 [INFO] PORTFOLIO - NAV USD 10,069.30 | Return +2.34%",
+    "2026-04-23 22:07:16 [INFO] SIGNALS - 28 active signal buckets in state",
+    "2026-04-23 22:07:16 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-23 22:07:16 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-23 21:14:10 UTC"
+  "generated_at": "2026-04-23 22:07:15 UTC"
 }
