@@ -38,7 +38,7 @@
       "pnl_pct_str": "+4.32%",
       "confidence": 92,
       "severity": "CRITICAL",
-      "days_held": 4,
+      "days_held": 5,
       "half_exited": false
     },
     {
@@ -61,7 +61,7 @@
       "pnl_pct_str": "+2.50%",
       "confidence": 94,
       "severity": "CRITICAL",
-      "days_held": 4,
+      "days_held": 5,
       "half_exited": false
     },
     {
@@ -153,7 +153,7 @@
       "pnl_pct_str": "+2.76%",
       "confidence": 78,
       "severity": "MEDIUM",
-      "days_held": 2,
+      "days_held": 3,
       "half_exited": false
     }
   ],
@@ -213,7 +213,7 @@
   "confidence": [
     {
       "symbol": "Defense & Aerospace",
-      "score": 97.0
+      "score": 98.0
     },
     {
       "symbol": "Technology & AI / Semiconductors",
@@ -280,12 +280,12 @@
       "score": 76.0
     },
     {
-      "symbol": "Clean Energy & Renewables",
+      "symbol": "Nuclear Energy & Uranium + Asia Pacific Equity",
       "score": 72.0
     },
     {
-      "symbol": "Nuclear Energy & Uranium + Asia Pacific Equity",
-      "score": 72.0
+      "symbol": "Clean Energy & Renewables",
+      "score": 69.0
     },
     {
       "symbol": "Cybersecurity",
@@ -324,27 +324,27 @@
     {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
-      "confidence": 97.0,
+      "confidence": 98.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 49,
-      "latest_at": "23 Apr 2026 06:00 UTC",
-      "headline": "EU unblocks \u20ac90 billion loan to Ukraine",
+      "article_count": 54,
+      "latest_at": "23 Apr 2026 11:02 UTC",
+      "headline": "Qatar\u2019s $20 Billion LNG Blackout Forces Pakistan Back to the Spot Market",
       "regions": [
-        "europe",
+        "global",
         "india",
         "asia_pacific",
-        "global"
+        "middle_east"
       ],
       "sources": [
-        "Oilprice.com",
         "World | Deutsche Welle",
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
+        "Finance",
+        "Bloomberg Markets",
+        "Oilprice.com"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -369,9 +369,9 @@
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 17.9,
+        "source_diversity": 18.2,
         "recency": 20.0,
-        "geopolitical_severity": 14.9
+        "geopolitical_severity": 14.8
       }
     },
     {
@@ -1213,56 +1213,6 @@
       }
     },
     {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables",
-      "confidence": 72.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "23 Apr 2026 05:02 UTC",
-      "headline": "Rivian hits production milestone for R2 EV ahead of customer deliveries",
-      "regions": [
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "Markets-Economic Times",
-        "Finance",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "ICLN",
-      "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NEWENERGY"
-      ],
-      "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 13.9,
-        "volume_confirmation": 15.2,
-        "source_diversity": 14.8,
-        "recency": 18.1,
-        "geopolitical_severity": 10.6
-      }
-    },
-    {
       "sector_key": "asia_pacific|nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium + Asia Pacific Equity",
       "confidence": 72.0,
@@ -1313,6 +1263,56 @@
         "source_diversity": 15.3,
         "recency": 19.0,
         "geopolitical_severity": 12.9
+      }
+    },
+    {
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables",
+      "confidence": 69.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "23 Apr 2026 09:39 UTC",
+      "headline": "SW Solar Q4 Results: Cons profit surge 143% YoY despite 23% revenue decline",
+      "regions": [
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Markets-Economic Times",
+        "Finance",
+        "Oilprice.com"
+      ],
+      "primary_etf": "ICLN",
+      "top_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NEWENERGY"
+      ],
+      "global_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 13.9,
+        "volume_confirmation": 15.2,
+        "source_diversity": 12.3,
+        "recency": 17.4,
+        "geopolitical_severity": 10.6
       }
     },
     {
@@ -1709,7 +1709,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 49 articles - HIGH / NEUTRAL - EU unblocks \u20ac90 billion loan to Ukraine"
+      "text": "Defense & Aerospace - 54 articles - HIGH / NEUTRAL - Qatar\u2019s $20 Billion LNG Blackout Forces Pakistan Back to the Spot Market"
     },
     {
       "tag": "tag-neu",
@@ -1794,12 +1794,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Clean Energy & Renewables - 7 articles - MEDIUM / NEUTRAL - Rivian hits production milestone for R2 EV ahead of customer deliveries"
+      "text": "Nuclear Energy & Uranium + Asia Pacific Equity - 7 articles - MEDIUM / NEUTRAL - Vietnam, South Korea Ink Deals on Security, Nuclear Power Plants"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Nuclear Energy & Uranium + Asia Pacific Equity - 7 articles - MEDIUM / NEUTRAL - Vietnam, South Korea Ink Deals on Security, Nuclear Power Plants"
+      "text": "Clean Energy & Renewables - 7 articles - MEDIUM / NEUTRAL - SW Solar Q4 Results: Cons profit surge 143% YoY despite 23% revenue decline"
     },
     {
       "tag": "tag-neu",
@@ -1880,22 +1880,22 @@
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10393.67,
+      "price": 10387.83,
       "currency": "GBP",
-      "change": -82.83,
-      "change_pct": -0.79,
-      "change_str": "-0.79%",
+      "change": -88.67,
+      "change_pct": -0.85,
+      "change_str": "-0.85%",
       "direction": "down"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 24085.58,
+      "price": 24080.88,
       "currency": "EUR",
-      "change": -109.32,
-      "change_pct": -0.45,
-      "change_str": "-0.45%",
+      "change": -114.02,
+      "change_pct": -0.47,
+      "change_str": "-0.47%",
       "direction": "down"
     },
     {
@@ -1924,66 +1924,66 @@
       "label": "Nifty 50",
       "ticker": "^NSEI",
       "region": "IN",
-      "price": 24161.0,
+      "price": 24173.05,
       "currency": "INR",
-      "change": -217.1,
-      "change_pct": -0.89,
-      "change_str": "-0.89%",
+      "change": -205.05,
+      "change_pct": -0.84,
+      "change_str": "-0.84%",
       "direction": "down"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4717.0,
+      "price": 4707.8,
       "currency": "USD",
-      "change": -15.5,
-      "change_pct": -0.33,
-      "change_str": "-0.33%",
+      "change": -24.7,
+      "change_pct": -0.52,
+      "change_str": "-0.52%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 94.58,
+      "price": 94.36,
       "currency": "USD",
-      "change": 1.62,
-      "change_pct": 1.74,
-      "change_str": "+1.74%",
+      "change": 1.4,
+      "change_pct": 1.51,
+      "change_str": "+1.51%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77634.97,
+      "price": 77460.24,
       "currency": "USD",
-      "change": -568.13,
-      "change_pct": -0.73,
-      "change_str": "-0.73%",
+      "change": -742.86,
+      "change_pct": -0.95,
+      "change_str": "-0.95%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.71,
+      "price": 98.79,
       "currency": "USD",
-      "change": 0.12,
-      "change_pct": 0.12,
-      "change_str": "+0.12%",
+      "change": 0.2,
+      "change_pct": 0.2,
+      "change_str": "+0.20%",
       "direction": "up"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 19.72,
+      "price": 19.69,
       "currency": "USD",
-      "change": 0.8,
-      "change_pct": 4.23,
-      "change_str": "+4.23%",
+      "change": 0.77,
+      "change_pct": 4.07,
+      "change_str": "+4.07%",
       "direction": "up"
     }
   ],
@@ -1991,7 +1991,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.05,
     "portfolio_peak": 10075.97,
-    "vix": 19.72,
+    "vix": 19.69,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -2410,10 +2410,10 @@
     }
   },
   "logs": [
-    "2026-04-23 09:49:41 [INFO] AZALYST - status.json generated",
-    "2026-04-23 09:49:41 [INFO] PORTFOLIO - NAV USD 10,070.48 | Return +2.35%",
-    "2026-04-23 09:49:41 [INFO] SIGNALS - 27 active signal buckets in state",
-    "2026-04-23 09:49:41 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC"
+    "2026-04-23 11:02:59 [INFO] AZALYST - status.json generated",
+    "2026-04-23 11:02:59 [INFO] PORTFOLIO - NAV USD 10,070.48 | Return +2.35%",
+    "2026-04-23 11:02:59 [INFO] SIGNALS - 27 active signal buckets in state",
+    "2026-04-23 11:02:59 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC"
   ],
-  "generated_at": "2026-04-23 09:49:40 UTC"
+  "generated_at": "2026-04-23 11:02:58 UTC"
 }
