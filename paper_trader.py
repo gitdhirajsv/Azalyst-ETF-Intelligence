@@ -642,10 +642,8 @@ class PaperPortfolio:
         slot_scalar = 1.0 if len(self.open_positions) < 3 else 0.9
         empirical_scalar = self._empirical_edge_multiplier(severity)
         fraction = base_fraction * confidence_scalar * slot_scalar * empirical_scalar
-        return round(
-            min(max(fraction, MIN_RISK_BUDGET_PCT), MAX_SINGLE_POSITION_PCT),
-            4,
-        )
+        # Ensure the calculated fraction does not exceed the single position cap
+        return round(min(fraction, MAX_SINGLE_POSITION_PCT), 4)
 
     def _select_rotation_candidate(self, signal: Dict) -> Optional[Position]:
         incoming_conf   = signal.get("confidence", 0)
