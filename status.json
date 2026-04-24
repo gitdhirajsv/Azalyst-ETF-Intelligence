@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 10067.79,
+  "portfolio_value": 10067.75,
   "total_deposited": 9824.57,
-  "cash": 446.29,
+  "cash": 364.35,
   "monthly_reserve": 0.0,
-  "market_value": 9621.5,
-  "total_invested": 9414.04,
-  "unrealised_pnl": 207.45,
-  "unrealised_str": "+207.45",
+  "market_value": 9703.39,
+  "total_invested": 9495.98,
+  "unrealised_pnl": 207.41,
+  "unrealised_str": "+207.41",
   "realised_pnl": 35.76,
   "realised_str": "+35.76",
   "change": "+2.48%",
@@ -38,7 +38,7 @@
       "pnl_pct_str": "+4.91%",
       "confidence": 96,
       "severity": "CRITICAL",
-      "days_held": 5,
+      "days_held": 6,
       "half_exited": true
     },
     {
@@ -61,7 +61,7 @@
       "pnl_pct_str": "+2.08%",
       "confidence": 94,
       "severity": "CRITICAL",
-      "days_held": 5,
+      "days_held": 6,
       "half_exited": false
     },
     {
@@ -71,17 +71,17 @@
       "sector": "Bonds & Fixed Income",
       "platform": "Vanguard \u2014 IBKR / Fidelity / Schwab",
       "exchange": "NASDAQ",
-      "entry": 73.22,
+      "entry": 73.24,
       "current": 73.73,
       "peak_price": 73.79,
-      "trail_stop": 65.9,
-      "dist_to_trail_pct": 10.62,
-      "units": 32.547616,
-      "invested": 2383.2,
-      "pnl": 16.54,
-      "pnl_str": "+16.54",
-      "pnl_pct": 0.69,
-      "pnl_pct_str": "+0.69%",
+      "trail_stop": 65.92,
+      "dist_to_trail_pct": 10.6,
+      "units": 33.658404,
+      "invested": 2465.14,
+      "pnl": 16.49,
+      "pnl_str": "+16.49",
+      "pnl_pct": 0.67,
+      "pnl_pct_str": "+0.67%",
       "confidence": 88,
       "severity": "HIGH",
       "days_held": 4,
@@ -185,11 +185,11 @@
     "values": [
       24.6,
       29.9,
-      23.8,
+      24.6,
       11.1,
       2.7,
       3.5,
-      4.4
+      3.6
     ]
   },
   "pnl": {
@@ -204,7 +204,7 @@
     "values": [
       116.02,
       61.18,
-      16.54,
+      16.49,
       -10.09,
       9.62,
       14.19
@@ -245,6 +245,10 @@
     },
     {
       "symbol": "Europe Equity + Gold & Precious Metals",
+      "score": 87.0
+    },
+    {
+      "symbol": "Bonds & Fixed Income + Gold & Precious Metals",
       "score": 87.0
     },
     {
@@ -301,10 +305,6 @@
     },
     {
       "symbol": "Clean Energy & Renewables",
-      "score": 68.0
-    },
-    {
-      "symbol": "Bonds & Fixed Income + Gold & Precious Metals",
       "score": 68.0
     },
     {
@@ -646,25 +646,26 @@
       "sector_key": "banking_financial|europe_equity",
       "sector_label": "Europe Equity + Banking & Financial Sector",
       "confidence": 88.0,
-      "severity": "HIGH",
+      "severity": "CRITICAL",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 9,
-      "latest_at": "22 Apr 2026 14:56 UTC",
-      "headline": "ECB\u2019s Cipollone Not Worried About Delay of Digital Euro Vote",
+      "latest_at": "24 Apr 2026 11:39 UTC",
+      "headline": "Kazimir Says Slight ECB Rate Increase May Be Needed on War",
       "regions": [
-        "europe",
         "middle_east",
-        "global"
+        "europe",
+        "americas",
+        "asia_pacific"
       ],
       "sources": [
-        "World | Deutsche Welle",
+        "Oilprice.com",
         "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Oilprice.com"
+        "World | Deutsche Welle",
+        "Defense News"
       ],
       "primary_etf": "XLF",
       "top_etfs": [
@@ -687,7 +688,7 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 21.2,
+        "signal_strength": 21.0,
         "volume_confirmation": 17.1,
         "source_diversity": 15.3,
         "recency": 20.0,
@@ -798,6 +799,61 @@
         "volume_confirmation": 18.7,
         "source_diversity": 16.0,
         "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "bonds_fixed_income|gold_precious_metals",
+      "sector_label": "Bonds & Fixed Income + Gold & Precious Metals",
+      "confidence": 87.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "24 Apr 2026 10:58 UTC",
+      "headline": "Top Indian Private Credit Borrower Delays Paying 20.75% Bond",
+      "regions": [
+        "global",
+        "middle_east",
+        "europe",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Cointelegraph.com News",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "GLDM",
+        "TLT"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "BND",
+        "GLDM",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.7,
+        "volume_confirmation": 19.4,
+        "source_diversity": 12.4,
+        "recency": 18.6,
         "geopolitical_severity": 15.0
       }
     },
@@ -1514,58 +1570,6 @@
       }
     },
     {
-      "sector_key": "bonds_fixed_income|gold_precious_metals",
-      "sector_label": "Bonds & Fixed Income + Gold & Precious Metals",
-      "confidence": 68.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "23 Apr 2026 15:49 UTC",
-      "headline": "Euro zone short-dated yields climb for fourth day amid Iran-US stalemate",
-      "regions": [
-        "global",
-        "middle_east",
-        "europe"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "GLDM",
-        "TLT"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "BND",
-        "GLDM",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.4,
-        "volume_confirmation": 15.2,
-        "source_diversity": 11.0,
-        "recency": 16.3,
-        "geopolitical_severity": 14.3
-      }
-    },
-    {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income",
       "confidence": 67.0,
@@ -1844,7 +1848,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Europe Equity + Banking & Financial Sector - 9 articles - HIGH / NEUTRAL - ECB\u2019s Cipollone Not Worried About Delay of Digital Euro Vote"
+      "text": "Europe Equity + Banking & Financial Sector - 9 articles - CRITICAL / NEUTRAL - Kazimir Says Slight ECB Rate Increase May Be Needed on War"
     },
     {
       "tag": "tag-neu",
@@ -1855,6 +1859,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Europe Equity + Gold & Precious Metals - 11 articles - HIGH / NEUTRAL - Euro zone short-dated yields climb for fourth day amid Iran-US stalemate"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Bonds & Fixed Income + Gold & Precious Metals - 12 articles - HIGH / NEUTRAL - Top Indian Private Credit Borrower Delays Paying 20.75% Bond"
     },
     {
       "tag": "tag-neu",
@@ -1929,11 +1938,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Bonds & Fixed Income + Gold & Precious Metals - 7 articles - HIGH / NEUTRAL - Euro zone short-dated yields climb for fourth day amid Iran-US stalemate"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Bonds & Fixed Income - 6 articles - MEDIUM / NEUTRAL - US housing market faces volatility despite decline in mortgage rates"
     },
     {
@@ -1995,23 +1999,23 @@
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10383.4,
+      "price": 10441.43,
       "currency": "GBP",
-      "change": -73.6,
-      "change_pct": -0.7,
-      "change_str": "-0.70%",
+      "change": -15.57,
+      "change_pct": -0.15,
+      "change_str": "-0.15%",
       "direction": "down"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 24045.41,
+      "price": 24292.91,
       "currency": "EUR",
-      "change": -110.04,
-      "change_pct": -0.46,
-      "change_str": "-0.46%",
-      "direction": "down"
+      "change": 137.46,
+      "change_pct": 0.57,
+      "change_str": "+0.57%",
+      "direction": "up"
     },
     {
       "label": "Nikkei 225",
@@ -2050,55 +2054,55 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4699.6,
+      "price": 4730.0,
       "currency": "USD",
-      "change": -5.5,
-      "change_pct": -0.12,
-      "change_str": "-0.12%",
-      "direction": "down"
+      "change": 24.9,
+      "change_pct": 0.53,
+      "change_str": "+0.53%",
+      "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 97.63,
+      "price": 93.76,
       "currency": "USD",
-      "change": 1.78,
-      "change_pct": 1.86,
-      "change_str": "+1.86%",
-      "direction": "up"
+      "change": -2.09,
+      "change_pct": -2.18,
+      "change_str": "-2.18%",
+      "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77464.79,
+      "price": 78291.99,
       "currency": "USD",
-      "change": -804.16,
-      "change_pct": -1.03,
-      "change_str": "-1.03%",
-      "direction": "down"
+      "change": 23.04,
+      "change_pct": 0.03,
+      "change_str": "+0.03%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.79,
+      "price": 98.57,
       "currency": "USD",
-      "change": -0.01,
-      "change_pct": -0.01,
-      "change_str": "-0.01%",
+      "change": -0.23,
+      "change_pct": -0.23,
+      "change_str": "-0.23%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 19.27,
+      "price": 18.53,
       "currency": "USD",
-      "change": -0.04,
-      "change_pct": -0.21,
-      "change_str": "-0.21%",
+      "change": -0.78,
+      "change_pct": -4.04,
+      "change_str": "-4.04%",
       "direction": "down"
     }
   ],
@@ -2106,7 +2110,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.07,
     "portfolio_peak": 10075.11,
-    "vix": 19.27,
+    "vix": 18.53,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -2115,13 +2119,13 @@
         "at_cap": false
       },
       {
-        "sector": "Energy / Oil & Gas",
+        "sector": "Bonds & Fixed Income",
         "weight": 24.6,
         "at_cap": false
       },
       {
-        "sector": "Bonds & Fixed Income",
-        "weight": 23.8,
+        "sector": "Energy / Oil & Gas",
+        "weight": 24.6,
         "at_cap": false
       },
       {
@@ -2264,8 +2268,17 @@
           "target_weight_pct": 15.0,
           "drift_pct": -11.54,
           "action": "ADD",
-          "amount": 1161.43,
+          "amount": 1161.42,
           "etf_name": "Invesco DB Commodity Index Tracking Fund"
+        },
+        {
+          "ticker": "BND",
+          "actual_weight_pct": 24.65,
+          "target_weight_pct": 15.0,
+          "drift_pct": 9.65,
+          "action": "TRIM",
+          "amount": 971.47,
+          "etf_name": "Vanguard Total Bond Market ETF"
         },
         {
           "ticker": "XLE",
@@ -2273,25 +2286,16 @@
           "target_weight_pct": 15.0,
           "drift_pct": 9.62,
           "action": "TRIM",
-          "amount": 968.11,
+          "amount": 968.12,
           "etf_name": "Energy Select Sector SPDR"
         },
         {
-          "ticker": "BND",
-          "actual_weight_pct": 23.84,
-          "target_weight_pct": 15.0,
-          "drift_pct": 8.84,
-          "action": "TRIM",
-          "amount": 889.57,
-          "etf_name": "Vanguard Total Bond Market ETF"
-        },
-        {
           "ticker": "CASH",
-          "actual_weight_pct": 4.43,
+          "actual_weight_pct": 3.62,
           "target_weight_pct": 10.0,
-          "drift_pct": -5.57,
+          "drift_pct": -6.38,
           "action": "RAISE",
-          "amount": 560.49,
+          "amount": 642.42,
           "etf_name": "Cash Reserve"
         }
       ],
@@ -2301,8 +2305,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -2349.17,
-          "portfolio_loss_pct": -23.33,
+          "total_impact": -2340.98,
+          "portfolio_loss_pct": -23.25,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -2320,7 +2324,7 @@
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 10.0,
-              "impact": 239.97
+              "impact": 248.16
             },
             {
               "ticker": "GLDM",
@@ -2343,8 +2347,8 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -2799.89,
-          "portfolio_loss_pct": -27.81,
+          "total_impact": -2795.79,
+          "portfolio_loss_pct": -27.77,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -2362,7 +2366,7 @@
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 5.0,
-              "impact": 119.99
+              "impact": 124.08
             },
             {
               "ticker": "GLDM",
@@ -2385,8 +2389,8 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1118.56,
-          "portfolio_loss_pct": -11.11,
+          "total_impact": -1128.38,
+          "portfolio_loss_pct": -11.21,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -2404,7 +2408,7 @@
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": -12.0,
-              "impact": -287.97
+              "impact": -297.8
             },
             {
               "ticker": "GLDM",
@@ -2427,8 +2431,8 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -772.17,
-          "portfolio_loss_pct": -7.67,
+          "total_impact": -770.53,
+          "portfolio_loss_pct": -7.65,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -2446,7 +2450,7 @@
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 2.0,
-              "impact": 47.99
+              "impact": 49.63
             },
             {
               "ticker": "GLDM",
@@ -2469,8 +2473,8 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -971.02,
-          "portfolio_loss_pct": -9.64,
+          "total_impact": -967.75,
+          "portfolio_loss_pct": -9.61,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -2488,7 +2492,7 @@
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 4.0,
-              "impact": 95.99
+              "impact": 99.27
             },
             {
               "ticker": "GLDM",
@@ -2512,15 +2516,15 @@
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -27.81
+      "worst_loss_pct": -27.77
     }
   },
   "logs": [
-    "2026-04-24 10:05:57 [INFO] AZALYST - status.json generated",
-    "2026-04-24 10:05:57 [INFO] PORTFOLIO - NAV USD 10,067.79 | Return +2.48%",
-    "2026-04-24 10:05:57 [INFO] SIGNALS - 29 active signal buckets in state",
-    "2026-04-24 10:05:57 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-24 10:05:57 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-24 11:40:31 [INFO] AZALYST - status.json generated",
+    "2026-04-24 11:40:31 [INFO] PORTFOLIO - NAV USD 10,067.75 | Return +2.48%",
+    "2026-04-24 11:40:31 [INFO] SIGNALS - 29 active signal buckets in state",
+    "2026-04-24 11:40:31 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-24 11:40:31 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-24 10:05:56 UTC"
+  "generated_at": "2026-04-24 11:40:30 UTC"
 }
