@@ -276,12 +276,12 @@
       "score": 76.0
     },
     {
-      "symbol": "Gold & Precious Metals",
-      "score": 75.0
-    },
-    {
       "symbol": "Nuclear Energy & Uranium + Asia Pacific Equity",
       "score": 72.0
+    },
+    {
+      "symbol": "Gold & Precious Metals",
+      "score": 70.0
     },
     {
       "symbol": "Cybersecurity",
@@ -289,6 +289,10 @@
     },
     {
       "symbol": "Banking & Financial Sector",
+      "score": 68.0
+    },
+    {
+      "symbol": "Commodities & Mining",
       "score": 68.0
     },
     {
@@ -317,10 +321,6 @@
     },
     {
       "symbol": "Bonds & Fixed Income",
-      "score": 62.0
-    },
-    {
-      "symbol": "Commodities & Mining",
       "score": 62.0
     }
   ],
@@ -1161,59 +1161,6 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 75.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "23 Apr 2026 12:35 UTC",
-      "headline": "BlackRock\u2019s Shigekawa Sees Risk to Yen on BOJ Miscommunication",
-      "regions": [
-        "middle_east",
-        "europe",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Oilprice.com",
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.7,
-        "volume_confirmation": 16.2,
-        "source_diversity": 13.1,
-        "recency": 16.8,
-        "geopolitical_severity": 14.4
-      }
-    },
-    {
       "sector_key": "asia_pacific|nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium + Asia Pacific Equity",
       "confidence": 72.0,
@@ -1264,6 +1211,57 @@
         "source_diversity": 15.3,
         "recency": 19.0,
         "geopolitical_severity": 12.9
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 70.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "24 Apr 2026 00:06 UTC",
+      "headline": "Gold Falls as US-Iran Hormuz Standoff Heightens Inflation Risk",
+      "regions": [
+        "middle_east",
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.4,
+        "volume_confirmation": 12.5,
+        "source_diversity": 12.3,
+        "recency": 19.9,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1359,6 +1357,55 @@
         "source_diversity": 12.4,
         "recency": 20.0,
         "geopolitical_severity": 13.8
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 68.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "24 Apr 2026 00:00 UTC",
+      "headline": "Lithium Supply Tightens as Low Prices Stall New Projects",
+      "regions": [
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "Bloomberg Markets",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.5,
+        "volume_confirmation": 14.0,
+        "source_diversity": 13.1,
+        "recency": 19.7,
+        "geopolitical_severity": 10.2
       }
     },
     {
@@ -1707,55 +1754,6 @@
         "recency": 19.4,
         "geopolitical_severity": 10.6
       }
-    },
-    {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 62.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "23 Apr 2026 17:06 UTC",
-      "headline": "Freeport delays Grasberg recovery due to wetter ore; shares fall",
-      "regions": [
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Oilprice.com",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 8.8,
-        "volume_confirmation": 12.5,
-        "source_diversity": 13.1,
-        "recency": 18.5,
-        "geopolitical_severity": 9.7
-      }
     }
   ],
   "articles": [
@@ -1842,12 +1840,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals - 8 articles - HIGH / NEUTRAL - BlackRock\u2019s Shigekawa Sees Risk to Yen on BOJ Miscommunication"
+      "text": "Nuclear Energy & Uranium + Asia Pacific Equity - 7 articles - MEDIUM / NEUTRAL - Vietnam, South Korea Ink Deals on Security, Nuclear Power Plants"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Nuclear Energy & Uranium + Asia Pacific Equity - 7 articles - MEDIUM / NEUTRAL - Vietnam, South Korea Ink Deals on Security, Nuclear Power Plants"
+      "text": "Gold & Precious Metals - 5 articles - MEDIUM / NEUTRAL - Gold Falls as US-Iran Hormuz Standoff Heightens Inflation Risk"
     },
     {
       "tag": "tag-neu",
@@ -1858,6 +1856,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Banking & Financial Sector - 4 articles - HIGH / NEUTRAL - AI failure could trigger the next financial crisis, warns Elizabeth Warren"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Commodities & Mining - 6 articles - MEDIUM / NEUTRAL - Lithium Supply Tightens as Low Prices Stall New Projects"
     },
     {
       "tag": "tag-neu",
@@ -1893,11 +1896,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Bonds & Fixed Income - 4 articles - MEDIUM / NEUTRAL - AI Junk-Bond Binge Brings Rare Early Repayments to Sweeten Deals"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Commodities & Mining - 5 articles - MEDIUM / NEUTRAL - Freeport delays Grasberg recovery due to wetter ore; shares fall"
     }
   ],
   "market_snapshot": [
@@ -1993,9 +1991,9 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4708.3,
+      "price": 4708.2,
       "currency": "USD",
-      "change": -24.2,
+      "change": -24.3,
       "change_pct": -0.51,
       "change_str": "-0.51%",
       "direction": "down"
@@ -2004,33 +2002,33 @@
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 97.13,
+      "price": 96.82,
       "currency": "USD",
-      "change": 4.17,
-      "change_pct": 4.49,
-      "change_str": "+4.49%",
+      "change": 3.86,
+      "change_pct": 4.15,
+      "change_str": "+4.15%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78126.2,
+      "price": 78314.01,
       "currency": "USD",
-      "change": -76.9,
-      "change_pct": -0.1,
-      "change_str": "-0.10%",
-      "direction": "down"
+      "change": 110.91,
+      "change_pct": 0.14,
+      "change_str": "+0.14%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.8,
+      "price": 98.83,
       "currency": "USD",
-      "change": 0.21,
-      "change_pct": 0.21,
-      "change_str": "+0.21%",
+      "change": 0.24,
+      "change_pct": 0.24,
+      "change_str": "+0.24%",
       "direction": "up"
     },
     {
@@ -2459,11 +2457,11 @@
     }
   },
   "logs": [
-    "2026-04-23 23:13:22 [INFO] AZALYST - status.json generated",
-    "2026-04-23 23:13:22 [INFO] PORTFOLIO - NAV USD 10,069.30 | Return +2.34%",
-    "2026-04-23 23:13:22 [INFO] SIGNALS - 28 active signal buckets in state",
-    "2026-04-23 23:13:22 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-23 23:13:22 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-24 00:08:45 [INFO] AZALYST - status.json generated",
+    "2026-04-24 00:08:45 [INFO] PORTFOLIO - NAV USD 10,069.30 | Return +2.34%",
+    "2026-04-24 00:08:45 [INFO] SIGNALS - 28 active signal buckets in state",
+    "2026-04-24 00:08:45 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-24 00:08:45 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-23 23:13:22 UTC"
+  "generated_at": "2026-04-24 00:08:45 UTC"
 }
