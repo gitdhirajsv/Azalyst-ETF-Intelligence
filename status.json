@@ -38,7 +38,7 @@
       "pnl_pct_str": "+4.37%",
       "confidence": 96,
       "severity": "CRITICAL",
-      "days_held": 6,
+      "days_held": 7,
       "half_exited": true
     },
     {
@@ -61,7 +61,7 @@
       "pnl_pct_str": "+4.02%",
       "confidence": 94,
       "severity": "CRITICAL",
-      "days_held": 6,
+      "days_held": 7,
       "half_exited": false
     },
     {
@@ -153,7 +153,7 @@
       "pnl_pct_str": "+4.13%",
       "confidence": 78,
       "severity": "MEDIUM",
-      "days_held": 4,
+      "days_held": 5,
       "half_exited": false
     }
   ],
@@ -236,10 +236,6 @@
       "score": 90.0
     },
     {
-      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
-      "score": 88.0
-    },
-    {
       "symbol": "Europe Equity + Banking & Financial Sector",
       "score": 88.0
     },
@@ -260,6 +256,10 @@
       "score": 87.0
     },
     {
+      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
+      "score": 87.0
+    },
+    {
       "symbol": "Europe Equity + Gold & Precious Metals",
       "score": 87.0
     },
@@ -272,16 +272,16 @@
       "score": 82.0
     },
     {
+      "symbol": "Crypto & Digital Assets",
+      "score": 81.0
+    },
+    {
       "symbol": "Emerging Markets + Banking & Financial Sector",
       "score": 80.0
     },
     {
       "symbol": "Europe Equity",
       "score": 78.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 77.0
     },
     {
       "symbol": "Real Estate & REITs + Bonds & Fixed Income",
@@ -316,15 +316,15 @@
       "score": 67.0
     },
     {
-      "symbol": "Nuclear Energy & Uranium",
-      "score": 65.0
-    },
-    {
       "symbol": "Real Estate & REITs",
       "score": 63.0
     },
     {
       "symbol": "Healthcare & Pharma",
+      "score": 62.0
+    },
+    {
+      "symbol": "Nuclear Energy & Uranium",
       "score": 62.0
     },
     {
@@ -651,61 +651,6 @@
       }
     },
     {
-      "sector_key": "banking_financial|gold_precious_metals",
-      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
-      "confidence": 88.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "25 Apr 2026 06:04 UTC",
-      "headline": "Fmr. Fed Governor Betsy Duke on Warsh's Future, Rates",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "middle_east",
-        "americas"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "GOLDBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD",
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 21.2,
-        "volume_confirmation": 18.7,
-        "source_diversity": 13.4,
-        "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "banking_financial|europe_equity",
       "sector_label": "Europe Equity + Banking & Financial Sector",
       "confidence": 88.0,
@@ -966,6 +911,61 @@
       }
     },
     {
+      "sector_key": "banking_financial|gold_precious_metals",
+      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
+      "confidence": 87.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "25 Apr 2026 10:37 UTC",
+      "headline": "Fmr. Fed Governor Betsy Duke on Warsh's Future, Rates",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "global",
+        "americas"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Cointelegraph.com News",
+        "Markets-Economic Times",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "GOLDBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD",
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 20.7,
+        "volume_confirmation": 18.7,
+        "source_diversity": 13.4,
+        "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "europe_equity|gold_precious_metals",
       "sector_label": "Europe Equity + Gold & Precious Metals",
       "confidence": 87.0,
@@ -1128,6 +1128,51 @@
       }
     },
     {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 81.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 22,
+      "latest_at": "25 Apr 2026 06:43 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "africa",
+        "global",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 8.5,
+        "recency": 13.5,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "banking_financial|emerging_markets",
       "sector_label": "Emerging Markets + Banking & Financial Sector",
       "confidence": 80.0,
@@ -1192,19 +1237,19 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 7,
-      "latest_at": "25 Apr 2026 06:04 UTC",
+      "latest_at": "25 Apr 2026 10:37 UTC",
       "headline": "ECB signs standards deals to cut digital euro integration costs",
       "regions": [
-        "europe",
         "asia_pacific",
+        "middle_east",
         "global",
-        "middle_east"
+        "europe"
       ],
       "sources": [
         "Cointelegraph.com News",
-        "Defense News",
+        "Markets-Economic Times",
         "BBC News",
-        "Markets-Economic Times"
+        "World | Deutsche Welle"
       ],
       "primary_etf": "VGK",
       "top_etfs": [
@@ -1229,51 +1274,6 @@
         "source_diversity": 14.1,
         "recency": 20.0,
         "geopolitical_severity": 14.4
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 77.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 22,
-      "latest_at": "24 Apr 2026 21:55 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "asia_pacific",
-        "europe",
-        "india",
-        "global"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 8.5,
-        "recency": 8.8,
-        "geopolitical_severity": 15.0
       }
     },
     {
@@ -1681,57 +1681,6 @@
       }
     },
     {
-      "sector_key": "nuclear_uranium",
-      "sector_label": "Nuclear Energy & Uranium",
-      "confidence": 65.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "24 Apr 2026 21:11 UTC",
-      "headline": "IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand",
-      "regions": [
-        "global",
-        "middle_east",
-        "americas"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "URA",
-      "top_etfs": [
-        "URA",
-        "URNM",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "URA",
-        "URNM",
-        "SRUUF"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 16.0,
-        "volume_confirmation": 12.5,
-        "source_diversity": 14.0,
-        "recency": 8.2,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "real_estate_reit",
       "sector_label": "Real Estate & REITs",
       "confidence": 63.0,
@@ -1829,6 +1778,57 @@
       }
     },
     {
+      "sector_key": "nuclear_uranium",
+      "sector_label": "Nuclear Energy & Uranium",
+      "confidence": 62.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "24 Apr 2026 21:11 UTC",
+      "headline": "IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand",
+      "regions": [
+        "middle_east",
+        "global",
+        "americas"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "Oilprice.com"
+      ],
+      "primary_etf": "URA",
+      "top_etfs": [
+        "URA",
+        "URNM",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "URA",
+        "URNM",
+        "SRUUF"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 16.0,
+        "volume_confirmation": 12.5,
+        "source_diversity": 14.0,
+        "recency": 5.2,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 62.0,
@@ -1913,11 +1913,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Banking & Financial Sector + Gold & Precious Metals - 11 articles - HIGH / NEUTRAL - Fmr. Fed Governor Betsy Duke on Warsh's Future, Rates"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Europe Equity + Banking & Financial Sector - 9 articles - CRITICAL / NEUTRAL - Kazimir Says Slight ECB Rate Increase May Be Needed on War"
     },
     {
@@ -1943,6 +1938,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Banking & Financial Sector + Gold & Precious Metals - 11 articles - HIGH / NEUTRAL - Fmr. Fed Governor Betsy Duke on Warsh's Future, Rates"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Europe Equity + Gold & Precious Metals - 11 articles - HIGH / NEUTRAL - Euro zone short-dated yields climb for fourth day amid Iran-US stalemate"
     },
     {
@@ -1958,17 +1958,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Crypto & Digital Assets - 22 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Emerging Markets + Banking & Financial Sector - 9 articles - HIGH / NEUTRAL - Is To Lam's Vietnam turning into Xi Jinping's China?"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Europe Equity - 7 articles - HIGH / NEUTRAL - ECB signs standards deals to cut digital euro integration costs"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Crypto & Digital Assets - 22 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -2013,17 +2013,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Nuclear Energy & Uranium - 5 articles - HIGH / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Real Estate & REITs - 3 articles - HIGH / NEUTRAL - Housing REIT National Healthcare\u2019s US IPO Raises $462 Million"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Healthcare & Pharma - 6 articles - MEDIUM / NEUTRAL - FDA fast-tracks psychedelic drug research following Trump executive order"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Nuclear Energy & Uranium - 5 articles - HIGH / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
     },
     {
       "tag": "tag-neu",
@@ -2146,11 +2146,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77761.52,
+      "price": 77874.54,
       "currency": "USD",
-      "change": 306.21,
-      "change_pct": 0.4,
-      "change_str": "+0.40%",
+      "change": 419.23,
+      "change_pct": 0.54,
+      "change_str": "+0.54%",
       "direction": "up"
     },
     {
@@ -2590,11 +2590,11 @@
     }
   },
   "logs": [
-    "2026-04-25 09:44:53 [INFO] AZALYST - status.json generated",
-    "2026-04-25 09:44:53 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
-    "2026-04-25 09:44:53 [INFO] SIGNALS - 30 active signal buckets in state",
-    "2026-04-25 09:44:53 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-25 09:44:53 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-25 10:38:01 [INFO] AZALYST - status.json generated",
+    "2026-04-25 10:38:01 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
+    "2026-04-25 10:38:01 [INFO] SIGNALS - 30 active signal buckets in state",
+    "2026-04-25 10:38:01 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-25 10:38:01 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-25 09:44:53 UTC"
+  "generated_at": "2026-04-25 10:38:00 UTC"
 }
