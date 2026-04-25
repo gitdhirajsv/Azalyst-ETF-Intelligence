@@ -84,7 +84,7 @@
       "pnl_pct_str": "+0.79%",
       "confidence": 92,
       "severity": "HIGH",
-      "days_held": 4,
+      "days_held": 5,
       "half_exited": false
     },
     {
@@ -107,7 +107,7 @@
       "pnl_pct_str": "-0.41%",
       "confidence": 88,
       "severity": "HIGH",
-      "days_held": 4,
+      "days_held": 5,
       "half_exited": false
     },
     {
@@ -130,7 +130,7 @@
       "pnl_pct_str": "+2.86%",
       "confidence": 84,
       "severity": "HIGH",
-      "days_held": 4,
+      "days_held": 5,
       "half_exited": false
     },
     {
@@ -316,12 +316,12 @@
       "score": 65.0
     },
     {
-      "symbol": "Healthcare & Pharma",
+      "symbol": "Real Estate & REITs",
       "score": 63.0
     },
     {
-      "symbol": "Real Estate & REITs",
-      "score": 63.0
+      "symbol": "Healthcare & Pharma",
+      "score": 62.0
     },
     {
       "symbol": "Clean Energy & Renewables",
@@ -1674,57 +1674,6 @@
       }
     },
     {
-      "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma",
-      "confidence": 63.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "24 Apr 2026 19:10 UTC",
-      "headline": "FDA fast-tracks psychedelic drug research following Trump executive order",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "india"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "XLV",
-      "top_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "HEALTHCARE",
-        "PHARMABEES"
-      ],
-      "global_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 9.6,
-        "volume_confirmation": 10.8,
-        "source_diversity": 12.3,
-        "recency": 18.9,
-        "geopolitical_severity": 11.6
-      }
-    },
-    {
       "sector_key": "real_estate_reit",
       "sector_label": "Real Estate & REITs",
       "confidence": 63.0,
@@ -1769,6 +1718,56 @@
         "source_diversity": 11.0,
         "recency": 17.3,
         "geopolitical_severity": 14.7
+      }
+    },
+    {
+      "sector_key": "healthcare_pharma",
+      "sector_label": "Healthcare & Pharma",
+      "confidence": 62.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "25 Apr 2026 06:57 UTC",
+      "headline": "FDA fast-tracks psychedelic drug research following Trump executive order",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "india"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "XLV",
+      "top_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "HEALTHCARE",
+        "PHARMABEES"
+      ],
+      "global_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.2,
+        "volume_confirmation": 14.0,
+        "source_diversity": 8.5,
+        "recency": 18.3,
+        "geopolitical_severity": 10.9
       }
     },
     {
@@ -1956,12 +1955,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Healthcare & Pharma - 4 articles - MEDIUM / NEUTRAL - FDA fast-tracks psychedelic drug research following Trump executive order"
+      "text": "Real Estate & REITs - 3 articles - HIGH / NEUTRAL - Housing REIT National Healthcare\u2019s US IPO Raises $462 Million"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Real Estate & REITs - 3 articles - HIGH / NEUTRAL - Housing REIT National Healthcare\u2019s US IPO Raises $462 Million"
+      "text": "Healthcare & Pharma - 6 articles - MEDIUM / NEUTRAL - FDA fast-tracks psychedelic drug research following Trump executive order"
     },
     {
       "tag": "tag-neu",
@@ -2084,12 +2083,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77562.21,
+      "price": 77555.67,
       "currency": "USD",
-      "change": -706.74,
-      "change_pct": -0.9,
-      "change_str": "-0.90%",
-      "direction": "down"
+      "change": 100.36,
+      "change_pct": 0.13,
+      "change_str": "+0.13%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
@@ -2528,11 +2527,11 @@
     }
   },
   "logs": [
-    "2026-04-25 06:05:07 [INFO] AZALYST - status.json generated",
-    "2026-04-25 06:05:07 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
-    "2026-04-25 06:05:07 [INFO] SIGNALS - 29 active signal buckets in state",
-    "2026-04-25 06:05:07 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-25 06:05:07 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-25 07:52:34 [INFO] AZALYST - status.json generated",
+    "2026-04-25 07:52:34 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
+    "2026-04-25 07:52:34 [INFO] SIGNALS - 29 active signal buckets in state",
+    "2026-04-25 07:52:34 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-25 07:52:34 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-25 06:05:07 UTC"
+  "generated_at": "2026-04-25 07:52:33 UTC"
 }
