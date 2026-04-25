@@ -268,6 +268,10 @@
       "score": 81.0
     },
     {
+      "symbol": "Clean Energy & Renewables",
+      "score": 81.0
+    },
+    {
       "symbol": "India Equity Markets + Healthcare & Pharma",
       "score": 81.0
     },
@@ -302,10 +306,6 @@
     {
       "symbol": "Nuclear Energy & Uranium + Asia Pacific Equity",
       "score": 72.0
-    },
-    {
-      "symbol": "Clean Energy & Renewables",
-      "score": 70.0
     },
     {
       "symbol": "Cybersecurity",
@@ -1068,6 +1068,57 @@
       }
     },
     {
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables",
+      "confidence": 81.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "25 Apr 2026 17:32 UTC",
+      "headline": "Inside the Rise of BYD, China\u2019s Top EV Maker",
+      "regions": [
+        "americas",
+        "global",
+        "europe"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Finance",
+        "The Verge",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "ICLN",
+      "top_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NEWENERGY"
+      ],
+      "global_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 16.7,
+        "volume_confirmation": 16.2,
+        "source_diversity": 14.8,
+        "recency": 20.0,
+        "geopolitical_severity": 13.6
+      }
+    },
+    {
       "sector_key": "healthcare_pharma|india_equity",
       "sector_label": "India Equity Markets + Healthcare & Pharma",
       "confidence": 81.0,
@@ -1536,57 +1587,6 @@
       }
     },
     {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables",
-      "confidence": 70.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "25 Apr 2026 14:04 UTC",
-      "headline": "Inside the Rise of BYD, China\u2019s Top EV Maker",
-      "regions": [
-        "americas",
-        "europe",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "Bloomberg Markets",
-        "Finance"
-      ],
-      "primary_etf": "ICLN",
-      "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NEWENERGY"
-      ],
-      "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 12.4,
-        "volume_confirmation": 12.5,
-        "source_diversity": 14.0,
-        "recency": 18.8,
-        "geopolitical_severity": 12.5
-      }
-    },
-    {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
       "confidence": 69.0,
@@ -1953,6 +1953,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Clean Energy & Renewables - 8 articles - HIGH / NEUTRAL - Inside the Rise of BYD, China\u2019s Top EV Maker"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "India Equity Markets + Healthcare & Pharma - 11 articles - HIGH / NEUTRAL - F&amp;O Talk: Nifty slips below 20 &amp; 50EMA. Sudeep Shah's tips to ride monthly expiry, trade 6 big weekly movers"
     },
     {
@@ -1994,11 +1999,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Nuclear Energy & Uranium + Asia Pacific Equity - 7 articles - MEDIUM / NEUTRAL - Vietnam, South Korea Ink Deals on Security, Nuclear Power Plants"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Clean Energy & Renewables - 5 articles - MEDIUM / NEUTRAL - Inside the Rise of BYD, China\u2019s Top EV Maker"
     },
     {
       "tag": "tag-neu",
@@ -2146,11 +2146,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77398.16,
+      "price": 77303.91,
       "currency": "USD",
-      "change": -57.15,
-      "change_pct": -0.07,
-      "change_str": "-0.07%",
+      "change": -151.4,
+      "change_pct": -0.2,
+      "change_str": "-0.20%",
       "direction": "down"
     },
     {
@@ -2590,11 +2590,11 @@
     }
   },
   "logs": [
-    "2026-04-25 16:33:17 [INFO] AZALYST - status.json generated",
-    "2026-04-25 16:33:17 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
-    "2026-04-25 16:33:17 [INFO] SIGNALS - 30 active signal buckets in state",
-    "2026-04-25 16:33:17 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-25 16:33:17 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-25 17:33:05 [INFO] AZALYST - status.json generated",
+    "2026-04-25 17:33:05 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
+    "2026-04-25 17:33:05 [INFO] SIGNALS - 30 active signal buckets in state",
+    "2026-04-25 17:33:05 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-25 17:33:05 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-25 16:33:16 UTC"
+  "generated_at": "2026-04-25 17:33:04 UTC"
 }
