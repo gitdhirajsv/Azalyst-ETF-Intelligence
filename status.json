@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 10127.88,
+  "portfolio_value": 10127.83,
   "total_deposited": 9825.41,
-  "cash": 90.71,
+  "cash": 46.4,
   "monthly_reserve": 0.0,
-  "market_value": 10037.17,
-  "total_invested": 9770.46,
-  "unrealised_pnl": 266.71,
-  "unrealised_str": "+266.71",
+  "market_value": 10081.43,
+  "total_invested": 9814.77,
+  "unrealised_pnl": 266.66,
+  "unrealised_str": "+266.66",
   "realised_pnl": 35.76,
   "realised_str": "+35.76",
   "change": "+3.08%",
@@ -25,17 +25,17 @@
       "sector": "Energy / Oil & Gas",
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 54.45,
+      "entry": 54.49,
       "current": 56.87,
       "peak_price": 57.08,
       "trail_stop": 52.52,
       "dist_to_trail_pct": 7.65,
-      "units": 45.832784,
-      "invested": 2495.4,
-      "pnl": 111.11,
-      "pnl_str": "+111.11",
-      "pnl_pct": 4.45,
-      "pnl_pct_str": "+4.45%",
+      "units": 46.611094,
+      "invested": 2539.71,
+      "pnl": 111.06,
+      "pnl_str": "+111.06",
+      "pnl_pct": 4.37,
+      "pnl_pct_str": "+4.37%",
       "confidence": 96,
       "severity": "CRITICAL",
       "days_held": 6,
@@ -183,13 +183,13 @@
       "CASH"
     ],
     "values": [
-      25.7,
+      26.2,
       30.3,
       25.5,
       11.5,
       2.7,
       3.4,
-      0.9
+      0.5
     ]
   },
   "pnl": {
@@ -202,7 +202,7 @@
       "DBC"
     ],
     "values": [
-      111.11,
+      111.06,
       118.47,
       20.6,
       -4.83,
@@ -214,10 +214,6 @@
     {
       "symbol": "Defense & Aerospace",
       "score": 98.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 97.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -236,7 +232,7 @@
       "score": 92.0
     },
     {
-      "symbol": "India Equity Markets",
+      "symbol": "Technology & AI / Semiconductors",
       "score": 90.0
     },
     {
@@ -258,6 +254,10 @@
     {
       "symbol": "Bonds & Fixed Income + Gold & Precious Metals",
       "score": 87.0
+    },
+    {
+      "symbol": "India Equity Markets",
+      "score": 86.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -339,20 +339,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 48,
-      "latest_at": "24 Apr 2026 22:33 UTC",
+      "article_count": 49,
+      "latest_at": "25 Apr 2026 04:17 UTC",
       "headline": "Nato says 'no provision' to expel members after report US could seek to suspend Spain",
       "regions": [
-        "africa",
-        "middle_east",
+        "asia_pacific",
         "india",
-        "global"
+        "global",
+        "europe"
       ],
       "sources": [
-        "World | Deutsche Welle",
-        "Cointelegraph.com News",
         "The Verge",
-        "BBC News"
+        "Defense News",
+        "World | Deutsche Welle",
+        "US Top News and Analysis"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -383,81 +383,28 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 97.0,
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 96.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 37,
-      "latest_at": "24 Apr 2026 22:33 UTC",
-      "headline": "Nvidia Breakout Sends Chip Giant to First Record Since October",
-      "regions": [
-        "middle_east",
-        "india",
-        "global",
-        "americas"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "The Verge",
-        "Finance",
-        "BBC News"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 17.1,
-        "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 96.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "24 Apr 2026 22:33 UTC",
+      "article_count": 26,
+      "latest_at": "25 Apr 2026 04:17 UTC",
       "headline": "IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand",
       "regions": [
-        "middle_east",
-        "india",
         "global",
-        "americas"
+        "asia_pacific",
+        "americas",
+        "middle_east"
       ],
       "sources": [
         "World | Deutsche Welle",
+        "US Top News and Analysis",
         "Finance",
-        "BBC News",
         "Bloomberg Markets"
       ],
       "primary_etf": "XLE",
@@ -647,8 +594,8 @@
       }
     },
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
       "confidence": 90.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
@@ -656,24 +603,26 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 17,
-      "latest_at": "24 Apr 2026 22:33 UTC",
-      "headline": "Gainers &amp; Losers: Infosys, Adani Energy among 7 big movers on Friday",
+      "article_count": 35,
+      "latest_at": "25 Apr 2026 00:00 UTC",
+      "headline": "AI Chip Surge Elevates Taiwan, Korea in Global Equity Rankings",
       "regions": [
-        "middle_east",
+        "asia_pacific",
         "india",
-        "asia_pacific"
+        "global",
+        "europe"
       ],
       "sources": [
-        "World | Deutsche Welle",
-        "BBC News",
-        "Markets-Economic Times"
+        "The Verge",
+        "Defense News",
+        "US Top News and Analysis",
+        "Cointelegraph.com News"
       ],
-      "primary_etf": "INDA",
+      "primary_etf": "QQQ",
       "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
       ],
       "access_markets": [
         "India-listed",
@@ -681,17 +630,19 @@
       ],
       "india_etfs": [
         "NIFTYBEES",
-        "MIDCAPETF"
+        "MAFANG"
       ],
       "global_etfs": [
-        "INDA"
+        "QQQ",
+        "SOXX",
+        "AIQ"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 23.3,
+        "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 12.3,
-        "recency": 20.0,
+        "source_diversity": 17.1,
+        "recency": 13.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -962,6 +913,54 @@
         "volume_confirmation": 19.4,
         "source_diversity": 12.4,
         "recency": 18.6,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 16,
+      "latest_at": "25 Apr 2026 04:17 UTC",
+      "headline": "Gainers &amp; Losers: Infosys, Adani Energy among 7 big movers on Friday",
+      "regions": [
+        "asia_pacific",
+        "india",
+        "middle_east"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 23.5,
+        "volume_confirmation": 20.0,
+        "source_diversity": 8.5,
+        "recency": 20.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -1825,17 +1824,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 48 articles - HIGH / NEUTRAL - Nato says 'no provision' to expel members after report US could seek to suspend Spain"
+      "text": "Defense & Aerospace - 49 articles - HIGH / NEUTRAL - Nato says 'no provision' to expel members after report US could seek to suspend Spain"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 37 articles - HIGH / NEUTRAL - Nvidia Breakout Sends Chip Giant to First Record Since October"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Energy / Oil & Gas - 25 articles - CRITICAL / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
+      "text": "Energy / Oil & Gas - 26 articles - HIGH / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
     },
     {
       "tag": "tag-neu",
@@ -1855,7 +1849,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 17 articles - HIGH / NEUTRAL - Gainers &amp; Losers: Infosys, Adani Energy among 7 big movers on Friday"
+      "text": "Technology & AI / Semiconductors - 35 articles - HIGH / NEUTRAL - AI Chip Surge Elevates Taiwan, Korea in Global Equity Rankings"
     },
     {
       "tag": "tag-neu",
@@ -1881,6 +1875,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Bonds & Fixed Income + Gold & Precious Metals - 12 articles - HIGH / NEUTRAL - Top Indian Private Credit Borrower Delays Paying 20.75% Bond"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "India Equity Markets - 16 articles - HIGH / NEUTRAL - Gainers &amp; Losers: Infosys, Adani Energy among 7 big movers on Friday"
     },
     {
       "tag": "tag-neu",
@@ -2083,11 +2082,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77496.57,
+      "price": 77697.85,
       "currency": "USD",
-      "change": -772.38,
-      "change_pct": -0.99,
-      "change_str": "-0.99%",
+      "change": -571.1,
+      "change_pct": -0.73,
+      "change_str": "-0.73%",
       "direction": "down"
     },
     {
@@ -2127,7 +2126,7 @@
       },
       {
         "sector": "Energy / Oil & Gas",
-        "weight": 25.7,
+        "weight": 26.2,
         "at_cap": false
       },
       {
@@ -2266,7 +2265,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -12.32,
           "action": "ADD",
-          "amount": 1247.53,
+          "amount": 1247.52,
           "etf_name": "iShares Global Clean Energy ETF"
         },
         {
@@ -2275,16 +2274,16 @@
           "target_weight_pct": 15.0,
           "drift_pct": -11.56,
           "action": "ADD",
-          "amount": 1170.79,
+          "amount": 1170.78,
           "etf_name": "Invesco DB Commodity Index Tracking Fund"
         },
         {
           "ticker": "XLE",
-          "actual_weight_pct": 25.74,
+          "actual_weight_pct": 26.17,
           "target_weight_pct": 15.0,
-          "drift_pct": 10.74,
+          "drift_pct": 11.17,
           "action": "TRIM",
-          "amount": 1087.33,
+          "amount": 1131.6,
           "etf_name": "Energy Select Sector SPDR"
         },
         {
@@ -2293,16 +2292,16 @@
           "target_weight_pct": 15.0,
           "drift_pct": 10.5,
           "action": "TRIM",
-          "amount": 1063.19,
+          "amount": 1063.2,
           "etf_name": "Vanguard Total Bond Market ETF"
         },
         {
           "ticker": "CASH",
-          "actual_weight_pct": 0.9,
+          "actual_weight_pct": 0.46,
           "target_weight_pct": 10.0,
-          "drift_pct": -9.1,
+          "drift_pct": -9.54,
           "action": "RAISE",
-          "amount": 922.08,
+          "amount": 966.38,
           "etf_name": "Cash Reserve"
         }
       ],
@@ -2312,14 +2311,14 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -2411.02,
-          "portfolio_loss_pct": -23.81,
+          "total_impact": -2435.37,
+          "portfolio_loss_pct": -24.05,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -1433.58
+              "impact": -1457.93
             },
             {
               "ticker": "QQQ",
@@ -2354,14 +2353,14 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -2891.25,
-          "portfolio_loss_pct": -28.55,
+          "total_impact": -2920.02,
+          "portfolio_loss_pct": -28.83,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -1694.23
+              "impact": -1723.0
             },
             {
               "ticker": "QQQ",
@@ -2396,14 +2395,14 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1164.07,
-          "portfolio_loss_pct": -11.49,
+          "total_impact": -1168.49,
+          "portfolio_loss_pct": -11.54,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -260.65
+              "impact": -265.08
             },
             {
               "ticker": "QQQ",
@@ -2438,14 +2437,14 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -798.1,
-          "portfolio_loss_pct": -7.88,
+          "total_impact": -804.74,
+          "portfolio_loss_pct": -7.95,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -390.98
+              "impact": -397.62
             },
             {
               "ticker": "QQQ",
@@ -2480,14 +2479,14 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -995.31,
-          "portfolio_loss_pct": -9.83,
+          "total_impact": -1004.16,
+          "portfolio_loss_pct": -9.91,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -521.3
+              "impact": -530.15
             },
             {
               "ticker": "QQQ",
@@ -2523,15 +2522,15 @@
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -28.55
+      "worst_loss_pct": -28.83
     }
   },
   "logs": [
-    "2026-04-25 01:29:22 [INFO] AZALYST - status.json generated",
-    "2026-04-25 01:29:22 [INFO] PORTFOLIO - NAV USD 10,127.88 | Return +3.08%",
-    "2026-04-25 01:29:22 [INFO] SIGNALS - 29 active signal buckets in state",
-    "2026-04-25 01:29:22 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-25 01:29:22 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-25 04:18:11 [INFO] AZALYST - status.json generated",
+    "2026-04-25 04:18:11 [INFO] PORTFOLIO - NAV USD 10,127.83 | Return +3.08%",
+    "2026-04-25 04:18:11 [INFO] SIGNALS - 29 active signal buckets in state",
+    "2026-04-25 04:18:11 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-25 04:18:11 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-25 01:29:22 UTC"
+  "generated_at": "2026-04-25 04:18:10 UTC"
 }
