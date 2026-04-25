@@ -300,10 +300,6 @@
       "score": 73.0
     },
     {
-      "symbol": "Nuclear Energy & Uranium",
-      "score": 72.0
-    },
-    {
       "symbol": "Nuclear Energy & Uranium + Asia Pacific Equity",
       "score": 72.0
     },
@@ -322,6 +318,10 @@
     {
       "symbol": "Asia Pacific Equity",
       "score": 67.0
+    },
+    {
+      "symbol": "Nuclear Energy & Uranium",
+      "score": 65.0
     },
     {
       "symbol": "Real Estate & REITs",
@@ -1485,56 +1485,6 @@
       }
     },
     {
-      "sector_key": "nuclear_uranium",
-      "sector_label": "Nuclear Energy & Uranium",
-      "confidence": 72.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "25 Apr 2026 16:00 UTC",
-      "headline": "IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand",
-      "regions": [
-        "americas",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "URA",
-      "top_etfs": [
-        "URA",
-        "URNM",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "URA",
-        "URNM",
-        "SRUUF"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 15.2,
-        "volume_confirmation": 12.5,
-        "source_diversity": 11.0,
-        "recency": 18.9,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "asia_pacific|nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium + Asia Pacific Equity",
       "confidence": 72.0,
@@ -1783,6 +1733,56 @@
       }
     },
     {
+      "sector_key": "nuclear_uranium",
+      "sector_label": "Nuclear Energy & Uranium",
+      "confidence": 65.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "25 Apr 2026 16:00 UTC",
+      "headline": "IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand",
+      "regions": [
+        "americas",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "URA",
+      "top_etfs": [
+        "URA",
+        "URNM",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "URA",
+        "URNM",
+        "SRUUF"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 15.2,
+        "volume_confirmation": 12.5,
+        "source_diversity": 11.0,
+        "recency": 12.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "real_estate_reit",
       "sector_label": "Real Estate & REITs",
       "confidence": 63.0,
@@ -1994,11 +1994,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Nuclear Energy & Uranium - 5 articles - HIGH / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Nuclear Energy & Uranium + Asia Pacific Equity - 7 articles - MEDIUM / NEUTRAL - Vietnam, South Korea Ink Deals on Security, Nuclear Power Plants"
     },
     {
@@ -2020,6 +2015,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Asia Pacific Equity - 4 articles - HIGH / NEUTRAL - Global Markets | Japan's Nikkei closes at record high as tech earnings overshadow Mideast concerns"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Nuclear Energy & Uranium - 5 articles - HIGH / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
     },
     {
       "tag": "tag-neu",
@@ -2147,12 +2147,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77443.92,
+      "price": 77522.37,
       "currency": "USD",
-      "change": -11.39,
-      "change_pct": -0.01,
-      "change_str": "-0.01%",
-      "direction": "down"
+      "change": 67.06,
+      "change_pct": 0.09,
+      "change_str": "+0.09%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
@@ -2591,11 +2591,11 @@
     }
   },
   "logs": [
-    "2026-04-25 20:31:15 [INFO] AZALYST - status.json generated",
-    "2026-04-25 20:31:15 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
-    "2026-04-25 20:31:15 [INFO] SIGNALS - 30 active signal buckets in state",
-    "2026-04-25 20:31:15 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-25 20:31:15 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-25 21:07:12 [INFO] AZALYST - status.json generated",
+    "2026-04-25 21:07:12 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
+    "2026-04-25 21:07:12 [INFO] SIGNALS - 30 active signal buckets in state",
+    "2026-04-25 21:07:12 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-25 21:07:12 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-25 20:31:13 UTC"
+  "generated_at": "2026-04-25 21:07:11 UTC"
 }
