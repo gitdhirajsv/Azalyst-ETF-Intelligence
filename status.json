@@ -260,12 +260,16 @@
       "score": 87.0
     },
     {
-      "symbol": "Real Estate & REITs + India Equity Markets",
-      "score": 82.0
+      "symbol": "Crypto & Digital Assets",
+      "score": 84.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 81.0
+      "symbol": "Europe Equity",
+      "score": 83.0
+    },
+    {
+      "symbol": "Real Estate & REITs + India Equity Markets",
+      "score": 82.0
     },
     {
       "symbol": "Technology & AI / Semiconductors",
@@ -278,10 +282,6 @@
     {
       "symbol": "Emerging Markets + Banking & Financial Sector",
       "score": 80.0
-    },
-    {
-      "symbol": "Europe Equity",
-      "score": 78.0
     },
     {
       "symbol": "Real Estate & REITs + Bonds & Fixed Income",
@@ -308,12 +308,12 @@
       "score": 72.0
     },
     {
-      "symbol": "Cybersecurity",
-      "score": 69.0
+      "symbol": "Bonds & Fixed Income",
+      "score": 70.0
     },
     {
-      "symbol": "Bonds & Fixed Income",
-      "score": 68.0
+      "symbol": "Cybersecurity",
+      "score": 69.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -663,19 +663,19 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 12,
-      "latest_at": "25 Apr 2026 14:41 UTC",
+      "latest_at": "25 Apr 2026 19:39 UTC",
       "headline": "US stocks today: S&amp;P 500, Nasdaq close at records on tech lift, Iran peace talk hopes",
       "regions": [
+        "global",
         "middle_east",
         "americas",
-        "asia_pacific",
-        "global"
+        "asia_pacific"
       ],
       "sources": [
-        "Cointelegraph.com News",
-        "World | Deutsche Welle",
         "US Top News and Analysis",
-        "Markets-Economic Times"
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "World | Deutsche Welle"
       ],
       "primary_etf": "XLF",
       "top_etfs": [
@@ -971,6 +971,102 @@
       }
     },
     {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 84.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "25 Apr 2026 14:38 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "india",
+        "global",
+        "asia_pacific",
+        "africa"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 12.3,
+        "recency": 12.1,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "europe_equity",
+      "sector_label": "Europe Equity",
+      "confidence": 83.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 9,
+      "latest_at": "25 Apr 2026 19:39 UTC",
+      "headline": "ECB signs standards deals to cut digital euro integration costs",
+      "regions": [
+        "europe",
+        "global",
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Markets-Economic Times",
+        "BBC News",
+        "World News - Breaking international news and headlines | Sky News"
+      ],
+      "primary_etf": "VGK",
+      "top_etfs": [
+        "VGK",
+        "IEV",
+        "EWU"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "VGK",
+        "IEV",
+        "EWU",
+        "EWG"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 16.6,
+        "volume_confirmation": 17.1,
+        "source_diversity": 15.4,
+        "recency": 20.0,
+        "geopolitical_severity": 14.1
+      }
+    },
+    {
       "sector_key": "india_equity|real_estate_reit",
       "sector_label": "Real Estate & REITs + India Equity Markets",
       "confidence": 82.0,
@@ -1020,52 +1116,6 @@
         "volume_confirmation": 17.1,
         "source_diversity": 11.0,
         "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 81.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 22,
-      "latest_at": "25 Apr 2026 06:43 UTC",
-      "headline": "Bitcoin near $78K, Ethereum steady near $2,300; rally cools after strong rebound",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "middle_east",
-        "africa"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Markets-Economic Times",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 12.3,
-        "recency": 9.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -1225,56 +1275,6 @@
         "source_diversity": 14.3,
         "recency": 20.0,
         "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "europe_equity",
-      "sector_label": "Europe Equity",
-      "confidence": 78.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "25 Apr 2026 14:41 UTC",
-      "headline": "ECB signs standards deals to cut digital euro integration costs",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "europe",
-        "global"
-      ],
-      "sources": [
-        "Defense News",
-        "Cointelegraph.com News",
-        "World | Deutsche Welle",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "VGK",
-      "top_etfs": [
-        "VGK",
-        "IEV",
-        "EWU"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "VGK",
-        "IEV",
-        "EWU",
-        "EWG"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.8,
-        "volume_confirmation": 15.2,
-        "source_diversity": 14.1,
-        "recency": 20.0,
-        "geopolitical_severity": 14.4
       }
     },
     {
@@ -1588,6 +1588,57 @@
       }
     },
     {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 70.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "25 Apr 2026 19:00 UTC",
+      "headline": "What the Fed Can Do About Anthropic\u2019s Latest System",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "americas"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "BBC News",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.2,
+        "volume_confirmation": 15.2,
+        "source_diversity": 14.1,
+        "recency": 18.7,
+        "geopolitical_severity": 10.8
+      }
+    },
+    {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
       "confidence": 69.0,
@@ -1631,57 +1682,6 @@
         "source_diversity": 13.1,
         "recency": 20.0,
         "geopolitical_severity": 11.8
-      }
-    },
-    {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
-      "confidence": 68.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "25 Apr 2026 12:03 UTC",
-      "headline": "What the Fed Can Do About Anthropic\u2019s Latest System",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Cointelegraph.com News",
-        "BBC News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.9,
-        "volume_confirmation": 15.2,
-        "source_diversity": 14.1,
-        "recency": 16.5,
-        "geopolitical_severity": 10.7
       }
     },
     {
@@ -1944,12 +1944,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Real Estate & REITs + India Equity Markets - 9 articles - HIGH / NEUTRAL - Displaced by Iran war: out of Lebanon, into Syrian crisis"
+      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 22 articles - HIGH / NEUTRAL - Bitcoin near $78K, Ethereum steady near $2,300; rally cools after strong rebound"
+      "text": "Europe Equity - 9 articles - HIGH / NEUTRAL - ECB signs standards deals to cut digital euro integration costs"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Real Estate & REITs + India Equity Markets - 9 articles - HIGH / NEUTRAL - Displaced by Iran war: out of Lebanon, into Syrian crisis"
     },
     {
       "tag": "tag-neu",
@@ -1965,11 +1970,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Emerging Markets + Banking & Financial Sector - 9 articles - HIGH / NEUTRAL - Is To Lam's Vietnam turning into Xi Jinping's China?"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Europe Equity - 7 articles - HIGH / NEUTRAL - ECB signs standards deals to cut digital euro integration costs"
     },
     {
       "tag": "tag-neu",
@@ -2004,12 +2004,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity - 5 articles - MEDIUM / NEUTRAL - Anthropic&#8217;s Mythos rollout has missed America\u2019s cybersecurity agency"
+      "text": "Bonds & Fixed Income - 7 articles - MEDIUM / NEUTRAL - What the Fed Can Do About Anthropic\u2019s Latest System"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Bonds & Fixed Income - 7 articles - MEDIUM / NEUTRAL - What the Fed Can Do About Anthropic\u2019s Latest System"
+      "text": "Cybersecurity - 5 articles - MEDIUM / NEUTRAL - Anthropic&#8217;s Mythos rollout has missed America\u2019s cybersecurity agency"
     },
     {
       "tag": "tag-neu",
@@ -2147,11 +2147,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77379.7,
+      "price": 77248.2,
       "currency": "USD",
-      "change": -75.61,
-      "change_pct": -0.1,
-      "change_str": "-0.10%",
+      "change": -207.11,
+      "change_pct": -0.27,
+      "change_str": "-0.27%",
       "direction": "down"
     },
     {
@@ -2591,11 +2591,11 @@
     }
   },
   "logs": [
-    "2026-04-25 18:38:53 [INFO] AZALYST - status.json generated",
-    "2026-04-25 18:38:53 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
-    "2026-04-25 18:38:53 [INFO] SIGNALS - 30 active signal buckets in state",
-    "2026-04-25 18:38:53 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-25 18:38:53 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-25 19:40:27 [INFO] AZALYST - status.json generated",
+    "2026-04-25 19:40:27 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
+    "2026-04-25 19:40:27 [INFO] SIGNALS - 30 active signal buckets in state",
+    "2026-04-25 19:40:27 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-25 19:40:27 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-25 18:38:53 UTC"
+  "generated_at": "2026-04-25 19:40:26 UTC"
 }
