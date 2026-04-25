@@ -232,6 +232,10 @@
       "score": 92.0
     },
     {
+      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
+      "score": 89.0
+    },
+    {
       "symbol": "Europe Equity + Banking & Financial Sector",
       "score": 88.0
     },
@@ -241,10 +245,6 @@
     },
     {
       "symbol": "India Equity Markets",
-      "score": 87.0
-    },
-    {
-      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
       "score": 87.0
     },
     {
@@ -300,6 +300,10 @@
       "score": 72.0
     },
     {
+      "symbol": "Clean Energy & Renewables",
+      "score": 70.0
+    },
+    {
       "symbol": "Cybersecurity",
       "score": 69.0
     },
@@ -325,10 +329,6 @@
     },
     {
       "symbol": "Nuclear Energy & Uranium",
-      "score": 62.0
-    },
-    {
-      "symbol": "Clean Energy & Renewables",
       "score": 62.0
     }
   ],
@@ -598,6 +598,61 @@
       }
     },
     {
+      "sector_key": "banking_financial|gold_precious_metals",
+      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
+      "confidence": 89.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "25 Apr 2026 14:41 UTC",
+      "headline": "US stocks today: S&amp;P 500, Nasdaq close at records on tech lift, Iran peace talk hopes",
+      "regions": [
+        "middle_east",
+        "americas",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "World | Deutsche Welle",
+        "US Top News and Analysis",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "GOLDBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD",
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.4,
+        "volume_confirmation": 19.4,
+        "source_diversity": 13.4,
+        "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "banking_financial|europe_equity",
       "sector_label": "Europe Equity + Banking & Financial Sector",
       "confidence": 88.0,
@@ -748,61 +803,6 @@
         "volume_confirmation": 20.0,
         "source_diversity": 8.5,
         "recency": 18.8,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "banking_financial|gold_precious_metals",
-      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
-      "confidence": 87.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "25 Apr 2026 10:37 UTC",
-      "headline": "Fmr. Fed Governor Betsy Duke on Warsh's Future, Rates",
-      "regions": [
-        "asia_pacific",
-        "middle_east",
-        "global",
-        "americas"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "Markets-Economic Times",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "GOLDBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD",
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 20.7,
-        "volume_confirmation": 18.7,
-        "source_diversity": 13.4,
-        "recency": 20.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -1025,7 +1025,7 @@
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 81.0,
-      "severity": "CRITICAL",
+      "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
@@ -1033,16 +1033,17 @@
       "ml_sentiment_mode": "rules-only",
       "article_count": 22,
       "latest_at": "25 Apr 2026 06:43 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
+      "headline": "Bitcoin near $78K, Ethereum steady near $2,300; rally cools after strong rebound",
       "regions": [
-        "africa",
-        "global",
         "asia_pacific",
-        "middle_east"
+        "global",
+        "middle_east",
+        "africa"
       ],
       "sources": [
         "Cointelegraph.com News",
-        "Markets-Economic Times"
+        "Markets-Economic Times",
+        "Bloomberg Markets"
       ],
       "primary_etf": "IBIT",
       "top_etfs": [
@@ -1061,8 +1062,8 @@
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 8.5,
-        "recency": 13.5,
+        "source_diversity": 12.3,
+        "recency": 9.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -1185,19 +1186,19 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 7,
-      "latest_at": "25 Apr 2026 10:37 UTC",
+      "latest_at": "25 Apr 2026 14:41 UTC",
       "headline": "ECB signs standards deals to cut digital euro integration costs",
       "regions": [
-        "asia_pacific",
         "middle_east",
-        "global",
-        "europe"
+        "asia_pacific",
+        "europe",
+        "global"
       ],
       "sources": [
+        "Defense News",
         "Cointelegraph.com News",
-        "Markets-Economic Times",
-        "BBC News",
-        "World | Deutsche Welle"
+        "World | Deutsche Welle",
+        "Markets-Economic Times"
       ],
       "primary_etf": "VGK",
       "top_etfs": [
@@ -1482,6 +1483,57 @@
         "source_diversity": 15.3,
         "recency": 19.0,
         "geopolitical_severity": 12.9
+      }
+    },
+    {
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables",
+      "confidence": 70.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "25 Apr 2026 14:04 UTC",
+      "headline": "Inside the Rise of BYD, China\u2019s Top EV Maker",
+      "regions": [
+        "americas",
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "Bloomberg Markets",
+        "Finance"
+      ],
+      "primary_etf": "ICLN",
+      "top_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NEWENERGY"
+      ],
+      "global_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.4,
+        "volume_confirmation": 12.5,
+        "source_diversity": 14.0,
+        "recency": 18.8,
+        "geopolitical_severity": 12.5
       }
     },
     {
@@ -1826,56 +1878,6 @@
         "recency": 5.2,
         "geopolitical_severity": 15.0
       }
-    },
-    {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables",
-      "confidence": 62.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "24 Apr 2026 22:00 UTC",
-      "headline": "Waaree Energies shares tumble 5% after US 123% anti-dumping duty shock for Indian solar imports",
-      "regions": [
-        "americas",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Finance",
-        "Oilprice.com",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "ICLN",
-      "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NEWENERGY"
-      ],
-      "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 10.3,
-        "volume_confirmation": 10.8,
-        "source_diversity": 11.0,
-        "recency": 18.9,
-        "geopolitical_severity": 11.9
-      }
     }
   ],
   "articles": [
@@ -1907,6 +1909,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Banking & Financial Sector + Gold & Precious Metals - 12 articles - HIGH / NEUTRAL - US stocks today: S&amp;P 500, Nasdaq close at records on tech lift, Iran peace talk hopes"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Europe Equity + Banking & Financial Sector - 9 articles - CRITICAL / NEUTRAL - Kazimir Says Slight ECB Rate Increase May Be Needed on War"
     },
     {
@@ -1918,11 +1925,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "India Equity Markets - 19 articles - HIGH / NEUTRAL - Gainers &amp; Losers: Infosys, Adani Energy among 7 big movers on Friday"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Banking & Financial Sector + Gold & Precious Metals - 11 articles - HIGH / NEUTRAL - Fmr. Fed Governor Betsy Duke on Warsh's Future, Rates"
     },
     {
       "tag": "tag-neu",
@@ -1947,7 +1949,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 22 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
+      "text": "Crypto & Digital Assets - 22 articles - HIGH / NEUTRAL - Bitcoin near $78K, Ethereum steady near $2,300; rally cools after strong rebound"
     },
     {
       "tag": "tag-neu",
@@ -1992,6 +1994,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Clean Energy & Renewables - 5 articles - MEDIUM / NEUTRAL - Inside the Rise of BYD, China\u2019s Top EV Maker"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Cybersecurity - 5 articles - MEDIUM / NEUTRAL - Anthropic&#8217;s Mythos rollout has missed America\u2019s cybersecurity agency"
     },
     {
@@ -2023,11 +2030,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 5 articles - HIGH / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Clean Energy & Renewables - 4 articles - MEDIUM / NEUTRAL - Waaree Energies shares tumble 5% after US 123% anti-dumping duty shock for Indian solar imports"
     }
   ],
   "market_snapshot": [
@@ -2145,11 +2147,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77701.36,
+      "price": 77761.21,
       "currency": "USD",
-      "change": 246.05,
-      "change_pct": 0.32,
-      "change_str": "+0.32%",
+      "change": 305.9,
+      "change_pct": 0.39,
+      "change_str": "+0.39%",
       "direction": "up"
     },
     {
@@ -2589,11 +2591,11 @@
     }
   },
   "logs": [
-    "2026-04-25 14:00:07 [INFO] AZALYST - status.json generated",
-    "2026-04-25 14:00:07 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
-    "2026-04-25 14:00:07 [INFO] SIGNALS - 30 active signal buckets in state",
-    "2026-04-25 14:00:07 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-25 14:00:07 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-25 14:42:23 [INFO] AZALYST - status.json generated",
+    "2026-04-25 14:42:23 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
+    "2026-04-25 14:42:23 [INFO] SIGNALS - 30 active signal buckets in state",
+    "2026-04-25 14:42:23 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-25 14:42:23 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-25 14:00:06 UTC"
+  "generated_at": "2026-04-25 14:42:22 UTC"
 }
