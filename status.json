@@ -248,7 +248,15 @@
       "score": 88.0
     },
     {
+      "symbol": "India Equity Markets + Healthcare & Pharma",
+      "score": 88.0
+    },
+    {
       "symbol": "India Equity Markets",
+      "score": 87.0
+    },
+    {
+      "symbol": "Bonds & Fixed Income",
       "score": 87.0
     },
     {
@@ -282,10 +290,6 @@
     {
       "symbol": "Real Estate & REITs + Clean Energy & Renewables",
       "score": 76.0
-    },
-    {
-      "symbol": "Bonds & Fixed Income",
-      "score": 75.0
     },
     {
       "symbol": "Gold & Precious Metals",
@@ -808,6 +812,60 @@
       }
     },
     {
+      "sector_key": "healthcare_pharma|india_equity",
+      "sector_label": "India Equity Markets + Healthcare & Pharma",
+      "confidence": 88.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "25 Apr 2026 09:32 UTC",
+      "headline": "F&amp;O Talk: Nifty slips below 20 &amp; 50EMA. Sudeep Shah's tips to ride monthly expiry, trade 6 big weekly movers",
+      "regions": [
+        "india",
+        "middle_east",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "XLV",
+      "top_etfs": [
+        "XLV",
+        "INDA",
+        "IXJ"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "HEALTHCARE",
+        "PHARMABEES"
+      ],
+      "global_etfs": [
+        "XLV",
+        "INDA",
+        "IXJ",
+        "XBI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 18.7,
+        "source_diversity": 10.1,
+        "recency": 19.6,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 87.0,
@@ -853,6 +911,58 @@
         "source_diversity": 8.5,
         "recency": 18.8,
         "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 87.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "25 Apr 2026 09:32 UTC",
+      "headline": "DOJ Drops Powell Probe, Iran War Impact on Credit Markets | Real Yield 4/24/2026",
+      "regions": [
+        "global",
+        "middle_east",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Cointelegraph.com News",
+        "BBC News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 19.9,
+        "volume_confirmation": 18.7,
+        "source_diversity": 14.1,
+        "recency": 19.6,
+        "geopolitical_severity": 14.9
       }
     },
     {
@@ -1269,58 +1379,6 @@
         "volume_confirmation": 16.2,
         "source_diversity": 12.3,
         "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
-      "confidence": 75.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "24 Apr 2026 20:52 UTC",
-      "headline": "DOJ Drops Powell Probe, Iran War Impact on Credit Markets | Real Yield 4/24/2026",
-      "regions": [
-        "europe",
-        "global",
-        "middle_east",
-        "americas"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "BBC News"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 20.0,
-        "volume_confirmation": 18.7,
-        "source_diversity": 14.1,
-        "recency": 8.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -1870,7 +1928,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "India Equity Markets + Healthcare & Pharma - 11 articles - HIGH / NEUTRAL - F&amp;O Talk: Nifty slips below 20 &amp; 50EMA. Sudeep Shah's tips to ride monthly expiry, trade 6 big weekly movers"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "India Equity Markets - 19 articles - HIGH / NEUTRAL - Gainers &amp; Losers: Infosys, Adani Energy among 7 big movers on Friday"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Bonds & Fixed Income - 11 articles - HIGH / NEUTRAL - DOJ Drops Powell Probe, Iran War Impact on Credit Markets | Real Yield 4/24/2026"
     },
     {
       "tag": "tag-neu",
@@ -1911,11 +1979,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Real Estate & REITs + Clean Energy & Renewables - 8 articles - HIGH / NEUTRAL - Displaced by Iran war: out of Lebanon, into Syrian crisis"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Bonds & Fixed Income - 11 articles - HIGH / NEUTRAL - DOJ Drops Powell Probe, Iran War Impact on Credit Markets | Real Yield 4/24/2026"
     },
     {
       "tag": "tag-neu",
@@ -2083,11 +2146,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77664.55,
+      "price": 77761.52,
       "currency": "USD",
-      "change": 209.24,
-      "change_pct": 0.27,
-      "change_str": "+0.27%",
+      "change": 306.21,
+      "change_pct": 0.4,
+      "change_str": "+0.40%",
       "direction": "up"
     },
     {
@@ -2527,11 +2590,11 @@
     }
   },
   "logs": [
-    "2026-04-25 08:44:08 [INFO] AZALYST - status.json generated",
-    "2026-04-25 08:44:08 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
-    "2026-04-25 08:44:08 [INFO] SIGNALS - 29 active signal buckets in state",
-    "2026-04-25 08:44:08 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-25 08:44:08 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-25 09:44:53 [INFO] AZALYST - status.json generated",
+    "2026-04-25 09:44:53 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
+    "2026-04-25 09:44:53 [INFO] SIGNALS - 30 active signal buckets in state",
+    "2026-04-25 09:44:53 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-25 09:44:53 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-25 08:44:07 UTC"
+  "generated_at": "2026-04-25 09:44:53 UTC"
 }
