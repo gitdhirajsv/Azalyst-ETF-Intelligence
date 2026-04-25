@@ -248,16 +248,16 @@
       "score": 88.0
     },
     {
+      "symbol": "India Equity Markets",
+      "score": 87.0
+    },
+    {
       "symbol": "Europe Equity + Gold & Precious Metals",
       "score": 87.0
     },
     {
       "symbol": "Bonds & Fixed Income + Gold & Precious Metals",
       "score": 87.0
-    },
-    {
-      "symbol": "India Equity Markets",
-      "score": 86.0
     },
     {
       "symbol": "Real Estate & REITs + India Equity Markets",
@@ -339,20 +339,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 49,
-      "latest_at": "25 Apr 2026 04:17 UTC",
+      "article_count": 48,
+      "latest_at": "25 Apr 2026 08:43 UTC",
       "headline": "Nato says 'no provision' to expel members after report US could seek to suspend Spain",
       "regions": [
-        "asia_pacific",
         "india",
+        "americas",
         "global",
-        "europe"
+        "middle_east"
       ],
       "sources": [
         "The Verge",
         "Defense News",
-        "World | Deutsche Welle",
-        "US Top News and Analysis"
+        "Cointelegraph.com News",
+        "Bloomberg Markets"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -377,7 +377,7 @@
       "breakdown": {
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
-        "source_diversity": 18.5,
+        "source_diversity": 18.2,
         "recency": 20.0,
         "geopolitical_severity": 15.0
       }
@@ -392,20 +392,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 26,
-      "latest_at": "25 Apr 2026 04:17 UTC",
+      "article_count": 27,
+      "latest_at": "25 Apr 2026 08:43 UTC",
       "headline": "IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand",
       "regions": [
-        "global",
-        "asia_pacific",
+        "india",
         "americas",
+        "global",
         "middle_east"
       ],
       "sources": [
-        "World | Deutsche Welle",
-        "US Top News and Analysis",
         "Finance",
-        "Bloomberg Markets"
+        "Bloomberg Markets",
+        "Oilprice.com",
+        "World | Deutsche Welle"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -603,20 +603,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 35,
-      "latest_at": "25 Apr 2026 00:00 UTC",
+      "article_count": 40,
+      "latest_at": "25 Apr 2026 04:26 UTC",
       "headline": "AI Chip Surge Elevates Taiwan, Korea in Global Equity Rankings",
       "regions": [
-        "asia_pacific",
         "india",
+        "americas",
         "global",
-        "europe"
+        "middle_east"
       ],
       "sources": [
         "The Verge",
         "Defense News",
-        "US Top News and Analysis",
-        "Cointelegraph.com News"
+        "Cointelegraph.com News",
+        "Finance"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -808,6 +808,54 @@
       }
     },
     {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 87.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 19,
+      "latest_at": "25 Apr 2026 08:06 UTC",
+      "headline": "Gainers &amp; Losers: Infosys, Adani Energy among 7 big movers on Friday",
+      "regions": [
+        "middle_east",
+        "india",
+        "asia_pacific"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 24.9,
+        "volume_confirmation": 20.0,
+        "source_diversity": 8.5,
+        "recency": 18.8,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "europe_equity|gold_precious_metals",
       "sector_label": "Europe Equity + Gold & Precious Metals",
       "confidence": 87.0,
@@ -913,54 +961,6 @@
         "volume_confirmation": 19.4,
         "source_diversity": 12.4,
         "recency": 18.6,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 86.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 16,
-      "latest_at": "25 Apr 2026 04:17 UTC",
-      "headline": "Gainers &amp; Losers: Infosys, Adani Energy among 7 big movers on Friday",
-      "regions": [
-        "asia_pacific",
-        "india",
-        "middle_east"
-      ],
-      "sources": [
-        "World | Deutsche Welle",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 23.5,
-        "volume_confirmation": 20.0,
-        "source_diversity": 8.5,
-        "recency": 20.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -1825,12 +1825,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 49 articles - HIGH / NEUTRAL - Nato says 'no provision' to expel members after report US could seek to suspend Spain"
+      "text": "Defense & Aerospace - 48 articles - HIGH / NEUTRAL - Nato says 'no provision' to expel members after report US could seek to suspend Spain"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 26 articles - HIGH / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
+      "text": "Energy / Oil & Gas - 27 articles - HIGH / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
     },
     {
       "tag": "tag-neu",
@@ -1850,7 +1850,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 35 articles - HIGH / NEUTRAL - AI Chip Surge Elevates Taiwan, Korea in Global Equity Rankings"
+      "text": "Technology & AI / Semiconductors - 40 articles - HIGH / NEUTRAL - AI Chip Surge Elevates Taiwan, Korea in Global Equity Rankings"
     },
     {
       "tag": "tag-neu",
@@ -1870,17 +1870,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "India Equity Markets - 19 articles - HIGH / NEUTRAL - Gainers &amp; Losers: Infosys, Adani Energy among 7 big movers on Friday"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Europe Equity + Gold & Precious Metals - 11 articles - HIGH / NEUTRAL - Euro zone short-dated yields climb for fourth day amid Iran-US stalemate"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Bonds & Fixed Income + Gold & Precious Metals - 12 articles - HIGH / NEUTRAL - Top Indian Private Credit Borrower Delays Paying 20.75% Bond"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "India Equity Markets - 16 articles - HIGH / NEUTRAL - Gainers &amp; Losers: Infosys, Adani Energy among 7 big movers on Friday"
     },
     {
       "tag": "tag-neu",
@@ -2083,11 +2083,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77555.67,
+      "price": 77664.55,
       "currency": "USD",
-      "change": 100.36,
-      "change_pct": 0.13,
-      "change_str": "+0.13%",
+      "change": 209.24,
+      "change_pct": 0.27,
+      "change_str": "+0.27%",
       "direction": "up"
     },
     {
@@ -2527,11 +2527,11 @@
     }
   },
   "logs": [
-    "2026-04-25 07:52:34 [INFO] AZALYST - status.json generated",
-    "2026-04-25 07:52:34 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
-    "2026-04-25 07:52:34 [INFO] SIGNALS - 29 active signal buckets in state",
-    "2026-04-25 07:52:34 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-25 07:52:34 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-25 08:44:08 [INFO] AZALYST - status.json generated",
+    "2026-04-25 08:44:08 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
+    "2026-04-25 08:44:08 [INFO] SIGNALS - 29 active signal buckets in state",
+    "2026-04-25 08:44:08 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-25 08:44:08 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-25 07:52:33 UTC"
+  "generated_at": "2026-04-25 08:44:07 UTC"
 }
