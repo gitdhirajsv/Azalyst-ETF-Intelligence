@@ -296,6 +296,10 @@
       "score": 73.0
     },
     {
+      "symbol": "Nuclear Energy & Uranium",
+      "score": 72.0
+    },
+    {
       "symbol": "Nuclear Energy & Uranium + Asia Pacific Equity",
       "score": 72.0
     },
@@ -325,10 +329,6 @@
     },
     {
       "symbol": "Healthcare & Pharma",
-      "score": 62.0
-    },
-    {
-      "symbol": "Nuclear Energy & Uranium",
       "score": 62.0
     }
   ],
@@ -1433,6 +1433,56 @@
       }
     },
     {
+      "sector_key": "nuclear_uranium",
+      "sector_label": "Nuclear Energy & Uranium",
+      "confidence": 72.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "25 Apr 2026 16:00 UTC",
+      "headline": "IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand",
+      "regions": [
+        "americas",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "URA",
+      "top_etfs": [
+        "URA",
+        "URNM",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "URA",
+        "URNM",
+        "SRUUF"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 15.2,
+        "volume_confirmation": 12.5,
+        "source_diversity": 11.0,
+        "recency": 18.9,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "asia_pacific|nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium + Asia Pacific Equity",
       "confidence": 72.0,
@@ -1827,57 +1877,6 @@
         "recency": 18.3,
         "geopolitical_severity": 10.9
       }
-    },
-    {
-      "sector_key": "nuclear_uranium",
-      "sector_label": "Nuclear Energy & Uranium",
-      "confidence": 62.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "24 Apr 2026 21:11 UTC",
-      "headline": "IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand",
-      "regions": [
-        "middle_east",
-        "global",
-        "americas"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Oilprice.com"
-      ],
-      "primary_etf": "URA",
-      "top_etfs": [
-        "URA",
-        "URNM",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "URA",
-        "URNM",
-        "SRUUF"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 16.0,
-        "volume_confirmation": 12.5,
-        "source_diversity": 14.0,
-        "recency": 5.2,
-        "geopolitical_severity": 15.0
-      }
     }
   ],
   "articles": [
@@ -1989,6 +1988,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Nuclear Energy & Uranium - 5 articles - HIGH / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Nuclear Energy & Uranium + Asia Pacific Equity - 7 articles - MEDIUM / NEUTRAL - Vietnam, South Korea Ink Deals on Security, Nuclear Power Plants"
     },
     {
@@ -2025,11 +2029,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Healthcare & Pharma - 6 articles - MEDIUM / NEUTRAL - FDA fast-tracks psychedelic drug research following Trump executive order"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Nuclear Energy & Uranium - 5 articles - HIGH / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
     }
   ],
   "market_snapshot": [
@@ -2147,12 +2146,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77729.44,
+      "price": 77398.16,
       "currency": "USD",
-      "change": 274.13,
-      "change_pct": 0.35,
-      "change_str": "+0.35%",
-      "direction": "up"
+      "change": -57.15,
+      "change_pct": -0.07,
+      "change_str": "-0.07%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
@@ -2591,11 +2590,11 @@
     }
   },
   "logs": [
-    "2026-04-25 15:34:30 [INFO] AZALYST - status.json generated",
-    "2026-04-25 15:34:30 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
-    "2026-04-25 15:34:30 [INFO] SIGNALS - 30 active signal buckets in state",
-    "2026-04-25 15:34:30 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-25 15:34:30 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-25 16:33:17 [INFO] AZALYST - status.json generated",
+    "2026-04-25 16:33:17 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
+    "2026-04-25 16:33:17 [INFO] SIGNALS - 30 active signal buckets in state",
+    "2026-04-25 16:33:17 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-25 16:33:17 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-25 15:34:29 UTC"
+  "generated_at": "2026-04-25 16:33:16 UTC"
 }
