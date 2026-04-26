@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 10127.81,
+  "portfolio_value": 10128.46,
   "total_deposited": 9825.41,
   "cash": 2.09,
   "monthly_reserve": 0.0,
-  "market_value": 10125.72,
+  "market_value": 10126.37,
   "total_invested": 9859.09,
-  "unrealised_pnl": 266.64,
-  "unrealised_str": "+266.64",
+  "unrealised_pnl": 267.28,
+  "unrealised_str": "+267.28",
   "realised_pnl": 35.76,
   "realised_str": "+35.76",
   "change": "+3.08%",
@@ -14,7 +14,7 @@
   "closed_trades": 0,
   "partial_realised_pnl": 35.76,
   "portfolio_peak": 10130.51,
-  "drawdown_now_pct": 0.03,
+  "drawdown_now_pct": 0.02,
   "max_drawdown_pct": 0.35,
   "usd_inr_rate": 94.22,
   "positions": [
@@ -49,16 +49,16 @@
       "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NASDAQ",
       "entry": 638.22,
-      "current": 663.88,
-      "peak_price": 663.94,
+      "current": 664.02,
+      "peak_price": 664.02,
       "trail_stop": 574.4,
-      "dist_to_trail_pct": 13.48,
+      "dist_to_trail_pct": 13.5,
       "units": 4.617291,
       "invested": 2946.86,
-      "pnl": 118.47,
-      "pnl_str": "+118.47",
-      "pnl_pct": 4.02,
-      "pnl_pct_str": "+4.02%",
+      "pnl": 119.11,
+      "pnl_str": "+119.11",
+      "pnl_pct": 4.04,
+      "pnl_pct_str": "+4.04%",
       "confidence": 94,
       "severity": "CRITICAL",
       "days_held": 8,
@@ -203,7 +203,7 @@
     ],
     "values": [
       111.06,
-      118.47,
+      119.11,
       20.58,
       -4.83,
       7.55,
@@ -2149,11 +2149,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78098.0,
+      "price": 78010.97,
       "currency": "USD",
-      "change": 485.98,
-      "change_pct": 0.63,
-      "change_str": "+0.63%",
+      "change": 398.95,
+      "change_pct": 0.51,
+      "change_str": "+0.51%",
       "direction": "up"
     },
     {
@@ -2181,7 +2181,7 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.03,
+    "drawdown_from_peak_pct": 0.02,
     "portfolio_peak": 10130.51,
     "vix": 18.71,
     "vix_regime": "ELEVATED",
@@ -2323,7 +2323,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": 15.27,
           "action": "TRIM",
-          "amount": 1546.16,
+          "amount": 1546.7,
           "etf_name": "Invesco QQQ Trust"
         },
         {
@@ -2332,7 +2332,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -12.32,
           "action": "ADD",
-          "amount": 1247.52,
+          "amount": 1247.61,
           "etf_name": "iShares Global Clean Energy ETF"
         },
         {
@@ -2341,7 +2341,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -11.56,
           "action": "ADD",
-          "amount": 1170.78,
+          "amount": 1170.88,
           "etf_name": "Invesco DB Commodity Index Tracking Fund"
         },
         {
@@ -2350,16 +2350,16 @@
           "target_weight_pct": 15.0,
           "drift_pct": 11.17,
           "action": "TRIM",
-          "amount": 1131.6,
+          "amount": 1131.5,
           "etf_name": "Energy Select Sector SPDR"
         },
         {
           "ticker": "BND",
-          "actual_weight_pct": 25.94,
+          "actual_weight_pct": 25.93,
           "target_weight_pct": 15.0,
-          "drift_pct": 10.94,
+          "drift_pct": 10.93,
           "action": "TRIM",
-          "amount": 1107.49,
+          "amount": 1107.4,
           "etf_name": "Vanguard Total Bond Market ETF"
         },
         {
@@ -2368,7 +2368,7 @@
           "target_weight_pct": 10.0,
           "drift_pct": -9.98,
           "action": "RAISE",
-          "amount": 1010.69,
+          "amount": 1010.76,
           "etf_name": "Cash Reserve"
         }
       ],
@@ -2378,7 +2378,7 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -2430.94,
+          "total_impact": -2431.2,
           "portfolio_loss_pct": -24.0,
           "position_impacts": [
             {
@@ -2391,7 +2391,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -1226.13
+              "impact": -1226.39
             },
             {
               "ticker": "BND",
@@ -2420,7 +2420,7 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -2917.81,
+          "total_impact": -2918.03,
           "portfolio_loss_pct": -28.81,
           "position_impacts": [
             {
@@ -2433,7 +2433,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -1042.21
+              "impact": -1042.43
             },
             {
               "ticker": "BND",
@@ -2462,7 +2462,7 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1173.81,
+          "total_impact": -1173.91,
           "portfolio_loss_pct": -11.59,
           "position_impacts": [
             {
@@ -2475,7 +2475,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -459.8
+              "impact": -459.9
             },
             {
               "ticker": "BND",
@@ -2504,7 +2504,7 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -803.85,
+          "total_impact": -803.9,
           "portfolio_loss_pct": -7.94,
           "position_impacts": [
             {
@@ -2517,7 +2517,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -245.23
+              "impact": -245.28
             },
             {
               "ticker": "BND",
@@ -2546,7 +2546,7 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1002.39,
+          "total_impact": -1002.51,
           "portfolio_loss_pct": -9.9,
           "position_impacts": [
             {
@@ -2559,7 +2559,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -551.76
+              "impact": -551.88
             },
             {
               "ticker": "BND",
@@ -2593,11 +2593,11 @@
     }
   },
   "logs": [
-    "2026-04-26 16:34:35 [INFO] AZALYST - status.json generated",
-    "2026-04-26 16:34:35 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
-    "2026-04-26 16:34:35 [INFO] SIGNALS - 30 active signal buckets in state",
-    "2026-04-26 16:34:35 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-26 16:34:35 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-26 17:33:38 [INFO] AZALYST - status.json generated",
+    "2026-04-26 17:33:38 [INFO] PORTFOLIO - NAV USD 10,128.46 | Return +3.08%",
+    "2026-04-26 17:33:38 [INFO] SIGNALS - 30 active signal buckets in state",
+    "2026-04-26 17:33:38 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-26 17:33:38 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-26 16:34:34 UTC"
+  "generated_at": "2026-04-26 17:33:37 UTC"
 }
