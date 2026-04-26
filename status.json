@@ -216,20 +216,16 @@
       "score": 94.0
     },
     {
+      "symbol": "India Equity Markets + Healthcare & Pharma",
+      "score": 94.0
+    },
+    {
       "symbol": "Cybersecurity + Crypto & Digital Assets",
       "score": 93.0
     },
     {
       "symbol": "Banking & Financial Sector + Bonds & Fixed Income",
       "score": 92.0
-    },
-    {
-      "symbol": "Healthcare & Pharma + India Equity Markets",
-      "score": 92.0
-    },
-    {
-      "symbol": "Energy / Oil & Gas",
-      "score": 91.0
     },
     {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
@@ -256,8 +252,12 @@
       "score": 87.0
     },
     {
-      "symbol": "Defense & Aerospace",
+      "symbol": "Energy / Oil & Gas",
       "score": 85.0
+    },
+    {
+      "symbol": "Defense & Aerospace",
+      "score": 82.0
     },
     {
       "symbol": "Real Estate & REITs + India Equity Markets",
@@ -281,7 +281,11 @@
     },
     {
       "symbol": "Technology & AI / Semiconductors",
-      "score": 79.0
+      "score": 78.0
+    },
+    {
+      "symbol": "Nuclear Energy & Uranium",
+      "score": 78.0
     },
     {
       "symbol": "Real Estate & REITs + Bonds & Fixed Income",
@@ -314,10 +318,6 @@
     {
       "symbol": "Asia Pacific Equity",
       "score": 67.0
-    },
-    {
-      "symbol": "Nuclear Energy & Uranium",
-      "score": 65.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -383,6 +383,61 @@
         "signal_strength": 25.0,
         "volume_confirmation": 17.1,
         "source_diversity": 17.7,
+        "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "healthcare_pharma|india_equity",
+      "sector_label": "India Equity Markets + Healthcare & Pharma",
+      "confidence": 94.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "26 Apr 2026 04:01 UTC",
+      "headline": "F&amp;O Talk: Nifty slips below 20 &amp; 50EMA. Sudeep Shah's tips to ride monthly expiry, trade 6 big weekly movers",
+      "regions": [
+        "india",
+        "middle_east",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "World | Deutsche Welle",
+        "US Top News and Analysis",
+        "BBC News"
+      ],
+      "primary_etf": "XLV",
+      "top_etfs": [
+        "XLV",
+        "INDA",
+        "IXJ"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "HEALTHCARE",
+        "PHARMABEES"
+      ],
+      "global_etfs": [
+        "XLV",
+        "INDA",
+        "IXJ",
+        "XBI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 14.3,
         "recency": 20.0,
         "geopolitical_severity": 15.0
       }
@@ -488,114 +543,6 @@
         "volume_confirmation": 20.0,
         "source_diversity": 15.6,
         "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "healthcare_pharma|india_equity",
-      "sector_label": "Healthcare & Pharma + India Equity Markets",
-      "confidence": 92.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "25 Apr 2026 23:30 UTC",
-      "headline": "FDA fast-tracks psychedelic drug research following Trump executive order",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "india",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "BBC News",
-        "US Top News and Analysis",
-        "The Verge"
-      ],
-      "primary_etf": "XLV",
-      "top_etfs": [
-        "XLV",
-        "INDA",
-        "IXJ"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "HEALTHCARE",
-        "PHARMABEES"
-      ],
-      "global_etfs": [
-        "XLV",
-        "INDA",
-        "IXJ",
-        "XBI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 23.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 14.3,
-        "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 91.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 26,
-      "latest_at": "25 Apr 2026 21:00 UTC",
-      "headline": "IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand",
-      "regions": [
-        "middle_east",
-        "europe",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "World | Deutsche Welle",
-        "Finance",
-        "Oilprice.com",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 15.5,
-        "recency": 15.6,
         "geopolitical_severity": 15.0
       }
     },
@@ -918,29 +865,82 @@
       }
     },
     {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 85.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 26,
+      "latest_at": "25 Apr 2026 21:00 UTC",
+      "headline": "IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand",
+      "regions": [
+        "middle_east",
+        "global",
+        "americas",
+        "europe"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "Finance"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 15.5,
+        "recency": 9.9,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
-      "confidence": 85.0,
+      "confidence": 82.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 43,
+      "article_count": 45,
       "latest_at": "25 Apr 2026 12:54 UTC",
       "headline": "Nato says 'no provision' to expel members after report US could seek to suspend Spain",
       "regions": [
         "middle_east",
-        "europe",
-        "asia_pacific",
-        "americas"
+        "global",
+        "americas",
+        "europe"
       ],
       "sources": [
+        "Cointelegraph.com News",
+        "Markets-Economic Times",
         "World | Deutsche Welle",
-        "BBC News",
-        "Finance",
-        "Cointelegraph.com News"
+        "US Top News and Analysis"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -966,7 +966,7 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 18.2,
-        "recency": 6.9,
+        "recency": 4.4,
         "geopolitical_severity": 15.0
       }
     },
@@ -1034,17 +1034,17 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 9,
-      "latest_at": "25 Apr 2026 21:59 UTC",
+      "latest_at": "26 Apr 2026 04:01 UTC",
       "headline": "Inside the Rise of BYD, China\u2019s Top EV Maker",
       "regions": [
-        "americas",
+        "global",
         "europe",
-        "global"
+        "americas"
       ],
       "sources": [
         "Markets-Economic Times",
         "Finance",
-        "The Verge",
+        "Bloomberg Markets",
         "Oilprice.com"
       ],
       "primary_etf": "ICLN",
@@ -1227,27 +1227,27 @@
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 79.0,
+      "confidence": 78.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
+      "article_count": 27,
       "latest_at": "25 Apr 2026 04:26 UTC",
       "headline": "Intel stock surges 24% as AI-driven CPU demand fuels turnaround",
       "regions": [
-        "asia_pacific",
         "middle_east",
+        "global",
         "americas",
-        "global"
+        "asia_pacific"
       ],
       "sources": [
-        "BBC News",
-        "Finance",
         "Cointelegraph.com News",
-        "Defense News"
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "BBC News"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -1270,10 +1270,61 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 25.0,
+        "signal_strength": 24.9,
         "volume_confirmation": 20.0,
         "source_diversity": 16.6,
-        "recency": 3.0,
+        "recency": 1.9,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "nuclear_uranium",
+      "sector_label": "Nuclear Energy & Uranium",
+      "confidence": 78.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "26 Apr 2026 04:01 UTC",
+      "headline": "IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand",
+      "regions": [
+        "middle_east",
+        "americas",
+        "global"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "Finance",
+        "World | Deutsche Welle"
+      ],
+      "primary_etf": "URA",
+      "top_etfs": [
+        "URA",
+        "URNM",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "URA",
+        "URNM",
+        "SRUUF"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 16.8,
+        "volume_confirmation": 14.0,
+        "source_diversity": 12.3,
+        "recency": 20.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -1682,56 +1733,6 @@
       }
     },
     {
-      "sector_key": "nuclear_uranium",
-      "sector_label": "Nuclear Energy & Uranium",
-      "confidence": 65.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "25 Apr 2026 16:00 UTC",
-      "headline": "IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand",
-      "regions": [
-        "americas",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "URA",
-      "top_etfs": [
-        "URA",
-        "URNM",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "URA",
-        "URNM",
-        "SRUUF"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 15.2,
-        "volume_confirmation": 12.5,
-        "source_diversity": 11.0,
-        "recency": 12.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income",
       "confidence": 64.0,
@@ -1889,22 +1890,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "India Equity Markets + Healthcare & Pharma - 13 articles - HIGH / NEUTRAL - F&amp;O Talk: Nifty slips below 20 &amp; 50EMA. Sudeep Shah's tips to ride monthly expiry, trade 6 big weekly movers"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Cybersecurity + Crypto & Digital Assets - 11 articles - HIGH / NEUTRAL - After watchdog slams understaffing, AI to vet Pentagon-backed professors\u2019 China ties"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Banking & Financial Sector + Bonds & Fixed Income - 13 articles - HIGH / NEUTRAL - Fmr. Fed Governor Betsy Duke on Warsh's Future, Rates"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Healthcare & Pharma + India Equity Markets - 13 articles - HIGH / NEUTRAL - FDA fast-tracks psychedelic drug research following Trump executive order"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Energy / Oil & Gas - 26 articles - CRITICAL / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
     },
     {
       "tag": "tag-neu",
@@ -1939,7 +1935,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 43 articles - HIGH / NEUTRAL - Nato says 'no provision' to expel members after report US could seek to suspend Spain"
+      "text": "Energy / Oil & Gas - 26 articles - CRITICAL / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Defense & Aerospace - 45 articles - HIGH / NEUTRAL - Nato says 'no provision' to expel members after report US could seek to suspend Spain"
     },
     {
       "tag": "tag-neu",
@@ -1969,7 +1970,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 28 articles - HIGH / NEUTRAL - Intel stock surges 24% as AI-driven CPU demand fuels turnaround"
+      "text": "Technology & AI / Semiconductors - 27 articles - HIGH / NEUTRAL - Intel stock surges 24% as AI-driven CPU demand fuels turnaround"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Nuclear Energy & Uranium - 6 articles - HIGH / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
     },
     {
       "tag": "tag-neu",
@@ -2010,11 +2016,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Asia Pacific Equity - 4 articles - HIGH / NEUTRAL - Global Markets | Japan's Nikkei closes at record high as tech earnings overshadow Mideast concerns"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Nuclear Energy & Uranium - 5 articles - HIGH / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
     },
     {
       "tag": "tag-neu",
@@ -2147,12 +2148,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77590.0,
+      "price": 77406.52,
       "currency": "USD",
-      "change": 134.69,
-      "change_pct": 0.17,
-      "change_str": "+0.17%",
-      "direction": "up"
+      "change": -48.79,
+      "change_pct": -0.06,
+      "change_str": "-0.06%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
@@ -2591,11 +2592,11 @@
     }
   },
   "logs": [
-    "2026-04-26 00:05:17 [INFO] AZALYST - status.json generated",
-    "2026-04-26 00:05:17 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
-    "2026-04-26 00:05:17 [INFO] SIGNALS - 30 active signal buckets in state",
-    "2026-04-26 00:05:17 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-26 00:05:17 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-26 04:02:22 [INFO] AZALYST - status.json generated",
+    "2026-04-26 04:02:22 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
+    "2026-04-26 04:02:22 [INFO] SIGNALS - 30 active signal buckets in state",
+    "2026-04-26 04:02:22 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-26 04:02:22 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-26 00:05:16 UTC"
+  "generated_at": "2026-04-26 04:02:21 UTC"
 }
