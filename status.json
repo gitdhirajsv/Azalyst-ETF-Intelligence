@@ -232,6 +232,10 @@
       "score": 92.0
     },
     {
+      "symbol": "Crypto & Digital Assets",
+      "score": 90.0
+    },
+    {
       "symbol": "Europe Equity + Banking & Financial Sector",
       "score": 88.0
     },
@@ -286,10 +290,6 @@
     {
       "symbol": "Europe Equity",
       "score": 75.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 74.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -596,6 +596,52 @@
         "volume_confirmation": 18.7,
         "source_diversity": 13.3,
         "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 90.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "26 Apr 2026 13:55 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "africa",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Cointelegraph.com News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 12.3,
+        "recency": 18.2,
         "geopolitical_severity": 15.0
       }
     },
@@ -1296,18 +1342,18 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 7,
-      "latest_at": "26 Apr 2026 10:38 UTC",
+      "latest_at": "26 Apr 2026 14:49 UTC",
       "headline": "ECB signs standards deals to cut digital euro integration costs",
       "regions": [
         "europe",
-        "global",
-        "asia_pacific"
+        "asia_pacific",
+        "global"
       ],
       "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
+        "Defense News",
+        "BBC News",
         "World | Deutsche Welle",
-        "BBC News"
+        "Cointelegraph.com News"
       ],
       "primary_etf": "VGK",
       "top_etfs": [
@@ -1332,52 +1378,6 @@
         "source_diversity": 14.1,
         "recency": 20.0,
         "geopolitical_severity": 11.8
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 74.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "25 Apr 2026 14:38 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "india",
-        "global"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 12.3,
-        "recency": 2.7,
-        "geopolitical_severity": 15.0
       }
     },
     {
@@ -1911,6 +1911,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Europe Equity + Banking & Financial Sector - 9 articles - CRITICAL / NEUTRAL - Kazimir Says Slight ECB Rate Increase May Be Needed on War"
     },
     {
@@ -1977,11 +1982,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Europe Equity - 7 articles - MEDIUM / NEUTRAL - ECB signs standards deals to cut digital euro integration costs"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -2149,11 +2149,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77949.01,
+      "price": 78126.92,
       "currency": "USD",
-      "change": 336.99,
-      "change_pct": 0.43,
-      "change_str": "+0.43%",
+      "change": 514.9,
+      "change_pct": 0.66,
+      "change_str": "+0.66%",
       "direction": "up"
     },
     {
@@ -2593,11 +2593,11 @@
     }
   },
   "logs": [
-    "2026-04-26 14:01:47 [INFO] AZALYST - status.json generated",
-    "2026-04-26 14:01:47 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
-    "2026-04-26 14:01:47 [INFO] SIGNALS - 30 active signal buckets in state",
-    "2026-04-26 14:01:47 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-26 14:01:47 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-26 14:50:45 [INFO] AZALYST - status.json generated",
+    "2026-04-26 14:50:45 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
+    "2026-04-26 14:50:45 [INFO] SIGNALS - 30 active signal buckets in state",
+    "2026-04-26 14:50:45 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-26 14:50:45 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-26 14:01:46 UTC"
+  "generated_at": "2026-04-26 14:50:45 UTC"
 }
