@@ -38,7 +38,7 @@
       "pnl_pct_str": "+4.37%",
       "confidence": 96,
       "severity": "CRITICAL",
-      "days_held": 7,
+      "days_held": 8,
       "half_exited": true
     },
     {
@@ -61,7 +61,7 @@
       "pnl_pct_str": "+4.02%",
       "confidence": 94,
       "severity": "CRITICAL",
-      "days_held": 7,
+      "days_held": 8,
       "half_exited": false
     },
     {
@@ -280,10 +280,6 @@
       "score": 77.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 76.0
-    },
-    {
       "symbol": "Technology & AI / Semiconductors",
       "score": 76.0
     },
@@ -294,6 +290,10 @@
     {
       "symbol": "Europe Equity",
       "score": 75.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 74.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -1232,52 +1232,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 76.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "25 Apr 2026 14:38 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "india",
-        "africa",
-        "asia_pacific",
-        "middle_east"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 12.3,
-        "recency": 4.2,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
       "confidence": 76.0,
@@ -1395,18 +1349,18 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 7,
-      "latest_at": "26 Apr 2026 06:10 UTC",
+      "latest_at": "26 Apr 2026 10:38 UTC",
       "headline": "ECB signs standards deals to cut digital euro integration costs",
       "regions": [
         "europe",
-        "asia_pacific",
-        "global"
+        "global",
+        "asia_pacific"
       ],
       "sources": [
-        "BBC News",
+        "Markets-Economic Times",
         "Cointelegraph.com News",
-        "Defense News",
-        "World | Deutsche Welle"
+        "World | Deutsche Welle",
+        "BBC News"
       ],
       "primary_etf": "VGK",
       "top_etfs": [
@@ -1431,6 +1385,52 @@
         "source_diversity": 14.1,
         "recency": 20.0,
         "geopolitical_severity": 11.8
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 74.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "25 Apr 2026 14:38 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "middle_east",
+        "asia_pacific",
+        "india",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 12.3,
+        "recency": 2.7,
+        "geopolitical_severity": 15.0
       }
     },
     {
@@ -1971,11 +1971,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Technology & AI / Semiconductors - 23 articles - HIGH / NEUTRAL - Inside China, artificial intelligence is a snake eating its own tail"
     },
     {
@@ -1987,6 +1982,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Europe Equity - 7 articles - MEDIUM / NEUTRAL - ECB signs standards deals to cut digital euro integration costs"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -2149,11 +2149,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78017.65,
+      "price": 78027.93,
       "currency": "USD",
-      "change": 405.63,
-      "change_pct": 0.52,
-      "change_str": "+0.52%",
+      "change": 415.91,
+      "change_pct": 0.54,
+      "change_str": "+0.54%",
       "direction": "up"
     },
     {
@@ -2593,11 +2593,11 @@
     }
   },
   "logs": [
-    "2026-04-26 09:56:21 [INFO] AZALYST - status.json generated",
-    "2026-04-26 09:56:21 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
-    "2026-04-26 09:56:21 [INFO] SIGNALS - 30 active signal buckets in state",
-    "2026-04-26 09:56:21 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-26 09:56:21 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-26 10:39:37 [INFO] AZALYST - status.json generated",
+    "2026-04-26 10:39:37 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
+    "2026-04-26 10:39:37 [INFO] SIGNALS - 30 active signal buckets in state",
+    "2026-04-26 10:39:37 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-26 10:39:37 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-26 09:56:20 UTC"
+  "generated_at": "2026-04-26 10:39:36 UTC"
 }
