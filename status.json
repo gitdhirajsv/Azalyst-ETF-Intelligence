@@ -228,10 +228,6 @@
       "score": 92.0
     },
     {
-      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
-      "score": 89.0
-    },
-    {
       "symbol": "Europe Equity + Banking & Financial Sector",
       "score": 88.0
     },
@@ -241,6 +237,10 @@
     },
     {
       "symbol": "India Equity Markets",
+      "score": 87.0
+    },
+    {
+      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
       "score": 87.0
     },
     {
@@ -547,61 +547,6 @@
       }
     },
     {
-      "sector_key": "banking_financial|gold_precious_metals",
-      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
-      "confidence": 89.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "26 Apr 2026 06:10 UTC",
-      "headline": "US stocks today: S&amp;P 500, Nasdaq close at records on tech lift, Iran peace talk hopes",
-      "regions": [
-        "global",
-        "middle_east",
-        "asia_pacific",
-        "americas"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Cointelegraph.com News",
-        "World | Deutsche Welle",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "GOLDBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD",
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 21.2,
-        "volume_confirmation": 20.0,
-        "source_diversity": 13.4,
-        "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "banking_financial|europe_equity",
       "sector_label": "Europe Equity + Banking & Financial Sector",
       "confidence": 88.0,
@@ -752,6 +697,61 @@
         "volume_confirmation": 20.0,
         "source_diversity": 8.5,
         "recency": 18.8,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "banking_financial|gold_precious_metals",
+      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
+      "confidence": 87.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "26 Apr 2026 11:34 UTC",
+      "headline": "US: Justice Department drops investigation into Fed Chair Powell",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "americas",
+        "middle_east"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "World | Deutsche Welle",
+        "Markets-Economic Times",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "GOLDBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD",
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 19.5,
+        "volume_confirmation": 20.0,
+        "source_diversity": 13.4,
+        "recency": 20.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -1906,11 +1906,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Banking & Financial Sector + Gold & Precious Metals - 13 articles - HIGH / NEUTRAL - US stocks today: S&amp;P 500, Nasdaq close at records on tech lift, Iran peace talk hopes"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Europe Equity + Banking & Financial Sector - 9 articles - CRITICAL / NEUTRAL - Kazimir Says Slight ECB Rate Increase May Be Needed on War"
     },
     {
@@ -1922,6 +1917,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "India Equity Markets - 19 articles - HIGH / NEUTRAL - Gainers &amp; Losers: Infosys, Adani Energy among 7 big movers on Friday"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Banking & Financial Sector + Gold & Precious Metals - 13 articles - HIGH / NEUTRAL - US: Justice Department drops investigation into Fed Chair Powell"
     },
     {
       "tag": "tag-neu",
@@ -2149,11 +2149,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78027.93,
+      "price": 78123.05,
       "currency": "USD",
-      "change": 415.91,
-      "change_pct": 0.54,
-      "change_str": "+0.54%",
+      "change": 511.03,
+      "change_pct": 0.66,
+      "change_str": "+0.66%",
       "direction": "up"
     },
     {
@@ -2593,11 +2593,11 @@
     }
   },
   "logs": [
-    "2026-04-26 10:39:37 [INFO] AZALYST - status.json generated",
-    "2026-04-26 10:39:37 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
-    "2026-04-26 10:39:37 [INFO] SIGNALS - 30 active signal buckets in state",
-    "2026-04-26 10:39:37 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-26 10:39:37 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-26 11:35:23 [INFO] AZALYST - status.json generated",
+    "2026-04-26 11:35:23 [INFO] PORTFOLIO - NAV USD 10,127.81 | Return +3.08%",
+    "2026-04-26 11:35:23 [INFO] SIGNALS - 30 active signal buckets in state",
+    "2026-04-26 11:35:23 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-26 11:35:23 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-26 10:39:36 UTC"
+  "generated_at": "2026-04-26 11:35:23 UTC"
 }
