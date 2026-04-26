@@ -216,6 +216,10 @@
       "score": 95.0
     },
     {
+      "symbol": "India Equity Markets + Healthcare & Pharma",
+      "score": 95.0
+    },
+    {
       "symbol": "Europe Equity + Energy / Oil & Gas",
       "score": 94.0
     },
@@ -228,11 +232,11 @@
       "score": 92.0
     },
     {
-      "symbol": "India Equity Markets + Healthcare & Pharma",
-      "score": 92.0
+      "symbol": "Crypto & Digital Assets",
+      "score": 90.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
+      "symbol": "Technology & AI / Semiconductors",
       "score": 90.0
     },
     {
@@ -264,11 +268,11 @@
       "score": 82.0
     },
     {
-      "symbol": "Banking & Financial Sector",
-      "score": 81.0
+      "symbol": "Clean Energy & Renewables",
+      "score": 82.0
     },
     {
-      "symbol": "Clean Energy & Renewables",
+      "symbol": "Banking & Financial Sector",
       "score": 81.0
     },
     {
@@ -277,7 +281,7 @@
     },
     {
       "symbol": "Defense & Aerospace",
-      "score": 79.0
+      "score": 78.0
     },
     {
       "symbol": "Real Estate & REITs + Bonds & Fixed Income",
@@ -294,10 +298,6 @@
     {
       "symbol": "Nuclear Energy & Uranium",
       "score": 74.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 73.0
     },
     {
       "symbol": "Nuclear Energy & Uranium + Asia Pacific Equity",
@@ -343,20 +343,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "26 Apr 2026 14:00 UTC",
+      "article_count": 21,
+      "latest_at": "26 Apr 2026 18:38 UTC",
       "headline": "IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand",
       "regions": [
-        "americas",
-        "global",
-        "africa",
-        "india"
+        "asia_pacific",
+        "india",
+        "middle_east",
+        "africa"
       ],
       "sources": [
         "World | Deutsche Welle",
-        "Bloomberg Markets",
         "Oilprice.com",
-        "US Top News and Analysis"
+        "Bloomberg Markets",
+        "Markets-Economic Times"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -376,6 +376,61 @@
         "XLE",
         "IXC",
         "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 15.5,
+        "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "healthcare_pharma|india_equity",
+      "sector_label": "India Equity Markets + Healthcare & Pharma",
+      "confidence": 95.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "26 Apr 2026 18:38 UTC",
+      "headline": "Ahead of Market: 10 things that will decide D-Street action on Monday",
+      "regions": [
+        "asia_pacific",
+        "americas",
+        "india",
+        "middle_east"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "The Verge"
+      ],
+      "primary_etf": "XLV",
+      "top_etfs": [
+        "XLV",
+        "INDA",
+        "IXJ"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "HEALTHCARE",
+        "PHARMABEES"
+      ],
+      "global_etfs": [
+        "XLV",
+        "INDA",
+        "IXJ",
+        "XBI"
       ],
       "is_legacy": false,
       "breakdown": {
@@ -545,61 +600,6 @@
       }
     },
     {
-      "sector_key": "healthcare_pharma|india_equity",
-      "sector_label": "India Equity Markets + Healthcare & Pharma",
-      "confidence": 92.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "26 Apr 2026 14:00 UTC",
-      "headline": "Ahead of Market: 10 things that will decide D-Street action on Monday",
-      "regions": [
-        "middle_east",
-        "americas",
-        "india",
-        "asia_pacific"
-      ],
-      "sources": [
-        "World | Deutsche Welle",
-        "Markets-Economic Times",
-        "BBC News",
-        "The Verge"
-      ],
-      "primary_etf": "XLV",
-      "top_etfs": [
-        "XLV",
-        "INDA",
-        "IXJ"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "HEALTHCARE",
-        "PHARMABEES"
-      ],
-      "global_etfs": [
-        "XLV",
-        "INDA",
-        "IXJ",
-        "XBI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 18.7,
-        "source_diversity": 13.3,
-        "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 90.0,
@@ -643,6 +643,59 @@
         "source_diversity": 12.3,
         "recency": 18.2,
         "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 90.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "26 Apr 2026 16:47 UTC",
+      "headline": "Inside China, artificial intelligence is a snake eating its own tail",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "india",
+        "middle_east"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 24.2,
+        "volume_confirmation": 20.0,
+        "source_diversity": 16.0,
+        "recency": 16.6,
+        "geopolitical_severity": 14.3
       }
     },
     {
@@ -1017,6 +1070,57 @@
       }
     },
     {
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables",
+      "confidence": 82.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 10,
+      "latest_at": "26 Apr 2026 18:38 UTC",
+      "headline": "The Green Hydrogen Dream Is Slipping Further Out of Reach",
+      "regions": [
+        "asia_pacific",
+        "americas",
+        "global"
+      ],
+      "sources": [
+        "The Verge",
+        "Oilprice.com",
+        "Finance",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "ICLN",
+      "top_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NEWENERGY"
+      ],
+      "global_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 18.8,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.3,
+        "recency": 20.0,
+        "geopolitical_severity": 13.6
+      }
+    },
+    {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector",
       "confidence": 81.0,
@@ -1065,57 +1169,6 @@
         "source_diversity": 13.4,
         "recency": 20.0,
         "geopolitical_severity": 11.8
-      }
-    },
-    {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables",
-      "confidence": 81.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 9,
-      "latest_at": "26 Apr 2026 14:00 UTC",
-      "headline": "Inside the Rise of BYD, China\u2019s Top EV Maker",
-      "regions": [
-        "global",
-        "americas",
-        "europe"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "The Verge",
-        "Oilprice.com",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "ICLN",
-      "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NEWENERGY"
-      ],
-      "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 17.3,
-        "volume_confirmation": 17.1,
-        "source_diversity": 14.8,
-        "recency": 20.0,
-        "geopolitical_severity": 12.4
       }
     },
     {
@@ -1175,27 +1228,27 @@
     {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
-      "confidence": 79.0,
+      "confidence": 78.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 47,
+      "article_count": 45,
       "latest_at": "25 Apr 2026 07:42 UTC",
       "headline": "Nato says 'no provision' to expel members after report US could seek to suspend Spain",
       "regions": [
-        "americas",
-        "global",
+        "asia_pacific",
         "india",
-        "middle_east"
+        "middle_east",
+        "americas"
       ],
       "sources": [
+        "US Top News and Analysis",
         "World | Deutsche Welle",
-        "BBC News",
-        "Bloomberg Markets",
-        "Defense News"
+        "World News - Breaking international news and headlines | Sky News",
+        "Oilprice.com"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -1221,7 +1274,7 @@
         "signal_strength": 25.0,
         "volume_confirmation": 20.0,
         "source_diversity": 18.2,
-        "recency": 1.0,
+        "recency": 0.6,
         "geopolitical_severity": 15.0
       }
     },
@@ -1391,18 +1444,18 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 5,
-      "latest_at": "26 Apr 2026 14:00 UTC",
+      "latest_at": "26 Apr 2026 18:38 UTC",
       "headline": "IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand",
       "regions": [
-        "middle_east",
         "americas",
-        "global"
+        "global",
+        "middle_east"
       ],
       "sources": [
         "World | Deutsche Welle",
         "Oilprice.com",
-        "Markets-Economic Times",
-        "US Top News and Analysis"
+        "Finance",
+        "Markets-Economic Times"
       ],
       "primary_etf": "URA",
       "top_etfs": [
@@ -1429,59 +1482,6 @@
         "source_diversity": 12.3,
         "recency": 20.0,
         "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 73.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "25 Apr 2026 05:37 UTC",
-      "headline": "Inside China, artificial intelligence is a snake eating its own tail",
-      "regions": [
-        "middle_east",
-        "india",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Defense News",
-        "US Top News and Analysis",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 24.1,
-        "volume_confirmation": 20.0,
-        "source_diversity": 14.9,
-        "recency": 0.8,
-        "geopolitical_severity": 14.2
       }
     },
     {
@@ -1886,7 +1886,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 24 articles - CRITICAL / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
+      "text": "Energy / Oil & Gas - 21 articles - CRITICAL / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "India Equity Markets + Healthcare & Pharma - 13 articles - CRITICAL / NEUTRAL - Ahead of Market: 10 things that will decide D-Street action on Monday"
     },
     {
       "tag": "tag-neu",
@@ -1906,12 +1911,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets + Healthcare & Pharma - 11 articles - CRITICAL / NEUTRAL - Ahead of Market: 10 things that will decide D-Street action on Monday"
+      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+      "text": "Technology & AI / Semiconductors - 24 articles - HIGH / NEUTRAL - Inside China, artificial intelligence is a snake eating its own tail"
     },
     {
       "tag": "tag-neu",
@@ -1951,12 +1956,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Banking & Financial Sector - 12 articles - MEDIUM / NEUTRAL - US: Justice Department drops investigation into Fed Chair Powell"
+      "text": "Clean Energy & Renewables - 10 articles - HIGH / NEUTRAL - The Green Hydrogen Dream Is Slipping Further Out of Reach"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Clean Energy & Renewables - 9 articles - MEDIUM / NEUTRAL - Inside the Rise of BYD, China\u2019s Top EV Maker"
+      "text": "Banking & Financial Sector - 12 articles - MEDIUM / NEUTRAL - US: Justice Department drops investigation into Fed Chair Powell"
     },
     {
       "tag": "tag-neu",
@@ -1966,7 +1971,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 47 articles - HIGH / NEUTRAL - Nato says 'no provision' to expel members after report US could seek to suspend Spain"
+      "text": "Defense & Aerospace - 45 articles - HIGH / NEUTRAL - Nato says 'no provision' to expel members after report US could seek to suspend Spain"
     },
     {
       "tag": "tag-neu",
@@ -1987,11 +1992,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 5 articles - HIGH / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 24 articles - HIGH / NEUTRAL - Inside China, artificial intelligence is a snake eating its own tail"
     },
     {
       "tag": "tag-neu",
@@ -2149,11 +2149,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78010.97,
+      "price": 78189.95,
       "currency": "USD",
-      "change": 398.95,
-      "change_pct": 0.51,
-      "change_str": "+0.51%",
+      "change": 577.93,
+      "change_pct": 0.74,
+      "change_str": "+0.74%",
       "direction": "up"
     },
     {
@@ -2593,11 +2593,11 @@
     }
   },
   "logs": [
-    "2026-04-26 17:33:38 [INFO] AZALYST - status.json generated",
-    "2026-04-26 17:33:38 [INFO] PORTFOLIO - NAV USD 10,128.46 | Return +3.08%",
-    "2026-04-26 17:33:38 [INFO] SIGNALS - 30 active signal buckets in state",
-    "2026-04-26 17:33:38 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-26 17:33:38 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-26 18:39:58 [INFO] AZALYST - status.json generated",
+    "2026-04-26 18:39:58 [INFO] PORTFOLIO - NAV USD 10,128.46 | Return +3.08%",
+    "2026-04-26 18:39:58 [INFO] SIGNALS - 30 active signal buckets in state",
+    "2026-04-26 18:39:58 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-26 18:39:58 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-26 17:33:37 UTC"
+  "generated_at": "2026-04-26 18:39:58 UTC"
 }
