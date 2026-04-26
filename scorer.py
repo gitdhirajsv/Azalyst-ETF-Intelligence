@@ -164,6 +164,7 @@ class ConfidenceScorer:
     def _factor_recency(self, signal: Dict) -> float:
         """
         Exponential time decay from the latest supporting article.
+        Aggressively decay articles older than 48h.
         """
         try:
             latest = signal.get("latest_ts")
@@ -176,6 +177,9 @@ class ConfidenceScorer:
             age_hours = max(age.total_seconds() / 3600.0, 0.0)
             if age_hours > 24 * 7:
                 return 0.0
+            # Aggressive decay for articles older than 48h
+            if age_hours > 48:
+                return min(20.0 * math.exp(-age_hours / 10.0) * 0.5, 20.0)
             return min(20.0 * math.exp(-age_hours / 10.0), 20.0)
         except Exception:
             return 0.0
