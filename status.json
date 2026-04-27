@@ -216,11 +216,11 @@
       "score": 98.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 96.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 95.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
+      "symbol": "Technology & AI / Semiconductors",
       "score": 95.0
     },
     {
@@ -312,6 +312,10 @@
       "score": 71.0
     },
     {
+      "symbol": "Asia Pacific Equity",
+      "score": 71.0
+    },
+    {
       "symbol": "Banking & Financial Sector",
       "score": 69.0
     },
@@ -326,10 +330,6 @@
     {
       "symbol": "Real Estate & REITs",
       "score": 63.0
-    },
-    {
-      "symbol": "Asia Pacific Equity",
-      "score": 62.0
     }
   ],
   "signals": [
@@ -387,59 +387,6 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 96.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 26,
-      "latest_at": "27 Apr 2026 19:05 UTC",
-      "headline": "Nvidia, Intel call buyers defy the dip in chip stocks",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "india",
-        "middle_east"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "Defense News",
-        "World | Deutsche Welle",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 24.4,
-        "volume_confirmation": 20.0,
-        "source_diversity": 17.1,
-        "recency": 20.0,
-        "geopolitical_severity": 14.9
-      }
-    },
-    {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
       "confidence": 95.0,
@@ -449,20 +396,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "27 Apr 2026 19:05 UTC",
-      "headline": "Hormuz Disruptions Drive Crude Higher as U.S.-Iran Diplomacy Stalls",
+      "article_count": 29,
+      "latest_at": "27 Apr 2026 23:44 UTC",
+      "headline": "Goldman Hikes Oil Forecasts Again as Hormuz Shock Builds",
       "regions": [
-        "global",
         "asia_pacific",
-        "europe",
-        "middle_east"
+        "global",
+        "middle_east",
+        "americas"
       ],
       "sources": [
-        "Oilprice.com",
+        "Finance",
         "World | Deutsche Welle",
         "Bloomberg Markets",
-        "US Top News and Analysis"
+        "Markets-Economic Times"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -489,6 +436,59 @@
         "volume_confirmation": 20.0,
         "source_diversity": 15.5,
         "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 95.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 26,
+      "latest_at": "27 Apr 2026 22:45 UTC",
+      "headline": "Nvidia, Intel call buyers defy the dip in chip stocks",
+      "regions": [
+        "india",
+        "asia_pacific",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Finance",
+        "World | Deutsche Welle",
+        "Cointelegraph.com News",
+        "The Verge"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 24.9,
+        "volume_confirmation": 20.0,
+        "source_diversity": 17.7,
+        "recency": 18.1,
         "geopolitical_severity": 15.0
       }
     },
@@ -1643,6 +1643,55 @@
       }
     },
     {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 71.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "27 Apr 2026 23:00 UTC",
+      "headline": "Global Markets | Japan's Nikkei closes above 60,000 for first time on earnings optimism",
+      "regions": [
+        "middle_east",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Defense News",
+        "Bloomberg Markets",
+        "Oilprice.com"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.5,
+        "volume_confirmation": 14.0,
+        "source_diversity": 14.5,
+        "recency": 18.6,
+        "geopolitical_severity": 12.3
+      }
+    },
+    {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector",
       "confidence": 69.0,
@@ -1834,53 +1883,6 @@
         "recency": 17.3,
         "geopolitical_severity": 14.7
       }
-    },
-    {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 62.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "27 Apr 2026 17:00 UTC",
-      "headline": "Global Markets | Japan's Nikkei closes above 60,000 for first time on earnings optimism",
-      "regions": [
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Defense News",
-        "Oilprice.com",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 9.6,
-        "volume_confirmation": 10.8,
-        "source_diversity": 11.9,
-        "recency": 18.4,
-        "geopolitical_severity": 11.8
-      }
     }
   ],
   "articles": [
@@ -1892,12 +1894,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 26 articles - HIGH / NEUTRAL - Nvidia, Intel call buyers defy the dip in chip stocks"
+      "text": "Energy / Oil & Gas - 29 articles - CRITICAL / NEUTRAL - Goldman Hikes Oil Forecasts Again as Hormuz Shock Builds"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 25 articles - CRITICAL / NEUTRAL - Hormuz Disruptions Drive Crude Higher as U.S.-Iran Diplomacy Stalls"
+      "text": "Technology & AI / Semiconductors - 26 articles - HIGH / NEUTRAL - Nvidia, Intel call buyers defy the dip in chip stocks"
     },
     {
       "tag": "tag-neu",
@@ -2012,6 +2014,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Asia Pacific Equity - 6 articles - MEDIUM / NEUTRAL - Global Markets | Japan's Nikkei closes above 60,000 for first time on earnings optimism"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Banking & Financial Sector - 5 articles - HIGH / NEUTRAL - Fed likely to hold rates steady as Powell prepares for possible swan song"
     },
     {
@@ -2028,11 +2035,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Real Estate & REITs - 3 articles - HIGH / NEUTRAL - Housing REIT National Healthcare\u2019s US IPO Raises $462 Million"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Asia Pacific Equity - 4 articles - MEDIUM / NEUTRAL - Global Markets | Japan's Nikkei closes above 60,000 for first time on earnings optimism"
     }
   ],
   "market_snapshot": [
@@ -2075,9 +2077,9 @@
       "region": "UK",
       "price": 10321.09,
       "currency": "GBP",
-      "change": -58.01,
-      "change_pct": -0.56,
-      "change_str": "-0.56%",
+      "change": -135.91,
+      "change_pct": -1.3,
+      "change_str": "-1.30%",
       "direction": "down"
     },
     {
@@ -2128,44 +2130,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4704.0,
+      "price": 4707.6,
       "currency": "USD",
-      "change": -18.3,
-      "change_pct": -0.39,
-      "change_str": "-0.39%",
+      "change": -14.7,
+      "change_pct": -0.31,
+      "change_str": "-0.31%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 96.5,
+      "price": 96.68,
       "currency": "USD",
-      "change": 2.1,
-      "change_pct": 2.22,
-      "change_str": "+2.22%",
+      "change": 2.28,
+      "change_pct": 2.42,
+      "change_str": "+2.42%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 76988.15,
+      "price": 77291.52,
       "currency": "USD",
-      "change": -1669.39,
-      "change_pct": -2.12,
-      "change_str": "-2.12%",
+      "change": -1366.02,
+      "change_pct": -1.74,
+      "change_str": "-1.74%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.5,
+      "price": 98.47,
       "currency": "USD",
-      "change": -0.01,
-      "change_pct": -0.01,
-      "change_str": "-0.01%",
+      "change": -0.04,
+      "change_pct": -0.04,
+      "change_str": "-0.04%",
       "direction": "down"
     },
     {
@@ -2594,11 +2596,11 @@
     }
   },
   "logs": [
-    "2026-04-27 22:42:50 [INFO] AZALYST - status.json generated",
-    "2026-04-27 22:42:50 [INFO] PORTFOLIO - NAV USD 10,116.84 | Return +2.91%",
-    "2026-04-27 22:42:50 [INFO] SIGNALS - 30 active signal buckets in state",
-    "2026-04-27 22:42:50 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-27 22:42:50 [INFO] RISK - Partial profits realised: USD 3,771.79"
+    "2026-04-27 23:45:09 [INFO] AZALYST - status.json generated",
+    "2026-04-27 23:45:09 [INFO] PORTFOLIO - NAV USD 10,116.84 | Return +2.91%",
+    "2026-04-27 23:45:09 [INFO] SIGNALS - 30 active signal buckets in state",
+    "2026-04-27 23:45:09 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-27 23:45:09 [INFO] RISK - Partial profits realised: USD 3,771.79"
   ],
-  "generated_at": "2026-04-27 22:42:50 UTC"
+  "generated_at": "2026-04-27 23:45:09 UTC"
 }
