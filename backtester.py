@@ -20,15 +20,15 @@ Usage:
 """
 
 import argparse
-import bisect
 import json
 import logging
-import urllib.parse
-import urllib.request
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Dict, List, Optional
+
+import pandas as pd
+import yfinance as yf
 
 from etf_mapper import ETFMapper
 from paper_trader import (
@@ -59,38 +59,46 @@ def _parse_ts(value: str) -> datetime:
     return datetime.fromisoformat(str(value).replace("Z", "+00:00")).astimezone(timezone.utc)
 
 
-def _venue_symbol(ticker: str, exchange: str) -> str:
-    exchange_upper = (exchange or "").upper()
-    if ("NSE" in exchange_upper or "BSE" in exchange_upper) and not ticker.endswith(".NS"):
-        return f"{ticker}.NS"
-    return ticker
+def prefetch_prices(tickers: list[str], start: datetime, end: datetime) -> dict[str, pd.DataFrame]:
+    """Pre-fetch all OHLC data once to avoid repeated network calls."""
+    cache: dict[str, pd.DataFrame] = {}
+    for t in sorted(set(tickers)):
+        try:
+            # Note: start/end are datetimes; yfinance handles them
+            df = yf.download(t, start=start, end=end, progress=False, auto_adjust=False)
+            if not df.empty:
+                # Convert to INR and ensure index is datetime-aware
+                if df.index.tz is None:
+                    df.index = df.index.tz_localize("UTC")
+                else:
+                    df.index = df.index.tz_convert("UTC")
+                
+                # Multi-index fix for recent yfinance versions
+                if isinstance(df.columns, pd.MultiIndex):
+                    df.columns = df.columns.get_level_values(0)
+                
+                for col in ["Open", "High", "Low", "Close"]:
+                    if col in df.columns:
+                        df[col] = (df[col] * USD_TO_INR).round(4)
+                cache[t] = df
+        except Exception:
+            log.exception("prefetch failed for %s", t)
+    return cache
 
 
-def _fetch_daily_closes(ticker: str, exchange: str, start_dt: datetime, end_dt: datetime) -> Dict[date, float]:
-    symbol = _venue_symbol(ticker, exchange)
-    period1 = int(start_dt.timestamp())
-    period2 = int((end_dt + timedelta(days=1)).timestamp())
-    url = (
-        "https://query1.finance.yahoo.com/v8/finance/chart/"
-        f"{urllib.parse.quote(symbol)}?period1={period1}&period2={period2}&interval=1d"
-    )
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=15) as resp:
-        payload = json.loads(resp.read())
-
-    result = (payload.get("chart") or {}).get("result") or []
-    if not result:
-        return {}
-
-    chart = result[0]
-    timestamps = chart.get("timestamp") or []
-    closes = (((chart.get("indicators") or {}).get("quote") or [{}])[0]).get("close") or []
-    rows: Dict[date, float] = {}
-    for ts, close in zip(timestamps, closes):
-        if close is None:
-            continue
-        rows[datetime.fromtimestamp(ts, tz=timezone.utc).date()] = round(float(close) * USD_TO_INR, 4)
-    return rows
+def next_trading_day_open(prices: pd.DataFrame, signal_ts: datetime):
+    """Return (entry_ts, entry_price) for the trading day strictly after signal_ts."""
+    # Ensure signal_ts is tz-aware UTC
+    if signal_ts.tzinfo is None:
+        signal_ts = signal_ts.replace(tzinfo=timezone.utc)
+    
+    # We want the first bar where the start of the day is strictly after the signal
+    after = prices[prices.index > signal_ts]
+    if after.empty:
+        return None, None
+    
+    next_day = after.iloc[0]
+    return after.index[0], float(next_day["Open"])
 
 
 def _load_events(path: Path) -> List[Dict]:
@@ -178,57 +186,73 @@ class HistoricalReplay:
         self.closed_trades: List[Dict] = []
         self.total_execution_costs_inr = 0.0
         self.daily_equity: List[Dict] = []
-        self.price_cache: Dict[str, Dict[date, float]] = {}
-        self.price_dates: Dict[str, List[date]] = {}
+        self.price_cache: Dict[str, pd.DataFrame] = {}
 
     def _prepare_prices(self):
         if not self.events:
             return
         start_dt = min(event["timestamp"] for event in self.events) - timedelta(days=10)
         end_dt = max(event["timestamp"] for event in self.events) + timedelta(days=MAX_HOLD_DAYS + 10)
-        tickers = {(event["ticker"], event["exchange"]) for event in self.events}
-        tickers.update({("SPY", "NYSE"), ("VT", "NYSE"), ("AGG", "NYSE")})
+        
+        tickers = {event["ticker"] for event in self.events}
+        tickers.update({"SPY", "VT", "AGG"})
+        
+        # Yahoo Finance suffix for India
+        processed_tickers = []
+        for t in tickers:
+            # Simple heuristic: if it looks like an Indian ticker (e.g. NIFTYBEES)
+            # but doesn't have a suffix, it's probably .NS
+            if t.isupper() and len(t) >= 4 and not "." in t and any(e["ticker"] == t and "NSE" in (e.get("exchange") or "") for e in self.events):
+                processed_tickers.append(f"{t}.NS")
+            else:
+                processed_tickers.append(t)
 
-        for ticker, exchange in sorted(tickers):
-            try:
-                history = _fetch_daily_closes(ticker, exchange, start_dt, end_dt)
-                if history:
-                    self.price_cache[ticker] = history
-                    self.price_dates[ticker] = sorted(history.keys())
-            except Exception as exc:
-                log.warning("Price history fetch failed for %s: %s", ticker, exc)
+        self.price_cache = prefetch_prices(processed_tickers, start_dt, end_dt)
+        
+        # Map back to original tickers for easier lookup
+        for t in list(self.price_cache.keys()):
+            if t.endswith(".NS"):
+                self.price_cache[t[:-3]] = self.price_cache[t]
 
-    def _portfolio_value(self, current_day: date) -> float:
+    def _portfolio_value(self, current_day: datetime) -> float:
         total = self.cash_inr
         for pos in self.open_positions:
-            history = self.price_cache.get(pos.ticker, {})
-            dates = self.price_dates.get(pos.ticker, [])
-            mark = _price_on_or_before(history, dates, current_day)
-            if mark:
-                total += pos.current_value(mark)
+            df = self.price_cache.get(pos.ticker)
+            if df is not None:
+                # Find the price on or before this day
+                after = df.index[df.index <= current_day]
+                if not after.empty:
+                    mark = float(df.loc[after[-1], "Close"])
+                    total += pos.current_value(mark)
         return round(total, 2)
 
-    def _sector_exposure(self, sector: str, current_day: date) -> float:
+    def _sector_exposure(self, sector: str, current_day: datetime) -> float:
         exposure = 0.0
         for pos in self.open_positions:
             if pos.sector != sector:
                 continue
-            history = self.price_cache.get(pos.ticker, {})
-            dates = self.price_dates.get(pos.ticker, [])
-            mark = _price_on_or_before(history, dates, current_day)
-            if mark:
-                exposure += pos.current_value(mark)
+            df = self.price_cache.get(pos.ticker)
+            if df is not None:
+                after = df.index[df.index <= current_day]
+                if not after.empty:
+                    mark = float(df.loc[after[-1], "Close"])
+                    exposure += pos.current_value(mark)
         return round(exposure, 2)
 
-    def _mark_to_market(self, current_day: date):
+    def _mark_to_market(self, current_day: datetime):
         survivors: List[SimPosition] = []
         for pos in self.open_positions:
-            history = self.price_cache.get(pos.ticker, {})
-            dates = self.price_dates.get(pos.ticker, [])
-            mark = _price_on_or_before(history, dates, current_day)
-            if mark is None:
+            df = self.price_cache.get(pos.ticker)
+            if df is None:
                 survivors.append(pos)
                 continue
+                
+            after = df.index[df.index <= current_day]
+            if after.empty:
+                survivors.append(pos)
+                continue
+            
+            mark = float(df.loc[after[-1], "Close"])
 
             pos.peak_price = max(pos.peak_price, mark)
             trailing_active = pos.peak_price >= pos.entry_price * (1 + TRAIL_ACTIVATION_PCT) or pos.half_exited
@@ -250,7 +274,7 @@ class HistoricalReplay:
             exit_reason = None
             if mark <= pos.trail_stop:
                 exit_reason = "Trailing/stop exit"
-            elif pos.days_held(current_day) >= MAX_HOLD_DAYS:
+            elif (current_day.date() - pos.entry_date).days >= MAX_HOLD_DAYS:
                 exit_reason = "Max hold exit"
 
             if exit_reason:
@@ -263,7 +287,7 @@ class HistoricalReplay:
                         "ticker": pos.ticker,
                         "sector": pos.sector,
                         "entry_date": pos.entry_date.isoformat(),
-                        "exit_date": current_day.isoformat(),
+                        "exit_date": current_day.date().isoformat(),
                         "entry_price": pos.entry_price,
                         "exit_price": execution["fill_price"],
                         "realised_pnl": realised_pnl,
@@ -279,16 +303,20 @@ class HistoricalReplay:
 
         self.open_positions = survivors
 
-    def _enter_signal(self, event: Dict, current_day: date):
+    def _enter_signal(self, event: Dict, current_day: datetime):
         if len(self.open_positions) >= MAX_POSITIONS:
             return
         if any(pos.ticker == event["ticker"] for pos in self.open_positions):
             return
 
-        history = self.price_cache.get(event["ticker"], {})
-        dates = self.price_dates.get(event["ticker"], [])
-        mark = _price_on_or_before(history, dates, current_day)
-        if mark is None:
+        prices = self.price_cache.get(event["ticker"])
+        if prices is None:
+            return
+
+        # FIX 3.6: Enforce T+1 entry on the open
+        entry_ts, entry_price = next_trading_day_open(prices, event["timestamp"])
+        if entry_ts is None or entry_ts.date() != current_day.date():
+            # If the next trading day open is NOT today, we wait
             return
 
         portfolio_value = self._portfolio_value(current_day)
@@ -302,7 +330,7 @@ class HistoricalReplay:
         if budget < MIN_TRADE_USD * USD_TO_INR:
             return
 
-        execution = build_entry_execution(mark, budget, event["exchange"], event["instrument_risk"])
+        execution = build_entry_execution(entry_price, budget, event["exchange"], event["instrument_risk"])
         if not execution or execution["total_cash_inr"] > self.cash_inr:
             return
 
@@ -317,7 +345,7 @@ class HistoricalReplay:
                 units=execution["units"],
                 invested_inr=execution["total_cash_inr"],
                 entry_price=execution["fill_price"],
-                entry_date=current_day,
+                entry_date=current_day.date(),
                 confidence=event["confidence"],
                 severity=event["severity"],
                 peak_price=execution["fill_price"],
@@ -325,15 +353,17 @@ class HistoricalReplay:
             )
         )
 
-    def _benchmarks(self, start_day: date, end_day: date) -> Dict[str, float]:
+    def _benchmarks(self, start_day: datetime, end_day: datetime) -> Dict[str, float]:
         output = {}
         for ticker in ("SPY", "VT", "AGG"):
-            history = self.price_cache.get(ticker, {})
-            dates = self.price_dates.get(ticker, [])
-            start_price = _price_on_or_before(history, dates, start_day)
-            end_price = _price_on_or_before(history, dates, end_day)
-            if start_price and end_price:
-                output[ticker] = round(((end_price - start_price) / start_price) * 100, 2)
+            df = self.price_cache.get(ticker)
+            if df is not None:
+                start_subset = df.index[df.index <= start_day]
+                end_subset = df.index[df.index <= end_day]
+                if not start_subset.empty and not end_subset.empty:
+                    start_price = float(df.loc[start_subset[-1], "Close"])
+                    end_price = float(df.loc[end_subset[-1], "Close"])
+                    output[ticker] = round(((end_price - start_price) / start_price) * 100, 2)
         return output
 
     def run(self) -> Dict:
@@ -341,33 +371,27 @@ class HistoricalReplay:
             return {"error": "No events supplied"}
 
         self._prepare_prices()
-        entry_schedule: Dict[date, List[Dict]] = {}
-        all_days = set()
-
-        for event in self.events:
-            dates = self.price_dates.get(event["ticker"], [])
-            if not dates:
-                continue
-            entry_day = _next_price_date(dates, event["timestamp"].date())
-            if entry_day is None:
-                continue
-            entry_schedule.setdefault(entry_day, []).append(event)
-            all_days.update(self.price_cache.get(event["ticker"], {}).keys())
-
-        for ticker in ("SPY", "VT", "AGG"):
-            all_days.update(self.price_cache.get(ticker, {}).keys())
-
-        ordered_days = sorted(day for day in all_days if day >= min(entry_schedule) and day <= max(all_days))
-        if not ordered_days:
-            return {"error": "No overlapping market data for supplied events"}
+        
+        all_days = pd.DatetimeIndex([])
+        for df in self.price_cache.values():
+            all_days = all_days.union(df.index)
+            
+        if all_days.empty:
+            return {"error": "No market data found for tickers"}
+            
+        start_day = min(event["timestamp"] for event in self.events)
+        ordered_days = all_days[all_days >= start_day].sort_values()
 
         for current_day in ordered_days:
             self._mark_to_market(current_day)
-            for event in sorted(entry_schedule.get(current_day, []), key=lambda item: item["confidence"], reverse=True):
+            
+            # Find signals that should be entered today
+            # We check all signals and let _enter_signal decide if today is their T+1 open
+            for event in sorted(self.events, key=lambda item: item["confidence"], reverse=True):
                 self._enter_signal(event, current_day)
 
             self.daily_equity.append({
-                "date": current_day.isoformat(),
+                "date": current_day.date().isoformat(),
                 "equity_inr": self._portfolio_value(current_day),
             })
 

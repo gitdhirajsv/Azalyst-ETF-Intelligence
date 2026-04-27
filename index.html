@@ -7,7 +7,7 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{font-size:13px}
-body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-x:hidden;min-width:1100px}
+body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-x:hidden}
 
 /* ── TOP BAR ── */
 .topbar{background:#ff6600;color:#000;display:flex;align-items:center;gap:12px;padding:5px 12px;font-weight:700;font-size:13px;position:sticky;top:0;z-index:100}
@@ -200,6 +200,27 @@ body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-
 .conf-label{display:flex;justify-content:space-between;font-size:9px;margin-bottom:2px}
 .conf-bar{background:#111;height:5px;border-radius:2px;overflow:hidden}
 .conf-fill{height:5px;background:#ff6600;border-radius:2px}
+
+/* ── MOBILE RESPONSIVENESS (FIX 3.14) ── */
+@media (max-width: 1024px) {
+  body { min-width: 0; }
+  .grid-3 { grid-template-columns: 1fr 1fr; }
+  .span3 { grid-column: span 2; }
+}
+
+@media (max-width: 768px) {
+  .grid-3, .grid-2 { grid-template-columns: 1fr; }
+  .span2, .span3 { grid-column: span 1; }
+  .topbar { flex-direction: column; align-items: flex-start; padding: 10px; height: auto; position: relative; }
+  .topbar-right { margin-left: 0; margin-top: 8px; width: 100%; justify-content: space-between; }
+  .tabs { margin-left: 0; margin-top: 8px; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tab { flex: 1; text-align: center; white-space: nowrap; }
+  .mgrid { grid-template-columns: repeat(2, 1fr) !important; }
+  #opportunityGrid { grid-template-columns: 1fr; }
+  .statusbar { flex-wrap: wrap; height: auto; padding: 10px; gap: 10px; }
+  .refresh-btn { width: 100%; }
+}
+
 </style>
 </head>
 <body>

@@ -172,13 +172,16 @@ def call_nim(context: str, api_key: str) -> dict:
     return json.loads(raw)
 
 
-def validate_syntax(filepath: Path) -> tuple[bool, str]:
-    """Return (ok, error_message). Compiles file without executing it."""
+def validate_syntax(content: str) -> tuple[bool, str]:
+    """Return (ok, error_message). Uses AST parsing to validate code."""
+    import ast
     try:
-        py_compile.compile(str(filepath), doraise=True)
+        ast.parse(content)
         return True, ""
-    except py_compile.PyCompileError as exc:
+    except SyntaxError as exc:
         return False, str(exc)
+    except Exception as exc:
+        return False, f"Unexpected error during validation: {exc}"
 
 
 def apply_change(change: dict) -> bool:
@@ -218,19 +221,10 @@ def apply_change(change: dict) -> bool:
 
     new_content = content.replace(old_code, new_code, 1)
 
-    with tempfile.NamedTemporaryFile(
-        mode="w", suffix=".py", delete=False, encoding="utf-8"
-    ) as tmp:
-        tmp.write(new_content)
-        tmp_path = Path(tmp.name)
-
-    try:
-        ok, err = validate_syntax(tmp_path)
-        if not ok:
-            print(f"  BLOCKED: syntax error in proposed change — {err}")
-            return False
-    finally:
-        tmp_path.unlink(missing_ok=True)
+    ok, err = validate_syntax(new_content)
+    if not ok:
+        print(f"  BLOCKED: syntax error in proposed change — {err}")
+        return False
 
     filepath.write_text(new_content, encoding="utf-8")
     print(f"  APPLIED: {description}  →  {filename}")

@@ -147,3 +147,28 @@ class Config:
         )
     )
     LOG_LEVEL = _get_env("AZALYST_LOG_LEVEL", "LOG_LEVEL", default="INFO")
+
+
+def validate_runtime_env() -> None:
+    """Call from main() before any work begins."""
+    import os
+    import warnings
+    errors = []
+    
+    # We check DISCORD_WEBHOOK_URL directly from Config
+    webhook = Config.DISCORD_WEBHOOK_URL.strip()
+    if not webhook:
+        errors.append("DISCORD_WEBHOOK_URL (or AZALYST_DISCORD_WEBHOOK/WEBHOOK) is empty")
+    elif not (webhook.startswith("https://discord.com/api/webhooks/") or 
+              webhook.startswith("https://discordapp.com/api/webhooks/")):
+        errors.append("DISCORD_WEBHOOK_URL is not a valid Discord webhook URL")
+
+    # NVIDIA_API_KEY is only required for self-improvement
+    if not os.environ.get("NVIDIA_API_KEY", "").strip():
+        warnings.warn("NVIDIA_API_KEY not set — self-improvement will be skipped")
+
+    if Config.POLL_INTERVAL_MINUTES <= 0:
+        errors.append("POLL_INTERVAL_MINUTES must be > 0")
+
+    if errors:
+        raise RuntimeError("Bad config:\n  - " + "\n  - ".join(errors))

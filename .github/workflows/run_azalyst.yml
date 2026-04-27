@@ -41,31 +41,24 @@ jobs:
         run: python azalyst.py --once
       - name: Generate dashboard
         run: python generate_dashboard.py
-      - name: Commit results
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
-          git add -f azalyst_portfolio.json azalyst_state.json status.json || true
-          git diff --staged --quiet || git commit -m "chore: update portfolio and state [skip ci]"
-          git push origin main
-      - name: Deploy dashboard to GitHub Pages
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
-          tmpdir="$(mktemp -d)"
-          cp index.html "$tmpdir/index.html"
-          cp dashboard.js "$tmpdir/dashboard.js"
-          cp status.json "$tmpdir/status.json"
+      - name: Upload state as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: state-${{ github.run_id }}
+          path: |
+            azalyst_state.json
+            azalyst_portfolio.json
+            status.json
+            improvement_log.jsonl
+          retention-days: 30
 
-          # Build a clean gh-pages tree with only dashboard files
-          git fetch origin gh-pages 2>/dev/null || true
-          git checkout --orphan gh-pages-deploy
-          git reset --hard
-          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
-          cp "$tmpdir/index.html" .
-          cp "$tmpdir/dashboard.js" .
-          cp "$tmpdir/status.json" .
-          touch .nojekyll
-          git add index.html dashboard.js status.json .nojekyll
-          git commit -m "deploy: dashboard update $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git push origin gh-pages-deploy:gh-pages --force
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Only include files needed for the dashboard
+          path: .
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4

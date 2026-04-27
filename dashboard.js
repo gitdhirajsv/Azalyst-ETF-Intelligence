@@ -1,483 +1,529 @@
-const REFRESH_INTERVAL = 30000;
-const STATUS_FILE = "status.json";
-const CHART_COLORS = ["#F97316", "#0EA5E9", "#8B5CF6", "#10B981", "#EF4444", "#6366F1", "#F59E0B", "#14B8A6"];
+(function() {
+  const REFRESH_INTERVAL = 30000;
+  const STATUS_FILE = "status.json";
+  const CHART_COLORS = ["#F97316", "#0EA5E9", "#8B5CF6", "#10B981", "#EF4444", "#6366F1", "#F59E0B", "#14B8A6"];
 
-let pieChart = null;
-let barChart = null;
-let usdInrRate = 83.5;
+  let pieChart = null;
+  let barChart = null;
+  let usdInrRate = 83.5;
 
-function escapeHtml(value) {
-  return String(value ?? "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
-}
-
-function usd(value) {
-  return "$" + Number(value || 0).toLocaleString("en-US", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
-  });
-}
-
-function rupee(value) {
-  return "\u20B9" + Number(value || 0).toLocaleString("en-IN", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
-  });
-}
-
-function pnlClass(value) {
-  return Number(value || 0) >= 0 ? "green" : "red";
-}
-
-function logClass(line) {
-  const text = String(line || "").toLowerCase();
-  if (text.includes("warn") || text.includes("error")) return "log-warn";
-  if (text.includes("written") || text.includes("complete") || text.includes("dispatched")) return "log-ok";
-  return "log-info";
-}
-
-function severityBadge(severity) {
-  const mapping = {
-    CRITICAL: "badge-crit",
-    HIGH: "badge-high",
-    MEDIUM: "badge-med",
-    LOW: "badge-low"
-  };
-  return `<span class="badge ${mapping[severity] || "badge-low"}">${escapeHtml(severity || "-")}</span>`;
-}
-
-function regimePill(regime) {
-  const mapping = {
-    NORMAL: "pill pill-normal",
-    ELEVATED: "pill pill-elevated",
-    HIGH: "pill pill-high",
-    EXTREME: "pill pill-extreme",
-    Unknown: "pill pill-unknown"
-  };
-  return `<span class="${mapping[regime] || "pill pill-unknown"}">${escapeHtml(regime || "Unknown")}</span>`;
-}
-
-function renderTags(items, cls) {
-  if (!items || !items.length) {
-    return `<span class="tag ${cls}">-</span>`;
-  }
-  return items.map(item => `<span class="tag ${cls}">${escapeHtml(item)}</span>`).join("");
-}
-
-function updateMarketSnapshot(data) {
-  const container = document.getElementById("marketSnapshot");
-  const items = (data.market_snapshot || []).filter(item => item.ticker !== "^VIX");
-  if (!items.length) {
-    container.innerHTML = `<div class="card"><div class="no-data">Market data unavailable</div></div>`;
-    return;
+  function escapeHtml(value) {
+    return String(value ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
   }
 
-  container.innerHTML = items.map(item => `
-    <div class="market-tile">
-      <div class="market-label">${escapeHtml(item.label)}</div>
-      <div class="market-price">${Number(item.price || 0).toLocaleString("en-US", { maximumFractionDigits: 2 })}</div>
-      <div class="market-chg ${item.direction === "up" ? "green" : "red"}">${escapeHtml(item.change_str || "-")}</div>
-      <div class="market-meta">${escapeHtml(item.region || "")}</div>
-    </div>
-  `).join("");
-}
-
-function updateRiskPanel(data) {
-  const controls = data.risk_controls || {};
-  document.getElementById("vixPill").innerHTML = regimePill(controls.vix_regime || "Unknown");
-  document.getElementById("vixValue").textContent = controls.vix ? `VIX ${Number(controls.vix).toFixed(2)}` : "VIX unavailable";
-  document.getElementById("cbPill").innerHTML = controls.circuit_breaker_active
-    ? `<span class="pill pill-bad">Active</span>`
-    : `<span class="pill pill-ok">Clear</span>`;
-
-  const ddNow = Number(controls.drawdown_from_peak_pct || 0);
-  const maxDd = Number(controls.max_drawdown_pct || 0);
-  const ddEl = document.getElementById("ddNow");
-  const maxEl = document.getElementById("maxDd");
-  ddEl.textContent = `${ddNow.toFixed(2)}%`;
-  maxEl.textContent = `${maxDd.toFixed(2)}%`;
-  ddEl.className = `risk-value ${ddNow >= 8 ? "red" : ddNow >= 4 ? "amber" : "green"}`;
-  maxEl.className = `risk-value ${maxDd >= 12 ? "red" : maxDd >= 6 ? "amber" : "green"}`;
-
-  const rows = controls.sector_concentration || [];
-  const sectorConc = document.getElementById("sectorConc");
-  if (!rows.length) {
-    sectorConc.innerHTML = `<div class="no-data">No open positions yet</div>`;
-    return;
+  function usd(value) {
+    return "$" + Number(value || 0).toLocaleString("en-US", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
   }
 
-  sectorConc.innerHTML = rows.map(row => `
-    <div class="sector-row">
-      <div class="sector-head">
-        <span>${escapeHtml(row.sector)}</span>
-        <span class="${row.at_cap ? "red" : "muted"}">${Number(row.weight || 0).toFixed(1)}%</span>
+  function rupee(value) {
+    return "\u20B9" + Number(value || 0).toLocaleString("en-IN", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+  }
+
+  function pnlClass(value) {
+    return Number(value || 0) >= 0 ? "green" : "red";
+  }
+
+  function logClass(line) {
+    const text = String(line || "").toLowerCase();
+    if (text.includes("warn") || text.includes("error")) return "log-warn";
+    if (text.includes("written") || text.includes("complete") || text.includes("dispatched")) return "log-ok";
+    return "log-info";
+  }
+
+  function severityBadge(severity) {
+    const mapping = {
+      CRITICAL: "badge-crit",
+      HIGH: "badge-high",
+      MEDIUM: "badge-med",
+      LOW: "badge-low"
+    };
+    return `<span class="badge ${mapping[severity] || "badge-low"}">${escapeHtml(severity || "-")}</span>`;
+  }
+
+  function regimePill(regime) {
+    const mapping = {
+      NORMAL: "pill pill-normal",
+      ELEVATED: "pill pill-elevated",
+      HIGH: "pill pill-high",
+      EXTREME: "pill pill-extreme",
+      Unknown: "pill pill-unknown"
+    };
+    return `<span class="${mapping[regime] || "pill pill-unknown"}">${escapeHtml(regime || "Unknown")}</span>`;
+  }
+
+  function renderTags(items, cls) {
+    if (!items || !items.length) {
+      return `<span class="tag ${cls}">-</span>`;
+    }
+    return items.map(item => `<span class="tag ${cls}">${escapeHtml(item)}</span>`).join("");
+  }
+
+  function updateMarketSnapshot(data) {
+    const container = document.getElementById("marketSnapshot");
+    if (!container) return;
+    const items = (data.market_snapshot || []).filter(item => item.ticker !== "^VIX");
+    if (!items.length) {
+      container.innerHTML = `<div class="card"><div class="no-data">Market data unavailable</div></div>`;
+      return;
+    }
+
+    container.innerHTML = items.map(item => `
+      <div class="market-tile">
+        <div class="market-label">${escapeHtml(item.label)}</div>
+        <div class="market-price">${Number(item.price || 0).toLocaleString("en-US", { maximumFractionDigits: 2 })}</div>
+        <div class="market-chg ${item.direction === "up" ? "green" : "red"}">${escapeHtml(item.change_str || "-")}</div>
+        <div class="market-meta">${escapeHtml(item.region || "")}</div>
       </div>
-      <div class="bar-bg"><div class="bar-fill ${row.at_cap ? "at-cap" : ""}" style="width:${Math.min(Number(row.weight || 0), 100)}%"></div></div>
-    </div>
-  `).join("");
-}
-
-function updateSignalCards(data) {
-  const container = document.getElementById("signalCards");
-  const signals = data.signals || [];
-  if (!signals.length) {
-    container.innerHTML = `<div class="no-data">No active signal details yet</div>`;
-    return;
+    `).join("");
   }
 
-  container.innerHTML = signals.slice(0, 8).map(signal => {
-    const breakdown = signal.breakdown || {};
-    const confidence = Number(signal.confidence || 0);
-    const confidenceClass = confidence >= 80 ? "tag-bull" : confidence >= 65 ? "tag-neu" : "tag-bear";
-    const topEtfs = (signal.top_etfs || signal.global_etfs || signal.india_etfs || []).join(", ") || "-";
-    const accessMarkets = (signal.access_markets || []).join(", ") || "Mapped markets";
-    const direction = signal.direction || "NEUTRAL";
-    const mlSentiment = signal.ml_sentiment_label || "NEUTRAL";
-    const mlMode = signal.ml_sentiment_mode || "rules-only";
-    return `
-      <div class="signal-card">
-        <div class="signal-head">
-          <div>
-            <div class="signal-title">${escapeHtml(signal.sector_label)}</div>
-            <div class="signal-meta">${escapeHtml(signal.latest_at || "-")} - ${escapeHtml(String(signal.article_count || 0))} articles</div>
-          </div>
-          <div style="text-align:right;">
-            <div class="msg-tag ${confidenceClass}">${escapeHtml(String(confidence))}/100</div>
-            <div style="margin-top:6px;">${severityBadge(signal.severity)}</div>
-          </div>
+  function updateRiskPanel(data) {
+    const controls = data.risk_controls || {};
+    const vixPill = document.getElementById("vixPill");
+    if (vixPill) vixPill.innerHTML = regimePill(controls.vix_regime || "Unknown");
+    const vixValue = document.getElementById("vixValue");
+    if (vixValue) vixValue.textContent = controls.vix ? `VIX ${Number(controls.vix).toFixed(2)}` : "VIX unavailable";
+    const cbPill = document.getElementById("cbPill");
+    if (cbPill) cbPill.innerHTML = controls.circuit_breaker_active
+      ? `<span class="pill pill-bad">Active</span>`
+      : `<span class="pill pill-ok">Clear</span>`;
+
+    const ddNow = Number(controls.drawdown_from_peak_pct || 0);
+    const maxDd = Number(controls.max_drawdown_pct || 0);
+    const ddEl = document.getElementById("ddNow");
+    const maxEl = document.getElementById("maxDd");
+    if (ddEl) {
+        ddEl.textContent = `${ddNow.toFixed(2)}%`;
+        ddEl.className = `risk-value ${ddNow >= 8 ? "red" : ddNow >= 4 ? "amber" : "green"}`;
+    }
+    if (maxEl) {
+        maxEl.textContent = `${maxDd.toFixed(2)}%`;
+        maxEl.className = `risk-value ${maxDd >= 12 ? "red" : maxDd >= 6 ? "amber" : "green"}`;
+    }
+
+    const rows = controls.sector_concentration || [];
+    const sectorConc = document.getElementById("sectorConc");
+    if (!sectorConc) return;
+    if (!rows.length) {
+      sectorConc.innerHTML = `<div class="no-data">No open positions yet</div>`;
+      return;
+    }
+
+    sectorConc.innerHTML = rows.map(row => `
+      <div class="sector-row">
+        <div class="sector-head">
+          <span>${escapeHtml(row.sector)}</span>
+          <span class="${row.at_cap ? "red" : "muted"}">${Number(row.weight || 0).toFixed(1)}%</span>
         </div>
-        <div class="signal-headline">${escapeHtml(signal.headline || "-")}</div>
-        <div class="signal-tags">
-          ${renderTags(signal.regions, "tag-blue")}
-          ${renderTags(signal.sources, "tag-purple")}
-        </div>
-        <div class="signal-grid">
-          <div class="signal-box">
-            <div class="signal-box-title">ETF Ranking</div>
-            <div class="signal-box-body">
-              <strong>Top:</strong> ${escapeHtml(topEtfs)}<br>
-              <strong>Access:</strong> ${escapeHtml(accessMarkets)}<br>
-              <strong>Bias:</strong> ${escapeHtml(direction)} / ${escapeHtml(mlSentiment)} (${escapeHtml(mlMode)})
+        <div class="bar-bg"><div class="bar-fill ${row.at_cap ? "at-cap" : ""}" style="width:${Math.min(Number(row.weight || 0), 100)}%"></div></div>
+      </div>
+    `).join("");
+  }
+
+  function updateSignalCards(data) {
+    const container = document.getElementById("signalCards");
+    if (!container) return;
+    const signals = data.signals || [];
+    if (!signals.length) {
+      container.innerHTML = `<div class="no-data">No active signal details yet</div>`;
+      return;
+    }
+
+    container.innerHTML = signals.slice(0, 8).map(signal => {
+      const breakdown = signal.breakdown || {};
+      const confidence = Number(signal.confidence || 0);
+      const confidenceClass = confidence >= 80 ? "tag-bull" : confidence >= 65 ? "tag-neu" : "tag-bear";
+      const topEtfs = (signal.top_etfs || signal.global_etfs || signal.india_etfs || []).join(", ") || "-";
+      const accessMarkets = (signal.access_markets || []).join(", ") || "Mapped markets";
+      const direction = signal.direction || "NEUTRAL";
+      const mlSentiment = signal.ml_sentiment_label || "NEUTRAL";
+      const mlMode = signal.ml_sentiment_mode || "rules-only";
+      return `
+        <div class="signal-card">
+          <div class="signal-head">
+            <div>
+              <div class="signal-title">${escapeHtml(signal.sector_label)}</div>
+              <div class="signal-meta">${escapeHtml(signal.latest_at || "-")} - ${escapeHtml(String(signal.article_count || 0))} articles</div>
+            </div>
+            <div style="text-align:right;">
+              <div class="msg-tag ${confidenceClass}">${escapeHtml(String(confidence))}/100</div>
+              <div style="margin-top:6px;">${severityBadge(signal.severity)}</div>
             </div>
           </div>
-          <div class="signal-box">
-            <div class="signal-box-title">Score Breakdown</div>
-            <div class="signal-box-body">
-              <div class="breakdown-row"><span>Signal</span><span>${Number(breakdown.signal_strength || 0).toFixed(1)}</span></div>
-              <div class="breakdown-row"><span>Volume</span><span>${Number(breakdown.volume_confirmation || 0).toFixed(1)}</span></div>
-              <div class="breakdown-row"><span>Sources</span><span>${Number(breakdown.source_diversity || 0).toFixed(1)}</span></div>
-              <div class="breakdown-row"><span>Recency</span><span>${Number(breakdown.recency || 0).toFixed(1)}</span></div>
-              <div class="breakdown-row"><span>Severity</span><span>${Number(breakdown.geopolitical_severity || 0).toFixed(1)}</span></div>
+          <div class="signal-headline">${escapeHtml(signal.headline || "-")}</div>
+          <div class="signal-tags">
+            ${renderTags(signal.regions, "tag-blue")}
+            ${renderTags(signal.sources, "tag-purple")}
+          </div>
+          <div class="signal-grid">
+            <div class="signal-box">
+              <div class="signal-box-title">ETF Ranking</div>
+              <div class="signal-box-body">
+                <strong>Top:</strong> ${escapeHtml(topEtfs)}<br>
+                <strong>Access:</strong> ${escapeHtml(accessMarkets)}<br>
+                <strong>Bias:</strong> ${escapeHtml(direction)} / ${escapeHtml(mlSentiment)} (${escapeHtml(mlMode)})
+              </div>
+            </div>
+            <div class="signal-box">
+              <div class="signal-box-title">Score Breakdown</div>
+              <div class="signal-box-body">
+                <div class="breakdown-row"><span>Signal</span><span>${Number(breakdown.signal_strength || 0).toFixed(1)}</span></div>
+                <div class="breakdown-row"><span>Volume</span><span>${Number(breakdown.volume_confirmation || 0).toFixed(1)}</span></div>
+                <div class="breakdown-row"><span>Sources</span><span>${Number(breakdown.source_diversity || 0).toFixed(1)}</span></div>
+                <div class="breakdown-row"><span>Recency</span><span>${Number(breakdown.recency || 0).toFixed(1)}</span></div>
+                <div class="breakdown-row"><span>Severity</span><span>${Number(breakdown.geopolitical_severity || 0).toFixed(1)}</span></div>
+              </div>
             </div>
           </div>
         </div>
+      `;
+    }).join("");
+  }
+
+  function updateArticles(data) {
+    const container = document.getElementById("articleUpdates");
+    if (!container) return;
+    const items = data.articles || [];
+    if (!items.length) {
+      container.innerHTML = `<div class="no-data">No recent signal updates</div>`;
+      return;
+    }
+    container.innerHTML = items.map(item => `
+      <div class="msg-item">
+        <span class="msg-tag ${escapeHtml(item.tag)}">${escapeHtml(item.label)}</span>
+        ${escapeHtml(item.text)}
       </div>
-    `;
-  }).join("");
-}
-
-function updateArticles(data) {
-  const container = document.getElementById("articleUpdates");
-  const items = data.articles || [];
-  if (!items.length) {
-    container.innerHTML = `<div class="no-data">No recent signal updates</div>`;
-    return;
-  }
-  container.innerHTML = items.map(item => `
-    <div class="msg-item">
-      <span class="msg-tag ${escapeHtml(item.tag)}">${escapeHtml(item.label)}</span>
-      ${escapeHtml(item.text)}
-    </div>
-  `).join("");
-}
-
-function updateConfidence(data) {
-  const container = document.getElementById("confidenceBars");
-  const rows = data.confidence || [];
-  document.getElementById("thresholdNote").textContent = `Signal threshold: ${Number(data.confidence_threshold || 62).toFixed(0)}`;
-  if (!rows.length) {
-    container.innerHTML = `<div class="no-data">No confidence data yet</div>`;
-    return;
+    `).join("");
   }
 
-  container.innerHTML = rows.map(row => `
-    <div class="conf-row">
-      <div class="conf-label"><span>${escapeHtml(row.symbol)}</span><span>${Number(row.score || 0).toFixed(1)}</span></div>
-      <div class="conf-bar"><div class="conf-fill" style="width:${Math.min(Number(row.score || 0), 100)}%"></div></div>
-    </div>
-  `).join("");
-}
+  function updateConfidence(data) {
+    const container = document.getElementById("confidenceBars");
+    if (!container) return;
+    const rows = data.confidence || [];
+    const thresholdNote = document.getElementById("thresholdNote");
+    if (thresholdNote) thresholdNote.textContent = `Signal threshold: ${Number(data.confidence_threshold || 62).toFixed(0)}`;
+    if (!rows.length) {
+      container.innerHTML = `<div class="no-data">No confidence data yet</div>`;
+      return;
+    }
 
-function updateStats(data) {
-  document.getElementById("portfolioValue").textContent = usd(data.portfolio_value);
-  document.getElementById("portfolioValueINR").textContent = usd(data.portfolio_value);
-  document.getElementById("totalDeposited").textContent = usd(data.total_deposited);
-  document.getElementById("totalDepositedINR").textContent = usd(data.total_deposited);
-  document.getElementById("cashAvailable").textContent = usd(data.cash);
-  document.getElementById("cashAvailableINR").textContent = usd(data.cash);
+    container.innerHTML = rows.map(row => `
+      <div class="conf-row">
+        <div class="conf-label"><span>${escapeHtml(row.symbol)}</span><span>${Number(row.score || 0).toFixed(1)}</span></div>
+        <div class="conf-bar"><div class="conf-fill" style="width:${Math.min(Number(row.score || 0), 100)}%"></div></div>
+      </div>
+    `).join("");
+  }
 
-  const reserve = Number(data.monthly_reserve || 0);
-  document.getElementById("monthlyReserve").textContent = usd(reserve);
-  document.getElementById("monthlyReserveINR").textContent = usd(reserve);
-
-  const unrealised = document.getElementById("unrealisedPnl");
-  const realised = document.getElementById("realisedPnl");
-  const unrealisedVal = Number(data.unrealised_pnl || 0);
-  const realisedVal = Number(data.realised_pnl || 0);
-  unrealised.textContent = `${unrealisedVal >= 0 ? "+" : ""}${usd(unrealisedVal)}`;
-  realised.textContent = `${realisedVal >= 0 ? "+" : ""}${usd(realisedVal)}`;
-  unrealised.className = `stat-val ${pnlClass(unrealisedVal)}`;
-  realised.className = `stat-val ${pnlClass(realisedVal)}`;
-  document.getElementById("unrealisedPnlINR").textContent = usd(unrealisedVal);
-  document.getElementById("realisedPnlINR").textContent = usd(realisedVal);
-
-  document.getElementById("portfolioChange").textContent = `${data.change || "-"} total return`;
-  document.getElementById("portfolioChange").className = `stat-sub ${pnlClass(data.change_raw)}`;
-  document.getElementById("positionsSummary").textContent = `${(data.positions || []).length} open \u2014 ${Number(data.closed_trades || 0)} closed`;
-
-  const partial = Number(data.partial_realised_pnl || 0);
-  document.getElementById("realisedSub").textContent = partial !== 0
-    ? `Closed trades + partial exits (${usd(partial)} partial)`
-    : "Closed trades and partial exits";
-}
-
-function ensurePieChart(labels, values) {
-  if (!labels.length) return;
-  if (!pieChart) {
-    pieChart = new Chart(document.getElementById("pieChart"), {
-      type: "doughnut",
-      data: { labels, datasets: [{ data: values, backgroundColor: CHART_COLORS.slice(0, labels.length), borderWidth: 2, borderColor: "#FFFFFF" }] },
-      options: { plugins: { legend: { position: "right", labels: { color: "#334155", font: { size: 12 }, padding: 12, boxWidth: 12 } } }, cutout: "62%", responsive: true, animation: { duration: 400 } }
+  function updateStats(data) {
+    const ids = ["portfolioValue", "portfolioValueINR", "totalDeposited", "totalDepositedINR", "cashAvailable", "cashAvailableINR", "monthlyReserve", "monthlyReserveINR"];
+    ids.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        if (id.includes("Value")) el.textContent = usd(data.portfolio_value);
+        else if (id.includes("Deposited")) el.textContent = usd(data.total_deposited);
+        else if (id.includes("Available")) el.textContent = usd(data.cash);
+        else if (id.includes("Reserve")) el.textContent = usd(data.monthly_reserve || 0);
     });
-    return;
-  }
-  pieChart.data.labels = labels;
-  pieChart.data.datasets[0].data = values;
-  pieChart.data.datasets[0].backgroundColor = CHART_COLORS.slice(0, labels.length);
-  pieChart.update();
-}
 
-function ensureBarChart(labels, values) {
-  if (!labels.length) return;
-  const colors = values.map(value => Number(value || 0) >= 0 ? "#10B981" : "#EF4444");
-  const usdValues = values.map(v => Number(v || 0).toFixed(2));
-  if (!barChart) {
-    barChart = new Chart(document.getElementById("barChart"), {
-      type: "bar",
-      data: { labels, datasets: [{ label: "P&L (USD)", data: usdValues, backgroundColor: colors, borderRadius: 5 }] },
-      options: { plugins: { legend: { display: false } }, scales: { x: { ticks: { color: "#64748B", font: { size: 12 } }, grid: { display: false } }, y: { ticks: { color: "#64748B", font: { size: 12 } }, grid: { color: "#F1F5F9" } } }, responsive: true, animation: { duration: 400 } }
-    });
-    return;
-  }
-  barChart.data.labels = labels;
-  barChart.data.datasets[0].data = usdValues;
-  barChart.data.datasets[0].backgroundColor = colors;
-  barChart.update();
-}
+    const unrealised = document.getElementById("unrealisedPnl");
+    const realised = document.getElementById("realisedPnl");
+    const unrealisedVal = Number(data.unrealised_pnl || 0);
+    const realisedVal = Number(data.realised_pnl || 0);
+    if (unrealised) {
+        unrealised.textContent = `${unrealisedVal >= 0 ? "+" : ""}${usd(unrealisedVal)}`;
+        unrealised.className = `stat-val ${pnlClass(unrealisedVal)}`;
+    }
+    if (realised) {
+        realised.textContent = `${realisedVal >= 0 ? "+" : ""}${usd(realisedVal)}`;
+        realised.className = `stat-val ${pnlClass(realisedVal)}`;
+    }
+    const unrealisedINR = document.getElementById("unrealisedPnlINR");
+    if (unrealisedINR) unrealisedINR.textContent = usd(unrealisedVal);
+    const realisedINR = document.getElementById("realisedPnlINR");
+    if (realisedINR) realisedINR.textContent = usd(realisedVal);
 
-function updateCharts(data) {
-  const allocation = data.allocation || { labels: [], values: [] };
-  const pnl = data.pnl || { labels: [], values: [] };
-  ensurePieChart(allocation.labels || [], allocation.values || []);
-  ensureBarChart(pnl.labels || [], pnl.values || []);
-}
+    const portfolioChange = document.getElementById("portfolioChange");
+    if (portfolioChange) {
+        portfolioChange.textContent = `${data.change || "-"} total return`;
+        portfolioChange.className = `stat-sub ${pnlClass(data.change_raw)}`;
+    }
+    const positionsSummary = document.getElementById("positionsSummary");
+    if (positionsSummary) positionsSummary.textContent = `${(data.positions || []).length} open \u2014 ${Number(data.closed_trades || 0)} closed`;
 
-function positionStatus(position) {
-  if (position.half_exited) return `<span class="badge badge-half">1/2 Exited</span>`;
-  if (Number(position.pnl_pct || 0) >= 15) return `<span class="badge badge-win">At Profit Trigger</span>`;
-  if (Number(position.dist_to_trail_pct || 0) <= 3) return `<span class="badge badge-loss">Near Stop</span>`;
-  return "-";
-}
-
-function updatePositions(data) {
-  const tbody = document.getElementById("positionsTbody");
-  const positions = data.positions || [];
-  if (!positions.length) {
-    tbody.innerHTML = `<tr><td colspan="16" class="no-data">No open positions yet</td></tr>`;
-    return;
+    const realisedSub = document.getElementById("realisedSub");
+    if (realisedSub) {
+        const partial = Number(data.partial_realised_pnl || 0);
+        realisedSub.textContent = partial !== 0
+          ? `Closed trades + partial exits (${usd(partial)} partial)`
+          : "Closed trades and partial exits";
+    }
   }
 
-  tbody.innerHTML = positions.map(position => `
-    <tr>
-      <td>${escapeHtml(position.trade_id)}</td>
-      <td><strong>${escapeHtml(position.ticker)}</strong></td>
-      <td style="max-width:170px;overflow:hidden;text-overflow:ellipsis;">${escapeHtml(position.etf_name)}</td>
-      <td>${escapeHtml(position.exchange || "NYSE")}</td>
-      <td>${escapeHtml(position.sector)}</td>
-      <td>${usd(position.entry)}</td>
-      <td>${usd(position.current)}</td>
-      <td>${usd(position.peak_price)}</td>
-      <td class="${pnlClass(position.pnl_pct)}">${escapeHtml(position.pnl_pct_str)}</td>
-      <td class="${pnlClass(position.pnl)}"><strong>${usd(position.pnl)}</strong></td>
-      <td>${usd(position.trail_stop)}</td>
-      <td class="${Number(position.dist_to_trail_pct || 0) <= 3 ? "red" : Number(position.dist_to_trail_pct || 0) <= 6 ? "amber" : "green"}">${Number(position.dist_to_trail_pct || 0).toFixed(2)}%</td>
-      <td>${escapeHtml(String(position.days_held || 0))}d</td>
-      <td>${escapeHtml(String(position.confidence || 0))}/100</td>
-      <td>${severityBadge(position.severity)}</td>
-      <td>${positionStatus(position)}</td>
-    </tr>
-  `).join("");
-}
-
-function setKpi(id, value, suffix, cls) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  el.textContent = value === null || value === undefined || value === "" ? "-" : `${value}${suffix || ""}`;
-  el.className = cls ? `kpi-val ${cls}` : "kpi-val";
-}
-
-function applyTradeCard(valueId, tickerId, reasonId, trade) {
-  const valueEl = document.getElementById(valueId);
-  const tickerEl = document.getElementById(tickerId);
-  const reasonEl = document.getElementById(reasonId);
-  if (!trade) {
-    valueEl.textContent = "-";
-    valueEl.className = "stat-val";
-    tickerEl.textContent = "No closed trades yet";
-    reasonEl.textContent = "";
-    return;
+  function ensurePieChart(labels, values) {
+    if (!labels.length) return;
+    const canvas = document.getElementById("pieChart");
+    if (!canvas) return;
+    if (!pieChart) {
+      pieChart = new Chart(canvas, {
+        type: "doughnut",
+        data: { labels, datasets: [{ data: values, backgroundColor: CHART_COLORS.slice(0, labels.length), borderWidth: 2, borderColor: "#FFFFFF" }] },
+        options: { plugins: { legend: { position: "right", labels: { color: "#334155", font: { size: 12 }, padding: 12, boxWidth: 12 } } }, cutout: "62%", responsive: true, animation: { duration: 400 } }
+      });
+      return;
+    }
+    pieChart.data.labels = labels;
+    pieChart.data.datasets[0].data = values;
+    pieChart.data.datasets[0].backgroundColor = CHART_COLORS.slice(0, labels.length);
+    pieChart.update();
   }
 
-  const pct = Number(trade.pnl_pct || 0);
-  valueEl.textContent = `${pct >= 0 ? "+" : ""}${pct.toFixed(2)}%`;
-  valueEl.className = `stat-val ${pct >= 0 ? "green" : "red"}`;
-  tickerEl.textContent = trade.etf_name ? `${trade.ticker} - ${trade.etf_name}` : trade.ticker;
-  reasonEl.textContent = trade.exit_reason || "";
-}
-
-function updateTrackRecord(data) {
-  const track = data.track_record || {};
-  document.getElementById("trTotalTrades").textContent = Number(track.total_trades || 0);
-  document.getElementById("trWinners").textContent = Number(track.winners || 0);
-  document.getElementById("trLosers").textContent = Number(track.losers || 0);
-
-  const winRate = Number(track.win_rate || 0);
-  const winRateEl = document.getElementById("trWinRate");
-  winRateEl.textContent = `${winRate.toFixed(1)}%`;
-  winRateEl.className = `track-val ${winRate >= 50 ? "green" : "red"}`;
-
-  const avgWin = Number(track.avg_win || 0);
-  const avgLoss = Number(track.avg_loss || 0);
-  const profitFactor = Number(track.profit_factor || 0);
-  const sharpe = Number(track.sharpe_proxy || 0);
-  const expectancy = Number(track.expectancy || 0);
-
-  setKpi("trAvgWin", `${avgWin >= 0 ? "+" : ""}${avgWin.toFixed(2)}`, "%", "green");
-  setKpi("trAvgLoss", avgLoss.toFixed(2), "%", "red");
-  setKpi("trPF", profitFactor ? profitFactor.toFixed(2) : "-", "", profitFactor >= 1.5 ? "green" : profitFactor >= 1 ? "amber" : "red");
-  setKpi("trSharpe", sharpe ? sharpe.toFixed(2) : "-", "", sharpe >= 1 ? "green" : sharpe >= 0 ? "amber" : "red");
-  setKpi("trExpectancy", expectancy ? `${expectancy >= 0 ? "+" : ""}${expectancy.toFixed(2)}` : "-", "%", expectancy >= 0 ? "green" : "red");
-
-  applyTradeCard("trBest", "trBestTicker", "trBestReason", track.best);
-  applyTradeCard("trWorst", "trWorstTicker", "trWorstReason", track.worst);
-}
-
-function updateClosedTrades(data) {
-  const tbody = document.getElementById("closedTbody");
-  const trades = data.closed_trades_list || [];
-  if (!trades.length) {
-    tbody.innerHTML = `<tr><td colspan="11" class="no-data">No closed trades yet</td></tr>`;
-    return;
+  function ensureBarChart(labels, values) {
+    if (!labels.length) return;
+    const canvas = document.getElementById("barChart");
+    if (!canvas) return;
+    const colors = values.map(value => Number(value || 0) >= 0 ? "#10B981" : "#EF4444");
+    const usdValues = values.map(v => Number(v || 0).toFixed(2));
+    if (!barChart) {
+      barChart = new Chart(canvas, {
+        type: "bar",
+        data: { labels, datasets: [{ label: "P&L (USD)", data: usdValues, backgroundColor: colors, borderRadius: 5 }] },
+        options: { plugins: { legend: { display: false } }, scales: { x: { ticks: { color: "#64748B", font: { size: 12 } }, grid: { display: false } }, y: { ticks: { color: "#64748B", font: { size: 12 } }, grid: { color: "#F1F5F9" } } }, responsive: true, animation: { duration: 400 } }
+      });
+      return;
+    }
+    barChart.data.labels = labels;
+    barChart.data.datasets[0].data = usdValues;
+    barChart.data.datasets[0].backgroundColor = colors;
+    barChart.update();
   }
 
-  tbody.innerHTML = trades.slice().reverse().map(trade => `
-    <tr>
-      <td>${escapeHtml(trade.trade_id)}</td>
-      <td><strong>${escapeHtml(trade.ticker)}</strong></td>
-      <td style="max-width:170px;overflow:hidden;text-overflow:ellipsis;">${escapeHtml(trade.etf_name)}</td>
-      <td>${escapeHtml(trade.platform || trade.exchange || "NYSE")}</td>
-      <td>${usd(trade.entry)}</td>
-      <td>${usd(trade.exit)}</td>
-      <td class="${pnlClass(trade.pnl)}"><strong>${usd(trade.pnl)}</strong></td>
-      <td class="${pnlClass(trade.pnl_pct)}">${escapeHtml(trade.pnl_pct_str)}</td>
-      <td>${escapeHtml(String(trade.days_held || 0))}d</td>
-      <td>${escapeHtml(trade.exit_reason)}</td>
-      <td><span class="badge ${trade.winner ? "badge-win" : "badge-loss"}">${trade.winner ? "WIN" : "LOSS"}</span></td>
-    </tr>
-  `).join("");
-}
-
-function updateLogs(data) {
-  const container = document.getElementById("logTail");
-  const lines = data.logs || [];
-  if (!lines.length) {
-    container.innerHTML = `<div class="no-data">No log lines available</div>`;
-    return;
-  }
-  container.innerHTML = lines.slice().reverse().map(line => `<div class="${logClass(line)}">${escapeHtml(line)}</div>`).join("");
-}
-
-function updateTimestamp(data) {
-  const localTime = new Date().toLocaleTimeString("en-US");
-  const generated = data.generated_at ? ` \u2014 data ${data.generated_at}` : "";
-  document.getElementById("lastUpdated").textContent = `Updated ${localTime}${generated}`;
-}
-
-function updateFxRate(data) {
-  usdInrRate = Number(data.usd_inr_rate || 83.5);
-  document.getElementById("fxRate").textContent = `USD/INR: ${usdInrRate.toFixed(2)}`;
-}
-
-function updateGlobalMonitor(data) {
-  const container = document.getElementById("opportunityGrid");
-  const signals = data.signals || [];
-  if (!signals.length) {
-    container.innerHTML = `<div class="card" style="grid-column:1/-1"><div class="no-data">No active opportunities \u2014 waiting for signal cycle</div></div>`;
-    return;
+  function updateCharts(data) {
+    const allocation = data.allocation || { labels: [], values: [] };
+    const pnl = data.pnl || { labels: [], values: [] };
+    ensurePieChart(allocation.labels || [], allocation.values || []);
+    ensureBarChart(pnl.labels || [], pnl.values || []);
   }
 
-  const sorted = signals.slice().sort((a, b) => Number(b.confidence || 0) - Number(a.confidence || 0));
-  container.innerHTML = sorted.slice(0, 6).map(signal => {
-    const conf = Number(signal.confidence || 0);
-    const tier = conf >= 80 ? "opp-crit" : conf >= 70 ? "opp-high" : conf >= 60 ? "opp-med" : "opp-low";
-    const topEtfs = (signal.top_etfs || signal.global_etfs || signal.india_etfs || []).slice(0, 3).join(", ") || "-";
-    const accessMarkets = (signal.access_markets || []).join(", ") || "Mapped markets";
-    const direction = signal.direction || "NEUTRAL";
-    return `
-      <div class="opp-card ${tier}">
-        <div class="opp-title">${escapeHtml(signal.sector_label)}</div>
-        <div class="opp-conf">${severityBadge(signal.severity)} <span style="margin-left:8px;color:#f1f5f9;font-weight:700">${conf}/100</span></div>
-        <div class="opp-etfs">
-          <span class="opp-etf-label">Top:</span> ${escapeHtml(topEtfs)}<br>
-          <span class="opp-etf-label">Access:</span> ${escapeHtml(accessMarkets)}<br>
-          <span class="opp-etf-label">Bias:</span> ${escapeHtml(direction)}
+  function positionStatus(position) {
+    if (position.half_exited) return `<span class="badge badge-half">1/2 Exited</span>`;
+    if (Number(position.pnl_pct || 0) >= 15) return `<span class="badge badge-win">At Profit Trigger</span>`;
+    if (Number(position.dist_to_trail_pct || 0) <= 3) return `<span class="badge badge-loss">Near Stop</span>`;
+    return "-";
+  }
+
+  function updatePositions(data) {
+    const tbody = document.getElementById("positionsTbody");
+    if (!tbody) return;
+    const positions = data.positions || [];
+    if (!positions.length) {
+      tbody.innerHTML = `<tr><td colspan="16" class="no-data">No open positions yet</td></tr>`;
+      return;
+    }
+
+    tbody.innerHTML = positions.map(position => `
+      <tr>
+        <td>${escapeHtml(position.trade_id)}</td>
+        <td><strong>${escapeHtml(position.ticker)}</strong></td>
+        <td style="max-width:170px;overflow:hidden;text-overflow:ellipsis;">${escapeHtml(position.etf_name)}</td>
+        <td>${escapeHtml(position.exchange || "NYSE")}</td>
+        <td>${escapeHtml(position.sector)}</td>
+        <td>${usd(position.entry)}</td>
+        <td>${usd(position.current)}</td>
+        <td>${usd(position.peak_price)}</td>
+        <td class="${pnlClass(position.pnl_pct)}">${escapeHtml(position.pnl_pct_str)}</td>
+        <td class="${pnlClass(position.pnl)}"><strong>${usd(position.pnl)}</strong></td>
+        <td>${usd(position.trail_stop)}</td>
+        <td class="${Number(position.dist_to_trail_pct || 0) <= 3 ? "red" : Number(position.dist_to_trail_pct || 0) <= 6 ? "amber" : "green"}">${Number(position.dist_to_trail_pct || 0).toFixed(2)}%</td>
+        <td>${escapeHtml(String(position.days_held || 0))}d</td>
+        <td>${escapeHtml(String(position.confidence || 0))}/100</td>
+        <td>${severityBadge(position.severity)}</td>
+        <td>${positionStatus(position)}</td>
+      </tr>
+    `).join("");
+  }
+
+  function setKpi(id, value, suffix, cls) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.textContent = value === null || value === undefined || value === "" ? "-" : `${value}${suffix || ""}`;
+    el.className = cls ? `kpi-val ${cls}` : "kpi-val";
+  }
+
+  function applyTradeCard(valueId, tickerId, reasonId, trade) {
+    const valueEl = document.getElementById(valueId);
+    const tickerEl = document.getElementById(tickerId);
+    const reasonEl = document.getElementById(reasonId);
+    if (!valueEl || !tickerEl || !reasonEl) return;
+    if (!trade) {
+      valueEl.textContent = "-";
+      valueEl.className = "stat-val";
+      tickerEl.textContent = "No closed trades yet";
+      reasonEl.textContent = "";
+      return;
+    }
+
+    const pct = Number(trade.pnl_pct || 0);
+    valueEl.textContent = `${pct >= 0 ? "+" : ""}${pct.toFixed(2)}%`;
+    valueEl.className = `stat-val ${pct >= 0 ? "green" : "red"}`;
+    tickerEl.textContent = trade.etf_name ? `${trade.ticker} - ${trade.etf_name}` : trade.ticker;
+    reasonEl.textContent = trade.exit_reason || "";
+  }
+
+  function updateTrackRecord(data) {
+    const track = data.track_record || {};
+    const trTotalTrades = document.getElementById("trTotalTrades");
+    if (trTotalTrades) trTotalTrades.textContent = Number(track.total_trades || 0);
+    const trWinners = document.getElementById("trWinners");
+    if (trWinners) trWinners.textContent = Number(track.winners || 0);
+    const trLosers = document.getElementById("trLosers");
+    if (trLosers) trLosers.textContent = Number(track.losers || 0);
+
+    const winRate = Number(track.win_rate || 0);
+    const winRateEl = document.getElementById("trWinRate");
+    if (winRateEl) {
+        winRateEl.textContent = `${winRate.toFixed(1)}%`;
+        winRateEl.className = `track-val ${winRate >= 50 ? "green" : "red"}`;
+    }
+
+    const avgWin = Number(track.avg_win || 0);
+    const avgLoss = Number(track.avg_loss || 0);
+    const profitFactor = Number(track.profit_factor || 0);
+    const sharpe = Number(track.sharpe_proxy || 0);
+    const expectancy = Number(track.expectancy || 0);
+
+    setKpi("trAvgWin", `${avgWin >= 0 ? "+" : ""}${avgWin.toFixed(2)}`, "%", "green");
+    setKpi("trAvgLoss", avgLoss.toFixed(2), "%", "red");
+    setKpi("trPF", profitFactor ? profitFactor.toFixed(2) : "-", "", profitFactor >= 1.5 ? "green" : profitFactor >= 1 ? "amber" : "red");
+    setKpi("trSharpe", sharpe ? sharpe.toFixed(2) : "-", "", sharpe >= 1 ? "green" : sharpe >= 0 ? "amber" : "red");
+    setKpi("trExpectancy", expectancy ? `${expectancy >= 0 ? "+" : ""}${expectancy.toFixed(2)}` : "-", "%", expectancy >= 0 ? "green" : "red");
+
+    applyTradeCard("trBest", "trBestTicker", "trBestReason", track.best);
+    applyTradeCard("trWorst", "trWorstTicker", "trWorstReason", track.worst);
+  }
+
+  function updateClosedTrades(data) {
+    const tbody = document.getElementById("closedTbody");
+    if (!tbody) return;
+    const trades = data.closed_trades_list || [];
+    if (!trades.length) {
+      tbody.innerHTML = `<tr><td colspan="11" class="no-data">No closed trades yet</td></tr>`;
+      return;
+    }
+
+    tbody.innerHTML = trades.slice().reverse().map(trade => `
+      <tr>
+        <td>${escapeHtml(trade.trade_id)}</td>
+        <td><strong>${escapeHtml(trade.ticker)}</strong></td>
+        <td style="max-width:170px;overflow:hidden;text-overflow:ellipsis;">${escapeHtml(trade.etf_name)}</td>
+        <td>${escapeHtml(trade.platform || trade.exchange || "NYSE")}</td>
+        <td>${usd(trade.entry)}</td>
+        <td>${usd(trade.exit)}</td>
+        <td class="${pnlClass(trade.pnl)}"><strong>${usd(trade.pnl)}</strong></td>
+        <td class="${pnlClass(trade.pnl_pct)}">${escapeHtml(trade.pnl_pct_str)}</td>
+        <td>${escapeHtml(String(trade.days_held || 0))}d</td>
+        <td>${escapeHtml(trade.exit_reason)}</td>
+        <td><span class="badge ${trade.winner ? "badge-win" : "badge-loss"}">${trade.winner ? "WIN" : "LOSS"}</span></td>
+      </tr>
+    `).join("");
+  }
+
+  function updateLogs(data) {
+    const container = document.getElementById("logTail");
+    if (!container) return;
+    const lines = data.logs || [];
+    if (!lines.length) {
+      container.innerHTML = `<div class="no-data">No log lines available</div>`;
+      return;
+    }
+    container.innerHTML = lines.slice().reverse().map(line => `<div class="${logClass(line)}">${escapeHtml(line)}</div>`).join("");
+  }
+
+  function updateTimestamp(data) {
+    const el = document.getElementById("lastUpdated");
+    if (!el) return;
+    const localTime = new Date().toLocaleTimeString("en-US");
+    const generated = data.generated_at ? ` \u2014 data ${data.generated_at}` : "";
+    el.textContent = `Updated ${localTime}${generated}`;
+  }
+
+  function updateFxRate(data) {
+    usdInrRate = Number(data.usd_inr_rate || 83.5);
+    const el = document.getElementById("fxRate");
+    if (el) el.textContent = `USD/INR: ${usdInrRate.toFixed(2)}`;
+  }
+
+  function updateGlobalMonitor(data) {
+    const container = document.getElementById("opportunityGrid");
+    if (!container) return;
+    const signals = data.signals || [];
+    if (!signals.length) {
+      container.innerHTML = `<div class="card" style="grid-column:1/-1"><div class="no-data">No active opportunities \u2014 waiting for signal cycle</div></div>`;
+      return;
+    }
+
+    const sorted = signals.slice().sort((a, b) => Number(b.confidence || 0) - Number(a.confidence || 0));
+    container.innerHTML = sorted.slice(0, 6).map(signal => {
+      const conf = Number(signal.confidence || 0);
+      const tier = conf >= 80 ? "opp-crit" : conf >= 70 ? "opp-high" : conf >= 60 ? "opp-med" : "opp-low";
+      const topEtfs = (signal.top_etfs || signal.global_etfs || signal.india_etfs || []).slice(0, 3).join(", ") || "-";
+      const accessMarkets = (signal.access_markets || []).join(", ") || "Mapped markets";
+      const direction = signal.direction || "NEUTRAL";
+      return `
+        <div class="opp-card ${tier}">
+          <div class="opp-title">${escapeHtml(signal.sector_label)}</div>
+          <div class="opp-conf">${severityBadge(signal.severity)} <span style="margin-left:8px;color:#f1f5f9;font-weight:700">${conf}/100</span></div>
+          <div class="opp-etfs">
+            <span class="opp-etf-label">Top:</span> ${escapeHtml(topEtfs)}<br>
+            <span class="opp-etf-label">Access:</span> ${escapeHtml(accessMarkets)}<br>
+            <span class="opp-etf-label">Bias:</span> ${escapeHtml(direction)}
+          </div>
         </div>
-      </div>
-    `;
-  }).join("");
-}
+      `;
+    }).join("");
+  }
 
-function fetchAndUpdate() {
-  fetch(`${STATUS_FILE}?t=${Date.now()}`)
-    .then(response => {
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      return response.json();
-    })
-    .then(data => {
-      updateFxRate(data);
-      updateMarketSnapshot(data);
-      updateRiskPanel(data);
-      updateStats(data);
-      updateCharts(data);
-      updatePositions(data);
-      updateGlobalMonitor(data);
-      updateSignalCards(data);
-      updateArticles(data);
-      updateConfidence(data);
-      updateTrackRecord(data);
-      updateClosedTrades(data);
-      updateLogs(data);
-      updateTimestamp(data);
-    })
-    .catch(error => {
-      console.warn(error.message);
-      document.getElementById("lastUpdated").textContent = "Update failed \u2014 retrying...";
-    });
-}
+  function fetchAndUpdate() {
+    fetch(`${STATUS_FILE}?t=${Date.now()}`)
+      .then(response => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.json();
+      })
+      .then(data => {
+        updateFxRate(data);
+        updateMarketSnapshot(data);
+        updateRiskPanel(data);
+        updateStats(data);
+        updateCharts(data);
+        updatePositions(data);
+        updateGlobalMonitor(data);
+        updateSignalCards(data);
+        updateArticles(data);
+        updateConfidence(data);
+        updateTrackRecord(data);
+        updateClosedTrades(data);
+        updateLogs(data);
+        updateTimestamp(data);
+      })
+      .catch(error => {
+        console.warn(error.message);
+        const el = document.getElementById("lastUpdated");
+        if (el) el.textContent = "Update failed \u2014 retrying...";
+      });
+  }
 
-fetchAndUpdate();
-setInterval(fetchAndUpdate, REFRESH_INTERVAL);
+  fetchAndUpdate();
+  setInterval(fetchAndUpdate, REFRESH_INTERVAL);
+})();
+

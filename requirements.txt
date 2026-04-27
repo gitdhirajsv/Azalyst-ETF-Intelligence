@@ -2,32 +2,14 @@
 # Install with: pip install -r requirements.txt
 
 # Core HTTP client — async-friendly, robust
-requests>=2.31.0
-
-# RSS/Atom feed parsing
-feedparser>=6.0.11
-
-# Task scheduling
-schedule>=1.2.2
-
-# Date/time parsing utilities
-python-dateutil>=2.8.2
-
-# Local .env loading for repo-safe configuration
-python-dotenv>=1.0.1
-
-# Finance-tuned transformer sentiment layer (optional but supported in-app)
-transformers>=4.45.0
-torch>=2.6.0
-
-# PEFT for efficient fine-tuning (LoRA)
-peft>=0.9.0
-
-# ── Optional: Data Processing ────────────────────────────────────────────────
-
-# Data manipulation and analysis
-pandas>=2.0.0
-
-# Numerical operations
-numpy>=1.24.0
-yfinance>=0.2.37
+requests==2.31.0
+feedparser==6.0.11
+schedule==1.2.2
+python-dateutil==2.8.2
+python-dotenv==1.0.1
+transformers==4.45.0
+torch==2.6.0
+peft==0.9.0
+pandas==2.2.0
+numpy==1.26.0
+yfinance==0.2.37
