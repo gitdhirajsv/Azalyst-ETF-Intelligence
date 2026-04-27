@@ -15,7 +15,9 @@ Institution-style paper trading with:
 import json
 import logging
 import os
+import time
 from datetime import date, datetime, timezone
+from pathlib import Path
 from typing import Dict, List, Optional
 import urllib.request
 
@@ -171,16 +173,39 @@ def build_exit_execution(
     }
 
 
-def fetch_usd_to_inr() -> float:
-    """Fetch live USD/INR rate from Yahoo Finance."""
+FX_CACHE_PATH = Path("data") / "fx_cache.json"
+USD_TO_INR_FALLBACK = 83.5
+FX_CACHE_MAX_AGE_S = 24 * 3600
+
+def get_usd_to_inr() -> float:
+    """Fetch live USD/INR rate from Yahoo Finance with local caching."""
     try:
         url = "https://query1.finance.yahoo.com/v8/finance/chart/USDINR=X?interval=1d&range=1d"
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
         with urllib.request.urlopen(req, timeout=8) as resp:
             data = json.loads(resp.read())
-        return float(data["chart"]["result"][0]["meta"]["regularMarketPrice"])
+        rate = float(data["chart"]["result"][0]["meta"]["regularMarketPrice"])
+        
+        # Cache the successful fetch
+        try:
+            FX_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+            FX_CACHE_PATH.write_text(json.dumps({"rate": rate, "ts": time.time()}), encoding="utf-8")
+        except Exception:
+            pass
+        return rate
     except Exception:
-        return USD_TO_INR
+        log.warning("Live FX fetch failed; using cached or fallback")
+
+    if FX_CACHE_PATH.exists():
+        try:
+            data = json.loads(FX_CACHE_PATH.read_text(encoding="utf-8"))
+            if time.time() - data["ts"] < FX_CACHE_MAX_AGE_S:
+                return float(data["rate"])
+        except Exception:
+            pass
+            
+    log.warning("FX cache stale or missing — using hardcoded %.2f", USD_TO_INR_FALLBACK)
+    return USD_TO_INR_FALLBACK
 
 
 def fetch_price_usd(ticker: str) -> Optional[float]:
@@ -221,7 +246,7 @@ def get_current_price_inr(
     usd_price = fetch_price_usd(ticker)
     if usd_price is None:
         return None
-    rate = usd_inr_rate if usd_inr_rate is not None else fetch_usd_to_inr()
+    rate = usd_inr_rate if usd_inr_rate is not None else get_usd_to_inr()
     return round(usd_price * rate, 4)
 
 
@@ -519,7 +544,7 @@ class PaperPortfolio:
             log.info(f"Monthly deposit already credited for {month_key}")
             return
 
-        usd_inr_rate   = fetch_usd_to_inr()
+        usd_inr_rate   = get_usd_to_inr()
         budget_inr     = round(MONTHLY_BUDGET_USD * usd_inr_rate, 2)
         deploy_half  = round(budget_inr * 0.50, 2)
         reserve_half = round(budget_inr - deploy_half, 2)
@@ -734,7 +759,7 @@ class PaperPortfolio:
     def _rotate_for_signal(self, signal: Dict, min_cash_needed: float) -> List[Dict]:
         rotation_exits: List[Dict] = []
         attempts = 0
-        usd_inr = fetch_usd_to_inr()
+        usd_inr = get_usd_to_inr()
 
         while (self.cash_inr < min_cash_needed or len(self.open_positions) >= MAX_POSITIONS) and attempts < 2:
             candidate = self._select_rotation_candidate(signal)

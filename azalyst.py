@@ -233,6 +233,9 @@ def main():
     print(BANNER)
     cfg = Config()
 
+    from config import validate_runtime_env
+    validate_runtime_env()
+
     fetcher       = NewsFetcher(cfg)
     classifier    = SectorClassifier(cfg)
     scorer        = ConfidenceScorer(cfg)
@@ -277,8 +280,23 @@ def main():
     )
     log.info(f"EOD report scheduled at {eod_time} UTC (8:30 PM IST)")
 
+    CONSECUTIVE_FAILURE_LIMIT = 5
+    failures = 0
     while True:
-        schedule.run_pending()
+        try:
+            schedule.run_pending()
+            failures = 0
+        except KeyboardInterrupt:
+            log.info("Shutdown requested")
+            break
+        except Exception:
+            failures += 1
+            log.exception("Scheduler tick failed (%d/%d)", failures, CONSECUTIVE_FAILURE_LIMIT)
+            if failures >= CONSECUTIVE_FAILURE_LIMIT:
+                log.error("Too many consecutive failures — exiting so supervisor can restart")
+                raise
+            time.sleep(min(60 * failures, 600))
+            continue
         time.sleep(30)
 
 
