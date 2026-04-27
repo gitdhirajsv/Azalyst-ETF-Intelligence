@@ -38,7 +38,7 @@
       "pnl_pct_str": "+4.34%",
       "confidence": 96,
       "severity": "CRITICAL",
-      "days_held": 8,
+      "days_held": 9,
       "half_exited": true
     },
     {
@@ -61,7 +61,7 @@
       "pnl_pct_str": "+4.01%",
       "confidence": 94,
       "severity": "CRITICAL",
-      "days_held": 8,
+      "days_held": 9,
       "half_exited": false
     },
     {
@@ -212,12 +212,16 @@
   },
   "confidence": [
     {
-      "symbol": "Europe Equity + Energy / Oil & Gas",
+      "symbol": "Defense & Aerospace",
+      "score": 98.0
+    },
+    {
+      "symbol": "India Equity Markets",
       "score": 94.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 93.0
+      "symbol": "Europe Equity + Energy / Oil & Gas",
+      "score": 94.0
     },
     {
       "symbol": "Technology & AI / Semiconductors",
@@ -248,12 +252,12 @@
       "score": 88.0
     },
     {
-      "symbol": "India Equity Markets",
+      "symbol": "Banking & Financial Sector + Crypto & Digital Assets",
       "score": 88.0
     },
     {
-      "symbol": "Banking & Financial Sector + Crypto & Digital Assets",
-      "score": 88.0
+      "symbol": "Crypto & Digital Assets",
+      "score": 87.0
     },
     {
       "symbol": "Europe Equity + Gold & Precious Metals",
@@ -280,12 +284,12 @@
       "score": 81.0
     },
     {
-      "symbol": "Healthcare & Pharma",
-      "score": 81.0
-    },
-    {
       "symbol": "Emerging Markets + Banking & Financial Sector",
       "score": 80.0
+    },
+    {
+      "symbol": "Healthcare & Pharma",
+      "score": 78.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -300,20 +304,16 @@
       "score": 76.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 74.0
-    },
-    {
       "symbol": "Bonds & Fixed Income",
       "score": 73.0
     },
     {
-      "symbol": "Nuclear Energy & Uranium + Asia Pacific Equity",
+      "symbol": "Nuclear Energy & Uranium",
       "score": 72.0
     },
     {
-      "symbol": "Nuclear Energy & Uranium",
-      "score": 71.0
+      "symbol": "Nuclear Energy & Uranium + Asia Pacific Equity",
+      "score": 72.0
     },
     {
       "symbol": "Cybersecurity",
@@ -333,6 +333,109 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 98.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 49,
+      "latest_at": "27 Apr 2026 12:05 UTC",
+      "headline": "The US military wants a fleet of missile-killing laser drones",
+      "regions": [
+        "india",
+        "europe",
+        "middle_east",
+        "americas"
+      ],
+      "sources": [
+        "Defense News",
+        "Oilprice.com",
+        "Finance",
+        "BBC News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 18.2,
+        "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 94.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 20,
+      "latest_at": "27 Apr 2026 12:05 UTC",
+      "headline": "MobiKwik shares jump 12% after RBI nod for NBFC licence to launch lending arm",
+      "regions": [
+        "india",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "BBC News",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 23.8,
+        "volume_confirmation": 20.0,
+        "source_diversity": 16.5,
+        "recency": 20.0,
+        "geopolitical_severity": 14.6
+      }
+    },
     {
       "sector_key": "energy_oil|europe_equity",
       "sector_label": "Europe Equity + Energy / Oil & Gas",
@@ -384,59 +487,6 @@
         "volume_confirmation": 17.1,
         "source_diversity": 17.7,
         "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 93.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 53,
-      "latest_at": "27 Apr 2026 05:03 UTC",
-      "headline": "Nato says 'no provision' to expel members after report US could seek to suspend Spain",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "europe",
-        "india"
-      ],
-      "sources": [
-        "BBC News",
-        "US Top News and Analysis",
-        "Defense News",
-        "Finance"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 18.2,
-        "recency": 15.3,
         "geopolitical_severity": 15.0
       }
     },
@@ -813,55 +863,6 @@
       }
     },
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 88.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 18,
-      "latest_at": "27 Apr 2026 07:00 UTC",
-      "headline": "Paytm shares crash 8% as RBI cancels Paytm Payments Bank's banking license. What lies ahead?",
-      "regions": [
-        "middle_east",
-        "india",
-        "asia_pacific"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 23.1,
-        "volume_confirmation": 20.0,
-        "source_diversity": 12.3,
-        "recency": 18.6,
-        "geopolitical_severity": 14.6
-      }
-    },
-    {
       "sector_key": "banking_financial|crypto_digital",
       "sector_label": "Banking & Financial Sector + Crypto & Digital Assets",
       "confidence": 88.0,
@@ -911,6 +912,51 @@
         "volume_confirmation": 17.1,
         "source_diversity": 12.3,
         "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 87.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "27 Apr 2026 11:32 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "india",
+        "europe",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 8.5,
+        "recency": 18.9,
         "geopolitical_severity": 15.0
       }
     },
@@ -1233,58 +1279,6 @@
       }
     },
     {
-      "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma",
-      "confidence": 81.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "27 Apr 2026 07:44 UTC",
-      "headline": "Researchers say we\u2019re talking less than ever",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "americas"
-      ],
-      "sources": [
-        "BBC News",
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Oilprice.com"
-      ],
-      "primary_etf": "XLV",
-      "top_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "HEALTHCARE",
-        "PHARMABEES"
-      ],
-      "global_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 16.5,
-        "volume_confirmation": 16.2,
-        "source_diversity": 16.5,
-        "recency": 20.0,
-        "geopolitical_severity": 12.1
-      }
-    },
-    {
       "sector_key": "banking_financial|emerging_markets",
       "sector_label": "Emerging Markets + Banking & Financial Sector",
       "confidence": 80.0,
@@ -1336,6 +1330,59 @@
         "source_diversity": 14.3,
         "recency": 20.0,
         "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "healthcare_pharma",
+      "sector_label": "Healthcare & Pharma",
+      "confidence": 78.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 9,
+      "latest_at": "27 Apr 2026 11:25 UTC",
+      "headline": "Dubai Home Prices Post First Post-Pandemic Decline",
+      "regions": [
+        "india",
+        "asia_pacific",
+        "africa",
+        "global"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "XLV",
+      "top_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "HEALTHCARE",
+        "PHARMABEES"
+      ],
+      "global_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 16.2,
+        "volume_confirmation": 17.1,
+        "source_diversity": 14.0,
+        "recency": 18.7,
+        "geopolitical_severity": 12.2
       }
     },
     {
@@ -1495,51 +1542,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 74.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "26 Apr 2026 20:09 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "middle_east",
-        "africa",
-        "india",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 8.5,
-        "recency": 6.3,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income",
       "confidence": 73.0,
@@ -1586,6 +1588,56 @@
         "source_diversity": 9.7,
         "recency": 19.1,
         "geopolitical_severity": 10.3
+      }
+    },
+    {
+      "sector_key": "nuclear_uranium",
+      "sector_label": "Nuclear Energy & Uranium",
+      "confidence": 72.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 4,
+      "latest_at": "27 Apr 2026 12:05 UTC",
+      "headline": "Worker killed at Zaporizhzhia nuclear plant after drone strike, says Russia",
+      "regions": [
+        "global",
+        "europe"
+      ],
+      "sources": [
+        "World News - Breaking international news and headlines | Sky News",
+        "Finance",
+        "BBC News",
+        "World | Deutsche Welle"
+      ],
+      "primary_etf": "URA",
+      "top_etfs": [
+        "URA",
+        "URNM",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "URA",
+        "URNM",
+        "SRUUF"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 15.0,
+        "volume_confirmation": 10.8,
+        "source_diversity": 12.3,
+        "recency": 20.0,
+        "geopolitical_severity": 14.8
       }
     },
     {
@@ -1639,56 +1691,6 @@
         "source_diversity": 15.3,
         "recency": 19.0,
         "geopolitical_severity": 12.9
-      }
-    },
-    {
-      "sector_key": "nuclear_uranium",
-      "sector_label": "Nuclear Energy & Uranium",
-      "confidence": 71.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "27 Apr 2026 05:16 UTC",
-      "headline": "IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand",
-      "regions": [
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "Finance",
-        "BBC News",
-        "World | Deutsche Welle"
-      ],
-      "primary_etf": "URA",
-      "top_etfs": [
-        "URA",
-        "URNM",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "URA",
-        "URNM",
-        "SRUUF"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 13.7,
-        "volume_confirmation": 10.8,
-        "source_diversity": 12.3,
-        "recency": 20.0,
-        "geopolitical_severity": 14.4
       }
     },
     {
@@ -1884,12 +1886,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Europe Equity + Energy / Oil & Gas - 9 articles - HIGH / NEUTRAL - Europe looks to secure shipping in Strait of Hormuz"
+      "text": "Defense & Aerospace - 49 articles - HIGH / NEUTRAL - The US military wants a fleet of missile-killing laser drones"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 53 articles - HIGH / NEUTRAL - Nato says 'no provision' to expel members after report US could seek to suspend Spain"
+      "text": "India Equity Markets - 20 articles - HIGH / NEUTRAL - MobiKwik shares jump 12% after RBI nod for NBFC licence to launch lending arm"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Europe Equity + Energy / Oil & Gas - 9 articles - HIGH / NEUTRAL - Europe looks to secure shipping in Strait of Hormuz"
     },
     {
       "tag": "tag-neu",
@@ -1929,12 +1936,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 18 articles - HIGH / NEUTRAL - Paytm shares crash 8% as RBI cancels Paytm Payments Bank's banking license. What lies ahead?"
+      "text": "Banking & Financial Sector + Crypto & Digital Assets - 9 articles - HIGH / NEUTRAL - AI failure could trigger the next financial crisis, warns Elizabeth Warren"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Banking & Financial Sector + Crypto & Digital Assets - 9 articles - HIGH / NEUTRAL - AI failure could trigger the next financial crisis, warns Elizabeth Warren"
+      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -1969,12 +1976,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Healthcare & Pharma - 8 articles - MEDIUM / NEUTRAL - Researchers say we\u2019re talking less than ever"
+      "text": "Emerging Markets + Banking & Financial Sector - 9 articles - HIGH / NEUTRAL - Is To Lam's Vietnam turning into Xi Jinping's China?"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Emerging Markets + Banking & Financial Sector - 9 articles - HIGH / NEUTRAL - Is To Lam's Vietnam turning into Xi Jinping's China?"
+      "text": "Healthcare & Pharma - 9 articles - MEDIUM / NEUTRAL - Dubai Home Prices Post First Post-Pandemic Decline"
     },
     {
       "tag": "tag-neu",
@@ -1994,22 +2001,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 23 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Bonds & Fixed Income - 10 articles - MEDIUM / NEUTRAL - Central Bankers Have Bond Market on Edge: Markets in 3 Minutes"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Nuclear Energy & Uranium + Asia Pacific Equity - 7 articles - MEDIUM / NEUTRAL - Vietnam, South Korea Ink Deals on Security, Nuclear Power Plants"
+      "text": "Nuclear Energy & Uranium - 4 articles - HIGH / NEUTRAL - Worker killed at Zaporizhzhia nuclear plant after drone strike, says Russia"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Nuclear Energy & Uranium - 4 articles - HIGH / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
+      "text": "Nuclear Energy & Uranium + Asia Pacific Equity - 7 articles - MEDIUM / NEUTRAL - Vietnam, South Korea Ink Deals on Security, Nuclear Power Plants"
     },
     {
       "tag": "tag-neu",
@@ -2070,22 +2072,22 @@
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10386.84,
+      "price": 10405.82,
       "currency": "GBP",
-      "change": 7.74,
-      "change_pct": 0.07,
-      "change_str": "+0.07%",
+      "change": 26.72,
+      "change_pct": 0.26,
+      "change_str": "+0.26%",
       "direction": "up"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 24274.59,
+      "price": 24349.33,
       "currency": "EUR",
-      "change": 145.61,
-      "change_pct": 0.6,
-      "change_str": "+0.60%",
+      "change": 220.35,
+      "change_pct": 0.91,
+      "change_str": "+0.91%",
       "direction": "up"
     },
     {
@@ -2125,33 +2127,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4719.8,
+      "price": 4717.7,
       "currency": "USD",
-      "change": -2.5,
-      "change_pct": -0.05,
-      "change_str": "-0.05%",
+      "change": -4.6,
+      "change_pct": -0.1,
+      "change_str": "-0.10%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 96.6,
+      "price": 95.15,
       "currency": "USD",
-      "change": 2.2,
-      "change_pct": 2.33,
-      "change_str": "+2.33%",
+      "change": 0.75,
+      "change_pct": 0.79,
+      "change_str": "+0.79%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77849.2,
+      "price": 77762.17,
       "currency": "USD",
-      "change": -808.34,
-      "change_pct": -1.03,
-      "change_str": "-1.03%",
+      "change": -895.37,
+      "change_pct": -1.14,
+      "change_str": "-1.14%",
       "direction": "down"
     },
     {
@@ -2161,19 +2163,19 @@
       "price": 98.33,
       "currency": "USD",
       "change": -0.18,
-      "change_pct": -0.19,
-      "change_str": "-0.19%",
+      "change_pct": -0.18,
+      "change_str": "-0.18%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 19.04,
+      "price": 18.95,
       "currency": "USD",
-      "change": 0.33,
-      "change_pct": 1.76,
-      "change_str": "+1.76%",
+      "change": 0.24,
+      "change_pct": 1.28,
+      "change_str": "+1.28%",
       "direction": "up"
     }
   ],
@@ -2181,7 +2183,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.05,
     "portfolio_peak": 10133.74,
-    "vix": 19.04,
+    "vix": 18.95,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -2591,11 +2593,11 @@
     }
   },
   "logs": [
-    "2026-04-27 10:09:15 [INFO] AZALYST - status.json generated",
-    "2026-04-27 10:09:15 [INFO] PORTFOLIO - NAV USD 10,128.46 | Return +3.05%",
-    "2026-04-27 10:09:15 [INFO] SIGNALS - 30 active signal buckets in state",
-    "2026-04-27 10:09:15 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-27 10:09:15 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-27 12:06:49 [INFO] AZALYST - status.json generated",
+    "2026-04-27 12:06:49 [INFO] PORTFOLIO - NAV USD 10,128.46 | Return +3.05%",
+    "2026-04-27 12:06:49 [INFO] SIGNALS - 30 active signal buckets in state",
+    "2026-04-27 12:06:49 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-27 12:06:49 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-27 10:09:14 UTC"
+  "generated_at": "2026-04-27 12:06:48 UTC"
 }
