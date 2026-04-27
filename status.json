@@ -216,6 +216,10 @@
       "score": 95.0
     },
     {
+      "symbol": "Defense & Aerospace",
+      "score": 94.0
+    },
+    {
       "symbol": "Europe Equity + Energy / Oil & Gas",
       "score": 94.0
     },
@@ -236,6 +240,10 @@
       "score": 90.0
     },
     {
+      "symbol": "India Equity Markets",
+      "score": 89.0
+    },
+    {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
       "score": 89.0
     },
@@ -246,10 +254,6 @@
     {
       "symbol": "Banking & Financial Sector + Crypto & Digital Assets",
       "score": 88.0
-    },
-    {
-      "symbol": "India Equity Markets",
-      "score": 87.0
     },
     {
       "symbol": "Europe Equity + Gold & Precious Metals",
@@ -280,8 +284,8 @@
       "score": 79.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 78.0
+      "symbol": "Healthcare & Pharma",
+      "score": 77.0
     },
     {
       "symbol": "Real Estate & REITs + Bonds & Fixed Income",
@@ -296,16 +300,20 @@
       "score": 75.0
     },
     {
-      "symbol": "Europe Equity",
-      "score": 75.0
-    },
-    {
       "symbol": "Nuclear Energy & Uranium + Asia Pacific Equity",
       "score": 72.0
     },
     {
+      "symbol": "Europe Equity",
+      "score": 70.0
+    },
+    {
       "symbol": "Cybersecurity",
       "score": 69.0
+    },
+    {
+      "symbol": "Bonds & Fixed Income",
+      "score": 68.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -316,19 +324,11 @@
       "score": 67.0
     },
     {
-      "symbol": "Bonds & Fixed Income",
-      "score": 63.0
-    },
-    {
       "symbol": "Real Estate & REITs",
       "score": 63.0
     },
     {
       "symbol": "Gold & Precious Metals",
-      "score": 62.0
-    },
-    {
-      "symbol": "Healthcare & Pharma",
       "score": 62.0
     }
   ],
@@ -383,6 +383,59 @@
         "volume_confirmation": 20.0,
         "source_diversity": 15.5,
         "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 94.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 44,
+      "latest_at": "27 Apr 2026 00:00 UTC",
+      "headline": "Nato says 'no provision' to expel members after report US could seek to suspend Spain",
+      "regions": [
+        "india",
+        "asia_pacific",
+        "americas",
+        "middle_east"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Finance",
+        "Cointelegraph.com News",
+        "Defense News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 18.2,
+        "recency": 16.5,
         "geopolitical_severity": 15.0
       }
     },
@@ -653,6 +706,55 @@
       }
     },
     {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 89.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 16,
+      "latest_at": "27 Apr 2026 01:40 UTC",
+      "headline": "Ahead of Market: 10 things that will decide D-Street action on Monday",
+      "regions": [
+        "india",
+        "asia_pacific",
+        "americas",
+        "middle_east"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 23.9,
+        "volume_confirmation": 20.0,
+        "source_diversity": 11.0,
+        "recency": 19.5,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "banking_financial|gold_precious_metals",
       "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
       "confidence": 89.0,
@@ -663,19 +765,19 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 12,
-      "latest_at": "26 Apr 2026 19:40 UTC",
-      "headline": "US: Justice Department drops investigation into Fed Chair Powell",
+      "latest_at": "27 Apr 2026 01:55 UTC",
+      "headline": "Gold falls on firm dollar, oil-driven inflation fears as US-Iran talks stall",
       "regions": [
         "americas",
+        "middle_east",
         "global",
-        "asia_pacific",
-        "middle_east"
+        "asia_pacific"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
         "World | Deutsche Welle",
-        "Markets-Economic Times"
+        "Bloomberg Markets"
       ],
       "primary_etf": "XLF",
       "top_etfs": [
@@ -700,9 +802,9 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 20.6,
+        "signal_strength": 21.3,
         "volume_confirmation": 19.4,
-        "source_diversity": 14.9,
+        "source_diversity": 14.1,
         "recency": 20.0,
         "geopolitical_severity": 15.0
       }
@@ -810,54 +912,6 @@
         "volume_confirmation": 17.1,
         "source_diversity": 12.3,
         "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 87.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 19,
-      "latest_at": "25 Apr 2026 08:06 UTC",
-      "headline": "Gainers &amp; Losers: Infosys, Adani Energy among 7 big movers on Friday",
-      "regions": [
-        "middle_east",
-        "india",
-        "asia_pacific"
-      ],
-      "sources": [
-        "World | Deutsche Welle",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 24.9,
-        "volume_confirmation": 20.0,
-        "source_diversity": 8.5,
-        "recency": 18.8,
         "geopolitical_severity": 15.0
       }
     },
@@ -1190,13 +1244,13 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 22,
-      "latest_at": "26 Apr 2026 13:55 UTC",
+      "latest_at": "26 Apr 2026 20:09 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
         "india",
-        "global",
+        "asia_pacific",
         "middle_east",
-        "africa"
+        "global"
       ],
       "sources": [
         "Markets-Economic Times",
@@ -1225,56 +1279,55 @@
       }
     },
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 78.0,
-      "severity": "HIGH",
+      "sector_key": "healthcare_pharma",
+      "sector_label": "Healthcare & Pharma",
+      "confidence": 77.0,
+      "severity": "MEDIUM",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 43,
-      "latest_at": "25 Apr 2026 07:42 UTC",
-      "headline": "Nato says 'no provision' to expel members after report US could seek to suspend Spain",
+      "article_count": 7,
+      "latest_at": "27 Apr 2026 01:55 UTC",
+      "headline": "Researchers say we\u2019re talking less than ever",
       "regions": [
-        "india",
         "asia_pacific",
-        "europe",
-        "americas"
+        "americas",
+        "global"
       ],
       "sources": [
+        "The Verge",
         "Markets-Economic Times",
-        "Defense News",
-        "Finance",
-        "World | Deutsche Welle"
+        "BBC News",
+        "Bloomberg Markets"
       ],
-      "primary_etf": "ITA",
+      "primary_etf": "XLV",
       "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
+        "XLV",
+        "IXJ",
+        "XBI"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
+        "HEALTHCARE",
+        "PHARMABEES"
       ],
       "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
+        "XLV",
+        "IXJ",
+        "XBI"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 18.2,
-        "recency": 0.4,
-        "geopolitical_severity": 15.0
+        "signal_strength": 14.8,
+        "volume_confirmation": 15.2,
+        "source_diversity": 16.0,
+        "recency": 20.0,
+        "geopolitical_severity": 11.8
       }
     },
     {
@@ -1434,55 +1487,6 @@
       }
     },
     {
-      "sector_key": "europe_equity",
-      "sector_label": "Europe Equity",
-      "confidence": 75.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "26 Apr 2026 19:40 UTC",
-      "headline": "ECB signs standards deals to cut digital euro integration costs",
-      "regions": [
-        "europe",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "BBC News",
-        "World | Deutsche Welle",
-        "Markets-Economic Times",
-        "Defense News"
-      ],
-      "primary_etf": "VGK",
-      "top_etfs": [
-        "VGK",
-        "IEV",
-        "EWU"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "VGK",
-        "IEV",
-        "EWU",
-        "EWG"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.2,
-        "volume_confirmation": 15.2,
-        "source_diversity": 14.1,
-        "recency": 20.0,
-        "geopolitical_severity": 11.8
-      }
-    },
-    {
       "sector_key": "asia_pacific|nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium + Asia Pacific Equity",
       "confidence": 72.0,
@@ -1536,6 +1540,55 @@
       }
     },
     {
+      "sector_key": "europe_equity",
+      "sector_label": "Europe Equity",
+      "confidence": 70.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "27 Apr 2026 01:55 UTC",
+      "headline": "ECB signs standards deals to cut digital euro integration costs",
+      "regions": [
+        "asia_pacific",
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Cointelegraph.com News",
+        "Defense News",
+        "BBC News"
+      ],
+      "primary_etf": "VGK",
+      "top_etfs": [
+        "VGK",
+        "IEV",
+        "EWU"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "VGK",
+        "IEV",
+        "EWU",
+        "EWG"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 13.1,
+        "volume_confirmation": 14.0,
+        "source_diversity": 11.1,
+        "recency": 20.0,
+        "geopolitical_severity": 12.0
+      }
+    },
+    {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
       "confidence": 69.0,
@@ -1579,6 +1632,57 @@
         "source_diversity": 13.1,
         "recency": 20.0,
         "geopolitical_severity": 11.8
+      }
+    },
+    {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 68.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "27 Apr 2026 01:40 UTC",
+      "headline": "Bond Traders Await Powell Update, Slate of US Treasury Auctions",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "americas",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.7,
+        "volume_confirmation": 14.0,
+        "source_diversity": 11.1,
+        "recency": 19.5,
+        "geopolitical_severity": 12.3
       }
     },
     {
@@ -1680,56 +1784,6 @@
       }
     },
     {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
-      "confidence": 63.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "26 Apr 2026 19:00 UTC",
-      "headline": "Bond Traders Await Powell Update, Slate of US Treasury Auctions",
-      "regions": [
-        "americas",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 10.4,
-        "volume_confirmation": 12.5,
-        "source_diversity": 11.1,
-        "recency": 18.7,
-        "geopolitical_severity": 11.1
-      }
-    },
-    {
       "sector_key": "real_estate_reit",
       "sector_label": "Real Estate & REITs",
       "confidence": 63.0,
@@ -1827,56 +1881,6 @@
         "recency": 5.4,
         "geopolitical_severity": 15.0
       }
-    },
-    {
-      "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma",
-      "confidence": 62.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "25 Apr 2026 06:57 UTC",
-      "headline": "FDA fast-tracks psychedelic drug research following Trump executive order",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "india"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "XLV",
-      "top_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "HEALTHCARE",
-        "PHARMABEES"
-      ],
-      "global_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.2,
-        "volume_confirmation": 14.0,
-        "source_diversity": 8.5,
-        "recency": 18.3,
-        "geopolitical_severity": 10.9
-      }
     }
   ],
   "articles": [
@@ -1884,6 +1888,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Energy / Oil & Gas - 22 articles - CRITICAL / NEUTRAL - IEA\u2019s Birol Says Iran War Will Permanently Cut Into Future Oil Demand"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Defense & Aerospace - 44 articles - HIGH / NEUTRAL - Nato says 'no provision' to expel members after report US could seek to suspend Spain"
     },
     {
       "tag": "tag-neu",
@@ -1913,7 +1922,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Banking & Financial Sector + Gold & Precious Metals - 12 articles - HIGH / NEUTRAL - US: Justice Department drops investigation into Fed Chair Powell"
+      "text": "India Equity Markets - 16 articles - HIGH / NEUTRAL - Ahead of Market: 10 things that will decide D-Street action on Monday"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Banking & Financial Sector + Gold & Precious Metals - 12 articles - HIGH / NEUTRAL - Gold falls on firm dollar, oil-driven inflation fears as US-Iran talks stall"
     },
     {
       "tag": "tag-neu",
@@ -1924,11 +1938,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Banking & Financial Sector + Crypto & Digital Assets - 9 articles - HIGH / NEUTRAL - AI failure could trigger the next financial crisis, warns Elizabeth Warren"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "India Equity Markets - 19 articles - HIGH / NEUTRAL - Gainers &amp; Losers: Infosys, Adani Energy among 7 big movers on Friday"
     },
     {
       "tag": "tag-neu",
@@ -1968,7 +1977,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 43 articles - HIGH / NEUTRAL - Nato says 'no provision' to expel members after report US could seek to suspend Spain"
+      "text": "Healthcare & Pharma - 7 articles - MEDIUM / NEUTRAL - Researchers say we\u2019re talking less than ever"
     },
     {
       "tag": "tag-neu",
@@ -1988,17 +1997,22 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Europe Equity - 7 articles - MEDIUM / NEUTRAL - ECB signs standards deals to cut digital euro integration costs"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Nuclear Energy & Uranium + Asia Pacific Equity - 7 articles - MEDIUM / NEUTRAL - Vietnam, South Korea Ink Deals on Security, Nuclear Power Plants"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Europe Equity - 6 articles - MEDIUM / NEUTRAL - ECB signs standards deals to cut digital euro integration costs"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Cybersecurity - 5 articles - MEDIUM / NEUTRAL - Anthropic&#8217;s Mythos rollout has missed America\u2019s cybersecurity agency"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Bonds & Fixed Income - 6 articles - MEDIUM / NEUTRAL - Bond Traders Await Powell Update, Slate of US Treasury Auctions"
     },
     {
       "tag": "tag-neu",
@@ -2013,22 +2027,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Bonds & Fixed Income - 5 articles - MEDIUM / NEUTRAL - Bond Traders Await Powell Update, Slate of US Treasury Auctions"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Real Estate & REITs - 3 articles - HIGH / NEUTRAL - Housing REIT National Healthcare\u2019s US IPO Raises $462 Million"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Gold & Precious Metals - 7 articles - HIGH / NEUTRAL - Gold gains but heads for first weekly loss in five weeks"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Healthcare & Pharma - 6 articles - MEDIUM / NEUTRAL - FDA fast-tracks psychedelic drug research following Trump executive order"
     }
   ],
   "market_snapshot": [
@@ -2091,23 +2095,23 @@
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 59716.18,
+      "price": 60484.44,
       "currency": "JPY",
-      "change": 575.95,
-      "change_pct": 0.97,
-      "change_str": "+0.97%",
+      "change": 768.26,
+      "change_pct": 1.29,
+      "change_str": "+1.29%",
       "direction": "up"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 25978.07,
+      "price": 25950.27,
       "currency": "HKD",
-      "change": 62.87,
-      "change_pct": 0.24,
-      "change_str": "+0.24%",
-      "direction": "up"
+      "change": -27.8,
+      "change_pct": -0.11,
+      "change_str": "-0.11%",
+      "direction": "down"
     },
     {
       "label": "Nifty 50",
@@ -2124,45 +2128,45 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4696.2,
+      "price": 4713.0,
       "currency": "USD",
-      "change": -26.1,
-      "change_pct": -0.55,
-      "change_str": "-0.55%",
+      "change": -9.3,
+      "change_pct": -0.2,
+      "change_str": "-0.20%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 96.11,
+      "price": 95.76,
       "currency": "USD",
-      "change": 1.71,
-      "change_pct": 1.81,
-      "change_str": "+1.81%",
+      "change": 1.36,
+      "change_pct": 1.44,
+      "change_str": "+1.44%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78284.85,
+      "price": 79198.88,
       "currency": "USD",
-      "change": 672.83,
-      "change_pct": 0.87,
-      "change_str": "+0.87%",
+      "change": 1586.86,
+      "change_pct": 2.04,
+      "change_str": "+2.04%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.61,
+      "price": 98.48,
       "currency": "USD",
-      "change": 0.1,
-      "change_pct": 0.1,
-      "change_str": "+0.10%",
-      "direction": "up"
+      "change": -0.03,
+      "change_pct": -0.03,
+      "change_str": "-0.03%",
+      "direction": "down"
     },
     {
       "label": "VIX",
@@ -2590,11 +2594,11 @@
     }
   },
   "logs": [
-    "2026-04-26 23:32:29 [INFO] AZALYST - status.json generated",
-    "2026-04-26 23:32:29 [INFO] PORTFOLIO - NAV USD 10,128.46 | Return +3.08%",
-    "2026-04-26 23:32:29 [INFO] SIGNALS - 30 active signal buckets in state",
-    "2026-04-26 23:32:29 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-26 23:32:29 [INFO] RISK - Partial profits realised: USD 3,369.67"
+    "2026-04-27 01:56:03 [INFO] AZALYST - status.json generated",
+    "2026-04-27 01:56:03 [INFO] PORTFOLIO - NAV USD 10,128.46 | Return +3.08%",
+    "2026-04-27 01:56:03 [INFO] SIGNALS - 30 active signal buckets in state",
+    "2026-04-27 01:56:03 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-27 01:56:03 [INFO] RISK - Partial profits realised: USD 3,369.67"
   ],
-  "generated_at": "2026-04-26 23:32:28 UTC"
+  "generated_at": "2026-04-27 01:56:02 UTC"
 }
