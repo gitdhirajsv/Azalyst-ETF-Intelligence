@@ -228,6 +228,10 @@
       "score": 94.0
     },
     {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 93.0
+    },
+    {
       "symbol": "Cybersecurity + Crypto & Digital Assets",
       "score": 93.0
     },
@@ -252,10 +256,6 @@
       "score": 88.0
     },
     {
-      "symbol": "Bonds & Fixed Income",
-      "score": 87.0
-    },
-    {
       "symbol": "Europe Equity + Gold & Precious Metals",
       "score": 87.0
     },
@@ -272,11 +272,11 @@
       "score": 86.0
     },
     {
-      "symbol": "Real Estate & REITs + India Equity Markets",
-      "score": 82.0
+      "symbol": "Bonds & Fixed Income",
+      "score": 84.0
     },
     {
-      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
+      "symbol": "Real Estate & REITs + India Equity Markets",
       "score": 82.0
     },
     {
@@ -547,6 +547,60 @@
         "volume_confirmation": 17.1,
         "source_diversity": 17.7,
         "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "banking_financial|gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 93.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "28 Apr 2026 22:39 UTC",
+      "headline": "Gold Steady After Two-Day Drop as Iran War Fans Inflation Fears",
+      "regions": [
+        "global",
+        "americas",
+        "middle_east"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "Finance"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "XLF",
+        "GOLDBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD",
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "XLF",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 14.8,
+        "recency": 18.3,
         "geopolitical_severity": 15.0
       }
     },
@@ -867,57 +921,6 @@
       }
     },
     {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
-      "confidence": 87.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "28 Apr 2026 17:54 UTC",
-      "headline": "India 10-year yield at three-week peak as oil tops $110",
-      "regions": [
-        "global",
-        "middle_east",
-        "europe"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "World News - Breaking international news and headlines | Sky News",
-        "Oilprice.com",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 19.2,
-        "volume_confirmation": 20.0,
-        "source_diversity": 16.4,
-        "recency": 19.3,
-        "geopolitical_severity": 12.2
-      }
-    },
-    {
       "sector_key": "europe_equity|gold_precious_metals",
       "sector_label": "Europe Equity + Gold & Precious Metals",
       "confidence": 87.0,
@@ -1124,6 +1127,57 @@
       }
     },
     {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 84.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 15,
+      "latest_at": "28 Apr 2026 20:45 UTC",
+      "headline": "India 10-year yield at three-week peak as oil tops $110",
+      "regions": [
+        "global",
+        "americas",
+        "middle_east"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "Finance"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.6,
+        "volume_confirmation": 20.0,
+        "source_diversity": 15.4,
+        "recency": 15.2,
+        "geopolitical_severity": 12.6
+      }
+    },
+    {
       "sector_key": "india_equity|real_estate_reit",
       "sector_label": "Real Estate & REITs + India Equity Markets",
       "confidence": 82.0,
@@ -1174,61 +1228,6 @@
         "source_diversity": 11.0,
         "recency": 20.0,
         "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "banking_financial|gold_precious_metals",
-      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
-      "confidence": 82.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "28 Apr 2026 16:46 UTC",
-      "headline": "Peak XV exits One MobiKwik Systems in Rs 130 crore block deal: Report",
-      "regions": [
-        "americas",
-        "global",
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Finance"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "GOLDBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD",
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 18.6,
-        "volume_confirmation": 18.7,
-        "source_diversity": 13.3,
-        "recency": 17.2,
-        "geopolitical_severity": 14.9
       }
     },
     {
@@ -1959,6 +1958,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / NEUTRAL - Gold Steady After Two-Day Drop as Iran War Fans Inflation Fears"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Cybersecurity + Crypto & Digital Assets - 11 articles - HIGH / NEUTRAL - After watchdog slams understaffing, AI to vet Pentagon-backed professors\u2019 China ties"
     },
     {
@@ -1989,11 +1993,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Bonds & Fixed Income - 13 articles - MEDIUM / NEUTRAL - India 10-year yield at three-week peak as oil tops $110"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Europe Equity + Gold & Precious Metals - 11 articles - HIGH / NEUTRAL - Euro zone short-dated yields climb for fourth day amid Iran-US stalemate"
     },
     {
@@ -2014,12 +2013,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Real Estate & REITs + India Equity Markets - 9 articles - HIGH / NEUTRAL - Displaced by Iran war: out of Lebanon, into Syrian crisis"
+      "text": "Bonds & Fixed Income - 15 articles - MEDIUM / NEUTRAL - India 10-year yield at three-week peak as oil tops $110"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Banking & Financial Sector + Gold & Precious Metals - 11 articles - HIGH / NEUTRAL - Peak XV exits One MobiKwik Systems in Rs 130 crore block deal: Report"
+      "text": "Real Estate & REITs + India Equity Markets - 9 articles - HIGH / NEUTRAL - Displaced by Iran war: out of Lebanon, into Syrian crisis"
     },
     {
       "tag": "tag-neu",
@@ -2132,10 +2131,10 @@
       "region": "UK",
       "price": 10332.79,
       "currency": "GBP",
-      "change": 11.69,
-      "change_pct": 0.11,
-      "change_str": "+0.11%",
-      "direction": "up"
+      "change": -46.31,
+      "change_pct": -0.45,
+      "change_str": "-0.45%",
+      "direction": "down"
     },
     {
       "label": "DAX",
@@ -2185,33 +2184,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4611.2,
+      "price": 4606.1,
       "currency": "USD",
-      "change": -64.2,
-      "change_pct": -1.37,
-      "change_str": "-1.37%",
+      "change": -69.3,
+      "change_pct": -1.48,
+      "change_str": "-1.48%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 99.37,
+      "price": 99.43,
       "currency": "USD",
-      "change": 3.0,
-      "change_pct": 3.11,
-      "change_str": "+3.11%",
+      "change": 3.06,
+      "change_pct": 3.18,
+      "change_str": "+3.18%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 76330.28,
+      "price": 76284.0,
       "currency": "USD",
-      "change": -1036.35,
-      "change_pct": -1.34,
-      "change_str": "-1.34%",
+      "change": -1082.62,
+      "change_pct": -1.4,
+      "change_str": "-1.40%",
       "direction": "down"
     },
     {
@@ -2651,11 +2650,11 @@
     }
   },
   "logs": [
-    "2026-04-28 22:32:08 [INFO] AZALYST - status.json generated",
-    "2026-04-28 22:32:08 [INFO] PORTFOLIO - NAV USD 10,105.27 | Return +3.18%",
-    "2026-04-28 22:32:08 [INFO] SIGNALS - 31 active signal buckets in state",
-    "2026-04-28 22:32:08 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-28 22:32:08 [INFO] RISK - Partial profits realised: USD 3,771.79"
+    "2026-04-28 23:31:31 [INFO] AZALYST - status.json generated",
+    "2026-04-28 23:31:31 [INFO] PORTFOLIO - NAV USD 10,105.27 | Return +3.18%",
+    "2026-04-28 23:31:31 [INFO] SIGNALS - 31 active signal buckets in state",
+    "2026-04-28 23:31:31 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-28 23:31:31 [INFO] RISK - Partial profits realised: USD 3,771.79"
   ],
-  "generated_at": "2026-04-28 22:32:08 UTC"
+  "generated_at": "2026-04-28 23:31:30 UTC"
 }
