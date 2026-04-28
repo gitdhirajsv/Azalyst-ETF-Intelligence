@@ -232,10 +232,6 @@
       "score": 93.0
     },
     {
-      "symbol": "India Equity Markets",
-      "score": 92.0
-    },
-    {
       "symbol": "Banking & Financial Sector + Bonds & Fixed Income",
       "score": 92.0
     },
@@ -244,12 +240,16 @@
       "score": 91.0
     },
     {
-      "symbol": "Banking & Financial Sector + Crypto & Digital Assets",
+      "symbol": "India Equity Markets",
+      "score": 90.0
+    },
+    {
+      "symbol": "Nuclear Energy & Uranium",
       "score": 88.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 87.0
+      "symbol": "Banking & Financial Sector + Crypto & Digital Assets",
+      "score": 88.0
     },
     {
       "symbol": "Europe Equity + Gold & Precious Metals",
@@ -260,32 +260,32 @@
       "score": 87.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
+      "symbol": "Europe Equity + Banking & Financial Sector",
       "score": 86.0
     },
     {
-      "symbol": "Europe Equity + Banking & Financial Sector",
-      "score": 86.0
+      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
+      "score": 83.0
     },
     {
       "symbol": "Real Estate & REITs + India Equity Markets",
       "score": 82.0
     },
     {
+      "symbol": "Bonds & Fixed Income",
+      "score": 80.0
+    },
+    {
       "symbol": "Emerging Markets + Banking & Financial Sector",
       "score": 80.0
     },
     {
-      "symbol": "Nuclear Energy & Uranium",
-      "score": 79.0
+      "symbol": "Crypto & Digital Assets",
+      "score": 78.0
     },
     {
       "symbol": "Real Estate & REITs + Bonds & Fixed Income",
       "score": 77.0
-    },
-    {
-      "symbol": "Bonds & Fixed Income",
-      "score": 76.0
     },
     {
       "symbol": "Real Estate & REITs + Clean Energy & Renewables",
@@ -294,10 +294,6 @@
     {
       "symbol": "Gold & Precious Metals",
       "score": 75.0
-    },
-    {
-      "symbol": "Clean Energy & Renewables",
-      "score": 74.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -330,6 +326,10 @@
     {
       "symbol": "Real Estate & REITs",
       "score": 63.0
+    },
+    {
+      "symbol": "Clean Energy & Renewables",
+      "score": 62.0
     }
   ],
   "signals": [
@@ -343,19 +343,19 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 52,
-      "latest_at": "27 Apr 2026 20:37 UTC",
+      "article_count": 61,
+      "latest_at": "28 Apr 2026 02:02 UTC",
       "headline": "Is a Permanent U.S. Blockade of the Strait of Hormuz Part of a Much Bigger Plan?",
       "regions": [
-        "asia_pacific",
         "americas",
         "middle_east",
-        "global"
+        "global",
+        "europe"
       ],
       "sources": [
-        "World | Deutsche Welle",
-        "Cointelegraph.com News",
         "The Verge",
+        "World | Deutsche Welle",
+        "US Top News and Analysis",
         "Oilprice.com"
       ],
       "primary_etf": "ITA",
@@ -597,57 +597,6 @@
       }
     },
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 92.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 21,
-      "latest_at": "27 Apr 2026 20:37 UTC",
-      "headline": "Ahead of Market: 10 things that will decide stock market action on Tuesday",
-      "regions": [
-        "asia_pacific",
-        "india",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "World | Deutsche Welle",
-        "BBC News",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 24.4,
-        "volume_confirmation": 20.0,
-        "source_diversity": 13.3,
-        "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "banking_financial|bonds_fixed_income",
       "sector_label": "Banking & Financial Sector + Bonds & Fixed Income",
       "confidence": 92.0,
@@ -757,6 +706,107 @@
       }
     },
     {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 90.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "28 Apr 2026 01:05 UTC",
+      "headline": "Ahead of Market: 10 things that will decide stock market action on Tuesday",
+      "regions": [
+        "middle_east",
+        "global",
+        "india",
+        "asia_pacific"
+      ],
+      "sources": [
+        "BBC News",
+        "World | Deutsche Welle",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 12.3,
+        "recency": 18.2,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "nuclear_uranium",
+      "sector_label": "Nuclear Energy & Uranium",
+      "confidence": 88.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 9,
+      "latest_at": "28 Apr 2026 01:06 UTC",
+      "headline": "Worker killed at Zaporizhzhia nuclear plant after drone strike, says Russia",
+      "regions": [
+        "middle_east",
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "US Top News and Analysis",
+        "Markets-Economic Times",
+        "World News - Breaking international news and headlines | Sky News"
+      ],
+      "primary_etf": "URA",
+      "top_etfs": [
+        "URA",
+        "URNM",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "URA",
+        "URNM",
+        "SRUUF"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.1,
+        "volume_confirmation": 17.1,
+        "source_diversity": 17.3,
+        "recency": 18.2,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
       "sector_key": "banking_financial|crypto_digital",
       "sector_label": "Banking & Financial Sector + Crypto & Digital Assets",
       "confidence": 88.0,
@@ -806,61 +856,6 @@
         "volume_confirmation": 17.1,
         "source_diversity": 12.3,
         "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "banking_financial|gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 87.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "27 Apr 2026 20:02 UTC",
-      "headline": "Gold investment demand surges as jewellery share declines",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Oilprice.com",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "XLF",
-        "GOLDBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD",
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "XLF",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 20.1,
-        "volume_confirmation": 19.4,
-        "source_diversity": 14.1,
-        "recency": 18.8,
         "geopolitical_severity": 15.0
       }
     },
@@ -974,52 +969,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 86.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 26,
-      "latest_at": "27 Apr 2026 18:56 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "india",
-        "global"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Bloomberg Markets",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 25.0,
-        "volume_confirmation": 20.0,
-        "source_diversity": 10.1,
-        "recency": 16.9,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "banking_financial|europe_equity",
       "sector_label": "Europe Equity + Banking & Financial Sector",
       "confidence": 86.0,
@@ -1068,6 +1017,61 @@
         "volume_confirmation": 18.7,
         "source_diversity": 14.0,
         "recency": 20.0,
+        "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "banking_financial|gold_precious_metals",
+      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
+      "confidence": 83.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "27 Apr 2026 23:02 UTC",
+      "headline": "Fed likely to hold rates steady as Powell prepares for possible swan song",
+      "regions": [
+        "americas",
+        "middle_east",
+        "global",
+        "india"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "GOLDBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD",
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.1,
+        "volume_confirmation": 20.0,
+        "source_diversity": 12.4,
+        "recency": 14.8,
         "geopolitical_severity": 15.0
       }
     },
@@ -1125,6 +1129,58 @@
       }
     },
     {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 80.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "28 Apr 2026 00:37 UTC",
+      "headline": "BitMine acquires 101,000 ETH despite $6.5B in unrealized losses",
+      "regions": [
+        "americas",
+        "middle_east",
+        "global",
+        "europe"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Cointelegraph.com News",
+        "Oilprice.com",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 16.5,
+        "volume_confirmation": 18.7,
+        "source_diversity": 15.4,
+        "recency": 17.3,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "banking_financial|emerging_markets",
       "sector_label": "Emerging Markets + Banking & Financial Sector",
       "confidence": 80.0,
@@ -1179,53 +1235,47 @@
       }
     },
     {
-      "sector_key": "nuclear_uranium",
-      "sector_label": "Nuclear Energy & Uranium",
-      "confidence": 79.0,
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 78.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "27 Apr 2026 18:10 UTC",
-      "headline": "Worker killed at Zaporizhzhia nuclear plant after drone strike, says Russia",
+      "article_count": 29,
+      "latest_at": "27 Apr 2026 21:44 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "europe",
+        "americas",
+        "middle_east",
         "global",
-        "middle_east"
+        "europe"
       ],
       "sources": [
-        "Oilprice.com",
-        "Finance",
-        "BBC News",
-        "World News - Breaking international news and headlines | Sky News"
+        "US Top News and Analysis",
+        "Cointelegraph.com News"
       ],
-      "primary_etf": "URA",
+      "primary_etf": "IBIT",
       "top_etfs": [
-        "URA",
-        "URNM",
-        "CPSEETF"
+        "IBIT",
+        "BITQ"
       ],
       "access_markets": [
-        "India-listed",
         "International-listed"
       ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
+      "india_etfs": [],
       "global_etfs": [
-        "URA",
-        "URNM",
-        "SRUUF"
+        "IBIT",
+        "BITQ"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 19.3,
-        "volume_confirmation": 15.2,
-        "source_diversity": 14.0,
-        "recency": 15.6,
+        "signal_strength": 25.0,
+        "volume_confirmation": 20.0,
+        "source_diversity": 5.2,
+        "recency": 13.0,
         "geopolitical_severity": 15.0
       }
     },
@@ -1279,58 +1329,6 @@
         "source_diversity": 11.1,
         "recency": 19.7,
         "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
-      "confidence": 76.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 9,
-      "latest_at": "27 Apr 2026 20:02 UTC",
-      "headline": "BitMine acquires 101,000 ETH despite $6.5B in unrealized losses",
-      "regions": [
-        "americas",
-        "europe",
-        "india",
-        "global"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Oilprice.com",
-        "Markets-Economic Times",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.4,
-        "volume_confirmation": 17.1,
-        "source_diversity": 14.6,
-        "recency": 18.8,
-        "geopolitical_severity": 11.8
       }
     },
     {
@@ -1436,56 +1434,6 @@
         "source_diversity": 11.0,
         "recency": 19.0,
         "geopolitical_severity": 14.2
-      }
-    },
-    {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables",
-      "confidence": 74.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "27 Apr 2026 14:33 UTC",
-      "headline": "India\u2019s Renewable Surge Cut Fossil Fuel Power Use in 2025",
-      "regions": [
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "Finance",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "ICLN",
-      "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NEWENERGY"
-      ],
-      "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 13.7,
-        "volume_confirmation": 16.2,
-        "source_diversity": 14.8,
-        "recency": 20.0,
-        "geopolitical_severity": 9.4
       }
     },
     {
@@ -1883,13 +1831,62 @@
         "recency": 17.3,
         "geopolitical_severity": 14.7
       }
+    },
+    {
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables",
+      "confidence": 62.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 4,
+      "latest_at": "28 Apr 2026 01:33 UTC",
+      "headline": "Samsung SDI Posts Smaller-Than-Expected Loss, Sending Shares Up",
+      "regions": [
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "Finance"
+      ],
+      "primary_etf": "ICLN",
+      "top_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NEWENERGY"
+      ],
+      "global_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 10.0,
+        "volume_confirmation": 10.8,
+        "source_diversity": 12.3,
+        "recency": 19.0,
+        "geopolitical_severity": 10.7
+      }
     }
   ],
   "articles": [
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 52 articles - HIGH / NEUTRAL - Is a Permanent U.S. Blockade of the Strait of Hormuz Part of a Much Bigger Plan?"
+      "text": "Defense & Aerospace - 61 articles - HIGH / NEUTRAL - Is a Permanent U.S. Blockade of the Strait of Hormuz Part of a Much Bigger Plan?"
     },
     {
       "tag": "tag-neu",
@@ -1914,11 +1911,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 21 articles - HIGH / NEUTRAL - Ahead of Market: 10 things that will decide stock market action on Tuesday"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Banking & Financial Sector + Bonds & Fixed Income - 13 articles - HIGH / NEUTRAL - Fmr. Fed Governor Betsy Duke on Warsh's Future, Rates"
     },
     {
@@ -1929,12 +1921,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Banking & Financial Sector + Crypto & Digital Assets - 9 articles - HIGH / NEUTRAL - AI failure could trigger the next financial crisis, warns Elizabeth Warren"
+      "text": "India Equity Markets - 24 articles - HIGH / NEUTRAL - Ahead of Market: 10 things that will decide stock market action on Tuesday"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - Gold investment demand surges as jewellery share declines"
+      "text": "Nuclear Energy & Uranium - 9 articles - HIGH / NEUTRAL - Worker killed at Zaporizhzhia nuclear plant after drone strike, says Russia"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Banking & Financial Sector + Crypto & Digital Assets - 9 articles - HIGH / NEUTRAL - AI failure could trigger the next financial crisis, warns Elizabeth Warren"
     },
     {
       "tag": "tag-neu",
@@ -1949,12 +1946,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 26 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+      "text": "Europe Equity + Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - Euro-Zone Companies See Higher Selling Prices, ECB Survey Shows"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Europe Equity + Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - Euro-Zone Companies See Higher Selling Prices, ECB Survey Shows"
+      "text": "Banking & Financial Sector + Gold & Precious Metals - 13 articles - HIGH / NEUTRAL - Fed likely to hold rates steady as Powell prepares for possible swan song"
     },
     {
       "tag": "tag-neu",
@@ -1964,22 +1961,22 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Bonds & Fixed Income - 11 articles - MEDIUM / NEUTRAL - BitMine acquires 101,000 ETH despite $6.5B in unrealized losses"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Emerging Markets + Banking & Financial Sector - 9 articles - HIGH / NEUTRAL - Is To Lam's Vietnam turning into Xi Jinping's China?"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Nuclear Energy & Uranium - 7 articles - HIGH / NEUTRAL - Worker killed at Zaporizhzhia nuclear plant after drone strike, says Russia"
+      "text": "Crypto & Digital Assets - 29 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Real Estate & REITs + Bonds & Fixed Income - 9 articles - HIGH / NEUTRAL - US housing market faces volatility despite decline in mortgage rates"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Bonds & Fixed Income - 9 articles - MEDIUM / NEUTRAL - BitMine acquires 101,000 ETH despite $6.5B in unrealized losses"
     },
     {
       "tag": "tag-neu",
@@ -1990,11 +1987,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Gold & Precious Metals - 7 articles - HIGH / NEUTRAL - Gold investment demand surges as jewellery share declines"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Clean Energy & Renewables - 8 articles - MEDIUM / NEUTRAL - India\u2019s Renewable Surge Cut Fossil Fuel Power Use in 2025"
     },
     {
       "tag": "tag-neu",
@@ -2035,6 +2027,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Real Estate & REITs - 3 articles - HIGH / NEUTRAL - Housing REIT National Healthcare\u2019s US IPO Raises $462 Million"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Clean Energy & Renewables - 4 articles - MEDIUM / NEUTRAL - Samsung SDI Posts Smaller-Than-Expected Loss, Sending Shares Up"
     }
   ],
   "market_snapshot": [
@@ -2077,9 +2074,9 @@
       "region": "UK",
       "price": 10321.09,
       "currency": "GBP",
-      "change": -135.91,
-      "change_pct": -1.3,
-      "change_str": "-1.30%",
+      "change": -58.01,
+      "change_pct": -0.56,
+      "change_str": "-0.56%",
       "direction": "down"
     },
     {
@@ -2088,32 +2085,32 @@
       "region": "EU",
       "price": 24083.53,
       "currency": "EUR",
-      "change": -71.92,
-      "change_pct": -0.3,
-      "change_str": "-0.30%",
+      "change": -45.45,
+      "change_pct": -0.19,
+      "change_str": "-0.19%",
       "direction": "down"
     },
     {
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 60537.36,
+      "price": 60297.75,
       "currency": "JPY",
-      "change": 1397.13,
-      "change_pct": 2.36,
-      "change_str": "+2.36%",
-      "direction": "up"
+      "change": -239.61,
+      "change_pct": -0.4,
+      "change_str": "-0.40%",
+      "direction": "down"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 25925.65,
+      "price": 25867.02,
       "currency": "HKD",
-      "change": 10.45,
-      "change_pct": 0.04,
-      "change_str": "+0.04%",
-      "direction": "up"
+      "change": -58.63,
+      "change_pct": -0.23,
+      "change_str": "-0.23%",
+      "direction": "down"
     },
     {
       "label": "Nifty 50",
@@ -2121,54 +2118,54 @@
       "region": "IN",
       "price": 24092.7,
       "currency": "INR",
-      "change": -80.35,
-      "change_pct": -0.33,
-      "change_str": "-0.33%",
-      "direction": "down"
+      "change": 194.75,
+      "change_pct": 0.81,
+      "change_str": "+0.81%",
+      "direction": "up"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4707.6,
+      "price": 4695.8,
       "currency": "USD",
-      "change": -14.7,
-      "change_pct": -0.31,
-      "change_str": "-0.31%",
-      "direction": "down"
+      "change": 20.4,
+      "change_pct": 0.44,
+      "change_str": "+0.44%",
+      "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 96.68,
+      "price": 97.25,
       "currency": "USD",
-      "change": 2.28,
-      "change_pct": 2.42,
-      "change_str": "+2.42%",
+      "change": 0.88,
+      "change_pct": 0.91,
+      "change_str": "+0.91%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77291.52,
+      "price": 77137.92,
       "currency": "USD",
-      "change": -1366.02,
-      "change_pct": -1.74,
-      "change_str": "-1.74%",
+      "change": -1519.62,
+      "change_pct": -1.93,
+      "change_str": "-1.93%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.47,
+      "price": 98.55,
       "currency": "USD",
-      "change": -0.04,
-      "change_pct": -0.04,
-      "change_str": "-0.04%",
-      "direction": "down"
+      "change": 0.07,
+      "change_pct": 0.07,
+      "change_str": "+0.07%",
+      "direction": "up"
     },
     {
       "label": "VIX",
@@ -2596,11 +2593,11 @@
     }
   },
   "logs": [
-    "2026-04-27 23:45:09 [INFO] AZALYST - status.json generated",
-    "2026-04-27 23:45:09 [INFO] PORTFOLIO - NAV USD 10,116.84 | Return +2.91%",
-    "2026-04-27 23:45:09 [INFO] SIGNALS - 30 active signal buckets in state",
-    "2026-04-27 23:45:09 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-27 23:45:09 [INFO] RISK - Partial profits realised: USD 3,771.79"
+    "2026-04-28 02:03:42 [INFO] AZALYST - status.json generated",
+    "2026-04-28 02:03:42 [INFO] PORTFOLIO - NAV USD 10,116.84 | Return +2.91%",
+    "2026-04-28 02:03:42 [INFO] SIGNALS - 30 active signal buckets in state",
+    "2026-04-28 02:03:42 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-28 02:03:42 [INFO] RISK - Partial profits realised: USD 3,771.79"
   ],
-  "generated_at": "2026-04-27 23:45:09 UTC"
+  "generated_at": "2026-04-28 02:03:42 UTC"
 }
