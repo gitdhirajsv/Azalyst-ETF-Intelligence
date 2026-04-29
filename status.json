@@ -260,10 +260,6 @@
       "score": 90.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 88.0
-    },
-    {
       "symbol": "Banking & Financial Sector + Crypto & Digital Assets",
       "score": 88.0
     },
@@ -292,6 +288,10 @@
       "score": 80.0
     },
     {
+      "symbol": "Crypto & Digital Assets",
+      "score": 79.0
+    },
+    {
       "symbol": "Real Estate & REITs + Bonds & Fixed Income",
       "score": 77.0
     },
@@ -312,10 +312,6 @@
       "score": 71.0
     },
     {
-      "symbol": "Healthcare & Pharma",
-      "score": 70.0
-    },
-    {
       "symbol": "Nuclear Energy & Uranium",
       "score": 69.0
     },
@@ -328,12 +324,16 @@
       "score": 68.0
     },
     {
+      "symbol": "Commodities & Mining",
+      "score": 65.0
+    },
+    {
       "symbol": "Real Estate & REITs",
       "score": 64.0
     },
     {
-      "symbol": "Commodities & Mining",
-      "score": 63.0
+      "symbol": "Healthcare & Pharma",
+      "score": 62.0
     },
     {
       "symbol": "Clean Energy & Renewables",
@@ -980,52 +980,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 88.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 20,
-      "latest_at": "29 Apr 2026 17:54 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "global",
-        "americas",
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Bloomberg Markets",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 24.9,
-        "volume_confirmation": 20.0,
-        "source_diversity": 10.1,
-        "recency": 18.1,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "banking_financial|crypto_digital",
       "sector_label": "Banking & Financial Sector + Crypto & Digital Assets",
       "confidence": 88.0,
@@ -1400,6 +1354,52 @@
       }
     },
     {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 79.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 17,
+      "latest_at": "29 Apr 2026 23:45 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "middle_east",
+        "india",
+        "asia_pacific",
+        "americas"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "The Register",
+        "Finance"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.8,
+        "volume_confirmation": 18.0,
+        "source_diversity": 6.5,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "bonds_fixed_income|real_estate_reit",
       "sector_label": "Real Estate & REITs + Bonds & Fixed Income",
       "confidence": 77.0,
@@ -1658,57 +1658,6 @@
       }
     },
     {
-      "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma",
-      "confidence": 70.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "29 Apr 2026 18:54 UTC",
-      "headline": "Sun Pharma, Lilly Lead Latest Healthcare Deal Rush",
-      "regions": [
-        "global",
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "World | Deutsche Welle"
-      ],
-      "primary_etf": "XLV",
-      "top_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "HEALTHCARE",
-        "PHARMABEES"
-      ],
-      "global_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 12.9,
-        "volume_confirmation": 10.8,
-        "source_diversity": 12.3,
-        "recency": 20.0,
-        "geopolitical_severity": 15.0
-      }
-    },
-    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 69.0,
@@ -1855,6 +1804,56 @@
       }
     },
     {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 65.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "29 Apr 2026 23:45 UTC",
+      "headline": "Core Scientific accelerates crypto-to-AI pivot, converts Bitcoin mine to gigawatt-scale token farm",
+      "regions": [
+        "middle_east",
+        "india",
+        "global"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "The Register",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "CPSEETF",
+        "COPP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 8.3,
+        "volume_confirmation": 12.6,
+        "source_diversity": 10.3,
+        "recency": 16.9,
+        "geopolitical_severity": 9.8
+      }
+    },
+    {
       "sector_key": "real_estate_reit",
       "sector_label": "Real Estate & REITs",
       "confidence": 64.0,
@@ -1904,52 +1903,53 @@
       }
     },
     {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 63.0,
+      "sector_key": "healthcare_pharma",
+      "sector_label": "Healthcare & Pharma",
+      "confidence": 62.0,
       "severity": "MEDIUM",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "29 Apr 2026 18:54 UTC",
-      "headline": "Copper Slips as Traders Weigh Iran War Impact, China Demand",
+      "article_count": 3,
+      "latest_at": "29 Apr 2026 23:45 UTC",
+      "headline": "Iran war squeezes India's pharma supply chain",
       "regions": [
-        "global",
-        "middle_east"
+        "middle_east",
+        "global"
       ],
       "sources": [
-        "Cointelegraph.com News",
+        "World | Deutsche Welle",
         "Bloomberg Markets",
-        "Markets-Economic Times",
-        "World | Deutsche Welle"
+        "Markets-Economic Times"
       ],
-      "primary_etf": "DBC",
+      "primary_etf": "XLV",
       "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
+        "XLV",
+        "IXJ",
+        "XBI"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "CPSEETF"
+        "HEALTHCARE",
+        "PHARMABEES"
       ],
       "global_etfs": [
-        "DBC",
-        "COPP"
+        "XLV",
+        "IXJ",
+        "XBI"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 9.2,
-        "volume_confirmation": 12.5,
-        "source_diversity": 12.4,
-        "recency": 20.0,
-        "geopolitical_severity": 9.6
+        "signal_strength": 7.2,
+        "volume_confirmation": 7.7,
+        "source_diversity": 11.0,
+        "recency": 16.9,
+        "geopolitical_severity": 10.7
       }
     },
     {
@@ -2067,11 +2067,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 20 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Banking & Financial Sector + Crypto & Digital Assets - 9 articles - HIGH / NEUTRAL - AI failure could trigger the next financial crisis, warns Elizabeth Warren"
     },
     {
@@ -2107,6 +2102,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Crypto & Digital Assets - 17 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Real Estate & REITs + Bonds & Fixed Income - 9 articles - HIGH / NEUTRAL - US housing market faces volatility despite decline in mortgage rates"
     },
     {
@@ -2132,11 +2132,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Healthcare & Pharma - 4 articles - HIGH / NEUTRAL - Sun Pharma, Lilly Lead Latest Healthcare Deal Rush"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 4 articles - HIGH / NEUTRAL - Iran Having a Nuclear Weapon is a 'Real Danger To The World' Says Sen. Moore Capito"
     },
     {
@@ -2152,12 +2147,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Commodities & Mining - 6 articles - MEDIUM / NEUTRAL - Core Scientific accelerates crypto-to-AI pivot, converts Bitcoin mine to gigawatt-scale token farm"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Real Estate & REITs - 5 articles - MEDIUM / NEUTRAL - Japan tells real estate and crypto sectors to tighten AML checks on property deals"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Commodities & Mining - 5 articles - MEDIUM / NEUTRAL - Copper Slips as Traders Weigh Iran War Impact, China Demand"
+      "text": "Healthcare & Pharma - 3 articles - MEDIUM / NEUTRAL - Iran war squeezes India's pharma supply chain"
     },
     {
       "tag": "tag-neu",
@@ -2205,9 +2205,9 @@
       "region": "UK",
       "price": 10213.11,
       "currency": "GBP",
-      "change": -119.69,
-      "change_pct": -1.16,
-      "change_str": "-1.16%",
+      "change": -107.99,
+      "change_pct": -1.05,
+      "change_str": "-1.05%",
       "direction": "down"
     },
     {
@@ -2258,33 +2258,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4559.6,
+      "price": 4565.4,
       "currency": "USD",
-      "change": -31.9,
-      "change_pct": -0.69,
-      "change_str": "-0.69%",
+      "change": -26.1,
+      "change_pct": -0.57,
+      "change_str": "-0.57%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 108.51,
+      "price": 108.1,
       "currency": "USD",
-      "change": 8.58,
-      "change_pct": 8.59,
-      "change_str": "+8.59%",
+      "change": 8.17,
+      "change_pct": 8.18,
+      "change_str": "+8.18%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 75885.03,
+      "price": 75803.13,
       "currency": "USD",
-      "change": -465.64,
-      "change_pct": -0.61,
-      "change_str": "-0.61%",
+      "change": -547.54,
+      "change_pct": -0.72,
+      "change_str": "-0.72%",
       "direction": "down"
     },
     {
@@ -2724,11 +2724,11 @@
     }
   },
   "logs": [
-    "2026-04-29 22:50:02 [INFO] AZALYST - status.json generated",
-    "2026-04-29 22:50:02 [INFO] PORTFOLIO - NAV USD 10,175.34 | Return +4.22%",
-    "2026-04-29 22:50:02 [INFO] SIGNALS - 32 active signal buckets in state",
-    "2026-04-29 22:50:02 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-29 22:50:02 [INFO] RISK - Partial profits realised: USD 4,088.89"
+    "2026-04-29 23:47:40 [INFO] AZALYST - status.json generated",
+    "2026-04-29 23:47:40 [INFO] PORTFOLIO - NAV USD 10,175.34 | Return +4.22%",
+    "2026-04-29 23:47:40 [INFO] SIGNALS - 32 active signal buckets in state",
+    "2026-04-29 23:47:40 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-29 23:47:40 [INFO] RISK - Partial profits realised: USD 4,088.89"
   ],
-  "generated_at": "2026-04-29 22:50:00 UTC"
+  "generated_at": "2026-04-29 23:47:39 UTC"
 }
