@@ -21,6 +21,18 @@ from portfolio_reporter import PortfolioReporter
 from config             import Config
 from quant_fetcher      import QuantFetcher
 
+# ── NEW: Multi-engine alpha stack ────────────────────────────────────────────
+try:
+    from price_scanner        import PriceScanner, ETF_TO_SECTOR
+    from constituent_analyzer import ConstituentAnalyzer
+    from reverse_researcher   import ReverseResearcher
+    from signal_fusion        import SignalFuser
+    _MULTI_ENGINE_AVAILABLE = True
+except Exception as _imp_err:
+    _MULTI_ENGINE_AVAILABLE = False
+    PriceScanner = ConstituentAnalyzer = ReverseResearcher = SignalFuser = None
+    ETF_TO_SECTOR = {}
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s - %(message)s",
@@ -67,16 +79,71 @@ def _select_etf_for_trade(signal: dict) -> tuple:
 
 def run_intelligence_cycle(
     fetcher, classifier, scorer, mapper,
-    reporter, state, portfolio, port_reporter, quant_fetcher, cfg
+    reporter, state, portfolio, port_reporter, quant_fetcher, cfg,
+    price_scanner=None, constituent_analyzer=None,
+    reverse_researcher=None, signal_fuser=None,
 ):
     log.info("--- Intelligence cycle starting ---")
     try:
+        # ── 1. NEWS engine (lagging, deep narrative) ─────────────────────────
         articles = fetcher.fetch_all()
         log.info(f"Fetched {len(articles)} articles")
-        if not articles:
-            return
 
-        sector_signals = classifier.classify_articles(articles)
+        news_signals_raw = classifier.classify_articles(articles) if articles else []
+        # Pre-score so signal_fusion can use confidence
+        for s in news_signals_raw:
+            s["confidence"] = scorer.score(s, articles)
+            s["confidence_breakdown"] = scorer.breakdown(s, articles)
+
+        # ── 2. PRICE engine (leading, momentum/breakouts) ────────────────────
+        price_signals: list = []
+        if price_scanner is not None:
+            try:
+                raw = price_scanner.scan()
+                price_signals = price_scanner.aggregate_by_sector(raw)
+                log.info("Price engine: %d sector-level signals", len(price_signals))
+            except Exception as exc:
+                log.warning("Price engine failed: %s", exc)
+
+        # ── 3. CONSTITUENT engine (top holdings rotation) ────────────────────
+        constituent_signals: list = []
+        if constituent_analyzer is not None:
+            try:
+                rots = constituent_analyzer.scan()
+                constituent_signals = [r.to_signal_dict() for r in rots]
+                log.info("Constituent engine: %d rotation signals", len(constituent_signals))
+            except Exception as exc:
+                log.warning("Constituent engine failed: %s", exc)
+
+        # ── 4. Reverse research for unexplained price movers ────────────────
+        if reverse_researcher is not None and price_signals:
+            news_sectors = {s["sector_id"] for s in news_signals_raw}
+            unexplained = [p for p in price_signals if p["sector_id"] not in news_sectors]
+            if unexplained:
+                log.info("Reverse-researching %d unexplained price movers...", len(unexplained))
+                try:
+                    reverse_researcher.explain(unexplained)
+                except Exception as exc:
+                    log.warning("Reverse researcher failed: %s", exc)
+
+        # ── 5. FUSE signals across all 3 engines ────────────────────────────
+        if signal_fuser is not None:
+            fused = signal_fuser.fuse(
+                news_signals_raw, price_signals, constituent_signals
+            )
+            log.info(
+                "Fused: %d signals (TierA=%d TierB=%d TierC=%d divergent=%d)",
+                len(fused),
+                sum(1 for f in fused if f.consensus_tier == "A"),
+                sum(1 for f in fused if f.consensus_tier == "B"),
+                sum(1 for f in fused if f.consensus_tier == "C"),
+                sum(1 for f in fused if f.divergent),
+            )
+            sector_signals = [f.to_dict() for f in fused]
+        else:
+            sector_signals = news_signals_raw
+
+        # ── 6. Score (now multi-engine aware via Factor 6) ──────────────────
         scored_signals = []
         for signal in sector_signals:
             score = scorer.score(signal, articles)
@@ -86,7 +153,7 @@ def run_intelligence_cycle(
                 scored_signals.append(signal)
 
         new_signals = state.filter_new_or_updated(scored_signals)
-        log.info(f"{len(new_signals)} new/updated signals")
+        log.info(f"{len(new_signals)} new/updated signals after multi-engine scoring")
 
         for signal in new_signals:
             etf_recs = mapper.get_etfs(signal["sectors"], signal)
@@ -243,6 +310,17 @@ def main():
     port_reporter = PortfolioReporter(cfg)
     quant_fetcher = QuantFetcher()
 
+    # ── NEW: Multi-engine alpha stack ──────────────────────────────────────
+    if _MULTI_ENGINE_AVAILABLE:
+        price_scanner        = PriceScanner()
+        constituent_analyzer = ConstituentAnalyzer(ETF_TO_SECTOR)
+        reverse_researcher   = ReverseResearcher(classifier)
+        signal_fuser         = SignalFuser()
+        log.info("Multi-engine stack ENABLED (price + constituents + fusion)")
+    else:
+        price_scanner = constituent_analyzer = reverse_researcher = signal_fuser = None
+        log.warning("Multi-engine stack DISABLED — running news-only mode")
+
     log.info(f"Ready. Interval: {cfg.POLL_INTERVAL_MINUTES}m | Paper trading: {'ON' if cfg.PAPER_TRADING_ENABLED else 'OFF'}")
 
     reporter.send_startup_message()
@@ -252,7 +330,11 @@ def main():
 
     run_intelligence_cycle(
         fetcher, classifier, scorer, mapper,
-        reporter, state, portfolio, port_reporter, quant_fetcher, cfg
+        reporter, state, portfolio, port_reporter, quant_fetcher, cfg,
+        price_scanner=price_scanner,
+        constituent_analyzer=constituent_analyzer,
+        reverse_researcher=reverse_researcher,
+        signal_fuser=signal_fuser,
     )
 
     if args.once:
@@ -266,7 +348,8 @@ def main():
     schedule.every(cfg.POLL_INTERVAL_MINUTES).minutes.do(
         run_intelligence_cycle,
         fetcher, classifier, scorer, mapper,
-        reporter, state, portfolio, port_reporter, quant_fetcher, cfg
+        reporter, state, portfolio, port_reporter, quant_fetcher, cfg,
+        price_scanner, constituent_analyzer, reverse_researcher, signal_fuser,
     )
     schedule.every(cfg.MTM_INTERVAL_MINUTES).minutes.do(
         run_mtm_cycle, portfolio, port_reporter
