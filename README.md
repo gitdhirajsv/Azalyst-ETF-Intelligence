@@ -16,6 +16,9 @@ Live dashboard: [https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/](https:
 - Generates a static dashboard from local state for GitHub Pages.
 - Replays dated historical signals through a backtester to compare results with benchmarks.
 - **Integrates an autonomous LLM-driven engine** for daily self-optimization of analytical models.
+- **Leads with price action** — a dedicated price scanner and constituent analyzer detect sector rotations before the news cycle confirms them.
+- **Filters false positives** before scoring via domain authority weighting, syndication burst detection, and headline entity entropy.
+- **Tracks pre-signal momentum** — a rolling slope buffer flags sectors building pressure before threshold crossing.
 
 ## Supported Sectors
 
@@ -38,29 +41,36 @@ The classification engine actively monitors and routes signals for the following
 ```mermaid
 flowchart LR
     A["News Feeds"] --> B["Dedup + Date Hygiene"]
-    B --> C["Rule Classifier"]
+    B --> FP["False Positive Filter"]
+    FP --> C["Rule Classifier"]
     C --> D["Optional ML Sentiment Layer"]
     D --> E["Confidence Scorer"]
-    E --> F["Global ETF Ranker"]
+    P["Price Scanner (80+ ETFs)"] --> SF["Signal Fusion"]
+    CA["Constituent Analyzer (~250 stocks)"] --> SF
+    E --> SF
+    SF --> RR["Reverse Researcher"]
+    RR --> F["Global ETF Ranker"]
     F --> G["Paper Trader"]
     G --> H["Risk Engine"]
     H --> I["Dashboard + Reports"]
     E --> J["Historical Replay / Walk-Forward"]
-    K["Daily Improvement Engine"] --> C
+    K["Daily Improvement Engine v2"] --> C
     K --> E
     K --> G
+    MB["Momentum Buffer"] --> C
 ```
 
 ## Autonomous Self-Improvement
 
-The platform features continuous autonomous optimization. A daily scheduled pipeline executes the `self_improve.py` engine, which:
+The platform features continuous autonomous optimization. A daily scheduled pipeline executes the `self_improve_v2.py` engine, which replaces the v1 source-code-editing approach with a safer JSON-patch pattern:
 
 1. Reads the latest performance data — portfolio P&L, alpha vs SPY, signal accuracy, open positions
 2. Reads the relevant source files — scorer, classifier, paper trader, ETF mapper
 3. Calls **Qwen3 Coder 480B** via the NVIDIA NIM free API endpoint
-4. Receives one targeted, validated code change
-5. Applies it if it passes a syntax check and exact-match guard
-6. Commits the changed file back to `main` — the next 30-minute scan runs with the improved code
+4. Receives one targeted, validated **JSON patch** (not raw code) for weight tuning
+5. The `WeightsRegistry` validates, applies, and archives the patch
+6. Commits the changed weights back to `main` — the next 30-minute scan runs with the improved configuration
+7. A shadow-mode A/B baseline is captured; if the next cycle shows PnL regression, signal collapse, or volume explosion, the patch is **automatically rolled back**
 
 Every cycle is logged to `improvement_log.jsonl` for a full audit trail whether a change was applied or not.
 
@@ -81,6 +91,12 @@ The improvement engine can only modify these files:
 - `etf_mapper.py` — ETF database and ranking
 - `news_fetcher.py` — RSS ingestion
 - `reporter.py` — Discord formatting
+- `classification_weights.json` — live weight registry (v2 patch target)
+- `price_scanner.py` — ETF momentum and breakout scanner
+- `constituent_analyzer.py` — top-holdings rotation detector
+- `reverse_researcher.py` — unexplained-mover headline fetcher
+- `signal_fusion.py` — cross-engine consensus merger
+- `keyword_expansions.py` — supplementary keyword universe
 
 Core orchestration files (`azalyst.py`, `config.py`, `risk_engine.py`) are read-only context — the engine cannot touch them. Every proposed change must match the existing code verbatim before it is applied, and is syntax-checked in a temporary file before writing to disk.
 
@@ -105,15 +121,24 @@ The free NVIDIA NIM endpoint for Qwen3 Coder 480B covers the daily volume with n
   - Word-boundary matching reduces substring false positives.
   - Directional signal scoring distinguishes bullish and bearish language.
   - Optional FinBERT-style sentiment support can run in `shadow` or `hybrid` mode.
+  - Keyword universe expanded from ~430 to **1,030 keywords** across 17 sectors via `keyword_expansions.py` (macro themes, asset jargon, sector catalysts, trade policy, 200+ company tickers).
 - Better news ingestion:
   - Fuzzy title dedup reduces paraphrased duplicate articles.
   - RSS timestamps now go through basic sanity checks.
+  - 7 additional semiconductor RSS feeds added to `config.py`.
+- Better false positive filtering:
+  - Pre-scoring `FalsePositiveFilter` applies domain authority weighting (authority / mid-tier / denylist tiers).
+  - Temporal burst detection blocks syndicated press-release echoes (>70% of articles within a 60-second window).
+  - Headline entity entropy check blocks single-company press-release floods.
+  - Domain denylist auto-grows nightly from paper-trade outcome history.
 - Better scoring model:
   - Volume, source diversity, recency, and signal strength now use smooth functions instead of hard cliffs.
   - Event intensity is less circular than the old severity logic.
+  - **New Factor 6: Cross-Engine Confirmation** (12 pts) — bonus when news, price, and constituent engines independently agree. Weights rebalanced: 25→22, 20→18, 20→18, 20→17, 15→13 to accommodate.
 - Better execution realism:
   - Paper trading includes modeled fees and slippage.
   - Position sizing employs a capped risk-budget approach for institutional-grade allocation.
+  - Tier-A signals get full position size; Tier-B half size; Tier-C research-only.
 - Better risk math:
   - Correlation modeling dynamically filters positive correlation while preserving negative diversification benefits.
   - Benchmark inception uses the actual start date window rather than a coarse range proxy.
@@ -121,20 +146,39 @@ The free NVIDIA NIM endpoint for Qwen3 Coder 480B covers the daily volume with n
 - Better validation:
   - Historical replay backtester added.
   - Walk-forward window summaries supported for dated signal files.
-- Autonomous improvement:
-  - Daily self-improvement engine added using Qwen3 Coder 480B on NVIDIA NIM.
+- Price-led detection:
+  - `price_scanner.py` — daily scan of 80+ ETFs via yfinance (one bulk HTTP call). Emits signals on z-score ≥ 1.8, |5D| ≥ 3%, 20D breakout/breakdown, or RS divergence vs SPY.
+  - `constituent_analyzer.py` — curated top-10 holdings (~250 unique stocks). Emits a sector rotation signal when ≥40% of holdings move directionally — typically 1–2 days before the ETF aggregate confirms.
+  - `reverse_researcher.py` — triggered for unexplained price movers (price flagged, news silent). Pulls 8 recent headlines via Yahoo Finance's news graph and re-classifies at `min_articles=1`. Unmatched moves are tagged `news_orthogonal` and fed to the daily self-improver as missing-keyword evidence.
+  - `signal_fusion.py` — merges all three engines per sector. Outputs consensus tier (A = 3 engines agree, B = 2, C = 1), direction conflict flags, and a composite `fused_score`.
+- Pre-signal momentum tracking:
+  - `momentum_detector.py` — rolling 90-minute slope buffer per sector. WATCH state fires when d_score/30min ≥ 2.0; ALERT at ≥ 3.5. Pre-warms the price scanner and boosts `event_intensity` once the threshold crosses.
+- Autonomous improvement v2:
+  - `self_improve_v2.py` — replaces source-code edits with validated JSON patches applied via `WeightsRegistry`.
+  - `weights_registry.py` — versioned weight store with patch validation, history archiving, and one-command rollback.
+  - Shadow-mode regression guard: auto-rollback if post-patch PnL drops >2pp, signal volume collapses, or volume explodes 2× baseline.
+  - `false_positive_filter.py` denylist grows automatically from closed paper-trade outcomes.
   - Audit log maintained in `improvement_log.jsonl`.
 
 ## Key Files
 
-- `azalyst.py`: live engine orchestration
-- `self_improve.py`: daily autonomous code improvement engine
+- `azalyst.py`: live engine orchestration (multi-engine stack, graceful fallback if yfinance unavailable)
+- `self_improve_v2.py`: daily autonomous weight-tuning engine via JSON patches
 - `news_fetcher.py`: ingestion, date parsing, dedup
 - `classifier.py`: rule engine plus optional ML sentiment layer
-- `scorer.py`: confidence scoring
+- `keyword_expansions.py`: 600+ supplementary keywords merged on import
+- `scorer.py`: 6-factor confidence scoring model with cross-engine confirmation
 - `etf_mapper.py`: global ETF ranking and market alternatives
 - `paper_trader.py`: realistic paper-trading engine
 - `risk_engine.py`: correlation, benchmark, vol, rebalance, stress test
+- `price_scanner.py`: daily ETF momentum, breakout, and relative-strength scanner
+- `constituent_analyzer.py`: top-holdings rotation detector (~250 stocks)
+- `reverse_researcher.py`: unexplained-mover headline fetcher and re-classifier
+- `signal_fusion.py`: cross-engine consensus merger (Tier A/B/C)
+- `false_positive_filter.py`: pre-scoring spam / syndication / echo filter
+- `momentum_detector.py`: rolling slope buffer for pre-signal momentum
+- `weights_registry.py`: versioned weight store with rollback support
+- `classification_weights.json`: live weight registry (patched by self-improver)
 - `backtester.py`: historical replay and walk-forward evaluation
 - `generate_dashboard.py`: builds `status.json`
 - `index.html`: GitHub Pages dashboard
@@ -162,8 +206,8 @@ Go to: **Settings → Secrets and variables → Actions → New repository secre
 
 ### 4. Let It Run
 The engine is now fully autonomous:
-- **Every 30 Minutes:** `run_azalyst.yml` fetches news, scores ETFs, executes paper trades, and deploys the live dashboard.
-- **Every Night:** `daily_improve.yml` runs the Qwen self-improvement audit on the codebase.
+- **Every 30 Minutes:** `run_azalyst.yml` fetches news, scans prices, fuses signals, executes paper trades, and deploys the live dashboard.
+- **Every Night:** `daily_improve.yml` runs the Qwen self-improvement audit, applies a JSON weight patch, and auto-grows the domain denylist.
 
 ## Backtesting And Walk-Forward
 
@@ -215,6 +259,7 @@ Note: The public simulation record serves as a transparent research log for ongo
 - ML added carefully, with fallback behavior.
 - Execution realism matters: costs, slippage, gaps, diversification, and volatility.
 - Validation matters as much as signal generation.
+- Price leads, news confirms — never the reverse.
 - The system improves itself — human oversight is audit, not operation.
 
 ## System Scope and Limitations
@@ -223,6 +268,7 @@ Note: The public simulation record serves as a transparent research log for ongo
 - Utilizes deterministic rule engines augmented by targeted ML layers.
 - Focuses on signal generation and allocation heuristics rather than high-frequency execution.
 - Ongoing empirical backtesting is required to establish robust, long-term alpha.
+- Multi-engine modules degrade gracefully to no-ops if `yfinance` is unreachable — the system continues running news-only.
 
 ## Recommended Next Steps
 
@@ -232,6 +278,7 @@ Note: The public simulation record serves as a transparent research log for ongo
 - Add a model registry for comparing rule-only vs hybrid ML variants.
 - Add live monitoring around stop-gap risk and execution windows.
 - Review `improvement_log.jsonl` weekly to audit what the engine changed and why.
+- Expand `reports/missed_moves.json` signal archive to feed the reverse researcher more evidence for keyword auto-growth.
 
 ## Acknowledgments & "All-in-One" Architecture
 
