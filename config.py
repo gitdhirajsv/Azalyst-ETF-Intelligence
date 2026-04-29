@@ -106,6 +106,14 @@ class Config:
         "https://www.defensenews.com/arc/outboundfeeds/rss/",
         "https://cointelegraph.com/rss",
         "https://www.zerohedge.com/fullrss2.xml",
+        # ── NEW: Semiconductor & Tech Industry feeds ──────────────────────
+        "https://www.eetimes.com/feed/",                         # EE Times — chip industry news
+        "https://semiengineering.com/feed/",                     # Semiconductor Engineering — deep chip coverage
+        "https://www.tomshardware.com/feeds/all",                # Tom's Hardware — GPU/CPU/chip launches
+        "https://www.theregister.com/headlines.atom",            # The Register — tech industry, chip policy
+        "https://www.cnbc.com/id/15839135/device/rss/rss.html",  # CNBC Technology
+        "https://www.cnbc.com/id/19854910/device/rss/rss.html",  # CNBC Semiconductors / Earnings
+        "https://feeds.a.dj.com/rss/RSSWSJD.xml",               # WSJ Tech / Markets deep cuts
     ]
 
     FETCH_TIMEOUT = int(_get_env("AZALYST_TIMEOUT", "TIMEOUT", default="12"))

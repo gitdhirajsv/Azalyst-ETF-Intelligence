@@ -18,6 +18,38 @@ from typing import Dict, List, Optional, Tuple
 
 log = logging.getLogger("azalyst.classifier")
 
+# ── Keyword Expansion Merge ───────────────────────────────────────────────────
+# Pull additional keywords from keyword_expansions.py (created separately so
+# the LLM self-improver can edit them without touching this file's structure).
+try:
+    from keyword_expansions import KEYWORD_EXPANSIONS as _EXP
+except ImportError:
+    _EXP = {}
+
+
+def _merge_keyword_expansions():
+    """Idempotent merge: only adds keywords that aren't already present."""
+    added = 0
+    for sector_id, extra_kws in _EXP.items():
+        if sector_id not in SECTOR_DEFINITIONS:
+            continue
+        existing = {kw for kw, _ in SECTOR_DEFINITIONS[sector_id]["keywords"]}
+        for kw, weight in extra_kws:
+            if kw not in existing:
+                SECTOR_DEFINITIONS[sector_id]["keywords"].append((kw, weight))
+                existing.add(kw)
+                added += 1
+    return added
+
+
+# Sector definitions are populated below; the merge runs after they are defined.
+def _post_definitions_setup():
+    n = _merge_keyword_expansions()
+    if n:
+        logging.getLogger("azalyst.classifier").info(
+            "Loaded %d additional keywords from keyword_expansions.py", n
+        )
+
 # ── Sector Definitions ────────────────────────────────────────────────────────
 # Format: { sector_id: { "label": str, "keywords": [(word, weight)], "negators": [word] } }
 
@@ -88,7 +120,7 @@ SECTOR_DEFINITIONS = {
         "label": "Technology & AI / Semiconductors",
         "emoji": "💻",
         "keywords": [
-            ("artificial intelligence", 6), ("ai ", 4), ("machine learning", 5),
+            ("artificial intelligence", 6), ("ai", 4), ("machine learning", 5),
             ("semiconductor", 6), ("chip", 5), ("nvidia", 5), ("tsmc", 5),
             ("intel", 3), ("amd", 3), ("broadcom", 3), ("qualcomm", 3),
             ("data center", 4), ("cloud computing", 4), ("tech", 2),
@@ -98,10 +130,28 @@ SECTOR_DEFINITIONS = {
             ("5g", 4), ("6g", 4), ("semiconductor supply chain", 6),
             ("taiwan", 4), ("chip war", 6), ("tech stock", 4),
             ("gpu", 4), ("cpu", 3), ("processor", 3),
+            # ── NEW: Company coverage ──────────────────────────────────────
+            ("asml", 6), ("micron", 5), ("sk hynix", 5), ("samsung electronics", 4),
+            ("arm holdings", 4), ("lam research", 4), ("applied materials", 4),
+            ("kla", 3), ("marvell", 3), ("on semiconductor", 3),
+            ("analog devices", 3), ("texas instruments", 3), ("infineon", 3),
+            ("microchip technology", 3), ("smic", 4), ("umc", 3),
+            # ── NEW: Product / technical terms ────────────────────────────
+            ("wafer", 4), ("chipmaker", 5), ("chip sales", 5),
+            ("chip earnings", 5), ("chip revenue", 5), ("chip capacity", 4),
+            ("hbm", 5), ("high bandwidth memory", 5), ("ai chip", 6),
+            ("ai accelerator", 5), ("advanced packaging", 4),
+            ("memory chip", 4), ("logic chip", 4), ("nand", 4), ("dram", 4),
+            # ── NEW: Trade / tariff policy terms ──────────────────────────
+            ("chip tariff", 6), ("semiconductor tariff", 6),
+            ("chip exemption", 6), ("tariff exemption tech", 6),
+            ("chip export ban", 6), ("semiconductor export ban", 6),
+            ("chip export eased", 6), ("trade deal tech", 5),
+            ("semiconductor deal", 5), ("tech tariff", 5),
         ],
         "negators": [],
         "geopolitical_boost": ["china", "taiwan", "usa", "export restriction",
-                               "chip ban"],
+                               "chip ban", "tariff", "trade deal"],
     },
 
     "nuclear_uranium": {
@@ -353,10 +403,22 @@ SECTOR_DIRECTION_TERMS = {
         "bullish": [
             ("beat estimates", 2.0), ("capex increase", 2.0), ("ai demand", 2.0),
             ("chip demand", 2.0), ("orders surge", 1.5), ("investment boom", 1.5),
+            # ── NEW: Trade / tariff relief ─────────────────────────────────
+            ("tariff exemption", 2.5), ("tariff relief", 2.5), ("tariff pause", 2.5),
+            ("trade deal", 2.0), ("ban lifted", 2.5), ("restrictions eased", 2.0),
+            ("export ban eased", 2.5), ("chip export allowed", 2.5),
+            # ── NEW: Financial outperformance ──────────────────────────────
+            ("earnings beat", 2.0), ("revenue beat", 2.0), ("guidance raised", 2.5),
+            ("record revenue", 2.0), ("record shipments", 2.0),
+            ("strong chip demand", 2.5), ("chip sales surge", 2.5),
+            ("wafer demand", 2.0), ("memory recovery", 2.0),
+            ("hbm demand", 2.5), ("ai chip orders", 2.5),
         ],
         "bearish": [
             ("export controls tighten", 2.0), ("guidance cut", 2.0), ("slowdown", 1.5),
             ("inventory glut", 2.0), ("demand weakness", 2.0), ("chip restrictions", 2.0),
+            ("chip ban tightened", 2.5), ("tariff escalation tech", 2.5),
+            ("revenue miss", 2.0), ("guidance lowered", 2.0),
         ],
     },
     "nuclear_uranium": {
@@ -503,6 +565,9 @@ ML_DIRECTION_ALIGNMENTS = {
     "real_estate_reit": 1.0,
     "technology_ai": 1.0,
 }
+
+# ── Run the expansion merge now that SECTOR_DEFINITIONS exists ────────────────
+_post_definitions_setup()
 
 ML_HYBRID_DIRECTION_WEIGHT = 2.5
 
