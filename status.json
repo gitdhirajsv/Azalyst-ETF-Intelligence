@@ -1,20 +1,20 @@
 {
-  "portfolio_value": 10176.31,
+  "portfolio_value": 10175.34,
   "total_deposited": 9763.24,
-  "cash": 70.32,
+  "cash": 26.29,
   "monthly_reserve": 0.0,
-  "market_value": 10106.0,
-  "total_invested": 9736.04,
-  "unrealised_pnl": 369.96,
-  "unrealised_str": "+369.96",
+  "market_value": 10149.06,
+  "total_invested": 9780.07,
+  "unrealised_pnl": 368.99,
+  "unrealised_str": "+368.99",
   "realised_pnl": 43.12,
   "realised_str": "+43.12",
-  "change": "+4.23%",
-  "change_raw": 4.23,
+  "change": "+4.22%",
+  "change_raw": 4.22,
   "closed_trades": 0,
   "partial_realised_pnl": 43.12,
-  "portfolio_peak": 10176.31,
-  "drawdown_now_pct": 0.0,
+  "portfolio_peak": 10177.35,
+  "drawdown_now_pct": 0.02,
   "max_drawdown_pct": 0.35,
   "usd_inr_rate": 94.82,
   "positions": [
@@ -26,16 +26,16 @@
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 54.18,
-      "current": 59.05,
+      "current": 59.03,
       "peak_price": 59.05,
       "trail_stop": 54.33,
-      "dist_to_trail_pct": 8.0,
+      "dist_to_trail_pct": 7.97,
       "units": 47.387604,
       "invested": 2567.67,
-      "pnl": 230.57,
-      "pnl_str": "+230.57",
-      "pnl_pct": 8.98,
-      "pnl_pct_str": "+8.98%",
+      "pnl": 229.62,
+      "pnl_str": "+229.62",
+      "pnl_pct": 8.94,
+      "pnl_pct_str": "+8.94%",
       "confidence": 96,
       "severity": "CRITICAL",
       "days_held": 11,
@@ -71,17 +71,17 @@
       "sector": "Bonds & Fixed Income",
       "platform": "Vanguard \u2014 IBKR / Fidelity / Schwab",
       "exchange": "NASDAQ",
-      "entry": 72.82,
+      "entry": 72.83,
       "current": 73.39,
       "peak_price": 73.73,
-      "trail_stop": 65.54,
-      "dist_to_trail_pct": 10.7,
-      "units": 35.562764,
-      "invested": 2589.6,
-      "pnl": 20.35,
-      "pnl_str": "+20.35",
-      "pnl_pct": 0.79,
-      "pnl_pct_str": "+0.79%",
+      "trail_stop": 65.55,
+      "dist_to_trail_pct": 10.69,
+      "units": 36.16242,
+      "invested": 2633.63,
+      "pnl": 20.33,
+      "pnl_str": "+20.33",
+      "pnl_pct": 0.77,
+      "pnl_pct_str": "+0.77%",
       "confidence": 92,
       "severity": "HIGH",
       "days_held": 9,
@@ -185,11 +185,11 @@
     "values": [
       27.5,
       30.0,
-      25.6,
+      26.1,
       11.4,
       2.0,
       2.7,
-      0.7
+      0.3
     ]
   },
   "pnl": {
@@ -202,9 +202,9 @@
       "DBC"
     ],
     "values": [
-      230.57,
+      229.62,
       126.45,
-      20.35,
+      20.33,
       -40.42,
       10.38,
       22.62
@@ -264,10 +264,6 @@
       "score": 88.0
     },
     {
-      "symbol": "Bonds & Fixed Income",
-      "score": 88.0
-    },
-    {
       "symbol": "Banking & Financial Sector + Crypto & Digital Assets",
       "score": 88.0
     },
@@ -282,6 +278,10 @@
     {
       "symbol": "Bonds & Fixed Income + Gold & Precious Metals",
       "score": 87.0
+    },
+    {
+      "symbol": "Bonds & Fixed Income + Banking & Financial Sector",
+      "score": 85.0
     },
     {
       "symbol": "Real Estate & REITs + India Equity Markets",
@@ -1026,57 +1026,6 @@
       }
     },
     {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
-      "confidence": 88.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 17,
-      "latest_at": "29 Apr 2026 11:00 UTC",
-      "headline": "Argentina Bond Investors Increasingly Fear the Day After Milei",
-      "regions": [
-        "middle_east",
-        "global",
-        "americas"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "Oilprice.com",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 21.9,
-        "volume_confirmation": 20.0,
-        "source_diversity": 15.4,
-        "recency": 19.1,
-        "geopolitical_severity": 12.2
-      }
-    },
-    {
       "sector_key": "banking_financial|crypto_digital",
       "sector_label": "Banking & Financial Sector + Crypto & Digital Assets",
       "confidence": 88.0,
@@ -1289,6 +1238,58 @@
         "source_diversity": 12.4,
         "recency": 18.6,
         "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income + Banking & Financial Sector",
+      "confidence": 85.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "29 Apr 2026 20:01 UTC",
+      "headline": "Four key takeaways from Jerome Powell's last rate decision as Fed chair",
+      "regions": [
+        "global",
+        "americas",
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "The Register",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 17.4,
+        "source_diversity": 15.7,
+        "recency": 15.9,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1762,25 +1763,26 @@
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
       "confidence": 69.0,
-      "severity": "MEDIUM",
+      "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "22 Apr 2026 23:12 UTC",
-      "headline": "Anthropic&#8217;s Mythos rollout has missed America\u2019s cybersecurity agency",
+      "article_count": 9,
+      "latest_at": "29 Apr 2026 20:39 UTC",
+      "headline": "CISA flags data-theft bug in NSA-built OT networking tool",
       "regions": [
         "europe",
-        "asia_pacific",
-        "global"
+        "global",
+        "middle_east",
+        "india"
       ],
       "sources": [
-        "Oilprice.com",
-        "The Verge",
         "Cointelegraph.com News",
-        "Markets-Economic Times"
+        "The Register",
+        "Latest from Tom's Hardware",
+        "World | Deutsche Welle"
       ],
       "primary_etf": "CIBR",
       "top_etfs": [
@@ -1797,11 +1799,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 11.9,
-        "volume_confirmation": 12.5,
-        "source_diversity": 13.1,
-        "recency": 20.0,
-        "geopolitical_severity": 11.8
+        "signal_strength": 16.9,
+        "volume_confirmation": 15.4,
+        "source_diversity": 6.7,
+        "recency": 17.0,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -2070,11 +2072,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Bonds & Fixed Income - 17 articles - MEDIUM / NEUTRAL - Argentina Bond Investors Increasingly Fear the Day After Milei"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Banking & Financial Sector + Crypto & Digital Assets - 9 articles - HIGH / NEUTRAL - AI failure could trigger the next financial crisis, warns Elizabeth Warren"
     },
     {
@@ -2091,6 +2088,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Bonds & Fixed Income + Gold & Precious Metals - 12 articles - HIGH / NEUTRAL - Top Indian Private Credit Borrower Delays Paying 20.75% Bond"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Bonds & Fixed Income + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - Four key takeaways from Jerome Powell's last rate decision as Fed chair"
     },
     {
       "tag": "tag-neu",
@@ -2140,7 +2142,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity - 5 articles - MEDIUM / NEUTRAL - Anthropic&#8217;s Mythos rollout has missed America\u2019s cybersecurity agency"
+      "text": "Cybersecurity - 9 articles - HIGH / NEUTRAL - CISA flags data-theft bug in NSA-built OT networking tool"
     },
     {
       "tag": "tag-neu",
@@ -2256,63 +2258,63 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4559.2,
+      "price": 4558.3,
       "currency": "USD",
-      "change": -32.3,
-      "change_pct": -0.7,
-      "change_str": "-0.70%",
+      "change": -33.2,
+      "change_pct": -0.72,
+      "change_str": "-0.72%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 107.76,
+      "price": 107.91,
       "currency": "USD",
-      "change": 7.83,
-      "change_pct": 7.84,
-      "change_str": "+7.84%",
+      "change": 7.98,
+      "change_pct": 7.99,
+      "change_str": "+7.99%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 75612.0,
+      "price": 75714.53,
       "currency": "USD",
-      "change": -738.67,
-      "change_pct": -0.97,
-      "change_str": "-0.97%",
+      "change": -636.14,
+      "change_pct": -0.83,
+      "change_str": "-0.83%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.94,
+      "price": 98.95,
       "currency": "USD",
-      "change": 0.32,
-      "change_pct": 0.32,
-      "change_str": "+0.32%",
+      "change": 0.33,
+      "change_pct": 0.34,
+      "change_str": "+0.34%",
       "direction": "up"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 18.48,
+      "price": 18.81,
       "currency": "USD",
-      "change": 0.65,
-      "change_pct": 3.65,
-      "change_str": "+3.65%",
+      "change": 0.98,
+      "change_pct": 5.5,
+      "change_str": "+5.50%",
       "direction": "up"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.0,
-    "portfolio_peak": 10176.31,
-    "vix": 18.48,
+    "drawdown_from_peak_pct": 0.02,
+    "portfolio_peak": 10177.35,
+    "vix": 18.81,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -2327,7 +2329,7 @@
       },
       {
         "sector": "Bonds & Fixed Income",
-        "weight": 25.6,
+        "weight": 26.1,
         "at_cap": false
       },
       {
@@ -2361,7 +2363,7 @@
           "GLDM": 0.487,
           "ICLN": 0.227,
           "QQQ": 0.477,
-          "XLE": -0.383
+          "XLE": -0.382
         },
         "DBC": {
           "BND": -0.471,
@@ -2385,7 +2387,7 @@
           "GLDM": 0.609,
           "ICLN": 1.0,
           "QQQ": 0.59,
-          "XLE": -0.357
+          "XLE": -0.358
         },
         "QQQ": {
           "BND": 0.477,
@@ -2393,14 +2395,14 @@
           "GLDM": 0.751,
           "ICLN": 0.59,
           "QQQ": 1.0,
-          "XLE": -0.582
+          "XLE": -0.583
         },
         "XLE": {
-          "BND": -0.383,
+          "BND": -0.382,
           "DBC": 0.811,
           "GLDM": -0.593,
-          "ICLN": -0.357,
-          "QQQ": -0.582,
+          "ICLN": -0.358,
+          "QQQ": -0.583,
           "XLE": 1.0
         }
       },
@@ -2426,7 +2428,7 @@
     },
     "volatility": {
       "per_ticker": {
-        "XLE": 26.24,
+        "XLE": 26.2,
         "QQQ": 17.24,
         "BND": 3.45,
         "GLDM": 23.77,
@@ -2437,11 +2439,11 @@
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 0.41,
+      "benchmark_return_pct": 0.4,
       "benchmark_price_start": 708.72,
-      "benchmark_price_now": 711.63,
+      "benchmark_price_now": 711.58,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": 4.23,
+      "portfolio_return_pct": 4.22,
       "alpha": 3.82
     },
     "rebalance": {
@@ -2452,7 +2454,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": 15.02,
           "action": "TRIM",
-          "amount": 1528.21,
+          "amount": 1528.36,
           "etf_name": "Invesco QQQ Trust"
         },
         {
@@ -2461,16 +2463,16 @@
           "target_weight_pct": 15.0,
           "drift_pct": -12.96,
           "action": "ADD",
-          "amount": 1319.24,
+          "amount": 1319.09,
           "etf_name": "iShares Global Clean Energy ETF"
         },
         {
           "ticker": "XLE",
-          "actual_weight_pct": 27.5,
+          "actual_weight_pct": 27.49,
           "target_weight_pct": 15.0,
-          "drift_pct": 12.5,
+          "drift_pct": 12.49,
           "action": "TRIM",
-          "amount": 1271.79,
+          "amount": 1270.99,
           "etf_name": "Energy Select Sector SPDR"
         },
         {
@@ -2479,25 +2481,25 @@
           "target_weight_pct": 15.0,
           "drift_pct": -12.33,
           "action": "ADD",
-          "amount": 1254.48,
+          "amount": 1254.33,
           "etf_name": "Invesco DB Commodity Index Tracking Fund"
         },
         {
           "ticker": "BND",
-          "actual_weight_pct": 25.65,
+          "actual_weight_pct": 26.08,
           "target_weight_pct": 15.0,
-          "drift_pct": 10.65,
+          "drift_pct": 11.08,
           "action": "TRIM",
-          "amount": 1083.5,
+          "amount": 1127.66,
           "etf_name": "Vanguard Total Bond Market ETF"
         },
         {
           "ticker": "CASH",
-          "actual_weight_pct": 0.69,
+          "actual_weight_pct": 0.26,
           "target_weight_pct": 10.0,
-          "drift_pct": -9.31,
+          "drift_pct": -9.74,
           "action": "RAISE",
-          "amount": 947.31,
+          "amount": 991.25,
           "etf_name": "Cash Reserve"
         }
       ],
@@ -2507,14 +2509,14 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -2441.37,
-          "portfolio_loss_pct": -23.99,
+          "total_impact": -2436.45,
+          "portfolio_loss_pct": -23.94,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -1539.03
+              "impact": -1538.51
             },
             {
               "ticker": "QQQ",
@@ -2526,7 +2528,7 @@
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 10.0,
-              "impact": 261.0
+              "impact": 265.4
             },
             {
               "ticker": "GLDM",
@@ -2549,14 +2551,14 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -2939.25,
-          "portfolio_loss_pct": -28.88,
+          "total_impact": -2936.44,
+          "portfolio_loss_pct": -28.86,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -1818.85
+              "impact": -1818.24
             },
             {
               "ticker": "QQQ",
@@ -2568,7 +2570,7 @@
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 5.0,
-              "impact": 130.5
+              "impact": 132.7
             },
             {
               "ticker": "GLDM",
@@ -2591,14 +2593,14 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1167.69,
-          "portfolio_loss_pct": -11.47,
+          "total_impact": -1172.88,
+          "portfolio_loss_pct": -11.53,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -279.82
+              "impact": -279.73
             },
             {
               "ticker": "QQQ",
@@ -2610,7 +2612,7 @@
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": -12.0,
-              "impact": -313.19
+              "impact": -318.48
             },
             {
               "ticker": "GLDM",
@@ -2633,14 +2635,14 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -808.96,
-          "portfolio_loss_pct": -7.95,
+          "total_impact": -807.94,
+          "portfolio_loss_pct": -7.94,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -419.74
+              "impact": -419.59
             },
             {
               "ticker": "QQQ",
@@ -2652,7 +2654,7 @@
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 2.0,
-              "impact": 52.2
+              "impact": 53.08
             },
             {
               "ticker": "GLDM",
@@ -2675,14 +2677,14 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1003.66,
-          "portfolio_loss_pct": -9.86,
+          "total_impact": -1001.71,
+          "portfolio_loss_pct": -9.84,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -559.65
+              "impact": -559.46
             },
             {
               "ticker": "QQQ",
@@ -2694,7 +2696,7 @@
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 4.0,
-              "impact": 104.4
+              "impact": 106.16
             },
             {
               "ticker": "GLDM",
@@ -2718,15 +2720,15 @@
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -28.88
+      "worst_loss_pct": -28.86
     }
   },
   "logs": [
-    "2026-04-29 20:09:31 [INFO] AZALYST - status.json generated",
-    "2026-04-29 20:09:31 [INFO] PORTFOLIO - NAV USD 10,176.31 | Return +4.23%",
-    "2026-04-29 20:09:31 [INFO] SIGNALS - 32 active signal buckets in state",
-    "2026-04-29 20:09:31 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-29 20:09:31 [INFO] RISK - Partial profits realised: USD 4,088.89"
+    "2026-04-29 20:41:00 [INFO] AZALYST - status.json generated",
+    "2026-04-29 20:41:00 [INFO] PORTFOLIO - NAV USD 10,175.34 | Return +4.22%",
+    "2026-04-29 20:41:00 [INFO] SIGNALS - 32 active signal buckets in state",
+    "2026-04-29 20:41:00 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-29 20:41:00 [INFO] RISK - Partial profits realised: USD 4,088.89"
   ],
-  "generated_at": "2026-04-29 20:09:30 UTC"
+  "generated_at": "2026-04-29 20:40:59 UTC"
 }
