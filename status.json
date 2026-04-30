@@ -284,10 +284,6 @@
       "score": 80.0
     },
     {
-      "symbol": "Healthcare & Pharma",
-      "score": 78.0
-    },
-    {
       "symbol": "Real Estate & REITs + Bonds & Fixed Income",
       "score": 77.0
     },
@@ -310,6 +306,10 @@
     {
       "symbol": "Nuclear Energy & Uranium + Asia Pacific Equity",
       "score": 72.0
+    },
+    {
+      "symbol": "Healthcare & Pharma",
+      "score": 71.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -1302,57 +1302,6 @@
       }
     },
     {
-      "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma",
-      "confidence": 78.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 9,
-      "latest_at": "30 Apr 2026 16:36 UTC",
-      "headline": "US Stocks: Eli Lilly raises annual forecasts as GLP-1 drugs fuel growth",
-      "regions": [
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "World News - Breaking international news and headlines | Sky News",
-        "BBC News",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "XLV",
-      "top_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "HEALTHCARE",
-        "PHARMABEES"
-      ],
-      "global_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 18.8,
-        "volume_confirmation": 15.4,
-        "source_diversity": 14.4,
-        "recency": 16.4,
-        "geopolitical_severity": 12.3
-      }
-    },
-    {
       "sector_key": "bonds_fixed_income|real_estate_reit",
       "sector_label": "Real Estate & REITs + Bonds & Fixed Income",
       "confidence": 77.0,
@@ -1661,6 +1610,56 @@
         "source_diversity": 15.3,
         "recency": 19.0,
         "geopolitical_severity": 12.9
+      }
+    },
+    {
+      "sector_key": "healthcare_pharma",
+      "sector_label": "Healthcare & Pharma",
+      "confidence": 71.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "30 Apr 2026 20:34 UTC",
+      "headline": "US Stocks: Eli Lilly raises annual forecasts as GLP-1 drugs fuel growth",
+      "regions": [
+        "global"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "World News - Breaking international news and headlines | Sky News",
+        "Earnings",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "XLV",
+      "top_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "HEALTHCARE",
+        "PHARMABEES"
+      ],
+      "global_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 17.6,
+        "volume_confirmation": 14.6,
+        "source_diversity": 14.0,
+        "recency": 14.9,
+        "geopolitical_severity": 9.8
       }
     },
     {
@@ -2149,11 +2148,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Healthcare & Pharma - 9 articles - HIGH / NEUTRAL - US Stocks: Eli Lilly raises annual forecasts as GLP-1 drugs fuel growth"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Real Estate & REITs + Bonds & Fixed Income - 9 articles - HIGH / NEUTRAL - US housing market faces volatility despite decline in mortgage rates"
     },
     {
@@ -2180,6 +2174,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Nuclear Energy & Uranium + Asia Pacific Equity - 7 articles - MEDIUM / NEUTRAL - Vietnam, South Korea Ink Deals on Security, Nuclear Power Plants"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Healthcare & Pharma - 8 articles - HIGH / NEUTRAL - US Stocks: Eli Lilly raises annual forecasts as GLP-1 drugs fuel growth"
     },
     {
       "tag": "tag-neu",
@@ -2315,33 +2314,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4629.7,
+      "price": 4636.0,
       "currency": "USD",
-      "change": 84.5,
-      "change_pct": 1.86,
-      "change_str": "+1.86%",
+      "change": 90.8,
+      "change_pct": 2.0,
+      "change_str": "+2.00%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 106.14,
+      "price": 105.41,
       "currency": "USD",
-      "change": -0.74,
-      "change_pct": -0.69,
-      "change_str": "-0.69%",
+      "change": -1.47,
+      "change_pct": -1.38,
+      "change_str": "-1.38%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 76498.84,
+      "price": 76304.77,
       "currency": "USD",
-      "change": 722.71,
-      "change_pct": 0.95,
-      "change_str": "+0.95%",
+      "change": 528.64,
+      "change_pct": 0.7,
+      "change_str": "+0.70%",
       "direction": "up"
     },
     {
@@ -2763,11 +2762,11 @@
     }
   },
   "logs": [
-    "2026-04-30 20:54:19 [INFO] AZALYST - status.json generated",
-    "2026-04-30 20:54:19 [INFO] PORTFOLIO - NAV USD 10,256.01 | Return +5.12%",
-    "2026-04-30 20:54:19 [INFO] SIGNALS - 33 active signal buckets in state",
-    "2026-04-30 20:54:19 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-04-30 20:54:19 [INFO] RISK - Partial profits realised: USD 15,634.68"
+    "2026-04-30 21:52:04 [INFO] AZALYST - status.json generated",
+    "2026-04-30 21:52:04 [INFO] PORTFOLIO - NAV USD 10,256.01 | Return +5.12%",
+    "2026-04-30 21:52:04 [INFO] SIGNALS - 33 active signal buckets in state",
+    "2026-04-30 21:52:04 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-04-30 21:52:04 [INFO] RISK - Partial profits realised: USD 15,634.68"
   ],
-  "generated_at": "2026-04-30 20:54:19 UTC"
+  "generated_at": "2026-04-30 21:52:03 UTC"
 }
