@@ -173,7 +173,8 @@ class ConfidenceScorer:
             if age_hours > 24 * 7:
                 return 0.0
             if age_hours > 48:
-                return max(17.0 * math.exp(-age_hours / 3.0) * 0.3, 0.0)
+                # More aggressive decay for very old articles
+                return max(17.0 * math.exp(-age_hours / 2.0) * 0.2, 0.0)
             return min(17.0 * math.exp(-age_hours / 10.0), 17.0)
         except Exception:
             return 0.0
