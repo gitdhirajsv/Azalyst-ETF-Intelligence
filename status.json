@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 20233.5,
+  "portfolio_value": 20233.33,
   "total_deposited": 19757.06,
-  "cash": 1934.11,
+  "cash": 1784.6,
   "monthly_reserve": 0.0,
-  "market_value": 18299.39,
-  "total_invested": 17987.74,
-  "unrealised_pnl": 311.65,
-  "unrealised_str": "+311.65",
+  "market_value": 18448.73,
+  "total_invested": 18137.24,
+  "unrealised_pnl": 311.49,
+  "unrealised_str": "+311.49",
   "realised_pnl": 164.78,
   "realised_str": "+164.78",
   "change": "+2.41%",
@@ -25,17 +25,17 @@
       "sector": "Energy / Oil & Gas",
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 56.76,
+      "entry": 56.85,
       "current": 58.85,
       "peak_price": 59.74,
       "trail_stop": 54.96,
       "dist_to_trail_pct": 6.61,
-      "units": 62.497273,
-      "invested": 3547.46,
-      "pnl": 130.51,
-      "pnl_str": "+130.51",
-      "pnl_pct": 3.68,
-      "pnl_pct_str": "+3.68%",
+      "units": 65.034951,
+      "invested": 3696.97,
+      "pnl": 130.34,
+      "pnl_str": "+130.34",
+      "pnl_pct": 3.53,
+      "pnl_pct_str": "+3.53%",
       "confidence": 96,
       "severity": "CRITICAL",
       "days_held": 13,
@@ -183,13 +183,13 @@
       "CASH"
     ],
     "values": [
-      18.2,
+      18.9,
       28.9,
       21.6,
       16.0,
       1.1,
       4.7,
-      9.6
+      8.8
     ]
   },
   "pnl": {
@@ -202,7 +202,7 @@
       "DBC"
     ],
     "values": [
-      130.51,
+      130.34,
       162.24,
       18.04,
       -29.16,
@@ -232,10 +232,6 @@
       "score": 93.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 92.0
-    },
-    {
       "symbol": "Banking & Financial Sector + Europe Equity",
       "score": 92.0
     },
@@ -246,6 +242,10 @@
     {
       "symbol": "Healthcare & Pharma + India Equity Markets",
       "score": 91.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 90.0
     },
     {
       "symbol": "Banking & Financial Sector + Asia Pacific Equity",
@@ -611,59 +611,6 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 92.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 51,
-      "latest_at": "01 May 2026 16:30 UTC",
-      "headline": "Oil rises over $1 with no sign of Iran conflict ending",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "europe",
-        "india"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "Finance",
-        "Earnings",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.7,
-        "recency": 13.2,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "banking_financial|europe_equity",
       "sector_label": "Banking & Financial Sector + Europe Equity",
       "confidence": 92.0,
@@ -824,6 +771,59 @@
         "source_diversity": 14.8,
         "recency": 20.0,
         "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 90.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 47,
+      "latest_at": "01 May 2026 19:33 UTC",
+      "headline": "Oil rises over $1 with no sign of Iran conflict ending",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "europe",
+        "americas"
+      ],
+      "sources": [
+        "Earnings",
+        "Finance",
+        "BBC News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.7,
+        "recency": 11.8,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -2084,11 +2084,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 51 articles - CRITICAL / NEUTRAL - Oil rises over $1 with no sign of Iran conflict ending"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Banking & Financial Sector + Europe Equity - 13 articles - HIGH / NEUTRAL - Former ECB's Trichet: the Enemies are Inflation Secondary Effects"
     },
     {
@@ -2100,6 +2095,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Healthcare & Pharma + India Equity Markets - 12 articles - CRITICAL / NEUTRAL - Researchers say we\u2019re talking less than ever"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Energy / Oil & Gas - 47 articles - CRITICAL / NEUTRAL - Oil rises over $1 with no sign of Iran conflict ending"
     },
     {
       "tag": "tag-neu",
@@ -2262,10 +2262,10 @@
       "region": "UK",
       "price": 10363.93,
       "currency": "GBP",
-      "change": -14.87,
-      "change_pct": -0.14,
-      "change_str": "-0.14%",
-      "direction": "down"
+      "change": 150.83,
+      "change_pct": 1.48,
+      "change_str": "+1.48%",
+      "direction": "up"
     },
     {
       "label": "DAX",
@@ -2337,11 +2337,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78307.99,
+      "price": 78130.25,
       "currency": "USD",
-      "change": 2003.67,
-      "change_pct": 2.63,
-      "change_str": "+2.63%",
+      "change": 1825.93,
+      "change_pct": 2.39,
+      "change_str": "+2.39%",
       "direction": "up"
     },
     {
@@ -2386,7 +2386,7 @@
       },
       {
         "sector": "Energy / Oil & Gas",
-        "weight": 18.2,
+        "weight": 18.9,
         "at_cap": false
       },
       {
@@ -2511,7 +2511,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": 13.95,
           "action": "TRIM",
-          "amount": 2822.48,
+          "amount": 2822.5,
           "etf_name": "Invesco QQQ Trust"
         },
         {
@@ -2520,7 +2520,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -13.94,
           "action": "ADD",
-          "amount": 2821.5,
+          "amount": 2821.47,
           "etf_name": "iShares Global Clean Energy ETF"
         },
         {
@@ -2529,7 +2529,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -10.27,
           "action": "ADD",
-          "amount": 2078.91,
+          "amount": 2078.88,
           "etf_name": "Invesco DB Commodity Index Tracking Fund"
         },
         {
@@ -2538,7 +2538,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": 6.57,
           "action": "TRIM",
-          "amount": 1328.83,
+          "amount": 1328.86,
           "etf_name": "Vanguard Total Bond Market ETF"
         }
       ],
@@ -2548,14 +2548,14 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -3733.16,
-          "portfolio_loss_pct": -18.45,
+          "total_impact": -3815.3,
+          "portfolio_loss_pct": -18.86,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -2022.88
+              "impact": -2105.02
             },
             {
               "ticker": "QQQ",
@@ -2590,14 +2590,14 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -4761.2,
-          "portfolio_loss_pct": -23.53,
+          "total_impact": -4858.27,
+          "portfolio_loss_pct": -24.01,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -2390.68
+              "impact": -2487.75
             },
             {
               "ticker": "QQQ",
@@ -2632,14 +2632,14 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -2059.25,
-          "portfolio_loss_pct": -10.18,
+          "total_impact": -2074.18,
+          "portfolio_loss_pct": -10.25,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -367.8
+              "impact": -382.73
             },
             {
               "ticker": "QQQ",
@@ -2674,14 +2674,14 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -1481.17,
-          "portfolio_loss_pct": -7.32,
+          "total_impact": -1503.57,
+          "portfolio_loss_pct": -7.43,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -551.69
+              "impact": -574.1
             },
             {
               "ticker": "QQQ",
@@ -2716,14 +2716,14 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1586.61,
-          "portfolio_loss_pct": -7.84,
+          "total_impact": -1616.48,
+          "portfolio_loss_pct": -7.99,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -735.59
+              "impact": -765.46
             },
             {
               "ticker": "QQQ",
@@ -2759,15 +2759,15 @@
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -23.53
+      "worst_loss_pct": -24.01
     }
   },
   "logs": [
-    "2026-05-01 22:13:30 [INFO] AZALYST - status.json generated",
-    "2026-05-01 22:13:30 [INFO] PORTFOLIO - NAV USD 20,233.50 | Return +2.41%",
-    "2026-05-01 22:13:30 [INFO] SIGNALS - 33 active signal buckets in state",
-    "2026-05-01 22:13:30 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
-    "2026-05-01 22:13:30 [INFO] RISK - Partial profits realised: USD 15,634.68"
+    "2026-05-01 23:15:21 [INFO] AZALYST - status.json generated",
+    "2026-05-01 23:15:21 [INFO] PORTFOLIO - NAV USD 20,233.33 | Return +2.41%",
+    "2026-05-01 23:15:21 [INFO] SIGNALS - 33 active signal buckets in state",
+    "2026-05-01 23:15:21 [INFO] TRADER - Open positions: XLE, QQQ, BND, GLDM, ICLN, DBC",
+    "2026-05-01 23:15:21 [INFO] RISK - Partial profits realised: USD 15,634.68"
   ],
-  "generated_at": "2026-05-01 22:13:29 UTC"
+  "generated_at": "2026-05-01 23:15:20 UTC"
 }
