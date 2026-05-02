@@ -19,10 +19,17 @@ can reach 100.
 
 import logging
 import math
+from collections import deque
 from datetime import datetime, timezone, timedelta
-from typing import Dict, List
+from typing import Dict, List, Optional, Tuple
 
 log = logging.getLogger("azalyst.scorer")
+
+# ======== REVIEW BOARD CHANGE: Factor orthogonalization rolling window ========
+# López de Prado recommendation: when factors are correlated >0.7, down-weight
+# both by 50% to avoid triple-counting the same information.
+MAX_FACTOR_HISTORY = 60  # rolling window for factor correlation calculation
+FACTOR_CORR_THRESHOLD = 0.7  # correlation threshold for down-weighting
 
 # Source credibility tiers (higher tier = more weight in source diversity score).
 #
@@ -87,6 +94,13 @@ class ConfidenceScorer:
 
     def __init__(self, cfg):
         self.cfg = cfg
+        # ======== REVIEW BOARD CHANGE: Rolling factor score history for orthogonalization ========
+        # López de Prado: track last 60 factor breakdowns to detect double-counting
+        self._factor_history: deque = deque(maxlen=MAX_FACTOR_HISTORY)
+        self._factor_names = [
+            "signal_strength", "volume_confirmation", "source_diversity",
+            "recency", "geopolitical_severity", "cross_engine_confirmation",
+        ]
 
     def score(self, signal: Dict, all_articles: List[Dict]) -> int:
         """Compute final confidence score (0–100) for a signal."""
@@ -97,7 +111,55 @@ class ConfidenceScorer:
         f5 = self._factor_geopolitical_severity(signal)
         f6 = self._factor_cross_engine_confirmation(signal)
 
-        raw = f1 + f2 + f3 + f4 + f5 + f6
+        # ======== REVIEW BOARD CHANGE: Factor orthogonalization ========
+        # López de Prado: when any pair of factors has correlation >0.7,
+        # down-weight both by 50% to avoid double-counting information.
+        raw_scores = {
+            "signal_strength": f1,
+            "volume_confirmation": f2,
+            "source_diversity": f3,
+            "recency": f4,
+            "geopolitical_severity": f5,
+            "cross_engine_confirmation": f6,
+        }
+        self._factor_history.append(raw_scores)
+        
+        # Compute pair-wise correlations if we have enough history
+        weight_multipliers = {fn: 1.0 for fn in self._factor_names}
+        if len(self._factor_history) >= 20:
+            # Extract series for each factor
+            series = {fn: [] for fn in self._factor_names}
+            for entry in self._factor_history:
+                for fn in self._factor_names:
+                    series[fn].append(entry.get(fn, 0))
+            
+            # Check correlation between every pair
+            flagged = set()
+            for i, fn1 in enumerate(self._factor_names):
+                for fn2 in self._factor_names[i+1:]:
+                    s1 = series[fn1]
+                    s2 = series[fn2]
+                    # Quick Pearson correlation
+                    n = len(s1)
+                    if n < 10:
+                        continue
+                    mean1, mean2 = sum(s1)/n, sum(s2)/n
+                    num = sum((s1[j]-mean1)*(s2[j]-mean2) for j in range(n))
+                    den = (sum((s1[j]-mean1)**2 for j in range(n)) * sum((s2[j]-mean2)**2 for j in range(n))) ** 0.5
+                    if den > 0:
+                        corr = abs(num / den)
+                        if corr > FACTOR_CORR_THRESHOLD:
+                            flagged.add(fn1)
+                            flagged.add(fn2)
+                            log.info(
+                                "Factor orthogonalization: %s ↔ %s corr=%.2f > %.2f — down-weighting both",
+                                fn1, fn2, corr, FACTOR_CORR_THRESHOLD,
+                            )
+            
+            for fn in flagged:
+                weight_multipliers[fn] = 0.5  # 50% reduction to avoid double-counting
+        
+        raw = sum(raw_scores[fn] * weight_multipliers[fn] for fn in self._factor_names)
         return min(int(raw), 100)
 
     def breakdown(self, signal: Dict, all_articles: List[Dict]) -> Dict:

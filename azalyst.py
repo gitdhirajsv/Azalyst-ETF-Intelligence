@@ -33,6 +33,23 @@ except Exception as _imp_err:
     PriceScanner = ConstituentAnalyzer = ReverseResearcher = SignalFuser = None
     ETF_TO_SECTOR = {}
 
+# ── REVIEW BOARD CHANGE: COT positioning engine ─────────────────────────────
+try:
+    from cot_fetcher import COTFetcher
+    _COT_AVAILABLE = True
+except ImportError:
+    COTFetcher = None
+    _COT_AVAILABLE = False
+
+# ── REVIEW BOARD CHANGE: External shock circuit breaker ─────────────────────
+try:
+    from risk_engine import compute_trend_adjustment, external_shock_check, CIRCUIT_BREAKER_ACTIVE
+    _RISK_ADVANCED = True
+except ImportError:
+    compute_trend_adjustment = external_shock_check = None
+    CIRCUIT_BREAKER_ACTIVE = False
+    _RISK_ADVANCED = False
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s - %(message)s",
@@ -126,10 +143,22 @@ def run_intelligence_cycle(
                 except Exception as exc:
                     log.warning("Reverse researcher failed: %s", exc)
 
-        # ── 5. FUSE signals across all 3 engines ────────────────────────────
+        # ── 3.5 COT engine (institutional positioning) ─────────────────────
+        # REVIEW BOARD CHANGE: 9-0 vote to add COT as 4th engine
+        cot_signals: list = []
+        if _COT_AVAILABLE:
+            try:
+                cot = COTFetcher(enabled=True)
+                cot_results = cot.scan_all()
+                cot_signals = [cot.to_azalyst_signal(r) for r in cot_results]
+                log.info("COT engine: %d positioning signals", len(cot_signals))
+            except Exception as exc:
+                log.warning("COT engine failed: %s", exc)
+
+        # ── 5. FUSE signals across all 4 engines ────────────────────────────
         if signal_fuser is not None:
             fused = signal_fuser.fuse(
-                news_signals_raw, price_signals, constituent_signals
+                news_signals_raw, price_signals, constituent_signals, cot_signals
             )
             log.info(
                 "Fused: %d signals (TierA=%d TierB=%d TierC=%d divergent=%d)",
@@ -164,19 +193,62 @@ def run_intelligence_cycle(
             state.record_signal(signal)
             time.sleep(1)
 
-            # Paper trade entry — HIGH/CRITICAL signals only
+            # ======== REVIEW BOARD CHANGE: Graduated trend adjustment ========
+            # Replaces binary Quant Blocker with confidence/size multipliers
+            # and adds external shock circuit breaker check
             if cfg.PAPER_TRADING_ENABLED and not is_update:
                 severity   = signal.get("severity", "LOW")
                 confidence = signal.get("confidence", 0)
+                
+                # External shock check — don't trade if cross-asset stress is extreme
+                if _RISK_ADVANCED and CIRCUIT_BREAKER_ACTIVE:
+                    log.warning("Trade skipped — external shock circuit breaker active")
+                    continue
+                
                 if severity in ("HIGH", "CRITICAL") or confidence >= 75:
                     etf, platform = _select_etf_for_trade(signal)
                     if etf and platform:
-                        # QUANT BLOCKER: Check if the ETF is mathematically broken
                         ticker = etf.get("ticker")
-                        if ticker and not quant_fetcher.check_trend_approval(ticker):
-                            log.warning(f"Trade skipped: News is bullish, but {ticker} is structurally broken (Quant Blocker).")
-                            continue
 
+                        # ── Graduated trend adjustment (replaces binary Quant Blocker) ──
+                        if ticker and _RISK_ADVANCED:
+                            try:
+                                current = __import__("paper_trader", fromlist=["get_current_price_inr"]).get_current_price_inr(
+                                    ticker, etf.get("exchange", "NYSE")
+                                )
+                                if current:
+                                    import yfinance as yf
+                                    hist = yf.Ticker(ticker).history(period="1y")
+                                    if not hist.empty and len(hist) >= 200:
+                                        ma_200 = float(hist["Close"].rolling(window=200).mean().iloc[-1])
+                                        adj = compute_trend_adjustment(current, ma_200, ticker)
+                                        conf_mult = adj["confidence_multiplier"]
+                                        
+                                        if conf_mult < 1.0:
+                                            original_conf = signal["confidence"]
+                                            signal["confidence"] = int(original_conf * conf_mult)
+                                            signal["_trend_adjusted"] = True
+                                            signal["_original_confidence"] = original_conf
+                                            signal["_confidence_multiplier"] = conf_mult
+                                            
+                                            # Alert if adjustment > 15%
+                                            if conf_mult < 0.85:
+                                                log.warning(
+                                                    "Trend adjustment: %s confidence %d → %d (mult=%.2f)",
+                                                    ticker, original_conf, signal["confidence"], conf_mult
+                                                )
+                                                reporter.send_quant_block_alert(signal, etf, ticker)
+                                            
+                                            # Skip if adjusted below threshold
+                                            if signal["confidence"] < cfg.CONFIDENCE_THRESHOLD:
+                                                log.info(
+                                                    "Trade skipped — adjusted confidence %d below threshold %d",
+                                                    signal["confidence"], cfg.CONFIDENCE_THRESHOLD
+                                                )
+                                                continue
+                            except Exception as exc:
+                                log.warning("Trend adjustment failed for %s: %s", ticker, exc)
+                        
                         entry = portfolio.enter_position(signal, etf, platform)
                         if entry:
                             rotation_exits = entry.get("rotation_exits") or []

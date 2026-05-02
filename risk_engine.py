@@ -395,6 +395,53 @@ def check_rebalance_drift(
     return sorted(alerts, key=lambda a: abs(a["drift_pct"]), reverse=True)
 
 
+# ── 5. Review Board Change: Trend-Based Confidence & Size Adjustment ────────────────────
+# Replaces the binary quant blocker with a graduated adjustment.
+# 9-0 panel decision: don't block trades outright — adjust conviction & size.
+
+def compute_trend_adjustment(
+    current_price: float,
+    ma_200: float,
+    ticker: str = "",
+) -> Dict[str, float]:
+    """
+    Return confidence and size multipliers based on 200-day MA relationship.
+
+    - Above MA: no adjustment (multiplier 1.0, size multiplier 1.0)
+    - Below MA: confidence multiplier = 1.0 - (distance_in_stddev * 0.3), clamped [0.4, 1.0]
+                size multiplier = 0.6 (position is reduced but not eliminated)
+
+    Returns: {"confidence_multiplier": float, "size_multiplier": float, "blocked": False}
+    """
+    if ma_200 <= 0 or current_price <= 0:
+        return {"confidence_multiplier": 1.0, "size_multiplier": 1.0, "blocked": False}
+
+    if current_price >= ma_200:
+        return {"confidence_multiplier": 1.0, "size_multiplier": 1.0, "blocked": False}
+
+    # Distance below MA as a fraction of MA
+    distance_pct = (ma_200 - current_price) / ma_200
+    # Scale: 5% below = 0.2σ → ~0.94 multiplier; 15% below = ~0.6σ → ~0.82 multiplier
+    distance_in_stddev = distance_pct * 4.0  # heuristic: 5% ≈ 0.2σ of daily returns
+
+    confidence_multiplier = 1.0 - (distance_in_stddev * 0.3)
+    confidence_multiplier = max(min(confidence_multiplier, 1.0), 0.4)
+    size_multiplier = 0.6
+
+    log.info(
+        "Trend adjustment for %s: price=%.2f, MA200=%.2f, dist=%.1f%% → "
+        "conf_mult=%.2f, size_mult=%.2f",
+        ticker, current_price, ma_200, distance_pct * 100,
+        confidence_multiplier, size_multiplier,
+    )
+
+    return {
+        "confidence_multiplier": round(confidence_multiplier, 3),
+        "size_multiplier": round(size_multiplier, 3),
+        "blocked": False,  # Never hard-block; let the human decide
+    }
+
+
 # ── 5. Stress Testing / Scenario Analysis ────────────────────────────────────
 
 def _normalise_sector_tokens(sector: str) -> List[str]:
@@ -480,6 +527,252 @@ def stress_test_portfolio(positions: List[Dict], portfolio_value: float) -> Dict
 
 
 # ── Full Risk Report (combines all 5 features) ──────────────────────────────
+
+# ── 6. Review Board Change: External Shock Circuit Breaker ────────────────
+# Tudor Jones recommendation: don't trade when cross-asset stress indicators spike.
+# This stub monitors swap spreads, EM FX vol, and gold/equity correlation.
+
+# Circuit breaker flag — checked by paper_trader before entry
+CIRCUIT_BREAKER_ACTIVE = False
+
+
+def external_shock_check() -> Dict:
+    """
+    Monitor cross-asset stress indicators and set circuit breaker flag.
+    Currently uses placeholder thresholds — will be calibrated with live data.
+
+    Indicators:
+        - TED spread proxy (LIBOR-Fed Funds spread equivalent)
+        - VIX level (fear gauge)
+        - Gold/SPY correlation flip (safe-haven rush)
+        - EM currency volatility
+
+    Returns: {circuit_breaker_active, indicators, warnings}
+    """
+    global CIRCUIT_BREAKER_ACTIVE
+    warnings = []
+    indicators = {}
+
+    # TODO: Fetch live TED spread from FRED (series: TEDRATE)
+    ted_spread = 0.15  # placeholder: normal range 0.10-0.25, stress > 0.50
+    indicators["ted_spread"] = ted_spread
+    if ted_spread > 0.50:
+        warnings.append(f"TED spread spike: {ted_spread:.2f}% — credit stress detected")
+
+    # TODO: Fetch VIX from Yahoo Finance
+    vix = 15.0  # placeholder
+    indicators["vix"] = vix
+    if vix > 35.0:
+        warnings.append(f"VIX > 35 ({vix:.1f}) — extreme fear regime")
+
+    # TODO: Compute gold/equity correlation rolling 20-day
+    gold_equity_corr = -0.25  # placeholder: typically negative
+    indicators["gold_equity_corr"] = gold_equity_corr
+    if gold_equity_corr > 0.3:
+        warnings.append(f"Gold/Equity correlation positive ({gold_equity_corr:.2f}) — safe-haven bid")
+
+    # TODO: Monitor EM FX vol (JP Morgan EM-VXY or similar)
+    em_fx_vol = 0.08  # placeholder: typical 6-10%, stress > 15%
+    indicators["em_fx_vol"] = em_fx_vol
+    if em_fx_vol > 0.15:
+        warnings.append(f"EM FX vol spike: {em_fx_vol:.1%} — carry unwind risk")
+
+    # Set circuit breaker if ≥2 warnings or VIX > 40
+    CIRCUIT_BREAKER_ACTIVE = (len(warnings) >= 2) or (vix > 40.0)
+
+    if CIRCUIT_BREAKER_ACTIVE:
+        log.warning(
+            "EXTERNAL SHOCK CIRCUIT BREAKER ACTIVE — %d warnings: %s",
+            len(warnings), "; ".join(warnings),
+        )
+
+    return {
+        "circuit_breaker_active": CIRCUIT_BREAKER_ACTIVE,
+        "indicators": indicators,
+        "warnings": warnings,
+        "checked_at": datetime.now(timezone.utc).isoformat(),
+    }
+
+
+# ── 7. Review Board Change: Multi-Asset Benchmark ────────────────────────────
+# Cliff Asness recommendation: compare against a composite benchmark, not just SPY.
+
+DEFAULT_BENCHMARK_WEIGHTS = {
+    "SPY": 0.40,   # Equities
+    "GLD": 0.30,   # Gold
+    "AGG": 0.20,   # Bonds
+    "INDA": 0.10,  # India Equity
+}
+
+
+def fetch_multi_asset_benchmark_return(
+    start_date: str,
+    weights: Optional[Dict[str, float]] = None,
+) -> Dict:
+    """
+    Compute composite benchmark return from inception.
+    Weighted portfolio of SPY + GLD + AGG + INDA by default.
+
+    Returns: {composite_return_pct, per_ticker, weights_used}
+    """
+    w = weights or DEFAULT_BENCHMARK_WEIGHTS
+    per_ticker = {}
+    composite_return = 0.0
+
+    for ticker, weight in w.items():
+        try:
+            bench = fetch_benchmark_return(start_date, ticker)
+            ret = bench.get("benchmark_return_pct", 0.0)
+            per_ticker[ticker] = {
+                "weight": weight,
+                "return_pct": ret,
+                "contribution": round(ret * weight, 2),
+            }
+            composite_return += ret * weight
+        except Exception as exc:
+            log.warning("Multi-asset benchmark: failed for %s: %s", ticker, exc)
+            per_ticker[ticker] = {"weight": weight, "return_pct": 0.0, "contribution": 0.0}
+
+    return {
+        "composite_return_pct": round(composite_return, 2),
+        "per_ticker": per_ticker,
+        "weights_used": w,
+        "benchmark_name": "Multi-Asset Composite (SPY 40/GLD 30/AGG 20/INDA 10)",
+    }
+
+
+def compute_composite_alpha(
+    portfolio_return_pct: float,
+    start_date: str,
+    weights: Optional[Dict[str, float]] = None,
+) -> Dict:
+    """
+    Compute alpha vs both SPY and the multi-asset composite benchmark.
+    """
+    spy_bench = fetch_benchmark_return(start_date, "SPY")
+    composite_bench = fetch_multi_asset_benchmark_return(start_date, weights)
+
+    return {
+        "portfolio_return_pct": portfolio_return_pct,
+        "spy_return_pct": spy_bench.get("benchmark_return_pct", 0.0),
+        "alpha_vs_spy": round(portfolio_return_pct - spy_bench.get("benchmark_return_pct", 0.0), 2),
+        "composite_return_pct": composite_bench["composite_return_pct"],
+        "alpha_vs_composite": round(portfolio_return_pct - composite_bench["composite_return_pct"], 2),
+        "composite_benchmark_name": composite_bench["benchmark_name"],
+    }
+
+
+# ── 8. Review Board Change: Factor Attribution ─────────────────────────────
+# López de Prado / AQR recommendation: regress returns against Fama-French factors.
+
+def factor_attribution(
+    portfolio_returns: List[float],
+    dates: List[str],
+    factor_returns: Optional[Dict[str, List[float]]] = None,
+) -> Dict:
+    """
+    Run a multi-factor regression of portfolio returns against Fama-French
+    5-factor + momentum. Uses pre-loaded CSV data (manual step required).
+
+    Args:
+        portfolio_returns: list of daily returns (same length as dates)
+        dates: list of date strings (YYYY-MM-DD)
+        factor_returns: dict of {factor_name: [returns]} — if None, prints guidance
+
+    Returns:
+        {alpha_annualized, factor_loadings, r_squared, alpha_t_stat, warning}
+
+    Manual step:
+        Download Fama-French 5-factor + momentum CSV from:
+        https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html
+        Place it as data/ff5_factors.csv with columns: date, Mkt-RF, SMB, HML, RMW, CMA, Mom
+    """
+    if factor_returns is None:
+        log.warning(
+            "Factor attribution requires Fama-French factor data. "
+            "Place CSV at data/ff5_factors.csv. See docstring for instructions."
+        )
+        return {
+            "status": "SKIPPED",
+            "reason": "No factor data provided. Download Fama-French 5-factor CSV.",
+            "alpha_annualized": 0.0,
+            "factor_loadings": {},
+            "r_squared": 0.0,
+            "alpha_t_stat": 0.0,
+            "warning": "MANUAL STEP: Download ff5_factors.csv to data/ folder",
+        }
+
+    try:
+        import numpy as np
+        port_arr = np.array(portfolio_returns)
+
+        # Align factor arrays with portfolio
+        factor_names = list(factor_returns.keys())
+        X_list = []
+        for fn in factor_names:
+            factor_arr = np.array(factor_returns[fn])
+            min_len = min(len(port_arr), len(factor_arr))
+            X_list.append(factor_arr[:min_len])
+
+        min_len = min(len(port_arr), min(len(x) for x in X_list)) if X_list else len(port_arr)
+        y = port_arr[:min_len]
+        X = np.column_stack([x[:min_len] for x in X_list])
+        X = np.column_stack([np.ones(min_len), X])  # add intercept
+
+        # OLS regression: (X'X)^-1 X'y
+        XtX_inv = np.linalg.inv(X.T @ X)
+        beta = XtX_inv @ X.T @ y
+        y_pred = X @ beta
+        residuals = y - y_pred
+
+        # R-squared
+        ss_res = np.sum(residuals ** 2)
+        ss_tot = np.sum((y - np.mean(y)) ** 2)
+        r_squared = 1 - (ss_res / ss_tot) if ss_tot > 0 else 0.0
+
+        # Standard errors
+        sigma_sq = ss_res / (min_len - len(beta))
+        se = np.sqrt(np.diag(sigma_sq * XtX_inv))
+        t_stats = beta / se
+
+        alpha_annualized = beta[0] * 252  # annualize daily alpha
+        alpha_t_stat = t_stats[0]
+
+        loadings = {"alpha": round(beta[0], 6)}
+        for i, fn in enumerate(factor_names):
+            loadings[fn] = round(beta[i + 1], 6)
+
+        warning = ""
+        if abs(alpha_t_stat) < 1.5:
+            warning = (
+                f"Alpha t-stat = {alpha_t_stat:.2f} (< 1.5) — "
+                f"insufficient evidence of genuine alpha. "
+                f"Returns may be explained by factor exposures."
+            )
+
+        return {
+            "status": "COMPLETE",
+            "alpha_annualized": round(alpha_annualized, 4),
+            "alpha_daily": round(beta[0], 6),
+            "factor_loadings": loadings,
+            "r_squared": round(r_squared, 4),
+            "alpha_t_stat": round(alpha_t_stat, 2),
+            "observations": min_len,
+            "warning": warning,
+        }
+
+    except Exception as exc:
+        log.error("Factor attribution failed: %s", exc)
+        return {
+            "status": "ERROR",
+            "reason": str(exc),
+            "alpha_annualized": 0.0,
+            "factor_loadings": {},
+            "r_squared": 0.0,
+            "alpha_t_stat": 0.0,
+            "warning": "Factor attribution computation failed.",
+        }
+
 
 def generate_risk_report(
     portfolio: Dict,

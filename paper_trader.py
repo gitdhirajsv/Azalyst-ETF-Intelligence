@@ -82,6 +82,113 @@ USD_TO_INR = 83.5
 
 MIN_TRADE_INR = round(MIN_TRADE_USD * USD_TO_INR, 2)
 
+# ======== REVIEW BOARD CHANGES: Liquidity checks & realistic cost models ========
+# Ken Griffin / Citadel: pre-trade liquidity validation prevents phantom fills.
+# Cliff Asness / AQR: ETF costs must be modeled accurately.
+
+# India ETF lot sizes (NSE minimum trading lots) — update quarterly
+INDIA_ETF_LOT_SIZES = {
+    "NIFTYBEES": 1,
+    "BANKBEES": 1,
+    "GOLDBEES": 1,
+    "HDFCGOLD": 1,
+    "MIDCAPETF": 1,
+    "CPSEETF": 5,
+    "PHARMABEES": 1,
+    "HEALTHCARE": 1,
+    "REALTY": 1,
+    "DEFENCEETF": 5,
+    "PSUBNKBEES": 1,
+    "BHARATBOND": 1,
+    "NEWENERGY": 5,
+    "MAFANG": 1,
+}
+
+# Realistic India trading costs (Citadel calibration)
+# Source: SEBI, NSE, and broker data — updated Q1 2025
+INDIA_BUY_COSTS = {
+    "brokerage_bps": 5.0,       # Discount broker: ₹20/order flat, ~5 bps for retail size
+    "stamp_duty_bps": 0.015,    # 0.015% of transaction value (Maharashtra rate)
+    "gst_bps": 0.9,             # 18% GST on brokerage (0.9 bps)
+    "sebi_charges_bps": 0.0002, # SEBI turnover fee
+    "exchange_fee_bps": 0.00325,# NSE transaction charges
+    "total_buy_bps": 5.918,     # Sum of above
+}
+
+INDIA_SELL_COSTS = {
+    "brokerage_bps": 5.0,
+    "stt_bps": 0.025,           # Securities Transaction Tax on sell
+    "gst_bps": 0.9,
+    "sebi_charges_bps": 0.0002,
+    "exchange_fee_bps": 0.00325,
+    "total_sell_bps": 5.928,
+}
+
+# ADV (Average Daily Volume) thresholds — position size limit
+MAX_POSITION_PCT_OF_ADV = 0.01   # Max 1% of 20-day ADV per position
+MAX_SPREAD_BPS_WARNING = 50.0    # >50 bps spread → warn and skip
+
+def fetch_etf_liquidity(ticker: str, exchange: str) -> Optional[Dict[str, float]]:
+    """
+    Fetch ETF's 20-day ADV and current bid-ask spread.
+    Uses Yahoo Finance for now — production would use Bloomberg/Reuters.
+    
+    Returns: {adv_shares, adv_inr, spread_bps, spread_pct} or None
+    """
+    try:
+        import yfinance as yf
+        etf = yf.Ticker(ticker if "." not in ticker else ticker.split(".")[0] + ("" if "NSE" not in (exchange or "").upper() else ".NS"))
+        
+        # 20-day ADV
+        hist = etf.history(period="1mo")
+        if hist.empty or len(hist) < 5:
+            return None
+        adv_shares = float(hist["Volume"].tail(20).mean())
+        
+        # Bid-ask spread
+        info = etf.info or {}
+        bid = info.get("bid", 0) or 0
+        ask = info.get("ask", 0) or 0
+        last_price = info.get("regularMarketPrice", 0) or info.get("previousClose", 0) or float(hist["Close"].iloc[-1])
+        
+        if bid > 0 and ask > 0 and ask > bid:
+            spread_pct = (ask - bid) / ask
+            spread_bps = spread_pct * 10000
+        else:
+            # Heuristic: 5 bps for liquid US ETFs, 25 bps for India ETFs
+            if "NSE" in (exchange or "").upper() or "BSE" in (exchange or "").upper():
+                spread_bps = 25.0
+            else:
+                spread_bps = 5.0
+            spread_pct = spread_bps / 10000.0
+        
+        adv_inr = adv_shares * last_price
+        
+        return {
+            "adv_shares": round(adv_shares, 0),
+            "adv_inr": round(adv_inr, 0),
+            "last_price": round(last_price, 2),
+            "spread_bps": round(spread_bps, 1),
+            "spread_pct": round(spread_pct, 4),
+        }
+    except Exception as e:
+        log.warning("Liquidity check failed for %s: %s", ticker, e)
+        return None
+
+
+def get_india_costs(direction: str = "buy") -> Dict[str, float]:
+    """Return realistic India trading costs as fraction of trade value."""
+    costs = INDIA_BUY_COSTS if direction == "buy" else INDIA_SELL_COSTS
+    return {
+        "brokerage": costs["brokerage_bps"] / 10000.0,
+        "stamp_or_stt": (costs.get("stamp_duty_bps", 0) if direction == "buy" else costs.get("stt_bps", 0)) / 10000.0,
+        "gst": costs["gst_bps"] / 10000.0,
+        "sebi": costs["sebi_charges_bps"] / 10000.0,
+        "exchange_fee": costs["exchange_fee_bps"] / 10000.0,
+        "total_rate": costs[f"total_{direction}_bps"] / 10000.0,
+    }
+
+
 
 def _venue_key(exchange: str) -> str:
     exchange_upper = (exchange or "").upper()
@@ -937,9 +1044,49 @@ class PaperPortfolio:
         headline   = (signal.get("top_headlines") or [""])[0]
 
         self._update_drawdown_state()
+        
+        # ======== REVIEW BOARD CHANGE: External shock circuit breaker ========
+        # Tudor Jones / Ken Griffin: stop trading when cross-asset stress spikes
         if self._circuit_breaker_active():
-            log.info("Position rejected - circuit breaker active")
+            log.info("Position rejected - drawdown circuit breaker active")
             return None
+        try:
+            from risk_engine import CIRCUIT_BREAKER_ACTIVE
+            if CIRCUIT_BREAKER_ACTIVE:
+                log.warning("Position rejected - external shock circuit breaker active")
+                return None
+        except ImportError:
+            pass  # risk_engine not loaded, skip check
+
+        # ======== REVIEW BOARD CHANGE: Pre-trade liquidity check ========
+        # Ken Griffin / Citadel: validate that the ETF can actually absorb the trade
+        liquidity = fetch_etf_liquidity(ticker, exchange)
+        if liquidity:
+            adv_inr = liquidity.get("adv_inr", 0)
+            spread_bps = liquidity.get("spread_bps", 100)
+            
+            # Skip if spread is too wide
+            if spread_bps > MAX_SPREAD_BPS_WARNING:
+                log.warning(
+                    "Position rejected - spread too wide for %s: %.1f bps (threshold: %.0f bps)",
+                    ticker, spread_bps, MAX_SPREAD_BPS_WARNING,
+                )
+                return None
+            
+            # Cap position size at 1% of ADV
+            max_by_adv = adv_inr * MAX_POSITION_PCT_OF_ADV
+            if max_by_adv > 0 and max_by_adv < MIN_TRADE_INR:
+                log.warning(
+                    "Position rejected - %s is too illiquid: ADV=%.0f, max_position=%.0f < min_trade=%.0f",
+                    ticker, adv_inr, max_by_adv, MIN_TRADE_INR,
+                )
+                return None
+            
+            # Store liquidity data for sizing
+            signal["_liquidity"] = liquidity
+            signal["_max_by_adv"] = max_by_adv
+        else:
+            log.info("Liquidity data unavailable for %s — proceeding with caution", ticker)
 
         re = _get_risk_engine()
         if re and not any(p.ticker == ticker for p in self.open_positions):

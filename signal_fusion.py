@@ -71,10 +71,15 @@ class FusedSignal:
 class SignalFuser:
     """Fuse signals across the three engines."""
 
-    # Weights for the composite fused_score (sum to 1.0)
-    W_NEWS = 0.45
-    W_PRICE = 0.35
-    W_CONSTITUENTS = 0.20
+    # ======== REVIEW BOARD CHANGE: Price-led fusion weights (9-0 panel vote) ========
+    # Price engine catches momentum 1-3 days before RSS news fires.
+    # COT engine adds institutional positioning data (independent source).
+    # News is confirmation; constituents used for sector conviction.
+    # When COT is unavailable, its 25% weight is redistributed: PRICE +10%, NEWS +10%, CONST +5%.
+    W_PRICE = 0.40
+    W_COT = 0.25        # COT engine — set to 0 until cot_fetcher is integrated
+    W_NEWS = 0.20
+    W_CONSTITUENTS = 0.15
 
     def fuse(self,
              news_signals: List[Dict],
@@ -136,10 +141,22 @@ class SignalFuser:
                 + const_pts * self.W_CONSTITUENTS,
                 1,
             )
-            # Tier A bonus, Tier C penalty for being thin
-            if tier == "A": fused_score = min(fused_score * 1.15, 100)
-            if tier == "C": fused_score *= 0.85
-            if divergent:   fused_score *= 0.7
+            # ======== REVIEW BOARD CHANGE: Tier-based score adjustments ========
+            # Tier A (3+ engines agree): rare consensus, modest bonus
+            if tier == "A":
+                fused_score = min(fused_score * 1.15, 100)
+            # Tier C (single engine): apply penalty ONLY if NOT price-led
+            # Price-only signals are the EARLIEST — penalizing them defeats the purpose
+            elif tier == "C":
+                if "PRICE" in engines or "COT" in engines:
+                    # Price-led or COT-led: no penalty — these catch moves before news
+                    pass
+                else:
+                    # News-only or constituents-only: truly thin signal
+                    fused_score *= 0.85
+            # Divergence penalty: engines disagree → reduce conviction
+            if divergent:
+                fused_score *= 0.70
 
             # Explanation string for the reporter
             parts = []

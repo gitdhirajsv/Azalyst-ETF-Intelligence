@@ -16,6 +16,13 @@ from typing import Dict, List, Optional
 
 log = logging.getLogger("azalyst.portfolio_reporter")
 
+# ======== REVIEW BOARD CHANGE: Discord @mention for all trade lifecycles ========
+DISCORD_USER_ID = "1363959528194052118"
+
+def _mention() -> str:
+    """Return Discord mention prefix for all trade alerts (9-0 panel vote)."""
+    return f"<@{DISCORD_USER_ID}>"
+
 
 def _sign(value: float) -> str:
     return f"+{value:,.2f}" if value >= 0 else f"{value:,.2f}"
@@ -104,8 +111,13 @@ class PortfolioReporter:
             "timestamp": datetime.now(timezone.utc).isoformat(),
         }
 
+        # ======== REVIEW BOARD CHANGE: @mention added for trade entry ========
         self._post({
-            "content": f"**AZALYST PAPER TRADE  |  ENTRY  |  {ticker}  |  ${invested_usd:,.0f} DEPLOYED**",
+            "content": (
+                f"{_mention()}  **ENTRY  |  {ticker}**  |  "
+                f"{sector}  |  Confidence: {confidence}/100  |  "
+                f"Risk: ${invested_usd:,.0f}"
+            ),
             "embeds": [embed],
         })
 
@@ -147,10 +159,13 @@ class PortfolioReporter:
                 "timestamp": datetime.now(timezone.utc).isoformat(),
             }
 
+            # ======== REVIEW BOARD CHANGE: @mention added for trade exit ========
+            pnl_emoji = "🟢" if pnl > 0 else "🔴"
             self._post({
                 "content": (
-                    f"**AZALYST PAPER TRADE  |  CLOSED  |  {ex['ticker']}  "
-                    f"|  PnL: ${_sign(pnl_usd)}  ({_sign_pct(pnl_pct)})**"
+                    f"{_mention()}  {pnl_emoji} **EXIT  |  {ex['ticker']}**  |  "
+                    f"PnL: ${_sign(pnl_usd)} ({_sign_pct(pnl_pct)})  |  "
+                    f"Reason: {ex['exit_reason']}"
                 ),
                 "embeds": [embed],
             })
@@ -318,11 +333,12 @@ class PortfolioReporter:
                 "timestamp": datetime.now(timezone.utc).isoformat(),
             }
 
+        # ======== REVIEW BOARD CHANGE: @mention added for EOD report ========
         self._post({
             "content": (
-                f"**AZALYST  |  END OF DAY  |  {today_str}  "
-                f"|  PORTFOLIO: ${pv_usd:,.0f}  "
-                f"|  RETURN: {_sign_pct(total_ret_pct)}**"
+                f"{_mention()}  **EOD REPORT  |  {today_str}**  "
+                f"|  Portfolio: ${pv_usd:,.0f}  "
+                f"|  Return: {_sign_pct(total_ret_pct)}"
             ),
             "embeds": [embed1, embed2, embed3],
         })
