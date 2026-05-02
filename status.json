@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 20216.96,
+  "portfolio_value": 20216.62,
   "total_deposited": 19750.82,
-  "cash": 6736.15,
+  "cash": 6241.04,
   "monthly_reserve": 0.0,
-  "market_value": 13480.81,
-  "total_invested": 13463.05,
-  "unrealised_pnl": 17.76,
-  "unrealised_str": "+17.76",
+  "market_value": 13975.57,
+  "total_invested": 13958.16,
+  "unrealised_pnl": 17.41,
+  "unrealised_str": "+17.41",
   "realised_pnl": 448.38,
   "realised_str": "+448.38",
   "change": "+2.36%",
@@ -48,18 +48,18 @@
       "sector": "Gold & Precious Metals",
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 91.88,
+      "entry": 91.81,
       "current": 91.21,
       "peak_price": 94.27,
-      "trail_stop": 82.69,
-      "dist_to_trail_pct": 9.34,
-      "units": 42.566924,
-      "invested": 3911.12,
-      "pnl": -28.59,
-      "pnl_str": "-28.59",
-      "pnl_pct": -0.73,
-      "pnl_pct_str": "-0.73%",
-      "confidence": 88,
+      "trail_stop": 82.63,
+      "dist_to_trail_pct": 9.41,
+      "units": 47.991338,
+      "invested": 4406.22,
+      "pnl": -28.93,
+      "pnl_str": "-28.93",
+      "pnl_pct": -0.66,
+      "pnl_pct_str": "-0.66%",
+      "confidence": 89,
       "severity": "HIGH",
       "days_held": 12,
       "half_exited": false
@@ -107,7 +107,7 @@
       "pnl_pct_str": "+1.43%",
       "confidence": 80,
       "severity": "MEDIUM",
-      "days_held": 11,
+      "days_held": 12,
       "half_exited": true
     },
     {
@@ -231,12 +231,12 @@
     ],
     "values": [
       30.0,
-      19.2,
+      21.7,
       1.1,
       4.7,
       2.0,
       9.7,
-      33.3
+      30.9
     ]
   },
   "pnl": {
@@ -250,7 +250,7 @@
     ],
     "values": [
       18.57,
-      -28.59,
+      -28.93,
       16.89,
       13.49,
       -0.44,
@@ -299,6 +299,10 @@
       "score": 90.0
     },
     {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 89.0
+    },
+    {
       "symbol": "Banking & Financial Sector + Crypto & Digital Assets",
       "score": 88.0
     },
@@ -313,10 +317,6 @@
     {
       "symbol": "Bonds & Fixed Income + Gold & Precious Metals",
       "score": 87.0
-    },
-    {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 86.0
     },
     {
       "symbol": "India Equity Markets",
@@ -927,6 +927,59 @@
       }
     },
     {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 89.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "02 May 2026 10:43 UTC",
+      "headline": "Gold turns positive as oil eases on hopes for Iran talks",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "americas",
+        "global"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.1,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.3,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "banking_financial|crypto_digital",
       "sector_label": "Banking & Financial Sector + Crypto & Digital Assets",
       "confidence": 88.0,
@@ -1142,59 +1195,6 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 86.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "02 May 2026 06:04 UTC",
-      "headline": "Gold turns positive as oil eases on hopes for Iran talks",
-      "regions": [
-        "global",
-        "americas",
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "The Register"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 17.4,
-        "source_diversity": 13.3,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 82.0,
@@ -1205,19 +1205,19 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 21,
-      "latest_at": "02 May 2026 05:40 UTC",
-      "headline": "Indian banks need to grow global forex game: RBI governor Sanjay Malhotra",
+      "latest_at": "02 May 2026 10:06 UTC",
+      "headline": "FII outflows not driven by lack of AI and high taxes, says Shankar Sharma. Here\u2019s why",
       "regions": [
-        "india",
-        "europe",
         "middle_east",
-        "asia_pacific"
+        "europe",
+        "asia_pacific",
+        "global"
       ],
       "sources": [
-        "Markets-Economic Times",
-        "Oilprice.com",
         "BBC News",
-        "Bloomberg Markets"
+        "Oilprice.com",
+        "Bloomberg Markets",
+        "Markets-Economic Times"
       ],
       "primary_etf": "INDA",
       "top_etfs": [
@@ -1241,7 +1241,7 @@
         "signal_strength": 21.6,
         "volume_confirmation": 18.0,
         "source_diversity": 13.8,
-        "recency": 16.3,
+        "recency": 15.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -2158,6 +2158,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / NEUTRAL - Gold turns positive as oil eases on hopes for Iran talks"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Banking & Financial Sector + Crypto & Digital Assets - 9 articles - HIGH / NEUTRAL - AI failure could trigger the next financial crisis, warns Elizabeth Warren"
     },
     {
@@ -2178,12 +2183,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - Gold turns positive as oil eases on hopes for Iran talks"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "India Equity Markets - 21 articles - HIGH / NEUTRAL - Indian banks need to grow global forex game: RBI governor Sanjay Malhotra"
+      "text": "India Equity Markets - 21 articles - HIGH / NEUTRAL - FII outflows not driven by lack of AI and high taxes, says Shankar Sharma. Here\u2019s why"
     },
     {
       "tag": "tag-neu",
@@ -2386,11 +2386,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78309.8,
+      "price": 78237.53,
       "currency": "USD",
-      "change": 130.8,
-      "change_pct": 0.17,
-      "change_str": "+0.17%",
+      "change": 58.53,
+      "change_pct": 0.07,
+      "change_str": "+0.07%",
       "direction": "up"
     },
     {
@@ -2430,7 +2430,7 @@
       },
       {
         "sector": "Gold & Precious Metals",
-        "weight": 19.2,
+        "weight": 21.7,
         "at_cap": false
       },
       {
@@ -2556,11 +2556,11 @@
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 33.32,
+          "actual_weight_pct": 30.87,
           "target_weight_pct": 10.0,
-          "drift_pct": 23.32,
+          "drift_pct": 20.87,
           "action": "DEPLOY",
-          "amount": 4714.46,
+          "amount": 4219.38,
           "etf_name": "Cash Reserve"
         },
         {
@@ -2569,7 +2569,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": 15.0,
           "action": "TRIM",
-          "amount": 3033.05,
+          "amount": 3033.1,
           "etf_name": "Vanguard Total Bond Market ETF"
         },
         {
@@ -2578,7 +2578,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -13.94,
           "action": "ADD",
-          "amount": 2819.02,
+          "amount": 2818.97,
           "etf_name": "iShares Global Clean Energy ETF"
         },
         {
@@ -2587,7 +2587,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -13.02,
           "action": "ADD",
-          "amount": 2631.79,
+          "amount": 2631.74,
           "etf_name": "First Trust Nasdaq CEA Cybersecurity ETF"
         },
         {
@@ -2596,8 +2596,17 @@
           "target_weight_pct": 15.0,
           "drift_pct": -10.27,
           "action": "ADD",
-          "amount": 2076.43,
+          "amount": 2076.38,
           "etf_name": "Invesco DB Commodity Index Tracking Fund"
+        },
+        {
+          "ticker": "GLDM",
+          "actual_weight_pct": 21.65,
+          "target_weight_pct": 15.0,
+          "drift_pct": 6.65,
+          "action": "TRIM",
+          "amount": 1344.8,
+          "etf_name": "SPDR Gold MiniShares Trust"
         },
         {
           "ticker": "QQQ",
@@ -2605,7 +2614,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -5.29,
           "action": "ADD",
-          "amount": 1070.26,
+          "amount": 1070.21,
           "etf_name": "Invesco QQQ Trust"
         }
       ],
@@ -2615,8 +2624,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": 20.7,
-          "portfolio_loss_pct": 0.1,
+          "total_impact": 144.39,
+          "portfolio_loss_pct": 0.71,
           "position_impacts": [
             {
               "ticker": "BND",
@@ -2628,7 +2637,7 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": 25.0,
-              "impact": 970.63
+              "impact": 1094.32
             },
             {
               "ticker": "ICLN",
@@ -2657,8 +2666,8 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -1077.75,
-          "portfolio_loss_pct": -5.33,
+          "total_impact": -1062.91,
+          "portfolio_loss_pct": -5.26,
           "position_impacts": [
             {
               "ticker": "BND",
@@ -2670,7 +2679,7 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": 3.0,
-              "impact": 116.48
+              "impact": 131.32
             },
             {
               "ticker": "ICLN",
@@ -2699,8 +2708,8 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1404.1,
-          "portfolio_loss_pct": -6.95,
+          "total_impact": -1428.83,
+          "portfolio_loss_pct": -7.07,
           "position_impacts": [
             {
               "ticker": "BND",
@@ -2712,7 +2721,7 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": -5.0,
-              "impact": -194.13
+              "impact": -218.86
             },
             {
               "ticker": "ICLN",
@@ -2741,8 +2750,8 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -694.13,
-          "portfolio_loss_pct": -3.43,
+          "total_impact": -753.51,
+          "portfolio_loss_pct": -3.73,
           "position_impacts": [
             {
               "ticker": "BND",
@@ -2754,7 +2763,7 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": -12.0,
-              "impact": -465.9
+              "impact": -525.27
             },
             {
               "ticker": "ICLN",
@@ -2783,8 +2792,8 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -101.78,
-          "portfolio_loss_pct": -0.5,
+          "total_impact": -62.2,
+          "portfolio_loss_pct": -0.31,
           "position_impacts": [
             {
               "ticker": "BND",
@@ -2796,7 +2805,7 @@
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": 8.0,
-              "impact": 310.6
+              "impact": 350.18
             },
             {
               "ticker": "ICLN",
@@ -2826,16 +2835,16 @@
         }
       },
       "worst_scenario": "RATES_SHOCK_+2%",
-      "worst_loss_pct": -6.95
+      "worst_loss_pct": -7.07
     }
   },
   "logs": [
-    "2026-05-02 09:41:01 [INFO] AZALYST - status.json generated",
-    "2026-05-02 09:41:01 [INFO] PORTFOLIO - NAV USD 20,216.96 | Return +2.36%",
-    "2026-05-02 09:41:01 [INFO] SIGNALS - 33 active signal buckets in state",
-    "2026-05-02 09:41:01 [INFO] TRADER - Open positions: BND, GLDM, ICLN, DBC, CIBR, QQQ",
-    "2026-05-02 09:41:01 [INFO] TRADER - Closed trades: 2",
-    "2026-05-02 09:41:01 [INFO] RISK - Partial profits realised: USD 15,634.68"
+    "2026-05-02 10:45:41 [INFO] AZALYST - status.json generated",
+    "2026-05-02 10:45:41 [INFO] PORTFOLIO - NAV USD 20,216.62 | Return +2.36%",
+    "2026-05-02 10:45:41 [INFO] SIGNALS - 33 active signal buckets in state",
+    "2026-05-02 10:45:41 [INFO] TRADER - Open positions: BND, GLDM, ICLN, DBC, CIBR, QQQ",
+    "2026-05-02 10:45:41 [INFO] TRADER - Closed trades: 2",
+    "2026-05-02 10:45:41 [INFO] RISK - Partial profits realised: USD 15,634.68"
   ],
-  "generated_at": "2026-05-02 09:41:00 UTC"
+  "generated_at": "2026-05-02 10:45:40 UTC"
 }
