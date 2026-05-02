@@ -53,8 +53,9 @@ DATA_FILES = [
 ]
 
 # ── NVIDIA NIM ───────────────────────────────────────────────────────────────
-NIM_URL   = "https://integrate.api.nvidia.com/v1/chat/completions"
-NIM_MODEL = "qwen/qwen3-coder-480b-a35b-instruct"
+NIM_URL        = "https://integrate.api.nvidia.com/v1/chat/completions"
+PRIMARY_MODEL  = "deepseek-ai/deepseek-v4-pro"
+FALLBACK_MODEL = "qwen/qwen3-coder-480b-a35b-instruct"
 
 # ── Prompt ───────────────────────────────────────────────────────────────────
 SYSTEM_PROMPT = """You are an autonomous improvement agent for Azalyst, a Python-based
@@ -142,34 +143,48 @@ def build_context() -> str:
 
 
 def call_nim(context: str, api_key: str) -> dict:
-    """Call Qwen3 Coder 480B on NVIDIA NIM and return parsed JSON response."""
+    """Call NVIDIA NIM with fallback logic: DeepSeek-V4-Pro -> Qwen3."""
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
     }
-    payload = {
-        "model": NIM_MODEL,
-        "messages": [
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": f"Analyze and improve Azalyst:\n\n{context}"},
-        ],
-        "max_tokens": 4096,
-        "temperature": 0.15,
-        "top_p": 0.7,
-    }
+    
+    models = [PRIMARY_MODEL, FALLBACK_MODEL]
+    last_error = None
 
-    print(f"  Calling {NIM_MODEL} ...")
-    resp = requests.post(NIM_URL, headers=headers, json=payload, timeout=600)
-    resp.raise_for_status()
+    for model in models:
+        try:
+            payload = {
+                "model": model,
+                "messages": [
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": f"Analyze and improve Azalyst:\n\n{context}"},
+                ],
+                "max_tokens": 4096,
+                "temperature": 0.15,
+                "top_p": 0.7,
+            }
 
-    raw = resp.json()["choices"][0]["message"]["content"].strip()
+            print(f"  Calling {model} ...")
+            resp = requests.post(NIM_URL, headers=headers, json=payload, timeout=600)
+            resp.raise_for_status()
 
-    # Strip markdown code fences if the model wrapped output anyway
-    if raw.startswith("```"):
-        lines = raw.splitlines()
-        raw = "\n".join(lines[1:] if lines[-1] != "```" else lines[1:-1])
+            raw = resp.json()["choices"][0]["message"]["content"].strip()
 
-    return json.loads(raw)
+            # Strip markdown code fences if the model wrapped output anyway
+            if raw.startswith("```"):
+                lines = raw.splitlines()
+                raw = "\n".join(lines[1:] if lines[-1] != "```" else lines[1:-1])
+
+            return json.loads(raw)
+        except Exception as e:
+            print(f"  FAILED with {model}: {e}")
+            last_error = e
+            if model == FALLBACK_MODEL:
+                raise last_error
+            print("  Retrying with fallback model...")
+
+    raise last_error
 
 
 def validate_syntax(filepath: Path) -> tuple[bool, str]:
@@ -273,7 +288,7 @@ def main() -> int:
     context = build_context()
     print(f"  Context size: {len(context):,} characters\n")
 
-    print("Step 2: Calling Qwen3 Coder 480B on NVIDIA NIM ...")
+    print(f"Step 2: Calling NIM ({PRIMARY_MODEL} with fallback) ...")
     try:
         result = call_nim(context, api_key)
     except requests.exceptions.HTTPError as exc:
