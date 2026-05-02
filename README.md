@@ -161,10 +161,9 @@ The free NVIDIA NIM endpoint for Qwen3 Coder 480B covers the daily volume with n
   - Z-scores velocity against a 104-week (2-year) rolling window. Signals fire at |z| ≥ 1.5σ.
   - Maps each commodity to Azalyst sector IDs and ETF tickers (e.g., gold → GLDM/GDX/GOLDBEES).
   - Degrades gracefully to synthetic neutral signals when CFTC data is unavailable.
-- **Discord @mention integration**:
-  - Every trade lifecycle event — entry, exit, stop-loss, capital rotation, and end-of-day report — now tags the decision-maker via Discord user ID.
-  - Quant Blocker trend adjustments exceeding 15% also generate a tagged alert with the blocked ETF, confidence, and reason.
-  - Cycle digest still suppresses when zero new signals fire, but now surfaces monitoring mode when ≥2 active signals are present.
+- **Discord notification policy**:
+  - Only actual paper-trade buy/sell events tag the decision-maker: entries, exits, stop-loss sells, and capital-rotation sells.
+  - Routine scans, cycle digests, monitoring updates, trend adjustments, and end-of-day reports post without an @mention.
 - Pre-signal momentum tracking:
   - `momentum_detector.py` — rolling 90-minute slope buffer per sector. WATCH state fires when d_score/30min ≥ 2.0; ALERT at ≥ 3.5. Pre-warms the price scanner and boosts `event_intensity` once the threshold crosses.
 - **Design stubs for V2** (callable, not yet integrated):

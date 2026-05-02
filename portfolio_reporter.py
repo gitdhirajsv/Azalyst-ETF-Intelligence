@@ -16,11 +16,13 @@ from typing import Dict, List, Optional
 
 log = logging.getLogger("azalyst.portfolio_reporter")
 
-# ======== REVIEW BOARD CHANGE: Discord @mention for all trade lifecycles ========
+# Discord @mention policy:
+# Only ping for actual paper-trade actions: buy entries and sell exits.
+# Routine EOD/scan reports should stay quiet.
 DISCORD_USER_ID = "1363959528194052118"
 
 def _mention() -> str:
-    """Return Discord mention prefix for all trade alerts (9-0 panel vote)."""
+    """Return Discord mention prefix for paper-trade buy/sell alerts."""
     return f"<@{DISCORD_USER_ID}>"
 
 
@@ -333,10 +335,9 @@ class PortfolioReporter:
                 "timestamp": datetime.now(timezone.utc).isoformat(),
             }
 
-        # ======== REVIEW BOARD CHANGE: @mention added for EOD report ========
         self._post({
             "content": (
-                f"{_mention()}  **EOD REPORT  |  {today_str}**  "
+                f"**EOD REPORT  |  {today_str}**  "
                 f"|  Portfolio: ${pv_usd:,.0f}  "
                 f"|  Return: {_sign_pct(total_ret_pct)}"
             ),
