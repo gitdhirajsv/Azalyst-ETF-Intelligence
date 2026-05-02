@@ -77,13 +77,6 @@ The platform features continuous autonomous optimization. A daily scheduled pipe
 
 Every cycle is logged to `improvement_log.jsonl` for a full audit trail whether a change was applied or not.
 
-### Agentic Intelligence (AGENTS.md)
-This repository contains an `AGENTS.md` file, which acts as the core system instruction set for the autonomous Qwen engine during its daily optimization cycles. It enforces strict engineering guidelines, ensuring the AI operates with:
-- **Minimal Complexity**: Prevents unnecessary code additions and gold-plating.
-- **Faithful Reporting**: Ensures the AI doesn't hallucinate test successes.
-- **Actionable Execution**: Guides the AI to synthesize findings and execute targeted fixes.
-
-
 ### Safety Guardrails
 
 The improvement engine can only modify these files:
