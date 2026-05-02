@@ -15,7 +15,7 @@ Institution-style paper trading with:
 import json
 import logging
 import os
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from typing import Dict, List, Optional
 import urllib.request
 
@@ -49,6 +49,7 @@ MAX_HOLD_DAYS           = 180
 CIRCUIT_BREAKER_DRAWDOWN_PCT = 0.12
 ROTATION_CONFIDENCE_DELTA    = 10
 ROTATION_MIN_HOLD_DAYS       = 14
+TRADE_CALENDAR_TZ            = timezone(timedelta(hours=5, minutes=30))
 
 BASE_RISK_BUDGET_BY_SEVERITY = {
     "CRITICAL": 0.13,
@@ -58,6 +59,14 @@ BASE_RISK_BUDGET_BY_SEVERITY = {
 }
 MIN_RISK_BUDGET_PCT = 0.04
 EMPIRICAL_MIN_TRADES = 8
+
+
+def is_weekday_trade_session(now: Optional[datetime] = None) -> bool:
+    """Return True only Monday-Friday in IST, the paper-trading control timezone."""
+    current = now or datetime.now(timezone.utc)
+    if current.tzinfo is None:
+        current = current.replace(tzinfo=timezone.utc)
+    return current.astimezone(TRADE_CALENDAR_TZ).weekday() < 5
 
 VENUE_EXPLICIT_COST_BPS = {
     "US": {
@@ -869,6 +878,9 @@ class PaperPortfolio:
 
     def _execute_partial_profit(self, position: Position) -> Optional[Dict]:
         """Freqtrade-inspired Dynamic Step-ROI Logic."""
+        if not is_weekday_trade_session():
+            return None
+
         roi_table = [
             {"target_pct": 0.05, "sell_fraction": 0.25},
             {"target_pct": 0.10, "sell_fraction": 0.33},
@@ -937,6 +949,9 @@ class PaperPortfolio:
         }
 
     def _recycle_idle_cash(self):
+        if not is_weekday_trade_session():
+            return
+
         if not self.open_positions:
             return
 
@@ -1042,6 +1057,10 @@ class PaperPortfolio:
         instrument_risk = etf.get("risk", "MEDIUM")
         sector     = signal.get("sector_label", "Unknown")
         headline   = (signal.get("top_headlines") or [""])[0]
+
+        if not is_weekday_trade_session():
+            log.info("Position skipped - paper trading is weekday-only (Mon-Fri IST)")
+            return None
 
         self._update_drawdown_state()
         
@@ -1277,6 +1296,10 @@ class PaperPortfolio:
         now_str = datetime.now(timezone.utc).isoformat()
         today   = date.today().isoformat()
         positions_to_close = []
+        trading_allowed = is_weekday_trade_session()
+
+        if not trading_allowed and self.open_positions:
+            log.info("Weekend mark-to-market only - paper-trade exits are paused until the next weekday")
 
         usd_inr = fetch_usd_to_inr()
 
@@ -1289,7 +1312,8 @@ class PaperPortfolio:
             position.current_price = current
             position.last_updated  = now_str
             self._update_position_risk(position)
-            self._execute_partial_profit(position)
+            if trading_allowed:
+                self._execute_partial_profit(position)
             self._update_position_risk(position)
 
             trailing_active = (
@@ -1313,7 +1337,7 @@ class PaperPortfolio:
             elif days >= MAX_HOLD_DAYS:
                 exit_reason = f"Max hold period ({days} days)"
 
-            if exit_reason:
+            if trading_allowed and exit_reason:
                 positions_to_close.append((position, current, today, exit_reason))
 
         for position, exit_price, exit_date, reason in positions_to_close:

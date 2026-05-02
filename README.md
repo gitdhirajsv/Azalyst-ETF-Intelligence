@@ -134,6 +134,7 @@ The free NVIDIA NIM endpoint for Qwen3 Coder 480B covers the daily volume with n
   - **Factor orthogonalization** — rolling 60-observation correlation matrix. When any pair of factors exceeds 0.7 correlation, both are down-weighted by 50% to avoid double-counting the same information (López de Prado review recommendation).
 - Better execution realism:
   - Paper trading includes modeled fees and slippage.
+  - Paper-trade execution is weekday-only: weekend runs can scan, mark prices, and report, but they do not open or close paper positions.
   - Position sizing employs a capped risk-budget approach for institutional-grade allocation.
   - **Realistic India cost model** — stamp duty (0.015% buy), STT (0.025% sell), GST on brokerage, SEBI charges, and NSE exchange fees now modeled explicitly.
   - **Pre-trade liquidity checks** — every entry validates ETF 20-day ADV and bid-ask spread. Positions capped at 1% of ADV; trades blocked if spread exceeds 50 bps (Citadel review recommendation).
