@@ -315,6 +315,14 @@
       "score": 86.0
     },
     {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 86.0
+    },
+    {
+      "symbol": "India Equity Markets",
+      "score": 82.0
+    },
+    {
       "symbol": "Real Estate & REITs + India Equity Markets",
       "score": 82.0
     },
@@ -343,10 +351,6 @@
       "score": 77.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 76.0
-    },
-    {
       "symbol": "Banking & Financial Sector + Bonds & Fixed Income",
       "score": 76.0
     },
@@ -363,10 +367,6 @@
       "score": 72.0
     },
     {
-      "symbol": "India Equity Markets",
-      "score": 69.0
-    },
-    {
       "symbol": "Nuclear Energy & Uranium",
       "score": 69.0
     },
@@ -375,8 +375,8 @@
       "score": 68.0
     },
     {
-      "symbol": "Healthcare & Pharma",
-      "score": 67.0
+      "symbol": "Healthcare & Pharma + Europe Equity",
+      "score": 64.0
     },
     {
       "symbol": "Real Estate & REITs",
@@ -1142,6 +1142,110 @@
       }
     },
     {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "02 May 2026 06:04 UTC",
+      "headline": "Gold turns positive as oil eases on hopes for Iran talks",
+      "regions": [
+        "global",
+        "americas",
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "The Register"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 17.4,
+        "source_diversity": 13.3,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 82.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 21,
+      "latest_at": "02 May 2026 05:40 UTC",
+      "headline": "Indian banks need to grow global forex game: RBI governor Sanjay Malhotra",
+      "regions": [
+        "india",
+        "europe",
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "BBC News",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.6,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.8,
+        "recency": 16.3,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "india_equity|real_estate_reit",
       "sector_label": "Real Estate & REITs + India Equity Markets",
       "confidence": 82.0,
@@ -1495,59 +1599,6 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 76.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "01 May 2026 20:12 UTC",
-      "headline": "Gold falls around 2% in one week as skyrocketing oil prices fuel inflation worries. What lies ahead?",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "The Register"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 16.8,
-        "source_diversity": 13.3,
-        "recency": 8.1,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector + Bonds & Fixed Income",
       "confidence": 76.0,
@@ -1755,56 +1806,6 @@
       }
     },
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 69.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 18,
-      "latest_at": "01 May 2026 16:32 UTC",
-      "headline": "Will Sensex, Nifty rally after state election results? Here's why analysts advise caution",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "india",
-        "europe"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "BBC News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 21.1,
-        "volume_confirmation": 18.0,
-        "source_diversity": 11.7,
-        "recency": 5.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 69.0,
@@ -1905,8 +1906,8 @@
     },
     {
       "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma",
-      "confidence": 67.0,
+      "sector_label": "Healthcare & Pharma + Europe Equity",
+      "confidence": 64.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
@@ -1914,17 +1915,18 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 6,
-      "latest_at": "01 May 2026 12:09 UTC",
-      "headline": "AstraZeneca stock falls after FDA panel votes against new cancer drug",
+      "latest_at": "02 May 2026 04:16 UTC",
+      "headline": "Apple earnings, DHS shutdown, 'Ozempic breath' and more in Morning Squawk",
       "regions": [
+        "global",
         "europe",
-        "global"
+        "middle_east",
+        "asia_pacific"
       ],
       "sources": [
-        "Bloomberg Markets",
+        "Markets-Economic Times",
         "Tech",
-        "US Top News and Analysis",
-        "Earnings"
+        "Defense News"
       ],
       "primary_etf": "XLV",
       "top_etfs": [
@@ -1947,11 +1949,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 15.0,
+        "signal_strength": 8.1,
         "volume_confirmation": 12.6,
-        "source_diversity": 10.3,
-        "recency": 15.6,
-        "geopolitical_severity": 12.9
+        "source_diversity": 9.9,
+        "recency": 14.1,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -2177,6 +2179,16 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - Gold turns positive as oil eases on hopes for Iran talks"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "India Equity Markets - 21 articles - HIGH / NEUTRAL - Indian banks need to grow global forex game: RBI governor Sanjay Malhotra"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Real Estate & REITs + India Equity Markets - 9 articles - HIGH / NEUTRAL - Displaced by Iran war: out of Lebanon, into Syrian crisis"
     },
     {
@@ -2212,11 +2224,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - Gold falls around 2% in one week as skyrocketing oil prices fuel inflation worries. What lies ahead?"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Banking & Financial Sector + Bonds & Fixed Income - 11 articles - HIGH / NEUTRAL - Ares, JPMorgan Ink $800 Million Private Credit Deal for GoodLife"
     },
     {
@@ -2237,11 +2244,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 18 articles - HIGH / NEUTRAL - Will Sensex, Nifty rally after state election results? Here's why analysts advise caution"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 4 articles - HIGH / NEUTRAL - Iran Having a Nuclear Weapon is a 'Real Danger To The World' Says Sen. Moore Capito"
     },
     {
@@ -2252,7 +2254,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Healthcare & Pharma - 6 articles - HIGH / NEUTRAL - AstraZeneca stock falls after FDA panel votes against new cancer drug"
+      "text": "Healthcare & Pharma + Europe Equity - 6 articles - HIGH / NEUTRAL - Apple earnings, DHS shutdown, 'Ozempic breath' and more in Morning Squawk"
     },
     {
       "tag": "tag-neu",
@@ -2363,33 +2365,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4625.6,
+      "price": 4644.5,
       "currency": "USD",
-      "change": 10.9,
-      "change_pct": 0.24,
-      "change_str": "+0.24%",
+      "change": 29.8,
+      "change_pct": 0.65,
+      "change_str": "+0.65%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 102.5,
+      "price": 101.94,
       "currency": "USD",
-      "change": -2.57,
-      "change_pct": -2.45,
-      "change_str": "-2.45%",
+      "change": -3.13,
+      "change_pct": -2.98,
+      "change_str": "-2.98%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78434.73,
+      "price": 78281.47,
       "currency": "USD",
-      "change": 2130.41,
-      "change_pct": 2.79,
-      "change_str": "+2.79%",
+      "change": 1977.15,
+      "change_pct": 2.59,
+      "change_str": "+2.59%",
       "direction": "up"
     },
     {
@@ -2829,12 +2831,12 @@
     }
   },
   "logs": [
-    "2026-05-02 04:00:39 [INFO] AZALYST - status.json generated",
-    "2026-05-02 04:00:39 [INFO] PORTFOLIO - NAV USD 20,218.41 | Return +2.37%",
-    "2026-05-02 04:00:39 [INFO] SIGNALS - 33 active signal buckets in state",
-    "2026-05-02 04:00:39 [INFO] TRADER - Open positions: BND, GLDM, ICLN, DBC, CIBR, QQQ",
-    "2026-05-02 04:00:39 [INFO] TRADER - Closed trades: 2",
-    "2026-05-02 04:00:39 [INFO] RISK - Partial profits realised: USD 15,634.68"
+    "2026-05-02 06:06:22 [INFO] AZALYST - status.json generated",
+    "2026-05-02 06:06:22 [INFO] PORTFOLIO - NAV USD 20,218.41 | Return +2.37%",
+    "2026-05-02 06:06:22 [INFO] SIGNALS - 33 active signal buckets in state",
+    "2026-05-02 06:06:22 [INFO] TRADER - Open positions: BND, GLDM, ICLN, DBC, CIBR, QQQ",
+    "2026-05-02 06:06:22 [INFO] TRADER - Closed trades: 2",
+    "2026-05-02 06:06:22 [INFO] RISK - Partial profits realised: USD 15,634.68"
   ],
-  "generated_at": "2026-05-02 04:00:39 UTC"
+  "generated_at": "2026-05-02 06:06:22 UTC"
 }
