@@ -155,11 +155,11 @@
       "score": 69.0
     },
     {
-      "symbol": "Asia Pacific Equity",
-      "score": 69.0
+      "symbol": "Europe Equity",
+      "score": 68.0
     },
     {
-      "symbol": "Europe Equity",
+      "symbol": "Asia Pacific Equity",
       "score": 68.0
     },
     {
@@ -1596,54 +1596,6 @@
       }
     },
     {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 69.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "02 May 2026 08:04 UTC",
-      "headline": "Global Markets | Japan's Nikkei rises on tech rally, stronger yen lifts JGBs",
-      "regions": [
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "Markets-Economic Times",
-        "The Register",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 13.7,
-        "volume_confirmation": 14.6,
-        "source_diversity": 10.4,
-        "recency": 16.9,
-        "geopolitical_severity": 10.0
-      }
-    },
-    {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity",
       "confidence": 68.0,
@@ -1689,6 +1641,54 @@
         "source_diversity": 12.6,
         "recency": 16.0,
         "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 68.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "03 May 2026 13:53 UTC",
+      "headline": "Japan\u2019s Katayama Declines to Comment on FX Intervention For Now",
+      "regions": [
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "The Register",
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.5,
+        "volume_confirmation": 13.7,
+        "source_diversity": 12.0,
+        "recency": 16.9,
+        "geopolitical_severity": 9.5
       }
     },
     {
@@ -2031,12 +2031,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Asia Pacific Equity - 8 articles - MEDIUM / NEUTRAL - Global Markets | Japan's Nikkei rises on tech rally, stronger yen lifts JGBs"
+      "text": "Europe Equity - 4 articles - HIGH / NEUTRAL - ECB Set to Hold Interest Rates as It Bides Time on Iran Response"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Europe Equity - 4 articles - HIGH / NEUTRAL - ECB Set to Hold Interest Rates as It Bides Time on Iran Response"
+      "text": "Asia Pacific Equity - 7 articles - MEDIUM / NEUTRAL - Japan\u2019s Katayama Declines to Comment on FX Intervention For Now"
     },
     {
       "tag": "tag-neu",
@@ -2174,12 +2174,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78730.0,
+      "price": 78648.57,
       "currency": "USD",
-      "change": 72.75,
-      "change_pct": 0.09,
-      "change_str": "+0.09%",
-      "direction": "up"
+      "change": -8.68,
+      "change_pct": -0.01,
+      "change_str": "-0.01%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
@@ -2252,9 +2252,9 @@
     }
   },
   "logs": [
-    "2026-05-03 12:05:52 [INFO] AZALYST - status.json generated",
-    "2026-05-03 12:05:52 [INFO] PORTFOLIO - NAV USD 10,000.00 | Return +0.00%",
-    "2026-05-03 12:05:52 [INFO] SIGNALS - 33 active signal buckets in state"
+    "2026-05-03 13:55:22 [INFO] AZALYST - status.json generated",
+    "2026-05-03 13:55:22 [INFO] PORTFOLIO - NAV USD 10,000.00 | Return +0.00%",
+    "2026-05-03 13:55:22 [INFO] SIGNALS - 33 active signal buckets in state"
   ],
-  "generated_at": "2026-05-03 12:05:52 UTC"
+  "generated_at": "2026-05-03 13:55:21 UTC"
 }
