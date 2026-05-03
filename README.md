@@ -69,7 +69,7 @@ The platform features continuous autonomous optimization. A daily scheduled pipe
 
 1. Reads the latest performance data — portfolio P&L, alpha vs SPY, signal accuracy, open positions
 2. Reads the relevant source files — scorer, classifier, paper trader, ETF mapper
-3. Calls **Qwen3 Coder 480B** via the NVIDIA NIM free API endpoint
+3. Calls **DeepSeek-V4-Pro** (falling back to **Qwen3 Coder 480B**) via the NVIDIA NIM API
 4. Receives one targeted, validated **JSON patch** (not raw code) for weight tuning
 5. The `WeightsRegistry` validates, applies, and archives the patch
 6. Commits the changed weights back to `main` — the next 30-minute scan runs with the improved configuration
@@ -106,7 +106,7 @@ Name:  NVIDIA_API_KEY
 Value: your key from build.nvidia.com
 ```
 
-The free NVIDIA NIM endpoint for Qwen3 Coder 480B covers the daily volume with no cost.
+The NVIDIA NIM endpoints for DeepSeek-V4-Pro and Qwen3 Coder 480B cover the daily volume.
 
 ## What Changed In This Version
 
@@ -180,7 +180,7 @@ The free NVIDIA NIM endpoint for Qwen3 Coder 480B covers the daily volume with n
 ## Key Files
 
 - `azalyst.py`: live engine orchestration (multi-engine stack — news, price, constituents, COT — graceful fallback if yfinance unavailable)
-- `self_improve_v2.py`: daily autonomous weight-tuning engine via JSON patches
+- `self_improve.py`: daily autonomous weight-tuning engine via DeepSeek-V4-Pro (fallback: Qwen3)
 - `news_fetcher.py`: ingestion, date parsing, dedup
 - `classifier.py`: rule engine plus optional ML sentiment layer
 - `keyword_expansions.py`: 600+ supplementary keywords merged on import

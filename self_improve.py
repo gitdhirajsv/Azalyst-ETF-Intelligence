@@ -2,7 +2,7 @@
 self_improve.py — AZALYST AUTONOMOUS IMPROVEMENT ENGINE
 
 Runs once daily via GitHub Actions.
-Reads performance data + source code, calls Qwen3 Coder 480B on NVIDIA NIM,
+Reads performance data + source code, calls DeepSeek-V4-Pro (fallback: Qwen3) on NVIDIA NIM,
 receives a targeted code change, validates it, applies it.
 Next GitHub Actions run automatically uses the improved code.
 
