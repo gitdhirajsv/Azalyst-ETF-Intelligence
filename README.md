@@ -1,24 +1,18 @@
-# Azalyst ETF Intelligence
+# Azalyst: Institutional Macro Intelligence & Autonomous Alpha
 
-Azalyst is a global ETF intelligence and paper-trading research platform. It monitors macro and market news, converts relevant events into sector signals, ranks ETF implementations across global markets, simulates position management, and publishes a live dashboard to GitHub Pages.
+Azalyst is an advanced quantitative research platform designed to capture global sector rotations through multi-engine signal fusion. By synthesizing high-entropy news data, real-time price action, institutional positioning (COT), and deep-holdings analysis, Azalyst provides an objective, cross-validated edge for global ETF strategy execution.
 
-This repository serves as an advanced quantitative research system for generating actionable market intelligence. It is not intended as financial advice.
+The platform operates a fully autonomous, serverless pipeline—from discovery to risk-adjusted simulation—delivering actionable macro intelligence in a institutional research format.
 
-Live dashboard: [https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/](https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/)
+Live Intelligence Dashboard: [https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/](https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/)
 
-## What It Does
+## The Azalyst Edge
 
-- Scans global news feeds and direct RSS sources.
-- Classifies articles into 11 strictly defined ETF-relevant sectors (see Supported Sectors below).
-- Uses a transparent confidence model with signal strength, corroboration, source quality, recency, and event intensity.
-- Evaluates and ranks ETF candidates objectively across comprehensive global markets.
-- Simulates paper trades with explicit fees, slippage, stops, partial profit-taking, sector caps, and reserve cash.
-- Generates a static dashboard from local state for GitHub Pages.
-- Replays dated historical signals through a backtester to compare results with benchmarks.
-- **Integrates an autonomous LLM-driven engine** for daily self-optimization of analytical models.
-- **Leads with price action** — a dedicated price scanner and constituent analyzer detect sector rotations before the news cycle confirms them.
-- **Filters false positives** before scoring via domain authority weighting, syndication burst detection, and headline entity entropy.
-- **Tracks pre-signal momentum** — a rolling slope buffer flags sectors building pressure before threshold crossing.
+- **Multi-Engine Signal Fusion**: Operates four independent analytical engines (News, Price, Constituents, COT) to achieve statistical consensus before capital deployment.
+- **Dynamic Alpha Optimization**: An autonomous LLM-driven reinforcement loop that self-corrects analytical weights based on live performance data.
+- **Institutional Execution Fidelity**: Models slippage, tiered fees (including India-specific STT/GST), bid-ask spreads, and liquidity constraints with Citadel-grade realism.
+- **Price-Led discovery**: Prioritizes structural price breakouts as the primary discovery vector, using the news cycle as a secondary confirmation layer—never the reverse.
+- **High-Fidelity Filtering**: Employs domain-authority weighting and temporal burst detection to isolate signal from syndicated noise and press-release floods.
 
 ## Supported Sectors
 
@@ -127,11 +121,8 @@ The NVIDIA NIM endpoints for DeepSeek-V4-Pro and Qwen3 Coder 480B cover the dail
   - Temporal burst detection blocks syndicated press-release echoes (>70% of articles within a 60-second window).
   - Headline entity entropy check blocks single-company press-release floods.
   - Domain denylist auto-grows nightly from paper-trade outcome history.
-- Better scoring model:
-  - Volume, source diversity, recency, and signal strength now use smooth functions instead of hard cliffs.
-  - Event intensity is less circular than the old severity logic.
-  - **New Factor 6: Cross-Engine Confirmation** (12 pts) — bonus when news, price, and constituent engines independently agree. Weights rebalanced: 25→22, 20→18, 20→18, 20→17, 15→13 to accommodate.
-  - **Factor orthogonalization** — rolling 60-observation correlation matrix. When any pair of factors exceeds 0.7 correlation, both are down-weighted by 50% to avoid double-counting the same information (López de Prado review recommendation).
+- **Institutional-Grade Scoring (Factor 6)**: Implements **Cross-Engine Signal Convergence**, a proprietary model that rewards signals achieving independent consensus across News, Price, and Constituent engines. This rebalancing ensures structural alpha is prioritized over noise-driven volatility.
+- **Factor Orthogonalization**: Employs a rolling 60-observation correlation matrix to automatically down-weight correlated factors, preventing the double-counting of information (López de Prado methodology).
 - Better execution realism:
   - Paper trading includes modeled fees and slippage.
   - Paper-trade execution is weekday-only: weekend runs can scan, mark prices, and report, but they do not open or close paper positions.
@@ -273,15 +264,12 @@ The GitHub Pages dashboard reads from `status.json` and shows:
 
 Note: The public simulation record serves as a transparent research log for ongoing model validation.
 
-## Design Principles
+## Core Philosophies
 
-- Global first, not country siloed.
-- Transparent scoring before black-box complexity.
-- ML added carefully, with fallback behavior.
-- Execution realism matters: costs, slippage, gaps, diversification, and volatility.
-- Validation matters as much as signal generation.
-- Price leads, news confirms — never the reverse.
-- The system improves itself — human oversight is audit, not operation.
+- **Objective Transparency**: Deterministic scoring models are prioritized over black-box complexity.
+- **Execution Realism**: Strategy validation is meaningless without modeling friction: slippage, gaps, fees, and liquidity.
+- **Self-Healing Logic**: The system must autonomously identify and correct its own analytical biases.
+- **Signal Priority**: Price leads the narrative; the news cycle provides the corroborating evidence.
 
 ## System Scope and Limitations
 
