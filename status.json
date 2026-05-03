@@ -336,12 +336,12 @@
       "score": 64.0
     },
     {
-      "symbol": "Clean Energy & Renewables",
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 63.0
     },
     {
-      "symbol": "Gold & Precious Metals",
-      "score": 62.0
+      "symbol": "Clean Energy & Renewables",
+      "score": 63.0
     }
   ],
   "signals": [
@@ -1814,15 +1814,15 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 6,
-      "latest_at": "03 May 2026 17:40 UTC",
+      "latest_at": "03 May 2026 22:32 UTC",
       "headline": "USGS Finds 328 Years of Lithium Imports Buried in Appalachia",
       "regions": [
-        "middle_east",
-        "global"
+        "global",
+        "middle_east"
       ],
       "sources": [
-        "Oilprice.com",
         "The Register",
+        "Oilprice.com",
         "US Top News and Analysis",
         "Cointelegraph.com News"
       ],
@@ -1954,6 +1954,59 @@
       }
     },
     {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 63.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "03 May 2026 22:32 UTC",
+      "headline": "Gold turns positive as oil eases on hopes for Iran talks",
+      "regions": [
+        "americas",
+        "global",
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "The Register",
+        "US Top News and Analysis",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 20.3,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.0,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 63.0,
@@ -2001,59 +2054,6 @@
         "source_diversity": 11.7,
         "recency": 16.6,
         "geopolitical_severity": 8.3
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 62.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "03 May 2026 17:40 UTC",
-      "headline": "Gold turns positive as oil eases on hopes for Iran talks",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Oilprice.com",
-        "The Register",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 18.3,
-        "volume_confirmation": 18.0,
-        "source_diversity": 13.3,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
       }
     }
   ],
@@ -2216,12 +2216,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Clean Energy & Renewables - 5 articles - MEDIUM / NEUTRAL - Chinese Researchers Test New Low-Cost Battery"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / NEUTRAL - Gold turns positive as oil eases on hopes for Iran talks"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals - 13 articles - HIGH / NEUTRAL - Gold turns positive as oil eases on hopes for Iran talks"
+      "text": "Clean Energy & Renewables - 5 articles - MEDIUM / NEUTRAL - Chinese Researchers Test New Low-Cost Battery"
     }
   ],
   "market_snapshot": [
@@ -2317,45 +2317,45 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4644.5,
+      "price": 4630.0,
       "currency": "USD",
-      "change": 29.8,
-      "change_pct": 0.65,
-      "change_str": "+0.65%",
+      "change": 0.1,
+      "change_pct": 0.0,
+      "change_str": "+0.00%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 101.94,
+      "price": 101.24,
       "currency": "USD",
-      "change": -3.13,
-      "change_pct": -2.98,
-      "change_str": "-2.98%",
+      "change": -0.7,
+      "change_pct": -0.69,
+      "change_str": "-0.69%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78896.17,
+      "price": 79158.9,
       "currency": "USD",
-      "change": 238.92,
-      "change_pct": 0.3,
-      "change_str": "+0.30%",
+      "change": 501.65,
+      "change_pct": 0.64,
+      "change_str": "+0.64%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.21,
+      "price": 98.14,
       "currency": "USD",
-      "change": 0.13,
-      "change_pct": 0.13,
-      "change_str": "+0.13%",
-      "direction": "up"
+      "change": -0.07,
+      "change_pct": -0.07,
+      "change_str": "-0.07%",
+      "direction": "down"
     },
     {
       "label": "VIX",
@@ -2774,10 +2774,10 @@
     }
   },
   "logs": [
-    "2026-05-03 21:36:49 [INFO] AZALYST - status.json generated",
-    "2026-05-03 21:36:49 [INFO] PORTFOLIO - NAV USD 9,991.69 | Return -0.08%",
-    "2026-05-03 21:36:49 [INFO] SIGNALS - 33 active signal buckets in state",
-    "2026-05-03 21:36:49 [INFO] TRADER - Open positions: XLE, ITA, QQQ, XLF, BND, CIBR"
+    "2026-05-03 22:34:33 [INFO] AZALYST - status.json generated",
+    "2026-05-03 22:34:33 [INFO] PORTFOLIO - NAV USD 9,991.69 | Return -0.08%",
+    "2026-05-03 22:34:33 [INFO] SIGNALS - 33 active signal buckets in state",
+    "2026-05-03 22:34:33 [INFO] TRADER - Open positions: XLE, ITA, QQQ, XLF, BND, CIBR"
   ],
-  "generated_at": "2026-05-03 21:36:47 UTC"
+  "generated_at": "2026-05-03 22:34:32 UTC"
 }
