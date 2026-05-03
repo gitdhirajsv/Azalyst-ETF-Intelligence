@@ -219,7 +219,7 @@ Go to: **Settings → Secrets and variables → Actions → New repository secre
 | Secret | Purpose |
 |---|---|
 | `DISCORD_WEBHOOK_URL` | Live signal and portfolio trade alerts to Discord |
-| `NVIDIA_API_KEY` | Daily self-improvement engine via NVIDIA NIM (Qwen Coder) |
+| `NVIDIA_API_KEY` | Daily self-improvement engine via NVIDIA NIM (DeepSeek-V4-Pro / Qwen) |
 
 ### 3. Enable GitHub Actions & Pages
 1. Go to the **Actions** tab and click **"I understand my workflows, go ahead and enable them"**.
