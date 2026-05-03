@@ -325,6 +325,13 @@ class ConfidenceScorer:
                 conv = float(ev.get("conviction", 0) or 0)
                 score += min(conv / 30.0, 2.0)
 
+        # COT positioning boost
+        cot_evidence = evidence.get("cot") or signal.get("cot_signal")
+        if cot_evidence:
+            # Reward strong COT scores (0-100)
+            cot_score = float(cot_evidence.get("cot_score", 0) or 0)
+            score += min(cot_score / 35.0, 1.5)
+
         # Divergence penalty
         if divergent:
             score *= 0.5
