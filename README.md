@@ -170,40 +170,40 @@ The NVIDIA NIM endpoints for DeepSeek-V4-Pro and Qwen3 Coder 480B cover the dail
 - **Design stubs for V2** (callable, not yet integrated):
   - `regime_classifier.py` — 2-state Hidden Markov Model stub (calm vs. stressed) using VIX thresholds. Will eventually drive dynamic fusion weight adjustments per regime.
   - `narrative_tracker.py` — headline clustering via keyword-overlap (sentence-transformers planned). Measures narrative coherence and story persistence over a rolling 5-day window.
-- Autonomous improvement v2:
-  - `self_improve_v2.py` — replaces source-code edits with validated JSON patches applied via `WeightsRegistry`.
-  - `weights_registry.py` — versioned weight store with patch validation, history archiving, and one-command rollback.
-  - Shadow-mode regression guard: auto-rollback if post-patch PnL drops >2pp, signal volume collapses, or volume explodes 2× baseline.
-  - `false_positive_filter.py` denylist grows automatically from closed paper-trade outcomes.
-  - Audit log maintained in `improvement_log.jsonl`.
+- Autonomous improvement:
+  - `self_improve.py` — identifies high-impact code improvements via LLM analysis.
+  - `improvement_log.jsonl` — maintained audit log of all applied model changes.
+  - Shadow-mode regression guard: auto-rollback if post-patch PnL drops >2pp.
+  - Domain denylist growth: automatically expands from closed paper-trade outcomes.
 
 ## Key Files
 
-- `azalyst.py`: live engine orchestration (multi-engine stack — news, price, constituents, COT — graceful fallback if yfinance unavailable)
-- `self_improve.py`: daily autonomous weight-tuning engine via DeepSeek-V4-Pro (fallback: Qwen3)
-- `news_fetcher.py`: ingestion, date parsing, dedup
-- `classifier.py`: rule engine plus optional ML sentiment layer
-- `keyword_expansions.py`: 600+ supplementary keywords merged on import
+- `azalyst.py`: live engine orchestration (multi-engine stack — news, price, constituents, COT)
+- `config.py`: global configuration, sector definitions, and RSS feed registry
+- `state.py`: persistence layer for portfolio, signals, and system health
+- `self_improve.py`: daily autonomous model optimization via DeepSeek-V4-Pro (fallback: Qwen3)
+- `news_fetcher.py`: ingestion, date parsing, dedup, and temporal burst filtering
+- `classifier.py`: keyword-based rule engine and NLP classification logic
+- `keyword_expansions.py`: 1,000+ supplementary keywords for macro theme detection
 - `scorer.py`: 6-factor confidence scoring model with cross-engine confirmation
-- `etf_mapper.py`: global ETF ranking and market alternatives
-- `paper_trader.py`: realistic paper-trading engine
-- `risk_engine.py`: correlation, benchmark, vol, rebalance, stress test
+- `etf_mapper.py`: global ETF database, ranking, and objective selection logic
+- `paper_trader.py`: realistic paper-trading engine with slippage and ROI modeling
+- `risk_engine.py`: correlation, benchmark, volatility-sizing, and factor attribution
 - `price_scanner.py`: daily ETF momentum, breakout, and relative-strength scanner
-- `constituent_analyzer.py`: top-holdings rotation detector (~250 stocks)
-- `reverse_researcher.py`: unexplained-mover headline fetcher and re-classifier
-- `signal_fusion.py`: cross-engine consensus merger (Tier A/B/C) — four engines (news, price, constituents, COT) with price-led weights
-- `false_positive_filter.py`: pre-scoring spam / syndication / echo filter
-- `momentum_detector.py`: rolling slope buffer for pre-signal momentum
-- `weights_registry.py`: versioned weight store with rollback support
-- `classification_weights.json`: live weight registry (patched by self-improver)
-- `cot_fetcher.py`: CFTC Commitments of Traders positioning engine — 4th signal source
-- `regime_classifier.py`: V2 stub — HMM-based market regime detection (calm / stressed)
-- `narrative_tracker.py`: V2 stub — headline clustering and story coherence tracker
+- `constituent_analyzer.py`: top-10 holdings rotation detector (~250 stocks)
+- `reverse_researcher.py`: unexplained-mover headline investigator and re-classifier
+- `signal_fusion.py`: consensus merger for news, price, constituents, and COT signals
+- `cot_fetcher.py`: CFTC Commitments of Traders positioning engine
+- `reporter.py`: Discord briefing dispatcher and research note generator
+- `portfolio_reporter.py`: detailed performance, P&L, and risk attribution reports
+- `quant_fetcher.py`: optimized bulk data fetching for technical scanning engines
+- `regime_classifier.py`: V2 design — HMM-based market regime detection
+- `narrative_tracker.py`: V2 design — headline clustering and coherence tracker
+- `backtester.py`: historical signal replay and walk-forward evaluation engine
 - `backtest_validator.py`: walk-forward cross-validation with deflated Sharpe ratio
-- `backtester.py`: historical replay and walk-forward evaluation
-- `generate_dashboard.py`: builds `status.json`
-- `index.html`: GitHub Pages dashboard
-- `improvement_log.jsonl`: audit log of all daily improvement cycles
+- `generate_dashboard.py`: builds static status JSON and dashboard data
+- `index.html`: live GitHub Pages dashboard interface
+- `improvement_log.jsonl`: versioned audit log of all model optimizations
 
 ## Autonomous Deployment (No Local Setup Required)
 
