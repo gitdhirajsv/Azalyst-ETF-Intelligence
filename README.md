@@ -313,6 +313,10 @@ Azalyst is designed as an all-in-one institutional macro engine, migrating and c
 - **[polakowo/vectorbt](https://github.com/polakowo/vectorbt)**: Inspired the vectorized matrix-math risk correlation engine.
 - **[Hudson-and-Thames/mlfinlab](https://github.com/Hudson-and-Thames/mlfinlab)**: Inspired the meta-labeling machine learning reinforcement loop.
 - **[TA-Lib/ta-lib-python](https://github.com/TA-Lib/ta-lib-python)**: Inspired the quantitative and technical indicator generation layer.
+- **[ranaroussi/yfinance](https://github.com/ranaroussi/yfinance)**: Powering our bulk price discovery and multi-engine ETF scanning.
+- **[huggingface/transformers](https://github.com/huggingface/transformers)**: Powering our finance-tuned NLP sentiment and classification layers.
+- **[NVIDIA/NIM](https://build.nvidia.com)**: Providing the infrastructure for our autonomous self-optimization cycles.
+- **[deepseek-ai](https://github.com/deepseek-ai)**: The primary intelligence engine driving our daily structural improvements.
 
 ## License
 
