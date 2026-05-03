@@ -51,6 +51,10 @@
       "score": 97.0
     },
     {
+      "symbol": "Energy / Oil & Gas",
+      "score": 94.0
+    },
+    {
       "symbol": "Europe Equity + Energy / Oil & Gas",
       "score": 94.0
     },
@@ -65,10 +69,6 @@
     {
       "symbol": "Cybersecurity + Crypto & Digital Assets",
       "score": 93.0
-    },
-    {
-      "symbol": "Energy / Oil & Gas",
-      "score": 92.0
     },
     {
       "symbol": "Banking & Financial Sector + Europe Equity",
@@ -123,10 +123,6 @@
       "score": 80.0
     },
     {
-      "symbol": "Cybersecurity",
-      "score": 79.0
-    },
-    {
       "symbol": "Crypto & Digital Assets",
       "score": 78.0
     },
@@ -144,6 +140,10 @@
     },
     {
       "symbol": "Real Estate & REITs + Clean Energy & Renewables",
+      "score": 76.0
+    },
+    {
+      "symbol": "Cybersecurity",
       "score": 76.0
     },
     {
@@ -190,20 +190,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 70,
-      "latest_at": "02 May 2026 08:04 UTC",
-      "headline": "Chip Industry Week in Review",
+      "article_count": 71,
+      "latest_at": "03 May 2026 08:03 UTC",
+      "headline": "Pentagon inks deals with AI giants, but not Anthropic",
       "regions": [
+        "middle_east",
         "india",
-        "global",
-        "asia_pacific",
-        "europe"
+        "americas",
+        "asia_pacific"
       ],
       "sources": [
-        "EE Times",
-        "Defense News",
-        "Latest from Tom's Hardware",
-        "The Verge"
+        "Cointelegraph.com News",
+        "Bloomberg Markets",
+        "The Verge",
+        "Markets-Economic Times"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -228,8 +228,61 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.9,
+        "source_diversity": 17.2,
         "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 94.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 44,
+      "latest_at": "03 May 2026 06:33 UTC",
+      "headline": "The Hormuz blockade: Why a fragile ceasefire may not lower global oil prices",
+      "regions": [
+        "middle_east",
+        "india",
+        "americas",
+        "europe"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "The Verge",
+        "Markets-Economic Times",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.3,
+        "recency": 14.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -443,59 +496,6 @@
         "source_diversity": 15.3,
         "recency": 19.8,
         "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 92.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 37,
-      "latest_at": "02 May 2026 05:40 UTC",
-      "headline": "India-Linked Tanker Laden With Cooking Fuel Attempts Hormuz Exit",
-      "regions": [
-        "india",
-        "global",
-        "asia_pacific",
-        "europe"
-      ],
-      "sources": [
-        "BBC News",
-        "Markets-Economic Times",
-        "Earnings",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.7,
-        "recency": 13.3,
-        "geopolitical_severity": 13.0
       }
     },
     {
@@ -725,19 +725,19 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 13,
-      "latest_at": "02 May 2026 10:43 UTC",
+      "latest_at": "03 May 2026 08:03 UTC",
       "headline": "Gold turns positive as oil eases on hopes for Iran talks",
       "regions": [
-        "asia_pacific",
+        "global",
         "middle_east",
         "americas",
-        "global"
+        "asia_pacific"
       ],
       "sources": [
-        "Oilprice.com",
-        "US Top News and Analysis",
         "Bloomberg Markets",
-        "Markets-Economic Times"
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "The Register"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -760,9 +760,9 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 21.1,
+        "signal_strength": 20.6,
         "volume_confirmation": 18.0,
-        "source_diversity": 13.3,
+        "source_diversity": 14.0,
         "recency": 16.9,
         "geopolitical_severity": 13.0
       }
@@ -1193,51 +1193,6 @@
       }
     },
     {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 79.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "02 May 2026 08:04 UTC",
-      "headline": "First reports come in of victims of critical cPanel vuln as 'millions' of sites potentially exposed",
-      "regions": [
-        "europe",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "The Register",
-        "The Verge",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 17.1,
-        "volume_confirmation": 18.0,
-        "source_diversity": 6.5,
-        "recency": 16.9,
-        "geopolitical_severity": 11.3
-      }
-    },
-    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 78.0,
@@ -1489,6 +1444,51 @@
         "source_diversity": 12.3,
         "recency": 20.0,
         "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 76.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "03 May 2026 08:03 UTC",
+      "headline": "First reports come in of victims of critical cPanel vuln as 'millions' of sites potentially exposed",
+      "regions": [
+        "global",
+        "middle_east",
+        "europe"
+      ],
+      "sources": [
+        "The Register",
+        "Cointelegraph.com News",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 16.4,
+        "volume_confirmation": 17.4,
+        "source_diversity": 4.9,
+        "recency": 16.9,
+        "geopolitical_severity": 11.3
       }
     },
     {
@@ -1896,7 +1896,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 70 articles - HIGH / NEUTRAL - Chip Industry Week in Review"
+      "text": "Technology & AI / Semiconductors - 71 articles - HIGH / NEUTRAL - Pentagon inks deals with AI giants, but not Anthropic"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Energy / Oil & Gas - 44 articles - CRITICAL / NEUTRAL - The Hormuz blockade: Why a fragile ceasefire may not lower global oil prices"
     },
     {
       "tag": "tag-neu",
@@ -1917,11 +1922,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Cybersecurity + Crypto & Digital Assets - 11 articles - HIGH / NEUTRAL - After watchdog slams understaffing, AI to vet Pentagon-backed professors\u2019 China ties"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Energy / Oil & Gas - 37 articles - CRITICAL / NEUTRAL - India-Linked Tanker Laden With Cooking Fuel Attempts Hormuz Exit"
     },
     {
       "tag": "tag-neu",
@@ -1991,11 +1991,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity - 13 articles - MEDIUM / NEUTRAL - First reports come in of victims of critical cPanel vuln as 'millions' of sites potentially exposed"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Crypto & Digital Assets - 26 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
@@ -2017,6 +2012,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Real Estate & REITs + Clean Energy & Renewables - 8 articles - HIGH / NEUTRAL - Displaced by Iran war: out of Lebanon, into Syrian crisis"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Cybersecurity - 12 articles - MEDIUM / NEUTRAL - First reports come in of victims of critical cPanel vuln as 'millions' of sites potentially exposed"
     },
     {
       "tag": "tag-neu",
@@ -2174,11 +2174,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78433.38,
+      "price": 78431.28,
       "currency": "USD",
-      "change": -223.87,
-      "change_pct": -0.28,
-      "change_str": "-0.28%",
+      "change": -225.97,
+      "change_pct": -0.29,
+      "change_str": "-0.29%",
       "direction": "down"
     },
     {
@@ -2252,9 +2252,9 @@
     }
   },
   "logs": [
-    "2026-05-03 07:32:25 [INFO] AZALYST - status.json generated",
-    "2026-05-03 07:32:25 [INFO] PORTFOLIO - NAV USD 10,000.00 | Return +0.00%",
-    "2026-05-03 07:32:25 [INFO] SIGNALS - 33 active signal buckets in state"
+    "2026-05-03 08:05:15 [INFO] AZALYST - status.json generated",
+    "2026-05-03 08:05:15 [INFO] PORTFOLIO - NAV USD 10,000.00 | Return +0.00%",
+    "2026-05-03 08:05:15 [INFO] SIGNALS - 33 active signal buckets in state"
   ],
-  "generated_at": "2026-05-03 07:32:24 UTC"
+  "generated_at": "2026-05-03 08:05:15 UTC"
 }
