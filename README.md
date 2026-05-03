@@ -2,7 +2,7 @@
 
 Azalyst is an advanced quantitative research platform designed to capture global sector rotations through multi-engine signal fusion. By synthesizing high-entropy news data, real-time price action, institutional positioning (COT), and deep-holdings analysis, Azalyst provides an objective, cross-validated edge for global ETF strategy execution.
 
-The platform operates a fully autonomous, serverless pipeline—from discovery to risk-adjusted simulation—delivering actionable macro intelligence in a institutional research format.
+The platform operates a fully autonomous, serverless pipeline from discovery to risk-adjusted simulation, delivering actionable macro intelligence in an institutional research format.
 
 Live Intelligence Dashboard: [https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/](https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/)
 
@@ -11,7 +11,7 @@ Live Intelligence Dashboard: [https://gitdhirajsv.github.io/Azalyst-ETF-Intellig
 - **Multi-Engine Signal Fusion**: Operates four independent analytical engines (News, Price, Constituents, COT) to achieve statistical consensus before capital deployment.
 - **Dynamic Alpha Optimization**: An autonomous LLM-driven reinforcement loop that self-corrects analytical weights based on live performance data.
 - **Institutional Execution Fidelity**: Models slippage, tiered fees (including India-specific STT/GST), bid-ask spreads, and liquidity constraints with Citadel-grade realism.
-- **Price-Led discovery**: Prioritizes structural price breakouts as the primary discovery vector, using the news cycle as a secondary confirmation layer—never the reverse.
+- **Price-Led discovery**: Prioritizes structural price breakouts as the primary discovery vector, using the news cycle as a secondary confirmation layer, never the reverse.
 - **High-Fidelity Filtering**: Employs domain-authority weighting and temporal burst detection to isolate signal from syndicated noise and press-release floods.
 
 ## Supported Sectors
@@ -61,13 +61,10 @@ flowchart LR
 
 The platform features continuous autonomous optimization. A daily scheduled pipeline executes the `self_improve_v2.py` engine, which replaces the v1 source-code-editing approach with a safer JSON-patch pattern:
 
-1. Reads the latest performance data — portfolio P&L, alpha vs SPY, signal accuracy, open positions
-2. Reads the relevant source files — scorer, classifier, paper trader, ETF mapper
-3. Calls **DeepSeek-V4-Pro** (falling back to **Qwen3 Coder 480B**) via the NVIDIA NIM API
-4. Receives one targeted, validated **JSON patch** (not raw code) for weight tuning
-5. The `WeightsRegistry` validates, applies, and archives the patch
-6. Commits the changed weights back to `main` — the next 30-minute scan runs with the improved configuration
-7. A shadow-mode A/B baseline is captured; if the next cycle shows PnL regression, signal collapse, or volume explosion, the patch is **automatically rolled back**
+1. Reads the latest performance data (portfolio P&L, alpha vs SPY, signal accuracy, open positions).
+...
+6. Commits the changed weights back to `main`, and the next 30-minute scan runs with the improved configuration.
+7. A shadow-mode A/B baseline is captured. If the next cycle shows PnL regression, signal collapse, or volume explosion, the patch is automatically rolled back.
 
 Every cycle is logged to `improvement_log.jsonl` for a full audit trail whether a change was applied or not.
 
@@ -75,20 +72,20 @@ Every cycle is logged to `improvement_log.jsonl` for a full audit trail whether 
 
 The improvement engine can only modify these files:
 
-- `scorer.py` — confidence scoring model
-- `classifier.py` — sector keyword classifier
-- `paper_trader.py` — trading logic
-- `etf_mapper.py` — ETF database and ranking
-- `news_fetcher.py` — RSS ingestion
-- `reporter.py` — Discord formatting
-- `classification_weights.json` — live weight registry (v2 patch target)
-- `price_scanner.py` — ETF momentum and breakout scanner
-- `constituent_analyzer.py` — top-holdings rotation detector
-- `reverse_researcher.py` — unexplained-mover headline fetcher
-- `signal_fusion.py` — cross-engine consensus merger
-- `keyword_expansions.py` — supplementary keyword universe
+- `scorer.py`: confidence scoring model
+- `classifier.py`: sector keyword classifier
+- `paper_trader.py`: trading logic
+- `etf_mapper.py`: ETF database and ranking
+- `news_fetcher.py`: RSS ingestion
+- `reporter.py`: Discord formatting
+- `classification_weights.json`: live weight registry (v2 patch target)
+- `price_scanner.py`: ETF momentum and breakout scanner
+- `constituent_analyzer.py`: top-holdings rotation detector
+- `reverse_researcher.py`: unexplained-mover headline fetcher
+- `signal_fusion.py`: cross-engine consensus merger
+- `keyword_expansions.py`: supplementary keyword universe
 
-Core orchestration files (`azalyst.py`, `config.py`, `risk_engine.py`) are read-only context — the engine cannot touch them. Every proposed change must match the existing code verbatim before it is applied, and is syntax-checked in a temporary file before writing to disk.
+Core orchestration files (`azalyst.py`, `config.py`, `risk_engine.py`) are read-only context, so the engine cannot touch them. Every proposed change must match the existing code verbatim before it is applied, and is syntax-checked in a temporary file before writing to disk.
 
 ### Setup
 
@@ -127,40 +124,40 @@ The NVIDIA NIM endpoints for DeepSeek-V4-Pro and Qwen3 Coder 480B cover the dail
   - Paper trading includes modeled fees and slippage.
   - Paper-trade execution is weekday-only: weekend runs can scan, mark prices, and report, but they do not open or close paper positions.
   - Position sizing employs a capped risk-budget approach for institutional-grade allocation.
-  - **Realistic India cost model** — stamp duty (0.015% buy), STT (0.025% sell), GST on brokerage, SEBI charges, and NSE exchange fees now modeled explicitly.
-  - **Pre-trade liquidity checks** — every entry validates ETF 20-day ADV and bid-ask spread. Positions capped at 1% of ADV; trades blocked if spread exceeds 50 bps (Citadel review recommendation).
+  - **Realistic India cost model**: stamp duty (0.015% buy), STT (0.025% sell), GST on brokerage, SEBI charges, and NSE exchange fees now modeled explicitly.
+  - **Pre-trade liquidity checks**: every entry validates ETF 20-day ADV and bid-ask spread. Positions capped at 1% of ADV; trades blocked if spread exceeds 50 bps (Citadel review recommendation).
   - India ETF minimum lot sizes enforced via lookup table (`INDIA_ETF_LOT_SIZES`).
 - Better risk math:
   - Correlation modeling dynamically filters positive correlation while preserving negative diversification benefits.
   - Benchmark inception uses the actual start date window rather than a coarse range proxy.
-  - **Multi-asset composite benchmark** — portfolio now tracked against a weighted composite (SPY 40% / GLD 30% / AGG 20% / INDA 10%) alongside SPY-only alpha. Active return reported against both.
+  - **Multi-asset composite benchmark**: portfolio now tracked against a weighted composite (SPY 40% / GLD 30% / AGG 20% / INDA 10%) alongside SPY-only alpha. Active return reported against both.
   - **Trend-based graduated adjustment** replaces the binary Quant Blocker. ETFs below 200-day MA receive confidence and size multipliers rather than hard rejection. A Discord alert fires when adjustment exceeds 15%.
-  - **External shock circuit breaker stub** — monitors TED spread proxy, VIX, gold/equity correlation, and EM FX vol. Flags `CIRCUIT_BREAKER_ACTIVE` when ≥2 stress indicators spike.
+  - **External shock circuit breaker stub**: monitors TED spread proxy, VIX, gold/equity correlation, and EM FX vol. Flags `CIRCUIT_BREAKER_ACTIVE` when >= 3 stress indicators spike.
   - Stress testing maps assets more reliably, including gold-linked ETFs such as `GLDM`.
-  - **Factor attribution** — Fama-French 5-factor + momentum regression available via `factor_attribution()` in `risk_engine.py`. Reports alpha intercept, factor loadings, R², and alpha t-stat.
+  - **Factor attribution**: Fama-French 5-factor + momentum regression available via `factor_attribution()` in `risk_engine.py`. Reports alpha intercept, factor loadings, R², and alpha t-stat.
 - Better validation:
   - Historical replay backtester added.
   - Walk-forward window summaries supported for dated signal files.
-  - **Walk-forward backtest validator** (`backtest_validator.py`) — expanding-window cross-validation with deflated Sharpe ratio computation. Validates whether observed Sharpe survives multiple-testing correction before real capital deployment.
+  - **Walk-forward backtest validator** (`backtest_validator.py`): expanding-window cross-validation with deflated Sharpe ratio computation. Validates whether observed Sharpe survives multiple-testing correction before real capital deployment.
 - Price-led detection:
-  - `price_scanner.py` — daily scan of 80+ ETFs via yfinance (one bulk HTTP call). Emits signals on z-score ≥ 1.8, |5D| ≥ 3%, 20D breakout/breakdown, or RS divergence vs SPY.
-  - `constituent_analyzer.py` — curated top-10 holdings (~250 unique stocks). Emits a sector rotation signal when ≥40% of holdings move directionally — typically 1–2 days before the ETF aggregate confirms.
-  - `reverse_researcher.py` — triggered for unexplained price movers (price flagged, news silent). Pulls 8 recent headlines via Yahoo Finance's news graph and re-classifies at `min_articles=1`. Unmatched moves are tagged `news_orthogonal` and fed to the daily self-improver as missing-keyword evidence.
-  - `signal_fusion.py` — merges all four engines (news, price, constituents, COT) per sector. **Fusion weights recalibrated:** PRICE 0.40, COT 0.25, NEWS 0.20, CONSTITUENTS 0.15. Price leads, news confirms — never the reverse. Tier C penalty removed for price-led and COT-led signals so early breakouts are not suppressed.
+  - `price_scanner.py`: daily scan of 80+ ETFs via yfinance (one bulk HTTP call). Emits signals on z-score >= 1.8, |5D| >= 3%, 20D breakout/breakdown, or RS divergence vs SPY.
+  - `constituent_analyzer.py`: curated top-10 holdings (~250 unique stocks). Emits a sector rotation signal when >= 40% of holdings move directionally, typically 1 to 2 days before the ETF aggregate confirms.
+  - `reverse_researcher.py`: triggered for unexplained price movers (price flagged, news silent). Pulls 8 recent headlines via Yahoo Finance's news graph and re-classifies at `min_articles=1`. Unmatched moves are tagged `news_orthogonal` and fed to the daily self-improver as missing-keyword evidence.
+  - `signal_fusion.py`: merges all four engines (news, price, constituents, COT) per sector. **Fusion weights recalibrated:** PRICE 0.40, COT 0.25, NEWS 0.20, CONSTITUENTS 0.15. Price leads, news confirms, never the reverse. Tier C penalty removed for price-led and COT-led signals so early breakouts are not suppressed.
 - **COT positioning engine** (`cot_fetcher.py`):
   - Downloads CFTC Commitments of Traders data (disaggregated) for gold, silver, crude oil, natural gas, copper, 10Y/30Y Treasuries, and S&P 500 E-mini.
   - Computes commercial hedger net positioning and 4-week velocity (rate of change).
-  - Z-scores velocity against a 104-week (2-year) rolling window. Signals fire at |z| ≥ 1.5σ.
-  - Maps each commodity to Azalyst sector IDs and ETF tickers (e.g., gold → GLDM/GDX/GOLDBEES).
+  - Z-scores velocity against a 104-week (2-year) rolling window. Signals fire at |z| >= 1.5σ.
+  - Maps each commodity to Azalyst sector IDs and ETF tickers (for example: gold to GLDM/GDX/GOLDBEES).
   - Degrades gracefully to synthetic neutral signals when CFTC data is unavailable.
 - **Discord notification policy**:
   - Only actual paper-trade buy/sell events tag the decision-maker: entries, exits, stop-loss sells, and capital-rotation sells.
   - Routine scans, cycle digests, monitoring updates, trend adjustments, and end-of-day reports post without an @mention.
 - Pre-signal momentum tracking:
-  - `momentum_detector.py` — rolling 90-minute slope buffer per sector. WATCH state fires when d_score/30min ≥ 2.0; ALERT at ≥ 3.5. Pre-warms the price scanner and boosts `event_intensity` once the threshold crosses.
+  - `momentum_detector.py`: rolling 90-minute slope buffer per sector. WATCH state fires when d_score/30min >= 2.0; ALERT at >= 3.5. Pre-warms the price scanner and boosts `event_intensity` once the threshold crosses.
 - **Design stubs for V2** (callable, not yet integrated):
-  - `regime_classifier.py` — 2-state Hidden Markov Model stub (calm vs. stressed) using VIX thresholds. Will eventually drive dynamic fusion weight adjustments per regime.
-  - `narrative_tracker.py` — headline clustering via keyword-overlap (sentence-transformers planned). Measures narrative coherence and story persistence over a rolling 5-day window.
+  - `regime_classifier.py`: 2-state Hidden Markov Model stub (calm vs. stressed) using VIX thresholds. Will eventually drive dynamic fusion weight adjustments per regime.
+  - `narrative_tracker.py`: headline clustering via keyword-overlap (sentence-transformers planned). Measures narrative coherence and story persistence over a rolling 5-day window.
 - Autonomous improvement:
   - `self_improve.py` — identifies high-impact code improvements via LLM analysis.
   - `improvement_log.jsonl` — maintained audit log of all applied model changes.
@@ -169,7 +166,7 @@ The NVIDIA NIM endpoints for DeepSeek-V4-Pro and Qwen3 Coder 480B cover the dail
 
 ## Key Files
 
-- `azalyst.py`: live engine orchestration (multi-engine stack — news, price, constituents, COT)
+- `azalyst.py`: live engine orchestration (multi-engine stack: news, price, constituents, COT)
 - `config.py`: global configuration, sector definitions, and RSS feed registry
 - `state.py`: persistence layer for portfolio, signals, and system health
 - `self_improve.py`: daily autonomous model optimization via DeepSeek-V4-Pro (fallback: Qwen3)
@@ -188,8 +185,8 @@ The NVIDIA NIM endpoints for DeepSeek-V4-Pro and Qwen3 Coder 480B cover the dail
 - `reporter.py`: Discord briefing dispatcher and research note generator
 - `portfolio_reporter.py`: detailed performance, P&L, and risk attribution reports
 - `quant_fetcher.py`: optimized bulk data fetching for technical scanning engines
-- `regime_classifier.py`: V2 design — HMM-based market regime detection
-- `narrative_tracker.py`: V2 design — headline clustering and coherence tracker
+- `regime_classifier.py`: V2 design, HMM-based market regime detection.
+- `narrative_tracker.py`: V2 design, headline clustering and coherence tracker.
 - `backtester.py`: historical signal replay and walk-forward evaluation engine
 - `backtest_validator.py`: walk-forward cross-validation with deflated Sharpe ratio
 - `generate_dashboard.py`: builds static status JSON and dashboard data
@@ -269,7 +266,7 @@ Note: The public simulation record serves as a transparent research log for ongo
 - **Objective Transparency**: Deterministic scoring models are prioritized over black-box complexity.
 - **Execution Realism**: Strategy validation is meaningless without modeling friction: slippage, gaps, fees, and liquidity.
 - **Self-Healing Logic**: The system must autonomously identify and correct its own analytical biases.
-- **Signal Priority**: Price leads the narrative; the news cycle provides the corroborating evidence.
+- **Signal Priority**: Price leads the narrative, and the news cycle provides the corroborating evidence.
 
 ## System Scope and Limitations
 
