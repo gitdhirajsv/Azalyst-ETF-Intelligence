@@ -167,12 +167,12 @@
       "score": 64.0
     },
     {
-      "symbol": "Real Estate & REITs",
+      "symbol": "Commodities & Mining",
       "score": 64.0
     },
     {
-      "symbol": "Commodities & Mining",
-      "score": 63.0
+      "symbol": "Real Estate & REITs",
+      "score": 64.0
     },
     {
       "symbol": "Clean Energy & Renewables",
@@ -1744,6 +1744,55 @@
       }
     },
     {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 64.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "03 May 2026 11:13 UTC",
+      "headline": "U.S. crude oil exports surge to record as tankers flock to Gulf Coast during Iran war",
+      "regions": [
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "EE Times",
+        "US Top News and Analysis",
+        "The Register",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 8.5,
+        "volume_confirmation": 12.6,
+        "source_diversity": 6.7,
+        "recency": 16.9,
+        "geopolitical_severity": 8.7
+      }
+    },
+    {
       "sector_key": "real_estate_reit",
       "sector_label": "Real Estate & REITs",
       "confidence": 64.0,
@@ -1790,55 +1839,6 @@
         "source_diversity": 12.4,
         "recency": 18.4,
         "geopolitical_severity": 9.9
-      }
-    },
-    {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 63.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "02 May 2026 08:04 UTC",
-      "headline": "China scraps tariffs for all but one African nation",
-      "regions": [
-        "americas",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "EE Times",
-        "The Register",
-        "BBC News"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 8.1,
-        "volume_confirmation": 11.3,
-        "source_diversity": 9.1,
-        "recency": 16.9,
-        "geopolitical_severity": 9.8
       }
     },
     {
@@ -2046,12 +2046,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Real Estate & REITs - 5 articles - MEDIUM / NEUTRAL - Japan tells real estate and crypto sectors to tighten AML checks on property deals"
+      "text": "Commodities & Mining - 6 articles - MEDIUM / NEUTRAL - U.S. crude oil exports surge to record as tankers flock to Gulf Coast during Iran war"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Commodities & Mining - 5 articles - MEDIUM / NEUTRAL - China scraps tariffs for all but one African nation"
+      "text": "Real Estate & REITs - 5 articles - MEDIUM / NEUTRAL - Japan tells real estate and crypto sectors to tighten AML checks on property deals"
     },
     {
       "tag": "tag-neu",
@@ -2174,11 +2174,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78453.73,
+      "price": 78536.47,
       "currency": "USD",
-      "change": -203.52,
-      "change_pct": -0.26,
-      "change_str": "-0.26%",
+      "change": -120.78,
+      "change_pct": -0.15,
+      "change_str": "-0.15%",
       "direction": "down"
     },
     {
@@ -2252,9 +2252,9 @@
     }
   },
   "logs": [
-    "2026-05-03 10:32:22 [INFO] AZALYST - status.json generated",
-    "2026-05-03 10:32:22 [INFO] PORTFOLIO - NAV USD 10,000.00 | Return +0.00%",
-    "2026-05-03 10:32:22 [INFO] SIGNALS - 33 active signal buckets in state"
+    "2026-05-03 11:15:33 [INFO] AZALYST - status.json generated",
+    "2026-05-03 11:15:33 [INFO] PORTFOLIO - NAV USD 10,000.00 | Return +0.00%",
+    "2026-05-03 11:15:33 [INFO] SIGNALS - 33 active signal buckets in state"
   ],
-  "generated_at": "2026-05-03 10:32:21 UTC"
+  "generated_at": "2026-05-03 11:15:32 UTC"
 }
