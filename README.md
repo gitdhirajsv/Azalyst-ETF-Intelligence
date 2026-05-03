@@ -1,4 +1,4 @@
-# Azalyst: Institutional Macro Intelligence & Autonomous Alpha
+# Azalyst-ETF-Intelligence
 
 Azalyst is an advanced quantitative research platform designed to capture global sector rotations through multi-engine signal fusion. By synthesizing high-entropy news data, real-time price action, institutional positioning (COT), and deep-holdings analysis, Azalyst provides an objective, cross-validated edge for global ETF strategy execution.
 
