@@ -39,6 +39,7 @@ class FusedSignal:
     news_signal: Optional[Dict] = None
     price_signal: Optional[Dict] = None
     constituent_signal: Optional[Dict] = None
+    cot_signal: Optional[Dict] = None
     divergent: bool = False
     fused_score: float = 0.0                # composite 0-100
     explanation: str = ""
@@ -63,6 +64,7 @@ class FusedSignal:
                 "news":         self.news_signal,
                 "price":        self.price_signal,
                 "constituents": self.constituent_signal,
+                "cot":          self.cot_signal,
             },
         })
         return out
@@ -84,29 +86,34 @@ class SignalFuser:
     def fuse(self,
              news_signals: List[Dict],
              price_signals: List[Dict],
-             constituent_signals: List[Dict]) -> List[FusedSignal]:
+             constituent_signals: List[Dict],
+             cot_signals: List[Dict] = None) -> List[FusedSignal]:
 
+        cot_signals = cot_signals or []
         # Index every input by sector_id
         idx_news: Dict[str, Dict] = {s["sector_id"]: s for s in news_signals if s.get("sector_id")}
         idx_price: Dict[str, Dict] = {s["sector_id"]: s for s in price_signals if s.get("sector_id")}
         idx_const: Dict[str, Dict] = {s["sector_id"]: s for s in constituent_signals if s.get("sector_id")}
+        idx_cot: Dict[str, Dict] = {s["sector_id"]: s for s in cot_signals if s.get("sector_id")}
 
-        all_sectors = set(idx_news) | set(idx_price) | set(idx_const)
+        all_sectors = set(idx_news) | set(idx_price) | set(idx_const) | set(idx_cot)
         fused: List[FusedSignal] = []
 
         for sec in all_sectors:
             n = idx_news.get(sec)
             p = idx_price.get(sec)
             c = idx_const.get(sec)
+            cot = idx_cot.get(sec)
 
             engines = [tag for tag, x in
-                       [("NEWS", n), ("PRICE", p), ("CONSTITUENTS", c)] if x]
+                       [("NEWS", n), ("PRICE", p), ("CONSTITUENTS", c), ("COT", cot)] if x]
 
             # Direction vote
             dirs: List[Tuple[str, str]] = []
             if n: dirs.append(("NEWS", n.get("direction", "NEUTRAL")))
             if p: dirs.append(("PRICE", p.get("direction", "NEUTRAL")))
             if c: dirs.append(("CONSTITUENTS", c.get("direction", "NEUTRAL")))
+            if cot: dirs.append(("COT", cot.get("direction", "NEUTRAL")))
 
             bull_votes = [e for e, d in dirs if d == "BULLISH"]
             bear_votes = [e for e, d in dirs if d == "BEARISH"]
@@ -135,10 +142,20 @@ class SignalFuser:
             news_pts = self._news_pts(n) if n else 0
             price_pts = self._price_pts(p) if p else 0
             const_pts = self._const_pts(c) if c else 0
+            cot_pts = self._cot_pts(cot) if cot else 0
+
+            # Weight redistribution if COT is missing for this sector
+            if not cot:
+                w_p, w_n, w_c = self.W_PRICE + 0.10, self.W_NEWS + 0.10, self.W_CONSTITUENTS + 0.05
+                w_cot = 0
+            else:
+                w_p, w_n, w_c, w_cot = self.W_PRICE, self.W_NEWS, self.W_CONSTITUENTS, self.W_COT
+
             fused_score = round(
-                news_pts * self.W_NEWS
-                + price_pts * self.W_PRICE
-                + const_pts * self.W_CONSTITUENTS,
+                news_pts * w_n
+                + price_pts * w_p
+                + const_pts * w_c
+                + cot_pts * w_cot,
                 1,
             )
             # ======== REVIEW BOARD CHANGE: Tier-based score adjustments ========
@@ -173,14 +190,19 @@ class SignalFuser:
             if c:
                 ce = c.get("constituent_evidence", {})
                 parts.append(
-                    f"constituents {ce.get('bullish_count','?')}↑/"
+                    f"{ce.get('bullish_count','?')}↑/"
                     f"{ce.get('bearish_count','?')}↓ ({c.get('direction')})"
+                )
+            if cot:
+                parts.append(
+                    f"cot signal={cot.get('direction')} "
+                    f"score={cot.get('cot_score', 0):.1f}"
                 )
             explanation = " | ".join(parts)
             if divergent:
                 explanation = "[DIVERGENT] " + explanation
 
-            sector_label = (n or p or c).get("sector_label") or sec
+            sector_label = (n or p or c or cot).get("sector_label") or sec
 
             fused.append(FusedSignal(
                 sector_id=sec,
@@ -191,6 +213,7 @@ class SignalFuser:
                 news_signal=n,
                 price_signal=p,
                 constituent_signal=c,
+                cot_signal=cot,
                 divergent=divergent,
                 fused_score=fused_score,
                 explanation=explanation,
@@ -215,3 +238,7 @@ class SignalFuser:
     def _const_pts(s: Dict) -> float:
         ev = s.get("constituent_evidence") or {}
         return float(ev.get("conviction", 0) or 0)
+
+    @staticmethod
+    def _cot_pts(s: Dict) -> float:
+        return float(s.get("cot_score", 0) or 0)
