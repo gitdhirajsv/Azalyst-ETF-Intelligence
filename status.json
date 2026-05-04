@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 9991.69,
+  "portfolio_value": 9991.51,
   "total_deposited": 10000.0,
-  "cash": 912.94,
+  "cash": 753.18,
   "monthly_reserve": 0.0,
-  "market_value": 9078.75,
-  "total_invested": 9087.06,
-  "unrealised_pnl": -8.31,
-  "unrealised_str": "-8.31",
+  "market_value": 9238.34,
+  "total_invested": 9246.82,
+  "unrealised_pnl": -8.49,
+  "unrealised_str": "-8.49",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
   "change": "-0.08%",
@@ -30,10 +30,10 @@
       "peak_price": 58.91,
       "trail_stop": 53.02,
       "dist_to_trail_pct": 9.9,
-      "units": 16.773789,
-      "invested": 988.22,
-      "pnl": -1.09,
-      "pnl_str": "-1.09",
+      "units": 17.911185,
+      "invested": 1055.23,
+      "pnl": -1.16,
+      "pnl_str": "-1.16",
       "pnl_pct": -0.11,
       "pnl_pct_str": "-0.11%",
       "confidence": 96,
@@ -76,10 +76,10 @@
       "peak_price": 674.92,
       "trail_stop": 607.43,
       "dist_to_trail_pct": 9.9,
-      "units": 1.999004,
-      "invested": 1349.17,
-      "pnl": -1.48,
-      "pnl_str": "-1.48",
+      "units": 2.136435,
+      "invested": 1441.93,
+      "pnl": -1.58,
+      "pnl_str": "-1.58",
       "pnl_pct": -0.11,
       "pnl_pct_str": "-0.11%",
       "confidence": 97,
@@ -183,13 +183,13 @@
       "CASH"
     ],
     "values": [
-      9.9,
+      10.5,
       6.7,
-      13.5,
+      14.4,
       30.6,
       28.0,
       2.3,
-      9.1
+      7.5
     ]
   },
   "pnl": {
@@ -202,9 +202,9 @@
       "CIBR"
     ],
     "values": [
-      -1.09,
+      -1.16,
       -0.67,
-      -1.48,
+      -1.58,
       -3.36,
       -1.4,
       -0.23
@@ -250,6 +250,10 @@
     {
       "symbol": "Banking & Financial Sector + Asia Pacific Equity",
       "score": 90.0
+    },
+    {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 88.0
     },
     {
       "symbol": "Banking & Financial Sector + Crypto & Digital Assets",
@@ -305,7 +309,7 @@
     },
     {
       "symbol": "Cybersecurity",
-      "score": 74.0
+      "score": 73.0
     },
     {
       "symbol": "Nuclear Energy & Uranium + Asia Pacific Equity",
@@ -336,10 +340,6 @@
       "score": 64.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 63.0
-    },
-    {
       "symbol": "Clean Energy & Renewables",
       "score": 63.0
     }
@@ -355,20 +355,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 66,
-      "latest_at": "03 May 2026 21:34 UTC",
+      "article_count": 61,
+      "latest_at": "04 May 2026 01:59 UTC",
       "headline": "Inference is giving AI chip startups a second chance to make their mark",
       "regions": [
-        "global",
-        "middle_east",
+        "americas",
+        "europe",
         "asia_pacific",
-        "europe"
+        "global"
       ],
       "sources": [
-        "Semiconductor Engineering",
-        "Bloomberg Markets",
-        "Defense News",
-        "Latest from Tom's Hardware"
+        "BBC News",
+        "Oilprice.com",
+        "Tech",
+        "The Verge"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -408,20 +408,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 41,
-      "latest_at": "03 May 2026 21:34 UTC",
-      "headline": "The Hormuz blockade: Why a fragile ceasefire may not lower global oil prices",
+      "article_count": 44,
+      "latest_at": "04 May 2026 01:59 UTC",
+      "headline": "Oil Prices Fall as Trump Launches \u201cProject Freedom\u201d and OPEC+ Increases Output",
       "regions": [
-        "global",
-        "middle_east",
+        "americas",
+        "europe",
         "asia_pacific",
-        "europe"
+        "global"
       ],
       "sources": [
-        "Bloomberg Markets",
-        "Latest from Tom's Hardware",
+        "BBC News",
         "Oilprice.com",
-        "BBC News"
+        "The Verge",
+        "Finance"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -877,6 +877,59 @@
         "source_diversity": 15.4,
         "recency": 17.3,
         "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 88.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "04 May 2026 01:59 UTC",
+      "headline": "US Stock Market: Traders grapple with tail risk as stocks regain highs",
+      "regions": [
+        "global",
+        "middle_east",
+        "americas",
+        "europe"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "The Register",
+        "Oilprice.com",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 18.8,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.0,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1561,25 +1614,25 @@
     {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
-      "confidence": 74.0,
+      "confidence": 73.0,
       "severity": "MEDIUM",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "03 May 2026 19:47 UTC",
+      "article_count": 10,
+      "latest_at": "04 May 2026 01:59 UTC",
       "headline": "First reports come in of victims of critical cPanel vuln as 'millions' of sites potentially exposed",
       "regions": [
+        "europe",
         "global",
-        "middle_east",
-        "europe"
+        "middle_east"
       ],
       "sources": [
+        "Latest from Tom's Hardware",
         "The Register",
-        "Cointelegraph.com News",
-        "Latest from Tom's Hardware"
+        "Cointelegraph.com News"
       ],
       "primary_etf": "CIBR",
       "top_etfs": [
@@ -1596,11 +1649,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 15.3,
-        "volume_confirmation": 16.8,
+        "signal_strength": 14.7,
+        "volume_confirmation": 16.2,
         "source_diversity": 4.9,
         "recency": 16.9,
-        "geopolitical_severity": 11.1
+        "geopolitical_severity": 11.2
       }
     },
     {
@@ -1954,59 +2007,6 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 63.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "03 May 2026 22:32 UTC",
-      "headline": "Gold turns positive as oil eases on hopes for Iran talks",
-      "regions": [
-        "americas",
-        "global",
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "The Register",
-        "US Top News and Analysis",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 20.3,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.0,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 63.0,
@@ -2061,12 +2061,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 66 articles - HIGH / NEUTRAL - Inference is giving AI chip startups a second chance to make their mark"
+      "text": "Technology & AI / Semiconductors - 61 articles - HIGH / NEUTRAL - Inference is giving AI chip startups a second chance to make their mark"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 41 articles - CRITICAL / NEUTRAL - The Hormuz blockade: Why a fragile ceasefire may not lower global oil prices"
+      "text": "Energy / Oil & Gas - 44 articles - CRITICAL / NEUTRAL - Oil Prices Fall as Trump Launches \u201cProject Freedom\u201d and OPEC+ Increases Output"
     },
     {
       "tag": "tag-neu",
@@ -2107,6 +2107,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Banking & Financial Sector + Asia Pacific Equity - 13 articles - HIGH / NEUTRAL - Strategists See Yen Slipping as Ueda Softens Hawkish Tone"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / NEUTRAL - US Stock Market: Traders grapple with tail risk as stocks regain highs"
     },
     {
       "tag": "tag-neu",
@@ -2176,7 +2181,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity - 11 articles - MEDIUM / NEUTRAL - First reports come in of victims of critical cPanel vuln as 'millions' of sites potentially exposed"
+      "text": "Cybersecurity - 10 articles - MEDIUM / NEUTRAL - First reports come in of victims of critical cPanel vuln as 'millions' of sites potentially exposed"
     },
     {
       "tag": "tag-neu",
@@ -2212,11 +2217,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Real Estate & REITs - 5 articles - MEDIUM / NEUTRAL - Japan tells real estate and crypto sectors to tighten AML checks on property deals"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / NEUTRAL - Gold turns positive as oil eases on hopes for Iran talks"
     },
     {
       "tag": "tag-neu",
@@ -2295,12 +2295,12 @@
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 25776.53,
+      "price": 26191.76,
       "currency": "HKD",
-      "change": -335.31,
-      "change_pct": -1.28,
-      "change_str": "-1.28%",
-      "direction": "down"
+      "change": 415.23,
+      "change_pct": 1.61,
+      "change_str": "+1.61%",
+      "direction": "up"
     },
     {
       "label": "Nifty 50",
@@ -2317,44 +2317,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4627.1,
+      "price": 4615.6,
       "currency": "USD",
-      "change": -2.8,
-      "change_pct": -0.06,
-      "change_str": "-0.06%",
+      "change": -14.3,
+      "change_pct": -0.31,
+      "change_str": "-0.31%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 101.52,
+      "price": 101.78,
       "currency": "USD",
-      "change": -0.42,
-      "change_pct": -0.41,
-      "change_str": "-0.41%",
+      "change": -0.16,
+      "change_pct": -0.16,
+      "change_str": "-0.16%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78652.7,
+      "price": 79784.14,
       "currency": "USD",
-      "change": -4.55,
-      "change_pct": -0.01,
-      "change_str": "-0.01%",
-      "direction": "down"
+      "change": 1126.89,
+      "change_pct": 1.43,
+      "change_str": "+1.43%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.13,
+      "price": 98.19,
       "currency": "USD",
-      "change": -0.08,
-      "change_pct": -0.09,
-      "change_str": "-0.09%",
+      "change": -0.02,
+      "change_pct": -0.02,
+      "change_str": "-0.02%",
       "direction": "down"
     },
     {
@@ -2388,12 +2388,12 @@
       },
       {
         "sector": "Technology & AI / Semiconductors",
-        "weight": 13.5,
+        "weight": 14.4,
         "at_cap": false
       },
       {
         "sector": "Energy / Oil & Gas",
-        "weight": 9.9,
+        "weight": 10.5,
         "at_cap": false
       },
       {
@@ -2513,7 +2513,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": 15.57,
           "action": "TRIM",
-          "amount": 1555.89,
+          "amount": 1555.91,
           "etf_name": "Financial Select Sector SPDR"
         },
         {
@@ -2522,7 +2522,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": 12.99,
           "action": "TRIM",
-          "amount": 1297.91,
+          "amount": 1297.93,
           "etf_name": "Vanguard Total Bond Market ETF"
         },
         {
@@ -2531,7 +2531,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -12.75,
           "action": "ADD",
-          "amount": 1273.73,
+          "amount": 1273.71,
           "etf_name": "First Trust Nasdaq CEA Cybersecurity ETF"
         },
         {
@@ -2540,17 +2540,8 @@
           "target_weight_pct": 15.0,
           "drift_pct": -8.32,
           "action": "ADD",
-          "amount": 831.15,
+          "amount": 831.13,
           "etf_name": "iShares U.S. Aerospace & Defense ETF"
-        },
-        {
-          "ticker": "XLE",
-          "actual_weight_pct": 9.88,
-          "target_weight_pct": 15.0,
-          "drift_pct": -5.12,
-          "action": "ADD",
-          "amount": 511.62,
-          "etf_name": "Energy Select Sector SPDR"
         }
       ],
       "drift_threshold_pct": 5.0,
@@ -2559,14 +2550,14 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -2426.24,
-          "portfolio_loss_pct": -24.28,
+          "total_impact": -2500.12,
+          "portfolio_loss_pct": -25.02,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -542.93
+              "impact": -579.74
             },
             {
               "ticker": "ITA",
@@ -2578,7 +2569,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -539.08
+              "impact": -576.14
             },
             {
               "ticker": "XLF",
@@ -2601,14 +2592,14 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -2315.59,
-          "portfolio_loss_pct": -23.18,
+          "total_impact": -2390.6,
+          "portfolio_loss_pct": -23.93,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -641.64
+              "impact": -685.15
             },
             {
               "ticker": "ITA",
@@ -2620,7 +2611,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -458.21
+              "impact": -489.72
             },
             {
               "ticker": "XLF",
@@ -2643,14 +2634,14 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1239.81,
-          "portfolio_loss_pct": -12.41,
+          "total_impact": -1260.4,
+          "portfolio_loss_pct": -12.61,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -98.71
+              "impact": -105.41
             },
             {
               "ticker": "ITA",
@@ -2662,7 +2653,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -202.15
+              "impact": -216.05
             },
             {
               "ticker": "XLF",
@@ -2685,14 +2676,14 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -520.23,
-          "portfolio_loss_pct": -5.21,
+          "total_impact": -537.69,
+          "portfolio_loss_pct": -5.38,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -148.07
+              "impact": -158.11
             },
             {
               "ticker": "ITA",
@@ -2704,7 +2695,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -107.82
+              "impact": -115.23
             },
             {
               "ticker": "XLF",
@@ -2727,14 +2718,14 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1054.4,
-          "portfolio_loss_pct": -10.55,
+          "total_impact": -1084.47,
+          "portfolio_loss_pct": -10.85,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -197.43
+              "impact": -210.81
             },
             {
               "ticker": "ITA",
@@ -2746,7 +2737,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -242.58
+              "impact": -259.26
             },
             {
               "ticker": "XLF",
@@ -2770,14 +2761,14 @@
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -24.28
+      "worst_loss_pct": -25.02
     }
   },
   "logs": [
-    "2026-05-03 23:38:37 [INFO] AZALYST - status.json generated",
-    "2026-05-03 23:38:37 [INFO] PORTFOLIO - NAV USD 9,991.69 | Return -0.08%",
-    "2026-05-03 23:38:37 [INFO] SIGNALS - 33 active signal buckets in state",
-    "2026-05-03 23:38:37 [INFO] TRADER - Open positions: XLE, ITA, QQQ, XLF, BND, CIBR"
+    "2026-05-04 02:01:05 [INFO] AZALYST - status.json generated",
+    "2026-05-04 02:01:05 [INFO] PORTFOLIO - NAV USD 9,991.51 | Return -0.08%",
+    "2026-05-04 02:01:05 [INFO] SIGNALS - 33 active signal buckets in state",
+    "2026-05-04 02:01:05 [INFO] TRADER - Open positions: XLE, ITA, QQQ, XLF, BND, CIBR"
   ],
-  "generated_at": "2026-05-03 23:38:36 UTC"
+  "generated_at": "2026-05-04 02:01:04 UTC"
 }
