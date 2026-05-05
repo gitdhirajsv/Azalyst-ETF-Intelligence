@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 9964.44,
+  "portfolio_value": 9964.39,
   "total_deposited": 9958.02,
-  "cash": 47.61,
+  "cash": 3.79,
   "monthly_reserve": 0.0,
-  "market_value": 9916.83,
-  "total_invested": 9910.41,
-  "unrealised_pnl": 6.42,
-  "unrealised_str": "+6.42",
+  "market_value": 9960.6,
+  "total_invested": 9954.23,
+  "unrealised_pnl": 6.37,
+  "unrealised_str": "+6.37",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
   "change": "+0.06%",
@@ -71,17 +71,17 @@
       "sector": "Technology & AI / Semiconductors",
       "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NASDAQ",
-      "entry": 672.23,
+      "entry": 672.27,
       "current": 672.88,
       "peak_price": 675.13,
-      "trail_stop": 605.01,
-      "dist_to_trail_pct": 10.09,
-      "units": 2.447524,
-      "invested": 1645.3,
-      "pnl": 1.59,
-      "pnl_str": "+1.59",
-      "pnl_pct": 0.1,
-      "pnl_pct_str": "+0.10%",
+      "trail_stop": 605.04,
+      "dist_to_trail_pct": 10.08,
+      "units": 2.512573,
+      "invested": 1689.12,
+      "pnl": 1.54,
+      "pnl_str": "+1.54",
+      "pnl_pct": 0.09,
+      "pnl_pct_str": "+0.09%",
       "confidence": 97,
       "severity": "CRITICAL",
       "days_held": 1,
@@ -185,11 +185,11 @@
     "values": [
       13.4,
       6.6,
-      16.5,
+      17.0,
       30.5,
       28.0,
       4.5,
-      0.5
+      0.0
     ]
   },
   "pnl": {
@@ -204,7 +204,7 @@
     "values": [
       13.88,
       -3.85,
-      1.59,
+      1.54,
       -10.53,
       0.82,
       4.58
@@ -212,12 +212,12 @@
   },
   "confidence": [
     {
-      "symbol": "Technology & AI / Semiconductors",
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 95.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 95.0
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 94.0
     },
     {
       "symbol": "Europe Equity + Energy / Oil & Gas",
@@ -308,15 +308,15 @@
       "score": 76.0
     },
     {
+      "symbol": "Asia Pacific Equity",
+      "score": 74.0
+    },
+    {
       "symbol": "Nuclear Energy & Uranium + Asia Pacific Equity",
       "score": 72.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
-      "score": 69.0
-    },
-    {
-      "symbol": "Asia Pacific Equity",
       "score": 69.0
     },
     {
@@ -345,59 +345,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 95.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 57,
-      "latest_at": "05 May 2026 07:30 UTC",
-      "headline": "Inference is giving AI chip startups a second chance to make their mark",
-      "regions": [
-        "middle_east",
-        "europe",
-        "americas",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Semiconductor Engineering",
-        "Bloomberg Markets",
-        "World | Deutsche Welle",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.6,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
@@ -447,6 +394,59 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 14.2,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 94.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 59,
+      "latest_at": "05 May 2026 12:03 UTC",
+      "headline": "Chip Industry Technical Paper Roundup: May 5",
+      "regions": [
+        "global",
+        "americas",
+        "middle_east",
+        "europe"
+      ],
+      "sources": [
+        "The Register",
+        "US Top News and Analysis",
+        "The Verge",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.2,
         "recency": 16.9,
         "geopolitical_severity": 13.0
       }
@@ -1608,6 +1608,55 @@
       }
     },
     {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 74.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "05 May 2026 12:03 UTC",
+      "headline": "Japan Has Two More Windows for Yen Intervention by IMF Rules",
+      "regions": [
+        "middle_east",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "The Register",
+        "Oilprice.com",
+        "Cointelegraph.com News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.6,
+        "volume_confirmation": 13.7,
+        "source_diversity": 13.4,
+        "recency": 16.9,
+        "geopolitical_severity": 10.8
+      }
+    },
+    {
       "sector_key": "asia_pacific|nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium + Asia Pacific Equity",
       "confidence": 72.0,
@@ -1709,53 +1758,6 @@
         "source_diversity": 12.3,
         "recency": 18.8,
         "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 69.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "05 May 2026 01:59 UTC",
-      "headline": "Jindal Stainless guides 7-9% volume growth",
-      "regions": [
-        "asia_pacific"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "World | Deutsche Welle",
-        "The Register",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 10.1,
-        "volume_confirmation": 12.6,
-        "source_diversity": 14.0,
-        "recency": 16.9,
-        "geopolitical_severity": 8.2
       }
     },
     {
@@ -2063,12 +2065,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 57 articles - HIGH / NEUTRAL - Inference is giving AI chip startups a second chance to make their mark"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / NEUTRAL - Tether Gold tops $3.3B as demand for bullion-backed tokens rises"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / NEUTRAL - Tether Gold tops $3.3B as demand for bullion-backed tokens rises"
+      "text": "Technology & AI / Semiconductors - 59 articles - HIGH / NEUTRAL - Chip Industry Technical Paper Roundup: May 5"
     },
     {
       "tag": "tag-neu",
@@ -2183,17 +2185,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Asia Pacific Equity - 7 articles - MEDIUM / NEUTRAL - Japan Has Two More Windows for Yen Intervention by IMF Rules"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Nuclear Energy & Uranium + Asia Pacific Equity - 7 articles - MEDIUM / NEUTRAL - Vietnam, South Korea Ink Deals on Security, Nuclear Power Plants"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 4 articles - HIGH / NEUTRAL - Iran Having a Nuclear Weapon is a 'Real Danger To The World' Says Sen. Moore Capito"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Asia Pacific Equity - 6 articles - MEDIUM / NEUTRAL - Jindal Stainless guides 7-9% volume growth"
     },
     {
       "tag": "tag-neu",
@@ -2264,22 +2266,22 @@
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10250.5,
+      "price": 10230.92,
       "currency": "GBP",
-      "change": -113.4,
-      "change_pct": -1.09,
-      "change_str": "-1.09%",
+      "change": -132.98,
+      "change_pct": -1.28,
+      "change_str": "-1.28%",
       "direction": "down"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 24259.89,
+      "price": 24337.12,
       "currency": "EUR",
-      "change": 268.62,
-      "change_pct": 1.12,
-      "change_str": "+1.12%",
+      "change": 345.85,
+      "change_pct": 1.44,
+      "change_str": "+1.44%",
       "direction": "up"
     },
     {
@@ -2319,55 +2321,55 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4552.5,
+      "price": 4569.9,
       "currency": "USD",
-      "change": 33.0,
-      "change_pct": 0.73,
-      "change_str": "+0.73%",
+      "change": 50.4,
+      "change_pct": 1.12,
+      "change_str": "+1.12%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 104.28,
+      "price": 103.99,
       "currency": "USD",
-      "change": -2.14,
-      "change_pct": -2.01,
-      "change_str": "-2.01%",
+      "change": -2.43,
+      "change_pct": -2.28,
+      "change_str": "-2.28%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 80834.33,
+      "price": 80988.88,
       "currency": "USD",
-      "change": 1006.42,
-      "change_pct": 1.26,
-      "change_str": "+1.26%",
+      "change": 1160.97,
+      "change_pct": 1.45,
+      "change_str": "+1.45%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.49,
+      "price": 98.5,
       "currency": "USD",
-      "change": 0.02,
-      "change_pct": 0.02,
-      "change_str": "+0.02%",
+      "change": 0.03,
+      "change_pct": 0.03,
+      "change_str": "+0.03%",
       "direction": "up"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 17.68,
+      "price": 17.67,
       "currency": "USD",
-      "change": -0.61,
-      "change_pct": -3.34,
-      "change_str": "-3.34%",
+      "change": -0.62,
+      "change_pct": -3.39,
+      "change_str": "-3.39%",
       "direction": "down"
     }
   ],
@@ -2375,7 +2377,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.29,
     "portfolio_peak": 9992.94,
-    "vix": 17.68,
+    "vix": 17.67,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -2390,7 +2392,7 @@
       },
       {
         "sector": "Technology & AI / Semiconductors",
-        "weight": 16.5,
+        "weight": 17.0,
         "at_cap": false
       },
       {
@@ -2515,7 +2517,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": 15.45,
           "action": "TRIM",
-          "amount": 1539.97,
+          "amount": 1539.98,
           "etf_name": "Financial Select Sector SPDR"
         },
         {
@@ -2524,7 +2526,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": 12.97,
           "action": "TRIM",
-          "amount": 1292.46,
+          "amount": 1292.47,
           "etf_name": "Vanguard Total Bond Market ETF"
         },
         {
@@ -2533,16 +2535,16 @@
           "target_weight_pct": 15.0,
           "drift_pct": -10.5,
           "action": "ADD",
-          "amount": 1046.68,
+          "amount": 1046.67,
           "etf_name": "First Trust Nasdaq CEA Cybersecurity ETF"
         },
         {
           "ticker": "CASH",
-          "actual_weight_pct": 0.48,
+          "actual_weight_pct": 0.04,
           "target_weight_pct": 10.0,
-          "drift_pct": -9.52,
+          "drift_pct": -9.96,
           "action": "RAISE",
-          "amount": 948.84,
+          "amount": 992.65,
           "etf_name": "Cash Reserve"
         },
         {
@@ -2561,8 +2563,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -2863.55,
-          "portfolio_loss_pct": -28.74,
+          "total_impact": -2881.06,
+          "portfolio_loss_pct": -28.91,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -2580,7 +2582,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -658.76
+              "impact": -676.26
             },
             {
               "ticker": "XLF",
@@ -2603,8 +2605,8 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -2726.58,
-          "portfolio_loss_pct": -27.36,
+          "total_impact": -2741.46,
+          "portfolio_loss_pct": -27.51,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -2622,7 +2624,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -559.94
+              "impact": -574.82
             },
             {
               "ticker": "XLF",
@@ -2645,8 +2647,8 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1359.38,
-          "portfolio_loss_pct": -13.64,
+          "total_impact": -1365.95,
+          "portfolio_loss_pct": -13.71,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -2664,7 +2666,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -247.03
+              "impact": -253.6
             },
             {
               "ticker": "XLF",
@@ -2687,8 +2689,8 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -617.29,
-          "portfolio_loss_pct": -6.19,
+          "total_impact": -620.8,
+          "portfolio_loss_pct": -6.23,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -2706,7 +2708,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -131.75
+              "impact": -135.25
             },
             {
               "ticker": "XLF",
@@ -2729,8 +2731,8 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1229.99,
-          "portfolio_loss_pct": -12.34,
+          "total_impact": -1237.87,
+          "portfolio_loss_pct": -12.42,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -2748,7 +2750,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -296.44
+              "impact": -304.32
             },
             {
               "ticker": "XLF",
@@ -2772,14 +2774,14 @@
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -28.74
+      "worst_loss_pct": -28.91
     }
   },
   "logs": [
-    "2026-05-05 11:01:52 [INFO] AZALYST - status.json generated",
-    "2026-05-05 11:01:52 [INFO] PORTFOLIO - NAV USD 9,964.44 | Return +0.06%",
-    "2026-05-05 11:01:52 [INFO] SIGNALS - 33 active signal buckets in state",
-    "2026-05-05 11:01:52 [INFO] TRADER - Open positions: XLE, ITA, QQQ, XLF, BND, CIBR"
+    "2026-05-05 12:05:44 [INFO] AZALYST - status.json generated",
+    "2026-05-05 12:05:44 [INFO] PORTFOLIO - NAV USD 9,964.39 | Return +0.06%",
+    "2026-05-05 12:05:44 [INFO] SIGNALS - 33 active signal buckets in state",
+    "2026-05-05 12:05:44 [INFO] TRADER - Open positions: XLE, ITA, QQQ, XLF, BND, CIBR"
   ],
-  "generated_at": "2026-05-05 11:01:51 UTC"
+  "generated_at": "2026-05-05 12:05:43 UTC"
 }
