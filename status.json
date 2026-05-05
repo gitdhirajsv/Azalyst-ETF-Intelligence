@@ -336,8 +336,8 @@
       "score": 64.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 63.0
+      "symbol": "Defense & Aerospace + Energy / Oil & Gas",
+      "score": 62.0
     },
     {
       "symbol": "Emerging Markets + Clean Energy & Renewables",
@@ -1959,28 +1959,28 @@
     },
     {
       "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 63.0,
-      "severity": "HIGH",
+      "sector_label": "Defense & Aerospace + Energy / Oil & Gas",
+      "confidence": 62.0,
+      "severity": "CRITICAL",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
-      "latest_at": "05 May 2026 14:31 UTC",
-      "headline": "Missile Strikes and Naval Escalation Threaten Fragile Gulf Cease-Fire",
+      "article_count": 13,
+      "latest_at": "05 May 2026 22:48 UTC",
+      "headline": "As US eyes smaller military footprint in Europe, new unit trains for drone warfare",
       "regions": [
-        "europe",
-        "asia_pacific",
         "middle_east",
-        "global"
+        "global",
+        "asia_pacific",
+        "europe"
       ],
       "sources": [
         "The Register",
-        "Finance",
         "Defense News",
-        "Bloomberg Markets"
+        "Markets-Economic Times",
+        "Oilprice.com"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -2005,7 +2005,7 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 14.9,
+        "source_diversity": 16.2,
         "recency": 16.9,
         "geopolitical_severity": 13.0
       }
@@ -2219,7 +2219,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 28 articles - HIGH / NEUTRAL - Missile Strikes and Naval Escalation Threaten Fragile Gulf Cease-Fire"
+      "text": "Defense & Aerospace + Energy / Oil & Gas - 13 articles - CRITICAL / NEUTRAL - As US eyes smaller military footprint in Europe, new unit trains for drone warfare"
     },
     {
       "tag": "tag-neu",
@@ -2278,9 +2278,9 @@
       "region": "EU",
       "price": 24401.7,
       "currency": "EUR",
-      "change": 410.43,
-      "change_pct": 1.71,
-      "change_str": "+1.71%",
+      "change": 109.32,
+      "change_pct": 0.45,
+      "change_str": "+0.45%",
       "direction": "up"
     },
     {
@@ -2320,44 +2320,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4567.8,
+      "price": 4560.2,
       "currency": "USD",
-      "change": 48.3,
-      "change_pct": 1.07,
-      "change_str": "+1.07%",
+      "change": 40.7,
+      "change_pct": 0.9,
+      "change_str": "+0.90%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 102.68,
+      "price": 102.49,
       "currency": "USD",
-      "change": -3.74,
-      "change_pct": -3.51,
-      "change_str": "-3.51%",
+      "change": -3.93,
+      "change_pct": -3.69,
+      "change_str": "-3.69%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 81459.63,
+      "price": 80937.36,
       "currency": "USD",
-      "change": 1631.72,
-      "change_pct": 2.04,
-      "change_str": "+2.04%",
+      "change": 1109.45,
+      "change_pct": 1.39,
+      "change_str": "+1.39%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.48,
+      "price": 98.49,
       "currency": "USD",
-      "change": 0.01,
-      "change_pct": 0.01,
-      "change_str": "+0.01%",
+      "change": 0.02,
+      "change_pct": 0.02,
+      "change_str": "+0.02%",
       "direction": "up"
     },
     {
@@ -2777,10 +2777,10 @@
     }
   },
   "logs": [
-    "2026-05-05 21:57:08 [INFO] AZALYST - status.json generated",
-    "2026-05-05 21:57:08 [INFO] PORTFOLIO - NAV USD 10,003.63 | Return +0.35%",
-    "2026-05-05 21:57:08 [INFO] SIGNALS - 33 active signal buckets in state",
-    "2026-05-05 21:57:08 [INFO] TRADER - Open positions: XLE, ITA, QQQ, XLF, BND, CIBR"
+    "2026-05-05 22:50:34 [INFO] AZALYST - status.json generated",
+    "2026-05-05 22:50:34 [INFO] PORTFOLIO - NAV USD 10,003.63 | Return +0.35%",
+    "2026-05-05 22:50:34 [INFO] SIGNALS - 33 active signal buckets in state",
+    "2026-05-05 22:50:34 [INFO] TRADER - Open positions: XLE, ITA, QQQ, XLF, BND, CIBR"
   ],
-  "generated_at": "2026-05-05 21:57:08 UTC"
+  "generated_at": "2026-05-05 22:50:33 UTC"
 }
