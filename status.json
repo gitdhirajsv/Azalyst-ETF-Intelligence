@@ -256,6 +256,10 @@
       "score": 90.0
     },
     {
+      "symbol": "Defense & Aerospace + Energy / Oil & Gas",
+      "score": 89.0
+    },
+    {
       "symbol": "Crypto & Digital Assets",
       "score": 88.0
     },
@@ -318,10 +322,6 @@
     {
       "symbol": "Asia Pacific Equity",
       "score": 66.0
-    },
-    {
-      "symbol": "Defense & Aerospace",
-      "score": 64.0
     },
     {
       "symbol": "Healthcare & Pharma + Europe Equity",
@@ -930,6 +930,59 @@
         "source_diversity": 15.4,
         "recency": 17.3,
         "geopolitical_severity": 15.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace + Energy / Oil & Gas",
+      "confidence": 89.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "07 May 2026 22:00 UTC",
+      "headline": "Trump Cannot Just Win the Strait. He Has to Win the Oil Curve",
+      "regions": [
+        "middle_east",
+        "india",
+        "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "BBC News",
+        "Finance",
+        "Oilprice.com"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.4,
+        "recency": 15.5,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1763,59 +1816,6 @@
       }
     },
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 64.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 41,
-      "latest_at": "07 May 2026 18:39 UTC",
-      "headline": "'Enjoy the show. Ignore the war': Venice Biennale faces backlash after including Russia",
-      "regions": [
-        "asia_pacific",
-        "india",
-        "europe",
-        "middle_east"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Defense News",
-        "BBC News",
-        "Oilprice.com"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.3,
-        "recency": 16.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "healthcare_pharma",
       "sector_label": "Healthcare & Pharma + Europe Equity",
       "confidence": 64.0,
@@ -2120,6 +2120,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Defense & Aerospace + Energy / Oil & Gas - 13 articles - CRITICAL / NEUTRAL - Trump Cannot Just Win the Strait. He Has to Win the Oil Curve"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Crypto & Digital Assets - 27 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
@@ -2200,11 +2205,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 41 articles - HIGH / NEUTRAL - 'Enjoy the show. Ignore the war': Venice Biennale faces backlash after including Russia"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Healthcare & Pharma + Europe Equity - 6 articles - HIGH / NEUTRAL - Apple earnings, DHS shutdown, 'Ozempic breath' and more in Morning Squawk"
     },
     {
@@ -2279,10 +2279,10 @@
       "region": "EU",
       "price": 24663.61,
       "currency": "EUR",
-      "change": -255.08,
-      "change_pct": -1.02,
-      "change_str": "-1.02%",
-      "direction": "down"
+      "change": 261.91,
+      "change_pct": 1.07,
+      "change_str": "+1.07%",
+      "direction": "up"
     },
     {
       "label": "Nikkei 225",
@@ -2321,44 +2321,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4696.0,
+      "price": 4692.7,
       "currency": "USD",
-      "change": 14.1,
-      "change_pct": 0.3,
-      "change_str": "+0.30%",
+      "change": 10.8,
+      "change_pct": 0.23,
+      "change_str": "+0.23%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 97.66,
+      "price": 97.36,
       "currency": "USD",
-      "change": 2.58,
-      "change_pct": 2.71,
-      "change_str": "+2.71%",
+      "change": 2.28,
+      "change_pct": 2.4,
+      "change_str": "+2.40%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 79814.01,
+      "price": 79907.49,
       "currency": "USD",
-      "change": -1613.52,
-      "change_pct": -1.98,
-      "change_str": "-1.98%",
+      "change": -1520.04,
+      "change_pct": -1.87,
+      "change_str": "-1.87%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.23,
+      "price": 98.26,
       "currency": "USD",
-      "change": 0.22,
-      "change_pct": 0.22,
-      "change_str": "+0.22%",
+      "change": 0.24,
+      "change_pct": 0.24,
+      "change_str": "+0.24%",
       "direction": "up"
     },
     {
@@ -2778,11 +2778,11 @@
     }
   },
   "logs": [
-    "2026-05-07 21:49:41 [INFO] AZALYST - status.json generated",
-    "2026-05-07 21:49:41 [INFO] PORTFOLIO - NAV USD 9,997.35 | Return -0.70%",
-    "2026-05-07 21:49:41 [INFO] SIGNALS - 33 active signal buckets in state",
-    "2026-05-07 21:49:41 [INFO] TRADER - Open positions: XLE, ITA, QQQ, XLF, BND, CIBR",
-    "2026-05-07 21:49:41 [INFO] RISK - Partial profits realised: USD 536.40"
+    "2026-05-07 22:56:26 [INFO] AZALYST - status.json generated",
+    "2026-05-07 22:56:26 [INFO] PORTFOLIO - NAV USD 9,997.35 | Return -0.70%",
+    "2026-05-07 22:56:26 [INFO] SIGNALS - 33 active signal buckets in state",
+    "2026-05-07 22:56:26 [INFO] TRADER - Open positions: XLE, ITA, QQQ, XLF, BND, CIBR",
+    "2026-05-07 22:56:26 [INFO] RISK - Partial profits realised: USD 536.40"
   ],
-  "generated_at": "2026-05-07 21:49:40 UTC"
+  "generated_at": "2026-05-07 22:56:26 UTC"
 }
