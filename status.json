@@ -256,6 +256,10 @@
       "score": 90.0
     },
     {
+      "symbol": "Crypto & Digital Assets",
+      "score": 88.0
+    },
+    {
       "symbol": "Banking & Financial Sector + Crypto & Digital Assets",
       "score": 88.0
     },
@@ -270,10 +274,6 @@
     {
       "symbol": "Real Estate & REITs + India Equity Markets",
       "score": 82.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 81.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -328,12 +328,12 @@
       "score": 64.0
     },
     {
-      "symbol": "Real Estate & REITs",
+      "symbol": "Cybersecurity",
       "score": 64.0
     },
     {
-      "symbol": "Cybersecurity",
-      "score": 63.0
+      "symbol": "Real Estate & REITs",
+      "score": 64.0
     },
     {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
@@ -516,20 +516,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 66,
-      "latest_at": "07 May 2026 17:14 UTC",
-      "headline": "Musk's SpaceX has rented out access to its supercomputer's 220,000 Nvidia GPUs and 300 megawatts of AI compute power to rival Anthropic \u2014 Musk says \u201cNo one set off my evil detector,\u201d Antrhropic also interested in orbital data centers",
+      "article_count": 72,
+      "latest_at": "07 May 2026 21:47 UTC",
+      "headline": "US stocks today: US market ends lower as semiconductor stocks reverse earlier gains",
       "regions": [
+        "asia_pacific",
         "europe",
-        "india",
         "americas",
         "global"
       ],
       "sources": [
-        "EE Times",
-        "Cointelegraph.com News",
-        "Latest from Tom's Hardware",
-        "Bloomberg Markets"
+        "Semiconductor Engineering",
+        "The Verge",
+        "Defense News",
+        "www.theregister.com - Articles"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -554,7 +554,7 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 17.2,
+        "source_diversity": 16.7,
         "recency": 16.9,
         "geopolitical_severity": 13.0
       }
@@ -933,6 +933,53 @@
       }
     },
     {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 88.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 27,
+      "latest_at": "07 May 2026 20:55 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "asia_pacific",
+        "europe",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "Latest from Tom's Hardware",
+        "US Top News and Analysis",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 11.4,
+        "recency": 15.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "banking_financial|crypto_digital",
       "sector_label": "Banking & Financial Sector + Crypto & Digital Assets",
       "confidence": 88.0,
@@ -1145,52 +1192,6 @@
         "source_diversity": 11.0,
         "recency": 20.0,
         "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 81.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "07 May 2026 15:38 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "europe",
-        "india",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Latest from Tom's Hardware",
-        "www.theregister.com - Articles"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 6.5,
-        "recency": 14.4,
-        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1867,6 +1868,50 @@
       }
     },
     {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 64.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 4,
+      "latest_at": "07 May 2026 21:47 UTC",
+      "headline": "Canvas is down as ShinyHunters threatens to leak schools\u2019 data",
+      "regions": [
+        "global",
+        "india"
+      ],
+      "sources": [
+        "The Verge",
+        "www.theregister.com - Articles",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 10.1,
+        "volume_confirmation": 9.7,
+        "source_diversity": 4.9,
+        "recency": 16.9,
+        "geopolitical_severity": 11.2
+      }
+    },
+    {
       "sector_key": "real_estate_reit",
       "sector_label": "Real Estate & REITs",
       "confidence": 64.0,
@@ -1913,50 +1958,6 @@
         "source_diversity": 12.4,
         "recency": 18.4,
         "geopolitical_severity": 9.9
-      }
-    },
-    {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 63.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "07 May 2026 13:53 UTC",
-      "headline": "Iran cybersnoops still LARPing as ransomware crooks in espionage ops",
-      "regions": [
-        "middle_east",
-        "global",
-        "india"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "www.theregister.com - Articles"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 10.9,
-        "volume_confirmation": 9.7,
-        "source_diversity": 2.7,
-        "recency": 14.9,
-        "geopolitical_severity": 13.0
       }
     },
     {
@@ -2079,7 +2080,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 66 articles - HIGH / NEUTRAL - Musk's SpaceX has rented out access to its supercomputer's 220,000 Nvidia GPUs and 300 megawatts of AI compute power to rival Anthropic \u2014 Musk says \u201cNo one set off my evil detector,\u201d Antrhropic also interested in orbital data centers"
+      "text": "Technology & AI / Semiconductors - 72 articles - HIGH / NEUTRAL - US stocks today: US market ends lower as semiconductor stocks reverse earlier gains"
     },
     {
       "tag": "tag-neu",
@@ -2119,6 +2120,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Crypto & Digital Assets - 27 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Banking & Financial Sector + Crypto & Digital Assets - 9 articles - HIGH / NEUTRAL - AI failure could trigger the next financial crisis, warns Elizabeth Warren"
     },
     {
@@ -2135,11 +2141,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Real Estate & REITs + India Equity Markets - 9 articles - HIGH / NEUTRAL - Displaced by Iran war: out of Lebanon, into Syrian crisis"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -2209,12 +2210,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Real Estate & REITs - 5 articles - MEDIUM / NEUTRAL - Japan tells real estate and crypto sectors to tighten AML checks on property deals"
+      "text": "Cybersecurity - 4 articles - HIGH / NEUTRAL - Canvas is down as ShinyHunters threatens to leak schools\u2019 data"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity - 4 articles - HIGH / NEUTRAL - Iran cybersnoops still LARPing as ransomware crooks in espionage ops"
+      "text": "Real Estate & REITs - 5 articles - MEDIUM / NEUTRAL - Japan tells real estate and crypto sectors to tighten AML checks on property deals"
     },
     {
       "tag": "tag-neu",
@@ -2320,44 +2321,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4715.5,
+      "price": 4696.0,
       "currency": "USD",
-      "change": 33.6,
-      "change_pct": 0.72,
-      "change_str": "+0.72%",
+      "change": 14.1,
+      "change_pct": 0.3,
+      "change_str": "+0.30%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 97.13,
+      "price": 97.66,
       "currency": "USD",
-      "change": 2.05,
-      "change_pct": 2.16,
-      "change_str": "+2.16%",
+      "change": 2.58,
+      "change_pct": 2.71,
+      "change_str": "+2.71%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 79981.2,
+      "price": 79814.01,
       "currency": "USD",
-      "change": -1446.33,
-      "change_pct": -1.78,
-      "change_str": "-1.78%",
+      "change": -1613.52,
+      "change_pct": -1.98,
+      "change_str": "-1.98%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.22,
+      "price": 98.23,
       "currency": "USD",
-      "change": 0.2,
-      "change_pct": 0.2,
-      "change_str": "+0.20%",
+      "change": 0.22,
+      "change_pct": 0.22,
+      "change_str": "+0.22%",
       "direction": "up"
     },
     {
@@ -2777,11 +2778,11 @@
     }
   },
   "logs": [
-    "2026-05-07 20:48:22 [INFO] AZALYST - status.json generated",
-    "2026-05-07 20:48:22 [INFO] PORTFOLIO - NAV USD 9,997.35 | Return -0.70%",
-    "2026-05-07 20:48:22 [INFO] SIGNALS - 33 active signal buckets in state",
-    "2026-05-07 20:48:22 [INFO] TRADER - Open positions: XLE, ITA, QQQ, XLF, BND, CIBR",
-    "2026-05-07 20:48:22 [INFO] RISK - Partial profits realised: USD 536.40"
+    "2026-05-07 21:49:41 [INFO] AZALYST - status.json generated",
+    "2026-05-07 21:49:41 [INFO] PORTFOLIO - NAV USD 9,997.35 | Return -0.70%",
+    "2026-05-07 21:49:41 [INFO] SIGNALS - 33 active signal buckets in state",
+    "2026-05-07 21:49:41 [INFO] TRADER - Open positions: XLE, ITA, QQQ, XLF, BND, CIBR",
+    "2026-05-07 21:49:41 [INFO] RISK - Partial profits realised: USD 536.40"
   ],
-  "generated_at": "2026-05-07 20:48:21 UTC"
+  "generated_at": "2026-05-07 21:49:40 UTC"
 }
