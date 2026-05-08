@@ -1,209 +1,245 @@
-# Azalyst ETF Intelligence — v2 Alpha Stack
+# Azalyst-ETF-Intelligence
 
-> **A note from the desk.** This week I sat with the leaderboard open and watched
-> EWY +9.95%, IGV +8.27%, SLV +7.41%, SOXX +6.70%, SMH +6.59% print over 5
-> sessions — and Azalyst v1 surfaced none of them. I was taking those trades by
-> eye while the engine I'd built told me nothing. So I called a board meeting,
-> brought in the experts whose work I respect, took the CTO chair myself, and
-> rebuilt the system from the ground up. This README is the public record of
-> that rebuild.
+Azalyst is an advanced quantitative research platform designed to capture global sector rotations through multi-engine signal fusion. By synthesizing high-entropy news data, real-time price action, institutional positioning (COT), and deep-holdings analysis, Azalyst provides an objective, cross-validated edge for global ETF strategy execution.
+
+The platform operates a fully autonomous, serverless pipeline from discovery to risk-adjusted simulation, delivering actionable macro intelligence in an institutional research format.
+
+Live Intelligence Dashboard: [https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/](https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/)
+
+## The Azalyst Edge
+
+- **Multi-Engine Signal Fusion**: Operates seven independent analytical layers (Cross-Sectional Rank, ETF Flow, Dealer GEX, Options Tape, Holdings-Weighted Rotation, Macro Fit, News) to achieve statistical consensus before capital deployment.
+- **Regime-Conditional Weighting**: Factor budgets shift between LOW / MID / HIGH volatility regimes based on a VIX-tercile classifier, with an absolute-momentum gate that only allows long signals on defensives in `RISK_OFF` tape.
+- **Institutional Execution Fidelity**: Models slippage (half-spread + square-root market impact), tiered fees (including India-specific STT/GST), bid-ask spreads, and liquidity constraints with Citadel-grade realism.
+- **Price-Led discovery**: Prioritizes structural price breakouts and dealer positioning as the primary discovery vectors, using the news cycle as a secondary confirmation layer (capped at 10/100 in scoring), never the reverse.
+- **High-Fidelity Filtering**: Employs domain-authority weighting and temporal burst detection to isolate signal from syndicated noise, plus correlation-cluster dedup so SOXX, SMH, and SOXL do not double-count as three independent positions.
+
+## Supported Sectors
+
+The classification engine actively monitors and routes signals for the following 11 intelligence categories:
+
+- Energy / Oil & Gas
+- Defense & Aerospace
+- Gold & Precious Metals
+- Technology & AI / Semiconductors
+- Nuclear Energy & Uranium
+- Cybersecurity
+- India Equity Markets
+- Crypto & Digital Assets
+- Banking & Financial Sector
+- Commodities & Mining
+- Emerging Markets
+
+## Current Architecture
+
+```mermaid
+flowchart LR
+    REG["Regime Engine (VIX tercile + abs-momentum gate)"] --> SC
+    R["Cross-Sectional Ranker (120 ETFs vs SPY)"] --> SC["Scorer v2"]
+    FL["Flow Engine (AUM Δ + dollar-volume z)"] --> SC
+    GX["GEX Engine (dealer gamma, gamma flip)"] --> SC
+    OPT["Options Tape (IV rank, 25Δ skew, sweeps)"] --> SC
+    ROT["Holdings-Weighted Rotation"] --> SC
+    MAC["Macro Overlay (DXY, real yields, copper/gold)"] --> SC
+    NEWS["News Engine (capped 10/100)"] --> SC
+    COT["COT Positioning Engine"] --> SC
+    SC --> GATE["60/100 Publish Gate"]
+    GATE --> CL["Cluster Dedup"]
+    CL --> PS["Position Sizer (vol-target + capped Kelly)"]
+    PS --> RM["Risk Manager (ATR trail, -8% hard, -15% DD breaker)"]
+    RM --> PT["Paper Trader (SQLite + sqrt-impact)"]
+    PT --> RPT["Daily Tearsheet"]
+    PT --> DASH["Dashboard"]
+    BT["Backtester (walk-forward + purged k-fold)"] -.-> SC
+    DSR["Deflated Sharpe Gate (≥0.5)"] -.-> BT
+```
+
+## Autonomous Self-Improvement
+
+> **DEPRECATED.** The legacy `self_improve.py` LLM-driven weight-tuning loop has been disabled because tuning parameters against historical P&L is functionally indistinguishable from p-hacking; the 2pp rollback rule does not protect against multi-trial inflation. Parameter changes are now subject to walk-forward validation and a deflated-Sharpe gate (López de Prado, 2014) before deployment.
 >
-> — *gitdhirajsv*
+> See `DEPRECATION_NOTICE.md` for the full deprecation map. The cron schedule on `daily_improve.yml` has been removed; the workflow is preserved as `workflow_dispatch` only and exits 0 with a deprecation message.
 
----
+Replacement validation pipeline:
 
-## What v1 was
+1. `azalyst_alpha/backtester.py` runs walk-forward (252-day train / 63-day test, rolling).
+2. `azalyst_alpha/deflated_sharpe.py` adjusts the realized Sharpe for trial inflation, return skew, and excess kurtosis.
+3. A change is only deployable if `DSR ≥ 0.5` (i.e. ≥ 70% probability the edge is real, not noise from running multiple parametrizations).
 
-Azalyst v1 was a news-driven sector-rotation platform: four engines (News,
-Price, Constituents, COT) feeding a confidence scorer that gated publication at
-62/100. On paper, an elegant multi-engine fusion. In practice, the scorer
-allocated **88 of 100 points to news factors**, capped cross-engine confirmation
-at 12, and `self_improve.py` retuned weights against past P&L on a nightly
-cron. A clean tape-led move could not mathematically clear the gate without a
-press release — and by the time the press arrived, the move was over.
+## What Changed In This Version
 
-That's what the leaderboard week proved.
+- **Scorer rebuilt (`scorer_v2.py`)**: replaces the 88/100-news, 12/100-cross-engine budget that mathematically blocked tape-led movers. New budget: Cross-Sectional Rank 25, Flow 20, Options + GEX 20, Holdings-Weighted Rotation 15, Macro Fit 10, News 10. Publish threshold lowered from 62 to **60**. Any 3 of {rank, flow, options, rotation} can clear the gate independently; news alone cannot.
+- **Cross-Sectional Ranker (`cross_sectional_ranker.py`)**: replaces the per-asset z-score in `price_scanner.py`. Ranks ~120 ETFs by 5D / 20D / 60D risk-adjusted return, residualized against SPY, with rank-stability streak detection. Generates the leaderboard view directly.
+- **Flow Engine (`flow_engine.py`)**: adds ETF creation/redemption proxy via shares-outstanding × dollar-volume z-score divergence vs. price action. Catches institutional flow before tape confirmation (the leading indicator on SLV / GLD / semiconductor ETFs).
+- **GEX Engine (`gex_engine.py`)**: dealer gamma exposure computed from yfinance option chains and Black-Scholes (Squeeze Metrics methodology, 2017). Outputs total dealer GEX, gamma-flip strike, largest call wall, and largest put wall — the SpotGamma equivalent built from public chains.
+- **Options Tape (`options_tape.py`)**: call/put dollar-volume ratio, ATM IV, IV rank vs. realized vol, 25-delta risk reversal skew, and unusual options activity sweep detector (volume > existing OI on individual strikes).
+- **Holdings-Weighted Rotation (`holdings_weighted_rotation.py`)**: replaces the equal-weighted top-10 rule in `constituent_analyzer.py`. Conviction is computed from `Σ(weight_i × ret_5d_i × sign)`, with a fraction-of-weight (not fraction-of-count) threshold of 0.30. Captures concentrated mega-cap-driven moves on IGV (MSFT/ORCL ~16%) and SOXX (NVDA/AVGO ~18%) that the count-based rule was missing.
+- **Macro Overlay (`macro_overlay.py`)**: per-ETF cross-asset regime fit. Each ETF carries a tailwind map (e.g., SLV ↔ DXY −, US10Y −, GC=F +; EWY ↔ DXY −, HG=F +, VIX −) and the engine computes a composite fit score in [-1, +1] that contributes to the macro factor budget.
+- **Cluster Dedup (`cluster_dedup.py`)**: hierarchical clustering on 60-day return correlation matrix, distance = `√(2(1−ρ))`. Before publishing, the engine keeps the highest-scoring ticker per correlation cluster, eliminating the SOXX + SMH + SOXL triple-count.
+- **Regime Engine (`regime_engine.py`)**: combines a VIX-tercile classifier (LOW / MID / HIGH against trailing 1Y) with an Antonacci absolute-momentum gate (SPY > 200MA AND SPY 3M return > 3M T-bill ⇒ `RISK_ON`; otherwise `RISK_OFF` allows only defensives). Each regime drives a different scorer weight matrix, recognizing that momentum half-life and signal efficacy change with the volatility regime.
+- **Position Sizing (`position_sizer.py`)**: vol-target sizing where each position contributes equal annualized $-vol to the book, with a per-position 15% cap and 1.5× max gross leverage. Capped Kelly (1/4-Kelly) available for high-confidence signals.
+- **Risk Overlay (`risk_manager.py`)**: ATR(14) chandelier trailing stop at 2.5× from peak, hard stop at −8% from entry, and a portfolio-level −15% drawdown circuit breaker that flattens non-defensives with a 7-day cool-down before re-entry. Vol-target rebalance bands at 0.7×–1.4× target.
+- **Backtester (`backtester.py`)**: walk-forward (rolling 252-day train, 63-day test) plus purged k-fold cross-validation with a 5-day embargo around test folds, per López de Prado AFML ch. 7.
+- **Deflated Sharpe Gate (`deflated_sharpe.py`)**: adjusts realized Sharpe for trial inflation, skew, and excess kurtosis. Strategy variants only deploy when `DSR ≥ 0.5`. The full strategy auto-pauses when realized rolling-6M DSR drops below 0.4 pending re-validation.
+- **Paper Trader (`azalyst_alpha/paper_trader.py`)**: SQLite-backed trade log with realistic fills — half-spread (5 bps default) plus square-root-rule market impact (`0.10 × √(notional / 30D ADV)` bps). Persisted positions, trades, and equity curve at `data/paper_trader.db`.
+- **Daily Tearsheet (`report.py`)**: markdown report at `data/tearsheet.md` covering regime banner, top-25 leaderboard, published book with gross/net exposure, live positions, and equity curve.
+- **`self_improve.py` deprecated**: the LLM-driven weight-tuning cron is removed. The file is preserved on disk for historical reference; the workflow is no-op. All future parameter changes route through walk-forward + DSR gate (see `DEPRECATION_NOTICE.md`).
+- **Paper trading reset**: portfolio re-initialized to 948,800 INR cash / 0 positions / 0 trades on v2 inception. The prior v1 paper-trading record is archived at `archive/v1_paper_track_record_2026-05-08/` for reference.
+- **Dashboard updates**: regime banner (risk state, vol regime, VIX percentile, SPY vs 200MA, 3M excess vs T-bill, active weight matrix), factor breakdown panel showing per-layer points for the top published signal, threshold display updated 62 → 60, and a v2-inception tag.
 
-## The board meeting
+## Key Files
 
-I didn't want to redesign this alone, so I assembled a virtual round table of
-ten practitioners whose published work directly addresses every gap I'd
-identified — Cliff Asness, Gary Antonacci, Meb Faber, Andrew Lo, Marcos López
-de Prado, Ernest Chan, Eric Balchunas, Charlie McElligott, Cem Karsan, Wes
-Gray. Each took a verdict and a concrete demand. The vote on the highest-leverage fix:
+### Core Engine (v2)
+- `azalyst_alpha/cross_sectional_ranker.py`: universe-wide risk-adjusted return ranking
+- `azalyst_alpha/flow_engine.py`: ETF flow proxy via shares-out × dollar-volume divergence
+- `azalyst_alpha/gex_engine.py`: dealer gamma exposure from Black-Scholes on option chains
+- `azalyst_alpha/options_tape.py`: IV rank, skew, sweep detection, C/P dollar-volume
+- `azalyst_alpha/holdings_weighted_rotation.py`: AUM-weighted constituent rotation
+- `azalyst_alpha/macro_overlay.py`: per-ETF cross-asset regime fit
+- `azalyst_alpha/cluster_dedup.py`: correlation-cluster gating to prevent double-counting
+- `azalyst_alpha/regime_engine.py`: VIX-tercile + absolute-momentum regime classifier
+- `azalyst_alpha/scorer_v2.py`: replacement scorer (60/100 publish gate)
+- `azalyst_alpha/position_sizer.py`: vol-target + capped Kelly sizing
+- `azalyst_alpha/risk_manager.py`: trailing stops + drawdown circuit breaker
+- `azalyst_alpha/portfolio_constructor.py`: end-to-end signal → sized book pipeline
+- `azalyst_alpha/backtester.py`: walk-forward + purged k-fold validator
+- `azalyst_alpha/deflated_sharpe.py`: López de Prado DSR publication gate
+- `azalyst_alpha/paper_trader.py`: SQLite paper trader with realistic frictions
+- `azalyst_alpha/report.py`: daily markdown tearsheet generator
+- `azalyst_alpha/fusion.py`: end-to-end orchestrator (regime → scoring → dedup → sizing → tearsheet)
 
-| Fix | Voters |
+### Legacy / v1 Modules (still present, roles adjusted)
+- `azalyst.py`: live engine orchestration (multi-engine stack: news, price, constituents, COT)
+- `config.py`: global configuration, sector definitions, and RSS feed registry
+- `state.py`: persistence layer for portfolio, signals, and system health
+- `news_fetcher.py`: ingestion, date parsing, dedup, and temporal burst filtering — output now feeds the news factor capped at 10/100
+- `classifier.py`: keyword-based rule engine and NLP classification logic
+- `keyword_expansions.py`: 1,000+ supplementary keywords for macro theme detection
+- `scorer.py`: legacy 6-factor confidence scoring model — superseded by `scorer_v2.py`
+- `etf_mapper.py`: global ETF database, ranking, and objective selection logic
+- `paper_trader.py`: legacy paper-trading engine — superseded by `azalyst_alpha/paper_trader.py`
+- `risk_engine.py`: correlation, benchmark, volatility-sizing, factor attribution
+- `price_scanner.py`: legacy momentum scanner — superseded by `cross_sectional_ranker.py`
+- `constituent_analyzer.py`: legacy holdings rotation detector — superseded by `holdings_weighted_rotation.py`
+- `reverse_researcher.py`: unexplained-mover headline investigator
+- `signal_fusion.py`: legacy fusion — superseded by `azalyst_alpha/fusion.py`
+- `cot_fetcher.py`: CFTC Commitments of Traders positioning engine
+- `reporter.py`: Discord briefing dispatcher and research note generator
+- `portfolio_reporter.py`: detailed performance, P&L, and risk attribution reports
+- `quant_fetcher.py`: optimized bulk data fetching for technical scanning engines
+- `regime_classifier.py`: original v1 stub — production version now in `azalyst_alpha/regime_engine.py`
+- `narrative_tracker.py`: V2 design, headline clustering and coherence tracker
+- `backtester.py`: historical signal replay engine
+- `backtest_validator.py`: legacy walk-forward validator — superseded by `azalyst_alpha/backtester.py` + `deflated_sharpe.py`
+- `generate_dashboard.py`: builds `status.json` (now also publishes regime + top_signal payloads)
+- `index.html`: live GitHub Pages dashboard interface
+- `self_improve.py`: deprecated LLM-driven weight tuner (preserved on disk; cron disabled)
+- `improvement_log.jsonl`: audit log of historical optimizations (reset at v2 inception)
+- `STRATEGY.md`: formal strategy document covering targets and pause conditions
+- `DEPRECATION_NOTICE.md`: full deprecation map for v1 modules
+
+## Autonomous Deployment (No Local Setup Required)
+
+Azalyst is entirely serverless and autonomous. You do not need to download the repository, run `.bat` files, or use local IDEs like Spyder to operate the engine.
+
+### 1. Fork The Repository
+Fork this repository to your own GitHub account.
+
+### 2. Add Secrets
+The engine requires one API key and an optional webhook to run.
+Go to: **Settings → Secrets and variables → Actions → New repository secret**
+
+| Secret | Purpose |
 |---|---|
-| Rebuild scorer so price/flow can clear gate without news | Asness, Faber, Chan, Lo (4) |
-| Add ETF flows + options/dealer positioning | Balchunas, McElligott, Karsan (3) |
-| Holdings-weighted (not equal-weight) constituent rotation | Gray, Antonacci (2) |
-| Stop overfitting via `self_improve.py` until CV is in place | López de Prado (1) |
+| `DISCORD_WEBHOOK_URL` | Live signal and portfolio trade alerts to Discord (optional) |
+| `NVIDIA_API_KEY` | Legacy self-improvement engine (cron disabled — kept for `workflow_dispatch` only) |
 
-The room was unanimous on diagnosis: **v1 was a news-confirmation engine wearing
-quant aesthetics.** The 62-point scorer with 88/100 budget on news was the
-chokepoint.
+### 3. Enable GitHub Actions & Pages
+1. Go to the **Actions** tab and click **"I understand my workflows, go ahead and enable them"**.
+2. Go to **Settings → Pages**, set the source to **Deploy from a branch**, and select the `gh-pages` branch.
 
-## The CTO mandate
+### 4. Let It Run
+The engine is autonomous:
+- **Every 30 Minutes:** `run_azalyst.yml` runs the legacy news/price/COT cycle, then runs the v2 alpha fusion pipeline (`python -m azalyst_alpha.fusion`), generates the dashboard, and deploys to GitHub Pages.
+- **Nightly:** `daily_improve.yml` is **deprecated** — cron removed, manual dispatch only.
 
-I took the CTO + Fund Manager chair and committed to delivery against this
-spec, in writing, before any P&L exists to argue with:
+## Backtesting And Walk-Forward
 
-> *Annualized return 25–40% gross, Sharpe > 1.4, max drawdown < 18%, deflated
-> Sharpe > 0.5 on a 6-month rolling window. If realized DSR drops below 0.4
-> over any 6-month window, the strategy auto-pauses pending re-validation.*
+Backtesting in this project means replaying dated historical signals against historical ETF prices with modeled execution costs.
 
-Hold me to it.
+Run the legacy replay:
 
-## What v2 actually is
+```bash
+python backtester.py --signals data/backtest_events.sample.jsonl
+python backtester.py --signals data/backtest_events.sample.jsonl --walk-forward-splits 3
+```
 
-A 7-layer alpha stack with regime-conditional weighting, a vol-targeted
-portfolio constructor, capped-and-trailing risk overlay, and a López de Prado
-validation gate. Free data only — no Bloomberg, no SpotGamma, no LiveVol — built
-from yfinance EOD, issuer holdings JSONs, FRED, and Black-Scholes math on
-public option chains.
+Run the v2 walk-forward + purged k-fold validator (recommended for any parameter change):
 
-| Layer | Module | What it does | Replaces (paid equiv.) |
-|---|---|---|---|
-| 1 | `cross_sectional_ranker.py` | Risk-adj rank across 120 ETFs, residualized vs. SPY — generates the leaderboard | — |
-| 2 | `flow_engine.py` | ETF creation/redemption + AUM Δ proxy | Bloomberg ETF flows |
-| 3a | `gex_engine.py` | Dealer GEX from Black-Scholes on yfinance chains, gamma flip level, call/put walls | SpotGamma ($500/mo) |
-| 3b | `options_tape.py` | IV rank, 25Δ skew, sweep detector, C/P $-vol ratio | LiveVol ($300/mo) |
-| 4 | `holdings_weighted_rotation.py` | Top-holding rotation **weighted by AUM share** (not equal-weight count) | — |
-| 5 | `macro_overlay.py` | Per-ETF cross-asset regime fit (DXY, real yields, copper/gold, KRW…) | Refinitiv |
-| 6 | News confirmation | Existing RSS ingestion, **downgraded to 10/100 max** | — |
-| 7 | `cluster_dedup.py` | Hierarchical correlation clustering — kills SOXX+SMH double-count | — |
-| Risk | `regime_engine.py` | Lo VIX-tercile weight matrix + Antonacci abs-momentum gate | — |
-| Risk | `position_sizer.py` | Vol-target sizing, capped Kelly | — |
-| Risk | `risk_manager.py` | ATR(14) chandelier trailing stop, –8% hard, –15% DD circuit breaker | — |
-| Validation | `backtester.py` | Walk-forward + purged k-fold | — |
-| Validation | `deflated_sharpe.py` | DSR ≥ 0.5 publication gate | — |
-| Exec | `paper_trader.py` | SQLite paper trader with half-spread + √-rule market impact | — |
-| Reporting | `report.py` | Daily markdown tearsheet | — |
-| Orchestration | `fusion.py` | End-to-end daily runner | — |
-
-### The new scorer (`scorer_v2.py`)
-
-| Factor | Pts (mid-vol) | Source |
-|---|---|---|
-| Cross-Sectional Rank | 25 | Layer 1 |
-| Flow | 20 | Layer 2 |
-| Options + GEX | 20 | Layers 3a + 3b |
-| Holdings-Weighted Rotation | 15 | Layer 4 |
-| Macro Fit | 10 | Layer 5 |
-| News Confirmation | 10 | (downgraded from 88) |
-| **Threshold** | **60** | — |
-
-**Any 3 of {rank, flow, options, rotation} can clear the gate independently.
-News alone cannot.** That is the architectural delta.
-
-### Regime-conditional weighting (Lo)
-
-Static factor weights ignore that momentum half-life and signal efficacy
-change with the volatility regime. `regime_engine.py` classifies VIX into
-LOW / MID / HIGH terciles vs. trailing 1Y and applies a regime-specific
-weight matrix on top of the scorer.
-
-| Regime | Trigger | Tilt |
-|---|---|---|
-| LOW_VOL | VIX < 33%ile | Lean into momentum: Rank 30, Flow 22 |
-| MID_VOL | 33–67%ile | Default budget |
-| HIGH_VOL | VIX > 67%ile | Lean into options/dealer flow: Options 28, Macro 12 |
-
-Plus the Antonacci absolute-momentum gate: in `RISK_OFF` (SPY < 200MA AND
-SPY 3M return < 3M T-bill), **only defensives** (TLT, GLD, SHV, AGG, TIP)
-can publish long signals.
-
-## What v1 modules are deprecated
-
-See [DEPRECATION_NOTICE.md](DEPRECATION_NOTICE.md) for the full list. Headlines:
-
-- **`self_improve.py` — disabled.** This was an LLM-driven loop that proposed
-  weight tweaks against historical P&L and "auto-rolled back if PnL drops
-  > 2pp." That's automated p-hacking. Replacement: every parameter change
-  passes `walk_forward()` + `deflated_sharpe.gate()`.
-- **`scorer.py` — replaced** by `scorer_v2.py`.
-- **`signal_fusion.py` — replaced** by `azalyst_alpha/fusion.py`.
-- **`price_scanner.py` — replaced** by `cross_sectional_ranker.py`.
-- **`constituent_analyzer.py` — replaced** by `holdings_weighted_rotation.py`.
-- **`news_fetcher.py` — kept**, but its output is capped at 10/100 in scoring.
-
-## How to run
-
-```powershell
-# install
-pip install -r requirements.txt
-
-# detect today's regime
-python -m azalyst_alpha.regime_engine
-
-# full daily pipeline (regime -> 6 layers -> scoring -> dedup -> sizing -> tearsheet)
-python -m azalyst_alpha.fusion
-
-# walk-forward validation (run before any parameter change)
+```bash
 python -m azalyst_alpha.backtester
-
-# DSR gate
 python -m azalyst_alpha.deflated_sharpe
 ```
 
-Output lands in `data/tearsheet.md`, `data/leaderboard_latest.csv`, and
-`data/paper_trader.db`.
+The v2 validator outputs the realized Sharpe, expected null-max Sharpe under the trial count, the deflated Sharpe ratio, and the implied probability that the edge is real. Strategy variants are only deployable at `DSR ≥ 0.5`.
 
-## Dashboard
+## Dashboard And Public Track Record
 
-The GitHub Pages dashboard at <https://gitdhirajsv.github.io/Azalyst-ETF-Intelligence/>
-now shows:
+The GitHub Pages dashboard reads from `status.json` and shows:
 
-- **Regime banner** — risk state, vol regime, VIX percentile, SPY vs 200MA, 3M
-  excess vs T-bill, active weight matrix.
-- **Factor Breakdown panel** — for the top published signal: per-layer points
-  (Rank/25, Flow/20, Options+GEX/20, Rotation/15, Macro/10, News/10) and
-  whether the signal cleared the 60-pt v2 gate.
-- **v2 Threshold** — 60/100 (down from v1's 62, with rebalanced budget).
+- **Regime banner** — risk state (`RISK_ON` / `RISK_OFF` / `NEUTRAL`), vol regime (LOW / MID / HIGH), VIX level and 1Y percentile, SPY vs 200MA, SPY 3M excess vs T-bill, and the active scorer weight matrix
+- **Factor breakdown** — for the top published signal, a per-layer points view (Rank/25, Flow/20, Options+GEX/20, Rotation/15, Macro/10, News/10) and whether the 60-pt v2 gate was cleared
+- portfolio NAV, cash, drawdown, reserve state
+- open and closed trades
+- active signal buckets
+- ranked ETF opportunities
+- market snapshot
+- risk controls and Aladdin-style analytics
 
-## Performance targets
+The public simulation record serves as a transparent research log for ongoing model validation. The v2 inception was 2026-05-08; the prior v1 paper record is archived under `archive/v1_paper_track_record_2026-05-08/` and remains accessible.
 
-Stated up front so they can be enforced.
+## Core Philosophies
 
-| Metric | Target | Pause floor |
-|---|---|---|
-| Annualized return (gross) | 25–40% | < 12% |
-| Sharpe (after fees) | > 1.4 | < 0.8 |
-| Max drawdown | < 18% | > 25% |
-| Win rate | 55–65% | < 50% |
-| Deflated Sharpe (rolling 6M) | > 0.5 | < 0.4 |
+- **Objective Transparency**: Deterministic scoring models are prioritized over black-box complexity.
+- **Execution Realism**: Strategy validation is meaningless without modeling friction: slippage, gaps, fees, and liquidity.
+- **Validated Improvement**: Parameter changes route through walk-forward CV and a deflated-Sharpe gate, not LLM-driven P&L tuning.
+- **Signal Priority**: Price, flow, and dealer positioning lead. The news cycle provides corroborating evidence, capped at 10/100 in scoring.
 
-If DSR drops below 0.4 over any 6-month rolling window, **the strategy
-auto-pauses** pending re-validation. This is non-negotiable.
+## System Scope and Limitations
 
-## What's still honest about the limits
+- Designed for quantitative research simulation rather than live broker integration.
+- Utilizes deterministic rule engines augmented by targeted ML layers.
+- Focuses on signal generation and allocation heuristics rather than high-frequency execution.
+- Free-data only (yfinance + FRED + issuer JSONs); intraday GEX flips are missed by design — fine for an EOD strategy, would matter for intraday.
+- Multi-engine modules degrade gracefully to no-ops if `yfinance` is unreachable — the system continues running on the layers whose feeds remain online.
 
-- yfinance is unofficial. Yahoo can rate-limit or break it; mitigation is a
-  one-line swap to Stooq or Tiingo free tier.
-- Free option chains are EOD-quality. Intraday GEX flips are missed — fine
-  for an EOD strategy, would matter for intraday.
-- News depth on free tier is genuinely thin vs. paid Bloomberg. That's why
-  it's downgraded to a 10-point confirmation, not a gate.
+## Recommended Next Steps
 
-## Documents
+- Build a larger dated signal dataset from historical news archives.
+- Add benchmark-by-sector and regime-specific evaluation.
+- Expand ETF metadata with live liquidity, spread, and expense-ratio feeds.
+- Add a model registry for comparing rule-only vs hybrid ML variants.
+- Add live monitoring around stop-gap risk and execution windows.
+- Run weekly walk-forward + DSR validation on any proposed parameter changes before merging.
+- Expand `reports/missed_moves.json` signal archive to feed the reverse researcher more evidence for keyword auto-growth.
 
-- [STRATEGY.md](STRATEGY.md) — formal strategy document, investor-letter
-  format. The contract.
-- [DEPRECATION_NOTICE.md](DEPRECATION_NOTICE.md) — what to remove from v1.
+## Acknowledgments & "All-in-One" Architecture
 
-## Acknowledgments
+Azalyst is designed as an all-in-one institutional macro engine, migrating and combining the best concepts from the world's top open-source quantitative repositories:
+- **[koala73/worldmonitor](https://github.com/koala73/worldmonitor)**: Inspired the core news ingestion and classification heuristics.
+- **[OpenBB-finance/OpenBB](https://github.com/OpenBB-finance/OpenBB)**: Inspired the integration of fundamental mathematical models and macro regime filters.
+- **[freqtrade/freqtrade](https://github.com/freqtrade/freqtrade)**: Inspired the dynamic Step-ROI and time-based unclogging execution logic in our paper trader.
+- **[AI4Finance-Foundation/FinRL](https://github.com/AI4Finance-Foundation/FinRL)**: Inspired the volatility-adjusted position sizing and transaction-cost penalty models.
+- **[quantopian/zipline](https://github.com/quantopian/zipline)**: Inspired the event-driven historical backtesting architecture.
+- **[ccxt/ccxt](https://github.com/ccxt/ccxt)**: Inspired the unified exchange and live execution routing concepts.
+- **[polakowo/vectorbt](https://github.com/polakowo/vectorbt)**: Inspired the vectorized matrix-math risk correlation engine.
+- **[Hudson-and-Thames/mlfinlab](https://github.com/Hudson-and-Thames/mlfinlab)**: Inspired the meta-labeling and deflated-Sharpe-ratio validation methodology.
+- **[TA-Lib/ta-lib-python](https://github.com/TA-Lib/ta-lib-python)**: Inspired the quantitative and technical indicator generation layer.
+- **[ranaroussi/yfinance](https://github.com/ranaroussi/yfinance)**: Powering bulk price discovery, option chain ingestion, and multi-engine ETF scanning.
+- **[huggingface/transformers](https://github.com/huggingface/transformers)**: Powering the finance-tuned NLP sentiment and classification layers.
+- **[NVIDIA/NIM](https://build.nvidia.com)**: Legacy infrastructure for the (now-deprecated) self-optimization cycles.
+- **[deepseek-ai](https://github.com/deepseek-ai)**: Legacy intelligence engine for v1 self-improvement (deprecated under v2).
 
-The v1 architecture concepts (multi-engine fusion, COT integration,
-dashboard scaffolding) are kept. The board members above informed every v2
-design decision, even where the room disagreed (López de Prado vs. an
-LLM-driven self-improvement loop — López de Prado won, decisively).
+## License
 
-Open-source dependencies: yfinance, pandas, numpy, scipy. That is the entire
-production stack. Total monthly data cost: **$0**.
-
----
-
-**Status:** v2 alpha stack shipped. Paper-trading gate active prior to live
-capital. Hold the targets above to me in writing.
-
-*License: MIT.*
+MIT
