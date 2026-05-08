@@ -37,7 +37,7 @@
     "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.05619968886064596,
+    "spy_excess_vs_tbill_3m": 0.05566506018900962,
     "vix_level": 17.440000534057617,
     "vix_percentile_1y": 0.5238095238095238,
     "weight_matrix": {
@@ -49,7 +49,18 @@
       "news": 10
     }
   },
-  "top_signal": {},
+  "top_signal": {
+    "ticker": "SMH",
+    "rank_score": 20.115646258503403,
+    "flow_score": 0.0,
+    "options_score": 20.20415951111727,
+    "rotation_score": 15.0,
+    "macro_score": 0.0,
+    "news_score": 0.0,
+    "total": 55.31980576962067,
+    "publish": false,
+    "direction": "long"
+  },
   "allocation": {
     "labels": [
       "CASH"
@@ -427,33 +438,33 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7393.95,
+      "price": 7390.87,
       "currency": "USD",
-      "change": 56.84,
-      "change_pct": 0.77,
-      "change_str": "+0.77%",
+      "change": 53.76,
+      "change_pct": 0.73,
+      "change_str": "+0.73%",
       "direction": "up"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 26187.63,
+      "price": 26189.91,
       "currency": "USD",
-      "change": 381.43,
-      "change_pct": 1.48,
-      "change_str": "+1.48%",
+      "change": 383.71,
+      "change_pct": 1.49,
+      "change_str": "+1.49%",
       "direction": "up"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 49562.96,
+      "price": 49511.12,
       "currency": "USD",
-      "change": -34.01,
-      "change_pct": -0.07,
-      "change_str": "-0.07%",
+      "change": -85.85,
+      "change_pct": -0.17,
+      "change_str": "-0.17%",
       "direction": "down"
     },
     {
@@ -515,9 +526,9 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4734.7,
+      "price": 4734.6,
       "currency": "USD",
-      "change": 34.9,
+      "change": 34.8,
       "change_pct": 0.74,
       "change_str": "+0.74%",
       "direction": "up"
@@ -526,22 +537,22 @@
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 95.07,
+      "price": 95.29,
       "currency": "USD",
-      "change": 0.26,
-      "change_pct": 0.27,
-      "change_str": "+0.27%",
+      "change": 0.48,
+      "change_pct": 0.51,
+      "change_str": "+0.51%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 80180.95,
+      "price": 80185.37,
       "currency": "USD",
-      "change": 170.96,
-      "change_pct": 0.21,
-      "change_str": "+0.21%",
+      "change": 175.38,
+      "change_pct": 0.22,
+      "change_str": "+0.22%",
       "direction": "up"
     },
     {
@@ -551,8 +562,8 @@
       "price": 97.9,
       "currency": "USD",
       "change": -0.35,
-      "change_pct": -0.36,
-      "change_str": "-0.36%",
+      "change_pct": -0.35,
+      "change_str": "-0.35%",
       "direction": "down"
     },
     {
@@ -615,9 +626,9 @@
     }
   },
   "logs": [
-    "2026-05-08 18:47:06 [INFO] AZALYST - status.json generated",
-    "2026-05-08 18:47:06 [INFO] PORTFOLIO - NAV USD 10,043.40 | Return +0.00%",
-    "2026-05-08 18:47:06 [INFO] SIGNALS - 6 active signal buckets in state"
+    "2026-05-08 18:54:34 [INFO] AZALYST - status.json generated",
+    "2026-05-08 18:54:34 [INFO] PORTFOLIO - NAV USD 10,043.40 | Return +0.00%",
+    "2026-05-08 18:54:34 [INFO] SIGNALS - 6 active signal buckets in state"
   ],
-  "generated_at": "2026-05-08 18:47:05 UTC"
+  "generated_at": "2026-05-08 18:54:33 UTC"
 }
