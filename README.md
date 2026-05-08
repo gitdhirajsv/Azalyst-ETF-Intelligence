@@ -16,7 +16,7 @@ Live Intelligence Dashboard: [https://gitdhirajsv.github.io/Azalyst-ETF-Intellig
 
 ## Supported Sectors
 
-The classification engine actively monitors and routes signals for the following 11 intelligence categories:
+The classification engine actively monitors and routes signals across these intelligence categories:
 
 - Energy / Oil & Gas
 - Defense & Aerospace
@@ -24,13 +24,94 @@ The classification engine actively monitors and routes signals for the following
 - Technology & AI / Semiconductors
 - Nuclear Energy & Uranium
 - Cybersecurity
-- India Equity Markets
 - Crypto & Digital Assets
 - Banking & Financial Sector
 - Commodities & Mining
 - Emerging Markets
+- Asia-Pacific & Europe regional ETFs
 
-## Current Architecture
+## Architecture
+
+```
+ ╔══════════════════════════════════════════════════════════════════╗
+ ║                  AZALYST ETF INTELLIGENCE                        ║
+ ║                  global alpha · free data · paper-traded         ║
+ ╚══════════════════════════════════════════════════════════════════╝
+
+           ┌── CRON ──┐
+           │  30 min  │
+           └────┬─────┘
+                │
+       ┌────────┴────────┐
+       ▼                 ▼
+ ┌────────────┐   ┌─────────────────────┐
+ │ NEWS       │   │ UNIVERSE FETCHER    │
+ │ ──────     │   │ ──────────────────  │
+ │ 80+ RSS    │   │ NASDAQ Trader live  │
+ │ classify   │   │ 5,000  →  1,500     │
+ │ score/sect │   │ liquidity-filtered  │
+ └─────┬──────┘   └─────────┬───────────┘
+       │                    │
+       └────────┬───────────┘
+                ▼
+ ┌──────────────────────────────────────────┐
+ │            REGIME ENGINE                 │
+ │  ─────────────────────────────────────── │
+ │  RISK_ON / RISK_OFF · VIX tercile        │
+ │  → factor weight matrix                  │
+ │  Antonacci: defensives only on RISK_OFF  │
+ └────────────────┬─────────────────────────┘
+                  │
+                  ▼
+ ╭──────────────────────────────────────────╮
+ │   ▌▌▌  6-LAYER SCORING (per ETF)  ▌▌▌    │
+ ├──────────────────────────────────────────┤
+ │   ①  RANK      cross-sectional      / 25 │
+ │   ②  FLOW      dollar-vol z-score   / 20 │
+ │   ③  OPTIONS   GEX + IV + sweeps    / 20 │
+ │   ④  ROTATION  AUM-weighted top-10  / 15 │
+ │   ⑤  MACRO     DXY · yields · HG=F  / 10 │
+ │   ⑥  NEWS      sector confidence    / 10 │
+ ╰──────────────────┬───────────────────────╯
+                    │
+                    ▼   gate ≥ 60 / 100
+ ┌──────────────────────────────────────────┐
+ │  CLUSTER DEDUP                           │
+ │  (kills SOXX + SMH + SOXL triple-count)  │
+ └──────────────────┬───────────────────────┘
+                    ▼
+ ┌──────────────────────────────────────────┐
+ │  VOL-TARGET SIZER                        │
+ │  notional ∝ 1/σ · cap 15% · 1.5× gross   │
+ └──────────────────┬───────────────────────┘
+                    ▼
+ ┌──────────────────────────────────────────┐
+ │  RISK OVERLAY                            │
+ │  ATR(14) trail · −8% hard · −15% DD brk  │
+ └──────────────────┬───────────────────────┘
+                    ▼
+ ┌──────────────────────────────────────────┐
+ │  COMMIT BOOK (idempotent)                │
+ │  open │ close │ resize │ no-op           │
+ └─────┬────────────────────┬───────────────┘
+       │                    │
+       ▼                    ▼
+ ┌──────────┐         ┌─────────────────┐
+ │ DISCORD  │         │   DASHBOARD     │
+ │ ──────── │         │   ─────────     │
+ │ ENTRY ⚡ │         │  regime banner  │
+ │ EXIT  ⚡ │         │  factor breakdwn│
+ │ news    │         │  leaderboard    │
+ │ digest  │         │  positions      │
+ └──────────┘         └─────────────────┘
+                              │
+                              ▼
+              gh-pages publish status.json
+```
+
+The mermaid version below is the same flow rendered live by GitHub:
+
+
 
 ```mermaid
 flowchart LR
