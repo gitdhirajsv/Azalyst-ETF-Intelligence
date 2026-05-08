@@ -46,7 +46,8 @@ def _conn() -> sqlite3.Connection:
         );
         CREATE TABLE IF NOT EXISTS positions (
             ticker TEXT PRIMARY KEY, shares INTEGER, avg_entry REAL,
-            entry_date TEXT, peak_price REAL, atr_at_entry REAL
+            entry_date TEXT, peak_price REAL, atr_at_entry REAL,
+            pct_book_at_entry REAL DEFAULT 0
         );
         CREATE TABLE IF NOT EXISTS equity (
             equity_date TEXT PRIMARY KEY, value REAL
@@ -55,6 +56,12 @@ def _conn() -> sqlite3.Connection:
             k TEXT PRIMARY KEY, v TEXT
         );
     """)
+    # Idempotent column-add for upgrade from older schemas
+    try:
+        c.execute("ALTER TABLE positions ADD COLUMN pct_book_at_entry REAL DEFAULT 0")
+        c.commit()
+    except sqlite3.OperationalError:
+        pass  # already exists
     return c
 
 
@@ -108,6 +115,7 @@ def open_position(
     regime_state: str = "UNKNOWN",
     vol_regime: str = "UNKNOWN",
     factor_breakdown: dict | None = None,
+    pct_of_book: float = 0.0,
     notify: bool = True,
 ) -> Trade | None:
     mid = _last_mid(ticker)
@@ -117,9 +125,10 @@ def open_position(
     notional = fill * shares
     today = str(date.today())
     c = _conn()
-    c.execute("""INSERT OR REPLACE INTO positions(ticker, shares, avg_entry, entry_date, peak_price, atr_at_entry)
-                 VALUES (?, ?, ?, ?, ?, ?)""",
-              (ticker, shares, fill, today, fill, 0.0))
+    # Persist entry-time pct_of_book so we can report book-contribution on exit
+    c.execute("""INSERT OR REPLACE INTO positions(ticker, shares, avg_entry, entry_date, peak_price, atr_at_entry, pct_book_at_entry)
+                 VALUES (?, ?, ?, ?, ?, ?, ?)""",
+              (ticker, shares, fill, today, fill, 0.0, pct_of_book))
     action = "BUY" if shares > 0 else "SHORT"
     c.execute("""INSERT INTO trades(trade_date, ticker, action, shares, fill_price, notional, reason)
                  VALUES (?, ?, ?, ?, ?, ?, ?)""",
@@ -137,6 +146,8 @@ def open_position(
                 regime_state=regime_state,
                 vol_regime=vol_regime,
                 factor_breakdown=factor_breakdown,
+                pct_of_book=pct_of_book,
+                book_value=book_value(),
             )
         except Exception:
             pass
@@ -149,11 +160,12 @@ def close_position(
     notify: bool = True,
 ) -> Trade | None:
     c = _conn()
-    cur = c.execute("SELECT shares, avg_entry, entry_date FROM positions WHERE ticker = ?", (ticker,))
+    cur = c.execute("SELECT shares, avg_entry, entry_date, pct_book_at_entry FROM positions WHERE ticker = ?", (ticker,))
     row = cur.fetchone()
     if row is None:
         return None
-    shares, avg_entry, entry_date = row
+    shares, avg_entry, entry_date, pct_book_at_entry = row
+    pct_book_at_entry = pct_book_at_entry or 0.0
     mid = _last_mid(ticker)
     if mid is None:
         return None
@@ -185,6 +197,8 @@ def close_position(
                 pnl_pct=pnl_pct,
                 reason=reason,
                 hold_days=hold_days,
+                pct_of_book_at_entry=pct_book_at_entry,
+                book_value=book_value(),
             )
         except Exception:
             pass

@@ -399,11 +399,12 @@ def commit_book(
         paper_trader.open_position(
             ticker=tk,
             shares=target_shares,
-            reason=f"v2-fusion publish (score {row.get('composite_score', 0):.1f})",
+            reason=f"fusion publish (score {row.get('composite_score', 0):.1f})",
             score=float(row.get("composite_score", 0)),
             regime_state=regime.risk_state,
             vol_regime=regime.vol_regime,
             factor_breakdown=breakdown,
+            pct_of_book=float(row.get("target_pct_of_book", 0) or 0),
             notify=True,
         )
         opened.append(tk)
