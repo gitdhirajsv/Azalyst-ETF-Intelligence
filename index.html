@@ -201,7 +201,7 @@ body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-
 .conf-bar{background:#111;height:5px;border-radius:2px;overflow:hidden}
 .conf-fill{height:5px;background:#ff6600;border-radius:2px}
 
-/* ── REGIME BANNER (v2 alpha stack) ── */
+/* ── REGIME BANNER ── */
 .regime-bar{background:#0a0a0a;border-bottom:1px solid #ff6600;padding:6px 12px;display:flex;gap:18px;align-items:center;font-size:10px;flex-wrap:wrap}
 .regime-cell{display:flex;flex-direction:column;line-height:1.25}
 .regime-k{color:#555;font-size:8px;text-transform:uppercase;letter-spacing:.4px}
@@ -259,7 +259,7 @@ body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-
   </div>
 </div>
 
-<!-- ════════ REGIME BANNER (v2 alpha stack) ════════ -->
+<!-- ════════ REGIME BANNER ════════ -->
 <div class="regime-bar" id="regimeBar">
   <div class="regime-cell">
     <span class="regime-k">Risk State</span>
@@ -285,7 +285,7 @@ body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-
     <span class="regime-k">Active Weights</span>
     <span class="regime-v" id="r-weights">Rank 25 / Flow 20 / Opt 20 / Rot 15 / Macro 10 / News 10</span>
   </div>
-  <span class="regime-tag" id="r-inception">v2 SINCE 2026-05-08</span>
+  <span class="regime-tag" id="r-inception">SINCE 2026-05-08</span>
 </div>
 
 <!-- ════════ PAGE: MKTD ════════ -->
@@ -346,11 +346,11 @@ body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-
 
     <!-- Panel 4: Signal Confidence -->
     <div class="panel">
-      <div class="panel-header">SIGNAL ENGINE — CONFIDENCE MAP <span class="cmd">v2 Threshold: <span id="threshold">60</span>/100</span></div>
+      <div class="panel-header">SIGNAL ENGINE — CONFIDENCE MAP <span class="cmd">Threshold: <span id="threshold">60</span>/100</span></div>
       <div id="signalBody"></div>
     </div>
 
-    <!-- Panel: Factor Breakdown (v2 alpha stack) -->
+    <!-- Panel: Factor Breakdown -->
     <div class="panel">
       <div class="panel-header">FACTOR BREAKDOWN — TOP SIGNAL <span class="cmd" id="fb-ticker">—</span></div>
       <div id="factorBreakdown">
@@ -373,8 +373,8 @@ body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-
       <div id="newsBodyMktd"></div>
     </div>
 
-    <!-- Panel 6: Risk Dashboard -->
-    <div class="panel">
+    <!-- Panel 6: Risk Dashboard (span3 to fill row after Factor Breakdown insertion) -->
+    <div class="panel span3">
       <div class="panel-header">RISK DASHBOARD</div>
       <div class="mgrid" style="grid-template-columns:repeat(4,1fr);margin-bottom:8px" id="riskBoxes"></div>
       <div style="font-size:8px;color:#444;margin-bottom:4px">— SECTOR CONCENTRATION —</div>
