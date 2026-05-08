@@ -45,6 +45,62 @@ GEX_TARGETS = ["SPY", "QQQ", "IWM", "SOXX", "SMH", "IGV", "XLK", "XLF", "XLE",
                "GLD", "SLV", "EWY", "GDX", "ITA"]
 
 
+# Map v1 sector_id -> list of v2 ETF tickers. Used to translate the per-sector
+# news confidence (written to azalyst_state.json by the legacy news engine)
+# into per-ETF news_score for the v2 scorer (capped at 10/100).
+SECTOR_TO_ETFS: dict[str, list[str]] = {
+    "technology_ai":          ["SOXX", "SMH", "SOXL", "IGV", "XLK", "VGT", "FDN", "ARKK", "ARKW", "QQQ"],
+    "energy_oil":             ["XLE", "USO", "UNG", "BNO"],
+    "gold_precious_metals":   ["GLD", "IAU", "SLV", "GDX", "GDXJ", "SIL", "PPLT"],
+    "defense_aerospace":      ["ITA", "PPA", "XAR", "DFEN"],
+    "nuclear_uranium":        ["URA", "URNM", "NLR"],
+    "cybersecurity":          ["HACK", "CIBR", "BUG"],
+    "india_equity":           ["INDA", "EPI", "INDY", "SMIN"],
+    "crypto_digital":         ["BITO", "IBIT", "FBTC", "ETHE"],
+    "banking_financial":      ["KBE", "KRE", "XLF", "IYG"],
+    "commodities_mining":     ["DBC", "GSG", "COPX", "PICK", "REMX", "LIT"],
+    "emerging_markets":       ["EEM", "VWO", "EWZ", "EWY", "EWT", "FXI", "MCHI", "ASHR", "INDA"],
+    "asia_pacific":           ["EWY", "EWT", "EWJ", "FXI", "MCHI", "ASHR"],
+    "europe_equity":          ["EWG", "EWU", "EWQ", "EWI", "EWP"],
+    "healthcare_pharma":      ["XBI", "IBB", "ARKG", "IHI"],
+    "clean_energy_renewables":["ICLN", "TAN", "FAN", "PBW"],
+    "real_estate_reit":       ["VNQ", "IYR", "REM"],
+    "bonds_fixed_income":     ["TLT", "IEF", "SHY", "HYG", "LQD", "TIP", "AGG"],
+}
+
+
+def _load_news_scores() -> dict[str, float]:
+    """Read v1 sector confidence from azalyst_state.json and project to per-ETF
+    news_score capped at 10. Confidence is 0-100; we scale by 0.1 -> 0-10."""
+    import json
+    from pathlib import Path
+    state_path = Path("azalyst_state.json")
+    if not state_path.exists():
+        return {}
+    try:
+        state = json.loads(state_path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    if not isinstance(state, dict):
+        return {}
+    out: dict[str, float] = {}
+    for sector_id, record in state.items():
+        if not isinstance(record, dict):
+            continue
+        conf = record.get("confidence")
+        if not isinstance(conf, (int, float)):
+            continue
+        # Severity multiplier — CRITICAL signals get full 10pt; HIGH gets 8; MEDIUM gets 6
+        sev = str(record.get("severity", "")).upper()
+        sev_mult = {"CRITICAL": 1.0, "HIGH": 0.8, "MEDIUM": 0.6, "LOW": 0.4}.get(sev, 0.5)
+        score = float(conf) / 10.0 * sev_mult  # 0-10 range
+        for etf in SECTOR_TO_ETFS.get(sector_id, []):
+            # If an ETF maps to multiple sectors (e.g. EWY in both emerging_markets and asia_pacific),
+            # take the maximum sector signal.
+            out[etf] = max(out.get(etf, 0.0), score)
+    return out
+
+
 def _regime_weighted_composite(
     ticker: str,
     rank_score: float,
