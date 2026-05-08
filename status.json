@@ -33,7 +33,22 @@
     "worst": null
   },
   "confidence_threshold": 60,
-  "regime": {},
+  "regime": {
+    "risk_state": "RISK_ON",
+    "vol_regime": "MID_VOL",
+    "spy_above_200ma": true,
+    "spy_excess_vs_tbill_3m": 0.05619968886064596,
+    "vix_level": 17.440000534057617,
+    "vix_percentile_1y": 0.5238095238095238,
+    "weight_matrix": {
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
+      "rotation": 15,
+      "macro": 10,
+      "news": 10
+    }
+  },
   "top_signal": {},
   "allocation": {
     "labels": [
@@ -412,34 +427,34 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7399.54,
+      "price": 7393.95,
       "currency": "USD",
-      "change": 62.43,
-      "change_pct": 0.85,
-      "change_str": "+0.85%",
+      "change": 56.84,
+      "change_pct": 0.77,
+      "change_str": "+0.77%",
       "direction": "up"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 26212.2,
+      "price": 26187.63,
       "currency": "USD",
-      "change": 406.0,
-      "change_pct": 1.57,
-      "change_str": "+1.57%",
+      "change": 381.43,
+      "change_pct": 1.48,
+      "change_str": "+1.48%",
       "direction": "up"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 49610.8,
+      "price": 49562.96,
       "currency": "USD",
-      "change": 13.83,
-      "change_pct": 0.03,
-      "change_str": "+0.03%",
-      "direction": "up"
+      "change": -34.01,
+      "change_pct": -0.07,
+      "change_str": "-0.07%",
+      "direction": "down"
     },
     {
       "label": "FTSE 100",
@@ -500,42 +515,42 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4737.0,
+      "price": 4734.7,
       "currency": "USD",
-      "change": 37.2,
-      "change_pct": 0.79,
-      "change_str": "+0.79%",
+      "change": 34.9,
+      "change_pct": 0.74,
+      "change_str": "+0.74%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 95.17,
+      "price": 95.07,
       "currency": "USD",
-      "change": 0.36,
-      "change_pct": 0.38,
-      "change_str": "+0.38%",
+      "change": 0.26,
+      "change_pct": 0.27,
+      "change_str": "+0.27%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 80264.66,
+      "price": 80180.95,
       "currency": "USD",
-      "change": 254.67,
-      "change_pct": 0.32,
-      "change_str": "+0.32%",
+      "change": 170.96,
+      "change_pct": 0.21,
+      "change_str": "+0.21%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 97.89,
+      "price": 97.9,
       "currency": "USD",
-      "change": -0.36,
+      "change": -0.35,
       "change_pct": -0.36,
       "change_str": "-0.36%",
       "direction": "down"
@@ -544,11 +559,11 @@
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 17.45,
+      "price": 17.44,
       "currency": "USD",
-      "change": 0.37,
-      "change_pct": 2.17,
-      "change_str": "+2.17%",
+      "change": 0.36,
+      "change_pct": 2.11,
+      "change_str": "+2.11%",
       "direction": "up"
     }
   ],
@@ -556,7 +571,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
     "portfolio_peak": 10043.4,
-    "vix": 17.45,
+    "vix": 17.44,
     "vix_regime": "ELEVATED",
     "sector_concentration": [],
     "max_drawdown_pct": 0.0,
@@ -600,9 +615,9 @@
     }
   },
   "logs": [
-    "2026-05-08 18:33:35 [INFO] AZALYST - status.json generated",
-    "2026-05-08 18:33:35 [INFO] PORTFOLIO - NAV USD 10,043.40 | Return +0.00%",
-    "2026-05-08 18:33:35 [INFO] SIGNALS - 6 active signal buckets in state"
+    "2026-05-08 18:47:06 [INFO] AZALYST - status.json generated",
+    "2026-05-08 18:47:06 [INFO] PORTFOLIO - NAV USD 10,043.40 | Return +0.00%",
+    "2026-05-08 18:47:06 [INFO] SIGNALS - 6 active signal buckets in state"
   ],
-  "generated_at": "2026-05-08 18:33:34 UTC"
+  "generated_at": "2026-05-08 18:47:05 UTC"
 }
