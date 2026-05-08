@@ -72,8 +72,12 @@ SECTOR_TO_ETFS: dict[str, list[str]] = {
 
 def _load_news_scores() -> dict[str, float]:
     """Read v1 sector confidence from azalyst_state.json and project to per-ETF
-    news_score capped at 10. Confidence is 0-100; we scale by 0.1 -> 0-10."""
+    news_score capped at 10. Confidence is 0-100; we scale by 0.1 -> 0-10.
+
+    Also fires Discord news alerts (no @-mention) for HIGH/CRITICAL sectors
+    that haven't been alerted in the last 6 hours."""
     import json
+    from datetime import datetime, timezone
     from pathlib import Path
     state_path = Path("azalyst_state.json")
     if not state_path.exists():
@@ -84,6 +88,16 @@ def _load_news_scores() -> dict[str, float]:
         return {}
     if not isinstance(state, dict):
         return {}
+
+    # Sentinel tracks last news-alert timestamp per sector to throttle pings
+    alert_sentinel = Path("data/.last_news_alert.json")
+    try:
+        alert_log = json.loads(alert_sentinel.read_text(encoding="utf-8"))
+    except Exception:
+        alert_log = {}
+    now_iso = datetime.now(timezone.utc).isoformat()
+    alert_changed = False
+
     out: dict[str, float] = {}
     for sector_id, record in state.items():
         if not isinstance(record, dict):
@@ -91,14 +105,46 @@ def _load_news_scores() -> dict[str, float]:
         conf = record.get("confidence")
         if not isinstance(conf, (int, float)):
             continue
-        # Severity multiplier — CRITICAL signals get full 10pt; HIGH gets 8; MEDIUM gets 6
         sev = str(record.get("severity", "")).upper()
         sev_mult = {"CRITICAL": 1.0, "HIGH": 0.8, "MEDIUM": 0.6, "LOW": 0.4}.get(sev, 0.5)
-        score = float(conf) / 10.0 * sev_mult  # 0-10 range
+        score = float(conf) / 10.0 * sev_mult
         for etf in SECTOR_TO_ETFS.get(sector_id, []):
-            # If an ETF maps to multiple sectors (e.g. EWY in both emerging_markets and asia_pacific),
-            # take the maximum sector signal.
             out[etf] = max(out.get(etf, 0.0), score)
+
+        # Discord news alert: fire on HIGH/CRITICAL sectors, max once per 6h
+        if sev in ("HIGH", "CRITICAL") and conf >= 70:
+            last = alert_log.get(sector_id)
+            should_fire = True
+            if last:
+                try:
+                    age_hours = (datetime.now(timezone.utc) -
+                                 datetime.fromisoformat(last)).total_seconds() / 3600
+                    should_fire = age_hours >= 6
+                except Exception:
+                    pass
+            if should_fire:
+                try:
+                    from . import discord_notify
+                    headlines = record.get("top_headlines") or []
+                    sector_label = record.get("sector_label", sector_id.replace("_", " ").title())
+                    discord_notify.notify_news_alert(
+                        sector=sector_label,
+                        confidence=float(conf),
+                        severity=sev,
+                        headlines=headlines if isinstance(headlines, list) else [],
+                        etfs=SECTOR_TO_ETFS.get(sector_id, [])[:6],
+                    )
+                    alert_log[sector_id] = now_iso
+                    alert_changed = True
+                except Exception:
+                    pass
+
+    if alert_changed:
+        try:
+            alert_sentinel.parent.mkdir(parents=True, exist_ok=True)
+            alert_sentinel.write_text(json.dumps(alert_log), encoding="utf-8")
+        except Exception:
+            pass
     return out
 
 
@@ -220,7 +266,78 @@ def run(book_value: float = 100_000, verbose: bool = True) -> dict:
         )
         out = "data/tearsheet.md"
 
+    # Discord cycle digest -- post regime + top 5 + news leaders + book size.
+    # Throttled by content fingerprint so identical cycles don't spam: only
+    # post when (a) regime changed, (b) top signal changed, (c) published count
+    # changed, OR (d) >= 4 hours since last digest.
+    try:
+        _push_cycle_digest_if_changed(leaderboard, book_df, regime, verbose=verbose)
+    except Exception as exc:
+        if verbose: print(f"[discord] cycle digest skipped: {exc}")
+
     return {"leaderboard": leaderboard, "book": book_df, "regime": regime, "tearsheet": out}
+
+
+def _push_cycle_digest_if_changed(leaderboard, book_df, regime, verbose=True):
+    """Smart throttle: only post when something meaningful changed since last cycle."""
+    import json
+    from datetime import datetime, timezone, timedelta
+    from pathlib import Path
+    from . import discord_notify
+
+    sentinel = Path("data/.last_cycle_digest")
+    top1_ticker = leaderboard["ticker"].iloc[0] if not leaderboard.empty else None
+    top1_score  = float(leaderboard["total"].iloc[0]) if not leaderboard.empty else 0.0
+    published_count = int(leaderboard["publish"].sum()) if "publish" in leaderboard.columns else 0
+    book_count = len(book_df)
+    fingerprint = {
+        "regime": f"{regime.risk_state}/{regime.vol_regime}",
+        "top1": top1_ticker,
+        "published_count": published_count,
+        "book_count": book_count,
+    }
+    now = datetime.now(timezone.utc)
+    last = None
+    if sentinel.exists():
+        try:
+            last = json.loads(sentinel.read_text(encoding="utf-8"))
+        except Exception:
+            last = None
+    same = last and last.get("fingerprint") == fingerprint
+    age_hours = float("inf")
+    if last and last.get("ts"):
+        try:
+            age_hours = (now - datetime.fromisoformat(last["ts"])).total_seconds() / 3600
+        except Exception:
+            pass
+    if same and age_hours < 4:
+        if verbose: print(f"[discord] digest skipped (no change, last fired {age_hours:.1f}h ago)")
+        return
+
+    # Read v1 sector news for the digest
+    try:
+        state = json.loads(Path("azalyst_state.json").read_text(encoding="utf-8"))
+    except Exception:
+        state = {}
+    news_top = sorted(
+        [(s, float(r.get("confidence", 0)), str(r.get("severity", ""))) for s, r in state.items()
+         if isinstance(r, dict) and isinstance(r.get("confidence"), (int, float))],
+        key=lambda x: -x[1],
+    )
+
+    discord_notify.notify_cycle_digest(
+        regime_state=regime.risk_state,
+        vol_regime=regime.vol_regime,
+        vix_level=regime.vix_level,
+        leaderboard_top=[(r.ticker, float(r.total)) for r in leaderboard.head(5).itertuples()],
+        book_size=book_count,
+        news_top=news_top,
+        published_count=published_count,
+    )
+    if verbose: print(f"[discord] cycle digest posted (regime={fingerprint['regime']}, top1={top1_ticker} {top1_score:.1f}, published={published_count})")
+
+    sentinel.parent.mkdir(parents=True, exist_ok=True)
+    sentinel.write_text(json.dumps({"fingerprint": fingerprint, "ts": now.isoformat()}), encoding="utf-8")
 
 
 def commit_book(
