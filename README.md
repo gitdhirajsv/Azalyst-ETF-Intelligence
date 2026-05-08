@@ -139,7 +139,7 @@ flowchart LR
 
 > **DEPRECATED.** The legacy `self_improve.py` LLM-driven weight-tuning loop has been disabled because tuning parameters against historical P&L is functionally indistinguishable from p-hacking; the 2pp rollback rule does not protect against multi-trial inflation. Parameter changes are now subject to walk-forward validation and a deflated-Sharpe gate (López de Prado, 2014) before deployment.
 >
-> See `DEPRECATION_NOTICE.md` for the full deprecation map. The cron schedule on `daily_improve.yml` has been removed; the workflow is preserved as `workflow_dispatch` only and exits 0 with a deprecation message.
+> The cron schedule on `daily_improve.yml` has been removed; the workflow is preserved as `workflow_dispatch` only and exits 0 with a deprecation message.
 
 Replacement validation pipeline:
 
@@ -160,11 +160,11 @@ Replacement validation pipeline:
 - **Regime Engine (`regime_engine.py`)**: combines a VIX-tercile classifier (LOW / MID / HIGH against trailing 1Y) with an Antonacci absolute-momentum gate (SPY > 200MA AND SPY 3M return > 3M T-bill ⇒ `RISK_ON`; otherwise `RISK_OFF` allows only defensives). Each regime drives a different scorer weight matrix, recognizing that momentum half-life and signal efficacy change with the volatility regime.
 - **Position Sizing (`position_sizer.py`)**: vol-target sizing where each position contributes equal annualized $-vol to the book, with a per-position 15% cap and 1.5× max gross leverage. Capped Kelly (1/4-Kelly) available for high-confidence signals.
 - **Risk Overlay (`risk_manager.py`)**: ATR(14) chandelier trailing stop at 2.5× from peak, hard stop at −8% from entry, and a portfolio-level −15% drawdown circuit breaker that flattens non-defensives with a 7-day cool-down before re-entry. Vol-target rebalance bands at 0.7×–1.4× target.
-- **Backtester (`backtester.py`)**: walk-forward (rolling 252-day train, 63-day test) plus purged k-fold cross-validation with a 5-day embargo around test folds, per López de Prado AFML ch. 7.
+- **Backtester (`azalyst_alpha/backtester.py`)**: walk-forward (rolling 252-day train, 63-day test) plus purged k-fold cross-validation with a 5-day embargo around test folds, per López de Prado AFML ch. 7.
 - **Deflated Sharpe Gate (`deflated_sharpe.py`)**: adjusts realized Sharpe for trial inflation, skew, and excess kurtosis. Strategy variants only deploy when `DSR ≥ 0.5`. The full strategy auto-pauses when realized rolling-6M DSR drops below 0.4 pending re-validation.
 - **Paper Trader (`azalyst_alpha/paper_trader.py`)**: SQLite-backed trade log with realistic fills — half-spread (5 bps default) plus square-root-rule market impact (`0.10 × √(notional / 30D ADV)` bps). Persisted positions, trades, and equity curve at `data/paper_trader.db`.
 - **Daily Tearsheet (`report.py`)**: markdown report at `data/tearsheet.md` covering regime banner, top-25 leaderboard, published book with gross/net exposure, live positions, and equity curve.
-- **`self_improve.py` deprecated**: the LLM-driven weight-tuning cron is removed. The file is preserved on disk for historical reference; the workflow is no-op. All future parameter changes route through walk-forward + DSR gate (see `DEPRECATION_NOTICE.md`).
+- **`self_improve.py` deprecated**: the LLM-driven weight-tuning cron is removed. All future parameter changes route through walk-forward + deflated-Sharpe gate.
 - **Paper trading reset**: portfolio re-initialized to 948,800 INR cash / 0 positions / 0 trades on v2 inception. The prior v1 paper-trading record is archived at `archive/v1_paper_track_record_2026-05-08/` for reference.
 - **Dashboard updates**: regime banner (risk state, vol regime, VIX percentile, SPY vs 200MA, 3M excess vs T-bill, active weight matrix), factor breakdown panel showing per-layer points for the top published signal, threshold display updated 62 → 60, and a v2-inception tag.
 
@@ -210,14 +210,9 @@ Replacement validation pipeline:
 - `quant_fetcher.py`: optimized bulk data fetching for technical scanning engines
 - `regime_classifier.py`: original v1 stub — production version now in `azalyst_alpha/regime_engine.py`
 - `narrative_tracker.py`: V2 design, headline clustering and coherence tracker
-- `backtester.py`: historical signal replay engine
-- `backtest_validator.py`: legacy walk-forward validator — superseded by `azalyst_alpha/backtester.py` + `deflated_sharpe.py`
 - `generate_dashboard.py`: builds `status.json` (now also publishes regime + top_signal payloads)
 - `index.html`: live GitHub Pages dashboard interface
 - `self_improve.py`: deprecated LLM-driven weight tuner (preserved on disk; cron disabled)
-- `improvement_log.jsonl`: audit log of historical optimizations (reset at v2 inception)
-- `STRATEGY.md`: formal strategy document covering targets and pause conditions
-- `DEPRECATION_NOTICE.md`: full deprecation map for v1 modules
 
 ## Autonomous Deployment (No Local Setup Required)
 
@@ -246,23 +241,14 @@ The engine is autonomous:
 
 ## Backtesting And Walk-Forward
 
-Backtesting in this project means replaying dated historical signals against historical ETF prices with modeled execution costs.
-
-Run the legacy replay:
-
-```bash
-python backtester.py --signals data/backtest_events.sample.jsonl
-python backtester.py --signals data/backtest_events.sample.jsonl --walk-forward-splits 3
-```
-
-Run the v2 walk-forward + purged k-fold validator (recommended for any parameter change):
+Run the walk-forward + purged k-fold validator (recommended for any parameter change):
 
 ```bash
 python -m azalyst_alpha.backtester
 python -m azalyst_alpha.deflated_sharpe
 ```
 
-The v2 validator outputs the realized Sharpe, expected null-max Sharpe under the trial count, the deflated Sharpe ratio, and the implied probability that the edge is real. Strategy variants are only deployable at `DSR ≥ 0.5`.
+The validator outputs the realized Sharpe, expected null-max Sharpe under the trial count, the deflated Sharpe ratio, and the implied probability that the edge is real. Strategy variants are only deployable at `DSR ≥ 0.5`.
 
 ## Dashboard And Public Track Record
 
