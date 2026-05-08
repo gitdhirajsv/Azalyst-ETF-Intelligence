@@ -105,15 +105,65 @@ def notify_cycle_digest(
     vix_level: float,
     leaderboard_top: list[tuple[str, float]],
     book_size: int,
+    news_top: list[tuple[str, float, str]] | None = None,
+    published_count: int = 0,
 ) -> None:
-    """No mention — informational only."""
-    top = "\n".join(f"`{i+1:>2}` **{tk}** — {sc:.1f}" for i, (tk, sc) in enumerate(leaderboard_top[:5]))
+    """No mention — informational digest after each fusion cycle."""
+    top = "\n".join(
+        f"`{i+1:>2}` **{tk}** — {sc:.1f}"
+        for i, (tk, sc) in enumerate(leaderboard_top[:5])
+    )
+    description = (
+        f"Regime: **{regime_state}** · **{vol_regime.replace('_',' ')}** · VIX {vix_level:.1f}\n\n"
+        f"**Top 5 by composite score**\n{top}\n\n"
+    )
+    if news_top:
+        nl = "\n".join(
+            f"`{sev[:4]:>4}` **{sector}** — {conf:.0f}/100"
+            for sector, conf, sev in news_top[:5]
+        )
+        description += f"**News leaders**\n{nl}\n\n"
+    description += f"Published (cleared 60-pt gate): **{published_count}** · Live book: **{book_size}** positions"
+
     embed = {
-        "title": "Azalyst v2 — cycle digest",
-        "description": f"Regime: **{regime_state}** / **{vol_regime}**  ·  VIX {vix_level:.1f}\n\n"
-                       f"**Top 5 leaderboard**\n{top}\n\n"
-                       f"Live book: {book_size} positions",
+        "title": "Azalyst — cycle digest",
+        "description": description,
         "color": 0xFF6600,
-        "footer": {"text": "Azalyst v2 · informational · no action"},
+        "footer": {"text": "Informational · no action"},
+    }
+    _post({"embeds": [embed]})
+
+
+def notify_new_signal(ticker: str, score: float, factor_breakdown: dict[str, float] | None = None) -> None:
+    """No mention — fired when a ticker enters the published-book set
+    (cleared the gate AND survived dedup) but BEFORE commit_book opens it.
+    Lets the user see published signals even on cycles where commit_book
+    decides no action (e.g., already holding the position)."""
+    fb = factor_breakdown or {}
+    fb_line = " | ".join(f"{k}={v:.0f}" for k, v in fb.items() if v) or "(no breakdown)"
+    embed = {
+        "title": f"📡 SIGNAL — {ticker}",
+        "description": f"Composite score **{score:.1f} / 100** · cleared gate\n\n{fb_line}",
+        "color": 0xFFAA00,
+        "footer": {"text": "Signal published · execution decided by commit_book"},
+    }
+    _post({"embeds": [embed]})
+
+
+def notify_news_alert(sector: str, confidence: float, severity: str, headlines: list[str], etfs: list[str]) -> None:
+    """No mention — high-confidence sector news alert (independent of trades).
+    Fires when the legacy news pipeline scores a sector at HIGH/CRITICAL severity."""
+    head_block = "\n".join(f"• {h[:120]}" for h in headlines[:3]) if headlines else "_(no headlines captured)_"
+    etfs_line = ", ".join(etfs[:6]) if etfs else "_(no mapping)_"
+    color = 0xFF3333 if severity == "CRITICAL" else 0xFFAA00 if severity == "HIGH" else 0x888888
+    embed = {
+        "title": f"📰 NEWS — {sector}  ({severity})",
+        "description": (
+            f"Confidence **{confidence:.0f} / 100**\n\n"
+            f"**Top headlines**\n{head_block}\n\n"
+            f"**Related ETFs:** {etfs_line}"
+        ),
+        "color": color,
+        "footer": {"text": "News signal · feeds news_score factor at next cycle"},
     }
     _post({"embeds": [embed]})
