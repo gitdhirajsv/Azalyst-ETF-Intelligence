@@ -32,6 +32,13 @@ pandas>=2.0.0
 numpy>=1.24.0
 yfinance>=0.2.37
 
+# ── V2 Alpha Stack (azalyst_alpha) ──────────────────────────────────────────
+# scipy: required by gex_engine (norm.pdf / Black-Scholes), cluster_dedup
+# (linkage / fcluster), deflated_sharpe (norm.cdf / norm.ppf)
+scipy>=1.11
+# tabulate: optional, used by report.py to render markdown tearsheet
+tabulate>=0.9
+
 # ── REVIEW BOARD ADDITIONS (V2 Design Considerations) ───────────────────────
 
 # Walk-forward backtest + deflated Sharpe ratio

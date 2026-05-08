@@ -132,8 +132,26 @@ def run(book_value: float = 100_000, verbose: bool = True) -> dict:
     leaderboard = pd.DataFrame([asdict(c) for c in composite]).sort_values("total", ascending=False)
     book_df = portfolio_constructor.to_dataframe(book)
 
+    # Always write the CSV — generate_dashboard.py reads this for top_signal payload.
+    from pathlib import Path
+    Path("data").mkdir(parents=True, exist_ok=True)
+    leaderboard.to_csv("data/leaderboard_latest.csv", index=False)
+    if verbose: print(f"[csv] data/leaderboard_latest.csv written ({len(leaderboard)} rows)")
+
     if verbose: print("[report] writing tearsheet -> data/tearsheet.md")
-    out = report.write_report(leaderboard, book_df, regime)
+    try:
+        out = report.write_report(leaderboard, book_df, regime)
+    except ImportError as exc:
+        # tabulate not installed -> fall back to plain text tearsheet
+        if verbose: print(f"[report] markdown rendering unavailable ({exc}); writing plain-text tearsheet")
+        Path("data/tearsheet.md").write_text(
+            f"# Azalyst Tearsheet — {regime.risk_state} / {regime.vol_regime}\n\n"
+            f"VIX {regime.vix_level:.1f} ({regime.vix_percentile_1y:.0%}ile)\n\n"
+            f"## Top 25\n```\n{leaderboard.head(25).to_string(index=False)}\n```\n\n"
+            f"## Published Book\n```\n{book_df.to_string(index=False) if not book_df.empty else '(empty)'}\n```\n",
+            encoding="utf-8",
+        )
+        out = "data/tearsheet.md"
 
     return {"leaderboard": leaderboard, "book": book_df, "regime": regime, "tearsheet": out}
 
