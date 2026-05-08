@@ -234,8 +234,11 @@ class ConfidenceScorer:
             age_hours = max(age.total_seconds() / 3600.0, 0.0)
             if age_hours > 24 * 7:
                 return 0.0
+            if age_hours > 168:
+                # Near-zero for articles older than 7 days
+                return max(17.0 * math.exp(-age_hours / 1.5) * 0.05, 0.0)
             if age_hours > 48:
-                # More aggressive decay for very old articles
+                # More aggressive decay for articles 2-7 days old
                 return max(17.0 * math.exp(-age_hours / 2.0) * 0.2, 0.0)
             return min(17.0 * math.exp(-age_hours / 10.0), 17.0)
         except Exception:
