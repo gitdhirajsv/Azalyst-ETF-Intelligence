@@ -200,6 +200,23 @@ body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-
 .conf-label{display:flex;justify-content:space-between;font-size:9px;margin-bottom:2px}
 .conf-bar{background:#111;height:5px;border-radius:2px;overflow:hidden}
 .conf-fill{height:5px;background:#ff6600;border-radius:2px}
+
+/* ── REGIME BANNER (v2 alpha stack) ── */
+.regime-bar{background:#0a0a0a;border-bottom:1px solid #ff6600;padding:6px 12px;display:flex;gap:18px;align-items:center;font-size:10px;flex-wrap:wrap}
+.regime-cell{display:flex;flex-direction:column;line-height:1.25}
+.regime-k{color:#555;font-size:8px;text-transform:uppercase;letter-spacing:.4px}
+.regime-v{color:#ffaa00;font-weight:700;font-size:11px}
+.regime-v.on{color:#00ff41}
+.regime-v.off{color:#ff3333}
+.regime-v.neu{color:#ffaa00}
+.regime-tag{margin-left:auto;background:#ff6600;color:#000;padding:2px 8px;font-weight:700;font-size:9px;letter-spacing:.5px}
+
+/* ── FACTOR BREAKDOWN ── */
+.fbar{display:flex;align-items:center;gap:6px;padding:2px 0;font-size:10px}
+.fname{color:#888;min-width:90px;font-size:9px}
+.fwrap{flex:1;background:#111;height:7px;border-radius:2px;overflow:hidden}
+.ffill{height:7px;border-radius:2px;background:linear-gradient(90deg,#ff6600,#ffaa00)}
+.fpts{min-width:48px;text-align:right;font-size:9px;color:#bbb}
 </style>
 </head>
 <body>
@@ -240,6 +257,35 @@ body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-
     <span class="tape-item" id="t-dxy">DXY ...</span>
     <span class="tape-item" id="t-usdinr">USD/INR ...</span>
   </div>
+</div>
+
+<!-- ════════ REGIME BANNER (v2 alpha stack) ════════ -->
+<div class="regime-bar" id="regimeBar">
+  <div class="regime-cell">
+    <span class="regime-k">Risk State</span>
+    <span class="regime-v neu" id="r-risk">—</span>
+  </div>
+  <div class="regime-cell">
+    <span class="regime-k">Vol Regime</span>
+    <span class="regime-v" id="r-vol">—</span>
+  </div>
+  <div class="regime-cell">
+    <span class="regime-k">VIX (1Y %ile)</span>
+    <span class="regime-v" id="r-vix">—</span>
+  </div>
+  <div class="regime-cell">
+    <span class="regime-k">SPY vs 200MA</span>
+    <span class="regime-v" id="r-spy200">—</span>
+  </div>
+  <div class="regime-cell">
+    <span class="regime-k">SPY 3M Excess</span>
+    <span class="regime-v" id="r-excess">—</span>
+  </div>
+  <div class="regime-cell">
+    <span class="regime-k">Active Weights</span>
+    <span class="regime-v" id="r-weights">Rank 25 / Flow 20 / Opt 20 / Rot 15 / Macro 10 / News 10</span>
+  </div>
+  <span class="regime-tag" id="r-inception">v2 SINCE 2026-05-08</span>
 </div>
 
 <!-- ════════ PAGE: MKTD ════════ -->
@@ -300,8 +346,25 @@ body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-
 
     <!-- Panel 4: Signal Confidence -->
     <div class="panel">
-      <div class="panel-header">SIGNAL ENGINE — CONFIDENCE MAP <span class="cmd">Threshold: <span id="threshold">62</span>/100</span></div>
+      <div class="panel-header">SIGNAL ENGINE — CONFIDENCE MAP <span class="cmd">v2 Threshold: <span id="threshold">60</span>/100</span></div>
       <div id="signalBody"></div>
+    </div>
+
+    <!-- Panel: Factor Breakdown (v2 alpha stack) -->
+    <div class="panel">
+      <div class="panel-header">FACTOR BREAKDOWN — TOP SIGNAL <span class="cmd" id="fb-ticker">—</span></div>
+      <div id="factorBreakdown">
+        <div class="fbar"><span class="fname">Rank (CS)</span><div class="fwrap"><div class="ffill" id="fb-rank-bar" style="width:0%"></div></div><span class="fpts" id="fb-rank">0/25</span></div>
+        <div class="fbar"><span class="fname">Flow</span><div class="fwrap"><div class="ffill" id="fb-flow-bar" style="width:0%"></div></div><span class="fpts" id="fb-flow">0/20</span></div>
+        <div class="fbar"><span class="fname">Options+GEX</span><div class="fwrap"><div class="ffill" id="fb-opt-bar" style="width:0%"></div></div><span class="fpts" id="fb-opt">0/20</span></div>
+        <div class="fbar"><span class="fname">Rotation</span><div class="fwrap"><div class="ffill" id="fb-rot-bar" style="width:0%"></div></div><span class="fpts" id="fb-rot">0/15</span></div>
+        <div class="fbar"><span class="fname">Macro Fit</span><div class="fwrap"><div class="ffill" id="fb-macro-bar" style="width:0%"></div></div><span class="fpts" id="fb-macro">0/10</span></div>
+        <div class="fbar"><span class="fname">News Conf.</span><div class="fwrap"><div class="ffill" id="fb-news-bar" style="width:0%"></div></div><span class="fpts" id="fb-news">0/10</span></div>
+        <div style="margin-top:5px;padding-top:5px;border-top:1px solid #222;font-size:9px;color:#888">
+          Total <span id="fb-total" style="color:#ffaa00;font-weight:700">0</span>/100 &nbsp;
+          <span id="fb-publish" style="color:#444">— not published</span>
+        </div>
+      </div>
     </div>
 
     <!-- Panel 5: News Headlines -->
@@ -629,7 +692,58 @@ function renderTape() {
   }
 }
 
+function renderRegime() {
+  const r = DATA.regime || {};
+  const risk = r.risk_state || 'NEUTRAL';
+  const vol = r.vol_regime || 'MID_VOL';
+  const vix = (r.vix_level !== undefined) ? Number(r.vix_level).toFixed(1) : '—';
+  const vixp = (r.vix_percentile_1y !== undefined) ? (Number(r.vix_percentile_1y) * 100).toFixed(0) + '%' : '—';
+  const above200 = r.spy_above_200ma === undefined ? '—' : (r.spy_above_200ma ? 'ABOVE' : 'BELOW');
+  const ex = (r.spy_excess_vs_tbill_3m !== undefined) ? ((Number(r.spy_excess_vs_tbill_3m) * 100).toFixed(1) + '%') : '—';
+  const rEl = document.getElementById('r-risk');
+  rEl.textContent = risk;
+  rEl.className = 'regime-v ' + (risk === 'RISK_ON' ? 'on' : risk === 'RISK_OFF' ? 'off' : 'neu');
+  document.getElementById('r-vol').textContent = vol.replace('_', ' ');
+  document.getElementById('r-vix').textContent = vix + ' (' + vixp + ')';
+  document.getElementById('r-spy200').textContent = above200;
+  document.getElementById('r-excess').textContent = ex;
+  if (r.weight_matrix) {
+    const w = r.weight_matrix;
+    document.getElementById('r-weights').textContent =
+      `Rank ${w.rank} / Flow ${w.flow} / Opt ${w.options} / Rot ${w.rotation} / Macro ${w.macro} / News ${w.news}`;
+  }
+}
+
+function renderFactorBreakdown() {
+  const top = (DATA.top_signal) || (DATA.signals && DATA.signals[0]) || null;
+  if (!top) return;
+  document.getElementById('fb-ticker').textContent = top.ticker || '—';
+  const set = (id, val, max) => {
+    const pct = Math.min(100, Math.max(0, (val / max) * 100));
+    document.getElementById(id + '-bar').style.width = pct + '%';
+    document.getElementById(id).textContent = (Number(val) || 0).toFixed(1) + '/' + max;
+  };
+  set('fb-rank', top.rank_score || 0, 25);
+  set('fb-flow', top.flow_score || 0, 20);
+  set('fb-opt', top.options_score || 0, 20);
+  set('fb-rot', top.rotation_score || 0, 15);
+  set('fb-macro', top.macro_score || 0, 10);
+  set('fb-news', top.news_score || 0, 10);
+  const total = Number(top.total || 0);
+  document.getElementById('fb-total').textContent = total.toFixed(1);
+  const pubEl = document.getElementById('fb-publish');
+  if (total >= 60) {
+    pubEl.textContent = '✓ PUBLISHED';
+    pubEl.style.color = '#00ff41';
+  } else {
+    pubEl.textContent = '— below 60-pt gate';
+    pubEl.style.color = '#444';
+  }
+}
+
 function renderMktdPage() {
+  renderRegime();
+  renderFactorBreakdown();
   // Portfolio stats (all values already in USD from status.json)
   const nav_usd = DATA.portfolio_value ? Number(DATA.portfolio_value).toFixed(0) : '--';
   const dep_usd = DATA.total_deposited ? Number(DATA.total_deposited).toFixed(0) : '--';

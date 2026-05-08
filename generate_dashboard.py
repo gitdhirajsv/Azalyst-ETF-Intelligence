@@ -679,7 +679,7 @@ def minimal_status(now_str):
             "avg_win": 0, "avg_loss": 0, "profit_factor": 0,
             "expectancy": 0, "sharpe_proxy": 0, "best": None, "worst": None,
         },
-        "confidence_threshold": 62,
+        "confidence_threshold": 60,
         "allocation":    {"labels": [], "values": []},
         "pnl":           {"labels": [], "values": []},
         "confidence":    [],
@@ -752,13 +752,56 @@ def generate_status():
             print(f"WARNING: risk_engine failed: {exc}")
             aladdin_risk = risk_engine._empty_report() if risk_engine else {}
 
+    # v2 alpha stack: regime + top-signal factor breakdown (best-effort load)
+    regime_payload = {}
+    top_signal_payload = {}
+    try:
+        from azalyst_alpha import regime_engine as _re
+        r = _re.detect_regime()
+        regime_payload = {
+            "risk_state": r.risk_state,
+            "vol_regime": r.vol_regime,
+            "spy_above_200ma": r.spy_above_200ma,
+            "spy_excess_vs_tbill_3m": r.spy_excess_vs_tbill_3m,
+            "vix_level": r.vix_level,
+            "vix_percentile_1y": r.vix_percentile_1y,
+            "weight_matrix": r.weight_matrix,
+        }
+    except Exception as exc:
+        print(f"INFO: regime engine unavailable ({exc}); dashboard will fall back to defaults")
+    try:
+        leaderboard_path = ROOT / "data" / "leaderboard_latest.csv"
+        if leaderboard_path.exists():
+            import csv
+            with open(leaderboard_path, encoding="utf-8") as fh:
+                rows = list(csv.DictReader(fh))
+            if rows:
+                rows.sort(key=lambda r: float(r.get("total", 0)), reverse=True)
+                top = rows[0]
+                top_signal_payload = {
+                    "ticker": top.get("ticker"),
+                    "rank_score":     float(top.get("rank_score", 0) or 0),
+                    "flow_score":     float(top.get("flow_score", 0) or 0),
+                    "options_score":  float(top.get("options_score", 0) or 0),
+                    "rotation_score": float(top.get("rotation_score", 0) or 0),
+                    "macro_score":    float(top.get("macro_score", 0) or 0),
+                    "news_score":     float(top.get("news_score", 0) or 0),
+                    "total":          float(top.get("total", 0) or 0),
+                    "publish":        str(top.get("publish", "")).lower() == "true",
+                    "direction":      top.get("direction", "long"),
+                }
+    except Exception as exc:
+        print(f"INFO: leaderboard parse skipped ({exc})")
+
     status = {
         **metrics,
         "usd_inr_rate":       safe_round(usd_inr_rate, 4),
         "positions":          positions,
         "closed_trades_list": build_closed(portfolio.get("closed_trades", []), usd_inr_rate),
         "track_record":       build_track(portfolio),
-        "confidence_threshold": 62,
+        "confidence_threshold": 60,
+        "regime":             regime_payload,
+        "top_signal":         top_signal_payload,
         "allocation":  build_alloc(positions, metrics["cash"] + metrics.get("monthly_reserve", 0)),
         "pnl":         build_pnl(positions),
         "confidence":  build_conf(state),

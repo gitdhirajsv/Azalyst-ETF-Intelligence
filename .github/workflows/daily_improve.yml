@@ -1,51 +1,25 @@
-name: Daily Self-Improvement
+# DEPRECATED — v2 alpha stack disables the LLM-driven self-improvement loop.
+#
+# Per the v2 board meeting (see README.md and DEPRECATION_NOTICE.md):
+#   "self_improve.py is automated p-hacking. All parameter changes go through
+#    walk_forward() + deflated_sharpe.gate()." — López de Prado
+#
+# The cron schedule is removed. The workflow is preserved as workflow_dispatch
+# only, and its single job exits 0 with a deprecation message. Re-enabling
+# this workflow is a deliberate decision; do not do so without re-validating
+# against STRATEGY.md §4.
+
+name: Daily Self-Improvement (DEPRECATED)
 
 on:
-  schedule:
-    # 2:00 AM UTC daily — after markets close, before the 30-min scan wakes up
-    - cron: "0 2 * * *"
   workflow_dispatch:
-    # Also triggerable manually from the Actions tab
-
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
-concurrency:
-  group: azalyst-improve
-  cancel-in-progress: false   # never cancel a running improvement mid-write
 
 jobs:
-  improve:
+  deprecated:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          ref: main
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-          cache: "pip"
-
-      - name: Install dependencies
-        run: pip install requests
-
-      - name: Run self-improvement engine
-        env:
-          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
-        run: python self_improve.py
-
-      - name: Commit improvements if any
+      - name: Notice
         run: |
-          git config --global user.name "azalyst-improver"
-          git config --global user.email "improver@azalyst.ai"
-          git add scorer.py classifier.py paper_trader.py etf_mapper.py \
-                  news_fetcher.py reporter.py improvement_log.jsonl || true
-          git diff --staged --quiet && echo "Nothing to commit" || \
-            git commit -m "improve: autonomous code update $(date -u '+%Y-%m-%d')"
-          git push origin main || echo "Nothing to push"
+          echo "self_improve.py is deprecated under the v2 alpha stack."
+          echo "See DEPRECATION_NOTICE.md for the replacement validation pipeline."
+          exit 0
