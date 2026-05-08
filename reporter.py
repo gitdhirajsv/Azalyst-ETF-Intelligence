@@ -125,6 +125,19 @@ class DiscordReporter:
     # ── System Messages ───────────────────────────────────────────────────────
 
     def send_startup_message(self):
+        # Throttle: cron fires every 30 minutes -- without this guard the
+        # "SYSTEM ACTIVE" embed would post 48x/day. Send at most once per day.
+        try:
+            from pathlib import Path
+            sentinel = Path("data/.last_startup_msg")
+            today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+            if sentinel.exists() and sentinel.read_text(encoding="utf-8").strip() == today_str:
+                return
+            sentinel.parent.mkdir(parents=True, exist_ok=True)
+            sentinel.write_text(today_str, encoding="utf-8")
+        except Exception:
+            pass  # if sentinel logic breaks, fall through and send anyway
+
         payload = {
             "embeds": [{
                 "title": "AZALYST ETF INTELLIGENCE  —  SYSTEM ACTIVE",
@@ -134,9 +147,9 @@ class DiscordReporter:
                     "Scan interval    : Every 30 minutes\n"
                     "Coverage         : Global sector, regional, commodity,\n"
                     "                   fixed income, and thematic ETFs\n"
-                    "Confidence floor : 62 / 100\n"
+                    "Confidence floor : 60 / 100\n"
                     "Capital plan     : $10,000 USD / month (50% deploy, 50% reserve)\n"
-                    "Trading venues   : US, Europe, Asia, India, commodity-linked\n"
+                    "Trading venues   : US, Europe, Asia, EM, commodity-linked\n"
                     "Access via       : Multi-broker and multi-exchange ETF routing\n"
                     "```\n\n"
                     "Alerts are issued only when a confirmed macro event meets the "
