@@ -37,6 +37,7 @@ jobs:
           pip install -r requirements.txt
           pip install scipy>=1.11
       - name: Run Azalyst engine (single cycle)
+        continue-on-error: true   # legacy v1 engine — failure must not block v2 fusion + dashboard
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: python azalyst.py --once
