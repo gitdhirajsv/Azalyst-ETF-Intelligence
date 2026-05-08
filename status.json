@@ -216,16 +216,16 @@
       "score": 95.0
     },
     {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 94.0
+    },
+    {
       "symbol": "Europe Equity + Energy / Oil & Gas",
       "score": 94.0
     },
     {
       "symbol": "Banking & Financial Sector + Bonds & Fixed Income",
       "score": 94.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 93.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
@@ -242,6 +242,10 @@
     {
       "symbol": "Gold & Precious Metals + Bonds & Fixed Income + Banking & Financial Sector",
       "score": 92.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 91.0
     },
     {
       "symbol": "Healthcare & Pharma + India Equity Markets",
@@ -272,10 +276,6 @@
       "score": 86.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 83.0
-    },
-    {
       "symbol": "Real Estate & REITs + India Equity Markets",
       "score": 82.0
     },
@@ -304,6 +304,10 @@
       "score": 72.0
     },
     {
+      "symbol": "Cybersecurity",
+      "score": 70.0
+    },
+    {
       "symbol": "Nuclear Energy & Uranium",
       "score": 69.0
     },
@@ -321,10 +325,6 @@
     },
     {
       "symbol": "Asia Pacific Equity",
-      "score": 67.0
-    },
-    {
-      "symbol": "Cybersecurity",
       "score": 67.0
     },
     {
@@ -394,6 +394,59 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 16.4,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 94.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 74,
+      "latest_at": "08 May 2026 11:50 UTC",
+      "headline": "Chip Industry Week In Review",
+      "regions": [
+        "europe",
+        "india",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Defense News",
+        "Tech",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 17.0,
         "recency": 16.9,
         "geopolitical_severity": 13.0
       }
@@ -504,59 +557,6 @@
         "source_diversity": 17.3,
         "recency": 18.0,
         "geopolitical_severity": 15.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 93.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 69,
-      "latest_at": "08 May 2026 07:03 UTC",
-      "headline": "IREN inks AI infrastructure deal with Nvidia",
-      "regions": [
-        "americas",
-        "asia_pacific",
-        "europe",
-        "global"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Cointelegraph.com News",
-        "US Top News and Analysis",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.7,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
       }
     },
     {
@@ -769,6 +769,53 @@
         "source_diversity": 16.0,
         "recency": 19.7,
         "geopolitical_severity": 14.8
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 91.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 29,
+      "latest_at": "08 May 2026 11:00 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "europe",
+        "india",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Cointelegraph.com News",
+        "www.theregister.com - Articles",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 11.4,
+        "recency": 15.6,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1145,53 +1192,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 83.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 30,
-      "latest_at": "07 May 2026 22:55 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "asia_pacific",
-        "europe",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "US Top News and Analysis",
-        "Latest from Tom's Hardware",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 11.4,
-        "recency": 7.5,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "india_equity|real_estate_reit",
       "sector_label": "Real Estate & REITs + India Equity Markets",
       "confidence": 82.0,
@@ -1562,6 +1562,50 @@
       }
     },
     {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 70.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "08 May 2026 11:50 UTC",
+      "headline": "Canvas is online again after ShinyHunters threaten to leak schools\u2019 data",
+      "regions": [
+        "global"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "The Verge",
+        "Latest from Tom's Hardware",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.8,
+        "volume_confirmation": 12.6,
+        "source_diversity": 8.1,
+        "recency": 16.9,
+        "geopolitical_severity": 7.8
+      }
+    },
+    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 69.0,
@@ -1813,50 +1857,6 @@
       }
     },
     {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 67.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "08 May 2026 07:03 UTC",
-      "headline": "Canvas is down as ShinyHunters threatens to leak schools\u2019 data",
-      "regions": [
-        "global"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "US Top News and Analysis",
-        "Latest from Tom's Hardware",
-        "The Verge"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.2,
-        "volume_confirmation": 11.3,
-        "source_diversity": 8.3,
-        "recency": 16.9,
-        "geopolitical_severity": 7.7
-      }
-    },
-    {
       "sector_key": "healthcare_pharma",
       "sector_label": "Healthcare & Pharma + Europe Equity",
       "confidence": 64.0,
@@ -2067,17 +2067,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Technology & AI / Semiconductors - 74 articles - HIGH / NEUTRAL - Chip Industry Week In Review"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Europe Equity + Energy / Oil & Gas - 9 articles - HIGH / NEUTRAL - Europe looks to secure shipping in Strait of Hormuz"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Banking & Financial Sector + Bonds & Fixed Income - 12 articles - HIGH / NEUTRAL - Treasuries Slump as Fed Dissents Spur Wagers on 2027 Rate Hike"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 69 articles - HIGH / NEUTRAL - IREN inks AI infrastructure deal with Nvidia"
     },
     {
       "tag": "tag-neu",
@@ -2098,6 +2098,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Gold & Precious Metals + Bonds & Fixed Income + Banking & Financial Sector - 15 articles - HIGH / NEUTRAL - Gold Steady After Two-Day Drop as Iran War Fans Inflation Fears"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Crypto & Digital Assets - 29 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -2137,11 +2142,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 30 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Real Estate & REITs + India Equity Markets - 9 articles - HIGH / NEUTRAL - Displaced by Iran war: out of Lebanon, into Syrian crisis"
     },
     {
@@ -2177,6 +2177,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Cybersecurity - 6 articles - MEDIUM / NEUTRAL - Canvas is online again after ShinyHunters threaten to leak schools\u2019 data"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 4 articles - HIGH / NEUTRAL - Iran Having a Nuclear Weapon is a 'Real Danger To The World' Says Sen. Moore Capito"
     },
     {
@@ -2198,11 +2203,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Asia Pacific Equity - 5 articles - MEDIUM / NEUTRAL - SoftBank shares surge over 18% as Japan tech-fueled rally lifts Nikkei 225 to record highs"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Cybersecurity - 5 articles - MEDIUM / NEUTRAL - Canvas is down as ShinyHunters threatens to leak schools\u2019 data"
     },
     {
       "tag": "tag-neu",
@@ -2263,20 +2263,20 @@
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10246.84,
+      "price": 10259.49,
       "currency": "GBP",
-      "change": -30.16,
-      "change_pct": -0.29,
-      "change_str": "-0.29%",
+      "change": -17.51,
+      "change_pct": -0.17,
+      "change_str": "-0.17%",
       "direction": "down"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 24446.23,
+      "price": 24445.99,
       "currency": "EUR",
-      "change": -217.38,
+      "change": -217.62,
       "change_pct": -0.88,
       "change_str": "-0.88%",
       "direction": "down"
@@ -2318,63 +2318,63 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4723.1,
+      "price": 4731.8,
       "currency": "USD",
-      "change": 23.3,
-      "change_pct": 0.5,
-      "change_str": "+0.50%",
+      "change": 32.0,
+      "change_pct": 0.68,
+      "change_str": "+0.68%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 95.17,
+      "price": 94.91,
       "currency": "USD",
-      "change": 0.36,
-      "change_pct": 0.38,
-      "change_str": "+0.38%",
+      "change": 0.1,
+      "change_pct": 0.11,
+      "change_str": "+0.11%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 79809.73,
+      "price": 80189.13,
       "currency": "USD",
-      "change": -200.26,
-      "change_pct": -0.25,
-      "change_str": "-0.25%",
-      "direction": "down"
+      "change": 179.14,
+      "change_pct": 0.22,
+      "change_str": "+0.22%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 97.92,
+      "price": 97.96,
       "currency": "USD",
-      "change": -0.33,
-      "change_pct": -0.34,
-      "change_str": "-0.34%",
+      "change": -0.29,
+      "change_pct": -0.3,
+      "change_str": "-0.30%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 17.12,
+      "price": 17.06,
       "currency": "USD",
-      "change": 0.04,
-      "change_pct": 0.23,
-      "change_str": "+0.23%",
-      "direction": "up"
+      "change": -0.02,
+      "change_pct": -0.12,
+      "change_str": "-0.12%",
+      "direction": "down"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.96,
     "portfolio_peak": 10094.25,
-    "vix": 17.12,
+    "vix": 17.06,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -2775,11 +2775,11 @@
     }
   },
   "logs": [
-    "2026-05-08 10:21:11 [INFO] AZALYST - status.json generated",
-    "2026-05-08 10:21:11 [INFO] PORTFOLIO - NAV USD 9,997.27 | Return -0.46%",
-    "2026-05-08 10:21:11 [INFO] SIGNALS - 33 active signal buckets in state",
-    "2026-05-08 10:21:11 [INFO] TRADER - Open positions: XLE, ITA, QQQ, XLF, BND, CIBR",
-    "2026-05-08 10:21:11 [INFO] RISK - Partial profits realised: USD 536.40"
+    "2026-05-08 11:52:48 [INFO] AZALYST - status.json generated",
+    "2026-05-08 11:52:48 [INFO] PORTFOLIO - NAV USD 9,997.27 | Return -0.46%",
+    "2026-05-08 11:52:48 [INFO] SIGNALS - 33 active signal buckets in state",
+    "2026-05-08 11:52:48 [INFO] TRADER - Open positions: XLE, ITA, QQQ, XLF, BND, CIBR",
+    "2026-05-08 11:52:48 [INFO] RISK - Partial profits realised: USD 536.40"
   ],
-  "generated_at": "2026-05-08 10:21:10 UTC"
+  "generated_at": "2026-05-08 11:52:48 UTC"
 }
