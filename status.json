@@ -212,8 +212,8 @@
   },
   "confidence": [
     {
-      "symbol": "Energy / Oil & Gas + Defense & Aerospace",
-      "score": 95.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 96.0
     },
     {
       "symbol": "Technology & AI / Semiconductors",
@@ -347,28 +347,28 @@
   "signals": [
     {
       "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas + Defense & Aerospace",
-      "confidence": 95.0,
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 96.0,
       "severity": "CRITICAL",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "08 May 2026 08:53 UTC",
-      "headline": "Pakistan Rejects LNG Bids as Energy Crisis Deepens",
+      "article_count": 35,
+      "latest_at": "08 May 2026 12:22 UTC",
+      "headline": "More Than 40 India-Bound Ships Remain Trapped Near Hormuz",
       "regions": [
-        "global",
         "americas",
-        "india",
-        "middle_east"
+        "middle_east",
+        "global",
+        "asia_pacific"
       ],
       "sources": [
+        "Bloomberg Markets",
         "BBC News",
-        "US Top News and Analysis",
         "Tech",
-        "Oilprice.com"
+        "Markets-Economic Times"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -393,8 +393,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.4,
-        "recency": 16.9,
+        "source_diversity": 15.7,
+        "recency": 15.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -2062,7 +2062,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas + Defense & Aerospace - 13 articles - CRITICAL / NEUTRAL - Pakistan Rejects LNG Bids as Energy Crisis Deepens"
+      "text": "Energy / Oil & Gas - 35 articles - CRITICAL / NEUTRAL - More Than 40 India-Bound Ships Remain Trapped Near Hormuz"
     },
     {
       "tag": "tag-neu",
@@ -2263,22 +2263,22 @@
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10259.49,
+      "price": 10267.62,
       "currency": "GBP",
-      "change": -17.51,
-      "change_pct": -0.17,
-      "change_str": "-0.17%",
+      "change": -9.38,
+      "change_pct": -0.09,
+      "change_str": "-0.09%",
       "direction": "down"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 24445.99,
+      "price": 24428.69,
       "currency": "EUR",
-      "change": -217.62,
-      "change_pct": -0.88,
-      "change_str": "-0.88%",
+      "change": -234.92,
+      "change_pct": -0.95,
+      "change_str": "-0.95%",
       "direction": "down"
     },
     {
@@ -2318,55 +2318,55 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4731.8,
+      "price": 4737.9,
       "currency": "USD",
-      "change": 32.0,
-      "change_pct": 0.68,
-      "change_str": "+0.68%",
+      "change": 38.1,
+      "change_pct": 0.81,
+      "change_str": "+0.81%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 94.91,
+      "price": 94.67,
       "currency": "USD",
-      "change": 0.1,
-      "change_pct": 0.11,
-      "change_str": "+0.11%",
-      "direction": "up"
+      "change": -0.14,
+      "change_pct": -0.15,
+      "change_str": "-0.15%",
+      "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 80189.13,
+      "price": 79873.35,
       "currency": "USD",
-      "change": 179.14,
-      "change_pct": 0.22,
-      "change_str": "+0.22%",
-      "direction": "up"
+      "change": -136.64,
+      "change_pct": -0.17,
+      "change_str": "-0.17%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 97.96,
+      "price": 97.93,
       "currency": "USD",
-      "change": -0.29,
-      "change_pct": -0.3,
-      "change_str": "-0.30%",
+      "change": -0.32,
+      "change_pct": -0.32,
+      "change_str": "-0.32%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 17.06,
+      "price": 16.95,
       "currency": "USD",
-      "change": -0.02,
-      "change_pct": -0.12,
-      "change_str": "-0.12%",
+      "change": -0.13,
+      "change_pct": -0.76,
+      "change_str": "-0.76%",
       "direction": "down"
     }
   ],
@@ -2374,7 +2374,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.96,
     "portfolio_peak": 10094.25,
-    "vix": 17.06,
+    "vix": 16.95,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -2775,11 +2775,11 @@
     }
   },
   "logs": [
-    "2026-05-08 11:52:48 [INFO] AZALYST - status.json generated",
-    "2026-05-08 11:52:48 [INFO] PORTFOLIO - NAV USD 9,997.27 | Return -0.46%",
-    "2026-05-08 11:52:48 [INFO] SIGNALS - 33 active signal buckets in state",
-    "2026-05-08 11:52:48 [INFO] TRADER - Open positions: XLE, ITA, QQQ, XLF, BND, CIBR",
-    "2026-05-08 11:52:48 [INFO] RISK - Partial profits realised: USD 536.40"
+    "2026-05-08 13:12:14 [INFO] AZALYST - status.json generated",
+    "2026-05-08 13:12:14 [INFO] PORTFOLIO - NAV USD 9,997.27 | Return -0.46%",
+    "2026-05-08 13:12:14 [INFO] SIGNALS - 33 active signal buckets in state",
+    "2026-05-08 13:12:14 [INFO] TRADER - Open positions: XLE, ITA, QQQ, XLF, BND, CIBR",
+    "2026-05-08 13:12:14 [INFO] RISK - Partial profits realised: USD 536.40"
   ],
-  "generated_at": "2026-05-08 11:52:48 UTC"
+  "generated_at": "2026-05-08 13:12:13 UTC"
 }
