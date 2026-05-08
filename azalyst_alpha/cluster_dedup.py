@@ -45,9 +45,13 @@ def build_clusters(
     distance_threshold: float = 0.5,
 ) -> list[Cluster]:
     tickers = tickers or ETF_UNIVERSE
+    # scipy.linkage requires >=2 observations. With 0 or 1 candidates each
+    # ticker is its own trivial cluster (no dedup needed anyway).
+    if len(tickers) <= 1:
+        return [Cluster(cluster_id=i, members=[t]) for i, t in enumerate(tickers)]
     corr = _correlation_matrix(tickers)
-    if corr.empty:
-        return [Cluster(cluster_id=0, members=[t]) for t in tickers]
+    if corr.empty or len(corr.columns) <= 1:
+        return [Cluster(cluster_id=i, members=[t]) for i, t in enumerate(tickers)]
     dist = np.sqrt(np.clip(2 * (1 - corr.values), 0, None))
     np.fill_diagonal(dist, 0)
     condensed = squareform(dist, checks=False)
