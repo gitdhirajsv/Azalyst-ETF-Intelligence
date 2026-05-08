@@ -49,26 +49,36 @@ def notify_entry(
     regime_state: str,
     vol_regime: str,
     factor_breakdown: dict[str, float] | None = None,
+    pct_of_book: float = 0.0,
+    book_value: float = 0.0,
 ) -> None:
-    """Tag the user — this is a real entry."""
+    """Tag the user — this is a real entry. Shows BOTH dollar notional AND
+    percentage of book so the user can translate to any real-account size
+    (10k / 50k / 100k all use same %)."""
     fb = factor_breakdown or {}
     fb_line = " | ".join(
         f"{k}={v:.0f}" for k, v in fb.items() if v
     ) or "(no breakdown)"
+    pct_str = f"{pct_of_book * 100:.1f}%" if pct_of_book else "—"
+    notional_str = f"${notional:,.0f}  ·  **{pct_str} of book**"
     embed = {
         "title": f"📈 ENTRY — {ticker}",
-        "color": 0x00FF41,  # green
+        "color": 0x00FF41,
         "fields": [
             {"name": "Shares", "value": f"{shares:,}", "inline": True},
             {"name": "Fill", "value": f"${fill_price:,.2f}", "inline": True},
-            {"name": "Notional", "value": f"${notional:,.0f}", "inline": True},
+            {"name": "Notional", "value": notional_str, "inline": True},
             {"name": "Composite Score", "value": f"{score:.1f} / 100", "inline": True},
             {"name": "Regime", "value": f"{regime_state} / {vol_regime}", "inline": True},
+            {"name": "Book Reference", "value": f"${book_value:,.0f}" if book_value else "—", "inline": True},
             {"name": "Factor Breakdown", "value": fb_line, "inline": False},
+            {"name": "Real-account translation", "value":
+                f"`$10k → ${(pct_of_book * 10_000):,.0f}` · `$50k → ${(pct_of_book * 50_000):,.0f}` · `$100k → ${(pct_of_book * 100_000):,.0f}`",
+                "inline": False},
         ],
-        "footer": {"text": "Azalyst v2 · paper trade · simulated only"},
+        "footer": {"text": "Paper trade · simulated only · scale by your account"},
     }
-    _post({"content": f"{_mention()}  **ENTRY** {ticker}", "embeds": [embed]})
+    _post({"content": f"{_mention()}  **ENTRY** {ticker}  ({pct_str})", "embeds": [embed]})
 
 
 def notify_exit(
@@ -80,23 +90,34 @@ def notify_exit(
     pnl_pct: float,
     reason: str,
     hold_days: int,
+    pct_of_book_at_entry: float = 0.0,
+    book_value: float = 0.0,
 ) -> None:
-    """Tag the user — this is a real exit."""
+    """Tag the user — real exit. Shows P&L in $ AND % of book contribution."""
     color = 0x00FF41 if pnl_pct >= 0 else 0xFF3333
     emoji = "✅" if pnl_pct >= 0 else "🔻"
+    # Contribution to book = position_pct * position_return
+    book_contrib_pct = pct_of_book_at_entry * pnl_pct if pct_of_book_at_entry else 0.0
+    pct_str = f"{pct_of_book_at_entry * 100:.1f}%" if pct_of_book_at_entry else "—"
+    pnl_str = (f"${pnl_usd:+,.2f}  ·  position **{pnl_pct:+.2%}**  "
+               f"·  book **{book_contrib_pct:+.3%}**")
     embed = {
         "title": f"{emoji} EXIT — {ticker}  ({pnl_pct:+.2%})",
         "color": color,
         "fields": [
             {"name": "Shares", "value": f"{shares:,}", "inline": True},
             {"name": "Fill", "value": f"${fill_price:,.2f}", "inline": True},
-            {"name": "P&L", "value": f"${pnl_usd:+,.2f}", "inline": True},
+            {"name": "Notional", "value": f"${notional:,.0f}  ·  was {pct_str} of book", "inline": True},
+            {"name": "P&L", "value": pnl_str, "inline": False},
             {"name": "Reason", "value": reason, "inline": True},
             {"name": "Hold", "value": f"{hold_days}d", "inline": True},
+            {"name": "Real-account P&L", "value":
+                f"`$10k acct → ${(book_contrib_pct * 10_000):+,.2f}` · `$50k → ${(book_contrib_pct * 50_000):+,.2f}` · `$100k → ${(book_contrib_pct * 100_000):+,.2f}`",
+                "inline": False},
         ],
-        "footer": {"text": "Azalyst v2 · paper trade · simulated only"},
+        "footer": {"text": "Paper trade · simulated only · scale by your account"},
     }
-    _post({"content": f"{_mention()}  **EXIT** {ticker}  {pnl_pct:+.2%}", "embeds": [embed]})
+    _post({"content": f"{_mention()}  **EXIT** {ticker}  {pnl_pct:+.2%} ({pct_str} pos)", "embeds": [embed]})
 
 
 def notify_cycle_digest(
