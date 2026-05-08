@@ -51,20 +51,36 @@ WEIGHT_MATRICES: dict[str, dict[str, float]] = {
 }
 
 
+def _close_series(ticker: str, period: str, auto_adjust: bool = True) -> pd.Series:
+    """yfinance returns either a Series (older versions) or a single-column
+    DataFrame (newer versions) when given one ticker. Coerce to Series."""
+    raw = yf.download(ticker, period=period, interval="1d",
+                      auto_adjust=auto_adjust, progress=False)
+    if raw is None or len(raw) == 0:
+        return pd.Series(dtype=float)
+    closes = raw["Close"] if "Close" in (raw.columns.get_level_values(0)
+                                         if isinstance(raw.columns, pd.MultiIndex)
+                                         else raw.columns) else raw
+    if isinstance(closes, pd.DataFrame):
+        # multi-ticker or single-ticker-DataFrame -> squeeze to Series
+        closes = closes.squeeze("columns") if closes.shape[1] == 1 else closes.iloc[:, 0]
+    return closes.dropna()
+
+
 def _spy_close(period: str = "2y") -> pd.Series:
-    return yf.download("SPY", period=period, interval="1d",
-                       auto_adjust=True, progress=False)["Close"].dropna()
+    return _close_series("SPY", period, auto_adjust=True)
 
 
 def _vix_close(period: str = "2y") -> pd.Series:
-    return yf.download("^VIX", period=period, interval="1d",
-                       progress=False)["Close"].dropna()
+    return _close_series("^VIX", period, auto_adjust=False)
 
 
 def _tbill_3m_yield() -> float:
     """3-month T-bill yield via ^IRX (CBOE 13-week rate quoted as %)."""
     try:
-        irx = yf.download("^IRX", period="10d", interval="1d", progress=False)["Close"].dropna()
+        irx = _close_series("^IRX", "10d", auto_adjust=False)
+        if irx.empty:
+            return 0.05
         return float(irx.iloc[-1]) / 100.0
     except Exception:
         return 0.05
