@@ -100,7 +100,16 @@ def set_book_value(v: float) -> None:
     c.commit()
 
 
-def open_position(ticker: str, shares: int, reason: str = "") -> Trade | None:
+def open_position(
+    ticker: str,
+    shares: int,
+    reason: str = "",
+    score: float = 0.0,
+    regime_state: str = "UNKNOWN",
+    vol_regime: str = "UNKNOWN",
+    factor_breakdown: dict | None = None,
+    notify: bool = True,
+) -> Trade | None:
     mid = _last_mid(ticker)
     if mid is None:
         return None
@@ -116,16 +125,35 @@ def open_position(ticker: str, shares: int, reason: str = "") -> Trade | None:
                  VALUES (?, ?, ?, ?, ?, ?, ?)""",
               (today, ticker, action, shares, fill, notional, reason))
     c.commit()
+    if notify:
+        try:
+            from . import discord_notify
+            discord_notify.notify_entry(
+                ticker=ticker,
+                shares=shares,
+                fill_price=fill,
+                notional=abs(notional),
+                score=score,
+                regime_state=regime_state,
+                vol_regime=vol_regime,
+                factor_breakdown=factor_breakdown,
+            )
+        except Exception:
+            pass
     return Trade(today, ticker, action, shares, fill, notional, reason)
 
 
-def close_position(ticker: str, reason: str = "EXIT") -> Trade | None:
+def close_position(
+    ticker: str,
+    reason: str = "EXIT",
+    notify: bool = True,
+) -> Trade | None:
     c = _conn()
-    cur = c.execute("SELECT shares, avg_entry FROM positions WHERE ticker = ?", (ticker,))
+    cur = c.execute("SELECT shares, avg_entry, entry_date FROM positions WHERE ticker = ?", (ticker,))
     row = cur.fetchone()
     if row is None:
         return None
-    shares, _ = row
+    shares, avg_entry, entry_date = row
     mid = _last_mid(ticker)
     if mid is None:
         return None
@@ -138,6 +166,28 @@ def close_position(ticker: str, reason: str = "EXIT") -> Trade | None:
               (today, ticker, action, -shares, fill, notional, reason))
     c.execute("DELETE FROM positions WHERE ticker = ?", (ticker,))
     c.commit()
+    if notify:
+        try:
+            from . import discord_notify
+            pnl_usd = (fill - avg_entry) * shares
+            pnl_pct = (fill - avg_entry) / avg_entry if avg_entry else 0.0
+            try:
+                from datetime import datetime as _dt
+                hold_days = (_dt.fromisoformat(today) - _dt.fromisoformat(entry_date)).days
+            except Exception:
+                hold_days = 0
+            discord_notify.notify_exit(
+                ticker=ticker,
+                shares=abs(shares),
+                fill_price=fill,
+                notional=abs(notional),
+                pnl_usd=pnl_usd,
+                pnl_pct=pnl_pct,
+                reason=reason,
+                hold_days=hold_days,
+            )
+        except Exception:
+            pass
     return Trade(today, ticker, action, -shares, fill, notional, reason)
 
 
