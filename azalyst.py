@@ -21,17 +21,17 @@ from portfolio_reporter import PortfolioReporter
 from config             import Config
 from quant_fetcher      import QuantFetcher
 
-# ── NEW: Multi-engine alpha stack ────────────────────────────────────────────
+# ── Multi-engine alpha stack (legacy v1; v2 stack lives in azalyst_alpha/) ──
 try:
     from price_scanner        import PriceScanner, ETF_TO_SECTOR
     from constituent_analyzer import ConstituentAnalyzer
-    from reverse_researcher   import ReverseResearcher
     from signal_fusion        import SignalFuser
     _MULTI_ENGINE_AVAILABLE = True
 except Exception as _imp_err:
     _MULTI_ENGINE_AVAILABLE = False
-    PriceScanner = ConstituentAnalyzer = ReverseResearcher = SignalFuser = None
+    PriceScanner = ConstituentAnalyzer = SignalFuser = None
     ETF_TO_SECTOR = {}
+ReverseResearcher = None  # removed in cleanup; legacy "explain mover" feature
 
 # ── REVIEW BOARD CHANGE: COT positioning engine ─────────────────────────────
 try:
