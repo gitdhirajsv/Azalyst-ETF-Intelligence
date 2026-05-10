@@ -23,21 +23,29 @@ WEBHOOK_ENV = "DISCORD_WEBHOOK_URL"
 def _post(payload: dict) -> None:
     url = os.environ.get(WEBHOOK_ENV)
     if not url:
-        return
-    try:
-        req = urllib.request.Request(
-            url,
-            data=json.dumps(payload).encode("utf-8"),
-            headers={"Content-Type": "application/json"},
-        )
-        with urllib.request.urlopen(req, timeout=10):
-            pass
-    except (urllib.error.URLError, TimeoutError):
-        pass
+              print(f"[discord] WARNING: {WEBHOOK_ENV} not set - skipping notification")
+              return
+          try:
+                    req = urllib.request.Request(
+                                  url,
+                                  data=json.dumps(payload).encode("utf-8"),
+                                  headers={"Content-Type": "application/json"},
+                    )
+                    with urllib.request.urlopen(req, timeout=10) as resp:
+                                  print(f"[discord] POST success (status {resp.status})")
+          except urllib.error.HTTPError as e:
+                    print(f"[discord] POST FAILED - HTTP {e.code}: {e.reason}")
+                    try:
+                                  body = e.read().decode("utf-8", errors="replace")[:300]
+                                  print(f"[discord]   response body: {body}")
+                    except Exception:
+                                  pass
+                    except (urllib.error.URLError, TimeoutError) as e:
+                              print(f"[discord] POST FAILED - {type(e).__name__}: {e}")
+                      
+        def _mention() -> str:
+              return f"<@{DISCORD_USER_ID}>"
 
-
-def _mention() -> str:
-    return f"<@{DISCORD_USER_ID}>"
 
 
 def notify_entry(
