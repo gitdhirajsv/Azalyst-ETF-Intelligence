@@ -20,32 +20,32 @@ DISCORD_USER_ID = "1363959528194052118"  # owner
 WEBHOOK_ENV = "DISCORD_WEBHOOK_URL"
 
 
+def _mention() -> str:
+    return f"<@{DISCORD_USER_ID}>"
+
+
 def _post(payload: dict) -> None:
     url = os.environ.get(WEBHOOK_ENV)
     if not url:
-              print(f"[discord] WARNING: {WEBHOOK_ENV} not set - skipping notification")
-              return
-          try:
-                    req = urllib.request.Request(
-                                  url,
-                                  data=json.dumps(payload).encode("utf-8"),
-                                  headers={"Content-Type": "application/json"},
-                    )
-                    with urllib.request.urlopen(req, timeout=10) as resp:
-                                  print(f"[discord] POST success (status {resp.status})")
-          except urllib.error.HTTPError as e:
-                    print(f"[discord] POST FAILED - HTTP {e.code}: {e.reason}")
-                    try:
-                                  body = e.read().decode("utf-8", errors="replace")[:300]
-                                  print(f"[discord]   response body: {body}")
-                    except Exception:
-                                  pass
-                    except (urllib.error.URLError, TimeoutError) as e:
-                              print(f"[discord] POST FAILED - {type(e).__name__}: {e}")
-                      
-        def _mention() -> str:
-              return f"<@{DISCORD_USER_ID}>"
-
+        print(f"[discord] WARNING: {WEBHOOK_ENV} not set - skipping notification")
+        return
+    try:
+        req = urllib.request.Request(
+            url,
+            data=json.dumps(payload).encode("utf-8"),
+            headers={"Content-Type": "application/json"},
+        )
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            print(f"[discord] POST success (status {resp.status})")
+    except urllib.error.HTTPError as e:
+        print(f"[discord] POST FAILED - HTTP {e.code}: {e.reason}")
+        try:
+            body = e.read().decode("utf-8", errors="replace")[:300]
+            print(f"[discord]   response body: {body}")
+        except Exception:
+            pass
+    except (urllib.error.URLError, TimeoutError) as e:
+        print(f"[discord] POST FAILED - {type(e).__name__}: {e}")
 
 
 def notify_entry(
@@ -104,7 +104,6 @@ def notify_exit(
     """Tag the user — real exit. Shows P&L in $ AND % of book contribution."""
     color = 0x00FF41 if pnl_pct >= 0 else 0xFF3333
     emoji = "✅" if pnl_pct >= 0 else "🔻"
-    # Contribution to book = position_pct * position_return
     book_contrib_pct = pct_of_book_at_entry * pnl_pct if pct_of_book_at_entry else 0.0
     pct_str = f"{pct_of_book_at_entry * 100:.1f}%" if pct_of_book_at_entry else "—"
     pnl_str = (f"${pnl_usd:+,.2f}  ·  position **{pnl_pct:+.2%}**  "
@@ -165,9 +164,7 @@ def notify_cycle_digest(
 
 def notify_new_signal(ticker: str, score: float, factor_breakdown: dict[str, float] | None = None) -> None:
     """No mention — fired when a ticker enters the published-book set
-    (cleared the gate AND survived dedup) but BEFORE commit_book opens it.
-    Lets the user see published signals even on cycles where commit_book
-    decides no action (e.g., already holding the position)."""
+    (cleared the gate AND survived dedup) but BEFORE commit_book opens it."""
     fb = factor_breakdown or {}
     fb_line = " | ".join(f"{k}={v:.0f}" for k, v in fb.items() if v) or "(no breakdown)"
     embed = {
@@ -180,8 +177,7 @@ def notify_new_signal(ticker: str, score: float, factor_breakdown: dict[str, flo
 
 
 def notify_news_alert(sector: str, confidence: float, severity: str, headlines: list[str], etfs: list[str]) -> None:
-    """No mention — high-confidence sector news alert (independent of trades).
-    Fires when the legacy news pipeline scores a sector at HIGH/CRITICAL severity."""
+    """No mention — high-confidence sector news alert (independent of trades)."""
     head_block = "\n".join(f"• {h[:120]}" for h in headlines[:3]) if headlines else "_(no headlines captured)_"
     etfs_line = ", ".join(etfs[:6]) if etfs else "_(no mapping)_"
     color = 0xFF3333 if severity == "CRITICAL" else 0xFFAA00 if severity == "HIGH" else 0x888888
