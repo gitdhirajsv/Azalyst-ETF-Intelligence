@@ -17,6 +17,8 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
+        env:
+              DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
     permissions:
       contents: write
       pages: write
@@ -37,9 +39,8 @@ jobs:
           pip install -r requirements.txt
           pip install scipy>=1.11
       - name: Run Azalyst engine (single cycle)
-        continue-on-error: true   # legacy v1 engine — failure must not block v2 fusion + dashboard
-        env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        continue-on-error: true   # legacy v1 engine — failure must not block v2 fsion + dashboard
+      
         run: python azalyst.py --once
       - name: Run v2 alpha fusion (regime + 6-layer scoring + leaderboard)
         continue-on-error: true   # do not block dashboard if a free-tier feed is rate-limited
