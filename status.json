@@ -34,12 +34,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
+    "risk_state": "NEUTRAL",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.05684493890676737,
-    "vix_level": 17.190000534057617,
-    "vix_percentile_1y": 0.47619047619047616,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -50,14 +50,14 @@
     }
   },
   "top_signal": {
-    "ticker": "QQQ",
-    "rank_score": 23.991723100075244,
-    "flow_score": 20.0,
-    "options_score": 25.5,
-    "rotation_score": 0.0,
+    "ticker": "XLK",
+    "rank_score": 22.71331828442438,
+    "flow_score": 13.26455051489145,
+    "options_score": 13.108906301105526,
+    "rotation_score": 15.0,
     "macro_score": 0.0,
     "news_score": 7.6000000000000005,
-    "total": 77.09172310007524,
+    "total": 71.68677510042136,
     "publish": true,
     "direction": "long"
   },
@@ -526,44 +526,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4696.7,
+      "price": 4705.0,
       "currency": "USD",
-      "change": -23.7,
-      "change_pct": -0.5,
-      "change_str": "-0.50%",
+      "change": -15.4,
+      "change_pct": -0.33,
+      "change_str": "-0.33%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 98.03,
+      "price": 98.42,
       "currency": "USD",
-      "change": 2.61,
-      "change_pct": 2.74,
-      "change_str": "+2.74%",
+      "change": 3.0,
+      "change_pct": 3.14,
+      "change_str": "+3.14%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 82001.44,
+      "price": 82194.77,
       "currency": "USD",
-      "change": 1337.07,
-      "change_pct": 1.66,
-      "change_str": "+1.66%",
+      "change": 1530.4,
+      "change_pct": 1.9,
+      "change_str": "+1.90%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.04,
+      "price": 98.0,
       "currency": "USD",
-      "change": 0.2,
-      "change_pct": 0.2,
-      "change_str": "+0.20%",
+      "change": 0.16,
+      "change_pct": 0.16,
+      "change_str": "+0.16%",
       "direction": "up"
     },
     {
@@ -626,9 +626,9 @@
     }
   },
   "logs": [
-    "2026-05-10 22:50:16 [INFO] AZALYST - status.json generated",
-    "2026-05-10 22:50:16 [INFO] PORTFOLIO - NAV USD 10,053.72 | Return +0.00%",
-    "2026-05-10 22:50:16 [INFO] SIGNALS - 6 active signal buckets in state"
+    "2026-05-10 23:53:55 [INFO] AZALYST - status.json generated",
+    "2026-05-10 23:53:55 [INFO] PORTFOLIO - NAV USD 10,053.72 | Return +0.00%",
+    "2026-05-10 23:53:55 [INFO] SIGNALS - 6 active signal buckets in state"
   ],
-  "generated_at": "2026-05-10 22:50:14 UTC"
+  "generated_at": "2026-05-10 23:53:54 UTC"
 }
