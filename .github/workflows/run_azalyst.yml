@@ -11,14 +11,13 @@ on:
   workflow_dispatch:
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
 concurrency:
   group: azalyst-run
   cancel-in-progress: false
 jobs:
   run:
     runs-on: ubuntu-latest
-        env:
-              DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
     permissions:
       contents: write
       pages: write
