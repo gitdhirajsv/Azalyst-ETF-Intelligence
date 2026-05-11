@@ -523,6 +523,12 @@ function switchTab(name) {
   if (tabEl) tabEl.classList.add('active');
   const page = document.getElementById('page-' + name);
   if (page) page.classList.add('active');
+  // Re-render the appropriate page section when switching tabs
+  if (DATA) {
+    if (name === 'MKTD') { renderMktdPage(); renderAladdin(); }
+    else if (name === 'PORT') { renderPortPage(); }
+    else if (name === 'NEWS') { renderNewsPage(); }
+  }
 }
 
 function updateClock() {
