@@ -1,15 +1,13 @@
-__pycache__/
-*.py[cod]
+```
+# Environment and temporary files
 .env
-.spyder_azalyst_etf/
-.qwen/
-azalyst_fixes/
-*.log
-spyder_debug.txt
-~$README.md
+.env.local
+*.env.*
+*.tmp
 
-# Local v2 fusion outputs (regenerated each run)
-data/leaderboard_latest.csv
-data/tearsheet.md
-data/paper_trader.db
-data/etf_universe_cache.csv
+# Data and state files
+data/.last_startup_msg
+
+# Logs
+*.log
+```

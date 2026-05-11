@@ -386,7 +386,7 @@ def main():
     if _MULTI_ENGINE_AVAILABLE:
         price_scanner        = PriceScanner()
         constituent_analyzer = ConstituentAnalyzer(ETF_TO_SECTOR)
-        reverse_researcher   = ReverseResearcher(classifier)
+        reverse_researcher   = None  # ReverseResearcher removed; legacy feature
         signal_fuser         = SignalFuser()
         log.info("Multi-engine stack ENABLED (price + constituents + fusion)")
     else:
