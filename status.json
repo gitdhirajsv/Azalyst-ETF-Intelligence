@@ -150,12 +150,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
+    "risk_state": "NEUTRAL",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0620845857151032,
-    "vix_level": 18.3799991607666,
-    "vix_percentile_1y": 0.6507936507936508,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -169,12 +169,12 @@
     "ticker": "SLV",
     "rank_score": 17.802618328298088,
     "flow_score": 20.0,
-    "options_score": 19.994127182210757,
+    "options_score": 0.0,
     "rotation_score": 0.0,
-    "macro_score": 5.2424340439549555,
+    "macro_score": 5.148140787622673,
     "news_score": 6.88,
-    "total": 69.9191795544638,
-    "publish": true,
+    "total": 49.83075911592076,
+    "publish": false,
     "direction": "long"
   },
   "allocation": {
@@ -791,10 +791,10 @@
       "region": "UK",
       "price": 10269.43,
       "currency": "GBP",
-      "change": 36.33,
-      "change_pct": 0.36,
-      "change_str": "+0.36%",
-      "direction": "up"
+      "change": -7.57,
+      "change_pct": -0.07,
+      "change_str": "-0.07%",
+      "direction": "down"
     },
     {
       "label": "DAX",
@@ -844,44 +844,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4763.6,
+      "price": 4778.4,
       "currency": "USD",
-      "change": 43.2,
-      "change_pct": 0.92,
-      "change_str": "+0.92%",
+      "change": 58.0,
+      "change_pct": 1.23,
+      "change_str": "+1.23%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 98.18,
+      "price": 98.06,
       "currency": "USD",
-      "change": 2.76,
-      "change_pct": 2.89,
-      "change_str": "+2.89%",
+      "change": 2.64,
+      "change_pct": 2.77,
+      "change_str": "+2.77%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 81823.22,
+      "price": 81739.27,
       "currency": "USD",
-      "change": -315.71,
-      "change_pct": -0.38,
-      "change_str": "-0.38%",
+      "change": -399.66,
+      "change_pct": -0.49,
+      "change_str": "-0.49%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 97.91,
+      "price": 97.96,
       "currency": "USD",
-      "change": 0.07,
-      "change_pct": 0.07,
-      "change_str": "+0.07%",
+      "change": 0.12,
+      "change_pct": 0.12,
+      "change_str": "+0.12%",
       "direction": "up"
     },
     {
@@ -1260,10 +1260,10 @@
     }
   },
   "logs": [
-    "2026-05-11 22:57:49 [INFO] AZALYST - status.json generated",
-    "2026-05-11 22:57:49 [INFO] PORTFOLIO - NAV USD 9,983.58 | Return +0.28%",
-    "2026-05-11 22:57:49 [INFO] SIGNALS - 9 active signal buckets in state",
-    "2026-05-11 22:57:49 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA"
+    "2026-05-12 00:03:46 [INFO] AZALYST - status.json generated",
+    "2026-05-12 00:03:46 [INFO] PORTFOLIO - NAV USD 9,983.58 | Return +0.28%",
+    "2026-05-12 00:03:46 [INFO] SIGNALS - 9 active signal buckets in state",
+    "2026-05-12 00:03:46 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA"
   ],
-  "generated_at": "2026-05-11 22:57:48 UTC"
+  "generated_at": "2026-05-12 00:03:43 UTC"
 }
