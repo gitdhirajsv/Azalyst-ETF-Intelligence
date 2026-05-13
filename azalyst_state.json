@@ -202,42 +202,42 @@
     }
   },
   "technology_ai": {
-    "sent_at": "2026-05-13T16:42:57.993852+00:00",
-    "confidence": 93,
+    "sent_at": "2026-05-13T21:57:58.805420+00:00",
+    "confidence": 94,
     "sector_label": "Technology & AI / Semiconductors",
     "article_count": 66,
     "severity": "HIGH",
     "regions": [
+      "india",
       "asia_pacific",
-      "americas",
-      "global",
       "europe",
+      "americas",
       "middle_east",
-      "india"
+      "global"
     ],
     "sources": [
-      "World | Deutsche Welle",
-      "Latest from Tom's Hardware",
-      "BBC News",
+      "US Top News and Analysis",
       "Bloomberg Markets",
-      "Oilprice.com",
-      "Finance"
+      "The Verge",
+      "Markets-Economic Times",
+      "World | Deutsche Welle",
+      "Earnings"
     ],
     "top_headlines": [
-      "Apple-Intel Foundry Deal Could Reshape U.S. Chip Manufacturing",
-      "Nvidia Gains on China Trip; Softbank Up on Quarterly Profit Beat | Stock Movers",
-      "Intel confirms Googlebook AI laptop partnership, opening x86 possibilities for new OS \u2014 Google VP says devices to also ship with Qualcomm and MediaTek chips",
+      "Intel, Qualcomm confirm Googlebook AI laptop partnerships, opening ARM andx86 possibilities for new OS \u2014 Google VP says devices to also ship with MediaTek chips",
       "Lasers Are The Heartbeat Of The Optical AI Data Center",
-      "Qualcomm drops 11% as chip stocks pull back from record AI-driven rally"
+      "Qualcomm drops 11% as chip stocks pull back from record AI-driven rally",
+      "AI Chipmaker\u00a0Cerebras Expects to Price Its IPO at $185 Per Share",
+      "Google races to put Gemini at the center of Android before Apple\u2019s AI reboot"
     ],
-    "latest_ts": "2026-05-13T14:39:55+00:00",
+    "latest_ts": "2026-05-13T21:06:54+00:00",
     "confidence_breakdown": {
       "signal_strength": 22.0,
       "volume_confirmation": 18.0,
       "source_diversity": 17.1,
-      "recency": 13.8,
+      "recency": 15.6,
       "geopolitical_severity": 13.0,
-      "cross_engine_confirmation": 9.5
+      "cross_engine_confirmation": 9.3
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -1877,40 +1877,37 @@
     }
   },
   "commodities_mining": {
-    "sent_at": "2026-05-13T16:43:01.092959+00:00",
-    "confidence": 80,
+    "sent_at": "2026-05-13T21:58:01.570320+00:00",
+    "confidence": 71,
     "sector_label": "Commodities & Mining",
-    "article_count": 12,
+    "article_count": 5,
     "severity": "MEDIUM",
     "regions": [
-      "americas",
-      "india",
-      "asia_pacific",
-      "global"
+      "global",
+      "middle_east",
+      "asia_pacific"
     ],
     "sources": [
-      "Latest from Tom's Hardware",
-      "Bloomberg Markets",
-      "Oilprice.com",
       "US Top News and Analysis",
       "Markets-Economic Times",
-      "www.theregister.com - Articles"
+      "Bloomberg Markets",
+      "Oilprice.com"
     ],
     "top_headlines": [
-      "Copper Nears Record High on Tight Global Supply; Aluminum Surges",
-      "Family Offices Build Stake in Miner After Stock Soars 900%",
-      "Market Trading Guide: Buy SAIL, Hindustan Copper on Thursday for gains up to 9%",
-      "Smallcaps rally! IIFL Finance, Hindustan Copper, Meesho, other stocks jump up to 7%",
-      "Agnico Eagle Plans $10 Billion Investment in Ontario Gold Assets"
+      "Rare Earth Minerals Expected to be Central to Trump, Xi Talks",
+      "Canadian Miner to Start Graphite Project in Challenge to China Dominance",
+      "Trump in China: Traders predict a tariff truce extension and Boeing aircraft purchases",
+      "Middle East War Threatens Renewable Energy Rollout",
+      "Why gold\u2019s Rs 10,000 spike after import duty increase is a one-off move"
     ],
-    "latest_ts": "2026-05-13T15:43:45+00:00",
+    "latest_ts": "2026-05-13T21:39:35+00:00",
     "confidence_breakdown": {
-      "signal_strength": 14.8,
-      "volume_confirmation": 17.4,
-      "source_diversity": 14.0,
-      "recency": 15.4,
-      "geopolitical_severity": 10.7,
-      "cross_engine_confirmation": 8.2
+      "signal_strength": 11.0,
+      "volume_confirmation": 11.3,
+      "source_diversity": 12.6,
+      "recency": 16.5,
+      "geopolitical_severity": 12.1,
+      "cross_engine_confirmation": 8.1
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -1952,23 +1949,6 @@
           ]
         },
         {
-          "name": "CPSE ETF",
-          "ticker": "CPSEETF",
-          "note": "NMDC, Coal India \u2014 commodity exposure",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "3\u20139 months",
-          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
-          "sector_key": "commodities_mining",
-          "market_bucket": "india",
-          "market_scope": "India-listed",
-          "selection_score": 72.0,
-          "selection_notes": [
-            "matches India-listed access"
-          ]
-        },
-        {
           "name": "Sprott Physical Copper Trust",
           "ticker": "COPP",
           "platform": "Sprott \u2014 IBKR / Schwab",
@@ -1984,6 +1964,21 @@
             "clean thematic exposure",
             "matches international access"
           ]
+        },
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NMDC, Coal India \u2014 commodity exposure",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u20139 months",
+          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
+          "sector_key": "commodities_mining",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 69.0,
+          "selection_notes": []
         }
       ],
       "top_etfs": [
@@ -2006,23 +2001,6 @@
           ]
         },
         {
-          "name": "CPSE ETF",
-          "ticker": "CPSEETF",
-          "note": "NMDC, Coal India \u2014 commodity exposure",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "3\u20139 months",
-          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
-          "sector_key": "commodities_mining",
-          "market_bucket": "india",
-          "market_scope": "India-listed",
-          "selection_score": 72.0,
-          "selection_notes": [
-            "matches India-listed access"
-          ]
-        },
-        {
           "name": "Sprott Physical Copper Trust",
           "ticker": "COPP",
           "platform": "Sprott \u2014 IBKR / Schwab",
@@ -2038,6 +2016,21 @@
             "clean thematic exposure",
             "matches international access"
           ]
+        },
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NMDC, Coal India \u2014 commodity exposure",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u20139 months",
+          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
+          "sector_key": "commodities_mining",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 69.0,
+          "selection_notes": []
         }
       ],
       "regional_alternatives": {
@@ -2054,10 +2047,8 @@
             "sector_key": "commodities_mining",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 72.0,
-            "selection_notes": [
-              "matches India-listed access"
-            ]
+            "selection_score": 69.0,
+            "selection_notes": []
           }
         ],
         "International-listed": [
@@ -2111,10 +2102,8 @@
           "sector_key": "commodities_mining",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 72.0,
-          "selection_notes": [
-            "matches India-listed access"
-          ]
+          "selection_score": 69.0,
+          "selection_notes": []
         }
       ],
       "global": [
