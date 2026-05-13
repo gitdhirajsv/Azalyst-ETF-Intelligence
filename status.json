@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 9921.98,
+  "portfolio_value": 9921.83,
   "total_deposited": 9922.61,
-  "cash": 1192.36,
+  "cash": 1141.93,
   "monthly_reserve": 0.0,
-  "market_value": 8729.62,
-  "total_invested": 8730.25,
-  "unrealised_pnl": -0.63,
-  "unrealised_str": "-0.63",
+  "market_value": 8779.91,
+  "total_invested": 8780.68,
+  "unrealised_pnl": -0.78,
+  "unrealised_str": "-0.78",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
   "change": "-0.01%",
@@ -94,17 +94,17 @@
       "sector": "Crypto & Digital Assets",
       "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NASDAQ",
-      "entry": 46.08,
+      "entry": 46.07,
       "current": 45.8,
       "peak_price": 46.6,
-      "trail_stop": 41.47,
-      "dist_to_trail_pct": 9.46,
-      "units": 32.914338,
-      "invested": 1516.54,
-      "pnl": -9.06,
-      "pnl_str": "-9.06",
-      "pnl_pct": -0.6,
-      "pnl_pct_str": "-0.60%",
+      "trail_stop": 41.46,
+      "dist_to_trail_pct": 9.47,
+      "units": 34.012397,
+      "invested": 1566.97,
+      "pnl": -9.21,
+      "pnl_str": "-9.21",
+      "pnl_pct": -0.59,
+      "pnl_pct_str": "-0.59%",
       "confidence": 88,
       "severity": "CRITICAL",
       "days_held": 1,
@@ -173,12 +173,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
+    "risk_state": "NEUTRAL",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.06070162251145958,
-    "vix_level": 17.989999771118164,
-    "vix_percentile_1y": 0.6031746031746031,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -189,15 +189,15 @@
     }
   },
   "top_signal": {
-    "ticker": "XLK",
-    "rank_score": 18.440575321725966,
-    "flow_score": 5.0,
-    "options_score": 16.0871832900792,
-    "rotation_score": 15.0,
-    "macro_score": 0.0,
-    "news_score": 9.0,
-    "total": 63.52775861180517,
-    "publish": true,
+    "ticker": "COPX",
+    "rank_score": 18.742871561948018,
+    "flow_score": 20.0,
+    "options_score": 0.0,
+    "rotation_score": 0.0,
+    "macro_score": 7.26882219733624,
+    "news_score": 4.74,
+    "total": 50.751693759284265,
+    "publish": false,
     "direction": "long"
   },
   "allocation": {
@@ -214,10 +214,10 @@
       37.9,
       15.6,
       15.3,
-      15.2,
+      15.7,
       3.2,
       0.8,
-      12.0
+      11.5
     ]
   },
   "pnl": {
@@ -233,12 +233,16 @@
       -18.23,
       29.92,
       -1.85,
-      -9.06,
+      -9.21,
       -1.32,
       -0.08
     ]
   },
   "confidence": [
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 93.0
+    },
     {
       "symbol": "Asia Pacific Equity + Banking & Financial Sector",
       "score": 91.0
@@ -256,31 +260,84 @@
       "score": 86.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 83.0
+      "symbol": "Cybersecurity",
+      "score": 80.0
     },
     {
       "symbol": "Commodities & Mining",
-      "score": 81.0
+      "score": 79.0
     },
     {
-      "symbol": "Cybersecurity",
-      "score": 80.0
+      "symbol": "Crypto & Digital Assets",
+      "score": 76.0
     },
     {
       "symbol": "Defense & Aerospace",
       "score": 65.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
+      "symbol": "Clean Energy & Renewables",
       "score": 62.0
     },
     {
-      "symbol": "Clean Energy & Renewables",
+      "symbol": "India Equity Markets",
       "score": 62.0
     }
   ],
   "signals": [
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 93.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 33,
+      "latest_at": "13 May 2026 02:19 UTC",
+      "headline": "US Crude Inventories Fall But Gasoline Stocks See Surprise Build",
+      "regions": [
+        "middle_east",
+        "global",
+        "asia_pacific",
+        "india"
+      ],
+      "sources": [
+        "BBC News",
+        "Bloomberg Markets",
+        "Cointelegraph.com News",
+        "World | Deutsche Welle"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.9,
+        "recency": 16.3,
+        "geopolitical_severity": 13.0
+      }
+    },
     {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity + Banking & Financial Sector",
@@ -489,102 +546,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 83.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 27,
-      "latest_at": "12 May 2026 18:31 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "americas",
-        "india",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "www.theregister.com - Articles",
-        "US Top News and Analysis",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 6.5,
-        "recency": 14.2,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 81.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "12 May 2026 21:00 UTC",
-      "headline": "Copper Nears Record High as Traders Tune Out Trump's Iran Rejection",
-      "regions": [
-        "middle_east",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "www.theregister.com - Articles",
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 15.5,
-        "volume_confirmation": 16.2,
-        "source_diversity": 14.0,
-        "recency": 15.6,
-        "geopolitical_severity": 11.6
-      }
-    },
-    {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
       "confidence": 80.0,
@@ -627,6 +588,102 @@
         "volume_confirmation": 15.4,
         "source_diversity": 9.2,
         "recency": 15.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 79.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 9,
+      "latest_at": "13 May 2026 02:02 UTC",
+      "headline": "Copper Nears Record High as Traders Tune Out Trump's Iran Rejection",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 14.0,
+        "volume_confirmation": 15.4,
+        "source_diversity": 14.0,
+        "recency": 15.8,
+        "geopolitical_severity": 11.2
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 76.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 27,
+      "latest_at": "12 May 2026 18:31 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "middle_east",
+        "global",
+        "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Cointelegraph.com News",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 6.5,
+        "recency": 7.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -684,59 +741,6 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 62.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 34,
-      "latest_at": "12 May 2026 22:03 UTC",
-      "headline": "US Crude Inventories Fall But Gasoline Stocks See Surprise Build",
-      "regions": [
-        "middle_east",
-        "americas",
-        "asia_pacific",
-        "india"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "World | Deutsche Welle",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.9,
-        "recency": 15.5,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 62.0,
@@ -786,9 +790,65 @@
         "recency": 16.9,
         "geopolitical_severity": 11.0
       }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 62.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 22,
+      "latest_at": "13 May 2026 02:42 UTC",
+      "headline": "Sensex dips 3,400 points in 4 days. Is this the beginning of a bigger crash?",
+      "regions": [
+        "asia_pacific",
+        "india",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "BBC News",
+        "Markets-Economic Times",
+        "World | Deutsche Welle",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.6,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.3,
+        "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
     }
   ],
   "articles": [
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Energy / Oil & Gas - 33 articles - CRITICAL / NEUTRAL - US Crude Inventories Fall But Gasoline Stocks See Surprise Build"
+    },
     {
       "tag": "tag-neu",
       "label": "Neutral",
@@ -812,17 +872,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 27 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Commodities & Mining - 10 articles - MEDIUM / NEUTRAL - Copper Nears Record High as Traders Tune Out Trump's Iran Rejection"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Cybersecurity - 9 articles - HIGH / NEUTRAL - Google finds first AI-developed zero-day that bypasses 2FA \u2014 self-morphing malware and Gemini-powered backdoors signal a new era of cybercrime"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Commodities & Mining - 9 articles - MEDIUM / NEUTRAL - Copper Nears Record High as Traders Tune Out Trump's Iran Rejection"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Crypto & Digital Assets - 27 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -832,12 +892,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 34 articles - CRITICAL / NEUTRAL - US Crude Inventories Fall But Gasoline Stocks See Surprise Build"
+      "text": "Clean Energy & Renewables - 4 articles - MEDIUM / NEUTRAL - Europe's Renewable-Plus-Battery Market Set to Quintuple by 2030"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Clean Energy & Renewables - 4 articles - MEDIUM / NEUTRAL - Europe's Renewable-Plus-Battery Market Set to Quintuple by 2030"
+      "text": "India Equity Markets - 22 articles - HIGH / NEUTRAL - Sensex dips 3,400 points in 4 days. Is this the beginning of a bigger crash?"
     }
   ],
   "market_snapshot": [
@@ -880,10 +940,10 @@
       "region": "UK",
       "price": 10265.32,
       "currency": "GBP",
-      "change": 32.22,
-      "change_pct": 0.31,
-      "change_str": "+0.31%",
-      "direction": "up"
+      "change": -4.08,
+      "change_pct": -0.04,
+      "change_str": "-0.04%",
+      "direction": "down"
     },
     {
       "label": "DAX",
@@ -891,31 +951,31 @@
       "region": "EU",
       "price": 23954.93,
       "currency": "EUR",
-      "change": -383.7,
-      "change_pct": -1.58,
-      "change_str": "-1.58%",
+      "change": -395.35,
+      "change_pct": -1.62,
+      "change_str": "-1.62%",
       "direction": "down"
     },
     {
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 62742.57,
+      "price": 62930.2,
       "currency": "JPY",
-      "change": 28.92,
-      "change_pct": 0.05,
-      "change_str": "+0.05%",
+      "change": 187.63,
+      "change_pct": 0.3,
+      "change_str": "+0.30%",
       "direction": "up"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 26347.91,
+      "price": 26277.74,
       "currency": "HKD",
-      "change": -45.8,
-      "change_pct": -0.17,
-      "change_str": "-0.17%",
+      "change": -70.17,
+      "change_pct": -0.27,
+      "change_str": "-0.27%",
       "direction": "down"
     },
     {
@@ -924,53 +984,53 @@
       "region": "IN",
       "price": 23379.55,
       "currency": "INR",
-      "change": -796.6,
-      "change_pct": -3.29,
-      "change_str": "-3.29%",
+      "change": -436.3,
+      "change_pct": -1.83,
+      "change_str": "-1.83%",
       "direction": "down"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4725.9,
+      "price": 4705.2,
       "currency": "USD",
-      "change": 7.2,
-      "change_pct": 0.15,
-      "change_str": "+0.15%",
+      "change": 27.6,
+      "change_pct": 0.59,
+      "change_str": "+0.59%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 102.05,
+      "price": 101.54,
       "currency": "USD",
-      "change": 3.98,
-      "change_pct": 4.06,
-      "change_str": "+4.06%",
-      "direction": "up"
+      "change": -0.64,
+      "change_pct": -0.63,
+      "change_str": "-0.63%",
+      "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 80483.75,
+      "price": 81055.0,
       "currency": "USD",
-      "change": -1244.55,
-      "change_pct": -1.52,
-      "change_str": "-1.52%",
+      "change": -673.3,
+      "change_pct": -0.82,
+      "change_str": "-0.82%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.33,
+      "price": 98.3,
       "currency": "USD",
-      "change": 0.39,
-      "change_pct": 0.39,
-      "change_str": "+0.39%",
+      "change": 0.01,
+      "change_pct": 0.01,
+      "change_str": "+0.01%",
       "direction": "up"
     },
     {
@@ -998,6 +1058,11 @@
         "at_cap": true
       },
       {
+        "sector": "Crypto & Digital Assets",
+        "weight": 15.7,
+        "at_cap": false
+      },
+      {
         "sector": "Energy / Oil & Gas",
         "weight": 15.6,
         "at_cap": false
@@ -1005,11 +1070,6 @@
       {
         "sector": "Gold & Precious Metals",
         "weight": 15.3,
-        "at_cap": false
-      },
-      {
-        "sector": "Crypto & Digital Assets",
-        "weight": 15.2,
         "at_cap": false
       },
       {
@@ -1129,7 +1189,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": 22.85,
           "action": "TRIM",
-          "amount": 2267.21,
+          "amount": 2267.24,
           "etf_name": "Invesco QQQ Trust"
         },
         {
@@ -1138,7 +1198,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -14.19,
           "action": "ADD",
-          "amount": 1408.14,
+          "amount": 1408.12,
           "etf_name": "First Trust Nasdaq CEA Cybersecurity ETF"
         },
         {
@@ -1147,7 +1207,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -11.77,
           "action": "ADD",
-          "amount": 1167.8,
+          "amount": 1167.78,
           "etf_name": "iShares U.S. Aerospace & Defense ETF"
         }
       ],
@@ -1157,8 +1217,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -3035.39,
-          "portfolio_loss_pct": -30.59,
+          "total_impact": -3065.56,
+          "portfolio_loss_pct": -30.9,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1182,7 +1242,7 @@
               "ticker": "IBIT",
               "factor": "crypto",
               "shock_pct": -60.0,
-              "impact": -904.49
+              "impact": -934.66
             },
             {
               "ticker": "ITA",
@@ -1199,8 +1259,8 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -2973.8,
-          "portfolio_loss_pct": -29.97,
+          "total_impact": -2993.92,
+          "portfolio_loss_pct": -30.18,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1224,7 +1284,7 @@
               "ticker": "IBIT",
               "factor": "crypto",
               "shock_pct": -40.0,
-              "impact": -602.99
+              "impact": -623.11
             },
             {
               "ticker": "ITA",
@@ -1241,8 +1301,8 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1155.4,
-          "portfolio_loss_pct": -11.64,
+          "total_impact": -1165.46,
+          "portfolio_loss_pct": -11.75,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1266,7 +1326,7 @@
               "ticker": "IBIT",
               "factor": "crypto",
               "shock_pct": -20.0,
-              "impact": -301.5
+              "impact": -311.55
             },
             {
               "ticker": "ITA",
@@ -1283,8 +1343,8 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -897.47,
-          "portfolio_loss_pct": -9.05,
+          "total_impact": -902.5,
+          "portfolio_loss_pct": -9.1,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1308,7 +1368,7 @@
               "ticker": "IBIT",
               "factor": "crypto",
               "shock_pct": -10.0,
-              "impact": -150.75
+              "impact": -155.78
             },
             {
               "ticker": "ITA",
@@ -1325,8 +1385,8 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1311.93,
-          "portfolio_loss_pct": -13.22,
+          "total_impact": -1324.5,
+          "portfolio_loss_pct": -13.35,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1350,7 +1410,7 @@
               "ticker": "IBIT",
               "factor": "crypto",
               "shock_pct": -25.0,
-              "impact": -376.87
+              "impact": -389.44
             },
             {
               "ticker": "ITA",
@@ -1368,14 +1428,14 @@
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -30.59
+      "worst_loss_pct": -30.9
     }
   },
   "logs": [
-    "2026-05-13 00:08:44 [INFO] AZALYST - status.json generated",
-    "2026-05-13 00:08:44 [INFO] PORTFOLIO - NAV USD 9,921.98 | Return -0.01%",
-    "2026-05-13 00:08:44 [INFO] SIGNALS - 10 active signal buckets in state",
-    "2026-05-13 00:08:44 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR"
+    "2026-05-13 02:52:24 [INFO] AZALYST - status.json generated",
+    "2026-05-13 02:52:24 [INFO] PORTFOLIO - NAV USD 9,921.83 | Return -0.01%",
+    "2026-05-13 02:52:24 [INFO] SIGNALS - 11 active signal buckets in state",
+    "2026-05-13 02:52:24 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR"
   ],
-  "generated_at": "2026-05-13 00:08:39 UTC"
+  "generated_at": "2026-05-13 02:52:20 UTC"
 }
