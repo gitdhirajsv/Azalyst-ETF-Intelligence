@@ -173,12 +173,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
+    "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.08357300548980903,
+    "vix_level": 17.889999389648438,
+    "vix_percentile_1y": 0.5992063492063492,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -189,14 +189,14 @@
     }
   },
   "top_signal": {
-    "ticker": "XLE",
-    "rank_score": 11.863429438543248,
-    "flow_score": 4.3935253492994635,
-    "options_score": 15.0,
+    "ticker": "XLK",
+    "rank_score": 17.70257966616085,
+    "flow_score": 3.7249956046087056,
+    "options_score": 18.409149039907685,
     "rotation_score": 15.0,
-    "macro_score": 7.494363760066118,
-    "news_score": 7.0,
-    "total": 60.75131854790884,
+    "macro_score": 0.0,
+    "news_score": 7.6000000000000005,
+    "total": 62.43672431067724,
     "publish": true,
     "direction": "long"
   },
@@ -252,10 +252,6 @@
       "score": 87.0
     },
     {
-      "symbol": "Cybersecurity",
-      "score": 83.0
-    },
-    {
       "symbol": "Banking & Financial Sector",
       "score": 82.0
     },
@@ -278,6 +274,10 @@
     {
       "symbol": "India Equity Markets",
       "score": 69.0
+    },
+    {
+      "symbol": "Cybersecurity",
+      "score": 67.0
     },
     {
       "symbol": "Clean Energy & Renewables",
@@ -438,53 +438,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 9.1,
         "recency": 15.8,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 83.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "14 May 2026 06:27 UTC",
-      "headline": "Foxconn confirms cyberattack after ransomware crew claims it stole confidential Apple, Nvidia files",
-      "regions": [
-        "india",
-        "middle_east",
-        "global",
-        "europe"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Oilprice.com",
-        "Markets-Economic Times",
-        "www.theregister.com - Articles"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 16.3,
-        "volume_confirmation": 16.2,
-        "source_diversity": 12.0,
-        "recency": 14.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -791,6 +744,53 @@
       }
     },
     {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 67.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "14 May 2026 06:27 UTC",
+      "headline": "AI-driven cyberattacks will start to be the 'new norm' in months, Palo Alto warns",
+      "regions": [
+        "india",
+        "europe",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "Latest from Tom's Hardware",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.8,
+        "volume_confirmation": 13.7,
+        "source_diversity": 12.0,
+        "recency": 9.3,
+        "geopolitical_severity": 11.9
+      }
+    },
+    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 64.0,
@@ -912,11 +912,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity - 10 articles - HIGH / NEUTRAL - Foxconn confirms cyberattack after ransomware crew claims it stole confidential Apple, Nvidia files"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - Why the ECB\u2019s June Interest-Rate Hike Is Becoming Less Certain"
     },
     {
@@ -943,6 +938,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "India Equity Markets - 23 articles - HIGH / NEUTRAL - Sensex rises over 400 points to cross 75,000; Nifty above 23,500 despite weak rupee"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Cybersecurity - 7 articles - MEDIUM / NEUTRAL - AI-driven cyberattacks will start to be the 'new norm' in months, Palo Alto warns"
     },
     {
       "tag": "tag-neu",
@@ -993,22 +993,22 @@
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10356.24,
+      "price": 10363.21,
       "currency": "GBP",
-      "change": 30.84,
-      "change_pct": 0.3,
-      "change_str": "+0.30%",
+      "change": 37.81,
+      "change_pct": 0.37,
+      "change_str": "+0.37%",
       "direction": "up"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 24451.17,
+      "price": 24456.46,
       "currency": "EUR",
-      "change": 314.36,
-      "change_pct": 1.3,
-      "change_str": "+1.30%",
+      "change": 319.65,
+      "change_pct": 1.32,
+      "change_str": "+1.32%",
       "direction": "up"
     },
     {
@@ -1048,55 +1048,55 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4702.0,
+      "price": 4711.5,
       "currency": "USD",
-      "change": 4.3,
-      "change_pct": 0.09,
-      "change_str": "+0.09%",
+      "change": 13.8,
+      "change_pct": 0.29,
+      "change_str": "+0.29%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 100.79,
+      "price": 99.9,
       "currency": "USD",
-      "change": -0.23,
-      "change_pct": -0.23,
-      "change_str": "-0.23%",
+      "change": -1.12,
+      "change_pct": -1.11,
+      "change_str": "-1.11%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 79464.99,
+      "price": 79542.01,
       "currency": "USD",
-      "change": 187.87,
-      "change_pct": 0.24,
-      "change_str": "+0.24%",
+      "change": 264.89,
+      "change_pct": 0.33,
+      "change_str": "+0.33%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.52,
+      "price": 98.55,
       "currency": "USD",
-      "change": 0.04,
-      "change_pct": 0.04,
-      "change_str": "+0.04%",
+      "change": 0.07,
+      "change_pct": 0.07,
+      "change_str": "+0.07%",
       "direction": "up"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 17.87,
+      "price": 17.89,
       "currency": "USD",
-      "change": -0.0,
-      "change_pct": -0.0,
-      "change_str": "+-0.00%",
+      "change": 0.02,
+      "change_pct": 0.11,
+      "change_str": "+0.11%",
       "direction": "up"
     }
   ],
@@ -1104,7 +1104,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.31,
     "portfolio_peak": 9962.31,
-    "vix": 17.87,
+    "vix": 17.89,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -1487,10 +1487,10 @@
     }
   },
   "logs": [
-    "2026-05-14 10:49:48 [INFO] AZALYST - status.json generated",
-    "2026-05-14 10:49:48 [INFO] PORTFOLIO - NAV USD 9,931.18 | Return +0.23%",
-    "2026-05-14 10:49:48 [INFO] SIGNALS - 12 active signal buckets in state",
-    "2026-05-14 10:49:48 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR"
+    "2026-05-14 12:35:00 [INFO] AZALYST - status.json generated",
+    "2026-05-14 12:35:00 [INFO] PORTFOLIO - NAV USD 9,931.18 | Return +0.23%",
+    "2026-05-14 12:35:00 [INFO] SIGNALS - 12 active signal buckets in state",
+    "2026-05-14 12:35:00 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR"
   ],
-  "generated_at": "2026-05-14 10:49:46 UTC"
+  "generated_at": "2026-05-14 12:34:58 UTC"
 }
