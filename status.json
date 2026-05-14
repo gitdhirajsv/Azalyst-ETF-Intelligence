@@ -153,7 +153,7 @@
       "pnl_pct_str": "+4.24%",
       "confidence": 80,
       "severity": "HIGH",
-      "days_held": 1,
+      "days_held": 2,
       "half_exited": false
     }
   ],
@@ -194,9 +194,9 @@
     "flow_score": 2.9402287099135385,
     "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 6.691316984789433,
+    "macro_score": 6.694107864643637,
     "news_score": 9.4,
-    "total": 47.38318566419191,
+    "total": 47.385976544046116,
     "publish": false,
     "direction": "long"
   },
@@ -241,7 +241,7 @@
   "confidence": [
     {
       "symbol": "Technology & AI / Semiconductors",
-      "score": 95.0
+      "score": 96.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -276,16 +276,16 @@
       "score": 75.0
     },
     {
+      "symbol": "Clean Energy & Renewables",
+      "score": 70.0
+    },
+    {
       "symbol": "India Equity Markets",
       "score": 69.0
     },
     {
       "symbol": "Cybersecurity",
       "score": 67.0
-    },
-    {
-      "symbol": "Clean Energy & Renewables",
-      "score": 64.0
     },
     {
       "symbol": "Defense & Aerospace",
@@ -296,27 +296,27 @@
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 95.0,
+      "confidence": 96.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 87,
-      "latest_at": "14 May 2026 19:18 UTC",
+      "article_count": 93,
+      "latest_at": "14 May 2026 23:29 UTC",
       "headline": "S&amp;P 500, Nasdaq futures rise to new highs as Nvidia jumps",
       "regions": [
-        "europe",
         "global",
-        "middle_east",
-        "americas"
+        "americas",
+        "india",
+        "europe"
       ],
       "sources": [
+        "Cointelegraph.com News",
+        "Defense News",
         "Earnings",
-        "www.theregister.com - Articles",
-        "Latest from Tom's Hardware",
-        "Tech"
+        "Finance"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -341,7 +341,7 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.1,
+        "source_diversity": 16.7,
         "recency": 16.9,
         "geopolitical_severity": 13.0
       }
@@ -749,6 +749,57 @@
       }
     },
     {
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables",
+      "confidence": 70.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "14 May 2026 23:29 UTC",
+      "headline": "PE Firm Lightrock Raises $500 Million for New Clean Energy Fund",
+      "regions": [
+        "global",
+        "africa",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "EE Times",
+        "World | Deutsche Welle"
+      ],
+      "primary_etf": "ICLN",
+      "top_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NEWENERGY"
+      ],
+      "global_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.5,
+        "volume_confirmation": 14.6,
+        "source_diversity": 12.8,
+        "recency": 16.9,
+        "geopolitical_severity": 10.2
+      }
+    },
+    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 69.0,
@@ -847,55 +898,6 @@
       }
     },
     {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables",
-      "confidence": 64.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "13 May 2026 18:40 UTC",
-      "headline": "Citi Sees India's Power Demand Rising 5%-6% Annually Amid Energy Buildout",
-      "regions": [
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Oilprice.com"
-      ],
-      "primary_etf": "ICLN",
-      "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NEWENERGY"
-      ],
-      "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 8.2,
-        "volume_confirmation": 11.3,
-        "source_diversity": 11.7,
-        "recency": 16.5,
-        "geopolitical_severity": 8.5
-      }
-    },
-    {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
       "confidence": 62.0,
@@ -953,7 +955,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 87 articles - HIGH / NEUTRAL - S&amp;P 500, Nasdaq futures rise to new highs as Nvidia jumps"
+      "text": "Technology & AI / Semiconductors - 93 articles - HIGH / NEUTRAL - S&amp;P 500, Nasdaq futures rise to new highs as Nvidia jumps"
     },
     {
       "tag": "tag-neu",
@@ -998,17 +1000,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Clean Energy & Renewables - 8 articles - MEDIUM / NEUTRAL - PE Firm Lightrock Raises $500 Million for New Clean Energy Fund"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "India Equity Markets - 23 articles - HIGH / NEUTRAL - Sensex rises over 400 points to cross 75,000; Nifty above 23,500 despite weak rupee"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Cybersecurity - 7 articles - MEDIUM / NEUTRAL - AI-driven cyberattacks will start to be the 'new norm' in months, Palo Alto warns"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Clean Energy & Renewables - 5 articles - MEDIUM / NEUTRAL - Citi Sees India's Power Demand Rising 5%-6% Annually Amid Energy Buildout"
     },
     {
       "tag": "tag-neu",
@@ -1056,9 +1058,9 @@
       "region": "UK",
       "price": 10372.93,
       "currency": "GBP",
-      "change": 47.53,
-      "change_pct": 0.46,
-      "change_str": "+0.46%",
+      "change": 107.63,
+      "change_pct": 1.05,
+      "change_str": "+1.05%",
       "direction": "up"
     },
     {
@@ -1109,33 +1111,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4661.9,
+      "price": 4667.7,
       "currency": "USD",
-      "change": -35.8,
-      "change_pct": -0.76,
-      "change_str": "-0.76%",
+      "change": -30.0,
+      "change_pct": -0.64,
+      "change_str": "-0.64%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 101.58,
+      "price": 101.91,
       "currency": "USD",
-      "change": 0.56,
-      "change_pct": 0.55,
-      "change_str": "+0.55%",
+      "change": 0.89,
+      "change_pct": 0.88,
+      "change_str": "+0.88%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 81402.0,
+      "price": 81230.43,
       "currency": "USD",
-      "change": 2124.88,
-      "change_pct": 2.68,
-      "change_str": "+2.68%",
+      "change": 1953.31,
+      "change_pct": 2.46,
+      "change_str": "+2.46%",
       "direction": "up"
     },
     {
@@ -1548,10 +1550,10 @@
     }
   },
   "logs": [
-    "2026-05-14 22:20:43 [INFO] AZALYST - status.json generated",
-    "2026-05-14 22:20:43 [INFO] PORTFOLIO - NAV USD 10,002.63 | Return +0.95%",
-    "2026-05-14 22:20:43 [INFO] SIGNALS - 13 active signal buckets in state",
-    "2026-05-14 22:20:43 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR"
+    "2026-05-14 23:41:16 [INFO] AZALYST - status.json generated",
+    "2026-05-14 23:41:16 [INFO] PORTFOLIO - NAV USD 10,002.63 | Return +0.95%",
+    "2026-05-14 23:41:16 [INFO] SIGNALS - 13 active signal buckets in state",
+    "2026-05-14 23:41:16 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR"
   ],
-  "generated_at": "2026-05-14 22:20:42 UTC"
+  "generated_at": "2026-05-14 23:41:14 UTC"
 }
