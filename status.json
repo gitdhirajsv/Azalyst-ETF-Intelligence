@@ -192,12 +192,12 @@
     "ticker": "IGV",
     "rank_score": 15.516250944822374,
     "flow_score": 20.0,
-    "options_score": 15.160404430824798,
+    "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 0.0,
     "news_score": 7.68,
-    "total": 73.35665537564716,
-    "publish": true,
+    "total": 58.196250944822374,
+    "publish": false,
     "direction": "short"
   },
   "allocation": {
@@ -245,19 +245,19 @@
     },
     {
       "symbol": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals",
-      "score": 95.0
+      "score": 96.0
     },
     {
       "symbol": "Defense & Aerospace",
       "score": 92.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
+      "symbol": "Crypto & Digital Assets",
       "score": 84.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 83.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 84.0
     },
     {
       "symbol": "Gold & Precious Metals",
@@ -265,7 +265,7 @@
     },
     {
       "symbol": "Bonds & Fixed Income",
-      "score": 81.0
+      "score": 83.0
     },
     {
       "symbol": "Europe Equity",
@@ -353,27 +353,27 @@
     {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals",
-      "confidence": 95.0,
+      "confidence": 96.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 14,
-      "latest_at": "16 May 2026 10:46 UTC",
+      "article_count": 13,
+      "latest_at": "16 May 2026 15:54 UTC",
       "headline": "Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says",
       "regions": [
-        "asia_pacific",
-        "americas",
         "middle_east",
+        "americas",
+        "global",
         "europe"
       ],
       "sources": [
-        "Markets-Economic Times",
+        "US Top News and Analysis",
         "Bloomberg Markets",
         "World | Deutsche Welle",
-        "US Top News and Analysis"
+        "Markets-Economic Times"
       ],
       "primary_etf": "XLF",
       "top_etfs": [
@@ -396,8 +396,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 14.5,
-        "recency": 17.0,
+        "source_diversity": 15.0,
+        "recency": 16.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -411,19 +411,19 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 32,
-      "latest_at": "16 May 2026 11:46 UTC",
-      "headline": "The Tiny Island Caught Between Iran, Iraq, China and the U.S.",
+      "article_count": 34,
+      "latest_at": "16 May 2026 15:54 UTC",
+      "headline": "China, US, Israel compete in fast-growing laser weapons race",
       "regions": [
         "asia_pacific",
-        "global",
-        "africa",
-        "europe"
+        "europe",
+        "americas",
+        "global"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "BBC News",
-        "Latest from Tom's Hardware",
+        "Finance",
+        "Oilprice.com",
+        "Cointelegraph.com News",
         "World News - Breaking international news and headlines | Sky News"
       ],
       "primary_etf": "ITA",
@@ -451,6 +451,52 @@
         "volume_confirmation": 18.0,
         "source_diversity": 16.6,
         "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 84.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 25,
+      "latest_at": "16 May 2026 14:12 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "india",
+        "global",
+        "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Tech",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 9.1,
+        "recency": 14.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -504,52 +550,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.4,
         "recency": 7.5,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 83.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 26,
-      "latest_at": "16 May 2026 08:04 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "india",
-        "europe",
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "Tech",
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 9.1,
-        "recency": 12.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -609,27 +609,27 @@
     {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income",
-      "confidence": 81.0,
+      "confidence": 83.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "16 May 2026 08:04 UTC",
+      "article_count": 12,
+      "latest_at": "16 May 2026 14:01 UTC",
       "headline": "US stocks today: Dow Jones crashes 500 points on mounting inflation worries",
       "regions": [
-        "asia_pacific",
         "americas",
+        "global",
         "middle_east",
         "india"
       ],
       "sources": [
-        "Tech",
-        "Cointelegraph.com News",
-        "Markets-Economic Times",
-        "Bloomberg Markets"
+        "Finance",
+        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "Cointelegraph.com News"
       ],
       "primary_etf": "BND",
       "top_etfs": [
@@ -651,10 +651,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 18.8,
-        "volume_confirmation": 18.0,
-        "source_diversity": 11.1,
-        "recency": 12.9,
+        "signal_strength": 18.7,
+        "volume_confirmation": 17.4,
+        "source_diversity": 12.9,
+        "recency": 14.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -1009,12 +1009,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals - 14 articles - HIGH / NEUTRAL - Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says"
+      "text": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals - 13 articles - HIGH / NEUTRAL - Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 32 articles - HIGH / NEUTRAL - The Tiny Island Caught Between Iran, Iraq, China and the U.S."
+      "text": "Defense & Aerospace - 34 articles - HIGH / NEUTRAL - China, US, Israel compete in fast-growing laser weapons race"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Crypto & Digital Assets - 25 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -1024,17 +1029,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 26 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Gold & Precious Metals - 18 articles - HIGH / NEUTRAL - US stocks today: US stocks fall as higher yields threaten AI-led rally"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Bonds & Fixed Income - 13 articles - HIGH / NEUTRAL - US stocks today: Dow Jones crashes 500 points on mounting inflation worries"
+      "text": "Bonds & Fixed Income - 12 articles - HIGH / NEUTRAL - US stocks today: Dow Jones crashes 500 points on mounting inflation worries"
     },
     {
       "tag": "tag-neu",
@@ -1187,11 +1187,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78066.0,
+      "price": 78234.94,
       "currency": "USD",
-      "change": -999.68,
-      "change_pct": -1.26,
-      "change_str": "-1.26%",
+      "change": -830.74,
+      "change_pct": -1.05,
+      "change_str": "-1.05%",
       "direction": "down"
     },
     {
@@ -1613,11 +1613,11 @@
     }
   },
   "logs": [
-    "2026-05-16 14:54:04 [INFO] AZALYST - status.json generated",
-    "2026-05-16 14:54:04 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
-    "2026-05-16 14:54:04 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-05-16 14:54:04 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-16 14:54:04 [INFO] RISK - Partial profits realised: USD 323.35"
+    "2026-05-16 16:07:38 [INFO] AZALYST - status.json generated",
+    "2026-05-16 16:07:38 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
+    "2026-05-16 16:07:38 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-05-16 16:07:38 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-16 16:07:38 [INFO] RISK - Partial profits realised: USD 323.35"
   ],
-  "generated_at": "2026-05-16 14:54:01 UTC"
+  "generated_at": "2026-05-16 16:07:36 UTC"
 }
