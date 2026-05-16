@@ -244,7 +244,7 @@
       "score": 96.0
     },
     {
-      "symbol": "Banking & Financial Sector + Gold & Precious Metals + Bonds & Fixed Income",
+      "symbol": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals",
       "score": 95.0
     },
     {
@@ -252,12 +252,16 @@
       "score": 89.0
     },
     {
+      "symbol": "Crypto & Digital Assets",
+      "score": 83.0
+    },
+    {
       "symbol": "Gold & Precious Metals",
       "score": 83.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 82.0
+      "symbol": "Bonds & Fixed Income",
+      "score": 81.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -348,7 +352,7 @@
     },
     {
       "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector + Gold & Precious Metals + Bonds & Fixed Income",
+      "sector_label": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals",
       "confidence": 95.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
@@ -356,20 +360,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 15,
-      "latest_at": "16 May 2026 05:41 UTC",
-      "headline": "Gold at over one-week low as dollar, yields climb, Middle East tensions stoke inflation",
+      "article_count": 14,
+      "latest_at": "16 May 2026 10:46 UTC",
+      "headline": "Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says",
       "regions": [
+        "asia_pacific",
+        "americas",
         "middle_east",
-        "global",
-        "europe",
-        "americas"
+        "europe"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "Tech",
+        "Markets-Economic Times",
         "Bloomberg Markets",
-        "Markets-Economic Times"
+        "World | Deutsche Welle",
+        "US Top News and Analysis"
       ],
       "primary_etf": "XLF",
       "top_etfs": [
@@ -392,8 +396,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 14.6,
-        "recency": 16.9,
+        "source_diversity": 14.5,
+        "recency": 17.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -451,6 +455,52 @@
       }
     },
     {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 83.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 26,
+      "latest_at": "16 May 2026 08:04 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "india",
+        "europe",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "Tech",
+        "Markets-Economic Times",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 9.1,
+        "recency": 12.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals",
       "confidence": 83.0,
@@ -504,48 +554,54 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 82.0,
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 81.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 26,
-      "latest_at": "16 May 2026 02:13 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
+      "article_count": 13,
+      "latest_at": "16 May 2026 08:04 UTC",
+      "headline": "US stocks today: Dow Jones crashes 500 points on mounting inflation worries",
       "regions": [
-        "global",
-        "india",
-        "europe",
-        "asia_pacific"
+        "asia_pacific",
+        "americas",
+        "middle_east",
+        "india"
       ],
       "sources": [
-        "Markets-Economic Times",
         "Tech",
-        "Cointelegraph.com News"
+        "Cointelegraph.com News",
+        "Markets-Economic Times",
+        "Bloomberg Markets"
       ],
-      "primary_etf": "IBIT",
+      "primary_etf": "BND",
       "top_etfs": [
-        "IBIT",
-        "BITQ"
+        "BND",
+        "TLT",
+        "TIP"
       ],
       "access_markets": [
+        "India-listed",
         "International-listed"
       ],
-      "india_etfs": [],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
       "global_etfs": [
-        "IBIT",
-        "BITQ"
+        "BND",
+        "TLT",
+        "TIP"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 22.0,
+        "signal_strength": 18.8,
         "volume_confirmation": 18.0,
-        "source_diversity": 9.1,
-        "recency": 12.0,
+        "source_diversity": 11.1,
+        "recency": 12.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -954,7 +1010,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Banking & Financial Sector + Gold & Precious Metals + Bonds & Fixed Income - 15 articles - HIGH / NEUTRAL - Gold at over one-week low as dollar, yields climb, Middle East tensions stoke inflation"
+      "text": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals - 14 articles - HIGH / NEUTRAL - Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says"
     },
     {
       "tag": "tag-neu",
@@ -964,12 +1020,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Crypto & Digital Assets - 26 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Gold & Precious Metals - 18 articles - HIGH / NEUTRAL - US stocks today: US stocks fall as higher yields threaten AI-led rally"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 26 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+      "text": "Bonds & Fixed Income - 13 articles - HIGH / NEUTRAL - US stocks today: Dow Jones crashes 500 points on mounting inflation worries"
     },
     {
       "tag": "tag-neu",
@@ -1127,11 +1188,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78101.63,
+      "price": 77906.15,
       "currency": "USD",
-      "change": -964.05,
-      "change_pct": -1.22,
-      "change_str": "-1.22%",
+      "change": -1159.53,
+      "change_pct": -1.47,
+      "change_str": "-1.47%",
       "direction": "down"
     },
     {
@@ -1553,11 +1614,11 @@
     }
   },
   "logs": [
-    "2026-05-16 09:39:21 [INFO] AZALYST - status.json generated",
-    "2026-05-16 09:39:21 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
-    "2026-05-16 09:39:21 [INFO] SIGNALS - 13 active signal buckets in state",
-    "2026-05-16 09:39:21 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-16 09:39:21 [INFO] RISK - Partial profits realised: USD 323.35"
+    "2026-05-16 10:58:20 [INFO] AZALYST - status.json generated",
+    "2026-05-16 10:58:20 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
+    "2026-05-16 10:58:20 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-05-16 10:58:20 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-16 10:58:20 [INFO] RISK - Partial profits realised: USD 323.35"
   ],
-  "generated_at": "2026-05-16 09:39:18 UTC"
+  "generated_at": "2026-05-16 10:58:18 UTC"
 }
