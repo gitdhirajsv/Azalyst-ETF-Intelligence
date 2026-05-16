@@ -190,13 +190,13 @@
   },
   "top_signal": {
     "ticker": "IGV",
-    "rank_score": 15.523881728582259,
+    "rank_score": 15.516250944822374,
     "flow_score": 20.0,
     "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 0.0,
     "news_score": 7.68,
-    "total": 58.20388172858226,
+    "total": 58.196250944822374,
     "publish": false,
     "direction": "short"
   },
@@ -252,8 +252,12 @@
       "score": 92.0
     },
     {
-      "symbol": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector",
+      "symbol": "Europe Equity + Banking & Financial Sector + Bonds & Fixed Income + Gold & Precious Metals",
       "score": 90.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 89.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -268,10 +272,6 @@
       "score": 83.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 82.0
-    },
-    {
       "symbol": "Asia Pacific Equity",
       "score": 74.0
     },
@@ -284,12 +284,12 @@
       "score": 68.0
     },
     {
-      "symbol": "Clean Energy & Renewables",
+      "symbol": "Commodities & Mining",
       "score": 66.0
     },
     {
-      "symbol": "Commodities & Mining + Cybersecurity",
-      "score": 63.0
+      "symbol": "Clean Energy & Renewables",
+      "score": 66.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -456,7 +456,7 @@
     },
     {
       "sector_key": "europe_equity",
-      "sector_label": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector",
+      "sector_label": "Europe Equity + Banking & Financial Sector + Bonds & Fixed Income + Gold & Precious Metals",
       "confidence": 90.0,
       "severity": "CRITICAL",
       "direction": "NEUTRAL",
@@ -464,20 +464,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "16 May 2026 17:53 UTC",
+      "article_count": 14,
+      "latest_at": "16 May 2026 22:11 UTC",
       "headline": "Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says",
       "regions": [
-        "middle_east",
         "europe",
+        "middle_east",
         "americas",
         "global"
       ],
       "sources": [
-        "Markets-Economic Times",
         "Bloomberg Markets",
-        "www.theregister.com - Articles",
-        "World | Deutsche Welle"
+        "Markets-Economic Times",
+        "World | Deutsche Welle",
+        "www.theregister.com - Articles"
       ],
       "primary_etf": "VGK",
       "top_etfs": [
@@ -498,9 +498,62 @@
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
-        "volume_confirmation": 17.4,
-        "source_diversity": 15.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.2,
         "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 89.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 28,
+      "latest_at": "16 May 2026 21:00 UTC",
+      "headline": "Crude oil surges 8% in a week to near $110 as Iran war tensions simmer again. Where are prices headed?",
+      "regions": [
+        "middle_east",
+        "americas",
+        "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "Oilprice.com"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.6,
+        "recency": 15.1,
         "geopolitical_severity": 13.0
       }
     },
@@ -656,59 +709,6 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 82.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 30,
-      "latest_at": "16 May 2026 05:04 UTC",
-      "headline": "Crude oil surges 8% in a week to near $110 as Iran war tensions simmer again. Where are prices headed?",
-      "regions": [
-        "americas",
-        "europe",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "Bloomberg Markets",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.6,
-        "recency": 4.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
       "confidence": 74.0,
@@ -853,6 +853,57 @@
       }
     },
     {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 66.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "16 May 2026 19:00 UTC",
+      "headline": "China\u2019s Battery Breakthrough Could Challenge Lithium-Ion Dominance",
+      "regions": [
+        "europe",
+        "americas",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "EE Times",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 9.1,
+        "volume_confirmation": 12.6,
+        "source_diversity": 12.8,
+        "recency": 12.3,
+        "geopolitical_severity": 10.5
+      }
+    },
+    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 66.0,
@@ -899,56 +950,6 @@
         "source_diversity": 9.9,
         "recency": 15.3,
         "geopolitical_severity": 10.6
-      }
-    },
-    {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining + Cybersecurity",
-      "confidence": 63.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "16 May 2026 11:40 UTC",
-      "headline": "AI data centers require 36 times more fiber than designs with standard servers \u2014 severe glass shortages push cable lead times out to a full year",
-      "regions": [
-        "global",
-        "americas",
-        "europe"
-      ],
-      "sources": [
-        "www.theregister.com - Articles",
-        "EE Times",
-        "US Top News and Analysis",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 9.8,
-        "volume_confirmation": 12.6,
-        "source_diversity": 11.4,
-        "recency": 9.1,
-        "geopolitical_severity": 11.6
       }
     },
     {
@@ -1021,7 +1022,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector - 12 articles - CRITICAL / NEUTRAL - Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says"
+      "text": "Europe Equity + Banking & Financial Sector + Bonds & Fixed Income + Gold & Precious Metals - 14 articles - CRITICAL / NEUTRAL - Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Energy / Oil & Gas - 28 articles - CRITICAL / NEUTRAL - Crude oil surges 8% in a week to near $110 as Iran war tensions simmer again. Where are prices headed?"
     },
     {
       "tag": "tag-neu",
@@ -1041,11 +1047,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 30 articles - CRITICAL / NEUTRAL - Crude oil surges 8% in a week to near $110 as Iran war tensions simmer again. Where are prices headed?"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Asia Pacific Equity - 6 articles - HIGH / NEUTRAL - Global Market Today: Asian stocks rise after AI rally spurs US gauges"
     },
     {
@@ -1061,12 +1062,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Clean Energy & Renewables - 5 articles - MEDIUM / NEUTRAL - China\u2019s Battery Breakthrough Could Challenge Lithium-Ion Dominance"
+      "text": "Commodities & Mining - 6 articles - MEDIUM / NEUTRAL - China\u2019s Battery Breakthrough Could Challenge Lithium-Ion Dominance"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Commodities & Mining + Cybersecurity - 6 articles - MEDIUM / NEUTRAL - AI data centers require 36 times more fiber than designs with standard servers \u2014 severe glass shortages push cable lead times out to a full year"
+      "text": "Clean Energy & Renewables - 5 articles - MEDIUM / NEUTRAL - China\u2019s Battery Breakthrough Could Challenge Lithium-Ion Dominance"
     },
     {
       "tag": "tag-neu",
@@ -1189,11 +1190,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78243.45,
+      "price": 78225.49,
       "currency": "USD",
-      "change": -822.23,
-      "change_pct": -1.04,
-      "change_str": "-1.04%",
+      "change": -840.19,
+      "change_pct": -1.06,
+      "change_str": "-1.06%",
       "direction": "down"
     },
     {
@@ -1615,11 +1616,11 @@
     }
   },
   "logs": [
-    "2026-05-16 21:26:30 [INFO] AZALYST - status.json generated",
-    "2026-05-16 21:26:30 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
-    "2026-05-16 21:26:30 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-05-16 21:26:30 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-16 21:26:30 [INFO] RISK - Partial profits realised: USD 323.35"
+    "2026-05-16 22:20:07 [INFO] AZALYST - status.json generated",
+    "2026-05-16 22:20:07 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
+    "2026-05-16 22:20:07 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-05-16 22:20:07 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-16 22:20:07 [INFO] RISK - Partial profits realised: USD 323.35"
   ],
-  "generated_at": "2026-05-16 21:26:28 UTC"
+  "generated_at": "2026-05-16 22:20:06 UTC"
 }
