@@ -38,7 +38,7 @@
       "pnl_pct_str": "+0.10%",
       "confidence": 95,
       "severity": "CRITICAL",
-      "days_held": 5,
+      "days_held": 6,
       "half_exited": false
     },
     {
@@ -61,7 +61,7 @@
       "pnl_pct_str": "+5.15%",
       "confidence": 96,
       "severity": "CRITICAL",
-      "days_held": 5,
+      "days_held": 6,
       "half_exited": false
     },
     {
@@ -84,7 +84,7 @@
       "pnl_pct_str": "-3.25%",
       "confidence": 94,
       "severity": "HIGH",
-      "days_held": 5,
+      "days_held": 6,
       "half_exited": false
     },
     {
@@ -107,7 +107,7 @@
       "pnl_pct_str": "-2.33%",
       "confidence": 90,
       "severity": "CRITICAL",
-      "days_held": 5,
+      "days_held": 6,
       "half_exited": false
     },
     {
@@ -248,20 +248,12 @@
       "score": 96.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 92.0
-    },
-    {
       "symbol": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector",
       "score": 89.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income",
       "score": 85.0
-    },
-    {
-      "symbol": "India Equity Markets",
-      "score": 81.0
     },
     {
       "symbol": "Asia Pacific Equity",
@@ -280,16 +272,24 @@
       "score": 73.0
     },
     {
+      "symbol": "Defense & Aerospace",
+      "score": 72.0
+    },
+    {
+      "symbol": "Commodities & Mining",
+      "score": 71.0
+    },
+    {
       "symbol": "Cybersecurity + Commodities & Mining",
       "score": 68.0
     },
     {
-      "symbol": "Commodities & Mining",
+      "symbol": "Clean Energy & Renewables",
       "score": 66.0
     },
     {
-      "symbol": "Clean Energy & Renewables",
-      "score": 66.0
+      "symbol": "India Equity Markets",
+      "score": 64.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -402,59 +402,6 @@
       }
     },
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 92.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 38,
-      "latest_at": "17 May 2026 08:58 UTC",
-      "headline": "China, US, Israel compete in fast-growing laser weapons race",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "africa",
-        "americas"
-      ],
-      "sources": [
-        "World News - Breaking international news and headlines | Sky News",
-        "World | Deutsche Welle",
-        "Markets-Economic Times",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.6,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector",
       "confidence": 89.0,
@@ -554,56 +501,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 12.1,
         "recency": 10.1,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 81.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 22,
-      "latest_at": "17 May 2026 05:10 UTC",
-      "headline": "Reliance Industries, TCS, HDFC Bank among 10 companies with highest FII selling in Q4. Do you own any?",
-      "regions": [
-        "india",
-        "global",
-        "asia_pacific",
-        "europe"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Oilprice.com"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 11.7,
-        "recency": 11.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -806,6 +703,109 @@
       }
     },
     {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 72.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 42,
+      "latest_at": "17 May 2026 14:04 UTC",
+      "headline": "National Gas Prices Near Record High",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "europe",
+        "americas"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "Latest from Tom's Hardware",
+        "Finance"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.6,
+        "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 71.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "17 May 2026 13:21 UTC",
+      "headline": "Trading While the Global Economy Shifts",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "europe"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Latest from Tom's Hardware",
+        "Bloomberg Markets",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 9.8,
+        "volume_confirmation": 12.6,
+        "source_diversity": 14.0,
+        "recency": 15.8,
+        "geopolitical_severity": 10.1
+      }
+    },
+    {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity + Commodities & Mining",
       "confidence": 68.0,
@@ -850,57 +850,6 @@
         "source_diversity": 14.5,
         "recency": 6.4,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 66.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "16 May 2026 19:00 UTC",
-      "headline": "China\u2019s Battery Breakthrough Could Challenge Lithium-Ion Dominance",
-      "regions": [
-        "europe",
-        "americas",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "EE Times",
-        "www.theregister.com - Articles"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 9.1,
-        "volume_confirmation": 12.6,
-        "source_diversity": 12.8,
-        "recency": 12.3,
-        "geopolitical_severity": 10.5
       }
     },
     {
@@ -950,6 +899,56 @@
         "source_diversity": 9.9,
         "recency": 15.3,
         "geopolitical_severity": 10.6
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 64.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "17 May 2026 12:13 UTC",
+      "headline": "Reliance Industries, TCS, HDFC Bank among 10 companies with highest FII selling in Q4. Do you own any?",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "europe",
+        "india"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 11.7,
+        "recency": 14.1,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1018,22 +1017,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 38 articles - HIGH / NEUTRAL - China, US, Israel compete in fast-growing laser weapons race"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector - 13 articles - CRITICAL / NEUTRAL - Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income - 13 articles - CRITICAL / NEUTRAL - Gold at over one-week low as dollar, yields climb, Middle East tensions stoke inflation"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "India Equity Markets - 22 articles - HIGH / NEUTRAL - Reliance Industries, TCS, HDFC Bank among 10 companies with highest FII selling in Q4. Do you own any?"
     },
     {
       "tag": "tag-neu",
@@ -1058,17 +1047,27 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Defense & Aerospace - 42 articles - HIGH / NEUTRAL - National Gas Prices Near Record High"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Commodities & Mining - 6 articles - MEDIUM / NEUTRAL - Trading While the Global Economy Shifts"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Cybersecurity + Commodities & Mining - 8 articles - HIGH / NEUTRAL - Patch time for Cisco SD-WAN admins as vendor drops yet another make-me-admin zero-day"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Commodities & Mining - 6 articles - MEDIUM / NEUTRAL - China\u2019s Battery Breakthrough Could Challenge Lithium-Ion Dominance"
+      "text": "Clean Energy & Renewables - 5 articles - MEDIUM / NEUTRAL - China\u2019s Battery Breakthrough Could Challenge Lithium-Ion Dominance"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Clean Energy & Renewables - 5 articles - MEDIUM / NEUTRAL - China\u2019s Battery Breakthrough Could Challenge Lithium-Ion Dominance"
+      "text": "India Equity Markets - 24 articles - HIGH / NEUTRAL - Reliance Industries, TCS, HDFC Bank among 10 companies with highest FII selling in Q4. Do you own any?"
     },
     {
       "tag": "tag-neu",
@@ -1191,12 +1190,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78345.97,
+      "price": 77912.22,
       "currency": "USD",
-      "change": 214.53,
-      "change_pct": 0.27,
-      "change_str": "+0.27%",
-      "direction": "up"
+      "change": -219.22,
+      "change_pct": -0.28,
+      "change_str": "-0.28%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
@@ -1617,11 +1616,11 @@
     }
   },
   "logs": [
-    "2026-05-17 12:21:43 [INFO] AZALYST - status.json generated",
-    "2026-05-17 12:21:43 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
-    "2026-05-17 12:21:43 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-05-17 12:21:43 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-17 12:21:43 [INFO] RISK - Partial profits realised: USD 323.35"
+    "2026-05-17 14:17:05 [INFO] AZALYST - status.json generated",
+    "2026-05-17 14:17:05 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
+    "2026-05-17 14:17:05 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-05-17 14:17:05 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-17 14:17:05 [INFO] RISK - Partial profits realised: USD 323.35"
   ],
-  "generated_at": "2026-05-17 12:21:41 UTC"
+  "generated_at": "2026-05-17 14:17:03 UTC"
 }
