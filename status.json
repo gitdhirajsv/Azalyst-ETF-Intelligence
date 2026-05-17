@@ -264,10 +264,6 @@
       "score": 74.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 73.0
-    },
-    {
       "symbol": "Bonds & Fixed Income",
       "score": 73.0
     },
@@ -282,6 +278,10 @@
     {
       "symbol": "Cybersecurity + Commodities & Mining",
       "score": 68.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 65.0
     },
     {
       "symbol": "Clean Energy & Renewables",
@@ -597,59 +597,6 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 73.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 32,
-      "latest_at": "16 May 2026 21:00 UTC",
-      "headline": "Crude oil surges 8% in a week to near $110 as Iran war tensions simmer again. Where are prices headed?",
-      "regions": [
-        "europe",
-        "middle_east",
-        "americas",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Oilprice.com"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.6,
-        "recency": 3.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income",
       "confidence": 73.0,
@@ -852,6 +799,59 @@
       }
     },
     {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 65.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 32,
+      "latest_at": "17 May 2026 17:00 UTC",
+      "headline": "Crude oil surges 8% in a week to near $110 as Iran war tensions simmer again. Where are prices headed?",
+      "regions": [
+        "americas",
+        "global",
+        "europe",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "Markets-Economic Times",
+        "Oilprice.com"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.6,
+        "recency": 15.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 65.0,
@@ -1035,11 +1035,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 32 articles - CRITICAL / NEUTRAL - Crude oil surges 8% in a week to near $110 as Iran war tensions simmer again. Where are prices headed?"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Bonds & Fixed Income - 13 articles - HIGH / NEUTRAL - US stocks today: Dow Jones crashes 500 points on mounting inflation worries"
     },
     {
@@ -1056,6 +1051,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Cybersecurity + Commodities & Mining - 8 articles - HIGH / NEUTRAL - Patch time for Cisco SD-WAN admins as vendor drops yet another make-me-admin zero-day"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Energy / Oil & Gas - 32 articles - CRITICAL / NEUTRAL - Crude oil surges 8% in a week to near $110 as Iran war tensions simmer again. Where are prices headed?"
     },
     {
       "tag": "tag-neu",
@@ -1188,11 +1188,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77987.28,
+      "price": 78115.39,
       "currency": "USD",
-      "change": -144.16,
-      "change_pct": -0.18,
-      "change_str": "-0.18%",
+      "change": -16.05,
+      "change_pct": -0.02,
+      "change_str": "-0.02%",
       "direction": "down"
     },
     {
@@ -1614,11 +1614,11 @@
     }
   },
   "logs": [
-    "2026-05-17 17:09:29 [INFO] AZALYST - status.json generated",
-    "2026-05-17 17:09:29 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
-    "2026-05-17 17:09:29 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-05-17 17:09:29 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-17 17:09:29 [INFO] RISK - Partial profits realised: USD 323.35"
+    "2026-05-17 18:14:26 [INFO] AZALYST - status.json generated",
+    "2026-05-17 18:14:26 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
+    "2026-05-17 18:14:26 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-05-17 18:14:26 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-17 18:14:26 [INFO] RISK - Partial profits realised: USD 323.35"
   ],
-  "generated_at": "2026-05-17 17:09:27 UTC"
+  "generated_at": "2026-05-17 18:14:24 UTC"
 }
