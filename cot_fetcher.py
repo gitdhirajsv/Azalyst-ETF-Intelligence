@@ -30,9 +30,11 @@ import json
 import logging
 import math
 import os
+import urllib.error
 import urllib.request
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
+from pathlib import Path
 from typing import Dict, List, Optional
 
 log = logging.getLogger("azalyst.cot")
@@ -115,7 +117,10 @@ VELOCITY_WEEKS = 4          # Rate of change over 4 weeks
 ZSCORE_LOOKBACK_WEEKS = 104 # 2-year rolling window for z-score normalization
 SIGNAL_THRESHOLD_Z = 1.5    # |z| > 1.5 → signal fired
 COT_FILING_DELAY_DAYS = 3   # COT reported Fridays, available ~Tuesday
-CFTC_API_ENABLED = False    # Set True when live data pipeline is configured
+CFTC_API_ENABLED = True     # Live CFTC API fetch enabled with disk-cached fallback
+COT_CACHE_DIR = Path(os.environ.get("AZALYST_COT_CACHE_DIR", "data/cot_cache"))
+COT_CACHE_TTL_SECONDS = 7 * 24 * 3600   # COT is weekly; refresh once a week
+COT_HTTP_TIMEOUT = 20
 
 # ── Static COT data for offline / development mode ───────────────────────────
 # Format: {commodity: {date_iso: {commercial_long, commercial_short}}}
@@ -168,18 +173,96 @@ class COTFetcher:
 
         mapping = COT_MAPPINGS[commodity]
 
-        # Try live CFTC API first
+        # Try live CFTC API first (with disk cache, 1-week TTL).
         if CFTC_API_ENABLED:
-            cot_records = self._fetch_cftc_api(mapping["cftc_code"])
+            cot_records, fetched_at = self._load_cot_records(commodity, mapping["cftc_code"])
         else:
-            # Use sample data or cached values for development
-            cot_records = _SAMPLE_COT_DATA.get(commodity, {})
+            cot_records = _SAMPLE_COT_DATA.get(commodity, {}) or {}
+            fetched_at = None
 
         if not cot_records or len(cot_records) < 10:
-            log.debug("COT: Insufficient data for %s (%d records)", commodity, len(cot_records or {}))
-            return self._fake_cot_result(commodity, mapping)
+            # HONEST FAILURE: when live data is unavailable we emit no signal
+            # rather than a synthetic neutral. Downstream fusion treats this
+            # commodity as silent for the cycle.
+            log.info(
+                "COT: no usable data for %s (%d records) — emitting no signal",
+                commodity,
+                len(cot_records or {}),
+            )
+            return None
 
-        return self._compute_signal(commodity, mapping, cot_records)
+        signal = self._compute_signal(commodity, mapping, cot_records)
+        if signal is not None:
+            signal["last_updated_at"] = (
+                fetched_at.isoformat() if fetched_at else datetime.now(timezone.utc).isoformat()
+            )
+            signal["data_source"] = "cftc_live" if CFTC_API_ENABLED else "static_sample"
+        return signal
+
+    # ── Internal: cache-aware loader ────────────────────────────────────────
+
+    def _load_cot_records(
+        self, commodity: str, cftc_code: str
+    ) -> tuple[Optional[Dict[str, Dict]], Optional[datetime]]:
+        """
+        Return (records, fetched_at). Uses a disk cache with COT_CACHE_TTL_SECONDS
+        TTL. On any error fetching live, falls back to the cached copy IF it
+        exists (stale-but-real beats nothing) and stamps the cached fetched_at.
+        If no cache and live fetch fails, returns (None, None).
+        """
+        try:
+            COT_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+        except OSError as exc:
+            log.warning("COT cache dir unavailable (%s); proceeding without cache", exc)
+
+        cache_path = COT_CACHE_DIR / f"{commodity}.json"
+        cached_records: Optional[Dict[str, Dict]] = None
+        cached_fetched_at: Optional[datetime] = None
+        if cache_path.exists():
+            try:
+                with cache_path.open("r", encoding="utf-8") as f:
+                    payload = json.load(f)
+                cached_records = payload.get("records") or None
+                fetched_iso = payload.get("fetched_at")
+                if fetched_iso:
+                    cached_fetched_at = datetime.fromisoformat(fetched_iso)
+            except (json.JSONDecodeError, OSError, ValueError) as exc:
+                log.warning("COT cache for %s unreadable (%s); will refetch", commodity, exc)
+
+        # Use cache if fresh.
+        if cached_records and cached_fetched_at:
+            age = (datetime.now(timezone.utc) - cached_fetched_at).total_seconds()
+            if age < COT_CACHE_TTL_SECONDS:
+                return cached_records, cached_fetched_at
+
+        # Otherwise refetch from CFTC.
+        live = self._fetch_cftc_api(cftc_code)
+        if live:
+            fetched_at = datetime.now(timezone.utc)
+            try:
+                tmp = cache_path.with_suffix(cache_path.suffix + ".tmp")
+                with tmp.open("w", encoding="utf-8") as f:
+                    json.dump(
+                        {"records": live, "fetched_at": fetched_at.isoformat()},
+                        f,
+                        indent=2,
+                    )
+                    f.flush()
+                    os.fsync(f.fileno())
+                tmp.replace(cache_path)
+            except OSError as exc:
+                log.warning("COT cache write failed for %s: %s", commodity, exc)
+            return live, fetched_at
+
+        # Live failed — fall back to whatever cached copy we have (clearly stale).
+        if cached_records:
+            log.warning(
+                "COT: live fetch failed for %s, serving stale cache from %s",
+                commodity,
+                cached_fetched_at.isoformat() if cached_fetched_at else "unknown",
+            )
+            return cached_records, cached_fetched_at
+        return None, None
 
     def scan_all(self) -> List[Dict]:
         """
@@ -247,7 +330,10 @@ class COTFetcher:
                 "commercial_net": cot_result.get("commercial_net", 0),
                 "direction": direction,
                 "latest_date": cot_result.get("latest_date", ""),
+                "last_updated_at": cot_result.get("last_updated_at", ""),
+                "data_source": cot_result.get("data_source", ""),
             },
+            "last_updated_at": cot_result.get("last_updated_at", ""),
         }
 
     # ── Internal: CFTC API Fetch ────────────────────────────────────────────
@@ -336,7 +422,7 @@ class COTFetcher:
             net_positions.append((d, net))
 
         if len(net_positions) < VELOCITY_WEEKS + 4:
-            return self._fake_cot_result(commodity, mapping)
+            return None
 
         # Compute 4-week velocities
         velocities = []
@@ -350,7 +436,7 @@ class COTFetcher:
             velocities.append((dates[i], vel))
 
         if not velocities:
-            return self._fake_cot_result(commodity, mapping)
+            return None
 
         # Current velocity = most recent
         current_date, current_vel = velocities[-1]
@@ -359,7 +445,7 @@ class COTFetcher:
         # Z-score against trailing 104-week window
         vel_values = [v for _, v in velocities[-ZSCORE_LOOKBACK_WEEKS:]]
         if len(vel_values) < 20:
-            return self._fake_cot_result(commodity, mapping)
+            return None
 
         mean_vel = sum(vel_values) / len(vel_values)
         variance = sum((v - mean_vel) ** 2 for v in vel_values) / len(vel_values)
