@@ -173,12 +173,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
+    "risk_state": "NEUTRAL",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.07646413950352943,
-    "vix_level": 18.43000030517578,
-    "vix_percentile_1y": 0.6626984126984127,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -256,16 +256,12 @@
       "score": 89.0
     },
     {
-      "symbol": "Gold & Precious Metals",
-      "score": 83.0
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income",
+      "score": 85.0
     },
     {
       "symbol": "India Equity Markets",
       "score": 81.0
-    },
-    {
-      "symbol": "Energy / Oil & Gas",
-      "score": 76.0
     },
     {
       "symbol": "Asia Pacific Equity",
@@ -274,6 +270,10 @@
     {
       "symbol": "Crypto & Digital Assets",
       "score": 74.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 73.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -506,28 +506,28 @@
     },
     {
       "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 83.0,
-      "severity": "HIGH",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income",
+      "confidence": 85.0,
+      "severity": "CRITICAL",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 18,
-      "latest_at": "15 May 2026 20:04 UTC",
-      "headline": "US stocks today: US stocks fall as higher yields threaten AI-led rally",
+      "article_count": 13,
+      "latest_at": "17 May 2026 07:00 UTC",
+      "headline": "Gold at over one-week low as dollar, yields climb, Middle East tensions stoke inflation",
       "regions": [
-        "india",
-        "asia_pacific",
-        "global",
-        "middle_east"
+        "europe",
+        "middle_east",
+        "americas",
+        "asia_pacific"
       ],
       "sources": [
-        "US Top News and Analysis",
         "Bloomberg Markets",
         "Markets-Economic Times",
-        "Oilprice.com"
+        "US Top News and Analysis",
+        "Tech"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -550,10 +550,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 20.3,
+        "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 12.6,
-        "recency": 8.9,
+        "source_diversity": 12.1,
+        "recency": 10.1,
         "geopolitical_severity": 13.0
       }
     },
@@ -604,59 +604,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 11.7,
         "recency": 11.2,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 76.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 30,
-      "latest_at": "16 May 2026 21:00 UTC",
-      "headline": "Crude oil surges 8% in a week to near $110 as Iran war tensions simmer again. Where are prices headed?",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "middle_east",
-        "europe"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.6,
-        "recency": 5.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -750,6 +697,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 9.1,
         "recency": 3.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 73.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 32,
+      "latest_at": "16 May 2026 21:00 UTC",
+      "headline": "Crude oil surges 8% in a week to near $110 as Iran war tensions simmer again. Where are prices headed?",
+      "regions": [
+        "europe",
+        "middle_east",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "Oilprice.com"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.6,
+        "recency": 3.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -1028,17 +1028,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals - 18 articles - HIGH / NEUTRAL - US stocks today: US stocks fall as higher yields threaten AI-led rally"
+      "text": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income - 13 articles - CRITICAL / NEUTRAL - Gold at over one-week low as dollar, yields climb, Middle East tensions stoke inflation"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "India Equity Markets - 22 articles - HIGH / NEUTRAL - Reliance Industries, TCS, HDFC Bank among 10 companies with highest FII selling in Q4. Do you own any?"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Energy / Oil & Gas - 30 articles - CRITICAL / NEUTRAL - Crude oil surges 8% in a week to near $110 as Iran war tensions simmer again. Where are prices headed?"
     },
     {
       "tag": "tag-neu",
@@ -1049,6 +1044,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Crypto & Digital Assets - 24 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Energy / Oil & Gas - 32 articles - CRITICAL / NEUTRAL - Crude oil surges 8% in a week to near $110 as Iran war tensions simmer again. Where are prices headed?"
     },
     {
       "tag": "tag-neu",
@@ -1191,11 +1191,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78373.6,
+      "price": 78345.97,
       "currency": "USD",
-      "change": 242.16,
-      "change_pct": 0.31,
-      "change_str": "+0.31%",
+      "change": 214.53,
+      "change_pct": 0.27,
+      "change_str": "+0.27%",
       "direction": "up"
     },
     {
@@ -1617,11 +1617,11 @@
     }
   },
   "logs": [
-    "2026-05-17 11:14:10 [INFO] AZALYST - status.json generated",
-    "2026-05-17 11:14:10 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
-    "2026-05-17 11:14:10 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-05-17 11:14:10 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-17 11:14:10 [INFO] RISK - Partial profits realised: USD 323.35"
+    "2026-05-17 12:21:43 [INFO] AZALYST - status.json generated",
+    "2026-05-17 12:21:43 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
+    "2026-05-17 12:21:43 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-05-17 12:21:43 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-17 12:21:43 [INFO] RISK - Partial profits realised: USD 323.35"
   ],
-  "generated_at": "2026-05-17 11:14:07 UTC"
+  "generated_at": "2026-05-17 12:21:41 UTC"
 }
