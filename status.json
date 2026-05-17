@@ -1,18 +1,18 @@
 {
-  "portfolio_value": 9890.61,
+  "portfolio_value": 9890.09,
   "total_deposited": 9887.97,
-  "cash": 391.6,
+  "cash": 860.7,
   "monthly_reserve": 0.0,
-  "market_value": 9499.01,
-  "total_invested": 9499.74,
-  "unrealised_pnl": -0.73,
-  "unrealised_str": "-0.73",
-  "realised_pnl": 3.37,
-  "realised_str": "+3.37",
-  "change": "+0.03%",
-  "change_raw": 0.03,
+  "market_value": 9029.39,
+  "total_invested": 9053.12,
+  "unrealised_pnl": -23.73,
+  "unrealised_str": "-23.73",
+  "realised_pnl": 25.85,
+  "realised_str": "+25.85",
+  "change": "+0.02%",
+  "change_raw": 0.02,
   "closed_trades": 0,
-  "partial_realised_pnl": 3.37,
+  "partial_realised_pnl": 25.85,
   "portfolio_peak": 10001.46,
   "drawdown_now_pct": 1.11,
   "max_drawdown_pct": 1.19,
@@ -53,16 +53,16 @@
       "peak_price": 59.44,
       "trail_stop": 54.68,
       "dist_to_trail_pct": 8.0,
-      "units": 31.602911,
-      "invested": 1786.49,
-      "pnl": 91.99,
-      "pnl_str": "+91.99",
+      "units": 23.702183,
+      "invested": 1339.86,
+      "pnl": 68.99,
+      "pnl_str": "+68.99",
       "pnl_pct": 5.15,
       "pnl_pct_str": "+5.15%",
       "confidence": 96,
       "severity": "CRITICAL",
       "days_held": 6,
-      "half_exited": false
+      "half_exited": true
     },
     {
       "trade_id": "T0003",
@@ -130,7 +130,7 @@
       "pnl_pct_str": "-3.64%",
       "confidence": 65,
       "severity": "HIGH",
-      "days_held": 5,
+      "days_held": 6,
       "half_exited": false
     },
     {
@@ -192,12 +192,12 @@
     "ticker": "IGV",
     "rank_score": 15.516250944822374,
     "flow_score": 20.0,
-    "options_score": 0.0,
+    "options_score": 15.0,
     "rotation_score": 15.0,
     "macro_score": 0.0,
     "news_score": 7.68,
-    "total": 58.196250944822374,
-    "publish": false,
+    "total": 73.19625094482237,
+    "publish": true,
     "direction": "short"
   },
   "allocation": {
@@ -212,12 +212,12 @@
     ],
     "values": [
       38.1,
-      19.0,
+      14.2,
       16.4,
       16.9,
       3.5,
       2.1,
-      4.0
+      8.7
     ]
   },
   "pnl": {
@@ -231,7 +231,7 @@
     ],
     "values": [
       3.92,
-      91.99,
+      68.99,
       -54.28,
       -39.92,
       -13.25,
@@ -260,6 +260,10 @@
       "score": 83.0
     },
     {
+      "symbol": "Commodities & Mining",
+      "score": 78.0
+    },
+    {
       "symbol": "Asia Pacific Equity",
       "score": 74.0
     },
@@ -272,11 +276,11 @@
       "score": 72.0
     },
     {
-      "symbol": "Commodities & Mining",
-      "score": 71.0
+      "symbol": "Cybersecurity + Commodities & Mining",
+      "score": 68.0
     },
     {
-      "symbol": "Cybersecurity + Commodities & Mining",
+      "symbol": "Nuclear Energy & Uranium",
       "score": 68.0
     },
     {
@@ -289,10 +293,6 @@
     },
     {
       "symbol": "India Equity Markets",
-      "score": 64.0
-    },
-    {
-      "symbol": "Nuclear Energy & Uranium",
       "score": 64.0
     }
   ],
@@ -550,6 +550,56 @@
       }
     },
     {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 78.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "17 May 2026 19:00 UTC",
+      "headline": "Clean Energy\u2019s Dirty Secret Lies in Critical Mineral Extraction",
+      "regions": [
+        "europe",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "EE Times",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 13.3,
+        "volume_confirmation": 14.6,
+        "source_diversity": 14.0,
+        "recency": 16.9,
+        "geopolitical_severity": 10.9
+      }
+    },
+    {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
       "confidence": 74.0,
@@ -659,19 +709,19 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 42,
-      "latest_at": "17 May 2026 14:04 UTC",
+      "latest_at": "17 May 2026 19:01 UTC",
       "headline": "National Gas Prices Near Record High",
       "regions": [
         "asia_pacific",
-        "middle_east",
-        "europe",
-        "americas"
+        "americas",
+        "global",
+        "europe"
       ],
       "sources": [
-        "Oilprice.com",
+        "Bloomberg Markets",
+        "World News - Breaking international news and headlines | Sky News",
         "Markets-Economic Times",
-        "Latest from Tom's Hardware",
-        "Finance"
+        "World | Deutsche Welle"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -697,58 +747,8 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 16.6,
-        "recency": 17.0,
+        "recency": 16.9,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 71.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "17 May 2026 13:21 UTC",
-      "headline": "Trading While the Global Economy Shifts",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "europe"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "Latest from Tom's Hardware",
-        "Bloomberg Markets",
-        "www.theregister.com - Articles"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 9.8,
-        "volume_confirmation": 12.6,
-        "source_diversity": 14.0,
-        "recency": 15.8,
-        "geopolitical_severity": 10.1
       }
     },
     {
@@ -795,6 +795,58 @@
         "volume_confirmation": 14.6,
         "source_diversity": 14.5,
         "recency": 6.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "nuclear_uranium",
+      "sector_label": "Nuclear Energy & Uranium",
+      "confidence": 68.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "17 May 2026 16:25 UTC",
+      "headline": "Goldman Adds SMRs to Nuclear Model, Sees 17% Upside in Uranium Demand",
+      "regions": [
+        "middle_east",
+        "americas",
+        "global",
+        "india"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Latest from Tom's Hardware",
+        "Oilprice.com",
+        "BBC News"
+      ],
+      "primary_etf": "URA",
+      "top_etfs": [
+        "URA",
+        "URNM",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "URA",
+        "URNM",
+        "SRUUF"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 13.4,
+        "volume_confirmation": 11.3,
+        "source_diversity": 13.3,
+        "recency": 13.1,
         "geopolitical_severity": 13.0
       }
     },
@@ -948,57 +1000,6 @@
         "recency": 14.1,
         "geopolitical_severity": 13.0
       }
-    },
-    {
-      "sector_key": "nuclear_uranium",
-      "sector_label": "Nuclear Energy & Uranium",
-      "confidence": 64.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "17 May 2026 10:00 UTC",
-      "headline": "Goldman Adds SMRs to Nuclear Model, Sees 17% Upside in Uranium Demand",
-      "regions": [
-        "india",
-        "global",
-        "americas"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Latest from Tom's Hardware",
-        "Oilprice.com",
-        "www.theregister.com - Articles"
-      ],
-      "primary_etf": "URA",
-      "top_etfs": [
-        "URA",
-        "URNM",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "URA",
-        "URNM",
-        "SRUUF"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 10.7,
-        "volume_confirmation": 9.7,
-        "source_diversity": 11.0,
-        "recency": 15.3,
-        "geopolitical_severity": 12.9
-      }
     }
   ],
   "articles": [
@@ -1030,6 +1031,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Commodities & Mining - 8 articles - MEDIUM / NEUTRAL - Clean Energy\u2019s Dirty Secret Lies in Critical Mineral Extraction"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Asia Pacific Equity - 6 articles - HIGH / NEUTRAL - Global Market Today: Asian stocks rise after AI rally spurs US gauges"
     },
     {
@@ -1045,12 +1051,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Commodities & Mining - 6 articles - MEDIUM / NEUTRAL - Trading While the Global Economy Shifts"
+      "text": "Cybersecurity + Commodities & Mining - 8 articles - HIGH / NEUTRAL - Patch time for Cisco SD-WAN admins as vendor drops yet another make-me-admin zero-day"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity + Commodities & Mining - 8 articles - HIGH / NEUTRAL - Patch time for Cisco SD-WAN admins as vendor drops yet another make-me-admin zero-day"
+      "text": "Nuclear Energy & Uranium - 5 articles - HIGH / NEUTRAL - Goldman Adds SMRs to Nuclear Model, Sees 17% Upside in Uranium Demand"
     },
     {
       "tag": "tag-neu",
@@ -1066,11 +1072,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "India Equity Markets - 24 articles - HIGH / NEUTRAL - Reliance Industries, TCS, HDFC Bank among 10 companies with highest FII selling in Q4. Do you own any?"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Nuclear Energy & Uranium - 4 articles - HIGH / NEUTRAL - Goldman Adds SMRs to Nuclear Model, Sees 17% Upside in Uranium Demand"
     }
   ],
   "market_snapshot": [
@@ -1188,12 +1189,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78115.39,
+      "price": 78215.24,
       "currency": "USD",
-      "change": -16.05,
-      "change_pct": -0.02,
-      "change_str": "-0.02%",
-      "direction": "down"
+      "change": 83.8,
+      "change_pct": 0.11,
+      "change_str": "+0.11%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
@@ -1231,11 +1232,6 @@
         "at_cap": true
       },
       {
-        "sector": "Energy / Oil & Gas",
-        "weight": 19.0,
-        "at_cap": false
-      },
-      {
         "sector": "Crypto & Digital Assets",
         "weight": 16.9,
         "at_cap": false
@@ -1243,6 +1239,11 @@
       {
         "sector": "Gold & Precious Metals",
         "weight": 16.4,
+        "at_cap": false
+      },
+      {
+        "sector": "Energy / Oil & Gas",
+        "weight": 14.2,
         "at_cap": false
       },
       {
@@ -1351,8 +1352,8 @@
       "benchmark_price_start": 739.3,
       "benchmark_price_now": 739.17,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": 0.03,
-      "alpha": 0.05
+      "portfolio_return_pct": 0.02,
+      "alpha": 0.04
     },
     "rebalance": {
       "alerts": [
@@ -1362,7 +1363,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": 23.06,
           "action": "TRIM",
-          "amount": 2280.89,
+          "amount": 2280.97,
           "etf_name": "Invesco QQQ Trust"
         },
         {
@@ -1371,7 +1372,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -12.86,
           "action": "ADD",
-          "amount": 1272.08,
+          "amount": 1272.0,
           "etf_name": "First Trust Nasdaq CEA Cybersecurity ETF"
         },
         {
@@ -1380,17 +1381,8 @@
           "target_weight_pct": 15.0,
           "drift_pct": -11.45,
           "action": "ADD",
-          "amount": 1132.64,
+          "amount": 1132.56,
           "etf_name": "iShares U.S. Aerospace & Defense ETF"
-        },
-        {
-          "ticker": "CASH",
-          "actual_weight_pct": 3.96,
-          "target_weight_pct": 10.0,
-          "drift_pct": -6.04,
-          "action": "RAISE",
-          "amount": 597.46,
-          "etf_name": "Cash Reserve"
         }
       ],
       "drift_threshold_pct": 5.0,
@@ -1399,8 +1391,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -3364.77,
-          "portfolio_loss_pct": -34.02,
+          "total_impact": -3106.48,
+          "portfolio_loss_pct": -31.41,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1412,7 +1404,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -1033.16
+              "impact": -774.87
             },
             {
               "ticker": "GLDM",
@@ -1441,8 +1433,8 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -3313.85,
-          "portfolio_loss_pct": -33.51,
+          "total_impact": -3008.6,
+          "portfolio_loss_pct": -30.42,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1454,7 +1446,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -1221.01
+              "impact": -915.76
             },
             {
               "ticker": "GLDM",
@@ -1483,8 +1475,8 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1252.9,
-          "portfolio_loss_pct": -12.67,
+          "total_impact": -1205.94,
+          "portfolio_loss_pct": -12.19,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1496,7 +1488,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -187.85
+              "impact": -140.89
             },
             {
               "ticker": "GLDM",
@@ -1525,8 +1517,8 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -989.65,
-          "portfolio_loss_pct": -10.01,
+          "total_impact": -919.2,
+          "portfolio_loss_pct": -9.29,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1538,7 +1530,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -281.77
+              "impact": -211.33
             },
             {
               "ticker": "GLDM",
@@ -1567,8 +1559,8 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1443.99,
-          "portfolio_loss_pct": -14.6,
+          "total_impact": -1350.07,
+          "portfolio_loss_pct": -13.65,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1580,7 +1572,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -375.7
+              "impact": -281.77
             },
             {
               "ticker": "GLDM",
@@ -1610,15 +1602,15 @@
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -34.02
+      "worst_loss_pct": -31.41
     }
   },
   "logs": [
-    "2026-05-17 18:14:26 [INFO] AZALYST - status.json generated",
-    "2026-05-17 18:14:26 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
-    "2026-05-17 18:14:26 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-05-17 18:14:26 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-17 18:14:26 [INFO] RISK - Partial profits realised: USD 323.35"
+    "2026-05-17 19:16:44 [INFO] AZALYST - status.json generated",
+    "2026-05-17 19:16:44 [INFO] PORTFOLIO - NAV USD 9,890.09 | Return +0.02%",
+    "2026-05-17 19:16:44 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-05-17 19:16:44 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-17 19:16:44 [INFO] RISK - Partial profits realised: USD 2,480.54"
   ],
-  "generated_at": "2026-05-17 18:14:24 UTC"
+  "generated_at": "2026-05-17 19:16:41 UTC"
 }
