@@ -248,15 +248,19 @@
       "score": 96.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income",
-      "score": 91.0
-    },
-    {
       "symbol": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector",
       "score": 89.0
     },
     {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 84.0
+    },
+    {
       "symbol": "Crypto & Digital Assets",
+      "score": 83.0
+    },
+    {
+      "symbol": "Clean Energy & Renewables + Commodities & Mining",
       "score": 83.0
     },
     {
@@ -264,12 +268,12 @@
       "score": 78.0
     },
     {
-      "symbol": "Asia Pacific Equity",
-      "score": 74.0
+      "symbol": "Bonds & Fixed Income",
+      "score": 77.0
     },
     {
-      "symbol": "Bonds & Fixed Income",
-      "score": 73.0
+      "symbol": "Asia Pacific Equity",
+      "score": 74.0
     },
     {
       "symbol": "Defense & Aerospace",
@@ -285,10 +289,6 @@
     },
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 65.0
-    },
-    {
-      "symbol": "Clean Energy & Renewables",
       "score": 65.0
     },
     {
@@ -402,59 +402,6 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income",
-      "confidence": 91.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 14,
-      "latest_at": "17 May 2026 16:26 UTC",
-      "headline": "Gold at over one-week low as dollar, yields climb, Middle East tensions stoke inflation",
-      "regions": [
-        "global",
-        "middle_east",
-        "europe",
-        "americas"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Tech"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.1,
-        "recency": 16.2,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector",
       "confidence": 89.0,
@@ -505,6 +452,59 @@
       }
     },
     {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 84.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 9,
+      "latest_at": "17 May 2026 20:00 UTC",
+      "headline": "Gold at over one-week low as dollar, yields climb, Middle East tensions stoke inflation",
+      "regions": [
+        "americas",
+        "middle_east",
+        "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "Markets-Economic Times",
+        "Tech"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 15.4,
+        "source_diversity": 12.0,
+        "recency": 14.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 83.0,
@@ -546,6 +546,58 @@
         "volume_confirmation": 18.0,
         "source_diversity": 7.6,
         "recency": 14.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables + Commodities & Mining",
+      "confidence": 83.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "17 May 2026 20:46 UTC",
+      "headline": "Mexico\u2019s Renewable Energy Revival Sparks $4.75 Billion Investment Wave",
+      "regions": [
+        "global",
+        "americas",
+        "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Bloomberg Markets",
+        "Latest from Tom's Hardware",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "ICLN",
+      "top_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NEWENERGY"
+      ],
+      "global_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 15.9,
+        "volume_confirmation": 16.8,
+        "source_diversity": 14.0,
+        "recency": 16.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -600,6 +652,58 @@
       }
     },
     {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 77.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "17 May 2026 13:30 UTC",
+      "headline": "US stocks today: Dow Jones crashes 500 points on mounting inflation worries",
+      "regions": [
+        "americas",
+        "middle_east",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "Markets-Economic Times",
+        "Tech"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 19.4,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.1,
+        "recency": 7.8,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
       "confidence": 74.0,
@@ -644,58 +748,6 @@
         "source_diversity": 13.3,
         "recency": 16.9,
         "geopolitical_severity": 11.5
-      }
-    },
-    {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
-      "confidence": 73.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "16 May 2026 19:00 UTC",
-      "headline": "US stocks today: Dow Jones crashes 500 points on mounting inflation worries",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "americas",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "Tech"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 18.4,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.1,
-        "recency": 4.2,
-        "geopolitical_severity": 13.0
       }
     },
     {
@@ -904,54 +956,6 @@
       }
     },
     {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables",
-      "confidence": 65.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "17 May 2026 15:00 UTC",
-      "headline": "Mexico\u2019s Renewable Energy Revival Sparks $4.75 Billion Investment Wave",
-      "regions": [
-        "americas",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "Semiconductor Engineering"
-      ],
-      "primary_etf": "ICLN",
-      "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NEWENERGY"
-      ],
-      "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 12.8,
-        "volume_confirmation": 9.7,
-        "source_diversity": 5.9,
-        "recency": 15.9,
-        "geopolitical_severity": 12.9
-      }
-    },
-    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 64.0,
@@ -1016,12 +1020,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income - 14 articles - CRITICAL / NEUTRAL - Gold at over one-week low as dollar, yields climb, Middle East tensions stoke inflation"
+      "text": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector - 13 articles - CRITICAL / NEUTRAL - Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector - 13 articles - CRITICAL / NEUTRAL - Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 9 articles - HIGH / NEUTRAL - Gold at over one-week low as dollar, yields climb, Middle East tensions stoke inflation"
     },
     {
       "tag": "tag-neu",
@@ -1031,17 +1035,22 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Clean Energy & Renewables + Commodities & Mining - 11 articles - HIGH / NEUTRAL - Mexico\u2019s Renewable Energy Revival Sparks $4.75 Billion Investment Wave"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Commodities & Mining - 8 articles - MEDIUM / NEUTRAL - Clean Energy\u2019s Dirty Secret Lies in Critical Mineral Extraction"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Asia Pacific Equity - 6 articles - HIGH / NEUTRAL - Global Market Today: Asian stocks rise after AI rally spurs US gauges"
+      "text": "Bonds & Fixed Income - 13 articles - HIGH / NEUTRAL - US stocks today: Dow Jones crashes 500 points on mounting inflation worries"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Bonds & Fixed Income - 13 articles - HIGH / NEUTRAL - US stocks today: Dow Jones crashes 500 points on mounting inflation worries"
+      "text": "Asia Pacific Equity - 6 articles - HIGH / NEUTRAL - Global Market Today: Asian stocks rise after AI rally spurs US gauges"
     },
     {
       "tag": "tag-neu",
@@ -1062,11 +1071,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Energy / Oil & Gas - 32 articles - CRITICAL / NEUTRAL - Crude oil surges 8% in a week to near $110 as Iran war tensions simmer again. Where are prices headed?"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Clean Energy & Renewables - 4 articles - HIGH / NEUTRAL - Mexico\u2019s Renewable Energy Revival Sparks $4.75 Billion Investment Wave"
     },
     {
       "tag": "tag-neu",
@@ -1189,11 +1193,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78252.01,
+      "price": 78380.78,
       "currency": "USD",
-      "change": 120.57,
-      "change_pct": 0.15,
-      "change_str": "+0.15%",
+      "change": 249.34,
+      "change_pct": 0.32,
+      "change_str": "+0.32%",
       "direction": "up"
     },
     {
@@ -1606,11 +1610,11 @@
     }
   },
   "logs": [
-    "2026-05-17 20:29:54 [INFO] AZALYST - status.json generated",
-    "2026-05-17 20:29:54 [INFO] PORTFOLIO - NAV USD 9,890.09 | Return +0.02%",
-    "2026-05-17 20:29:54 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-05-17 20:29:54 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-17 20:29:54 [INFO] RISK - Partial profits realised: USD 2,480.54"
+    "2026-05-17 21:24:27 [INFO] AZALYST - status.json generated",
+    "2026-05-17 21:24:27 [INFO] PORTFOLIO - NAV USD 9,890.09 | Return +0.02%",
+    "2026-05-17 21:24:27 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-05-17 21:24:27 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-17 21:24:27 [INFO] RISK - Partial profits realised: USD 2,480.54"
   ],
-  "generated_at": "2026-05-17 20:29:51 UTC"
+  "generated_at": "2026-05-17 21:24:26 UTC"
 }
