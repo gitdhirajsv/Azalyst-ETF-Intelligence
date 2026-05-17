@@ -9,6 +9,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
+from state import atomic_write_json
+
 # Aladdin-grade risk engine
 try:
     import risk_engine
@@ -718,8 +720,7 @@ def generate_status():
 
     if not portfolio and not state:
         output = minimal_status(now_str)
-        with open(OUTPUT_FILE, "w", encoding="utf-8") as fh:
-            json.dump(output, fh, indent=2)
+        atomic_write_json(OUTPUT_FILE, output)
         print(f"Written minimal dashboard status -> {OUTPUT_FILE}")
         return
 
@@ -814,8 +815,7 @@ def generate_status():
         "generated_at":    now_str,
     }
 
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as fh:
-        json.dump(status, fh, indent=2)
+    atomic_write_json(OUTPUT_FILE, status)
 
     print(f"status.json written -> {OUTPUT_FILE}")
 

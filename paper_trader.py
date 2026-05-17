@@ -19,6 +19,8 @@ from datetime import date, datetime, timedelta, timezone
 from typing import Dict, List, Optional
 import urllib.request
 
+from state import atomic_write_json
+
 log = logging.getLogger("azalyst.trader")
 
 # Lazy import to avoid circular dependency — loaded on first use
@@ -624,8 +626,7 @@ class PaperPortfolio:
                 "closed_trades":               [ct.to_dict() for ct in self.closed_trades],
                 "last_saved":                  datetime.now(timezone.utc).isoformat(),
             }
-            with open(self.portfolio_file, "w", encoding="utf-8") as fh:
-                json.dump(data, fh, indent=2)
+            atomic_write_json(self.portfolio_file, data)
         except Exception as exc:
             log.error(f"Portfolio save error: {exc}")
 

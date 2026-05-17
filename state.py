@@ -12,9 +12,33 @@ import json
 import logging
 import os
 from datetime import datetime, timezone, timedelta
-from typing import Dict, List
+from pathlib import Path
+from typing import Any, Dict, List, Union
 
 log = logging.getLogger("azalyst.state")
+
+
+def atomic_write_json(path: Union[str, Path], data: Any, *, indent: int = 2) -> None:
+    """
+    Atomically write ``data`` as JSON to ``path``.
+
+    Strategy: write to a sibling ``.tmp`` file, flush + fsync, then rename onto
+    the target. ``os.replace`` is atomic on POSIX and as-atomic-as-it-gets on
+    Windows (NTFS performs the rename atomically; the previous file is
+    unlinked as part of the call). This guarantees readers never observe a
+    half-written file even if the process is killed mid-write.
+
+    The ``default=str`` fallback covers datetimes and other repr-able objects
+    that previously broke json.dump on direct writes.
+    """
+    target = Path(path)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    tmp = target.with_suffix(target.suffix + ".tmp")
+    with tmp.open("w", encoding="utf-8") as f:
+        json.dump(data, f, indent=indent, default=str)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, target)
 
 
 def _parse_dt(value) -> datetime:
@@ -91,14 +115,12 @@ class SignalStateManager:
         return {}
 
     def _save(self):
-        """Persist state to disk."""
+        """Persist state to disk atomically (tmp file + os.replace)."""
         try:
             serializable = {}
             for sector_id, record in self._state.items():
                 serializable[sector_id] = _json_safe(record)
-
-            with open(self.state_file, "w", encoding="utf-8") as f:
-                json.dump(serializable, f, indent=2)
+            atomic_write_json(self.state_file, serializable)
         except Exception as e:
             log.warning(f"Could not save state: {e}")
 
