@@ -155,3 +155,27 @@ class Config:
         )
     )
     LOG_LEVEL = _get_env("AZALYST_LOG_LEVEL", "LOG_LEVEL", default="INFO")
+
+    # ── Scorer factor caps ────────────────────────────────────────────────
+    # CALIBRATION STATUS: HAND-TUNED, NOT BACKTESTED.
+    #
+    # The six factor caps below are an opinionated allocation of the 100-point
+    # confidence budget; they were chosen by intuition and never regressed
+    # against realised forward returns. They are exposed here so they can be
+    # tuned without touching scorer.py, and so the docstring above any future
+    # change is the first thing a reader sees.
+    #
+    # The sum MUST equal 100 (a sanity test in tests/test_scorer.py asserts
+    # this on import). If you change a cap, change another to keep the sum
+    # at 100.
+    #
+    # TODO(calibration): Replace these constants with weights fit by regressing
+    # realised 5-day forward return (or some other forward target) on the per-
+    # factor scores using a held-out walk-forward window. Until that happens
+    # the caps below should be treated as a structural prior, not a model.
+    SCORER_CAP_SIGNAL_STRENGTH = 22
+    SCORER_CAP_VOLUME_CONFIRMATION = 18
+    SCORER_CAP_SOURCE_DIVERSITY = 18
+    SCORER_CAP_RECENCY = 17
+    SCORER_CAP_GEOPOLITICAL_SEVERITY = 13
+    SCORER_CAP_CROSS_ENGINE_CONFIRMATION = 12

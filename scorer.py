@@ -11,6 +11,16 @@ scorer.py — AZALYST Confidence Scoring Model (6-factor, multi-engine aware)
 
 Total caps at 100. Threshold = 62 (configurable).
 
+CALIBRATION STATUS
+------------------
+The 22/18/18/17/13/12 split is HAND-TUNED. It has not been backtested or
+regressed against realised forward returns. The caps live in config.py
+(SCORER_CAP_*) so they can be tuned without touching this file.
+
+TODO(calibration): Regress realised 5-day forward return on the per-factor
+scores using a held-out walk-forward window, then refit the caps. Until that
+work is done these weights are a structural prior, not a model.
+
 Factor 6 is the alpha-generating factor: it rewards signals where the news
 narrative is corroborated by independent price action and stock-rotation
 data. A news-only signal can still reach 88; only multi-engine consensus
@@ -92,6 +102,16 @@ class ConfidenceScorer:
     Scores sector signals on a 0–100 scale.
     """
 
+    # Default caps used when a cfg without SCORER_CAP_* is passed (e.g. tests).
+    _DEFAULT_CAPS = {
+        "signal_strength": 22,
+        "volume_confirmation": 18,
+        "source_diversity": 18,
+        "recency": 17,
+        "geopolitical_severity": 13,
+        "cross_engine_confirmation": 12,
+    }
+
     def __init__(self, cfg):
         self.cfg = cfg
         # ======== REVIEW BOARD CHANGE: Rolling factor score history for orthogonalization ========
@@ -101,6 +121,21 @@ class ConfidenceScorer:
             "signal_strength", "volume_confirmation", "source_diversity",
             "recency", "geopolitical_severity", "cross_engine_confirmation",
         ]
+        # Resolve caps from config (config-driven; see config.py SCORER_CAP_*).
+        self._caps = {
+            "signal_strength": float(getattr(cfg, "SCORER_CAP_SIGNAL_STRENGTH",
+                                             self._DEFAULT_CAPS["signal_strength"])),
+            "volume_confirmation": float(getattr(cfg, "SCORER_CAP_VOLUME_CONFIRMATION",
+                                                 self._DEFAULT_CAPS["volume_confirmation"])),
+            "source_diversity": float(getattr(cfg, "SCORER_CAP_SOURCE_DIVERSITY",
+                                              self._DEFAULT_CAPS["source_diversity"])),
+            "recency": float(getattr(cfg, "SCORER_CAP_RECENCY",
+                                     self._DEFAULT_CAPS["recency"])),
+            "geopolitical_severity": float(getattr(cfg, "SCORER_CAP_GEOPOLITICAL_SEVERITY",
+                                                   self._DEFAULT_CAPS["geopolitical_severity"])),
+            "cross_engine_confirmation": float(getattr(cfg, "SCORER_CAP_CROSS_ENGINE_CONFIRMATION",
+                                                       self._DEFAULT_CAPS["cross_engine_confirmation"])),
+        }
 
     def score(self, signal: Dict, all_articles: List[Dict]) -> int:
         """Compute final confidence score (0–100) for a signal."""
@@ -175,28 +210,31 @@ class ConfidenceScorer:
 
     # ── Factor 1: Signal Strength ─────────────────────────────────────────
     def _factor_signal_strength(self, signal: Dict) -> float:
-        """Smoothly saturating score from total keyword intensity. 22 pts max."""
+        """Smoothly saturating score from total keyword intensity. Cap from config."""
+        cap = self._caps["signal_strength"]
         total_score = max(float(signal.get("total_score", 0) or 0), 0.0)
         avg_score = max(float(signal.get("avg_article_score", 0) or 0), 0.0)
         if total_score <= 0:
             return 0.0
-        score = 22.0 * (1 - math.exp(-total_score / 55.0))
+        score = cap * (1 - math.exp(-total_score / 55.0))
         if avg_score > 0:
             score += min(avg_score / 15.0, 1.0) * 1.8
-        return min(score, 22.0)
+        return min(score, cap)
 
     # ── Factor 2: Volume Confirmation ─────────────────────────────────────
     def _factor_volume(self, signal: Dict) -> float:
-        """Diminishing returns from corroborating article count. 18 pts max."""
+        """Diminishing returns from corroborating article count. Cap from config."""
+        cap = self._caps["volume_confirmation"]
         count = signal.get("article_count", 0)
         if count < 2:
             return 0.0
         normalized = math.log1p(max(count - 1, 0)) / math.log1p(12)
-        return min(max(normalized, 0.0) * 18.0, 18.0)
+        return min(max(normalized, 0.0) * cap, cap)
 
     # ── Factor 3: Source Diversity ────────────────────────────────────────
     def _factor_source_diversity(self, signal: Dict) -> float:
-        """Independent source confirmation. 18 pts max. Tiered by quality."""
+        """Independent source confirmation. Tiered by quality. Cap from config."""
+        cap = self._caps["source_diversity"]
         sources = {s.lower() for s in signal.get("sources", [])}
         tier1_hits = 0
         tier2_hits = 0
@@ -218,11 +256,12 @@ class ConfidenceScorer:
                     tier3_hits += 1
 
         weighted_sources = tier1_hits * 1.6 + tier2_hits * 1.0 + tier3_hits * 0.6
-        return min(18.0 * (1 - math.exp(-weighted_sources / 4.0)), 18.0)
+        return min(cap * (1 - math.exp(-weighted_sources / 4.0)), cap)
 
     # ── Factor 4: Recency ─────────────────────────────────────────────────
     def _factor_recency(self, signal: Dict) -> float:
-        """Exponential time decay. 17 pts max."""
+        """Exponential time decay. Cap from config."""
+        cap = self._caps["recency"]
         try:
             latest = signal.get("latest_ts")
             if not latest:
@@ -236,17 +275,18 @@ class ConfidenceScorer:
                 return 0.0
             if age_hours > 168:
                 # Near-zero for articles older than 7 days
-                return max(17.0 * math.exp(-age_hours / 1.5) * 0.05, 0.0)
+                return max(cap * math.exp(-age_hours / 1.5) * 0.05, 0.0)
             if age_hours > 48:
                 # More aggressive decay for articles 2-7 days old
-                return max(17.0 * math.exp(-age_hours / 2.0) * 0.2, 0.0)
-            return min(17.0 * math.exp(-age_hours / 10.0), 17.0)
+                return max(cap * math.exp(-age_hours / 2.0) * 0.2, 0.0)
+            return min(cap * math.exp(-age_hours / 10.0), cap)
         except Exception:
             return 0.0
 
     # ── Factor 5: Geopolitical Severity ──────────────────────────────────
     def _factor_geopolitical_severity(self, signal: Dict) -> float:
-        """Event intensity + region impact. 13 pts max."""
+        """Event intensity + region impact. Cap from config."""
+        cap = self._caps["geopolitical_severity"]
         severity = signal.get("severity", "LOW")
         sev_score = SEVERITY_WEIGHTS.get(severity, 3)
         event_intensity = float(signal.get("event_intensity", 0.0) or 0.0)
@@ -261,13 +301,13 @@ class ConfidenceScorer:
         severity_component = min(sev_score * 0.22, 2.6)
         region_component = min(max_region * 0.65, 3.0)
 
-        return min(intensity_component + severity_component + region_component + cross_region_bonus, 13.0)
+        return min(intensity_component + severity_component + region_component + cross_region_bonus, cap)
 
     # ── Factor 6: Cross-Engine Confirmation ──────────────────────────────
     def _factor_cross_engine_confirmation(self, signal: Dict) -> float:
         """
         Reward signals confirmed by INDEPENDENT engines (price action +
-        constituent rotation). 12 pts max.
+        constituent rotation). Cap from config.
 
         Lookups:
           signal["evidence"]["price"]        → from signal_fusion.SignalFuser
@@ -339,4 +379,4 @@ class ConfidenceScorer:
         if divergent:
             score *= 0.5
 
-        return min(score, 12.0)
+        return min(score, self._caps["cross_engine_confirmation"])
