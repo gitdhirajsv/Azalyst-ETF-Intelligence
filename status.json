@@ -192,12 +192,12 @@
     "ticker": "IGV",
     "rank_score": 15.516250944822374,
     "flow_score": 20.0,
-    "options_score": 15.162914606108464,
+    "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 0.0,
     "news_score": 7.68,
-    "total": 73.35916555093084,
-    "publish": true,
+    "total": 58.196250944822374,
+    "publish": false,
     "direction": "short"
   },
   "allocation": {
@@ -252,16 +252,16 @@
       "score": 92.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 89.0
-    },
-    {
       "symbol": "Europe Equity + Banking & Financial Sector + Gold & Precious Metals",
       "score": 89.0
     },
     {
       "symbol": "Gold & Precious Metals",
       "score": 83.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 76.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -455,59 +455,6 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 89.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
-      "latest_at": "16 May 2026 21:00 UTC",
-      "headline": "Crude oil surges 8% in a week to near $110 as Iran war tensions simmer again. Where are prices headed?",
-      "regions": [
-        "middle_east",
-        "americas",
-        "asia_pacific",
-        "europe"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "Oilprice.com"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.6,
-        "recency": 15.1,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity + Banking & Financial Sector + Gold & Precious Metals",
       "confidence": 89.0,
@@ -607,6 +554,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 12.6,
         "recency": 8.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 76.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 30,
+      "latest_at": "16 May 2026 21:00 UTC",
+      "headline": "Crude oil surges 8% in a week to near $110 as Iran war tensions simmer again. Where are prices headed?",
+      "regions": [
+        "asia_pacific",
+        "americas",
+        "middle_east",
+        "europe"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.6,
+        "recency": 5.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -1023,17 +1023,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 28 articles - CRITICAL / NEUTRAL - Crude oil surges 8% in a week to near $110 as Iran war tensions simmer again. Where are prices headed?"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Europe Equity + Banking & Financial Sector + Gold & Precious Metals - 13 articles - CRITICAL / NEUTRAL - Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Gold & Precious Metals - 18 articles - HIGH / NEUTRAL - US stocks today: US stocks fall as higher yields threaten AI-led rally"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Energy / Oil & Gas - 30 articles - CRITICAL / NEUTRAL - Crude oil surges 8% in a week to near $110 as Iran war tensions simmer again. Where are prices headed?"
     },
     {
       "tag": "tag-neu",
@@ -1191,11 +1191,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78145.83,
+      "price": 78115.99,
       "currency": "USD",
-      "change": -919.85,
-      "change_pct": -1.16,
-      "change_str": "-1.16%",
+      "change": -15.45,
+      "change_pct": -0.02,
+      "change_str": "-0.02%",
       "direction": "down"
     },
     {
@@ -1617,11 +1617,11 @@
     }
   },
   "logs": [
-    "2026-05-17 04:49:58 [INFO] AZALYST - status.json generated",
-    "2026-05-17 04:49:58 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
-    "2026-05-17 04:49:58 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-05-17 04:49:58 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-17 04:49:58 [INFO] RISK - Partial profits realised: USD 323.35"
+    "2026-05-17 07:42:27 [INFO] AZALYST - status.json generated",
+    "2026-05-17 07:42:27 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
+    "2026-05-17 07:42:27 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-05-17 07:42:27 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-17 07:42:27 [INFO] RISK - Partial profits realised: USD 323.35"
   ],
-  "generated_at": "2026-05-17 04:49:50 UTC"
+  "generated_at": "2026-05-17 07:42:26 UTC"
 }
