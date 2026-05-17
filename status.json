@@ -192,12 +192,12 @@
     "ticker": "IGV",
     "rank_score": 15.516250944822374,
     "flow_score": 20.0,
-    "options_score": 0.0,
+    "options_score": 15.0,
     "rotation_score": 15.0,
     "macro_score": 0.0,
     "news_score": 7.68,
-    "total": 58.196250944822374,
-    "publish": false,
+    "total": 73.19625094482237,
+    "publish": true,
     "direction": "short"
   },
   "allocation": {
@@ -252,7 +252,7 @@
       "score": 92.0
     },
     {
-      "symbol": "Europe Equity + Banking & Financial Sector + Gold & Precious Metals",
+      "symbol": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector",
       "score": 89.0
     },
     {
@@ -264,24 +264,24 @@
       "score": 76.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 75.0
-    },
-    {
-      "symbol": "Bonds & Fixed Income",
-      "score": 75.0
-    },
-    {
       "symbol": "Asia Pacific Equity",
       "score": 74.0
     },
     {
-      "symbol": "Cybersecurity + Commodities & Mining",
-      "score": 72.0
+      "symbol": "Crypto & Digital Assets",
+      "score": 74.0
+    },
+    {
+      "symbol": "Bonds & Fixed Income",
+      "score": 73.0
     },
     {
       "symbol": "India Equity Markets",
       "score": 69.0
+    },
+    {
+      "symbol": "Cybersecurity + Commodities & Mining",
+      "score": 68.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -411,20 +411,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 36,
-      "latest_at": "17 May 2026 04:38 UTC",
+      "article_count": 38,
+      "latest_at": "17 May 2026 08:58 UTC",
       "headline": "China, US, Israel compete in fast-growing laser weapons race",
       "regions": [
-        "middle_east",
-        "europe",
         "global",
-        "asia_pacific"
+        "asia_pacific",
+        "africa",
+        "americas"
       ],
       "sources": [
+        "World News - Breaking international news and headlines | Sky News",
         "World | Deutsche Welle",
-        "Defense News",
-        "Cointelegraph.com News",
-        "Latest from Tom's Hardware"
+        "Markets-Economic Times",
+        "US Top News and Analysis"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -456,7 +456,7 @@
     },
     {
       "sector_key": "europe_equity",
-      "sector_label": "Europe Equity + Banking & Financial Sector + Gold & Precious Metals",
+      "sector_label": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector",
       "confidence": 89.0,
       "severity": "CRITICAL",
       "direction": "NEUTRAL",
@@ -465,18 +465,18 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 13,
-      "latest_at": "17 May 2026 04:38 UTC",
+      "latest_at": "17 May 2026 08:58 UTC",
       "headline": "Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says",
       "regions": [
-        "europe",
         "middle_east",
+        "europe",
         "global",
-        "americas"
+        "asia_pacific"
       ],
       "sources": [
+        "www.theregister.com - Articles",
         "World | Deutsche Welle",
         "Markets-Economic Times",
-        "www.theregister.com - Articles",
         "Bloomberg Markets"
       ],
       "primary_etf": "VGK",
@@ -497,7 +497,7 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 21.8,
+        "signal_strength": 21.5,
         "volume_confirmation": 18.0,
         "source_diversity": 13.6,
         "recency": 16.9,
@@ -611,104 +611,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 75.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "16 May 2026 17:07 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "europe",
-        "global",
-        "asia_pacific",
-        "india"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Tech",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 9.1,
-        "recency": 5.4,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
-      "confidence": 75.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 14,
-      "latest_at": "16 May 2026 19:00 UTC",
-      "headline": "US stocks today: Dow Jones crashes 500 points on mounting inflation worries",
-      "regions": [
-        "middle_east",
-        "global",
-        "asia_pacific",
-        "americas"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 18.9,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.1,
-        "recency": 6.5,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
       "confidence": 74.0,
@@ -756,49 +658,100 @@
       }
     },
     {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity + Commodities & Mining",
-      "confidence": 72.0,
-      "severity": "HIGH",
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 74.0,
+      "severity": "CRITICAL",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "16 May 2026 23:15 UTC",
-      "headline": "Patch time for Cisco SD-WAN admins as vendor drops yet another make-me-admin zero-day",
+      "article_count": 24,
+      "latest_at": "16 May 2026 17:07 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "europe",
         "global",
         "asia_pacific",
-        "americas"
+        "india",
+        "europe"
       ],
       "sources": [
-        "BBC News",
+        "Cointelegraph.com News",
         "Markets-Economic Times",
-        "www.theregister.com - Articles",
-        "Latest from Tom's Hardware"
+        "Tech"
       ],
-      "primary_etf": "CIBR",
+      "primary_etf": "IBIT",
       "top_etfs": [
-        "CIBR",
-        "HACK"
+        "IBIT",
+        "BITQ"
       ],
       "access_markets": [
         "International-listed"
       ],
       "india_etfs": [],
       "global_etfs": [
-        "CIBR",
-        "HACK"
+        "IBIT",
+        "BITQ"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 12.1,
-        "volume_confirmation": 14.6,
-        "source_diversity": 14.5,
-        "recency": 9.9,
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 9.1,
+        "recency": 3.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 73.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "16 May 2026 19:00 UTC",
+      "headline": "US stocks today: Dow Jones crashes 500 points on mounting inflation worries",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "americas",
+        "middle_east"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "Cointelegraph.com News",
+        "Tech"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 18.4,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.1,
+        "recency": 4.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -850,6 +803,53 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.4,
         "recency": 16.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity + Commodities & Mining",
+      "confidence": 68.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "16 May 2026 23:15 UTC",
+      "headline": "Patch time for Cisco SD-WAN admins as vendor drops yet another make-me-admin zero-day",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "europe",
+        "americas"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "BBC News",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.1,
+        "volume_confirmation": 14.6,
+        "source_diversity": 14.5,
+        "recency": 6.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -1018,12 +1018,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 36 articles - HIGH / NEUTRAL - China, US, Israel compete in fast-growing laser weapons race"
+      "text": "Defense & Aerospace - 38 articles - HIGH / NEUTRAL - China, US, Israel compete in fast-growing laser weapons race"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Europe Equity + Banking & Financial Sector + Gold & Precious Metals - 13 articles - CRITICAL / NEUTRAL - Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says"
+      "text": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector - 13 articles - CRITICAL / NEUTRAL - Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says"
     },
     {
       "tag": "tag-neu",
@@ -1038,27 +1038,27 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 24 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Bonds & Fixed Income - 14 articles - HIGH / NEUTRAL - US stocks today: Dow Jones crashes 500 points on mounting inflation worries"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Asia Pacific Equity - 6 articles - HIGH / NEUTRAL - Global Market Today: Asian stocks rise after AI rally spurs US gauges"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity + Commodities & Mining - 8 articles - HIGH / NEUTRAL - Patch time for Cisco SD-WAN admins as vendor drops yet another make-me-admin zero-day"
+      "text": "Crypto & Digital Assets - 24 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Bonds & Fixed Income - 13 articles - HIGH / NEUTRAL - US stocks today: Dow Jones crashes 500 points on mounting inflation worries"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "India Equity Markets - 23 articles - HIGH / NEUTRAL - Sensex rises over 400 points to cross 75,000; Nifty above 23,500 despite weak rupee"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Cybersecurity + Commodities & Mining - 8 articles - HIGH / NEUTRAL - Patch time for Cisco SD-WAN admins as vendor drops yet another make-me-admin zero-day"
     },
     {
       "tag": "tag-neu",
@@ -1191,11 +1191,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78115.99,
+      "price": 78106.8,
       "currency": "USD",
-      "change": -15.45,
-      "change_pct": -0.02,
-      "change_str": "-0.02%",
+      "change": -24.64,
+      "change_pct": -0.03,
+      "change_str": "-0.03%",
       "direction": "down"
     },
     {
@@ -1617,11 +1617,11 @@
     }
   },
   "logs": [
-    "2026-05-17 07:42:27 [INFO] AZALYST - status.json generated",
-    "2026-05-17 07:42:27 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
-    "2026-05-17 07:42:27 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-05-17 07:42:27 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-17 07:42:27 [INFO] RISK - Partial profits realised: USD 323.35"
+    "2026-05-17 09:15:26 [INFO] AZALYST - status.json generated",
+    "2026-05-17 09:15:26 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
+    "2026-05-17 09:15:26 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-05-17 09:15:26 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-17 09:15:26 [INFO] RISK - Partial profits realised: USD 323.35"
   ],
-  "generated_at": "2026-05-17 07:42:26 UTC"
+  "generated_at": "2026-05-17 09:15:25 UTC"
 }
