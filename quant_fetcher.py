@@ -6,8 +6,12 @@ Acts as the Phase 2 risk-confirmation layer before executing news-driven trades.
 """
 
 import logging
-import yfinance as yf
+from datetime import datetime, timedelta, timezone
 from functools import lru_cache
+from typing import Optional
+
+import pandas as pd
+import yfinance as yf
 
 log = logging.getLogger("azalyst.quant")
 
@@ -16,28 +20,71 @@ class QuantFetcher:
         self.enabled = True
 
     @lru_cache(maxsize=32)
-    def check_trend_approval(self, ticker: str) -> bool:
+    def check_trend_approval(self, ticker: str, signal_date: Optional[str] = None) -> bool:
         """
-        Check if the ETF is currently in a bullish/neutral technical trend.
-        Returns False ONLY if the ETF is actively crashing below its 200-day MA.
-        If yfinance fails, defaults to True (fails open) so news engine isn't blocked.
+        Check if the ETF is in a bullish/neutral technical trend at ``signal_date``.
+
+        Returns False ONLY if the ETF was actively trading >5% below its 200-day MA
+        as of the signal date. If yfinance fails, defaults to True (fails open).
+
+        Lookahead protection
+        --------------------
+        - In live use (``signal_date=None``) the function uses prices up to "today",
+          which is the only history available at decision time — this is not
+          lookahead, it's the standard walk-forward setup.
+        - In backtest replay, callers MUST pass ``signal_date`` (ISO string, UTC).
+          The function then fetches history with an explicit ``end=signal_date``
+          and strictly slices the frame to dates < ``signal_date`` before computing
+          the 200-MA, so no price at or after the signal can leak into the gate.
         """
         try:
             ticker_obj = yf.Ticker(ticker)
-            # Fetch 1 year of daily history
-            hist = ticker_obj.history(period="1y")
-            if hist.empty or len(hist) < 200:
-                return True # Not enough data, fail open
-                
-            current_price = hist['Close'].iloc[-1]
-            ma_200 = hist['Close'].rolling(window=200).mean().iloc[-1]
-            
-            # Simple blocker: If price is > 5% below its 200-day MA, it's a structural downtrend.
-            # Don't buy the dip purely on news if the asset is fundamentally broken.
+
+            if signal_date is None:
+                # Live mode: use all data up to now. yfinance returns history up
+                # to the latest available bar at call time — that is t-by-t data,
+                # not future data.
+                hist = ticker_obj.history(period="1y")
+                cutoff = None
+            else:
+                # Backtest mode: bound the request and slice strictly < signal_date.
+                cutoff = pd.Timestamp(signal_date)
+                if cutoff.tzinfo is None:
+                    cutoff = cutoff.tz_localize(timezone.utc)
+                # Pull ~14 months ending at signal_date so we have 200 trading days
+                # of *prior* history available after slicing strictly < cutoff.
+                start = (cutoff - timedelta(days=425)).date().isoformat()
+                end = cutoff.date().isoformat()
+                hist = ticker_obj.history(start=start, end=end)
+
+            if hist.empty:
+                return True  # Not enough data, fail open
+
+            # Normalize index timezone for safe comparison.
+            if hist.index.tz is None:
+                hist.index = hist.index.tz_localize(timezone.utc)
+            else:
+                hist.index = hist.index.tz_convert(timezone.utc)
+
+            if cutoff is not None:
+                # Strict <: never include the signal-date bar in the 200-MA gate.
+                hist = hist[hist.index < cutoff]
+
+            if len(hist) < 200:
+                return True  # Not enough prior history, fail open
+
+            window = hist['Close'].tail(200)
+            current_price = float(window.iloc[-1])
+            ma_200 = float(window.mean())
+
+            # Structural-downtrend blocker: >5% below 200-day MA.
             if current_price < (ma_200 * 0.95):
-                log.warning(f"QUANT BLOCKER: {ticker} is in a structural downtrend (Price: {current_price:.2f}, 200MA: {ma_200:.2f})")
+                log.warning(
+                    f"QUANT BLOCKER: {ticker} is in a structural downtrend "
+                    f"(Price: {current_price:.2f}, 200MA: {ma_200:.2f})"
+                )
                 return False
-                
+
             return True
         except Exception as e:
             log.warning(f"yfinance failed to fetch {ticker}: {e}. Failsafe: Approving trend.")
