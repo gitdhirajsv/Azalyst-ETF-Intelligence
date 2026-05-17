@@ -192,12 +192,12 @@
     "ticker": "IGV",
     "rank_score": 15.516250944822374,
     "flow_score": 20.0,
-    "options_score": 15.0,
+    "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 0.0,
     "news_score": 7.68,
-    "total": 73.19625094482237,
-    "publish": true,
+    "total": 58.196250944822374,
+    "publish": false,
     "direction": "short"
   },
   "allocation": {
@@ -260,6 +260,10 @@
       "score": 83.0
     },
     {
+      "symbol": "India Equity Markets",
+      "score": 81.0
+    },
+    {
       "symbol": "Energy / Oil & Gas",
       "score": 76.0
     },
@@ -274,10 +278,6 @@
     {
       "symbol": "Bonds & Fixed Income",
       "score": 73.0
-    },
-    {
-      "symbol": "India Equity Markets",
-      "score": 69.0
     },
     {
       "symbol": "Cybersecurity + Commodities & Mining",
@@ -558,6 +558,56 @@
       }
     },
     {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 81.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 22,
+      "latest_at": "17 May 2026 05:10 UTC",
+      "headline": "Reliance Industries, TCS, HDFC Bank among 10 companies with highest FII selling in Q4. Do you own any?",
+      "regions": [
+        "india",
+        "global",
+        "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "Oilprice.com"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 11.7,
+        "recency": 11.2,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
       "confidence": 76.0,
@@ -752,57 +802,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 12.1,
         "recency": 4.2,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 69.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "14 May 2026 04:45 UTC",
-      "headline": "Sensex rises over 400 points to cross 75,000; Nifty above 23,500 despite weak rupee",
-      "regions": [
-        "india",
-        "asia_pacific",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "BBC News"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.4,
-        "recency": 16.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -1033,6 +1032,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "India Equity Markets - 22 articles - HIGH / NEUTRAL - Reliance Industries, TCS, HDFC Bank among 10 companies with highest FII selling in Q4. Do you own any?"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Energy / Oil & Gas - 30 articles - CRITICAL / NEUTRAL - Crude oil surges 8% in a week to near $110 as Iran war tensions simmer again. Where are prices headed?"
     },
     {
@@ -1049,11 +1053,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Bonds & Fixed Income - 13 articles - HIGH / NEUTRAL - US stocks today: Dow Jones crashes 500 points on mounting inflation worries"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "India Equity Markets - 23 articles - HIGH / NEUTRAL - Sensex rises over 400 points to cross 75,000; Nifty above 23,500 despite weak rupee"
     },
     {
       "tag": "tag-neu",
@@ -1191,11 +1190,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78106.8,
+      "price": 78094.03,
       "currency": "USD",
-      "change": -24.64,
-      "change_pct": -0.03,
-      "change_str": "-0.03%",
+      "change": -37.41,
+      "change_pct": -0.05,
+      "change_str": "-0.05%",
       "direction": "down"
     },
     {
@@ -1617,11 +1616,11 @@
     }
   },
   "logs": [
-    "2026-05-17 09:15:26 [INFO] AZALYST - status.json generated",
-    "2026-05-17 09:15:26 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
-    "2026-05-17 09:15:26 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-05-17 09:15:26 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-17 09:15:26 [INFO] RISK - Partial profits realised: USD 323.35"
+    "2026-05-17 09:33:51 [INFO] AZALYST - status.json generated",
+    "2026-05-17 09:33:51 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
+    "2026-05-17 09:33:51 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-05-17 09:33:51 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-17 09:33:51 [INFO] RISK - Partial profits realised: USD 323.35"
   ],
-  "generated_at": "2026-05-17 09:15:25 UTC"
+  "generated_at": "2026-05-17 09:33:47 UTC"
 }
