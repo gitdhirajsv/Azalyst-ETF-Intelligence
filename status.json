@@ -173,12 +173,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
+    "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.07646413950352943,
+    "vix_level": 18.43000030517578,
+    "vix_percentile_1y": 0.6626984126984127,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -192,12 +192,12 @@
     "ticker": "IGV",
     "rank_score": 15.516250944822374,
     "flow_score": 20.0,
-    "options_score": 15.16291528060471,
+    "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 0.0,
     "news_score": 7.68,
-    "total": 73.35916622542709,
-    "publish": true,
+    "total": 58.196250944822374,
+    "publish": false,
     "direction": "short"
   },
   "allocation": {
@@ -293,7 +293,7 @@
     },
     {
       "symbol": "Nuclear Energy & Uranium",
-      "score": 62.0
+      "score": 64.0
     }
   ],
   "signals": [
@@ -955,22 +955,23 @@
     {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
-      "confidence": 62.0,
-      "severity": "CRITICAL",
+      "confidence": 64.0,
+      "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 4,
-      "latest_at": "14 May 2026 21:00 UTC",
-      "headline": "Financial Strains and Mining Disputes Cloud Russia-Kazakhstan Nuclear Ties",
+      "latest_at": "17 May 2026 10:00 UTC",
+      "headline": "Goldman Adds SMRs to Nuclear Model, Sees 17% Upside in Uranium Demand",
       "regions": [
-        "europe",
+        "india",
         "global",
-        "asia_pacific"
+        "americas"
       ],
       "sources": [
+        "Bloomberg Markets",
         "Latest from Tom's Hardware",
         "Oilprice.com",
         "www.theregister.com - Articles"
@@ -995,11 +996,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 15.4,
+        "signal_strength": 10.7,
         "volume_confirmation": 9.7,
-        "source_diversity": 7.6,
-        "recency": 7.5,
-        "geopolitical_severity": 13.0
+        "source_diversity": 11.0,
+        "recency": 15.3,
+        "geopolitical_severity": 12.9
       }
     }
   ],
@@ -1072,7 +1073,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Nuclear Energy & Uranium - 4 articles - CRITICAL / NEUTRAL - Financial Strains and Mining Disputes Cloud Russia-Kazakhstan Nuclear Ties"
+      "text": "Nuclear Energy & Uranium - 4 articles - HIGH / NEUTRAL - Goldman Adds SMRs to Nuclear Model, Sees 17% Upside in Uranium Demand"
     }
   ],
   "market_snapshot": [
@@ -1190,11 +1191,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78243.05,
+      "price": 78373.6,
       "currency": "USD",
-      "change": 111.61,
-      "change_pct": 0.14,
-      "change_str": "+0.14%",
+      "change": 242.16,
+      "change_pct": 0.31,
+      "change_str": "+0.31%",
       "direction": "up"
     },
     {
@@ -1616,11 +1617,11 @@
     }
   },
   "logs": [
-    "2026-05-17 09:58:25 [INFO] AZALYST - status.json generated",
-    "2026-05-17 09:58:25 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
-    "2026-05-17 09:58:25 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-05-17 09:58:25 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-17 09:58:25 [INFO] RISK - Partial profits realised: USD 323.35"
+    "2026-05-17 11:14:10 [INFO] AZALYST - status.json generated",
+    "2026-05-17 11:14:10 [INFO] PORTFOLIO - NAV USD 9,890.61 | Return +0.03%",
+    "2026-05-17 11:14:10 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-05-17 11:14:10 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-17 11:14:10 [INFO] RISK - Partial profits realised: USD 323.35"
   ],
-  "generated_at": "2026-05-17 09:58:23 UTC"
+  "generated_at": "2026-05-17 11:14:07 UTC"
 }
