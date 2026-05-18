@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 9862.7,
+  "portfolio_value": 9862.57,
   "total_deposited": 9848.96,
-  "cash": 239.59,
+  "cash": 196.26,
   "monthly_reserve": 0.0,
-  "market_value": 9623.1,
-  "total_invested": 9635.12,
-  "unrealised_pnl": -12.01,
-  "unrealised_str": "-12.01",
+  "market_value": 9666.32,
+  "total_invested": 9678.46,
+  "unrealised_pnl": -12.14,
+  "unrealised_str": "-12.14",
   "realised_pnl": 25.75,
   "realised_str": "+25.75",
   "change": "+0.14%",
@@ -94,17 +94,17 @@
       "sector": "Crypto & Digital Assets",
       "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NASDAQ",
-      "entry": 45.59,
+      "entry": 45.55,
       "current": 43.53,
       "peak_price": 46.25,
-      "trail_stop": 41.03,
-      "dist_to_trail_pct": 5.74,
-      "units": 41.29991,
-      "invested": 1882.96,
-      "pnl": -85.17,
-      "pnl_str": "-85.17",
-      "pnl_pct": -4.52,
-      "pnl_pct_str": "-4.52%",
+      "trail_stop": 40.99,
+      "dist_to_trail_pct": 5.83,
+      "units": 42.292628,
+      "invested": 1926.3,
+      "pnl": -85.3,
+      "pnl_str": "-85.30",
+      "pnl_pct": -4.43,
+      "pnl_pct_str": "-4.43%",
       "confidence": 90,
       "severity": "CRITICAL",
       "days_held": 7,
@@ -153,7 +153,7 @@
       "pnl_pct_str": "+8.30%",
       "confidence": 80,
       "severity": "HIGH",
-      "days_held": 5,
+      "days_held": 6,
       "half_exited": true
     }
   ],
@@ -173,12 +173,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
+    "risk_state": "NEUTRAL",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.07031368768802279,
-    "vix_level": 17.81999969482422,
-    "vix_percentile_1y": 0.5833333333333334,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -190,13 +190,13 @@
   },
   "top_signal": {
     "ticker": "XLE",
-    "rank_score": 22.15882650480526,
+    "rank_score": 22.15793470007593,
     "flow_score": 20.0,
-    "options_score": 20.885527044812374,
+    "options_score": 18.0,
     "rotation_score": 15.0,
-    "macro_score": 6.876128685434907,
+    "macro_score": 6.881557992253521,
     "news_score": 9.2,
-    "total": 94.12048223505255,
+    "total": 91.23949269232945,
     "publish": true,
     "direction": "long"
   },
@@ -214,10 +214,10 @@
       38.0,
       16.9,
       17.8,
-      18.2,
+      18.7,
       4.5,
       2.2,
-      2.4
+      2.0
     ]
   },
   "pnl": {
@@ -233,7 +233,7 @@
       2.56,
       103.91,
       -43.96,
-      -85.17,
+      -85.3,
       -5.94,
       16.59
     ]
@@ -260,10 +260,6 @@
       "score": 87.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 83.0
-    },
-    {
       "symbol": "India Equity Markets",
       "score": 83.0
     },
@@ -272,12 +268,16 @@
       "score": 82.0
     },
     {
-      "symbol": "Nuclear Energy & Uranium",
-      "score": 80.0
+      "symbol": "Crypto & Digital Assets",
+      "score": 82.0
     },
     {
       "symbol": "Asia Pacific Equity",
       "score": 74.0
+    },
+    {
+      "symbol": "Nuclear Energy & Uranium",
+      "score": 70.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -558,50 +558,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 83.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "18 May 2026 17:58 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "global",
-        "middle_east",
-        "americas",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 2.5,
-        "recency": 16.1,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 83.0,
@@ -699,54 +655,46 @@
       }
     },
     {
-      "sector_key": "nuclear_uranium",
-      "sector_label": "Nuclear Energy & Uranium",
-      "confidence": 80.0,
-      "severity": "HIGH",
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 82.0,
+      "severity": "CRITICAL",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "18 May 2026 18:30 UTC",
-      "headline": "China Burns More Coal and Gas as Wind and Nuclear Output Falls",
+      "article_count": 24,
+      "latest_at": "18 May 2026 21:47 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
       "regions": [
         "middle_east",
-        "india",
-        "global",
-        "asia_pacific"
+        "asia_pacific",
+        "americas",
+        "global"
       ],
       "sources": [
-        "Oilprice.com",
-        "Latest from Tom's Hardware",
-        "Bloomberg Markets",
-        "www.theregister.com - Articles"
+        "Cointelegraph.com News"
       ],
-      "primary_etf": "URA",
+      "primary_etf": "IBIT",
       "top_etfs": [
-        "URA",
-        "URNM",
-        "CPSEETF"
+        "IBIT",
+        "BITQ"
       ],
       "access_markets": [
-        "India-listed",
         "International-listed"
       ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
+      "india_etfs": [],
       "global_etfs": [
-        "URA",
-        "URNM",
-        "SRUUF"
+        "IBIT",
+        "BITQ"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 12.7,
-        "volume_confirmation": 13.7,
-        "source_diversity": 14.0,
-        "recency": 16.9,
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 2.5,
+        "recency": 15.1,
         "geopolitical_severity": 13.0
       }
     },
@@ -795,6 +743,58 @@
         "source_diversity": 13.3,
         "recency": 16.9,
         "geopolitical_severity": 11.5
+      }
+    },
+    {
+      "sector_key": "nuclear_uranium",
+      "sector_label": "Nuclear Energy & Uranium",
+      "confidence": 70.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "18 May 2026 22:57 UTC",
+      "headline": "UAE reports strike near Abu Dhabi nuclear power plant",
+      "regions": [
+        "asia_pacific",
+        "americas",
+        "india",
+        "global"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "Latest from Tom's Hardware",
+        "BBC News",
+        "World | Deutsche Welle"
+      ],
+      "primary_etf": "URA",
+      "top_etfs": [
+        "URA",
+        "URNM",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "URA",
+        "URNM",
+        "SRUUF"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 9.2,
+        "volume_confirmation": 11.3,
+        "source_diversity": 12.0,
+        "recency": 16.9,
+        "geopolitical_severity": 11.1
       }
     },
     {
@@ -1031,11 +1031,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 23 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "India Equity Markets - 21 articles - HIGH / NEUTRAL - Why is market falling today? Sensex crashes 1,000 points, Nifty below 23,350; 5 key factors behind bloodbath"
     },
     {
@@ -1046,12 +1041,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Nuclear Energy & Uranium - 7 articles - HIGH / NEUTRAL - China Burns More Coal and Gas as Wind and Nuclear Output Falls"
+      "text": "Crypto & Digital Assets - 24 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Asia Pacific Equity - 6 articles - HIGH / NEUTRAL - Global Market Today: Asian stocks rise after AI rally spurs US gauges"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Nuclear Energy & Uranium - 5 articles - MEDIUM / NEUTRAL - UAE reports strike near Abu Dhabi nuclear power plant"
     },
     {
       "tag": "tag-neu",
@@ -1114,10 +1114,10 @@
       "region": "UK",
       "price": 10323.75,
       "currency": "GBP",
-      "change": 128.35,
-      "change_pct": 1.26,
-      "change_str": "+1.26%",
-      "direction": "up"
+      "change": -49.15,
+      "change_pct": -0.47,
+      "change_str": "-0.47%",
+      "direction": "down"
     },
     {
       "label": "DAX",
@@ -1167,44 +1167,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4570.8,
+      "price": 4581.3,
       "currency": "USD",
-      "change": 15.0,
-      "change_pct": 0.33,
-      "change_str": "+0.33%",
+      "change": 25.5,
+      "change_pct": 0.56,
+      "change_str": "+0.56%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 102.49,
+      "price": 102.46,
       "currency": "USD",
-      "change": -2.93,
-      "change_pct": -2.78,
-      "change_str": "-2.78%",
+      "change": -2.96,
+      "change_pct": -2.81,
+      "change_str": "-2.81%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77090.94,
+      "price": 77094.69,
       "currency": "USD",
-      "change": -338.41,
-      "change_pct": -0.44,
-      "change_str": "-0.44%",
+      "change": -334.66,
+      "change_pct": -0.43,
+      "change_str": "-0.43%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.97,
+      "price": 98.95,
       "currency": "USD",
-      "change": -0.3,
-      "change_pct": -0.31,
-      "change_str": "-0.31%",
+      "change": -0.32,
+      "change_pct": -0.32,
+      "change_str": "-0.32%",
       "direction": "down"
     },
     {
@@ -1233,7 +1233,7 @@
       },
       {
         "sector": "Crypto & Digital Assets",
-        "weight": 18.2,
+        "weight": 18.7,
         "at_cap": false
       },
       {
@@ -1359,11 +1359,11 @@
       "alerts": [
         {
           "ticker": "QQQ",
-          "actual_weight_pct": 38.0,
+          "actual_weight_pct": 38.01,
           "target_weight_pct": 15.0,
-          "drift_pct": 23.0,
+          "drift_pct": 23.01,
           "action": "TRIM",
-          "amount": 2268.88,
+          "amount": 2268.9,
           "etf_name": "Invesco QQQ Trust"
         },
         {
@@ -1372,7 +1372,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -12.8,
           "action": "ADD",
-          "amount": 1262.89,
+          "amount": 1262.87,
           "etf_name": "First Trust Nasdaq CEA Cybersecurity ETF"
         },
         {
@@ -1381,16 +1381,16 @@
           "target_weight_pct": 15.0,
           "drift_pct": -10.5,
           "action": "ADD",
-          "amount": 1035.91,
+          "amount": 1035.89,
           "etf_name": "iShares U.S. Aerospace & Defense ETF"
         },
         {
           "ticker": "CASH",
-          "actual_weight_pct": 2.43,
+          "actual_weight_pct": 1.99,
           "target_weight_pct": 10.0,
-          "drift_pct": -7.57,
+          "drift_pct": -8.01,
           "action": "RAISE",
-          "amount": 746.68,
+          "amount": 790.0,
           "etf_name": "Cash Reserve"
         }
       ],
@@ -1400,8 +1400,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -3319.95,
-          "portfolio_loss_pct": -33.66,
+          "total_impact": -3345.87,
+          "portfolio_loss_pct": -33.92,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1425,7 +1425,7 @@
               "ticker": "IBIT",
               "factor": "crypto",
               "shock_pct": -60.0,
-              "impact": -1078.67
+              "impact": -1104.6
             },
             {
               "ticker": "ITA",
@@ -1442,8 +1442,8 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -3247.8,
-          "portfolio_loss_pct": -32.93,
+          "total_impact": -3265.09,
+          "portfolio_loss_pct": -33.11,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1467,7 +1467,7 @@
               "ticker": "IBIT",
               "factor": "crypto",
               "shock_pct": -40.0,
-              "impact": -719.11
+              "impact": -736.4
             },
             {
               "ticker": "ITA",
@@ -1484,8 +1484,8 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1274.92,
-          "portfolio_loss_pct": -12.93,
+          "total_impact": -1283.56,
+          "portfolio_loss_pct": -13.01,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1509,7 +1509,7 @@
               "ticker": "IBIT",
               "factor": "crypto",
               "shock_pct": -20.0,
-              "impact": -359.56
+              "impact": -368.2
             },
             {
               "ticker": "ITA",
@@ -1526,8 +1526,8 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -992.44,
-          "portfolio_loss_pct": -10.06,
+          "total_impact": -996.76,
+          "portfolio_loss_pct": -10.11,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1551,7 +1551,7 @@
               "ticker": "IBIT",
               "factor": "crypto",
               "shock_pct": -10.0,
-              "impact": -179.78
+              "impact": -184.1
             },
             {
               "ticker": "ITA",
@@ -1568,8 +1568,8 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1435.85,
-          "portfolio_loss_pct": -14.56,
+          "total_impact": -1446.66,
+          "portfolio_loss_pct": -14.67,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1593,7 +1593,7 @@
               "ticker": "IBIT",
               "factor": "crypto",
               "shock_pct": -25.0,
-              "impact": -449.45
+              "impact": -460.25
             },
             {
               "ticker": "ITA",
@@ -1611,15 +1611,15 @@
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -33.66
+      "worst_loss_pct": -33.92
     }
   },
   "logs": [
-    "2026-05-18 22:00:15 [INFO] AZALYST - status.json generated",
-    "2026-05-18 22:00:15 [INFO] PORTFOLIO - NAV USD 9,862.70 | Return +0.14%",
-    "2026-05-18 22:00:15 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-05-18 22:00:15 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-18 22:00:15 [INFO] RISK - Partial profits realised: USD 2,480.54"
+    "2026-05-18 23:10:19 [INFO] AZALYST - status.json generated",
+    "2026-05-18 23:10:19 [INFO] PORTFOLIO - NAV USD 9,862.57 | Return +0.14%",
+    "2026-05-18 23:10:19 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-05-18 23:10:19 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-18 23:10:19 [INFO] RISK - Partial profits realised: USD 2,480.54"
   ],
-  "generated_at": "2026-05-18 22:00:13 UTC"
+  "generated_at": "2026-05-18 23:10:17 UTC"
 }
