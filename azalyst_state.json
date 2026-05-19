@@ -1094,42 +1094,42 @@
     }
   },
   "energy_oil": {
-    "sent_at": "2026-05-19T17:39:43.984742+00:00",
-    "confidence": 65,
+    "sent_at": "2026-05-19T19:51:52.405196+00:00",
+    "confidence": 92,
     "sector_label": "Energy / Oil & Gas",
-    "article_count": 28,
+    "article_count": 26,
     "severity": "CRITICAL",
     "regions": [
-      "asia_pacific",
-      "europe",
-      "middle_east",
       "africa",
-      "americas",
-      "global"
+      "global",
+      "middle_east",
+      "europe",
+      "asia_pacific",
+      "americas"
     ],
     "sources": [
       "www.theregister.com - Articles",
-      "Markets-Economic Times",
       "Bloomberg Markets",
-      "World | Deutsche Welle",
       "US Top News and Analysis",
-      "Oilprice.com"
+      "Oilprice.com",
+      "Markets-Economic Times",
+      "World | Deutsche Welle"
     ],
     "top_headlines": [
       "Nigeria Needs New Export Markets as UAE's Exit Rattles OPEC",
-      "Japan and South Korea Deepen Oil Ties as Hormuz Crisis Bites",
       "Oil Holds Near $110 After Trump Delays Iran Strike",
       "A Handful of Tankers Are Still Crossing the Strait of Hormuz",
-      "Iran\u2019s Floating Oil Stockpile Jumps 65% as U.S. Naval Blockade Bites"
+      "Iran\u2019s Floating Oil Stockpile Jumps 65% as U.S. Naval Blockade Bites",
+      "India bonds gain as oil cools on US-Iran deal hopes"
     ],
-    "latest_ts": "2026-05-19T17:30:00+00:00",
+    "latest_ts": "2026-05-19T19:30:00+00:00",
     "confidence_breakdown": {
       "signal_strength": 22.0,
       "volume_confirmation": 18.0,
       "source_diversity": 14.0,
-      "recency": 16.7,
+      "recency": 16.4,
       "geopolitical_severity": 13.0,
-      "cross_engine_confirmation": 8.3
+      "cross_engine_confirmation": 9.0
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -1862,39 +1862,41 @@
     }
   },
   "commodities_mining": {
-    "sent_at": "2026-05-19T00:04:56.435101+00:00",
-    "confidence": 71,
+    "sent_at": "2026-05-19T19:51:49.269366+00:00",
+    "confidence": 79,
     "sector_label": "Commodities & Mining",
-    "article_count": 7,
+    "article_count": 9,
     "severity": "MEDIUM",
     "regions": [
+      "global",
       "middle_east",
-      "asia_pacific",
-      "global"
+      "europe",
+      "india",
+      "asia_pacific"
     ],
     "sources": [
-      "Finance",
-      "www.theregister.com - Articles",
       "Cointelegraph.com News",
-      "Markets-Economic Times",
-      "Oilprice.com",
-      "Bloomberg Markets"
+      "Bloomberg Markets",
+      "Latest from Tom's Hardware",
+      "Tech",
+      "US Top News and Analysis",
+      "Oilprice.com"
     ],
     "top_headlines": [
-      "The Pentagon Wants 300,000 Drones But China Controls The Magnets",
-      "White House touts deals on soybeans and rare earths after Trump-Xi summit, while China talks up tariff cuts",
-      "US stocks today: Nasdaq falls as technology stocks slide, Treasury yields climb",
-      "Copper Steady as Traders Weigh US-Iran Deal Prospects",
-      "Soluna revenue jumps 58% as hosting business offsets weaker Bitcoin mining"
+      "Chile Lowers Copper Production Outlook, Raises Price Forecasts",
+      "China's zero-tariff for Africa: Win-win or winner takes all?",
+      "Intel's Project Firefly creates sub-$600 laptops to compete with Apple's MacBook Neo \u2014 leverages China's smartphone manufacturing blueprint to produce affordable Wildcat Lake systems",
+      "Custom-built passive water-cooled PC relies on convection chimney effect powered by triple-stacked radiators \u2014 9800X3D build with RTX 5080 has no fans, copper, and radiator chimney, but struggles to keep temperatures down",
+      "Anthropic and U.S. government to face off in DC court over blacklisting of AI company"
     ],
-    "latest_ts": "2026-05-19T00:00:00+00:00",
+    "latest_ts": "2026-05-19T19:50:00.816091+00:00",
     "confidence_breakdown": {
-      "signal_strength": 12.1,
-      "volume_confirmation": 13.7,
-      "source_diversity": 13.4,
+      "signal_strength": 12.9,
+      "volume_confirmation": 15.4,
+      "source_diversity": 12.9,
       "recency": 16.9,
-      "geopolitical_severity": 11.4,
-      "cross_engine_confirmation": 4.6
+      "geopolitical_severity": 12.0,
+      "cross_engine_confirmation": 9.7
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -1936,6 +1938,23 @@
           ]
         },
         {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NMDC, Coal India \u2014 commodity exposure",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u20139 months",
+          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
+          "sector_key": "commodities_mining",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 72.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        },
+        {
           "name": "Sprott Physical Copper Trust",
           "ticker": "COPP",
           "platform": "Sprott \u2014 IBKR / Schwab",
@@ -1951,21 +1970,6 @@
             "clean thematic exposure",
             "matches international access"
           ]
-        },
-        {
-          "name": "CPSE ETF",
-          "ticker": "CPSEETF",
-          "note": "NMDC, Coal India \u2014 commodity exposure",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "3\u20139 months",
-          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
-          "sector_key": "commodities_mining",
-          "market_bucket": "india",
-          "market_scope": "India-listed",
-          "selection_score": 69.0,
-          "selection_notes": []
         }
       ],
       "top_etfs": [
@@ -1988,6 +1992,23 @@
           ]
         },
         {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NMDC, Coal India \u2014 commodity exposure",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u20139 months",
+          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
+          "sector_key": "commodities_mining",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 72.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        },
+        {
           "name": "Sprott Physical Copper Trust",
           "ticker": "COPP",
           "platform": "Sprott \u2014 IBKR / Schwab",
@@ -2003,21 +2024,6 @@
             "clean thematic exposure",
             "matches international access"
           ]
-        },
-        {
-          "name": "CPSE ETF",
-          "ticker": "CPSEETF",
-          "note": "NMDC, Coal India \u2014 commodity exposure",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "3\u20139 months",
-          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
-          "sector_key": "commodities_mining",
-          "market_bucket": "india",
-          "market_scope": "India-listed",
-          "selection_score": 69.0,
-          "selection_notes": []
         }
       ],
       "regional_alternatives": {
@@ -2034,8 +2040,10 @@
             "sector_key": "commodities_mining",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 69.0,
-            "selection_notes": []
+            "selection_score": 72.0,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
           }
         ],
         "International-listed": [
@@ -2089,8 +2097,10 @@
           "sector_key": "commodities_mining",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 69.0,
-          "selection_notes": []
+          "selection_score": 72.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "global": [
