@@ -190,13 +190,13 @@
   },
   "top_signal": {
     "ticker": "XLE",
-    "rank_score": 22.15793470007593,
+    "rank_score": 22.15882650480526,
     "flow_score": 20.0,
-    "options_score": 18.0,
+    "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 6.881557992253521,
+    "macro_score": 6.820574306336585,
     "news_score": 9.2,
-    "total": 91.23949269232945,
+    "total": 73.17940081114185,
     "publish": true,
     "direction": "long"
   },
@@ -276,12 +276,12 @@
       "score": 74.0
     },
     {
-      "symbol": "Nuclear Energy & Uranium",
-      "score": 70.0
+      "symbol": "Commodities & Mining",
+      "score": 71.0
     },
     {
-      "symbol": "Commodities & Mining",
-      "score": 66.0
+      "symbol": "Nuclear Energy & Uranium",
+      "score": 70.0
     },
     {
       "symbol": "Clean Energy & Renewables",
@@ -746,6 +746,56 @@
       }
     },
     {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 71.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "19 May 2026 00:00 UTC",
+      "headline": "The Pentagon Wants 300,000 Drones But China Controls The Magnets",
+      "regions": [
+        "middle_east",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "Finance",
+        "www.theregister.com - Articles",
+        "Cointelegraph.com News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.1,
+        "volume_confirmation": 13.7,
+        "source_diversity": 13.4,
+        "recency": 16.9,
+        "geopolitical_severity": 11.4
+      }
+    },
+    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 70.0,
@@ -795,56 +845,6 @@
         "source_diversity": 12.0,
         "recency": 16.9,
         "geopolitical_severity": 11.1
-      }
-    },
-    {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 66.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "18 May 2026 17:56 UTC",
-      "headline": "Anglo American Exits Steelmaking Coal With $3.9 Billion Australian Asset Sale",
-      "regions": [
-        "global",
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "Latest from Tom's Hardware",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.7,
-        "volume_confirmation": 13.7,
-        "source_diversity": 14.0,
-        "recency": 16.0,
-        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1051,12 +1051,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Nuclear Energy & Uranium - 5 articles - MEDIUM / NEUTRAL - UAE reports strike near Abu Dhabi nuclear power plant"
+      "text": "Commodities & Mining - 7 articles - MEDIUM / NEUTRAL - The Pentagon Wants 300,000 Drones But China Controls The Magnets"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Commodities & Mining - 7 articles - HIGH / NEUTRAL - Anglo American Exits Steelmaking Coal With $3.9 Billion Australian Asset Sale"
+      "text": "Nuclear Energy & Uranium - 5 articles - MEDIUM / NEUTRAL - UAE reports strike near Abu Dhabi nuclear power plant"
     },
     {
       "tag": "tag-neu",
@@ -1167,44 +1167,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4581.3,
+      "price": 4591.6,
       "currency": "USD",
-      "change": 25.5,
-      "change_pct": 0.56,
-      "change_str": "+0.56%",
+      "change": 35.8,
+      "change_pct": 0.79,
+      "change_str": "+0.79%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 102.46,
+      "price": 102.32,
       "currency": "USD",
-      "change": -2.96,
-      "change_pct": -2.81,
-      "change_str": "-2.81%",
+      "change": -3.1,
+      "change_pct": -2.94,
+      "change_str": "-2.94%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77094.69,
+      "price": 77081.8,
       "currency": "USD",
-      "change": -334.66,
-      "change_pct": -0.43,
-      "change_str": "-0.43%",
+      "change": -347.55,
+      "change_pct": -0.45,
+      "change_str": "-0.45%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.95,
+      "price": 99.01,
       "currency": "USD",
-      "change": -0.32,
-      "change_pct": -0.32,
-      "change_str": "-0.32%",
+      "change": -0.26,
+      "change_pct": -0.26,
+      "change_str": "-0.26%",
       "direction": "down"
     },
     {
@@ -1615,11 +1615,11 @@
     }
   },
   "logs": [
-    "2026-05-18 23:10:19 [INFO] AZALYST - status.json generated",
-    "2026-05-18 23:10:19 [INFO] PORTFOLIO - NAV USD 9,862.57 | Return +0.14%",
-    "2026-05-18 23:10:19 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-05-18 23:10:19 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-18 23:10:19 [INFO] RISK - Partial profits realised: USD 2,480.54"
+    "2026-05-19 00:12:43 [INFO] AZALYST - status.json generated",
+    "2026-05-19 00:12:43 [INFO] PORTFOLIO - NAV USD 9,862.57 | Return +0.14%",
+    "2026-05-19 00:12:43 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-05-19 00:12:43 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-19 00:12:43 [INFO] RISK - Partial profits realised: USD 2,480.54"
   ],
-  "generated_at": "2026-05-18 23:10:17 UTC"
+  "generated_at": "2026-05-19 00:12:41 UTC"
 }
