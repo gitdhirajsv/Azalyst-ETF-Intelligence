@@ -192,12 +192,12 @@
     "ticker": "XLE",
     "rank_score": 23.873196659073653,
     "flow_score": 0.0,
-    "options_score": 0.0,
+    "options_score": 18.0,
     "rotation_score": 15.0,
-    "macro_score": 5.30985820413063,
+    "macro_score": 5.509085551610782,
     "news_score": 9.2,
-    "total": 53.38305486320428,
-    "publish": false,
+    "total": 71.58228221068444,
+    "publish": true,
     "direction": "long"
   },
   "allocation": {
@@ -260,16 +260,16 @@
       "score": 89.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 84.0
-    },
-    {
       "symbol": "India Equity Markets",
       "score": 83.0
     },
     {
       "symbol": "Cybersecurity + Commodities & Mining",
       "score": 82.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 80.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -281,7 +281,7 @@
     },
     {
       "symbol": "Nuclear Energy & Uranium",
-      "score": 72.0
+      "score": 68.0
     },
     {
       "symbol": "Clean Energy & Renewables",
@@ -558,51 +558,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 84.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "19 May 2026 16:00 UTC",
-      "headline": "Price predictions 5/18: SPX, DXY, BTC, ETH, XRP, BNB, SOL, DOGE, HYPE, ADA",
-      "regions": [
-        "india",
-        "asia_pacific",
-        "middle_east",
-        "europe"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 4.7,
-        "recency": 14.4,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 83.0,
@@ -696,6 +651,51 @@
         "volume_confirmation": 16.8,
         "source_diversity": 15.3,
         "recency": 14.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 80.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 23,
+      "latest_at": "19 May 2026 20:34 UTC",
+      "headline": "Retail Bitcoin investor demand falls by 73% as futures selling tops $2B: Are the bears back?",
+      "regions": [
+        "global",
+        "americas",
+        "india",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Latest from Tom's Hardware",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.9,
+        "volume_confirmation": 18.0,
+        "source_diversity": 4.7,
+        "recency": 13.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -800,24 +800,22 @@
     {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
-      "confidence": 72.0,
-      "severity": "HIGH",
+      "confidence": 68.0,
+      "severity": "CRITICAL",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "19 May 2026 17:37 UTC",
+      "article_count": 3,
+      "latest_at": "19 May 2026 22:45 UTC",
       "headline": "Iran Lays Out Sweeping Demands as U.S. Weighs Military Strike Pause",
       "regions": [
-        "global",
         "asia_pacific",
         "middle_east"
       ],
       "sources": [
         "Markets-Economic Times",
-        "www.theregister.com - Articles",
         "Oilprice.com",
         "World | Deutsche Welle"
       ],
@@ -841,9 +839,9 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 12.1,
-        "volume_confirmation": 9.7,
-        "source_diversity": 11.0,
+        "signal_strength": 11.5,
+        "volume_confirmation": 7.7,
+        "source_diversity": 9.9,
         "recency": 16.9,
         "geopolitical_severity": 13.0
       }
@@ -1032,17 +1030,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Price predictions 5/18: SPX, DXY, BTC, ETH, XRP, BNB, SOL, DOGE, HYPE, ADA"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "India Equity Markets - 21 articles - HIGH / NEUTRAL - Why is market falling today? Sensex crashes 1,000 points, Nifty below 23,350; 5 key factors behind bloodbath"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Cybersecurity + Commodities & Mining - 11 articles - HIGH / NEUTRAL - Patch time for Cisco SD-WAN admins as vendor drops yet another make-me-admin zero-day"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Crypto & Digital Assets - 23 articles - HIGH / NEUTRAL - Retail Bitcoin investor demand falls by 73% as futures selling tops $2B: Are the bears back?"
     },
     {
       "tag": "tag-neu",
@@ -1057,7 +1055,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Nuclear Energy & Uranium - 4 articles - HIGH / NEUTRAL - Iran Lays Out Sweeping Demands as U.S. Weighs Military Strike Pause"
+      "text": "Nuclear Energy & Uranium - 3 articles - CRITICAL / NEUTRAL - Iran Lays Out Sweeping Demands as U.S. Weighs Military Strike Pause"
     },
     {
       "tag": "tag-neu",
@@ -1126,9 +1124,9 @@
       "region": "EU",
       "price": 24400.65,
       "currency": "EUR",
-      "change": 92.73,
-      "change_pct": 0.38,
-      "change_str": "+0.38%",
+      "change": 450.08,
+      "change_pct": 1.88,
+      "change_str": "+1.88%",
       "direction": "up"
     },
     {
@@ -1168,44 +1166,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4485.4,
+      "price": 4484.4,
       "currency": "USD",
-      "change": -67.1,
-      "change_pct": -1.47,
-      "change_str": "-1.47%",
+      "change": -68.1,
+      "change_pct": -1.5,
+      "change_str": "-1.50%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 104.03,
+      "price": 104.17,
       "currency": "USD",
-      "change": -4.63,
-      "change_pct": -4.26,
-      "change_str": "-4.26%",
+      "change": -4.49,
+      "change_pct": -4.13,
+      "change_str": "-4.13%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 76922.39,
+      "price": 76677.55,
       "currency": "USD",
-      "change": -31.78,
-      "change_pct": -0.04,
-      "change_str": "-0.04%",
+      "change": -276.62,
+      "change_pct": -0.36,
+      "change_str": "-0.36%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.32,
+      "price": 99.31,
       "currency": "USD",
-      "change": 0.35,
-      "change_pct": 0.35,
-      "change_str": "+0.35%",
+      "change": 0.34,
+      "change_pct": 0.34,
+      "change_str": "+0.34%",
       "direction": "up"
     },
     {
@@ -1616,11 +1614,11 @@
     }
   },
   "logs": [
-    "2026-05-19 21:29:23 [INFO] AZALYST - status.json generated",
-    "2026-05-19 21:29:23 [INFO] PORTFOLIO - NAV USD 9,822.85 | Return -0.07%",
-    "2026-05-19 21:29:23 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-05-19 21:29:23 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-19 21:29:23 [INFO] RISK - Partial profits realised: USD 2,480.54"
+    "2026-05-19 22:56:00 [INFO] AZALYST - status.json generated",
+    "2026-05-19 22:56:00 [INFO] PORTFOLIO - NAV USD 9,822.85 | Return -0.07%",
+    "2026-05-19 22:56:00 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-05-19 22:56:00 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-19 22:56:00 [INFO] RISK - Partial profits realised: USD 2,480.54"
   ],
-  "generated_at": "2026-05-19 21:29:20 UTC"
+  "generated_at": "2026-05-19 22:55:57 UTC"
 }
