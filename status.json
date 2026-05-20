@@ -153,7 +153,7 @@
       "pnl_pct_str": "+7.81%",
       "confidence": 80,
       "severity": "HIGH",
-      "days_held": 6,
+      "days_held": 7,
       "half_exited": true
     }
   ],
@@ -192,12 +192,12 @@
     "ticker": "XLE",
     "rank_score": 23.873196659073653,
     "flow_score": 0.0,
-    "options_score": 18.0,
+    "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 5.509085551610782,
+    "macro_score": 5.042651380623905,
     "news_score": 9.2,
-    "total": 71.58228221068444,
-    "publish": true,
+    "total": 53.11584803969757,
+    "publish": false,
     "direction": "long"
   },
   "allocation": {
@@ -244,8 +244,8 @@
       "score": 96.0
     },
     {
-      "symbol": "Gold & Precious Metals + Bonds & Fixed Income",
-      "score": 94.0
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 93.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -273,7 +273,7 @@
     },
     {
       "symbol": "Commodities & Mining",
-      "score": 79.0
+      "score": 77.0
     },
     {
       "symbol": "Asia Pacific Equity",
@@ -350,26 +350,26 @@
     },
     {
       "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Bonds & Fixed Income",
-      "confidence": 94.0,
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 93.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "19 May 2026 17:22 UTC",
+      "article_count": 12,
+      "latest_at": "19 May 2026 23:48 UTC",
       "headline": "Gold Declines as Inflation Fears Fuel Interest Rate Hike Bets",
       "regions": [
-        "asia_pacific",
-        "middle_east",
         "americas",
-        "global"
+        "middle_east",
+        "global",
+        "asia_pacific"
       ],
       "sources": [
         "Markets-Economic Times",
-        "EE Times",
+        "US Top News and Analysis",
         "Bloomberg Markets",
         "Cointelegraph.com News"
       ],
@@ -395,9 +395,9 @@
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
+        "volume_confirmation": 17.4,
         "source_diversity": 12.9,
-        "recency": 16.5,
+        "recency": 16.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -702,27 +702,27 @@
     {
       "sector_key": "commodities_mining",
       "sector_label": "Commodities & Mining",
-      "confidence": 79.0,
+      "confidence": 77.0,
       "severity": "MEDIUM",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 9,
-      "latest_at": "19 May 2026 19:50 UTC",
-      "headline": "Chile Lowers Copper Production Outlook, Raises Price Forecasts",
+      "article_count": 8,
+      "latest_at": "19 May 2026 23:59 UTC",
+      "headline": "China's zero-tariff for Africa: Win-win or winner takes all?",
       "regions": [
-        "global",
         "middle_east",
         "europe",
+        "asia_pacific",
         "india"
       ],
       "sources": [
-        "Cointelegraph.com News",
-        "Bloomberg Markets",
+        "World | Deutsche Welle",
+        "Oilprice.com",
         "Latest from Tom's Hardware",
-        "Tech"
+        "US Top News and Analysis"
       ],
       "primary_etf": "DBC",
       "top_etfs": [
@@ -743,11 +743,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 12.9,
-        "volume_confirmation": 15.4,
-        "source_diversity": 12.9,
+        "signal_strength": 11.5,
+        "volume_confirmation": 14.6,
+        "source_diversity": 12.8,
         "recency": 16.9,
-        "geopolitical_severity": 12.0
+        "geopolitical_severity": 11.8
       }
     },
     {
@@ -1010,7 +1010,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + Bonds & Fixed Income - 13 articles - HIGH / NEUTRAL - Gold Declines as Inflation Fears Fuel Interest Rate Hike Bets"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - Gold Declines as Inflation Fears Fuel Interest Rate Hike Bets"
     },
     {
       "tag": "tag-neu",
@@ -1045,7 +1045,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Commodities & Mining - 9 articles - MEDIUM / NEUTRAL - Chile Lowers Copper Production Outlook, Raises Price Forecasts"
+      "text": "Commodities & Mining - 8 articles - MEDIUM / NEUTRAL - China's zero-tariff for Africa: Win-win or winner takes all?"
     },
     {
       "tag": "tag-neu",
@@ -1113,9 +1113,9 @@
       "region": "UK",
       "price": 10330.55,
       "currency": "GBP",
-      "change": 6.75,
-      "change_pct": 0.07,
-      "change_str": "+0.07%",
+      "change": 135.15,
+      "change_pct": 1.33,
+      "change_str": "+1.33%",
       "direction": "up"
     },
     {
@@ -1166,33 +1166,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4484.4,
+      "price": 4491.8,
       "currency": "USD",
-      "change": -68.1,
-      "change_pct": -1.5,
-      "change_str": "-1.50%",
+      "change": -60.7,
+      "change_pct": -1.33,
+      "change_str": "-1.33%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 104.17,
+      "price": 103.85,
       "currency": "USD",
-      "change": -4.49,
-      "change_pct": -4.13,
-      "change_str": "-4.13%",
+      "change": -4.81,
+      "change_pct": -4.43,
+      "change_str": "-4.43%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 76677.55,
+      "price": 76508.42,
       "currency": "USD",
-      "change": -276.62,
-      "change_pct": -0.36,
-      "change_str": "-0.36%",
+      "change": -445.75,
+      "change_pct": -0.58,
+      "change_str": "-0.58%",
       "direction": "down"
     },
     {
@@ -1202,8 +1202,8 @@
       "price": 99.31,
       "currency": "USD",
       "change": 0.34,
-      "change_pct": 0.34,
-      "change_str": "+0.34%",
+      "change_pct": 0.35,
+      "change_str": "+0.35%",
       "direction": "up"
     },
     {
@@ -1614,11 +1614,11 @@
     }
   },
   "logs": [
-    "2026-05-19 22:56:00 [INFO] AZALYST - status.json generated",
-    "2026-05-19 22:56:00 [INFO] PORTFOLIO - NAV USD 9,822.85 | Return -0.07%",
-    "2026-05-19 22:56:00 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-05-19 22:56:00 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-19 22:56:00 [INFO] RISK - Partial profits realised: USD 2,480.54"
+    "2026-05-20 00:13:47 [INFO] AZALYST - status.json generated",
+    "2026-05-20 00:13:47 [INFO] PORTFOLIO - NAV USD 9,822.85 | Return -0.07%",
+    "2026-05-20 00:13:47 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-05-20 00:13:47 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-20 00:13:47 [INFO] RISK - Partial profits realised: USD 2,480.54"
   ],
-  "generated_at": "2026-05-19 22:55:57 UTC"
+  "generated_at": "2026-05-20 00:13:44 UTC"
 }
