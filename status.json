@@ -153,7 +153,7 @@
       "pnl_pct_str": "+9.78%",
       "confidence": 80,
       "severity": "HIGH",
-      "days_held": 8,
+      "days_held": 9,
       "half_exited": true
     }
   ],
@@ -173,12 +173,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
+    "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.08242721679486913,
+    "vix_level": 16.760000228881836,
+    "vix_percentile_1y": 0.4007936507936508,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -257,18 +257,18 @@
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 89.0
+      "score": 91.0
     },
     {
       "symbol": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector",
       "score": 89.0
     },
     {
-      "symbol": "Asia Pacific Equity",
-      "score": 83.0
+      "symbol": "Crypto & Digital Assets",
+      "score": 84.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
+      "symbol": "Asia Pacific Equity",
       "score": 83.0
     },
     {
@@ -518,26 +518,26 @@
     {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 89.0,
+      "confidence": 91.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "21 May 2026 16:48 UTC",
-      "headline": "Fed officials see rate hike ahead if inflation stays elevated, minutes show",
+      "article_count": 12,
+      "latest_at": "21 May 2026 22:34 UTC",
+      "headline": "Gold Steady as US-Iran Signals Keep Rate Hike Bets Simmering",
       "regions": [
         "middle_east",
+        "asia_pacific",
         "global",
-        "india",
-        "asia_pacific"
+        "americas"
       ],
       "sources": [
-        "Markets-Economic Times",
+        "US Top News and Analysis",
         "Cointelegraph.com News",
-        "Finance",
+        "Markets-Economic Times",
         "Bloomberg Markets"
       ],
       "primary_etf": "GLDM",
@@ -561,10 +561,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 19.7,
-        "volume_confirmation": 16.8,
-        "source_diversity": 13.4,
-        "recency": 15.8,
+        "signal_strength": 22.0,
+        "volume_confirmation": 17.4,
+        "source_diversity": 12.1,
+        "recency": 16.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -619,6 +619,53 @@
       }
     },
     {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 84.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 28,
+      "latest_at": "21 May 2026 20:39 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "middle_east",
+        "europe",
+        "asia_pacific",
+        "india"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "Latest from Tom's Hardware",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 10.3,
+        "recency": 13.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
       "confidence": 83.0,
@@ -666,53 +713,6 @@
         "source_diversity": 15.3,
         "recency": 15.7,
         "geopolitical_severity": 11.7
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 83.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
-      "latest_at": "21 May 2026 16:21 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "middle_east",
-        "global",
-        "india",
-        "europe"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Latest from Tom's Hardware",
-        "Cointelegraph.com News",
-        "Tech"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 8.1,
-        "recency": 15.1,
-        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1141,7 +1141,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - Fed officials see rate hike ahead if inflation stays elevated, minutes show"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - Gold Steady as US-Iran Signals Keep Rate Hike Bets Simmering"
     },
     {
       "tag": "tag-neu",
@@ -1151,12 +1151,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Asia Pacific Equity - 13 articles - MEDIUM / NEUTRAL - Carlyle's Thomas Sees BOJ Hiking Rates in June"
+      "text": "Crypto & Digital Assets - 28 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 28 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+      "text": "Asia Pacific Equity - 13 articles - MEDIUM / NEUTRAL - Carlyle's Thomas Sees BOJ Hiking Rates in June"
     },
     {
       "tag": "tag-neu",
@@ -1239,9 +1239,9 @@
       "region": "UK",
       "price": 10443.47,
       "currency": "GBP",
-      "change": 11.17,
-      "change_pct": 0.11,
-      "change_str": "+0.11%",
+      "change": 112.87,
+      "change_pct": 1.09,
+      "change_str": "+1.09%",
       "direction": "up"
     },
     {
@@ -1250,10 +1250,10 @@
       "region": "EU",
       "price": 24606.77,
       "currency": "EUR",
-      "change": -130.47,
-      "change_pct": -0.53,
-      "change_str": "-0.53%",
-      "direction": "down"
+      "change": 206.12,
+      "change_pct": 0.84,
+      "change_str": "+0.84%",
+      "direction": "up"
     },
     {
       "label": "Nikkei 225",
@@ -1292,44 +1292,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4544.2,
+      "price": 4543.1,
       "currency": "USD",
-      "change": 12.9,
-      "change_pct": 0.28,
-      "change_str": "+0.28%",
+      "change": 11.8,
+      "change_pct": 0.26,
+      "change_str": "+0.26%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 98.0,
+      "price": 97.72,
       "currency": "USD",
-      "change": -0.26,
-      "change_pct": -0.26,
-      "change_str": "-0.26%",
+      "change": -0.54,
+      "change_pct": -0.55,
+      "change_str": "-0.55%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77695.48,
+      "price": 77520.35,
       "currency": "USD",
-      "change": 237.71,
-      "change_pct": 0.31,
-      "change_str": "+0.31%",
+      "change": 62.58,
+      "change_pct": 0.08,
+      "change_str": "+0.08%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.18,
+      "price": 99.19,
       "currency": "USD",
-      "change": 0.07,
-      "change_pct": 0.07,
-      "change_str": "+0.07%",
+      "change": 0.08,
+      "change_pct": 0.08,
+      "change_str": "+0.08%",
       "direction": "up"
     },
     {
@@ -1740,11 +1740,11 @@
     }
   },
   "logs": [
-    "2026-05-21 21:27:54 [INFO] AZALYST - status.json generated",
-    "2026-05-21 21:27:54 [INFO] PORTFOLIO - NAV USD 9,890.77 | Return +0.27%",
-    "2026-05-21 21:27:54 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-05-21 21:27:54 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-21 21:27:54 [INFO] RISK - Partial profits realised: USD 2,480.54"
+    "2026-05-21 23:02:06 [INFO] AZALYST - status.json generated",
+    "2026-05-21 23:02:06 [INFO] PORTFOLIO - NAV USD 9,890.77 | Return +0.27%",
+    "2026-05-21 23:02:06 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-05-21 23:02:06 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-21 23:02:06 [INFO] RISK - Partial profits realised: USD 2,480.54"
   ],
-  "generated_at": "2026-05-21 21:27:50 UTC"
+  "generated_at": "2026-05-21 23:02:03 UTC"
 }
