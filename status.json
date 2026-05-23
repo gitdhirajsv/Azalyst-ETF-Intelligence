@@ -190,13 +190,13 @@
   },
   "top_signal": {
     "ticker": "IGV",
-    "rank_score": 14.956388676358072,
-    "flow_score": 5.203743323212872,
+    "rank_score": 14.949618320610686,
+    "flow_score": 4.232357977451007,
     "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 4.861035813540017,
-    "news_score": 7.28,
-    "total": 47.301167813110965,
+    "macro_score": 4.860029638857984,
+    "news_score": 6.800000000000001,
+    "total": 45.842005936919676,
     "publish": false,
     "direction": "long"
   },
@@ -252,16 +252,16 @@
       "score": 92.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 91.0
-    },
-    {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 91.0
     },
     {
       "symbol": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector",
       "score": 89.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 85.0
     },
     {
       "symbol": "Asia Pacific Equity",
@@ -463,59 +463,6 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 91.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 62,
-      "latest_at": "22 May 2026 20:00 UTC",
-      "headline": "Large-scale, SRAM-based LLM Inference Deployment (Groq)",
-      "regions": [
-        "global",
-        "americas",
-        "asia_pacific",
-        "europe"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "Finance",
-        "Defense News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 17.2,
-        "recency": 12.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
       "confidence": 91.0,
@@ -525,20 +472,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "22 May 2026 22:54 UTC",
+      "article_count": 11,
+      "latest_at": "23 May 2026 03:42 UTC",
       "headline": "Gold Drops as Fed\u2019s Waller Says Next Move Likely To Be Rate Hike",
       "regions": [
+        "india",
         "global",
-        "americas",
         "asia_pacific",
         "middle_east"
       ],
       "sources": [
-        "Finance",
         "Markets-Economic Times",
-        "World | Deutsche Welle",
-        "US Top News and Analysis"
+        "US Top News and Analysis",
+        "Oilprice.com",
+        "World | Deutsche Welle"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -562,9 +509,9 @@
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
-        "volume_confirmation": 16.2,
+        "volume_confirmation": 16.8,
         "source_diversity": 14.0,
-        "recency": 16.9,
+        "recency": 16.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -615,6 +562,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 13.6,
         "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 85.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 60,
+      "latest_at": "22 May 2026 20:00 UTC",
+      "headline": "Large-scale, SRAM-based LLM Inference Deployment (Groq)",
+      "regions": [
+        "india",
+        "global",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Semiconductor Engineering",
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.7,
+        "recency": 7.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -780,19 +780,19 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 9,
-      "latest_at": "22 May 2026 16:06 UTC",
+      "latest_at": "22 May 2026 23:07 UTC",
       "headline": "Ebola outbreak 'spreading rapidly' - as vaccine from UK scientists 'months away'",
       "regions": [
+        "india",
         "global",
         "asia_pacific",
-        "europe",
         "middle_east"
       ],
       "sources": [
         "Markets-Economic Times",
         "World News - Breaking international news and headlines | Sky News",
         "Oilprice.com",
-        "US Top News and Analysis"
+        "BBC News"
       ],
       "primary_etf": "XLV",
       "top_etfs": [
@@ -815,10 +815,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 17.6,
+        "signal_strength": 17.5,
         "volume_confirmation": 15.4,
-        "source_diversity": 11.7,
-        "recency": 11.1,
+        "source_diversity": 13.1,
+        "recency": 10.1,
         "geopolitical_severity": 13.0
       }
     },
@@ -1133,17 +1133,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 62 articles - HIGH / NEUTRAL - Large-scale, SRAM-based LLM Inference Deployment (Groq)"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 10 articles - HIGH / NEUTRAL - Gold Drops as Fed\u2019s Waller Says Next Move Likely To Be Rate Hike"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - Gold Drops as Fed\u2019s Waller Says Next Move Likely To Be Rate Hike"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector - 13 articles - CRITICAL / NEUTRAL - Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Technology & AI / Semiconductors - 60 articles - HIGH / NEUTRAL - Large-scale, SRAM-based LLM Inference Deployment (Groq)"
     },
     {
       "tag": "tag-neu",
@@ -1236,9 +1236,9 @@
       "region": "UK",
       "price": 10466.26,
       "currency": "GBP",
-      "change": 33.96,
-      "change_pct": 0.33,
-      "change_str": "+0.33%",
+      "change": 22.76,
+      "change_pct": 0.22,
+      "change_str": "+0.22%",
       "direction": "up"
     },
     {
@@ -1247,9 +1247,9 @@
       "region": "EU",
       "price": 24888.56,
       "currency": "EUR",
-      "change": 151.32,
-      "change_pct": 0.61,
-      "change_str": "+0.61%",
+      "change": 281.79,
+      "change_pct": 1.15,
+      "change_str": "+1.15%",
       "direction": "up"
     },
     {
@@ -1258,9 +1258,9 @@
       "region": "JP",
       "price": 63339.07,
       "currency": "JPY",
-      "change": 3534.66,
-      "change_pct": 5.91,
-      "change_str": "+5.91%",
+      "change": 1654.93,
+      "change_pct": 2.68,
+      "change_str": "+2.68%",
       "direction": "up"
     },
     {
@@ -1269,10 +1269,10 @@
       "region": "HK",
       "price": 25606.03,
       "currency": "HKD",
-      "change": -45.09,
-      "change_pct": -0.18,
-      "change_str": "-0.18%",
-      "direction": "down"
+      "change": 219.51,
+      "change_pct": 0.86,
+      "change_str": "+0.86%",
+      "direction": "up"
     },
     {
       "label": "Nifty 50",
@@ -1280,9 +1280,9 @@
       "region": "IN",
       "price": 23719.3,
       "currency": "INR",
-      "change": 60.3,
-      "change_pct": 0.25,
-      "change_str": "+0.25%",
+      "change": 64.6,
+      "change_pct": 0.27,
+      "change_str": "+0.27%",
       "direction": "up"
     },
     {
@@ -1300,22 +1300,22 @@
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 97.0,
+      "price": 96.6,
       "currency": "USD",
-      "change": 0.65,
-      "change_pct": 0.67,
-      "change_str": "+0.67%",
+      "change": 0.25,
+      "change_pct": 0.26,
+      "change_str": "+0.26%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 75455.29,
+      "price": 75493.88,
       "currency": "USD",
-      "change": -2083.88,
-      "change_pct": -2.69,
-      "change_str": "-2.69%",
+      "change": -2045.29,
+      "change_pct": -2.64,
+      "change_str": "-2.64%",
       "direction": "down"
     },
     {
@@ -1737,11 +1737,11 @@
     }
   },
   "logs": [
-    "2026-05-23 00:12:39 [INFO] AZALYST - status.json generated",
-    "2026-05-23 00:12:39 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
-    "2026-05-23 00:12:39 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-05-23 00:12:39 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-23 00:12:39 [INFO] RISK - Partial profits realised: USD 3,234.71"
+    "2026-05-23 04:26:46 [INFO] AZALYST - status.json generated",
+    "2026-05-23 04:26:46 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
+    "2026-05-23 04:26:46 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-05-23 04:26:46 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-23 04:26:46 [INFO] RISK - Partial profits realised: USD 3,234.71"
   ],
-  "generated_at": "2026-05-23 00:12:36 UTC"
+  "generated_at": "2026-05-23 04:26:43 UTC"
 }
