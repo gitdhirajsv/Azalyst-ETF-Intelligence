@@ -195,8 +195,8 @@
     "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 4.860029638857984,
-    "news_score": 6.56,
-    "total": 45.60200593691968,
+    "news_score": 7.440000000000001,
+    "total": 46.48200593691968,
     "publish": false,
     "direction": "long"
   },
@@ -244,6 +244,10 @@
       "score": 96.0
     },
     {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 93.0
+    },
+    {
       "symbol": "Energy / Oil & Gas",
       "score": 93.0
     },
@@ -264,10 +268,6 @@
       "score": 83.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 82.0
-    },
-    {
       "symbol": "Clean Energy & Renewables + Commodities & Mining",
       "score": 79.0
     },
@@ -280,12 +280,16 @@
       "score": 72.0
     },
     {
-      "symbol": "Cybersecurity",
-      "score": 69.0
+      "symbol": "Defense & Aerospace",
+      "score": 68.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
       "score": 68.0
+    },
+    {
+      "symbol": "Cybersecurity",
+      "score": 65.0
     },
     {
       "symbol": "Real Estate & REITs",
@@ -294,10 +298,6 @@
     {
       "symbol": "Healthcare & Pharma",
       "score": 64.0
-    },
-    {
-      "symbol": "Defense & Aerospace",
-      "score": 63.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -353,6 +353,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 15.0,
         "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 93.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 54,
+      "latest_at": "23 May 2026 11:20 UTC",
+      "headline": "Anthropic, Microsoft in talks for AI chip deal after $5 billion investment",
+      "regions": [
+        "india",
+        "americas",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Tech",
+        "Latest from Tom's Hardware",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.7,
+        "recency": 15.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -613,59 +666,6 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 82.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 54,
-      "latest_at": "22 May 2026 20:00 UTC",
-      "headline": "Anthropic, Microsoft in talks for AI chip deal after $5 billion investment",
-      "regions": [
-        "india",
-        "europe",
-        "middle_east",
-        "americas"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Finance",
-        "Earnings",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.9,
-        "recency": 4.5,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables + Commodities & Mining",
       "confidence": 79.0,
@@ -813,49 +813,56 @@
       }
     },
     {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 69.0,
-      "severity": "MEDIUM",
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 68.0,
+      "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "23 May 2026 07:14 UTC",
-      "headline": "New Chinese surveillance leaves foreigners nowhere to hide",
+      "article_count": 39,
+      "latest_at": "23 May 2026 07:44 UTC",
+      "headline": "British troops train for war with Russia from the London Underground",
       "regions": [
-        "global",
+        "india",
         "asia_pacific",
+        "middle_east",
         "europe"
       ],
       "sources": [
-        "Latest from Tom's Hardware",
+        "Bloomberg Markets",
         "Cointelegraph.com News",
-        "World | Deutsche Welle",
-        "www.theregister.com - Articles"
+        "Markets-Economic Times",
+        "US Top News and Analysis"
       ],
-      "primary_etf": "CIBR",
+      "primary_etf": "ITA",
       "top_etfs": [
-        "CIBR",
-        "HACK"
+        "ITA",
+        "XAR",
+        "PPA"
       ],
       "access_markets": [
+        "India-listed",
         "International-listed"
       ],
-      "india_etfs": [],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
       "global_etfs": [
-        "CIBR",
-        "HACK"
+        "ITA",
+        "XAR",
+        "PPA"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 10.3,
-        "volume_confirmation": 12.6,
-        "source_diversity": 6.7,
-        "recency": 16.9,
-        "geopolitical_severity": 10.5
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.1,
+        "recency": 11.1,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -904,6 +911,50 @@
         "source_diversity": 9.9,
         "recency": 16.9,
         "geopolitical_severity": 10.5
+      }
+    },
+    {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 65.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "23 May 2026 11:00 UTC",
+      "headline": "Wi-Fi controlled hacking USB cable stealthily packs in a microcontroller, microSD storage, and more \u2014 cable executes remote payload execution, keystroke injection, and more, but is 'built for makers, developers, enthusiasts, and cybersecurity learners'",
+      "regions": [
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "Cointelegraph.com News",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.1,
+        "volume_confirmation": 12.6,
+        "source_diversity": 4.9,
+        "recency": 15.4,
+        "geopolitical_severity": 9.8
       }
     },
     {
@@ -1009,59 +1060,6 @@
       }
     },
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 63.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 39,
-      "latest_at": "23 May 2026 05:38 UTC",
-      "headline": "British troops train for war with Russia from the London Underground",
-      "regions": [
-        "middle_east",
-        "europe",
-        "india",
-        "asia_pacific"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Oilprice.com",
-        "Bloomberg Markets",
-        "World News - Breaking international news and headlines | Sky News"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.1,
-        "recency": 14.4,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income",
       "confidence": 62.0,
@@ -1122,6 +1120,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Technology & AI / Semiconductors - 54 articles - HIGH / NEUTRAL - Anthropic, Microsoft in talks for AI chip deal after $5 billion investment"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Energy / Oil & Gas - 28 articles - CRITICAL / NEUTRAL - StanChart Says Record SPR Withdrawals Are Tightening U.S. Oil Buffers"
     },
     {
@@ -1147,11 +1150,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 54 articles - HIGH / NEUTRAL - Anthropic, Microsoft in talks for AI chip deal after $5 billion investment"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Clean Energy & Renewables + Commodities & Mining - 9 articles - HIGH / NEUTRAL - This New Solar Battery Stores Energy Without Lithium or the Grid"
     },
     {
@@ -1167,12 +1165,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity - 6 articles - MEDIUM / NEUTRAL - New Chinese surveillance leaves foreigners nowhere to hide"
+      "text": "Defense & Aerospace - 39 articles - HIGH / NEUTRAL - British troops train for war with Russia from the London Underground"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 5 articles - MEDIUM / NEUTRAL - U.S., Iran signal peace progress \u2014 but remain at odds over enriched uranium, Strait of Hormuz tolls"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Cybersecurity - 6 articles - MEDIUM / NEUTRAL - Wi-Fi controlled hacking USB cable stealthily packs in a microcontroller, microSD storage, and more \u2014 cable executes remote payload execution, keystroke injection, and more, but is 'built for makers, developers, enthusiasts, and cybersecurity learners'"
     },
     {
       "tag": "tag-neu",
@@ -1183,11 +1186,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Healthcare & Pharma - 4 articles - CRITICAL / NEUTRAL - Ebola outbreak 'spreading rapidly' - as vaccine from UK scientists 'months away'"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Defense & Aerospace - 39 articles - HIGH / NEUTRAL - British troops train for war with Russia from the London Underground"
     },
     {
       "tag": "tag-neu",
@@ -1310,11 +1308,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 74633.02,
+      "price": 74694.86,
       "currency": "USD",
-      "change": -855.22,
-      "change_pct": -1.13,
-      "change_str": "-1.13%",
+      "change": -793.38,
+      "change_pct": -1.05,
+      "change_str": "-1.05%",
       "direction": "down"
     },
     {
@@ -1736,11 +1734,11 @@
     }
   },
   "logs": [
-    "2026-05-23 10:57:41 [INFO] AZALYST - status.json generated",
-    "2026-05-23 10:57:41 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
-    "2026-05-23 10:57:41 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-05-23 10:57:41 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-23 10:57:41 [INFO] RISK - Partial profits realised: USD 3,234.71"
+    "2026-05-23 12:05:35 [INFO] AZALYST - status.json generated",
+    "2026-05-23 12:05:35 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
+    "2026-05-23 12:05:35 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-05-23 12:05:35 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-23 12:05:35 [INFO] RISK - Partial profits realised: USD 3,234.71"
   ],
-  "generated_at": "2026-05-23 10:57:40 UTC"
+  "generated_at": "2026-05-23 12:05:33 UTC"
 }
