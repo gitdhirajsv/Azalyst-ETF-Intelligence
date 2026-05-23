@@ -189,14 +189,14 @@
     }
   },
   "top_signal": {
-    "ticker": "IGV",
-    "rank_score": 14.949618320610686,
-    "flow_score": 4.232357977451007,
-    "options_score": 0.0,
+    "ticker": "XLF",
+    "rank_score": 10.937404580152673,
+    "flow_score": 7.988418314974068,
+    "options_score": 4.0,
     "rotation_score": 15.0,
-    "macro_score": 4.860029638857984,
-    "news_score": 6.800000000000001,
-    "total": 45.842005936919676,
+    "macro_score": 3.0882692780771004,
+    "news_score": 7.68,
+    "total": 48.69409217320384,
     "publish": false,
     "direction": "long"
   },
@@ -249,15 +249,11 @@
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 91.0
+      "score": 93.0
     },
     {
       "symbol": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector",
       "score": 89.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 85.0
     },
     {
       "symbol": "Asia Pacific Equity",
@@ -268,12 +264,12 @@
       "score": 83.0
     },
     {
-      "symbol": "Clean Energy & Renewables + Commodities & Mining",
-      "score": 79.0
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 82.0
     },
     {
-      "symbol": "Healthcare & Pharma",
-      "score": 78.0
+      "symbol": "Clean Energy & Renewables + Commodities & Mining",
+      "score": 79.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -294,6 +290,10 @@
     {
       "symbol": "Real Estate & REITs",
       "score": 65.0
+    },
+    {
+      "symbol": "Healthcare & Pharma",
+      "score": 64.0
     },
     {
       "symbol": "Defense & Aerospace",
@@ -412,7 +412,7 @@
     {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 91.0,
+      "confidence": 93.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
@@ -420,19 +420,19 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 11,
-      "latest_at": "23 May 2026 03:42 UTC",
-      "headline": "Gold Drops as Fed\u2019s Waller Says Next Move Likely To Be Rate Hike",
+      "latest_at": "23 May 2026 09:20 UTC",
+      "headline": "Gold on track for second weekly loss as rising oil prices drive up rate hike bets",
       "regions": [
         "india",
-        "global",
-        "asia_pacific",
-        "middle_east"
+        "europe",
+        "middle_east",
+        "americas"
       ],
       "sources": [
         "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Oilprice.com",
-        "World | Deutsche Welle"
+        "Finance",
+        "Cointelegraph.com News",
+        "Bloomberg Markets"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -457,8 +457,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 16.8,
-        "source_diversity": 14.0,
-        "recency": 16.0,
+        "source_diversity": 15.3,
+        "recency": 16.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -509,59 +509,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 13.6,
         "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 85.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 60,
-      "latest_at": "22 May 2026 20:00 UTC",
-      "headline": "Large-scale, SRAM-based LLM Inference Deployment (Groq)",
-      "regions": [
-        "india",
-        "global",
-        "asia_pacific",
-        "middle_east"
-      ],
-      "sources": [
-        "Semiconductor Engineering",
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "www.theregister.com - Articles"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.7,
-        "recency": 7.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -666,6 +613,59 @@
       }
     },
     {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 82.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 54,
+      "latest_at": "22 May 2026 20:00 UTC",
+      "headline": "Anthropic, Microsoft in talks for AI chip deal after $5 billion investment",
+      "regions": [
+        "india",
+        "europe",
+        "middle_east",
+        "americas"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Finance",
+        "Earnings",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.9,
+        "recency": 4.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables + Commodities & Mining",
       "confidence": 79.0,
@@ -713,59 +713,6 @@
         "volume_confirmation": 15.4,
         "source_diversity": 12.1,
         "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma",
-      "confidence": 78.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 9,
-      "latest_at": "22 May 2026 23:07 UTC",
-      "headline": "Ebola outbreak 'spreading rapidly' - as vaccine from UK scientists 'months away'",
-      "regions": [
-        "india",
-        "global",
-        "asia_pacific",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "World News - Breaking international news and headlines | Sky News",
-        "Oilprice.com",
-        "BBC News"
-      ],
-      "primary_etf": "XLV",
-      "top_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "HEALTHCARE",
-        "PHARMABEES"
-      ],
-      "global_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 17.5,
-        "volume_confirmation": 15.4,
-        "source_diversity": 13.1,
-        "recency": 10.1,
         "geopolitical_severity": 13.0
       }
     },
@@ -1009,6 +956,59 @@
       }
     },
     {
+      "sector_key": "healthcare_pharma",
+      "sector_label": "Healthcare & Pharma",
+      "confidence": 64.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 4,
+      "latest_at": "22 May 2026 23:07 UTC",
+      "headline": "Ebola outbreak 'spreading rapidly' - as vaccine from UK scientists 'months away'",
+      "regions": [
+        "middle_east",
+        "europe",
+        "africa",
+        "india"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "BBC News",
+        "World News - Breaking international news and headlines | Sky News",
+        "Oilprice.com"
+      ],
+      "primary_etf": "XLV",
+      "top_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "HEALTHCARE",
+        "PHARMABEES"
+      ],
+      "global_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.8,
+        "volume_confirmation": 9.7,
+        "source_diversity": 13.1,
+        "recency": 6.1,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
       "confidence": 63.0,
@@ -1127,17 +1127,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - Gold Drops as Fed\u2019s Waller Says Next Move Likely To Be Rate Hike"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - Gold on track for second weekly loss as rising oil prices drive up rate hike bets"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector - 13 articles - CRITICAL / NEUTRAL - Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 60 articles - HIGH / NEUTRAL - Large-scale, SRAM-based LLM Inference Deployment (Groq)"
     },
     {
       "tag": "tag-neu",
@@ -1152,12 +1147,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Clean Energy & Renewables + Commodities & Mining - 9 articles - HIGH / NEUTRAL - This New Solar Battery Stores Energy Without Lithium or the Grid"
+      "text": "Technology & AI / Semiconductors - 54 articles - HIGH / NEUTRAL - Anthropic, Microsoft in talks for AI chip deal after $5 billion investment"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Healthcare & Pharma - 9 articles - HIGH / NEUTRAL - Ebola outbreak 'spreading rapidly' - as vaccine from UK scientists 'months away'"
+      "text": "Clean Energy & Renewables + Commodities & Mining - 9 articles - HIGH / NEUTRAL - This New Solar Battery Stores Energy Without Lithium or the Grid"
     },
     {
       "tag": "tag-neu",
@@ -1183,6 +1178,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Real Estate & REITs - 6 articles - MEDIUM / NEUTRAL - What the AvalonBay, Equity Residential megamerger means for the apartment industry and rents"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Healthcare & Pharma - 4 articles - CRITICAL / NEUTRAL - Ebola outbreak 'spreading rapidly' - as vaccine from UK scientists 'months away'"
     },
     {
       "tag": "tag-neu",
@@ -1310,11 +1310,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 75200.52,
+      "price": 74594.51,
       "currency": "USD",
-      "change": -287.72,
-      "change_pct": -0.38,
-      "change_str": "-0.38%",
+      "change": -893.73,
+      "change_pct": -1.18,
+      "change_str": "-1.18%",
       "direction": "down"
     },
     {
@@ -1736,11 +1736,11 @@
     }
   },
   "logs": [
-    "2026-05-23 07:24:01 [INFO] AZALYST - status.json generated",
-    "2026-05-23 07:24:01 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
-    "2026-05-23 07:24:01 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-05-23 07:24:01 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-23 07:24:01 [INFO] RISK - Partial profits realised: USD 3,234.71"
+    "2026-05-23 09:30:42 [INFO] AZALYST - status.json generated",
+    "2026-05-23 09:30:42 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
+    "2026-05-23 09:30:42 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-05-23 09:30:42 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-23 09:30:42 [INFO] RISK - Partial profits realised: USD 3,234.71"
   ],
-  "generated_at": "2026-05-23 07:23:59 UTC"
+  "generated_at": "2026-05-23 09:30:41 UTC"
 }
