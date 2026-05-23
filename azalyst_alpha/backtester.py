@@ -132,16 +132,40 @@ def purged_kfold(
     k: int = 5,
     embargo_days: int = 5,
 ) -> list[BacktestResult]:
-    """Purged k-fold: split returns into k folds; for each test fold, embargo
-    `embargo_days` around it from training (we don't actually train here, but
-    we evaluate each fold independently to detect regime variance)."""
+    """K-fold evaluation of a pre-computed return series with fold-boundary
+    embargo.
+
+    Split `returns` into k contiguous folds. For each fold, drop the first
+    `embargo_days` bars before evaluating — those bars sit closest to the
+    previous fold and can carry information through the strategy's lookback
+    windows (e.g. 20-day momentum at the fold boundary depends on bars from
+    the previous fold). Embargoing the boundary keeps each fold's stats from
+    being contaminated by the adjacent fold's tape.
+
+    Note: this is fold-boundary embargo for already-computed strategy returns.
+    It is not the full López de Prado purged-CV (which also purges training
+    data around test folds); this function has no training stage.
+    """
+    if k <= 0:
+        return []
     n = len(returns)
     fold_size = n // k
+    if fold_size <= 0:
+        return []
+    embargo = max(0, int(embargo_days))
     out: list[BacktestResult] = []
     for f in range(k):
         start = f * fold_size
         end = start + fold_size
-        test = returns.iloc[start:end]
+        # Drop the first `embargo` bars of every fold except the first one —
+        # there is no previous fold for fold 0 to leak into it.
+        fold_start = start + embargo if f > 0 else start
+        if fold_start >= end:
+            # Embargo wider than the fold — emit an empty result so callers
+            # still see k entries.
+            out.append(evaluate(pd.Series(dtype=float)))
+            continue
+        test = returns.iloc[fold_start:end]
         out.append(evaluate(test))
     return out
 
