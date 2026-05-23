@@ -192,11 +192,11 @@
     "ticker": "IGV",
     "rank_score": 14.949618320610686,
     "flow_score": 4.232357977451007,
-    "options_score": 12.0,
+    "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 4.860029638857984,
-    "news_score": 7.440000000000001,
-    "total": 58.48200593691968,
+    "news_score": 7.28,
+    "total": 46.32200593691968,
     "publish": false,
     "direction": "long"
   },
@@ -244,16 +244,16 @@
       "score": 96.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 93.0
-    },
-    {
       "symbol": "Energy / Oil & Gas",
       "score": 93.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 93.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 91.0
     },
     {
       "symbol": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector",
@@ -353,59 +353,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 15.0,
         "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 93.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 54,
-      "latest_at": "23 May 2026 11:20 UTC",
-      "headline": "Anthropic, Microsoft in talks for AI chip deal after $5 billion investment",
-      "regions": [
-        "india",
-        "americas",
-        "asia_pacific",
-        "middle_east"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Tech",
-        "Latest from Tom's Hardware",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.7,
-        "recency": 15.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -512,6 +459,59 @@
         "volume_confirmation": 17.4,
         "source_diversity": 15.3,
         "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 91.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 56,
+      "latest_at": "23 May 2026 13:49 UTC",
+      "headline": "Chip Industry Week In Review",
+      "regions": [
+        "india",
+        "europe",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Latest from Tom's Hardware",
+        "www.theregister.com - Articles",
+        "Defense News",
+        "Tech"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.5,
+        "recency": 13.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -1120,17 +1120,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 54 articles - HIGH / NEUTRAL - Anthropic, Microsoft in talks for AI chip deal after $5 billion investment"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Energy / Oil & Gas - 28 articles - CRITICAL / NEUTRAL - StanChart Says Record SPR Withdrawals Are Tightening U.S. Oil Buffers"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - Gold on track for second weekly loss as rising oil prices drive up rate hike bets"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Technology & AI / Semiconductors - 56 articles - HIGH / NEUTRAL - Chip Industry Week In Review"
     },
     {
       "tag": "tag-neu",
@@ -1308,11 +1308,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 75452.66,
+      "price": 75462.99,
       "currency": "USD",
-      "change": -35.58,
-      "change_pct": -0.05,
-      "change_str": "-0.05%",
+      "change": -25.25,
+      "change_pct": -0.03,
+      "change_str": "-0.03%",
       "direction": "down"
     },
     {
@@ -1734,11 +1734,11 @@
     }
   },
   "logs": [
-    "2026-05-23 15:00:39 [INFO] AZALYST - status.json generated",
-    "2026-05-23 15:00:39 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
-    "2026-05-23 15:00:39 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-05-23 15:00:39 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-23 15:00:39 [INFO] RISK - Partial profits realised: USD 3,234.71"
+    "2026-05-23 16:07:28 [INFO] AZALYST - status.json generated",
+    "2026-05-23 16:07:28 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
+    "2026-05-23 16:07:28 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-05-23 16:07:28 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-23 16:07:28 [INFO] RISK - Partial profits realised: USD 3,234.71"
   ],
-  "generated_at": "2026-05-23 15:00:37 UTC"
+  "generated_at": "2026-05-23 16:07:27 UTC"
 }
