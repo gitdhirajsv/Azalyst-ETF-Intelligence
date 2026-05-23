@@ -38,7 +38,7 @@
       "pnl_pct_str": "+1.03%",
       "confidence": 95,
       "severity": "CRITICAL",
-      "days_held": 11,
+      "days_held": 12,
       "half_exited": false
     },
     {
@@ -61,7 +61,7 @@
       "pnl_pct_str": "+3.85%",
       "confidence": 96,
       "severity": "CRITICAL",
-      "days_held": 11,
+      "days_held": 12,
       "half_exited": true
     },
     {
@@ -84,7 +84,7 @@
       "pnl_pct_str": "-4.02%",
       "confidence": 94,
       "severity": "HIGH",
-      "days_held": 11,
+      "days_held": 12,
       "half_exited": false
     },
     {
@@ -107,7 +107,7 @@
       "pnl_pct_str": "-6.15%",
       "confidence": 90,
       "severity": "CRITICAL",
-      "days_held": 11,
+      "days_held": 12,
       "half_exited": false
     },
     {
@@ -268,6 +268,10 @@
       "score": 83.0
     },
     {
+      "symbol": "Healthcare & Pharma",
+      "score": 80.0
+    },
+    {
       "symbol": "Clean Energy & Renewables + Commodities & Mining",
       "score": 79.0
     },
@@ -294,10 +298,6 @@
     {
       "symbol": "Real Estate & REITs",
       "score": 65.0
-    },
-    {
-      "symbol": "Healthcare & Pharma",
-      "score": 64.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -472,8 +472,8 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "23 May 2026 09:20 UTC",
+      "article_count": 12,
+      "latest_at": "23 May 2026 13:26 UTC",
       "headline": "Gold on track for second weekly loss as rising oil prices drive up rate hike bets",
       "regions": [
         "india",
@@ -482,10 +482,10 @@
         "americas"
       ],
       "sources": [
-        "Markets-Economic Times",
+        "US Top News and Analysis",
         "Finance",
-        "Cointelegraph.com News",
-        "Bloomberg Markets"
+        "World | Deutsche Welle",
+        "Markets-Economic Times"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -509,7 +509,7 @@
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
-        "volume_confirmation": 16.8,
+        "volume_confirmation": 17.4,
         "source_diversity": 15.3,
         "recency": 16.9,
         "geopolitical_severity": 13.0
@@ -662,6 +662,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 9.9,
         "recency": 15.7,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "healthcare_pharma",
+      "sector_label": "Healthcare & Pharma",
+      "confidence": 80.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "23 May 2026 12:35 UTC",
+      "headline": "Ebola outbreak 'spreading rapidly' - as vaccine from UK scientists 'months away'",
+      "regions": [
+        "india",
+        "africa",
+        "europe",
+        "middle_east"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "BBC News",
+        "World News - Breaking international news and headlines | Sky News"
+      ],
+      "primary_etf": "XLV",
+      "top_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "HEALTHCARE",
+        "PHARMABEES"
+      ],
+      "global_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 15.0,
+        "volume_confirmation": 12.6,
+        "source_diversity": 14.7,
+        "recency": 15.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -1007,59 +1060,6 @@
       }
     },
     {
-      "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma",
-      "confidence": 64.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "22 May 2026 23:07 UTC",
-      "headline": "Ebola outbreak 'spreading rapidly' - as vaccine from UK scientists 'months away'",
-      "regions": [
-        "middle_east",
-        "europe",
-        "africa",
-        "india"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "BBC News",
-        "World News - Breaking international news and headlines | Sky News",
-        "Oilprice.com"
-      ],
-      "primary_etf": "XLV",
-      "top_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "HEALTHCARE",
-        "PHARMABEES"
-      ],
-      "global_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 12.8,
-        "volume_confirmation": 9.7,
-        "source_diversity": 13.1,
-        "recency": 6.1,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income",
       "confidence": 62.0,
@@ -1130,7 +1130,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - Gold on track for second weekly loss as rising oil prices drive up rate hike bets"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - Gold on track for second weekly loss as rising oil prices drive up rate hike bets"
     },
     {
       "tag": "tag-neu",
@@ -1146,6 +1146,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "India Equity Markets - 21 articles - HIGH / NEUTRAL - Why is market falling today? Sensex crashes 1,000 points, Nifty below 23,350; 5 key factors behind bloodbath"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Healthcare & Pharma - 6 articles - HIGH / NEUTRAL - Ebola outbreak 'spreading rapidly' - as vaccine from UK scientists 'months away'"
     },
     {
       "tag": "tag-neu",
@@ -1181,11 +1186,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Real Estate & REITs - 6 articles - MEDIUM / NEUTRAL - What the AvalonBay, Equity Residential megamerger means for the apartment industry and rents"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Healthcare & Pharma - 4 articles - CRITICAL / NEUTRAL - Ebola outbreak 'spreading rapidly' - as vaccine from UK scientists 'months away'"
     },
     {
       "tag": "tag-neu",
@@ -1308,11 +1308,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 74694.86,
+      "price": 74833.97,
       "currency": "USD",
-      "change": -793.38,
-      "change_pct": -1.05,
-      "change_str": "-1.05%",
+      "change": -654.27,
+      "change_pct": -0.87,
+      "change_str": "-0.87%",
       "direction": "down"
     },
     {
@@ -1734,11 +1734,11 @@
     }
   },
   "logs": [
-    "2026-05-23 12:05:35 [INFO] AZALYST - status.json generated",
-    "2026-05-23 12:05:35 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
-    "2026-05-23 12:05:35 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-05-23 12:05:35 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-23 12:05:35 [INFO] RISK - Partial profits realised: USD 3,234.71"
+    "2026-05-23 13:37:25 [INFO] AZALYST - status.json generated",
+    "2026-05-23 13:37:25 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
+    "2026-05-23 13:37:25 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-05-23 13:37:25 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-23 13:37:25 [INFO] RISK - Partial profits realised: USD 3,234.71"
   ],
-  "generated_at": "2026-05-23 12:05:33 UTC"
+  "generated_at": "2026-05-23 13:37:23 UTC"
 }
