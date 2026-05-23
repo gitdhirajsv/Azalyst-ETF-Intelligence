@@ -130,7 +130,7 @@
       "pnl_pct_str": "+0.29%",
       "confidence": 92,
       "severity": "HIGH",
-      "days_held": 11,
+      "days_held": 12,
       "half_exited": false
     },
     {
@@ -192,12 +192,12 @@
     "ticker": "IGV",
     "rank_score": 14.949618320610686,
     "flow_score": 4.232357977451007,
-    "options_score": 0.0,
+    "options_score": 14.735652033179859,
     "rotation_score": 15.0,
     "macro_score": 4.860029638857984,
     "news_score": 7.28,
-    "total": 46.32200593691968,
-    "publish": false,
+    "total": 61.05765797009954,
+    "publish": true,
     "direction": "long"
   },
   "allocation": {
@@ -256,8 +256,16 @@
       "score": 91.0
     },
     {
+      "symbol": "Defense & Aerospace",
+      "score": 91.0
+    },
+    {
       "symbol": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector",
       "score": 89.0
+    },
+    {
+      "symbol": "Healthcare & Pharma",
+      "score": 86.0
     },
     {
       "symbol": "Asia Pacific Equity",
@@ -266,10 +274,6 @@
     {
       "symbol": "India Equity Markets",
       "score": 83.0
-    },
-    {
-      "symbol": "Healthcare & Pharma",
-      "score": 80.0
     },
     {
       "symbol": "Clean Energy & Renewables + Commodities & Mining",
@@ -282,10 +286,6 @@
     {
       "symbol": "Commodities & Mining",
       "score": 72.0
-    },
-    {
-      "symbol": "Defense & Aerospace",
-      "score": 68.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -420,19 +420,19 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 12,
-      "latest_at": "23 May 2026 13:26 UTC",
+      "latest_at": "23 May 2026 18:34 UTC",
       "headline": "Gold on track for second weekly loss as rising oil prices drive up rate hike bets",
       "regions": [
-        "india",
-        "europe",
         "middle_east",
+        "europe",
+        "global",
         "americas"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "Finance",
-        "World | Deutsche Welle",
-        "Markets-Economic Times"
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "BBC News",
+        "World | Deutsche Welle"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -458,7 +458,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 17.4,
         "source_diversity": 15.3,
-        "recency": 16.9,
+        "recency": 17.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -516,6 +516,59 @@
       }
     },
     {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 91.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 38,
+      "latest_at": "23 May 2026 17:00 UTC",
+      "headline": "British troops train for war with Russia from the London Underground",
+      "regions": [
+        "middle_east",
+        "europe",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Defense News",
+        "Bloomberg Markets",
+        "BBC News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.1,
+        "recency": 14.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector",
       "confidence": 89.0,
@@ -562,6 +615,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 13.6,
         "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "healthcare_pharma",
+      "sector_label": "Healthcare & Pharma",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 10,
+      "latest_at": "23 May 2026 17:15 UTC",
+      "headline": "Ebola outbreak 'spreading rapidly' - as vaccine from UK scientists 'months away'",
+      "regions": [
+        "africa",
+        "middle_east",
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "BBC News",
+        "Oilprice.com"
+      ],
+      "primary_etf": "XLV",
+      "top_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "HEALTHCARE",
+        "PHARMABEES"
+      ],
+      "global_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 18.4,
+        "volume_confirmation": 16.2,
+        "source_diversity": 14.7,
+        "recency": 14.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -662,59 +768,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 9.9,
         "recency": 15.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma",
-      "confidence": 80.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "23 May 2026 12:35 UTC",
-      "headline": "Ebola outbreak 'spreading rapidly' - as vaccine from UK scientists 'months away'",
-      "regions": [
-        "india",
-        "africa",
-        "europe",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "BBC News",
-        "World News - Breaking international news and headlines | Sky News"
-      ],
-      "primary_etf": "XLV",
-      "top_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "HEALTHCARE",
-        "PHARMABEES"
-      ],
-      "global_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 15.0,
-        "volume_confirmation": 12.6,
-        "source_diversity": 14.7,
-        "recency": 15.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -863,59 +916,6 @@
         "source_diversity": 11.1,
         "recency": 14.2,
         "geopolitical_severity": 12.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 68.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 39,
-      "latest_at": "23 May 2026 07:44 UTC",
-      "headline": "British troops train for war with Russia from the London Underground",
-      "regions": [
-        "india",
-        "asia_pacific",
-        "middle_east",
-        "europe"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Cointelegraph.com News",
-        "Markets-Economic Times",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.1,
-        "recency": 11.1,
-        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1135,7 +1135,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Defense & Aerospace - 38 articles - HIGH / NEUTRAL - British troops train for war with Russia from the London Underground"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector - 13 articles - CRITICAL / NEUTRAL - Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Healthcare & Pharma - 10 articles - HIGH / NEUTRAL - Ebola outbreak 'spreading rapidly' - as vaccine from UK scientists 'months away'"
     },
     {
       "tag": "tag-neu",
@@ -1146,11 +1156,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "India Equity Markets - 21 articles - HIGH / NEUTRAL - Why is market falling today? Sensex crashes 1,000 points, Nifty below 23,350; 5 key factors behind bloodbath"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Healthcare & Pharma - 6 articles - HIGH / NEUTRAL - Ebola outbreak 'spreading rapidly' - as vaccine from UK scientists 'months away'"
     },
     {
       "tag": "tag-neu",
@@ -1166,11 +1171,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Commodities & Mining - 7 articles - MEDIUM / NEUTRAL - Deccan Gold Mines shares soar 23% in just two days. What\u2019s fuelling the rally?"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Defense & Aerospace - 39 articles - HIGH / NEUTRAL - British troops train for war with Russia from the London Underground"
     },
     {
       "tag": "tag-neu",
@@ -1308,12 +1308,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 75372.12,
+      "price": 75796.0,
       "currency": "USD",
-      "change": -116.12,
-      "change_pct": -0.15,
-      "change_str": "-0.15%",
-      "direction": "down"
+      "change": 307.76,
+      "change_pct": 0.41,
+      "change_str": "+0.41%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
@@ -1734,11 +1734,11 @@
     }
   },
   "logs": [
-    "2026-05-23 17:15:04 [INFO] AZALYST - status.json generated",
-    "2026-05-23 17:15:04 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
-    "2026-05-23 17:15:04 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-05-23 17:15:04 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-23 17:15:04 [INFO] RISK - Partial profits realised: USD 3,234.71"
+    "2026-05-23 18:41:33 [INFO] AZALYST - status.json generated",
+    "2026-05-23 18:41:33 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
+    "2026-05-23 18:41:33 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-05-23 18:41:33 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-23 18:41:33 [INFO] RISK - Partial profits realised: USD 3,234.71"
   ],
-  "generated_at": "2026-05-23 17:15:02 UTC"
+  "generated_at": "2026-05-23 18:41:32 UTC"
 }
