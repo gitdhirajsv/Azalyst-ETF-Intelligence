@@ -248,10 +248,6 @@
       "score": 93.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 92.0
-    },
-    {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 91.0
     },
@@ -289,7 +285,7 @@
     },
     {
       "symbol": "Cybersecurity",
-      "score": 68.0
+      "score": 69.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -298,6 +294,10 @@
     {
       "symbol": "Real Estate & REITs",
       "score": 65.0
+    },
+    {
+      "symbol": "Defense & Aerospace",
+      "score": 63.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -406,59 +406,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 15.6,
         "recency": 14.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 92.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 34,
-      "latest_at": "22 May 2026 15:18 UTC",
-      "headline": "British troops train for war with Russia from the London Underground",
-      "regions": [
-        "global",
-        "europe",
-        "asia_pacific",
-        "middle_east"
-      ],
-      "sources": [
-        "BBC News",
-        "Latest from Tom's Hardware",
-        "Bloomberg Markets",
-        "World | Deutsche Welle"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.4,
-        "recency": 15.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -921,27 +868,26 @@
     {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
-      "confidence": 68.0,
+      "confidence": 69.0,
       "severity": "MEDIUM",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "21 May 2026 14:55 UTC",
+      "article_count": 6,
+      "latest_at": "23 May 2026 07:14 UTC",
       "headline": "New Chinese surveillance leaves foreigners nowhere to hide",
       "regions": [
-        "asia_pacific",
-        "americas",
         "global",
+        "asia_pacific",
         "europe"
       ],
       "sources": [
+        "Latest from Tom's Hardware",
+        "Cointelegraph.com News",
         "World | Deutsche Welle",
-        "BBC News",
-        "Tech",
-        "The Verge"
+        "www.theregister.com - Articles"
       ],
       "primary_etf": "CIBR",
       "top_etfs": [
@@ -958,11 +904,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 9.4,
-        "volume_confirmation": 11.3,
-        "source_diversity": 11.4,
+        "signal_strength": 10.3,
+        "volume_confirmation": 12.6,
+        "source_diversity": 6.7,
         "recency": 16.9,
-        "geopolitical_severity": 11.3
+        "geopolitical_severity": 10.5
       }
     },
     {
@@ -1063,6 +1009,59 @@
       }
     },
     {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 63.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 39,
+      "latest_at": "23 May 2026 05:38 UTC",
+      "headline": "British troops train for war with Russia from the London Underground",
+      "regions": [
+        "middle_east",
+        "europe",
+        "india",
+        "asia_pacific"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Oilprice.com",
+        "Bloomberg Markets",
+        "World News - Breaking international news and headlines | Sky News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.1,
+        "recency": 14.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income",
       "confidence": 62.0,
@@ -1128,11 +1127,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 34 articles - HIGH / NEUTRAL - British troops train for war with Russia from the London Underground"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - Gold Drops as Fed\u2019s Waller Says Next Move Likely To Be Rate Hike"
     },
     {
@@ -1178,7 +1172,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity - 5 articles - MEDIUM / NEUTRAL - New Chinese surveillance leaves foreigners nowhere to hide"
+      "text": "Cybersecurity - 6 articles - MEDIUM / NEUTRAL - New Chinese surveillance leaves foreigners nowhere to hide"
     },
     {
       "tag": "tag-neu",
@@ -1189,6 +1183,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Real Estate & REITs - 6 articles - MEDIUM / NEUTRAL - What the AvalonBay, Equity Residential megamerger means for the apartment industry and rents"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Defense & Aerospace - 39 articles - HIGH / NEUTRAL - British troops train for war with Russia from the London Underground"
     },
     {
       "tag": "tag-neu",
@@ -1289,11 +1288,11 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4510.5,
+      "price": 4523.2,
       "currency": "USD",
-      "change": -29.3,
-      "change_pct": -0.65,
-      "change_str": "-0.65%",
+      "change": -16.6,
+      "change_pct": -0.37,
+      "change_str": "-0.37%",
       "direction": "down"
     },
     {
@@ -1311,11 +1310,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 75493.88,
+      "price": 75200.52,
       "currency": "USD",
-      "change": -2045.29,
-      "change_pct": -2.64,
-      "change_str": "-2.64%",
+      "change": -287.72,
+      "change_pct": -0.38,
+      "change_str": "-0.38%",
       "direction": "down"
     },
     {
@@ -1737,11 +1736,11 @@
     }
   },
   "logs": [
-    "2026-05-23 04:26:46 [INFO] AZALYST - status.json generated",
-    "2026-05-23 04:26:46 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
-    "2026-05-23 04:26:46 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-05-23 04:26:46 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-23 04:26:46 [INFO] RISK - Partial profits realised: USD 3,234.71"
+    "2026-05-23 07:24:01 [INFO] AZALYST - status.json generated",
+    "2026-05-23 07:24:01 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
+    "2026-05-23 07:24:01 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-05-23 07:24:01 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-23 07:24:01 [INFO] RISK - Partial profits realised: USD 3,234.71"
   ],
-  "generated_at": "2026-05-23 04:26:43 UTC"
+  "generated_at": "2026-05-23 07:23:59 UTC"
 }
