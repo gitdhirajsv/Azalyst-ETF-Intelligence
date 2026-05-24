@@ -190,13 +190,13 @@
   },
   "top_signal": {
     "ticker": "IGV",
-    "rank_score": 14.951871657754012,
+    "rank_score": 14.949618320610686,
     "flow_score": 4.232357977451007,
     "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 4.860029638857984,
     "news_score": 7.040000000000001,
-    "total": 46.084259274062994,
+    "total": 46.08200593691968,
     "publish": false,
     "direction": "long"
   },
@@ -256,6 +256,10 @@
       "score": 88.0
     },
     {
+      "symbol": "Defense & Aerospace",
+      "score": 88.0
+    },
+    {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 85.0
     },
@@ -290,10 +294,6 @@
     {
       "symbol": "Nuclear Energy & Uranium",
       "score": 68.0
-    },
-    {
-      "symbol": "Defense & Aerospace",
-      "score": 67.0
     },
     {
       "symbol": "Real Estate & REITs",
@@ -508,6 +508,59 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 16.7,
+        "recency": 10.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 88.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 46,
+      "latest_at": "24 May 2026 17:01 UTC",
+      "headline": "Hypersonic missile used in Kyiv strike: What we know about it",
+      "regions": [
+        "india",
+        "global",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "BBC News",
+        "Defense News",
+        "World | Deutsche Welle",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.6,
         "recency": 10.9,
         "geopolitical_severity": 13.0
       }
@@ -959,59 +1012,6 @@
       }
     },
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 67.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 48,
-      "latest_at": "24 May 2026 16:50 UTC",
-      "headline": "Hypersonic missile used in Kyiv strike: What we know about it",
-      "regions": [
-        "europe",
-        "india",
-        "global",
-        "americas"
-      ],
-      "sources": [
-        "BBC News",
-        "World News - Breaking international news and headlines | Sky News",
-        "Defense News",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.6,
-        "recency": 16.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "real_estate_reit",
       "sector_label": "Real Estate & REITs",
       "confidence": 65.0,
@@ -1136,6 +1136,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Defense & Aerospace - 46 articles - HIGH / NEUTRAL - Hypersonic missile used in Kyiv strike: What we know about it"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - Gold on track for second weekly loss as rising oil prices drive up rate hike bets"
     },
     {
@@ -1177,11 +1182,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 5 articles - MEDIUM / NEUTRAL - U.S., Iran signal peace progress \u2014 but remain at odds over enriched uranium, Strait of Hormuz tolls"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Defense & Aerospace - 48 articles - HIGH / NEUTRAL - Hypersonic missile used in Kyiv strike: What we know about it"
     },
     {
       "tag": "tag-neu",
@@ -1309,11 +1309,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 76564.4,
+      "price": 76050.91,
       "currency": "USD",
-      "change": -108.97,
-      "change_pct": -0.14,
-      "change_str": "-0.14%",
+      "change": -622.46,
+      "change_pct": -0.81,
+      "change_str": "-0.81%",
       "direction": "down"
     },
     {
@@ -1735,11 +1735,11 @@
     }
   },
   "logs": [
-    "2026-05-24 20:18:00 [INFO] AZALYST - status.json generated",
-    "2026-05-24 20:18:00 [INFO] PORTFOLIO - NAV USD 9,867.90 | Return -0.49%",
-    "2026-05-24 20:18:00 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-05-24 20:18:00 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-24 20:18:00 [INFO] RISK - Partial profits realised: USD 3,234.71"
+    "2026-05-24 21:37:28 [INFO] AZALYST - status.json generated",
+    "2026-05-24 21:37:28 [INFO] PORTFOLIO - NAV USD 9,867.90 | Return -0.49%",
+    "2026-05-24 21:37:28 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-05-24 21:37:28 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-24 21:37:28 [INFO] RISK - Partial profits realised: USD 3,234.71"
   ],
-  "generated_at": "2026-05-24 20:17:56 UTC"
+  "generated_at": "2026-05-24 21:37:26 UTC"
 }
