@@ -38,7 +38,7 @@
       "pnl_pct_str": "+1.03%",
       "confidence": 95,
       "severity": "CRITICAL",
-      "days_held": 12,
+      "days_held": 13,
       "half_exited": false
     },
     {
@@ -61,7 +61,7 @@
       "pnl_pct_str": "+3.85%",
       "confidence": 96,
       "severity": "CRITICAL",
-      "days_held": 12,
+      "days_held": 13,
       "half_exited": true
     },
     {
@@ -84,7 +84,7 @@
       "pnl_pct_str": "-4.02%",
       "confidence": 94,
       "severity": "HIGH",
-      "days_held": 12,
+      "days_held": 13,
       "half_exited": false
     },
     {
@@ -107,7 +107,7 @@
       "pnl_pct_str": "-6.15%",
       "confidence": 90,
       "severity": "CRITICAL",
-      "days_held": 12,
+      "days_held": 13,
       "half_exited": false
     },
     {
@@ -288,12 +288,12 @@
       "score": 72.0
     },
     {
-      "symbol": "Nuclear Energy & Uranium",
+      "symbol": "Cybersecurity",
       "score": 68.0
     },
     {
-      "symbol": "Cybersecurity",
-      "score": 65.0
+      "symbol": "Nuclear Energy & Uranium",
+      "score": 68.0
     },
     {
       "symbol": "Real Estate & REITs",
@@ -919,6 +919,52 @@
       }
     },
     {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 68.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "24 May 2026 13:13 UTC",
+      "headline": "Wi-Fi controlled hacking USB cable stealthily packs in a microcontroller, microSD storage, and more \u2014 cable executes remote payload execution, keystroke injection, and more, but is 'built for makers, developers, enthusiasts, and cybersecurity learners'",
+      "regions": [
+        "europe",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Cointelegraph.com News",
+        "The Verge",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.1,
+        "volume_confirmation": 12.6,
+        "source_diversity": 8.3,
+        "recency": 17.0,
+        "geopolitical_severity": 11.0
+      }
+    },
+    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 68.0,
@@ -964,50 +1010,6 @@
         "source_diversity": 9.9,
         "recency": 16.9,
         "geopolitical_severity": 10.5
-      }
-    },
-    {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 65.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "23 May 2026 11:00 UTC",
-      "headline": "Wi-Fi controlled hacking USB cable stealthily packs in a microcontroller, microSD storage, and more \u2014 cable executes remote payload execution, keystroke injection, and more, but is 'built for makers, developers, enthusiasts, and cybersecurity learners'",
-      "regions": [
-        "europe",
-        "global"
-      ],
-      "sources": [
-        "www.theregister.com - Articles",
-        "Cointelegraph.com News",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.1,
-        "volume_confirmation": 12.6,
-        "source_diversity": 4.9,
-        "recency": 15.4,
-        "geopolitical_severity": 9.8
       }
     },
     {
@@ -1175,12 +1177,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Nuclear Energy & Uranium - 5 articles - MEDIUM / NEUTRAL - U.S., Iran signal peace progress \u2014 but remain at odds over enriched uranium, Strait of Hormuz tolls"
+      "text": "Cybersecurity - 6 articles - MEDIUM / NEUTRAL - Wi-Fi controlled hacking USB cable stealthily packs in a microcontroller, microSD storage, and more \u2014 cable executes remote payload execution, keystroke injection, and more, but is 'built for makers, developers, enthusiasts, and cybersecurity learners'"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity - 6 articles - MEDIUM / NEUTRAL - Wi-Fi controlled hacking USB cable stealthily packs in a microcontroller, microSD storage, and more \u2014 cable executes remote payload execution, keystroke injection, and more, but is 'built for makers, developers, enthusiasts, and cybersecurity learners'"
+      "text": "Nuclear Energy & Uranium - 5 articles - MEDIUM / NEUTRAL - U.S., Iran signal peace progress \u2014 but remain at odds over enriched uranium, Strait of Hormuz tolls"
     },
     {
       "tag": "tag-neu",
@@ -1308,11 +1310,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77177.98,
+      "price": 76997.45,
       "currency": "USD",
-      "change": 504.61,
-      "change_pct": 0.66,
-      "change_str": "+0.66%",
+      "change": 324.08,
+      "change_pct": 0.42,
+      "change_str": "+0.42%",
       "direction": "up"
     },
     {
@@ -1734,11 +1736,11 @@
     }
   },
   "logs": [
-    "2026-05-24 11:58:44 [INFO] AZALYST - status.json generated",
-    "2026-05-24 11:58:44 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
-    "2026-05-24 11:58:44 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-05-24 11:58:44 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-24 11:58:44 [INFO] RISK - Partial profits realised: USD 3,234.71"
+    "2026-05-24 13:23:06 [INFO] AZALYST - status.json generated",
+    "2026-05-24 13:23:06 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
+    "2026-05-24 13:23:06 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-05-24 13:23:06 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-24 13:23:06 [INFO] RISK - Partial profits realised: USD 3,234.71"
   ],
-  "generated_at": "2026-05-24 11:58:41 UTC"
+  "generated_at": "2026-05-24 13:23:04 UTC"
 }
