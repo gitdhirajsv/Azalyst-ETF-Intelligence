@@ -195,8 +195,8 @@
     "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 4.860029638857984,
-    "news_score": 6.56,
-    "total": 45.60200593691968,
+    "news_score": 6.4,
+    "total": 45.44200593691968,
     "publish": false,
     "direction": "long"
   },
@@ -244,20 +244,20 @@
       "score": 96.0
     },
     {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 94.0
+    },
+    {
       "symbol": "Energy / Oil & Gas",
       "score": 93.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "symbol": "Defense & Aerospace",
       "score": 93.0
     },
     {
       "symbol": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector",
       "score": 89.0
-    },
-    {
-      "symbol": "Defense & Aerospace",
-      "score": 86.0
     },
     {
       "symbol": "Asia Pacific Equity",
@@ -268,15 +268,15 @@
       "score": 83.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
+      "symbol": "Healthcare & Pharma",
       "score": 82.0
     },
     {
-      "symbol": "Clean Energy & Renewables + Commodities & Mining",
-      "score": 79.0
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 80.0
     },
     {
-      "symbol": "Healthcare & Pharma",
+      "symbol": "Clean Energy & Renewables + Commodities & Mining",
       "score": 79.0
     },
     {
@@ -357,6 +357,59 @@
       }
     },
     {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 94.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "24 May 2026 10:19 UTC",
+      "headline": "Gold on track for second weekly loss as rising oil prices drive up rate hike bets",
+      "regions": [
+        "middle_east",
+        "global",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "Markets-Economic Times",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.3,
+        "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
       "confidence": 93.0,
@@ -410,8 +463,8 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
       "confidence": 93.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
@@ -419,46 +472,46 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "24 May 2026 05:40 UTC",
-      "headline": "Gold on track for second weekly loss as rising oil prices drive up rate hike bets",
+      "article_count": 47,
+      "latest_at": "24 May 2026 09:42 UTC",
+      "headline": "At least four killed in Kyiv airstrikes as Zelenskyy claims hypersonic missile used during attacks",
       "regions": [
+        "middle_east",
         "global",
-        "americas",
         "india",
-        "europe"
+        "americas"
       ],
       "sources": [
-        "Markets-Economic Times",
+        "www.theregister.com - Articles",
+        "Bloomberg Markets",
         "US Top News and Analysis",
-        "Oilprice.com",
-        "Bloomberg Markets"
+        "Markets-Economic Times"
       ],
-      "primary_etf": "GLDM",
+      "primary_etf": "ITA",
       "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
+        "ITA",
+        "XAR",
+        "PPA"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
+        "CPSEETF",
+        "DEFENCEETF"
       ],
       "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
+        "ITA",
+        "XAR",
+        "PPA"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
-        "volume_confirmation": 17.4,
-        "source_diversity": 14.9,
-        "recency": 17.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.4,
+        "recency": 15.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -509,59 +562,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 13.6,
         "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 86.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 43,
-      "latest_at": "23 May 2026 23:24 UTC",
-      "headline": "British troops train for war with Russia from the London Underground",
-      "regions": [
-        "global",
-        "americas",
-        "india",
-        "europe"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Oilprice.com",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.1,
-        "recency": 9.1,
         "geopolitical_severity": 13.0
       }
     },
@@ -666,8 +666,8 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
+      "sector_key": "healthcare_pharma",
+      "sector_label": "Healthcare & Pharma",
       "confidence": 82.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
@@ -675,20 +675,73 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 48,
-      "latest_at": "23 May 2026 17:31 UTC",
-      "headline": "Chip Industry Week In Review",
+      "article_count": 10,
+      "latest_at": "24 May 2026 06:13 UTC",
+      "headline": "'Speed, money and compassion' - lessons from an Ebola survivor and other experts",
       "regions": [
+        "middle_east",
         "global",
         "americas",
-        "india",
-        "europe"
+        "africa"
       ],
       "sources": [
+        "Bloomberg Markets",
         "Markets-Economic Times",
+        "World News - Breaking international news and headlines | Sky News",
+        "BBC News"
+      ],
+      "primary_etf": "XLV",
+      "top_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "HEALTHCARE",
+        "PHARMABEES"
+      ],
+      "global_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 17.6,
+        "volume_confirmation": 16.2,
+        "source_diversity": 14.7,
+        "recency": 11.3,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 80.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 47,
+      "latest_at": "23 May 2026 17:31 UTC",
+      "headline": "3D-Printed Copper Plates Could Cut Data Center Cooling Energy Use by 97%",
+      "regions": [
+        "global",
+        "india",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "Bloomberg Markets",
         "US Top News and Analysis",
-        "The Verge",
-        "Oilprice.com"
+        "Earnings"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -714,7 +767,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 16.5,
-        "recency": 5.0,
+        "recency": 3.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -766,59 +819,6 @@
         "volume_confirmation": 15.4,
         "source_diversity": 12.1,
         "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma",
-      "confidence": 79.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "23 May 2026 23:01 UTC",
-      "headline": "'Speed, money and compassion' - lessons from an Ebola survivor and other experts",
-      "regions": [
-        "global",
-        "americas",
-        "india",
-        "africa"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "Bloomberg Markets",
-        "World News - Breaking international news and headlines | Sky News"
-      ],
-      "primary_etf": "XLV",
-      "top_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "HEALTHCARE",
-        "PHARMABEES"
-      ],
-      "global_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 17.6,
-        "volume_confirmation": 16.2,
-        "source_diversity": 14.7,
-        "recency": 8.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -1120,22 +1120,22 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / NEUTRAL - Gold on track for second weekly loss as rising oil prices drive up rate hike bets"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Energy / Oil & Gas - 28 articles - CRITICAL / NEUTRAL - StanChart Says Record SPR Withdrawals Are Tightening U.S. Oil Buffers"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - Gold on track for second weekly loss as rising oil prices drive up rate hike bets"
+      "text": "Defense & Aerospace - 47 articles - HIGH / NEUTRAL - At least four killed in Kyiv airstrikes as Zelenskyy claims hypersonic missile used during attacks"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector - 13 articles - CRITICAL / NEUTRAL - Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Defense & Aerospace - 43 articles - HIGH / NEUTRAL - British troops train for war with Russia from the London Underground"
     },
     {
       "tag": "tag-neu",
@@ -1150,17 +1150,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 48 articles - HIGH / NEUTRAL - Chip Industry Week In Review"
+      "text": "Healthcare & Pharma - 10 articles - HIGH / NEUTRAL - 'Speed, money and compassion' - lessons from an Ebola survivor and other experts"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Technology & AI / Semiconductors - 47 articles - HIGH / NEUTRAL - 3D-Printed Copper Plates Could Cut Data Center Cooling Energy Use by 97%"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Clean Energy & Renewables + Commodities & Mining - 9 articles - HIGH / NEUTRAL - This New Solar Battery Stores Energy Without Lithium or the Grid"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Healthcare & Pharma - 10 articles - HIGH / NEUTRAL - 'Speed, money and compassion' - lessons from an Ebola survivor and other experts"
     },
     {
       "tag": "tag-neu",
@@ -1308,11 +1308,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 76695.02,
+      "price": 76994.16,
       "currency": "USD",
-      "change": 21.65,
-      "change_pct": 0.03,
-      "change_str": "+0.03%",
+      "change": 320.79,
+      "change_pct": 0.42,
+      "change_str": "+0.42%",
       "direction": "up"
     },
     {
@@ -1734,11 +1734,11 @@
     }
   },
   "logs": [
-    "2026-05-24 08:35:06 [INFO] AZALYST - status.json generated",
-    "2026-05-24 08:35:06 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
-    "2026-05-24 08:35:06 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-05-24 08:35:06 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-24 08:35:06 [INFO] RISK - Partial profits realised: USD 3,234.71"
+    "2026-05-24 10:32:34 [INFO] AZALYST - status.json generated",
+    "2026-05-24 10:32:34 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
+    "2026-05-24 10:32:34 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-05-24 10:32:34 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-24 10:32:34 [INFO] RISK - Partial profits realised: USD 3,234.71"
   ],
-  "generated_at": "2026-05-24 08:35:04 UTC"
+  "generated_at": "2026-05-24 10:32:31 UTC"
 }
