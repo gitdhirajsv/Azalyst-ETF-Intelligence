@@ -192,11 +192,11 @@
     "ticker": "IGV",
     "rank_score": 14.949618320610686,
     "flow_score": 4.232357977451007,
-    "options_score": 0.0,
+    "options_score": 12.0,
     "rotation_score": 15.0,
     "macro_score": 4.860029638857984,
-    "news_score": 6.4,
-    "total": 45.44200593691968,
+    "news_score": 7.5200000000000005,
+    "total": 58.56200593691968,
     "publish": false,
     "direction": "long"
   },
@@ -244,7 +244,7 @@
       "score": 96.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "symbol": "Technology & AI / Semiconductors",
       "score": 94.0
     },
     {
@@ -254,6 +254,10 @@
     {
       "symbol": "Defense & Aerospace",
       "score": 93.0
+    },
+    {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 89.0
     },
     {
       "symbol": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector",
@@ -270,10 +274,6 @@
     {
       "symbol": "Healthcare & Pharma",
       "score": 82.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 80.0
     },
     {
       "symbol": "Clean Energy & Renewables + Commodities & Mining",
@@ -357,8 +357,8 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
       "confidence": 94.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
@@ -366,46 +366,46 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "24 May 2026 10:19 UTC",
-      "headline": "Gold on track for second weekly loss as rising oil prices drive up rate hike bets",
+      "article_count": 49,
+      "latest_at": "24 May 2026 14:20 UTC",
+      "headline": "After $2.5 billion Supermicro smuggling bust, Nvidia CEO urges company to fix export control compliance \u2014 Taiwan also begins to crack down on AI GPU chip smuggling to China",
       "regions": [
-        "middle_east",
-        "global",
+        "india",
         "americas",
+        "europe",
         "asia_pacific"
       ],
       "sources": [
+        "Latest from Tom's Hardware",
         "Bloomberg Markets",
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
+        "www.theregister.com - Articles",
+        "US Top News and Analysis"
       ],
-      "primary_etf": "GLDM",
+      "primary_etf": "QQQ",
       "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
+        "NIFTYBEES",
+        "MAFANG"
       ],
       "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
+        "QQQ",
+        "SOXX",
+        "AIQ"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 15.3,
-        "recency": 17.0,
+        "source_diversity": 16.7,
+        "recency": 16.1,
         "geopolitical_severity": 13.0
       }
     },
@@ -512,6 +512,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 16.4,
         "recency": 15.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 89.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "24 May 2026 13:00 UTC",
+      "headline": "Gold on track for second weekly loss as rising oil prices drive up rate hike bets",
+      "regions": [
+        "americas",
+        "europe",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "BBC News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 16.8,
+        "source_diversity": 14.9,
+        "recency": 14.1,
         "geopolitical_severity": 13.0
       }
     },
@@ -675,20 +728,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "24 May 2026 06:13 UTC",
+      "article_count": 11,
+      "latest_at": "24 May 2026 11:09 UTC",
       "headline": "'Speed, money and compassion' - lessons from an Ebola survivor and other experts",
       "regions": [
-        "middle_east",
-        "global",
+        "africa",
         "americas",
-        "africa"
+        "asia_pacific",
+        "middle_east"
       ],
       "sources": [
-        "Bloomberg Markets",
         "Markets-Economic Times",
-        "World News - Breaking international news and headlines | Sky News",
-        "BBC News"
+        "BBC News",
+        "Bloomberg Markets",
+        "Oilprice.com"
       ],
       "primary_etf": "XLV",
       "top_etfs": [
@@ -711,63 +764,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 17.6,
-        "volume_confirmation": 16.2,
-        "source_diversity": 14.7,
-        "recency": 11.3,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 80.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 47,
-      "latest_at": "23 May 2026 17:31 UTC",
-      "headline": "3D-Printed Copper Plates Could Cut Data Center Cooling Energy Use by 97%",
-      "regions": [
-        "global",
-        "india",
-        "americas",
-        "asia_pacific"
-      ],
-      "sources": [
-        "www.theregister.com - Articles",
-        "Bloomberg Markets",
-        "US Top News and Analysis",
-        "Earnings"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.5,
-        "recency": 3.2,
+        "signal_strength": 18.1,
+        "volume_confirmation": 16.8,
+        "source_diversity": 13.8,
+        "recency": 11.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -1122,7 +1122,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / NEUTRAL - Gold on track for second weekly loss as rising oil prices drive up rate hike bets"
+      "text": "Technology & AI / Semiconductors - 49 articles - HIGH / NEUTRAL - After $2.5 billion Supermicro smuggling bust, Nvidia CEO urges company to fix export control compliance \u2014 Taiwan also begins to crack down on AI GPU chip smuggling to China"
     },
     {
       "tag": "tag-neu",
@@ -1133,6 +1133,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Defense & Aerospace - 47 articles - HIGH / NEUTRAL - At least four killed in Kyiv airstrikes as Zelenskyy claims hypersonic missile used during attacks"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - Gold on track for second weekly loss as rising oil prices drive up rate hike bets"
     },
     {
       "tag": "tag-neu",
@@ -1152,12 +1157,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Healthcare & Pharma - 10 articles - HIGH / NEUTRAL - 'Speed, money and compassion' - lessons from an Ebola survivor and other experts"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 47 articles - HIGH / NEUTRAL - 3D-Printed Copper Plates Could Cut Data Center Cooling Energy Use by 97%"
+      "text": "Healthcare & Pharma - 11 articles - HIGH / NEUTRAL - 'Speed, money and compassion' - lessons from an Ebola survivor and other experts"
     },
     {
       "tag": "tag-neu",
@@ -1310,12 +1310,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 76997.45,
+      "price": 76346.79,
       "currency": "USD",
-      "change": 324.08,
-      "change_pct": 0.42,
-      "change_str": "+0.42%",
-      "direction": "up"
+      "change": -326.58,
+      "change_pct": -0.43,
+      "change_str": "-0.43%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
@@ -1736,11 +1736,11 @@
     }
   },
   "logs": [
-    "2026-05-24 13:23:06 [INFO] AZALYST - status.json generated",
-    "2026-05-24 13:23:06 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
-    "2026-05-24 13:23:06 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-05-24 13:23:06 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-24 13:23:06 [INFO] RISK - Partial profits realised: USD 3,234.71"
+    "2026-05-24 15:00:24 [INFO] AZALYST - status.json generated",
+    "2026-05-24 15:00:24 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
+    "2026-05-24 15:00:24 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-05-24 15:00:24 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-24 15:00:24 [INFO] RISK - Partial profits realised: USD 3,234.71"
   ],
-  "generated_at": "2026-05-24 13:23:04 UTC"
+  "generated_at": "2026-05-24 15:00:21 UTC"
 }
