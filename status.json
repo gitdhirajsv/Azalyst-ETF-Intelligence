@@ -173,12 +173,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
+    "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.0788041644640121,
+    "vix_level": 16.700000762939453,
+    "vix_percentile_1y": 0.38492063492063494,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -192,12 +192,12 @@
     "ticker": "IGV",
     "rank_score": 14.949618320610686,
     "flow_score": 4.232357977451007,
-    "options_score": 0.0,
+    "options_score": 14.737163790228012,
     "rotation_score": 15.0,
     "macro_score": 4.860029638857984,
     "news_score": 7.5200000000000005,
-    "total": 46.56200593691968,
-    "publish": false,
+    "total": 61.29916972714769,
+    "publish": true,
     "direction": "long"
   },
   "allocation": {
@@ -252,10 +252,6 @@
       "score": 93.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 93.0
-    },
-    {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 89.0
     },
@@ -294,6 +290,10 @@
     {
       "symbol": "Nuclear Energy & Uranium",
       "score": 68.0
+    },
+    {
+      "symbol": "Defense & Aerospace",
+      "score": 67.0
     },
     {
       "symbol": "Real Estate & REITs",
@@ -459,59 +459,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 15.6,
         "recency": 14.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 93.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 47,
-      "latest_at": "24 May 2026 09:42 UTC",
-      "headline": "At least four killed in Kyiv airstrikes as Zelenskyy claims hypersonic missile used during attacks",
-      "regions": [
-        "middle_east",
-        "global",
-        "india",
-        "americas"
-      ],
-      "sources": [
-        "www.theregister.com - Articles",
-        "Bloomberg Markets",
-        "US Top News and Analysis",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.4,
-        "recency": 15.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -1013,6 +960,59 @@
       }
     },
     {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 67.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 48,
+      "latest_at": "24 May 2026 16:50 UTC",
+      "headline": "Hypersonic missile used in Kyiv strike: What we know about it",
+      "regions": [
+        "europe",
+        "india",
+        "global",
+        "americas"
+      ],
+      "sources": [
+        "BBC News",
+        "World News - Breaking international news and headlines | Sky News",
+        "Defense News",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.6,
+        "recency": 16.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "real_estate_reit",
       "sector_label": "Real Estate & REITs",
       "confidence": 65.0,
@@ -1132,11 +1132,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 47 articles - HIGH / NEUTRAL - At least four killed in Kyiv airstrikes as Zelenskyy claims hypersonic missile used during attacks"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - Gold on track for second weekly loss as rising oil prices drive up rate hike bets"
     },
     {
@@ -1183,6 +1178,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 5 articles - MEDIUM / NEUTRAL - U.S., Iran signal peace progress \u2014 but remain at odds over enriched uranium, Strait of Hormuz tolls"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Defense & Aerospace - 48 articles - HIGH / NEUTRAL - Hypersonic missile used in Kyiv strike: What we know about it"
     },
     {
       "tag": "tag-neu",
@@ -1310,11 +1310,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 76473.0,
+      "price": 76519.6,
       "currency": "USD",
-      "change": -200.37,
-      "change_pct": -0.26,
-      "change_str": "-0.26%",
+      "change": -153.77,
+      "change_pct": -0.2,
+      "change_str": "-0.20%",
       "direction": "down"
     },
     {
@@ -1736,11 +1736,11 @@
     }
   },
   "logs": [
-    "2026-05-24 16:09:31 [INFO] AZALYST - status.json generated",
-    "2026-05-24 16:09:31 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
-    "2026-05-24 16:09:31 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-05-24 16:09:31 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-24 16:09:31 [INFO] RISK - Partial profits realised: USD 3,234.71"
+    "2026-05-24 17:14:36 [INFO] AZALYST - status.json generated",
+    "2026-05-24 17:14:36 [INFO] PORTFOLIO - NAV USD 9,867.93 | Return -0.49%",
+    "2026-05-24 17:14:36 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-05-24 17:14:36 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
+    "2026-05-24 17:14:36 [INFO] RISK - Partial profits realised: USD 3,234.71"
   ],
-  "generated_at": "2026-05-24 16:09:29 UTC"
+  "generated_at": "2026-05-24 17:14:33 UTC"
 }
