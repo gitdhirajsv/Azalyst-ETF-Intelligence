@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 9863.7,
+  "portfolio_value": 9863.55,
   "total_deposited": 9964.29,
-  "cash": 1076.67,
+  "cash": 1026.28,
   "monthly_reserve": 0.0,
-  "market_value": 8787.03,
-  "total_invested": 8712.95,
-  "unrealised_pnl": 74.08,
-  "unrealised_str": "+74.08",
+  "market_value": 8837.27,
+  "total_invested": 8763.33,
+  "unrealised_pnl": 73.94,
+  "unrealised_str": "+73.94",
   "realised_pnl": -174.68,
   "realised_str": "-174.68",
   "change": "-1.01%",
@@ -132,6 +132,29 @@
       "severity": "HIGH",
       "days_held": 0,
       "half_exited": false
+    },
+    {
+      "trade_id": "T0008",
+      "ticker": "IBIT",
+      "etf_name": "iShares Bitcoin Trust ETF",
+      "sector": "Crypto & Digital Assets",
+      "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NASDAQ",
+      "entry": 43.08,
+      "current": 42.96,
+      "peak_price": 43.08,
+      "trail_stop": 38.77,
+      "dist_to_trail_pct": 9.75,
+      "units": 1.169514,
+      "invested": 50.39,
+      "pnl": -0.14,
+      "pnl_str": "-0.14",
+      "pnl_pct": -0.28,
+      "pnl_pct_str": "-0.28%",
+      "confidence": 79,
+      "severity": "HIGH",
+      "days_held": 0,
+      "half_exited": false
     }
   ],
   "closed_trades_list": [
@@ -218,9 +241,9 @@
     "flow_score": 4.232357977451007,
     "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 4.895288689058708,
-    "news_score": 7.28,
-    "total": 46.3572649871204,
+    "macro_score": 4.885671871531487,
+    "news_score": 7.359999999999999,
+    "total": 46.427648169593176,
     "publish": false,
     "direction": "long"
   },
@@ -231,6 +254,7 @@
       "ITA",
       "CIBR",
       "GLDM",
+      "IBIT",
       "CASH"
     ],
     "values": [
@@ -239,7 +263,8 @@
       4.6,
       28.1,
       0.8,
-      10.9
+      0.5,
+      10.4
     ]
   },
   "pnl": {
@@ -248,14 +273,16 @@
       "XLE",
       "ITA",
       "CIBR",
-      "GLDM"
+      "GLDM",
+      "IBIT"
     ],
     "values": [
       20.61,
       54.34,
       -0.85,
       0.04,
-      -0.05
+      -0.05,
+      -0.14
     ]
   },
   "confidence": [
@@ -273,7 +300,7 @@
     },
     {
       "symbol": "Technology & AI / Semiconductors",
-      "score": 91.0
+      "score": 92.0
     },
     {
       "symbol": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector",
@@ -288,24 +315,24 @@
       "score": 83.0
     },
     {
-      "symbol": "Clean Energy & Renewables + Commodities & Mining",
+      "symbol": "Crypto & Digital Assets",
       "score": 79.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 77.0
+      "symbol": "Clean Energy & Renewables + Commodities & Mining",
+      "score": 79.0
     },
     {
       "symbol": "Commodities & Mining",
       "score": 72.0
     },
     {
-      "symbol": "Cybersecurity",
-      "score": 69.0
-    },
-    {
       "symbol": "Nuclear Energy & Uranium",
       "score": 68.0
+    },
+    {
+      "symbol": "Cybersecurity",
+      "score": 67.0
     },
     {
       "symbol": "Healthcare & Pharma",
@@ -386,20 +413,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 31,
-      "latest_at": "25 May 2026 11:35 UTC",
+      "article_count": 30,
+      "latest_at": "25 May 2026 17:05 UTC",
       "headline": "Hypersonic missile used in Kyiv strike: What we know about it",
       "regions": [
-        "americas",
-        "global",
+        "india",
         "europe",
-        "asia_pacific"
+        "asia_pacific",
+        "global"
       ],
       "sources": [
-        "Cointelegraph.com News",
-        "US Top News and Analysis",
-        "World | Deutsche Welle",
-        "World News - Breaking international news and headlines | Sky News"
+        "Bloomberg Markets",
+        "World News - Breaking international news and headlines | Sky News",
+        "Markets-Economic Times",
+        "World | Deutsche Welle"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -424,7 +451,7 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.6,
+        "source_diversity": 16.8,
         "recency": 17.0,
         "geopolitical_severity": 13.0
       }
@@ -485,27 +512,27 @@
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 91.0,
+      "confidence": 92.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 52,
-      "latest_at": "25 May 2026 09:38 UTC",
+      "article_count": 54,
+      "latest_at": "25 May 2026 15:27 UTC",
       "headline": "After $2.5 billion Supermicro smuggling bust, Nvidia CEO urges company to fix export control compliance \u2014 Taiwan also begins to crack down on AI GPU chip smuggling to China",
       "regions": [
-        "americas",
-        "global",
+        "india",
         "europe",
-        "asia_pacific"
+        "asia_pacific",
+        "global"
       ],
       "sources": [
-        "Cointelegraph.com News",
-        "US Top News and Analysis",
-        "World | Deutsche Welle",
-        "Tech"
+        "EE Times",
+        "Bloomberg Markets",
+        "Earnings",
+        "Markets-Economic Times"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -530,8 +557,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.1,
-        "recency": 13.9,
+        "source_diversity": 16.4,
+        "recency": 14.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -689,6 +716,52 @@
       }
     },
     {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 79.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "25 May 2026 14:02 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "europe",
+        "americas",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "www.theregister.com - Articles",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 9.1,
+        "recency": 12.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables + Commodities & Mining",
       "confidence": 79.0,
@@ -736,52 +809,6 @@
         "volume_confirmation": 15.4,
         "source_diversity": 12.1,
         "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 77.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 26,
-      "latest_at": "21 May 2026 23:07 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "india",
-        "europe",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Tech",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 6.5,
-        "recency": 10.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -836,52 +863,6 @@
       }
     },
     {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 69.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "25 May 2026 11:35 UTC",
-      "headline": "Wi-Fi controlled hacking USB cable stealthily packs in a microcontroller, microSD storage, and more \u2014 cable executes remote payload execution, keystroke injection, and more, but is 'built for makers, developers, enthusiasts, and cybersecurity learners'",
-      "regions": [
-        "europe",
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "World | Deutsche Welle",
-        "Latest from Tom's Hardware",
-        "www.theregister.com - Articles"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.5,
-        "volume_confirmation": 12.6,
-        "source_diversity": 8.3,
-        "recency": 17.0,
-        "geopolitical_severity": 11.2
-      }
-    },
-    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 68.0,
@@ -927,6 +908,52 @@
         "source_diversity": 9.9,
         "recency": 16.9,
         "geopolitical_severity": 10.5
+      }
+    },
+    {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 67.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "25 May 2026 17:05 UTC",
+      "headline": "Wi-Fi controlled hacking USB cable stealthily packs in a microcontroller, microSD storage, and more \u2014 cable executes remote payload execution, keystroke injection, and more, but is 'built for makers, developers, enthusiasts, and cybersecurity learners'",
+      "regions": [
+        "europe",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "The Verge",
+        "Latest from Tom's Hardware",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 10.7,
+        "volume_confirmation": 11.3,
+        "source_diversity": 8.3,
+        "recency": 17.0,
+        "geopolitical_severity": 11.6
       }
     },
     {
@@ -1142,7 +1169,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 31 articles - HIGH / NEUTRAL - Hypersonic missile used in Kyiv strike: What we know about it"
+      "text": "Defense & Aerospace - 30 articles - HIGH / NEUTRAL - Hypersonic missile used in Kyiv strike: What we know about it"
     },
     {
       "tag": "tag-neu",
@@ -1152,7 +1179,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 52 articles - HIGH / NEUTRAL - After $2.5 billion Supermicro smuggling bust, Nvidia CEO urges company to fix export control compliance \u2014 Taiwan also begins to crack down on AI GPU chip smuggling to China"
+      "text": "Technology & AI / Semiconductors - 54 articles - HIGH / NEUTRAL - After $2.5 billion Supermicro smuggling bust, Nvidia CEO urges company to fix export control compliance \u2014 Taiwan also begins to crack down on AI GPU chip smuggling to China"
     },
     {
       "tag": "tag-neu",
@@ -1172,12 +1199,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Clean Energy & Renewables + Commodities & Mining - 9 articles - HIGH / NEUTRAL - This New Solar Battery Stores Energy Without Lithium or the Grid"
+      "text": "Crypto & Digital Assets - 24 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 26 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+      "text": "Clean Energy & Renewables + Commodities & Mining - 9 articles - HIGH / NEUTRAL - This New Solar Battery Stores Energy Without Lithium or the Grid"
     },
     {
       "tag": "tag-neu",
@@ -1187,12 +1214,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity - 6 articles - MEDIUM / NEUTRAL - Wi-Fi controlled hacking USB cable stealthily packs in a microcontroller, microSD storage, and more \u2014 cable executes remote payload execution, keystroke injection, and more, but is 'built for makers, developers, enthusiasts, and cybersecurity learners'"
+      "text": "Nuclear Energy & Uranium - 5 articles - MEDIUM / NEUTRAL - U.S., Iran signal peace progress \u2014 but remain at odds over enriched uranium, Strait of Hormuz tolls"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Nuclear Energy & Uranium - 5 articles - MEDIUM / NEUTRAL - U.S., Iran signal peace progress \u2014 but remain at odds over enriched uranium, Strait of Hormuz tolls"
+      "text": "Cybersecurity - 5 articles - MEDIUM / NEUTRAL - Wi-Fi controlled hacking USB cable stealthily packs in a microcontroller, microSD storage, and more \u2014 cable executes remote payload execution, keystroke injection, and more, but is 'built for makers, developers, enthusiasts, and cybersecurity learners'"
     },
     {
       "tag": "tag-neu",
@@ -1264,11 +1291,11 @@
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 25352.97,
+      "price": 25389.1,
       "currency": "EUR",
-      "change": 464.41,
-      "change_pct": 1.87,
-      "change_str": "+1.87%",
+      "change": 500.54,
+      "change_pct": 2.01,
+      "change_str": "+2.01%",
       "direction": "up"
     },
     {
@@ -1277,9 +1304,9 @@
       "region": "JP",
       "price": 65158.19,
       "currency": "JPY",
-      "change": 1819.12,
-      "change_pct": 2.87,
-      "change_str": "+2.87%",
+      "change": 3474.05,
+      "change_pct": 5.63,
+      "change_str": "+5.63%",
       "direction": "up"
     },
     {
@@ -1330,33 +1357,33 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77633.97,
+      "price": 77612.45,
       "currency": "USD",
-      "change": 652.85,
-      "change_pct": 0.85,
-      "change_str": "+0.85%",
+      "change": 631.32,
+      "change_pct": 0.82,
+      "change_str": "+0.82%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.97,
+      "price": 98.99,
       "currency": "USD",
-      "change": -0.35,
-      "change_pct": -0.35,
-      "change_str": "-0.35%",
+      "change": -0.33,
+      "change_pct": -0.33,
+      "change_str": "-0.33%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 16.69,
+      "price": 16.59,
       "currency": "USD",
-      "change": -0.01,
-      "change_pct": -0.06,
-      "change_str": "-0.06%",
+      "change": -0.11,
+      "change_pct": -0.66,
+      "change_str": "-0.66%",
       "direction": "down"
     }
   ],
@@ -1364,7 +1391,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 2.13,
     "portfolio_peak": 10078.66,
-    "vix": 16.69,
+    "vix": 16.59,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -1391,6 +1418,11 @@
         "sector": "Gold & Precious Metals + Banking & Financial Sector",
         "weight": 0.8,
         "at_cap": false
+      },
+      {
+        "sector": "Crypto & Digital Assets",
+        "weight": 0.5,
+        "at_cap": false
       }
     ],
     "max_drawdown_pct": 2.13,
@@ -1405,6 +1437,7 @@
         "CIBR": {
           "CIBR": 1.0,
           "GLDM": -0.053,
+          "IBIT": -0.037,
           "ITA": -0.198,
           "QQQ": 0.195,
           "XLE": -0.104
@@ -1412,13 +1445,23 @@
         "GLDM": {
           "CIBR": -0.053,
           "GLDM": 1.0,
+          "IBIT": 0.24,
           "ITA": 0.784,
           "QQQ": 0.732,
           "XLE": -0.657
         },
+        "IBIT": {
+          "CIBR": -0.037,
+          "GLDM": 0.24,
+          "IBIT": 1.0,
+          "ITA": 0.167,
+          "QQQ": 0.42,
+          "XLE": -0.162
+        },
         "ITA": {
           "CIBR": -0.198,
           "GLDM": 0.784,
+          "IBIT": 0.167,
           "ITA": 1.0,
           "QQQ": 0.465,
           "XLE": -0.451
@@ -1426,6 +1469,7 @@
         "QQQ": {
           "CIBR": 0.195,
           "GLDM": 0.732,
+          "IBIT": 0.42,
           "ITA": 0.465,
           "QQQ": 1.0,
           "XLE": -0.583
@@ -1433,6 +1477,7 @@
         "XLE": {
           "CIBR": -0.104,
           "GLDM": -0.657,
+          "IBIT": -0.162,
           "ITA": -0.451,
           "QQQ": -0.583,
           "XLE": 1.0
@@ -1441,6 +1486,7 @@
       "tickers": [
         "CIBR",
         "GLDM",
+        "IBIT",
         "ITA",
         "QQQ",
         "XLE"
@@ -1463,9 +1509,10 @@
         "XLE": 26.4,
         "ITA": 23.79,
         "CIBR": 22.1,
-        "GLDM": 19.83
+        "GLDM": 19.83,
+        "IBIT": 27.1
       },
-      "portfolio_avg_vol_pct": 21.66,
+      "portfolio_avg_vol_pct": 22.57,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -1481,38 +1528,47 @@
         {
           "ticker": "QQQ",
           "actual_weight_pct": 38.63,
-          "target_weight_pct": 18.0,
-          "drift_pct": 20.63,
+          "target_weight_pct": 15.0,
+          "drift_pct": 23.63,
           "action": "TRIM",
-          "amount": 2034.74,
+          "amount": 2330.67,
           "etf_name": "Invesco QQQ Trust"
+        },
+        {
+          "ticker": "IBIT",
+          "actual_weight_pct": 0.51,
+          "target_weight_pct": 15.0,
+          "drift_pct": -14.49,
+          "action": "ADD",
+          "amount": 1429.29,
+          "etf_name": "iShares Bitcoin Trust ETF"
         },
         {
           "ticker": "GLDM",
           "actual_weight_pct": 0.78,
-          "target_weight_pct": 18.0,
-          "drift_pct": -17.22,
+          "target_weight_pct": 15.0,
+          "drift_pct": -14.22,
           "action": "ADD",
-          "amount": 1698.57,
+          "amount": 1402.64,
           "etf_name": "SPDR Gold MiniShares Trust"
-        },
-        {
-          "ticker": "ITA",
-          "actual_weight_pct": 4.6,
-          "target_weight_pct": 18.0,
-          "drift_pct": -13.4,
-          "action": "ADD",
-          "amount": 1321.62,
-          "etf_name": "iShares U.S. Aerospace & Defense ETF"
         },
         {
           "ticker": "CIBR",
           "actual_weight_pct": 28.07,
-          "target_weight_pct": 18.0,
-          "drift_pct": 10.07,
+          "target_weight_pct": 15.0,
+          "drift_pct": 13.07,
           "action": "TRIM",
-          "amount": 992.8,
+          "amount": 1288.74,
           "etf_name": "First Trust Nasdaq CEA Cybersecurity ETF"
+        },
+        {
+          "ticker": "ITA",
+          "actual_weight_pct": 4.6,
+          "target_weight_pct": 15.0,
+          "drift_pct": -10.4,
+          "action": "ADD",
+          "amount": 1025.68,
+          "etf_name": "iShares U.S. Aerospace & Defense ETF"
         }
       ],
       "drift_threshold_pct": 5.0,
@@ -1521,8 +1577,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -3716.5,
-          "portfolio_loss_pct": -37.68,
+          "total_impact": -3746.65,
+          "portfolio_loss_pct": -37.98,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1553,12 +1609,18 @@
               "factor": "gold",
               "shock_pct": 25.0,
               "impact": 19.22
+            },
+            {
+              "ticker": "IBIT",
+              "factor": "crypto",
+              "shock_pct": -60.0,
+              "impact": -30.15
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -3479.26,
-          "portfolio_loss_pct": -35.27,
+          "total_impact": -3499.36,
+          "portfolio_loss_pct": -35.48,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1589,12 +1651,18 @@
               "factor": "gold",
               "shock_pct": 3.0,
               "impact": 2.31
+            },
+            {
+              "ticker": "IBIT",
+              "factor": "crypto",
+              "shock_pct": -40.0,
+              "impact": -20.1
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1226.47,
-          "portfolio_loss_pct": -12.43,
+          "total_impact": -1236.52,
+          "portfolio_loss_pct": -12.54,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1625,12 +1693,18 @@
               "factor": "gold",
               "shock_pct": -5.0,
               "impact": -3.84
+            },
+            {
+              "ticker": "IBIT",
+              "factor": "crypto",
+              "shock_pct": -20.0,
+              "impact": -10.05
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -823.49,
-          "portfolio_loss_pct": -8.35,
+          "total_impact": -828.51,
+          "portfolio_loss_pct": -8.4,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1661,12 +1735,18 @@
               "factor": "gold",
               "shock_pct": -12.0,
               "impact": -9.23
+            },
+            {
+              "ticker": "IBIT",
+              "factor": "crypto",
+              "shock_pct": -10.0,
+              "impact": -5.02
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1595.23,
-          "portfolio_loss_pct": -16.17,
+          "total_impact": -1607.79,
+          "portfolio_loss_pct": -16.3,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1697,21 +1777,27 @@
               "factor": "gold",
               "shock_pct": 8.0,
               "impact": 6.15
+            },
+            {
+              "ticker": "IBIT",
+              "factor": "crypto",
+              "shock_pct": -25.0,
+              "impact": -12.56
             }
           ]
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -37.68
+      "worst_loss_pct": -37.98
     }
   },
   "logs": [
-    "2026-05-25 14:56:09 [INFO] AZALYST - status.json generated",
-    "2026-05-25 14:56:09 [INFO] PORTFOLIO - NAV USD 9,863.70 | Return -1.01%",
-    "2026-05-25 14:56:09 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-05-25 14:56:09 [INFO] TRADER - Open positions: QQQ, XLE, ITA, CIBR, GLDM",
-    "2026-05-25 14:56:09 [INFO] TRADER - Closed trades: 2",
-    "2026-05-25 14:56:09 [INFO] RISK - Partial profits realised: USD 3,234.71"
+    "2026-05-25 17:15:15 [INFO] AZALYST - status.json generated",
+    "2026-05-25 17:15:15 [INFO] PORTFOLIO - NAV USD 9,863.55 | Return -1.01%",
+    "2026-05-25 17:15:15 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-05-25 17:15:15 [INFO] TRADER - Open positions: QQQ, XLE, ITA, CIBR, GLDM, IBIT",
+    "2026-05-25 17:15:15 [INFO] TRADER - Closed trades: 2",
+    "2026-05-25 17:15:15 [INFO] RISK - Partial profits realised: USD 3,234.71"
   ],
-  "generated_at": "2026-05-25 14:56:06 UTC"
+  "generated_at": "2026-05-25 17:15:11 UTC"
 }
