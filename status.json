@@ -1,46 +1,23 @@
 {
-  "portfolio_value": 9863.55,
+  "portfolio_value": 9858.68,
   "total_deposited": 9964.29,
-  "cash": 1026.28,
+  "cash": 4215.69,
   "monthly_reserve": 0.0,
-  "market_value": 8837.27,
-  "total_invested": 8763.33,
-  "unrealised_pnl": 73.94,
-  "unrealised_str": "+73.94",
-  "realised_pnl": -174.68,
-  "realised_str": "-174.68",
-  "change": "-1.01%",
-  "change_raw": -1.01,
-  "closed_trades": 2,
+  "market_value": 5642.99,
+  "total_invested": 5590.34,
+  "unrealised_pnl": 52.65,
+  "unrealised_str": "+52.65",
+  "realised_pnl": -158.25,
+  "realised_str": "-158.25",
+  "change": "-1.06%",
+  "change_raw": -1.06,
+  "closed_trades": 3,
   "partial_realised_pnl": 33.97,
   "portfolio_peak": 10078.66,
-  "drawdown_now_pct": 2.13,
-  "max_drawdown_pct": 2.13,
+  "drawdown_now_pct": 2.18,
+  "max_drawdown_pct": 2.18,
   "usd_inr_rate": 95.22,
   "positions": [
-    {
-      "trade_id": "T0001",
-      "ticker": "QQQ",
-      "etf_name": "Invesco QQQ Trust",
-      "sector": "Technology & AI / Semiconductors",
-      "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
-      "exchange": "NASDAQ",
-      "entry": 713.66,
-      "current": 717.54,
-      "peak_price": 725.35,
-      "trail_stop": 642.29,
-      "dist_to_trail_pct": 10.49,
-      "units": 5.310095,
-      "invested": 3789.59,
-      "pnl": 20.61,
-      "pnl_str": "+20.61",
-      "pnl_pct": 0.54,
-      "pnl_pct_str": "+0.54%",
-      "confidence": 95,
-      "severity": "CRITICAL",
-      "days_held": 14,
-      "half_exited": false
-    },
     {
       "trade_id": "T0002",
       "ticker": "XLE",
@@ -155,6 +132,29 @@
       "severity": "HIGH",
       "days_held": 0,
       "half_exited": false
+    },
+    {
+      "trade_id": "T0009",
+      "ticker": "XLF",
+      "etf_name": "Financial Select Sector SPDR",
+      "sector": "Banking & Financial Sector + Gold & Precious Metals",
+      "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NYSE",
+      "entry": 51.99,
+      "current": 51.94,
+      "peak_price": 51.99,
+      "trail_stop": 46.79,
+      "dist_to_trail_pct": 9.91,
+      "units": 11.858361,
+      "invested": 616.6,
+      "pnl": -0.62,
+      "pnl_str": "-0.62",
+      "pnl_pct": -0.1,
+      "pnl_pct_str": "-0.10%",
+      "confidence": 87,
+      "severity": "HIGH",
+      "days_held": 0,
+      "half_exited": false
     }
   ],
   "closed_trades_list": [
@@ -189,24 +189,40 @@
       "days_held": 14,
       "exit_reason": "Time-based unclogging (14 days, -3.9%)",
       "winner": false
+    },
+    {
+      "trade_id": "T0001",
+      "ticker": "QQQ",
+      "etf_name": "Invesco QQQ Trust",
+      "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NASDAQ",
+      "entry": 713.66,
+      "exit": 716.82,
+      "pnl": 16.42,
+      "pnl_str": "+16.42",
+      "pnl_pct": 0.43,
+      "pnl_pct_str": "+0.43%",
+      "days_held": 14,
+      "exit_reason": "Capital rotation to stronger Banking & Financial Sector + Gold & Precious Metals (87/100)",
+      "winner": true
     }
   ],
   "track_record": {
-    "total_trades": 2,
-    "winners": 0,
+    "total_trades": 3,
+    "winners": 1,
     "losers": 2,
-    "win_rate": 0.0,
-    "avg_win": 0.0,
+    "win_rate": 33.3,
+    "avg_win": 0.43,
     "avg_loss": -5.21,
-    "profit_factor": 0.0,
-    "expectancy": -5.21,
-    "sharpe_proxy": -4.31,
+    "profit_factor": 0.08,
+    "expectancy": -3.33,
+    "sharpe_proxy": -1.17,
     "best": {
-      "ticker": "GLDM",
-      "etf_name": "SPDR Gold MiniShares Trust",
-      "pnl_pct": -4.0,
-      "pnl_pct_str": "-4.00%",
-      "exit_reason": "Time-based unclogging (14 days, -3.9%)",
+      "ticker": "QQQ",
+      "etf_name": "Invesco QQQ Trust",
+      "pnl_pct": 0.43,
+      "pnl_pct_str": "+0.43%",
+      "exit_reason": "Capital rotation to stronger Banking & Financial Sector + Gold & Precious Metals (87/100)",
       "days_held": 14
     },
     "worst": {
@@ -220,12 +236,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
+    "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.0788041644640121,
+    "vix_level": 16.59000015258789,
+    "vix_percentile_1y": 0.3492063492063492,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -237,59 +253,55 @@
   },
   "top_signal": {
     "ticker": "IGV",
-    "rank_score": 14.95492742551566,
+    "rank_score": 14.949618320610686,
     "flow_score": 4.232357977451007,
-    "options_score": 0.0,
+    "options_score": 14.707345113024662,
     "rotation_score": 15.0,
     "macro_score": 4.634730431048708,
     "news_score": 7.359999999999999,
-    "total": 46.182015834015374,
-    "publish": false,
+    "total": 60.884051842135065,
+    "publish": true,
     "direction": "long"
   },
   "allocation": {
     "labels": [
-      "QQQ",
       "XLE",
       "ITA",
       "CIBR",
       "GLDM",
       "IBIT",
+      "XLF",
       "CASH"
     ],
     "values": [
-      38.6,
       17.0,
       4.6,
       28.1,
       0.8,
       0.5,
-      10.4
+      6.2,
+      42.8
     ]
   },
   "pnl": {
     "labels": [
-      "QQQ",
       "XLE",
       "ITA",
       "CIBR",
       "GLDM",
-      "IBIT"
+      "IBIT",
+      "XLF"
     ],
     "values": [
-      20.61,
       54.34,
       -0.85,
       0.04,
       -0.05,
-      -0.14
+      -0.14,
+      -0.62
     ]
   },
   "confidence": [
-    {
-      "symbol": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals",
-      "score": 96.0
-    },
     {
       "symbol": "Defense & Aerospace",
       "score": 94.0
@@ -305,6 +317,10 @@
     {
       "symbol": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector",
       "score": 89.0
+    },
+    {
+      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
+      "score": 87.0
     },
     {
       "symbol": "Asia Pacific Equity",
@@ -352,57 +368,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals",
-      "confidence": 96.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "16 May 2026 15:54 UTC",
-      "headline": "Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says",
-      "regions": [
-        "middle_east",
-        "americas",
-        "global",
-        "europe"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "World | Deutsche Welle",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "BANKBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.0,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
@@ -609,6 +574,57 @@
         "volume_confirmation": 18.0,
         "source_diversity": 13.6,
         "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
+      "confidence": 87.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "25 May 2026 17:53 UTC",
+      "headline": "BlackRock\u2019s Saigal Sees \u2018Sufficient Factors\u2019 to Justify Fed Cut",
+      "regions": [
+        "europe",
+        "global",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Oilprice.com",
+        "Finance",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "BANKBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.4,
+        "volume_confirmation": 16.8,
+        "source_diversity": 13.4,
+        "recency": 13.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -1164,11 +1180,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals - 13 articles - HIGH / NEUTRAL - Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Defense & Aerospace - 30 articles - HIGH / NEUTRAL - Hypersonic missile used in Kyiv strike: What we know about it"
     },
     {
@@ -1185,6 +1196,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector - 13 articles - CRITICAL / NEUTRAL - Modest ECB Rate Hike Would Limit Economic Pain, Stournaras Says"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Banking & Financial Sector + Gold & Precious Metals - 11 articles - HIGH / NEUTRAL - BlackRock\u2019s Saigal Sees \u2018Sufficient Factors\u2019 to Justify Fed Cut"
     },
     {
       "tag": "tag-neu",
@@ -1357,11 +1373,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77363.72,
+      "price": 77375.99,
       "currency": "USD",
-      "change": 382.6,
-      "change_pct": 0.5,
-      "change_str": "+0.50%",
+      "change": 394.87,
+      "change_pct": 0.51,
+      "change_str": "+0.51%",
       "direction": "up"
     },
     {
@@ -1389,16 +1405,11 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 2.13,
+    "drawdown_from_peak_pct": 2.18,
     "portfolio_peak": 10078.66,
     "vix": 16.59,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
-      {
-        "sector": "Technology & AI / Semiconductors",
-        "weight": 38.6,
-        "at_cap": true
-      },
       {
         "sector": "Cybersecurity",
         "weight": 28.1,
@@ -1407,6 +1418,11 @@
       {
         "sector": "Energy / Oil & Gas",
         "weight": 17.0,
+        "at_cap": false
+      },
+      {
+        "sector": "Banking & Financial Sector + Gold & Precious Metals",
+        "weight": 6.2,
         "at_cap": false
       },
       {
@@ -1425,7 +1441,7 @@
         "at_cap": false
       }
     ],
-    "max_drawdown_pct": 2.13,
+    "max_drawdown_pct": 2.18,
     "sector_cap_pct": 30,
     "trailing_stop_pct": 8,
     "hard_stop_pct": 10,
@@ -1439,48 +1455,48 @@
           "GLDM": -0.053,
           "IBIT": -0.037,
           "ITA": -0.198,
-          "QQQ": 0.195,
-          "XLE": -0.104
+          "XLE": -0.104,
+          "XLF": -0.058
         },
         "GLDM": {
           "CIBR": -0.053,
           "GLDM": 1.0,
           "IBIT": 0.24,
           "ITA": 0.784,
-          "QQQ": 0.732,
-          "XLE": -0.657
+          "XLE": -0.657,
+          "XLF": 0.351
         },
         "IBIT": {
           "CIBR": -0.037,
           "GLDM": 0.24,
           "IBIT": 1.0,
           "ITA": 0.167,
-          "QQQ": 0.42,
-          "XLE": -0.162
+          "XLE": -0.162,
+          "XLF": -0.102
         },
         "ITA": {
           "CIBR": -0.198,
           "GLDM": 0.784,
           "IBIT": 0.167,
           "ITA": 1.0,
-          "QQQ": 0.465,
-          "XLE": -0.451
-        },
-        "QQQ": {
-          "CIBR": 0.195,
-          "GLDM": 0.732,
-          "IBIT": 0.42,
-          "ITA": 0.465,
-          "QQQ": 1.0,
-          "XLE": -0.583
+          "XLE": -0.451,
+          "XLF": 0.503
         },
         "XLE": {
           "CIBR": -0.104,
           "GLDM": -0.657,
           "IBIT": -0.162,
           "ITA": -0.451,
-          "QQQ": -0.583,
-          "XLE": 1.0
+          "XLE": 1.0,
+          "XLF": -0.082
+        },
+        "XLF": {
+          "CIBR": -0.058,
+          "GLDM": 0.351,
+          "IBIT": -0.102,
+          "ITA": 0.503,
+          "XLE": -0.082,
+          "XLF": 1.0
         }
       },
       "tickers": [
@@ -1488,8 +1504,8 @@
         "GLDM",
         "IBIT",
         "ITA",
-        "QQQ",
-        "XLE"
+        "XLE",
+        "XLF"
       ],
       "max_corr": 0.784,
       "max_corr_pair": [
@@ -1505,14 +1521,14 @@
     },
     "volatility": {
       "per_ticker": {
-        "QQQ": 16.18,
         "XLE": 26.4,
         "ITA": 23.79,
         "CIBR": 22.1,
         "GLDM": 19.83,
-        "IBIT": 27.1
+        "IBIT": 27.1,
+        "XLF": 10.79
       },
-      "portfolio_avg_vol_pct": 22.57,
+      "portfolio_avg_vol_pct": 21.67,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -1520,19 +1536,19 @@
       "benchmark_price_start": 739.3,
       "benchmark_price_now": 745.64,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -1.01,
-      "alpha": -1.87
+      "portfolio_return_pct": -1.06,
+      "alpha": -1.92
     },
     "rebalance": {
       "alerts": [
         {
-          "ticker": "QQQ",
-          "actual_weight_pct": 38.63,
-          "target_weight_pct": 15.0,
-          "drift_pct": 23.63,
-          "action": "TRIM",
-          "amount": 2330.67,
-          "etf_name": "Invesco QQQ Trust"
+          "ticker": "CASH",
+          "actual_weight_pct": 42.76,
+          "target_weight_pct": 10.0,
+          "drift_pct": 32.76,
+          "action": "DEPLOY",
+          "amount": 3229.83,
+          "etf_name": "Cash Reserve"
         },
         {
           "ticker": "IBIT",
@@ -1540,7 +1556,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -14.49,
           "action": "ADD",
-          "amount": 1429.29,
+          "amount": 1428.56,
           "etf_name": "iShares Bitcoin Trust ETF"
         },
         {
@@ -1549,16 +1565,16 @@
           "target_weight_pct": 15.0,
           "drift_pct": -14.22,
           "action": "ADD",
-          "amount": 1402.64,
+          "amount": 1401.91,
           "etf_name": "SPDR Gold MiniShares Trust"
         },
         {
           "ticker": "CIBR",
-          "actual_weight_pct": 28.07,
+          "actual_weight_pct": 28.08,
           "target_weight_pct": 15.0,
-          "drift_pct": 13.07,
+          "drift_pct": 13.08,
           "action": "TRIM",
-          "amount": 1288.74,
+          "amount": 1289.47,
           "etf_name": "First Trust Nasdaq CEA Cybersecurity ETF"
         },
         {
@@ -1567,8 +1583,17 @@
           "target_weight_pct": 15.0,
           "drift_pct": -10.4,
           "action": "ADD",
-          "amount": 1025.68,
+          "amount": 1024.95,
           "etf_name": "iShares U.S. Aerospace & Defense ETF"
+        },
+        {
+          "ticker": "XLF",
+          "actual_weight_pct": 6.25,
+          "target_weight_pct": 15.0,
+          "drift_pct": -8.75,
+          "action": "ADD",
+          "amount": 862.88,
+          "etf_name": "Financial Select Sector SPDR"
         }
       ],
       "drift_threshold_pct": 5.0,
@@ -1577,15 +1602,9 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -3746.65,
-          "portfolio_loss_pct": -37.98,
+          "total_impact": -2068.59,
+          "portfolio_loss_pct": -20.98,
           "position_impacts": [
-            {
-              "ticker": "QQQ",
-              "factor": "equities",
-              "shock_pct": -40.0,
-              "impact": -1524.08
-            },
             {
               "ticker": "XLE",
               "factor": "oil",
@@ -1615,19 +1634,19 @@
               "factor": "crypto",
               "shock_pct": -60.0,
               "impact": -30.15
+            },
+            {
+              "ticker": "XLF",
+              "factor": "gold",
+              "shock_pct": 25.0,
+              "impact": 153.98
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -3499.36,
-          "portfolio_loss_pct": -35.48,
+          "total_impact": -2185.41,
+          "portfolio_loss_pct": -22.17,
           "position_impacts": [
-            {
-              "ticker": "QQQ",
-              "factor": "equities",
-              "shock_pct": -34.0,
-              "impact": -1295.47
-            },
             {
               "ticker": "XLE",
               "factor": "oil",
@@ -1657,19 +1676,19 @@
               "factor": "crypto",
               "shock_pct": -40.0,
               "impact": -20.1
+            },
+            {
+              "ticker": "XLF",
+              "factor": "gold",
+              "shock_pct": 3.0,
+              "impact": 18.48
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1236.52,
-          "portfolio_loss_pct": -12.54,
+          "total_impact": -695.79,
+          "portfolio_loss_pct": -7.06,
           "position_impacts": [
-            {
-              "ticker": "QQQ",
-              "factor": "equities",
-              "shock_pct": -15.0,
-              "impact": -571.53
-            },
             {
               "ticker": "XLE",
               "factor": "oil",
@@ -1699,19 +1718,19 @@
               "factor": "crypto",
               "shock_pct": -20.0,
               "impact": -10.05
+            },
+            {
+              "ticker": "XLF",
+              "factor": "gold",
+              "shock_pct": -5.0,
+              "impact": -30.8
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -828.51,
-          "portfolio_loss_pct": -8.4,
+          "total_impact": -597.6,
+          "portfolio_loss_pct": -6.06,
           "position_impacts": [
-            {
-              "ticker": "QQQ",
-              "factor": "equities",
-              "shock_pct": -8.0,
-              "impact": -304.82
-            },
             {
               "ticker": "XLE",
               "factor": "oil",
@@ -1741,19 +1760,19 @@
               "factor": "crypto",
               "shock_pct": -10.0,
               "impact": -5.02
+            },
+            {
+              "ticker": "XLF",
+              "factor": "gold",
+              "shock_pct": -12.0,
+              "impact": -73.91
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1607.79,
-          "portfolio_loss_pct": -16.3,
+          "total_impact": -872.68,
+          "portfolio_loss_pct": -8.85,
           "position_impacts": [
-            {
-              "ticker": "QQQ",
-              "factor": "equities",
-              "shock_pct": -18.0,
-              "impact": -685.84
-            },
             {
               "ticker": "XLE",
               "factor": "oil",
@@ -1783,21 +1802,27 @@
               "factor": "crypto",
               "shock_pct": -25.0,
               "impact": -12.56
+            },
+            {
+              "ticker": "XLF",
+              "factor": "gold",
+              "shock_pct": 8.0,
+              "impact": 49.27
             }
           ]
         }
       },
-      "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -37.98
+      "worst_scenario": "2020_COVID",
+      "worst_loss_pct": -22.17
     }
   },
   "logs": [
-    "2026-05-25 19:09:51 [INFO] AZALYST - status.json generated",
-    "2026-05-25 19:09:51 [INFO] PORTFOLIO - NAV USD 9,863.55 | Return -1.01%",
-    "2026-05-25 19:09:51 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-05-25 19:09:51 [INFO] TRADER - Open positions: QQQ, XLE, ITA, CIBR, GLDM, IBIT",
-    "2026-05-25 19:09:51 [INFO] TRADER - Closed trades: 2",
-    "2026-05-25 19:09:51 [INFO] RISK - Partial profits realised: USD 3,234.71"
+    "2026-05-25 20:32:14 [INFO] AZALYST - status.json generated",
+    "2026-05-25 20:32:14 [INFO] PORTFOLIO - NAV USD 9,858.68 | Return -1.06%",
+    "2026-05-25 20:32:14 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-05-25 20:32:14 [INFO] TRADER - Open positions: XLE, ITA, CIBR, GLDM, IBIT, XLF",
+    "2026-05-25 20:32:14 [INFO] TRADER - Closed trades: 3",
+    "2026-05-25 20:32:14 [INFO] RISK - Partial profits realised: USD 3,234.71"
   ],
-  "generated_at": "2026-05-25 19:09:49 UTC"
+  "generated_at": "2026-05-25 20:32:12 UTC"
 }
