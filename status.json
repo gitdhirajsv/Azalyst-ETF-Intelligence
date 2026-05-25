@@ -1,21 +1,21 @@
 {
-  "portfolio_value": 9867.9,
+  "portfolio_value": 9858.21,
   "total_deposited": 9916.39,
-  "cash": 10.1,
+  "cash": 1148.07,
   "monthly_reserve": 0.0,
-  "market_value": 9857.8,
-  "total_invested": 9940.1,
-  "unrealised_pnl": -82.29,
-  "unrealised_str": "-82.29",
-  "realised_pnl": 33.81,
-  "realised_str": "+33.81",
-  "change": "-0.49%",
-  "change_raw": -0.49,
-  "closed_trades": 0,
+  "market_value": 8710.14,
+  "total_invested": 8594.48,
+  "unrealised_pnl": 115.66,
+  "unrealised_str": "+115.66",
+  "realised_pnl": -173.84,
+  "realised_str": "-173.84",
+  "change": "-0.59%",
+  "change_raw": -0.59,
+  "closed_trades": 2,
   "partial_realised_pnl": 33.81,
   "portfolio_peak": 10030.21,
-  "drawdown_now_pct": 1.62,
-  "max_drawdown_pct": 1.62,
+  "drawdown_now_pct": 1.71,
+  "max_drawdown_pct": 1.71,
   "usd_inr_rate": 95.68,
   "positions": [
     {
@@ -65,52 +65,6 @@
       "half_exited": true
     },
     {
-      "trade_id": "T0003",
-      "ticker": "GLDM",
-      "etf_name": "SPDR Gold MiniShares Trust",
-      "sector": "Gold & Precious Metals",
-      "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
-      "exchange": "NYSE",
-      "entry": 92.86,
-      "current": 89.21,
-      "peak_price": 93.69,
-      "trail_stop": 83.57,
-      "dist_to_trail_pct": 6.32,
-      "units": 20.880335,
-      "invested": 1938.92,
-      "pnl": -76.18,
-      "pnl_str": "-76.18",
-      "pnl_pct": -3.93,
-      "pnl_pct_str": "-3.93%",
-      "confidence": 94,
-      "severity": "HIGH",
-      "days_held": 13,
-      "half_exited": false
-    },
-    {
-      "trade_id": "T0004",
-      "ticker": "IBIT",
-      "etf_name": "iShares Bitcoin Trust ETF",
-      "sector": "Crypto & Digital Assets",
-      "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
-      "exchange": "NASDAQ",
-      "entry": 45.78,
-      "current": 42.96,
-      "peak_price": 46.57,
-      "trail_stop": 41.2,
-      "dist_to_trail_pct": 4.1,
-      "units": 44.276265,
-      "invested": 2026.75,
-      "pnl": -124.65,
-      "pnl_str": "-124.65",
-      "pnl_pct": -6.15,
-      "pnl_pct_str": "-6.15%",
-      "confidence": 90,
-      "severity": "CRITICAL",
-      "days_held": 13,
-      "half_exited": false
-    },
-    {
       "trade_id": "T0005",
       "ticker": "ITA",
       "etf_name": "iShares U.S. Aerospace & Defense ETF",
@@ -140,36 +94,83 @@
       "sector": "Cybersecurity",
       "platform": "First Trust \u2014 IBKR / Schwab",
       "exchange": "NASDAQ",
-      "entry": 75.23,
+      "entry": 83.87,
       "current": 84.28,
-      "peak_price": 84.28,
-      "trail_stop": 77.54,
-      "dist_to_trail_pct": 8.0,
-      "units": 1.792738,
-      "invested": 134.87,
-      "pnl": 16.22,
-      "pnl_str": "+16.22",
-      "pnl_pct": 12.03,
-      "pnl_pct_str": "+12.03%",
+      "peak_price": 84.36,
+      "trail_stop": 77.62,
+      "dist_to_trail_pct": 7.91,
+      "units": 32.846088,
+      "invested": 2754.92,
+      "pnl": 13.34,
+      "pnl_str": "+13.34",
+      "pnl_pct": 0.48,
+      "pnl_pct_str": "+0.48%",
       "confidence": 80,
       "severity": "HIGH",
       "days_held": 12,
       "half_exited": true
     }
   ],
-  "closed_trades_list": [],
+  "closed_trades_list": [
+    {
+      "trade_id": "T0004",
+      "ticker": "IBIT",
+      "etf_name": "iShares Bitcoin Trust ETF",
+      "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NASDAQ",
+      "entry": 45.78,
+      "exit": 42.84,
+      "pnl": -130.16,
+      "pnl_str": "-130.16",
+      "pnl_pct": -6.42,
+      "pnl_pct_str": "-6.42%",
+      "days_held": 14,
+      "exit_reason": "Capital rotation to stronger Technology & AI / Semiconductors (83/100)",
+      "winner": false
+    },
+    {
+      "trade_id": "T0003",
+      "ticker": "GLDM",
+      "etf_name": "SPDR Gold MiniShares Trust",
+      "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NYSE",
+      "entry": 92.86,
+      "exit": 89.16,
+      "pnl": -77.49,
+      "pnl_str": "-77.49",
+      "pnl_pct": -4.0,
+      "pnl_pct_str": "-4.00%",
+      "days_held": 14,
+      "exit_reason": "Time-based unclogging (14 days, -3.9%)",
+      "winner": false
+    }
+  ],
   "track_record": {
-    "total_trades": 0,
+    "total_trades": 2,
     "winners": 0,
-    "losers": 0,
+    "losers": 2,
     "win_rate": 0.0,
     "avg_win": 0.0,
-    "avg_loss": 0.0,
+    "avg_loss": -5.21,
     "profit_factor": 0.0,
-    "expectancy": 0.0,
-    "sharpe_proxy": 0.0,
-    "best": null,
-    "worst": null
+    "expectancy": -5.21,
+    "sharpe_proxy": -4.31,
+    "best": {
+      "ticker": "GLDM",
+      "etf_name": "SPDR Gold MiniShares Trust",
+      "pnl_pct": -4.0,
+      "pnl_pct_str": "-4.00%",
+      "exit_reason": "Time-based unclogging (14 days, -3.9%)",
+      "days_held": 14
+    },
+    "worst": {
+      "ticker": "IBIT",
+      "etf_name": "iShares Bitcoin Trust ETF",
+      "pnl_pct": -6.42,
+      "pnl_pct_str": "-6.42%",
+      "exit_reason": "Capital rotation to stronger Technology & AI / Semiconductors (83/100)",
+      "days_held": 14
+    }
   },
   "confidence_threshold": 60,
   "regime": {
@@ -192,11 +193,11 @@
     "ticker": "IGV",
     "rank_score": 14.949618320610686,
     "flow_score": 4.232357977451007,
-    "options_score": 12.0,
+    "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 4.891195441159784,
-    "news_score": 7.040000000000001,
-    "total": 58.11317173922148,
+    "macro_score": 4.863921790351585,
+    "news_score": 6.640000000000001,
+    "total": 45.685898088413275,
     "publish": false,
     "direction": "long"
   },
@@ -204,38 +205,30 @@
     "labels": [
       "QQQ",
       "XLE",
-      "GLDM",
-      "IBIT",
       "ITA",
       "CIBR",
       "CASH"
     ],
     "values": [
-      38.6,
+      38.7,
       17.0,
-      18.9,
-      19.3,
       4.6,
-      1.5,
-      0.1
+      28.1,
+      11.6
     ]
   },
   "pnl": {
     "labels": [
       "QQQ",
       "XLE",
-      "GLDM",
-      "IBIT",
       "ITA",
       "CIBR"
     ],
     "values": [
       38.83,
       62.15,
-      -76.18,
-      -124.65,
       1.33,
-      16.22
+      13.34
     ]
   },
   "confidence": [
@@ -252,16 +245,16 @@
       "score": 89.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 88.0
-    },
-    {
       "symbol": "Defense & Aerospace",
       "score": 88.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 85.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 83.0
     },
     {
       "symbol": "Asia Pacific Equity",
@@ -276,12 +269,12 @@
       "score": 79.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 77.0
+      "symbol": "Healthcare & Pharma",
+      "score": 78.0
     },
     {
-      "symbol": "Healthcare & Pharma",
-      "score": 76.0
+      "symbol": "Crypto & Digital Assets",
+      "score": 77.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -460,59 +453,6 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 88.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 49,
-      "latest_at": "24 May 2026 15:39 UTC",
-      "headline": "After $2.5 billion Supermicro smuggling bust, Nvidia CEO urges company to fix export control compliance \u2014 Taiwan also begins to crack down on AI GPU chip smuggling to China",
-      "regions": [
-        "asia_pacific",
-        "india",
-        "global",
-        "americas"
-      ],
-      "sources": [
-        "Finance",
-        "Bloomberg Markets",
-        "Earnings",
-        "The Verge"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.7,
-        "recency": 10.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
       "confidence": 88.0,
@@ -615,6 +555,59 @@
         "volume_confirmation": 16.8,
         "source_diversity": 14.0,
         "recency": 10.2,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 83.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 50,
+      "latest_at": "24 May 2026 15:39 UTC",
+      "headline": "After $2.5 billion Supermicro smuggling bust, Nvidia CEO urges company to fix export control compliance \u2014 Taiwan also begins to crack down on AI GPU chip smuggling to China",
+      "regions": [
+        "middle_east",
+        "global",
+        "americas",
+        "india"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "EE Times",
+        "Earnings",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.7,
+        "recency": 5.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -770,6 +763,57 @@
       }
     },
     {
+      "sector_key": "healthcare_pharma",
+      "sector_label": "Healthcare & Pharma",
+      "confidence": 78.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "25 May 2026 00:45 UTC",
+      "headline": "'Speed, money and compassion' - lessons from an Ebola survivor and other experts",
+      "regions": [
+        "africa",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "BBC News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLV",
+      "top_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "HEALTHCARE",
+        "PHARMABEES"
+      ],
+      "global_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 15.7,
+        "volume_confirmation": 14.6,
+        "source_diversity": 12.6,
+        "recency": 13.7,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 77.0,
@@ -812,58 +856,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 6.5,
         "recency": 10.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma",
-      "confidence": 76.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "24 May 2026 15:57 UTC",
-      "headline": "'Speed, money and compassion' - lessons from an Ebola survivor and other experts",
-      "regions": [
-        "asia_pacific",
-        "middle_east",
-        "africa",
-        "global"
-      ],
-      "sources": [
-        "BBC News",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "XLV",
-      "top_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "HEALTHCARE",
-        "PHARMABEES"
-      ],
-      "global_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 15.5,
-        "volume_confirmation": 14.6,
-        "source_diversity": 12.6,
-        "recency": 11.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -1131,17 +1123,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 49 articles - HIGH / NEUTRAL - After $2.5 billion Supermicro smuggling bust, Nvidia CEO urges company to fix export control compliance \u2014 Taiwan also begins to crack down on AI GPU chip smuggling to China"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Defense & Aerospace - 46 articles - HIGH / NEUTRAL - Hypersonic missile used in Kyiv strike: What we know about it"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - Gold on track for second weekly loss as rising oil prices drive up rate hike bets"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Technology & AI / Semiconductors - 50 articles - HIGH / NEUTRAL - After $2.5 billion Supermicro smuggling bust, Nvidia CEO urges company to fix export control compliance \u2014 Taiwan also begins to crack down on AI GPU chip smuggling to China"
     },
     {
       "tag": "tag-neu",
@@ -1161,12 +1153,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 26 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+      "text": "Healthcare & Pharma - 8 articles - HIGH / NEUTRAL - 'Speed, money and compassion' - lessons from an Ebola survivor and other experts"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Healthcare & Pharma - 8 articles - HIGH / NEUTRAL - 'Speed, money and compassion' - lessons from an Ebola survivor and other experts"
+      "text": "Crypto & Digital Assets - 26 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -1254,11 +1246,11 @@
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 63339.07,
+      "price": 65142.81,
       "currency": "JPY",
-      "change": 1654.93,
-      "change_pct": 2.68,
-      "change_str": "+2.68%",
+      "change": 1803.74,
+      "change_pct": 2.85,
+      "change_str": "+2.85%",
       "direction": "up"
     },
     {
@@ -1309,9 +1301,9 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77027.03,
+      "price": 77026.64,
       "currency": "USD",
-      "change": 353.66,
+      "change": 353.27,
       "change_pct": 0.46,
       "change_str": "+0.46%",
       "direction": "up"
@@ -1320,11 +1312,11 @@
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.99,
+      "price": 99.02,
       "currency": "USD",
-      "change": -0.33,
-      "change_pct": -0.33,
-      "change_str": "-0.33%",
+      "change": -0.3,
+      "change_pct": -0.31,
+      "change_str": "-0.31%",
       "direction": "down"
     },
     {
@@ -1341,24 +1333,19 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 1.62,
+    "drawdown_from_peak_pct": 1.71,
     "portfolio_peak": 10030.21,
     "vix": 16.7,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
         "sector": "Technology & AI / Semiconductors",
-        "weight": 38.6,
+        "weight": 38.7,
         "at_cap": true
       },
       {
-        "sector": "Crypto & Digital Assets",
-        "weight": 19.3,
-        "at_cap": false
-      },
-      {
-        "sector": "Gold & Precious Metals",
-        "weight": 18.9,
+        "sector": "Cybersecurity",
+        "weight": 28.1,
         "at_cap": false
       },
       {
@@ -1370,14 +1357,9 @@
         "sector": "Defense & Aerospace",
         "weight": 4.6,
         "at_cap": false
-      },
-      {
-        "sector": "Cybersecurity",
-        "weight": 1.5,
-        "at_cap": false
       }
     ],
-    "max_drawdown_pct": 1.62,
+    "max_drawdown_pct": 1.71,
     "sector_cap_pct": 30,
     "trailing_stop_pct": 8,
     "hard_stop_pct": 10,
@@ -1388,48 +1370,24 @@
       "matrix": {
         "CIBR": {
           "CIBR": 1.0,
-          "GLDM": -0.053,
-          "IBIT": -0.037,
           "ITA": -0.198,
           "QQQ": 0.195,
           "XLE": -0.104
         },
-        "GLDM": {
-          "CIBR": -0.053,
-          "GLDM": 1.0,
-          "IBIT": 0.24,
-          "ITA": 0.784,
-          "QQQ": 0.732,
-          "XLE": -0.657
-        },
-        "IBIT": {
-          "CIBR": -0.037,
-          "GLDM": 0.24,
-          "IBIT": 1.0,
-          "ITA": 0.167,
-          "QQQ": 0.42,
-          "XLE": -0.162
-        },
         "ITA": {
           "CIBR": -0.198,
-          "GLDM": 0.784,
-          "IBIT": 0.167,
           "ITA": 1.0,
           "QQQ": 0.465,
           "XLE": -0.451
         },
         "QQQ": {
           "CIBR": 0.195,
-          "GLDM": 0.732,
-          "IBIT": 0.42,
           "ITA": 0.465,
           "QQQ": 1.0,
           "XLE": -0.583
         },
         "XLE": {
           "CIBR": -0.104,
-          "GLDM": -0.657,
-          "IBIT": -0.162,
           "ITA": -0.451,
           "QQQ": -0.583,
           "XLE": 1.0
@@ -1437,34 +1395,30 @@
       },
       "tickers": [
         "CIBR",
-        "GLDM",
-        "IBIT",
         "ITA",
         "QQQ",
         "XLE"
       ],
-      "max_corr": 0.784,
+      "max_corr": 0.465,
       "max_corr_pair": [
-        "GLDM",
-        "ITA"
+        "ITA",
+        "QQQ"
       ],
-      "most_negative_corr": -0.657,
+      "most_negative_corr": -0.583,
       "most_negative_pair": [
-        "GLDM",
+        "QQQ",
         "XLE"
       ],
-      "status": "HIGH"
+      "status": "OK"
     },
     "volatility": {
       "per_ticker": {
         "QQQ": 16.18,
         "XLE": 26.4,
-        "GLDM": 19.83,
-        "IBIT": 27.1,
         "ITA": 23.79,
         "CIBR": 22.1
       },
-      "portfolio_avg_vol_pct": 22.57,
+      "portfolio_avg_vol_pct": 22.12,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -1472,46 +1426,46 @@
       "benchmark_price_start": 739.3,
       "benchmark_price_now": 745.64,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.49,
-      "alpha": -1.35
+      "portfolio_return_pct": -0.59,
+      "alpha": -1.45
     },
     "rebalance": {
       "alerts": [
         {
+          "ticker": "ITA",
+          "actual_weight_pct": 4.6,
+          "target_weight_pct": 22.5,
+          "drift_pct": -17.9,
+          "action": "ADD",
+          "amount": 1764.25,
+          "etf_name": "iShares U.S. Aerospace & Defense ETF"
+        },
+        {
           "ticker": "QQQ",
-          "actual_weight_pct": 38.61,
-          "target_weight_pct": 15.0,
-          "drift_pct": 23.61,
+          "actual_weight_pct": 38.65,
+          "target_weight_pct": 22.5,
+          "drift_pct": 16.15,
           "action": "TRIM",
-          "amount": 2330.02,
+          "amount": 1592.11,
           "etf_name": "Invesco QQQ Trust"
         },
         {
           "ticker": "CIBR",
-          "actual_weight_pct": 1.53,
-          "target_weight_pct": 15.0,
-          "drift_pct": -13.47,
-          "action": "ADD",
-          "amount": 1329.09,
+          "actual_weight_pct": 28.08,
+          "target_weight_pct": 22.5,
+          "drift_pct": 5.58,
+          "action": "TRIM",
+          "amount": 550.17,
           "etf_name": "First Trust Nasdaq CEA Cybersecurity ETF"
         },
         {
-          "ticker": "ITA",
-          "actual_weight_pct": 4.6,
-          "target_weight_pct": 15.0,
-          "drift_pct": -10.4,
+          "ticker": "XLE",
+          "actual_weight_pct": 17.02,
+          "target_weight_pct": 22.5,
+          "drift_pct": -5.48,
           "action": "ADD",
-          "amount": 1026.34,
-          "etf_name": "iShares U.S. Aerospace & Defense ETF"
-        },
-        {
-          "ticker": "CASH",
-          "actual_weight_pct": 0.1,
-          "target_weight_pct": 10.0,
-          "drift_pct": -9.9,
-          "action": "RAISE",
-          "amount": 976.69,
-          "etf_name": "Cash Reserve"
+          "amount": 540.28,
+          "etf_name": "Energy Select Sector SPDR"
         }
       ],
       "drift_threshold_pct": 5.0,
@@ -1520,8 +1474,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -3364.44,
-          "portfolio_loss_pct": -34.09,
+          "total_impact": -3735.73,
+          "portfolio_loss_pct": -37.89,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1536,18 +1490,6 @@
               "impact": -922.8
             },
             {
-              "ticker": "GLDM",
-              "factor": "gold",
-              "shock_pct": 25.0,
-              "impact": 465.68
-            },
-            {
-              "ticker": "IBIT",
-              "factor": "crypto",
-              "shock_pct": -60.0,
-              "impact": -1141.27
-            },
-            {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -40.0,
@@ -1557,13 +1499,13 @@
               "ticker": "CIBR",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -60.44
+              "impact": -1107.31
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -3296.69,
-          "portfolio_loss_pct": -33.41,
+          "total_impact": -3481.57,
+          "portfolio_loss_pct": -35.32,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1578,18 +1520,6 @@
               "impact": -1090.58
             },
             {
-              "ticker": "GLDM",
-              "factor": "gold",
-              "shock_pct": 3.0,
-              "impact": 55.88
-            },
-            {
-              "ticker": "IBIT",
-              "factor": "crypto",
-              "shock_pct": -40.0,
-              "impact": -760.84
-            },
-            {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -34.0,
@@ -1599,13 +1529,13 @@
               "ticker": "CIBR",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -51.37
+              "impact": -941.21
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1303.61,
-          "portfolio_loss_pct": -13.21,
+          "total_impact": -1222.63,
+          "portfolio_loss_pct": -12.4,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1620,18 +1550,6 @@
               "impact": -167.78
             },
             {
-              "ticker": "GLDM",
-              "factor": "gold",
-              "shock_pct": -5.0,
-              "impact": -93.14
-            },
-            {
-              "ticker": "IBIT",
-              "factor": "crypto",
-              "shock_pct": -20.0,
-              "impact": -380.42
-            },
-            {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -15.0,
@@ -1641,13 +1559,13 @@
               "ticker": "CIBR",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -22.66
+              "impact": -415.24
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -1018.62,
-          "portfolio_loss_pct": -10.32,
+          "total_impact": -814.26,
+          "portfolio_loss_pct": -8.26,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1662,18 +1580,6 @@
               "impact": -251.67
             },
             {
-              "ticker": "GLDM",
-              "factor": "gold",
-              "shock_pct": -12.0,
-              "impact": -223.53
-            },
-            {
-              "ticker": "IBIT",
-              "factor": "crypto",
-              "shock_pct": -10.0,
-              "impact": -190.21
-            },
-            {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -8.0,
@@ -1683,13 +1589,13 @@
               "ticker": "CIBR",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -12.09
+              "impact": -221.46
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1456.8,
-          "portfolio_loss_pct": -14.76,
+          "total_impact": -1601.38,
+          "portfolio_loss_pct": -16.24,
           "position_impacts": [
             {
               "ticker": "QQQ",
@@ -1704,18 +1610,6 @@
               "impact": -335.56
             },
             {
-              "ticker": "GLDM",
-              "factor": "gold",
-              "shock_pct": 8.0,
-              "impact": 149.02
-            },
-            {
-              "ticker": "IBIT",
-              "factor": "crypto",
-              "shock_pct": -25.0,
-              "impact": -475.53
-            },
-            {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -18.0,
@@ -1725,21 +1619,22 @@
               "ticker": "CIBR",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -27.2
+              "impact": -498.29
             }
           ]
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -34.09
+      "worst_loss_pct": -37.89
     }
   },
   "logs": [
-    "2026-05-24 23:42:34 [INFO] AZALYST - status.json generated",
-    "2026-05-24 23:42:34 [INFO] PORTFOLIO - NAV USD 9,867.90 | Return -0.49%",
-    "2026-05-24 23:42:34 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-05-24 23:42:34 [INFO] TRADER - Open positions: QQQ, XLE, GLDM, IBIT, ITA, CIBR",
-    "2026-05-24 23:42:34 [INFO] RISK - Partial profits realised: USD 3,234.71"
+    "2026-05-25 03:04:46 [INFO] AZALYST - status.json generated",
+    "2026-05-25 03:04:46 [INFO] PORTFOLIO - NAV USD 9,858.21 | Return -0.59%",
+    "2026-05-25 03:04:46 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-05-25 03:04:46 [INFO] TRADER - Open positions: QQQ, XLE, ITA, CIBR",
+    "2026-05-25 03:04:46 [INFO] TRADER - Closed trades: 2",
+    "2026-05-25 03:04:46 [INFO] RISK - Partial profits realised: USD 3,234.71"
   ],
-  "generated_at": "2026-05-24 23:42:33 UTC"
+  "generated_at": "2026-05-25 03:04:44 UTC"
 }
