@@ -1,21 +1,21 @@
 {
-  "portfolio_value": 9857.74,
+  "portfolio_value": 9854.36,
   "total_deposited": 9964.29,
-  "cash": 4263.77,
+  "cash": 6545.4,
   "monthly_reserve": 0.0,
-  "market_value": 5593.97,
-  "total_invested": 5540.92,
-  "unrealised_pnl": 53.05,
-  "unrealised_str": "+53.05",
-  "realised_pnl": -159.61,
-  "realised_str": "-159.61",
-  "change": "-1.07%",
-  "change_raw": -1.07,
-  "closed_trades": 4,
+  "market_value": 3308.96,
+  "total_invested": 3256.28,
+  "unrealised_pnl": 52.68,
+  "unrealised_str": "+52.68",
+  "realised_pnl": -162.62,
+  "realised_str": "-162.62",
+  "change": "-1.10%",
+  "change_raw": -1.1,
+  "closed_trades": 5,
   "partial_realised_pnl": 33.97,
   "portfolio_peak": 10078.66,
-  "drawdown_now_pct": 2.19,
-  "max_drawdown_pct": 2.19,
+  "drawdown_now_pct": 2.23,
+  "max_drawdown_pct": 2.23,
   "usd_inr_rate": 95.22,
   "positions": [
     {
@@ -42,47 +42,24 @@
       "half_exited": true
     },
     {
-      "trade_id": "T0006",
-      "ticker": "CIBR",
-      "etf_name": "First Trust Nasdaq CEA Cybersecurity ETF",
-      "sector": "Cybersecurity",
-      "platform": "First Trust \u2014 IBKR / Schwab",
-      "exchange": "NASDAQ",
-      "entry": 84.28,
-      "current": 84.28,
-      "peak_price": 84.77,
-      "trail_stop": 77.99,
-      "dist_to_trail_pct": 7.46,
-      "units": 32.846088,
-      "invested": 2768.23,
-      "pnl": 0.04,
-      "pnl_str": "+0.04",
-      "pnl_pct": 0.0,
-      "pnl_pct_str": "+0.00%",
-      "confidence": 80,
-      "severity": "HIGH",
-      "days_held": 13,
-      "half_exited": true
-    },
-    {
       "trade_id": "T0007",
       "ticker": "GLDM",
       "etf_name": "SPDR Gold MiniShares Trust",
       "sector": "Gold & Precious Metals + Banking & Financial Sector",
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 89.26,
+      "entry": 89.27,
       "current": 89.21,
-      "peak_price": 89.26,
-      "trail_stop": 80.34,
-      "dist_to_trail_pct": 9.95,
-      "units": 0.861925,
-      "invested": 76.95,
-      "pnl": -0.05,
-      "pnl_str": "-0.05",
-      "pnl_pct": -0.06,
-      "pnl_pct_str": "-0.06%",
-      "confidence": 83,
+      "peak_price": 89.27,
+      "trail_stop": 80.35,
+      "dist_to_trail_pct": 9.94,
+      "units": 6.278992,
+      "invested": 560.54,
+      "pnl": -0.39,
+      "pnl_str": "-0.39",
+      "pnl_pct": -0.07,
+      "pnl_pct_str": "-0.07%",
+      "confidence": 86,
       "severity": "HIGH",
       "days_held": 0,
       "half_exited": false
@@ -221,18 +198,34 @@
       "days_held": 14,
       "exit_reason": "Capital rotation to stronger Technology & AI / Semiconductors (89/100)",
       "winner": false
+    },
+    {
+      "trade_id": "T0006",
+      "ticker": "CIBR",
+      "etf_name": "First Trust Nasdaq CEA Cybersecurity ETF",
+      "platform": "First Trust \u2014 IBKR / Schwab",
+      "exchange": "NASDAQ",
+      "entry": 84.28,
+      "exit": 84.2,
+      "pnl": -3.01,
+      "pnl_str": "-3.01",
+      "pnl_pct": -0.11,
+      "pnl_pct_str": "-0.11%",
+      "days_held": 14,
+      "exit_reason": "Capital rotation to stronger Gold & Precious Metals + Banking & Financial Sector (86/100)",
+      "winner": false
     }
   ],
   "track_record": {
-    "total_trades": 4,
+    "total_trades": 5,
     "winners": 1,
-    "losers": 3,
-    "win_rate": 25.0,
+    "losers": 4,
+    "win_rate": 20.0,
     "avg_win": 0.43,
-    "avg_loss": -3.57,
+    "avg_loss": -2.71,
     "profit_factor": 0.08,
-    "expectancy": -2.57,
-    "sharpe_proxy": -0.92,
+    "expectancy": -2.08,
+    "sharpe_proxy": -0.78,
     "best": {
       "ticker": "QQQ",
       "etf_name": "Invesco QQQ Trust",
@@ -252,12 +245,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
+    "risk_state": "NEUTRAL",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0788041644640121,
-    "vix_level": 16.59000015258789,
-    "vix_percentile_1y": 0.3492063492063492,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -271,18 +264,17 @@
     "ticker": "IGV",
     "rank_score": 14.949618320610686,
     "flow_score": 4.232357977451007,
-    "options_score": 14.707345113024662,
+    "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 4.634730431048708,
     "news_score": 7.120000000000001,
-    "total": 60.64405184213507,
-    "publish": true,
+    "total": 45.9367067291104,
+    "publish": false,
     "direction": "long"
   },
   "allocation": {
     "labels": [
       "XLE",
-      "CIBR",
       "GLDM",
       "IBIT",
       "XLF",
@@ -291,18 +283,16 @@
     ],
     "values": [
       17.0,
-      28.1,
-      0.8,
+      5.7,
       0.5,
-      6.2,
+      6.3,
       4.1,
-      43.3
+      66.4
     ]
   },
   "pnl": {
     "labels": [
       "XLE",
-      "CIBR",
       "GLDM",
       "IBIT",
       "XLF",
@@ -310,8 +300,7 @@
     ],
     "values": [
       54.34,
-      0.04,
-      -0.05,
+      -0.39,
       -0.14,
       -0.62,
       -0.4
@@ -339,11 +328,11 @@
       "score": 87.0
     },
     {
-      "symbol": "Asia Pacific Equity",
-      "score": 83.0
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 86.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "symbol": "Asia Pacific Equity",
       "score": 83.0
     },
     {
@@ -645,6 +634,59 @@
       }
     },
     {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "25 May 2026 23:30 UTC",
+      "headline": "Gold &amp; silver ready for next big leg up? 360 ONE Asset\u2019s Rahul Khetawat shares tactical allocation strategy",
+      "regions": [
+        "middle_east",
+        "americas",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "US Top News and Analysis",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 17.4,
+        "source_diversity": 12.1,
+        "recency": 16.1,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
       "confidence": 83.0,
@@ -692,59 +734,6 @@
         "source_diversity": 15.3,
         "recency": 15.7,
         "geopolitical_severity": 11.7
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 83.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "25 May 2026 08:22 UTC",
-      "headline": "Gold &amp; silver ready for next big leg up? 360 ONE Asset\u2019s Rahul Khetawat shares tactical allocation strategy",
-      "regions": [
-        "americas",
-        "middle_east",
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.1,
-        "recency": 12.3,
-        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1221,12 +1210,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Asia Pacific Equity - 13 articles - MEDIUM / NEUTRAL - Carlyle's Thomas Sees BOJ Hiking Rates in June"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - Gold &amp; silver ready for next big leg up? 360 ONE Asset\u2019s Rahul Khetawat shares tactical allocation strategy"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / NEUTRAL - Gold &amp; silver ready for next big leg up? 360 ONE Asset\u2019s Rahul Khetawat shares tactical allocation strategy"
+      "text": "Asia Pacific Equity - 13 articles - MEDIUM / NEUTRAL - Carlyle's Thomas Sees BOJ Hiking Rates in June"
     },
     {
       "tag": "tag-neu",
@@ -1367,33 +1356,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4578.2,
+      "price": 4555.6,
       "currency": "USD",
-      "change": 57.2,
-      "change_pct": 1.27,
-      "change_str": "+1.27%",
+      "change": 34.6,
+      "change_pct": 0.77,
+      "change_str": "+0.77%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 90.56,
+      "price": 91.43,
       "currency": "USD",
-      "change": -6.04,
-      "change_pct": -6.25,
-      "change_str": "-6.25%",
+      "change": -5.17,
+      "change_pct": -5.35,
+      "change_str": "-5.35%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77202.64,
+      "price": 77146.45,
       "currency": "USD",
-      "change": 221.51,
-      "change_pct": 0.29,
-      "change_str": "+0.29%",
+      "change": 165.32,
+      "change_pct": 0.21,
+      "change_str": "+0.21%",
       "direction": "up"
     },
     {
@@ -1421,16 +1410,11 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 2.19,
+    "drawdown_from_peak_pct": 2.23,
     "portfolio_peak": 10078.66,
     "vix": 16.59,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
-      {
-        "sector": "Cybersecurity",
-        "weight": 28.1,
-        "at_cap": false
-      },
       {
         "sector": "Energy / Oil & Gas",
         "weight": 17.0,
@@ -1438,7 +1422,12 @@
       },
       {
         "sector": "Banking & Financial Sector + Gold & Precious Metals",
-        "weight": 6.2,
+        "weight": 6.3,
+        "at_cap": false
+      },
+      {
+        "sector": "Gold & Precious Metals + Banking & Financial Sector",
+        "weight": 5.7,
         "at_cap": false
       },
       {
@@ -1447,17 +1436,12 @@
         "at_cap": false
       },
       {
-        "sector": "Gold & Precious Metals + Banking & Financial Sector",
-        "weight": 0.8,
-        "at_cap": false
-      },
-      {
         "sector": "Crypto & Digital Assets",
         "weight": 0.5,
         "at_cap": false
       }
     ],
-    "max_drawdown_pct": 2.19,
+    "max_drawdown_pct": 2.23,
     "sector_cap_pct": 30,
     "trailing_stop_pct": 8,
     "hard_stop_pct": 10,
@@ -1466,16 +1450,7 @@
   "aladdin_risk": {
     "correlation": {
       "matrix": {
-        "CIBR": {
-          "CIBR": 1.0,
-          "GLDM": -0.053,
-          "IBIT": -0.037,
-          "QQQ": 0.195,
-          "XLE": -0.104,
-          "XLF": -0.058
-        },
         "GLDM": {
-          "CIBR": -0.053,
           "GLDM": 1.0,
           "IBIT": 0.24,
           "QQQ": 0.732,
@@ -1483,7 +1458,6 @@
           "XLF": 0.351
         },
         "IBIT": {
-          "CIBR": -0.037,
           "GLDM": 0.24,
           "IBIT": 1.0,
           "QQQ": 0.42,
@@ -1491,7 +1465,6 @@
           "XLF": -0.102
         },
         "QQQ": {
-          "CIBR": 0.195,
           "GLDM": 0.732,
           "IBIT": 0.42,
           "QQQ": 1.0,
@@ -1499,7 +1472,6 @@
           "XLF": -0.026
         },
         "XLE": {
-          "CIBR": -0.104,
           "GLDM": -0.657,
           "IBIT": -0.162,
           "QQQ": -0.583,
@@ -1507,7 +1479,6 @@
           "XLF": -0.082
         },
         "XLF": {
-          "CIBR": -0.058,
           "GLDM": 0.351,
           "IBIT": -0.102,
           "QQQ": -0.026,
@@ -1516,7 +1487,6 @@
         }
       },
       "tickers": [
-        "CIBR",
         "GLDM",
         "IBIT",
         "QQQ",
@@ -1538,13 +1508,12 @@
     "volatility": {
       "per_ticker": {
         "XLE": 26.4,
-        "CIBR": 22.1,
         "GLDM": 19.83,
         "IBIT": 27.1,
         "XLF": 10.79,
         "QQQ": 16.18
       },
-      "portfolio_avg_vol_pct": 20.4,
+      "portfolio_avg_vol_pct": 20.06,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -1552,63 +1521,54 @@
       "benchmark_price_start": 739.3,
       "benchmark_price_now": 745.64,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -1.07,
-      "alpha": -1.93
+      "portfolio_return_pct": -1.1,
+      "alpha": -1.96
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 43.25,
+          "actual_weight_pct": 66.42,
           "target_weight_pct": 10.0,
-          "drift_pct": 33.25,
+          "drift_pct": 56.42,
           "action": "DEPLOY",
-          "amount": 3278.0,
+          "amount": 5559.96,
           "etf_name": "Cash Reserve"
         },
         {
           "ticker": "IBIT",
           "actual_weight_pct": 0.51,
-          "target_weight_pct": 15.0,
-          "drift_pct": -14.49,
+          "target_weight_pct": 18.0,
+          "drift_pct": -17.49,
           "action": "ADD",
-          "amount": 1428.42,
+          "amount": 1723.54,
           "etf_name": "iShares Bitcoin Trust ETF"
-        },
-        {
-          "ticker": "GLDM",
-          "actual_weight_pct": 0.78,
-          "target_weight_pct": 15.0,
-          "drift_pct": -14.22,
-          "action": "ADD",
-          "amount": 1401.77,
-          "etf_name": "SPDR Gold MiniShares Trust"
-        },
-        {
-          "ticker": "CIBR",
-          "actual_weight_pct": 28.08,
-          "target_weight_pct": 15.0,
-          "drift_pct": 13.08,
-          "action": "TRIM",
-          "amount": 1289.61,
-          "etf_name": "First Trust Nasdaq CEA Cybersecurity ETF"
         },
         {
           "ticker": "QQQ",
           "actual_weight_pct": 4.11,
-          "target_weight_pct": 15.0,
-          "drift_pct": -10.89,
+          "target_weight_pct": 18.0,
+          "drift_pct": -13.89,
           "action": "ADD",
-          "amount": 1073.83,
+          "amount": 1368.96,
           "etf_name": "Invesco QQQ Trust"
+        },
+        {
+          "ticker": "GLDM",
+          "actual_weight_pct": 5.68,
+          "target_weight_pct": 18.0,
+          "drift_pct": -12.32,
+          "action": "ADD",
+          "amount": 1213.64,
+          "etf_name": "SPDR Gold MiniShares Trust"
         },
         {
           "ticker": "XLF",
           "actual_weight_pct": 6.25,
-          "target_weight_pct": 15.0,
-          "drift_pct": -8.75,
+          "target_weight_pct": 18.0,
+          "drift_pct": -11.75,
           "action": "ADD",
-          "amount": 862.74,
+          "amount": 1157.86,
           "etf_name": "Financial Select Sector SPDR"
         }
       ],
@@ -1618,8 +1578,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -2048.98,
-          "portfolio_loss_pct": -20.79,
+          "total_impact": -820.86,
+          "portfolio_loss_pct": -8.33,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1628,16 +1588,10 @@
               "impact": -922.8
             },
             {
-              "ticker": "CIBR",
-              "factor": "equities",
-              "shock_pct": -40.0,
-              "impact": -1107.31
-            },
-            {
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": 25.0,
-              "impact": 19.22
+              "impact": 140.04
             },
             {
               "ticker": "IBIT",
@@ -1660,8 +1614,8 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -2168.74,
-          "portfolio_loss_pct": -22.0,
+          "total_impact": -1213.04,
+          "portfolio_loss_pct": -12.31,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1670,16 +1624,10 @@
               "impact": -1090.58
             },
             {
-              "ticker": "CIBR",
-              "factor": "equities",
-              "shock_pct": -34.0,
-              "impact": -941.21
-            },
-            {
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": 3.0,
-              "impact": 2.31
+              "impact": 16.8
             },
             {
               "ticker": "IBIT",
@@ -1702,8 +1650,8 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -688.43,
-          "portfolio_loss_pct": -6.98,
+          "total_impact": -297.36,
+          "portfolio_loss_pct": -3.02,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1712,16 +1660,10 @@
               "impact": -167.78
             },
             {
-              "ticker": "CIBR",
-              "factor": "equities",
-              "shock_pct": -15.0,
-              "impact": -415.24
-            },
-            {
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": -5.0,
-              "impact": -3.84
+              "impact": -28.01
             },
             {
               "ticker": "IBIT",
@@ -1744,8 +1686,8 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -593.68,
-          "portfolio_loss_pct": -6.02,
+          "total_impact": -430.21,
+          "portfolio_loss_pct": -4.37,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1754,16 +1696,10 @@
               "impact": -251.67
             },
             {
-              "ticker": "CIBR",
-              "factor": "equities",
-              "shock_pct": -8.0,
-              "impact": -221.46
-            },
-            {
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": -12.0,
-              "impact": -9.23
+              "impact": -67.22
             },
             {
               "ticker": "IBIT",
@@ -1786,8 +1722,8 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -863.86,
-          "portfolio_loss_pct": -8.76,
+          "total_impact": -326.91,
+          "portfolio_loss_pct": -3.32,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1796,16 +1732,10 @@
               "impact": -335.56
             },
             {
-              "ticker": "CIBR",
-              "factor": "equities",
-              "shock_pct": -18.0,
-              "impact": -498.29
-            },
-            {
               "ticker": "GLDM",
               "factor": "gold",
               "shock_pct": 8.0,
-              "impact": 6.15
+              "impact": 44.81
             },
             {
               "ticker": "IBIT",
@@ -1829,16 +1759,16 @@
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -22.0
+      "worst_loss_pct": -12.31
     }
   },
   "logs": [
-    "2026-05-25 23:08:09 [INFO] AZALYST - status.json generated",
-    "2026-05-25 23:08:09 [INFO] PORTFOLIO - NAV USD 9,857.74 | Return -1.07%",
-    "2026-05-25 23:08:09 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-05-25 23:08:09 [INFO] TRADER - Open positions: XLE, CIBR, GLDM, IBIT, XLF, QQQ",
-    "2026-05-25 23:08:09 [INFO] TRADER - Closed trades: 4",
-    "2026-05-25 23:08:09 [INFO] RISK - Partial profits realised: USD 3,234.71"
+    "2026-05-26 00:11:37 [INFO] AZALYST - status.json generated",
+    "2026-05-26 00:11:37 [INFO] PORTFOLIO - NAV USD 9,854.36 | Return -1.10%",
+    "2026-05-26 00:11:37 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-05-26 00:11:37 [INFO] TRADER - Open positions: XLE, GLDM, IBIT, XLF, QQQ",
+    "2026-05-26 00:11:37 [INFO] TRADER - Closed trades: 5",
+    "2026-05-26 00:11:37 [INFO] RISK - Partial profits realised: USD 3,234.71"
   ],
-  "generated_at": "2026-05-25 23:08:04 UTC"
+  "generated_at": "2026-05-26 00:11:34 UTC"
 }
