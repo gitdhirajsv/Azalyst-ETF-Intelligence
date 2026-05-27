@@ -1,16 +1,16 @@
 {
-  "portfolio_value": 9775.16,
+  "portfolio_value": 9775.0,
   "total_deposited": 9916.39,
   "cash": 2793.92,
   "monthly_reserve": 0.0,
-  "market_value": 6981.24,
+  "market_value": 6981.07,
   "total_invested": 7001.6,
-  "unrealised_pnl": -20.36,
-  "unrealised_str": "-20.36",
+  "unrealised_pnl": -20.53,
+  "unrealised_str": "-20.53",
   "realised_pnl": -120.87,
   "realised_str": "-120.87",
-  "change": "-1.42%",
-  "change_raw": -1.42,
+  "change": "-1.43%",
+  "change_raw": -1.43,
   "closed_trades": 6,
   "partial_realised_pnl": 33.81,
   "portfolio_peak": 10030.21,
@@ -72,19 +72,19 @@
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 51.74,
-      "current": 51.44,
+      "current": 51.42,
       "peak_price": 51.91,
       "trail_stop": 46.57,
-      "dist_to_trail_pct": 9.47,
+      "dist_to_trail_pct": 9.44,
       "units": 11.858361,
       "invested": 613.64,
-      "pnl": -3.58,
-      "pnl_str": "-3.58",
-      "pnl_pct": -0.58,
-      "pnl_pct_str": "-0.58%",
+      "pnl": -3.82,
+      "pnl_str": "-3.82",
+      "pnl_pct": -0.62,
+      "pnl_pct_str": "-0.62%",
       "confidence": 87,
       "severity": "HIGH",
-      "days_held": 1,
+      "days_held": 2,
       "half_exited": false
     },
     {
@@ -95,19 +95,19 @@
       "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NASDAQ",
       "entry": 724.95,
-      "current": 729.44,
+      "current": 729.45,
       "peak_price": 731.53,
       "trail_stop": 652.46,
-      "dist_to_trail_pct": 10.55,
+      "dist_to_trail_pct": 10.56,
       "units": 3.848307,
       "invested": 2789.83,
-      "pnl": 17.29,
-      "pnl_str": "+17.29",
+      "pnl": 17.31,
+      "pnl_str": "+17.31",
       "pnl_pct": 0.62,
       "pnl_pct_str": "+0.62%",
       "confidence": 94,
       "severity": "HIGH",
-      "days_held": 1,
+      "days_held": 2,
       "half_exited": false
     },
     {
@@ -118,16 +118,16 @@
       "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 227.01,
-      "current": 230.54,
+      "current": 230.48,
       "peak_price": 230.67,
       "trail_stop": 204.31,
-      "dist_to_trail_pct": 11.38,
+      "dist_to_trail_pct": 11.35,
       "units": 2.32911,
       "invested": 528.74,
-      "pnl": 8.23,
-      "pnl_str": "+8.23",
-      "pnl_pct": 1.56,
-      "pnl_pct_str": "+1.56%",
+      "pnl": 8.08,
+      "pnl_str": "+8.08",
+      "pnl_pct": 1.53,
+      "pnl_pct_str": "+1.53%",
       "confidence": 94,
       "severity": "HIGH",
       "days_held": 1,
@@ -141,16 +141,16 @@
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 57.94,
-      "current": 56.98,
+      "current": 56.99,
       "peak_price": 58.86,
       "trail_stop": 52.14,
-      "dist_to_trail_pct": 8.49,
+      "dist_to_trail_pct": 8.51,
       "units": 19.824303,
       "invested": 1148.55,
-      "pnl": -18.96,
-      "pnl_str": "-18.96",
-      "pnl_pct": -1.65,
-      "pnl_pct_str": "-1.65%",
+      "pnl": -18.76,
+      "pnl_str": "-18.76",
+      "pnl_pct": -1.63,
+      "pnl_pct_str": "-1.63%",
       "confidence": 96,
       "severity": "CRITICAL",
       "days_held": 1,
@@ -284,32 +284,32 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.08273860818929307,
+    "vix_level": 16.290000915527344,
+    "vix_percentile_1y": 0.26587301587301587,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
+      "rank": 30,
+      "flow": 22,
+      "options": 18,
       "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "macro": 8,
+      "news": 7
     }
   },
   "top_signal": {
-    "ticker": "XLK",
-    "rank_score": 19.71911652703732,
-    "flow_score": 2.496103773355997,
-    "options_score": 9.067659228713753,
-    "rotation_score": 13.741944503363655,
-    "macro_score": 6.327895680633464,
-    "news_score": 6.2299999999999995,
-    "total": 57.58271971310419,
+    "ticker": "ITA",
+    "rank_score": 17.39178082191781,
+    "flow_score": 22.0,
+    "options_score": 2.2555784820789504,
+    "rotation_score": 15.0,
+    "macro_score": 0.0,
+    "news_score": 0.0,
+    "total": 56.64735930399676,
     "publish": false,
-    "direction": "short"
+    "direction": "long"
   },
   "allocation": {
     "labels": [
@@ -343,20 +343,16 @@
     "values": [
       -13.22,
       -10.05,
-      -3.58,
-      17.29,
-      8.23,
-      -18.96
+      -3.82,
+      17.31,
+      8.08,
+      -18.76
     ]
   },
   "confidence": [
     {
       "symbol": "Energy / Oil & Gas",
       "score": 96.0
-    },
-    {
-      "symbol": "Defense & Aerospace",
-      "score": 93.0
     },
     {
       "symbol": "Technology & AI / Semiconductors",
@@ -384,11 +380,15 @@
     },
     {
       "symbol": "Clean Energy & Renewables",
-      "score": 69.0
+      "score": 70.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
       "score": 68.0
+    },
+    {
+      "symbol": "Defense & Aerospace",
+      "score": 67.0
     },
     {
       "symbol": "India Equity Markets",
@@ -466,59 +466,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.9,
         "recency": 16.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 93.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 34,
-      "latest_at": "27 May 2026 17:12 UTC",
-      "headline": "US lawmakers weigh aviation fuel cost increase from Iran war in fiscal 2027 defense hearing",
-      "regions": [
-        "middle_east",
-        "global",
-        "asia_pacific",
-        "europe"
-      ],
-      "sources": [
-        "World | Deutsche Welle",
-        "Markets-Economic Times",
-        "Defense News",
-        "Oilprice.com"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.2,
-        "recency": 16.1,
         "geopolitical_severity": 13.0
       }
     },
@@ -825,7 +772,7 @@
     {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
-      "confidence": 69.0,
+      "confidence": 70.0,
       "severity": "MEDIUM",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
@@ -833,17 +780,17 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 5,
-      "latest_at": "27 May 2026 14:31 UTC",
-      "headline": "IEA: Global Electric Car Sales Topped 20 Million In 2025",
+      "latest_at": "27 May 2026 22:17 UTC",
+      "headline": "Floating Solar Could Be a Lifeline for Land-Scarce Nations Facing Energy Crises",
       "regions": [
-        "global",
-        "asia_pacific"
+        "asia_pacific",
+        "global"
       ],
       "sources": [
-        "Bloomberg Markets",
+        "World | Deutsche Welle",
         "Oilprice.com",
-        "The Verge",
-        "World | Deutsche Welle"
+        "US Top News and Analysis",
+        "The Verge"
       ],
       "primary_etf": "ICLN",
       "top_etfs": [
@@ -865,11 +812,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 10.0,
+        "signal_strength": 9.7,
         "volume_confirmation": 11.3,
-        "source_diversity": 11.0,
+        "source_diversity": 12.0,
         "recency": 16.9,
-        "geopolitical_severity": 9.8
+        "geopolitical_severity": 9.6
       }
     },
     {
@@ -918,6 +865,59 @@
         "source_diversity": 9.9,
         "recency": 16.9,
         "geopolitical_severity": 10.5
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 67.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 37,
+      "latest_at": "27 May 2026 21:42 UTC",
+      "headline": "US lawmakers weigh aviation fuel cost increase from Iran war in fiscal 2027 defense hearing",
+      "regions": [
+        "global",
+        "europe",
+        "india",
+        "middle_east"
+      ],
+      "sources": [
+        "Tech",
+        "EE Times",
+        "World | Deutsche Welle",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.5,
+        "recency": 16.0,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1230,11 +1230,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 34 articles - HIGH / NEUTRAL - US lawmakers weigh aviation fuel cost increase from Iran war in fiscal 2027 defense hearing"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Technology & AI / Semiconductors - 65 articles - CRITICAL / NEUTRAL - Characterization of GPU-based Inference for Reasoning-Centric LLMs (Micron, Argonne)"
     },
     {
@@ -1265,12 +1260,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Clean Energy & Renewables - 5 articles - MEDIUM / NEUTRAL - IEA: Global Electric Car Sales Topped 20 Million In 2025"
+      "text": "Clean Energy & Renewables - 5 articles - MEDIUM / NEUTRAL - Floating Solar Could Be a Lifeline for Land-Scarce Nations Facing Energy Crises"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 5 articles - MEDIUM / NEUTRAL - U.S., Iran signal peace progress \u2014 but remain at odds over enriched uranium, Strait of Hormuz tolls"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Defense & Aerospace - 37 articles - HIGH / NEUTRAL - US lawmakers weigh aviation fuel cost increase from Iran war in fiscal 2027 defense hearing"
     },
     {
       "tag": "tag-neu",
@@ -1354,9 +1354,9 @@
       "region": "EU",
       "price": 25177.8,
       "currency": "EUR",
-      "change": -7.09,
-      "change_pct": -0.03,
-      "change_str": "-0.03%",
+      "change": -211.3,
+      "change_pct": -0.83,
+      "change_str": "-0.83%",
       "direction": "down"
     },
     {
@@ -1396,55 +1396,55 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4484.8,
+      "price": 4489.1,
       "currency": "USD",
-      "change": -15.6,
-      "change_pct": -0.35,
-      "change_str": "-0.35%",
+      "change": -11.3,
+      "change_pct": -0.25,
+      "change_str": "-0.25%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 89.4,
+      "price": 89.48,
       "currency": "USD",
-      "change": -4.49,
-      "change_pct": -4.78,
-      "change_str": "-4.78%",
+      "change": -4.41,
+      "change_pct": -4.7,
+      "change_str": "-4.70%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 75274.01,
+      "price": 74472.01,
       "currency": "USD",
-      "change": -551.72,
-      "change_pct": -0.73,
-      "change_str": "-0.73%",
+      "change": -1353.72,
+      "change_pct": -1.79,
+      "change_str": "-1.79%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.2,
+      "price": 99.22,
       "currency": "USD",
-      "change": 0.03,
-      "change_pct": 0.03,
-      "change_str": "+0.03%",
+      "change": 0.05,
+      "change_pct": 0.05,
+      "change_str": "+0.05%",
       "direction": "up"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 16.33,
+      "price": 16.29,
       "currency": "USD",
-      "change": -0.68,
-      "change_pct": -4.0,
-      "change_str": "-4.00%",
+      "change": -0.72,
+      "change_pct": -4.23,
+      "change_str": "-4.23%",
       "direction": "down"
     }
   ],
@@ -1452,7 +1452,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 2.54,
     "portfolio_peak": 10030.21,
-    "vix": 16.33,
+    "vix": 16.29,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -1524,23 +1524,23 @@
           "IBIT": 0.434,
           "ITA": 0.632,
           "QQQ": 1.0,
-          "XLE": -0.581,
+          "XLE": -0.582,
           "XLF": 0.104
         },
         "XLE": {
           "GLDM": -0.55,
           "IBIT": -0.12,
           "ITA": -0.517,
-          "QQQ": -0.581,
+          "QQQ": -0.582,
           "XLE": 1.0,
-          "XLF": -0.013
+          "XLF": -0.014
         },
         "XLF": {
           "GLDM": 0.49,
           "IBIT": -0.032,
           "ITA": 0.441,
           "QQQ": 0.104,
-          "XLE": -0.013,
+          "XLE": -0.014,
           "XLF": 1.0
         }
       },
@@ -1557,7 +1557,7 @@
         "GLDM",
         "ITA"
       ],
-      "most_negative_corr": -0.581,
+      "most_negative_corr": -0.582,
       "most_negative_pair": [
         "QQQ",
         "XLE"
@@ -1571,7 +1571,7 @@
         "XLF": 10.81,
         "QQQ": 15.63,
         "ITA": 24.23,
-        "XLE": 28.89
+        "XLE": 28.88
       },
       "portfolio_avg_vol_pct": 21.16,
       "target_vol_pct": 15.0
@@ -1579,10 +1579,10 @@
     "benchmark": {
       "benchmark_return_pct": -0.02,
       "benchmark_price_start": 750.59,
-      "benchmark_price_now": 750.45,
+      "benchmark_price_now": 750.46,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -1.42,
-      "alpha": -1.4
+      "portfolio_return_pct": -1.43,
+      "alpha": -1.41
     },
     "rebalance": {
       "alerts": [
@@ -1592,7 +1592,7 @@
           "target_weight_pct": 10.0,
           "drift_pct": 18.58,
           "action": "DEPLOY",
-          "amount": 1816.41,
+          "amount": 1816.42,
           "etf_name": "Cash Reserve"
         },
         {
@@ -1601,7 +1601,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": 13.72,
           "action": "TRIM",
-          "amount": 1340.85,
+          "amount": 1340.9,
           "etf_name": "Invesco QQQ Trust"
         },
         {
@@ -1610,7 +1610,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -9.51,
           "action": "ADD",
-          "amount": 929.31,
+          "amount": 929.44,
           "etf_name": "iShares U.S. Aerospace & Defense ETF"
         },
         {
@@ -1619,7 +1619,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -8.76,
           "action": "ADD",
-          "amount": 856.28,
+          "amount": 856.49,
           "etf_name": "Financial Select Sector SPDR"
         },
         {
@@ -1628,7 +1628,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -8.42,
           "action": "ADD",
-          "amount": 822.66,
+          "amount": 822.64,
           "etf_name": "iShares Bitcoin Trust ETF"
         }
       ],
@@ -1638,7 +1638,7 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -1879.09,
+          "total_impact": -1879.2,
           "portfolio_loss_pct": -19.22,
           "position_impacts": [
             {
@@ -1657,31 +1657,31 @@
               "ticker": "XLF",
               "factor": "gold",
               "shock_pct": 25.0,
-              "impact": 152.5
+              "impact": 152.44
             },
             {
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -1122.85
+              "impact": -1122.86
             },
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -214.79
+              "impact": -214.73
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -621.27
+              "impact": -621.38
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -2072.75,
-          "portfolio_loss_pct": -21.2,
+          "total_impact": -2072.84,
+          "portfolio_loss_pct": -21.21,
           "position_impacts": [
             {
               "ticker": "GLDM",
@@ -1699,30 +1699,30 @@
               "ticker": "XLF",
               "factor": "gold",
               "shock_pct": 3.0,
-              "impact": 18.3
+              "impact": 18.29
             },
             {
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -954.42
+              "impact": -954.43
             },
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -182.57
+              "impact": -182.52
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -734.23
+              "impact": -734.36
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -836.49,
+          "total_impact": -836.48,
           "portfolio_loss_pct": -8.56,
           "position_impacts": [
             {
@@ -1741,7 +1741,7 @@
               "ticker": "XLF",
               "factor": "gold",
               "shock_pct": -5.0,
-              "impact": -30.5
+              "impact": -30.49
             },
             {
               "ticker": "QQQ",
@@ -1753,18 +1753,18 @@
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -80.54
+              "impact": -80.52
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -112.96
+              "impact": -112.98
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -725.0,
+          "total_impact": -724.99,
           "portfolio_loss_pct": -7.42,
           "position_impacts": [
             {
@@ -1783,7 +1783,7 @@
               "ticker": "XLF",
               "factor": "gold",
               "shock_pct": -12.0,
-              "impact": -73.2
+              "impact": -73.17
             },
             {
               "ticker": "QQQ",
@@ -1795,18 +1795,18 @@
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -42.96
+              "impact": -42.95
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -169.44
+              "impact": -169.47
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -839.64,
+          "total_impact": -839.68,
           "portfolio_loss_pct": -8.59,
           "position_impacts": [
             {
@@ -1825,40 +1825,40 @@
               "ticker": "XLF",
               "factor": "gold",
               "shock_pct": 8.0,
-              "impact": 48.8
+              "impact": 48.78
             },
             {
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -505.28
+              "impact": -505.29
             },
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -96.65
+              "impact": -96.63
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -225.92
+              "impact": -225.96
             }
           ]
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -21.2
+      "worst_loss_pct": -21.21
     }
   },
   "logs": [
-    "2026-05-27 20:20:31 [INFO] AZALYST - status.json generated",
-    "2026-05-27 20:20:31 [INFO] PORTFOLIO - NAV USD 9,775.16 | Return -1.42%",
-    "2026-05-27 20:20:31 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-05-27 20:20:31 [INFO] TRADER - Open positions: GLDM, IBIT, XLF, QQQ, ITA, XLE",
-    "2026-05-27 20:20:31 [INFO] TRADER - Closed trades: 6",
-    "2026-05-27 20:20:31 [INFO] RISK - Partial profits realised: USD 3,234.71"
+    "2026-05-27 22:27:57 [INFO] AZALYST - status.json generated",
+    "2026-05-27 22:27:57 [INFO] PORTFOLIO - NAV USD 9,775.00 | Return -1.43%",
+    "2026-05-27 22:27:57 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-05-27 22:27:57 [INFO] TRADER - Open positions: GLDM, IBIT, XLF, QQQ, ITA, XLE",
+    "2026-05-27 22:27:57 [INFO] TRADER - Closed trades: 6",
+    "2026-05-27 22:27:57 [INFO] RISK - Partial profits realised: USD 3,234.71"
   ],
-  "generated_at": "2026-05-27 20:20:30 UTC"
+  "generated_at": "2026-05-27 22:27:55 UTC"
 }
