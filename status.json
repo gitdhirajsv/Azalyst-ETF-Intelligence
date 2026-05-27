@@ -1,16 +1,16 @@
 {
-  "portfolio_value": 9819.87,
+  "portfolio_value": 9819.29,
   "total_deposited": 9917.42,
-  "cash": 4652.95,
+  "cash": 4124.37,
   "monthly_reserve": 0.0,
-  "market_value": 5166.92,
-  "total_invested": 5143.6,
-  "unrealised_pnl": 23.32,
-  "unrealised_str": "+23.32",
+  "market_value": 5694.91,
+  "total_invested": 5672.17,
+  "unrealised_pnl": 22.74,
+  "unrealised_str": "+22.74",
   "realised_pnl": -120.88,
   "realised_str": "-120.88",
-  "change": "-0.98%",
-  "change_raw": -0.98,
+  "change": "-0.99%",
+  "change_raw": -0.99,
   "closed_trades": 6,
   "partial_realised_pnl": 33.81,
   "portfolio_peak": 10031.26,
@@ -94,17 +94,17 @@
       "sector": "Technology & AI / Semiconductors",
       "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NASDAQ",
-      "entry": 721.5,
+      "entry": 723.67,
       "current": 730.28,
       "peak_price": 731.01,
-      "trail_stop": 649.35,
-      "dist_to_trail_pct": 11.08,
-      "units": 2.472553,
-      "invested": 1783.95,
-      "pnl": 21.71,
-      "pnl_str": "+21.71",
-      "pnl_pct": 1.22,
-      "pnl_pct_str": "+1.22%",
+      "trail_stop": 651.3,
+      "dist_to_trail_pct": 10.81,
+      "units": 3.195555,
+      "invested": 2312.52,
+      "pnl": 21.13,
+      "pnl_str": "+21.13",
+      "pnl_pct": 0.91,
+      "pnl_pct_str": "+0.91%",
       "confidence": 94,
       "severity": "HIGH",
       "days_held": 1,
@@ -284,12 +284,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
+    "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.07687034845836142,
+    "vix_level": 17.010000228881836,
+    "vix_percentile_1y": 0.46825396825396826,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -301,13 +301,13 @@
   },
   "top_signal": {
     "ticker": "EWY",
-    "rank_score": 14.019892884468248,
+    "rank_score": 13.957186544342507,
     "flow_score": 20.0,
     "options_score": 15.0,
     "rotation_score": 15.0,
-    "macro_score": 5.196832000158535,
-    "news_score": 5.36,
-    "total": 74.57672488462678,
+    "macro_score": 5.384166762771986,
+    "news_score": 7.120000000000001,
+    "total": 76.46135330711449,
     "publish": true,
     "direction": "long"
   },
@@ -325,10 +325,10 @@
       12.9,
       4.4,
       6.3,
-      18.4,
+      23.8,
       3.5,
       7.2,
-      47.4
+      42.0
     ]
   },
   "pnl": {
@@ -344,19 +344,23 @@
       3.16,
       -1.11,
       1.22,
-      21.71,
+      21.13,
       6.8,
       -8.36
     ]
   },
   "confidence": [
     {
-      "symbol": "Technology & AI / Semiconductors",
+      "symbol": "Defense & Aerospace",
       "score": 94.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 94.0
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 91.0
+    },
+    {
+      "symbol": "Asia Pacific Equity",
+      "score": 89.0
     },
     {
       "symbol": "Europe Equity + Gold & Precious Metals + Banking & Financial Sector",
@@ -381,10 +385,6 @@
     {
       "symbol": "Nuclear Energy & Uranium",
       "score": 68.0
-    },
-    {
-      "symbol": "Asia Pacific Equity",
-      "score": 67.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -416,59 +416,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 94.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 62,
-      "latest_at": "26 May 2026 19:11 UTC",
-      "headline": "\u200bHow TSMC and AI mania helped Taiwan leapfrog India in global equity rankings",
-      "regions": [
-        "india",
-        "middle_east",
-        "americas",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Cointelegraph.com News",
-        "World News - Breaking international news and headlines | Sky News",
-        "Semiconductor Engineering"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.3,
-        "recency": 15.5,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
@@ -519,6 +466,109 @@
         "volume_confirmation": 18.0,
         "source_diversity": 16.8,
         "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 91.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 69,
+      "latest_at": "27 May 2026 00:07 UTC",
+      "headline": "Characterization of GPU-based Inference for Reasoning-Centric LLMs (Micron, Argonne)",
+      "regions": [
+        "india",
+        "global",
+        "europe",
+        "middle_east"
+      ],
+      "sources": [
+        "The Verge",
+        "EE Times",
+        "Tech",
+        "World News - Breaking international news and headlines | Sky News"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.1,
+        "recency": 12.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 89.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "27 May 2026 02:35 UTC",
+      "headline": "Japan's Nikkei hits record high as chip-related shares jump",
+      "regions": [
+        "india",
+        "global",
+        "europe",
+        "middle_east"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Tech",
+        "World News - Breaking international news and headlines | Sky News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 18.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.9,
+        "recency": 16.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -816,56 +866,6 @@
         "source_diversity": 9.9,
         "recency": 16.9,
         "geopolitical_severity": 10.5
-      }
-    },
-    {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 67.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "26 May 2026 14:30 UTC",
-      "headline": "Global Markets: Japan's Nikkei retreats from record high on profit-booking, strength in oil prices",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "europe",
-        "india"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "World News - Breaking international news and headlines | Sky News",
-        "Oilprice.com",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 12.9,
-        "volume_confirmation": 13.7,
-        "source_diversity": 14.4,
-        "recency": 9.7,
-        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1227,12 +1227,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 62 articles - CRITICAL / NEUTRAL - \u200bHow TSMC and AI mania helped Taiwan leapfrog India in global equity rankings"
+      "text": "Defense & Aerospace - 43 articles - HIGH / NEUTRAL - Hypersonic missile used in Kyiv strike: What we know about it"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 43 articles - HIGH / NEUTRAL - Hypersonic missile used in Kyiv strike: What we know about it"
+      "text": "Technology & AI / Semiconductors - 69 articles - CRITICAL / NEUTRAL - Characterization of GPU-based Inference for Reasoning-Centric LLMs (Micron, Argonne)"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Asia Pacific Equity - 13 articles - HIGH / NEUTRAL - Japan's Nikkei hits record high as chip-related shares jump"
     },
     {
       "tag": "tag-neu",
@@ -1263,11 +1268,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Nuclear Energy & Uranium - 5 articles - MEDIUM / NEUTRAL - U.S., Iran signal peace progress \u2014 but remain at odds over enriched uranium, Strait of Hormuz tolls"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Asia Pacific Equity - 7 articles - HIGH / NEUTRAL - Global Markets: Japan's Nikkei retreats from record high on profit-booking, strength in oil prices"
     },
     {
       "tag": "tag-neu",
@@ -1345,9 +1345,9 @@
       "region": "UK",
       "price": 10491.39,
       "currency": "GBP",
-      "change": 47.89,
-      "change_pct": 0.46,
-      "change_str": "+0.46%",
+      "change": 25.09,
+      "change_pct": 0.24,
+      "change_str": "+0.24%",
       "direction": "up"
     },
     {
@@ -1356,32 +1356,32 @@
       "region": "EU",
       "price": 25184.89,
       "currency": "EUR",
-      "change": 296.33,
-      "change_pct": 1.19,
-      "change_str": "+1.19%",
-      "direction": "up"
+      "change": -204.21,
+      "change_pct": -0.8,
+      "change_str": "-0.80%",
+      "direction": "down"
     },
     {
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 64996.09,
+      "price": 65816.62,
       "currency": "JPY",
-      "change": 1657.02,
-      "change_pct": 2.62,
-      "change_str": "+2.62%",
+      "change": 820.53,
+      "change_pct": 1.26,
+      "change_str": "+1.26%",
       "direction": "up"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 25599.45,
+      "price": 25436.98,
       "currency": "HKD",
-      "change": 212.93,
-      "change_pct": 0.84,
-      "change_str": "+0.84%",
-      "direction": "up"
+      "change": -162.47,
+      "change_pct": -0.63,
+      "change_str": "-0.63%",
+      "direction": "down"
     },
     {
       "label": "Nifty 50",
@@ -1389,53 +1389,53 @@
       "region": "IN",
       "price": 23913.7,
       "currency": "INR",
-      "change": 194.4,
-      "change_pct": 0.82,
-      "change_str": "+0.82%",
-      "direction": "up"
+      "change": -118.0,
+      "change_pct": -0.49,
+      "change_str": "-0.49%",
+      "direction": "down"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4513.8,
+      "price": 4502.0,
       "currency": "USD",
-      "change": -7.2,
-      "change_pct": -0.16,
-      "change_str": "-0.16%",
-      "direction": "down"
+      "change": 1.6,
+      "change_pct": 0.04,
+      "change_str": "+0.04%",
+      "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 93.33,
+      "price": 92.2,
       "currency": "USD",
-      "change": -3.27,
-      "change_pct": -3.39,
-      "change_str": "-3.39%",
+      "change": -1.69,
+      "change_pct": -1.8,
+      "change_str": "-1.80%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 75847.67,
+      "price": 75746.37,
       "currency": "USD",
-      "change": -1432.26,
-      "change_pct": -1.85,
-      "change_str": "-1.85%",
+      "change": -1533.56,
+      "change_pct": -1.98,
+      "change_str": "-1.98%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.14,
+      "price": 99.11,
       "currency": "USD",
-      "change": -0.18,
-      "change_pct": -0.18,
-      "change_str": "-0.18%",
+      "change": -0.04,
+      "change_pct": -0.04,
+      "change_str": "-0.04%",
       "direction": "down"
     },
     {
@@ -1459,7 +1459,7 @@
     "sector_concentration": [
       {
         "sector": "Technology & AI / Semiconductors",
-        "weight": 18.4,
+        "weight": 23.8,
         "at_cap": false
       },
       {
@@ -1583,18 +1583,18 @@
       "benchmark_price_start": 750.59,
       "benchmark_price_now": 750.59,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.98,
-      "alpha": -0.98
+      "portfolio_return_pct": -0.99,
+      "alpha": -0.99
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 47.38,
+          "actual_weight_pct": 42.0,
           "target_weight_pct": 10.0,
-          "drift_pct": 37.38,
+          "drift_pct": 32.0,
           "action": "DEPLOY",
-          "amount": 3670.96,
+          "amount": 3142.44,
           "etf_name": "Cash Reserve"
         },
         {
@@ -1603,7 +1603,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -11.55,
           "action": "ADD",
-          "amount": 1134.11,
+          "amount": 1134.02,
           "etf_name": "iShares U.S. Aerospace & Defense ETF"
         },
         {
@@ -1612,8 +1612,17 @@
           "target_weight_pct": 15.0,
           "drift_pct": -10.62,
           "action": "ADD",
-          "amount": 1043.18,
+          "amount": 1043.09,
           "etf_name": "iShares Bitcoin Trust ETF"
+        },
+        {
+          "ticker": "QQQ",
+          "actual_weight_pct": 23.77,
+          "target_weight_pct": 15.0,
+          "drift_pct": 8.77,
+          "action": "TRIM",
+          "amount": 860.76,
+          "etf_name": "Invesco QQQ Trust"
         },
         {
           "ticker": "XLF",
@@ -1621,7 +1630,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -8.74,
           "action": "ADD",
-          "amount": 858.12,
+          "amount": 858.04,
           "etf_name": "Financial Select Sector SPDR"
         },
         {
@@ -1630,7 +1639,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -7.8,
           "action": "ADD",
-          "amount": 765.73,
+          "amount": 765.64,
           "etf_name": "Energy Select Sector SPDR"
         }
       ],
@@ -1640,8 +1649,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -1033.35,
-          "portfolio_loss_pct": -10.52,
+          "total_impact": -1244.55,
+          "portfolio_loss_pct": -12.67,
           "position_impacts": [
             {
               "ticker": "GLDM",
@@ -1665,7 +1674,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -722.26
+              "impact": -933.46
             },
             {
               "ticker": "ITA",
@@ -1682,8 +1691,8 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -1304.22,
-          "portfolio_loss_pct": -13.28,
+          "total_impact": -1483.73,
+          "portfolio_loss_pct": -15.11,
           "position_impacts": [
             {
               "ticker": "GLDM",
@@ -1707,7 +1716,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -613.92
+              "impact": -793.44
             },
             {
               "ticker": "ITA",
@@ -1724,8 +1733,8 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -572.63,
-          "portfolio_loss_pct": -5.83,
+          "total_impact": -651.83,
+          "portfolio_loss_pct": -6.64,
           "position_impacts": [
             {
               "ticker": "GLDM",
@@ -1749,7 +1758,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -270.85
+              "impact": -350.05
             },
             {
               "ticker": "ITA",
@@ -1766,8 +1775,8 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -546.87,
-          "portfolio_loss_pct": -5.57,
+          "total_impact": -589.11,
+          "portfolio_loss_pct": -6.0,
           "position_impacts": [
             {
               "ticker": "GLDM",
@@ -1791,7 +1800,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -144.45
+              "impact": -186.69
             },
             {
               "ticker": "ITA",
@@ -1808,8 +1817,8 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -484.09,
-          "portfolio_loss_pct": -4.93,
+          "total_impact": -579.13,
+          "portfolio_loss_pct": -5.9,
           "position_impacts": [
             {
               "ticker": "GLDM",
@@ -1833,7 +1842,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -325.02
+              "impact": -420.06
             },
             {
               "ticker": "ITA",
@@ -1851,16 +1860,16 @@
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -13.28
+      "worst_loss_pct": -15.11
     }
   },
   "logs": [
-    "2026-05-26 23:47:46 [INFO] AZALYST - status.json generated",
-    "2026-05-26 23:47:46 [INFO] PORTFOLIO - NAV USD 9,819.87 | Return -0.98%",
-    "2026-05-26 23:47:46 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-05-26 23:47:46 [INFO] TRADER - Open positions: GLDM, IBIT, XLF, QQQ, ITA, XLE",
-    "2026-05-26 23:47:46 [INFO] TRADER - Closed trades: 6",
-    "2026-05-26 23:47:46 [INFO] RISK - Partial profits realised: USD 3,234.71"
+    "2026-05-27 03:01:44 [INFO] AZALYST - status.json generated",
+    "2026-05-27 03:01:44 [INFO] PORTFOLIO - NAV USD 9,819.29 | Return -0.99%",
+    "2026-05-27 03:01:44 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-05-27 03:01:44 [INFO] TRADER - Open positions: GLDM, IBIT, XLF, QQQ, ITA, XLE",
+    "2026-05-27 03:01:44 [INFO] TRADER - Closed trades: 6",
+    "2026-05-27 03:01:44 [INFO] RISK - Partial profits realised: USD 3,234.71"
   ],
-  "generated_at": "2026-05-26 23:47:44 UTC"
+  "generated_at": "2026-05-27 03:01:41 UTC"
 }
