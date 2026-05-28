@@ -1,21 +1,21 @@
 {
-  "portfolio_value": 9998.55,
+  "portfolio_value": 10009.55,
   "total_deposited": 10000.0,
-  "cash": 8675.96,
+  "cash": 8034.81,
   "monthly_reserve": 0.0,
-  "market_value": 1322.58,
-  "total_invested": 1324.04,
-  "unrealised_pnl": -1.45,
-  "unrealised_str": "-1.45",
+  "market_value": 1974.74,
+  "total_invested": 1965.19,
+  "unrealised_pnl": 9.55,
+  "unrealised_str": "+9.55",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "-0.01%",
-  "change_raw": -0.01,
+  "change": "+0.10%",
+  "change_raw": 0.1,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 10000.0,
-  "drawdown_now_pct": 0.01,
-  "max_drawdown_pct": 0.01,
+  "portfolio_peak": 10009.55,
+  "drawdown_now_pct": 0.0,
+  "max_drawdown_pct": 0.02,
   "usd_inr_rate": 95.68,
   "positions": [
     {
@@ -26,16 +26,16 @@
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 57.05,
-      "current": 56.99,
-      "peak_price": 57.05,
+      "current": 57.14,
+      "peak_price": 57.14,
       "trail_stop": 51.34,
-      "dist_to_trail_pct": 9.91,
+      "dist_to_trail_pct": 10.15,
       "units": 12.304414,
       "invested": 702.0,
-      "pnl": -0.7,
-      "pnl_str": "-0.70",
-      "pnl_pct": -0.1,
-      "pnl_pct_str": "-0.10%",
+      "pnl": 1.14,
+      "pnl_str": "+1.14",
+      "pnl_pct": 0.16,
+      "pnl_pct_str": "+0.16%",
       "confidence": 89,
       "severity": "CRITICAL",
       "days_held": 0,
@@ -49,18 +49,41 @@
       "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 230.71,
-      "current": 230.48,
-      "peak_price": 230.71,
+      "current": 234.56,
+      "peak_price": 234.56,
       "trail_stop": 207.64,
-      "dist_to_trail_pct": 9.91,
+      "dist_to_trail_pct": 11.48,
       "units": 2.695907,
       "invested": 622.04,
-      "pnl": -0.62,
-      "pnl_str": "-0.62",
-      "pnl_pct": -0.1,
-      "pnl_pct_str": "-0.10%",
+      "pnl": 10.39,
+      "pnl_str": "+10.39",
+      "pnl_pct": 1.67,
+      "pnl_pct_str": "+1.67%",
       "confidence": 93,
       "severity": "HIGH",
+      "days_held": 0,
+      "half_exited": false
+    },
+    {
+      "trade_id": "T0003",
+      "ticker": "IBIT",
+      "etf_name": "iShares Bitcoin Trust ETF",
+      "sector": "Crypto & Digital Assets + Bonds & Fixed Income",
+      "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NASDAQ",
+      "entry": 41.35,
+      "current": 41.23,
+      "peak_price": 41.35,
+      "trail_stop": 37.21,
+      "dist_to_trail_pct": 9.75,
+      "units": 15.50569,
+      "invested": 641.15,
+      "pnl": -1.79,
+      "pnl_str": "-1.79",
+      "pnl_pct": -0.28,
+      "pnl_pct_str": "-0.28%",
+      "confidence": 94,
+      "severity": "CRITICAL",
       "days_held": 0,
       "half_exited": false
     }
@@ -81,12 +104,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
+    "risk_state": "NEUTRAL",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.08273860759324662,
-    "vix_level": 16.719999313354492,
-    "vix_percentile_1y": 0.3968253968253968,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -97,40 +120,48 @@
     }
   },
   "top_signal": {
-    "ticker": "XLK",
-    "rank_score": 16.434650455927052,
-    "flow_score": 0.16712273332554686,
-    "options_score": 20.005409709603377,
-    "rotation_score": 13.741944503363655,
-    "macro_score": 4.899144308581783,
-    "news_score": 6.96,
-    "total": 62.20827171080141,
-    "publish": true,
-    "direction": "short"
+    "ticker": "JEDI",
+    "rank_score": 27.039999999999996,
+    "flow_score": 22.0,
+    "options_score": 0.0,
+    "rotation_score": 0.0,
+    "macro_score": 0.0,
+    "news_score": 0.0,
+    "total": 49.03999999999999,
+    "publish": false,
+    "direction": "long"
   },
   "allocation": {
     "labels": [
       "XLE",
       "ITA",
+      "IBIT",
       "CASH"
     ],
     "values": [
       7.0,
-      6.2,
-      86.8
+      6.3,
+      6.4,
+      80.3
     ]
   },
   "pnl": {
     "labels": [
       "XLE",
-      "ITA"
+      "ITA",
+      "IBIT"
     ],
     "values": [
-      -0.7,
-      -0.62
+      1.14,
+      10.39,
+      -1.79
     ]
   },
   "confidence": [
+    {
+      "symbol": "Crypto & Digital Assets + Bonds & Fixed Income",
+      "score": 94.0
+    },
     {
       "symbol": "Defense & Aerospace",
       "score": 93.0
@@ -157,6 +188,53 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets + Bonds & Fixed Income",
+      "confidence": 94.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "28 May 2026 14:18 UTC",
+      "headline": "Price predictions 5/27: BTC, ETH, BNB, XRP, SOL, DOGE, HYPE, ZEC, ADA, XMR",
+      "regions": [
+        "middle_east",
+        "asia_pacific",
+        "americas",
+        "europe"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "Bloomberg Markets",
+        "BBC News"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 17.4,
+        "source_diversity": 13.3,
+        "recency": 16.5,
+        "geopolitical_severity": 13.0
+      }
+    },
     {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
@@ -466,6 +544,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Crypto & Digital Assets + Bonds & Fixed Income - 12 articles - CRITICAL / NEUTRAL - Price predictions 5/27: BTC, ETH, BNB, XRP, SOL, DOGE, HYPE, ZEC, ADA, XMR"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Defense & Aerospace - 32 articles - HIGH / NEUTRAL - Gift Nifty tumbles nearly 2% after US-Iran exchange strikes in latest escalation"
     },
     {
@@ -499,55 +582,55 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7520.36,
+      "price": 7542.04,
       "currency": "USD",
-      "change": 1.24,
-      "change_pct": 0.02,
-      "change_str": "+0.02%",
+      "change": 21.68,
+      "change_pct": 0.29,
+      "change_str": "+0.29%",
       "direction": "up"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 26674.73,
+      "price": 26752.64,
       "currency": "USD",
-      "change": 18.55,
-      "change_pct": 0.07,
-      "change_str": "+0.07%",
+      "change": 77.91,
+      "change_pct": 0.29,
+      "change_str": "+0.29%",
       "direction": "up"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 50644.28,
+      "price": 50593.06,
       "currency": "USD",
-      "change": 182.6,
-      "change_pct": 0.36,
-      "change_str": "+0.36%",
-      "direction": "up"
+      "change": -51.22,
+      "change_pct": -0.1,
+      "change_str": "-0.10%",
+      "direction": "down"
     },
     {
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10398.35,
+      "price": 10437.1,
       "currency": "GBP",
-      "change": -106.65,
-      "change_pct": -1.02,
-      "change_str": "-1.02%",
+      "change": -67.9,
+      "change_pct": -0.65,
+      "change_str": "-0.65%",
       "direction": "down"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 25078.56,
+      "price": 25128.88,
       "currency": "EUR",
-      "change": -99.24,
-      "change_pct": -0.39,
-      "change_str": "-0.39%",
+      "change": -48.92,
+      "change_pct": -0.19,
+      "change_str": "-0.19%",
       "direction": "down"
     },
     {
@@ -587,63 +670,63 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4410.9,
+      "price": 4498.4,
       "currency": "USD",
-      "change": -36.6,
-      "change_pct": -0.82,
-      "change_str": "-0.82%",
-      "direction": "down"
+      "change": 50.9,
+      "change_pct": 1.14,
+      "change_str": "+1.14%",
+      "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 90.87,
+      "price": 88.97,
       "currency": "USD",
-      "change": 2.19,
-      "change_pct": 2.47,
-      "change_str": "+2.47%",
+      "change": 0.29,
+      "change_pct": 0.33,
+      "change_str": "+0.33%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 73296.61,
+      "price": 72863.68,
       "currency": "USD",
-      "change": -1048.09,
-      "change_pct": -1.41,
-      "change_str": "-1.41%",
+      "change": -1481.02,
+      "change_pct": -1.99,
+      "change_str": "-1.99%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.38,
+      "price": 99.01,
       "currency": "USD",
-      "change": 0.17,
-      "change_pct": 0.17,
-      "change_str": "+0.17%",
-      "direction": "up"
+      "change": -0.2,
+      "change_pct": -0.2,
+      "change_str": "-0.20%",
+      "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 16.72,
+      "price": 16.02,
       "currency": "USD",
-      "change": 0.43,
-      "change_pct": 2.64,
-      "change_str": "+2.64%",
-      "direction": "up"
+      "change": -0.27,
+      "change_pct": -1.66,
+      "change_str": "-1.66%",
+      "direction": "down"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.01,
-    "portfolio_peak": 10000.0,
-    "vix": 16.72,
+    "drawdown_from_peak_pct": 0.0,
+    "portfolio_peak": 10009.55,
+    "vix": 16.02,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -652,12 +735,17 @@
         "at_cap": false
       },
       {
+        "sector": "Crypto & Digital Assets + Bonds & Fixed Income",
+        "weight": 6.4,
+        "at_cap": false
+      },
+      {
         "sector": "Defense & Aerospace",
-        "weight": 6.2,
+        "weight": 6.3,
         "at_cap": false
       }
     ],
-    "max_drawdown_pct": 0.01,
+    "max_drawdown_pct": 0.02,
     "sector_cap_pct": 30,
     "trailing_stop_pct": 8,
     "hard_stop_pct": 10,
@@ -666,17 +754,17 @@
   "aladdin_risk": {
     "correlation": {
       "matrix": {
-        "ITA": {
-          "ITA": 1.0,
-          "XLE": -0.517
+        "IBIT": {
+          "IBIT": 1.0,
+          "XLE": -0.118
         },
         "XLE": {
-          "ITA": -0.517,
+          "IBIT": -0.118,
           "XLE": 1.0
         }
       },
       "tickers": [
-        "ITA",
+        "IBIT",
         "XLE"
       ],
       "max_corr": 0.0,
@@ -684,56 +772,65 @@
         "",
         ""
       ],
-      "most_negative_corr": -0.517,
+      "most_negative_corr": -0.118,
       "most_negative_pair": [
-        "ITA",
+        "IBIT",
         "XLE"
       ],
       "status": "OK"
     },
     "volatility": {
       "per_ticker": {
-        "XLE": 28.88,
-        "ITA": 24.23
+        "XLE": 28.18,
+        "IBIT": 28.68
       },
-      "portfolio_avg_vol_pct": 26.56,
+      "portfolio_avg_vol_pct": 28.43,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": -0.02,
-      "benchmark_price_start": 750.59,
-      "benchmark_price_now": 750.46,
+      "benchmark_return_pct": 0.0,
+      "benchmark_price_start": 752.45,
+      "benchmark_price_now": 752.45,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.01,
-      "alpha": 0.01
+      "portfolio_return_pct": 0.1,
+      "alpha": 0.1
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 86.77,
+          "actual_weight_pct": 80.27,
           "target_weight_pct": 10.0,
-          "drift_pct": 76.77,
+          "drift_pct": 70.27,
           "action": "DEPLOY",
-          "amount": 7676.11,
+          "amount": 7033.86,
           "etf_name": "Cash Reserve"
         },
         {
           "ticker": "ITA",
-          "actual_weight_pct": 6.21,
-          "target_weight_pct": 45.0,
-          "drift_pct": -38.79,
+          "actual_weight_pct": 6.32,
+          "target_weight_pct": 30.0,
+          "drift_pct": -23.68,
           "action": "ADD",
-          "amount": 3877.99,
+          "amount": 2370.5,
           "etf_name": "iShares U.S. Aerospace & Defense ETF"
         },
         {
-          "ticker": "XLE",
-          "actual_weight_pct": 7.01,
-          "target_weight_pct": 45.0,
-          "drift_pct": -37.99,
+          "ticker": "IBIT",
+          "actual_weight_pct": 6.39,
+          "target_weight_pct": 30.0,
+          "drift_pct": -23.61,
           "action": "ADD",
-          "amount": 3798.12,
+          "amount": 2363.57,
+          "etf_name": "iShares Bitcoin Trust ETF"
+        },
+        {
+          "ticker": "XLE",
+          "actual_weight_pct": 7.02,
+          "target_weight_pct": 30.0,
+          "drift_pct": -22.98,
+          "action": "ADD",
+          "amount": 2299.79,
           "etf_name": "Energy Select Sector SPDR"
         }
       ],
@@ -743,105 +840,135 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -634.22,
-          "portfolio_loss_pct": -6.34,
+          "total_impact": -1023.22,
+          "portfolio_loss_pct": -10.22,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -385.68
+              "impact": -386.69
             },
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -248.54
+              "impact": -252.95
+            },
+            {
+              "ticker": "IBIT",
+              "factor": "crypto",
+              "shock_pct": -60.0,
+              "impact": -383.58
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -667.06,
-          "portfolio_loss_pct": -6.67,
+          "total_impact": -927.72,
+          "portfolio_loss_pct": -9.27,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -455.8
+              "impact": -457.0
             },
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -211.26
+              "impact": -215.0
+            },
+            {
+              "ticker": "IBIT",
+              "factor": "crypto",
+              "shock_pct": -40.0,
+              "impact": -255.72
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -163.33,
-          "portfolio_loss_pct": -1.63,
+          "total_impact": -293.02,
+          "portfolio_loss_pct": -2.93,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -70.12
+              "impact": -70.31
             },
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -93.2
+              "impact": -94.85
+            },
+            {
+              "ticker": "IBIT",
+              "factor": "crypto",
+              "shock_pct": -20.0,
+              "impact": -127.86
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -154.89,
-          "portfolio_loss_pct": -1.55,
+          "total_impact": -219.98,
+          "portfolio_loss_pct": -2.2,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -105.18
+              "impact": -105.46
             },
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -49.71
+              "impact": -50.59
+            },
+            {
+              "ticker": "IBIT",
+              "factor": "crypto",
+              "shock_pct": -10.0,
+              "impact": -63.93
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -252.09,
-          "portfolio_loss_pct": -2.52,
+          "total_impact": -414.27,
+          "portfolio_loss_pct": -4.14,
           "position_impacts": [
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -140.25
+              "impact": -140.61
             },
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -111.84
+              "impact": -113.83
+            },
+            {
+              "ticker": "IBIT",
+              "factor": "crypto",
+              "shock_pct": -25.0,
+              "impact": -159.82
             }
           ]
         }
       },
-      "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -6.67
+      "worst_scenario": "2008_GFC",
+      "worst_loss_pct": -10.22
     }
   },
   "logs": [
-    "2026-05-28 11:04:33 [INFO] AZALYST - status.json generated",
-    "2026-05-28 11:04:33 [INFO] PORTFOLIO - NAV USD 9,998.55 | Return -0.01%",
-    "2026-05-28 11:04:33 [INFO] SIGNALS - 6 active signal buckets in state",
-    "2026-05-28 11:04:33 [INFO] TRADER - Open positions: XLE, ITA"
+    "2026-05-28 14:41:03 [INFO] AZALYST - status.json generated",
+    "2026-05-28 14:41:03 [INFO] PORTFOLIO - NAV USD 10,009.55 | Return +0.10%",
+    "2026-05-28 14:41:03 [INFO] SIGNALS - 7 active signal buckets in state",
+    "2026-05-28 14:41:03 [INFO] TRADER - Open positions: XLE, ITA, IBIT"
   ],
-  "generated_at": "2026-05-28 11:04:31 UTC"
+  "generated_at": "2026-05-28 14:41:02 UTC"
 }
