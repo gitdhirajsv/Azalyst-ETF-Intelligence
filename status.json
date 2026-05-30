@@ -149,8 +149,8 @@
     "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 6.205925908149401,
-    "news_score": 5.264,
-    "total": 69.35154631325067,
+    "news_score": 4.928,
+    "total": 69.01554631325067,
     "publish": true,
     "direction": "long"
   },
@@ -186,23 +186,23 @@
   },
   "confidence": [
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 94.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 94.0
-    },
-    {
       "symbol": "Defense & Aerospace",
       "score": 88.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 83.0
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 88.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 87.0
     },
     {
       "symbol": "Asia Pacific Equity",
+      "score": 80.0
+    },
+    {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 80.0
     },
     {
@@ -223,112 +223,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 94.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 27,
-      "latest_at": "30 May 2026 13:00 UTC",
-      "headline": "Oil Prices Suffer Biggest Weekly Collapse in Two Months",
-      "regions": [
-        "americas",
-        "asia_pacific",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Defense News",
-        "Oilprice.com"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.9,
-        "recency": 14.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 94.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 64,
-      "latest_at": "30 May 2026 12:00 UTC",
-      "headline": "Chip Industry Week In Review",
-      "regions": [
-        "india",
-        "asia_pacific",
-        "middle_east",
-        "americas"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "US Top News and Analysis",
-        "World | Deutsche Welle",
-        "BBC News"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.9,
-        "recency": 13.3,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
@@ -383,55 +277,108 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 83.0,
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 88.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "30 May 2026 05:47 UTC",
-      "headline": "Wall Street Week Ahead: Jobs report on tap for soaring US stocks as rate path, bond yields eyed as risks",
+      "article_count": 60,
+      "latest_at": "30 May 2026 14:49 UTC",
+      "headline": "Chip Industry Week In Review",
       "regions": [
-        "india",
-        "asia_pacific",
+        "global",
         "middle_east",
-        "americas"
+        "americas",
+        "europe"
       ],
       "sources": [
-        "Latest from Tom's Hardware",
-        "BBC News",
-        "Finance",
-        "Markets-Economic Times"
+        "Cointelegraph.com News",
+        "World | Deutsche Welle",
+        "Earnings",
+        "www.theregister.com - Articles"
       ],
-      "primary_etf": "GLDM",
+      "primary_etf": "QQQ",
       "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
+        "NIFTYBEES",
+        "MAFANG"
       ],
       "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
+        "QQQ",
+        "SOXX",
+        "AIQ"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
-        "volume_confirmation": 16.8,
-        "source_diversity": 14.9,
-        "recency": 7.1,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.9,
+        "recency": 10.3,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 87.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 26,
+      "latest_at": "30 May 2026 13:00 UTC",
+      "headline": "Oil Prices Suffer Biggest Weekly Collapse in Two Months",
+      "regions": [
+        "global",
+        "americas",
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "Defense News"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.4,
+        "recency": 8.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -481,6 +428,59 @@
         "volume_confirmation": 13.7,
         "source_diversity": 12.8,
         "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 80.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "30 May 2026 05:47 UTC",
+      "headline": "Wall Street Week Ahead: Jobs report on tap for soaring US stocks as rate path, bond yields eyed as risks",
+      "regions": [
+        "global",
+        "middle_east",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Latest from Tom's Hardware",
+        "Bloomberg Markets",
+        "BBC News"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 16.8,
+        "source_diversity": 14.9,
+        "recency": 4.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -541,17 +541,17 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 7,
-      "latest_at": "30 May 2026 15:46 UTC",
+      "latest_at": "30 May 2026 19:48 UTC",
       "headline": "Independent cyber audit finds zero malware or backdoors in DJI drones \u2014 U.S. firm's hardware analysis challenges FCC ban amid ongoing $1.56 billion legal battle",
       "regions": [
-        "india",
-        "global"
+        "global",
+        "india"
       ],
       "sources": [
-        "The Verge",
-        "US Top News and Analysis",
         "www.theregister.com - Articles",
-        "Earnings"
+        "Earnings",
+        "Latest from Tom's Hardware",
+        "The Verge"
       ],
       "primary_etf": "CIBR",
       "top_etfs": [
@@ -571,7 +571,7 @@
         "signal_strength": 12.3,
         "volume_confirmation": 13.7,
         "source_diversity": 9.5,
-        "recency": 16.9,
+        "recency": 17.0,
         "geopolitical_severity": 8.4
       }
     },
@@ -636,17 +636,18 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "29 May 2026 16:14 UTC",
-      "headline": "Jony Ive\u2019s funky Ferrari",
+      "article_count": 4,
+      "latest_at": "30 May 2026 19:00 UTC",
+      "headline": "Morocco Is Emerging as a Renewable Energy Superpower",
       "regions": [
         "global",
-        "india"
+        "americas",
+        "africa"
       ],
       "sources": [
-        "Markets-Economic Times",
         "Latest from Tom's Hardware",
-        "The Verge"
+        "US Top News and Analysis",
+        "Oilprice.com"
       ],
       "primary_etf": "ICLN",
       "top_etfs": [
@@ -668,25 +669,15 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 7.8,
-        "volume_confirmation": 11.3,
-        "source_diversity": 9.1,
-        "recency": 16.9,
-        "geopolitical_severity": 7.0
+        "signal_strength": 8.8,
+        "volume_confirmation": 9.7,
+        "source_diversity": 7.6,
+        "recency": 15.6,
+        "geopolitical_severity": 10.8
       }
     }
   ],
   "articles": [
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Energy / Oil & Gas - 27 articles - CRITICAL / NEUTRAL - Oil Prices Suffer Biggest Weekly Collapse in Two Months"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 64 articles - HIGH / NEUTRAL - Chip Industry Week In Review"
-    },
     {
       "tag": "tag-neu",
       "label": "Neutral",
@@ -695,12 +686,22 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - Wall Street Week Ahead: Jobs report on tap for soaring US stocks as rate path, bond yields eyed as risks"
+      "text": "Technology & AI / Semiconductors - 60 articles - HIGH / NEUTRAL - Chip Industry Week In Review"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Energy / Oil & Gas - 26 articles - CRITICAL / NEUTRAL - Oil Prices Suffer Biggest Weekly Collapse in Two Months"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Asia Pacific Equity - 7 articles - HIGH / NEUTRAL - South Korea's Kospi, Japan's Topix hit record highs as investors shrug off Iran tensions"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - Wall Street Week Ahead: Jobs report on tap for soaring US stocks as rate path, bond yields eyed as risks"
     },
     {
       "tag": "tag-neu",
@@ -720,7 +721,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Clean Energy & Renewables - 5 articles - MEDIUM / NEUTRAL - Jony Ive\u2019s funky Ferrari"
+      "text": "Clean Energy & Renewables - 4 articles - MEDIUM / NEUTRAL - Morocco Is Emerging as a Renewable Energy Superpower"
     }
   ],
   "market_snapshot": [
@@ -838,11 +839,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 73908.09,
+      "price": 73921.84,
       "currency": "USD",
-      "change": 535.57,
-      "change_pct": 0.73,
-      "change_str": "+0.73%",
+      "change": 549.32,
+      "change_pct": 0.75,
+      "change_str": "+0.75%",
       "direction": "up"
     },
     {
@@ -1157,10 +1158,10 @@
     }
   },
   "logs": [
-    "2026-05-30 18:14:53 [INFO] AZALYST - status.json generated",
-    "2026-05-30 18:14:53 [INFO] PORTFOLIO - NAV USD 10,024.15 | Return -0.48%",
-    "2026-05-30 18:14:53 [INFO] SIGNALS - 9 active signal buckets in state",
-    "2026-05-30 18:14:53 [INFO] TRADER - Open positions: XLE, ITA, IBIT, QQQ"
+    "2026-05-30 19:55:44 [INFO] AZALYST - status.json generated",
+    "2026-05-30 19:55:44 [INFO] PORTFOLIO - NAV USD 10,024.15 | Return -0.48%",
+    "2026-05-30 19:55:44 [INFO] SIGNALS - 9 active signal buckets in state",
+    "2026-05-30 19:55:44 [INFO] TRADER - Open positions: XLE, ITA, IBIT, QQQ"
   ],
-  "generated_at": "2026-05-30 18:14:50 UTC"
+  "generated_at": "2026-05-30 19:55:42 UTC"
 }
