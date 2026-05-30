@@ -613,24 +613,24 @@
     }
   },
   "energy_oil": {
-    "sent_at": "2026-05-29T21:24:10.156916+00:00",
+    "sent_at": "2026-05-30T04:35:45.091461+00:00",
     "confidence": 97,
     "sector_label": "Energy / Oil & Gas",
-    "article_count": 24,
+    "article_count": 27,
     "severity": "CRITICAL",
     "regions": [
-      "middle_east",
-      "asia_pacific",
       "americas",
-      "global"
+      "global",
+      "asia_pacific",
+      "middle_east"
     ],
     "sources": [
-      "Earnings",
       "US Top News and Analysis",
-      "World | Deutsche Welle",
-      "Defense News",
+      "Bloomberg Markets",
+      "Oilprice.com",
       "Markets-Economic Times",
-      "www.theregister.com - Articles"
+      "Earnings",
+      "World | Deutsche Welle"
     ],
     "top_headlines": [
       "Oil Prices Suffer Biggest Weekly Collapse in Two Months",
@@ -639,7 +639,7 @@
       "Suez, Panama canals charge for transit \u2014 why can't Hormuz?",
       "Philippines Receives First Iranian Crude Cargo Since Hormuz Blockade"
     ],
-    "latest_ts": "2026-05-29T21:22:22.221523+00:00",
+    "latest_ts": "2026-05-30T04:33:53.759164+00:00",
     "confidence_breakdown": {
       "signal_strength": 22.0,
       "volume_confirmation": 18.0,
@@ -984,41 +984,41 @@
     }
   },
   "defense": {
-    "sent_at": "2026-05-29T12:15:01.921457+00:00",
-    "confidence": 95,
+    "sent_at": "2026-05-30T04:35:48.761415+00:00",
+    "confidence": 68,
     "sector_label": "Defense & Aerospace",
-    "article_count": 26,
+    "article_count": 38,
     "severity": "HIGH",
     "regions": [
       "europe",
+      "india",
       "middle_east",
-      "global",
-      "americas",
-      "asia_pacific"
+      "asia_pacific",
+      "global"
     ],
     "sources": [
-      "Latest from Tom's Hardware",
+      "US Top News and Analysis",
+      "BBC News",
       "Bloomberg Markets",
-      "World | Deutsche Welle",
       "Oilprice.com",
-      "www.theregister.com - Articles",
-      "BBC News"
+      "Markets-Economic Times",
+      "Latest from Tom's Hardware"
     ],
     "top_headlines": [
-      "US troops are reportedly being targeted using location data, Pentagon says",
-      "NATO chief says alliance \u2018ready to defend every inch of Allied territory\u2019 after Russian drone hits member state Romania",
-      "Civilians in Lebanon hit hardest as Israel targets Hezbollah",
-      "At French Army FPV competition, NATO soldiers race drones and swap tips",
-      "Iran reportedly launches missiles as Trump mulls deal to pause war for two months"
+      "RBI warns West Asia war may hurt India growth outlook",
+      "China is building launch pads near its nuclear missile silos",
+      "SpaceX gets $4 billion contract to build missile-tracking \u2018Golden Dome\u2019 satellites",
+      "How Russia is turning Ukraine\u2019s drones against NATO",
+      "Nato and EU condemn Russia after drone hits Romanian residential block"
     ],
-    "latest_ts": "2026-05-29T12:12:49.506471+00:00",
+    "latest_ts": "2026-05-30T04:33:53.759109+00:00",
     "confidence_breakdown": {
       "signal_strength": 22.0,
       "volume_confirmation": 18.0,
-      "source_diversity": 16.6,
+      "source_diversity": 16.8,
       "recency": 16.9,
       "geopolitical_severity": 13.0,
-      "cross_engine_confirmation": 9.1
+      "cross_engine_confirmation": 7.9
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -1104,8 +1104,10 @@
           "sector_key": "defense",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 69.0,
-          "selection_notes": []
+          "selection_score": 72.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         },
         {
           "name": "Mirae Asset Nifty India Defence ETF",
@@ -1119,9 +1121,10 @@
           "sector_key": "defense",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 68.0,
+          "selection_score": 71.0,
           "selection_notes": [
-            "clean thematic exposure"
+            "clean thematic exposure",
+            "matches India-listed access"
           ]
         }
       ],
@@ -1193,8 +1196,10 @@
             "sector_key": "defense",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 69.0,
-            "selection_notes": []
+            "selection_score": 72.0,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
           },
           {
             "name": "Mirae Asset Nifty India Defence ETF",
@@ -1208,9 +1213,10 @@
             "sector_key": "defense",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 68.0,
+            "selection_score": 71.0,
             "selection_notes": [
-              "clean thematic exposure"
+              "clean thematic exposure",
+              "matches India-listed access"
             ]
           }
         ],
@@ -1282,8 +1288,10 @@
           "sector_key": "defense",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 69.0,
-          "selection_notes": []
+          "selection_score": 72.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         },
         {
           "name": "Mirae Asset Nifty India Defence ETF",
@@ -1297,9 +1305,10 @@
           "sector_key": "defense",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 68.0,
+          "selection_score": 71.0,
           "selection_notes": [
-            "clean thematic exposure"
+            "clean thematic exposure",
+            "matches India-listed access"
           ]
         }
       ],
@@ -1360,41 +1369,42 @@
     }
   },
   "technology_ai": {
-    "sent_at": "2026-05-29T21:24:11.593741+00:00",
-    "confidence": 93,
+    "sent_at": "2026-05-30T04:35:41.799459+00:00",
+    "confidence": 94,
     "sector_label": "Technology & AI / Semiconductors",
-    "article_count": 60,
+    "article_count": 59,
     "severity": "HIGH",
     "regions": [
+      "americas",
+      "europe",
+      "india",
       "middle_east",
       "asia_pacific",
-      "europe",
-      "americas",
       "global"
     ],
     "sources": [
-      "The Verge",
-      "Semiconductor Engineering",
-      "Cointelegraph.com News",
-      "Earnings",
+      "www.theregister.com - Articles",
       "US Top News and Analysis",
-      "World | Deutsche Welle"
+      "Bloomberg Markets",
+      "BBC News",
+      "Markets-Economic Times",
+      "Tech"
     ],
     "top_headlines": [
       "Chip Industry Week In Review",
-      "\u200bAnthropic overtakes OpenAI: AI valuation race enters hyperdrive",
       "Building Fixed HW Implementations of Neural Networks (Yale, Cornell et al.)",
       "Samsung's shares surge as much as 6% after company ships next-generation AI memory chip samples",
-      "Anthropic tops OpenAI as most valuable AI startup, nears $1 trillion valuation in latest round"
+      "Anthropic tops OpenAI as most valuable AI startup, nears $1 trillion valuation in latest round",
+      "The Tech Download: How chip companies are looking to use light to solve this major AI bottleneck"
     ],
-    "latest_ts": "2026-05-29T18:01:22+00:00",
+    "latest_ts": "2026-05-30T02:18:25+00:00",
     "confidence_breakdown": {
       "signal_strength": 22.0,
       "volume_confirmation": 18.0,
-      "source_diversity": 16.9,
-      "recency": 12.1,
+      "source_diversity": 16.7,
+      "recency": 13.5,
       "geopolitical_severity": 13.0,
-      "cross_engine_confirmation": 11.5
+      "cross_engine_confirmation": 11.6
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -1465,10 +1475,11 @@
           "sector_key": "technology_ai",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 102.0,
+          "selection_score": 105.0,
           "selection_notes": [
             "broad diversification",
-            "broad exposure"
+            "broad exposure",
+            "matches India-listed access"
           ]
         },
         {
@@ -1499,8 +1510,10 @@
           "sector_key": "technology_ai",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 69.5,
-          "selection_notes": []
+          "selection_score": 72.5,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "top_etfs": [
@@ -1552,10 +1565,11 @@
           "sector_key": "technology_ai",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 102.0,
+          "selection_score": 105.0,
           "selection_notes": [
             "broad diversification",
-            "broad exposure"
+            "broad exposure",
+            "matches India-listed access"
           ]
         }
       ],
@@ -1573,10 +1587,11 @@
             "sector_key": "technology_ai",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 102.0,
+            "selection_score": 105.0,
             "selection_notes": [
               "broad diversification",
-              "broad exposure"
+              "broad exposure",
+              "matches India-listed access"
             ]
           },
           {
@@ -1591,8 +1606,10 @@
             "sector_key": "technology_ai",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 69.5,
-            "selection_notes": []
+            "selection_score": 72.5,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
           }
         ],
         "International-listed": [
@@ -1663,10 +1680,11 @@
           "sector_key": "technology_ai",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 102.0,
+          "selection_score": 105.0,
           "selection_notes": [
             "broad diversification",
-            "broad exposure"
+            "broad exposure",
+            "matches India-listed access"
           ]
         },
         {
@@ -1681,8 +1699,10 @@
           "sector_key": "technology_ai",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 69.5,
-          "selection_notes": []
+          "selection_score": 72.5,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "global": [
@@ -1742,8 +1762,8 @@
     }
   },
   "cybersecurity": {
-    "sent_at": "2026-05-30T00:08:13.420507+00:00",
-    "confidence": 69,
+    "sent_at": "2026-05-30T04:35:43.921246+00:00",
+    "confidence": 63,
     "sector_label": "Cybersecurity",
     "article_count": 8,
     "severity": "MEDIUM",
@@ -1753,10 +1773,9 @@
     ],
     "sources": [
       "US Top News and Analysis",
-      "www.theregister.com - Articles",
       "Latest from Tom's Hardware",
       "Tech",
-      "Earnings"
+      "www.theregister.com - Articles"
     ],
     "top_headlines": [
       "Independent cyber audit finds zero malware or backdoors in DJI drones \u2014 U.S. firm's hardware analysis challenges FCC ban amid ongoing $1.56 billion legal battle",
@@ -1769,10 +1788,10 @@
     "confidence_breakdown": {
       "signal_strength": 12.8,
       "volume_confirmation": 14.6,
-      "source_diversity": 9.5,
-      "recency": 12.9,
+      "source_diversity": 8.1,
+      "recency": 8.2,
       "geopolitical_severity": 8.1,
-      "cross_engine_confirmation": 12.0
+      "cross_engine_confirmation": 11.9
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -2517,40 +2536,41 @@
     }
   },
   "gold_precious_metals": {
-    "sent_at": "2026-05-30T00:08:14.751928+00:00",
-    "confidence": 85,
+    "sent_at": "2026-05-30T04:35:47.026091+00:00",
+    "confidence": 91,
     "sector_label": "Gold & Precious Metals",
-    "article_count": 18,
+    "article_count": 22,
     "severity": "HIGH",
     "regions": [
       "americas",
+      "india",
       "middle_east",
-      "global",
-      "asia_pacific"
+      "asia_pacific",
+      "global"
     ],
     "sources": [
+      "US Top News and Analysis",
+      "Bloomberg Markets",
       "Oilprice.com",
       "Markets-Economic Times",
-      "US Top News and Analysis",
-      "Latest from Tom's Hardware",
       "Cointelegraph.com News",
-      "Bloomberg Markets"
+      "Latest from Tom's Hardware"
     ],
     "top_headlines": [
+      "Wall Street Week Ahead: Jobs report on tap for soaring US stocks as rate path, bond yields eyed as risks",
       "Kansas Fed Pres Warns Oil Price Shock Might Not Be Transitory",
       "Gold Pares Gains as Traders Weigh Mixed Signals on US-Iran Deal",
       "Fed officials mull raising rates to curb growing inflation risk",
-      "US Jobs Report Due Next Friday",
-      "Market Could Price in Two Fed Hikes: Tannuzzo"
+      "US Jobs Report Due Next Friday"
     ],
-    "latest_ts": "2026-05-29T20:13:11+00:00",
+    "latest_ts": "2026-05-30T04:25:15+00:00",
     "confidence_breakdown": {
-      "signal_strength": 20.1,
+      "signal_strength": 21.1,
       "volume_confirmation": 18.0,
       "source_diversity": 13.4,
-      "recency": 11.5,
+      "recency": 16.7,
       "geopolitical_severity": 13.0,
-      "cross_engine_confirmation": 9.4
+      "cross_engine_confirmation": 9.5
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -2603,10 +2623,11 @@
           "sector_key": "gold_precious_metals",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 99.0,
+          "selection_score": 102.0,
           "selection_notes": [
             "clean thematic exposure",
-            "institutional depth"
+            "institutional depth",
+            "matches India-listed access"
           ]
         },
         {
@@ -2620,7 +2641,7 @@
           "sector_key": "gold_precious_metals",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 95.5,
+          "selection_score": 98.5,
           "selection_notes": [
             "clean thematic exposure",
             "strong trading liquidity",
@@ -2693,10 +2714,11 @@
           "sector_key": "gold_precious_metals",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 99.0,
+          "selection_score": 102.0,
           "selection_notes": [
             "clean thematic exposure",
-            "institutional depth"
+            "institutional depth",
+            "matches India-listed access"
           ]
         },
         {
@@ -2710,7 +2732,7 @@
           "sector_key": "gold_precious_metals",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 95.5,
+          "selection_score": 98.5,
           "selection_notes": [
             "clean thematic exposure",
             "strong trading liquidity",
@@ -2732,10 +2754,11 @@
             "sector_key": "gold_precious_metals",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 99.0,
+            "selection_score": 102.0,
             "selection_notes": [
               "clean thematic exposure",
-              "institutional depth"
+              "institutional depth",
+              "matches India-listed access"
             ]
           },
           {
@@ -2749,7 +2772,7 @@
             "sector_key": "gold_precious_metals",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 95.5,
+            "selection_score": 98.5,
             "selection_notes": [
               "clean thematic exposure",
               "strong trading liquidity",
@@ -2825,10 +2848,11 @@
           "sector_key": "gold_precious_metals",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 99.0,
+          "selection_score": 102.0,
           "selection_notes": [
             "clean thematic exposure",
-            "institutional depth"
+            "institutional depth",
+            "matches India-listed access"
           ]
         },
         {
@@ -2842,7 +2866,7 @@
           "sector_key": "gold_precious_metals",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 95.5,
+          "selection_score": 98.5,
           "selection_notes": [
             "clean thematic exposure",
             "strong trading liquidity",
