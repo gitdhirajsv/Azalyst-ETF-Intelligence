@@ -144,13 +144,13 @@
   },
   "top_signal": {
     "ticker": "XLK",
-    "rank_score": 21.059459459459458,
+    "rank_score": 21.130753564154787,
     "flow_score": 22.0,
     "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 6.180570942689389,
     "news_score": 5.208,
-    "total": 69.44803040214885,
+    "total": 69.51932450684417,
     "publish": true,
     "direction": "long"
   },
@@ -198,12 +198,12 @@
       "score": 93.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 89.0
-    },
-    {
       "symbol": "Crypto & Digital Assets",
       "score": 86.0
+    },
+    {
+      "symbol": "Gold & Precious Metals",
+      "score": 85.0
     },
     {
       "symbol": "Asia Pacific Equity",
@@ -211,7 +211,7 @@
     },
     {
       "symbol": "Cybersecurity",
-      "score": 66.0
+      "score": 69.0
     },
     {
       "symbol": "Healthcare & Pharma",
@@ -383,59 +383,6 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 89.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "29 May 2026 17:51 UTC",
-      "headline": "Kansas Fed Pres Warns Oil Price Shock Might Not Be Transitory",
-      "regions": [
-        "global",
-        "americas",
-        "asia_pacific",
-        "middle_east"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 20.8,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.0,
-        "recency": 14.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 86.0,
@@ -479,6 +426,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 12.0,
         "recency": 14.2,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 85.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 18,
+      "latest_at": "29 May 2026 20:13 UTC",
+      "headline": "Kansas Fed Pres Warns Oil Price Shock Might Not Be Transitory",
+      "regions": [
+        "americas",
+        "middle_east",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 20.1,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.4,
+        "recency": 11.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -534,15 +534,15 @@
     {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
-      "confidence": 66.0,
+      "confidence": 69.0,
       "severity": "MEDIUM",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "29 May 2026 17:36 UTC",
+      "article_count": 8,
+      "latest_at": "29 May 2026 21:20 UTC",
       "headline": "Independent cyber audit finds zero malware or backdoors in DJI drones \u2014 U.S. firm's hardware analysis challenges FCC ban amid ongoing $1.56 billion legal battle",
       "regions": [
         "global",
@@ -550,9 +550,9 @@
       ],
       "sources": [
         "US Top News and Analysis",
+        "www.theregister.com - Articles",
         "Latest from Tom's Hardware",
-        "Tech",
-        "www.theregister.com - Articles"
+        "Tech"
       ],
       "primary_etf": "CIBR",
       "top_etfs": [
@@ -569,11 +569,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 11.3,
-        "volume_confirmation": 12.6,
-        "source_diversity": 8.1,
-        "recency": 14.6,
-        "geopolitical_severity": 8.6
+        "signal_strength": 12.8,
+        "volume_confirmation": 14.6,
+        "source_diversity": 9.5,
+        "recency": 12.9,
+        "geopolitical_severity": 8.1
       }
     },
     {
@@ -696,12 +696,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / NEUTRAL - Kansas Fed Pres Warns Oil Price Shock Might Not Be Transitory"
+      "text": "Crypto & Digital Assets - 28 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 28 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+      "text": "Gold & Precious Metals - 18 articles - HIGH / NEUTRAL - Kansas Fed Pres Warns Oil Price Shock Might Not Be Transitory"
     },
     {
       "tag": "tag-neu",
@@ -711,7 +711,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity - 6 articles - MEDIUM / NEUTRAL - Independent cyber audit finds zero malware or backdoors in DJI drones \u2014 U.S. firm's hardware analysis challenges FCC ban amid ongoing $1.56 billion legal battle"
+      "text": "Cybersecurity - 8 articles - MEDIUM / NEUTRAL - Independent cyber audit finds zero malware or backdoors in DJI drones \u2014 U.S. firm's hardware analysis challenges FCC ban amid ongoing $1.56 billion legal battle"
     },
     {
       "tag": "tag-neu",
@@ -764,9 +764,9 @@
       "region": "UK",
       "price": 10409.28,
       "currency": "GBP",
-      "change": -16.72,
-      "change_pct": -0.16,
-      "change_str": "-0.16%",
+      "change": -95.72,
+      "change_pct": -0.91,
+      "change_str": "-0.91%",
       "direction": "down"
     },
     {
@@ -839,9 +839,9 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 73400.93,
+      "price": 73405.5,
       "currency": "USD",
-      "change": -135.62,
+      "change": -131.05,
       "change_pct": -0.18,
       "change_str": "-0.18%",
       "direction": "down"
@@ -1158,10 +1158,10 @@
     }
   },
   "logs": [
-    "2026-05-29 22:57:04 [INFO] AZALYST - status.json generated",
-    "2026-05-29 22:57:04 [INFO] PORTFOLIO - NAV USD 10,024.15 | Return -0.48%",
-    "2026-05-29 22:57:04 [INFO] SIGNALS - 9 active signal buckets in state",
-    "2026-05-29 22:57:04 [INFO] TRADER - Open positions: XLE, ITA, IBIT, QQQ"
+    "2026-05-30 00:12:31 [INFO] AZALYST - status.json generated",
+    "2026-05-30 00:12:31 [INFO] PORTFOLIO - NAV USD 10,024.15 | Return -0.48%",
+    "2026-05-30 00:12:31 [INFO] SIGNALS - 9 active signal buckets in state",
+    "2026-05-30 00:12:31 [INFO] TRADER - Open positions: XLE, ITA, IBIT, QQQ"
   ],
-  "generated_at": "2026-05-29 22:57:03 UTC"
+  "generated_at": "2026-05-30 00:12:30 UTC"
 }
