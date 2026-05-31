@@ -146,11 +146,11 @@
     "ticker": "IGV",
     "rank_score": 17.439159789947485,
     "flow_score": 22.0,
-    "options_score": 18.715762159077336,
+    "options_score": 16.2,
     "rotation_score": 15.0,
     "macro_score": 6.205925908149401,
     "news_score": 4.592,
-    "total": 83.9528478571742,
+    "total": 81.43708569809688,
     "publish": true,
     "direction": "long"
   },
@@ -194,15 +194,15 @@
       "score": 84.0
     },
     {
+      "symbol": "Gold & Precious Metals",
+      "score": 84.0
+    },
+    {
       "symbol": "Technology & AI / Semiconductors",
       "score": 82.0
     },
     {
       "symbol": "Asia Pacific Equity",
-      "score": 80.0
-    },
-    {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 80.0
     },
     {
@@ -330,6 +330,59 @@
       }
     },
     {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 84.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 14,
+      "latest_at": "31 May 2026 04:06 UTC",
+      "headline": "Wall Street Week Ahead: Jobs report on tap for soaring US stocks as rate path, bond yields eyed as risks",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "global",
+        "americas"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Latest from Tom's Hardware",
+        "Finance",
+        "Oilprice.com"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 18.9,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.4,
+        "recency": 11.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
       "confidence": 82.0,
@@ -428,59 +481,6 @@
         "volume_confirmation": 13.7,
         "source_diversity": 12.8,
         "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 80.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "30 May 2026 05:47 UTC",
-      "headline": "Wall Street Week Ahead: Jobs report on tap for soaring US stocks as rate path, bond yields eyed as risks",
-      "regions": [
-        "global",
-        "middle_east",
-        "americas",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Latest from Tom's Hardware",
-        "Bloomberg Markets",
-        "BBC News"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 16.8,
-        "source_diversity": 14.9,
-        "recency": 4.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -691,17 +691,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Gold & Precious Metals - 14 articles - HIGH / NEUTRAL - Wall Street Week Ahead: Jobs report on tap for soaring US stocks as rate path, bond yields eyed as risks"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Technology & AI / Semiconductors - 60 articles - HIGH / NEUTRAL - Chip Industry Week In Review"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Asia Pacific Equity - 7 articles - HIGH / NEUTRAL - South Korea's Kospi, Japan's Topix hit record highs as investors shrug off Iran tensions"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / NEUTRAL - Wall Street Week Ahead: Jobs report on tap for soaring US stocks as rate path, bond yields eyed as risks"
     },
     {
       "tag": "tag-neu",
@@ -839,11 +839,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 74018.92,
+      "price": 73820.0,
       "currency": "USD",
-      "change": 646.4,
-      "change_pct": 0.88,
-      "change_str": "+0.88%",
+      "change": 65.16,
+      "change_pct": 0.09,
+      "change_str": "+0.09%",
       "direction": "up"
     },
     {
@@ -1158,10 +1158,10 @@
     }
   },
   "logs": [
-    "2026-05-31 04:10:43 [INFO] AZALYST - status.json generated",
-    "2026-05-31 04:10:43 [INFO] PORTFOLIO - NAV USD 10,024.15 | Return -0.48%",
-    "2026-05-31 04:10:43 [INFO] SIGNALS - 9 active signal buckets in state",
-    "2026-05-31 04:10:43 [INFO] TRADER - Open positions: XLE, ITA, IBIT, QQQ"
+    "2026-05-31 08:04:19 [INFO] AZALYST - status.json generated",
+    "2026-05-31 08:04:19 [INFO] PORTFOLIO - NAV USD 10,024.15 | Return -0.48%",
+    "2026-05-31 08:04:19 [INFO] SIGNALS - 9 active signal buckets in state",
+    "2026-05-31 08:04:19 [INFO] TRADER - Open positions: XLE, ITA, IBIT, QQQ"
   ],
-  "generated_at": "2026-05-31 04:10:40 UTC"
+  "generated_at": "2026-05-31 08:04:17 UTC"
 }
