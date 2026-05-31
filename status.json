@@ -146,11 +146,11 @@
     "ticker": "IGV",
     "rank_score": 17.439159789947485,
     "flow_score": 22.0,
-    "options_score": 18.715760679945138,
+    "options_score": 18.715762159077336,
     "rotation_score": 15.0,
     "macro_score": 6.205925908149401,
-    "news_score": 4.928,
-    "total": 84.28884637804201,
+    "news_score": 4.592,
+    "total": 83.9528478571742,
     "publish": true,
     "direction": "long"
   },
@@ -187,15 +187,15 @@
   "confidence": [
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 91.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 88.0
+      "score": 87.0
     },
     {
       "symbol": "Defense & Aerospace",
       "score": 84.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 82.0
     },
     {
       "symbol": "Asia Pacific Equity",
@@ -207,26 +207,26 @@
     },
     {
       "symbol": "Cybersecurity",
-      "score": 74.0
+      "score": 72.0
     },
     {
       "symbol": "Crypto & Digital Assets",
       "score": 70.0
     },
     {
-      "symbol": "Clean Energy & Renewables",
+      "symbol": "Healthcare & Pharma",
       "score": 66.0
     },
     {
-      "symbol": "Healthcare & Pharma",
-      "score": 66.0
+      "symbol": "Clean Energy & Renewables",
+      "score": 62.0
     }
   ],
   "signals": [
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 91.0,
+      "confidence": 87.0,
       "severity": "CRITICAL",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
@@ -239,14 +239,14 @@
       "regions": [
         "middle_east",
         "americas",
-        "global",
-        "asia_pacific"
+        "asia_pacific",
+        "global"
       ],
       "sources": [
-        "Oilprice.com",
+        "Bloomberg Markets",
         "www.theregister.com - Articles",
         "Defense News",
-        "US Top News and Analysis"
+        "Markets-Economic Times"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -272,60 +272,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 14.4,
-        "recency": 12.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 88.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 63,
-      "latest_at": "30 May 2026 14:49 UTC",
-      "headline": "Chip Industry Week In Review",
-      "regions": [
-        "asia_pacific",
-        "europe",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "World | Deutsche Welle",
-        "BBC News",
-        "www.theregister.com - Articles",
-        "Earnings"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.9,
-        "recency": 6.8,
+        "recency": 8.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -379,6 +326,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 16.8,
         "recency": 6.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 82.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 60,
+      "latest_at": "30 May 2026 14:49 UTC",
+      "headline": "Chip Industry Week In Review",
+      "regions": [
+        "india",
+        "europe",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "www.theregister.com - Articles",
+        "EE Times",
+        "Semiconductor Engineering"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.7,
+        "recency": 4.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -487,15 +487,15 @@
     {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
-      "confidence": 74.0,
+      "confidence": 72.0,
       "severity": "MEDIUM",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "30 May 2026 23:59 UTC",
+      "article_count": 7,
+      "latest_at": "31 May 2026 04:03 UTC",
       "headline": "Independent cyber audit finds zero malware or backdoors in DJI drones \u2014 U.S. firm's hardware analysis challenges FCC ban amid ongoing $1.56 billion legal battle",
       "regions": [
         "global",
@@ -503,9 +503,9 @@
       ],
       "sources": [
         "www.theregister.com - Articles",
-        "Earnings",
+        "The Verge",
         "US Top News and Analysis",
-        "The Verge"
+        "Latest from Tom's Hardware"
       ],
       "primary_etf": "CIBR",
       "top_etfs": [
@@ -522,11 +522,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 13.0,
-        "volume_confirmation": 14.6,
+        "signal_strength": 12.3,
+        "volume_confirmation": 13.7,
         "source_diversity": 9.5,
-        "recency": 16.9,
-        "geopolitical_severity": 8.2
+        "recency": 17.0,
+        "geopolitical_severity": 8.4
       }
     },
     {
@@ -572,57 +572,6 @@
         "source_diversity": 7.6,
         "recency": 5.8,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables",
-      "confidence": 66.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "30 May 2026 22:23 UTC",
-      "headline": "Morocco Is Emerging as a Renewable Energy Superpower",
-      "regions": [
-        "americas",
-        "africa",
-        "global"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "BBC News",
-        "US Top News and Analysis",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "ICLN",
-      "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NEWENERGY"
-      ],
-      "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 9.7,
-        "volume_confirmation": 11.3,
-        "source_diversity": 11.0,
-        "recency": 14.4,
-        "geopolitical_severity": 10.4
       }
     },
     {
@@ -675,6 +624,57 @@
         "recency": 15.8,
         "geopolitical_severity": 11.4
       }
+    },
+    {
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables",
+      "confidence": 62.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "30 May 2026 22:23 UTC",
+      "headline": "Morocco Is Emerging as a Renewable Energy Superpower",
+      "regions": [
+        "africa",
+        "global",
+        "americas"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Latest from Tom's Hardware",
+        "BBC News",
+        "Oilprice.com"
+      ],
+      "primary_etf": "ICLN",
+      "top_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NEWENERGY"
+      ],
+      "global_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 9.7,
+        "volume_confirmation": 11.3,
+        "source_diversity": 11.0,
+        "recency": 9.6,
+        "geopolitical_severity": 10.4
+      }
     }
   ],
   "articles": [
@@ -686,12 +686,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 63 articles - HIGH / NEUTRAL - Chip Industry Week In Review"
+      "text": "Defense & Aerospace - 43 articles - HIGH / NEUTRAL - NATO Military Head Says No \u2018Drama\u2019 With US"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 43 articles - HIGH / NEUTRAL - NATO Military Head Says No \u2018Drama\u2019 With US"
+      "text": "Technology & AI / Semiconductors - 60 articles - HIGH / NEUTRAL - Chip Industry Week In Review"
     },
     {
       "tag": "tag-neu",
@@ -706,7 +706,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity - 8 articles - MEDIUM / NEUTRAL - Independent cyber audit finds zero malware or backdoors in DJI drones \u2014 U.S. firm's hardware analysis challenges FCC ban amid ongoing $1.56 billion legal battle"
+      "text": "Cybersecurity - 7 articles - MEDIUM / NEUTRAL - Independent cyber audit finds zero malware or backdoors in DJI drones \u2014 U.S. firm's hardware analysis challenges FCC ban amid ongoing $1.56 billion legal battle"
     },
     {
       "tag": "tag-neu",
@@ -716,12 +716,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Clean Energy & Renewables - 5 articles - MEDIUM / NEUTRAL - Morocco Is Emerging as a Renewable Energy Superpower"
+      "text": "Healthcare & Pharma - 5 articles - MEDIUM / NEUTRAL - Iran Reconnects to the Internet After 88 Days in Digital Darkness"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Healthcare & Pharma - 5 articles - MEDIUM / NEUTRAL - Iran Reconnects to the Internet After 88 Days in Digital Darkness"
+      "text": "Clean Energy & Renewables - 5 articles - MEDIUM / NEUTRAL - Morocco Is Emerging as a Renewable Energy Superpower"
     }
   ],
   "market_snapshot": [
@@ -839,11 +839,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 73767.5,
+      "price": 74018.92,
       "currency": "USD",
-      "change": 394.98,
-      "change_pct": 0.54,
-      "change_str": "+0.54%",
+      "change": 646.4,
+      "change_pct": 0.88,
+      "change_str": "+0.88%",
       "direction": "up"
     },
     {
@@ -1158,10 +1158,10 @@
     }
   },
   "logs": [
-    "2026-05-31 00:10:44 [INFO] AZALYST - status.json generated",
-    "2026-05-31 00:10:44 [INFO] PORTFOLIO - NAV USD 10,024.15 | Return -0.48%",
-    "2026-05-31 00:10:44 [INFO] SIGNALS - 9 active signal buckets in state",
-    "2026-05-31 00:10:44 [INFO] TRADER - Open positions: XLE, ITA, IBIT, QQQ"
+    "2026-05-31 04:10:43 [INFO] AZALYST - status.json generated",
+    "2026-05-31 04:10:43 [INFO] PORTFOLIO - NAV USD 10,024.15 | Return -0.48%",
+    "2026-05-31 04:10:43 [INFO] SIGNALS - 9 active signal buckets in state",
+    "2026-05-31 04:10:43 [INFO] TRADER - Open positions: XLE, ITA, IBIT, QQQ"
   ],
-  "generated_at": "2026-05-31 00:10:43 UTC"
+  "generated_at": "2026-05-31 04:10:40 UTC"
 }
