@@ -143,14 +143,14 @@
     }
   },
   "top_signal": {
-    "ticker": "IGV",
-    "rank_score": 17.439159789947485,
+    "ticker": "XLK",
+    "rank_score": 20.881620405101277,
     "flow_score": 22.0,
-    "options_score": 18.66749983913753,
+    "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 6.205925908149401,
     "news_score": 4.816,
-    "total": 84.12858553723441,
+    "total": 68.90354631325067,
     "publish": true,
     "direction": "long"
   },
@@ -215,6 +215,10 @@
     },
     {
       "symbol": "Clean Energy & Renewables",
+      "score": 64.0
+    },
+    {
+      "symbol": "Bonds & Fixed Income + Gold & Precious Metals",
       "score": 64.0
     },
     {
@@ -632,6 +636,58 @@
       }
     },
     {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income + Gold & Precious Metals",
+      "confidence": 64.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "31 May 2026 21:56 UTC",
+      "headline": "Why Britain\u2019s Bond Market Is Sounding the Alarm",
+      "regions": [
+        "europe",
+        "americas",
+        "global",
+        "india"
+      ],
+      "sources": [
+        "Latest from Tom's Hardware",
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "The Verge"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 19.7,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.7,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 62.0,
@@ -718,6 +774,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Clean Energy & Renewables - 6 articles - MEDIUM / NEUTRAL - Morocco Is Emerging as a Renewable Energy Superpower"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Bonds & Fixed Income + Gold & Precious Metals - 13 articles - HIGH / NEUTRAL - Why Britain\u2019s Bond Market Is Sounding the Alarm"
     },
     {
       "tag": "tag-neu",
@@ -840,11 +901,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 73578.01,
+      "price": 73640.82,
       "currency": "USD",
-      "change": -176.83,
-      "change_pct": -0.24,
-      "change_str": "-0.24%",
+      "change": -114.02,
+      "change_pct": -0.15,
+      "change_str": "-0.15%",
       "direction": "down"
     },
     {
@@ -1159,10 +1220,10 @@
     }
   },
   "logs": [
-    "2026-05-31 20:49:45 [INFO] AZALYST - status.json generated",
-    "2026-05-31 20:49:45 [INFO] PORTFOLIO - NAV USD 10,023.74 | Return -0.49%",
-    "2026-05-31 20:49:45 [INFO] SIGNALS - 9 active signal buckets in state",
-    "2026-05-31 20:49:45 [INFO] TRADER - Open positions: XLE, ITA, IBIT, QQQ"
+    "2026-05-31 22:06:59 [INFO] AZALYST - status.json generated",
+    "2026-05-31 22:06:59 [INFO] PORTFOLIO - NAV USD 10,023.74 | Return -0.49%",
+    "2026-05-31 22:06:59 [INFO] SIGNALS - 10 active signal buckets in state",
+    "2026-05-31 22:06:59 [INFO] TRADER - Open positions: XLE, ITA, IBIT, QQQ"
   ],
-  "generated_at": "2026-05-31 20:49:43 UTC"
+  "generated_at": "2026-05-31 22:06:57 UTC"
 }
