@@ -84,7 +84,7 @@
       "pnl_pct_str": "-0.41%",
       "confidence": 94,
       "severity": "CRITICAL",
-      "days_held": 2,
+      "days_held": 3,
       "half_exited": false
     },
     {
@@ -191,11 +191,15 @@
     },
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 88.0
+      "score": 85.0
     },
     {
       "symbol": "Asia Pacific Equity",
       "score": 80.0
+    },
+    {
+      "symbol": "Cybersecurity",
+      "score": 75.0
     },
     {
       "symbol": "Defense & Aerospace",
@@ -206,16 +210,12 @@
       "score": 73.0
     },
     {
-      "symbol": "Cybersecurity",
-      "score": 72.0
-    },
-    {
       "symbol": "Healthcare & Pharma",
       "score": 66.0
     },
     {
       "symbol": "Clean Energy & Renewables",
-      "score": 62.0
+      "score": 63.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -279,26 +279,26 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 88.0,
+      "confidence": 85.0,
       "severity": "CRITICAL",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
+      "article_count": 24,
       "latest_at": "31 May 2026 03:51 UTC",
       "headline": "Oil Prices Suffer Biggest Weekly Collapse in Two Months",
       "regions": [
         "middle_east",
-        "americas",
         "global",
-        "europe"
+        "americas",
+        "asia_pacific"
       ],
       "sources": [
-        "Bloomberg Markets",
         "www.theregister.com - Articles",
-        "US Top News and Analysis",
+        "Oilprice.com",
+        "World | Deutsche Welle",
         "Defense News"
       ],
       "primary_etf": "XLE",
@@ -325,7 +325,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 14.9,
-        "recency": 9.0,
+        "recency": 5.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -379,6 +379,51 @@
       }
     },
     {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 75.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "31 May 2026 15:01 UTC",
+      "headline": "Independent cyber audit finds zero malware or backdoors in DJI drones \u2014 U.S. firm's hardware analysis challenges FCC ban amid ongoing $1.56 billion legal battle",
+      "regions": [
+        "india",
+        "global"
+      ],
+      "sources": [
+        "Tech",
+        "US Top News and Analysis",
+        "The Verge",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 14.1,
+        "volume_confirmation": 14.6,
+        "source_diversity": 9.5,
+        "recency": 17.0,
+        "geopolitical_severity": 9.0
+      }
+    },
+    {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
       "confidence": 74.0,
@@ -388,20 +433,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 43,
-      "latest_at": "31 May 2026 10:13 UTC",
+      "article_count": 39,
+      "latest_at": "31 May 2026 15:01 UTC",
       "headline": "US, UK and Australia to develop underwater drone technology",
       "regions": [
         "middle_east",
-        "americas",
         "global",
-        "europe"
+        "americas",
+        "asia_pacific"
       ],
       "sources": [
-        "Bloomberg Markets",
+        "BBC News",
         "www.theregister.com - Articles",
-        "World News - Breaking international news and headlines | Sky News",
-        "Defense News"
+        "World | Deutsche Welle",
+        "Oilprice.com"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -485,51 +530,6 @@
       }
     },
     {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 72.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "31 May 2026 10:13 UTC",
-      "headline": "Independent cyber audit finds zero malware or backdoors in DJI drones \u2014 U.S. firm's hardware analysis challenges FCC ban amid ongoing $1.56 billion legal battle",
-      "regions": [
-        "india",
-        "global"
-      ],
-      "sources": [
-        "www.theregister.com - Articles",
-        "US Top News and Analysis",
-        "Latest from Tom's Hardware",
-        "The Verge"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 12.3,
-        "volume_confirmation": 13.7,
-        "source_diversity": 9.5,
-        "recency": 17.0,
-        "geopolitical_severity": 8.4
-      }
-    },
-    {
       "sector_key": "healthcare_pharma",
       "sector_label": "Healthcare & Pharma",
       "confidence": 66.0,
@@ -583,26 +583,26 @@
     {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
-      "confidence": 62.0,
+      "confidence": 63.0,
       "severity": "MEDIUM",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "30 May 2026 22:23 UTC",
+      "article_count": 8,
+      "latest_at": "31 May 2026 15:01 UTC",
       "headline": "Morocco Is Emerging as a Renewable Energy Superpower",
       "regions": [
+        "americas",
         "africa",
-        "global",
-        "americas"
+        "global"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "Latest from Tom's Hardware",
         "BBC News",
-        "Oilprice.com"
+        "Oilprice.com",
+        "The Verge",
+        "Latest from Tom's Hardware"
       ],
       "primary_etf": "ICLN",
       "top_etfs": [
@@ -624,11 +624,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 9.7,
-        "volume_confirmation": 11.3,
-        "source_diversity": 11.0,
-        "recency": 9.6,
-        "geopolitical_severity": 10.4
+        "signal_strength": 13.2,
+        "volume_confirmation": 14.6,
+        "source_diversity": 12.0,
+        "recency": 17.0,
+        "geopolitical_severity": 10.2
       }
     },
     {
@@ -687,7 +687,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 28 articles - CRITICAL / NEUTRAL - Oil Prices Suffer Biggest Weekly Collapse in Two Months"
+      "text": "Energy / Oil & Gas - 24 articles - CRITICAL / NEUTRAL - Oil Prices Suffer Biggest Weekly Collapse in Two Months"
     },
     {
       "tag": "tag-neu",
@@ -697,7 +697,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Defense & Aerospace - 43 articles - HIGH / NEUTRAL - US, UK and Australia to develop underwater drone technology"
+      "text": "Cybersecurity - 8 articles - MEDIUM / NEUTRAL - Independent cyber audit finds zero malware or backdoors in DJI drones \u2014 U.S. firm's hardware analysis challenges FCC ban amid ongoing $1.56 billion legal battle"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Defense & Aerospace - 39 articles - HIGH / NEUTRAL - US, UK and Australia to develop underwater drone technology"
     },
     {
       "tag": "tag-neu",
@@ -707,17 +712,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity - 7 articles - MEDIUM / NEUTRAL - Independent cyber audit finds zero malware or backdoors in DJI drones \u2014 U.S. firm's hardware analysis challenges FCC ban amid ongoing $1.56 billion legal battle"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Healthcare & Pharma - 5 articles - MEDIUM / NEUTRAL - Iran Reconnects to the Internet After 88 Days in Digital Darkness"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Clean Energy & Renewables - 5 articles - MEDIUM / NEUTRAL - Morocco Is Emerging as a Renewable Energy Superpower"
+      "text": "Clean Energy & Renewables - 8 articles - MEDIUM / NEUTRAL - Morocco Is Emerging as a Renewable Energy Superpower"
     },
     {
       "tag": "tag-neu",
@@ -840,12 +840,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 73852.0,
+      "price": 73555.14,
       "currency": "USD",
-      "change": 97.16,
-      "change_pct": 0.13,
-      "change_str": "+0.13%",
-      "direction": "up"
+      "change": -199.7,
+      "change_pct": -0.27,
+      "change_str": "-0.27%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
@@ -1159,10 +1159,10 @@
     }
   },
   "logs": [
-    "2026-05-31 13:35:22 [INFO] AZALYST - status.json generated",
-    "2026-05-31 13:35:22 [INFO] PORTFOLIO - NAV USD 10,024.15 | Return -0.48%",
-    "2026-05-31 13:35:22 [INFO] SIGNALS - 9 active signal buckets in state",
-    "2026-05-31 13:35:22 [INFO] TRADER - Open positions: XLE, ITA, IBIT, QQQ"
+    "2026-05-31 15:08:21 [INFO] AZALYST - status.json generated",
+    "2026-05-31 15:08:21 [INFO] PORTFOLIO - NAV USD 10,024.15 | Return -0.48%",
+    "2026-05-31 15:08:21 [INFO] SIGNALS - 9 active signal buckets in state",
+    "2026-05-31 15:08:21 [INFO] TRADER - Open positions: XLE, ITA, IBIT, QQQ"
   ],
-  "generated_at": "2026-05-31 13:35:20 UTC"
+  "generated_at": "2026-05-31 15:08:20 UTC"
 }
