@@ -1,20 +1,20 @@
 {
-  "portfolio_value": 10023.96,
+  "portfolio_value": 10023.74,
   "total_deposited": 10072.64,
-  "cash": 2305.16,
+  "cash": 2103.92,
   "monthly_reserve": 0.0,
-  "market_value": 7718.8,
-  "total_invested": 7767.48,
-  "unrealised_pnl": -48.68,
-  "unrealised_str": "-48.68",
+  "market_value": 7919.82,
+  "total_invested": 7968.72,
+  "unrealised_pnl": -48.9,
+  "unrealised_str": "-48.90",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "-0.48%",
-  "change_raw": -0.48,
+  "change": "-0.49%",
+  "change_raw": -0.49,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 10087.87,
-  "drawdown_now_pct": 0.63,
+  "drawdown_now_pct": 0.64,
   "max_drawdown_pct": 0.73,
   "usd_inr_rate": 94.99,
   "positions": [
@@ -94,17 +94,17 @@
       "sector": "Technology & AI / Semiconductors",
       "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NASDAQ",
-      "entry": 740.76,
+      "entry": 740.62,
       "current": 738.31,
       "peak_price": 742.55,
-      "trail_stop": 666.68,
-      "dist_to_trail_pct": 9.7,
-      "units": 2.920144,
-      "invested": 2163.12,
-      "pnl": -7.15,
-      "pnl_str": "-7.15",
-      "pnl_pct": -0.33,
-      "pnl_pct_str": "-0.33%",
+      "trail_stop": 666.56,
+      "dist_to_trail_pct": 9.72,
+      "units": 3.192414,
+      "invested": 2364.36,
+      "pnl": -7.37,
+      "pnl_str": "-7.37",
+      "pnl_pct": -0.31,
+      "pnl_pct_str": "-0.31%",
       "confidence": 95,
       "severity": "HIGH",
       "days_held": 3,
@@ -143,14 +143,14 @@
     }
   },
   "top_signal": {
-    "ticker": "XLK",
-    "rank_score": 20.881620405101277,
+    "ticker": "IGV",
+    "rank_score": 17.439159789947485,
     "flow_score": 22.0,
-    "options_score": 0.0,
+    "options_score": 18.66749983913753,
     "rotation_score": 15.0,
     "macro_score": 6.205925908149401,
-    "news_score": 4.088,
-    "total": 68.17554631325066,
+    "news_score": 4.816,
+    "total": 84.12858553723441,
     "publish": true,
     "direction": "long"
   },
@@ -166,8 +166,8 @@
       22.4,
       17.1,
       16.0,
-      21.5,
-      23.0
+      23.5,
+      21.0
     ]
   },
   "pnl": {
@@ -181,13 +181,17 @@
       -36.29,
       1.38,
       -6.62,
-      -7.15
+      -7.37
     ]
   },
   "confidence": [
     {
       "symbol": "Energy / Oil & Gas",
       "score": 91.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 86.0
     },
     {
       "symbol": "Gold & Precious Metals",
@@ -202,10 +206,6 @@
       "score": 75.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 73.0
-    },
-    {
       "symbol": "Defense & Aerospace",
       "score": 67.0
     },
@@ -215,7 +215,7 @@
     },
     {
       "symbol": "Clean Energy & Renewables",
-      "score": 63.0
+      "score": 64.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -273,6 +273,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 13.3,
         "recency": 13.7,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 64,
+      "latest_at": "31 May 2026 12:20 UTC",
+      "headline": "AMD Ryzen 7 5800X and Nvidia RTX 5060 combo is only $439 \u2014 deal includes a free CPU cooler, totaling out to $150 in savings for a great budget setup",
+      "regions": [
+        "india",
+        "americas",
+        "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "The Verge",
+        "www.theregister.com - Articles",
+        "Tech"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 17.0,
+        "recency": 7.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -424,59 +477,6 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 73.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 62,
-      "latest_at": "31 May 2026 12:20 UTC",
-      "headline": "AMD Ryzen 7 5800X and Nvidia RTX 5060 combo is only $439 \u2014 deal includes a free CPU cooler, totaling out to $150 in savings for a great budget setup",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "india",
-        "europe"
-      ],
-      "sources": [
-        "The Verge",
-        "Earnings",
-        "Cointelegraph.com News",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.5,
-        "recency": 15.2,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
       "confidence": 67.0,
@@ -583,15 +583,15 @@
     {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
-      "confidence": 63.0,
+      "confidence": 64.0,
       "severity": "MEDIUM",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "31 May 2026 15:01 UTC",
+      "article_count": 6,
+      "latest_at": "31 May 2026 15:00 UTC",
       "headline": "Morocco Is Emerging as a Renewable Energy Superpower",
       "regions": [
         "americas",
@@ -599,10 +599,10 @@
         "global"
       ],
       "sources": [
-        "BBC News",
+        "Latest from Tom's Hardware",
+        "US Top News and Analysis",
         "Oilprice.com",
-        "The Verge",
-        "Latest from Tom's Hardware"
+        "BBC News"
       ],
       "primary_etf": "ICLN",
       "top_etfs": [
@@ -624,10 +624,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 13.2,
-        "volume_confirmation": 14.6,
-        "source_diversity": 12.0,
-        "recency": 17.0,
+        "signal_strength": 10.8,
+        "volume_confirmation": 12.6,
+        "source_diversity": 11.0,
+        "recency": 9.6,
         "geopolitical_severity": 10.2
       }
     },
@@ -687,6 +687,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Technology & AI / Semiconductors - 64 articles - HIGH / NEUTRAL - AMD Ryzen 7 5800X and Nvidia RTX 5060 combo is only $439 \u2014 deal includes a free CPU cooler, totaling out to $150 in savings for a great budget setup"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Gold & Precious Metals - 15 articles - HIGH / NEUTRAL - Wall Street Week Ahead: Jobs report on tap for soaring US stocks as rate path, bond yields eyed as risks"
     },
     {
@@ -702,11 +707,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 62 articles - HIGH / NEUTRAL - AMD Ryzen 7 5800X and Nvidia RTX 5060 combo is only $439 \u2014 deal includes a free CPU cooler, totaling out to $150 in savings for a great budget setup"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Defense & Aerospace - 37 articles - HIGH / NEUTRAL - Shangri-La conference: Asia-Pacific on path to rearmament"
     },
     {
@@ -717,7 +717,7 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Clean Energy & Renewables - 8 articles - MEDIUM / NEUTRAL - Morocco Is Emerging as a Renewable Energy Superpower"
+      "text": "Clean Energy & Renewables - 6 articles - MEDIUM / NEUTRAL - Morocco Is Emerging as a Renewable Energy Superpower"
     },
     {
       "tag": "tag-neu",
@@ -840,11 +840,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 73507.96,
+      "price": 73578.01,
       "currency": "USD",
-      "change": -246.88,
-      "change_pct": -0.33,
-      "change_str": "-0.33%",
+      "change": -176.83,
+      "change_pct": -0.24,
+      "change_str": "-0.24%",
       "direction": "down"
     },
     {
@@ -872,19 +872,19 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.63,
+    "drawdown_from_peak_pct": 0.64,
     "portfolio_peak": 10087.87,
     "vix": 15.32,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
-        "sector": "Energy / Oil & Gas",
-        "weight": 22.4,
+        "sector": "Technology & AI / Semiconductors",
+        "weight": 23.5,
         "at_cap": false
       },
       {
-        "sector": "Technology & AI / Semiconductors",
-        "weight": 21.5,
+        "sector": "Energy / Oil & Gas",
+        "weight": 22.4,
         "at_cap": false
       },
       {
@@ -965,18 +965,18 @@
       "benchmark_price_start": 754.6,
       "benchmark_price_now": 756.48,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.48,
-      "alpha": -0.73
+      "portfolio_return_pct": -0.49,
+      "alpha": -0.74
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 23.0,
+          "actual_weight_pct": 20.99,
           "target_weight_pct": 10.0,
-          "drift_pct": 13.0,
+          "drift_pct": 10.99,
           "action": "DEPLOY",
-          "amount": 1302.77,
+          "amount": 1101.55,
           "etf_name": "Cash Reserve"
         },
         {
@@ -985,7 +985,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": -6.5,
           "action": "ADD",
-          "amount": 651.9,
+          "amount": 651.85,
           "etf_name": "iShares Bitcoin Trust ETF"
         },
         {
@@ -994,7 +994,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": -5.38,
           "action": "ADD",
-          "amount": 539.75,
+          "amount": 539.7,
           "etf_name": "iShares U.S. Aerospace & Defense ETF"
         }
       ],
@@ -1004,8 +1004,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -3744.77,
-          "portfolio_loss_pct": -37.36,
+          "total_impact": -3825.18,
+          "portfolio_loss_pct": -38.16,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1029,13 +1029,13 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -862.39
+              "impact": -942.8
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -3416.15,
-          "portfolio_loss_pct": -34.08,
+          "total_impact": -3484.5,
+          "portfolio_loss_pct": -34.76,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1059,13 +1059,13 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -733.03
+              "impact": -801.38
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1125.81,
-          "portfolio_loss_pct": -11.23,
+          "total_impact": -1155.96,
+          "portfolio_loss_pct": -11.53,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1089,13 +1089,13 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -323.4
+              "impact": -353.55
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -806.63,
-          "portfolio_loss_pct": -8.05,
+          "total_impact": -822.71,
+          "portfolio_loss_pct": -8.21,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1119,13 +1119,13 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -172.48
+              "impact": -188.56
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1546.5,
-          "portfolio_loss_pct": -15.43,
+          "total_impact": -1582.69,
+          "portfolio_loss_pct": -15.79,
           "position_impacts": [
             {
               "ticker": "XLE",
@@ -1149,20 +1149,20 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -388.07
+              "impact": -424.26
             }
           ]
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -37.36
+      "worst_loss_pct": -38.16
     }
   },
   "logs": [
-    "2026-05-31 19:21:22 [INFO] AZALYST - status.json generated",
-    "2026-05-31 19:21:22 [INFO] PORTFOLIO - NAV USD 10,023.96 | Return -0.48%",
-    "2026-05-31 19:21:22 [INFO] SIGNALS - 9 active signal buckets in state",
-    "2026-05-31 19:21:22 [INFO] TRADER - Open positions: XLE, ITA, IBIT, QQQ"
+    "2026-05-31 20:49:45 [INFO] AZALYST - status.json generated",
+    "2026-05-31 20:49:45 [INFO] PORTFOLIO - NAV USD 10,023.74 | Return -0.49%",
+    "2026-05-31 20:49:45 [INFO] SIGNALS - 9 active signal buckets in state",
+    "2026-05-31 20:49:45 [INFO] TRADER - Open positions: XLE, ITA, IBIT, QQQ"
   ],
-  "generated_at": "2026-05-31 19:21:17 UTC"
+  "generated_at": "2026-05-31 20:49:43 UTC"
 }
