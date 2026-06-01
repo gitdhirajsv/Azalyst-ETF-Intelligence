@@ -315,38 +315,40 @@
     }
   },
   "asia_pacific": {
-    "sent_at": "2026-05-29T08:42:51.231796+00:00",
+    "sent_at": "2026-06-01T16:39:06.425041+00:00",
     "confidence": 80,
     "sector_label": "Asia Pacific Equity",
-    "article_count": 7,
+    "article_count": 9,
     "severity": "HIGH",
     "regions": [
+      "europe",
+      "americas",
       "global",
-      "asia_pacific",
-      "middle_east"
+      "asia_pacific"
     ],
     "sources": [
-      "Bloomberg Markets",
-      "US Top News and Analysis",
-      "World | Deutsche Welle",
+      "BBC News",
+      "Latest from Tom's Hardware",
+      "Tech",
+      "Oilprice.com",
       "Markets-Economic Times",
-      "Tech"
+      "US Top News and Analysis"
     ],
     "top_headlines": [
-      "South Korea's Kospi, Japan's Topix hit record highs as investors shrug off Iran tensions",
-      "Global Market: Japan inflation remains below BOJ target as energy costs rise",
-      "Global Markets: Japan's Nikkei scales record peak on Mideast, AI optimism",
-      "Fried Chicken Cutlet Chain Zhengxin Food Is Said to Consider Hong Kong IPO",
-      "A look inside Japan's largest prison for women"
+      "Global Markets: Japan's Nikkei tops 67,000 on AI boost; SoftBank becomes most valuable Japanese firm",
+      "SoftBank overtakes Toyota as Japan's most valuable company",
+      "SoftBank becomes Japan's most valuable company, announces $53 billion French investment",
+      "BP Sells 5% Stake in Australia's Newest $35 Billion LNG Project",
+      "Seven hospitalized after toxic gas fire at SK hynix advanced memory plant \u2014 Cheongju 4th campus incident today led to all 3,600 staff being evacuated"
     ],
-    "latest_ts": "2026-05-29T08:40:52.612323+00:00",
+    "latest_ts": "2026-06-01T14:04:50+00:00",
     "confidence_breakdown": {
-      "signal_strength": 14.3,
-      "volume_confirmation": 13.7,
-      "source_diversity": 12.8,
-      "recency": 16.9,
+      "signal_strength": 15.6,
+      "volume_confirmation": 15.4,
+      "source_diversity": 14.0,
+      "recency": 13.1,
       "geopolitical_severity": 13.0,
-      "cross_engine_confirmation": 9.3
+      "cross_engine_confirmation": 9.6
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -610,41 +612,41 @@
     }
   },
   "energy_oil": {
-    "sent_at": "2026-06-01T10:41:05.236442+00:00",
-    "confidence": 94,
-    "sector_label": "Energy / Oil & Gas + Commodities & Mining",
-    "article_count": 13,
-    "severity": "CRITICAL",
+    "sent_at": "2026-06-01T16:39:08.436389+00:00",
+    "confidence": 69,
+    "sector_label": "Energy / Oil & Gas",
+    "article_count": 36,
+    "severity": "HIGH",
     "regions": [
-      "europe",
-      "americas",
       "global",
-      "asia_pacific",
-      "middle_east"
+      "middle_east",
+      "europe",
+      "india",
+      "asia_pacific"
     ],
     "sources": [
-      "BBC News",
-      "Bloomberg Markets",
       "World | Deutsche Welle",
+      "BBC News",
       "Markets-Economic Times",
+      "Oilprice.com",
       "www.theregister.com - Articles",
       "US Top News and Analysis"
     ],
     "top_headlines": [
-      "Oil Prices Up 3% As Trump Demands Changes To Iran Deal",
+      "Oil Surges Over 7% as Iran Halts U.S. Talks and Threatens Total Hormuz Closure",
       "The Iran War\u2019s First 90 Days Upended Energy Markets",
-      "Spent Nuclear Fuel Could Be America's Answer to Russia's Uranium Grip",
       "Oil Prices Rise as Israel Expands Lebanon Offensive and U.S. Strikes Iran",
-      "America\u2019s LNG Boom Is Real \u2014 But China Is Planning Beyond It"
+      "Indian Refiners Freeze Domestic Jet Fuel Prices",
+      "Iran stops negotiations with U.S., vows to 'completely' block Strait of Hormuz: State media"
     ],
-    "latest_ts": "2026-06-01T10:39:04.026462+00:00",
+    "latest_ts": "2026-06-01T16:23:06+00:00",
     "confidence_breakdown": {
       "signal_strength": 22.0,
       "volume_confirmation": 18.0,
-      "source_diversity": 15.7,
-      "recency": 16.9,
+      "source_diversity": 15.9,
+      "recency": 16.6,
       "geopolitical_severity": 13.0,
-      "cross_engine_confirmation": 8.9
+      "cross_engine_confirmation": 3.6
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -714,8 +716,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 66.0,
-          "selection_notes": []
+          "selection_score": 69.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         },
         {
           "name": "United States Oil Fund",
@@ -747,8 +751,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 45.0,
-          "selection_notes": []
+          "selection_score": 48.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "top_etfs": [
@@ -799,8 +805,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 66.0,
-          "selection_notes": []
+          "selection_score": 69.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "regional_alternatives": {
@@ -817,8 +825,10 @@
             "sector_key": "energy_oil",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 66.0,
-            "selection_notes": []
+            "selection_score": 69.0,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
           },
           {
             "name": "Nippon India ETF Nifty PSU Bank BeES",
@@ -832,8 +842,10 @@
             "sector_key": "energy_oil",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 45.0,
-            "selection_notes": []
+            "selection_score": 48.0,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
           }
         ],
         "International-listed": [
@@ -905,8 +917,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 66.0,
-          "selection_notes": []
+          "selection_score": 69.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         },
         {
           "name": "Nippon India ETF Nifty PSU Bank BeES",
@@ -920,8 +934,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 45.0,
-          "selection_notes": []
+          "selection_score": 48.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "global": [
@@ -1359,42 +1375,42 @@
     }
   },
   "technology_ai": {
-    "sent_at": "2026-06-01T10:41:02.818907+00:00",
+    "sent_at": "2026-06-01T16:39:02.528421+00:00",
     "confidence": 95,
-    "sector_label": "Technology & AI / Semiconductors + Asia Pacific Equity",
-    "article_count": 13,
-    "severity": "CRITICAL",
+    "sector_label": "Technology & AI / Semiconductors",
+    "article_count": 74,
+    "severity": "HIGH",
     "regions": [
-      "europe",
-      "americas",
-      "india",
       "global",
-      "asia_pacific",
-      "middle_east"
+      "middle_east",
+      "europe",
+      "india",
+      "americas",
+      "asia_pacific"
     ],
     "sources": [
       "EE Times",
-      "Bloomberg Markets",
+      "Latest from Tom's Hardware",
       "Tech",
+      "Semiconductor Engineering",
       "Markets-Economic Times",
-      "Oilprice.com",
-      "The Verge"
+      "www.theregister.com - Articles"
     ],
     "top_headlines": [
-      "Nvidia announces RTX Spark as \u2018the most efficient PC chip ever built\u2019",
-      "Samsung, LG shares rally ahead of Nvidia CEO meetings with Korean executives",
       "SoftBank overtakes Toyota as Japan's most valuable company",
       "Intel details long-awaited Crescent Island AI GPU at Computex, boasts up to 480 GB of LPDDR5X to combat memory shortages \u2014 company shares more details of its Xe3P inference accelerator at Computex",
-      "South Korean shares hit record high on export surge, Nvidia optimism"
+      "Computex 2026: All the news and announcements",
+      "Fluence Shares Soar on Design for Nvidia AI Data Center Factory",
+      "Nvidia-backed $5 billion AI company tells CNBC of major London expansion"
     ],
-    "latest_ts": "2026-06-01T10:39:03.694171+00:00",
+    "latest_ts": "2026-06-01T16:37:03.563785+00:00",
     "confidence_breakdown": {
       "signal_strength": 22.0,
       "volume_confirmation": 18.0,
-      "source_diversity": 16.9,
+      "source_diversity": 15.6,
       "recency": 16.9,
       "geopolitical_severity": 13.0,
-      "cross_engine_confirmation": 8.6
+      "cross_engine_confirmation": 10.2
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -1752,37 +1768,37 @@
     }
   },
   "cybersecurity": {
-    "sent_at": "2026-05-31T15:03:13.361246+00:00",
-    "confidence": 75,
+    "sent_at": "2026-06-01T16:39:05.241240+00:00",
+    "confidence": 64,
     "sector_label": "Cybersecurity",
-    "article_count": 8,
+    "article_count": 4,
     "severity": "MEDIUM",
     "regions": [
+      "europe",
       "india",
-      "global"
+      "global",
+      "asia_pacific"
     ],
     "sources": [
-      "Tech",
-      "US Top News and Analysis",
-      "The Verge",
-      "Latest from Tom's Hardware",
-      "www.theregister.com - Articles"
+      "World | Deutsche Welle",
+      "EE Times",
+      "www.theregister.com - Articles",
+      "Tech"
     ],
     "top_headlines": [
-      "Independent cyber audit finds zero malware or backdoors in DJI drones \u2014 U.S. firm's hardware analysis challenges FCC ban amid ongoing $1.56 billion legal battle",
-      "Here are the 4 big things we're watching in the stock market in the week ahead",
-      "Microsoft is threatening legal action for disclosing exploits",
-      "23andMe inherits lawsuit over 'disturbing' DNA data breach",
-      "Microsoft warns GPU mining malware is being spread to users through SEO poisoning and AI chatbots \u2014 cryptojacking campaign targets gamers and high-end PC users with downloads disguised as popular PC utilities"
+      "Palo Alto VPN bug graduates from advisory to active exploitation",
+      "How China keeps North Korea's economy alive",
+      "Anthropic to offer EU access to its advanced Mythos model",
+      "AI-Accelerated Software Security Vulnerability Discovery: Is Hardware Next?"
     ],
-    "latest_ts": "2026-05-31T15:01:34.232874+00:00",
+    "latest_ts": "2026-06-01T16:37:02.981563+00:00",
     "confidence_breakdown": {
-      "signal_strength": 14.1,
-      "volume_confirmation": 14.6,
-      "source_diversity": 9.5,
-      "recency": 17.0,
-      "geopolitical_severity": 9.0,
-      "cross_engine_confirmation": 11.9
+      "signal_strength": 8.5,
+      "volume_confirmation": 9.7,
+      "source_diversity": 8.1,
+      "recency": 16.9,
+      "geopolitical_severity": 11.5,
+      "cross_engine_confirmation": 9.7
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -1954,39 +1970,38 @@
     }
   },
   "crypto_digital": {
-    "sent_at": "2026-05-31T13:27:58.787475+00:00",
-    "confidence": 62,
+    "sent_at": "2026-06-01T16:39:00.593694+00:00",
+    "confidence": 88,
     "sector_label": "Crypto & Digital Assets",
-    "article_count": 25,
-    "severity": "HIGH",
+    "article_count": 21,
+    "severity": "CRITICAL",
     "regions": [
       "global",
-      "india",
-      "asia_pacific",
+      "middle_east",
       "europe",
       "americas",
-      "middle_east"
+      "asia_pacific"
     ],
     "sources": [
+      "US Top News and Analysis",
       "Markets-Economic Times",
-      "The Verge",
       "Cointelegraph.com News"
     ],
     "top_headlines": [
-      "Texas Bitcoin reserve plans shift from ETF to direct BTC custody",
-      "I went looking for the AI weed vape that gives you Bitcoin for smoking",
-      "Bitcoin price targets $78K as BTC holders defend 'strongest near-term support'",
-      "Bitcoin sentiment reaches most \u2018lopsided positive\u2019 ratio for 2026: Santiment",
-      "Bitcoin is at \u2018pivotal level\u2019 as $65K downside risk looms: Analyst"
+      "Here\u2019s what happened in crypto today",
+      "Strategy's Michael Saylor teases BTC buy with 'working better' tweet",
+      "Strategy sells 32 BTC in first Bitcoin sale since 2022; Stock falls on open",
+      "Bitcoin ETPs post largest 2026 outflow as crypto funds bleed $1.67B",
+      "Bitcoin preps 3% May downside, but US PMI data may boost BTC price"
     ],
-    "latest_ts": "2026-05-31T13:26:15.365118+00:00",
+    "latest_ts": "2026-06-01T14:46:40+00:00",
     "confidence_breakdown": {
       "signal_strength": 22.0,
       "volume_confirmation": 18.0,
       "source_diversity": 9.1,
-      "recency": 17.0,
+      "recency": 14.1,
       "geopolitical_severity": 13.0,
-      "cross_engine_confirmation": 3.9
+      "cross_engine_confirmation": 12.0
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
