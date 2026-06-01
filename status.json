@@ -150,30 +150,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.10895378318776974,
+    "vix_level": 16.049999237060547,
+    "vix_percentile_1y": 0.24206349206349206,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
+      "rank": 30,
+      "flow": 22,
+      "options": 18,
       "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "macro": 8,
+      "news": 7
     }
   },
   "top_signal": {
     "ticker": "XLK",
     "rank_score": 25.043622641509433,
     "flow_score": 22.0,
-    "options_score": 0.0,
+    "options_score": 14.910704814501958,
     "rotation_score": 15.0,
-    "macro_score": 5.2085090279974295,
+    "macro_score": 5.218934134876634,
     "news_score": 6.789999999999999,
-    "total": 74.04213166950686,
+    "total": 88.96326159088801,
     "publish": true,
     "direction": "long"
   },
@@ -221,6 +221,10 @@
       "score": 94.0
     },
     {
+      "symbol": "Energy / Oil & Gas",
+      "score": 91.0
+    },
+    {
       "symbol": "Crypto & Digital Assets",
       "score": 87.0
     },
@@ -239,10 +243,6 @@
     {
       "symbol": "Cybersecurity",
       "score": 72.0
-    },
-    {
-      "symbol": "Energy / Oil & Gas",
-      "score": 71.0
     },
     {
       "symbol": "Clean Energy & Renewables",
@@ -361,6 +361,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 16.4,
         "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 91.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 32,
+      "latest_at": "01 Jun 2026 19:30 UTC",
+      "headline": "Oil Surges Over 7% as Iran Halts U.S. Talks and Threatens Total Hormuz Closure",
+      "regions": [
+        "europe",
+        "global",
+        "asia_pacific",
+        "americas"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "BBC News",
+        "Bloomberg Markets",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.6,
+        "recency": 11.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -610,59 +663,6 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 71.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 31,
-      "latest_at": "01 Jun 2026 19:30 UTC",
-      "headline": "Oil Surges Over 7% as Iran Halts U.S. Talks and Threatens Total Hormuz Closure",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "europe",
-        "global"
-      ],
-      "sources": [
-        "World News - Breaking international news and headlines | Sky News",
-        "Markets-Economic Times",
-        "BBC News",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.6,
-        "recency": 14.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 68.0,
@@ -832,6 +832,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Energy / Oil & Gas - 32 articles - HIGH / NEUTRAL - Oil Surges Over 7% as Iran Halts U.S. Talks and Threatens Total Hormuz Closure"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Crypto & Digital Assets - 19 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
@@ -853,11 +858,6 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Cybersecurity - 6 articles - MEDIUM / NEUTRAL - Election interlopers register 5K+ domains, hope to catch some voting phish"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Energy / Oil & Gas - 31 articles - HIGH / NEUTRAL - Oil Surges Over 7% as Iran Halts U.S. Talks and Threatens Total Hormuz Closure"
     },
     {
       "tag": "tag-neu",
@@ -915,9 +915,9 @@
       "region": "UK",
       "price": 10338.95,
       "currency": "GBP",
-      "change": -70.35,
-      "change_pct": -0.68,
-      "change_str": "-0.68%",
+      "change": -87.05,
+      "change_pct": -0.83,
+      "change_str": "-0.83%",
       "direction": "down"
     },
     {
@@ -926,9 +926,9 @@
       "region": "EU",
       "price": 25003.04,
       "currency": "EUR",
-      "change": -101.66,
-      "change_pct": -0.4,
-      "change_str": "-0.40%",
+      "change": -89.21,
+      "change_pct": -0.36,
+      "change_str": "-0.36%",
       "direction": "down"
     },
     {
@@ -968,44 +968,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4512.8,
+      "price": 4516.4,
       "currency": "USD",
-      "change": -47.7,
-      "change_pct": -1.05,
-      "change_str": "-1.05%",
+      "change": -44.1,
+      "change_pct": -0.97,
+      "change_str": "-0.97%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 92.5,
+      "price": 92.3,
       "currency": "USD",
-      "change": 5.14,
-      "change_pct": 5.88,
-      "change_str": "+5.88%",
+      "change": 4.94,
+      "change_pct": 5.65,
+      "change_str": "+5.65%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 71337.98,
+      "price": 71272.07,
       "currency": "USD",
-      "change": -2241.71,
-      "change_pct": -3.05,
-      "change_str": "-3.05%",
+      "change": -2307.62,
+      "change_pct": -3.14,
+      "change_str": "-3.14%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.19,
+      "price": 99.18,
       "currency": "USD",
-      "change": 0.28,
-      "change_pct": 0.29,
-      "change_str": "+0.29%",
+      "change": 0.27,
+      "change_pct": 0.27,
+      "change_str": "+0.27%",
       "direction": "up"
     },
     {
@@ -1375,10 +1375,10 @@
     }
   },
   "logs": [
-    "2026-06-01 21:04:12 [INFO] AZALYST - status.json generated",
-    "2026-06-01 21:04:12 [INFO] PORTFOLIO - NAV USD 20,005.60 | Return -0.34%",
-    "2026-06-01 21:04:12 [INFO] SIGNALS - 11 active signal buckets in state",
-    "2026-06-01 21:04:12 [INFO] TRADER - Open positions: XLE, ITA, IBIT, QQQ, GLDM"
+    "2026-06-01 23:09:54 [INFO] AZALYST - status.json generated",
+    "2026-06-01 23:09:54 [INFO] PORTFOLIO - NAV USD 20,005.60 | Return -0.34%",
+    "2026-06-01 23:09:54 [INFO] SIGNALS - 11 active signal buckets in state",
+    "2026-06-01 23:09:54 [INFO] TRADER - Open positions: XLE, ITA, IBIT, QQQ, GLDM"
   ],
-  "generated_at": "2026-06-01 21:04:10 UTC"
+  "generated_at": "2026-06-01 23:09:52 UTC"
 }
