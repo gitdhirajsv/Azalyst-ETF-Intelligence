@@ -45,9 +45,21 @@ MONTHLY_BUDGET_USD      = 10_000
 MIN_TRADE_USD           = 50
 MAX_POSITIONS           = 6
 MAX_SINGLE_POSITION_PCT = 0.22
-STOP_LOSS_PCT           = 0.10
+STOP_LOSS_PCT           = 0.10   # fallback hard stop if instrument risk is unknown
 TRAILING_STOP_PCT       = 0.08
 TRAIL_ACTIVATION_PCT    = 0.05
+
+# "Cut losers": hard stop sized by instrument volatility so losers exit fast
+# without whipsawing volatile names (a flat 6% would stop a Bitcoin ETF out on
+# noise). Tighter for calm instruments, wider for inherently volatile ones.
+HARD_STOP_BY_RISK       = {"LOW": 0.05, "MEDIUM": 0.07, "HIGH": 0.12}
+
+# "Let winners win": once a position proves itself and we start banking via the
+# step-ROI scale-outs, give the remaining runner MORE room (indexed by roi_step
+# 0..3) so a strong trend isn't choked off. The absolute trail still only
+# ratchets upward (see _update_position_risk) — it never actually loosens in
+# rupee terms; a wider pct just means new highs raise the stop more gently.
+TRAIL_STEP_PCTS         = (0.08, 0.09, 0.10, 0.12)
 PARTIAL_PROFIT_PCT      = 0.08
 PARTIAL_PROFIT_FRACTION = 0.50
 SECTOR_CAP_PCT          = 0.30
@@ -789,15 +801,38 @@ class PaperPortfolio:
         cap_value = portfolio_value * SECTOR_CAP_PCT
         return round(max(cap_value - self._sector_market_value(sector), 0.0), 2)
 
+    @staticmethod
+    def _hard_stop_pct(position: Position) -> float:
+        """Volatility-aware hard-stop distance based on the position's risk tag.
+
+        Handles exact tags ("HIGH") and compound/unknown tags ("LOW-MEDIUM") by
+        picking the riskiest token present; unknown tags default to MEDIUM rather
+        than the loose fallback so losers are still cut promptly."""
+        risk = str(getattr(position, "instrument_risk", "MEDIUM") or "MEDIUM").upper()
+        if risk in HARD_STOP_BY_RISK:
+            return HARD_STOP_BY_RISK[risk]
+        if "HIGH" in risk:
+            return HARD_STOP_BY_RISK["HIGH"]
+        if "MEDIUM" in risk:
+            return HARD_STOP_BY_RISK["MEDIUM"]
+        if "LOW" in risk:
+            return HARD_STOP_BY_RISK["LOW"]
+        return HARD_STOP_BY_RISK["MEDIUM"]
+
     def _update_position_risk(self, position: Position):
         position.peak_price = max(position.peak_price or 0.0, position.current_price, position.entry_price)
-        hard_stop = position.entry_price * (1 - STOP_LOSS_PCT)
+        hard_stop = position.entry_price * (1 - self._hard_stop_pct(position))
         trailing_active = (
             position.peak_price >= position.entry_price * (1 + TRAIL_ACTIVATION_PCT)
             or position.half_exited
         )
         if trailing_active:
-            position.trail_stop = round(max(hard_stop, position.peak_price * (1 - TRAILING_STOP_PCT)), 4)
+            # Tighten the trail as profit steps are banked (ratchet by roi_step).
+            step      = min(max(getattr(position, "roi_step", 0), 0), len(TRAIL_STEP_PCTS) - 1)
+            trail_pct = TRAIL_STEP_PCTS[step]
+            new_trail = round(max(hard_stop, position.peak_price * (1 - trail_pct)), 4)
+            # Ratchet only upward — a trailing stop must never loosen.
+            position.trail_stop = max(new_trail, position.trail_stop or 0.0)
         else:
             position.trail_stop = round(hard_stop, 4)
 
