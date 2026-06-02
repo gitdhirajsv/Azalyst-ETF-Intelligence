@@ -1,70 +1,23 @@
 {
-  "portfolio_value": 19879.48,
-  "total_deposited": 19884.6,
-  "cash": 15561.33,
+  "portfolio_value": 0.0,
+  "total_deposited": 0.0,
+  "cash": 0.0,
   "monthly_reserve": 0.0,
-  "market_value": 4318.15,
-  "total_invested": 4323.27,
-  "unrealised_pnl": -5.13,
-  "unrealised_str": "-5.13",
+  "market_value": 0.0,
+  "total_invested": 0.0,
+  "unrealised_pnl": 0.0,
+  "unrealised_str": "+0.00",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "-0.03%",
-  "change_raw": -0.03,
+  "change": "+0.00%",
+  "change_raw": 0.0,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 19884.6,
-  "drawdown_now_pct": 0.03,
-  "max_drawdown_pct": 0.03,
+  "portfolio_peak": 0.0,
+  "drawdown_now_pct": 0.0,
+  "max_drawdown_pct": 0.0,
   "usd_inr_rate": 95.255,
-  "positions": [
-    {
-      "trade_id": "T0001",
-      "ticker": "ITA",
-      "etf_name": "iShares U.S. Aerospace & Defense ETF",
-      "sector": "Defense & Aerospace",
-      "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
-      "exchange": "NYSE",
-      "entry": 230.07,
-      "current": 230.03,
-      "peak_price": 230.07,
-      "trail_stop": 213.97,
-      "dist_to_trail_pct": 6.98,
-      "units": 7.596145,
-      "invested": 1747.86,
-      "pnl": -0.34,
-      "pnl_str": "-0.34",
-      "pnl_pct": -0.02,
-      "pnl_pct_str": "-0.02%",
-      "confidence": 94,
-      "severity": "CRITICAL",
-      "days_held": 0,
-      "half_exited": false
-    },
-    {
-      "trade_id": "T0002",
-      "ticker": "QQQ",
-      "etf_name": "Invesco QQQ Trust",
-      "sector": "Technology & AI / Semiconductors",
-      "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
-      "exchange": "NASDAQ",
-      "entry": 744.83,
-      "current": 743.57,
-      "peak_price": 744.83,
-      "trail_stop": 692.69,
-      "dist_to_trail_pct": 6.84,
-      "units": 3.457384,
-      "invested": 2575.42,
-      "pnl": -4.35,
-      "pnl_str": "-4.35",
-      "pnl_pct": -0.17,
-      "pnl_pct_str": "-0.17%",
-      "confidence": 97,
-      "severity": "CRITICAL",
-      "days_held": 0,
-      "half_exited": false
-    }
-  ],
+  "positions": [],
   "closed_trades_list": [],
   "track_record": {
     "total_trades": 0,
@@ -84,9 +37,9 @@
     "risk_state": "RISK_ON",
     "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.10246022615089395,
-    "vix_level": 16.059999465942383,
-    "vix_percentile_1y": 0.24603174603174602,
+    "spy_excess_vs_tbill_3m": 0.10282611694624827,
+    "vix_level": 16.049999237060547,
+    "vix_percentile_1y": 0.24206349206349206,
     "weight_matrix": {
       "rank": 30,
       "flow": 22,
@@ -96,876 +49,72 @@
       "news": 7
     }
   },
-  "top_signal": {
-    "ticker": "XLK",
-    "rank_score": 21.596358118361152,
-    "flow_score": 11.592014592986418,
-    "options_score": 14.928744559399497,
-    "rotation_score": 15.0,
-    "macro_score": 4.328239694791367,
-    "news_score": 6.789999999999999,
-    "total": 74.23535696553844,
-    "publish": true,
-    "direction": "long"
-  },
+  "top_signal": {},
   "allocation": {
-    "labels": [
-      "ITA",
-      "QQQ",
-      "CASH"
-    ],
-    "values": [
-      8.8,
-      12.9,
-      78.3
-    ]
+    "labels": [],
+    "values": []
   },
   "pnl": {
-    "labels": [
-      "ITA",
-      "QQQ"
-    ],
-    "values": [
-      -0.34,
-      -4.35
-    ]
+    "labels": [],
+    "values": []
   },
-  "confidence": [
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 97.0
-    },
-    {
-      "symbol": "Defense & Aerospace",
-      "score": 94.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets + Bonds & Fixed Income",
-      "score": 85.0
-    },
-    {
-      "symbol": "Gold & Precious Metals",
-      "score": 82.0
-    },
-    {
-      "symbol": "Cybersecurity",
-      "score": 81.0
-    },
-    {
-      "symbol": "Asia Pacific Equity",
-      "score": 74.0
-    },
-    {
-      "symbol": "Commodities & Mining",
-      "score": 71.0
-    },
-    {
-      "symbol": "Energy / Oil & Gas",
-      "score": 70.0
-    },
-    {
-      "symbol": "Clean Energy & Renewables",
-      "score": 68.0
-    },
-    {
-      "symbol": "India Equity Markets",
-      "score": 68.0
-    },
-    {
-      "symbol": "Healthcare & Pharma",
-      "score": 66.0
-    },
-    {
-      "symbol": "Real Estate & REITs",
-      "score": 65.0
-    },
-    {
-      "symbol": "Bonds & Fixed Income + Gold & Precious Metals",
-      "score": 64.0
-    }
-  ],
-  "signals": [
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 97.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 83,
-      "latest_at": "02 Jun 2026 13:53 UTC",
-      "headline": "Chip Industry Technical Paper Roundup: Jun. 2",
-      "regions": [
-        "americas",
-        "europe",
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Tech",
-        "www.theregister.com - Articles",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.9,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 94.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 33,
-      "latest_at": "01 Jun 2026 10:39 UTC",
-      "headline": "Shangri-La conference: Asia-Pacific on path to rearmament",
-      "regions": [
-        "europe",
-        "africa",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "BBC News",
-        "Bloomberg Markets",
-        "World News - Breaking international news and headlines | Sky News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.4,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets + Bonds & Fixed Income",
-      "confidence": 85.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "02 Jun 2026 12:35 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "global",
-        "middle_east",
-        "asia_pacific",
-        "americas"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "Tech",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.8,
-        "recency": 14.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 82.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 15,
-      "latest_at": "01 Jun 2026 08:42 UTC",
-      "headline": "US Stock Market: Jobs data, AI earnings to test Wall Street rally amid inflation risks loom",
-      "regions": [
-        "europe",
-        "americas",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "Finance",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 19.4,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.0,
-        "recency": 14.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 81.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "02 Jun 2026 13:53 UTC",
-      "headline": "Election interlopers register 5K+ domains, hope to catch some voting phish",
-      "regions": [
-        "europe",
-        "global",
-        "india",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Tech",
-        "www.theregister.com - Articles",
-        "Bloomberg Markets",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 15.4,
-        "volume_confirmation": 16.8,
-        "source_diversity": 13.2,
-        "recency": 16.9,
-        "geopolitical_severity": 11.2
-      }
-    },
-    {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 74.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 9,
-      "latest_at": "02 Jun 2026 11:25 UTC",
-      "headline": "Global Markets: South Korean shares post record-high close as Nvidia hopes lift tech stocks",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "americas"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "Defense News",
-        "Cointelegraph.com News",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 15.4,
-        "volume_confirmation": 15.4,
-        "source_diversity": 12.7,
-        "recency": 13.4,
-        "geopolitical_severity": 11.7
-      }
-    },
-    {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 71.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "02 Jun 2026 13:53 UTC",
-      "headline": "Brazil is set to cut in on China's rare earths dominance",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "americas"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "World | Deutsche Welle",
-        "Oilprice.com"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 9.3,
-        "volume_confirmation": 9.7,
-        "source_diversity": 11.0,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 70.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 30,
-      "latest_at": "02 Jun 2026 08:30 UTC",
-      "headline": "Top 5 Commodities Impacted By The Iran War",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "india",
-        "middle_east"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "World News - Breaking international news and headlines | Sky News",
-        "Oilprice.com",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.2,
-        "recency": 14.8,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables",
-      "confidence": 68.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "01 Jun 2026 04:49 UTC",
-      "headline": "Morocco Is Emerging as a Renewable Energy Superpower",
-      "regions": [
-        "asia_pacific",
-        "africa",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "Markets-Economic Times",
-        "BBC News",
-        "Oilprice.com"
-      ],
-      "primary_etf": "ICLN",
-      "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NEWENERGY"
-      ],
-      "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.1,
-        "volume_confirmation": 12.6,
-        "source_diversity": 12.6,
-        "recency": 9.5,
-        "geopolitical_severity": 12.6
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 68.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 18,
-      "latest_at": "02 Jun 2026 04:53 UTC",
-      "headline": "Sensex falls over 400 points, Nifty below 23,250 amid US-Iran tensions, persistent FII selling",
-      "regions": [
-        "asia_pacific",
-        "india",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Markets-Economic Times",
-        "BBC News",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 21.2,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.7,
-        "recency": 16.5,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma",
-      "confidence": 66.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "29 May 2026 04:11 UTC",
-      "headline": "Iran Reconnects to the Internet After 88 Days in Digital Darkness",
-      "regions": [
-        "global",
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Oilprice.com"
-      ],
-      "primary_etf": "XLV",
-      "top_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "HEALTHCARE",
-        "PHARMABEES"
-      ],
-      "global_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 9.7,
-        "volume_confirmation": 11.3,
-        "source_diversity": 9.9,
-        "recency": 15.8,
-        "geopolitical_severity": 11.4
-      }
-    },
-    {
-      "sector_key": "real_estate_reit",
-      "sector_label": "Real Estate & REITs",
-      "confidence": 65.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "02 Jun 2026 13:34 UTC",
-      "headline": "Trump picks housing Dir. Bill Pulte as acting intelligence chief, replacing Tulsi Gabbard",
-      "regions": [
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Finance",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "VNQ",
-      "top_etfs": [
-        "VNQ",
-        "REET",
-        "REALTY"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "REALTY"
-      ],
-      "global_etfs": [
-        "VNQ",
-        "REET"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 10.5,
-        "volume_confirmation": 11.3,
-        "source_diversity": 9.1,
-        "recency": 16.0,
-        "geopolitical_severity": 9.8
-      }
-    },
-    {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income + Gold & Precious Metals",
-      "confidence": 64.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "31 May 2026 21:56 UTC",
-      "headline": "Why Britain\u2019s Bond Market Is Sounding the Alarm",
-      "regions": [
-        "europe",
-        "americas",
-        "global",
-        "india"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "The Verge"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 19.7,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.7,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    }
-  ],
-  "articles": [
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 83 articles - CRITICAL / NEUTRAL - Chip Industry Technical Paper Roundup: Jun. 2"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Defense & Aerospace - 33 articles - HIGH / NEUTRAL - Shangri-La conference: Asia-Pacific on path to rearmament"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Crypto & Digital Assets + Bonds & Fixed Income - 13 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Gold & Precious Metals - 15 articles - HIGH / NEUTRAL - US Stock Market: Jobs data, AI earnings to test Wall Street rally amid inflation risks loom"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Cybersecurity - 11 articles - MEDIUM / NEUTRAL - Election interlopers register 5K+ domains, hope to catch some voting phish"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Asia Pacific Equity - 9 articles - MEDIUM / NEUTRAL - Global Markets: South Korean shares post record-high close as Nvidia hopes lift tech stocks"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Commodities & Mining - 4 articles - HIGH / NEUTRAL - Brazil is set to cut in on China's rare earths dominance"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Energy / Oil & Gas - 30 articles - HIGH / NEUTRAL - Top 5 Commodities Impacted By The Iran War"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Clean Energy & Renewables - 6 articles - HIGH / NEUTRAL - Morocco Is Emerging as a Renewable Energy Superpower"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "India Equity Markets - 18 articles - HIGH / NEUTRAL - Sensex falls over 400 points, Nifty below 23,250 amid US-Iran tensions, persistent FII selling"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Healthcare & Pharma - 5 articles - MEDIUM / NEUTRAL - Iran Reconnects to the Internet After 88 Days in Digital Darkness"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Real Estate & REITs - 5 articles - MEDIUM / NEUTRAL - Trump picks housing Dir. Bill Pulte as acting intelligence chief, replacing Tulsi Gabbard"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Bonds & Fixed Income + Gold & Precious Metals - 13 articles - HIGH / NEUTRAL - Why Britain\u2019s Bond Market Is Sounding the Alarm"
-    }
-  ],
+  "confidence": [],
+  "signals": [],
+  "articles": [],
   "market_snapshot": [
     {
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7611.8,
+      "price": 7614.12,
       "currency": "USD",
-      "change": 11.84,
-      "change_pct": 0.16,
-      "change_str": "+0.16%",
+      "change": 14.16,
+      "change_pct": 0.19,
+      "change_str": "+0.19%",
       "direction": "up"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 27134.72,
+      "price": 27145.26,
       "currency": "USD",
-      "change": 47.91,
-      "change_pct": 0.18,
-      "change_str": "+0.18%",
+      "change": 58.45,
+      "change_pct": 0.22,
+      "change_str": "+0.22%",
       "direction": "up"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 51099.64,
+      "price": 51151.09,
       "currency": "USD",
-      "change": 20.76,
-      "change_pct": 0.04,
-      "change_str": "+0.04%",
+      "change": 72.21,
+      "change_pct": 0.14,
+      "change_str": "+0.14%",
       "direction": "up"
     },
     {
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10370.89,
+      "price": 10373.94,
       "currency": "GBP",
-      "change": 31.89,
-      "change_pct": 0.31,
-      "change_str": "+0.31%",
+      "change": 34.94,
+      "change_pct": 0.34,
+      "change_str": "+0.34%",
       "direction": "up"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 25110.06,
+      "price": 25120.05,
       "currency": "EUR",
-      "change": 107.02,
-      "change_pct": 0.43,
-      "change_str": "+0.43%",
+      "change": 117.01,
+      "change_pct": 0.47,
+      "change_str": "+0.47%",
       "direction": "up"
     },
     {
@@ -1005,9 +154,9 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4533.4,
+      "price": 4533.6,
       "currency": "USD",
-      "change": 58.2,
+      "change": 58.4,
       "change_pct": 1.3,
       "change_str": "+1.30%",
       "direction": "up"
@@ -1016,66 +165,55 @@
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 91.87,
+      "price": 92.07,
       "currency": "USD",
-      "change": -0.29,
-      "change_pct": -0.31,
-      "change_str": "-0.31%",
+      "change": -0.09,
+      "change_pct": -0.1,
+      "change_str": "-0.10%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 67956.39,
+      "price": 67847.95,
       "currency": "USD",
-      "change": -3363.38,
-      "change_pct": -4.72,
-      "change_str": "-4.72%",
+      "change": -3471.82,
+      "change_pct": -4.87,
+      "change_str": "-4.87%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.1,
+      "price": 99.11,
       "currency": "USD",
-      "change": -0.1,
-      "change_pct": -0.1,
-      "change_str": "-0.10%",
+      "change": -0.09,
+      "change_pct": -0.09,
+      "change_str": "-0.09%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 16.06,
+      "price": 16.05,
       "currency": "USD",
-      "change": 0.01,
-      "change_pct": 0.06,
-      "change_str": "+0.06%",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "change_str": "+0.00%",
       "direction": "up"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.03,
-    "portfolio_peak": 19884.6,
-    "vix": 16.06,
+    "drawdown_from_peak_pct": 0.0,
+    "portfolio_peak": 0.0,
+    "vix": 16.05,
     "vix_regime": "ELEVATED",
-    "sector_concentration": [
-      {
-        "sector": "Technology & AI / Semiconductors",
-        "weight": 12.9,
-        "at_cap": false
-      },
-      {
-        "sector": "Defense & Aerospace",
-        "weight": 8.8,
-        "at_cap": false
-      }
-    ],
-    "max_drawdown_pct": 0.03,
+    "sector_concentration": [],
+    "max_drawdown_pct": 0.0,
     "sector_cap_pct": 30,
     "trailing_stop_pct": 8,
     "hard_stop_pct": 10,
@@ -1083,183 +221,41 @@
   },
   "aladdin_risk": {
     "correlation": {
-      "matrix": {
-        "ITA": {
-          "ITA": 1.0,
-          "QQQ": 0.628
-        },
-        "QQQ": {
-          "ITA": 0.628,
-          "QQQ": 1.0
-        }
-      },
-      "tickers": [
-        "ITA",
-        "QQQ"
-      ],
-      "max_corr": 0.628,
-      "max_corr_pair": [
-        "ITA",
-        "QQQ"
-      ],
+      "matrix": {},
+      "tickers": [],
+      "max_corr": 0.0,
+      "max_corr_pair": [],
       "most_negative_corr": 0.0,
-      "most_negative_pair": [
-        "",
-        ""
-      ],
-      "status": "HIGH"
+      "most_negative_pair": [],
+      "status": "OK"
     },
     "volatility": {
-      "per_ticker": {
-        "ITA": 24.15,
-        "QQQ": 15.37
-      },
-      "portfolio_avg_vol_pct": 19.76,
+      "per_ticker": {},
+      "portfolio_avg_vol_pct": 0.0,
       "target_vol_pct": 15.0
     },
     "benchmark": {
       "benchmark_return_pct": 0.0,
-      "benchmark_price_start": 759.46,
-      "benchmark_price_now": 759.46,
+      "benchmark_price_start": 0,
+      "benchmark_price_now": 0,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.03,
-      "alpha": -0.03
+      "portfolio_return_pct": 0.0,
+      "alpha": 0.0
     },
     "rebalance": {
-      "alerts": [
-        {
-          "ticker": "CASH",
-          "actual_weight_pct": 78.28,
-          "target_weight_pct": 10.0,
-          "drift_pct": 68.28,
-          "action": "DEPLOY",
-          "amount": 13573.38,
-          "etf_name": "Cash Reserve"
-        },
-        {
-          "ticker": "ITA",
-          "actual_weight_pct": 8.79,
-          "target_weight_pct": 45.0,
-          "drift_pct": -36.21,
-          "action": "ADD",
-          "amount": 7198.42,
-          "etf_name": "iShares U.S. Aerospace & Defense ETF"
-        },
-        {
-          "ticker": "QQQ",
-          "actual_weight_pct": 12.93,
-          "target_weight_pct": 45.0,
-          "drift_pct": -32.07,
-          "action": "ADD",
-          "amount": 6374.96,
-          "etf_name": "Invesco QQQ Trust"
-        }
-      ],
+      "alerts": [],
       "drift_threshold_pct": 5.0,
-      "needs_rebalance": true
+      "needs_rebalance": false
     },
     "stress_test": {
-      "scenarios": {
-        "2008_GFC": {
-          "total_impact": -1727.26,
-          "portfolio_loss_pct": -8.69,
-          "position_impacts": [
-            {
-              "ticker": "ITA",
-              "factor": "equities",
-              "shock_pct": -40.0,
-              "impact": -698.94
-            },
-            {
-              "ticker": "QQQ",
-              "factor": "equities",
-              "shock_pct": -40.0,
-              "impact": -1028.32
-            }
-          ]
-        },
-        "2020_COVID": {
-          "total_impact": -1468.17,
-          "portfolio_loss_pct": -7.39,
-          "position_impacts": [
-            {
-              "ticker": "ITA",
-              "factor": "equities",
-              "shock_pct": -34.0,
-              "impact": -594.1
-            },
-            {
-              "ticker": "QQQ",
-              "factor": "equities",
-              "shock_pct": -34.0,
-              "impact": -874.07
-            }
-          ]
-        },
-        "RATES_SHOCK_+2%": {
-          "total_impact": -647.72,
-          "portfolio_loss_pct": -3.26,
-          "position_impacts": [
-            {
-              "ticker": "ITA",
-              "factor": "equities",
-              "shock_pct": -15.0,
-              "impact": -262.1
-            },
-            {
-              "ticker": "QQQ",
-              "factor": "equities",
-              "shock_pct": -15.0,
-              "impact": -385.62
-            }
-          ]
-        },
-        "USD_SPIKE_+10%": {
-          "total_impact": -345.45,
-          "portfolio_loss_pct": -1.74,
-          "position_impacts": [
-            {
-              "ticker": "ITA",
-              "factor": "equities",
-              "shock_pct": -8.0,
-              "impact": -139.79
-            },
-            {
-              "ticker": "QQQ",
-              "factor": "equities",
-              "shock_pct": -8.0,
-              "impact": -205.66
-            }
-          ]
-        },
-        "VIX_SPIKE_40": {
-          "total_impact": -777.27,
-          "portfolio_loss_pct": -3.91,
-          "position_impacts": [
-            {
-              "ticker": "ITA",
-              "factor": "equities",
-              "shock_pct": -18.0,
-              "impact": -314.52
-            },
-            {
-              "ticker": "QQQ",
-              "factor": "equities",
-              "shock_pct": -18.0,
-              "impact": -462.75
-            }
-          ]
-        }
-      },
-      "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -8.69
+      "scenarios": {},
+      "worst_scenario": "",
+      "worst_loss_pct": 0.0
     }
   },
   "logs": [
-    "2026-06-02 14:54:35 [INFO] AZALYST - status.json generated",
-    "2026-06-02 14:54:35 [INFO] PORTFOLIO - NAV USD 19,879.48 | Return -0.03%",
-    "2026-06-02 14:54:35 [INFO] SIGNALS - 13 active signal buckets in state",
-    "2026-06-02 14:54:35 [INFO] TRADER - Open positions: ITA, QQQ"
+    "2026-06-02 14:59:47 [INFO] AZALYST - status.json generated",
+    "2026-06-02 14:59:47 [INFO] PORTFOLIO - NAV USD 0.00 | Return +0.00%"
   ],
-  "generated_at": "2026-06-02 14:54:32 UTC"
+  "generated_at": "2026-06-02 14:59:41 UTC"
 }
