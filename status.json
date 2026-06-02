@@ -150,30 +150,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "LOW_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.10895378318776974,
-    "vix_level": 16.049999237060547,
-    "vix_percentile_1y": 0.24206349206349206,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 30,
-      "flow": 22,
-      "options": 18,
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
       "rotation": 15,
-      "macro": 8,
-      "news": 7
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
     "ticker": "XLK",
     "rank_score": 25.043622641509433,
     "flow_score": 22.0,
-    "options_score": 14.910704814501958,
+    "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 5.218934134876634,
+    "macro_score": 5.214927910847891,
     "news_score": 6.789999999999999,
-    "total": 88.96326159088801,
+    "total": 74.04855055235731,
     "publish": true,
     "direction": "long"
   },
@@ -935,11 +935,11 @@
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 66934.33,
+      "price": 66639.58,
       "currency": "JPY",
-      "change": 2241.21,
-      "change_pct": 3.46,
-      "change_str": "+3.46%",
+      "change": 310.08,
+      "change_pct": 0.47,
+      "change_str": "+0.47%",
       "direction": "up"
     },
     {
@@ -968,44 +968,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4516.4,
+      "price": 4512.2,
       "currency": "USD",
-      "change": -44.1,
-      "change_pct": -0.97,
-      "change_str": "-0.97%",
+      "change": -48.3,
+      "change_pct": -1.06,
+      "change_str": "-1.06%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 92.3,
+      "price": 91.86,
       "currency": "USD",
-      "change": 4.94,
-      "change_pct": 5.65,
-      "change_str": "+5.65%",
+      "change": 4.5,
+      "change_pct": 5.15,
+      "change_str": "+5.15%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 71272.07,
+      "price": 71109.81,
       "currency": "USD",
-      "change": -2307.62,
-      "change_pct": -3.14,
-      "change_str": "-3.14%",
+      "change": -2469.88,
+      "change_pct": -3.36,
+      "change_str": "-3.36%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.18,
+      "price": 99.19,
       "currency": "USD",
-      "change": 0.27,
-      "change_pct": 0.27,
-      "change_str": "+0.27%",
+      "change": 0.28,
+      "change_pct": 0.28,
+      "change_str": "+0.28%",
       "direction": "up"
     },
     {
@@ -1375,10 +1375,10 @@
     }
   },
   "logs": [
-    "2026-06-01 23:09:54 [INFO] AZALYST - status.json generated",
-    "2026-06-01 23:09:54 [INFO] PORTFOLIO - NAV USD 20,005.60 | Return -0.34%",
-    "2026-06-01 23:09:54 [INFO] SIGNALS - 11 active signal buckets in state",
-    "2026-06-01 23:09:54 [INFO] TRADER - Open positions: XLE, ITA, IBIT, QQQ, GLDM"
+    "2026-06-02 00:28:58 [INFO] AZALYST - status.json generated",
+    "2026-06-02 00:28:58 [INFO] PORTFOLIO - NAV USD 20,005.60 | Return -0.34%",
+    "2026-06-02 00:28:58 [INFO] SIGNALS - 11 active signal buckets in state",
+    "2026-06-02 00:28:58 [INFO] TRADER - Open positions: XLE, ITA, IBIT, QQQ, GLDM"
   ],
-  "generated_at": "2026-06-01 23:09:52 UTC"
+  "generated_at": "2026-06-02 00:28:56 UTC"
 }
