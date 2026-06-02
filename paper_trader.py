@@ -15,6 +15,7 @@ Institution-style paper trading with:
 import json
 import logging
 import os
+import time
 from datetime import date, datetime, timedelta, timezone
 from typing import Dict, List, Optional
 import urllib.request
@@ -65,6 +66,9 @@ PARTIAL_PROFIT_FRACTION = 0.50
 SECTOR_CAP_PCT          = 0.30
 CASH_FLOOR_PCT          = 0.05
 MAX_HOLD_DAYS           = 180
+# After this many consecutive cycles with no fresh price, escalate loudly: the
+# stop/profit engine is flying blind on that position and the operator must know.
+STALE_MARK_ALERT        = 3
 CIRCUIT_BREAKER_DRAWDOWN_PCT = 0.12
 ROTATION_CONFIDENCE_DELTA    = 10
 ROTATION_MIN_HOLD_DAYS       = 14
@@ -306,43 +310,77 @@ def build_exit_execution(
     }
 
 
+# Price fetches were single-shot: one transient Yahoo failure (or a payload that
+# omits regularMarketPrice) returned None, which froze a position at its old mark
+# and blinded the stop/profit engine. These retry with backoff and fall back to
+# the last close in the quote array so a flaky response no longer means stale data.
+_PRICE_RETRIES = 3
+_PRICE_BACKOFF_SEC = 0.6
+
+
+def _yahoo_chart_price(symbol: str) -> Optional[float]:
+    """Latest price for a Yahoo symbol, with retries and close-array fallback.
+
+    Tries regularMarketPrice first; if absent, walks the most recent non-null
+    close in the quote array, then previousClose/chartPreviousClose. Returns None
+    only after all retries are exhausted with no usable price."""
+    url = (
+        f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}"
+        f"?interval=1d&range=5d"
+    )
+    last_err = None
+    for attempt in range(_PRICE_RETRIES):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=8) as resp:
+                data = json.loads(resp.read())
+            result = data["chart"]["result"][0]
+            meta = result.get("meta", {}) or {}
+
+            px = meta.get("regularMarketPrice")
+            if px is None:
+                closes = (
+                    (result.get("indicators", {}) or {})
+                    .get("quote", [{}])[0]
+                    .get("close")
+                ) or []
+                for c in reversed(closes):
+                    if c is not None:
+                        px = c
+                        break
+            if px is None:
+                px = meta.get("previousClose") or meta.get("chartPreviousClose")
+
+            if px is not None and float(px) > 0:
+                return float(px)
+            last_err = ValueError("no usable price in payload")
+        except Exception as exc:
+            last_err = exc
+        if attempt < _PRICE_RETRIES - 1:
+            time.sleep(_PRICE_BACKOFF_SEC * (attempt + 1))
+
+    log.warning(
+        "Price fetch failed for %s after %d attempts: %s",
+        symbol, _PRICE_RETRIES, last_err,
+    )
+    return None
+
+
 def fetch_usd_to_inr() -> float:
-    """Fetch live USD/INR rate from Yahoo Finance."""
-    try:
-        url = "https://query1.finance.yahoo.com/v8/finance/chart/USDINR=X?interval=1d&range=1d"
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=8) as resp:
-            data = json.loads(resp.read())
-        return float(data["chart"]["result"][0]["meta"]["regularMarketPrice"])
-    except Exception:
-        return USD_TO_INR
+    """Fetch live USD/INR rate from Yahoo Finance (falls back to static rate)."""
+    px = _yahoo_chart_price("USDINR=X")
+    return px if px is not None else USD_TO_INR
 
 
 def fetch_price_usd(ticker: str) -> Optional[float]:
     """Fetch a US-listed ETF price in USD."""
-    try:
-        url = f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}?interval=1d&range=1d"
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=8) as resp:
-            data = json.loads(resp.read())
-        return float(data["chart"]["result"][0]["meta"]["regularMarketPrice"])
-    except Exception as exc:
-        log.warning(f"Price fetch failed for {ticker}: {exc}")
-        return None
+    return _yahoo_chart_price(ticker)
 
 
 def fetch_price_inr(ticker: str) -> Optional[float]:
     """Fetch an NSE-listed ETF price in INR."""
-    try:
-        yf_ticker = ticker if ticker.endswith(".NS") else f"{ticker}.NS"
-        url = f"https://query1.finance.yahoo.com/v8/finance/chart/{yf_ticker}?interval=1d&range=1d"
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=8) as resp:
-            data = json.loads(resp.read())
-        return float(data["chart"]["result"][0]["meta"]["regularMarketPrice"])
-    except Exception as exc:
-        log.warning(f"NSE price fetch failed for {ticker}: {exc}")
-        return None
+    yf_ticker = ticker if ticker.endswith(".NS") else f"{ticker}.NS"
+    return _yahoo_chart_price(yf_ticker)
 
 
 def get_current_price_inr(
@@ -404,6 +442,7 @@ class Position:
         self.trail_stop     = round(entry_price * (1 - STOP_LOSS_PCT), 4)
         self.half_exited    = False
         self.roi_step       = 0
+        self.stale_marks    = 0   # consecutive cycles a live price could not be fetched
 
     def current_value(self) -> float:
         return round(self.units * self.current_price, 2)
@@ -447,6 +486,7 @@ class Position:
             "trail_stop":     self.trail_stop,
             "half_exited":    self.half_exited,
             "roi_step":       self.roi_step,
+            "stale_marks":    self.stale_marks,
         }
 
     @classmethod
@@ -478,6 +518,7 @@ class Position:
         )
         pos.half_exited = raw.get("half_exited", False)
         pos.roi_step    = raw.get("roi_step", 1 if pos.half_exited else 0)
+        pos.stale_marks = raw.get("stale_marks", 0)
         return pos
 
 
@@ -1413,9 +1454,26 @@ class PaperPortfolio:
         for position in list(self.open_positions):
             current = get_current_price_inr(position.ticker, position.exchange, usd_inr)
             if current is None or current <= 0:
-                log.warning(f"Price unavailable for {position.ticker} - skipping mark")
+                # No fresh price. Hold the last mark but DO NOT evaluate stops or
+                # profit targets on stale data, and track how long it has been
+                # blind so persistent outages get escalated rather than ignored.
+                position.stale_marks = getattr(position, "stale_marks", 0) + 1
+                msg = (
+                    "Price unavailable for %s (stale x%d) - holding last mark "
+                    "%.2f; stop/profit checks skipped this cycle"
+                )
+                if position.stale_marks >= STALE_MARK_ALERT:
+                    log.critical(
+                        msg + " | STALE BEYOND THRESHOLD - exit engine is blind on this position",
+                        position.ticker, position.stale_marks, position.current_price,
+                    )
+                else:
+                    log.warning(msg, position.ticker, position.stale_marks, position.current_price)
                 continue
 
+            if getattr(position, "stale_marks", 0):
+                log.info("Price recovered for %s after %d stale cycle(s)", position.ticker, position.stale_marks)
+            position.stale_marks   = 0
             position.current_price = current
             position.last_updated  = now_str
             self._update_position_risk(position)
