@@ -23,6 +23,11 @@ from state import atomic_write_json
 
 log = logging.getLogger("azalyst.trader")
 
+
+class PortfolioLoadError(RuntimeError):
+    """Raised when an existing portfolio file cannot be loaded. Aborts the run
+    so a corrupt/unreadable book is never silently overwritten with a fresh one."""
+
 # Lazy import to avoid circular dependency — loaded on first use
 _risk_engine = None
 def _get_risk_engine():
@@ -536,6 +541,7 @@ class PaperPortfolio:
 
     def __init__(self, portfolio_file: str = "azalyst_portfolio.json"):
         self.portfolio_file              = portfolio_file
+        self._load_failed                = False
         self.cash_inr                    = 0.0
         self.total_deposited             = 0.0
         self.partial_realised_pnl_total  = 0.0
@@ -549,6 +555,16 @@ class PaperPortfolio:
         self.monthly_reserve_inr         = 0.0
 
         self._load()
+        if self._load_failed:
+            # The book exists but is unreadable. Abort the entire run: better a
+            # loud, visible failure (and one untouched, good file in git) than a
+            # silent re-seed that destroys positions, realized P&L and the
+            # deposit history. Fix/restore the file from git and re-run.
+            raise PortfolioLoadError(
+                f"Refusing to run: {self.portfolio_file!r} exists but could not be "
+                f"loaded. Aborting before any deposit/save so the saved book is "
+                f"not overwritten. Inspect or `git checkout` the file and re-run."
+            )
         self._process_monthly_deposit()
         for pos in self.open_positions:
             self._update_position_risk(pos)
@@ -608,7 +624,16 @@ class PaperPortfolio:
                 )
                 self.save()
         except Exception as exc:
-            log.error(f"Portfolio load error: {exc}")
+            # CRITICAL: the book file exists on disk but could not be parsed.
+            # Do NOT continue with empty constructor defaults — the caller
+            # (__init__) would then credit a monthly deposit and save() an
+            # empty book straight over the good one. That silent path is what
+            # wiped the April record on 2026-05-02. Flag the failure so the
+            # run aborts instead of overwriting the saved portfolio.
+            self._load_failed = True
+            log.critical(
+                "Portfolio load FAILED for existing file %s: %s", self.portfolio_file, exc
+            )
 
     def save(self):
         try:
@@ -626,9 +651,55 @@ class PaperPortfolio:
                 "closed_trades":               [ct.to_dict() for ct in self.closed_trades],
                 "last_saved":                  datetime.now(timezone.utc).isoformat(),
             }
+            if not self._safe_to_overwrite(data):
+                log.critical(
+                    "REFUSING to save portfolio: the write would erase a non-empty "
+                    "saved book (deposits shrank, a month key disappeared, or "
+                    "positions vanished without matching closures). Save aborted to "
+                    "protect the track record. In-memory state left unpersisted."
+                )
+                return
             atomic_write_json(self.portfolio_file, data)
         except Exception as exc:
             log.error(f"Portfolio save error: {exc}")
+
+    def _safe_to_overwrite(self, new_data: dict) -> bool:
+        """Guard against the state-reset bug (see 2026-05-02 / 2026-05-08 wipes).
+
+        Compares the about-to-be-written book against the one already on disk and
+        blocks regressions that can only be corruption, never legitimate trading:
+          * total_deposited must never decrease,
+          * monthly_deposits must never lose a month key,
+          * open positions may only drop if matched by newly recorded closures
+            (every real exit appends to closed_trades).
+        Returns True when the write is safe or when there is no prior file.
+        """
+        try:
+            if not os.path.exists(self.portfolio_file):
+                return True
+            with open(self.portfolio_file, "r", encoding="utf-8") as fh:
+                disk = json.load(fh)
+        except Exception:
+            # Old file unreadable — the load-guard already aborts that case, so
+            # refusing here would only deadlock. Allow the write.
+            return True
+
+        disk_dep    = disk.get("total_deposited", 0) or 0
+        new_dep     = new_data.get("total_deposited", 0) or 0
+        disk_months = set(disk.get("monthly_deposits", {}) or {})
+        new_months  = set(new_data.get("monthly_deposits", {}) or {})
+        disk_pos    = len(disk.get("open_positions", []) or [])
+        new_pos     = len(new_data.get("open_positions", []) or [])
+        disk_closed = len(disk.get("closed_trades", []) or [])
+        new_closed  = len(new_data.get("closed_trades", []) or [])
+
+        if new_dep < disk_dep - 1.0:
+            return False
+        if disk_months - new_months:
+            return False
+        if new_pos < disk_pos and (new_closed - disk_closed) < (disk_pos - new_pos):
+            return False
+        return True
 
     def _process_monthly_deposit(self):
         month_key = date.today().strftime("%Y-%m")

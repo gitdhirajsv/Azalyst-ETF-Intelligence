@@ -106,6 +106,35 @@ VIX_TICKER = "^VIX"         # market regime gauge
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# NSE symbol handling. yfinance needs the ".NS" suffix for NSE-listed ETFs;
+# the bare symbols (e.g. "NIFTYBEES") 404 every run and the whole India / gold-
+# BeES / PSU sleeve goes invisible to the scanner. These were verified to
+# resolve on yfinance (2026-06-02). Keys here stay BARE so the ETF_TO_SECTOR /
+# etf_mapper sector lookups are unchanged — the suffix is applied only at the
+# yfinance call boundary and stripped back off the downloaded columns.
+# ─────────────────────────────────────────────────────────────────────────────
+_NSE_SYMBOLS = {
+    "NIFTYBEES", "GOLDBEES", "BANKBEES", "PSUBNKBEES", "CPSEETF",
+    "MIDCAPETF", "HDFCGOLD", "PHARMABEES", "HEALTHCARE", "MAFANG",
+}
+# Symbols with no resolvable yfinance ticker under any known suffix — skip them
+# instead of 404ing every scan. (No valid NSE/Yahoo listing found 2026-06-02.)
+_DEAD_SYMBOLS = {"DEFENCEETF", "REALTY", "NEWENERGY", "BHARATBOND"}
+
+
+def _to_yf(symbol: str) -> str:
+    """Map a canonical universe symbol to its yfinance ticker."""
+    return f"{symbol}.NS" if symbol in _NSE_SYMBOLS else symbol
+
+
+def _from_yf(symbol: str) -> str:
+    """Strip the NSE suffix back to the canonical universe symbol."""
+    if symbol.endswith(".NS") and symbol[:-3] in _NSE_SYMBOLS:
+        return symbol[:-3]
+    return symbol
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Data containers
 # ─────────────────────────────────────────────────────────────────────────────
 @dataclass
@@ -241,7 +270,9 @@ class PriceScanner:
 
     def __init__(self, tickers: Optional[List[str]] = None,
                  lookback_days: int = 260):
-        self.tickers = tickers or list(ETF_TO_SECTOR.keys())
+        base = tickers or list(ETF_TO_SECTOR.keys())
+        # Drop symbols with no resolvable yfinance listing so they don't 404 every run.
+        self.tickers = [t for t in base if t not in _DEAD_SYMBOLS]
         self.lookback_days = lookback_days
         self._spy_returns: Optional[pd.Series] = None
 
@@ -249,8 +280,12 @@ class PriceScanner:
     def _fetch_history(self, tickers: List[str]) -> pd.DataFrame:
         """Bulk-download history for many tickers in one call (fast)."""
         try:
+            # Apply the .NS suffix for NSE symbols at the fetch boundary, then
+            # rename columns back to canonical so the rest of the scanner is
+            # suffix-agnostic.
+            yf_tickers = [_to_yf(t) for t in tickers] + [BENCHMARK_TICKER]
             df = yf.download(
-                tickers + [BENCHMARK_TICKER],
+                yf_tickers,
                 period=f"{self.lookback_days}d",
                 interval="1d",
                 auto_adjust=True,
@@ -258,6 +293,8 @@ class PriceScanner:
                 group_by="ticker",
                 threads=True,
             )
+            if isinstance(df.columns, pd.MultiIndex):
+                df = df.rename(columns=_from_yf, level=0)
             return df
         except Exception as exc:
             log.warning("Bulk download failed (%s); falling back to per-ticker.", exc)
