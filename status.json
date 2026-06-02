@@ -34,22 +34,33 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "LOW_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.10282611694624827,
-    "vix_level": 16.049999237060547,
-    "vix_percentile_1y": 0.24206349206349206,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 30,
-      "flow": 22,
-      "options": 18,
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
       "rotation": 15,
-      "macro": 8,
-      "news": 7
+      "macro": 10,
+      "news": 10
     }
   },
-  "top_signal": {},
+  "top_signal": {
+    "ticker": "XLK",
+    "rank_score": 22.248599545798637,
+    "flow_score": 7.601211166825346,
+    "options_score": 0.0,
+    "rotation_score": 15.0,
+    "macro_score": 3.898470819073914,
+    "news_score": 0.0,
+    "total": 48.7482815316979,
+    "publish": false,
+    "direction": "long"
+  },
   "allocation": {
     "labels": [],
     "values": []
@@ -58,63 +69,177 @@
     "labels": [],
     "values": []
   },
-  "confidence": [],
-  "signals": [],
-  "articles": [],
+  "confidence": [
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 87.0
+    },
+    {
+      "symbol": "Cybersecurity",
+      "score": 79.0
+    }
+  ],
+  "signals": [
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 87.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 30,
+      "latest_at": "02 Jun 2026 17:54 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "middle_east",
+        "europe",
+        "india",
+        "global"
+      ],
+      "sources": [
+        "Tech",
+        "Cointelegraph.com News",
+        "US Top News and Analysis",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.8,
+        "recency": 16.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 79.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 10,
+      "latest_at": "02 Jun 2026 18:05 UTC",
+      "headline": "Election interlopers register 5K+ domains, hope to catch some voting phish",
+      "regions": [
+        "europe",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Tech",
+        "Latest from Tom's Hardware",
+        "Cointelegraph.com News",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 14.4,
+        "volume_confirmation": 16.2,
+        "source_diversity": 12.4,
+        "recency": 17.0,
+        "geopolitical_severity": 10.4
+      }
+    }
+  ],
+  "articles": [
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Crypto & Digital Assets - 30 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Cybersecurity - 10 articles - MEDIUM / NEUTRAL - Election interlopers register 5K+ domains, hope to catch some voting phish"
+    }
+  ],
   "market_snapshot": [
     {
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7614.12,
+      "price": 7607.7,
       "currency": "USD",
-      "change": 14.16,
-      "change_pct": 0.19,
-      "change_str": "+0.19%",
+      "change": 7.74,
+      "change_pct": 0.1,
+      "change_str": "+0.10%",
       "direction": "up"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 27145.26,
+      "price": 27086.95,
       "currency": "USD",
-      "change": 58.45,
-      "change_pct": 0.22,
-      "change_str": "+0.22%",
+      "change": 0.14,
+      "change_pct": 0.0,
+      "change_str": "+0.00%",
       "direction": "up"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 51151.09,
+      "price": 51252.56,
       "currency": "USD",
-      "change": 72.21,
-      "change_pct": 0.14,
-      "change_str": "+0.14%",
+      "change": 173.68,
+      "change_pct": 0.34,
+      "change_str": "+0.34%",
       "direction": "up"
     },
     {
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10373.94,
+      "price": 10373.51,
       "currency": "GBP",
-      "change": 34.94,
-      "change_pct": 0.34,
-      "change_str": "+0.34%",
+      "change": 34.51,
+      "change_pct": 0.33,
+      "change_str": "+0.33%",
       "direction": "up"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 25120.05,
+      "price": 25124.17,
       "currency": "EUR",
-      "change": 117.01,
-      "change_pct": 0.47,
-      "change_str": "+0.47%",
+      "change": 121.13,
+      "change_pct": 0.48,
+      "change_str": "+0.48%",
       "direction": "up"
     },
     {
@@ -123,10 +248,10 @@
       "region": "JP",
       "price": 66734.24,
       "currency": "JPY",
-      "change": -200.09,
-      "change_pct": -0.3,
-      "change_str": "-0.30%",
-      "direction": "down"
+      "change": 404.74,
+      "change_pct": 0.61,
+      "change_str": "+0.61%",
+      "direction": "up"
     },
     {
       "label": "Hang Seng",
@@ -134,9 +259,9 @@
       "region": "HK",
       "price": 26038.32,
       "currency": "HKD",
-      "change": 640.14,
-      "change_pct": 2.52,
-      "change_str": "+2.52%",
+      "change": 855.93,
+      "change_pct": 3.4,
+      "change_str": "+3.40%",
       "direction": "up"
     },
     {
@@ -154,63 +279,63 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4533.6,
+      "price": 4516.0,
       "currency": "USD",
-      "change": 58.4,
-      "change_pct": 1.3,
-      "change_str": "+1.30%",
+      "change": 40.8,
+      "change_pct": 0.91,
+      "change_str": "+0.91%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 92.07,
+      "price": 93.61,
       "currency": "USD",
-      "change": -0.09,
-      "change_pct": -0.1,
-      "change_str": "-0.10%",
-      "direction": "down"
+      "change": 1.45,
+      "change_pct": 1.57,
+      "change_str": "+1.57%",
+      "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 67847.95,
+      "price": 67493.07,
       "currency": "USD",
-      "change": -3471.82,
-      "change_pct": -4.87,
-      "change_str": "-4.87%",
+      "change": -3826.7,
+      "change_pct": -5.37,
+      "change_str": "-5.37%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.11,
+      "price": 99.28,
       "currency": "USD",
-      "change": -0.09,
-      "change_pct": -0.09,
-      "change_str": "-0.09%",
-      "direction": "down"
+      "change": 0.08,
+      "change_pct": 0.08,
+      "change_str": "+0.08%",
+      "direction": "up"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 16.05,
+      "price": 15.99,
       "currency": "USD",
-      "change": 0.0,
-      "change_pct": 0.0,
-      "change_str": "+0.00%",
-      "direction": "up"
+      "change": -0.06,
+      "change_pct": -0.37,
+      "change_str": "-0.37%",
+      "direction": "down"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
     "portfolio_peak": 0.0,
-    "vix": 16.05,
+    "vix": 15.99,
     "vix_regime": "ELEVATED",
     "sector_concentration": [],
     "max_drawdown_pct": 0.0,
@@ -254,8 +379,9 @@
     }
   },
   "logs": [
-    "2026-06-02 14:59:47 [INFO] AZALYST - status.json generated",
-    "2026-06-02 14:59:47 [INFO] PORTFOLIO - NAV USD 0.00 | Return +0.00%"
+    "2026-06-02 18:13:51 [INFO] AZALYST - status.json generated",
+    "2026-06-02 18:13:51 [INFO] PORTFOLIO - NAV USD 0.00 | Return +0.00%",
+    "2026-06-02 18:13:51 [INFO] SIGNALS - 2 active signal buckets in state"
   ],
-  "generated_at": "2026-06-02 14:59:41 UTC"
+  "generated_at": "2026-06-02 18:13:49 UTC"
 }
