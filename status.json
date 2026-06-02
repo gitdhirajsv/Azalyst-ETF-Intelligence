@@ -50,14 +50,14 @@
     }
   },
   "top_signal": {
-    "ticker": "XLK",
-    "rank_score": 22.248599545798637,
-    "flow_score": 7.601211166825346,
+    "ticker": "ESGV",
+    "rank_score": 28.199547169811318,
+    "flow_score": 22.0,
     "options_score": 0.0,
-    "rotation_score": 15.0,
-    "macro_score": 3.898470819073914,
+    "rotation_score": 0.0,
+    "macro_score": 0.0,
     "news_score": 0.0,
-    "total": 48.7482815316979,
+    "total": 50.19954716981132,
     "publish": false,
     "direction": "long"
   },
@@ -77,6 +77,10 @@
     {
       "symbol": "Cybersecurity",
       "score": 79.0
+    },
+    {
+      "symbol": "Commodities & Mining",
+      "score": 76.0
     }
   ],
   "signals": [
@@ -172,6 +176,56 @@
         "recency": 17.0,
         "geopolitical_severity": 10.4
       }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 76.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "02 Jun 2026 21:31 UTC",
+      "headline": "Copper and Aluminum Power Higher on Global Demand, War Outlook",
+      "regions": [
+        "middle_east",
+        "global",
+        "africa"
+      ],
+      "sources": [
+        "The Verge",
+        "Bloomberg Markets",
+        "Oilprice.com",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.0,
+        "volume_confirmation": 13.7,
+        "source_diversity": 12.7,
+        "recency": 16.9,
+        "geopolitical_severity": 10.7
+      }
     }
   ],
   "articles": [
@@ -184,6 +238,11 @@
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Cybersecurity - 10 articles - MEDIUM / NEUTRAL - Election interlopers register 5K+ domains, hope to catch some voting phish"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Commodities & Mining - 7 articles - MEDIUM / NEUTRAL - Copper and Aluminum Power Higher on Global Demand, War Outlook"
     }
   ],
   "market_snapshot": [
@@ -191,33 +250,33 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7607.7,
+      "price": 7609.78,
       "currency": "USD",
-      "change": 7.74,
-      "change_pct": 0.1,
-      "change_str": "+0.10%",
+      "change": 9.82,
+      "change_pct": 0.13,
+      "change_str": "+0.13%",
       "direction": "up"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 27086.95,
+      "price": 27093.9,
       "currency": "USD",
-      "change": 0.14,
-      "change_pct": 0.0,
-      "change_str": "+0.00%",
+      "change": 7.09,
+      "change_pct": 0.03,
+      "change_str": "+0.03%",
       "direction": "up"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 51252.56,
+      "price": 51307.79,
       "currency": "USD",
-      "change": 173.68,
-      "change_pct": 0.34,
-      "change_str": "+0.34%",
+      "change": 228.91,
+      "change_pct": 0.45,
+      "change_str": "+0.45%",
       "direction": "up"
     },
     {
@@ -270,64 +329,64 @@
       "region": "IN",
       "price": 23483.55,
       "currency": "INR",
-      "change": 100.95,
-      "change_pct": 0.43,
-      "change_str": "+0.43%",
-      "direction": "up"
+      "change": -64.2,
+      "change_pct": -0.27,
+      "change_str": "-0.27%",
+      "direction": "down"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4516.0,
+      "price": 4519.2,
       "currency": "USD",
-      "change": 40.8,
-      "change_pct": 0.91,
-      "change_str": "+0.91%",
+      "change": 44.0,
+      "change_pct": 0.98,
+      "change_str": "+0.98%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 93.61,
+      "price": 93.39,
       "currency": "USD",
-      "change": 1.45,
-      "change_pct": 1.57,
-      "change_str": "+1.57%",
+      "change": 1.23,
+      "change_pct": 1.33,
+      "change_str": "+1.33%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 67493.07,
+      "price": 67758.21,
       "currency": "USD",
-      "change": -3826.7,
-      "change_pct": -5.37,
-      "change_str": "-5.37%",
+      "change": -3561.56,
+      "change_pct": -4.99,
+      "change_str": "-4.99%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.28,
+      "price": 99.2,
       "currency": "USD",
-      "change": 0.08,
-      "change_pct": 0.08,
-      "change_str": "+0.08%",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "change_str": "+0.00%",
       "direction": "up"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 15.99,
+      "price": 15.77,
       "currency": "USD",
-      "change": -0.06,
-      "change_pct": -0.37,
-      "change_str": "-0.37%",
+      "change": -0.28,
+      "change_pct": -1.74,
+      "change_str": "-1.74%",
       "direction": "down"
     }
   ],
@@ -335,7 +394,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
     "portfolio_peak": 0.0,
-    "vix": 15.99,
+    "vix": 15.77,
     "vix_regime": "ELEVATED",
     "sector_concentration": [],
     "max_drawdown_pct": 0.0,
@@ -379,9 +438,9 @@
     }
   },
   "logs": [
-    "2026-06-02 18:13:51 [INFO] AZALYST - status.json generated",
-    "2026-06-02 18:13:51 [INFO] PORTFOLIO - NAV USD 0.00 | Return +0.00%",
-    "2026-06-02 18:13:51 [INFO] SIGNALS - 2 active signal buckets in state"
+    "2026-06-02 21:39:03 [INFO] AZALYST - status.json generated",
+    "2026-06-02 21:39:03 [INFO] PORTFOLIO - NAV USD 0.00 | Return +0.00%",
+    "2026-06-02 21:39:03 [INFO] SIGNALS - 3 active signal buckets in state"
   ],
-  "generated_at": "2026-06-02 18:13:49 UTC"
+  "generated_at": "2026-06-02 21:39:02 UTC"
 }
