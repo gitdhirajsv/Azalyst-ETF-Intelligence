@@ -409,37 +409,38 @@
     }
   },
   "commodities_mining": {
-    "sent_at": "2026-06-02T21:32:56.610096+00:00",
-    "confidence": 76,
+    "sent_at": "2026-06-03T02:09:20.056581+00:00",
+    "confidence": 79,
     "sector_label": "Commodities & Mining",
-    "article_count": 7,
+    "article_count": 8,
     "severity": "MEDIUM",
     "regions": [
-      "middle_east",
       "global",
-      "africa"
+      "africa",
+      "india",
+      "middle_east"
     ],
     "sources": [
-      "The Verge",
-      "Bloomberg Markets",
       "Oilprice.com",
+      "The Verge",
       "Cointelegraph.com News",
+      "Markets-Economic Times",
       "BBC News"
     ],
     "top_headlines": [
-      "Copper and Aluminum Power Higher on Global Demand, War Outlook",
+      "Can CMR Green's IPO deliver long-term gains for high-risk investors?",
+      "How Long Can Demand Destruction Keep a Lid on Oil Prices?",
       "Mayor cancels DR Congo friendly with Chile in Spain over Ebola concern",
-      "HSBC Flags a Super-Squeeze In the Oil Market",
       "Microsoft\u2019s next-gen quantum chip cuts timeline to useful quantum computing",
-      "New Shareholder Elliott Pushes for Sale of Australia\u2019s Top Gold Miner"
+      "India\u2019s Oman Bet Looks Timely As Hormuz Crisis Deepens"
     ],
-    "latest_ts": "2026-06-02T21:31:01.873108+00:00",
+    "latest_ts": "2026-06-03T02:07:22.491375+00:00",
     "confidence_breakdown": {
-      "signal_strength": 11.0,
-      "volume_confirmation": 13.7,
+      "signal_strength": 12.0,
+      "volume_confirmation": 14.6,
       "source_diversity": 12.7,
       "recency": 16.9,
-      "geopolitical_severity": 10.7,
+      "geopolitical_severity": 11.4,
       "cross_engine_confirmation": 12.0
     },
     "etf_recommendations": {
@@ -482,6 +483,23 @@
           ]
         },
         {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NMDC, Coal India \u2014 commodity exposure",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u20139 months",
+          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
+          "sector_key": "commodities_mining",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 72.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        },
+        {
           "name": "Sprott Physical Copper Trust",
           "ticker": "COPP",
           "platform": "Sprott \u2014 IBKR / Schwab",
@@ -497,21 +515,6 @@
             "clean thematic exposure",
             "matches international access"
           ]
-        },
-        {
-          "name": "CPSE ETF",
-          "ticker": "CPSEETF",
-          "note": "NMDC, Coal India \u2014 commodity exposure",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "3\u20139 months",
-          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
-          "sector_key": "commodities_mining",
-          "market_bucket": "india",
-          "market_scope": "India-listed",
-          "selection_score": 69.0,
-          "selection_notes": []
         }
       ],
       "top_etfs": [
@@ -534,6 +537,23 @@
           ]
         },
         {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NMDC, Coal India \u2014 commodity exposure",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u20139 months",
+          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
+          "sector_key": "commodities_mining",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 72.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        },
+        {
           "name": "Sprott Physical Copper Trust",
           "ticker": "COPP",
           "platform": "Sprott \u2014 IBKR / Schwab",
@@ -549,21 +569,6 @@
             "clean thematic exposure",
             "matches international access"
           ]
-        },
-        {
-          "name": "CPSE ETF",
-          "ticker": "CPSEETF",
-          "note": "NMDC, Coal India \u2014 commodity exposure",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "3\u20139 months",
-          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
-          "sector_key": "commodities_mining",
-          "market_bucket": "india",
-          "market_scope": "India-listed",
-          "selection_score": 69.0,
-          "selection_notes": []
         }
       ],
       "regional_alternatives": {
@@ -580,8 +585,10 @@
             "sector_key": "commodities_mining",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 69.0,
-            "selection_notes": []
+            "selection_score": 72.0,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
           }
         ],
         "International-listed": [
@@ -635,8 +642,10 @@
           "sector_key": "commodities_mining",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 69.0,
-          "selection_notes": []
+          "selection_score": 72.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "global": [
@@ -672,6 +681,673 @@
           "selection_score": 71.0,
           "selection_notes": [
             "clean thematic exposure",
+            "matches international access"
+          ]
+        }
+      ]
+    }
+  },
+  "energy_oil": {
+    "sent_at": "2026-06-03T02:09:21.723239+00:00",
+    "confidence": 93,
+    "sector_label": "Energy / Oil & Gas",
+    "article_count": 25,
+    "severity": "CRITICAL",
+    "regions": [
+      "global",
+      "middle_east",
+      "asia_pacific",
+      "africa",
+      "americas",
+      "europe"
+    ],
+    "sources": [
+      "Oilprice.com",
+      "US Top News and Analysis",
+      "Bloomberg Markets",
+      "Markets-Economic Times",
+      "BBC News"
+    ],
+    "top_headlines": [
+      "Iraq, UAE, Saudi Arabia All Set for Major Oil Output Surge in 2027",
+      "US Crude Oil Inventories Continue Downward Plunge But Gasoline Surprises",
+      "Why India\u2019s LNG Buying Surges Despite Costly Gas",
+      "China Eases Order for Teapot Refiners to Keep Fuel Output High",
+      "How Long Can Demand Destruction Keep a Lid on Oil Prices?"
+    ],
+    "latest_ts": "2026-06-03T01:58:37+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 22.0,
+      "volume_confirmation": 18.0,
+      "source_diversity": 14.4,
+      "recency": 16.7,
+      "geopolitical_severity": 13.0,
+      "cross_engine_confirmation": 9.4
+    },
+    "etf_recommendations": {
+      "selection_method": "global-ranked",
+      "primary": {
+        "name": "Energy Select Sector SPDR",
+        "ticker": "XLE",
+        "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+        "exchange": "NYSE",
+        "risk": "Medium",
+        "timeframe": "1\u20133 months",
+        "thesis": "Largest US energy ETF. Holds Exxon, Chevron, ConocoPhillips. Direct oil price leverage.",
+        "sector_key": "energy_oil",
+        "market_bucket": "global",
+        "market_scope": "International-listed",
+        "selection_score": 124.0,
+        "selection_notes": [
+          "deep liquidity",
+          "strong cost profile",
+          "high implementation stability"
+        ]
+      },
+      "ranked": [
+        {
+          "name": "Energy Select Sector SPDR",
+          "ticker": "XLE",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20133 months",
+          "thesis": "Largest US energy ETF. Holds Exxon, Chevron, ConocoPhillips. Direct oil price leverage.",
+          "sector_key": "energy_oil",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 124.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "high implementation stability"
+          ]
+        },
+        {
+          "name": "iShares Global Energy ETF",
+          "ticker": "IXC",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Global energy diversification \u2014 Shell, BP, TotalEnergies, Saudi Aramco. Less US-centric.",
+          "sector_key": "energy_oil",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 112.5,
+          "selection_notes": [
+            "broad diversification",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "Direct PSU energy exposure \u2014 ONGC, NTPC, Coal India",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "CPSE ETF holds ONGC, Coal India, NTPC, BHEL. Direct play on India's energy sector.",
+          "sector_key": "energy_oil",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 66.0,
+          "selection_notes": []
+        },
+        {
+          "name": "United States Oil Fund",
+          "ticker": "USO",
+          "platform": "USCF \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "1\u20134 weeks",
+          "thesis": "Direct WTI crude oil futures exposure. Short-term geopolitical supply-shock play.",
+          "sector_key": "energy_oil",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 56.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "futures roll-cost risk",
+            "short holding window"
+          ]
+        },
+        {
+          "name": "Nippon India ETF Nifty PSU Bank BeES",
+          "ticker": "PSUBNKBEES",
+          "note": "PSU banks benefit from energy sector capex",
+          "platform": "Dhan App",
+          "exchange": "NSE/BSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Indian PSU energy companies (ONGC, IOC) drive PSU bank credit. Energy capex cycle benefits.",
+          "sector_key": "energy_oil",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 45.0,
+          "selection_notes": []
+        }
+      ],
+      "top_etfs": [
+        {
+          "name": "Energy Select Sector SPDR",
+          "ticker": "XLE",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20133 months",
+          "thesis": "Largest US energy ETF. Holds Exxon, Chevron, ConocoPhillips. Direct oil price leverage.",
+          "sector_key": "energy_oil",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 124.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "high implementation stability"
+          ]
+        },
+        {
+          "name": "iShares Global Energy ETF",
+          "ticker": "IXC",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Global energy diversification \u2014 Shell, BP, TotalEnergies, Saudi Aramco. Less US-centric.",
+          "sector_key": "energy_oil",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 112.5,
+          "selection_notes": [
+            "broad diversification",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "Direct PSU energy exposure \u2014 ONGC, NTPC, Coal India",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "CPSE ETF holds ONGC, Coal India, NTPC, BHEL. Direct play on India's energy sector.",
+          "sector_key": "energy_oil",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 66.0,
+          "selection_notes": []
+        }
+      ],
+      "regional_alternatives": {
+        "India-listed": [
+          {
+            "name": "CPSE ETF",
+            "ticker": "CPSEETF",
+            "note": "Direct PSU energy exposure \u2014 ONGC, NTPC, Coal India",
+            "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+            "exchange": "NSE",
+            "risk": "Medium",
+            "timeframe": "1\u20136 months",
+            "thesis": "CPSE ETF holds ONGC, Coal India, NTPC, BHEL. Direct play on India's energy sector.",
+            "sector_key": "energy_oil",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 66.0,
+            "selection_notes": []
+          },
+          {
+            "name": "Nippon India ETF Nifty PSU Bank BeES",
+            "ticker": "PSUBNKBEES",
+            "note": "PSU banks benefit from energy sector capex",
+            "platform": "Dhan App",
+            "exchange": "NSE/BSE",
+            "risk": "Medium",
+            "timeframe": "1\u20136 months",
+            "thesis": "Indian PSU energy companies (ONGC, IOC) drive PSU bank credit. Energy capex cycle benefits.",
+            "sector_key": "energy_oil",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 45.0,
+            "selection_notes": []
+          }
+        ],
+        "International-listed": [
+          {
+            "name": "Energy Select Sector SPDR",
+            "ticker": "XLE",
+            "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Medium",
+            "timeframe": "1\u20133 months",
+            "thesis": "Largest US energy ETF. Holds Exxon, Chevron, ConocoPhillips. Direct oil price leverage.",
+            "sector_key": "energy_oil",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 124.0,
+            "selection_notes": [
+              "deep liquidity",
+              "strong cost profile",
+              "high implementation stability"
+            ]
+          },
+          {
+            "name": "iShares Global Energy ETF",
+            "ticker": "IXC",
+            "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Medium",
+            "timeframe": "1\u20136 months",
+            "thesis": "Global energy diversification \u2014 Shell, BP, TotalEnergies, Saudi Aramco. Less US-centric.",
+            "sector_key": "energy_oil",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 112.5,
+            "selection_notes": [
+              "broad diversification",
+              "matches international access"
+            ]
+          },
+          {
+            "name": "United States Oil Fund",
+            "ticker": "USO",
+            "platform": "USCF \u2014 IBKR / Schwab",
+            "exchange": "NYSE",
+            "risk": "High",
+            "timeframe": "1\u20134 weeks",
+            "thesis": "Direct WTI crude oil futures exposure. Short-term geopolitical supply-shock play.",
+            "sector_key": "energy_oil",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 56.0,
+            "selection_notes": [
+              "clean thematic exposure",
+              "futures roll-cost risk",
+              "short holding window"
+            ]
+          }
+        ]
+      },
+      "india": [
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "Direct PSU energy exposure \u2014 ONGC, NTPC, Coal India",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "CPSE ETF holds ONGC, Coal India, NTPC, BHEL. Direct play on India's energy sector.",
+          "sector_key": "energy_oil",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 66.0,
+          "selection_notes": []
+        },
+        {
+          "name": "Nippon India ETF Nifty PSU Bank BeES",
+          "ticker": "PSUBNKBEES",
+          "note": "PSU banks benefit from energy sector capex",
+          "platform": "Dhan App",
+          "exchange": "NSE/BSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Indian PSU energy companies (ONGC, IOC) drive PSU bank credit. Energy capex cycle benefits.",
+          "sector_key": "energy_oil",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 45.0,
+          "selection_notes": []
+        }
+      ],
+      "global": [
+        {
+          "name": "Energy Select Sector SPDR",
+          "ticker": "XLE",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20133 months",
+          "thesis": "Largest US energy ETF. Holds Exxon, Chevron, ConocoPhillips. Direct oil price leverage.",
+          "sector_key": "energy_oil",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 124.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "high implementation stability"
+          ]
+        },
+        {
+          "name": "iShares Global Energy ETF",
+          "ticker": "IXC",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "1\u20136 months",
+          "thesis": "Global energy diversification \u2014 Shell, BP, TotalEnergies, Saudi Aramco. Less US-centric.",
+          "sector_key": "energy_oil",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 112.5,
+          "selection_notes": [
+            "broad diversification",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "United States Oil Fund",
+          "ticker": "USO",
+          "platform": "USCF \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "1\u20134 weeks",
+          "thesis": "Direct WTI crude oil futures exposure. Short-term geopolitical supply-shock play.",
+          "sector_key": "energy_oil",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 56.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "futures roll-cost risk",
+            "short holding window"
+          ]
+        }
+      ]
+    }
+  },
+  "asia_pacific": {
+    "sent_at": "2026-06-03T02:09:23.617372+00:00",
+    "confidence": 83,
+    "sector_label": "Asia Pacific Equity",
+    "article_count": 10,
+    "severity": "HIGH",
+    "regions": [
+      "global",
+      "middle_east",
+      "asia_pacific"
+    ],
+    "sources": [
+      "US Top News and Analysis",
+      "Latest from Tom's Hardware",
+      "Bloomberg Markets",
+      "Markets-Economic Times",
+      "BBC News"
+    ],
+    "top_headlines": [
+      "Global Markets: South Korean shares post record-high close as Nvidia hopes lift tech stocks",
+      "Japan's Nikkei hits record high as Asia markets rise amid Middle East concerns",
+      "Japan's Nikkei retreats from record peak as market gauges fragile Mideast peace talks",
+      "Global Market Today: Asian stocks edge up, Yen nears 160 per dollar",
+      "Explained: Why Indian stock market has fallen prey to South Korea, Taiwan\u2019s AI prowess"
+    ],
+    "latest_ts": "2026-06-03T02:01:40+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 16.2,
+      "volume_confirmation": 16.2,
+      "source_diversity": 14.0,
+      "recency": 16.8,
+      "geopolitical_severity": 13.0,
+      "cross_engine_confirmation": 7.2
+    },
+    "etf_recommendations": {
+      "selection_method": "global-ranked",
+      "primary": {
+        "name": "iShares MSCI Japan ETF",
+        "ticker": "EWJ",
+        "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+        "exchange": "NYSE",
+        "risk": "Medium",
+        "timeframe": "3\u201312 months",
+        "thesis": "Japan corporate reform + Nikkei record highs. BoJ normalisation adds FX tailwind for USD investors.",
+        "sector_key": "asia_pacific",
+        "market_bucket": "global",
+        "market_scope": "International-listed",
+        "selection_score": 108.5,
+        "selection_notes": [
+          "matches international access"
+        ]
+      },
+      "ranked": [
+        {
+          "name": "iShares MSCI Japan ETF",
+          "ticker": "EWJ",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Japan corporate reform + Nikkei record highs. BoJ normalisation adds FX tailwind for USD investors.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 108.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "iShares MSCI South Korea ETF",
+          "ticker": "EWY",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium-High",
+          "timeframe": "3\u201312 months",
+          "thesis": "Korea: Samsung, SK Hynix, POSCO. Memory chip & EV battery cycle play. Korea discount narrowing.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 101.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Franklin FTSE Asia ex Japan ETF",
+          "ticker": "FLAX",
+          "platform": "Franklin Templeton \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Asia ex-Japan \u2014 India, China, Taiwan, Korea, ASEAN. Catch-up trade vs US equities.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 94.5,
+          "selection_notes": [
+            "broad diversification",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "iShares China Large-Cap ETF",
+          "ticker": "FXI",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "1\u20136 months",
+          "thesis": "China stimulus-driven re-rating potential. Alibaba, Tencent, BYD. High geopolitical risk.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 87.5,
+          "selection_notes": [
+            "elevated geopolitical risk",
+            "matches international access"
+          ]
+        }
+      ],
+      "top_etfs": [
+        {
+          "name": "iShares MSCI Japan ETF",
+          "ticker": "EWJ",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Japan corporate reform + Nikkei record highs. BoJ normalisation adds FX tailwind for USD investors.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 108.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "iShares MSCI South Korea ETF",
+          "ticker": "EWY",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium-High",
+          "timeframe": "3\u201312 months",
+          "thesis": "Korea: Samsung, SK Hynix, POSCO. Memory chip & EV battery cycle play. Korea discount narrowing.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 101.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Franklin FTSE Asia ex Japan ETF",
+          "ticker": "FLAX",
+          "platform": "Franklin Templeton \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Asia ex-Japan \u2014 India, China, Taiwan, Korea, ASEAN. Catch-up trade vs US equities.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 94.5,
+          "selection_notes": [
+            "broad diversification",
+            "matches international access"
+          ]
+        }
+      ],
+      "regional_alternatives": {
+        "International-listed": [
+          {
+            "name": "iShares MSCI Japan ETF",
+            "ticker": "EWJ",
+            "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Medium",
+            "timeframe": "3\u201312 months",
+            "thesis": "Japan corporate reform + Nikkei record highs. BoJ normalisation adds FX tailwind for USD investors.",
+            "sector_key": "asia_pacific",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 108.5,
+            "selection_notes": [
+              "matches international access"
+            ]
+          },
+          {
+            "name": "iShares MSCI South Korea ETF",
+            "ticker": "EWY",
+            "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Medium-High",
+            "timeframe": "3\u201312 months",
+            "thesis": "Korea: Samsung, SK Hynix, POSCO. Memory chip & EV battery cycle play. Korea discount narrowing.",
+            "sector_key": "asia_pacific",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 101.5,
+            "selection_notes": [
+              "matches international access"
+            ]
+          },
+          {
+            "name": "Franklin FTSE Asia ex Japan ETF",
+            "ticker": "FLAX",
+            "platform": "Franklin Templeton \u2014 IBKR / Schwab",
+            "exchange": "NYSE",
+            "risk": "Medium",
+            "timeframe": "6\u201318 months",
+            "thesis": "Asia ex-Japan \u2014 India, China, Taiwan, Korea, ASEAN. Catch-up trade vs US equities.",
+            "sector_key": "asia_pacific",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 94.5,
+            "selection_notes": [
+              "broad diversification",
+              "matches international access"
+            ]
+          }
+        ]
+      },
+      "india": [],
+      "global": [
+        {
+          "name": "iShares MSCI Japan ETF",
+          "ticker": "EWJ",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "3\u201312 months",
+          "thesis": "Japan corporate reform + Nikkei record highs. BoJ normalisation adds FX tailwind for USD investors.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 108.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "iShares MSCI South Korea ETF",
+          "ticker": "EWY",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium-High",
+          "timeframe": "3\u201312 months",
+          "thesis": "Korea: Samsung, SK Hynix, POSCO. Memory chip & EV battery cycle play. Korea discount narrowing.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 101.5,
+          "selection_notes": [
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Franklin FTSE Asia ex Japan ETF",
+          "ticker": "FLAX",
+          "platform": "Franklin Templeton \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Asia ex-Japan \u2014 India, China, Taiwan, Korea, ASEAN. Catch-up trade vs US equities.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 94.5,
+          "selection_notes": [
+            "broad diversification",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "iShares China Large-Cap ETF",
+          "ticker": "FXI",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "1\u20136 months",
+          "thesis": "China stimulus-driven re-rating potential. Alibaba, Tencent, BYD. High geopolitical risk.",
+          "sector_key": "asia_pacific",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 87.5,
+          "selection_notes": [
+            "elevated geopolitical risk",
             "matches international access"
           ]
         }
