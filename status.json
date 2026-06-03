@@ -51,14 +51,14 @@
   },
   "top_signal": {
     "ticker": "XLK",
-    "rank_score": 26.578447626224563,
-    "flow_score": 3.949255865422933,
-    "options_score": 16.210458497391254,
+    "rank_score": 28.63532979529947,
+    "flow_score": 0.0,
+    "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 2.968158545223984,
-    "news_score": 3.92,
-    "total": 68.62632053426273,
-    "publish": true,
+    "macro_score": 0.0,
+    "news_score": 5.208,
+    "total": 48.84332979529947,
+    "publish": false,
     "direction": "long"
   },
   "allocation": {
@@ -71,20 +71,24 @@
   },
   "confidence": [
     {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 93.0
+    },
+    {
       "symbol": "Energy / Oil & Gas",
       "score": 92.0
     },
     {
+      "symbol": "Crypto & Digital Assets",
+      "score": 83.0
+    },
+    {
       "symbol": "Asia Pacific Equity",
-      "score": 78.0
+      "score": 81.0
     },
     {
       "symbol": "Cybersecurity",
-      "score": 71.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 70.0
+      "score": 78.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -99,15 +103,64 @@
       "score": 63.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 62.0
-    },
-    {
       "symbol": "Healthcare & Pharma",
       "score": 62.0
     }
   ],
   "signals": [
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 93.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 95,
+      "latest_at": "03 Jun 2026 17:10 UTC",
+      "headline": "Using Graph Attention for Virtual Metrology in Semiconductor Manufacturing (Intel Foundry, ASU)",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "india",
+        "middle_east"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Semiconductor Engineering",
+        "World | Deutsche Welle",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.6,
+        "recency": 16.5,
+        "geopolitical_severity": 13.0
+      }
+    },
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
@@ -162,17 +215,64 @@
       }
     },
     {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 78.0,
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 83.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 9,
-      "latest_at": "03 Jun 2026 09:13 UTC",
+      "article_count": 29,
+      "latest_at": "03 Jun 2026 16:09 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "global",
+        "india",
+        "europe",
+        "middle_east"
+      ],
+      "sources": [
+        "Tech",
+        "Cointelegraph.com News",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 11.4,
+        "recency": 14.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 81.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 10,
+      "latest_at": "03 Jun 2026 16:03 UTC",
       "headline": "Yen Holds Near 160 Against Dollar After BOJ\u2019s Ueda Hints at Hike",
       "regions": [
         "global",
@@ -180,10 +280,10 @@
         "europe"
       ],
       "sources": [
+        "Oilprice.com",
         "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Latest from Tom's Hardware",
-        "BBC News"
+        "BBC News",
+        "Tech"
       ],
       "primary_etf": "EWJ",
       "top_etfs": [
@@ -203,35 +303,35 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 16.1,
-        "volume_confirmation": 15.4,
+        "signal_strength": 16.9,
+        "volume_confirmation": 16.2,
         "source_diversity": 14.9,
-        "recency": 12.4,
+        "recency": 14.7,
         "geopolitical_severity": 12.9
       }
     },
     {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
-      "confidence": 71.0,
+      "confidence": 78.0,
       "severity": "MEDIUM",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "03 Jun 2026 11:04 UTC",
+      "article_count": 9,
+      "latest_at": "03 Jun 2026 17:27 UTC",
       "headline": "Palo Alto CEO says customer meeting requests have surged amid AI security concerns",
       "regions": [
-        "europe",
-        "global"
+        "global",
+        "europe"
       ],
       "sources": [
-        "Cointelegraph.com News",
-        "US Top News and Analysis",
         "Tech",
-        "www.theregister.com - Articles"
+        "Cointelegraph.com News",
+        "Earnings",
+        "The Verge"
       ],
       "primary_etf": "CIBR",
       "top_etfs": [
@@ -248,64 +348,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 13.4,
-        "volume_confirmation": 13.7,
-        "source_diversity": 6.7,
-        "recency": 14.9,
-        "geopolitical_severity": 10.6
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 70.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 96,
-      "latest_at": "03 Jun 2026 12:20 UTC",
-      "headline": "Nvidia's new PC chips represent CEO Huang's bid to win at every layer of AI stack",
-      "regions": [
-        "europe",
-        "asia_pacific",
-        "americas",
-        "middle_east"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Tech",
-        "EE Times"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.9,
+        "signal_strength": 15.0,
+        "volume_confirmation": 15.4,
+        "source_diversity": 9.6,
         "recency": 16.9,
-        "geopolitical_severity": 13.0
+        "geopolitical_severity": 10.2
       }
     },
     {
@@ -464,53 +511,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 62.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 26,
-      "latest_at": "03 Jun 2026 10:48 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "middle_east",
-        "india",
-        "europe",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "Tech"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 10.3,
-        "recency": 14.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "healthcare_pharma",
       "sector_label": "Healthcare & Pharma",
       "confidence": 62.0,
@@ -566,22 +566,27 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Technology & AI / Semiconductors - 95 articles - HIGH / NEUTRAL - Using Graph Attention for Virtual Metrology in Semiconductor Manufacturing (Intel Foundry, ASU)"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Energy / Oil & Gas - 27 articles - CRITICAL / NEUTRAL - US Crude Oil Inventories Continue Downward Plunge But Gasoline Surprises"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Asia Pacific Equity - 9 articles - HIGH / NEUTRAL - Yen Holds Near 160 Against Dollar After BOJ\u2019s Ueda Hints at Hike"
+      "text": "Crypto & Digital Assets - 29 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity - 7 articles - MEDIUM / NEUTRAL - Palo Alto CEO says customer meeting requests have surged amid AI security concerns"
+      "text": "Asia Pacific Equity - 10 articles - HIGH / NEUTRAL - Yen Holds Near 160 Against Dollar After BOJ\u2019s Ueda Hints at Hike"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 96 articles - HIGH / NEUTRAL - Nvidia's new PC chips represent CEO Huang's bid to win at every layer of AI stack"
+      "text": "Cybersecurity - 9 articles - MEDIUM / NEUTRAL - Palo Alto CEO says customer meeting requests have surged amid AI security concerns"
     },
     {
       "tag": "tag-neu",
@@ -601,11 +606,6 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 26 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Healthcare & Pharma - 4 articles - MEDIUM / NEUTRAL - India\u2019s Oil Demand Growth Set for Pandemic Low on War Crunch"
     }
   ],
@@ -614,55 +614,55 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7609.78,
+      "price": 7563.25,
       "currency": "USD",
-      "change": 9.82,
-      "change_pct": 0.13,
-      "change_str": "+0.13%",
-      "direction": "up"
+      "change": -46.53,
+      "change_pct": -0.61,
+      "change_str": "-0.61%",
+      "direction": "down"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 27093.9,
+      "price": 26833.09,
       "currency": "USD",
-      "change": 7.09,
-      "change_pct": 0.03,
-      "change_str": "+0.03%",
-      "direction": "up"
+      "change": -260.81,
+      "change_pct": -0.96,
+      "change_str": "-0.96%",
+      "direction": "down"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 51307.79,
+      "price": 50867.53,
       "currency": "USD",
-      "change": 228.91,
-      "change_pct": 0.45,
-      "change_str": "+0.45%",
-      "direction": "up"
+      "change": -440.26,
+      "change_pct": -0.86,
+      "change_str": "-0.86%",
+      "direction": "down"
     },
     {
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10339.49,
+      "price": 10332.3,
       "currency": "GBP",
-      "change": -34.01,
-      "change_pct": -0.33,
-      "change_str": "-0.33%",
+      "change": -41.2,
+      "change_pct": -0.4,
+      "change_str": "-0.40%",
       "direction": "down"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 24910.94,
+      "price": 24795.94,
       "currency": "EUR",
-      "change": -213.23,
-      "change_pct": -0.85,
-      "change_str": "-0.85%",
+      "change": -328.23,
+      "change_pct": -1.31,
+      "change_str": "-1.31%",
       "direction": "down"
     },
     {
@@ -671,9 +671,9 @@
       "region": "JP",
       "price": 68402.13,
       "currency": "JPY",
-      "change": 1667.89,
-      "change_pct": 2.5,
-      "change_str": "+2.50%",
+      "change": 1467.8,
+      "change_pct": 2.19,
+      "change_str": "+2.19%",
       "direction": "up"
     },
     {
@@ -682,10 +682,10 @@
       "region": "HK",
       "price": 25633.21,
       "currency": "HKD",
-      "change": -405.11,
-      "change_pct": -1.56,
-      "change_str": "-1.56%",
-      "direction": "down"
+      "change": 235.03,
+      "change_pct": 0.93,
+      "change_str": "+0.93%",
+      "direction": "up"
     },
     {
       "label": "Nifty 50",
@@ -702,55 +702,55 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4489.0,
+      "price": 4469.5,
       "currency": "USD",
-      "change": -0.1,
-      "change_pct": -0.0,
-      "change_str": "+-0.00%",
-      "direction": "up"
+      "change": -19.6,
+      "change_pct": -0.44,
+      "change_str": "-0.44%",
+      "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 96.13,
+      "price": 96.19,
       "currency": "USD",
-      "change": 2.37,
-      "change_pct": 2.53,
-      "change_str": "+2.53%",
+      "change": 2.43,
+      "change_pct": 2.59,
+      "change_str": "+2.59%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66919.07,
+      "price": 66021.88,
       "currency": "USD",
-      "change": 215.41,
-      "change_pct": 0.32,
-      "change_str": "+0.32%",
-      "direction": "up"
+      "change": -681.78,
+      "change_pct": -1.02,
+      "change_str": "-1.02%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.38,
+      "price": 99.53,
       "currency": "USD",
-      "change": 0.16,
-      "change_pct": 0.16,
-      "change_str": "+0.16%",
+      "change": 0.31,
+      "change_pct": 0.31,
+      "change_str": "+0.31%",
       "direction": "up"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 16.05,
+      "price": 16.32,
       "currency": "USD",
-      "change": 0.28,
-      "change_pct": 1.78,
-      "change_str": "+1.78%",
+      "change": 0.55,
+      "change_pct": 3.49,
+      "change_str": "+3.49%",
       "direction": "up"
     }
   ],
@@ -758,7 +758,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
     "portfolio_peak": 0.0,
-    "vix": 16.05,
+    "vix": 16.32,
     "vix_regime": "ELEVATED",
     "sector_concentration": [],
     "max_drawdown_pct": 0.0,
@@ -802,9 +802,9 @@
     }
   },
   "logs": [
-    "2026-06-03 12:30:27 [INFO] AZALYST - status.json generated",
-    "2026-06-03 12:30:27 [INFO] PORTFOLIO - NAV USD 0.00 | Return +0.00%",
-    "2026-06-03 12:30:27 [INFO] SIGNALS - 9 active signal buckets in state"
+    "2026-06-03 17:33:55 [INFO] AZALYST - status.json generated",
+    "2026-06-03 17:33:55 [INFO] PORTFOLIO - NAV USD 0.00 | Return +0.00%",
+    "2026-06-03 17:33:55 [INFO] SIGNALS - 9 active signal buckets in state"
   ],
-  "generated_at": "2026-06-03 12:30:25 UTC"
+  "generated_at": "2026-06-03 17:33:54 UTC"
 }
