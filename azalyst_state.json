@@ -1,35 +1,35 @@
 {
   "cybersecurity": {
-    "sent_at": "2026-06-02T23:20:02.816516+00:00",
-    "confidence": 83,
+    "sent_at": "2026-06-03T07:23:52.383612+00:00",
+    "confidence": 81,
     "sector_label": "Cybersecurity",
-    "article_count": 9,
+    "article_count": 8,
     "severity": "HIGH",
     "regions": [
-      "global",
+      "europe",
       "asia_pacific",
-      "europe"
+      "global"
     ],
     "sources": [
-      "Tech",
+      "www.theregister.com - Articles",
       "World | Deutsche Welle",
+      "Tech",
       "The Verge",
-      "US Top News and Analysis",
-      "www.theregister.com - Articles"
+      "US Top News and Analysis"
     ],
     "top_headlines": [
       "Palo Alto CEO says customer meeting requests have surged amid AI security concerns",
       "Palo Alto Networks tops earnings as AI fuels cybersecurity urgency",
       "'Dumbass' criminal breaks the 'first rule of ransomware club'",
-      "Election interlopers register 5K+ domains, hope to catch some voting phish",
+      "Trump signs executive order to review AI models before they\u2019re released",
       "How China keeps North Korea's economy alive"
     ],
-    "latest_ts": "2026-06-02T23:17:54.412124+00:00",
+    "latest_ts": "2026-06-03T07:22:11.586789+00:00",
     "confidence_breakdown": {
-      "signal_strength": 16.4,
-      "volume_confirmation": 15.4,
+      "signal_strength": 15.1,
+      "volume_confirmation": 14.6,
       "source_diversity": 9.5,
-      "recency": 16.9,
+      "recency": 17.0,
       "geopolitical_severity": 13.0,
       "cross_engine_confirmation": 12.0
     },
@@ -409,38 +409,39 @@
     }
   },
   "commodities_mining": {
-    "sent_at": "2026-06-03T02:09:20.056581+00:00",
-    "confidence": 79,
+    "sent_at": "2026-06-03T07:23:54.897470+00:00",
+    "confidence": 85,
     "sector_label": "Commodities & Mining",
-    "article_count": 8,
+    "article_count": 10,
     "severity": "MEDIUM",
     "regions": [
       "global",
+      "asia_pacific",
       "africa",
-      "india",
       "middle_east"
     ],
     "sources": [
-      "Oilprice.com",
-      "The Verge",
       "Cointelegraph.com News",
+      "Oilprice.com",
+      "BBC News",
       "Markets-Economic Times",
-      "BBC News"
+      "Bloomberg Markets",
+      "The Verge"
     ],
     "top_headlines": [
-      "Can CMR Green's IPO deliver long-term gains for high-risk investors?",
+      "Guinea\u2019s Simandou Iron Exports Surge Six Months After First Ore",
       "How Long Can Demand Destruction Keep a Lid on Oil Prices?",
       "Mayor cancels DR Congo friendly with Chile in Spain over Ebola concern",
-      "Microsoft\u2019s next-gen quantum chip cuts timeline to useful quantum computing",
-      "India\u2019s Oman Bet Looks Timely As Hormuz Crisis Deepens"
+      "Rising crude and aluminium prices:  Bharat Subramanian on what it means for India's energy and metals sectors",
+      "Microsoft\u2019s next-gen quantum chip cuts timeline to useful quantum computing"
     ],
-    "latest_ts": "2026-06-03T02:07:22.491375+00:00",
+    "latest_ts": "2026-06-03T07:22:11.586862+00:00",
     "confidence_breakdown": {
-      "signal_strength": 12.0,
-      "volume_confirmation": 14.6,
-      "source_diversity": 12.7,
-      "recency": 16.9,
-      "geopolitical_severity": 11.4,
+      "signal_strength": 14.1,
+      "volume_confirmation": 16.2,
+      "source_diversity": 14.4,
+      "recency": 17.0,
+      "geopolitical_severity": 11.7,
       "cross_engine_confirmation": 12.0
     },
     "etf_recommendations": {
@@ -483,23 +484,6 @@
           ]
         },
         {
-          "name": "CPSE ETF",
-          "ticker": "CPSEETF",
-          "note": "NMDC, Coal India \u2014 commodity exposure",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "3\u20139 months",
-          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
-          "sector_key": "commodities_mining",
-          "market_bucket": "india",
-          "market_scope": "India-listed",
-          "selection_score": 72.0,
-          "selection_notes": [
-            "matches India-listed access"
-          ]
-        },
-        {
           "name": "Sprott Physical Copper Trust",
           "ticker": "COPP",
           "platform": "Sprott \u2014 IBKR / Schwab",
@@ -515,6 +499,21 @@
             "clean thematic exposure",
             "matches international access"
           ]
+        },
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NMDC, Coal India \u2014 commodity exposure",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u20139 months",
+          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
+          "sector_key": "commodities_mining",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 69.0,
+          "selection_notes": []
         }
       ],
       "top_etfs": [
@@ -537,23 +536,6 @@
           ]
         },
         {
-          "name": "CPSE ETF",
-          "ticker": "CPSEETF",
-          "note": "NMDC, Coal India \u2014 commodity exposure",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "3\u20139 months",
-          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
-          "sector_key": "commodities_mining",
-          "market_bucket": "india",
-          "market_scope": "India-listed",
-          "selection_score": 72.0,
-          "selection_notes": [
-            "matches India-listed access"
-          ]
-        },
-        {
           "name": "Sprott Physical Copper Trust",
           "ticker": "COPP",
           "platform": "Sprott \u2014 IBKR / Schwab",
@@ -569,6 +551,21 @@
             "clean thematic exposure",
             "matches international access"
           ]
+        },
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NMDC, Coal India \u2014 commodity exposure",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u20139 months",
+          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
+          "sector_key": "commodities_mining",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 69.0,
+          "selection_notes": []
         }
       ],
       "regional_alternatives": {
@@ -585,10 +582,8 @@
             "sector_key": "commodities_mining",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 72.0,
-            "selection_notes": [
-              "matches India-listed access"
-            ]
+            "selection_score": 69.0,
+            "selection_notes": []
           }
         ],
         "International-listed": [
@@ -642,10 +637,8 @@
           "sector_key": "commodities_mining",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 72.0,
-          "selection_notes": [
-            "matches India-listed access"
-          ]
+          "selection_score": 69.0,
+          "selection_notes": []
         }
       ],
       "global": [
@@ -688,39 +681,39 @@
     }
   },
   "energy_oil": {
-    "sent_at": "2026-06-03T02:09:21.723239+00:00",
-    "confidence": 93,
+    "sent_at": "2026-06-03T07:23:56.655575+00:00",
+    "confidence": 91,
     "sector_label": "Energy / Oil & Gas",
-    "article_count": 25,
+    "article_count": 24,
     "severity": "CRITICAL",
     "regions": [
       "global",
-      "middle_east",
-      "asia_pacific",
-      "africa",
       "americas",
+      "africa",
+      "asia_pacific",
+      "middle_east",
       "europe"
     ],
     "sources": [
       "Oilprice.com",
-      "US Top News and Analysis",
-      "Bloomberg Markets",
+      "BBC News",
       "Markets-Economic Times",
-      "BBC News"
+      "Bloomberg Markets",
+      "US Top News and Analysis"
     ],
     "top_headlines": [
-      "Iraq, UAE, Saudi Arabia All Set for Major Oil Output Surge in 2027",
       "US Crude Oil Inventories Continue Downward Plunge But Gasoline Surprises",
       "Why India\u2019s LNG Buying Surges Despite Costly Gas",
       "China Eases Order for Teapot Refiners to Keep Fuel Output High",
-      "How Long Can Demand Destruction Keep a Lid on Oil Prices?"
+      "How Long Can Demand Destruction Keep a Lid on Oil Prices?",
+      "Oil Prices Climb as U.S. Strikes Tanker and Downs Iranian Drones"
     ],
-    "latest_ts": "2026-06-03T01:58:37+00:00",
+    "latest_ts": "2026-06-03T06:15:00+00:00",
     "confidence_breakdown": {
       "signal_strength": 22.0,
       "volume_confirmation": 18.0,
       "source_diversity": 14.4,
-      "recency": 16.7,
+      "recency": 15.2,
       "geopolitical_severity": 13.0,
       "cross_engine_confirmation": 9.4
     },
@@ -1060,38 +1053,39 @@
     }
   },
   "asia_pacific": {
-    "sent_at": "2026-06-03T02:09:23.617372+00:00",
-    "confidence": 83,
+    "sent_at": "2026-06-03T07:23:58.444485+00:00",
+    "confidence": 79,
     "sector_label": "Asia Pacific Equity",
-    "article_count": 10,
+    "article_count": 9,
     "severity": "HIGH",
     "regions": [
       "global",
-      "middle_east",
-      "asia_pacific"
+      "europe",
+      "asia_pacific",
+      "middle_east"
     ],
     "sources": [
-      "US Top News and Analysis",
       "Latest from Tom's Hardware",
-      "Bloomberg Markets",
+      "BBC News",
       "Markets-Economic Times",
-      "BBC News"
+      "Bloomberg Markets",
+      "US Top News and Analysis"
     ],
     "top_headlines": [
-      "Global Markets: South Korean shares post record-high close as Nvidia hopes lift tech stocks",
+      "Global Market: Japan's Nikkei surges past 68,000 for first time as AI stocks lead rally",
       "Japan's Nikkei hits record high as Asia markets rise amid Middle East concerns",
-      "Japan's Nikkei retreats from record peak as market gauges fragile Mideast peace talks",
-      "Global Market Today: Asian stocks edge up, Yen nears 160 per dollar",
-      "Explained: Why Indian stock market has fallen prey to South Korea, Taiwan\u2019s AI prowess"
+      "Big Tech's AI ambitions pose a major power test for Europe",
+      "Yen Hovers Near 160 Per Dollar as Traders Eye Intervention Risk",
+      "Goldman Lifts Kospi Target to 12,000, Upgrades Taiwan to Buy"
     ],
-    "latest_ts": "2026-06-03T02:01:40+00:00",
+    "latest_ts": "2026-06-03T06:11:03+00:00",
     "confidence_breakdown": {
-      "signal_strength": 16.2,
-      "volume_confirmation": 16.2,
+      "signal_strength": 15.7,
+      "volume_confirmation": 15.4,
       "source_diversity": 14.0,
-      "recency": 16.8,
+      "recency": 15.1,
       "geopolitical_severity": 13.0,
-      "cross_engine_confirmation": 7.2
+      "cross_engine_confirmation": 6.6
     },
     "etf_recommendations": {
       "selection_method": "global-ranked",
@@ -1348,6 +1342,655 @@
           "selection_score": 87.5,
           "selection_notes": [
             "elevated geopolitical risk",
+            "matches international access"
+          ]
+        }
+      ]
+    }
+  },
+  "healthcare_pharma": {
+    "sent_at": "2026-06-03T07:24:00.304733+00:00",
+    "confidence": 62,
+    "sector_label": "Healthcare & Pharma",
+    "article_count": 4,
+    "severity": "MEDIUM",
+    "regions": [
+      "global",
+      "asia_pacific",
+      "africa"
+    ],
+    "sources": [
+      "Bloomberg Markets",
+      "BBC News",
+      "Markets-Economic Times"
+    ],
+    "top_headlines": [
+      "India\u2019s Oil Demand Growth Set for Pandemic Low on War Crunch",
+      "Mayor cancels DR Congo friendly with Chile in Spain over Ebola concern",
+      "Concord Biotech shares jump 8% on USFDA nod for Mycophenolate Mofetil oral suspension",
+      "'Wait out IT, buy pharma and defence'; Ajay Bagga's 3-sector playbook for 2026"
+    ],
+    "latest_ts": "2026-06-03T05:21:32+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 8.5,
+      "volume_confirmation": 9.7,
+      "source_diversity": 12.6,
+      "recency": 13.9,
+      "geopolitical_severity": 10.8,
+      "cross_engine_confirmation": 7.5
+    },
+    "etf_recommendations": {
+      "selection_method": "global-ranked",
+      "primary": {
+        "name": "Health Care Select Sector SPDR",
+        "ticker": "XLV",
+        "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+        "exchange": "NYSE",
+        "risk": "Low-Medium",
+        "timeframe": "6\u201318 months",
+        "thesis": "UnitedHealth, J&J, Eli Lilly, AbbVie. Defensive growth \u2014 non-cyclical demand driver.",
+        "sector_key": "healthcare_pharma",
+        "market_bucket": "global",
+        "market_scope": "International-listed",
+        "selection_score": 135.0,
+        "selection_notes": [
+          "deep liquidity",
+          "strong cost profile",
+          "clean thematic exposure"
+        ]
+      },
+      "ranked": [
+        {
+          "name": "Health Care Select Sector SPDR",
+          "ticker": "XLV",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "UnitedHealth, J&J, Eli Lilly, AbbVie. Defensive growth \u2014 non-cyclical demand driver.",
+          "sector_key": "healthcare_pharma",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 135.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "iShares Global Healthcare ETF",
+          "ticker": "IXJ",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Global diversification \u2014 Roche, Novartis, Novo Nordisk (GLP-1 supercycle). Less US-centric.",
+          "sector_key": "healthcare_pharma",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 117.5,
+          "selection_notes": [
+            "broad diversification",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "SPDR S&P Biotech ETF",
+          "ticker": "XBI",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "3\u201312 months",
+          "thesis": "Equal-weighted biotech. High risk/reward. FDA catalyst-driven. For strong macro health signals.",
+          "sector_key": "healthcare_pharma",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 87.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "reduced single-name concentration",
+            "narrow tactical profile"
+          ]
+        },
+        {
+          "name": "Mirae Asset Nifty Healthcare ETF",
+          "ticker": "HEALTHCARE",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "India pharma majors \u2014 Sun Pharma, Dr Reddy's, Cipla. Generic drug exports + domestic demand.",
+          "sector_key": "healthcare_pharma",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 82.5,
+          "selection_notes": [
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "Nippon India Nifty Pharma ETF",
+          "ticker": "PHARMABEES",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Pure Indian pharma play. Secular demand story \u2014 ageing population, US generics market.",
+          "sector_key": "healthcare_pharma",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 78.0,
+          "selection_notes": []
+        }
+      ],
+      "top_etfs": [
+        {
+          "name": "Health Care Select Sector SPDR",
+          "ticker": "XLV",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "UnitedHealth, J&J, Eli Lilly, AbbVie. Defensive growth \u2014 non-cyclical demand driver.",
+          "sector_key": "healthcare_pharma",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 135.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "iShares Global Healthcare ETF",
+          "ticker": "IXJ",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Global diversification \u2014 Roche, Novartis, Novo Nordisk (GLP-1 supercycle). Less US-centric.",
+          "sector_key": "healthcare_pharma",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 117.5,
+          "selection_notes": [
+            "broad diversification",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "SPDR S&P Biotech ETF",
+          "ticker": "XBI",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "3\u201312 months",
+          "thesis": "Equal-weighted biotech. High risk/reward. FDA catalyst-driven. For strong macro health signals.",
+          "sector_key": "healthcare_pharma",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 87.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "reduced single-name concentration",
+            "narrow tactical profile"
+          ]
+        }
+      ],
+      "regional_alternatives": {
+        "India-listed": [
+          {
+            "name": "Mirae Asset Nifty Healthcare ETF",
+            "ticker": "HEALTHCARE",
+            "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+            "exchange": "NSE",
+            "risk": "Medium",
+            "timeframe": "6\u201318 months",
+            "thesis": "India pharma majors \u2014 Sun Pharma, Dr Reddy's, Cipla. Generic drug exports + domestic demand.",
+            "sector_key": "healthcare_pharma",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 82.5,
+            "selection_notes": [
+              "clean thematic exposure"
+            ]
+          },
+          {
+            "name": "Nippon India Nifty Pharma ETF",
+            "ticker": "PHARMABEES",
+            "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+            "exchange": "NSE",
+            "risk": "Medium",
+            "timeframe": "6\u201318 months",
+            "thesis": "Pure Indian pharma play. Secular demand story \u2014 ageing population, US generics market.",
+            "sector_key": "healthcare_pharma",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 78.0,
+            "selection_notes": []
+          }
+        ],
+        "International-listed": [
+          {
+            "name": "Health Care Select Sector SPDR",
+            "ticker": "XLV",
+            "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Low-Medium",
+            "timeframe": "6\u201318 months",
+            "thesis": "UnitedHealth, J&J, Eli Lilly, AbbVie. Defensive growth \u2014 non-cyclical demand driver.",
+            "sector_key": "healthcare_pharma",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 135.0,
+            "selection_notes": [
+              "deep liquidity",
+              "strong cost profile",
+              "clean thematic exposure"
+            ]
+          },
+          {
+            "name": "iShares Global Healthcare ETF",
+            "ticker": "IXJ",
+            "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Low-Medium",
+            "timeframe": "6\u201318 months",
+            "thesis": "Global diversification \u2014 Roche, Novartis, Novo Nordisk (GLP-1 supercycle). Less US-centric.",
+            "sector_key": "healthcare_pharma",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 117.5,
+            "selection_notes": [
+              "broad diversification",
+              "matches international access"
+            ]
+          },
+          {
+            "name": "SPDR S&P Biotech ETF",
+            "ticker": "XBI",
+            "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "High",
+            "timeframe": "3\u201312 months",
+            "thesis": "Equal-weighted biotech. High risk/reward. FDA catalyst-driven. For strong macro health signals.",
+            "sector_key": "healthcare_pharma",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 87.0,
+            "selection_notes": [
+              "clean thematic exposure",
+              "reduced single-name concentration",
+              "narrow tactical profile"
+            ]
+          }
+        ]
+      },
+      "india": [
+        {
+          "name": "Mirae Asset Nifty Healthcare ETF",
+          "ticker": "HEALTHCARE",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "India pharma majors \u2014 Sun Pharma, Dr Reddy's, Cipla. Generic drug exports + domestic demand.",
+          "sector_key": "healthcare_pharma",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 82.5,
+          "selection_notes": [
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "Nippon India Nifty Pharma ETF",
+          "ticker": "PHARMABEES",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Pure Indian pharma play. Secular demand story \u2014 ageing population, US generics market.",
+          "sector_key": "healthcare_pharma",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 78.0,
+          "selection_notes": []
+        }
+      ],
+      "global": [
+        {
+          "name": "Health Care Select Sector SPDR",
+          "ticker": "XLV",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "UnitedHealth, J&J, Eli Lilly, AbbVie. Defensive growth \u2014 non-cyclical demand driver.",
+          "sector_key": "healthcare_pharma",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 135.0,
+          "selection_notes": [
+            "deep liquidity",
+            "strong cost profile",
+            "clean thematic exposure"
+          ]
+        },
+        {
+          "name": "iShares Global Healthcare ETF",
+          "ticker": "IXJ",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Low-Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Global diversification \u2014 Roche, Novartis, Novo Nordisk (GLP-1 supercycle). Less US-centric.",
+          "sector_key": "healthcare_pharma",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 117.5,
+          "selection_notes": [
+            "broad diversification",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "SPDR S&P Biotech ETF",
+          "ticker": "XBI",
+          "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "3\u201312 months",
+          "thesis": "Equal-weighted biotech. High risk/reward. FDA catalyst-driven. For strong macro health signals.",
+          "sector_key": "healthcare_pharma",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 87.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "reduced single-name concentration",
+            "narrow tactical profile"
+          ]
+        }
+      ]
+    }
+  },
+  "india_equity": {
+    "sent_at": "2026-06-03T07:24:01.444309+00:00",
+    "confidence": 90,
+    "sector_label": "India Equity Markets",
+    "article_count": 32,
+    "severity": "HIGH",
+    "regions": [
+      "global",
+      "india",
+      "asia_pacific",
+      "middle_east"
+    ],
+    "sources": [
+      "World | Deutsche Welle",
+      "Oilprice.com",
+      "BBC News",
+      "Markets-Economic Times",
+      "Bloomberg Markets",
+      "US Top News and Analysis"
+    ],
+    "top_headlines": [
+      "Government denies new report stating RBI may have sold $12 billion gold to rescue rupee",
+      "Sensex tumbles over 1,100 points, Nifty below 23,200. 6 key factors behind today's D-Street rout",
+      "Eternal to ICICI Bank: 15 stocks on Axis Securities buy list for June",
+      "Nifty Bank tumbles 600 points; IndusInd Bank, Yes Bank, SBI and other stocks fall up to 3%. What lies ahead?",
+      "Indian market at 11% discount to long-term average; Anshul Saigal says it's a buyer's market for 3\u20135 year investors"
+    ],
+    "latest_ts": "2026-06-03T07:04:05+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 22.0,
+      "volume_confirmation": 18.0,
+      "source_diversity": 14.9,
+      "recency": 16.4,
+      "geopolitical_severity": 13.0,
+      "cross_engine_confirmation": 6.1
+    },
+    "etf_recommendations": {
+      "selection_method": "global-ranked",
+      "primary": {
+        "name": "iShares MSCI India ETF",
+        "ticker": "INDA",
+        "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+        "exchange": "NYSE",
+        "risk": "Medium",
+        "timeframe": "6\u201318 months",
+        "thesis": "US-listed India equity ETF. USD-denominated India large-cap exposure.",
+        "sector_key": "india_equity",
+        "market_bucket": "global",
+        "market_scope": "International-listed",
+        "selection_score": 120.0,
+        "selection_notes": [
+          "clean thematic exposure",
+          "broad diversification",
+          "matches international access"
+        ]
+      },
+      "ranked": [
+        {
+          "name": "iShares MSCI India ETF",
+          "ticker": "INDA",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "US-listed India equity ETF. USD-denominated India large-cap exposure.",
+          "sector_key": "india_equity",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 120.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "broad diversification",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Nippon India Nifty 50 BeES",
+          "ticker": "NIFTYBEES",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Broadest India equity exposure. Liquid, low cost. Core India macro play.",
+          "sector_key": "india_equity",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 105.0,
+          "selection_notes": [
+            "broad diversification",
+            "broad exposure",
+            "matches India-listed access"
+          ]
+        },
+        {
+          "name": "Mirae Asset Nifty Midcap 150 ETF",
+          "ticker": "MIDCAPETF",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium-High",
+          "timeframe": "6\u201318 months",
+          "thesis": "India mid-cap growth. Higher beta than Nifty 50. Better for India growth thesis.",
+          "sector_key": "india_equity",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 66.5,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        }
+      ],
+      "top_etfs": [
+        {
+          "name": "iShares MSCI India ETF",
+          "ticker": "INDA",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "US-listed India equity ETF. USD-denominated India large-cap exposure.",
+          "sector_key": "india_equity",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 120.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "broad diversification",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Nippon India Nifty 50 BeES",
+          "ticker": "NIFTYBEES",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Broadest India equity exposure. Liquid, low cost. Core India macro play.",
+          "sector_key": "india_equity",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 105.0,
+          "selection_notes": [
+            "broad diversification",
+            "broad exposure",
+            "matches India-listed access"
+          ]
+        },
+        {
+          "name": "Mirae Asset Nifty Midcap 150 ETF",
+          "ticker": "MIDCAPETF",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium-High",
+          "timeframe": "6\u201318 months",
+          "thesis": "India mid-cap growth. Higher beta than Nifty 50. Better for India growth thesis.",
+          "sector_key": "india_equity",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 66.5,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        }
+      ],
+      "regional_alternatives": {
+        "India-listed": [
+          {
+            "name": "Nippon India Nifty 50 BeES",
+            "ticker": "NIFTYBEES",
+            "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+            "exchange": "NSE",
+            "risk": "Low-Medium",
+            "timeframe": "6\u201318 months",
+            "thesis": "Broadest India equity exposure. Liquid, low cost. Core India macro play.",
+            "sector_key": "india_equity",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 105.0,
+            "selection_notes": [
+              "broad diversification",
+              "broad exposure",
+              "matches India-listed access"
+            ]
+          },
+          {
+            "name": "Mirae Asset Nifty Midcap 150 ETF",
+            "ticker": "MIDCAPETF",
+            "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+            "exchange": "NSE",
+            "risk": "Medium-High",
+            "timeframe": "6\u201318 months",
+            "thesis": "India mid-cap growth. Higher beta than Nifty 50. Better for India growth thesis.",
+            "sector_key": "india_equity",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 66.5,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
+          }
+        ],
+        "International-listed": [
+          {
+            "name": "iShares MSCI India ETF",
+            "ticker": "INDA",
+            "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+            "exchange": "NYSE",
+            "risk": "Medium",
+            "timeframe": "6\u201318 months",
+            "thesis": "US-listed India equity ETF. USD-denominated India large-cap exposure.",
+            "sector_key": "india_equity",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 120.0,
+            "selection_notes": [
+              "clean thematic exposure",
+              "broad diversification",
+              "matches international access"
+            ]
+          }
+        ]
+      },
+      "india": [
+        {
+          "name": "Nippon India Nifty 50 BeES",
+          "ticker": "NIFTYBEES",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Low-Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "Broadest India equity exposure. Liquid, low cost. Core India macro play.",
+          "sector_key": "india_equity",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 105.0,
+          "selection_notes": [
+            "broad diversification",
+            "broad exposure",
+            "matches India-listed access"
+          ]
+        },
+        {
+          "name": "Mirae Asset Nifty Midcap 150 ETF",
+          "ticker": "MIDCAPETF",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium-High",
+          "timeframe": "6\u201318 months",
+          "thesis": "India mid-cap growth. Higher beta than Nifty 50. Better for India growth thesis.",
+          "sector_key": "india_equity",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 66.5,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        }
+      ],
+      "global": [
+        {
+          "name": "iShares MSCI India ETF",
+          "ticker": "INDA",
+          "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+          "exchange": "NYSE",
+          "risk": "Medium",
+          "timeframe": "6\u201318 months",
+          "thesis": "US-listed India equity ETF. USD-denominated India large-cap exposure.",
+          "sector_key": "india_equity",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 120.0,
+          "selection_notes": [
+            "clean thematic exposure",
+            "broad diversification",
             "matches international access"
           ]
         }

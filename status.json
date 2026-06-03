@@ -16,7 +16,7 @@
   "portfolio_peak": 0.0,
   "drawdown_now_pct": 0.0,
   "max_drawdown_pct": 0.0,
-  "usd_inr_rate": 95.255,
+  "usd_inr_rate": 95.783,
   "positions": [],
   "closed_trades_list": [],
   "track_record": {
@@ -72,50 +72,58 @@
   "confidence": [
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 93.0
+      "score": 91.0
+    },
+    {
+      "symbol": "India Equity Markets",
+      "score": 90.0
     },
     {
       "symbol": "Crypto & Digital Assets",
       "score": 85.0
     },
     {
+      "symbol": "Commodities & Mining",
+      "score": 85.0
+    },
+    {
       "symbol": "Cybersecurity",
-      "score": 83.0
+      "score": 81.0
     },
     {
       "symbol": "Asia Pacific Equity",
-      "score": 83.0
+      "score": 79.0
     },
     {
-      "symbol": "Commodities & Mining",
-      "score": 79.0
+      "symbol": "Healthcare & Pharma",
+      "score": 62.0
     }
   ],
   "signals": [
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 93.0,
+      "confidence": 91.0,
       "severity": "CRITICAL",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "03 Jun 2026 01:58 UTC",
-      "headline": "Iraq, UAE, Saudi Arabia All Set for Major Oil Output Surge in 2027",
+      "article_count": 24,
+      "latest_at": "03 Jun 2026 06:15 UTC",
+      "headline": "US Crude Oil Inventories Continue Downward Plunge But Gasoline Surprises",
       "regions": [
         "global",
-        "middle_east",
-        "asia_pacific",
-        "africa"
+        "americas",
+        "africa",
+        "asia_pacific"
       ],
       "sources": [
         "Oilprice.com",
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
+        "BBC News",
+        "Markets-Economic Times",
+        "Bloomberg Markets"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -141,7 +149,58 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 14.4,
-        "recency": 16.7,
+        "recency": 15.2,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 90.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 32,
+      "latest_at": "03 Jun 2026 07:04 UTC",
+      "headline": "Government denies new report stating RBI may have sold $12 billion gold to rescue rupee",
+      "regions": [
+        "global",
+        "india",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Oilprice.com",
+        "BBC News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.9,
+        "recency": 16.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -193,28 +252,79 @@
       }
     },
     {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 85.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 10,
+      "latest_at": "03 Jun 2026 07:22 UTC",
+      "headline": "Guinea\u2019s Simandou Iron Exports Surge Six Months After First Ore",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "africa",
+        "middle_east"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Oilprice.com",
+        "BBC News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 14.1,
+        "volume_confirmation": 16.2,
+        "source_diversity": 14.4,
+        "recency": 17.0,
+        "geopolitical_severity": 11.7
+      }
+    },
+    {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
-      "confidence": 83.0,
+      "confidence": 81.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 9,
-      "latest_at": "02 Jun 2026 23:17 UTC",
+      "article_count": 8,
+      "latest_at": "03 Jun 2026 07:22 UTC",
       "headline": "Palo Alto CEO says customer meeting requests have surged amid AI security concerns",
       "regions": [
-        "global",
+        "europe",
         "asia_pacific",
-        "europe"
+        "global"
       ],
       "sources": [
-        "Tech",
+        "www.theregister.com - Articles",
         "World | Deutsche Welle",
-        "The Verge",
-        "US Top News and Analysis"
+        "Tech",
+        "The Verge"
       ],
       "primary_etf": "CIBR",
       "top_etfs": [
@@ -231,36 +341,37 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 16.4,
-        "volume_confirmation": 15.4,
+        "signal_strength": 15.1,
+        "volume_confirmation": 14.6,
         "source_diversity": 9.5,
-        "recency": 16.9,
+        "recency": 17.0,
         "geopolitical_severity": 13.0
       }
     },
     {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
-      "confidence": 83.0,
+      "confidence": 79.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "03 Jun 2026 02:01 UTC",
-      "headline": "Global Markets: South Korean shares post record-high close as Nvidia hopes lift tech stocks",
+      "article_count": 9,
+      "latest_at": "03 Jun 2026 06:11 UTC",
+      "headline": "Global Market: Japan's Nikkei surges past 68,000 for first time as AI stocks lead rally",
       "regions": [
         "global",
-        "middle_east",
-        "asia_pacific"
+        "europe",
+        "asia_pacific",
+        "middle_east"
       ],
       "sources": [
-        "US Top News and Analysis",
         "Latest from Tom's Hardware",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
+        "BBC News",
+        "Markets-Economic Times",
+        "Bloomberg Markets"
       ],
       "primary_etf": "EWJ",
       "top_etfs": [
@@ -280,62 +391,62 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 16.2,
-        "volume_confirmation": 16.2,
+        "signal_strength": 15.7,
+        "volume_confirmation": 15.4,
         "source_diversity": 14.0,
-        "recency": 16.8,
+        "recency": 15.1,
         "geopolitical_severity": 13.0
       }
     },
     {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 79.0,
+      "sector_key": "healthcare_pharma",
+      "sector_label": "Healthcare & Pharma",
+      "confidence": 62.0,
       "severity": "MEDIUM",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "03 Jun 2026 02:07 UTC",
-      "headline": "Can CMR Green's IPO deliver long-term gains for high-risk investors?",
+      "article_count": 4,
+      "latest_at": "03 Jun 2026 05:21 UTC",
+      "headline": "India\u2019s Oil Demand Growth Set for Pandemic Low on War Crunch",
       "regions": [
         "global",
-        "africa",
-        "india",
-        "middle_east"
+        "asia_pacific",
+        "africa"
       ],
       "sources": [
-        "Oilprice.com",
-        "The Verge",
-        "Cointelegraph.com News",
+        "Bloomberg Markets",
+        "BBC News",
         "Markets-Economic Times"
       ],
-      "primary_etf": "DBC",
+      "primary_etf": "XLV",
       "top_etfs": [
-        "DBC",
-        "CPSEETF",
-        "COPP"
+        "XLV",
+        "IXJ",
+        "XBI"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "CPSEETF"
+        "HEALTHCARE",
+        "PHARMABEES"
       ],
       "global_etfs": [
-        "DBC",
-        "COPP"
+        "XLV",
+        "IXJ",
+        "XBI"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 12.0,
-        "volume_confirmation": 14.6,
-        "source_diversity": 12.7,
-        "recency": 16.9,
-        "geopolitical_severity": 11.4
+        "signal_strength": 8.5,
+        "volume_confirmation": 9.7,
+        "source_diversity": 12.6,
+        "recency": 13.9,
+        "geopolitical_severity": 10.8
       }
     }
   ],
@@ -343,7 +454,12 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 25 articles - CRITICAL / NEUTRAL - Iraq, UAE, Saudi Arabia All Set for Major Oil Output Surge in 2027"
+      "text": "Energy / Oil & Gas - 24 articles - CRITICAL / NEUTRAL - US Crude Oil Inventories Continue Downward Plunge But Gasoline Surprises"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "India Equity Markets - 32 articles - HIGH / NEUTRAL - Government denies new report stating RBI may have sold $12 billion gold to rescue rupee"
     },
     {
       "tag": "tag-neu",
@@ -353,17 +469,22 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity - 9 articles - HIGH / NEUTRAL - Palo Alto CEO says customer meeting requests have surged amid AI security concerns"
+      "text": "Commodities & Mining - 10 articles - MEDIUM / NEUTRAL - Guinea\u2019s Simandou Iron Exports Surge Six Months After First Ore"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Asia Pacific Equity - 10 articles - HIGH / NEUTRAL - Global Markets: South Korean shares post record-high close as Nvidia hopes lift tech stocks"
+      "text": "Cybersecurity - 8 articles - HIGH / NEUTRAL - Palo Alto CEO says customer meeting requests have surged amid AI security concerns"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Commodities & Mining - 8 articles - MEDIUM / NEUTRAL - Can CMR Green's IPO deliver long-term gains for high-risk investors?"
+      "text": "Asia Pacific Equity - 9 articles - HIGH / NEUTRAL - Global Market: Japan's Nikkei surges past 68,000 for first time as AI stocks lead rally"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Healthcare & Pharma - 4 articles - MEDIUM / NEUTRAL - India\u2019s Oil Demand Growth Set for Pandemic Low on War Crunch"
     }
   ],
   "market_snapshot": [
@@ -404,31 +525,31 @@
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10373.51,
+      "price": 10378.68,
       "currency": "GBP",
-      "change": 34.51,
-      "change_pct": 0.33,
-      "change_str": "+0.33%",
+      "change": 5.18,
+      "change_pct": 0.05,
+      "change_str": "+0.05%",
       "direction": "up"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 25124.17,
+      "price": 24958.23,
       "currency": "EUR",
-      "change": 121.13,
-      "change_pct": 0.48,
-      "change_str": "+0.48%",
-      "direction": "up"
+      "change": -165.94,
+      "change_pct": -0.66,
+      "change_str": "-0.66%",
+      "direction": "down"
     },
     {
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 68403.04,
+      "price": 68402.13,
       "currency": "JPY",
-      "change": 1668.8,
+      "change": 1667.89,
       "change_pct": 2.5,
       "change_str": "+2.50%",
       "direction": "up"
@@ -437,85 +558,85 @@
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 25767.57,
+      "price": 25611.26,
       "currency": "HKD",
-      "change": -270.75,
-      "change_pct": -1.04,
-      "change_str": "-1.04%",
+      "change": -427.06,
+      "change_pct": -1.64,
+      "change_str": "-1.64%",
       "direction": "down"
     },
     {
       "label": "Nifty 50",
       "ticker": "^NSEI",
       "region": "IN",
-      "price": 23483.55,
+      "price": 23298.1,
       "currency": "INR",
-      "change": 100.95,
-      "change_pct": 0.43,
-      "change_str": "+0.43%",
-      "direction": "up"
+      "change": -185.45,
+      "change_pct": -0.79,
+      "change_str": "-0.79%",
+      "direction": "down"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4503.5,
+      "price": 4491.9,
       "currency": "USD",
-      "change": 14.4,
-      "change_pct": 0.32,
-      "change_str": "+0.32%",
+      "change": 2.8,
+      "change_pct": 0.06,
+      "change_str": "+0.06%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 94.83,
+      "price": 95.61,
       "currency": "USD",
-      "change": 1.07,
-      "change_pct": 1.14,
-      "change_str": "+1.14%",
+      "change": 1.85,
+      "change_pct": 1.97,
+      "change_str": "+1.97%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66829.02,
+      "price": 67128.47,
       "currency": "USD",
-      "change": -4490.75,
-      "change_pct": -6.3,
-      "change_str": "-6.30%",
-      "direction": "down"
+      "change": 424.81,
+      "change_pct": 0.64,
+      "change_str": "+0.64%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.21,
+      "price": 99.32,
       "currency": "USD",
-      "change": -0.01,
-      "change_pct": -0.01,
-      "change_str": "-0.01%",
-      "direction": "down"
+      "change": 0.1,
+      "change_pct": 0.1,
+      "change_str": "+0.10%",
+      "direction": "up"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 15.77,
+      "price": 15.99,
       "currency": "USD",
-      "change": -0.28,
-      "change_pct": -1.74,
-      "change_str": "-1.74%",
-      "direction": "down"
+      "change": 0.22,
+      "change_pct": 1.4,
+      "change_str": "+1.40%",
+      "direction": "up"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
     "portfolio_peak": 0.0,
-    "vix": 15.77,
+    "vix": 15.99,
     "vix_regime": "ELEVATED",
     "sector_concentration": [],
     "max_drawdown_pct": 0.0,
@@ -559,9 +680,9 @@
     }
   },
   "logs": [
-    "2026-06-03 02:18:54 [INFO] AZALYST - status.json generated",
-    "2026-06-03 02:18:54 [INFO] PORTFOLIO - NAV USD 0.00 | Return +0.00%",
-    "2026-06-03 02:18:54 [INFO] SIGNALS - 5 active signal buckets in state"
+    "2026-06-03 07:31:37 [INFO] AZALYST - status.json generated",
+    "2026-06-03 07:31:37 [INFO] PORTFOLIO - NAV USD 0.00 | Return +0.00%",
+    "2026-06-03 07:31:37 [INFO] SIGNALS - 7 active signal buckets in state"
   ],
-  "generated_at": "2026-06-03 02:18:54 UTC"
+  "generated_at": "2026-06-03 07:31:36 UTC"
 }
