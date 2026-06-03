@@ -16,7 +16,7 @@
   "portfolio_peak": 0.0,
   "drawdown_now_pct": 0.0,
   "max_drawdown_pct": 0.0,
-  "usd_inr_rate": 95.783,
+  "usd_inr_rate": 95.695,
   "positions": [],
   "closed_trades_list": [],
   "track_record": {
@@ -50,15 +50,15 @@
     }
   },
   "top_signal": {
-    "ticker": "ESGV",
-    "rank_score": 28.187792012057272,
-    "flow_score": 22.0,
-    "options_score": 0.0,
-    "rotation_score": 0.0,
-    "macro_score": 0.0,
-    "news_score": 0.0,
-    "total": 50.18779201205727,
-    "publish": false,
+    "ticker": "XLK",
+    "rank_score": 26.578447626224563,
+    "flow_score": 3.949255865422933,
+    "options_score": 16.210458497391254,
+    "rotation_score": 15.0,
+    "macro_score": 2.968158545223984,
+    "news_score": 3.92,
+    "total": 68.62632053426273,
+    "publish": true,
     "direction": "long"
   },
   "allocation": {
@@ -72,27 +72,35 @@
   "confidence": [
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 91.0
-    },
-    {
-      "symbol": "India Equity Markets",
-      "score": 90.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 85.0
-    },
-    {
-      "symbol": "Commodities & Mining",
-      "score": 85.0
-    },
-    {
-      "symbol": "Cybersecurity",
-      "score": 81.0
+      "score": 92.0
     },
     {
       "symbol": "Asia Pacific Equity",
-      "score": 79.0
+      "score": 78.0
+    },
+    {
+      "symbol": "Cybersecurity",
+      "score": 71.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 70.0
+    },
+    {
+      "symbol": "Commodities & Mining",
+      "score": 68.0
+    },
+    {
+      "symbol": "Defense & Aerospace",
+      "score": 67.0
+    },
+    {
+      "symbol": "India Equity Markets",
+      "score": 63.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 62.0
     },
     {
       "symbol": "Healthcare & Pharma",
@@ -103,27 +111,27 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 91.0,
+      "confidence": 92.0,
       "severity": "CRITICAL",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "03 Jun 2026 06:15 UTC",
+      "article_count": 27,
+      "latest_at": "03 Jun 2026 11:58 UTC",
       "headline": "US Crude Oil Inventories Continue Downward Plunge But Gasoline Surprises",
       "regions": [
-        "global",
-        "americas",
+        "europe",
         "africa",
-        "asia_pacific"
+        "asia_pacific",
+        "americas"
       ],
       "sources": [
-        "Oilprice.com",
-        "BBC News",
+        "Bloomberg Markets",
         "Markets-Economic Times",
-        "Bloomberg Markets"
+        "BBC News",
+        "Oilprice.com"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -148,35 +156,286 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 14.4,
-        "recency": 15.2,
+        "source_diversity": 13.8,
+        "recency": 16.3,
         "geopolitical_severity": 13.0
       }
     },
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 90.0,
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 78.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 32,
-      "latest_at": "03 Jun 2026 07:04 UTC",
-      "headline": "Government denies new report stating RBI may have sold $12 billion gold to rescue rupee",
+      "article_count": 9,
+      "latest_at": "03 Jun 2026 09:13 UTC",
+      "headline": "Yen Holds Near 160 Against Dollar After BOJ\u2019s Ueda Hints at Hike",
       "regions": [
         "global",
-        "india",
         "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "Latest from Tom's Hardware",
+        "BBC News"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 16.1,
+        "volume_confirmation": 15.4,
+        "source_diversity": 14.9,
+        "recency": 12.4,
+        "geopolitical_severity": 12.9
+      }
+    },
+    {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 71.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "03 Jun 2026 11:04 UTC",
+      "headline": "Palo Alto CEO says customer meeting requests have surged amid AI security concerns",
+      "regions": [
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "US Top News and Analysis",
+        "Tech",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 13.4,
+        "volume_confirmation": 13.7,
+        "source_diversity": 6.7,
+        "recency": 14.9,
+        "geopolitical_severity": 10.6
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 70.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 96,
+      "latest_at": "03 Jun 2026 12:20 UTC",
+      "headline": "Nvidia's new PC chips represent CEO Huang's bid to win at every layer of AI stack",
+      "regions": [
+        "europe",
+        "asia_pacific",
+        "americas",
         "middle_east"
       ],
       "sources": [
-        "World | Deutsche Welle",
-        "Oilprice.com",
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "Tech",
+        "EE Times"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.9,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 68.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "03 Jun 2026 03:30 UTC",
+      "headline": "How Long Can Demand Destruction Keep a Lid on Oil Prices?",
+      "regions": [
+        "africa",
+        "asia_pacific",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Markets-Economic Times",
         "BBC News",
-        "Markets-Economic Times"
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 10.7,
+        "volume_confirmation": 13.7,
+        "source_diversity": 13.8,
+        "recency": 7.0,
+        "geopolitical_severity": 11.3
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 67.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 30,
+      "latest_at": "03 Jun 2026 12:20 UTC",
+      "headline": "At a NATO range in Latvia, hits and misses mark Europe\u2019s counter-drone journey",
+      "regions": [
+        "europe",
+        "asia_pacific",
+        "middle_east",
+        "india"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "World | Deutsche Welle",
+        "Defense News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.4,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 63.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 36,
+      "latest_at": "03 Jun 2026 11:04 UTC",
+      "headline": "Government denies new report stating RBI may have sold $12 billion gold to rescue rupee",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "middle_east",
+        "india"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "Tech",
+        "World | Deutsche Welle"
       ],
       "primary_etf": "INDA",
       "top_etfs": [
@@ -200,34 +459,34 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 14.9,
-        "recency": 16.4,
+        "recency": 14.9,
         "geopolitical_severity": 13.0
       }
     },
     {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
-      "confidence": 85.0,
-      "severity": "CRITICAL",
+      "confidence": 62.0,
+      "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 30,
-      "latest_at": "02 Jun 2026 21:16 UTC",
+      "article_count": 26,
+      "latest_at": "03 Jun 2026 10:48 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "americas",
-        "global",
         "middle_east",
-        "europe"
+        "india",
+        "europe",
+        "global"
       ],
       "sources": [
-        "Tech",
-        "Semiconductor Engineering",
         "US Top News and Analysis",
-        "Bloomberg Markets"
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "Tech"
       ],
       "primary_etf": "IBIT",
       "top_etfs": [
@@ -246,155 +505,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 13.6,
-        "recency": 13.8,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 85.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "03 Jun 2026 07:22 UTC",
-      "headline": "Guinea\u2019s Simandou Iron Exports Surge Six Months After First Ore",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "africa",
-        "middle_east"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Oilprice.com",
-        "BBC News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.1,
-        "volume_confirmation": 16.2,
-        "source_diversity": 14.4,
-        "recency": 17.0,
-        "geopolitical_severity": 11.7
-      }
-    },
-    {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 81.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "03 Jun 2026 07:22 UTC",
-      "headline": "Palo Alto CEO says customer meeting requests have surged amid AI security concerns",
-      "regions": [
-        "europe",
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "www.theregister.com - Articles",
-        "World | Deutsche Welle",
-        "Tech",
-        "The Verge"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 15.1,
-        "volume_confirmation": 14.6,
-        "source_diversity": 9.5,
-        "recency": 17.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 79.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 9,
-      "latest_at": "03 Jun 2026 06:11 UTC",
-      "headline": "Global Market: Japan's Nikkei surges past 68,000 for first time as AI stocks lead rally",
-      "regions": [
-        "global",
-        "europe",
-        "asia_pacific",
-        "middle_east"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "BBC News",
-        "Markets-Economic Times",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 15.7,
-        "volume_confirmation": 15.4,
-        "source_diversity": 14.0,
-        "recency": 15.1,
+        "source_diversity": 10.3,
+        "recency": 14.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -454,32 +566,42 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Energy / Oil & Gas - 24 articles - CRITICAL / NEUTRAL - US Crude Oil Inventories Continue Downward Plunge But Gasoline Surprises"
+      "text": "Energy / Oil & Gas - 27 articles - CRITICAL / NEUTRAL - US Crude Oil Inventories Continue Downward Plunge But Gasoline Surprises"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "India Equity Markets - 32 articles - HIGH / NEUTRAL - Government denies new report stating RBI may have sold $12 billion gold to rescue rupee"
+      "text": "Asia Pacific Equity - 9 articles - HIGH / NEUTRAL - Yen Holds Near 160 Against Dollar After BOJ\u2019s Ueda Hints at Hike"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 30 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
+      "text": "Cybersecurity - 7 articles - MEDIUM / NEUTRAL - Palo Alto CEO says customer meeting requests have surged amid AI security concerns"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Commodities & Mining - 10 articles - MEDIUM / NEUTRAL - Guinea\u2019s Simandou Iron Exports Surge Six Months After First Ore"
+      "text": "Technology & AI / Semiconductors - 96 articles - HIGH / NEUTRAL - Nvidia's new PC chips represent CEO Huang's bid to win at every layer of AI stack"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity - 8 articles - HIGH / NEUTRAL - Palo Alto CEO says customer meeting requests have surged amid AI security concerns"
+      "text": "Commodities & Mining - 7 articles - MEDIUM / NEUTRAL - How Long Can Demand Destruction Keep a Lid on Oil Prices?"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Asia Pacific Equity - 9 articles - HIGH / NEUTRAL - Global Market: Japan's Nikkei surges past 68,000 for first time as AI stocks lead rally"
+      "text": "Defense & Aerospace - 30 articles - HIGH / NEUTRAL - At a NATO range in Latvia, hits and misses mark Europe\u2019s counter-drone journey"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "India Equity Markets - 36 articles - HIGH / NEUTRAL - Government denies new report stating RBI may have sold $12 billion gold to rescue rupee"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Crypto & Digital Assets - 26 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-neu",
@@ -525,22 +647,22 @@
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10378.68,
+      "price": 10339.49,
       "currency": "GBP",
-      "change": 5.18,
-      "change_pct": 0.05,
-      "change_str": "+0.05%",
-      "direction": "up"
+      "change": -34.01,
+      "change_pct": -0.33,
+      "change_str": "-0.33%",
+      "direction": "down"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 24958.23,
+      "price": 24910.94,
       "currency": "EUR",
-      "change": -165.94,
-      "change_pct": -0.66,
-      "change_str": "-0.66%",
+      "change": -213.23,
+      "change_pct": -0.85,
+      "change_str": "-0.85%",
       "direction": "down"
     },
     {
@@ -558,77 +680,77 @@
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 25611.26,
+      "price": 25633.21,
       "currency": "HKD",
-      "change": -427.06,
-      "change_pct": -1.64,
-      "change_str": "-1.64%",
+      "change": -405.11,
+      "change_pct": -1.56,
+      "change_str": "-1.56%",
       "direction": "down"
     },
     {
       "label": "Nifty 50",
       "ticker": "^NSEI",
       "region": "IN",
-      "price": 23298.1,
+      "price": 23405.6,
       "currency": "INR",
-      "change": -185.45,
-      "change_pct": -0.79,
-      "change_str": "-0.79%",
+      "change": -77.95,
+      "change_pct": -0.33,
+      "change_str": "-0.33%",
       "direction": "down"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4491.9,
+      "price": 4489.0,
       "currency": "USD",
-      "change": 2.8,
-      "change_pct": 0.06,
-      "change_str": "+0.06%",
+      "change": -0.1,
+      "change_pct": -0.0,
+      "change_str": "+-0.00%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 95.61,
+      "price": 96.13,
       "currency": "USD",
-      "change": 1.85,
-      "change_pct": 1.97,
-      "change_str": "+1.97%",
+      "change": 2.37,
+      "change_pct": 2.53,
+      "change_str": "+2.53%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 67128.47,
+      "price": 66919.07,
       "currency": "USD",
-      "change": 424.81,
-      "change_pct": 0.64,
-      "change_str": "+0.64%",
+      "change": 215.41,
+      "change_pct": 0.32,
+      "change_str": "+0.32%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.32,
+      "price": 99.38,
       "currency": "USD",
-      "change": 0.1,
-      "change_pct": 0.1,
-      "change_str": "+0.10%",
+      "change": 0.16,
+      "change_pct": 0.16,
+      "change_str": "+0.16%",
       "direction": "up"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 15.99,
+      "price": 16.05,
       "currency": "USD",
-      "change": 0.22,
-      "change_pct": 1.4,
-      "change_str": "+1.40%",
+      "change": 0.28,
+      "change_pct": 1.78,
+      "change_str": "+1.78%",
       "direction": "up"
     }
   ],
@@ -636,7 +758,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
     "portfolio_peak": 0.0,
-    "vix": 15.99,
+    "vix": 16.05,
     "vix_regime": "ELEVATED",
     "sector_concentration": [],
     "max_drawdown_pct": 0.0,
@@ -680,9 +802,9 @@
     }
   },
   "logs": [
-    "2026-06-03 07:31:37 [INFO] AZALYST - status.json generated",
-    "2026-06-03 07:31:37 [INFO] PORTFOLIO - NAV USD 0.00 | Return +0.00%",
-    "2026-06-03 07:31:37 [INFO] SIGNALS - 7 active signal buckets in state"
+    "2026-06-03 12:30:27 [INFO] AZALYST - status.json generated",
+    "2026-06-03 12:30:27 [INFO] PORTFOLIO - NAV USD 0.00 | Return +0.00%",
+    "2026-06-03 12:30:27 [INFO] SIGNALS - 9 active signal buckets in state"
   ],
-  "generated_at": "2026-06-03 07:31:36 UTC"
+  "generated_at": "2026-06-03 12:30:25 UTC"
 }
