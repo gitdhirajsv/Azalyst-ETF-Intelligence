@@ -16,7 +16,7 @@
   "portfolio_peak": 0.0,
   "drawdown_now_pct": 0.0,
   "max_drawdown_pct": 0.0,
-  "usd_inr_rate": 95.695,
+  "usd_inr_rate": 95.7425,
   "positions": [],
   "closed_trades_list": [],
   "track_record": {
@@ -34,30 +34,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.1010096110720386,
+    "vix_level": 16.059999465942383,
+    "vix_percentile_1y": 0.25,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
+      "rank": 30,
+      "flow": 22,
+      "options": 18,
       "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "macro": 8,
+      "news": 7
     }
   },
   "top_signal": {
     "ticker": "XLK",
-    "rank_score": 28.56936936936937,
-    "flow_score": 2.4498514147133936,
-    "options_score": 12.6,
+    "rank_score": 28.568294515401952,
+    "flow_score": 2.330779239406021,
+    "options_score": 11.700000000000001,
     "rotation_score": 15.0,
-    "macro_score": 0.8264154525040882,
-    "news_score": 5.208,
-    "total": 64.65363623658685,
+    "macro_score": 0.6783835055453227,
+    "news_score": 4.928,
+    "total": 63.20545726035329,
     "publish": true,
     "direction": "long"
   },
@@ -71,32 +71,32 @@
   },
   "confidence": [
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 93.0
-    },
-    {
       "symbol": "Energy / Oil & Gas",
       "score": 92.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 86.0
+      "symbol": "India Equity Markets",
+      "score": 88.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 88.0
     },
     {
       "symbol": "Asia Pacific Equity",
-      "score": 77.0
+      "score": 85.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 83.0
     },
     {
       "symbol": "Cybersecurity",
-      "score": 76.0
+      "score": 72.0
     },
     {
       "symbol": "Defense & Aerospace",
       "score": 67.0
-    },
-    {
-      "symbol": "India Equity Markets",
-      "score": 63.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -108,59 +108,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 93.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 93,
-      "latest_at": "03 Jun 2026 23:00 UTC",
-      "headline": "Using Graph Attention for Virtual Metrology in Semiconductor Manufacturing (Intel Foundry, ASU)",
-      "regions": [
-        "americas",
-        "asia_pacific",
-        "global",
-        "africa"
-      ],
-      "sources": [
-        "Semiconductor Engineering",
-        "Tech",
-        "Cointelegraph.com News",
-        "Oilprice.com"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.6,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
@@ -215,75 +162,132 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 86.0,
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 88.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 29,
-      "latest_at": "03 Jun 2026 21:53 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
+      "article_count": 24,
+      "latest_at": "04 Jun 2026 06:36 UTC",
+      "headline": "Sensex falls over 300 points, Nifty below 23,350 amid persistent FII selling",
       "regions": [
         "india",
-        "europe",
+        "asia_pacific",
         "middle_east",
         "global"
       ],
       "sources": [
         "Tech",
-        "Cointelegraph.com News",
         "Markets-Economic Times",
+        "BBC News",
         "Bloomberg Markets"
       ],
-      "primary_etf": "IBIT",
+      "primary_etf": "INDA",
       "top_etfs": [
-        "IBIT",
-        "BITQ"
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
       ],
       "access_markets": [
+        "India-listed",
         "International-listed"
       ],
-      "india_etfs": [],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
       "global_etfs": [
-        "IBIT",
-        "BITQ"
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.2,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.0,
+        "recency": 16.3,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 88.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 84,
+      "latest_at": "03 Jun 2026 23:00 UTC",
+      "headline": "Microsoft unveils new AI models to lessen reliance on OpenAI and lower costs for developers",
+      "regions": [
+        "india",
+        "middle_east",
+        "americas",
+        "africa"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "EE Times",
+        "Tech",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 13.6,
-        "recency": 15.1,
+        "source_diversity": 17.1,
+        "recency": 7.6,
         "geopolitical_severity": 13.0
       }
     },
     {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
-      "confidence": 77.0,
+      "confidence": 85.0,
       "severity": "MEDIUM",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "03 Jun 2026 22:23 UTC",
-      "headline": "Global Market: Japan's Nikkei surges past 68,000 for first time as AI stocks lead rally",
+      "article_count": 14,
+      "latest_at": "04 Jun 2026 06:57 UTC",
+      "headline": "Traders Brace for Big Yen Swings on BOJ, Intervention Risks",
       "regions": [
-        "europe",
         "asia_pacific",
-        "global"
+        "global",
+        "europe"
       ],
       "sources": [
         "Tech",
-        "BBC News",
-        "Oilprice.com",
-        "Markets-Economic Times"
+        "Markets-Economic Times",
+        "Latest from Tom's Hardware",
+        "Oilprice.com"
       ],
       "primary_etf": "EWJ",
       "top_etfs": [
@@ -303,35 +307,82 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 14.1,
-        "volume_confirmation": 14.6,
-        "source_diversity": 14.9,
-        "recency": 15.9,
-        "geopolitical_severity": 11.3
+        "signal_strength": 18.1,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.3,
+        "recency": 16.8,
+        "geopolitical_severity": 11.2
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 83.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 29,
+      "latest_at": "04 Jun 2026 06:16 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "india",
+        "middle_east",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Tech",
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 10.3,
+        "recency": 15.7,
+        "geopolitical_severity": 13.0
       }
     },
     {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
-      "confidence": 76.0,
+      "confidence": 72.0,
       "severity": "MEDIUM",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 9,
-      "latest_at": "03 Jun 2026 21:34 UTC",
+      "article_count": 10,
+      "latest_at": "04 Jun 2026 01:16 UTC",
       "headline": "CrowdStrike narrowly beats estimates on AI tailwinds, but stock falls 10%",
       "regions": [
-        "europe",
-        "global"
+        "global",
+        "europe"
       ],
       "sources": [
-        "Tech",
         "Cointelegraph.com News",
-        "Earnings",
-        "www.theregister.com - Articles"
+        "Tech",
+        "www.theregister.com - Articles",
+        "Earnings"
       ],
       "primary_etf": "CIBR",
       "top_etfs": [
@@ -348,11 +399,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 15.7,
-        "volume_confirmation": 15.4,
+        "signal_strength": 16.3,
+        "volume_confirmation": 16.2,
         "source_diversity": 8.3,
-        "recency": 14.6,
-        "geopolitical_severity": 10.8
+        "recency": 9.5,
+        "geopolitical_severity": 10.6
       }
     },
     {
@@ -405,57 +456,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 16.4,
         "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 63.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 36,
-      "latest_at": "03 Jun 2026 11:04 UTC",
-      "headline": "Government denies new report stating RBI may have sold $12 billion gold to rescue rupee",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "middle_east",
-        "india"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Tech",
-        "World | Deutsche Welle"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.9,
-        "recency": 14.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -564,37 +564,37 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 93 articles - HIGH / NEUTRAL - Using Graph Attention for Virtual Metrology in Semiconductor Manufacturing (Intel Foundry, ASU)"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Energy / Oil & Gas - 27 articles - CRITICAL / NEUTRAL - US Crude Oil Inventories Continue Downward Plunge But Gasoline Surprises"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Crypto & Digital Assets - 29 articles - HIGH / NEUTRAL - Here\u2019s what happened in crypto today"
+      "text": "India Equity Markets - 24 articles - HIGH / NEUTRAL - Sensex falls over 300 points, Nifty below 23,350 amid persistent FII selling"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Asia Pacific Equity - 8 articles - MEDIUM / NEUTRAL - Global Market: Japan's Nikkei surges past 68,000 for first time as AI stocks lead rally"
+      "text": "Technology & AI / Semiconductors - 84 articles - HIGH / NEUTRAL - Microsoft unveils new AI models to lessen reliance on OpenAI and lower costs for developers"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity - 9 articles - MEDIUM / NEUTRAL - CrowdStrike narrowly beats estimates on AI tailwinds, but stock falls 10%"
+      "text": "Asia Pacific Equity - 14 articles - MEDIUM / NEUTRAL - Traders Brace for Big Yen Swings on BOJ, Intervention Risks"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Crypto & Digital Assets - 29 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Cybersecurity - 10 articles - MEDIUM / NEUTRAL - CrowdStrike narrowly beats estimates on AI tailwinds, but stock falls 10%"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
       "text": "Defense & Aerospace - 30 articles - HIGH / NEUTRAL - At a NATO range in Latvia, hits and misses mark Europe\u2019s counter-drone journey"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "India Equity Markets - 36 articles - HIGH / NEUTRAL - Government denies new report stating RBI may have sold $12 billion gold to rescue rupee"
     },
     {
       "tag": "tag-neu",
@@ -667,66 +667,66 @@
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 67138.62,
+      "price": 67470.69,
       "currency": "JPY",
-      "change": -1263.51,
-      "change_pct": -1.85,
-      "change_str": "-1.85%",
+      "change": -931.44,
+      "change_pct": -1.36,
+      "change_str": "-1.36%",
       "direction": "down"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 25370.98,
+      "price": 25262.62,
       "currency": "HKD",
-      "change": -262.23,
-      "change_pct": -1.02,
-      "change_str": "-1.02%",
+      "change": -370.59,
+      "change_pct": -1.45,
+      "change_str": "-1.45%",
       "direction": "down"
     },
     {
       "label": "Nifty 50",
       "ticker": "^NSEI",
       "region": "IN",
-      "price": 23405.6,
+      "price": 23392.1,
       "currency": "INR",
-      "change": -77.95,
-      "change_pct": -0.33,
-      "change_str": "-0.33%",
+      "change": -13.5,
+      "change_pct": -0.06,
+      "change_str": "-0.06%",
       "direction": "down"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4487.4,
+      "price": 4494.1,
       "currency": "USD",
-      "change": 50.7,
-      "change_pct": 1.14,
-      "change_str": "+1.14%",
+      "change": 57.4,
+      "change_pct": 1.29,
+      "change_str": "+1.29%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 95.0,
+      "price": 95.23,
       "currency": "USD",
-      "change": -1.02,
-      "change_pct": -1.06,
-      "change_str": "-1.06%",
+      "change": -0.79,
+      "change_pct": -0.82,
+      "change_str": "-0.82%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 62098.81,
+      "price": 63698.12,
       "currency": "USD",
-      "change": -4604.85,
-      "change_pct": -6.9,
-      "change_str": "-6.90%",
+      "change": -316.25,
+      "change_pct": -0.49,
+      "change_str": "-0.49%",
       "direction": "down"
     },
     {
@@ -735,7 +735,7 @@
       "region": "FX",
       "price": 99.44,
       "currency": "USD",
-      "change": -0.08,
+      "change": -0.09,
       "change_pct": -0.09,
       "change_str": "-0.09%",
       "direction": "down"
@@ -800,9 +800,9 @@
     }
   },
   "logs": [
-    "2026-06-04 02:15:50 [INFO] AZALYST - status.json generated",
-    "2026-06-04 02:15:50 [INFO] PORTFOLIO - NAV USD 0.00 | Return +0.00%",
-    "2026-06-04 02:15:50 [INFO] SIGNALS - 9 active signal buckets in state"
+    "2026-06-04 07:14:01 [INFO] AZALYST - status.json generated",
+    "2026-06-04 07:14:01 [INFO] PORTFOLIO - NAV USD 0.00 | Return +0.00%",
+    "2026-06-04 07:14:01 [INFO] SIGNALS - 9 active signal buckets in state"
   ],
-  "generated_at": "2026-06-04 02:15:48 UTC"
+  "generated_at": "2026-06-04 07:13:59 UTC"
 }
