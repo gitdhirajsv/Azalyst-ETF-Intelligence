@@ -1,4 +1,4 @@
-"""
+﻿"""
 AZALYST ETF INTELLIGENCE — CORE ENGINE
 Macro hedge fund-grade global news + paper trading track record system
 + Aladdin-grade risk engine (correlation, benchmark, vol-sizing, rebalancing, stress testing)
@@ -333,14 +333,34 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, quant_fetcher, 
 
         etf, platform = _select_etf_for_trade(signal)
         if etf and platform:
-            # FIX: Apply the same quant blocker used in run_intelligence_cycle.
-            # Previously seed trades bypassed the 200-day MA trend check entirely.
             ticker = etf.get("ticker")
-            if ticker and not quant_fetcher.check_trend_approval(ticker):
-                log.warning(
-                    f"Seed trade skipped: {ticker} is in a structural downtrend (Quant Blocker)."
-                )
-                continue
+            if ticker:
+                if _RISK_ADVANCED:
+                    try:
+                        from paper_trader import get_current_price_inr
+                        current = get_current_price_inr(ticker, etf.get("exchange", "NYSE"))
+                        if current:
+                            import yfinance as yf
+                            hist = yf.Ticker(ticker).history(period="1y")
+                            if not hist.empty and len(hist) >= 200:
+                                ma_200 = float(hist["Close"].rolling(window=200).mean().iloc[-1])
+                                adj = compute_trend_adjustment(current, ma_200, ticker)
+                                conf_mult = adj["confidence_multiplier"]
+                                if conf_mult < 1.0:
+                                    signal["confidence"] = int(signal["confidence"] * conf_mult)
+                                    if signal["confidence"] < cfg.CONFIDENCE_THRESHOLD:
+                                        log.info(
+                                            "Seed trade skipped -- adjusted confidence %d below threshold %d",
+                                            signal["confidence"], cfg.CONFIDENCE_THRESHOLD,
+                                        )
+                                        continue
+                    except Exception as exc:
+                        log.warning("Trend adjustment failed for seed %s: %s", ticker, exc)
+                elif not quant_fetcher.check_trend_approval(ticker):
+                    log.warning(
+                        "Seed trade skipped: %s is in a structural downtrend (Quant Blocker).", ticker
+                    )
+                    continue
 
             entry = portfolio.enter_position(signal, etf, platform)
             if entry:
