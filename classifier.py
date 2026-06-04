@@ -1,4 +1,4 @@
-"""
+﻿"""
 classifier.py — AZALYST Sector Classification Engine
 
 Multi-pass keyword classification with:
@@ -374,6 +374,28 @@ SECTOR_DEFINITIONS = {
         "negators": [],
         "geopolitical_boost": ["ukraine", "russia", "ecb", "nato", "energy crisis"],
     },
+
+    "bearish_macro": {
+        "label": "Bearish Market / Macro Selloff",
+        "keywords": [
+            ("recession", 8), ("market crash", 9), ("stock market crash", 9),
+            ("bear market", 8), ("selloff", 7), ("sell-off", 7), ("market selloff", 8),
+            ("risk off", 7), ("risk-off", 7), ("flight to safety", 6),
+            ("economic downturn", 7), ("economic contraction", 7),
+            ("gdp contraction", 8), ("negative gdp", 8),
+            ("stagflation", 7), ("deflation", 6),
+            ("credit crisis", 8), ("financial crisis", 9), ("banking crisis", 8),
+            ("market correction", 6), ("equity crash", 8),
+            ("panic selling", 8), ("capitulation", 7),
+            ("vix spike", 7), ("volatility surge", 6),
+            ("yield curve inversion", 7), ("inverted yield curve", 7),
+            ("debt crisis", 7), ("sovereign default", 8),
+            ("hard landing", 7), ("global slowdown", 6), ("growth collapse", 7),
+            ("tariff shock", 5), ("trade war escalation", 5),
+        ],
+        "negators": ["recovery", "rebound", "easing", "stimulus", "bullish"],
+        "geopolitical_boost": ["recession", "crash", "crisis", "bear market"],
+    },
 }
 
 SECTOR_DIRECTION_TERMS = {
@@ -550,6 +572,16 @@ SECTOR_DIRECTION_TERMS = {
             ("ecb hike", 2.0), ("political crisis", 1.5),
         ],
     },
+    "bearish_macro": {
+        "bullish": [
+            ("crash deepens", 2.5), ("recession confirmed", 2.5), ("bear market extends", 2.0),
+            ("capitulation", 2.0), ("vix spike", 2.0), ("selloff accelerates", 2.5),
+        ],
+        "bearish": [
+            ("recovery", 2.0), ("rebound", 2.0), ("stimulus", 1.5), ("easing", 1.5),
+            ("soft landing", 2.0), ("gdp beat", 1.5),
+        ],
+    },
 }
 
 ML_DIRECTION_ALIGNMENTS = {
@@ -560,6 +592,7 @@ ML_DIRECTION_ALIGNMENTS = {
     "crypto_digital": 1.0,
     "emerging_markets": 1.0,
     "europe_equity": 1.0,
+    "bearish_macro": -1.0,
     "healthcare_pharma": 1.0,
     "india_equity": 1.0,
     "real_estate_reit": 1.0,
