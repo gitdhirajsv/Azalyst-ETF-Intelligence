@@ -35,30 +35,30 @@
   "confidence_threshold": 60,
   "regime": {
     "risk_state": "RISK_ON",
-    "vol_regime": "MID_VOL",
+    "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.1010096110720386,
-    "vix_level": 16.600000381469727,
-    "vix_percentile_1y": 0.38492063492063494,
+    "spy_excess_vs_tbill_3m": 0.11289684789240298,
+    "vix_level": 15.960000038146973,
+    "vix_percentile_1y": 0.23809523809523808,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
+      "rank": 30,
+      "flow": 22,
+      "options": 18,
       "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "macro": 8,
+      "news": 7
     }
   },
   "top_signal": {
-    "ticker": "XLE",
-    "rank_score": 11.486486486486484,
-    "flow_score": 2.057660224702526,
-    "options_score": 20.0,
+    "ticker": "XLF",
+    "rank_score": 15.662006079027355,
+    "flow_score": 16.07190527694092,
+    "options_score": 8.667402178646897,
     "rotation_score": 15.0,
-    "macro_score": 5.940635759041984,
-    "news_score": 9.2,
-    "total": 63.684782470231,
-    "publish": true,
+    "macro_score": 0.0,
+    "news_score": 4.367999999999999,
+    "total": 59.76931353461517,
+    "publish": false,
     "direction": "long"
   },
   "allocation": {
@@ -79,24 +79,28 @@
       "score": 92.0
     },
     {
+      "symbol": "Crypto & Digital Assets",
+      "score": 88.0
+    },
+    {
       "symbol": "India Equity Markets",
       "score": 88.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 88.0
+      "symbol": "Banking & Financial Sector",
+      "score": 78.0
     },
     {
-      "symbol": "Asia Pacific Equity",
-      "score": 85.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 83.0
+      "symbol": "Clean Energy & Renewables",
+      "score": 76.0
     },
     {
       "symbol": "Cybersecurity",
       "score": 72.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 69.0
     },
     {
       "symbol": "Defense & Aerospace",
@@ -104,6 +108,10 @@
     },
     {
       "symbol": "Commodities & Mining",
+      "score": 62.0
+    },
+    {
+      "symbol": "Asia Pacific Equity",
       "score": 62.0
     },
     {
@@ -216,6 +224,53 @@
       }
     },
     {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 88.0,
+      "severity": "CRITICAL",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 27,
+      "latest_at": "04 Jun 2026 11:46 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "middle_east",
+        "india"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Finance",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 10.3,
+        "recency": 13.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 88.0,
@@ -267,152 +322,105 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 88.0,
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector",
+      "confidence": 78.0,
       "severity": "HIGH",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 84,
-      "latest_at": "03 Jun 2026 23:00 UTC",
-      "headline": "Microsoft unveils new AI models to lessen reliance on OpenAI and lower costs for developers",
+      "article_count": 12,
+      "latest_at": "04 Jun 2026 10:22 UTC",
+      "headline": "Reliance traders said to game plan in case RBI raises rates",
       "regions": [
-        "india",
         "middle_east",
+        "global",
         "americas",
-        "africa"
+        "asia_pacific"
       ],
       "sources": [
         "Cointelegraph.com News",
-        "EE Times",
-        "Tech",
-        "www.theregister.com - Articles"
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "Finance"
       ],
-      "primary_etf": "QQQ",
+      "primary_etf": "XLF",
       "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
+        "XLF",
+        "GLDM",
+        "BANKBEES"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
+        "BANKBEES"
       ],
       "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
+        "XLF",
+        "GLDM"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 17.1,
-        "recency": 7.6,
+        "signal_strength": 17.6,
+        "volume_confirmation": 17.4,
+        "source_diversity": 12.1,
+        "recency": 11.8,
         "geopolitical_severity": 13.0
       }
     },
     {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 85.0,
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables",
+      "confidence": 76.0,
       "severity": "MEDIUM",
       "direction": "NEUTRAL",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 14,
-      "latest_at": "04 Jun 2026 06:57 UTC",
-      "headline": "Traders Brace for Big Yen Swings on BOJ, Intervention Risks",
+      "article_count": 8,
+      "latest_at": "04 Jun 2026 13:57 UTC",
+      "headline": "Suzlon Energy shares rise 2% after firm announces foray into solar, battery storage businesses under 'Suzlon 2.0'",
       "regions": [
-        "asia_pacific",
         "global",
+        "asia_pacific",
         "europe"
       ],
       "sources": [
-        "Tech",
+        "Oilprice.com",
         "Markets-Economic Times",
-        "Latest from Tom's Hardware",
-        "Oilprice.com"
+        "The Verge",
+        "BBC News"
       ],
-      "primary_etf": "EWJ",
+      "primary_etf": "ICLN",
       "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
+        "ICLN",
+        "QCLN",
+        "PBW"
       ],
       "access_markets": [
+        "India-listed",
         "International-listed"
       ],
-      "india_etfs": [],
+      "india_etfs": [
+        "NEWENERGY"
+      ],
       "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
+        "ICLN",
+        "QCLN",
+        "PBW"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 18.1,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.3,
-        "recency": 16.8,
-        "geopolitical_severity": 11.2
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 83.0,
-      "severity": "CRITICAL",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 29,
-      "latest_at": "04 Jun 2026 06:16 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "india",
-        "middle_east",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Tech",
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 10.3,
-        "recency": 15.7,
-        "geopolitical_severity": 13.0
+        "signal_strength": 14.4,
+        "volume_confirmation": 14.6,
+        "source_diversity": 12.6,
+        "recency": 17.0,
+        "geopolitical_severity": 11.4
       }
     },
     {
@@ -458,6 +466,59 @@
         "source_diversity": 8.3,
         "recency": 9.5,
         "geopolitical_severity": 10.6
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 69.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 87,
+      "latest_at": "04 Jun 2026 13:40 UTC",
+      "headline": "Microsoft unveils Project Solara AI, a chip-to-cloud platform built to power a new generation of 'agent-first' enterprise devices \u2014 hardware designed to run AI agents instead of traditional apps",
+      "regions": [
+        "global",
+        "americas",
+        "asia_pacific",
+        "africa"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Oilprice.com",
+        "BBC News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 17.1,
+        "recency": 16.5,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -524,17 +585,17 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 4,
-      "latest_at": "03 Jun 2026 20:00 UTC",
-      "headline": "Mayor cancels DR Congo friendly with Chile in Spain over Ebola concern",
+      "latest_at": "04 Jun 2026 12:48 UTC",
+      "headline": "Zimbabwe Says China\u2019s Huayou Plans Lithium Carbonate Plant",
       "regions": [
-        "europe",
         "middle_east",
-        "africa"
+        "global",
+        "asia_pacific"
       ],
       "sources": [
-        "Markets-Economic Times",
-        "BBC News",
-        "Oilprice.com"
+        "Oilprice.com",
+        "Semiconductor Engineering",
+        "Bloomberg Markets"
       ],
       "primary_etf": "DBC",
       "top_etfs": [
@@ -555,11 +616,61 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 7.0,
+        "signal_strength": 8.8,
         "volume_confirmation": 9.7,
-        "source_diversity": 11.7,
-        "recency": 15.9,
-        "geopolitical_severity": 11.1
+        "source_diversity": 9.9,
+        "recency": 15.1,
+        "geopolitical_severity": 11.8
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 62.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "04 Jun 2026 13:30 UTC",
+      "headline": "Global Markets: Japan's Nikkei pulls back from record high on AI selloff",
+      "regions": [
+        "middle_east",
+        "global",
+        "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "BBC News",
+        "Markets-Economic Times",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 13.2,
+        "volume_confirmation": 14.6,
+        "source_diversity": 14.9,
+        "recency": 16.2,
+        "geopolitical_severity": 12.0
       }
     },
     {
@@ -628,22 +739,22 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Crypto & Digital Assets - 27 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "India Equity Markets - 24 articles - HIGH / NEUTRAL - Sensex falls over 300 points, Nifty below 23,350 amid persistent FII selling"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 84 articles - HIGH / NEUTRAL - Microsoft unveils new AI models to lessen reliance on OpenAI and lower costs for developers"
+      "text": "Banking & Financial Sector - 12 articles - HIGH / NEUTRAL - Reliance traders said to game plan in case RBI raises rates"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Asia Pacific Equity - 14 articles - MEDIUM / NEUTRAL - Traders Brace for Big Yen Swings on BOJ, Intervention Risks"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Crypto & Digital Assets - 29 articles - CRITICAL / NEUTRAL - Here\u2019s what happened in crypto today"
+      "text": "Clean Energy & Renewables - 8 articles - MEDIUM / NEUTRAL - Suzlon Energy shares rise 2% after firm announces foray into solar, battery storage businesses under 'Suzlon 2.0'"
     },
     {
       "tag": "tag-neu",
@@ -653,12 +764,22 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Technology & AI / Semiconductors - 87 articles - HIGH / NEUTRAL - Microsoft unveils Project Solara AI, a chip-to-cloud platform built to power a new generation of 'agent-first' enterprise devices \u2014 hardware designed to run AI agents instead of traditional apps"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Defense & Aerospace - 30 articles - HIGH / NEUTRAL - At a NATO range in Latvia, hits and misses mark Europe\u2019s counter-drone journey"
     },
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Commodities & Mining - 4 articles - MEDIUM / NEUTRAL - Mayor cancels DR Congo friendly with Chile in Spain over Ebola concern"
+      "text": "Commodities & Mining - 4 articles - MEDIUM / NEUTRAL - Zimbabwe Says China\u2019s Huayou Plans Lithium Carbonate Plant"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Asia Pacific Equity - 8 articles - MEDIUM / NEUTRAL - Global Markets: Japan's Nikkei pulls back from record high on AI selloff"
     },
     {
       "tag": "tag-neu",
@@ -671,55 +792,55 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7553.68,
+      "price": 7537.74,
       "currency": "USD",
-      "change": -56.1,
-      "change_pct": -0.74,
-      "change_str": "-0.74%",
+      "change": -15.94,
+      "change_pct": -0.21,
+      "change_str": "-0.21%",
       "direction": "down"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 26853.98,
+      "price": 26569.01,
       "currency": "USD",
-      "change": -239.92,
-      "change_pct": -0.89,
-      "change_str": "-0.89%",
+      "change": -284.97,
+      "change_pct": -1.06,
+      "change_str": "-1.06%",
       "direction": "down"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 50687.07,
+      "price": 51483.24,
       "currency": "USD",
-      "change": -620.72,
-      "change_pct": -1.21,
-      "change_str": "-1.21%",
-      "direction": "down"
+      "change": 796.17,
+      "change_pct": 1.57,
+      "change_str": "+1.57%",
+      "direction": "up"
     },
     {
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10243.83,
+      "price": 10344.45,
       "currency": "GBP",
-      "change": -88.47,
-      "change_pct": -0.86,
-      "change_str": "-0.86%",
-      "direction": "down"
+      "change": 12.15,
+      "change_pct": 0.12,
+      "change_str": "+0.12%",
+      "direction": "up"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 24862.57,
+      "price": 24963.49,
       "currency": "EUR",
-      "change": 66.63,
-      "change_pct": 0.27,
-      "change_str": "+0.27%",
+      "change": 167.55,
+      "change_pct": 0.68,
+      "change_str": "+0.68%",
       "direction": "up"
     },
     {
@@ -759,63 +880,63 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4499.1,
+      "price": 4528.6,
       "currency": "USD",
-      "change": 62.4,
-      "change_pct": 1.41,
-      "change_str": "+1.41%",
+      "change": 91.9,
+      "change_pct": 2.07,
+      "change_str": "+2.07%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 95.05,
+      "price": 92.32,
       "currency": "USD",
-      "change": -0.97,
-      "change_pct": -1.01,
-      "change_str": "-1.01%",
+      "change": -3.7,
+      "change_pct": -3.85,
+      "change_str": "-3.85%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 62278.43,
+      "price": 64103.21,
       "currency": "USD",
-      "change": -1735.94,
-      "change_pct": -2.71,
-      "change_str": "-2.71%",
-      "direction": "down"
+      "change": 88.84,
+      "change_pct": 0.14,
+      "change_str": "+0.14%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.29,
+      "price": 99.24,
       "currency": "USD",
-      "change": -0.24,
-      "change_pct": -0.24,
-      "change_str": "-0.24%",
+      "change": -0.29,
+      "change_pct": -0.29,
+      "change_str": "-0.29%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 16.6,
+      "price": 15.96,
       "currency": "USD",
-      "change": 0.54,
-      "change_pct": 3.36,
-      "change_str": "+3.36%",
-      "direction": "up"
+      "change": -0.1,
+      "change_pct": -0.62,
+      "change_str": "-0.62%",
+      "direction": "down"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
     "portfolio_peak": 0.0,
-    "vix": 16.6,
+    "vix": 15.96,
     "vix_regime": "ELEVATED",
     "sector_concentration": [],
     "max_drawdown_pct": 0.0,
@@ -859,9 +980,9 @@
     }
   },
   "logs": [
-    "2026-06-04 10:55:43 [INFO] AZALYST - status.json generated",
-    "2026-06-04 10:55:43 [INFO] PORTFOLIO - NAV USD 0.00 | Return +0.00%",
-    "2026-06-04 10:55:43 [INFO] SIGNALS - 10 active signal buckets in state"
+    "2026-06-04 14:07:26 [INFO] AZALYST - status.json generated",
+    "2026-06-04 14:07:26 [INFO] PORTFOLIO - NAV USD 0.00 | Return +0.00%",
+    "2026-06-04 14:07:26 [INFO] SIGNALS - 12 active signal buckets in state"
   ],
-  "generated_at": "2026-06-04 10:55:41 UTC"
+  "generated_at": "2026-06-04 14:07:23 UTC"
 }
