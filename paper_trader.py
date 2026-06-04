@@ -1,4 +1,4 @@
-﻿"""
+﻿﻿"""
 paper_trader.py - AZALYST Paper Trading Engine
 
 Institution-style paper trading with:
@@ -66,6 +66,16 @@ PARTIAL_PROFIT_FRACTION = 0.50
 SECTOR_CAP_PCT          = 0.30
 CASH_FLOOR_PCT          = 0.05
 MAX_HOLD_DAYS           = 180
+# Leveraged / inverse ETFs decay via daily rebalancing compounding. Hard cap
+# their hold period well below the global 180-day limit so a slow grind against
+# the position does not destroy value over months of chop.
+INVERSE_ETF_MAX_HOLD_DAYS: dict = {
+    "SQQQ": 14, "SDS": 14,   # 3x / 2x leveraged inverse — max 2 weeks
+    "PSQ": 30,  "SH": 30,    # 1x inverse — max 30 days
+    "SPXS": 14, "SPXU": 14,  # Direxion / ProShares 3x inverse
+    "SOXS": 14, "FAZ": 14,   # sector inverse leveraged
+    "UVXY": 7,  "VIXY": 14,  # volatility products
+}
 # After this many consecutive cycles with no fresh price, escalate loudly: the
 # stop/profit engine is flying blind on that position and the operator must know.
 STALE_MARK_ALERT        = 3
@@ -1506,7 +1516,7 @@ class PaperPortfolio:
                     exit_reason = f"Stop-loss hit ({change_pct * 100:.1f}%)"
             elif days >= 14 and change_pct <= -0.02:
                 exit_reason = f"Time-based unclogging ({days} days, {change_pct * 100:.1f}%)"
-            elif days >= MAX_HOLD_DAYS:
+            elif days >= INVERSE_ETF_MAX_HOLD_DAYS.get(position.ticker, MAX_HOLD_DAYS):
                 exit_reason = f"Max hold period ({days} days)"
 
             if trading_allowed and exit_reason:
