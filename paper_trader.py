@@ -1,4 +1,4 @@
-﻿"""
+"""
 paper_trader.py - AZALYST Paper Trading Engine
 
 Institution-style paper trading with:
@@ -82,9 +82,32 @@ INVERSE_ETF_MAX_HOLD_DAYS: dict = {
 # days, NOT over a long hold. So for this set we do the OPPOSITE of "let the
 # winner run": bank the spike fully, keep a tight non-widening trail, and cut
 # fast if the move doesn't materialize. Plain long positions are unaffected.
-DECAY_ETF_TICKERS          = set(INVERSE_ETF_MAX_HOLD_DAYS)
-DECAY_TRAIL_PCT            = 0.05   # fixed tight trail (never widens by roi_step)
-DECAY_FULL_TAKE_PROFIT_PCT = 0.10  # close 100% once the spike delivers this gain
+# Per-instrument decay profile, SCALED BY LEVERAGE. A fixed % is wrong across
+# tiers: on a 3x ETF a +10% gain is only a ~3% index move (not worth banking
+# yet), and a 5% trail is just ~1.7% of index — pure intraday noise that would
+# whipsaw the position out near the top. So higher leverage gets BOTH a higher
+# full-take target (only bank on a real index move) AND a wider trail (ride the
+# instrument's natural volatility without false stops).
+#   take_profit = unrealised gain at which we close 100% (capture the spike)
+#   trail       = fixed trailing-stop width once trailing is active (never widens)
+DECAY_ETF_PROFILE = {
+    # 1x inverse — +10% gain ~= 10% index drop (a genuine correction)
+    "SH":   {"take_profit": 0.10, "trail": 0.05},
+    "PSQ":  {"take_profit": 0.10, "trail": 0.05},
+    # 2x inverse — +15% gain ~= 7.5% index drop
+    "SDS":  {"take_profit": 0.15, "trail": 0.07},
+    # 3x inverse — +18% gain ~= 6% index drop
+    "SQQQ": {"take_profit": 0.18, "trail": 0.09},
+    "SPXS": {"take_profit": 0.18, "trail": 0.09},
+    "SPXU": {"take_profit": 0.18, "trail": 0.09},
+    "SOXS": {"take_profit": 0.18, "trail": 0.09},
+    "FAZ":  {"take_profit": 0.18, "trail": 0.09},
+    # volatility products — explosive in panic, collapse just as fast
+    "UVXY": {"take_profit": 0.25, "trail": 0.10},
+    "VIXY": {"take_profit": 0.18, "trail": 0.08},
+}
+_DECAY_DEFAULT_PROFILE     = {"take_profit": 0.10, "trail": 0.05}
+DECAY_ETF_TICKERS          = set(DECAY_ETF_PROFILE)
 DECAY_STALL_DAYS           = 5     # if it hasn't worked in this many days...
 DECAY_STALL_MIN_GAIN_PCT   = 0.03  # ...and is below this gain, cut the decay bleed
 
@@ -92,6 +115,11 @@ DECAY_STALL_MIN_GAIN_PCT   = 0.03  # ...and is below this gain, cut the decay bl
 def _is_decay_etf(ticker: str) -> bool:
     """True for inverse/leveraged/vol ETFs that must be held days, not months."""
     return (ticker or "").upper() in DECAY_ETF_TICKERS
+
+
+def _decay_profile(ticker: str) -> dict:
+    """Leverage-scaled take-profit / trail width for a decay ETF (default = 1x)."""
+    return DECAY_ETF_PROFILE.get((ticker or "").upper(), _DECAY_DEFAULT_PROFILE)
 # After this many consecutive cycles with no fresh price, escalate loudly: the
 # stop/profit engine is flying blind on that position and the operator must know.
 STALE_MARK_ALERT        = 3
@@ -902,9 +930,10 @@ class PaperPortfolio:
         )
         if trailing_active:
             if _is_decay_etf(position.ticker):
-                # Decay ETFs: fixed tight trail that never widens — lock the spike
-                # fast; never hand a daily-decaying instrument a longer leash.
-                trail_pct = DECAY_TRAIL_PCT
+                # Decay ETFs: leverage-scaled trail that never widens by roi_step.
+                # Wider for higher leverage so 3x noise doesn't whipsaw it out,
+                # but it still only ratchets upward (see below) — never loosens.
+                trail_pct = _decay_profile(position.ticker)["trail"]
             else:
                 # Tighten the trail as profit steps are banked (ratchet by roi_step).
                 step      = min(max(getattr(position, "roi_step", 0), 0), len(TRAIL_STEP_PCTS) - 1)
@@ -1533,7 +1562,7 @@ class PaperPortfolio:
             # Decay ETFs (inverse/leveraged/vol): capture the few-day spike in full
             # and cut non-working positions fast — never ride the daily decay.
             if _is_decay_etf(position.ticker):
-                if change_pct >= DECAY_FULL_TAKE_PROFIT_PCT:
+                if change_pct >= _decay_profile(position.ticker)["take_profit"]:
                     exit_reason = f"Decay-ETF profit lock (+{change_pct * 100:.1f}%)"
                 elif days >= DECAY_STALL_DAYS and change_pct < DECAY_STALL_MIN_GAIN_PCT:
                     exit_reason = f"Decay-ETF stall exit ({days}d, {change_pct * 100:+.1f}%)"
