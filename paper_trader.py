@@ -1,4 +1,4 @@
-"""
+﻿"""
 paper_trader.py - AZALYST Paper Trading Engine
 
 Institution-style paper trading with:
@@ -186,6 +186,13 @@ def fetch_etf_liquidity(ticker: str, exchange: str) -> Optional[Dict[str, float]
         if bid > 0 and ask > 0 and ask > bid:
             spread_pct = (ask - bid) / ask
             spread_bps = spread_pct * 10000
+            # Sanity check: Yahoo Finance sometimes returns stale bid-ask that
+            # produces absurd spreads (e.g. 1479 bps for ICLN). Fall back to the
+            # heuristic when the computed spread is implausibly wide.
+            if spread_bps > 200.0:
+                log.debug("Spread for %s looks stale (%.1f bps) -- using heuristic", ticker, spread_bps)
+                spread_bps = 25.0 if ("NSE" in (exchange or "").upper() or "BSE" in (exchange or "").upper()) else 5.0
+                spread_pct = spread_bps / 10000.0
         else:
             # Heuristic: 5 bps for liquid US ETFs, 25 bps for India ETFs
             if "NSE" in (exchange or "").upper() or "BSE" in (exchange or "").upper():
