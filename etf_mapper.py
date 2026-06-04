@@ -1,4 +1,4 @@
-"""
+﻿"""
 etf_mapper.py - AZALYST ETF Mapping Engine
 
 Maps detected sectors to specific ETF recommendations.
@@ -681,6 +681,48 @@ ETF_DATABASE = {
         ],
     },
 
+    "bearish_macro": {
+        "india": [],
+        "global": [
+            {
+                "name":      "ProShares Short S&P500",
+                "ticker":    "SH",
+                "platform":  "ProShares -- IBKR / Schwab / Fidelity",
+                "exchange":  "NYSE",
+                "risk":      "Medium",
+                "timeframe": "1-4 weeks",
+                "thesis":    "1x inverse S&P 500. Buy this ETF long to profit from broad market declines. Most liquid inverse ETF -- use for tactical bearish macro hedges.",
+            },
+            {
+                "name":      "ProShares Short QQQ",
+                "ticker":    "PSQ",
+                "platform":  "ProShares -- IBKR / Schwab / Fidelity",
+                "exchange":  "NYSE",
+                "risk":      "Medium",
+                "timeframe": "1-4 weeks",
+                "thesis":    "1x inverse NASDAQ-100. Use when tech/growth selloff is the driver. Conservative inverse exposure with lower decay than 2x/3x products.",
+            },
+            {
+                "name":      "ProShares UltraShort S&P500",
+                "ticker":    "SDS",
+                "platform":  "ProShares -- IBKR / Schwab / Fidelity",
+                "exchange":  "NYSE",
+                "risk":      "High",
+                "timeframe": "1-2 weeks",
+                "thesis":    "2x daily inverse S&P 500. Higher leverage for deep conviction bearish signals only. Path-dependency drag limits hold period.",
+            },
+            {
+                "name":      "ProShares UltraPro Short QQQ",
+                "ticker":    "SQQQ",
+                "platform":  "ProShares -- IBKR / Schwab / Fidelity",
+                "exchange":  "NASDAQ",
+                "risk":      "High",
+                "timeframe": "1-2 weeks",
+                "thesis":    "3x daily inverse NASDAQ-100. Tactical only -- use for CRITICAL severity crash signals. Severe decay; do not hold beyond 2 weeks.",
+            },
+        ],
+    },
+
     "bonds_fixed_income": {
         "india": [
             {
@@ -758,6 +800,14 @@ _SECTOR_ALIASES: Dict[str, str] = {
     "bonds":                    "bonds_fixed_income",
     "fixed_income":             "bonds_fixed_income",
     "rates":                    "bonds_fixed_income",
+    "bearish":                  "bearish_macro",
+    "bear_market":             "bearish_macro",
+    "recession":               "bearish_macro",
+    "risk_off":                "bearish_macro",
+    "selloff":                 "bearish_macro",
+    "market_crash":            "bearish_macro",
+    "crash":                   "bearish_macro",
+    "capitulation":            "bearish_macro",
     "energy":                   "energy_oil",
     "oil":                      "energy_oil",
     "oil_gas":                  "energy_oil",
@@ -818,6 +868,10 @@ _SELECTION_PROFILES: Dict[str, Dict[str, int]] = {
     "QQQ":        {"cost": 4, "liquidity": 5, "purity": 3, "diversification": 5, "access": 5, "stability": 5},
     "REALTY":     {"cost": 2, "liquidity": 2, "purity": 4, "diversification": 2, "access": 2, "stability": 2},
     "REET":       {"cost": 3, "liquidity": 3, "purity": 4, "diversification": 5, "access": 4, "stability": 4},
+    "SH":         {"cost": 5, "liquidity": 5, "purity": 5, "diversification": 2, "access": 5, "stability": 3},
+    "PSQ":        {"cost": 4, "liquidity": 4, "purity": 5, "diversification": 2, "access": 5, "stability": 3},
+    "SDS":        {"cost": 3, "liquidity": 4, "purity": 5, "diversification": 1, "access": 4, "stability": 2},
+    "SQQQ":       {"cost": 2, "liquidity": 5, "purity": 5, "diversification": 1, "access": 5, "stability": 1},
     "SOXX":       {"cost": 3, "liquidity": 4, "purity": 5, "diversification": 3, "access": 5, "stability": 4},
     "SPEM":       {"cost": 4, "liquidity": 3, "purity": 5, "diversification": 5, "access": 4, "stability": 4},
     "SRUUF":      {"cost": 1, "liquidity": 1, "purity": 4, "diversification": 2, "access": 1, "stability": 4},
