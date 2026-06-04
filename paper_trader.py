@@ -1,4 +1,4 @@
-﻿﻿"""
+﻿"""
 paper_trader.py - AZALYST Paper Trading Engine
 
 Institution-style paper trading with:
@@ -76,6 +76,22 @@ INVERSE_ETF_MAX_HOLD_DAYS: dict = {
     "SOXS": 14, "FAZ": 14,   # sector inverse leveraged
     "UVXY": 7,  "VIXY": 14,  # volatility products
 }
+
+# Decay-aware exit policy for inverse / leveraged / vol ETFs. These rebalance
+# daily and bleed value in sideways or choppy tape — they pay off in a few sharp
+# days, NOT over a long hold. So for this set we do the OPPOSITE of "let the
+# winner run": bank the spike fully, keep a tight non-widening trail, and cut
+# fast if the move doesn't materialize. Plain long positions are unaffected.
+DECAY_ETF_TICKERS          = set(INVERSE_ETF_MAX_HOLD_DAYS)
+DECAY_TRAIL_PCT            = 0.05   # fixed tight trail (never widens by roi_step)
+DECAY_FULL_TAKE_PROFIT_PCT = 0.10  # close 100% once the spike delivers this gain
+DECAY_STALL_DAYS           = 5     # if it hasn't worked in this many days...
+DECAY_STALL_MIN_GAIN_PCT   = 0.03  # ...and is below this gain, cut the decay bleed
+
+
+def _is_decay_etf(ticker: str) -> bool:
+    """True for inverse/leveraged/vol ETFs that must be held days, not months."""
+    return (ticker or "").upper() in DECAY_ETF_TICKERS
 # After this many consecutive cycles with no fresh price, escalate loudly: the
 # stop/profit engine is flying blind on that position and the operator must know.
 STALE_MARK_ALERT        = 3
@@ -885,9 +901,14 @@ class PaperPortfolio:
             or position.half_exited
         )
         if trailing_active:
-            # Tighten the trail as profit steps are banked (ratchet by roi_step).
-            step      = min(max(getattr(position, "roi_step", 0), 0), len(TRAIL_STEP_PCTS) - 1)
-            trail_pct = TRAIL_STEP_PCTS[step]
+            if _is_decay_etf(position.ticker):
+                # Decay ETFs: fixed tight trail that never widens — lock the spike
+                # fast; never hand a daily-decaying instrument a longer leash.
+                trail_pct = DECAY_TRAIL_PCT
+            else:
+                # Tighten the trail as profit steps are banked (ratchet by roi_step).
+                step      = min(max(getattr(position, "roi_step", 0), 0), len(TRAIL_STEP_PCTS) - 1)
+                trail_pct = TRAIL_STEP_PCTS[step]
             new_trail = round(max(hard_stop, position.peak_price * (1 - trail_pct)), 4)
             # Ratchet only upward — a trailing stop must never loosen.
             position.trail_stop = max(new_trail, position.trail_stop or 0.0)
@@ -1509,15 +1530,24 @@ class PaperPortfolio:
             days = position.days_held()
 
             exit_reason = None
-            if current <= position.trail_stop:
-                if trailing_active:
-                    exit_reason = f"Trailing stop hit ({change_pct * 100:.1f}%)"
-                else:
-                    exit_reason = f"Stop-loss hit ({change_pct * 100:.1f}%)"
-            elif days >= 14 and change_pct <= -0.02:
-                exit_reason = f"Time-based unclogging ({days} days, {change_pct * 100:.1f}%)"
-            elif days >= INVERSE_ETF_MAX_HOLD_DAYS.get(position.ticker, MAX_HOLD_DAYS):
-                exit_reason = f"Max hold period ({days} days)"
+            # Decay ETFs (inverse/leveraged/vol): capture the few-day spike in full
+            # and cut non-working positions fast — never ride the daily decay.
+            if _is_decay_etf(position.ticker):
+                if change_pct >= DECAY_FULL_TAKE_PROFIT_PCT:
+                    exit_reason = f"Decay-ETF profit lock (+{change_pct * 100:.1f}%)"
+                elif days >= DECAY_STALL_DAYS and change_pct < DECAY_STALL_MIN_GAIN_PCT:
+                    exit_reason = f"Decay-ETF stall exit ({days}d, {change_pct * 100:+.1f}%)"
+
+            if exit_reason is None:
+                if current <= position.trail_stop:
+                    if trailing_active:
+                        exit_reason = f"Trailing stop hit ({change_pct * 100:.1f}%)"
+                    else:
+                        exit_reason = f"Stop-loss hit ({change_pct * 100:.1f}%)"
+                elif days >= 14 and change_pct <= -0.02:
+                    exit_reason = f"Time-based unclogging ({days} days, {change_pct * 100:.1f}%)"
+                elif days >= INVERSE_ETF_MAX_HOLD_DAYS.get(position.ticker, MAX_HOLD_DAYS):
+                    exit_reason = f"Max hold period ({days} days)"
 
             if trading_allowed and exit_reason:
                 positions_to_close.append((position, current, today, exit_reason))
