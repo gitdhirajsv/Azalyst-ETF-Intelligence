@@ -16,7 +16,7 @@
   "portfolio_peak": 0.0,
   "drawdown_now_pct": 0.0,
   "max_drawdown_pct": 0.0,
-  "usd_inr_rate": 95.7425,
+  "usd_inr_rate": 95.775,
   "positions": [],
   "closed_trades_list": [],
   "track_record": {
@@ -35,29 +35,29 @@
   "confidence_threshold": 60,
   "regime": {
     "risk_state": "RISK_ON",
-    "vol_regime": "LOW_VOL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
     "spy_excess_vs_tbill_3m": 0.1010096110720386,
-    "vix_level": 16.059999465942383,
-    "vix_percentile_1y": 0.25,
+    "vix_level": 16.600000381469727,
+    "vix_percentile_1y": 0.38492063492063494,
     "weight_matrix": {
-      "rank": 30,
-      "flow": 22,
-      "options": 18,
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
       "rotation": 15,
-      "macro": 8,
-      "news": 7
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
-    "ticker": "XLK",
-    "rank_score": 28.568294515401952,
-    "flow_score": 2.330779239406021,
-    "options_score": 11.700000000000001,
+    "ticker": "XLE",
+    "rank_score": 11.486486486486484,
+    "flow_score": 2.057660224702526,
+    "options_score": 20.0,
     "rotation_score": 15.0,
-    "macro_score": 0.6783835055453227,
-    "news_score": 4.928,
-    "total": 63.20545726035329,
+    "macro_score": 5.940635759041984,
+    "news_score": 9.2,
+    "total": 63.684782470231,
     "publish": true,
     "direction": "long"
   },
@@ -70,6 +70,10 @@
     "values": []
   },
   "confidence": [
+    {
+      "symbol": "Europe Equity + Defense & Aerospace",
+      "score": 94.0
+    },
     {
       "symbol": "Energy / Oil & Gas",
       "score": 92.0
@@ -108,6 +112,56 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "europe_equity",
+      "sector_label": "Europe Equity + Defense & Aerospace",
+      "confidence": 94.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "04 Jun 2026 10:43 UTC",
+      "headline": "Europe Scrambles to Contain the Energy Shock",
+      "regions": [
+        "europe",
+        "middle_east",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "Tech"
+      ],
+      "primary_etf": "VGK",
+      "top_etfs": [
+        "VGK",
+        "IEV",
+        "EWU"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "VGK",
+        "IEV",
+        "EWU",
+        "EWG"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.4,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.2,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
@@ -564,6 +618,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Europe Equity + Defense & Aerospace - 13 articles - HIGH / NEUTRAL - Europe Scrambles to Contain the Energy Shock"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Energy / Oil & Gas - 27 articles - CRITICAL / NEUTRAL - US Crude Oil Inventories Continue Downward Plunge But Gasoline Surprises"
     },
     {
@@ -645,23 +704,23 @@
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10332.3,
+      "price": 10243.83,
       "currency": "GBP",
-      "change": -41.2,
-      "change_pct": -0.4,
-      "change_str": "-0.40%",
+      "change": -88.47,
+      "change_pct": -0.86,
+      "change_str": "-0.86%",
       "direction": "down"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 24795.94,
+      "price": 24862.57,
       "currency": "EUR",
-      "change": -328.23,
-      "change_pct": -1.31,
-      "change_str": "-1.31%",
-      "direction": "down"
+      "change": 66.63,
+      "change_pct": 0.27,
+      "change_str": "+0.27%",
+      "direction": "up"
     },
     {
       "label": "Nikkei 225",
@@ -678,77 +737,77 @@
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 25262.62,
+      "price": 25253.4,
       "currency": "HKD",
-      "change": -370.59,
-      "change_pct": -1.45,
-      "change_str": "-1.45%",
+      "change": -379.81,
+      "change_pct": -1.48,
+      "change_str": "-1.48%",
       "direction": "down"
     },
     {
       "label": "Nifty 50",
       "ticker": "^NSEI",
       "region": "IN",
-      "price": 23392.1,
+      "price": 23416.55,
       "currency": "INR",
-      "change": -13.5,
-      "change_pct": -0.06,
-      "change_str": "-0.06%",
-      "direction": "down"
+      "change": 10.95,
+      "change_pct": 0.05,
+      "change_str": "+0.05%",
+      "direction": "up"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4494.1,
+      "price": 4499.1,
       "currency": "USD",
-      "change": 57.4,
-      "change_pct": 1.29,
-      "change_str": "+1.29%",
+      "change": 62.4,
+      "change_pct": 1.41,
+      "change_str": "+1.41%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 95.23,
+      "price": 95.05,
       "currency": "USD",
-      "change": -0.79,
-      "change_pct": -0.82,
-      "change_str": "-0.82%",
+      "change": -0.97,
+      "change_pct": -1.01,
+      "change_str": "-1.01%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63698.12,
+      "price": 62278.43,
       "currency": "USD",
-      "change": -316.25,
-      "change_pct": -0.49,
-      "change_str": "-0.49%",
+      "change": -1735.94,
+      "change_pct": -2.71,
+      "change_str": "-2.71%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.44,
+      "price": 99.29,
       "currency": "USD",
-      "change": -0.09,
-      "change_pct": -0.09,
-      "change_str": "-0.09%",
+      "change": -0.24,
+      "change_pct": -0.24,
+      "change_str": "-0.24%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 16.06,
+      "price": 16.6,
       "currency": "USD",
-      "change": 0.29,
-      "change_pct": 1.84,
-      "change_str": "+1.84%",
+      "change": 0.54,
+      "change_pct": 3.36,
+      "change_str": "+3.36%",
       "direction": "up"
     }
   ],
@@ -756,7 +815,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
     "portfolio_peak": 0.0,
-    "vix": 16.06,
+    "vix": 16.6,
     "vix_regime": "ELEVATED",
     "sector_concentration": [],
     "max_drawdown_pct": 0.0,
@@ -800,9 +859,9 @@
     }
   },
   "logs": [
-    "2026-06-04 07:14:01 [INFO] AZALYST - status.json generated",
-    "2026-06-04 07:14:01 [INFO] PORTFOLIO - NAV USD 0.00 | Return +0.00%",
-    "2026-06-04 07:14:01 [INFO] SIGNALS - 9 active signal buckets in state"
+    "2026-06-04 10:55:43 [INFO] AZALYST - status.json generated",
+    "2026-06-04 10:55:43 [INFO] PORTFOLIO - NAV USD 0.00 | Return +0.00%",
+    "2026-06-04 10:55:43 [INFO] SIGNALS - 10 active signal buckets in state"
   ],
-  "generated_at": "2026-06-04 07:13:59 UTC"
+  "generated_at": "2026-06-04 10:55:41 UTC"
 }
