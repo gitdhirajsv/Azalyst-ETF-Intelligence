@@ -34,31 +34,31 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "LOW_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.11289684789240298,
-    "vix_level": 15.960000038146973,
-    "vix_percentile_1y": 0.23809523809523808,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 30,
-      "flow": 22,
-      "options": 18,
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
       "rotation": 15,
-      "macro": 8,
-      "news": 7
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
-    "ticker": "XLF",
-    "rank_score": 15.662006079027355,
-    "flow_score": 16.07190527694092,
-    "options_score": 8.667402178646897,
+    "ticker": "XLE",
+    "rank_score": 20.78308157099698,
+    "flow_score": 6.617601014219483,
+    "options_score": 9.0,
     "rotation_score": 15.0,
-    "macro_score": 0.0,
-    "news_score": 4.367999999999999,
-    "total": 59.76931353461517,
-    "publish": false,
+    "macro_score": 4.566739576787189,
+    "news_score": 6.4399999999999995,
+    "total": 62.407422162003655,
+    "publish": true,
     "direction": "long"
   },
   "allocation": {
@@ -70,6 +70,10 @@
     "values": []
   },
   "confidence": [
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 96.0
+    },
     {
       "symbol": "Europe Equity + Defense & Aerospace",
       "score": 94.0
@@ -95,16 +99,16 @@
       "score": 76.0
     },
     {
-      "symbol": "Cybersecurity",
-      "score": 72.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 69.0
-    },
-    {
       "symbol": "Defense & Aerospace",
       "score": 67.0
+    },
+    {
+      "symbol": "Gold & Precious Metals",
+      "score": 64.0
+    },
+    {
+      "symbol": "Cybersecurity",
+      "score": 62.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -120,6 +124,59 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 96.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 87,
+      "latest_at": "04 Jun 2026 16:52 UTC",
+      "headline": "TSMC struggles to keep up with AI demand: &#8216;We can only support so much&#8217;",
+      "regions": [
+        "asia_pacific",
+        "europe",
+        "americas",
+        "india"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "Earnings",
+        "Semiconductor Engineering",
+        "BBC News"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.8,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
     {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity + Defense & Aerospace",
@@ -424,104 +481,6 @@
       }
     },
     {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 72.0,
-      "severity": "MEDIUM",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "04 Jun 2026 01:16 UTC",
-      "headline": "CrowdStrike narrowly beats estimates on AI tailwinds, but stock falls 10%",
-      "regions": [
-        "global",
-        "europe"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Tech",
-        "www.theregister.com - Articles",
-        "Earnings"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 16.3,
-        "volume_confirmation": 16.2,
-        "source_diversity": 8.3,
-        "recency": 9.5,
-        "geopolitical_severity": 10.6
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 69.0,
-      "severity": "HIGH",
-      "direction": "NEUTRAL",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 87,
-      "latest_at": "04 Jun 2026 13:40 UTC",
-      "headline": "Microsoft unveils Project Solara AI, a chip-to-cloud platform built to power a new generation of 'agent-first' enterprise devices \u2014 hardware designed to run AI agents instead of traditional apps",
-      "regions": [
-        "global",
-        "americas",
-        "asia_pacific",
-        "africa"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Oilprice.com",
-        "BBC News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 17.1,
-        "recency": 16.5,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
       "confidence": 67.0,
@@ -572,6 +531,100 @@
         "source_diversity": 16.4,
         "recency": 16.9,
         "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 64.0,
+      "severity": "HIGH",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 4,
+      "latest_at": "04 Jun 2026 16:00 UTC",
+      "headline": "US Stock Market: Fed may need tighter policy as inflation risks persist",
+      "regions": [
+        "middle_east",
+        "global",
+        "americas"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 10.4,
+        "volume_confirmation": 9.7,
+        "source_diversity": 9.9,
+        "recency": 15.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 62.0,
+      "severity": "MEDIUM",
+      "direction": "NEUTRAL",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "04 Jun 2026 16:14 UTC",
+      "headline": "CrowdStrike narrowly beats estimates on AI tailwinds, but stock falls 10%",
+      "regions": [
+        "global"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "Earnings",
+        "Semiconductor Engineering",
+        "Tech"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 10.6,
+        "volume_confirmation": 12.6,
+        "source_diversity": 9.5,
+        "recency": 15.9,
+        "geopolitical_severity": 6.0
       }
     },
     {
@@ -729,6 +782,11 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
+      "text": "Technology & AI / Semiconductors - 87 articles - HIGH / NEUTRAL - TSMC struggles to keep up with AI demand: &#8216;We can only support so much&#8217;"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
       "text": "Europe Equity + Defense & Aerospace - 13 articles - HIGH / NEUTRAL - Europe Scrambles to Contain the Energy Shock"
     },
     {
@@ -759,17 +817,17 @@
     {
       "tag": "tag-neu",
       "label": "Neutral",
-      "text": "Cybersecurity - 10 articles - MEDIUM / NEUTRAL - CrowdStrike narrowly beats estimates on AI tailwinds, but stock falls 10%"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
-      "text": "Technology & AI / Semiconductors - 87 articles - HIGH / NEUTRAL - Microsoft unveils Project Solara AI, a chip-to-cloud platform built to power a new generation of 'agent-first' enterprise devices \u2014 hardware designed to run AI agents instead of traditional apps"
-    },
-    {
-      "tag": "tag-neu",
-      "label": "Neutral",
       "text": "Defense & Aerospace - 30 articles - HIGH / NEUTRAL - At a NATO range in Latvia, hits and misses mark Europe\u2019s counter-drone journey"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Gold & Precious Metals - 4 articles - HIGH / NEUTRAL - US Stock Market: Fed may need tighter policy as inflation risks persist"
+    },
+    {
+      "tag": "tag-neu",
+      "label": "Neutral",
+      "text": "Cybersecurity - 6 articles - MEDIUM / NEUTRAL - CrowdStrike narrowly beats estimates on AI tailwinds, but stock falls 10%"
     },
     {
       "tag": "tag-neu",
@@ -792,55 +850,55 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7537.74,
+      "price": 7582.18,
       "currency": "USD",
-      "change": -15.94,
-      "change_pct": -0.21,
-      "change_str": "-0.21%",
-      "direction": "down"
+      "change": 28.5,
+      "change_pct": 0.38,
+      "change_str": "+0.38%",
+      "direction": "up"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 26569.01,
+      "price": 26818.88,
       "currency": "USD",
-      "change": -284.97,
-      "change_pct": -1.06,
-      "change_str": "-1.06%",
+      "change": -35.1,
+      "change_pct": -0.13,
+      "change_str": "-0.13%",
       "direction": "down"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 51483.24,
+      "price": 51582.57,
       "currency": "USD",
-      "change": 796.17,
-      "change_pct": 1.57,
-      "change_str": "+1.57%",
+      "change": 895.5,
+      "change_pct": 1.77,
+      "change_str": "+1.77%",
       "direction": "up"
     },
     {
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10344.45,
+      "price": 10360.32,
       "currency": "GBP",
-      "change": 12.15,
-      "change_pct": 0.12,
-      "change_str": "+0.12%",
+      "change": 28.02,
+      "change_pct": 0.27,
+      "change_str": "+0.27%",
       "direction": "up"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 24963.49,
+      "price": 24944.95,
       "currency": "EUR",
-      "change": 167.55,
-      "change_pct": 0.68,
-      "change_str": "+0.68%",
+      "change": 149.01,
+      "change_pct": 0.6,
+      "change_str": "+0.60%",
       "direction": "up"
     },
     {
@@ -849,10 +907,10 @@
       "region": "JP",
       "price": 67470.69,
       "currency": "JPY",
-      "change": -931.44,
-      "change_pct": -1.36,
-      "change_str": "-1.36%",
-      "direction": "down"
+      "change": 736.45,
+      "change_pct": 1.1,
+      "change_str": "+1.10%",
+      "direction": "up"
     },
     {
       "label": "Hang Seng",
@@ -860,9 +918,9 @@
       "region": "HK",
       "price": 25253.4,
       "currency": "HKD",
-      "change": -379.81,
-      "change_pct": -1.48,
-      "change_str": "-1.48%",
+      "change": -784.92,
+      "change_pct": -3.01,
+      "change_str": "-3.01%",
       "direction": "down"
     },
     {
@@ -880,55 +938,55 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4528.6,
+      "price": 4508.6,
       "currency": "USD",
-      "change": 91.9,
-      "change_pct": 2.07,
-      "change_str": "+2.07%",
+      "change": 71.9,
+      "change_pct": 1.62,
+      "change_str": "+1.62%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 92.32,
+      "price": 92.54,
       "currency": "USD",
-      "change": -3.7,
-      "change_pct": -3.85,
-      "change_str": "-3.85%",
+      "change": -3.48,
+      "change_pct": -3.62,
+      "change_str": "-3.62%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64103.21,
+      "price": 63469.13,
       "currency": "USD",
-      "change": 88.84,
-      "change_pct": 0.14,
-      "change_str": "+0.14%",
-      "direction": "up"
+      "change": -545.24,
+      "change_pct": -0.85,
+      "change_str": "-0.85%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.24,
+      "price": 99.34,
       "currency": "USD",
-      "change": -0.29,
-      "change_pct": -0.29,
-      "change_str": "-0.29%",
+      "change": -0.19,
+      "change_pct": -0.19,
+      "change_str": "-0.19%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 15.96,
+      "price": 15.46,
       "currency": "USD",
-      "change": -0.1,
-      "change_pct": -0.62,
-      "change_str": "-0.62%",
+      "change": -0.6,
+      "change_pct": -3.74,
+      "change_str": "-3.74%",
       "direction": "down"
     }
   ],
@@ -936,7 +994,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
     "portfolio_peak": 0.0,
-    "vix": 15.96,
+    "vix": 15.46,
     "vix_regime": "ELEVATED",
     "sector_concentration": [],
     "max_drawdown_pct": 0.0,
@@ -980,9 +1038,9 @@
     }
   },
   "logs": [
-    "2026-06-04 14:07:26 [INFO] AZALYST - status.json generated",
-    "2026-06-04 14:07:26 [INFO] PORTFOLIO - NAV USD 0.00 | Return +0.00%",
-    "2026-06-04 14:07:26 [INFO] SIGNALS - 12 active signal buckets in state"
+    "2026-06-04 17:00:13 [INFO] AZALYST - status.json generated",
+    "2026-06-04 17:00:13 [INFO] PORTFOLIO - NAV USD 0.00 | Return +0.00%",
+    "2026-06-04 17:00:13 [INFO] SIGNALS - 13 active signal buckets in state"
   ],
-  "generated_at": "2026-06-04 14:07:23 UTC"
+  "generated_at": "2026-06-04 17:00:12 UTC"
 }
