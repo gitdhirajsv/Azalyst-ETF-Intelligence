@@ -173,30 +173,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "HIGH_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.08130592736889028,
+    "vix_level": 21.510000228881836,
+    "vix_percentile_1y": 0.8650793650793651,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
-      "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "rank": 18,
+      "flow": 18,
+      "options": 28,
+      "rotation": 12,
+      "macro": 12,
+      "news": 12
     }
   },
   "top_signal": {
     "ticker": "XLE",
     "rank_score": 13.761793721973095,
     "flow_score": 0.0,
-    "options_score": 5.66967044402623,
+    "options_score": 0.0,
     "rotation_score": 12.0,
     "macro_score": 7.3217777190572075,
     "news_score": 11.04,
-    "total": 49.79324188505653,
+    "total": 44.1235714410303,
     "publish": false,
     "direction": "long"
   },
@@ -1128,11 +1128,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 60650.04,
+      "price": 60798.21,
       "currency": "USD",
-      "change": -272.63,
-      "change_pct": -0.45,
-      "change_str": "-0.45%",
+      "change": -124.46,
+      "change_pct": -0.2,
+      "change_str": "-0.20%",
       "direction": "down"
     },
     {
@@ -1581,10 +1581,10 @@
     }
   },
   "logs": [
-    "2026-06-06 10:11:43 [INFO] AZALYST - status.json generated",
-    "2026-06-06 10:11:43 [INFO] PORTFOLIO - NAV USD 9,895.76 | Return -1.90%",
-    "2026-06-06 10:11:43 [INFO] SIGNALS - 13 active signal buckets in state",
-    "2026-06-06 10:11:43 [INFO] TRADER - Open positions: IBIT, XLE, INDA, QQQ, VGK, XLF"
+    "2026-06-06 11:44:50 [INFO] AZALYST - status.json generated",
+    "2026-06-06 11:44:50 [INFO] PORTFOLIO - NAV USD 9,895.76 | Return -1.90%",
+    "2026-06-06 11:44:50 [INFO] SIGNALS - 13 active signal buckets in state",
+    "2026-06-06 11:44:50 [INFO] TRADER - Open positions: IBIT, XLE, INDA, QQQ, VGK, XLF"
   ],
-  "generated_at": "2026-06-06 10:11:40 UTC"
+  "generated_at": "2026-06-06 11:44:48 UTC"
 }
