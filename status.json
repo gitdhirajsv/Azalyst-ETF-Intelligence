@@ -34,30 +34,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "HIGH_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.08130592736889028,
-    "vix_level": 21.510000228881836,
-    "vix_percentile_1y": 0.8650793650793651,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 18,
-      "flow": 18,
-      "options": 28,
-      "rotation": 12,
-      "macro": 12,
-      "news": 12
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
+      "rotation": 15,
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
     "ticker": "XLE",
     "rank_score": 13.761793721973095,
     "flow_score": 0.0,
-    "options_score": 5.668707693210392,
+    "options_score": 5.668960295225023,
     "rotation_score": 12.0,
     "macro_score": 7.3217777190572075,
     "news_score": 0.0,
-    "total": 38.752279134240695,
+    "total": 38.75253173625533,
     "publish": false,
     "direction": "long"
   },
@@ -191,11 +191,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 62210.77,
+      "price": 62142.82,
       "currency": "USD",
-      "change": 1343.36,
-      "change_pct": 2.21,
-      "change_str": "+2.21%",
+      "change": 1275.41,
+      "change_pct": 2.1,
+      "change_str": "+2.10%",
       "direction": "up"
     },
     {
@@ -269,8 +269,8 @@
     }
   },
   "logs": [
-    "2026-06-07 16:20:51 [INFO] AZALYST - status.json generated",
-    "2026-06-07 16:20:51 [INFO] PORTFOLIO - NAV USD 10,089.01 | Return +0.00%"
+    "2026-06-07 17:54:54 [INFO] AZALYST - status.json generated",
+    "2026-06-07 17:54:54 [INFO] PORTFOLIO - NAV USD 10,089.01 | Return +0.00%"
   ],
-  "generated_at": "2026-06-07 16:20:49 UTC"
+  "generated_at": "2026-06-07 17:54:52 UTC"
 }
