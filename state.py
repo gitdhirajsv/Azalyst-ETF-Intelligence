@@ -191,6 +191,8 @@ class SignalStateManager:
             "severity":             signal.get("severity", ""),
             "direction":            signal.get("direction", "NEUTRAL"),
             "direction_score":      float(signal.get("direction_score", 0.0)),
+            "signal_scope":         signal.get("signal_scope", "global"),
+            "india_article_ratio":  float(signal.get("india_article_ratio", 0.0)),
             "regions":              signal.get("regions", [])[:6],
             "sources":              signal.get("sources", [])[:6],
             "top_headlines":        signal.get("top_headlines", [])[:5],

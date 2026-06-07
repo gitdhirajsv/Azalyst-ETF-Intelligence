@@ -248,6 +248,23 @@ def run_intelligence_cycle(
                     if etf and platform:
                         ticker = etf.get("ticker")
 
+                        # SCOPE GATE: India-domestic signals must not buy globally-traded ETFs.
+                        # Example: Sensex falling or India gold import duty should not
+                        # trigger INDA/GLD/XLE — those respond to global events, not
+                        # domestic India policy. India-domestic signals are restricted to
+                        # India-listed ETFs only.
+                        signal_scope = signal.get("signal_scope", "global")
+                        etf_scope    = etf.get("market_scope", "International-listed")
+                        if signal_scope == "india_domestic" and etf_scope != "India-listed":
+                            log.info(
+                                "Trade skipped — India-domestic signal (%s, %.0f%% India articles) "
+                                "cannot enter global ETF %s",
+                                signal.get("sector_label"),
+                                signal.get("india_article_ratio", 0) * 100,
+                                ticker,
+                            )
+                            continue
+
                         # PRICE-DIVERGENCE GATE: news says BULLISH but price already falling
                         if ticker:
                             ret_5d = _get_5d_return(ticker)
@@ -366,6 +383,7 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, quant_fetcher, 
             continue  # Only HIGH/CRITICAL confidence signals
 
         direction    = record.get("direction", "NEUTRAL")
+        signal_scope = record.get("signal_scope", "global")
         sector_label = record.get("sector_label", "Unknown")
         sectors      = sector_key.split("|")
         severity     = "CRITICAL" if confidence >= 80 else "HIGH"
@@ -385,14 +403,26 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, quant_fetcher, 
             "confidence":           confidence,
             "severity":             severity,
             "direction":            direction,
+            "signal_scope":         signal_scope,
+            "india_article_ratio":  record.get("india_article_ratio", 0.0),
             "top_headlines":        [f"Startup seed — {sector_label} (conf: {confidence})"],
             "etf_recommendations":  etf_recs,
         }
 
         etf, platform = _select_etf_for_trade(signal)
         if etf and platform:
-            # PRICE-DIVERGENCE GATE: price already falling despite bullish signal in state
             seed_ticker = etf.get("ticker")
+            etf_scope   = etf.get("market_scope", "International-listed")
+
+            # SCOPE GATE: India-domestic stored signals must not seed global ETFs
+            if signal_scope == "india_domestic" and etf_scope != "India-listed":
+                log.info(
+                    "Seed skipped — India-domestic signal (%s) cannot seed global ETF %s",
+                    sector_label, seed_ticker,
+                )
+                continue
+
+            # PRICE-DIVERGENCE GATE: price already falling despite bullish signal in state
             if seed_ticker:
                 ret_5d = _get_5d_return(seed_ticker)
                 if ret_5d is not None and ret_5d < -0.02:

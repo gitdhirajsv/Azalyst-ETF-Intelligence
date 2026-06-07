@@ -466,10 +466,19 @@ SECTOR_DIRECTION_TERMS = {
         "bullish": [
             ("rate cut", 1.5), ("inflows", 2.0), ("gdp growth", 1.5),
             ("budget boost", 1.5), ("manufacturing expansion", 1.5),
+            # common market-movement language the classifier was missing
+            ("rally", 2.0), ("surges", 2.0), ("gains", 1.5), ("rises", 1.5),
+            ("record high", 2.0), ("breakout", 1.5), ("fii buying", 2.0),
+            ("sensex rises", 2.0), ("nifty gains", 2.0), ("sensex gains", 2.0),
         ],
         "bearish": [
             ("outflows", 2.0), ("inflation spike", 1.5), ("rate hike", 1.5),
             ("rupee weakness", 1.5), ("earnings miss", 1.5),
+            # common market-movement language the classifier was missing
+            ("falls", 2.0), ("drops", 2.0), ("decline", 1.5), ("slump", 2.0),
+            ("selloff", 2.0), ("sell-off", 2.0), ("selling", 1.5), ("plunge", 2.0),
+            ("fii selling", 2.5), ("persistent selling", 2.0), ("correction", 1.5),
+            ("sensex falls", 2.5), ("nifty falls", 2.5), ("sensex drops", 2.5),
         ],
     },
     "crypto_digital": {
@@ -850,6 +859,15 @@ class SectorClassifier:
             defn = SECTOR_DEFINITIONS[sector_id]
             severity, event_intensity = self._determine_severity(scored_arts, direction_score)
 
+            # Signal scope: what fraction of articles are India-region only.
+            # >70% India articles = domestic India event; should not trigger
+            # globally-traded ETFs (GLD on import duty, INDA on Sensex move).
+            india_art_count = sum(
+                1 for s in scored_arts if s["article"].get("region") == "india"
+            )
+            india_ratio = india_art_count / max(len(scored_arts), 1)
+            signal_scope = "india_domestic" if india_ratio > 0.70 else "global"
+
             signals.append({
                 "sector_id":     sector_id,
                 "sector_label":  defn["label"],
@@ -861,6 +879,8 @@ class SectorClassifier:
                 "avg_article_score": avg_article_score,
                 "direction_score": direction_score,
                 "direction":     _direction_label(direction_score),
+                "signal_scope":  signal_scope,
+                "india_article_ratio": round(india_ratio, 2),
                 "severity":      severity,
                 "event_intensity": event_intensity,
                 "ml_sentiment_label": _sentiment_label(ml_sentiment_score),
