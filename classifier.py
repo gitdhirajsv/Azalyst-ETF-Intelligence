@@ -403,12 +403,15 @@ SECTOR_DIRECTION_TERMS = {
         "bullish": [
             ("surge", 2.0), ("spike", 2.0), ("jump", 1.5), ("rally", 1.5),
             ("shortage", 2.0), ("supply disruption", 2.5), ("production cuts", 2.0),
-            ("embargo", 2.0), ("sanctions", 1.5),
+            ("embargo", 2.0), ("sanctions", 1.5), ("inventory draw", 1.5),
         ],
         "bearish": [
             ("fall", 2.0), ("drop", 2.0), ("slump", 2.0), ("decline", 1.5),
             ("oversupply", 2.0), ("glut", 2.0), ("ceasefire", 1.5),
             ("production increase", 2.0), ("supply recovery", 1.5),
+            ("plunge", 2.0), ("collapse", 2.0), ("downward", 1.5),
+            ("crude falls", 2.5), ("oil falls", 2.5), ("oil drops", 2.5),
+            ("demand weakness", 2.0), ("inventory build", 1.5),
         ],
     },
     "gold_precious_metals": {
@@ -457,9 +460,13 @@ SECTOR_DIRECTION_TERMS = {
         "bullish": [
             ("breach", 2.0), ("cyberattack", 2.0), ("ransomware", 2.0),
             ("security spending", 1.5), ("nation-state", 1.5),
+            ("earnings beat", 1.5), ("guidance raised", 2.0), ("contract win", 1.5),
         ],
         "bearish": [
             ("budget cuts", 2.0), ("spending slowdown", 1.5), ("deal cancellation", 1.5),
+            ("stock falls", 2.0), ("shares fall", 2.0), ("shares drop", 2.0),
+            ("stock drops", 2.0), ("misses estimates", 2.0), ("guidance cut", 2.0),
+            ("revenue miss", 2.0), ("earnings miss", 2.0),
         ],
     },
     "india_equity": {
@@ -495,10 +502,15 @@ SECTOR_DIRECTION_TERMS = {
         "bullish": [
             ("rate cuts", 1.5), ("soft landing", 1.5), ("credit growth", 1.5),
             ("capital return", 1.5), ("deposit growth", 1.5),
+            ("earnings beat", 1.5), ("nii growth", 2.0), ("net interest income", 1.5),
         ],
         "bearish": [
             ("bank run", 2.0), ("defaults rise", 2.0), ("credit stress", 2.0),
             ("yield curve inversion", 1.5), ("funding stress", 2.0),
+            ("rate hike", 1.5), ("raises rates", 2.0), ("tightening", 1.5),
+            ("bank stocks fall", 2.5), ("financials drop", 2.5),
+            ("npa rise", 2.0), ("loan losses", 2.0), ("credit tightening", 2.0),
+            ("rbi hike", 2.5), ("ecb hike", 2.5), ("fed hike", 2.5),
         ],
     },
     "commodities_mining": {
@@ -565,20 +577,34 @@ SECTOR_DIRECTION_TERMS = {
         "bullish": [
             ("stimulus", 2.0), ("yen weakness", 1.5), ("reform", 1.5),
             ("earnings beat", 1.5), ("inflows", 2.0),
+            ("rally", 2.0), ("surges", 2.0), ("gains", 1.5), ("rises", 1.5),
+            ("record high", 2.0), ("rebound", 1.5), ("nikkei rally", 2.5),
+            ("nikkei gains", 2.5), ("nikkei rises", 2.5),
         ],
         "bearish": [
             ("yen strength", 2.0), ("china slowdown", 2.0), ("outflows", 2.0),
             ("property crisis", 2.0), ("deflation", 1.5),
+            ("falls", 2.0), ("drops", 2.0), ("selloff", 2.0), ("sell-off", 2.0),
+            ("pullback", 2.0), ("pulls back", 2.0), ("decline", 1.5),
+            ("correction", 1.5), ("slump", 2.0), ("retreat", 1.5),
+            ("nikkei falls", 2.5), ("nikkei drops", 2.5), ("nikkei selloff", 2.5),
+            ("hang seng falls", 2.5), ("kospi falls", 2.5),
         ],
     },
     "europe_equity": {
         "bullish": [
             ("ecb cut", 2.0), ("fiscal stimulus", 2.0), ("defense spending", 1.5),
             ("growth surprise", 1.5), ("inflows", 2.0),
+            ("dax rally", 2.5), ("ftse rally", 2.5), ("europe rally", 2.0),
+            ("rebound", 1.5), ("gains", 1.5), ("rises", 1.5),
         ],
         "bearish": [
             ("energy crisis", 2.0), ("recession", 2.0), ("fragmentation", 1.5),
             ("ecb hike", 2.0), ("political crisis", 1.5),
+            ("energy shock", 2.0), ("scrambles", 1.5), ("containment", 1.5),
+            ("falls", 2.0), ("drops", 2.0), ("selloff", 2.0), ("slump", 2.0),
+            ("dax falls", 2.5), ("ftse falls", 2.5), ("europe selloff", 2.5),
+            ("economic slowdown", 2.0), ("growth concerns", 1.5),
         ],
     },
     "bearish_macro": {

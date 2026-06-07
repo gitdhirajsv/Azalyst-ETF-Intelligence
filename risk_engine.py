@@ -24,6 +24,15 @@ log = logging.getLogger("azalyst.risk")
 # ── Constants ────────────────────────────────────────────────────────────────
 
 BENCHMARK_TICKER = "SPY"
+
+# Inverse/leveraged/vol ETFs are designed to sit below the underlying index's
+# 200-day MA during bull markets. Penalising them for being "below 200MA" is
+# backwards — skip the trend adjustment for these entirely.
+_DECAY_ETF_SKIP_TICKERS = frozenset({
+    "SH", "PSQ", "SDS", "SQQQ",
+    "SPXS", "SPXU", "SOXS", "FAZ",
+    "UVXY", "VIXY",
+})
 TARGET_VOL = 0.15                   # 15% annualised — target portfolio vol
 CORRELATION_BLOCK_THRESHOLD = 0.80  # block new entry if max corr > 0.80
 CORRELATION_WARN_THRESHOLD  = 0.60  # warn on dashboard if > 0.60
@@ -416,6 +425,11 @@ def compute_trend_adjustment(
     if ma_200 <= 0 or current_price <= 0:
         return {"confidence_multiplier": 1.0, "size_multiplier": 1.0, "blocked": False}
 
+    # Inverse/leveraged ETFs sit below the market's 200MA during bull runs by
+    # design — applying a bearish MA penalty to them is backwards.
+    if (ticker or "").upper() in _DECAY_ETF_SKIP_TICKERS:
+        return {"confidence_multiplier": 1.0, "size_multiplier": 1.0, "blocked": False}
+
     if current_price >= ma_200:
         return {"confidence_multiplier": 1.0, "size_multiplier": 1.0, "blocked": False}
 
@@ -559,8 +573,12 @@ def external_shock_check() -> Dict:
     if ted_spread > 0.50:
         warnings.append(f"TED spread spike: {ted_spread:.2f}% — credit stress detected")
 
-    # TODO: Fetch VIX from Yahoo Finance
-    vix = 15.0  # placeholder
+    # Fetch live VIX from Yahoo Finance
+    try:
+        vix_closes = _fetch_chart("^VIX", range_str="5d", interval="1d")
+        vix = float(vix_closes[-1]) if vix_closes else 20.0
+    except Exception:
+        vix = 20.0
     indicators["vix"] = vix
     if vix > 35.0:
         warnings.append(f"VIX > 35 ({vix:.1f}) — extreme fear regime")
