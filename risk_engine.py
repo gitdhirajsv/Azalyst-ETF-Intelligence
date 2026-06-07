@@ -34,8 +34,11 @@ _DECAY_ETF_SKIP_TICKERS = frozenset({
     "UVXY", "VIXY",
 })
 TARGET_VOL = 0.15                   # 15% annualised — target portfolio vol
-CORRELATION_BLOCK_THRESHOLD = 0.80  # block new entry if max corr > 0.80
-CORRELATION_WARN_THRESHOLD  = 0.60  # warn on dashboard if > 0.60
+# Tightened 0.80 -> 0.65: at 0.80 four equity ETFs correlated 0.45-0.63
+# (QQQ/VGK/INDA/XLF) all passed, so the book was one beta bet wearing six hats.
+# 0.65 stops a new name from stacking onto an already-correlated cluster.
+CORRELATION_BLOCK_THRESHOLD = 0.65  # block new entry if max corr > 0.65
+CORRELATION_WARN_THRESHOLD  = 0.50  # warn on dashboard if > 0.50
 REBALANCE_DRIFT_PCT = 5.0           # trigger rebalance if position drifts > 5% from target
 ANNUALISE_FACTOR = math.sqrt(252)   # trading days per year
 
@@ -363,6 +366,16 @@ def check_rebalance_drift(
     if portfolio_value <= 0 or not positions:
         return []
 
+    # Regime check: in a high-VIX risk-off tape, do NOT advise deploying cash or
+    # adding to longs — that is "catching a falling knife". Suppress buy actions
+    # and tell the operator to hold cash instead.
+    try:
+        vix_closes = _fetch_chart("^VIX", range_str="5d", interval="1d")
+        vix = float(vix_closes[-1]) if vix_closes else 20.0
+    except Exception:
+        vix = 20.0
+    risk_off = vix >= 25.0
+
     targets = compute_target_weights(positions, portfolio_value)
     alerts = []
 
@@ -375,6 +388,11 @@ def check_rebalance_drift(
 
         if abs(drift) > REBALANCE_DRIFT_PCT:
             action = "TRIM" if drift > 0 else "ADD"
+            # In risk-off, don't recommend adding to longs — hold instead.
+            note = ""
+            if action == "ADD" and risk_off:
+                action = "HOLD"
+                note = f"risk-off (VIX {vix:.0f}) — not adding to longs"
             trim_amount = round(abs(drift) / 100 * portfolio_value, 2)
             alerts.append({
                 "ticker": ticker,
@@ -384,6 +402,7 @@ def check_rebalance_drift(
                 "action": action,
                 "amount": trim_amount,
                 "etf_name": pos.get("etf_name", ""),
+                "regime_note": note,
             })
 
     # Check cash drift
@@ -391,14 +410,22 @@ def check_rebalance_drift(
     cash_target = targets.get("CASH", 0.10) * 100
     cash_drift = cash_weight - cash_target
     if abs(cash_drift) > REBALANCE_DRIFT_PCT:
+        # Excess cash normally says DEPLOY, but in risk-off, holding cash IS the
+        # position — flip to HOLD so the dashboard stops urging dip-buying.
+        cash_action = "DEPLOY" if cash_drift > 0 else "RAISE"
+        cash_note = ""
+        if cash_action == "DEPLOY" and risk_off:
+            cash_action = "HOLD"
+            cash_note = f"risk-off (VIX {vix:.0f}) — keep cash, do not deploy into the dip"
         alerts.append({
             "ticker": "CASH",
             "actual_weight_pct": round(cash_weight, 2),
             "target_weight_pct": round(cash_target, 2),
             "drift_pct": round(cash_drift, 2),
-            "action": "DEPLOY" if cash_drift > 0 else "RAISE",
+            "action": cash_action,
             "amount": round(abs(cash_drift) / 100 * portfolio_value, 2),
             "etf_name": "Cash Reserve",
+            "regime_note": cash_note,
         })
 
     return sorted(alerts, key=lambda a: abs(a["drift_pct"]), reverse=True)

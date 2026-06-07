@@ -48,7 +48,10 @@ MAX_POSITIONS           = 6
 MAX_SINGLE_POSITION_PCT = 0.22
 STOP_LOSS_PCT           = 0.10   # fallback hard stop if instrument risk is unknown
 TRAILING_STOP_PCT       = 0.08
-TRAIL_ACTIVATION_PCT    = 0.05
+# Trail engages once a position is up this much. Lowered 5% -> 3%: at 5% the
+# trail almost never armed (most names never ran +5% before rolling over), so
+# every position rode its wide hard stop straight down. 3% locks gains sooner.
+TRAIL_ACTIVATION_PCT    = 0.03
 
 # "Cut losers": hard stop sized by instrument volatility so losers exit fast
 # without whipsawing volatile names (a flat 6% would stop a Bitcoin ETF out on
@@ -115,6 +118,29 @@ DECAY_STALL_MIN_GAIN_PCT   = 0.03  # ...and is below this gain, cut the decay bl
 def _is_decay_etf(ticker: str) -> bool:
     """True for inverse/leveraged/vol ETFs that must be held days, not months."""
     return (ticker or "").upper() in DECAY_ETF_TICKERS
+
+
+# Regime-stop thresholds: tighten hard stops as volatility climbs.
+VIX_STOP_ELEVATED = 25.0
+VIX_STOP_EXTREME  = 30.0
+
+
+def regime_stop_multiplier() -> float:
+    """Multiplier applied to hard-stop distance based on live VIX.
+
+    1.0 normal, 0.75 when VIX >= 25 (elevated), 0.6 when VIX >= 30 (extreme).
+    Smaller = tighter stop = losers cut faster when the tape is violent."""
+    try:
+        vix = _yahoo_chart_price("^VIX")
+    except Exception:
+        vix = None
+    if vix is None:
+        return 1.0
+    if vix >= VIX_STOP_EXTREME:
+        return 0.6
+    if vix >= VIX_STOP_ELEVATED:
+        return 0.75
+    return 1.0
 
 
 def _decay_profile(ticker: str) -> dict:
@@ -667,6 +693,9 @@ class PaperPortfolio:
         self.monthly_deposits: Dict[str, float] = {}
         self.trade_counter               = 0
         self.monthly_reserve_inr         = 0.0
+        # Regime stop multiplier: <1.0 tightens hard stops in high-VIX tape.
+        # Refreshed once per mark_to_market; defaults to neutral until then.
+        self._regime_stop_mult           = 1.0
 
         self._load()
         if self._load_failed:
@@ -923,7 +952,14 @@ class PaperPortfolio:
 
     def _update_position_risk(self, position: Position):
         position.peak_price = max(position.peak_price or 0.0, position.current_price, position.entry_price)
-        hard_stop = position.entry_price * (1 - self._hard_stop_pct(position))
+        # Tighten the hard stop in a high-VIX regime (multiplier < 1.0 shrinks the
+        # loss distance). A 12% stop on a leveraged name during a VIX-30 panic is
+        # far too loose — cut faster when the tape is violent. Decay/inverse ETFs
+        # are exempt: they are the hedge and need room to work in exactly that tape.
+        stop_pct = self._hard_stop_pct(position)
+        if not _is_decay_etf(position.ticker):
+            stop_pct *= getattr(self, "_regime_stop_mult", 1.0)
+        hard_stop = position.entry_price * (1 - stop_pct)
         trailing_active = (
             position.peak_price >= position.entry_price * (1 + TRAIL_ACTIVATION_PCT)
             or position.half_exited
@@ -967,12 +1003,35 @@ class PaperPortfolio:
             return 1.15
         return 1.0
 
-    def _position_size(self, confidence: int, severity: str = "MEDIUM") -> float:
+    @staticmethod
+    def _direction_scalar(direction_score: float) -> float:
+        """Scale size by directional conviction, not just news volume.
+
+        Confidence measures *how much* news, not *which way* — that's why the
+        highest-confidence name (QQQ 96) was the biggest loser. direction_score
+        captures the bullish/bearish lean. A genuinely BULLISH signal (>= +2.0)
+        sizes full; a NEUTRAL one driven only by news volume is cut back so the
+        noisiest sector no longer gets the largest bet."""
+        if direction_score >= 4.0:
+            return 1.15
+        if direction_score >= 2.0:
+            return 1.0
+        if direction_score >= 0.0:
+            return 0.70
+        return 0.50  # negative lean on a long: minimal size (direction gate should catch most)
+
+    def _position_size(
+        self,
+        confidence: int,
+        severity: str = "MEDIUM",
+        direction_score: float = 2.0,
+    ) -> float:
         base_fraction = BASE_RISK_BUDGET_BY_SEVERITY.get(severity, BASE_RISK_BUDGET_BY_SEVERITY["MEDIUM"])
         confidence_scalar = 0.75 + max(confidence - 60, 0) / 100.0
         slot_scalar = 1.0 if len(self.open_positions) < 3 else 0.9
         empirical_scalar = self._empirical_edge_multiplier(severity)
-        fraction = base_fraction * confidence_scalar * slot_scalar * empirical_scalar
+        direction_scalar = self._direction_scalar(direction_score)
+        fraction = base_fraction * confidence_scalar * slot_scalar * empirical_scalar * direction_scalar
         # Ensure the calculated fraction does not exceed the single position cap
         return round(min(fraction, MAX_SINGLE_POSITION_PCT), 4)
 
@@ -1334,7 +1393,9 @@ class PaperPortfolio:
                     )
                     return None
 
-        fraction = self._position_size(confidence, severity)
+        fraction = self._position_size(
+            confidence, severity, float(signal.get("direction_score", 2.0))
+        )
         if fraction <= 0:
             return None
 
@@ -1515,6 +1576,12 @@ class PaperPortfolio:
 
         if not trading_allowed and self.open_positions:
             log.info("Weekend mark-to-market only - paper-trade exits are paused until the next weekday")
+
+        # Refresh the regime stop multiplier once per cycle so _update_position_risk
+        # tightens stops on every position consistently this pass.
+        self._regime_stop_mult = regime_stop_multiplier()
+        if self._regime_stop_mult < 1.0:
+            log.info("High-VIX regime — hard stops tightened (multiplier %.2f)", self._regime_stop_mult)
 
         usd_inr = fetch_usd_to_inr()
 
