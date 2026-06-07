@@ -189,6 +189,8 @@ class SignalStateManager:
             "sector_label":         signal.get("sector_label", ""),
             "article_count":        signal.get("article_count", 0),
             "severity":             signal.get("severity", ""),
+            "direction":            signal.get("direction", "NEUTRAL"),
+            "direction_score":      float(signal.get("direction_score", 0.0)),
             "regions":              signal.get("regions", [])[:6],
             "sources":              signal.get("sources", [])[:6],
             "top_headlines":        signal.get("top_headlines", [])[:5],

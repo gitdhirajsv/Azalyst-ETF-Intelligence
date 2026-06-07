@@ -69,6 +69,21 @@ BANNER = """
 """
 
 
+def _get_5d_return(ticker: str):
+    """Return the 5-session price return for ticker, or None on failure."""
+    try:
+        import yfinance as yf
+        hist = yf.Ticker(ticker).history(period="15d")
+        if hist.empty:
+            return None
+        closes = hist["Close"].dropna()
+        if len(closes) < 6:
+            return None
+        return float(closes.iloc[-1] / closes.iloc[-6] - 1)
+    except Exception:
+        return None
+
+
 def _select_etf_for_trade(signal: dict) -> tuple:
     """Pick the highest-ranked ETF from the unified recommendation set."""
     etf_recs = signal.get("etf_recommendations", {})
@@ -199,16 +214,49 @@ def run_intelligence_cycle(
             if cfg.PAPER_TRADING_ENABLED and not is_update:
                 severity   = signal.get("severity", "LOW")
                 confidence = signal.get("confidence", 0)
-                
+                direction  = signal.get("direction", "BULLISH")
+
                 # External shock check — don't trade if cross-asset stress is extreme
                 if _RISK_ADVANCED and CIRCUIT_BREAKER_ACTIVE:
                     log.warning("Trade skipped — external shock circuit breaker active")
                     continue
-                
+
                 if severity in ("HIGH", "CRITICAL") or confidence >= 75:
+
+                    # DIRECTION GATE: BEARISH signals must route to inverse ETFs, never long
+                    if direction == "BEARISH":
+                        if severity in ("HIGH", "CRITICAL"):
+                            bearish_recs = mapper.get_etfs(["bearish_macro"], signal)
+                            b_etf = bearish_recs.get("primary")
+                            b_platform = b_etf.get("platform", "Broker") if b_etf else None
+                            if b_etf and b_platform:
+                                log.info(
+                                    "BEARISH signal -> inverse ETF entry: %s (sector=%s conf=%d)",
+                                    b_etf.get("ticker"), signal.get("sector_label"), confidence,
+                                )
+                                b_entry = portfolio.enter_position(signal, b_etf, b_platform)
+                                if b_entry and not b_entry.get("is_topup"):
+                                    port_reporter.send_trade_entry(b_entry, signal)
+                        else:
+                            log.info(
+                                "BEARISH signal skipped — not HIGH/CRITICAL: %s (conf=%d)",
+                                signal.get("sector_label"), confidence,
+                            )
+                        continue
+
                     etf, platform = _select_etf_for_trade(signal)
                     if etf and platform:
                         ticker = etf.get("ticker")
+
+                        # PRICE-DIVERGENCE GATE: news says BULLISH but price already falling
+                        if ticker:
+                            ret_5d = _get_5d_return(ticker)
+                            if ret_5d is not None and ret_5d < -0.02:
+                                log.warning(
+                                    "Trade skipped — news BULLISH but %s price down %.1f%% over 5 days",
+                                    ticker, ret_5d * 100,
+                                )
+                                continue
 
                         # ── Graduated trend adjustment (replaces binary Quant Blocker) ──
                         if ticker and _RISK_ADVANCED:
@@ -317,9 +365,18 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, quant_fetcher, 
         if confidence < 75:
             continue  # Only HIGH/CRITICAL confidence signals
 
+        direction    = record.get("direction", "NEUTRAL")
         sector_label = record.get("sector_label", "Unknown")
         sectors      = sector_key.split("|")
         severity     = "CRITICAL" if confidence >= 80 else "HIGH"
+
+        # DIRECTION GATE: never seed a long position from a stored BEARISH signal
+        if direction == "BEARISH":
+            log.info(
+                "Seed skipped — stored direction is BEARISH for %s (conf=%d)",
+                sector_label, confidence,
+            )
+            continue
 
         etf_recs = mapper.get_etfs(sectors, record)
         signal = {
@@ -327,12 +384,23 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, quant_fetcher, 
             "sector_label":         sector_label,
             "confidence":           confidence,
             "severity":             severity,
+            "direction":            direction,
             "top_headlines":        [f"Startup seed — {sector_label} (conf: {confidence})"],
             "etf_recommendations":  etf_recs,
         }
 
         etf, platform = _select_etf_for_trade(signal)
         if etf and platform:
+            # PRICE-DIVERGENCE GATE: price already falling despite bullish signal in state
+            seed_ticker = etf.get("ticker")
+            if seed_ticker:
+                ret_5d = _get_5d_return(seed_ticker)
+                if ret_5d is not None and ret_5d < -0.02:
+                    log.warning(
+                        "Seed skipped — %s price down %.1f%% over 5 days despite stored bullish signal",
+                        seed_ticker, ret_5d * 100,
+                    )
+                    continue
             ticker = etf.get("ticker")
             if ticker:
                 if _RISK_ADVANCED:
