@@ -117,15 +117,46 @@ def _market_regime():
 def _regime_size_multiplier(regime: str) -> float:
     """Scale long size to the volatility regime instead of blocking the entry.
 
-    A dip is an opportunity to invest, not a reason to halt — so we still take
-    the position, just smaller when the tape is shaky. NORMAL = full size,
-    ELEVATED = 0.6x, EXTREME = 0.4x. Bearish signals route to inverse ETFs
-    separately and are unaffected by this."""
+    This is the VOLATILITY dampener — distinct from the DIRECTION filter below.
+    When the market is volatile but NOT falling, longs are still OK, just smaller:
+    NORMAL = full size, ELEVATED = 0.6x, EXTREME = 0.4x. Bearish signals route to
+    inverse ETFs separately and are unaffected by this."""
     if regime == "EXTREME":
         return 0.4
     if regime == "ELEVATED":
         return 0.6
     return 1.0
+
+
+def _market_downturn():
+    """Return (in_downturn: bool, detail: str) for the broad market (SPY).
+
+    DIRECTION filter, separate from the VIX volatility dampener. A downturn is a
+    falling market — SPY below its 50-day MA (sustained downtrend) OR SPY down
+    >3% over the last 5 sessions (sharp drop). When the market is in a downturn
+    it is NOT ok to open longs: capital should go to inverse ETFs (the short
+    side), not long ETFs. High volatility alone is not a downturn."""
+    try:
+        import yfinance as yf
+        closes = yf.Ticker("SPY").history(period="3mo")["Close"].dropna()
+        if len(closes) < 50:
+            return False, "insufficient SPY history — longs allowed"
+        last = float(closes.iloc[-1])
+        ma50 = float(closes.rolling(50).mean().iloc[-1])
+        ret5 = float(closes.iloc[-1] / closes.iloc[-6] - 1) if len(closes) >= 6 else 0.0
+        below_ma   = last < ma50
+        sharp_drop = ret5 <= -0.03
+        if below_ma or sharp_drop:
+            why = []
+            if below_ma:
+                why.append(f"SPY {last:.0f} < 50dMA {ma50:.0f}")
+            if sharp_drop:
+                why.append(f"SPY 5d {ret5 * 100:+.1f}%")
+            return True, "; ".join(why)
+        return False, f"SPY {last:.0f} >= 50dMA {ma50:.0f}, 5d {ret5 * 100:+.1f}%"
+    except Exception as exc:
+        # Fail open — a data hiccup should not silently halt all long entries.
+        return False, f"downturn check failed ({exc}) — longs allowed"
 
 
 def _select_etf_for_trade(signal: dict) -> tuple:
@@ -243,9 +274,16 @@ def run_intelligence_cycle(
         new_signals = state.filter_new_or_updated(scored_signals)
         log.info(f"{len(new_signals)} new/updated signals after multi-engine scoring")
 
-        # Volatility regime — computed once per cycle, gates all long entries below.
+        # Volatility regime (size dampener) + market direction (downturn = no longs).
+        # Both computed once per cycle and applied to every long entry below.
         cycle_vix, cycle_regime = _market_regime()
+        cycle_downturn, cycle_downturn_detail = _market_downturn()
         log.info("Market regime: VIX %.1f → %s", cycle_vix, cycle_regime)
+        log.info(
+            "Market direction: %s (%s)",
+            "DOWNTURN — longs off, shorts only" if cycle_downturn else "not a downturn — longs allowed",
+            cycle_downturn_detail,
+        )
 
         for signal in new_signals:
             etf_recs = mapper.get_etfs(signal["sectors"], signal)
@@ -292,9 +330,19 @@ def run_intelligence_cycle(
                             )
                         continue
 
-                    # REGIME SIZING: don't skip longs in a dip — assess and invest,
-                    # just size down when volatility is high. (Bearish signals were
-                    # already routed to inverse ETFs above and bypass this.)
+                    # DIRECTION FILTER: if the broad market is in a downturn it is
+                    # not ok to open longs — the short side (inverse ETFs, routed
+                    # above from bearish signals) is how we participate. Block the
+                    # long here.
+                    if cycle_downturn:
+                        log.info(
+                            "Long entry blocked — market in downturn (%s); %s long skipped (%s)",
+                            cycle_downturn_detail, severity, signal.get("sector_label"),
+                        )
+                        continue
+
+                    # REGIME SIZING: outside a downturn, don't skip longs in a dip —
+                    # assess and invest, just size down when volatility is high.
                     regime_mult = _regime_size_multiplier(cycle_regime)
                     if regime_mult < 1.0:
                         signal["_regime_size_mult"] = regime_mult
@@ -437,10 +485,17 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, quant_fetcher, 
     log.info("Startup trade seeder running — checking existing signals for entry...")
     seeded = 0
 
-    # Regime gate for the cold-start seeder too — never seed a fresh long book
-    # straight into a risk-off tape (the exact failure that opened 6 sinking longs).
+    # Regime (size) + direction (downturn) for the cold-start seeder too — never
+    # seed a fresh long book into a falling market (the exact failure that opened
+    # 6 sinking longs). Both computed once here.
     seed_vix, seed_regime = _market_regime()
+    seed_downturn, seed_downturn_detail = _market_downturn()
     log.info("Seed-time market regime: VIX %.1f → %s", seed_vix, seed_regime)
+    log.info(
+        "Seed-time market direction: %s (%s)",
+        "DOWNTURN — long seeds off" if seed_downturn else "not a downturn",
+        seed_downturn_detail,
+    )
 
     # Stage entries by conviction instead of dumping every stored signal at once.
     # The original seeder opened all 6 positions in the same minute with zero
@@ -477,7 +532,16 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, quant_fetcher, 
             )
             continue
 
-        # REGIME SIZING: don't skip seeds in a dip — invest, just size down.
+        # DIRECTION FILTER: no long seeds while the market is in a downturn.
+        if seed_downturn:
+            log.info(
+                "Seed skipped — market in downturn (%s); long seed off for %s",
+                seed_downturn_detail, sector_label,
+            )
+            continue
+
+        # REGIME SIZING: outside a downturn, don't skip seeds in a dip — invest,
+        # just size down when volatility is high.
         regime_mult = _regime_size_multiplier(seed_regime)
 
         etf_recs = mapper.get_etfs(sectors, record)
