@@ -388,12 +388,13 @@ def check_rebalance_drift(
 
         if abs(drift) > REBALANCE_DRIFT_PCT:
             action = "TRIM" if drift > 0 else "ADD"
-            # In risk-off, don't recommend adding to longs — hold instead.
             note = ""
-            if action == "ADD" and risk_off:
-                action = "HOLD"
-                note = f"risk-off (VIX {vix:.0f}) — not adding to longs"
             trim_amount = round(abs(drift) / 100 * portfolio_value, 2)
+            # In risk-off, still add to longs (a dip is an entry) but in smaller
+            # tranches — halve the recommended amount and flag the caution.
+            if action == "ADD" and risk_off:
+                trim_amount = round(trim_amount * 0.5, 2)
+                note = f"risk-off (VIX {vix:.0f}) — add gradually, half tranche"
             alerts.append({
                 "ticker": ticker,
                 "actual_weight_pct": round(actual_weight, 2),
@@ -410,20 +411,21 @@ def check_rebalance_drift(
     cash_target = targets.get("CASH", 0.10) * 100
     cash_drift = cash_weight - cash_target
     if abs(cash_drift) > REBALANCE_DRIFT_PCT:
-        # Excess cash normally says DEPLOY, but in risk-off, holding cash IS the
-        # position — flip to HOLD so the dashboard stops urging dip-buying.
         cash_action = "DEPLOY" if cash_drift > 0 else "RAISE"
         cash_note = ""
+        cash_amount = round(abs(cash_drift) / 100 * portfolio_value, 2)
+        # Deploy into the dip, but gradually — halve the tranche in risk-off so
+        # capital is staged in rather than dumped at one volatile price.
         if cash_action == "DEPLOY" and risk_off:
-            cash_action = "HOLD"
-            cash_note = f"risk-off (VIX {vix:.0f}) — keep cash, do not deploy into the dip"
+            cash_amount = round(cash_amount * 0.5, 2)
+            cash_note = f"risk-off (VIX {vix:.0f}) — deploy gradually into the dip, half tranche"
         alerts.append({
             "ticker": "CASH",
             "actual_weight_pct": round(cash_weight, 2),
             "target_weight_pct": round(cash_target, 2),
             "drift_pct": round(cash_drift, 2),
             "action": cash_action,
-            "amount": round(abs(cash_drift) / 100 * portfolio_value, 2),
+            "amount": cash_amount,
             "etf_name": "Cash Reserve",
             "regime_note": cash_note,
         })

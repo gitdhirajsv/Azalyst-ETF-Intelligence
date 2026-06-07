@@ -114,13 +114,18 @@ def _market_regime():
     return vix, "NORMAL"
 
 
-def _long_entry_allowed_in_regime(severity: str, regime: str) -> bool:
-    """Gate long entries by volatility regime. Inverse/bearish entries bypass this."""
+def _regime_size_multiplier(regime: str) -> float:
+    """Scale long size to the volatility regime instead of blocking the entry.
+
+    A dip is an opportunity to invest, not a reason to halt — so we still take
+    the position, just smaller when the tape is shaky. NORMAL = full size,
+    ELEVATED = 0.6x, EXTREME = 0.4x. Bearish signals route to inverse ETFs
+    separately and are unaffected by this."""
     if regime == "EXTREME":
-        return False
+        return 0.4
     if regime == "ELEVATED":
-        return severity == "CRITICAL"
-    return True
+        return 0.6
+    return 1.0
 
 
 def _select_etf_for_trade(signal: dict) -> tuple:
@@ -287,15 +292,17 @@ def run_intelligence_cycle(
                             )
                         continue
 
-                    # REGIME GATE: don't add long risk into a high-VIX, risk-off tape.
-                    # ELEVATED → only CRITICAL longs; EXTREME → no new longs at all.
-                    # (Bearish signals already routed to inverse ETFs above, bypassing this.)
-                    if not _long_entry_allowed_in_regime(severity, cycle_regime):
+                    # REGIME SIZING: don't skip longs in a dip — assess and invest,
+                    # just size down when volatility is high. (Bearish signals were
+                    # already routed to inverse ETFs above and bypass this.)
+                    regime_mult = _regime_size_multiplier(cycle_regime)
+                    if regime_mult < 1.0:
+                        signal["_regime_size_mult"] = regime_mult
                         log.info(
-                            "Long entry skipped — VIX %.1f %s regime blocks %s-severity long (%s)",
-                            cycle_vix, cycle_regime, severity, signal.get("sector_label"),
+                            "VIX %.1f %s — sizing %s long to %.0f%% (%s)",
+                            cycle_vix, cycle_regime, severity, regime_mult * 100,
+                            signal.get("sector_label"),
                         )
-                        continue
 
                     etf, platform = _select_etf_for_trade(signal)
                     if etf and platform:
@@ -470,13 +477,8 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, quant_fetcher, 
             )
             continue
 
-        # REGIME GATE: don't seed longs into a high-VIX risk-off tape
-        if not _long_entry_allowed_in_regime(severity, seed_regime):
-            log.info(
-                "Seed skipped — VIX %.1f %s regime blocks %s-severity long (%s)",
-                seed_vix, seed_regime, severity, sector_label,
-            )
-            continue
+        # REGIME SIZING: don't skip seeds in a dip — invest, just size down.
+        regime_mult = _regime_size_multiplier(seed_regime)
 
         etf_recs = mapper.get_etfs(sectors, record)
         signal = {
@@ -485,11 +487,18 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, quant_fetcher, 
             "confidence":           confidence,
             "severity":             severity,
             "direction":            direction,
+            "direction_score":      record.get("direction_score", 2.0),
             "signal_scope":         signal_scope,
             "india_article_ratio":  record.get("india_article_ratio", 0.0),
+            "_regime_size_mult":    regime_mult,
             "top_headlines":        [f"Startup seed — {sector_label} (conf: {confidence})"],
             "etf_recommendations":  etf_recs,
         }
+        if regime_mult < 1.0:
+            log.info(
+                "VIX %.1f %s — sizing seed %s to %.0f%% (%s)",
+                seed_vix, seed_regime, severity, regime_mult * 100, sector_label,
+            )
 
         etf, platform = _select_etf_for_trade(signal)
         if etf and platform:

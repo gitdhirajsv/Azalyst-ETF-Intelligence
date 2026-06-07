@@ -72,12 +72,16 @@ MAX_HOLD_DAYS           = 180
 # Leveraged / inverse ETFs decay via daily rebalancing compounding. Hard cap
 # their hold period well below the global 180-day limit so a slow grind against
 # the position does not destroy value over months of chop.
+# Inverse ETFs are the short proxy (you can't hold real shorts overnight), but
+# they BLEED from daily rebalancing decay — they are a few-day tactical capture,
+# never a position to sit in. Tightened windows: leverage decays fastest, so the
+# 3x names get the shortest leash.
 INVERSE_ETF_MAX_HOLD_DAYS: dict = {
-    "SQQQ": 14, "SDS": 14,   # 3x / 2x leveraged inverse — max 2 weeks
-    "PSQ": 30,  "SH": 30,    # 1x inverse — max 30 days
-    "SPXS": 14, "SPXU": 14,  # Direxion / ProShares 3x inverse
-    "SOXS": 14, "FAZ": 14,   # sector inverse leveraged
-    "UVXY": 7,  "VIXY": 14,  # volatility products
+    "SQQQ": 7,  "SDS": 10,   # 3x / 2x leveraged inverse — out within days
+    "PSQ": 14,  "SH": 14,    # 1x inverse — still don't sit for weeks
+    "SPXS": 7,  "SPXU": 7,   # Direxion / ProShares 3x inverse
+    "SOXS": 7,  "FAZ": 10,   # sector inverse leveraged
+    "UVXY": 5,  "VIXY": 10,  # volatility products
 }
 
 # Decay-aware exit policy for inverse / leveraged / vol ETFs. These rebalance
@@ -111,7 +115,7 @@ DECAY_ETF_PROFILE = {
 }
 _DECAY_DEFAULT_PROFILE     = {"take_profit": 0.10, "trail": 0.05}
 DECAY_ETF_TICKERS          = set(DECAY_ETF_PROFILE)
-DECAY_STALL_DAYS           = 5     # if it hasn't worked in this many days...
+DECAY_STALL_DAYS           = 3     # if a short hasn't worked in this many days...
 DECAY_STALL_MIN_GAIN_PCT   = 0.03  # ...and is below this gain, cut the decay bleed
 
 
@@ -1396,6 +1400,8 @@ class PaperPortfolio:
         fraction = self._position_size(
             confidence, severity, float(signal.get("direction_score", 2.0))
         )
+        # Volatility-regime dampener: invest in the dip but smaller when shaky.
+        fraction *= float(signal.get("_regime_size_mult", 1.0))
         if fraction <= 0:
             return None
 
