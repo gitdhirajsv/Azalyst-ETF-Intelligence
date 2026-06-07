@@ -84,6 +84,45 @@ def _get_5d_return(ticker: str):
         return None
 
 
+# Volatility regime thresholds (live VIX). Below ELEVATED = trade normally.
+# ELEVATED = only highest-conviction longs allowed (the market is shaky).
+# EXTREME  = no new longs at all; only inverse/bearish entries make sense.
+VIX_ELEVATED = 25.0
+VIX_EXTREME  = 30.0
+
+# Cold-start seeder: max positions to open in one startup pass. Staging by
+# conviction beats dumping every stored signal into the book simultaneously.
+MAX_SEED_POSITIONS = 2
+
+
+def _market_regime():
+    """Return (vix_level, regime) where regime is NORMAL / ELEVATED / EXTREME.
+
+    A long book has no business adding risk into a spiking-VIX, risk-off tape.
+    This is the regime awareness the entry path was missing — the 6 startup-seed
+    longs were opened straight into a falling market with VIX ramping."""
+    vix = 20.0
+    try:
+        if _RISK_ADVANCED and external_shock_check is not None:
+            vix = float(external_shock_check().get("indicators", {}).get("vix", 20.0))
+    except Exception:
+        vix = 20.0
+    if vix >= VIX_EXTREME:
+        return vix, "EXTREME"
+    if vix >= VIX_ELEVATED:
+        return vix, "ELEVATED"
+    return vix, "NORMAL"
+
+
+def _long_entry_allowed_in_regime(severity: str, regime: str) -> bool:
+    """Gate long entries by volatility regime. Inverse/bearish entries bypass this."""
+    if regime == "EXTREME":
+        return False
+    if regime == "ELEVATED":
+        return severity == "CRITICAL"
+    return True
+
+
 def _select_etf_for_trade(signal: dict) -> tuple:
     """Pick the highest-ranked ETF from the unified recommendation set."""
     etf_recs = signal.get("etf_recommendations", {})
@@ -199,6 +238,10 @@ def run_intelligence_cycle(
         new_signals = state.filter_new_or_updated(scored_signals)
         log.info(f"{len(new_signals)} new/updated signals after multi-engine scoring")
 
+        # Volatility regime — computed once per cycle, gates all long entries below.
+        cycle_vix, cycle_regime = _market_regime()
+        log.info("Market regime: VIX %.1f → %s", cycle_vix, cycle_regime)
+
         for signal in new_signals:
             etf_recs = mapper.get_etfs(signal["sectors"], signal)
             signal["etf_recommendations"] = etf_recs
@@ -242,6 +285,16 @@ def run_intelligence_cycle(
                                 "BEARISH signal skipped — not HIGH/CRITICAL: %s (conf=%d)",
                                 signal.get("sector_label"), confidence,
                             )
+                        continue
+
+                    # REGIME GATE: don't add long risk into a high-VIX, risk-off tape.
+                    # ELEVATED → only CRITICAL longs; EXTREME → no new longs at all.
+                    # (Bearish signals already routed to inverse ETFs above, bypassing this.)
+                    if not _long_entry_allowed_in_regime(severity, cycle_regime):
+                        log.info(
+                            "Long entry skipped — VIX %.1f %s regime blocks %s-severity long (%s)",
+                            cycle_vix, cycle_regime, severity, signal.get("sector_label"),
+                        )
                         continue
 
                     etf, platform = _select_etf_for_trade(signal)
@@ -377,7 +430,28 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, quant_fetcher, 
     log.info("Startup trade seeder running — checking existing signals for entry...")
     seeded = 0
 
-    for sector_key, record in state._state.items():
+    # Regime gate for the cold-start seeder too — never seed a fresh long book
+    # straight into a risk-off tape (the exact failure that opened 6 sinking longs).
+    seed_vix, seed_regime = _market_regime()
+    log.info("Seed-time market regime: VIX %.1f → %s", seed_vix, seed_regime)
+
+    # Stage entries by conviction instead of dumping every stored signal at once.
+    # The original seeder opened all 6 positions in the same minute with zero
+    # diversification across time — cap it and take only the highest-conviction.
+    ranked_records = sorted(
+        state._state.items(),
+        key=lambda kv: kv[1].get("confidence", 0),
+        reverse=True,
+    )
+
+    for sector_key, record in ranked_records:
+        if seeded >= MAX_SEED_POSITIONS:
+            log.info(
+                "Seed cap reached (%d) — remaining signals deferred to live cycles",
+                MAX_SEED_POSITIONS,
+            )
+            break
+
         confidence = record.get("confidence", 0)
         if confidence < 75:
             continue  # Only HIGH/CRITICAL confidence signals
@@ -393,6 +467,14 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, quant_fetcher, 
             log.info(
                 "Seed skipped — stored direction is BEARISH for %s (conf=%d)",
                 sector_label, confidence,
+            )
+            continue
+
+        # REGIME GATE: don't seed longs into a high-VIX risk-off tape
+        if not _long_entry_allowed_in_regime(severity, seed_regime):
+            log.info(
+                "Seed skipped — VIX %.1f %s regime blocks %s-severity long (%s)",
+                seed_vix, seed_regime, severity, sector_label,
             )
             continue
 
