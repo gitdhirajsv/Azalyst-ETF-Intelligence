@@ -34,30 +34,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "HIGH_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.08366732196286483,
-    "vix_level": 19.8700008392334,
-    "vix_percentile_1y": 0.7857142857142857,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 18,
-      "flow": 18,
-      "options": 28,
-      "rotation": 12,
-      "macro": 12,
-      "news": 12
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
+      "rotation": 15,
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
-    "ticker": "IWM",
-    "rank_score": 8.588417910447761,
+    "ticker": "TBIL",
+    "rank_score": 17.72253920836445,
     "flow_score": 18.0,
-    "options_score": 14.826548521783746,
+    "options_score": 0.0,
     "rotation_score": 0.0,
     "macro_score": 0.0,
     "news_score": 0.0,
-    "total": 41.41496643223151,
+    "total": 35.72253920836445,
     "publish": false,
     "direction": "long"
   },
@@ -116,9 +116,9 @@
       "region": "UK",
       "price": 10227.33,
       "currency": "GBP",
-      "change": -145.87,
-      "change_pct": -1.41,
-      "change_str": "-1.41%",
+      "change": -140.77,
+      "change_pct": -1.36,
+      "change_str": "-1.36%",
       "direction": "down"
     },
     {
@@ -169,44 +169,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4279.7,
+      "price": 4238.9,
       "currency": "USD",
-      "change": -56.2,
-      "change_pct": -1.3,
-      "change_str": "-1.30%",
+      "change": -97.0,
+      "change_pct": -2.24,
+      "change_str": "-2.24%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 88.65,
+      "price": 89.11,
       "currency": "USD",
-      "change": -2.65,
-      "change_pct": -2.9,
-      "change_str": "-2.90%",
+      "change": -2.19,
+      "change_pct": -2.4,
+      "change_str": "-2.40%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 61761.39,
+      "price": 61748.32,
       "currency": "USD",
-      "change": -1329.2,
-      "change_pct": -2.11,
-      "change_str": "-2.11%",
+      "change": -1342.27,
+      "change_pct": -2.13,
+      "change_str": "-2.13%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.0,
+      "price": 100.02,
       "currency": "USD",
-      "change": -0.06,
-      "change_pct": -0.05,
-      "change_str": "-0.05%",
+      "change": -0.03,
+      "change_pct": -0.03,
+      "change_str": "-0.03%",
       "direction": "down"
     },
     {
@@ -269,8 +269,8 @@
     }
   },
   "logs": [
-    "2026-06-09 22:26:30 [INFO] AZALYST - status.json generated",
-    "2026-06-09 22:26:30 [INFO] PORTFOLIO - NAV USD 10,046.15 | Return +0.00%"
+    "2026-06-10 00:03:09 [INFO] AZALYST - status.json generated",
+    "2026-06-10 00:03:09 [INFO] PORTFOLIO - NAV USD 10,046.15 | Return +0.00%"
   ],
-  "generated_at": "2026-06-09 22:26:29 UTC"
+  "generated_at": "2026-06-10 00:03:08 UTC"
 }
