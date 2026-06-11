@@ -34,32 +34,32 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "HIGH_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.09405171046202601,
-    "vix_level": 21.530000686645508,
-    "vix_percentile_1y": 0.8611111111111112,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 18,
-      "flow": 18,
-      "options": 28,
-      "rotation": 12,
-      "macro": 12,
-      "news": 12
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
+      "rotation": 15,
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
-    "ticker": "EWY",
-    "rank_score": 9.073524962178517,
-    "flow_score": 4.94571215460286,
-    "options_score": 18.2,
-    "rotation_score": 12.0,
+    "ticker": "SPHD",
+    "rank_score": 17.3695952023988,
+    "flow_score": 18.0,
+    "options_score": 0.0,
+    "rotation_score": 0.0,
     "macro_score": 0.0,
     "news_score": 0.0,
-    "total": 44.21923711678137,
+    "total": 35.3695952023988,
     "publish": false,
-    "direction": "short"
+    "direction": "long"
   },
   "allocation": {
     "labels": [
@@ -81,33 +81,33 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7297.88,
+      "price": 7409.22,
       "currency": "USD",
-      "change": 30.89,
-      "change_pct": 0.43,
-      "change_str": "+0.43%",
+      "change": 142.23,
+      "change_pct": 1.96,
+      "change_str": "+1.96%",
       "direction": "up"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 25339.22,
+      "price": 25835.15,
       "currency": "USD",
-      "change": 169.72,
-      "change_pct": 0.67,
-      "change_str": "+0.67%",
+      "change": 665.65,
+      "change_pct": 2.64,
+      "change_str": "+2.64%",
       "direction": "up"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 50291.25,
+      "price": 50952.5,
       "currency": "USD",
-      "change": 372.47,
-      "change_pct": 0.75,
-      "change_str": "+0.75%",
+      "change": 1033.72,
+      "change_pct": 2.07,
+      "change_str": "+2.07%",
       "direction": "up"
     },
     {
@@ -160,64 +160,64 @@
       "region": "IN",
       "price": 23161.6,
       "currency": "INR",
-      "change": -53.35,
-      "change_pct": -0.23,
-      "change_str": "-0.23%",
+      "change": -80.5,
+      "change_pct": -0.35,
+      "change_str": "-0.35%",
       "direction": "down"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4103.6,
+      "price": 4227.5,
       "currency": "USD",
-      "change": -4.6,
-      "change_pct": -0.11,
-      "change_str": "-0.11%",
-      "direction": "down"
+      "change": 119.3,
+      "change_pct": 2.9,
+      "change_str": "+2.90%",
+      "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 91.31,
+      "price": 86.15,
       "currency": "USD",
-      "change": 1.28,
-      "change_pct": 1.42,
-      "change_str": "+1.42%",
-      "direction": "up"
+      "change": -3.88,
+      "change_pct": -4.31,
+      "change_str": "-4.31%",
+      "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 62600.0,
+      "price": 63731.38,
       "currency": "USD",
-      "change": 1150.71,
-      "change_pct": 1.87,
-      "change_str": "+1.87%",
+      "change": 2282.09,
+      "change_pct": 3.71,
+      "change_str": "+3.71%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.26,
+      "price": 99.63,
       "currency": "USD",
-      "change": 0.31,
-      "change_pct": 0.31,
-      "change_str": "+0.31%",
-      "direction": "up"
+      "change": -0.32,
+      "change_pct": -0.32,
+      "change_str": "-0.32%",
+      "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 21.53,
+      "price": 19.57,
       "currency": "USD",
-      "change": -0.69,
-      "change_pct": -3.11,
-      "change_str": "-3.11%",
+      "change": -2.65,
+      "change_pct": -11.93,
+      "change_str": "-11.93%",
       "direction": "down"
     }
   ],
@@ -225,7 +225,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
     "portfolio_peak": 10003.13,
-    "vix": 21.53,
+    "vix": 19.57,
     "vix_regime": "ELEVATED",
     "sector_concentration": [],
     "max_drawdown_pct": 0.0,
@@ -269,8 +269,8 @@
     }
   },
   "logs": [
-    "2026-06-11 16:48:59 [INFO] AZALYST - status.json generated",
-    "2026-06-11 16:48:59 [INFO] PORTFOLIO - NAV USD 10,003.13 | Return +0.00%"
+    "2026-06-11 19:42:37 [INFO] AZALYST - status.json generated",
+    "2026-06-11 19:42:37 [INFO] PORTFOLIO - NAV USD 10,003.13 | Return +0.00%"
   ],
-  "generated_at": "2026-06-11 16:48:57 UTC"
+  "generated_at": "2026-06-11 19:42:35 UTC"
 }
