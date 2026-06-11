@@ -1039,13 +1039,13 @@ class PaperPortfolio:
         # Ensure the calculated fraction does not exceed the single position cap
         return round(min(fraction, MAX_SINGLE_POSITION_PCT), 4)
 
-    def _select_rotation_candidate(self, signal: Dict) -> Optional[Position]:
+    def _select_rotation_candidate(self, signal: Dict, force: bool = False) -> Optional[Position]:
         incoming_conf   = signal.get("confidence", 0)
         incoming_sector = signal.get("sector_label", "")
         candidates = []
 
         for pos in self.open_positions:
-            if pos.days_held() < ROTATION_MIN_HOLD_DAYS:
+            if not force and pos.days_held() < ROTATION_MIN_HOLD_DAYS:
                 continue
 
             pnl_pct = pos.unrealised_pnl_pct()
@@ -1125,13 +1125,13 @@ class PaperPortfolio:
             "exit_price":       ct.exit_price,
         }
 
-    def _rotate_for_signal(self, signal: Dict, min_cash_needed: float) -> List[Dict]:
+    def _rotate_for_signal(self, signal: Dict, min_cash_needed: float, force: bool = False) -> List[Dict]:
         rotation_exits: List[Dict] = []
         attempts = 0
         usd_inr = fetch_usd_to_inr()
 
         while (self.cash_inr < min_cash_needed or len(self.open_positions) >= MAX_POSITIONS) and attempts < 2:
-            candidate = self._select_rotation_candidate(signal)
+            candidate = self._select_rotation_candidate(signal, force=force)
             if candidate is None:
                 break
 
@@ -1326,7 +1326,7 @@ class PaperPortfolio:
 
         return max(same_sector_stronger, key=lambda p: (p.confidence, p.unrealised_pnl_pct()))
 
-    def enter_position(self, signal: Dict, etf: Dict, platform: str) -> Optional[Dict]:
+    def enter_position(self, signal: Dict, etf: Dict, platform: str, is_hedge: bool = False) -> Optional[Dict]:
         confidence = signal.get("confidence", 0)
         severity   = signal.get("severity", "LOW")
         ticker     = etf["ticker"]
@@ -1443,7 +1443,7 @@ class PaperPortfolio:
 
         rotation_exits: List[Dict] = []
         if self.cash_inr < target_alloc or len(self.open_positions) >= MAX_POSITIONS:
-            rotation_exits = self._rotate_for_signal(signal, target_alloc)
+            rotation_exits = self._rotate_for_signal(signal, target_alloc, force=is_hedge)
 
         if self.cash_inr < MIN_TRADE_INR:
             log.info("Position rejected - insufficient cash (%.0f)", self.cash_inr)
@@ -1522,8 +1522,14 @@ class PaperPortfolio:
             }
 
         if len(self.open_positions) >= MAX_POSITIONS:
-            log.info("New position rejected - max positions (%s) reached", MAX_POSITIONS)
-            return None
+            if is_hedge:
+                log.warning(
+                    "Hedge entry forced despite max positions (%s) — rotation could not free a slot",
+                    MAX_POSITIONS,
+                )
+            else:
+                log.info("New position rejected - max positions (%s) reached", MAX_POSITIONS)
+                return None
 
         self.cash_inr -= invested
         position = Position(

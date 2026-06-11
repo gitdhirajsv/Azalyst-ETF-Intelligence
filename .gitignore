@@ -1,1 +1,28 @@
-(index.html is a source file, so no changes needed to .gitignore)
+# Bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Secrets
+.env
+
+# Runtime data — never commit live state/portfolio
+azalyst_portfolio.json
+azalyst_state.json
+status.json
+
+# Logs
+*.log
+
+# OS files
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Temp
+*.tmp
+data/.last_startup_msg

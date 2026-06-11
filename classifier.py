@@ -377,6 +377,7 @@ SECTOR_DEFINITIONS = {
 
     "bearish_macro": {
         "label": "Bearish Market / Macro Selloff",
+        "emoji": "📉",
         "keywords": [
             ("recession", 8), ("market crash", 9), ("stock market crash", 9),
             ("bear market", 8), ("selloff", 7), ("sell-off", 7), ("market selloff", 8),

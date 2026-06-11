@@ -320,7 +320,7 @@ def run_intelligence_cycle(
                                     "BEARISH signal -> inverse ETF entry: %s (sector=%s conf=%d)",
                                     b_etf.get("ticker"), signal.get("sector_label"), confidence,
                                 )
-                                b_entry = portfolio.enter_position(signal, b_etf, b_platform)
+                                b_entry = portfolio.enter_position(signal, b_etf, b_platform, is_hedge=True)
                                 if b_entry and not b_entry.get("is_topup"):
                                     port_reporter.send_trade_entry(b_entry, signal)
                         else:
