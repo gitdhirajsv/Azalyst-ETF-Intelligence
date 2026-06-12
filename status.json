@@ -1,22 +1,22 @@
 {
-  "portfolio_value": 9996.7,
-  "total_deposited": 10000.0,
-  "cash": 6999.68,
+  "portfolio_value": 10019.11,
+  "total_deposited": 10035.37,
+  "cash": 5082.08,
   "monthly_reserve": 0.0,
-  "market_value": 2997.03,
-  "total_invested": 3000.32,
-  "unrealised_pnl": -3.3,
-  "unrealised_str": "-3.30",
+  "market_value": 4937.03,
+  "total_invested": 4953.29,
+  "unrealised_pnl": -16.26,
+  "unrealised_str": "-16.26",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "-0.03%",
-  "change_raw": -0.03,
+  "change": "-0.16%",
+  "change_raw": -0.16,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 10000.0,
-  "drawdown_now_pct": 0.03,
-  "max_drawdown_pct": 0.03,
-  "usd_inr_rate": 95.75,
+  "portfolio_peak": 10035.37,
+  "drawdown_now_pct": 0.16,
+  "max_drawdown_pct": 0.16,
+  "usd_inr_rate": 95.4125,
   "positions": [
     {
       "trade_id": "T0001",
@@ -25,18 +25,41 @@
       "sector": "Gold & Precious Metals",
       "platform": "ProShares -- IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 33.78,
+      "entry": 33.86,
       "current": 33.74,
-      "peak_price": 33.78,
-      "trail_stop": 31.41,
-      "dist_to_trail_pct": 6.9,
-      "units": 88.827124,
-      "invested": 3000.32,
-      "pnl": -3.3,
-      "pnl_str": "-3.30",
-      "pnl_pct": -0.11,
-      "pnl_pct_str": "-0.11%",
+      "peak_price": 33.9,
+      "trail_stop": 31.49,
+      "dist_to_trail_pct": 6.65,
+      "units": 121.253357,
+      "invested": 4106.23,
+      "pnl": -15.33,
+      "pnl_str": "-15.33",
+      "pnl_pct": -0.37,
+      "pnl_pct_str": "-0.37%",
       "confidence": 92,
+      "severity": "HIGH",
+      "days_held": 0,
+      "half_exited": false
+    },
+    {
+      "trade_id": "T0002",
+      "ticker": "INDA",
+      "etf_name": "iShares MSCI India ETF",
+      "sector": "India Equity Markets",
+      "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NYSE",
+      "entry": 47.84,
+      "current": 47.79,
+      "peak_price": 47.84,
+      "trail_stop": 44.49,
+      "dist_to_trail_pct": 6.91,
+      "units": 17.706043,
+      "invested": 847.06,
+      "pnl": -0.85,
+      "pnl_str": "-0.85",
+      "pnl_pct": -0.1,
+      "pnl_pct_str": "-0.10%",
+      "confidence": 90,
       "severity": "HIGH",
       "days_held": 0,
       "half_exited": false
@@ -58,59 +81,71 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "HIGH_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.10793783337243096,
-    "vix_level": 19.440000534057617,
-    "vix_percentile_1y": 0.746031746031746,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 18,
-      "flow": 18,
-      "options": 28,
-      "rotation": 12,
-      "macro": 12,
-      "news": 12
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
+      "rotation": 15,
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
-    "ticker": "SMH",
-    "rank_score": 8.26519072550486,
-    "flow_score": 0.0,
-    "options_score": 26.76229090438697,
-    "rotation_score": 12.0,
+    "ticker": "BILS",
+    "rank_score": 17.976322869955155,
+    "flow_score": 18.0,
+    "options_score": 0.0,
+    "rotation_score": 0.0,
     "macro_score": 0.0,
     "news_score": 0.0,
-    "total": 47.02748162989183,
+    "total": 35.976322869955155,
     "publish": false,
-    "direction": "short"
+    "direction": "long"
   },
   "allocation": {
     "labels": [
       "SH",
+      "INDA",
       "CASH"
     ],
     "values": [
-      30.0,
-      70.0
+      40.8,
+      8.4,
+      50.7
     ]
   },
   "pnl": {
     "labels": [
-      "SH"
+      "SH",
+      "INDA"
     ],
     "values": [
-      -3.3
+      -15.33,
+      -0.85
     ]
   },
   "confidence": [
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 92.0
+      "symbol": "India Equity Markets",
+      "score": 90.0
     },
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 90.0
+      "score": 86.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 86.0
+    },
+    {
+      "symbol": "Gold & Precious Metals",
+      "score": 82.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -123,81 +158,79 @@
   ],
   "signals": [
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 92.0,
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 90.0,
       "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -3.5,
+      "direction": "BULLISH",
+      "direction_score": 5.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "12 Jun 2026 01:16 UTC",
-      "headline": "Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor",
+      "article_count": 21,
+      "latest_at": "12 Jun 2026 06:31 UTC",
+      "headline": "BSE CEO Sundararaman Ramamurthy on building trust, fighting deepfakes, and why yuva shakti &amp; nari shakti are future of Indian market",
       "regions": [
         "asia_pacific",
-        "global",
         "middle_east",
-        "india"
+        "india",
+        "global"
       ],
       "sources": [
         "Bloomberg Markets",
-        "Cointelegraph.com News",
-        "Markets-Economic Times",
-        "US Top News and Analysis"
+        "World News - Breaking international news and headlines | Sky News",
+        "BBC News",
+        "Markets-Economic Times"
       ],
-      "primary_etf": "GLDM",
+      "primary_etf": "INDA",
       "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
+        "NIFTYBEES",
+        "MIDCAPETF"
       ],
       "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
+        "INDA"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 22.0,
+        "signal_strength": 21.3,
         "volume_confirmation": 18.0,
-        "source_diversity": 12.1,
-        "recency": 16.2,
+        "source_diversity": 15.2,
+        "recency": 17.0,
         "geopolitical_severity": 13.0
       }
     },
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 90.0,
-      "severity": "CRITICAL",
+      "confidence": 86.0,
+      "severity": "HIGH",
       "direction": "BEARISH",
-      "direction_score": 1.5,
+      "direction_score": 2.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 34,
-      "latest_at": "12 Jun 2026 01:13 UTC",
+      "article_count": 28,
+      "latest_at": "12 Jun 2026 05:34 UTC",
       "headline": "Why Household Batteries Are Becoming Strategic Assets",
       "regions": [
-        "asia_pacific",
         "americas",
+        "asia_pacific",
         "middle_east",
         "global"
       ],
       "sources": [
         "Bloomberg Markets",
+        "Cointelegraph.com News",
         "US Top News and Analysis",
-        "Defense News",
         "Markets-Economic Times"
       ],
       "primary_etf": "XLE",
@@ -224,7 +257,112 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 13.8,
-        "recency": 16.1,
+        "recency": 15.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 67,
+      "latest_at": "11 Jun 2026 22:00 UTC",
+      "headline": "Rebellions Bets on Memory-Centric Architecture as it Weighs IPO Options",
+      "regions": [
+        "europe",
+        "americas",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "EE Times",
+        "Bloomberg Markets",
+        "Semiconductor Engineering",
+        "Tech"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.6,
+        "recency": 7.2,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 82.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 9,
+      "latest_at": "12 Jun 2026 05:07 UTC",
+      "headline": "Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor",
+      "regions": [
+        "europe",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "Cointelegraph.com News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 17.5,
+        "volume_confirmation": 15.4,
+        "source_diversity": 11.1,
+        "recency": 14.8,
         "geopolitical_severity": 13.0
       }
     },
@@ -328,14 +466,24 @@
   ],
   "articles": [
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / BEARISH - Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor"
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "India Equity Markets - 21 articles - HIGH / BULLISH - BSE CEO Sundararaman Ramamurthy on building trust, fighting deepfakes, and why yuva shakti &amp; nari shakti are future of Indian market"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 34 articles - CRITICAL / BEARISH - Why Household Batteries Are Becoming Strategic Assets"
+      "text": "Energy / Oil & Gas - 28 articles - HIGH / BEARISH - Why Household Batteries Are Becoming Strategic Assets"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Technology & AI / Semiconductors - 67 articles - HIGH / BEARISH - Rebellions Bets on Memory-Centric Architecture as it Weighs IPO Options"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Gold & Precious Metals - 9 articles - HIGH / BEARISH - Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor"
     },
     {
       "tag": "tag-bear",
@@ -408,77 +556,77 @@
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 66032.03,
+      "price": 66041.85,
       "currency": "JPY",
-      "change": 1814.76,
-      "change_pct": 2.83,
-      "change_str": "+2.83%",
+      "change": 1824.58,
+      "change_pct": 2.84,
+      "change_str": "+2.84%",
       "direction": "up"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 24534.33,
+      "price": 24647.47,
       "currency": "HKD",
-      "change": 285.04,
-      "change_pct": 1.18,
-      "change_str": "+1.18%",
+      "change": 398.18,
+      "change_pct": 1.64,
+      "change_str": "+1.64%",
       "direction": "up"
     },
     {
       "label": "Nifty 50",
       "ticker": "^NSEI",
       "region": "IN",
-      "price": 23161.6,
+      "price": 23368.2,
       "currency": "INR",
-      "change": -53.35,
-      "change_pct": -0.23,
-      "change_str": "-0.23%",
-      "direction": "down"
+      "change": 206.6,
+      "change_pct": 0.89,
+      "change_str": "+0.89%",
+      "direction": "up"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4209.3,
+      "price": 4203.2,
       "currency": "USD",
-      "change": 101.1,
-      "change_pct": 2.46,
-      "change_str": "+2.46%",
+      "change": 112.9,
+      "change_pct": 2.76,
+      "change_str": "+2.76%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 86.79,
+      "price": 85.92,
       "currency": "USD",
-      "change": -3.24,
-      "change_pct": -3.6,
-      "change_str": "-3.60%",
+      "change": -1.79,
+      "change_pct": -2.04,
+      "change_str": "-2.04%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63334.99,
+      "price": 62784.51,
       "currency": "USD",
-      "change": 1885.7,
-      "change_pct": 3.07,
-      "change_str": "+3.07%",
-      "direction": "up"
+      "change": -776.54,
+      "change_pct": -1.22,
+      "change_str": "-1.22%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.82,
+      "price": 99.8,
       "currency": "USD",
-      "change": -0.04,
-      "change_pct": -0.04,
-      "change_str": "-0.04%",
+      "change": -0.06,
+      "change_pct": -0.06,
+      "change_str": "-0.06%",
       "direction": "down"
     },
     {
@@ -495,18 +643,23 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.03,
-    "portfolio_peak": 10000.0,
+    "drawdown_from_peak_pct": 0.16,
+    "portfolio_peak": 10035.37,
     "vix": 19.44,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
         "sector": "Gold & Precious Metals",
-        "weight": 30.0,
+        "weight": 40.8,
         "at_cap": true
+      },
+      {
+        "sector": "India Equity Markets",
+        "weight": 8.4,
+        "at_cap": false
       }
     ],
-    "max_drawdown_pct": 0.03,
+    "max_drawdown_pct": 0.16,
     "sector_cap_pct": 30,
     "trailing_stop_pct": 8,
     "hard_stop_pct": 10,
@@ -514,25 +667,38 @@
   },
   "aladdin_risk": {
     "correlation": {
-      "matrix": {},
-      "tickers": [],
+      "matrix": {
+        "INDA": {
+          "INDA": 1.0,
+          "SH": -0.725
+        },
+        "SH": {
+          "INDA": -0.725,
+          "SH": 1.0
+        }
+      },
+      "tickers": [
+        "INDA",
+        "SH"
+      ],
       "max_corr": 0.0,
       "max_corr_pair": [
         "",
         ""
       ],
-      "most_negative_corr": 0.0,
+      "most_negative_corr": -0.725,
       "most_negative_pair": [
-        "",
-        ""
+        "INDA",
+        "SH"
       ],
       "status": "OK"
     },
     "volatility": {
       "per_ticker": {
-        "SH": 14.64
+        "SH": 14.64,
+        "INDA": 13.93
       },
-      "portfolio_avg_vol_pct": 14.64,
+      "portfolio_avg_vol_pct": 14.29,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -540,29 +706,29 @@
       "benchmark_price_start": 737.76,
       "benchmark_price_now": 737.76,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.03,
-      "alpha": -0.03
+      "portfolio_return_pct": -0.16,
+      "alpha": -0.16
     },
     "rebalance": {
       "alerts": [
         {
-          "ticker": "SH",
-          "actual_weight_pct": 29.98,
-          "target_weight_pct": 90.0,
-          "drift_pct": -60.02,
-          "action": "ADD",
-          "amount": 6000.0,
-          "etf_name": "ProShares Short S&P500",
+          "ticker": "CASH",
+          "actual_weight_pct": 50.72,
+          "target_weight_pct": 10.0,
+          "drift_pct": 40.72,
+          "action": "DEPLOY",
+          "amount": 4080.17,
+          "etf_name": "Cash Reserve",
           "regime_note": ""
         },
         {
-          "ticker": "CASH",
-          "actual_weight_pct": 70.02,
-          "target_weight_pct": 10.0,
-          "drift_pct": 60.02,
-          "action": "DEPLOY",
-          "amount": 6000.01,
-          "etf_name": "Cash Reserve",
+          "ticker": "INDA",
+          "actual_weight_pct": 8.45,
+          "target_weight_pct": 45.0,
+          "drift_pct": -36.55,
+          "action": "ADD",
+          "amount": 3662.47,
+          "etf_name": "iShares MSCI India ETF",
           "regime_note": ""
         }
       ],
@@ -572,75 +738,105 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": 749.26,
-          "portfolio_loss_pct": 7.5,
+          "total_impact": 684.27,
+          "portfolio_loss_pct": 6.83,
           "position_impacts": [
             {
               "ticker": "SH",
               "factor": "gold",
               "shock_pct": 25.0,
-              "impact": 749.26
+              "impact": 1022.72
+            },
+            {
+              "ticker": "INDA",
+              "factor": "equities",
+              "shock_pct": -40.0,
+              "impact": -338.45
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": 89.91,
-          "portfolio_loss_pct": 0.9,
+          "total_impact": -164.96,
+          "portfolio_loss_pct": -1.65,
           "position_impacts": [
             {
               "ticker": "SH",
               "factor": "gold",
               "shock_pct": 3.0,
-              "impact": 89.91
+              "impact": 122.73
+            },
+            {
+              "ticker": "INDA",
+              "factor": "equities",
+              "shock_pct": -34.0,
+              "impact": -287.68
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -149.85,
-          "portfolio_loss_pct": -1.5,
+          "total_impact": -331.46,
+          "portfolio_loss_pct": -3.31,
           "position_impacts": [
             {
               "ticker": "SH",
               "factor": "gold",
               "shock_pct": -5.0,
-              "impact": -149.85
+              "impact": -204.54
+            },
+            {
+              "ticker": "INDA",
+              "factor": "equities",
+              "shock_pct": -15.0,
+              "impact": -126.92
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -359.64,
-          "portfolio_loss_pct": -3.6,
+          "total_impact": -558.6,
+          "portfolio_loss_pct": -5.58,
           "position_impacts": [
             {
               "ticker": "SH",
               "factor": "gold",
               "shock_pct": -12.0,
-              "impact": -359.64
+              "impact": -490.91
+            },
+            {
+              "ticker": "INDA",
+              "factor": "equities",
+              "shock_pct": -8.0,
+              "impact": -67.69
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": 239.76,
-          "portfolio_loss_pct": 2.4,
+          "total_impact": 174.97,
+          "portfolio_loss_pct": 1.75,
           "position_impacts": [
             {
               "ticker": "SH",
               "factor": "gold",
               "shock_pct": 8.0,
-              "impact": 239.76
+              "impact": 327.27
+            },
+            {
+              "ticker": "INDA",
+              "factor": "equities",
+              "shock_pct": -18.0,
+              "impact": -152.3
             }
           ]
         }
       },
       "worst_scenario": "USD_SPIKE_+10%",
-      "worst_loss_pct": -3.6
+      "worst_loss_pct": -5.58
     }
   },
   "logs": [
-    "2026-06-12 01:56:41 [INFO] AZALYST - status.json generated",
-    "2026-06-12 01:56:41 [INFO] PORTFOLIO - NAV USD 9,996.70 | Return -0.03%",
-    "2026-06-12 01:56:41 [INFO] SIGNALS - 4 active signal buckets in state",
-    "2026-06-12 01:56:41 [INFO] TRADER - Open positions: SH"
+    "2026-06-12 06:38:32 [INFO] AZALYST - status.json generated",
+    "2026-06-12 06:38:32 [INFO] PORTFOLIO - NAV USD 10,019.11 | Return -0.16%",
+    "2026-06-12 06:38:32 [INFO] SIGNALS - 6 active signal buckets in state",
+    "2026-06-12 06:38:32 [INFO] TRADER - Open positions: SH, INDA"
   ],
-  "generated_at": "2026-06-12 01:56:37 UTC"
+  "generated_at": "2026-06-12 06:38:30 UTC"
 }
