@@ -61,7 +61,7 @@
       "pnl_pct_str": "+0.80%",
       "confidence": 90,
       "severity": "HIGH",
-      "days_held": 0,
+      "days_held": 1,
       "half_exited": false
     },
     {
@@ -127,12 +127,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
+    "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.10267747181100029,
+    "vix_level": 17.68000030517578,
+    "vix_percentile_1y": 0.5952380952380952,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -186,12 +186,8 @@
   },
   "confidence": [
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 89.0
-    },
-    {
       "symbol": "India Equity Markets",
-      "score": 88.0
+      "score": 86.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
@@ -200,6 +196,10 @@
     {
       "symbol": "Crypto & Digital Assets",
       "score": 84.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 82.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -216,82 +216,29 @@
   ],
   "signals": [
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 89.0,
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 86.0,
       "severity": "HIGH",
       "direction": "BULLISH",
-      "direction_score": 2.0,
+      "direction_score": 7.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 58,
-      "latest_at": "12 Jun 2026 19:00 UTC",
-      "headline": "Delos Data offers AI chip startups a fast track to rack scale",
+      "article_count": 19,
+      "latest_at": "13 Jun 2026 06:51 UTC",
+      "headline": "ETMarkets Smart Talk| RBI's FPI reforms could attract $50-100 billion into Indian debt over time: Vikas Garg of Invesco MF",
       "regions": [
-        "europe",
-        "middle_east",
+        "asia_pacific",
         "india",
+        "europe",
         "global"
       ],
       "sources": [
-        "Latest from Tom's Hardware",
-        "US Top News and Analysis",
-        "Tech",
-        "The Verge"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.3,
-        "recency": 16.1,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 88.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 13.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 32,
-      "latest_at": "12 Jun 2026 12:10 UTC",
-      "headline": "Why market rallied today? Sensex zooms 1,700 points, Nifty closes above 23,600. 4 key factors behind Rs 10 lakh crore gains",
-      "regions": [
-        "asia_pacific",
-        "middle_east",
-        "india",
-        "europe"
-      ],
-      "sources": [
+        "World | Deutsche Welle",
+        "Oilprice.com",
         "Markets-Economic Times",
-        "Bloomberg Markets",
-        "World News - Breaking international news and headlines | Sky News",
-        "Oilprice.com"
+        "BBC News"
       ],
       "primary_etf": "INDA",
       "top_etfs": [
@@ -312,10 +259,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 22.0,
+        "signal_strength": 21.6,
         "volume_confirmation": 18.0,
-        "source_diversity": 15.2,
-        "recency": 14.0,
+        "source_diversity": 12.6,
+        "recency": 14.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -416,6 +363,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 10.3,
         "recency": 11.7,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 82.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 53,
+      "latest_at": "12 Jun 2026 19:00 UTC",
+      "headline": "Delos Data offers AI chip startups a fast track to rack scale",
+      "regions": [
+        "asia_pacific",
+        "india",
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "Oilprice.com",
+        "Bloomberg Markets",
+        "Defense News"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.3,
+        "recency": 4.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -577,12 +577,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 58 articles - HIGH / BULLISH - Delos Data offers AI chip startups a fast track to rack scale"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "India Equity Markets - 32 articles - HIGH / BULLISH - Why market rallied today? Sensex zooms 1,700 points, Nifty closes above 23,600. 4 key factors behind Rs 10 lakh crore gains"
+      "text": "India Equity Markets - 19 articles - HIGH / BULLISH - ETMarkets Smart Talk| RBI's FPI reforms could attract $50-100 billion into Indian debt over time: Vikas Garg of Invesco MF"
     },
     {
       "tag": "tag-bear",
@@ -593,6 +588,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Crypto & Digital Assets - 28 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Technology & AI / Semiconductors - 53 articles - HIGH / BEARISH - Delos Data offers AI chip startups a fast track to rack scale"
     },
     {
       "tag": "tag-bull",
@@ -725,12 +725,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63488.07,
+      "price": 63806.38,
       "currency": "USD",
-      "change": -72.98,
-      "change_pct": -0.11,
-      "change_str": "-0.11%",
-      "direction": "down"
+      "change": 263.18,
+      "change_pct": 0.41,
+      "change_str": "+0.41%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
@@ -1067,10 +1067,10 @@
     }
   },
   "logs": [
-    "2026-06-13 05:06:49 [INFO] AZALYST - status.json generated",
-    "2026-06-13 05:06:49 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
-    "2026-06-13 05:06:49 [INFO] SIGNALS - 7 active signal buckets in state",
-    "2026-06-13 05:06:49 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
+    "2026-06-13 08:32:03 [INFO] AZALYST - status.json generated",
+    "2026-06-13 08:32:03 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
+    "2026-06-13 08:32:03 [INFO] SIGNALS - 7 active signal buckets in state",
+    "2026-06-13 08:32:03 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
   ],
-  "generated_at": "2026-06-13 05:06:48 UTC"
+  "generated_at": "2026-06-13 08:31:59 UTC"
 }
