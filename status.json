@@ -144,13 +144,13 @@
   },
   "top_signal": {
     "ticker": "XLF",
-    "rank_score": 16.862745098039216,
+    "rank_score": 16.853051996985684,
     "flow_score": 20.0,
-    "options_score": 17.0,
+    "options_score": 22.68908666576231,
     "rotation_score": 15.0,
     "macro_score": 2.5346015588702073,
     "news_score": 4.08,
-    "total": 75.47734665690942,
+    "total": 81.1567402216182,
     "publish": true,
     "direction": "long"
   },
@@ -194,16 +194,16 @@
       "score": 88.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 86.0
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 84.0
     },
     {
       "symbol": "Crypto & Digital Assets",
       "score": 84.0
     },
     {
-      "symbol": "Gold & Precious Metals",
-      "score": 82.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 80.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -320,55 +320,55 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 86.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": 3.0,
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 84.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -3.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 27,
-      "latest_at": "12 Jun 2026 23:00 UTC",
-      "headline": "U.S. Military Helping Move 7 Million Bpd Out of Persian Gulf, Wright Says",
+      "article_count": 12,
+      "latest_at": "13 Jun 2026 04:40 UTC",
+      "headline": "Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor",
       "regions": [
         "americas",
-        "europe",
         "middle_east",
-        "africa"
+        "asia_pacific",
+        "global"
       ],
       "sources": [
         "Markets-Economic Times",
-        "Bloomberg Markets",
-        "Cointelegraph.com News",
-        "Oilprice.com"
+        "Earnings",
+        "Finance",
+        "US Top News and Analysis"
       ],
-      "primary_etf": "XLE",
+      "primary_etf": "GLDM",
       "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
+        "GOLDBEES",
+        "HDFCGOLD"
       ],
       "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
+        "GLDM",
+        "GDX",
+        "GDXJ"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.8,
-        "recency": 14.9,
+        "signal_strength": 20.4,
+        "volume_confirmation": 17.4,
+        "source_diversity": 10.3,
+        "recency": 16.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -420,54 +420,55 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 82.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -2.0,
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 80.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": 2.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "12 Jun 2026 18:28 UTC",
-      "headline": "Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor",
+      "article_count": 27,
+      "latest_at": "12 Jun 2026 23:00 UTC",
+      "headline": "U.S. Military Helping Move 7 Million Bpd Out of Persian Gulf, Wright Says",
       "regions": [
+        "americas",
         "middle_east",
-        "global",
-        "asia_pacific"
+        "europe",
+        "global"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "Finance",
-        "Earnings"
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "World News - Breaking international news and headlines | Sky News",
+        "Bloomberg Markets"
       ],
-      "primary_etf": "GLDM",
+      "primary_etf": "XLE",
       "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
+        "XLE",
+        "IXC",
+        "CPSEETF"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
+        "CPSEETF",
+        "PSUBNKBEES"
       ],
       "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
+        "XLE",
+        "IXC",
+        "USO"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 17.6,
-        "volume_confirmation": 16.2,
-        "source_diversity": 12.9,
-        "recency": 15.3,
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.7,
+        "recency": 9.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -584,9 +585,9 @@
       "text": "India Equity Markets - 32 articles - HIGH / BULLISH - Why market rallied today? Sensex zooms 1,700 points, Nifty closes above 23,600. 4 key factors behind Rs 10 lakh crore gains"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Energy / Oil & Gas - 27 articles - CRITICAL / BULLISH - U.S. Military Helping Move 7 Million Bpd Out of Persian Gulf, Wright Says"
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BEARISH - Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor"
     },
     {
       "tag": "tag-bear",
@@ -594,9 +595,9 @@
       "text": "Crypto & Digital Assets - 28 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Gold & Precious Metals - 10 articles - HIGH / BEARISH - Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor"
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Energy / Oil & Gas - 27 articles - CRITICAL / BULLISH - U.S. Military Helping Move 7 Million Bpd Out of Persian Gulf, Wright Says"
     },
     {
       "tag": "tag-bull",
@@ -702,33 +703,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4239.9,
+      "price": 4238.8,
       "currency": "USD",
-      "change": 149.6,
-      "change_pct": 3.66,
-      "change_str": "+3.66%",
+      "change": 148.5,
+      "change_pct": 3.63,
+      "change_str": "+3.63%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 84.29,
+      "price": 84.88,
       "currency": "USD",
-      "change": -3.42,
-      "change_pct": -3.9,
-      "change_str": "-3.90%",
+      "change": -2.83,
+      "change_pct": -3.23,
+      "change_str": "-3.23%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63496.95,
+      "price": 63488.07,
       "currency": "USD",
-      "change": -64.1,
-      "change_pct": -0.1,
-      "change_str": "-0.10%",
+      "change": -72.98,
+      "change_pct": -0.11,
+      "change_str": "-0.11%",
       "direction": "down"
     },
     {
@@ -1066,10 +1067,10 @@
     }
   },
   "logs": [
-    "2026-06-13 00:28:12 [INFO] AZALYST - status.json generated",
-    "2026-06-13 00:28:12 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
-    "2026-06-13 00:28:12 [INFO] SIGNALS - 7 active signal buckets in state",
-    "2026-06-13 00:28:12 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
+    "2026-06-13 05:06:49 [INFO] AZALYST - status.json generated",
+    "2026-06-13 05:06:49 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
+    "2026-06-13 05:06:49 [INFO] SIGNALS - 7 active signal buckets in state",
+    "2026-06-13 05:06:49 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
   ],
-  "generated_at": "2026-06-13 00:28:10 UTC"
+  "generated_at": "2026-06-13 05:06:48 UTC"
 }
