@@ -187,7 +187,11 @@
   "confidence": [
     {
       "symbol": "Technology & AI / Semiconductors",
-      "score": 95.0
+      "score": 90.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 87.0
     },
     {
       "symbol": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals",
@@ -198,16 +202,12 @@
       "score": 84.0
     },
     {
-      "symbol": "India Equity Markets",
-      "score": 83.0
-    },
-    {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 82.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 80.0
+      "symbol": "India Equity Markets",
+      "score": 73.0
     },
     {
       "symbol": "Clean Energy & Renewables",
@@ -218,27 +218,27 @@
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 95.0,
+      "confidence": 90.0,
       "severity": "HIGH",
       "direction": "BEARISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 62,
-      "latest_at": "13 Jun 2026 12:04 UTC",
+      "article_count": 65,
+      "latest_at": "13 Jun 2026 14:12 UTC",
       "headline": "Delos Data offers AI chip startups a fast track to rack scale",
       "regions": [
-        "india",
-        "asia_pacific",
+        "americas",
+        "global",
         "middle_east",
-        "americas"
+        "europe"
       ],
       "sources": [
-        "The Verge",
+        "US Top News and Analysis",
+        "Markets-Economic Times",
         "Latest from Tom's Hardware",
-        "Defense News",
-        "Tech"
+        "Semiconductor Engineering"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -264,7 +264,60 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 17.0,
-        "recency": 16.4,
+        "recency": 11.7,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 87.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": 8.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 26,
+      "latest_at": "13 Jun 2026 17:30 UTC",
+      "headline": "U.S. Military Helping Move 7 Million Bpd Out of Persian Gulf, Wright Says",
+      "regions": [
+        "americas",
+        "global",
+        "middle_east",
+        "europe"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Oilprice.com",
+        "World News - Breaking international news and headlines | Sky News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.7,
+        "recency": 16.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -367,57 +420,6 @@
       }
     },
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 83.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 9.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 19,
-      "latest_at": "13 Jun 2026 08:28 UTC",
-      "headline": "F&amp;O Talk: Bullish Nifty charts; Sudeep Shah picks 7 stocks, outlines HDFC Bank, Sterlite Tech strategy",
-      "regions": [
-        "india",
-        "asia_pacific",
-        "middle_east",
-        "europe"
-      ],
-      "sources": [
-        "World | Deutsche Welle",
-        "BBC News",
-        "Oilprice.com",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.6,
-        "recency": 11.5,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
       "confidence": 82.0,
@@ -471,55 +473,51 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 80.0,
-      "severity": "CRITICAL",
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 73.0,
+      "severity": "HIGH",
       "direction": "BULLISH",
-      "direction_score": 2.0,
+      "direction_score": 9.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 27,
-      "latest_at": "12 Jun 2026 23:00 UTC",
-      "headline": "U.S. Military Helping Move 7 Million Bpd Out of Persian Gulf, Wright Says",
+      "article_count": 17,
+      "latest_at": "13 Jun 2026 08:28 UTC",
+      "headline": "F&amp;O Talk: Bullish Nifty charts; Sudeep Shah picks 7 stocks, outlines HDFC Bank, Sterlite Tech strategy",
       "regions": [
-        "americas",
+        "asia_pacific",
+        "global",
         "middle_east",
-        "europe",
-        "global"
+        "india"
       ],
       "sources": [
-        "Oilprice.com",
-        "Markets-Economic Times",
-        "World News - Breaking international news and headlines | Sky News",
-        "Bloomberg Markets"
+        "World | Deutsche Welle",
+        "Markets-Economic Times"
       ],
-      "primary_etf": "XLE",
+      "primary_etf": "INDA",
       "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
+        "NIFTYBEES",
+        "MIDCAPETF"
       ],
       "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
+        "INDA"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 22.0,
+        "signal_strength": 21.8,
         "volume_confirmation": 18.0,
-        "source_diversity": 14.7,
-        "recency": 9.3,
+        "source_diversity": 7.6,
+        "recency": 6.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -579,7 +577,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Technology & AI / Semiconductors - 62 articles - HIGH / BEARISH - Delos Data offers AI chip startups a fast track to rack scale"
+      "text": "Technology & AI / Semiconductors - 65 articles - HIGH / BEARISH - Delos Data offers AI chip startups a fast track to rack scale"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Energy / Oil & Gas - 26 articles - CRITICAL / BULLISH - U.S. Military Helping Move 7 Million Bpd Out of Persian Gulf, Wright Says"
     },
     {
       "tag": "tag-bull",
@@ -592,11 +595,6 @@
       "text": "Crypto & Digital Assets - 28 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "India Equity Markets - 19 articles - HIGH / BULLISH - F&amp;O Talk: Bullish Nifty charts; Sudeep Shah picks 7 stocks, outlines HDFC Bank, Sterlite Tech strategy"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - CRITICAL / BEARISH - Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor"
@@ -604,7 +602,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas - 27 articles - CRITICAL / BULLISH - U.S. Military Helping Move 7 Million Bpd Out of Persian Gulf, Wright Says"
+      "text": "India Equity Markets - 17 articles - HIGH / BULLISH - F&amp;O Talk: Bullish Nifty charts; Sudeep Shah picks 7 stocks, outlines HDFC Bank, Sterlite Tech strategy"
     },
     {
       "tag": "tag-bear",
@@ -727,11 +725,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63996.78,
+      "price": 63962.62,
       "currency": "USD",
-      "change": 453.58,
-      "change_pct": 0.71,
-      "change_str": "+0.71%",
+      "change": 419.42,
+      "change_pct": 0.66,
+      "change_str": "+0.66%",
       "direction": "up"
     },
     {
@@ -1069,10 +1067,10 @@
     }
   },
   "logs": [
-    "2026-06-13 16:21:11 [INFO] AZALYST - status.json generated",
-    "2026-06-13 16:21:11 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
-    "2026-06-13 16:21:11 [INFO] SIGNALS - 7 active signal buckets in state",
-    "2026-06-13 16:21:11 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
+    "2026-06-13 18:01:32 [INFO] AZALYST - status.json generated",
+    "2026-06-13 18:01:32 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
+    "2026-06-13 18:01:32 [INFO] SIGNALS - 7 active signal buckets in state",
+    "2026-06-13 18:01:32 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
   ],
-  "generated_at": "2026-06-13 16:21:08 UTC"
+  "generated_at": "2026-06-13 18:01:29 UTC"
 }
