@@ -127,12 +127,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
+    "risk_state": "NEUTRAL",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.10267747181100029,
-    "vix_level": 17.68000030517578,
-    "vix_percentile_1y": 0.5952380952380952,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -144,13 +144,13 @@
   },
   "top_signal": {
     "ticker": "XLF",
-    "rank_score": 16.853051996985684,
+    "rank_score": 16.850678733031675,
     "flow_score": 20.0,
-    "options_score": 22.68908666576231,
+    "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 2.5346015588702073,
-    "news_score": 4.08,
-    "total": 81.1567402216182,
+    "news_score": 8.5,
+    "total": 62.88528029190188,
     "publish": true,
     "direction": "long"
   },
@@ -190,6 +190,10 @@
       "score": 86.0
     },
     {
+      "symbol": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals",
+      "score": 85.0
+    },
+    {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 84.0
     },
@@ -204,10 +208,6 @@
     {
       "symbol": "Energy / Oil & Gas",
       "score": 80.0
-    },
-    {
-      "symbol": "Banking & Financial Sector",
-      "score": 68.0
     },
     {
       "symbol": "Clean Energy & Renewables",
@@ -263,6 +263,57 @@
         "volume_confirmation": 18.0,
         "source_diversity": 12.6,
         "recency": 14.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals",
+      "confidence": 85.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": -9.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 15,
+      "latest_at": "13 Jun 2026 09:00 UTC",
+      "headline": "Dollar steadies, set for weekly loss on US-Iran deal talks",
+      "regions": [
+        "middle_east",
+        "asia_pacific",
+        "global",
+        "americas"
+      ],
+      "sources": [
+        "Finance",
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "BANKBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.6,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.0,
+        "recency": 14.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -473,55 +524,6 @@
       }
     },
     {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector",
-      "confidence": 68.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "12 Jun 2026 21:11 UTC",
-      "headline": "Nifty Bank surges 700 points to one-month high; HDFC Bank, Yes Bank, PNB, other stocks rise 2%. What lies ahead?",
-      "regions": [
-        "americas",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Finance",
-        "US Top News and Analysis",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "BANKBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 9.8,
-        "volume_confirmation": 13.7,
-        "source_diversity": 9.1,
-        "recency": 16.9,
-        "geopolitical_severity": 10.0
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 62.0,
@@ -580,6 +582,11 @@
       "text": "India Equity Markets - 19 articles - HIGH / BULLISH - ETMarkets Smart Talk| RBI's FPI reforms could attract $50-100 billion into Indian debt over time: Vikas Garg of Invesco MF"
     },
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals - 15 articles - CRITICAL / BULLISH - Dollar steadies, set for weekly loss on US-Iran deal talks"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BEARISH - Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor"
@@ -598,11 +605,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Energy / Oil & Gas - 27 articles - CRITICAL / BULLISH - U.S. Military Helping Move 7 Million Bpd Out of Persian Gulf, Wright Says"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Banking & Financial Sector - 7 articles - MEDIUM / BULLISH - Nifty Bank surges 700 points to one-month high; HDFC Bank, Yes Bank, PNB, other stocks rise 2%. What lies ahead?"
     },
     {
       "tag": "tag-bear",
@@ -725,11 +727,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63806.38,
+      "price": 63866.99,
       "currency": "USD",
-      "change": 263.18,
-      "change_pct": 0.41,
-      "change_str": "+0.41%",
+      "change": 323.79,
+      "change_pct": 0.51,
+      "change_str": "+0.51%",
       "direction": "up"
     },
     {
@@ -1067,10 +1069,10 @@
     }
   },
   "logs": [
-    "2026-06-13 08:32:03 [INFO] AZALYST - status.json generated",
-    "2026-06-13 08:32:03 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
-    "2026-06-13 08:32:03 [INFO] SIGNALS - 7 active signal buckets in state",
-    "2026-06-13 08:32:03 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
+    "2026-06-13 10:53:07 [INFO] AZALYST - status.json generated",
+    "2026-06-13 10:53:07 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
+    "2026-06-13 10:53:07 [INFO] SIGNALS - 7 active signal buckets in state",
+    "2026-06-13 10:53:07 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
   ],
-  "generated_at": "2026-06-13 08:31:59 UTC"
+  "generated_at": "2026-06-13 10:53:05 UTC"
 }
