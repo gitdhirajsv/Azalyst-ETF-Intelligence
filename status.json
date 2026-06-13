@@ -84,7 +84,7 @@
       "pnl_pct_str": "+1.27%",
       "confidence": 78,
       "severity": "HIGH",
-      "days_held": 0,
+      "days_held": 1,
       "half_exited": false
     },
     {
@@ -144,13 +144,13 @@
   },
   "top_signal": {
     "ticker": "XLF",
-    "rank_score": 16.850678733031675,
+    "rank_score": 16.853051996985684,
     "flow_score": 20.0,
     "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 2.5346015588702073,
     "news_score": 8.5,
-    "total": 62.88528029190188,
+    "total": 62.88765355585589,
     "publish": true,
     "direction": "long"
   },
@@ -186,8 +186,8 @@
   },
   "confidence": [
     {
-      "symbol": "India Equity Markets",
-      "score": 86.0
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 95.0
     },
     {
       "symbol": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals",
@@ -202,8 +202,8 @@
       "score": 84.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 82.0
+      "symbol": "India Equity Markets",
+      "score": 83.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -216,35 +216,35 @@
   ],
   "signals": [
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 86.0,
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 95.0,
       "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 7.5,
+      "direction": "BEARISH",
+      "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 19,
-      "latest_at": "13 Jun 2026 06:51 UTC",
-      "headline": "ETMarkets Smart Talk| RBI's FPI reforms could attract $50-100 billion into Indian debt over time: Vikas Garg of Invesco MF",
+      "article_count": 62,
+      "latest_at": "13 Jun 2026 12:04 UTC",
+      "headline": "Delos Data offers AI chip startups a fast track to rack scale",
       "regions": [
-        "asia_pacific",
         "india",
-        "europe",
-        "global"
+        "asia_pacific",
+        "middle_east",
+        "americas"
       ],
       "sources": [
-        "World | Deutsche Welle",
-        "Oilprice.com",
-        "Markets-Economic Times",
-        "BBC News"
+        "The Verge",
+        "Latest from Tom's Hardware",
+        "Defense News",
+        "Tech"
       ],
-      "primary_etf": "INDA",
+      "primary_etf": "QQQ",
       "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
       ],
       "access_markets": [
         "India-listed",
@@ -252,17 +252,19 @@
       ],
       "india_etfs": [
         "NIFTYBEES",
-        "MIDCAPETF"
+        "MAFANG"
       ],
       "global_etfs": [
-        "INDA"
+        "QQQ",
+        "SOXX",
+        "AIQ"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 21.6,
+        "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 12.6,
-        "recency": 14.5,
+        "source_diversity": 17.0,
+        "recency": 16.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -418,35 +420,35 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 82.0,
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 83.0,
       "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
+      "direction": "BULLISH",
+      "direction_score": 9.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 53,
-      "latest_at": "12 Jun 2026 19:00 UTC",
-      "headline": "Delos Data offers AI chip startups a fast track to rack scale",
+      "article_count": 19,
+      "latest_at": "13 Jun 2026 08:28 UTC",
+      "headline": "F&amp;O Talk: Bullish Nifty charts; Sudeep Shah picks 7 stocks, outlines HDFC Bank, Sterlite Tech strategy",
       "regions": [
-        "asia_pacific",
         "india",
-        "europe",
-        "global"
+        "asia_pacific",
+        "middle_east",
+        "europe"
       ],
       "sources": [
-        "www.theregister.com - Articles",
+        "World | Deutsche Welle",
+        "BBC News",
         "Oilprice.com",
-        "Bloomberg Markets",
-        "Defense News"
+        "Markets-Economic Times"
       ],
-      "primary_etf": "QQQ",
+      "primary_etf": "INDA",
       "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
       ],
       "access_markets": [
         "India-listed",
@@ -454,19 +456,17 @@
       ],
       "india_etfs": [
         "NIFTYBEES",
-        "MAFANG"
+        "MIDCAPETF"
       ],
       "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
+        "INDA"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.3,
-        "recency": 4.4,
+        "source_diversity": 12.6,
+        "recency": 11.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -577,9 +577,9 @@
   ],
   "articles": [
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "India Equity Markets - 19 articles - HIGH / BULLISH - ETMarkets Smart Talk| RBI's FPI reforms could attract $50-100 billion into Indian debt over time: Vikas Garg of Invesco MF"
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Technology & AI / Semiconductors - 62 articles - HIGH / BEARISH - Delos Data offers AI chip startups a fast track to rack scale"
     },
     {
       "tag": "tag-bull",
@@ -597,9 +597,9 @@
       "text": "Crypto & Digital Assets - 28 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Technology & AI / Semiconductors - 53 articles - HIGH / BEARISH - Delos Data offers AI chip startups a fast track to rack scale"
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "India Equity Markets - 19 articles - HIGH / BULLISH - F&amp;O Talk: Bullish Nifty charts; Sudeep Shah picks 7 stocks, outlines HDFC Bank, Sterlite Tech strategy"
     },
     {
       "tag": "tag-bull",
@@ -727,11 +727,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63866.99,
+      "price": 63949.99,
       "currency": "USD",
-      "change": 323.79,
-      "change_pct": 0.51,
-      "change_str": "+0.51%",
+      "change": 406.79,
+      "change_pct": 0.64,
+      "change_str": "+0.64%",
       "direction": "up"
     },
     {
@@ -1069,10 +1069,10 @@
     }
   },
   "logs": [
-    "2026-06-13 10:53:07 [INFO] AZALYST - status.json generated",
-    "2026-06-13 10:53:07 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
-    "2026-06-13 10:53:07 [INFO] SIGNALS - 7 active signal buckets in state",
-    "2026-06-13 10:53:07 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
+    "2026-06-13 12:32:30 [INFO] AZALYST - status.json generated",
+    "2026-06-13 12:32:30 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
+    "2026-06-13 12:32:30 [INFO] SIGNALS - 7 active signal buckets in state",
+    "2026-06-13 12:32:30 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
   ],
-  "generated_at": "2026-06-13 10:53:05 UTC"
+  "generated_at": "2026-06-13 12:32:28 UTC"
 }
