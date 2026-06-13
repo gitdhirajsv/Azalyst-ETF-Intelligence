@@ -38,7 +38,7 @@
       "pnl_pct_str": "-1.16%",
       "confidence": 92,
       "severity": "HIGH",
-      "days_held": 1,
+      "days_held": 2,
       "half_exited": false
     },
     {
@@ -127,12 +127,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
+    "risk_state": "NEUTRAL",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.10267747181100029,
-    "vix_level": 17.68000030517578,
-    "vix_percentile_1y": 0.5952380952380952,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -146,11 +146,11 @@
     "ticker": "XLF",
     "rank_score": 16.853051996985684,
     "flow_score": 20.0,
-    "options_score": 17.0,
+    "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 2.5346015588702073,
     "news_score": 8.5,
-    "total": 79.88765355585589,
+    "total": 62.88765355585589,
     "publish": true,
     "direction": "long"
   },
@@ -194,16 +194,16 @@
       "score": 87.0
     },
     {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 85.0
+    },
+    {
       "symbol": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals",
       "score": 85.0
     },
     {
       "symbol": "Crypto & Digital Assets",
       "score": 84.0
-    },
-    {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 82.0
     },
     {
       "symbol": "India Equity Markets",
@@ -322,6 +322,59 @@
       }
     },
     {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 85.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -10.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "13 Jun 2026 19:00 UTC",
+      "headline": "Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "global",
+        "americas"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "Earnings",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 17.4,
+        "source_diversity": 14.0,
+        "recency": 14.1,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals",
       "confidence": 85.0,
@@ -416,59 +469,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 10.3,
         "recency": 11.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 82.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -10.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "13 Jun 2026 12:00 UTC",
-      "headline": "Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Finance"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 21.5,
-        "volume_confirmation": 17.4,
-        "source_diversity": 12.8,
-        "recency": 13.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -585,6 +585,11 @@
       "text": "Energy / Oil & Gas - 26 articles - CRITICAL / BULLISH - U.S. Military Helping Move 7 Million Bpd Out of Persian Gulf, Wright Says"
     },
     {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - CRITICAL / BEARISH - Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor"
+    },
+    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals - 15 articles - CRITICAL / BULLISH - Dollar steadies, set for weekly loss on US-Iran deal talks"
@@ -593,11 +598,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Crypto & Digital Assets - 28 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - CRITICAL / BEARISH - Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor"
     },
     {
       "tag": "tag-bull",
@@ -725,11 +725,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64138.13,
+      "price": 64248.82,
       "currency": "USD",
-      "change": 594.93,
-      "change_pct": 0.94,
-      "change_str": "+0.94%",
+      "change": 705.62,
+      "change_pct": 1.11,
+      "change_str": "+1.11%",
       "direction": "up"
     },
     {
@@ -1067,10 +1067,10 @@
     }
   },
   "logs": [
-    "2026-06-13 19:31:54 [INFO] AZALYST - status.json generated",
-    "2026-06-13 19:31:54 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
-    "2026-06-13 19:31:54 [INFO] SIGNALS - 7 active signal buckets in state",
-    "2026-06-13 19:31:54 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
+    "2026-06-13 20:59:03 [INFO] AZALYST - status.json generated",
+    "2026-06-13 20:59:03 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
+    "2026-06-13 20:59:03 [INFO] SIGNALS - 7 active signal buckets in state",
+    "2026-06-13 20:59:03 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
   ],
-  "generated_at": "2026-06-13 19:31:51 UTC"
+  "generated_at": "2026-06-13 20:59:00 UTC"
 }
