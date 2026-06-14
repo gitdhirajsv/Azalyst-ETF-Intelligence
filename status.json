@@ -146,11 +146,11 @@
     "ticker": "XLF",
     "rank_score": 16.853051996985684,
     "flow_score": 20.0,
-    "options_score": 22.715920966812845,
+    "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 2.5346015588702073,
     "news_score": 7.040000000000001,
-    "total": 84.14357452266874,
+    "total": 61.42765355585589,
     "publish": true,
     "direction": "long"
   },
@@ -187,7 +187,7 @@
   "confidence": [
     {
       "symbol": "Technology & AI / Semiconductors",
-      "score": 95.0
+      "score": 88.0
     },
     {
       "symbol": "Banking & Financial Sector + Europe Equity",
@@ -203,7 +203,7 @@
     },
     {
       "symbol": "India Equity Markets",
-      "score": 82.0
+      "score": 75.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -222,27 +222,27 @@
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 95.0,
+      "confidence": 88.0,
       "severity": "HIGH",
       "direction": "BEARISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 68,
+      "article_count": 65,
       "latest_at": "14 Jun 2026 12:04 UTC",
       "headline": "Delos Data offers AI chip startups a fast track to rack scale",
       "regions": [
-        "asia_pacific",
         "global",
         "india",
-        "middle_east"
+        "asia_pacific",
+        "europe"
       ],
       "sources": [
-        "World | Deutsche Welle",
+        "Defense News",
         "Cointelegraph.com News",
-        "Semiconductor Engineering",
-        "Bloomberg Markets"
+        "Oilprice.com",
+        "EE Times"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -268,7 +268,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 17.0,
-        "recency": 16.5,
+        "recency": 9.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -426,7 +426,7 @@
     {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
-      "confidence": 82.0,
+      "confidence": 75.0,
       "severity": "CRITICAL",
       "direction": "BULLISH",
       "direction_score": 15.5,
@@ -437,14 +437,14 @@
       "latest_at": "14 Jun 2026 11:25 UTC",
       "headline": "F&amp;O Talk: Bullish Nifty charts; Sudeep Shah picks 7 stocks, outlines HDFC Bank, Sterlite Tech strategy",
       "regions": [
+        "global",
         "asia_pacific",
-        "india",
         "middle_east",
-        "global"
+        "india"
       ],
       "sources": [
-        "World | Deutsche Welle",
-        "Markets-Economic Times"
+        "Markets-Economic Times",
+        "World | Deutsche Welle"
       ],
       "primary_etf": "INDA",
       "top_etfs": [
@@ -468,7 +468,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 7.6,
-        "recency": 15.4,
+        "recency": 8.8,
         "geopolitical_severity": 13.0
       }
     },
@@ -632,7 +632,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Technology & AI / Semiconductors - 68 articles - HIGH / BEARISH - Delos Data offers AI chip startups a fast track to rack scale"
+      "text": "Technology & AI / Semiconductors - 65 articles - HIGH / BEARISH - Delos Data offers AI chip startups a fast track to rack scale"
     },
     {
       "tag": "tag-bull",
@@ -785,11 +785,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64111.02,
+      "price": 63729.53,
       "currency": "USD",
-      "change": -310.3,
-      "change_pct": -0.48,
-      "change_str": "-0.48%",
+      "change": -691.79,
+      "change_pct": -1.07,
+      "change_str": "-1.07%",
       "direction": "down"
     },
     {
@@ -1127,10 +1127,10 @@
     }
   },
   "logs": [
-    "2026-06-14 16:28:15 [INFO] AZALYST - status.json generated",
-    "2026-06-14 16:28:15 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
-    "2026-06-14 16:28:15 [INFO] SIGNALS - 8 active signal buckets in state",
-    "2026-06-14 16:28:15 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
+    "2026-06-14 18:04:27 [INFO] AZALYST - status.json generated",
+    "2026-06-14 18:04:27 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
+    "2026-06-14 18:04:27 [INFO] SIGNALS - 8 active signal buckets in state",
+    "2026-06-14 18:04:27 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
   ],
-  "generated_at": "2026-06-14 16:28:13 UTC"
+  "generated_at": "2026-06-14 18:04:26 UTC"
 }
