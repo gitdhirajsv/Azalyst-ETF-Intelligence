@@ -1,21 +1,21 @@
 {
-  "portfolio_value": 10022.64,
+  "portfolio_value": 10022.08,
   "total_deposited": 10068.35,
-  "cash": 4333.74,
+  "cash": 3823.89,
   "monthly_reserve": 0.0,
-  "market_value": 5688.9,
-  "total_invested": 5678.22,
-  "unrealised_pnl": 10.67,
-  "unrealised_str": "+10.67",
+  "market_value": 6198.19,
+  "total_invested": 6188.07,
+  "unrealised_pnl": 10.11,
+  "unrealised_str": "+10.11",
   "realised_pnl": -56.38,
   "realised_str": "-56.38",
-  "change": "-0.45%",
-  "change_raw": -0.45,
+  "change": "-0.46%",
+  "change_raw": -0.46,
   "closed_trades": 1,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 10068.35,
-  "drawdown_now_pct": 0.45,
-  "max_drawdown_pct": 0.45,
+  "drawdown_now_pct": 0.46,
+  "max_drawdown_pct": 0.46,
   "usd_inr_rate": 95.1,
   "positions": [
     {
@@ -86,6 +86,52 @@
       "severity": "HIGH",
       "days_held": 2,
       "half_exited": false
+    },
+    {
+      "trade_id": "T0005",
+      "ticker": "SH",
+      "etf_name": "ProShares Short S&P500",
+      "sector": "Nuclear Energy & Uranium",
+      "platform": "ProShares -- IBKR / Schwab / Fidelity",
+      "exchange": "NYSE",
+      "entry": 33.6,
+      "current": 33.57,
+      "peak_price": 33.6,
+      "trail_stop": 31.25,
+      "dist_to_trail_pct": 6.91,
+      "units": 7.169838,
+      "invested": 240.96,
+      "pnl": -0.24,
+      "pnl_str": "-0.24",
+      "pnl_pct": -0.1,
+      "pnl_pct_str": "-0.10%",
+      "confidence": 71,
+      "severity": "HIGH",
+      "days_held": 0,
+      "half_exited": false
+    },
+    {
+      "trade_id": "T0006",
+      "ticker": "XLE",
+      "etf_name": "Energy Select Sector SPDR",
+      "sector": "Energy / Oil & Gas",
+      "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NYSE",
+      "entry": 57.61,
+      "current": 57.55,
+      "peak_price": 57.61,
+      "trail_stop": 53.58,
+      "dist_to_trail_pct": 6.91,
+      "units": 4.667259,
+      "invested": 268.9,
+      "pnl": -0.27,
+      "pnl_str": "-0.27",
+      "pnl_pct": -0.1,
+      "pnl_pct_str": "-0.10%",
+      "confidence": 65,
+      "severity": "CRITICAL",
+      "days_held": 0,
+      "half_exited": false
     }
   ],
   "closed_trades_list": [
@@ -152,13 +198,13 @@
   },
   "top_signal": {
     "ticker": "XLF",
-    "rank_score": 16.853051996985684,
+    "rank_score": 16.850678733031675,
     "flow_score": 20.0,
     "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 2.5346015588702073,
     "news_score": 6.24,
-    "total": 60.62765355585589,
+    "total": 60.62528029190188,
     "publish": true,
     "direction": "long"
   },
@@ -167,25 +213,33 @@
       "INDA",
       "XLF",
       "QQQ",
+      "SH",
+      "XLE",
       "CASH"
     ],
     "values": [
-      18.6,
+      18.7,
       32.4,
       5.7,
-      43.2
+      2.4,
+      2.7,
+      38.2
     ]
   },
   "pnl": {
     "labels": [
       "INDA",
       "XLF",
-      "QQQ"
+      "QQQ",
+      "SH",
+      "XLE"
     ],
     "values": [
       9.2,
       0.92,
-      0.55
+      0.55,
+      -0.24,
+      -0.27
     ]
   },
   "confidence": [
@@ -206,16 +260,24 @@
       "score": 78.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 74.0
-    },
-    {
       "symbol": "India Equity Markets",
       "score": 72.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
-      "score": 64.0
+      "score": 71.0
+    },
+    {
+      "symbol": "Defense & Aerospace",
+      "score": 67.0
+    },
+    {
+      "symbol": "Europe Equity",
+      "score": 66.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 65.0
     },
     {
       "symbol": "Clean Energy & Renewables",
@@ -428,59 +490,6 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 74.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": 8.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "13 Jun 2026 21:00 UTC",
-      "headline": "Fuel Tax Changes Hit Six States As Energy Inflation Accelerates",
-      "regions": [
-        "global",
-        "middle_east",
-        "americas",
-        "europe"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Bloomberg Markets",
-        "US Top News and Analysis",
-        "World News - Breaking international news and headlines | Sky News"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 13.8,
-        "recency": 3.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 72.0,
@@ -532,24 +541,25 @@
     {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
-      "confidence": 64.0,
+      "confidence": 71.0,
       "severity": "HIGH",
       "direction": "BEARISH",
-      "direction_score": 0.0,
+      "direction_score": 1.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "14 Jun 2026 13:24 UTC",
-      "headline": "Compressed Timeline for US-Iran Nuclear Deal Could Lead to Later Unraveling",
+      "article_count": 5,
+      "latest_at": "14 Jun 2026 23:02 UTC",
+      "headline": "China's Fusion Reactor on Track for Ignition by 2027, Threatening U.S. Lead",
       "regions": [
-        "asia_pacific",
         "middle_east",
-        "global"
+        "global",
+        "asia_pacific",
+        "europe"
       ],
       "sources": [
-        "Oilprice.com",
         "Latest from Tom's Hardware",
+        "Oilprice.com",
         "Bloomberg Markets",
         "Semiconductor Engineering"
       ],
@@ -573,10 +583,165 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 13.4,
-        "volume_confirmation": 9.7,
+        "signal_strength": 12.5,
+        "volume_confirmation": 11.3,
         "source_diversity": 11.0,
-        "recency": 9.4,
+        "recency": 15.8,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 67.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 25,
+      "latest_at": "14 Jun 2026 23:46 UTC",
+      "headline": "India bets big on domestic drones for future warfare",
+      "regions": [
+        "americas",
+        "global",
+        "asia_pacific",
+        "africa"
+      ],
+      "sources": [
+        "Latest from Tom's Hardware",
+        "Bloomberg Markets",
+        "www.theregister.com - Articles",
+        "BBC News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.5,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.6,
+        "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "europe_equity",
+      "sector_label": "Europe Equity",
+      "confidence": 66.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 3.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "14 Jun 2026 23:02 UTC",
+      "headline": "Bailey Defends BOE Gilt Sales After Criticism From Farage",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "europe"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "Markets-Economic Times",
+        "Defense News"
+      ],
+      "primary_etf": "VGK",
+      "top_etfs": [
+        "VGK",
+        "IEV",
+        "EWU"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "VGK",
+        "IEV",
+        "EWU",
+        "EWG"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 17.8,
+        "volume_confirmation": 16.8,
+        "source_diversity": 13.8,
+        "recency": 15.8,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 65.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": 6.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 27,
+      "latest_at": "14 Jun 2026 22:56 UTC",
+      "headline": "Fuel Tax Changes Hit Six States As Energy Inflation Accelerates",
+      "regions": [
+        "americas",
+        "global",
+        "india",
+        "middle_east"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "Cointelegraph.com News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.7,
+        "recency": 15.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -656,17 +821,27 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas - 25 articles - CRITICAL / BULLISH - Fuel Tax Changes Hit Six States As Energy Inflation Accelerates"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "India Equity Markets - 19 articles - CRITICAL / BULLISH - F&amp;O Talk: Bullish Nifty charts; Sudeep Shah picks 7 stocks, outlines HDFC Bank, Sterlite Tech strategy"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Nuclear Energy & Uranium - 4 articles - HIGH / BEARISH - Compressed Timeline for US-Iran Nuclear Deal Could Lead to Later Unraveling"
+      "text": "Nuclear Energy & Uranium - 5 articles - HIGH / BEARISH - China's Fusion Reactor on Track for Ignition by 2027, Threatening U.S. Lead"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Defense & Aerospace - 25 articles - HIGH / BULLISH - India bets big on domestic drones for future warfare"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Europe Equity - 11 articles - HIGH / BULLISH - Bailey Defends BOE Gilt Sales After Criticism From Farage"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Energy / Oil & Gas - 27 articles - CRITICAL / BULLISH - Fuel Tax Changes Hit Six States As Energy Inflation Accelerates"
     },
     {
       "tag": "tag-bear",
@@ -767,44 +942,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4238.8,
+      "price": 4305.0,
       "currency": "USD",
-      "change": 23.8,
-      "change_pct": 0.56,
-      "change_str": "+0.56%",
+      "change": 90.0,
+      "change_pct": 2.14,
+      "change_str": "+2.14%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 84.88,
+      "price": 81.09,
       "currency": "USD",
-      "change": 0.0,
-      "change_pct": 0.0,
-      "change_str": "+0.00%",
-      "direction": "up"
+      "change": -3.79,
+      "change_pct": -4.47,
+      "change_str": "-4.47%",
+      "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 65098.49,
+      "price": 65724.54,
       "currency": "USD",
-      "change": 677.17,
-      "change_pct": 1.05,
-      "change_str": "+1.05%",
+      "change": 1303.22,
+      "change_pct": 2.02,
+      "change_str": "+2.02%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.46,
+      "price": 99.49,
       "currency": "USD",
-      "change": -0.29,
-      "change_pct": -0.29,
-      "change_str": "-0.29%",
+      "change": -0.26,
+      "change_pct": -0.26,
+      "change_str": "-0.26%",
       "direction": "down"
     },
     {
@@ -821,7 +996,7 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.45,
+    "drawdown_from_peak_pct": 0.46,
     "portfolio_peak": 10068.35,
     "vix": 17.68,
     "vix_regime": "ELEVATED",
@@ -833,16 +1008,26 @@
       },
       {
         "sector": "India Equity Markets",
-        "weight": 18.6,
+        "weight": 18.7,
         "at_cap": false
       },
       {
         "sector": "Technology & AI / Semiconductors",
         "weight": 5.7,
         "at_cap": false
+      },
+      {
+        "sector": "Energy / Oil & Gas",
+        "weight": 2.7,
+        "at_cap": false
+      },
+      {
+        "sector": "Nuclear Energy & Uranium",
+        "weight": 2.4,
+        "at_cap": false
       }
     ],
-    "max_drawdown_pct": 0.45,
+    "max_drawdown_pct": 0.46,
     "sector_cap_pct": 30,
     "trailing_stop_pct": 8,
     "hard_stop_pct": 10,
@@ -854,22 +1039,44 @@
         "INDA": {
           "INDA": 1.0,
           "QQQ": 0.538,
+          "SH": -0.721,
+          "XLE": -0.406,
           "XLF": 0.714
         },
         "QQQ": {
           "INDA": 0.538,
           "QQQ": 1.0,
+          "SH": -0.939,
+          "XLE": -0.169,
           "XLF": 0.09
+        },
+        "SH": {
+          "INDA": -0.721,
+          "QQQ": -0.939,
+          "SH": 1.0,
+          "XLE": 0.257,
+          "XLF": -0.35
+        },
+        "XLE": {
+          "INDA": -0.406,
+          "QQQ": -0.169,
+          "SH": 0.257,
+          "XLE": 1.0,
+          "XLF": -0.222
         },
         "XLF": {
           "INDA": 0.714,
           "QQQ": 0.09,
+          "SH": -0.35,
+          "XLE": -0.222,
           "XLF": 1.0
         }
       },
       "tickers": [
         "INDA",
         "QQQ",
+        "SH",
+        "XLE",
         "XLF"
       ],
       "max_corr": 0.714,
@@ -877,10 +1084,10 @@
         "INDA",
         "XLF"
       ],
-      "most_negative_corr": 0.0,
+      "most_negative_corr": -0.939,
       "most_negative_pair": [
-        "",
-        ""
+        "QQQ",
+        "SH"
       ],
       "status": "HIGH"
     },
@@ -888,9 +1095,11 @@
       "per_ticker": {
         "INDA": 14.07,
         "XLF": 14.31,
-        "QQQ": 25.57
+        "QQQ": 25.57,
+        "SH": 14.62,
+        "XLE": 24.55
       },
-      "portfolio_avg_vol_pct": 17.98,
+      "portfolio_avg_vol_pct": 18.62,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -898,39 +1107,59 @@
       "benchmark_price_start": 741.75,
       "benchmark_price_now": 741.75,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.45,
-      "alpha": -0.45
+      "portfolio_return_pct": -0.46,
+      "alpha": -0.46
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 43.24,
+          "actual_weight_pct": 38.15,
           "target_weight_pct": 10.0,
-          "drift_pct": 33.24,
+          "drift_pct": 28.15,
           "action": "DEPLOY",
-          "amount": 3331.48,
+          "amount": 2821.68,
           "etf_name": "Cash Reserve",
+          "regime_note": ""
+        },
+        {
+          "ticker": "SH",
+          "actual_weight_pct": 2.4,
+          "target_weight_pct": 18.0,
+          "drift_pct": -15.6,
+          "action": "ADD",
+          "amount": 1563.28,
+          "etf_name": "ProShares Short S&P500",
+          "regime_note": ""
+        },
+        {
+          "ticker": "XLE",
+          "actual_weight_pct": 2.68,
+          "target_weight_pct": 18.0,
+          "drift_pct": -15.32,
+          "action": "ADD",
+          "amount": 1535.37,
+          "etf_name": "Energy Select Sector SPDR",
+          "regime_note": ""
+        },
+        {
+          "ticker": "XLF",
+          "actual_weight_pct": 32.4,
+          "target_weight_pct": 18.0,
+          "drift_pct": 14.4,
+          "action": "TRIM",
+          "amount": 1443.37,
+          "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
         {
           "ticker": "QQQ",
           "actual_weight_pct": 5.71,
-          "target_weight_pct": 30.0,
-          "drift_pct": -24.29,
+          "target_weight_pct": 18.0,
+          "drift_pct": -12.29,
           "action": "ADD",
-          "amount": 2434.37,
+          "amount": 1231.55,
           "etf_name": "Invesco QQQ Trust",
-          "regime_note": ""
-        },
-        {
-          "ticker": "INDA",
-          "actual_weight_pct": 18.65,
-          "target_weight_pct": 30.0,
-          "drift_pct": -11.35,
-          "action": "ADD",
-          "amount": 1137.67,
-          "etf_name": "iShares MSCI India ETF",
           "regime_note": ""
         }
       ],
@@ -940,8 +1169,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -2275.56,
-          "portfolio_loss_pct": -22.7,
+          "total_impact": -2519.57,
+          "portfolio_loss_pct": -25.14,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -960,12 +1189,24 @@
               "factor": "equities",
               "shock_pct": -40.0,
               "impact": -228.97
+            },
+            {
+              "ticker": "SH",
+              "factor": "equities",
+              "shock_pct": -40.0,
+              "impact": -96.28
+            },
+            {
+              "ticker": "XLE",
+              "factor": "oil",
+              "shock_pct": -55.0,
+              "impact": -147.73
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -1934.22,
-          "portfolio_loss_pct": -19.3,
+          "total_impact": -2190.65,
+          "portfolio_loss_pct": -21.86,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -984,12 +1225,24 @@
               "factor": "equities",
               "shock_pct": -34.0,
               "impact": -194.62
+            },
+            {
+              "ticker": "SH",
+              "factor": "equities",
+              "shock_pct": -34.0,
+              "impact": -81.84
+            },
+            {
+              "ticker": "XLE",
+              "factor": "oil",
+              "shock_pct": -65.0,
+              "impact": -174.59
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -853.33,
-          "portfolio_loss_pct": -8.51,
+          "total_impact": -916.3,
+          "portfolio_loss_pct": -9.14,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1008,12 +1261,24 @@
               "factor": "equities",
               "shock_pct": -15.0,
               "impact": -85.86
+            },
+            {
+              "ticker": "SH",
+              "factor": "equities",
+              "shock_pct": -15.0,
+              "impact": -36.1
+            },
+            {
+              "ticker": "XLE",
+              "factor": "oil",
+              "shock_pct": -10.0,
+              "impact": -26.86
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -455.11,
-          "portfolio_loss_pct": -4.54,
+          "total_impact": -514.66,
+          "portfolio_loss_pct": -5.14,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1032,12 +1297,24 @@
               "factor": "equities",
               "shock_pct": -8.0,
               "impact": -45.79
+            },
+            {
+              "ticker": "SH",
+              "factor": "equities",
+              "shock_pct": -8.0,
+              "impact": -19.26
+            },
+            {
+              "ticker": "XLE",
+              "factor": "oil",
+              "shock_pct": -15.0,
+              "impact": -40.29
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1024.0,
-          "portfolio_loss_pct": -10.22,
+          "total_impact": -1121.05,
+          "portfolio_loss_pct": -11.19,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1056,20 +1333,32 @@
               "factor": "equities",
               "shock_pct": -18.0,
               "impact": -103.04
+            },
+            {
+              "ticker": "SH",
+              "factor": "equities",
+              "shock_pct": -18.0,
+              "impact": -43.32
+            },
+            {
+              "ticker": "XLE",
+              "factor": "oil",
+              "shock_pct": -20.0,
+              "impact": -53.72
             }
           ]
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -22.7
+      "worst_loss_pct": -25.14
     }
   },
   "logs": [
-    "2026-06-14 22:16:30 [INFO] AZALYST - status.json generated",
-    "2026-06-14 22:16:30 [INFO] PORTFOLIO - NAV USD 10,022.64 | Return -0.45%",
-    "2026-06-14 22:16:30 [INFO] SIGNALS - 8 active signal buckets in state",
-    "2026-06-14 22:16:30 [INFO] TRADER - Open positions: INDA, XLF, QQQ",
-    "2026-06-14 22:16:30 [INFO] TRADER - Closed trades: 1"
+    "2026-06-14 23:55:09 [INFO] AZALYST - status.json generated",
+    "2026-06-14 23:55:09 [INFO] PORTFOLIO - NAV USD 10,022.08 | Return -0.46%",
+    "2026-06-14 23:55:09 [INFO] SIGNALS - 10 active signal buckets in state",
+    "2026-06-14 23:55:09 [INFO] TRADER - Open positions: INDA, XLF, QQQ, SH, XLE",
+    "2026-06-14 23:55:09 [INFO] TRADER - Closed trades: 1"
   ],
-  "generated_at": "2026-06-14 22:16:27 UTC"
+  "generated_at": "2026-06-14 23:55:07 UTC"
 }
