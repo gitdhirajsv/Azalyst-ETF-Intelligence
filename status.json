@@ -1,46 +1,23 @@
 {
-  "portfolio_value": 10032.45,
+  "portfolio_value": 10023.96,
   "total_deposited": 10068.35,
-  "cash": 3890.11,
+  "cash": 5536.18,
   "monthly_reserve": 0.0,
-  "market_value": 6142.35,
-  "total_invested": 6178.24,
-  "unrealised_pnl": -35.89,
-  "unrealised_str": "-35.89",
-  "realised_pnl": 0.0,
-  "realised_str": "+0.00",
-  "change": "-0.36%",
-  "change_raw": -0.36,
-  "closed_trades": 0,
+  "market_value": 4487.79,
+  "total_invested": 4475.79,
+  "unrealised_pnl": 12.0,
+  "unrealised_str": "+12.00",
+  "realised_pnl": -56.38,
+  "realised_str": "-56.38",
+  "change": "-0.44%",
+  "change_raw": -0.44,
+  "closed_trades": 1,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 10068.35,
-  "drawdown_now_pct": 0.36,
-  "max_drawdown_pct": 0.37,
+  "drawdown_now_pct": 0.44,
+  "max_drawdown_pct": 0.44,
   "usd_inr_rate": 95.1,
   "positions": [
-    {
-      "trade_id": "T0001",
-      "ticker": "SH",
-      "etf_name": "ProShares Short S&P500",
-      "sector": "Gold & Precious Metals",
-      "platform": "ProShares -- IBKR / Schwab / Fidelity",
-      "exchange": "NYSE",
-      "entry": 33.96,
-      "current": 33.57,
-      "peak_price": 34.01,
-      "trail_stop": 31.59,
-      "dist_to_trail_pct": 5.91,
-      "units": 128.906713,
-      "invested": 4378.23,
-      "pnl": -50.83,
-      "pnl_str": "-50.83",
-      "pnl_pct": -1.16,
-      "pnl_pct_str": "-1.16%",
-      "confidence": 92,
-      "severity": "HIGH",
-      "days_held": 2,
-      "half_exited": false
-    },
     {
       "trade_id": "T0002",
       "ticker": "INDA",
@@ -71,17 +48,17 @@
       "sector": "Banking & Financial Sector",
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 52.67,
+      "entry": 53.32,
       "current": 53.34,
-      "peak_price": 53.36,
-      "trail_stop": 48.99,
-      "dist_to_trail_pct": 8.16,
-      "units": 6.229759,
-      "invested": 328.17,
-      "pnl": 4.16,
-      "pnl_str": "+4.16",
-      "pnl_pct": 1.27,
-      "pnl_pct_str": "+1.27%",
+      "peak_price": 53.39,
+      "trail_stop": 49.59,
+      "dist_to_trail_pct": 7.04,
+      "units": 56.33915,
+      "invested": 3003.95,
+      "pnl": 1.18,
+      "pnl_str": "+1.18",
+      "pnl_pct": 0.04,
+      "pnl_pct_str": "+0.04%",
       "confidence": 78,
       "severity": "HIGH",
       "days_held": 2,
@@ -111,19 +88,50 @@
       "half_exited": false
     }
   ],
-  "closed_trades_list": [],
+  "closed_trades_list": [
+    {
+      "trade_id": "T0001",
+      "ticker": "SH",
+      "etf_name": "ProShares Short S&P500",
+      "platform": "ProShares -- IBKR / Schwab / Fidelity",
+      "exchange": "NYSE",
+      "entry": 33.94,
+      "exit": 33.54,
+      "pnl": -56.38,
+      "pnl_str": "-56.38",
+      "pnl_pct": -1.19,
+      "pnl_pct_str": "-1.19%",
+      "days_held": 3,
+      "exit_reason": "Decay-ETF stall exit (3d, -1.1%)",
+      "winner": false
+    }
+  ],
   "track_record": {
-    "total_trades": 0,
+    "total_trades": 1,
     "winners": 0,
-    "losers": 0,
+    "losers": 1,
     "win_rate": 0.0,
     "avg_win": 0.0,
-    "avg_loss": 0.0,
+    "avg_loss": -1.19,
     "profit_factor": 0.0,
-    "expectancy": 0.0,
+    "expectancy": -1.19,
     "sharpe_proxy": 0.0,
-    "best": null,
-    "worst": null
+    "best": {
+      "ticker": "SH",
+      "etf_name": "ProShares Short S&P500",
+      "pnl_pct": -1.19,
+      "pnl_pct_str": "-1.19%",
+      "exit_reason": "Decay-ETF stall exit (3d, -1.1%)",
+      "days_held": 3
+    },
+    "worst": {
+      "ticker": "SH",
+      "etf_name": "ProShares Short S&P500",
+      "pnl_pct": -1.19,
+      "pnl_pct_str": "-1.19%",
+      "exit_reason": "Decay-ETF stall exit (3d, -1.1%)",
+      "days_held": 3
+    }
   },
   "confidence_threshold": 60,
   "regime": {
@@ -156,31 +164,27 @@
   },
   "allocation": {
     "labels": [
-      "SH",
       "INDA",
       "XLF",
       "QQQ",
       "CASH"
     ],
     "values": [
-      43.1,
       12.5,
-      3.3,
+      30.0,
       2.3,
-      38.8
+      55.2
     ]
   },
   "pnl": {
     "labels": [
-      "SH",
       "INDA",
       "XLF",
       "QQQ"
     ],
     "values": [
-      -50.83,
       9.88,
-      4.16,
+      1.18,
       0.95
     ]
   },
@@ -194,12 +198,12 @@
       "score": 88.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 86.0
-    },
-    {
       "symbol": "Crypto & Digital Assets",
       "score": 84.0
+    },
+    {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 80.0
     },
     {
       "symbol": "India Equity Markets",
@@ -211,7 +215,7 @@
     },
     {
       "symbol": "Nuclear Energy & Uranium",
-      "score": 70.0
+      "score": 64.0
     },
     {
       "symbol": "Clean Energy & Renewables",
@@ -324,59 +328,6 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 86.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -9.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "14 Jun 2026 13:49 UTC",
-      "headline": "Gold heads for second weekly loss on rate rise expectations",
-      "regions": [
-        "middle_east",
-        "americas",
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Earnings",
-        "Oilprice.com",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 16.8,
-        "source_diversity": 14.0,
-        "recency": 15.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 84.0,
@@ -420,6 +371,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 10.3,
         "recency": 11.7,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 80.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -9.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "14 Jun 2026 13:49 UTC",
+      "headline": "Gold heads for second weekly loss on rate rise expectations",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "americas",
+        "global"
+      ],
+      "sources": [
+        "Earnings",
+        "Oilprice.com",
+        "Latest from Tom's Hardware",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 16.8,
+        "source_diversity": 14.0,
+        "recency": 9.8,
         "geopolitical_severity": 13.0
       }
     },
@@ -528,7 +532,7 @@
     {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
-      "confidence": 70.0,
+      "confidence": 64.0,
       "severity": "HIGH",
       "direction": "BEARISH",
       "direction_score": 0.0,
@@ -539,15 +543,15 @@
       "latest_at": "14 Jun 2026 13:24 UTC",
       "headline": "Compressed Timeline for US-Iran Nuclear Deal Could Lead to Later Unraveling",
       "regions": [
+        "asia_pacific",
         "middle_east",
-        "global",
-        "asia_pacific"
+        "global"
       ],
       "sources": [
         "Oilprice.com",
-        "Semiconductor Engineering",
+        "Latest from Tom's Hardware",
         "Bloomberg Markets",
-        "Latest from Tom's Hardware"
+        "Semiconductor Engineering"
       ],
       "primary_etf": "URA",
       "top_etfs": [
@@ -572,7 +576,7 @@
         "signal_strength": 13.4,
         "volume_confirmation": 9.7,
         "source_diversity": 11.0,
-        "recency": 14.9,
+        "recency": 9.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -642,12 +646,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / BEARISH - Gold heads for second weekly loss on rate rise expectations"
+      "text": "Crypto & Digital Assets - 28 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Crypto & Digital Assets - 28 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / BEARISH - Gold heads for second weekly loss on rate rise expectations"
     },
     {
       "tag": "tag-bull",
@@ -785,11 +789,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63729.53,
+      "price": 63751.2,
       "currency": "USD",
-      "change": -691.79,
-      "change_pct": -1.07,
-      "change_str": "-1.07%",
+      "change": -670.12,
+      "change_pct": -1.04,
+      "change_str": "-1.04%",
       "direction": "down"
     },
     {
@@ -817,14 +821,14 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.36,
+    "drawdown_from_peak_pct": 0.44,
     "portfolio_peak": 10068.35,
     "vix": 17.68,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
-        "sector": "Gold & Precious Metals",
-        "weight": 43.1,
+        "sector": "Banking & Financial Sector",
+        "weight": 30.0,
         "at_cap": true
       },
       {
@@ -833,17 +837,12 @@
         "at_cap": false
       },
       {
-        "sector": "Banking & Financial Sector",
-        "weight": 3.3,
-        "at_cap": false
-      },
-      {
         "sector": "Technology & AI / Semiconductors",
         "weight": 2.3,
         "at_cap": false
       }
     ],
-    "max_drawdown_pct": 0.37,
+    "max_drawdown_pct": 0.44,
     "sector_cap_pct": 30,
     "trailing_stop_pct": 8,
     "hard_stop_pct": 10,
@@ -855,32 +854,22 @@
         "INDA": {
           "INDA": 1.0,
           "QQQ": 0.538,
-          "SH": -0.721,
           "XLF": 0.714
         },
         "QQQ": {
           "INDA": 0.538,
           "QQQ": 1.0,
-          "SH": -0.939,
           "XLF": 0.09
-        },
-        "SH": {
-          "INDA": -0.721,
-          "QQQ": -0.939,
-          "SH": 1.0,
-          "XLF": -0.35
         },
         "XLF": {
           "INDA": 0.714,
           "QQQ": 0.09,
-          "SH": -0.35,
           "XLF": 1.0
         }
       },
       "tickers": [
         "INDA",
         "QQQ",
-        "SH",
         "XLF"
       ],
       "max_corr": 0.714,
@@ -888,80 +877,59 @@
         "INDA",
         "XLF"
       ],
-      "most_negative_corr": -0.939,
+      "most_negative_corr": 0.0,
       "most_negative_pair": [
-        "QQQ",
-        "SH"
+        "",
+        ""
       ],
       "status": "HIGH"
     },
     "volatility": {
       "per_ticker": {
-        "SH": 14.62,
         "INDA": 14.07,
         "XLF": 14.31,
         "QQQ": 25.57
       },
-      "portfolio_avg_vol_pct": 17.14,
+      "portfolio_avg_vol_pct": 17.98,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 0.54,
-      "benchmark_price_start": 737.76,
+      "benchmark_return_pct": 0.0,
+      "benchmark_price_start": 741.75,
       "benchmark_price_now": 741.75,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.36,
-      "alpha": -0.9
+      "portfolio_return_pct": -0.44,
+      "alpha": -0.44
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 38.78,
+          "actual_weight_pct": 55.23,
           "target_weight_pct": 10.0,
-          "drift_pct": 28.78,
+          "drift_pct": 45.23,
           "action": "DEPLOY",
-          "amount": 2886.86,
+          "amount": 4533.78,
           "etf_name": "Cash Reserve",
-          "regime_note": ""
-        },
-        {
-          "ticker": "SH",
-          "actual_weight_pct": 43.13,
-          "target_weight_pct": 22.5,
-          "drift_pct": 20.63,
-          "action": "TRIM",
-          "amount": 2070.1,
-          "etf_name": "ProShares Short S&P500",
           "regime_note": ""
         },
         {
           "ticker": "QQQ",
           "actual_weight_pct": 2.3,
-          "target_weight_pct": 22.5,
-          "drift_pct": -20.2,
+          "target_weight_pct": 30.0,
+          "drift_pct": -27.7,
           "action": "ADD",
-          "amount": 2026.48,
+          "amount": 2776.36,
           "etf_name": "Invesco QQQ Trust",
           "regime_note": ""
         },
         {
-          "ticker": "XLF",
-          "actual_weight_pct": 3.31,
-          "target_weight_pct": 22.5,
-          "drift_pct": -19.19,
-          "action": "ADD",
-          "amount": 1925.01,
-          "etf_name": "Financial Select Sector SPDR",
-          "regime_note": ""
-        },
-        {
           "ticker": "INDA",
-          "actual_weight_pct": 12.48,
-          "target_weight_pct": 22.5,
-          "drift_pct": -10.02,
+          "actual_weight_pct": 12.49,
+          "target_weight_pct": 30.0,
+          "drift_pct": -17.51,
           "action": "ADD",
-          "amount": 1005.47,
+          "amount": 1755.36,
           "etf_name": "iShares MSCI India ETF",
           "regime_note": ""
         }
@@ -972,15 +940,9 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": 355.87,
-          "portfolio_loss_pct": 3.55,
+          "total_impact": -1795.11,
+          "portfolio_loss_pct": -17.91,
           "position_impacts": [
-            {
-              "ticker": "SH",
-              "factor": "gold",
-              "shock_pct": 25.0,
-              "impact": 1081.85
-            },
             {
               "ticker": "INDA",
               "factor": "equities",
@@ -991,7 +953,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -132.92
+              "impact": -1202.05
             },
             {
               "ticker": "QQQ",
@@ -1002,15 +964,9 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -487.26,
-          "portfolio_loss_pct": -4.86,
+          "total_impact": -1525.85,
+          "portfolio_loss_pct": -15.22,
           "position_impacts": [
-            {
-              "ticker": "SH",
-              "factor": "gold",
-              "shock_pct": 3.0,
-              "impact": 129.82
-            },
             {
               "ticker": "INDA",
               "factor": "equities",
@@ -1021,7 +977,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -112.98
+              "impact": -1021.74
             },
             {
               "ticker": "QQQ",
@@ -1032,15 +988,9 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -488.61,
-          "portfolio_loss_pct": -4.87,
+          "total_impact": -673.17,
+          "portfolio_loss_pct": -6.72,
           "position_impacts": [
-            {
-              "ticker": "SH",
-              "factor": "gold",
-              "shock_pct": -5.0,
-              "impact": -216.37
-            },
             {
               "ticker": "INDA",
               "factor": "equities",
@@ -1051,7 +1001,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -49.84
+              "impact": -450.77
             },
             {
               "ticker": "QQQ",
@@ -1062,15 +1012,9 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -664.48,
-          "portfolio_loss_pct": -6.62,
+          "total_impact": -359.02,
+          "portfolio_loss_pct": -3.58,
           "position_impacts": [
-            {
-              "ticker": "SH",
-              "factor": "gold",
-              "shock_pct": -12.0,
-              "impact": -519.29
-            },
             {
               "ticker": "INDA",
               "factor": "equities",
@@ -1081,7 +1025,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -26.58
+              "impact": -240.41
             },
             {
               "ticker": "QQQ",
@@ -1092,15 +1036,9 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": 19.5,
-          "portfolio_loss_pct": 0.19,
+          "total_impact": -807.8,
+          "portfolio_loss_pct": -8.06,
           "position_impacts": [
-            {
-              "ticker": "SH",
-              "factor": "gold",
-              "shock_pct": 8.0,
-              "impact": 346.19
-            },
             {
               "ticker": "INDA",
               "factor": "equities",
@@ -1111,7 +1049,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -59.81
+              "impact": -540.92
             },
             {
               "ticker": "QQQ",
@@ -1122,15 +1060,16 @@
           ]
         }
       },
-      "worst_scenario": "USD_SPIKE_+10%",
-      "worst_loss_pct": -6.62
+      "worst_scenario": "2008_GFC",
+      "worst_loss_pct": -17.91
     }
   },
   "logs": [
-    "2026-06-14 18:04:27 [INFO] AZALYST - status.json generated",
-    "2026-06-14 18:04:27 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
-    "2026-06-14 18:04:27 [INFO] SIGNALS - 8 active signal buckets in state",
-    "2026-06-14 18:04:27 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
+    "2026-06-14 19:29:17 [INFO] AZALYST - status.json generated",
+    "2026-06-14 19:29:17 [INFO] PORTFOLIO - NAV USD 10,023.96 | Return -0.44%",
+    "2026-06-14 19:29:17 [INFO] SIGNALS - 8 active signal buckets in state",
+    "2026-06-14 19:29:17 [INFO] TRADER - Open positions: INDA, XLF, QQQ",
+    "2026-06-14 19:29:17 [INFO] TRADER - Closed trades: 1"
   ],
-  "generated_at": "2026-06-14 18:04:26 UTC"
+  "generated_at": "2026-06-14 19:29:15 UTC"
 }
