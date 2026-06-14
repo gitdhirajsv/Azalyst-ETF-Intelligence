@@ -84,7 +84,7 @@
       "pnl_pct_str": "+1.27%",
       "confidence": 78,
       "severity": "HIGH",
-      "days_held": 1,
+      "days_held": 2,
       "half_exited": false
     },
     {
@@ -146,11 +146,11 @@
     "ticker": "XLF",
     "rank_score": 16.853051996985684,
     "flow_score": 20.0,
-    "options_score": 22.715920966812845,
+    "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 2.5346015588702073,
     "news_score": 7.040000000000001,
-    "total": 84.14357452266874,
+    "total": 61.42765355585589,
     "publish": true,
     "direction": "long"
   },
@@ -186,6 +186,10 @@
   },
   "confidence": [
     {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 95.0
+    },
+    {
       "symbol": "Banking & Financial Sector + Europe Equity",
       "score": 88.0
     },
@@ -195,19 +199,15 @@
     },
     {
       "symbol": "India Equity Markets",
-      "score": 83.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 81.0
+      "score": 82.0
     },
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 77.0
+      "score": 74.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 76.0
+      "symbol": "Gold & Precious Metals",
+      "score": 71.0
     },
     {
       "symbol": "Clean Energy & Renewables",
@@ -215,6 +215,59 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 95.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 68,
+      "latest_at": "14 Jun 2026 12:04 UTC",
+      "headline": "Delos Data offers AI chip startups a fast track to rack scale",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "india",
+        "middle_east"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Cointelegraph.com News",
+        "Semiconductor Engineering",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 17.0,
+        "recency": 16.5,
+        "geopolitical_severity": 13.0
+      }
+    },
     {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector + Europe Equity",
@@ -316,25 +369,25 @@
     {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
-      "confidence": 83.0,
-      "severity": "HIGH",
+      "confidence": 82.0,
+      "severity": "CRITICAL",
       "direction": "BULLISH",
-      "direction_score": 6.0,
+      "direction_score": 15.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 16,
-      "latest_at": "14 Jun 2026 06:30 UTC",
+      "article_count": 19,
+      "latest_at": "14 Jun 2026 11:25 UTC",
       "headline": "F&amp;O Talk: Bullish Nifty charts; Sudeep Shah picks 7 stocks, outlines HDFC Bank, Sterlite Tech strategy",
       "regions": [
-        "middle_east",
-        "global",
+        "asia_pacific",
         "india",
-        "asia_pacific"
+        "middle_east",
+        "global"
       ],
       "sources": [
-        "Markets-Economic Times",
-        "World | Deutsche Welle"
+        "World | Deutsche Welle",
+        "Markets-Economic Times"
       ],
       "primary_etf": "INDA",
       "top_etfs": [
@@ -355,90 +408,37 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 21.7,
-        "volume_confirmation": 18.0,
-        "source_diversity": 7.6,
-        "recency": 17.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 81.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 63,
-      "latest_at": "13 Jun 2026 14:12 UTC",
-      "headline": "Delos Data offers AI chip startups a fast track to rack scale",
-      "regions": [
-        "global",
-        "india",
-        "asia_pacific",
-        "americas"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "World | Deutsche Welle",
-        "The Verge",
-        "Defense News"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.5,
-        "recency": 3.3,
+        "source_diversity": 7.6,
+        "recency": 15.4,
         "geopolitical_severity": 13.0
       }
     },
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 77.0,
+      "confidence": 74.0,
       "severity": "CRITICAL",
       "direction": "BULLISH",
-      "direction_score": 7.0,
+      "direction_score": 8.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 26,
+      "article_count": 25,
       "latest_at": "13 Jun 2026 21:00 UTC",
       "headline": "Fuel Tax Changes Hit Six States As Energy Inflation Accelerates",
       "regions": [
         "global",
-        "americas",
         "middle_east",
-        "africa"
+        "americas",
+        "europe"
       ],
       "sources": [
-        "Bloomberg Markets",
-        "Defense News",
         "Cointelegraph.com News",
-        "Oilprice.com"
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "World News - Breaking international news and headlines | Sky News"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -463,35 +463,35 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 14.2,
-        "recency": 6.5,
+        "source_diversity": 13.8,
+        "recency": 3.6,
         "geopolitical_severity": 13.0
       }
     },
     {
       "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 76.0,
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 71.0,
       "severity": "HIGH",
       "direction": "BEARISH",
-      "direction_score": -10.5,
+      "direction_score": -6.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "13 Jun 2026 19:00 UTC",
+      "article_count": 13,
+      "latest_at": "13 Jun 2026 12:00 UTC",
       "headline": "Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor",
       "regions": [
-        "middle_east",
-        "global",
+        "asia_pacific",
         "americas",
-        "asia_pacific"
+        "middle_east",
+        "global"
       ],
       "sources": [
         "Bloomberg Markets",
-        "Finance",
+        "Earnings",
         "US Top News and Analysis",
-        "Oilprice.com"
+        "Finance"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -514,10 +514,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 17.4,
+        "signal_strength": 20.6,
+        "volume_confirmation": 18.0,
         "source_diversity": 14.0,
-        "recency": 5.4,
+        "recency": 1.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -575,6 +575,11 @@
   ],
   "articles": [
     {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Technology & AI / Semiconductors - 68 articles - HIGH / BEARISH - Delos Data offers AI chip startups a fast track to rack scale"
+    },
+    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Banking & Financial Sector + Europe Equity - 13 articles - HIGH / BULLISH - Dollar steadies, set for weekly loss on US-Iran deal talks"
@@ -587,22 +592,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "India Equity Markets - 16 articles - HIGH / BULLISH - F&amp;O Talk: Bullish Nifty charts; Sudeep Shah picks 7 stocks, outlines HDFC Bank, Sterlite Tech strategy"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Technology & AI / Semiconductors - 63 articles - HIGH / BEARISH - Delos Data offers AI chip startups a fast track to rack scale"
+      "text": "India Equity Markets - 19 articles - CRITICAL / BULLISH - F&amp;O Talk: Bullish Nifty charts; Sudeep Shah picks 7 stocks, outlines HDFC Bank, Sterlite Tech strategy"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas - 26 articles - CRITICAL / BULLISH - Fuel Tax Changes Hit Six States As Energy Inflation Accelerates"
+      "text": "Energy / Oil & Gas - 25 articles - CRITICAL / BULLISH - Fuel Tax Changes Hit Six States As Energy Inflation Accelerates"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BEARISH - Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor"
+      "text": "Gold & Precious Metals - 13 articles - HIGH / BEARISH - Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor"
     },
     {
       "tag": "tag-bear",
@@ -725,12 +725,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64479.5,
+      "price": 64357.99,
       "currency": "USD",
-      "change": 58.18,
-      "change_pct": 0.09,
-      "change_str": "+0.09%",
-      "direction": "up"
+      "change": -63.33,
+      "change_pct": -0.1,
+      "change_str": "-0.10%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
@@ -1067,10 +1067,10 @@
     }
   },
   "logs": [
-    "2026-06-14 10:13:17 [INFO] AZALYST - status.json generated",
-    "2026-06-14 10:13:17 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
-    "2026-06-14 10:13:17 [INFO] SIGNALS - 7 active signal buckets in state",
-    "2026-06-14 10:13:17 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
+    "2026-06-14 12:32:35 [INFO] AZALYST - status.json generated",
+    "2026-06-14 12:32:35 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
+    "2026-06-14 12:32:35 [INFO] SIGNALS - 7 active signal buckets in state",
+    "2026-06-14 12:32:35 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
   ],
-  "generated_at": "2026-06-14 10:13:16 UTC"
+  "generated_at": "2026-06-14 12:32:33 UTC"
 }
