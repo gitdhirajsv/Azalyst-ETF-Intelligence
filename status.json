@@ -107,7 +107,7 @@
       "pnl_pct_str": "+0.41%",
       "confidence": 89,
       "severity": "HIGH",
-      "days_held": 1,
+      "days_held": 2,
       "half_exited": false
     }
   ],
@@ -194,6 +194,10 @@
       "score": 88.0
     },
     {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 86.0
+    },
+    {
       "symbol": "Crypto & Digital Assets",
       "score": 84.0
     },
@@ -206,8 +210,8 @@
       "score": 74.0
     },
     {
-      "symbol": "Gold & Precious Metals",
-      "score": 71.0
+      "symbol": "Nuclear Energy & Uranium",
+      "score": 70.0
     },
     {
       "symbol": "Clean Energy & Renewables",
@@ -316,6 +320,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.4,
         "recency": 14.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -9.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "14 Jun 2026 13:49 UTC",
+      "headline": "Gold heads for second weekly loss on rate rise expectations",
+      "regions": [
+        "middle_east",
+        "americas",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Earnings",
+        "Oilprice.com",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 16.8,
+        "source_diversity": 14.0,
+        "recency": 15.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -469,55 +526,53 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 71.0,
+      "sector_key": "nuclear_uranium",
+      "sector_label": "Nuclear Energy & Uranium",
+      "confidence": 70.0,
       "severity": "HIGH",
       "direction": "BEARISH",
-      "direction_score": -6.0,
+      "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "13 Jun 2026 12:00 UTC",
-      "headline": "Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor",
+      "article_count": 4,
+      "latest_at": "14 Jun 2026 13:24 UTC",
+      "headline": "Compressed Timeline for US-Iran Nuclear Deal Could Lead to Later Unraveling",
       "regions": [
-        "asia_pacific",
-        "americas",
         "middle_east",
-        "global"
+        "global",
+        "asia_pacific"
       ],
       "sources": [
+        "Oilprice.com",
+        "Semiconductor Engineering",
         "Bloomberg Markets",
-        "Earnings",
-        "US Top News and Analysis",
-        "Finance"
+        "Latest from Tom's Hardware"
       ],
-      "primary_etf": "GLDM",
+      "primary_etf": "URA",
       "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
+        "URA",
+        "URNM",
+        "CPSEETF"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
+        "CPSEETF"
       ],
       "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
+        "URA",
+        "URNM",
+        "SRUUF"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 20.6,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.0,
-        "recency": 1.5,
+        "signal_strength": 13.4,
+        "volume_confirmation": 9.7,
+        "source_diversity": 11.0,
+        "recency": 14.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -587,6 +642,11 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / BEARISH - Gold heads for second weekly loss on rate rise expectations"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "Crypto & Digital Assets - 28 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
@@ -602,7 +662,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Gold & Precious Metals - 13 articles - HIGH / BEARISH - Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor"
+      "text": "Nuclear Energy & Uranium - 4 articles - HIGH / BEARISH - Compressed Timeline for US-Iran Nuclear Deal Could Lead to Later Unraveling"
     },
     {
       "tag": "tag-bear",
@@ -725,11 +785,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64357.99,
+      "price": 63908.01,
       "currency": "USD",
-      "change": -63.33,
-      "change_pct": -0.1,
-      "change_str": "-0.10%",
+      "change": -513.31,
+      "change_pct": -0.8,
+      "change_str": "-0.80%",
       "direction": "down"
     },
     {
@@ -1067,10 +1127,10 @@
     }
   },
   "logs": [
-    "2026-06-14 12:32:35 [INFO] AZALYST - status.json generated",
-    "2026-06-14 12:32:35 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
-    "2026-06-14 12:32:35 [INFO] SIGNALS - 7 active signal buckets in state",
-    "2026-06-14 12:32:35 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
+    "2026-06-14 14:48:46 [INFO] AZALYST - status.json generated",
+    "2026-06-14 14:48:46 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
+    "2026-06-14 14:48:46 [INFO] SIGNALS - 8 active signal buckets in state",
+    "2026-06-14 14:48:46 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
   ],
-  "generated_at": "2026-06-14 12:32:33 UTC"
+  "generated_at": "2026-06-14 14:48:44 UTC"
 }

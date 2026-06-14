@@ -1,41 +1,41 @@
 {
   "gold_precious_metals": {
-    "sent_at": "2026-06-14T12:24:38.072580+00:00",
-    "confidence": 71,
-    "sector_label": "Gold & Precious Metals",
-    "article_count": 13,
+    "sent_at": "2026-06-14T14:42:01.377331+00:00",
+    "confidence": 86,
+    "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+    "article_count": 11,
     "severity": "HIGH",
     "direction": "BEARISH",
-    "direction_score": -6.0,
+    "direction_score": -9.0,
     "signal_scope": "global",
     "india_article_ratio": 0.0,
     "regions": [
-      "asia_pacific",
-      "americas",
       "middle_east",
+      "americas",
+      "asia_pacific",
       "global"
     ],
     "sources": [
-      "Bloomberg Markets",
-      "Earnings",
       "US Top News and Analysis",
-      "Finance",
+      "Earnings",
       "Oilprice.com",
-      "Markets-Economic Times"
+      "Markets-Economic Times",
+      "Bloomberg Markets",
+      "Latest from Tom's Hardware"
     ],
     "top_headlines": [
-      "Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor",
       "Gold heads for second weekly loss on rate rise expectations",
+      "Fed Chair Warsh Faces Challenging Debut",
       "Wall Street Week Ahead: Newly led Fed poses wildcard for rockier US indexes",
       "Jewelry giant Chow Tai Fook's shares rise 15% as higher gold price boosts profits",
       "US stocks: US market ends up on Iran war peace deal hopes, SpaceX's historic debut"
     ],
-    "latest_ts": "2026-06-13T12:00:00+00:00",
+    "latest_ts": "2026-06-14T13:49:21+00:00",
     "confidence_breakdown": {
-      "signal_strength": 20.6,
-      "volume_confirmation": 18.0,
+      "signal_strength": 22.0,
+      "volume_confirmation": 16.8,
       "source_diversity": 14.0,
-      "recency": 1.5,
+      "recency": 15.6,
       "geopolitical_severity": 13.0,
       "cross_engine_confirmation": 4.6
     },
@@ -2255,6 +2255,321 @@
             "deep liquidity",
             "strong cost profile",
             "clean thematic exposure"
+          ]
+        }
+      ]
+    }
+  },
+  "nuclear_uranium": {
+    "sent_at": "2026-06-14T14:42:00.180935+00:00",
+    "confidence": 70,
+    "sector_label": "Nuclear Energy & Uranium",
+    "article_count": 4,
+    "severity": "HIGH",
+    "direction": "BEARISH",
+    "direction_score": 0.0,
+    "signal_scope": "global",
+    "india_article_ratio": 0.0,
+    "regions": [
+      "middle_east",
+      "global",
+      "asia_pacific"
+    ],
+    "sources": [
+      "Oilprice.com",
+      "Semiconductor Engineering",
+      "Bloomberg Markets",
+      "Latest from Tom's Hardware"
+    ],
+    "top_headlines": [
+      "Compressed Timeline for US-Iran Nuclear Deal Could Lead to Later Unraveling",
+      "China's Fusion Reactor on Track for Ignition by 2027, Threatening U.S. Lead",
+      "New malware campaign tricks AI scanners with fake nuclear weapon prompts \u2014 malicious code triggers safety failsafes so scanners skip the payload",
+      "Optimizing EUV Source Efficiency With Radiation-Hydrodynamic Simulations (U. Of Osaka et al.)"
+    ],
+    "latest_ts": "2026-06-14T13:24:34+00:00",
+    "confidence_breakdown": {
+      "signal_strength": 13.4,
+      "volume_confirmation": 9.7,
+      "source_diversity": 11.0,
+      "recency": 14.9,
+      "geopolitical_severity": 13.0,
+      "cross_engine_confirmation": 8.3
+    },
+    "etf_recommendations": {
+      "selection_method": "global-ranked",
+      "primary": {
+        "name": "Global X Uranium ETF",
+        "ticker": "URA",
+        "platform": "VanEck \u2014 IBKR / Schwab",
+        "exchange": "NYSE",
+        "risk": "High",
+        "timeframe": "6\u201324 months",
+        "thesis": "Broader uranium + nuclear supply chain. Cameco, Kazatomprom. Lower concentration than URNM.",
+        "sector_key": "nuclear_uranium",
+        "market_bucket": "global",
+        "market_scope": "International-listed",
+        "selection_score": 94.0,
+        "selection_notes": [
+          "broad exposure",
+          "matches international access"
+        ]
+      },
+      "ranked": [
+        {
+          "name": "Global X Uranium ETF",
+          "ticker": "URA",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "6\u201324 months",
+          "thesis": "Broader uranium + nuclear supply chain. Cameco, Kazatomprom. Lower concentration than URNM.",
+          "sector_key": "nuclear_uranium",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 94.0,
+          "selection_notes": [
+            "broad exposure",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Sprott Uranium Miners ETF",
+          "ticker": "URNM",
+          "platform": "Sprott \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "6\u201324 months",
+          "thesis": "Physical uranium + major miners. Uranium in structural deficit through 2040. Early-cycle.",
+          "sector_key": "nuclear_uranium",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 77.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NTPC (nuclear expansion) + BHEL included",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "6\u201324 months",
+          "thesis": "NTPC is building India's first fleet of small modular reactors. CPSE ETF captures this.",
+          "sector_key": "nuclear_uranium",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 69.0,
+          "selection_notes": []
+        },
+        {
+          "name": "Sprott Physical Uranium Trust",
+          "ticker": "SRUUF",
+          "platform": "Sprott \u2014 IBKR",
+          "exchange": "OTC",
+          "risk": "High",
+          "timeframe": "12\u201336 months",
+          "thesis": "Holds physical uranium. Longer-term hold. Acts like gold but for nuclear fuel cycle.",
+          "sector_key": "nuclear_uranium",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 54.0,
+          "selection_notes": [
+            "matches international access"
+          ]
+        }
+      ],
+      "top_etfs": [
+        {
+          "name": "Global X Uranium ETF",
+          "ticker": "URA",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "6\u201324 months",
+          "thesis": "Broader uranium + nuclear supply chain. Cameco, Kazatomprom. Lower concentration than URNM.",
+          "sector_key": "nuclear_uranium",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 94.0,
+          "selection_notes": [
+            "broad exposure",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Sprott Uranium Miners ETF",
+          "ticker": "URNM",
+          "platform": "Sprott \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "6\u201324 months",
+          "thesis": "Physical uranium + major miners. Uranium in structural deficit through 2040. Early-cycle.",
+          "sector_key": "nuclear_uranium",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 77.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NTPC (nuclear expansion) + BHEL included",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "6\u201324 months",
+          "thesis": "NTPC is building India's first fleet of small modular reactors. CPSE ETF captures this.",
+          "sector_key": "nuclear_uranium",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 69.0,
+          "selection_notes": []
+        }
+      ],
+      "regional_alternatives": {
+        "India-listed": [
+          {
+            "name": "CPSE ETF",
+            "ticker": "CPSEETF",
+            "note": "NTPC (nuclear expansion) + BHEL included",
+            "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+            "exchange": "NSE",
+            "risk": "Medium",
+            "timeframe": "6\u201324 months",
+            "thesis": "NTPC is building India's first fleet of small modular reactors. CPSE ETF captures this.",
+            "sector_key": "nuclear_uranium",
+            "market_bucket": "india",
+            "market_scope": "India-listed",
+            "selection_score": 69.0,
+            "selection_notes": []
+          }
+        ],
+        "International-listed": [
+          {
+            "name": "Global X Uranium ETF",
+            "ticker": "URA",
+            "platform": "VanEck \u2014 IBKR / Schwab",
+            "exchange": "NYSE",
+            "risk": "High",
+            "timeframe": "6\u201324 months",
+            "thesis": "Broader uranium + nuclear supply chain. Cameco, Kazatomprom. Lower concentration than URNM.",
+            "sector_key": "nuclear_uranium",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 94.0,
+            "selection_notes": [
+              "broad exposure",
+              "matches international access"
+            ]
+          },
+          {
+            "name": "Sprott Uranium Miners ETF",
+            "ticker": "URNM",
+            "platform": "Sprott \u2014 IBKR / Schwab",
+            "exchange": "NYSE",
+            "risk": "High",
+            "timeframe": "6\u201324 months",
+            "thesis": "Physical uranium + major miners. Uranium in structural deficit through 2040. Early-cycle.",
+            "sector_key": "nuclear_uranium",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 77.5,
+            "selection_notes": [
+              "clean thematic exposure",
+              "matches international access"
+            ]
+          },
+          {
+            "name": "Sprott Physical Uranium Trust",
+            "ticker": "SRUUF",
+            "platform": "Sprott \u2014 IBKR",
+            "exchange": "OTC",
+            "risk": "High",
+            "timeframe": "12\u201336 months",
+            "thesis": "Holds physical uranium. Longer-term hold. Acts like gold but for nuclear fuel cycle.",
+            "sector_key": "nuclear_uranium",
+            "market_bucket": "global",
+            "market_scope": "International-listed",
+            "selection_score": 54.0,
+            "selection_notes": [
+              "matches international access"
+            ]
+          }
+        ]
+      },
+      "india": [
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NTPC (nuclear expansion) + BHEL included",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "6\u201324 months",
+          "thesis": "NTPC is building India's first fleet of small modular reactors. CPSE ETF captures this.",
+          "sector_key": "nuclear_uranium",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 69.0,
+          "selection_notes": []
+        }
+      ],
+      "global": [
+        {
+          "name": "Global X Uranium ETF",
+          "ticker": "URA",
+          "platform": "VanEck \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "6\u201324 months",
+          "thesis": "Broader uranium + nuclear supply chain. Cameco, Kazatomprom. Lower concentration than URNM.",
+          "sector_key": "nuclear_uranium",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 94.0,
+          "selection_notes": [
+            "broad exposure",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Sprott Uranium Miners ETF",
+          "ticker": "URNM",
+          "platform": "Sprott \u2014 IBKR / Schwab",
+          "exchange": "NYSE",
+          "risk": "High",
+          "timeframe": "6\u201324 months",
+          "thesis": "Physical uranium + major miners. Uranium in structural deficit through 2040. Early-cycle.",
+          "sector_key": "nuclear_uranium",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 77.5,
+          "selection_notes": [
+            "clean thematic exposure",
+            "matches international access"
+          ]
+        },
+        {
+          "name": "Sprott Physical Uranium Trust",
+          "ticker": "SRUUF",
+          "platform": "Sprott \u2014 IBKR",
+          "exchange": "OTC",
+          "risk": "High",
+          "timeframe": "12\u201336 months",
+          "thesis": "Holds physical uranium. Longer-term hold. Acts like gold but for nuclear fuel cycle.",
+          "sector_key": "nuclear_uranium",
+          "market_bucket": "global",
+          "market_scope": "International-listed",
+          "selection_score": 54.0,
+          "selection_notes": [
+            "matches international access"
           ]
         }
       ]
