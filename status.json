@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 10023.96,
+  "portfolio_value": 10023.7,
   "total_deposited": 10068.35,
-  "cash": 5536.18,
+  "cash": 5293.69,
   "monthly_reserve": 0.0,
-  "market_value": 4487.79,
-  "total_invested": 4475.79,
-  "unrealised_pnl": 12.0,
-  "unrealised_str": "+12.00",
+  "market_value": 4730.0,
+  "total_invested": 4718.27,
+  "unrealised_pnl": 11.73,
+  "unrealised_str": "+11.73",
   "realised_pnl": -56.38,
   "realised_str": "-56.38",
   "change": "-0.44%",
@@ -52,13 +52,13 @@
       "current": 53.34,
       "peak_price": 53.39,
       "trail_stop": 49.59,
-      "dist_to_trail_pct": 7.04,
-      "units": 56.33915,
-      "invested": 3003.95,
-      "pnl": 1.18,
-      "pnl_str": "+1.18",
-      "pnl_pct": 0.04,
-      "pnl_pct_str": "+0.04%",
+      "dist_to_trail_pct": 7.03,
+      "units": 60.880171,
+      "invested": 3246.43,
+      "pnl": 0.92,
+      "pnl_str": "+0.92",
+      "pnl_pct": 0.03,
+      "pnl_pct_str": "+0.03%",
       "confidence": 78,
       "severity": "HIGH",
       "days_held": 2,
@@ -157,8 +157,8 @@
     "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 2.5346015588702073,
-    "news_score": 7.040000000000001,
-    "total": 61.42765355585589,
+    "news_score": 6.24,
+    "total": 60.62765355585589,
     "publish": true,
     "direction": "long"
   },
@@ -171,9 +171,9 @@
     ],
     "values": [
       12.5,
-      30.0,
+      32.4,
       2.3,
-      55.2
+      52.8
     ]
   },
   "pnl": {
@@ -184,7 +184,7 @@
     ],
     "values": [
       9.88,
-      1.18,
+      0.92,
       0.95
     ]
   },
@@ -194,16 +194,16 @@
       "score": 88.0
     },
     {
-      "symbol": "Banking & Financial Sector + Europe Equity",
-      "score": 88.0
-    },
-    {
       "symbol": "Crypto & Digital Assets",
       "score": 84.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 80.0
+    },
+    {
+      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
+      "score": 78.0
     },
     {
       "symbol": "India Equity Markets",
@@ -273,57 +273,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 17.0,
         "recency": 9.4,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector + Europe Equity",
-      "confidence": 88.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 0.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "14 Jun 2026 08:27 UTC",
-      "headline": "Dollar steadies, set for weekly loss on US-Iran deal talks",
-      "regions": [
-        "global",
-        "middle_east",
-        "asia_pacific",
-        "americas"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Finance"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "BANKBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 20.5,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.4,
-        "recency": 14.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -424,6 +373,57 @@
         "volume_confirmation": 16.8,
         "source_diversity": 14.0,
         "recency": 9.8,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
+      "confidence": 78.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": -9.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "14 Jun 2026 13:49 UTC",
+      "headline": "Dollar steadies, set for weekly loss on US-Iran deal talks",
+      "regions": [
+        "middle_east",
+        "americas",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "BANKBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.8,
+        "volume_confirmation": 16.8,
+        "source_diversity": 14.0,
+        "recency": 8.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -639,11 +639,6 @@
       "text": "Technology & AI / Semiconductors - 65 articles - HIGH / BEARISH - Delos Data offers AI chip startups a fast track to rack scale"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Banking & Financial Sector + Europe Equity - 13 articles - HIGH / BULLISH - Dollar steadies, set for weekly loss on US-Iran deal talks"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Crypto & Digital Assets - 28 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
@@ -652,6 +647,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / BEARISH - Gold heads for second weekly loss on rate rise expectations"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Banking & Financial Sector + Gold & Precious Metals - 11 articles - HIGH / BULLISH - Dollar steadies, set for weekly loss on US-Iran deal talks"
     },
     {
       "tag": "tag-bull",
@@ -789,11 +789,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63751.2,
+      "price": 63999.15,
       "currency": "USD",
-      "change": -670.12,
-      "change_pct": -1.04,
-      "change_str": "-1.04%",
+      "change": -422.17,
+      "change_pct": -0.66,
+      "change_str": "-0.66%",
       "direction": "down"
     },
     {
@@ -828,7 +828,7 @@
     "sector_concentration": [
       {
         "sector": "Banking & Financial Sector",
-        "weight": 30.0,
+        "weight": 32.4,
         "at_cap": true
       },
       {
@@ -905,11 +905,11 @@
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 55.23,
+          "actual_weight_pct": 52.81,
           "target_weight_pct": 10.0,
-          "drift_pct": 45.23,
+          "drift_pct": 42.81,
           "action": "DEPLOY",
-          "amount": 4533.78,
+          "amount": 4291.32,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
@@ -919,7 +919,7 @@
           "target_weight_pct": 30.0,
           "drift_pct": -27.7,
           "action": "ADD",
-          "amount": 2776.36,
+          "amount": 2776.28,
           "etf_name": "Invesco QQQ Trust",
           "regime_note": ""
         },
@@ -929,7 +929,7 @@
           "target_weight_pct": 30.0,
           "drift_pct": -17.51,
           "action": "ADD",
-          "amount": 1755.36,
+          "amount": 1755.28,
           "etf_name": "iShares MSCI India ETF",
           "regime_note": ""
         }
@@ -940,8 +940,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -1795.11,
-          "portfolio_loss_pct": -17.91,
+          "total_impact": -1892.0,
+          "portfolio_loss_pct": -18.88,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -953,7 +953,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -1202.05
+              "impact": -1298.94
             },
             {
               "ticker": "QQQ",
@@ -964,8 +964,8 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -1525.85,
-          "portfolio_loss_pct": -15.22,
+          "total_impact": -1608.2,
+          "portfolio_loss_pct": -16.04,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -977,7 +977,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -1021.74
+              "impact": -1104.1
             },
             {
               "ticker": "QQQ",
@@ -988,8 +988,8 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -673.17,
-          "portfolio_loss_pct": -6.72,
+          "total_impact": -709.5,
+          "portfolio_loss_pct": -7.08,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1001,7 +1001,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -450.77
+              "impact": -487.1
             },
             {
               "ticker": "QQQ",
@@ -1012,8 +1012,8 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -359.02,
-          "portfolio_loss_pct": -3.58,
+          "total_impact": -378.4,
+          "portfolio_loss_pct": -3.78,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1025,7 +1025,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -240.41
+              "impact": -259.79
             },
             {
               "ticker": "QQQ",
@@ -1036,8 +1036,8 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -807.8,
-          "portfolio_loss_pct": -8.06,
+          "total_impact": -851.4,
+          "portfolio_loss_pct": -8.49,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1049,7 +1049,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -540.92
+              "impact": -584.52
             },
             {
               "ticker": "QQQ",
@@ -1061,15 +1061,15 @@
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -17.91
+      "worst_loss_pct": -18.88
     }
   },
   "logs": [
-    "2026-06-14 19:29:17 [INFO] AZALYST - status.json generated",
-    "2026-06-14 19:29:17 [INFO] PORTFOLIO - NAV USD 10,023.96 | Return -0.44%",
-    "2026-06-14 19:29:17 [INFO] SIGNALS - 8 active signal buckets in state",
-    "2026-06-14 19:29:17 [INFO] TRADER - Open positions: INDA, XLF, QQQ",
-    "2026-06-14 19:29:17 [INFO] TRADER - Closed trades: 1"
+    "2026-06-14 20:57:42 [INFO] AZALYST - status.json generated",
+    "2026-06-14 20:57:42 [INFO] PORTFOLIO - NAV USD 10,023.70 | Return -0.44%",
+    "2026-06-14 20:57:42 [INFO] SIGNALS - 8 active signal buckets in state",
+    "2026-06-14 20:57:42 [INFO] TRADER - Open positions: INDA, XLF, QQQ",
+    "2026-06-14 20:57:42 [INFO] TRADER - Closed trades: 1"
   ],
-  "generated_at": "2026-06-14 19:29:15 UTC"
+  "generated_at": "2026-06-14 20:57:40 UTC"
 }
