@@ -1,0 +1,1076 @@
+{
+  "portfolio_value": 10032.45,
+  "total_deposited": 10068.35,
+  "cash": 3890.11,
+  "monthly_reserve": 0.0,
+  "market_value": 6142.35,
+  "total_invested": 6178.24,
+  "unrealised_pnl": -35.89,
+  "unrealised_str": "-35.89",
+  "realised_pnl": 0.0,
+  "realised_str": "+0.00",
+  "change": "-0.36%",
+  "change_raw": -0.36,
+  "closed_trades": 0,
+  "partial_realised_pnl": 0.0,
+  "portfolio_peak": 10068.35,
+  "drawdown_now_pct": 0.36,
+  "max_drawdown_pct": 0.37,
+  "usd_inr_rate": 95.1,
+  "positions": [
+    {
+      "trade_id": "T0001",
+      "ticker": "SH",
+      "etf_name": "ProShares Short S&P500",
+      "sector": "Gold & Precious Metals",
+      "platform": "ProShares -- IBKR / Schwab / Fidelity",
+      "exchange": "NYSE",
+      "entry": 33.96,
+      "current": 33.57,
+      "peak_price": 34.01,
+      "trail_stop": 31.59,
+      "dist_to_trail_pct": 5.91,
+      "units": 128.906713,
+      "invested": 4378.23,
+      "pnl": -50.83,
+      "pnl_str": "-50.83",
+      "pnl_pct": -1.16,
+      "pnl_pct_str": "-1.16%",
+      "confidence": 92,
+      "severity": "HIGH",
+      "days_held": 2,
+      "half_exited": false
+    },
+    {
+      "trade_id": "T0002",
+      "ticker": "INDA",
+      "etf_name": "iShares MSCI India ETF",
+      "sector": "India Equity Markets",
+      "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NYSE",
+      "entry": 47.95,
+      "current": 48.33,
+      "peak_price": 48.44,
+      "trail_stop": 44.59,
+      "dist_to_trail_pct": 7.73,
+      "units": 25.90171,
+      "invested": 1241.95,
+      "pnl": 9.88,
+      "pnl_str": "+9.88",
+      "pnl_pct": 0.8,
+      "pnl_pct_str": "+0.80%",
+      "confidence": 90,
+      "severity": "HIGH",
+      "days_held": 2,
+      "half_exited": false
+    },
+    {
+      "trade_id": "T0003",
+      "ticker": "XLF",
+      "etf_name": "Financial Select Sector SPDR",
+      "sector": "Banking & Financial Sector",
+      "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NYSE",
+      "entry": 52.67,
+      "current": 53.34,
+      "peak_price": 53.36,
+      "trail_stop": 48.99,
+      "dist_to_trail_pct": 8.16,
+      "units": 6.229759,
+      "invested": 328.17,
+      "pnl": 4.16,
+      "pnl_str": "+4.16",
+      "pnl_pct": 1.27,
+      "pnl_pct_str": "+1.27%",
+      "confidence": 78,
+      "severity": "HIGH",
+      "days_held": 2,
+      "half_exited": false
+    },
+    {
+      "trade_id": "T0004",
+      "ticker": "QQQ",
+      "etf_name": "Invesco QQQ Trust",
+      "sector": "Technology & AI / Semiconductors",
+      "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NASDAQ",
+      "entry": 718.36,
+      "current": 721.34,
+      "peak_price": 723.32,
+      "trail_stop": 668.08,
+      "dist_to_trail_pct": 7.38,
+      "units": 0.319996,
+      "invested": 229.9,
+      "pnl": 0.95,
+      "pnl_str": "+0.95",
+      "pnl_pct": 0.41,
+      "pnl_pct_str": "+0.41%",
+      "confidence": 89,
+      "severity": "HIGH",
+      "days_held": 1,
+      "half_exited": false
+    }
+  ],
+  "closed_trades_list": [],
+  "track_record": {
+    "total_trades": 0,
+    "winners": 0,
+    "losers": 0,
+    "win_rate": 0.0,
+    "avg_win": 0.0,
+    "avg_loss": 0.0,
+    "profit_factor": 0.0,
+    "expectancy": 0.0,
+    "sharpe_proxy": 0.0,
+    "best": null,
+    "worst": null
+  },
+  "confidence_threshold": 60,
+  "regime": {
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
+    "spy_above_200ma": true,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
+    "weight_matrix": {
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
+      "rotation": 15,
+      "macro": 10,
+      "news": 10
+    }
+  },
+  "top_signal": {
+    "ticker": "XLF",
+    "rank_score": 16.853051996985684,
+    "flow_score": 20.0,
+    "options_score": 0.0,
+    "rotation_score": 15.0,
+    "macro_score": 2.5346015588702073,
+    "news_score": 7.040000000000001,
+    "total": 61.42765355585589,
+    "publish": true,
+    "direction": "long"
+  },
+  "allocation": {
+    "labels": [
+      "SH",
+      "INDA",
+      "XLF",
+      "QQQ",
+      "CASH"
+    ],
+    "values": [
+      43.1,
+      12.5,
+      3.3,
+      2.3,
+      38.8
+    ]
+  },
+  "pnl": {
+    "labels": [
+      "SH",
+      "INDA",
+      "XLF",
+      "QQQ"
+    ],
+    "values": [
+      -50.83,
+      9.88,
+      4.16,
+      0.95
+    ]
+  },
+  "confidence": [
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 95.0
+    },
+    {
+      "symbol": "Banking & Financial Sector + Europe Equity",
+      "score": 88.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 84.0
+    },
+    {
+      "symbol": "India Equity Markets",
+      "score": 82.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 74.0
+    },
+    {
+      "symbol": "Gold & Precious Metals",
+      "score": 71.0
+    },
+    {
+      "symbol": "Clean Energy & Renewables",
+      "score": 62.0
+    }
+  ],
+  "signals": [
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 95.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 68,
+      "latest_at": "14 Jun 2026 12:04 UTC",
+      "headline": "Delos Data offers AI chip startups a fast track to rack scale",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "india",
+        "middle_east"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Cointelegraph.com News",
+        "Semiconductor Engineering",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 17.0,
+        "recency": 16.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector + Europe Equity",
+      "confidence": 88.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "14 Jun 2026 08:27 UTC",
+      "headline": "Dollar steadies, set for weekly loss on US-Iran deal talks",
+      "regions": [
+        "global",
+        "middle_east",
+        "asia_pacific",
+        "americas"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "Finance"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "BANKBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 20.5,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.4,
+        "recency": 14.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 84.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 28,
+      "latest_at": "12 Jun 2026 07:09 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "global",
+        "middle_east",
+        "asia_pacific",
+        "india"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Cointelegraph.com News",
+        "Tech",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 10.3,
+        "recency": 11.7,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 82.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": 15.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 19,
+      "latest_at": "14 Jun 2026 11:25 UTC",
+      "headline": "F&amp;O Talk: Bullish Nifty charts; Sudeep Shah picks 7 stocks, outlines HDFC Bank, Sterlite Tech strategy",
+      "regions": [
+        "asia_pacific",
+        "india",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 7.6,
+        "recency": 15.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 74.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": 8.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 25,
+      "latest_at": "13 Jun 2026 21:00 UTC",
+      "headline": "Fuel Tax Changes Hit Six States As Energy Inflation Accelerates",
+      "regions": [
+        "global",
+        "middle_east",
+        "americas",
+        "europe"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "World News - Breaking international news and headlines | Sky News"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.8,
+        "recency": 3.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 71.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -6.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "13 Jun 2026 12:00 UTC",
+      "headline": "Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor",
+      "regions": [
+        "asia_pacific",
+        "americas",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Earnings",
+        "US Top News and Analysis",
+        "Finance"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 20.6,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.0,
+        "recency": 1.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables",
+      "confidence": 62.0,
+      "severity": "MEDIUM",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "12 Jun 2026 17:21 UTC",
+      "headline": "BMW\u2019s Neue Klasse M concept brings next-gen EV tech to motorsports",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "india"
+      ],
+      "sources": [
+        "The Verge",
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "ICLN",
+      "top_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NEWENERGY"
+      ],
+      "global_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 7.2,
+        "volume_confirmation": 11.3,
+        "source_diversity": 11.0,
+        "recency": 16.9,
+        "geopolitical_severity": 9.4
+      }
+    }
+  ],
+  "articles": [
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Technology & AI / Semiconductors - 68 articles - HIGH / BEARISH - Delos Data offers AI chip startups a fast track to rack scale"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Banking & Financial Sector + Europe Equity - 13 articles - HIGH / BULLISH - Dollar steadies, set for weekly loss on US-Iran deal talks"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Crypto & Digital Assets - 28 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "India Equity Markets - 19 articles - CRITICAL / BULLISH - F&amp;O Talk: Bullish Nifty charts; Sudeep Shah picks 7 stocks, outlines HDFC Bank, Sterlite Tech strategy"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Energy / Oil & Gas - 25 articles - CRITICAL / BULLISH - Fuel Tax Changes Hit Six States As Energy Inflation Accelerates"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Gold & Precious Metals - 13 articles - HIGH / BEARISH - Gold slumps to 6-month low even as inflation fears rise. Here's why bullion is out of favor"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Clean Energy & Renewables - 5 articles - MEDIUM / BEARISH - BMW\u2019s Neue Klasse M concept brings next-gen EV tech to motorsports"
+    }
+  ],
+  "market_snapshot": [
+    {
+      "label": "S&P 500",
+      "ticker": "^GSPC",
+      "region": "US",
+      "price": 7431.46,
+      "currency": "USD",
+      "change": 37.16,
+      "change_pct": 0.5,
+      "change_str": "+0.50%",
+      "direction": "up"
+    },
+    {
+      "label": "NASDAQ",
+      "ticker": "^IXIC",
+      "region": "US",
+      "price": 25888.84,
+      "currency": "USD",
+      "change": 79.18,
+      "change_pct": 0.31,
+      "change_str": "+0.31%",
+      "direction": "up"
+    },
+    {
+      "label": "Dow Jones",
+      "ticker": "^DJI",
+      "region": "US",
+      "price": 51202.26,
+      "currency": "USD",
+      "change": 353.51,
+      "change_pct": 0.7,
+      "change_str": "+0.70%",
+      "direction": "up"
+    },
+    {
+      "label": "FTSE 100",
+      "ticker": "^FTSE",
+      "region": "UK",
+      "price": 10471.72,
+      "currency": "GBP",
+      "change": 167.82,
+      "change_pct": 1.63,
+      "change_str": "+1.63%",
+      "direction": "up"
+    },
+    {
+      "label": "DAX",
+      "ticker": "^GDAXI",
+      "region": "EU",
+      "price": 24635.3,
+      "currency": "EUR",
+      "change": 425.59,
+      "change_pct": 1.76,
+      "change_str": "+1.76%",
+      "direction": "up"
+    },
+    {
+      "label": "Nikkei 225",
+      "ticker": "^N225",
+      "region": "JP",
+      "price": 66020.04,
+      "currency": "JPY",
+      "change": 1802.77,
+      "change_pct": 2.81,
+      "change_str": "+2.81%",
+      "direction": "up"
+    },
+    {
+      "label": "Hang Seng",
+      "ticker": "^HSI",
+      "region": "HK",
+      "price": 24718.1,
+      "currency": "HKD",
+      "change": 468.81,
+      "change_pct": 1.93,
+      "change_str": "+1.93%",
+      "direction": "up"
+    },
+    {
+      "label": "Nifty 50",
+      "ticker": "^NSEI",
+      "region": "IN",
+      "price": 23622.9,
+      "currency": "INR",
+      "change": 461.3,
+      "change_pct": 1.99,
+      "change_str": "+1.99%",
+      "direction": "up"
+    },
+    {
+      "label": "Gold",
+      "ticker": "GC=F",
+      "region": "COMMOD",
+      "price": 4238.8,
+      "currency": "USD",
+      "change": 148.5,
+      "change_pct": 3.63,
+      "change_str": "+3.63%",
+      "direction": "up"
+    },
+    {
+      "label": "Crude Oil",
+      "ticker": "CL=F",
+      "region": "COMMOD",
+      "price": 84.88,
+      "currency": "USD",
+      "change": -2.83,
+      "change_pct": -3.23,
+      "change_str": "-3.23%",
+      "direction": "down"
+    },
+    {
+      "label": "Bitcoin",
+      "ticker": "BTC-USD",
+      "region": "CRYPTO",
+      "price": 64357.99,
+      "currency": "USD",
+      "change": -63.33,
+      "change_pct": -0.1,
+      "change_str": "-0.10%",
+      "direction": "down"
+    },
+    {
+      "label": "USD Index",
+      "ticker": "DX-Y.NYB",
+      "region": "FX",
+      "price": 99.81,
+      "currency": "USD",
+      "change": -0.05,
+      "change_pct": -0.05,
+      "change_str": "-0.05%",
+      "direction": "down"
+    },
+    {
+      "label": "VIX",
+      "ticker": "^VIX",
+      "region": "VOL",
+      "price": 17.68,
+      "currency": "USD",
+      "change": -1.76,
+      "change_pct": -9.05,
+      "change_str": "-9.05%",
+      "direction": "down"
+    }
+  ],
+  "risk_controls": {
+    "circuit_breaker_active": false,
+    "drawdown_from_peak_pct": 0.36,
+    "portfolio_peak": 10068.35,
+    "vix": 17.68,
+    "vix_regime": "ELEVATED",
+    "sector_concentration": [
+      {
+        "sector": "Gold & Precious Metals",
+        "weight": 43.1,
+        "at_cap": true
+      },
+      {
+        "sector": "India Equity Markets",
+        "weight": 12.5,
+        "at_cap": false
+      },
+      {
+        "sector": "Banking & Financial Sector",
+        "weight": 3.3,
+        "at_cap": false
+      },
+      {
+        "sector": "Technology & AI / Semiconductors",
+        "weight": 2.3,
+        "at_cap": false
+      }
+    ],
+    "max_drawdown_pct": 0.37,
+    "sector_cap_pct": 30,
+    "trailing_stop_pct": 8,
+    "hard_stop_pct": 10,
+    "partial_profit_pct": 8
+  },
+  "aladdin_risk": {
+    "correlation": {
+      "matrix": {
+        "INDA": {
+          "INDA": 1.0,
+          "QQQ": 0.538,
+          "SH": -0.721,
+          "XLF": 0.714
+        },
+        "QQQ": {
+          "INDA": 0.538,
+          "QQQ": 1.0,
+          "SH": -0.939,
+          "XLF": 0.09
+        },
+        "SH": {
+          "INDA": -0.721,
+          "QQQ": -0.939,
+          "SH": 1.0,
+          "XLF": -0.35
+        },
+        "XLF": {
+          "INDA": 0.714,
+          "QQQ": 0.09,
+          "SH": -0.35,
+          "XLF": 1.0
+        }
+      },
+      "tickers": [
+        "INDA",
+        "QQQ",
+        "SH",
+        "XLF"
+      ],
+      "max_corr": 0.714,
+      "max_corr_pair": [
+        "INDA",
+        "XLF"
+      ],
+      "most_negative_corr": -0.939,
+      "most_negative_pair": [
+        "QQQ",
+        "SH"
+      ],
+      "status": "HIGH"
+    },
+    "volatility": {
+      "per_ticker": {
+        "SH": 14.62,
+        "INDA": 14.07,
+        "XLF": 14.31,
+        "QQQ": 25.57
+      },
+      "portfolio_avg_vol_pct": 17.14,
+      "target_vol_pct": 15.0
+    },
+    "benchmark": {
+      "benchmark_return_pct": 0.54,
+      "benchmark_price_start": 737.76,
+      "benchmark_price_now": 741.75,
+      "benchmark_ticker": "SPY",
+      "portfolio_return_pct": -0.36,
+      "alpha": -0.9
+    },
+    "rebalance": {
+      "alerts": [
+        {
+          "ticker": "CASH",
+          "actual_weight_pct": 38.78,
+          "target_weight_pct": 10.0,
+          "drift_pct": 28.78,
+          "action": "DEPLOY",
+          "amount": 2886.86,
+          "etf_name": "Cash Reserve",
+          "regime_note": ""
+        },
+        {
+          "ticker": "SH",
+          "actual_weight_pct": 43.13,
+          "target_weight_pct": 22.5,
+          "drift_pct": 20.63,
+          "action": "TRIM",
+          "amount": 2070.1,
+          "etf_name": "ProShares Short S&P500",
+          "regime_note": ""
+        },
+        {
+          "ticker": "QQQ",
+          "actual_weight_pct": 2.3,
+          "target_weight_pct": 22.5,
+          "drift_pct": -20.2,
+          "action": "ADD",
+          "amount": 2026.48,
+          "etf_name": "Invesco QQQ Trust",
+          "regime_note": ""
+        },
+        {
+          "ticker": "XLF",
+          "actual_weight_pct": 3.31,
+          "target_weight_pct": 22.5,
+          "drift_pct": -19.19,
+          "action": "ADD",
+          "amount": 1925.01,
+          "etf_name": "Financial Select Sector SPDR",
+          "regime_note": ""
+        },
+        {
+          "ticker": "INDA",
+          "actual_weight_pct": 12.48,
+          "target_weight_pct": 22.5,
+          "drift_pct": -10.02,
+          "action": "ADD",
+          "amount": 1005.47,
+          "etf_name": "iShares MSCI India ETF",
+          "regime_note": ""
+        }
+      ],
+      "drift_threshold_pct": 5.0,
+      "needs_rebalance": true
+    },
+    "stress_test": {
+      "scenarios": {
+        "2008_GFC": {
+          "total_impact": 355.87,
+          "portfolio_loss_pct": 3.55,
+          "position_impacts": [
+            {
+              "ticker": "SH",
+              "factor": "gold",
+              "shock_pct": 25.0,
+              "impact": 1081.85
+            },
+            {
+              "ticker": "INDA",
+              "factor": "equities",
+              "shock_pct": -40.0,
+              "impact": -500.73
+            },
+            {
+              "ticker": "XLF",
+              "factor": "equities",
+              "shock_pct": -40.0,
+              "impact": -132.92
+            },
+            {
+              "ticker": "QQQ",
+              "factor": "equities",
+              "shock_pct": -40.0,
+              "impact": -92.33
+            }
+          ]
+        },
+        "2020_COVID": {
+          "total_impact": -487.26,
+          "portfolio_loss_pct": -4.86,
+          "position_impacts": [
+            {
+              "ticker": "SH",
+              "factor": "gold",
+              "shock_pct": 3.0,
+              "impact": 129.82
+            },
+            {
+              "ticker": "INDA",
+              "factor": "equities",
+              "shock_pct": -34.0,
+              "impact": -425.62
+            },
+            {
+              "ticker": "XLF",
+              "factor": "equities",
+              "shock_pct": -34.0,
+              "impact": -112.98
+            },
+            {
+              "ticker": "QQQ",
+              "factor": "equities",
+              "shock_pct": -34.0,
+              "impact": -78.48
+            }
+          ]
+        },
+        "RATES_SHOCK_+2%": {
+          "total_impact": -488.61,
+          "portfolio_loss_pct": -4.87,
+          "position_impacts": [
+            {
+              "ticker": "SH",
+              "factor": "gold",
+              "shock_pct": -5.0,
+              "impact": -216.37
+            },
+            {
+              "ticker": "INDA",
+              "factor": "equities",
+              "shock_pct": -15.0,
+              "impact": -187.77
+            },
+            {
+              "ticker": "XLF",
+              "factor": "equities",
+              "shock_pct": -15.0,
+              "impact": -49.84
+            },
+            {
+              "ticker": "QQQ",
+              "factor": "equities",
+              "shock_pct": -15.0,
+              "impact": -34.62
+            }
+          ]
+        },
+        "USD_SPIKE_+10%": {
+          "total_impact": -664.48,
+          "portfolio_loss_pct": -6.62,
+          "position_impacts": [
+            {
+              "ticker": "SH",
+              "factor": "gold",
+              "shock_pct": -12.0,
+              "impact": -519.29
+            },
+            {
+              "ticker": "INDA",
+              "factor": "equities",
+              "shock_pct": -8.0,
+              "impact": -100.15
+            },
+            {
+              "ticker": "XLF",
+              "factor": "equities",
+              "shock_pct": -8.0,
+              "impact": -26.58
+            },
+            {
+              "ticker": "QQQ",
+              "factor": "equities",
+              "shock_pct": -8.0,
+              "impact": -18.47
+            }
+          ]
+        },
+        "VIX_SPIKE_40": {
+          "total_impact": 19.5,
+          "portfolio_loss_pct": 0.19,
+          "position_impacts": [
+            {
+              "ticker": "SH",
+              "factor": "gold",
+              "shock_pct": 8.0,
+              "impact": 346.19
+            },
+            {
+              "ticker": "INDA",
+              "factor": "equities",
+              "shock_pct": -18.0,
+              "impact": -225.33
+            },
+            {
+              "ticker": "XLF",
+              "factor": "equities",
+              "shock_pct": -18.0,
+              "impact": -59.81
+            },
+            {
+              "ticker": "QQQ",
+              "factor": "equities",
+              "shock_pct": -18.0,
+              "impact": -41.55
+            }
+          ]
+        }
+      },
+      "worst_scenario": "USD_SPIKE_+10%",
+      "worst_loss_pct": -6.62
+    }
+  },
+  "logs": [
+    "2026-06-14 12:32:35 [INFO] AZALYST - status.json generated",
+    "2026-06-14 12:32:35 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
+    "2026-06-14 12:32:35 [INFO] SIGNALS - 7 active signal buckets in state",
+    "2026-06-14 12:32:35 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
+  ],
+  "generated_at": "2026-06-14 12:32:33 UTC"
+}
