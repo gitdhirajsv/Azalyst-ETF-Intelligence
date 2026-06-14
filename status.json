@@ -146,11 +146,11 @@
     "ticker": "XLF",
     "rank_score": 16.853051996985684,
     "flow_score": 20.0,
-    "options_score": 0.0,
+    "options_score": 22.715920966812845,
     "rotation_score": 15.0,
     "macro_score": 2.5346015588702073,
-    "news_score": 8.5,
-    "total": 62.88765355585589,
+    "news_score": 7.040000000000001,
+    "total": 84.14357452266874,
     "publish": true,
     "direction": "long"
   },
@@ -186,8 +186,8 @@
   },
   "confidence": [
     {
-      "symbol": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals",
-      "score": 85.0
+      "symbol": "Banking & Financial Sector + Europe Equity",
+      "score": 88.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -217,28 +217,28 @@
   "signals": [
     {
       "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals",
-      "confidence": 85.0,
-      "severity": "CRITICAL",
+      "sector_label": "Banking & Financial Sector + Europe Equity",
+      "confidence": 88.0,
+      "severity": "HIGH",
       "direction": "BULLISH",
-      "direction_score": -9.0,
+      "direction_score": 0.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 15,
-      "latest_at": "13 Jun 2026 09:00 UTC",
+      "article_count": 13,
+      "latest_at": "14 Jun 2026 08:27 UTC",
       "headline": "Dollar steadies, set for weekly loss on US-Iran deal talks",
       "regions": [
+        "global",
         "middle_east",
         "asia_pacific",
-        "global",
         "americas"
       ],
       "sources": [
-        "Finance",
-        "Markets-Economic Times",
         "US Top News and Analysis",
-        "Bloomberg Markets"
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "Finance"
       ],
       "primary_etf": "XLF",
       "top_etfs": [
@@ -259,10 +259,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 21.6,
+        "signal_strength": 20.5,
         "volume_confirmation": 18.0,
-        "source_diversity": 14.0,
-        "recency": 14.2,
+        "source_diversity": 14.4,
+        "recency": 14.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -577,7 +577,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Banking & Financial Sector + Europe Equity + Gold & Precious Metals - 15 articles - CRITICAL / BULLISH - Dollar steadies, set for weekly loss on US-Iran deal talks"
+      "text": "Banking & Financial Sector + Europe Equity - 13 articles - HIGH / BULLISH - Dollar steadies, set for weekly loss on US-Iran deal talks"
     },
     {
       "tag": "tag-bear",
@@ -725,12 +725,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64251.13,
+      "price": 64479.5,
       "currency": "USD",
-      "change": -170.19,
-      "change_pct": -0.26,
-      "change_str": "-0.26%",
-      "direction": "down"
+      "change": 58.18,
+      "change_pct": 0.09,
+      "change_str": "+0.09%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
@@ -1067,10 +1067,10 @@
     }
   },
   "logs": [
-    "2026-06-14 06:41:42 [INFO] AZALYST - status.json generated",
-    "2026-06-14 06:41:42 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
-    "2026-06-14 06:41:42 [INFO] SIGNALS - 7 active signal buckets in state",
-    "2026-06-14 06:41:42 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
+    "2026-06-14 10:13:17 [INFO] AZALYST - status.json generated",
+    "2026-06-14 10:13:17 [INFO] PORTFOLIO - NAV USD 10,032.45 | Return -0.36%",
+    "2026-06-14 10:13:17 [INFO] SIGNALS - 7 active signal buckets in state",
+    "2026-06-14 10:13:17 [INFO] TRADER - Open positions: SH, INDA, XLF, QQQ"
   ],
-  "generated_at": "2026-06-14 06:41:41 UTC"
+  "generated_at": "2026-06-14 10:13:16 UTC"
 }
