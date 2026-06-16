@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 10095.65,
+  "portfolio_value": 10095.31,
   "total_deposited": 10110.88,
-  "cash": 2244.35,
+  "cash": 1937.26,
   "monthly_reserve": 0.0,
-  "market_value": 7851.3,
-  "total_invested": 7809.9,
-  "unrealised_pnl": 41.39,
-  "unrealised_str": "+41.39",
+  "market_value": 8158.05,
+  "total_invested": 8116.99,
+  "unrealised_pnl": 41.06,
+  "unrealised_str": "+41.06",
   "realised_pnl": -56.62,
   "realised_str": "-56.62",
   "change": "-0.15%",
@@ -25,17 +25,17 @@
       "sector": "India Equity Markets",
       "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 48.32,
+      "entry": 48.39,
       "current": 49.26,
       "peak_price": 49.38,
-      "trail_stop": 44.93,
-      "dist_to_trail_pct": 8.78,
-      "units": 51.137278,
-      "invested": 2470.75,
-      "pnl": 48.27,
-      "pnl_str": "+48.27",
-      "pnl_pct": 1.95,
-      "pnl_pct_str": "+1.95%",
+      "trail_stop": 45.0,
+      "dist_to_trail_pct": 8.64,
+      "units": 55.184418,
+      "invested": 2670.33,
+      "pnl": 48.05,
+      "pnl_str": "+48.05",
+      "pnl_pct": 1.8,
+      "pnl_pct_str": "+1.80%",
       "confidence": 90,
       "severity": "HIGH",
       "days_held": 3,
@@ -94,20 +94,20 @@
       "sector": "Nuclear Energy & Uranium",
       "platform": "ProShares -- IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 33.35,
+      "entry": 33.32,
       "current": 32.99,
       "peak_price": 33.75,
-      "trail_stop": 31.01,
-      "dist_to_trail_pct": 5.99,
-      "units": 28.092776,
-      "invested": 936.87,
-      "pnl": -10.09,
-      "pnl_str": "-10.09",
-      "pnl_pct": -1.08,
-      "pnl_pct_str": "-1.08%",
+      "trail_stop": 30.98,
+      "dist_to_trail_pct": 6.08,
+      "units": 31.347889,
+      "invested": 1044.38,
+      "pnl": -10.21,
+      "pnl_str": "-10.21",
+      "pnl_pct": -0.98,
+      "pnl_pct_str": "-0.98%",
       "confidence": 97,
       "severity": "HIGH",
-      "days_held": 0,
+      "days_held": 1,
       "half_exited": false
     },
     {
@@ -130,7 +130,7 @@
       "pnl_pct_str": "-3.83%",
       "confidence": 68,
       "severity": "CRITICAL",
-      "days_held": 0,
+      "days_held": 1,
       "half_exited": false
     }
   ],
@@ -181,31 +181,31 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.11931337365286832,
+    "vix_level": 16.200000762939453,
+    "vix_percentile_1y": 0.28174603174603174,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
+      "rank": 30,
+      "flow": 22,
+      "options": 18,
       "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "macro": 8,
+      "news": 7
     }
   },
   "top_signal": {
     "ticker": "GDX",
     "rank_score": 9.636308623298033,
     "flow_score": 22.0,
-    "options_score": 0.0,
+    "options_score": 14.172471239993664,
     "rotation_score": 15.0,
-    "macro_score": 1.4303537779493025,
+    "macro_score": 1.6954523055951887,
     "news_score": 4.4799999999999995,
-    "total": 52.54666240124733,
-    "publish": false,
+    "total": 66.98423216888689,
+    "publish": true,
     "direction": "long"
   },
   "allocation": {
@@ -218,12 +218,12 @@
       "CASH"
     ],
     "values": [
-      25.0,
+      26.9,
       32.3,
       7.1,
-      9.2,
+      10.2,
       4.3,
-      22.2
+      19.2
     ]
   },
   "pnl": {
@@ -235,10 +235,10 @@
       "XLE"
     ],
     "values": [
-      48.27,
+      48.05,
       0.6,
       19.75,
-      -10.09,
+      -10.21,
       -17.14
     ]
   },
@@ -249,15 +249,11 @@
     },
     {
       "symbol": "Technology & AI / Semiconductors",
-      "score": 95.0
+      "score": 96.0
     },
     {
       "symbol": "Defense & Aerospace",
       "score": 94.0
-    },
-    {
-      "symbol": "India Equity Markets",
-      "score": 88.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -272,6 +268,14 @@
       "score": 80.0
     },
     {
+      "symbol": "India Equity Markets",
+      "score": 79.0
+    },
+    {
+      "symbol": "Asia Pacific Equity",
+      "score": 77.0
+    },
+    {
       "symbol": "Banking & Financial Sector",
       "score": 76.0
     },
@@ -282,10 +286,6 @@
     {
       "symbol": "Europe Equity",
       "score": 66.0
-    },
-    {
-      "symbol": "Asia Pacific Equity",
-      "score": 63.0
     },
     {
       "symbol": "Clean Energy & Renewables",
@@ -349,27 +349,27 @@
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 95.0,
+      "confidence": 96.0,
       "severity": "HIGH",
       "direction": "BEARISH",
       "direction_score": -1.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 64,
-      "latest_at": "15 Jun 2026 19:00 UTC",
-      "headline": "Tensordyne Tapes Out LNS-Based AI Chip, Claims Huge Power Advantages",
+      "article_count": 60,
+      "latest_at": "16 Jun 2026 00:00 UTC",
+      "headline": "AI Wars: Why Microsoft, Google and Amazon Are All Fighting Over Power",
       "regions": [
+        "americas",
         "asia_pacific",
         "global",
-        "europe",
         "india"
       ],
       "sources": [
-        "Semiconductor Engineering",
-        "Cointelegraph.com News",
-        "Oilprice.com",
-        "The Verge"
+        "Tech",
+        "Defense News",
+        "Markets-Economic Times",
+        "Latest from Tom's Hardware"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -395,7 +395,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 16.5,
-        "recency": 15.8,
+        "recency": 16.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -449,57 +449,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 16.8,
         "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 88.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 5.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
-      "latest_at": "15 Jun 2026 09:24 UTC",
-      "headline": "Will SpaceX's $75 billion IPO set the ball rolling for Reliance Jio and NSE listings in India?",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "middle_east",
-        "india"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "www.theregister.com - Articles",
-        "World | Deutsche Welle"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.0,
-        "recency": 16.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -651,6 +600,106 @@
         "volume_confirmation": 16.8,
         "source_diversity": 14.0,
         "recency": 9.8,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 79.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 16.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 25,
+      "latest_at": "15 Jun 2026 15:45 UTC",
+      "headline": "Nifty Bank rallies 1,000 points; HDFC Bank, IndusInd, Yes Bank, and other stocks jump up to 3%. What lies ahead?",
+      "regions": [
+        "middle_east",
+        "asia_pacific",
+        "india",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.6,
+        "recency": 7.3,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 77.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 4.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "15 Jun 2026 22:06 UTC",
+      "headline": "Asia Traders Turn Focus to RBA, BOJ Rate Decisions: Markets Wrap",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "europe"
+      ],
+      "sources": [
+        "Tech",
+        "Defense News",
+        "Markets-Economic Times",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.6,
+        "volume_confirmation": 13.7,
+        "source_diversity": 14.9,
+        "recency": 13.8,
         "geopolitical_severity": 13.0
       }
     },
@@ -807,55 +856,6 @@
       }
     },
     {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 63.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "15 Jun 2026 12:37 UTC",
-      "headline": "South Korea's Starbucks to shut for staff history lesson after backlash",
-      "regions": [
-        "asia_pacific",
-        "europe",
-        "middle_east"
-      ],
-      "sources": [
-        "BBC News",
-        "Tech",
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 8.3,
-        "volume_confirmation": 12.6,
-        "source_diversity": 13.4,
-        "recency": 8.3,
-        "geopolitical_severity": 10.8
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 62.0,
@@ -916,17 +916,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Technology & AI / Semiconductors - 64 articles - HIGH / BEARISH - Tensordyne Tapes Out LNS-Based AI Chip, Claims Huge Power Advantages"
+      "text": "Technology & AI / Semiconductors - 60 articles - HIGH / BEARISH - AI Wars: Why Microsoft, Google and Amazon Are All Fighting Over Power"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Defense & Aerospace - 27 articles - HIGH / BULLISH - France picks MBDA-Safran combo to supply multiple rocket launcher"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "India Equity Markets - 28 articles - HIGH / BULLISH - Will SpaceX's $75 billion IPO set the ball rolling for Reliance Jio and NSE listings in India?"
     },
     {
       "tag": "tag-bear",
@@ -946,6 +941,16 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "India Equity Markets - 25 articles - HIGH / BULLISH - Nifty Bank rallies 1,000 points; HDFC Bank, IndusInd, Yes Bank, and other stocks jump up to 3%. What lies ahead?"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Asia Pacific Equity - 7 articles - HIGH / BULLISH - Asia Traders Turn Focus to RBA, BOJ Rate Decisions: Markets Wrap"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Banking & Financial Sector - 10 articles - MEDIUM / BULLISH - Warsh Caught Between Trump, Bond Market Bet on Rate Hikes"
     },
     {
@@ -957,11 +962,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Europe Equity - 11 articles - HIGH / BULLISH - Bailey Defends BOE Gilt Sales After Criticism From Farage"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Asia Pacific Equity - 6 articles - MEDIUM / BULLISH - South Korea's Starbucks to shut for staff history lesson after backlash"
     },
     {
       "tag": "tag-bear",
@@ -1009,10 +1009,10 @@
       "region": "UK",
       "price": 10430.62,
       "currency": "GBP",
-      "change": -41.08,
-      "change_pct": -0.39,
-      "change_str": "-0.39%",
-      "direction": "down"
+      "change": 126.72,
+      "change_pct": 1.23,
+      "change_str": "+1.23%",
+      "direction": "up"
     },
     {
       "label": "DAX",
@@ -1029,11 +1029,11 @@
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 69317.5,
+      "price": 69203.21,
       "currency": "JPY",
-      "change": 5100.23,
-      "change_pct": 7.94,
-      "change_str": "+7.94%",
+      "change": 3183.17,
+      "change_pct": 4.82,
+      "change_str": "+4.82%",
       "direction": "up"
     },
     {
@@ -1062,33 +1062,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4331.6,
+      "price": 4337.6,
       "currency": "USD",
-      "change": 116.6,
-      "change_pct": 2.77,
-      "change_str": "+2.77%",
+      "change": 122.6,
+      "change_pct": 2.91,
+      "change_str": "+2.91%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 81.13,
+      "price": 81.42,
       "currency": "USD",
-      "change": -3.75,
-      "change_pct": -4.42,
-      "change_str": "-4.42%",
+      "change": -3.46,
+      "change_pct": -4.08,
+      "change_str": "-4.08%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66315.69,
+      "price": 66333.94,
       "currency": "USD",
-      "change": 605.29,
-      "change_pct": 0.92,
-      "change_str": "+0.92%",
+      "change": 623.54,
+      "change_pct": 0.95,
+      "change_str": "+0.95%",
       "direction": "up"
     },
     {
@@ -1128,12 +1128,12 @@
       },
       {
         "sector": "India Equity Markets",
-        "weight": 25.0,
+        "weight": 26.9,
         "at_cap": false
       },
       {
         "sector": "Nuclear Energy & Uranium",
-        "weight": 9.2,
+        "weight": 10.2,
         "at_cap": false
       },
       {
@@ -1238,7 +1238,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": 14.3,
           "action": "TRIM",
-          "amount": 1443.52,
+          "amount": 1443.59,
           "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
@@ -1248,18 +1248,8 @@
           "target_weight_pct": 18.0,
           "drift_pct": -13.74,
           "action": "ADD",
-          "amount": 1386.94,
+          "amount": 1386.88,
           "etf_name": "Energy Select Sector SPDR",
-          "regime_note": ""
-        },
-        {
-          "ticker": "CASH",
-          "actual_weight_pct": 22.23,
-          "target_weight_pct": 10.0,
-          "drift_pct": 12.23,
-          "action": "DEPLOY",
-          "amount": 1234.79,
-          "etf_name": "Cash Reserve",
           "regime_note": ""
         },
         {
@@ -1268,28 +1258,38 @@
           "target_weight_pct": 18.0,
           "drift_pct": -10.92,
           "action": "ADD",
-          "amount": 1102.74,
+          "amount": 1102.68,
           "etf_name": "Invesco QQQ Trust",
           "regime_note": ""
         },
         {
-          "ticker": "SH",
-          "actual_weight_pct": 9.18,
-          "target_weight_pct": 18.0,
-          "drift_pct": -8.82,
-          "action": "ADD",
-          "amount": 890.44,
-          "etf_name": "ProShares Short S&P500",
+          "ticker": "CASH",
+          "actual_weight_pct": 19.19,
+          "target_weight_pct": 10.0,
+          "drift_pct": 9.19,
+          "action": "DEPLOY",
+          "amount": 927.73,
+          "etf_name": "Cash Reserve",
           "regime_note": ""
         },
         {
           "ticker": "INDA",
-          "actual_weight_pct": 24.95,
+          "actual_weight_pct": 26.93,
           "target_weight_pct": 18.0,
-          "drift_pct": 6.95,
+          "drift_pct": 8.93,
           "action": "TRIM",
-          "amount": 701.81,
+          "amount": 901.23,
           "etf_name": "iShares MSCI India ETF",
+          "regime_note": ""
+        },
+        {
+          "ticker": "SH",
+          "actual_weight_pct": 10.24,
+          "target_weight_pct": 18.0,
+          "drift_pct": -7.76,
+          "action": "ADD",
+          "amount": 782.99,
+          "etf_name": "ProShares Short S&P500",
           "regime_note": ""
         }
       ],
@@ -1299,14 +1299,14 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -3205.06,
-          "portfolio_loss_pct": -31.75,
+          "total_impact": -3327.76,
+          "portfolio_loss_pct": -32.96,
           "position_impacts": [
             {
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -1007.61
+              "impact": -1087.35
             },
             {
               "ticker": "XLF",
@@ -1324,7 +1324,7 @@
               "ticker": "SH",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -370.71
+              "impact": -413.67
             },
             {
               "ticker": "XLE",
@@ -1335,14 +1335,14 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -2802.83,
-          "portfolio_loss_pct": -27.76,
+          "total_impact": -2907.12,
+          "portfolio_loss_pct": -28.8,
           "position_impacts": [
             {
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -856.47
+              "impact": -924.25
             },
             {
               "ticker": "XLF",
@@ -1360,7 +1360,7 @@
               "ticker": "SH",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -315.11
+              "impact": -351.62
             },
             {
               "ticker": "XLE",
@@ -1371,14 +1371,14 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1156.18,
-          "portfolio_loss_pct": -11.45,
+          "total_impact": -1202.19,
+          "portfolio_loss_pct": -11.91,
           "position_impacts": [
             {
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -377.85
+              "impact": -407.76
             },
             {
               "ticker": "XLF",
@@ -1396,7 +1396,7 @@
               "ticker": "SH",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -139.02
+              "impact": -155.13
             },
             {
               "ticker": "XLE",
@@ -1407,14 +1407,14 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -658.22,
-          "portfolio_loss_pct": -6.52,
+          "total_impact": -682.76,
+          "portfolio_loss_pct": -6.76,
           "position_impacts": [
             {
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -201.52
+              "impact": -217.47
             },
             {
               "ticker": "XLF",
@@ -1432,7 +1432,7 @@
               "ticker": "SH",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -74.14
+              "impact": -82.73
             },
             {
               "ticker": "XLE",
@@ -1443,14 +1443,14 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1421.84,
-          "portfolio_loss_pct": -14.08,
+          "total_impact": -1477.05,
+          "portfolio_loss_pct": -14.63,
           "position_impacts": [
             {
               "ticker": "INDA",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -453.42
+              "impact": -489.31
             },
             {
               "ticker": "XLF",
@@ -1468,7 +1468,7 @@
               "ticker": "SH",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -166.82
+              "impact": -186.15
             },
             {
               "ticker": "XLE",
@@ -1480,15 +1480,15 @@
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -31.75
+      "worst_loss_pct": -32.96
     }
   },
   "logs": [
-    "2026-06-15 22:22:36 [INFO] AZALYST - status.json generated",
-    "2026-06-15 22:22:36 [INFO] PORTFOLIO - NAV USD 10,095.65 | Return -0.15%",
-    "2026-06-15 22:22:36 [INFO] SIGNALS - 12 active signal buckets in state",
-    "2026-06-15 22:22:36 [INFO] TRADER - Open positions: INDA, XLF, QQQ, SH, XLE",
-    "2026-06-15 22:22:36 [INFO] TRADER - Closed trades: 1"
+    "2026-06-16 00:18:05 [INFO] AZALYST - status.json generated",
+    "2026-06-16 00:18:05 [INFO] PORTFOLIO - NAV USD 10,095.31 | Return -0.15%",
+    "2026-06-16 00:18:05 [INFO] SIGNALS - 12 active signal buckets in state",
+    "2026-06-16 00:18:05 [INFO] TRADER - Open positions: INDA, XLF, QQQ, SH, XLE",
+    "2026-06-16 00:18:05 [INFO] TRADER - Closed trades: 1"
   ],
-  "generated_at": "2026-06-15 22:22:35 UTC"
+  "generated_at": "2026-06-16 00:18:03 UTC"
 }
