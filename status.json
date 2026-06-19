@@ -300,12 +300,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
+    "risk_state": "NEUTRAL",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.14528490653824389,
-    "vix_level": 16.780000686645508,
-    "vix_percentile_1y": 0.4603174603174603,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -319,12 +319,12 @@
     "ticker": "SMH",
     "rank_score": 15.6289592760181,
     "flow_score": 10.936571224731237,
-    "options_score": 9.838641679271337,
+    "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 2.437827072269249,
     "news_score": 6.800000000000001,
-    "total": 60.641999252289935,
-    "publish": true,
+    "total": 50.80335757301859,
+    "publish": false,
     "direction": "long"
   },
   "allocation": {
@@ -1261,10 +1261,10 @@
       "region": "EU",
       "price": 24985.82,
       "currency": "EUR",
-      "change": -40.98,
-      "change_pct": -0.16,
-      "change_str": "-0.16%",
-      "direction": "down"
+      "change": 51.15,
+      "change_pct": 0.21,
+      "change_str": "+0.21%",
+      "direction": "up"
     },
     {
       "label": "Nikkei 225",
@@ -1325,11 +1325,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63196.2,
+      "price": 63256.95,
       "currency": "USD",
-      "change": 299.73,
-      "change_pct": 0.48,
-      "change_str": "+0.48%",
+      "change": 360.48,
+      "change_pct": 0.57,
+      "change_str": "+0.57%",
       "direction": "up"
     },
     {
@@ -1765,11 +1765,11 @@
     }
   },
   "logs": [
-    "2026-06-19 21:17:40 [INFO] AZALYST - status.json generated",
-    "2026-06-19 21:17:40 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
-    "2026-06-19 21:17:40 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-06-19 21:17:40 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
-    "2026-06-19 21:17:40 [INFO] TRADER - Closed trades: 7"
+    "2026-06-19 22:41:27 [INFO] AZALYST - status.json generated",
+    "2026-06-19 22:41:27 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
+    "2026-06-19 22:41:27 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-06-19 22:41:27 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
+    "2026-06-19 22:41:27 [INFO] TRADER - Closed trades: 7"
   ],
-  "generated_at": "2026-06-19 21:17:36 UTC"
+  "generated_at": "2026-06-19 22:41:24 UTC"
 }
