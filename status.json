@@ -300,12 +300,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
+    "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.14528490653824389,
+    "vix_level": 16.780000686645508,
+    "vix_percentile_1y": 0.4603174603174603,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -316,16 +316,16 @@
     }
   },
   "top_signal": {
-    "ticker": "IGV",
-    "rank_score": 0.0,
-    "flow_score": 5.0,
-    "options_score": 0.0,
+    "ticker": "SMH",
+    "rank_score": 15.6289592760181,
+    "flow_score": 10.936571224731237,
+    "options_score": 9.838641679271337,
     "rotation_score": 15.0,
-    "macro_score": 4.645391401710385,
+    "macro_score": 2.624958332083929,
     "news_score": 4.960000000000001,
-    "total": 29.605391401710385,
+    "total": 58.98913051210461,
     "publish": false,
-    "direction": "short"
+    "direction": "long"
   },
   "allocation": {
     "labels": [
@@ -1217,10 +1217,10 @@
       "region": "US",
       "price": 7500.58,
       "currency": "USD",
-      "change": -10.77,
-      "change_pct": -0.14,
-      "change_str": "-0.14%",
-      "direction": "down"
+      "change": 80.48,
+      "change_pct": 1.08,
+      "change_str": "+1.08%",
+      "direction": "up"
     },
     {
       "label": "NASDAQ",
@@ -1228,9 +1228,9 @@
       "region": "US",
       "price": 26517.93,
       "currency": "USD",
-      "change": 141.59,
-      "change_pct": 0.54,
-      "change_str": "+0.54%",
+      "change": 496.27,
+      "change_pct": 1.91,
+      "change_str": "+1.91%",
       "direction": "up"
     },
     {
@@ -1239,10 +1239,10 @@
       "region": "US",
       "price": 51564.7,
       "currency": "USD",
-      "change": -434.97,
-      "change_pct": -0.84,
-      "change_str": "-0.84%",
-      "direction": "down"
+      "change": 72.15,
+      "change_pct": 0.14,
+      "change_str": "+0.14%",
+      "direction": "up"
     },
     {
       "label": "FTSE 100",
@@ -1250,9 +1250,9 @@
       "region": "UK",
       "price": 10363.27,
       "currency": "GBP",
-      "change": -145.33,
-      "change_pct": -1.38,
-      "change_str": "-1.38%",
+      "change": -36.43,
+      "change_pct": -0.35,
+      "change_str": "-0.35%",
       "direction": "down"
     },
     {
@@ -1261,10 +1261,10 @@
       "region": "EU",
       "price": 24985.82,
       "currency": "EUR",
-      "change": 51.15,
-      "change_pct": 0.21,
-      "change_str": "+0.21%",
-      "direction": "up"
+      "change": -40.98,
+      "change_pct": -0.16,
+      "change_str": "-0.16%",
+      "direction": "down"
     },
     {
       "label": "Nikkei 225",
@@ -1272,9 +1272,9 @@
       "region": "JP",
       "price": 71250.06,
       "currency": "JPY",
-      "change": 1845.56,
-      "change_pct": 2.66,
-      "change_str": "+2.66%",
+      "change": 1347.81,
+      "change_pct": 1.93,
+      "change_str": "+1.93%",
       "direction": "up"
     },
     {
@@ -1283,9 +1283,9 @@
       "region": "HK",
       "price": 23924.81,
       "currency": "HKD",
-      "change": -569.14,
-      "change_pct": -2.32,
-      "change_str": "-2.32%",
+      "change": -387.35,
+      "change_pct": -1.59,
+      "change_str": "-1.59%",
       "direction": "down"
     },
     {
@@ -1325,12 +1325,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63136.19,
+      "price": 62965.36,
       "currency": "USD",
-      "change": -1282.26,
-      "change_pct": -1.99,
-      "change_str": "-1.99%",
-      "direction": "down"
+      "change": 68.89,
+      "change_pct": 0.11,
+      "change_str": "+0.11%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
@@ -1338,10 +1338,10 @@
       "region": "FX",
       "price": 100.73,
       "currency": "USD",
-      "change": 0.64,
-      "change_pct": 0.64,
-      "change_str": "+0.64%",
-      "direction": "up"
+      "change": -0.12,
+      "change_pct": -0.12,
+      "change_str": "-0.12%",
+      "direction": "down"
     },
     {
       "label": "VIX",
@@ -1349,10 +1349,10 @@
       "region": "VOL",
       "price": 16.78,
       "currency": "USD",
-      "change": -1.66,
-      "change_pct": -9.0,
-      "change_str": "-9.00%",
-      "direction": "down"
+      "change": 0.38,
+      "change_pct": 2.32,
+      "change_str": "+2.32%",
+      "direction": "up"
     }
   ],
   "risk_controls": {
@@ -1404,50 +1404,50 @@
       "matrix": {
         "IBIT": {
           "IBIT": 1.0,
-          "INDA": 0.452,
-          "QQQ": 0.652,
-          "SH": -0.575,
-          "XLF": 0.011,
-          "XLV": -0.162
+          "INDA": 0.423,
+          "QQQ": 0.6,
+          "SH": -0.544,
+          "XLF": 0.036,
+          "XLV": -0.141
         },
         "INDA": {
-          "IBIT": 0.452,
+          "IBIT": 0.423,
           "INDA": 1.0,
-          "QQQ": 0.568,
-          "SH": -0.742,
-          "XLF": 0.663,
-          "XLV": 0.3
+          "QQQ": 0.589,
+          "SH": -0.752,
+          "XLF": 0.568,
+          "XLV": 0.25
         },
         "QQQ": {
-          "IBIT": 0.652,
-          "INDA": 0.568,
+          "IBIT": 0.6,
+          "INDA": 0.589,
           "QQQ": 1.0,
-          "SH": -0.94,
-          "XLF": -0.003,
-          "XLV": -0.1
+          "SH": -0.941,
+          "XLF": -0.078,
+          "XLV": -0.147
         },
         "SH": {
-          "IBIT": -0.575,
-          "INDA": -0.742,
-          "QQQ": -0.94,
+          "IBIT": -0.544,
+          "INDA": -0.752,
+          "QQQ": -0.941,
           "SH": 1.0,
-          "XLF": -0.273,
-          "XLV": -0.107
+          "XLF": -0.202,
+          "XLV": -0.065
         },
         "XLF": {
-          "IBIT": 0.011,
-          "INDA": 0.663,
-          "QQQ": -0.003,
-          "SH": -0.273,
+          "IBIT": 0.036,
+          "INDA": 0.568,
+          "QQQ": -0.078,
+          "SH": -0.202,
           "XLF": 1.0,
-          "XLV": 0.461
+          "XLV": 0.489
         },
         "XLV": {
-          "IBIT": -0.162,
-          "INDA": 0.3,
-          "QQQ": -0.1,
-          "SH": -0.107,
-          "XLF": 0.461,
+          "IBIT": -0.141,
+          "INDA": 0.25,
+          "QQQ": -0.147,
+          "SH": -0.065,
+          "XLF": 0.489,
           "XLV": 1.0
         }
       },
@@ -1459,12 +1459,12 @@
         "XLF",
         "XLV"
       ],
-      "max_corr": 0.663,
+      "max_corr": 0.6,
       "max_corr_pair": [
-        "INDA",
-        "XLF"
+        "IBIT",
+        "QQQ"
       ],
-      "most_negative_corr": -0.94,
+      "most_negative_corr": -0.941,
       "most_negative_pair": [
         "QQQ",
         "SH"
@@ -1473,23 +1473,23 @@
     },
     "volatility": {
       "per_ticker": {
-        "INDA": 14.77,
-        "XLF": 13.97,
-        "QQQ": 28.61,
-        "IBIT": 43.83,
-        "SH": 15.9,
-        "XLV": 17.27
+        "INDA": 14.71,
+        "XLF": 14.2,
+        "QQQ": 29.01,
+        "IBIT": 42.95,
+        "SH": 15.83,
+        "XLV": 17.18
       },
-      "portfolio_avg_vol_pct": 22.39,
+      "portfolio_avg_vol_pct": 22.31,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": -0.11,
+      "benchmark_return_pct": 0.67,
       "benchmark_price_start": 741.75,
-      "benchmark_price_now": 740.96,
+      "benchmark_price_now": 746.74,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": -0.45,
-      "alpha": -0.34
+      "alpha": -1.12
     },
     "rebalance": {
       "alerts": [
@@ -1765,11 +1765,11 @@
     }
   },
   "logs": [
-    "2026-06-19 18:00:54 [INFO] AZALYST - status.json generated",
-    "2026-06-19 18:00:54 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
-    "2026-06-19 18:00:54 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-06-19 18:00:54 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
-    "2026-06-19 18:00:54 [INFO] TRADER - Closed trades: 7"
+    "2026-06-19 19:50:32 [INFO] AZALYST - status.json generated",
+    "2026-06-19 19:50:32 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
+    "2026-06-19 19:50:32 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-06-19 19:50:32 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
+    "2026-06-19 19:50:32 [INFO] TRADER - Closed trades: 7"
   ],
-  "generated_at": "2026-06-19 18:00:52 UTC"
+  "generated_at": "2026-06-19 19:50:30 UTC"
 }
