@@ -84,7 +84,7 @@
       "pnl_pct_str": "+1.49%",
       "confidence": 94,
       "severity": "HIGH",
-      "days_held": 6,
+      "days_held": 7,
       "half_exited": false
     },
     {
@@ -277,12 +277,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
+    "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.14528490653824389,
+    "vix_level": 16.780000686645508,
+    "vix_percentile_1y": 0.4603174603174603,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -294,14 +294,14 @@
   },
   "top_signal": {
     "ticker": "SMH",
-    "rank_score": 15.603757472245945,
+    "rank_score": 15.6289592760181,
     "flow_score": 10.843060593812899,
-    "options_score": 0.0,
+    "options_score": 9.838641679271337,
     "rotation_score": 15.0,
-    "macro_score": 2.269670819048965,
+    "macro_score": 2.500016683926982,
     "news_score": 8.9,
-    "total": 52.616488885107806,
-    "publish": false,
+    "total": 62.71067823302931,
+    "publish": true,
     "direction": "long"
   },
   "allocation": {
@@ -340,6 +340,10 @@
   },
   "confidence": [
     {
+      "symbol": "Energy / Oil & Gas",
+      "score": 97.0
+    },
+    {
       "symbol": "Technology & AI / Semiconductors",
       "score": 89.0
     },
@@ -348,12 +352,8 @@
       "score": 89.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 87.0
-    },
-    {
       "symbol": "India Equity Markets",
-      "score": 86.0
+      "score": 87.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -362,6 +362,10 @@
     {
       "symbol": "Bonds & Fixed Income",
       "score": 77.0
+    },
+    {
+      "symbol": "Asia Pacific Equity",
+      "score": 76.0
     },
     {
       "symbol": "Healthcare & Pharma",
@@ -388,15 +392,64 @@
       "score": 64.0
     },
     {
-      "symbol": "Asia Pacific Equity",
-      "score": 63.0
-    },
-    {
       "symbol": "Clean Energy & Renewables",
       "score": 62.0
     }
   ],
   "signals": [
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 97.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -2.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 32,
+      "latest_at": "19 Jun 2026 15:30 UTC",
+      "headline": "India Orders Major Strategic Oil Reserve Expansion After Supply Crisis",
+      "regions": [
+        "india",
+        "americas",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "www.theregister.com - Articles",
+        "US Top News and Analysis",
+        "Defense News"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.9,
+        "recency": 16.4,
+        "geopolitical_severity": 13.0
+      }
+    },
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
@@ -502,81 +555,28 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 87.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": 3.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 31,
-      "latest_at": "19 Jun 2026 10:30 UTC",
-      "headline": "India Orders Major Strategic Oil Reserve Expansion After Supply Crisis",
-      "regions": [
-        "americas",
-        "europe",
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Defense News",
-        "BBC News",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.6,
-        "recency": 14.5,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
-      "confidence": 86.0,
+      "confidence": 87.0,
       "severity": "HIGH",
       "direction": "BULLISH",
-      "direction_score": 10.5,
+      "direction_score": 5.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 27,
-      "latest_at": "19 Jun 2026 00:41 UTC",
-      "headline": "GIFT Nifty signals muted start for Dalal Street amid cautious trade",
+      "article_count": 39,
+      "latest_at": "19 Jun 2026 13:21 UTC",
+      "headline": "Nifty IT crashes 6% to 3-year low as Infosys, HCL Tech, other IT stocks crash up to 9%. Time to buy the dip?",
       "regions": [
-        "middle_east",
-        "india",
         "asia_pacific",
-        "global"
+        "global",
+        "india",
+        "middle_east"
       ],
       "sources": [
-        "Bloomberg Markets",
         "www.theregister.com - Articles",
-        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "BBC News",
         "Oilprice.com"
       ],
       "primary_etf": "INDA",
@@ -600,8 +600,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 12.6,
-        "recency": 14.5,
+        "source_diversity": 14.9,
+        "recency": 13.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -705,6 +705,55 @@
         "volume_confirmation": 14.6,
         "source_diversity": 14.2,
         "recency": 14.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 76.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "19 Jun 2026 11:58 UTC",
+      "headline": "Yen teeters on cusp of 40-year low as BOJ hike fails to stem rout",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Latest from Tom's Hardware",
+        "Markets-Economic Times",
+        "Defense News"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 14.6,
+        "volume_confirmation": 14.6,
+        "source_diversity": 11.0,
+        "recency": 11.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -1010,54 +1059,6 @@
       }
     },
     {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 63.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "19 Jun 2026 04:13 UTC",
-      "headline": "Why Japan's $70 billion-plus intervention and a rate hike didn't prop up the yen more",
-      "regions": [
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "BBC News",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 9.3,
-        "volume_confirmation": 12.6,
-        "source_diversity": 13.3,
-        "recency": 12.1,
-        "geopolitical_severity": 8.5
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 62.0,
@@ -1111,6 +1112,11 @@
   ],
   "articles": [
     {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Energy / Oil & Gas - 32 articles - CRITICAL / BEARISH - India Orders Major Strategic Oil Reserve Expansion After Supply Crisis"
+    },
+    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Technology & AI / Semiconductors - 74 articles - CRITICAL / BULLISH - Chip Industry Week In Review"
@@ -1121,14 +1127,9 @@
       "text": "Banking & Financial Sector - 25 articles - HIGH / BULLISH - Fed holds rates steady, pares down statement to remove cutting bias"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Energy / Oil & Gas - 31 articles - CRITICAL / BEARISH - India Orders Major Strategic Oil Reserve Expansion After Supply Crisis"
-    },
-    {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "India Equity Markets - 27 articles - HIGH / BULLISH - GIFT Nifty signals muted start for Dalal Street amid cautious trade"
+      "text": "India Equity Markets - 39 articles - HIGH / BULLISH - Nifty IT crashes 6% to 3-year low as Infosys, HCL Tech, other IT stocks crash up to 9%. Time to buy the dip?"
     },
     {
       "tag": "tag-bull",
@@ -1139,6 +1140,11 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Bonds & Fixed Income - 8 articles - HIGH / BULLISH - Bears step up bets against high-yield sector, shaking up bond traders"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Asia Pacific Equity - 8 articles - HIGH / BULLISH - Yen teeters on cusp of 40-year low as BOJ hike fails to stem rout"
     },
     {
       "tag": "tag-bull",
@@ -1169,11 +1175,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Gold & Precious Metals - 20 articles - HIGH / BEARISH - Gold prices dip below Rs 1.50 lakh/10g; silver cracks Rs 20K/kg in 2 days amid strong dollar, inflation worries. Should you sell?"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Asia Pacific Equity - 6 articles - MEDIUM / BULLISH - Why Japan's $70 billion-plus intervention and a rate hike didn't prop up the yen more"
     },
     {
       "tag": "tag-bear",
@@ -1219,22 +1220,22 @@
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10360.09,
+      "price": 10356.9,
       "currency": "GBP",
-      "change": -39.61,
-      "change_pct": -0.38,
-      "change_str": "-0.38%",
+      "change": -42.8,
+      "change_pct": -0.41,
+      "change_str": "-0.41%",
       "direction": "down"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 25015.39,
+      "price": 24985.82,
       "currency": "EUR",
-      "change": -11.41,
-      "change_pct": -0.05,
-      "change_str": "-0.05%",
+      "change": -40.98,
+      "change_pct": -0.16,
+      "change_str": "-0.16%",
       "direction": "down"
     },
     {
@@ -1243,9 +1244,9 @@
       "region": "JP",
       "price": 71250.06,
       "currency": "JPY",
-      "change": 196.57,
-      "change_pct": 0.28,
-      "change_str": "+0.28%",
+      "change": 1347.81,
+      "change_pct": 1.93,
+      "change_str": "+1.93%",
       "direction": "up"
     },
     {
@@ -1274,55 +1275,55 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4173.2,
+      "price": 4167.2,
       "currency": "USD",
-      "change": -50.9,
-      "change_pct": -1.2,
-      "change_str": "-1.20%",
+      "change": -56.9,
+      "change_pct": -1.35,
+      "change_str": "-1.35%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 76.0,
+      "price": 76.31,
       "currency": "USD",
-      "change": -0.6,
-      "change_pct": -0.78,
-      "change_str": "-0.78%",
+      "change": -0.29,
+      "change_pct": -0.38,
+      "change_str": "-0.38%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 62592.98,
+      "price": 63171.68,
       "currency": "USD",
-      "change": -303.49,
-      "change_pct": -0.48,
-      "change_str": "-0.48%",
-      "direction": "down"
+      "change": 275.21,
+      "change_pct": 0.44,
+      "change_str": "+0.44%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.79,
+      "price": 100.81,
       "currency": "USD",
-      "change": 0.7,
-      "change_pct": 0.7,
-      "change_str": "+0.70%",
-      "direction": "up"
+      "change": -0.04,
+      "change_pct": -0.04,
+      "change_str": "-0.04%",
+      "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 17.16,
+      "price": 16.78,
       "currency": "USD",
-      "change": 0.76,
-      "change_pct": 4.63,
-      "change_str": "+4.63%",
+      "change": 0.38,
+      "change_pct": 2.32,
+      "change_str": "+2.32%",
       "direction": "up"
     }
   ],
@@ -1330,7 +1331,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.89,
     "portfolio_peak": 10198.46,
-    "vix": 17.16,
+    "vix": 16.78,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -1373,34 +1374,34 @@
           "INDA": 0.423,
           "QQQ": 0.6,
           "SH": -0.544,
-          "XLF": 0.011
+          "XLF": 0.036
         },
         "INDA": {
           "IBIT": 0.423,
           "INDA": 1.0,
           "QQQ": 0.589,
           "SH": -0.752,
-          "XLF": 0.663
+          "XLF": 0.568
         },
         "QQQ": {
           "IBIT": 0.6,
           "INDA": 0.589,
           "QQQ": 1.0,
           "SH": -0.941,
-          "XLF": -0.003
+          "XLF": -0.078
         },
         "SH": {
           "IBIT": -0.544,
           "INDA": -0.752,
           "QQQ": -0.941,
           "SH": 1.0,
-          "XLF": -0.273
+          "XLF": -0.202
         },
         "XLF": {
-          "IBIT": 0.011,
-          "INDA": 0.663,
-          "QQQ": -0.003,
-          "SH": -0.273,
+          "IBIT": 0.036,
+          "INDA": 0.568,
+          "QQQ": -0.078,
+          "SH": -0.202,
           "XLF": 1.0
         }
       },
@@ -1411,10 +1412,10 @@
         "SH",
         "XLF"
       ],
-      "max_corr": 0.663,
+      "max_corr": 0.6,
       "max_corr_pair": [
-        "INDA",
-        "XLF"
+        "IBIT",
+        "QQQ"
       ],
       "most_negative_corr": -0.941,
       "most_negative_pair": [
@@ -1426,12 +1427,12 @@
     "volatility": {
       "per_ticker": {
         "INDA": 14.71,
-        "XLF": 13.97,
+        "XLF": 14.2,
         "QQQ": 29.01,
         "IBIT": 42.95,
         "SH": 15.83
       },
-      "portfolio_avg_vol_pct": 23.29,
+      "portfolio_avg_vol_pct": 23.34,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -1686,11 +1687,11 @@
     }
   },
   "logs": [
-    "2026-06-19 12:10:50 [INFO] AZALYST - status.json generated",
-    "2026-06-19 12:10:50 [INFO] PORTFOLIO - NAV USD 10,107.26 | Return -0.45%",
-    "2026-06-19 12:10:50 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-06-19 12:10:50 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH",
-    "2026-06-19 12:10:50 [INFO] TRADER - Closed trades: 7"
+    "2026-06-19 15:55:44 [INFO] AZALYST - status.json generated",
+    "2026-06-19 15:55:44 [INFO] PORTFOLIO - NAV USD 10,107.26 | Return -0.45%",
+    "2026-06-19 15:55:44 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-06-19 15:55:44 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH",
+    "2026-06-19 15:55:44 [INFO] TRADER - Closed trades: 7"
   ],
-  "generated_at": "2026-06-19 12:10:48 UTC"
+  "generated_at": "2026-06-19 15:55:42 UTC"
 }
