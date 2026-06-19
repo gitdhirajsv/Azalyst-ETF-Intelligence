@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 10107.26,
+  "portfolio_value": 10107.18,
   "total_deposited": 10152.69,
-  "cash": 483.63,
+  "cash": 395.09,
   "monthly_reserve": 0.0,
-  "market_value": 9623.63,
-  "total_invested": 9579.98,
-  "unrealised_pnl": 43.65,
-  "unrealised_str": "+43.65",
+  "market_value": 9712.09,
+  "total_invested": 9668.52,
+  "unrealised_pnl": 43.57,
+  "unrealised_str": "+43.57",
   "realised_pnl": -89.08,
   "realised_str": "-89.08",
   "change": "-0.45%",
@@ -71,17 +71,17 @@
       "sector": "Technology & AI / Semiconductors",
       "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NASDAQ",
-      "entry": 729.73,
+      "entry": 730.1,
       "current": 740.62,
       "peak_price": 747.08,
-      "trail_stop": 678.65,
-      "dist_to_trail_pct": 8.37,
-      "units": 1.794625,
-      "invested": 1309.59,
-      "pnl": 19.55,
-      "pnl_str": "+19.55",
-      "pnl_pct": 1.49,
-      "pnl_pct_str": "+1.49%",
+      "trail_stop": 679.0,
+      "dist_to_trail_pct": 8.32,
+      "units": 1.854332,
+      "invested": 1353.85,
+      "pnl": 19.5,
+      "pnl_str": "+19.50",
+      "pnl_pct": 1.44,
+      "pnl_pct_str": "+1.44%",
       "confidence": 94,
       "severity": "HIGH",
       "days_held": 7,
@@ -131,6 +131,29 @@
       "confidence": 96,
       "severity": "CRITICAL",
       "days_held": 2,
+      "half_exited": false
+    },
+    {
+      "trade_id": "T0013",
+      "ticker": "XLV",
+      "etf_name": "Health Care Select Sector SPDR",
+      "sector": "Healthcare & Pharma",
+      "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NYSE",
+      "entry": 149.49,
+      "current": 149.4,
+      "peak_price": 149.49,
+      "trail_stop": 139.03,
+      "dist_to_trail_pct": 6.94,
+      "units": 0.296104,
+      "invested": 44.27,
+      "pnl": -0.03,
+      "pnl_str": "-0.03",
+      "pnl_pct": -0.06,
+      "pnl_pct_str": "-0.06%",
+      "confidence": 64,
+      "severity": "HIGH",
+      "days_held": 0,
       "half_exited": false
     }
   ],
@@ -277,12 +300,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
+    "risk_state": "NEUTRAL",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.14528490653824389,
-    "vix_level": 16.780000686645508,
-    "vix_percentile_1y": 0.4603174603174603,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -293,16 +316,16 @@
     }
   },
   "top_signal": {
-    "ticker": "SMH",
-    "rank_score": 15.6289592760181,
-    "flow_score": 10.843060593812899,
-    "options_score": 9.838641679271337,
+    "ticker": "IGV",
+    "rank_score": 0.0,
+    "flow_score": 5.0,
+    "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 2.500016683926982,
-    "news_score": 8.9,
-    "total": 62.71067823302931,
-    "publish": true,
-    "direction": "long"
+    "macro_score": 4.645391401710385,
+    "news_score": 4.960000000000001,
+    "total": 29.605391401710385,
+    "publish": false,
+    "direction": "short"
   },
   "allocation": {
     "labels": [
@@ -311,15 +334,17 @@
       "QQQ",
       "IBIT",
       "SH",
+      "XLV",
       "CASH"
     ],
     "values": [
       32.5,
       35.3,
-      13.2,
+      13.6,
       1.7,
       12.6,
-      4.8
+      0.4,
+      3.9
     ]
   },
   "pnl": {
@@ -328,14 +353,16 @@
       "XLF",
       "QQQ",
       "IBIT",
-      "SH"
+      "SH",
+      "XLV"
     ],
     "values": [
       55.31,
       -17.87,
-      19.55,
+      19.5,
       -9.35,
-      -3.99
+      -3.99,
+      -0.03
     ]
   },
   "confidence": [
@@ -344,8 +371,8 @@
       "score": 97.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 89.0
+      "symbol": "Defense & Aerospace",
+      "score": 94.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -368,10 +395,6 @@
       "score": 76.0
     },
     {
-      "symbol": "Healthcare & Pharma",
-      "score": 74.0
-    },
-    {
       "symbol": "Crypto & Digital Assets",
       "score": 73.0
     },
@@ -384,15 +407,19 @@
       "score": 66.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 66.0
-    },
-    {
       "symbol": "Gold & Precious Metals",
       "score": 64.0
     },
     {
+      "symbol": "Healthcare & Pharma",
+      "score": 64.0
+    },
+    {
       "symbol": "Clean Energy & Renewables",
+      "score": 62.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
       "score": 62.0
     }
   ],
@@ -451,55 +478,55 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 89.0,
-      "severity": "CRITICAL",
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 94.0,
+      "severity": "HIGH",
       "direction": "BULLISH",
-      "direction_score": -4.0,
+      "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 74,
-      "latest_at": "19 Jun 2026 11:38 UTC",
-      "headline": "Chip Industry Week In Review",
+      "article_count": 29,
+      "latest_at": "19 Jun 2026 17:53 UTC",
+      "headline": "Pentagon open to Poland\u2019s offer to host permanent U.S. base, Polish minister says",
       "regions": [
-        "americas",
-        "europe",
         "middle_east",
-        "asia_pacific"
+        "americas",
+        "global",
+        "india"
       ],
       "sources": [
-        "EE Times",
+        "Defense News",
+        "US Top News and Analysis",
         "BBC News",
-        "Latest from Tom's Hardware",
         "Oilprice.com"
       ],
-      "primary_etf": "QQQ",
+      "primary_etf": "ITA",
       "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
+        "ITA",
+        "XAR",
+        "PPA"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
+        "CPSEETF",
+        "DEFENCEETF"
       ],
       "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
+        "ITA",
+        "XAR",
+        "PPA"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.5,
-        "recency": 16.3,
+        "source_diversity": 15.9,
+        "recency": 16.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -758,56 +785,6 @@
       }
     },
     {
-      "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma",
-      "confidence": 74.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "18 Jun 2026 09:53 UTC",
-      "headline": "UniQure to seek FDA approval for Huntington's disease gene therapy after previous clash with agency",
-      "regions": [
-        "africa",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "World | Deutsche Welle",
-        "BBC News"
-      ],
-      "primary_etf": "XLV",
-      "top_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "HEALTHCARE",
-        "PHARMABEES"
-      ],
-      "global_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 13.6,
-        "volume_confirmation": 11.3,
-        "source_diversity": 9.1,
-        "recency": 17.0,
-        "geopolitical_severity": 11.7
-      }
-    },
-    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 73.0,
@@ -953,59 +930,6 @@
       }
     },
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 66.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 33,
-      "latest_at": "18 Jun 2026 21:13 UTC",
-      "headline": "Pentagon open to Poland\u2019s offer to host permanent U.S. base, Polish minister says",
-      "regions": [
-        "americas",
-        "europe",
-        "asia_pacific",
-        "india"
-      ],
-      "sources": [
-        "Defense News",
-        "EE Times",
-        "BBC News",
-        "World News - Breaking international news and headlines | Sky News"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.6,
-        "recency": 16.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals",
       "confidence": 64.0,
@@ -1059,6 +983,57 @@
       }
     },
     {
+      "sector_key": "healthcare_pharma",
+      "sector_label": "Healthcare & Pharma",
+      "confidence": 64.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 4,
+      "latest_at": "19 Jun 2026 14:45 UTC",
+      "headline": "Six-year-old Ebola patient taken from DR Congo hospital found and 'doing well'",
+      "regions": [
+        "global",
+        "africa",
+        "europe"
+      ],
+      "sources": [
+        "World News - Breaking international news and headlines | Sky News",
+        "BBC News",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "XLV",
+      "top_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "HEALTHCARE",
+        "PHARMABEES"
+      ],
+      "global_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 10.9,
+        "volume_confirmation": 9.7,
+        "source_diversity": 9.9,
+        "recency": 12.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 62.0,
@@ -1108,6 +1083,59 @@
         "recency": 16.9,
         "geopolitical_severity": 9.4
       }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 62.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 1.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 65,
+      "latest_at": "19 Jun 2026 13:30 UTC",
+      "headline": "Chip Industry Week In Review",
+      "regions": [
+        "middle_east",
+        "americas",
+        "global",
+        "india"
+      ],
+      "sources": [
+        "Defense News",
+        "BBC News",
+        "Oilprice.com",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.9,
+        "recency": 10.9,
+        "geopolitical_severity": 13.0
+      }
     }
   ],
   "articles": [
@@ -1119,7 +1147,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 74 articles - CRITICAL / BULLISH - Chip Industry Week In Review"
+      "text": "Defense & Aerospace - 29 articles - HIGH / BULLISH - Pentagon open to Poland\u2019s offer to host permanent U.S. base, Polish minister says"
     },
     {
       "tag": "tag-bull",
@@ -1147,11 +1175,6 @@
       "text": "Asia Pacific Equity - 8 articles - HIGH / BULLISH - Yen teeters on cusp of 40-year low as BOJ hike fails to stem rout"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Healthcare & Pharma - 5 articles - HIGH / BULLISH - UniQure to seek FDA approval for Huntington's disease gene therapy after previous clash with agency"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Crypto & Digital Assets - 26 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
@@ -1167,19 +1190,24 @@
       "text": "Europe Equity - 11 articles - HIGH / BULLISH - Bailey Defends BOE Gilt Sales After Criticism From Farage"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Defense & Aerospace - 33 articles - HIGH / BULLISH - Pentagon open to Poland\u2019s offer to host permanent U.S. base, Polish minister says"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Gold & Precious Metals - 20 articles - HIGH / BEARISH - Gold prices dip below Rs 1.50 lakh/10g; silver cracks Rs 20K/kg in 2 days amid strong dollar, inflation worries. Should you sell?"
     },
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Healthcare & Pharma - 4 articles - HIGH / BULLISH - Six-year-old Ebola patient taken from DR Congo hospital found and 'doing well'"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Clean Energy & Renewables - 5 articles - MEDIUM / BEARISH - BMW\u2019s Neue Klasse M concept brings next-gen EV tech to motorsports"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Technology & AI / Semiconductors - 65 articles - HIGH / BULLISH - Chip Industry Week In Review"
     }
   ],
   "market_snapshot": [
@@ -1189,10 +1217,10 @@
       "region": "US",
       "price": 7500.58,
       "currency": "USD",
-      "change": 80.48,
-      "change_pct": 1.08,
-      "change_str": "+1.08%",
-      "direction": "up"
+      "change": -10.77,
+      "change_pct": -0.14,
+      "change_str": "-0.14%",
+      "direction": "down"
     },
     {
       "label": "NASDAQ",
@@ -1200,9 +1228,9 @@
       "region": "US",
       "price": 26517.93,
       "currency": "USD",
-      "change": 496.27,
-      "change_pct": 1.91,
-      "change_str": "+1.91%",
+      "change": 141.59,
+      "change_pct": 0.54,
+      "change_str": "+0.54%",
       "direction": "up"
     },
     {
@@ -1211,20 +1239,20 @@
       "region": "US",
       "price": 51564.7,
       "currency": "USD",
-      "change": 72.15,
-      "change_pct": 0.14,
-      "change_str": "+0.14%",
-      "direction": "up"
+      "change": -434.97,
+      "change_pct": -0.84,
+      "change_str": "-0.84%",
+      "direction": "down"
     },
     {
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10356.9,
+      "price": 10363.27,
       "currency": "GBP",
-      "change": -42.8,
-      "change_pct": -0.41,
-      "change_str": "-0.41%",
+      "change": -145.33,
+      "change_pct": -1.38,
+      "change_str": "-1.38%",
       "direction": "down"
     },
     {
@@ -1233,10 +1261,10 @@
       "region": "EU",
       "price": 24985.82,
       "currency": "EUR",
-      "change": -40.98,
-      "change_pct": -0.16,
-      "change_str": "-0.16%",
-      "direction": "down"
+      "change": 51.15,
+      "change_pct": 0.21,
+      "change_str": "+0.21%",
+      "direction": "up"
     },
     {
       "label": "Nikkei 225",
@@ -1244,9 +1272,9 @@
       "region": "JP",
       "price": 71250.06,
       "currency": "JPY",
-      "change": 1347.81,
-      "change_pct": 1.93,
-      "change_str": "+1.93%",
+      "change": 1845.56,
+      "change_pct": 2.66,
+      "change_str": "+2.66%",
       "direction": "up"
     },
     {
@@ -1255,9 +1283,9 @@
       "region": "HK",
       "price": 23924.81,
       "currency": "HKD",
-      "change": -387.35,
-      "change_pct": -1.59,
-      "change_str": "-1.59%",
+      "change": -569.14,
+      "change_pct": -2.32,
+      "change_str": "-2.32%",
       "direction": "down"
     },
     {
@@ -1266,54 +1294,54 @@
       "region": "IN",
       "price": 24013.1,
       "currency": "INR",
-      "change": -154.9,
-      "change_pct": -0.64,
-      "change_str": "-0.64%",
+      "change": -72.6,
+      "change_pct": -0.3,
+      "change_str": "-0.30%",
       "direction": "down"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4167.2,
+      "price": 4172.9,
       "currency": "USD",
-      "change": -56.9,
-      "change_pct": -1.35,
-      "change_str": "-1.35%",
+      "change": -51.2,
+      "change_pct": -1.21,
+      "change_str": "-1.21%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 76.31,
+      "price": 76.54,
       "currency": "USD",
-      "change": -0.29,
-      "change_pct": -0.38,
-      "change_str": "-0.38%",
+      "change": -0.06,
+      "change_pct": -0.08,
+      "change_str": "-0.08%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63171.68,
+      "price": 63136.19,
       "currency": "USD",
-      "change": 275.21,
-      "change_pct": 0.44,
-      "change_str": "+0.44%",
-      "direction": "up"
+      "change": -1282.26,
+      "change_pct": -1.99,
+      "change_str": "-1.99%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.81,
+      "price": 100.73,
       "currency": "USD",
-      "change": -0.04,
-      "change_pct": -0.04,
-      "change_str": "-0.04%",
-      "direction": "down"
+      "change": 0.64,
+      "change_pct": 0.64,
+      "change_str": "+0.64%",
+      "direction": "up"
     },
     {
       "label": "VIX",
@@ -1321,10 +1349,10 @@
       "region": "VOL",
       "price": 16.78,
       "currency": "USD",
-      "change": 0.38,
-      "change_pct": 2.32,
-      "change_str": "+2.32%",
-      "direction": "up"
+      "change": -1.66,
+      "change_pct": -9.0,
+      "change_str": "-9.00%",
+      "direction": "down"
     }
   ],
   "risk_controls": {
@@ -1346,7 +1374,7 @@
       },
       {
         "sector": "Technology & AI / Semiconductors",
-        "weight": 13.2,
+        "weight": 13.6,
         "at_cap": false
       },
       {
@@ -1357,6 +1385,11 @@
       {
         "sector": "Crypto & Digital Assets",
         "weight": 1.7,
+        "at_cap": false
+      },
+      {
+        "sector": "Healthcare & Pharma",
+        "weight": 0.4,
         "at_cap": false
       }
     ],
@@ -1371,38 +1404,51 @@
       "matrix": {
         "IBIT": {
           "IBIT": 1.0,
-          "INDA": 0.423,
-          "QQQ": 0.6,
-          "SH": -0.544,
-          "XLF": 0.036
+          "INDA": 0.452,
+          "QQQ": 0.652,
+          "SH": -0.575,
+          "XLF": 0.011,
+          "XLV": -0.162
         },
         "INDA": {
-          "IBIT": 0.423,
+          "IBIT": 0.452,
           "INDA": 1.0,
-          "QQQ": 0.589,
-          "SH": -0.752,
-          "XLF": 0.568
+          "QQQ": 0.568,
+          "SH": -0.742,
+          "XLF": 0.663,
+          "XLV": 0.3
         },
         "QQQ": {
-          "IBIT": 0.6,
-          "INDA": 0.589,
+          "IBIT": 0.652,
+          "INDA": 0.568,
           "QQQ": 1.0,
-          "SH": -0.941,
-          "XLF": -0.078
+          "SH": -0.94,
+          "XLF": -0.003,
+          "XLV": -0.1
         },
         "SH": {
-          "IBIT": -0.544,
-          "INDA": -0.752,
-          "QQQ": -0.941,
+          "IBIT": -0.575,
+          "INDA": -0.742,
+          "QQQ": -0.94,
           "SH": 1.0,
-          "XLF": -0.202
+          "XLF": -0.273,
+          "XLV": -0.107
         },
         "XLF": {
-          "IBIT": 0.036,
-          "INDA": 0.568,
-          "QQQ": -0.078,
-          "SH": -0.202,
-          "XLF": 1.0
+          "IBIT": 0.011,
+          "INDA": 0.663,
+          "QQQ": -0.003,
+          "SH": -0.273,
+          "XLF": 1.0,
+          "XLV": 0.461
+        },
+        "XLV": {
+          "IBIT": -0.162,
+          "INDA": 0.3,
+          "QQQ": -0.1,
+          "SH": -0.107,
+          "XLF": 0.461,
+          "XLV": 1.0
         }
       },
       "tickers": [
@@ -1410,14 +1456,15 @@
         "INDA",
         "QQQ",
         "SH",
+        "XLF",
+        "XLV"
+      ],
+      "max_corr": 0.663,
+      "max_corr_pair": [
+        "INDA",
         "XLF"
       ],
-      "max_corr": 0.6,
-      "max_corr_pair": [
-        "IBIT",
-        "QQQ"
-      ],
-      "most_negative_corr": -0.941,
+      "most_negative_corr": -0.94,
       "most_negative_pair": [
         "QQQ",
         "SH"
@@ -1426,72 +1473,73 @@
     },
     "volatility": {
       "per_ticker": {
-        "INDA": 14.71,
-        "XLF": 14.2,
-        "QQQ": 29.01,
-        "IBIT": 42.95,
-        "SH": 15.83
+        "INDA": 14.77,
+        "XLF": 13.97,
+        "QQQ": 28.61,
+        "IBIT": 43.83,
+        "SH": 15.9,
+        "XLV": 17.27
       },
-      "portfolio_avg_vol_pct": 23.34,
+      "portfolio_avg_vol_pct": 22.39,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 0.67,
+      "benchmark_return_pct": -0.11,
       "benchmark_price_start": 741.75,
-      "benchmark_price_now": 746.74,
+      "benchmark_price_now": 740.96,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": -0.45,
-      "alpha": -1.12
+      "alpha": -0.34
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "XLF",
           "actual_weight_pct": 35.31,
-          "target_weight_pct": 18.0,
-          "drift_pct": 17.31,
+          "target_weight_pct": 15.0,
+          "drift_pct": 20.31,
           "action": "TRIM",
-          "amount": 1750.01,
+          "amount": 2053.24,
           "etf_name": "Financial Select Sector SPDR",
-          "regime_note": ""
-        },
-        {
-          "ticker": "IBIT",
-          "actual_weight_pct": 1.66,
-          "target_weight_pct": 18.0,
-          "drift_pct": -16.34,
-          "action": "ADD",
-          "amount": 1651.14,
-          "etf_name": "iShares Bitcoin Trust ETF",
           "regime_note": ""
         },
         {
           "ticker": "INDA",
           "actual_weight_pct": 32.48,
-          "target_weight_pct": 18.0,
-          "drift_pct": 14.48,
+          "target_weight_pct": 15.0,
+          "drift_pct": 17.48,
           "action": "TRIM",
-          "amount": 1463.2,
+          "amount": 1766.43,
           "etf_name": "iShares MSCI India ETF",
           "regime_note": ""
         },
         {
-          "ticker": "SH",
-          "actual_weight_pct": 12.61,
-          "target_weight_pct": 18.0,
-          "drift_pct": -5.39,
+          "ticker": "XLV",
+          "actual_weight_pct": 0.44,
+          "target_weight_pct": 15.0,
+          "drift_pct": -14.56,
           "action": "ADD",
-          "amount": 544.8,
-          "etf_name": "ProShares Short S&P500",
+          "amount": 1471.84,
+          "etf_name": "Health Care Select Sector SPDR",
+          "regime_note": ""
+        },
+        {
+          "ticker": "IBIT",
+          "actual_weight_pct": 1.66,
+          "target_weight_pct": 15.0,
+          "drift_pct": -13.34,
+          "action": "ADD",
+          "amount": 1347.91,
+          "etf_name": "iShares Bitcoin Trust ETF",
           "regime_note": ""
         },
         {
           "ticker": "CASH",
-          "actual_weight_pct": 4.78,
+          "actual_weight_pct": 3.91,
           "target_weight_pct": 10.0,
-          "drift_pct": -5.22,
+          "drift_pct": -6.09,
           "action": "RAISE",
-          "amount": 527.1,
+          "amount": 615.63,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         }
@@ -1502,8 +1550,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -4074.26,
-          "portfolio_loss_pct": -40.31,
+          "total_impact": -4109.65,
+          "portfolio_loss_pct": -40.66,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1521,7 +1569,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -531.65
+              "impact": -549.34
             },
             {
               "ticker": "IBIT",
@@ -1534,12 +1582,18 @@
               "factor": "oil",
               "shock_pct": -55.0,
               "impact": -700.98
+            },
+            {
+              "ticker": "XLV",
+              "factor": "equities",
+              "shock_pct": -40.0,
+              "impact": -17.7
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -3677.22,
-          "portfolio_loss_pct": -36.38,
+          "total_impact": -3707.3,
+          "portfolio_loss_pct": -36.68,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1557,7 +1611,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -451.91
+              "impact": -466.94
             },
             {
               "ticker": "IBIT",
@@ -1570,12 +1624,18 @@
               "factor": "oil",
               "shock_pct": -65.0,
               "impact": -828.43
+            },
+            {
+              "ticker": "XLV",
+              "factor": "equities",
+              "shock_pct": -34.0,
+              "impact": -15.04
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1388.23,
-          "portfolio_loss_pct": -13.73,
+          "total_impact": -1401.5,
+          "portfolio_loss_pct": -13.87,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1593,7 +1653,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -199.37
+              "impact": -206.0
             },
             {
               "ticker": "IBIT",
@@ -1606,12 +1666,18 @@
               "factor": "oil",
               "shock_pct": -10.0,
               "impact": -127.45
+            },
+            {
+              "ticker": "XLV",
+              "factor": "equities",
+              "shock_pct": -15.0,
+              "impact": -6.64
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -862.47,
-          "portfolio_loss_pct": -8.53,
+          "total_impact": -869.55,
+          "portfolio_loss_pct": -8.6,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1629,7 +1695,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -106.33
+              "impact": -109.87
             },
             {
               "ticker": "IBIT",
@@ -1642,12 +1708,18 @@
               "factor": "oil",
               "shock_pct": -15.0,
               "impact": -191.18
+            },
+            {
+              "ticker": "XLV",
+              "factor": "equities",
+              "shock_pct": -8.0,
+              "impact": -3.54
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1769.52,
-          "portfolio_loss_pct": -17.51,
+          "total_impact": -1785.44,
+          "portfolio_loss_pct": -17.67,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1665,7 +1737,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -239.24
+              "impact": -247.2
             },
             {
               "ticker": "IBIT",
@@ -1678,20 +1750,26 @@
               "factor": "oil",
               "shock_pct": -20.0,
               "impact": -254.9
+            },
+            {
+              "ticker": "XLV",
+              "factor": "equities",
+              "shock_pct": -18.0,
+              "impact": -7.96
             }
           ]
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -40.31
+      "worst_loss_pct": -40.66
     }
   },
   "logs": [
-    "2026-06-19 15:55:44 [INFO] AZALYST - status.json generated",
-    "2026-06-19 15:55:44 [INFO] PORTFOLIO - NAV USD 10,107.26 | Return -0.45%",
-    "2026-06-19 15:55:44 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-06-19 15:55:44 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH",
-    "2026-06-19 15:55:44 [INFO] TRADER - Closed trades: 7"
+    "2026-06-19 18:00:54 [INFO] AZALYST - status.json generated",
+    "2026-06-19 18:00:54 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
+    "2026-06-19 18:00:54 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-06-19 18:00:54 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
+    "2026-06-19 18:00:54 [INFO] TRADER - Closed trades: 7"
   ],
-  "generated_at": "2026-06-19 15:55:42 UTC"
+  "generated_at": "2026-06-19 18:00:52 UTC"
 }
