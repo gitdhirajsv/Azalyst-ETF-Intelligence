@@ -300,12 +300,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
+    "risk_state": "NEUTRAL",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.14528490653824389,
-    "vix_level": 16.399999618530273,
-    "vix_percentile_1y": 0.34523809523809523,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -317,14 +317,14 @@
   },
   "top_signal": {
     "ticker": "SMH",
-    "rank_score": 15.572908366533866,
-    "flow_score": 10.936571224731237,
-    "options_score": 9.856337467225012,
-    "rotation_score": 15.0,
-    "macro_score": 2.474530007347223,
-    "news_score": 8.7,
-    "total": 62.54034706583734,
-    "publish": true,
+    "rank_score": 12.394838709677419,
+    "flow_score": 9.842914102258113,
+    "options_score": 0.0,
+    "rotation_score": 12.0,
+    "macro_score": 3.1751125329030154,
+    "news_score": 10.44,
+    "total": 47.85286534483855,
+    "publish": false,
     "direction": "long"
   },
   "allocation": {
@@ -1217,10 +1217,10 @@
       "region": "US",
       "price": 7500.58,
       "currency": "USD",
-      "change": 80.48,
-      "change_pct": 1.08,
-      "change_str": "+1.08%",
-      "direction": "up"
+      "change": -10.77,
+      "change_pct": -0.14,
+      "change_str": "-0.14%",
+      "direction": "down"
     },
     {
       "label": "NASDAQ",
@@ -1228,9 +1228,9 @@
       "region": "US",
       "price": 26517.93,
       "currency": "USD",
-      "change": 496.27,
-      "change_pct": 1.91,
-      "change_str": "+1.91%",
+      "change": 141.59,
+      "change_pct": 0.54,
+      "change_str": "+0.54%",
       "direction": "up"
     },
     {
@@ -1239,10 +1239,10 @@
       "region": "US",
       "price": 51564.7,
       "currency": "USD",
-      "change": 72.15,
-      "change_pct": 0.14,
-      "change_str": "+0.14%",
-      "direction": "up"
+      "change": -434.97,
+      "change_pct": -0.84,
+      "change_str": "-0.84%",
+      "direction": "down"
     },
     {
       "label": "FTSE 100",
@@ -1250,9 +1250,9 @@
       "region": "UK",
       "price": 10363.27,
       "currency": "GBP",
-      "change": -36.43,
-      "change_pct": -0.35,
-      "change_str": "-0.35%",
+      "change": -145.33,
+      "change_pct": -1.38,
+      "change_str": "-1.38%",
       "direction": "down"
     },
     {
@@ -1261,10 +1261,10 @@
       "region": "EU",
       "price": 24985.82,
       "currency": "EUR",
-      "change": -40.98,
-      "change_pct": -0.16,
-      "change_str": "-0.16%",
-      "direction": "down"
+      "change": 51.15,
+      "change_pct": 0.21,
+      "change_str": "+0.21%",
+      "direction": "up"
     },
     {
       "label": "Nikkei 225",
@@ -1272,9 +1272,9 @@
       "region": "JP",
       "price": 71250.06,
       "currency": "JPY",
-      "change": 196.57,
-      "change_pct": 0.28,
-      "change_str": "+0.28%",
+      "change": 1347.81,
+      "change_pct": 1.93,
+      "change_str": "+1.93%",
       "direction": "up"
     },
     {
@@ -1283,9 +1283,9 @@
       "region": "HK",
       "price": 23924.81,
       "currency": "HKD",
-      "change": -387.35,
-      "change_pct": -1.59,
-      "change_str": "-1.59%",
+      "change": -569.14,
+      "change_pct": -2.32,
+      "change_str": "-2.32%",
       "direction": "down"
     },
     {
@@ -1294,9 +1294,9 @@
       "region": "IN",
       "price": 24013.1,
       "currency": "INR",
-      "change": -154.9,
-      "change_pct": -0.64,
-      "change_str": "-0.64%",
+      "change": -72.6,
+      "change_pct": -0.3,
+      "change_str": "-0.30%",
       "direction": "down"
     },
     {
@@ -1325,11 +1325,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63889.11,
+      "price": 63971.11,
       "currency": "USD",
-      "change": 348.27,
-      "change_pct": 0.55,
-      "change_str": "+0.55%",
+      "change": 430.27,
+      "change_pct": 0.68,
+      "change_str": "+0.68%",
       "direction": "up"
     },
     {
@@ -1338,9 +1338,9 @@
       "region": "FX",
       "price": 100.85,
       "currency": "USD",
-      "change": -0.0,
-      "change_pct": -0.0,
-      "change_str": "+-0.00%",
+      "change": 0.76,
+      "change_pct": 0.76,
+      "change_str": "+0.76%",
       "direction": "up"
     },
     {
@@ -1349,10 +1349,10 @@
       "region": "VOL",
       "price": 16.78,
       "currency": "USD",
-      "change": -1.66,
-      "change_pct": -9.0,
-      "change_str": "-9.00%",
-      "direction": "down"
+      "change": 0.37,
+      "change_pct": 2.25,
+      "change_str": "+2.25%",
+      "direction": "up"
     }
   ],
   "risk_controls": {
@@ -1404,23 +1404,23 @@
       "matrix": {
         "IBIT": {
           "IBIT": 1.0,
-          "INDA": 0.423,
+          "INDA": 0.452,
           "QQQ": 0.6,
           "SH": -0.544,
           "XLF": 0.036,
           "XLV": -0.141
         },
         "INDA": {
-          "IBIT": 0.423,
+          "IBIT": 0.452,
           "INDA": 1.0,
-          "QQQ": 0.589,
-          "SH": -0.752,
-          "XLF": 0.568,
-          "XLV": 0.25
+          "QQQ": 0.568,
+          "SH": -0.742,
+          "XLF": 0.663,
+          "XLV": 0.3
         },
         "QQQ": {
           "IBIT": 0.6,
-          "INDA": 0.589,
+          "INDA": 0.568,
           "QQQ": 1.0,
           "SH": -0.941,
           "XLF": -0.078,
@@ -1428,7 +1428,7 @@
         },
         "SH": {
           "IBIT": -0.544,
-          "INDA": -0.752,
+          "INDA": -0.742,
           "QQQ": -0.941,
           "SH": 1.0,
           "XLF": -0.202,
@@ -1436,7 +1436,7 @@
         },
         "XLF": {
           "IBIT": 0.036,
-          "INDA": 0.568,
+          "INDA": 0.663,
           "QQQ": -0.078,
           "SH": -0.202,
           "XLF": 1.0,
@@ -1444,7 +1444,7 @@
         },
         "XLV": {
           "IBIT": -0.141,
-          "INDA": 0.25,
+          "INDA": 0.3,
           "QQQ": -0.147,
           "SH": -0.065,
           "XLF": 0.489,
@@ -1459,10 +1459,10 @@
         "XLF",
         "XLV"
       ],
-      "max_corr": 0.6,
+      "max_corr": 0.663,
       "max_corr_pair": [
-        "IBIT",
-        "QQQ"
+        "INDA",
+        "XLF"
       ],
       "most_negative_corr": -0.941,
       "most_negative_pair": [
@@ -1473,14 +1473,14 @@
     },
     "volatility": {
       "per_ticker": {
-        "INDA": 14.71,
+        "INDA": 14.77,
         "XLF": 14.2,
         "QQQ": 29.01,
         "IBIT": 42.95,
         "SH": 15.83,
         "XLV": 17.18
       },
-      "portfolio_avg_vol_pct": 22.31,
+      "portfolio_avg_vol_pct": 22.32,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -1765,11 +1765,11 @@
     }
   },
   "logs": [
-    "2026-06-20 14:48:25 [INFO] AZALYST - status.json generated",
-    "2026-06-20 14:48:25 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
-    "2026-06-20 14:48:25 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-06-20 14:48:25 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
-    "2026-06-20 14:48:25 [INFO] TRADER - Closed trades: 7"
+    "2026-06-20 16:24:49 [INFO] AZALYST - status.json generated",
+    "2026-06-20 16:24:49 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
+    "2026-06-20 16:24:49 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-06-20 16:24:49 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
+    "2026-06-20 16:24:49 [INFO] TRADER - Closed trades: 7"
   ],
-  "generated_at": "2026-06-20 14:48:23 UTC"
+  "generated_at": "2026-06-20 16:24:46 UTC"
 }
