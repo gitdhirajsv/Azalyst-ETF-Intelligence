@@ -130,7 +130,7 @@
       "pnl_pct_str": "-0.31%",
       "confidence": 96,
       "severity": "CRITICAL",
-      "days_held": 2,
+      "days_held": 3,
       "half_exited": false
     },
     {
@@ -300,12 +300,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
+    "risk_state": "NEUTRAL",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.14528490653824389,
-    "vix_level": 16.399999618530273,
-    "vix_percentile_1y": 0.34523809523809523,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -403,6 +403,10 @@
       "score": 66.0
     },
     {
+      "symbol": "Defense & Aerospace",
+      "score": 65.0
+    },
+    {
       "symbol": "Commodities & Mining",
       "score": 64.0
     },
@@ -416,10 +420,6 @@
     },
     {
       "symbol": "Clean Energy & Renewables",
-      "score": 62.0
-    },
-    {
-      "symbol": "Defense & Aerospace",
       "score": 62.0
     }
   ],
@@ -879,6 +879,59 @@
       }
     },
     {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 65.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 27,
+      "latest_at": "20 Jun 2026 10:10 UTC",
+      "headline": "Pentagon open to Poland\u2019s offer to host permanent U.S. base, Polish minister says",
+      "regions": [
+        "middle_east",
+        "europe",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "EE Times",
+        "Defense News",
+        "World | Deutsche Welle",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.9,
+        "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "commodities_mining",
       "sector_label": "Commodities & Mining",
       "confidence": 64.0,
@@ -1083,59 +1136,6 @@
         "recency": 16.9,
         "geopolitical_severity": 9.4
       }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 62.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
-      "latest_at": "20 Jun 2026 02:50 UTC",
-      "headline": "Pentagon open to Poland\u2019s offer to host permanent U.S. base, Polish minister says",
-      "regions": [
-        "middle_east",
-        "americas",
-        "europe",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "Defense News",
-        "EE Times"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.9,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
     }
   ],
   "articles": [
@@ -1187,6 +1187,11 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Defense & Aerospace - 27 articles - HIGH / BULLISH - Pentagon open to Poland\u2019s offer to host permanent U.S. base, Polish minister says"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Commodities & Mining - 7 articles - HIGH / BULLISH - First Quantum Deemed Broadly Compliant at Panama Copper Mine"
     },
     {
@@ -1203,11 +1208,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Clean Energy & Renewables - 5 articles - MEDIUM / BEARISH - BMW\u2019s Neue Klasse M concept brings next-gen EV tech to motorsports"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Defense & Aerospace - 28 articles - HIGH / BULLISH - Pentagon open to Poland\u2019s offer to host permanent U.S. base, Polish minister says"
     }
   ],
   "market_snapshot": [
@@ -1325,11 +1325,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63560.71,
+      "price": 63628.56,
       "currency": "USD",
-      "change": 19.87,
-      "change_pct": 0.03,
-      "change_str": "+0.03%",
+      "change": 87.72,
+      "change_pct": 0.14,
+      "change_str": "+0.14%",
       "direction": "up"
     },
     {
@@ -1765,11 +1765,11 @@
     }
   },
   "logs": [
-    "2026-06-20 07:06:39 [INFO] AZALYST - status.json generated",
-    "2026-06-20 07:06:39 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
-    "2026-06-20 07:06:39 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-06-20 07:06:39 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
-    "2026-06-20 07:06:39 [INFO] TRADER - Closed trades: 7"
+    "2026-06-20 10:16:46 [INFO] AZALYST - status.json generated",
+    "2026-06-20 10:16:46 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
+    "2026-06-20 10:16:46 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-06-20 10:16:46 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
+    "2026-06-20 10:16:46 [INFO] TRADER - Closed trades: 7"
   ],
-  "generated_at": "2026-06-20 07:06:37 UTC"
+  "generated_at": "2026-06-20 10:16:45 UTC"
 }
