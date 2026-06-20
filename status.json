@@ -315,18 +315,7 @@
       "news": 10
     }
   },
-  "top_signal": {
-    "ticker": "SMH",
-    "rank_score": 12.394838709677419,
-    "flow_score": 9.842914102258113,
-    "options_score": 0.0,
-    "rotation_score": 12.0,
-    "macro_score": 3.1751125329030154,
-    "news_score": 10.799999999999999,
-    "total": 48.21286534483855,
-    "publish": false,
-    "direction": "long"
-  },
+  "top_signal": {},
   "allocation": {
     "labels": [
       "INDA",
@@ -379,16 +368,16 @@
       "score": 82.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 82.0
-    },
-    {
       "symbol": "India Equity Markets",
       "score": 78.0
     },
     {
       "symbol": "Bonds & Fixed Income",
       "score": 77.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 76.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -584,52 +573,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 82.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "20 Jun 2026 19:09 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "middle_east",
-        "india",
-        "africa",
-        "asia_pacific"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 9.1,
-        "recency": 16.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 78.0,
@@ -729,6 +672,52 @@
         "volume_confirmation": 14.6,
         "source_diversity": 14.2,
         "recency": 14.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 76.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 25,
+      "latest_at": "20 Jun 2026 19:09 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "africa",
+        "india"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "Finance"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 9.1,
+        "recency": 10.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -1158,17 +1147,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Crypto & Digital Assets - 25 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "India Equity Markets - 36 articles - HIGH / BULLISH - F&amp;O Talk: Mid, smallcaps look strong on charts; Sudeep Shah picks 8 stocks, outlines Infosys, IFCI strategy"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Bonds & Fixed Income - 8 articles - HIGH / BULLISH - Bears step up bets against high-yield sector, shaking up bond traders"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Crypto & Digital Assets - 25 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
@@ -1326,11 +1315,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64016.0,
+      "price": 64204.01,
       "currency": "USD",
-      "change": 475.16,
-      "change_pct": 0.75,
-      "change_str": "+0.75%",
+      "change": 663.17,
+      "change_pct": 1.04,
+      "change_str": "+1.04%",
       "direction": "up"
     },
     {
@@ -1766,11 +1755,11 @@
     }
   },
   "logs": [
-    "2026-06-20 22:18:00 [INFO] AZALYST - status.json generated",
-    "2026-06-20 22:18:00 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
-    "2026-06-20 22:18:00 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-06-20 22:18:00 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
-    "2026-06-20 22:18:00 [INFO] TRADER - Closed trades: 7"
+    "2026-06-20 23:51:43 [INFO] AZALYST - status.json generated",
+    "2026-06-20 23:51:43 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
+    "2026-06-20 23:51:43 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-06-20 23:51:43 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
+    "2026-06-20 23:51:43 [INFO] TRADER - Closed trades: 7"
   ],
-  "generated_at": "2026-06-20 22:17:57 UTC"
+  "generated_at": "2026-06-20 23:51:41 UTC"
 }
