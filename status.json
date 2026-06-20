@@ -300,12 +300,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
+    "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.14528490653824389,
+    "vix_level": 16.399999618530273,
+    "vix_percentile_1y": 0.34523809523809523,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -317,13 +317,13 @@
   },
   "top_signal": {
     "ticker": "SMH",
-    "rank_score": 15.61573373676248,
+    "rank_score": 15.607655502392344,
     "flow_score": 10.936571224731237,
     "options_score": 9.856337467225012,
     "rotation_score": 15.0,
     "macro_score": 2.474530007347223,
     "news_score": 9.6,
-    "total": 63.48317243606595,
+    "total": 63.47509420169582,
     "publish": true,
     "direction": "long"
   },
@@ -379,12 +379,12 @@
       "score": 87.0
     },
     {
-      "symbol": "Bonds & Fixed Income",
-      "score": 77.0
+      "symbol": "Crypto & Digital Assets",
+      "score": 82.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 72.0
+      "symbol": "Bonds & Fixed Income",
+      "score": 77.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -582,6 +582,52 @@
       }
     },
     {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 82.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 25,
+      "latest_at": "20 Jun 2026 19:09 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "middle_east",
+        "india",
+        "africa",
+        "asia_pacific"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Markets-Economic Times",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 9.1,
+        "recency": 16.7,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income",
       "confidence": 77.0,
@@ -630,51 +676,6 @@
         "volume_confirmation": 14.6,
         "source_diversity": 14.2,
         "recency": 14.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 72.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "20 Jun 2026 08:08 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "africa",
-        "americas",
-        "global",
-        "europe"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 7.6,
-        "recency": 8.8,
         "geopolitical_severity": 13.0
       }
     },
@@ -1157,12 +1158,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Bonds & Fixed Income - 8 articles - HIGH / BULLISH - Bears step up bets against high-yield sector, shaking up bond traders"
+      "text": "Crypto & Digital Assets - 25 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Crypto & Digital Assets - 24 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
+      "text": "Bonds & Fixed Income - 8 articles - HIGH / BULLISH - Bears step up bets against high-yield sector, shaking up bond traders"
     },
     {
       "tag": "tag-bull",
@@ -1325,11 +1326,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63800.73,
+      "price": 63846.01,
       "currency": "USD",
-      "change": 259.89,
-      "change_pct": 0.41,
-      "change_str": "+0.41%",
+      "change": 305.17,
+      "change_pct": 0.48,
+      "change_str": "+0.48%",
       "direction": "up"
     },
     {
@@ -1765,11 +1766,11 @@
     }
   },
   "logs": [
-    "2026-06-20 18:01:42 [INFO] AZALYST - status.json generated",
-    "2026-06-20 18:01:42 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
-    "2026-06-20 18:01:42 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-06-20 18:01:42 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
-    "2026-06-20 18:01:42 [INFO] TRADER - Closed trades: 7"
+    "2026-06-20 19:26:02 [INFO] AZALYST - status.json generated",
+    "2026-06-20 19:26:02 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
+    "2026-06-20 19:26:02 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-06-20 19:26:02 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
+    "2026-06-20 19:26:02 [INFO] TRADER - Closed trades: 7"
   ],
-  "generated_at": "2026-06-20 18:01:41 UTC"
+  "generated_at": "2026-06-20 19:26:00 UTC"
 }
