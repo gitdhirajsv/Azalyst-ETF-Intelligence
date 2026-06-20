@@ -153,7 +153,7 @@
       "pnl_pct_str": "-0.06%",
       "confidence": 64,
       "severity": "HIGH",
-      "days_held": 0,
+      "days_held": 1,
       "half_exited": false
     }
   ],
@@ -317,14 +317,14 @@
   },
   "top_signal": {
     "ticker": "SMH",
-    "rank_score": 12.394838709677419,
-    "flow_score": 9.842914102258113,
-    "options_score": 0.0,
-    "rotation_score": 12.0,
-    "macro_score": 3.1751125329030154,
-    "news_score": 10.44,
-    "total": 47.85286534483855,
-    "publish": false,
+    "rank_score": 15.61573373676248,
+    "flow_score": 10.936571224731237,
+    "options_score": 9.856337467225012,
+    "rotation_score": 15.0,
+    "macro_score": 2.474530007347223,
+    "news_score": 9.6,
+    "total": 63.48317243606595,
+    "publish": true,
     "direction": "long"
   },
   "allocation": {
@@ -368,15 +368,15 @@
   "confidence": [
     {
       "symbol": "Technology & AI / Semiconductors",
-      "score": 87.0
+      "score": 96.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 89.0
     },
     {
       "symbol": "India Equity Markets",
       "score": 87.0
-    },
-    {
-      "symbol": "Energy / Oil & Gas",
-      "score": 84.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -427,27 +427,27 @@
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 87.0,
+      "confidence": 96.0,
       "severity": "CRITICAL",
       "direction": "BULLISH",
-      "direction_score": 2.5,
+      "direction_score": 4.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 52,
-      "latest_at": "20 Jun 2026 03:17 UTC",
+      "article_count": 55,
+      "latest_at": "20 Jun 2026 17:00 UTC",
       "headline": "Chip Industry Week In Review",
       "regions": [
+        "africa",
         "europe",
-        "middle_east",
-        "india",
-        "asia_pacific"
+        "asia_pacific",
+        "india"
       ],
       "sources": [
-        "Tech",
-        "Semiconductor Engineering",
-        "Oilprice.com",
-        "US Top News and Analysis"
+        "The Verge",
+        "EE Times",
+        "Bloomberg Markets",
+        "www.theregister.com - Articles"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -473,7 +473,60 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 16.5,
-        "recency": 6.9,
+        "recency": 15.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 89.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -10.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 25,
+      "latest_at": "20 Jun 2026 12:05 UTC",
+      "headline": "Kuwait Says Oil Output Could Hit 2 Million Bpd Within a Week",
+      "regions": [
+        "europe",
+        "asia_pacific",
+        "india",
+        "middle_east"
+      ],
+      "sources": [
+        "BBC News",
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.2,
+        "recency": 9.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -525,59 +578,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.9,
         "recency": 13.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 84.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -9.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 27,
-      "latest_at": "19 Jun 2026 23:00 UTC",
-      "headline": "Kuwait Says Oil Output Could Hit 2 Million Bpd Within a Week",
-      "regions": [
-        "europe",
-        "middle_east",
-        "india",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "US Top News and Analysis",
-        "Defense News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.2,
-        "recency": 4.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -1142,17 +1142,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 52 articles - CRITICAL / BULLISH - Chip Industry Week In Review"
+      "text": "Technology & AI / Semiconductors - 55 articles - CRITICAL / BULLISH - Chip Industry Week In Review"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Energy / Oil & Gas - 25 articles - CRITICAL / BEARISH - Kuwait Says Oil Output Could Hit 2 Million Bpd Within a Week"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "India Equity Markets - 38 articles - HIGH / BULLISH - F&amp;O Talk: Mid, smallcaps look strong on charts; Sudeep Shah picks 8 stocks, outlines Infosys, IFCI strategy"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Energy / Oil & Gas - 27 articles - CRITICAL / BEARISH - Kuwait Says Oil Output Could Hit 2 Million Bpd Within a Week"
     },
     {
       "tag": "tag-bull",
@@ -1217,10 +1217,10 @@
       "region": "US",
       "price": 7500.58,
       "currency": "USD",
-      "change": -10.77,
-      "change_pct": -0.14,
-      "change_str": "-0.14%",
-      "direction": "down"
+      "change": 80.48,
+      "change_pct": 1.08,
+      "change_str": "+1.08%",
+      "direction": "up"
     },
     {
       "label": "NASDAQ",
@@ -1228,9 +1228,9 @@
       "region": "US",
       "price": 26517.93,
       "currency": "USD",
-      "change": 141.59,
-      "change_pct": 0.54,
-      "change_str": "+0.54%",
+      "change": 496.27,
+      "change_pct": 1.91,
+      "change_str": "+1.91%",
       "direction": "up"
     },
     {
@@ -1239,10 +1239,10 @@
       "region": "US",
       "price": 51564.7,
       "currency": "USD",
-      "change": -434.97,
-      "change_pct": -0.84,
-      "change_str": "-0.84%",
-      "direction": "down"
+      "change": 72.15,
+      "change_pct": 0.14,
+      "change_str": "+0.14%",
+      "direction": "up"
     },
     {
       "label": "FTSE 100",
@@ -1250,9 +1250,9 @@
       "region": "UK",
       "price": 10363.27,
       "currency": "GBP",
-      "change": -145.33,
-      "change_pct": -1.38,
-      "change_str": "-1.38%",
+      "change": -36.43,
+      "change_pct": -0.35,
+      "change_str": "-0.35%",
       "direction": "down"
     },
     {
@@ -1261,10 +1261,10 @@
       "region": "EU",
       "price": 24985.82,
       "currency": "EUR",
-      "change": 51.15,
-      "change_pct": 0.21,
-      "change_str": "+0.21%",
-      "direction": "up"
+      "change": -40.98,
+      "change_pct": -0.16,
+      "change_str": "-0.16%",
+      "direction": "down"
     },
     {
       "label": "Nikkei 225",
@@ -1272,9 +1272,9 @@
       "region": "JP",
       "price": 71250.06,
       "currency": "JPY",
-      "change": 1347.81,
-      "change_pct": 1.93,
-      "change_str": "+1.93%",
+      "change": 196.57,
+      "change_pct": 0.28,
+      "change_str": "+0.28%",
       "direction": "up"
     },
     {
@@ -1283,9 +1283,9 @@
       "region": "HK",
       "price": 23924.81,
       "currency": "HKD",
-      "change": -569.14,
-      "change_pct": -2.32,
-      "change_str": "-2.32%",
+      "change": -387.35,
+      "change_pct": -1.59,
+      "change_str": "-1.59%",
       "direction": "down"
     },
     {
@@ -1294,9 +1294,9 @@
       "region": "IN",
       "price": 24013.1,
       "currency": "INR",
-      "change": -72.6,
-      "change_pct": -0.3,
-      "change_str": "-0.30%",
+      "change": -154.9,
+      "change_pct": -0.64,
+      "change_str": "-0.64%",
       "direction": "down"
     },
     {
@@ -1325,11 +1325,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63971.11,
+      "price": 63800.73,
       "currency": "USD",
-      "change": 430.27,
-      "change_pct": 0.68,
-      "change_str": "+0.68%",
+      "change": 259.89,
+      "change_pct": 0.41,
+      "change_str": "+0.41%",
       "direction": "up"
     },
     {
@@ -1338,9 +1338,9 @@
       "region": "FX",
       "price": 100.85,
       "currency": "USD",
-      "change": 0.76,
-      "change_pct": 0.76,
-      "change_str": "+0.76%",
+      "change": -0.0,
+      "change_pct": -0.0,
+      "change_str": "+-0.00%",
       "direction": "up"
     },
     {
@@ -1349,10 +1349,10 @@
       "region": "VOL",
       "price": 16.78,
       "currency": "USD",
-      "change": 0.37,
-      "change_pct": 2.25,
-      "change_str": "+2.25%",
-      "direction": "up"
+      "change": -1.66,
+      "change_pct": -9.0,
+      "change_str": "-9.00%",
+      "direction": "down"
     }
   ],
   "risk_controls": {
@@ -1404,23 +1404,23 @@
       "matrix": {
         "IBIT": {
           "IBIT": 1.0,
-          "INDA": 0.452,
+          "INDA": 0.423,
           "QQQ": 0.6,
           "SH": -0.544,
           "XLF": 0.036,
           "XLV": -0.141
         },
         "INDA": {
-          "IBIT": 0.452,
+          "IBIT": 0.423,
           "INDA": 1.0,
-          "QQQ": 0.568,
-          "SH": -0.742,
-          "XLF": 0.663,
-          "XLV": 0.3
+          "QQQ": 0.589,
+          "SH": -0.752,
+          "XLF": 0.568,
+          "XLV": 0.25
         },
         "QQQ": {
           "IBIT": 0.6,
-          "INDA": 0.568,
+          "INDA": 0.589,
           "QQQ": 1.0,
           "SH": -0.941,
           "XLF": -0.078,
@@ -1428,7 +1428,7 @@
         },
         "SH": {
           "IBIT": -0.544,
-          "INDA": -0.742,
+          "INDA": -0.752,
           "QQQ": -0.941,
           "SH": 1.0,
           "XLF": -0.202,
@@ -1436,7 +1436,7 @@
         },
         "XLF": {
           "IBIT": 0.036,
-          "INDA": 0.663,
+          "INDA": 0.568,
           "QQQ": -0.078,
           "SH": -0.202,
           "XLF": 1.0,
@@ -1444,7 +1444,7 @@
         },
         "XLV": {
           "IBIT": -0.141,
-          "INDA": 0.3,
+          "INDA": 0.25,
           "QQQ": -0.147,
           "SH": -0.065,
           "XLF": 0.489,
@@ -1459,10 +1459,10 @@
         "XLF",
         "XLV"
       ],
-      "max_corr": 0.663,
+      "max_corr": 0.6,
       "max_corr_pair": [
-        "INDA",
-        "XLF"
+        "IBIT",
+        "QQQ"
       ],
       "most_negative_corr": -0.941,
       "most_negative_pair": [
@@ -1473,14 +1473,14 @@
     },
     "volatility": {
       "per_ticker": {
-        "INDA": 14.77,
+        "INDA": 14.71,
         "XLF": 14.2,
         "QQQ": 29.01,
         "IBIT": 42.95,
         "SH": 15.83,
         "XLV": 17.18
       },
-      "portfolio_avg_vol_pct": 22.32,
+      "portfolio_avg_vol_pct": 22.31,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -1765,11 +1765,11 @@
     }
   },
   "logs": [
-    "2026-06-20 16:24:49 [INFO] AZALYST - status.json generated",
-    "2026-06-20 16:24:49 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
-    "2026-06-20 16:24:49 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-06-20 16:24:49 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
-    "2026-06-20 16:24:49 [INFO] TRADER - Closed trades: 7"
+    "2026-06-20 18:01:42 [INFO] AZALYST - status.json generated",
+    "2026-06-20 18:01:42 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
+    "2026-06-20 18:01:42 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-06-20 18:01:42 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
+    "2026-06-20 18:01:42 [INFO] TRADER - Closed trades: 7"
   ],
-  "generated_at": "2026-06-20 16:24:46 UTC"
+  "generated_at": "2026-06-20 18:01:41 UTC"
 }
