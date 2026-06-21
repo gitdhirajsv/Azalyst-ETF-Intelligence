@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 10105.47,
+  "portfolio_value": 10105.39,
   "total_deposited": 10152.69,
-  "cash": 1623.77,
+  "cash": 1546.97,
   "monthly_reserve": 0.0,
-  "market_value": 8481.7,
-  "total_invested": 8434.29,
-  "unrealised_pnl": 47.41,
-  "unrealised_str": "+47.41",
+  "market_value": 8558.42,
+  "total_invested": 8511.09,
+  "unrealised_pnl": 47.33,
+  "unrealised_str": "+47.33",
   "realised_pnl": -94.63,
   "realised_str": "-94.63",
   "change": "-0.47%",
@@ -108,6 +108,29 @@
       "confidence": 91,
       "severity": "CRITICAL",
       "days_held": 5,
+      "half_exited": false
+    },
+    {
+      "trade_id": "T0014",
+      "ticker": "SH",
+      "etf_name": "ProShares Short S&P500",
+      "sector": "Energy / Oil & Gas",
+      "platform": "ProShares -- IBKR / Schwab / Fidelity",
+      "exchange": "NYSE",
+      "entry": 33.31,
+      "current": 33.28,
+      "peak_price": 33.31,
+      "trail_stop": 30.98,
+      "dist_to_trail_pct": 6.91,
+      "units": 2.305291,
+      "invested": 76.8,
+      "pnl": -0.08,
+      "pnl_str": "-0.08",
+      "pnl_pct": -0.1,
+      "pnl_pct_str": "-0.10%",
+      "confidence": 96,
+      "severity": "HIGH",
+      "days_held": 0,
       "half_exited": false
     }
   ],
@@ -286,12 +309,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
+    "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.1451849066336113,
+    "vix_level": 16.399999618530273,
+    "vix_percentile_1y": 0.34523809523809523,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -305,12 +328,12 @@
     "ticker": "SMH",
     "rank_score": 15.6289592760181,
     "flow_score": 10.936571224731237,
-    "options_score": 0.0,
+    "options_score": 9.88170082962523,
     "rotation_score": 15.0,
     "macro_score": 1.5659974040200186,
     "news_score": 8.2,
-    "total": 51.33152790476936,
-    "publish": false,
+    "total": 61.21322873439459,
+    "publish": true,
     "direction": "long"
   },
   "allocation": {
@@ -319,6 +342,7 @@
       "XLF",
       "QQQ",
       "IBIT",
+      "SH",
       "CASH"
     ],
     "values": [
@@ -326,7 +350,8 @@
       35.3,
       14.0,
       2.1,
-      16.1
+      0.8,
+      15.3
     ]
   },
   "pnl": {
@@ -334,19 +359,21 @@
       "INDA",
       "XLF",
       "QQQ",
-      "IBIT"
+      "IBIT",
+      "SH"
     ],
     "values": [
       55.31,
       -17.87,
       19.45,
-      -9.48
+      -9.48,
+      -0.08
     ]
   },
   "confidence": [
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 94.0
+      "score": 96.0
     },
     {
       "symbol": "India Equity Markets",
@@ -357,16 +384,16 @@
       "score": 82.0
     },
     {
-      "symbol": "Bonds & Fixed Income",
-      "score": 77.0
-    },
-    {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 76.0
     },
     {
       "symbol": "Crypto & Digital Assets",
       "score": 76.0
+    },
+    {
+      "symbol": "Bonds & Fixed Income",
+      "score": 72.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -405,27 +432,27 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 94.0,
+      "confidence": 96.0,
       "severity": "HIGH",
       "direction": "BEARISH",
-      "direction_score": -10.5,
+      "direction_score": -8.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
-      "latest_at": "21 Jun 2026 15:00 UTC",
-      "headline": "Energy Security, Not Climate Goals, Is Now Driving the Clean Power Boom",
+      "article_count": 26,
+      "latest_at": "21 Jun 2026 21:00 UTC",
+      "headline": "Hormuz Crisis Sparks a Middle East Pipeline Boom",
       "regions": [
         "europe",
+        "global",
         "middle_east",
-        "asia_pacific",
-        "global"
+        "asia_pacific"
       ],
       "sources": [
-        "Bloomberg Markets",
-        "Cointelegraph.com News",
-        "Defense News",
-        "Finance"
+        "US Top News and Analysis",
+        "Finance",
+        "Oilprice.com",
+        "Defense News"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -451,7 +478,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 15.6,
-        "recency": 13.8,
+        "recency": 15.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -559,58 +586,6 @@
       }
     },
     {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
-      "confidence": 77.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "19 Jun 2026 10:34 UTC",
-      "headline": "Bears step up bets against high-yield sector, shaking up bond traders",
-      "regions": [
-        "americas",
-        "middle_east",
-        "asia_pacific",
-        "africa"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Finance"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 15.1,
-        "volume_confirmation": 14.6,
-        "source_diversity": 14.2,
-        "recency": 14.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
       "confidence": 76.0,
@@ -707,6 +682,58 @@
         "source_diversity": 9.1,
         "recency": 11.2,
         "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 72.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 2.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "21 Jun 2026 19:00 UTC",
+      "headline": "Bond Traders Burned by Fed\u2019s Pivot Look to Prices Gauge, Oil",
+      "regions": [
+        "india",
+        "americas",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Finance",
+        "Semiconductor Engineering",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 13.7,
+        "volume_confirmation": 14.6,
+        "source_diversity": 12.8,
+        "recency": 12.7,
+        "geopolitical_severity": 12.9
       }
     },
     {
@@ -1119,7 +1146,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 28 articles - HIGH / BEARISH - Energy Security, Not Climate Goals, Is Now Driving the Clean Power Boom"
+      "text": "Energy / Oil & Gas - 26 articles - HIGH / BEARISH - Hormuz Crisis Sparks a Middle East Pipeline Boom"
     },
     {
       "tag": "tag-bull",
@@ -1132,11 +1159,6 @@
       "text": "Technology & AI / Semiconductors - 53 articles - CRITICAL / BULLISH - Chip Industry Week In Review"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Bonds & Fixed Income - 8 articles - HIGH / BULLISH - Bears step up bets against high-yield sector, shaking up bond traders"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / BEARISH - Traders boost US rate-hike bets on hawkish Fed"
@@ -1145,6 +1167,11 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Crypto & Digital Assets - 27 articles - CRITICAL / BULLISH - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Bonds & Fixed Income - 8 articles - HIGH / BULLISH - Bond Traders Burned by Fed\u2019s Pivot Look to Prices Gauge, Oil"
     },
     {
       "tag": "tag-bull",
@@ -1302,11 +1329,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63981.61,
+      "price": 63586.81,
       "currency": "USD",
-      "change": -258.07,
-      "change_pct": -0.4,
-      "change_str": "-0.40%",
+      "change": -652.87,
+      "change_pct": -1.02,
+      "change_str": "-1.02%",
       "direction": "down"
     },
     {
@@ -1358,6 +1385,11 @@
         "sector": "Crypto & Digital Assets",
         "weight": 2.1,
         "at_cap": false
+      },
+      {
+        "sector": "Energy / Oil & Gas",
+        "weight": 0.8,
+        "at_cap": false
       }
     ],
     "max_drawdown_pct": 1.14,
@@ -1373,24 +1405,35 @@
           "IBIT": 1.0,
           "INDA": 0.423,
           "QQQ": 0.6,
+          "SH": -0.544,
           "XLF": 0.036
         },
         "INDA": {
           "IBIT": 0.423,
           "INDA": 1.0,
           "QQQ": 0.589,
+          "SH": -0.752,
           "XLF": 0.568
         },
         "QQQ": {
           "IBIT": 0.6,
           "INDA": 0.589,
           "QQQ": 1.0,
+          "SH": -0.941,
           "XLF": -0.078
+        },
+        "SH": {
+          "IBIT": -0.544,
+          "INDA": -0.752,
+          "QQQ": -0.941,
+          "SH": 1.0,
+          "XLF": -0.202
         },
         "XLF": {
           "IBIT": 0.036,
           "INDA": 0.568,
           "QQQ": -0.078,
+          "SH": -0.202,
           "XLF": 1.0
         }
       },
@@ -1398,6 +1441,7 @@
         "IBIT",
         "INDA",
         "QQQ",
+        "SH",
         "XLF"
       ],
       "max_corr": 0.6,
@@ -1405,10 +1449,10 @@
         "IBIT",
         "QQQ"
       ],
-      "most_negative_corr": -0.078,
+      "most_negative_corr": -0.941,
       "most_negative_pair": [
         "QQQ",
-        "XLF"
+        "SH"
       ],
       "status": "HIGH"
     },
@@ -1417,9 +1461,10 @@
         "INDA": 14.71,
         "XLF": 14.2,
         "QQQ": 29.01,
-        "IBIT": 42.95
+        "IBIT": 42.95,
+        "SH": 15.83
       },
-      "portfolio_avg_vol_pct": 25.22,
+      "portfolio_avg_vol_pct": 23.34,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -1433,52 +1478,52 @@
     "rebalance": {
       "alerts": [
         {
-          "ticker": "IBIT",
-          "actual_weight_pct": 2.1,
-          "target_weight_pct": 22.5,
-          "drift_pct": -20.4,
-          "action": "ADD",
-          "amount": 2061.42,
-          "etf_name": "iShares Bitcoin Trust ETF",
+          "ticker": "XLF",
+          "actual_weight_pct": 35.32,
+          "target_weight_pct": 18.0,
+          "drift_pct": 17.32,
+          "action": "TRIM",
+          "amount": 1750.35,
+          "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
         {
-          "ticker": "XLF",
-          "actual_weight_pct": 35.32,
-          "target_weight_pct": 22.5,
-          "drift_pct": 12.82,
-          "action": "TRIM",
-          "amount": 1295.59,
-          "etf_name": "Financial Select Sector SPDR",
+          "ticker": "SH",
+          "actual_weight_pct": 0.76,
+          "target_weight_pct": 18.0,
+          "drift_pct": -17.24,
+          "action": "ADD",
+          "amount": 1742.25,
+          "etf_name": "ProShares Short S&P500",
+          "regime_note": ""
+        },
+        {
+          "ticker": "IBIT",
+          "actual_weight_pct": 2.1,
+          "target_weight_pct": 18.0,
+          "drift_pct": -15.9,
+          "action": "ADD",
+          "amount": 1606.66,
+          "etf_name": "iShares Bitcoin Trust ETF",
           "regime_note": ""
         },
         {
           "ticker": "INDA",
           "actual_weight_pct": 32.48,
-          "target_weight_pct": 22.5,
-          "drift_pct": 9.98,
+          "target_weight_pct": 18.0,
+          "drift_pct": 14.48,
           "action": "TRIM",
-          "amount": 1008.77,
+          "amount": 1463.53,
           "etf_name": "iShares MSCI India ETF",
           "regime_note": ""
         },
         {
-          "ticker": "QQQ",
-          "actual_weight_pct": 14.03,
-          "target_weight_pct": 22.5,
-          "drift_pct": -8.47,
-          "action": "ADD",
-          "amount": 856.16,
-          "etf_name": "Invesco QQQ Trust",
-          "regime_note": ""
-        },
-        {
           "ticker": "CASH",
-          "actual_weight_pct": 16.07,
+          "actual_weight_pct": 15.31,
           "target_weight_pct": 10.0,
-          "drift_pct": 6.07,
+          "drift_pct": 5.31,
           "action": "DEPLOY",
-          "amount": 613.23,
+          "amount": 536.43,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         }
@@ -1489,8 +1534,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -3435.14,
-          "portfolio_loss_pct": -33.99,
+          "total_impact": -3477.34,
+          "portfolio_loss_pct": -34.41,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1515,12 +1560,18 @@
               "factor": "crypto",
               "shock_pct": -60.0,
               "impact": -127.38
+            },
+            {
+              "ticker": "SH",
+              "factor": "oil",
+              "shock_pct": -55.0,
+              "impact": -42.2
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -2896.52,
-          "portfolio_loss_pct": -28.66,
+          "total_impact": -2946.38,
+          "portfolio_loss_pct": -29.16,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1545,12 +1596,18 @@
               "factor": "crypto",
               "shock_pct": -40.0,
               "impact": -84.92
+            },
+            {
+              "ticker": "SH",
+              "factor": "oil",
+              "shock_pct": -65.0,
+              "impact": -49.87
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1282.87,
-          "portfolio_loss_pct": -12.69,
+          "total_impact": -1290.54,
+          "portfolio_loss_pct": -12.77,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1575,12 +1632,18 @@
               "factor": "crypto",
               "shock_pct": -20.0,
               "impact": -42.46
+            },
+            {
+              "ticker": "SH",
+              "factor": "oil",
+              "shock_pct": -10.0,
+              "impact": -7.67
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -682.78,
-          "portfolio_loss_pct": -6.76,
+          "total_impact": -694.29,
+          "portfolio_loss_pct": -6.87,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1605,12 +1668,18 @@
               "factor": "crypto",
               "shock_pct": -10.0,
               "impact": -21.23
+            },
+            {
+              "ticker": "SH",
+              "factor": "oil",
+              "shock_pct": -15.0,
+              "impact": -11.51
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1541.57,
-          "portfolio_loss_pct": -15.25,
+          "total_impact": -1556.91,
+          "portfolio_loss_pct": -15.41,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1635,20 +1704,26 @@
               "factor": "crypto",
               "shock_pct": -25.0,
               "impact": -53.08
+            },
+            {
+              "ticker": "SH",
+              "factor": "oil",
+              "shock_pct": -20.0,
+              "impact": -15.34
             }
           ]
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -33.99
+      "worst_loss_pct": -34.41
     }
   },
   "logs": [
-    "2026-06-21 20:34:48 [INFO] AZALYST - status.json generated",
-    "2026-06-21 20:34:48 [INFO] PORTFOLIO - NAV USD 10,105.47 | Return -0.47%",
-    "2026-06-21 20:34:48 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-06-21 20:34:48 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT",
-    "2026-06-21 20:34:48 [INFO] TRADER - Closed trades: 9"
+    "2026-06-21 22:01:01 [INFO] AZALYST - status.json generated",
+    "2026-06-21 22:01:01 [INFO] PORTFOLIO - NAV USD 10,105.39 | Return -0.47%",
+    "2026-06-21 22:01:01 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-06-21 22:01:01 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH",
+    "2026-06-21 22:01:01 [INFO] TRADER - Closed trades: 9"
   ],
-  "generated_at": "2026-06-21 20:34:47 UTC"
+  "generated_at": "2026-06-21 22:00:59 UTC"
 }
