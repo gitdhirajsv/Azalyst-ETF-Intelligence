@@ -300,12 +300,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
+    "risk_state": "NEUTRAL",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.1451849066336113,
-    "vix_level": 16.399999618530273,
-    "vix_percentile_1y": 0.34523809523809523,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -317,14 +317,14 @@
   },
   "top_signal": {
     "ticker": "SMH",
-    "rank_score": 15.6289592760181,
+    "rank_score": 15.631698113207548,
     "flow_score": 10.936571224731237,
-    "options_score": 9.88240081971186,
+    "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 1.5659974040200186,
-    "news_score": 8.4,
-    "total": 61.41392872448122,
-    "publish": true,
+    "news_score": 9.4,
+    "total": 52.5342667419588,
+    "publish": false,
     "direction": "long"
   },
   "allocation": {
@@ -371,11 +371,15 @@
       "score": 95.0
     },
     {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 94.0
+    },
+    {
       "symbol": "India Equity Markets",
       "score": 87.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 84.0
     },
     {
@@ -387,19 +391,11 @@
       "score": 77.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 72.0
-    },
-    {
       "symbol": "Banking & Financial Sector",
       "score": 68.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
-      "score": 68.0
-    },
-    {
-      "symbol": "Asia Pacific Equity",
       "score": 68.0
     },
     {
@@ -409,6 +405,10 @@
     {
       "symbol": "Defense & Aerospace",
       "score": 66.0
+    },
+    {
+      "symbol": "Asia Pacific Equity",
+      "score": 64.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -478,6 +478,59 @@
       }
     },
     {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 94.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": 2.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 52,
+      "latest_at": "21 Jun 2026 11:00 UTC",
+      "headline": "Chip Industry Week In Review",
+      "regions": [
+        "india",
+        "americas",
+        "middle_east",
+        "europe"
+      ],
+      "sources": [
+        "The Verge",
+        "Defense News",
+        "EE Times",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.9,
+        "recency": 13.3,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 87.0,
@@ -528,55 +581,55 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
       "confidence": 84.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": 2.5,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -3.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 53,
-      "latest_at": "20 Jun 2026 17:00 UTC",
-      "headline": "Chip Industry Week In Review",
+      "article_count": 13,
+      "latest_at": "21 Jun 2026 12:36 UTC",
+      "headline": "Traders boost US rate-hike bets on hawkish Fed",
       "regions": [
-        "europe",
         "middle_east",
-        "africa",
+        "americas",
+        "europe",
         "global"
       ],
       "sources": [
-        "World | Deutsche Welle",
-        "Bloomberg Markets",
         "Latest from Tom's Hardware",
-        "US Top News and Analysis"
+        "US Top News and Analysis",
+        "Finance",
+        "Cointelegraph.com News"
       ],
-      "primary_etf": "QQQ",
+      "primary_etf": "GLDM",
       "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
+        "GOLDBEES",
+        "HDFCGOLD"
       ],
       "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
+        "GLDM",
+        "GDX",
+        "GDXJ"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 22.0,
+        "signal_strength": 21.4,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.9,
-        "recency": 3.6,
+        "source_diversity": 12.9,
+        "recency": 15.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -584,25 +637,25 @@
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 77.0,
-      "severity": "HIGH",
+      "severity": "CRITICAL",
       "direction": "BULLISH",
       "direction_score": 4.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "21 Jun 2026 04:36 UTC",
+      "article_count": 26,
+      "latest_at": "21 Jun 2026 10:15 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "europe",
+        "india",
         "middle_east",
-        "africa",
-        "global"
+        "americas",
+        "europe"
       ],
       "sources": [
         "Markets-Economic Times",
         "Cointelegraph.com News",
-        "US Top News and Analysis"
+        "Finance"
       ],
       "primary_etf": "IBIT",
       "top_etfs": [
@@ -622,7 +675,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 9.1,
-        "recency": 11.6,
+        "recency": 12.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -675,59 +728,6 @@
         "volume_confirmation": 14.6,
         "source_diversity": 14.2,
         "recency": 14.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 72.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -3.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "20 Jun 2026 20:00 UTC",
-      "headline": "Traders boost US rate-hike bets on hawkish Fed",
-      "regions": [
-        "europe",
-        "middle_east",
-        "africa",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Finance"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 21.2,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.1,
-        "recency": 4.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -834,55 +834,6 @@
       }
     },
     {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 68.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "20 Jun 2026 08:59 UTC",
-      "headline": "Yen teeters on cusp of 40-year low as BOJ hike fails to stem rout",
-      "regions": [
-        "middle_east",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "Defense News",
-        "US Top News and Analysis",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 12.1,
-        "volume_confirmation": 13.7,
-        "source_diversity": 11.0,
-        "recency": 12.2,
-        "geopolitical_severity": 11.3
-      }
-    },
-    {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity",
       "confidence": 66.0,
@@ -982,6 +933,54 @@
         "source_diversity": 15.3,
         "recency": 17.0,
         "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 64.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "21 Jun 2026 11:58 UTC",
+      "headline": "Samsung and SK hynix bonuses for chip workers flagged as a national inflation risk \u2014 Bank of Korea projects full-year inflation significantly above its 2% target",
+      "regions": [
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Latest from Tom's Hardware",
+        "Defense News",
+        "US Top News and Analysis",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.8,
+        "volume_confirmation": 13.7,
+        "source_diversity": 7.8,
+        "recency": 14.7,
+        "geopolitical_severity": 9.1
       }
     },
     {
@@ -1147,27 +1146,27 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Technology & AI / Semiconductors - 52 articles - CRITICAL / BULLISH - Chip Industry Week In Review"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "India Equity Markets - 33 articles - CRITICAL / BULLISH - F&amp;O Talk: Mid, smallcaps look strong on charts; Sudeep Shah picks 8 stocks, outlines Infosys, IFCI strategy"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 53 articles - CRITICAL / BULLISH - Chip Industry Week In Review"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Crypto & Digital Assets - 25 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Bonds & Fixed Income - 8 articles - HIGH / BULLISH - Bears step up bets against high-yield sector, shaking up bond traders"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / BEARISH - Traders boost US rate-hike bets on hawkish Fed"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Crypto & Digital Assets - 26 articles - CRITICAL / BULLISH - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Bonds & Fixed Income - 8 articles - HIGH / BULLISH - Bears step up bets against high-yield sector, shaking up bond traders"
     },
     {
       "tag": "tag-bull",
@@ -1182,17 +1181,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Asia Pacific Equity - 7 articles - MEDIUM / BULLISH - Yen teeters on cusp of 40-year low as BOJ hike fails to stem rout"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "Europe Equity - 11 articles - HIGH / BULLISH - Bailey Defends BOE Gilt Sales After Criticism From Farage"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Defense & Aerospace - 27 articles - HIGH / BULLISH - Pentagon open to Poland\u2019s offer to host permanent U.S. base, Polish minister says"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Asia Pacific Equity - 7 articles - MEDIUM / BULLISH - Samsung and SK hynix bonuses for chip workers flagged as a national inflation risk \u2014 Bank of Korea projects full-year inflation significantly above its 2% target"
     },
     {
       "tag": "tag-bull",
@@ -1325,11 +1324,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64168.0,
+      "price": 63967.8,
       "currency": "USD",
-      "change": -71.68,
-      "change_pct": -0.11,
-      "change_str": "-0.11%",
+      "change": -271.88,
+      "change_pct": -0.42,
+      "change_str": "-0.42%",
       "direction": "down"
     },
     {
@@ -1765,11 +1764,11 @@
     }
   },
   "logs": [
-    "2026-06-21 11:42:09 [INFO] AZALYST - status.json generated",
-    "2026-06-21 11:42:09 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
-    "2026-06-21 11:42:09 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-06-21 11:42:09 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
-    "2026-06-21 11:42:09 [INFO] TRADER - Closed trades: 7"
+    "2026-06-21 13:38:01 [INFO] AZALYST - status.json generated",
+    "2026-06-21 13:38:01 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
+    "2026-06-21 13:38:01 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-06-21 13:38:01 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
+    "2026-06-21 13:38:01 [INFO] TRADER - Closed trades: 7"
   ],
-  "generated_at": "2026-06-21 11:42:06 UTC"
+  "generated_at": "2026-06-21 13:37:57 UTC"
 }
