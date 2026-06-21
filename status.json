@@ -38,7 +38,7 @@
       "pnl_pct_str": "+1.71%",
       "confidence": 92,
       "severity": "HIGH",
-      "days_held": 8,
+      "days_held": 9,
       "half_exited": false
     },
     {
@@ -300,12 +300,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
+    "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.1451849066336113,
+    "vix_level": 16.399999618530273,
+    "vix_percentile_1y": 0.34523809523809523,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -317,14 +317,14 @@
   },
   "top_signal": {
     "ticker": "SMH",
-    "rank_score": 12.394838709677419,
-    "flow_score": 9.842914102258113,
-    "options_score": 0.0,
-    "rotation_score": 12.0,
-    "macro_score": 3.1751125329030154,
-    "news_score": 10.319999999999999,
-    "total": 47.73286534483855,
-    "publish": false,
+    "rank_score": 15.6289592760181,
+    "flow_score": 10.936571224731237,
+    "options_score": 9.88240081971186,
+    "rotation_score": 15.0,
+    "macro_score": 1.5659974040200186,
+    "news_score": 8.4,
+    "total": 61.41392872448122,
+    "publish": true,
     "direction": "long"
   },
   "allocation": {
@@ -367,16 +367,20 @@
   },
   "confidence": [
     {
+      "symbol": "India Equity Markets",
+      "score": 87.0
+    },
+    {
       "symbol": "Energy / Oil & Gas",
-      "score": 89.0
+      "score": 85.0
     },
     {
       "symbol": "Technology & AI / Semiconductors",
-      "score": 86.0
+      "score": 84.0
     },
     {
-      "symbol": "India Equity Markets",
-      "score": 78.0
+      "symbol": "Crypto & Digital Assets",
+      "score": 77.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -384,11 +388,7 @@
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 76.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 76.0
+      "score": 72.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -425,29 +425,79 @@
   ],
   "signals": [
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 89.0,
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 87.0,
       "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -10.0,
+      "direction": "BULLISH",
+      "direction_score": 2.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 27,
-      "latest_at": "20 Jun 2026 21:00 UTC",
-      "headline": "Energy Security, Not Climate Goals, Is Now Driving the Clean Power Boom",
+      "article_count": 33,
+      "latest_at": "21 Jun 2026 07:05 UTC",
+      "headline": "F&amp;O Talk: Mid, smallcaps look strong on charts; Sudeep Shah picks 8 stocks, outlines Infosys, IFCI strategy",
       "regions": [
-        "global",
         "india",
-        "europe",
+        "middle_east",
         "asia_pacific"
       ],
       "sources": [
-        "Defense News",
-        "Finance",
-        "Oilprice.com",
+        "Markets-Economic Times",
+        "BBC News",
+        "US Top News and Analysis",
         "Bloomberg Markets"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.3,
+        "recency": 14.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 85.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -9.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 28,
+      "latest_at": "20 Jun 2026 21:00 UTC",
+      "headline": "Energy Security, Not Climate Goals, Is Now Driving the Clean Power Boom",
+      "regions": [
+        "europe",
+        "middle_east",
+        "global",
+        "india"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "BBC News"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -472,35 +522,35 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 15.6,
-        "recency": 8.8,
+        "source_diversity": 15.2,
+        "recency": 5.4,
         "geopolitical_severity": 13.0
       }
     },
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 86.0,
+      "confidence": 84.0,
       "severity": "CRITICAL",
       "direction": "BULLISH",
       "direction_score": 2.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 54,
+      "article_count": 53,
       "latest_at": "20 Jun 2026 17:00 UTC",
       "headline": "Chip Industry Week In Review",
       "regions": [
-        "americas",
-        "global",
-        "india",
-        "europe"
+        "europe",
+        "middle_east",
+        "africa",
+        "global"
       ],
       "sources": [
-        "Defense News",
-        "Semiconductor Engineering",
+        "World | Deutsche Welle",
+        "Bloomberg Markets",
         "Latest from Tom's Hardware",
-        "Oilprice.com"
+        "US Top News and Analysis"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -525,59 +575,54 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.3,
-        "recency": 5.9,
+        "source_diversity": 16.9,
+        "recency": 3.6,
         "geopolitical_severity": 13.0
       }
     },
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 78.0,
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 77.0,
       "severity": "HIGH",
       "direction": "BULLISH",
-      "direction_score": 5.5,
+      "direction_score": 4.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 36,
-      "latest_at": "20 Jun 2026 12:02 UTC",
-      "headline": "F&amp;O Talk: Mid, smallcaps look strong on charts; Sudeep Shah picks 8 stocks, outlines Infosys, IFCI strategy",
+      "article_count": 25,
+      "latest_at": "21 Jun 2026 04:36 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
       "regions": [
+        "europe",
         "middle_east",
-        "global",
-        "asia_pacific",
-        "india"
+        "africa",
+        "global"
       ],
       "sources": [
-        "www.theregister.com - Articles",
-        "US Top News and Analysis",
         "Markets-Economic Times",
-        "BBC News"
+        "Cointelegraph.com News",
+        "US Top News and Analysis"
       ],
-      "primary_etf": "INDA",
+      "primary_etf": "IBIT",
       "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
+        "IBIT",
+        "BITQ"
       ],
       "access_markets": [
-        "India-listed",
         "International-listed"
       ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
+      "india_etfs": [],
       "global_etfs": [
-        "INDA"
+        "IBIT",
+        "BITQ"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 12.0,
-        "recency": 7.0,
+        "source_diversity": 9.1,
+        "recency": 11.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -636,7 +681,7 @@
     {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 76.0,
+      "confidence": 72.0,
       "severity": "HIGH",
       "direction": "BEARISH",
       "direction_score": -3.5,
@@ -647,16 +692,16 @@
       "latest_at": "20 Jun 2026 20:00 UTC",
       "headline": "Traders boost US rate-hike bets on hawkish Fed",
       "regions": [
-        "americas",
-        "global",
         "europe",
-        "asia_pacific"
+        "middle_east",
+        "africa",
+        "global"
       ],
       "sources": [
-        "Finance",
         "US Top News and Analysis",
         "Bloomberg Markets",
-        "Markets-Economic Times"
+        "Markets-Economic Times",
+        "Finance"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -679,56 +724,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 21.9,
+        "signal_strength": 21.2,
         "volume_confirmation": 18.0,
         "source_diversity": 12.1,
-        "recency": 8.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 76.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "20 Jun 2026 19:09 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "africa",
-        "india"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "Finance"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 9.1,
-        "recency": 10.7,
+        "recency": 4.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -1141,19 +1140,24 @@
   ],
   "articles": [
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "India Equity Markets - 33 articles - CRITICAL / BULLISH - F&amp;O Talk: Mid, smallcaps look strong on charts; Sudeep Shah picks 8 stocks, outlines Infosys, IFCI strategy"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 27 articles - CRITICAL / BEARISH - Energy Security, Not Climate Goals, Is Now Driving the Clean Power Boom"
+      "text": "Energy / Oil & Gas - 28 articles - CRITICAL / BEARISH - Energy Security, Not Climate Goals, Is Now Driving the Clean Power Boom"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 54 articles - CRITICAL / BULLISH - Chip Industry Week In Review"
+      "text": "Technology & AI / Semiconductors - 53 articles - CRITICAL / BULLISH - Chip Industry Week In Review"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "India Equity Markets - 36 articles - HIGH / BULLISH - F&amp;O Talk: Mid, smallcaps look strong on charts; Sudeep Shah picks 8 stocks, outlines Infosys, IFCI strategy"
+      "text": "Crypto & Digital Assets - 25 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
@@ -1164,11 +1168,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / BEARISH - Traders boost US rate-hike bets on hawkish Fed"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Crypto & Digital Assets - 25 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
@@ -1218,10 +1217,10 @@
       "region": "US",
       "price": 7500.58,
       "currency": "USD",
-      "change": -10.77,
-      "change_pct": -0.14,
-      "change_str": "-0.14%",
-      "direction": "down"
+      "change": 80.48,
+      "change_pct": 1.08,
+      "change_str": "+1.08%",
+      "direction": "up"
     },
     {
       "label": "NASDAQ",
@@ -1229,9 +1228,9 @@
       "region": "US",
       "price": 26517.93,
       "currency": "USD",
-      "change": 141.59,
-      "change_pct": 0.54,
-      "change_str": "+0.54%",
+      "change": 496.27,
+      "change_pct": 1.91,
+      "change_str": "+1.91%",
       "direction": "up"
     },
     {
@@ -1240,10 +1239,10 @@
       "region": "US",
       "price": 51564.7,
       "currency": "USD",
-      "change": -434.97,
-      "change_pct": -0.84,
-      "change_str": "-0.84%",
-      "direction": "down"
+      "change": 72.15,
+      "change_pct": 0.14,
+      "change_str": "+0.14%",
+      "direction": "up"
     },
     {
       "label": "FTSE 100",
@@ -1251,9 +1250,9 @@
       "region": "UK",
       "price": 10363.27,
       "currency": "GBP",
-      "change": -145.33,
-      "change_pct": -1.38,
-      "change_str": "-1.38%",
+      "change": -36.43,
+      "change_pct": -0.35,
+      "change_str": "-0.35%",
       "direction": "down"
     },
     {
@@ -1262,10 +1261,10 @@
       "region": "EU",
       "price": 24985.82,
       "currency": "EUR",
-      "change": 51.15,
-      "change_pct": 0.21,
-      "change_str": "+0.21%",
-      "direction": "up"
+      "change": -40.98,
+      "change_pct": -0.16,
+      "change_str": "-0.16%",
+      "direction": "down"
     },
     {
       "label": "Nikkei 225",
@@ -1273,9 +1272,9 @@
       "region": "JP",
       "price": 71250.06,
       "currency": "JPY",
-      "change": 1347.81,
-      "change_pct": 1.93,
-      "change_str": "+1.93%",
+      "change": 196.57,
+      "change_pct": 0.28,
+      "change_str": "+0.28%",
       "direction": "up"
     },
     {
@@ -1284,9 +1283,9 @@
       "region": "HK",
       "price": 23924.81,
       "currency": "HKD",
-      "change": -569.14,
-      "change_pct": -2.32,
-      "change_str": "-2.32%",
+      "change": -387.35,
+      "change_pct": -1.59,
+      "change_str": "-1.59%",
       "direction": "down"
     },
     {
@@ -1295,9 +1294,9 @@
       "region": "IN",
       "price": 24013.1,
       "currency": "INR",
-      "change": -72.6,
-      "change_pct": -0.3,
-      "change_str": "-0.30%",
+      "change": -154.9,
+      "change_pct": -0.64,
+      "change_str": "-0.64%",
       "direction": "down"
     },
     {
@@ -1326,22 +1325,22 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64326.16,
+      "price": 63942.59,
       "currency": "USD",
-      "change": 785.32,
-      "change_pct": 1.24,
-      "change_str": "+1.24%",
-      "direction": "up"
+      "change": -297.09,
+      "change_pct": -0.46,
+      "change_str": "-0.46%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.85,
+      "price": 100.76,
       "currency": "USD",
-      "change": 0.76,
-      "change_pct": 0.76,
-      "change_str": "+0.76%",
+      "change": 0.67,
+      "change_pct": 0.67,
+      "change_str": "+0.67%",
       "direction": "up"
     },
     {
@@ -1350,10 +1349,10 @@
       "region": "VOL",
       "price": 16.78,
       "currency": "USD",
-      "change": 0.37,
-      "change_pct": 2.25,
-      "change_str": "+2.25%",
-      "direction": "up"
+      "change": -1.66,
+      "change_pct": -9.0,
+      "change_str": "-9.00%",
+      "direction": "down"
     }
   ],
   "risk_controls": {
@@ -1405,23 +1404,23 @@
       "matrix": {
         "IBIT": {
           "IBIT": 1.0,
-          "INDA": 0.452,
+          "INDA": 0.423,
           "QQQ": 0.6,
           "SH": -0.544,
           "XLF": 0.036,
           "XLV": -0.141
         },
         "INDA": {
-          "IBIT": 0.452,
+          "IBIT": 0.423,
           "INDA": 1.0,
-          "QQQ": 0.568,
-          "SH": -0.742,
-          "XLF": 0.663,
-          "XLV": 0.3
+          "QQQ": 0.589,
+          "SH": -0.752,
+          "XLF": 0.568,
+          "XLV": 0.25
         },
         "QQQ": {
           "IBIT": 0.6,
-          "INDA": 0.568,
+          "INDA": 0.589,
           "QQQ": 1.0,
           "SH": -0.941,
           "XLF": -0.078,
@@ -1429,7 +1428,7 @@
         },
         "SH": {
           "IBIT": -0.544,
-          "INDA": -0.742,
+          "INDA": -0.752,
           "QQQ": -0.941,
           "SH": 1.0,
           "XLF": -0.202,
@@ -1437,7 +1436,7 @@
         },
         "XLF": {
           "IBIT": 0.036,
-          "INDA": 0.663,
+          "INDA": 0.568,
           "QQQ": -0.078,
           "SH": -0.202,
           "XLF": 1.0,
@@ -1445,7 +1444,7 @@
         },
         "XLV": {
           "IBIT": -0.141,
-          "INDA": 0.3,
+          "INDA": 0.25,
           "QQQ": -0.147,
           "SH": -0.065,
           "XLF": 0.489,
@@ -1460,10 +1459,10 @@
         "XLF",
         "XLV"
       ],
-      "max_corr": 0.663,
+      "max_corr": 0.6,
       "max_corr_pair": [
-        "INDA",
-        "XLF"
+        "IBIT",
+        "QQQ"
       ],
       "most_negative_corr": -0.941,
       "most_negative_pair": [
@@ -1474,14 +1473,14 @@
     },
     "volatility": {
       "per_ticker": {
-        "INDA": 14.77,
+        "INDA": 14.71,
         "XLF": 14.2,
         "QQQ": 29.01,
         "IBIT": 42.95,
         "SH": 15.83,
         "XLV": 17.18
       },
-      "portfolio_avg_vol_pct": 22.32,
+      "portfolio_avg_vol_pct": 22.31,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -1766,11 +1765,11 @@
     }
   },
   "logs": [
-    "2026-06-21 03:41:20 [INFO] AZALYST - status.json generated",
-    "2026-06-21 03:41:20 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
-    "2026-06-21 03:41:20 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-06-21 03:41:20 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
-    "2026-06-21 03:41:20 [INFO] TRADER - Closed trades: 7"
+    "2026-06-21 08:34:07 [INFO] AZALYST - status.json generated",
+    "2026-06-21 08:34:07 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
+    "2026-06-21 08:34:07 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-06-21 08:34:07 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
+    "2026-06-21 08:34:07 [INFO] TRADER - Closed trades: 7"
   ],
-  "generated_at": "2026-06-21 03:41:19 UTC"
+  "generated_at": "2026-06-21 08:34:05 UTC"
 }
