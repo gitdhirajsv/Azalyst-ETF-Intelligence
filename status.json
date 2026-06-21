@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 10105.39,
+  "portfolio_value": 10105.22,
   "total_deposited": 10152.69,
-  "cash": 1546.97,
+  "cash": 1396.6,
   "monthly_reserve": 0.0,
-  "market_value": 8558.42,
-  "total_invested": 8511.09,
-  "unrealised_pnl": 47.33,
-  "unrealised_str": "+47.33",
+  "market_value": 8708.62,
+  "total_invested": 8661.46,
+  "unrealised_pnl": 47.16,
+  "unrealised_str": "+47.16",
   "realised_pnl": -94.63,
   "realised_str": "-94.63",
   "change": "-0.47%",
@@ -71,17 +71,17 @@
       "sector": "Technology & AI / Semiconductors",
       "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NASDAQ",
-      "entry": 730.46,
+      "entry": 731.12,
       "current": 740.62,
       "peak_price": 747.08,
-      "trail_stop": 679.33,
-      "dist_to_trail_pct": 8.28,
-      "units": 1.914039,
-      "invested": 1398.12,
-      "pnl": 19.45,
-      "pnl_str": "+19.45",
-      "pnl_pct": 1.39,
-      "pnl_pct_str": "+1.39%",
+      "trail_stop": 679.94,
+      "dist_to_trail_pct": 8.19,
+      "units": 2.036514,
+      "invested": 1488.93,
+      "pnl": 19.35,
+      "pnl_str": "+19.35",
+      "pnl_pct": 1.3,
+      "pnl_pct_str": "+1.30%",
       "confidence": 94,
       "severity": "HIGH",
       "days_held": 9,
@@ -117,17 +117,17 @@
       "sector": "Energy / Oil & Gas",
       "platform": "ProShares -- IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 33.31,
+      "entry": 33.32,
       "current": 33.28,
-      "peak_price": 33.31,
+      "peak_price": 33.32,
       "trail_stop": 30.98,
-      "dist_to_trail_pct": 6.91,
-      "units": 2.305291,
-      "invested": 76.8,
-      "pnl": -0.08,
-      "pnl_str": "-0.08",
-      "pnl_pct": -0.1,
-      "pnl_pct_str": "-0.10%",
+      "dist_to_trail_pct": 6.9,
+      "units": 4.092898,
+      "invested": 136.36,
+      "pnl": -0.15,
+      "pnl_str": "-0.15",
+      "pnl_pct": -0.11,
+      "pnl_pct_str": "-0.11%",
       "confidence": 96,
       "severity": "HIGH",
       "days_held": 0,
@@ -309,12 +309,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
+    "risk_state": "NEUTRAL",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.1451849066336113,
-    "vix_level": 16.399999618530273,
-    "vix_percentile_1y": 0.34523809523809523,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -330,9 +330,9 @@
     "flow_score": 10.936571224731237,
     "options_score": 9.88170082962523,
     "rotation_score": 15.0,
-    "macro_score": 1.5659974040200186,
+    "macro_score": 1.4112367561169687,
     "news_score": 8.2,
-    "total": 61.21322873439459,
+    "total": 61.058468086491544,
     "publish": true,
     "direction": "long"
   },
@@ -348,10 +348,10 @@
     "values": [
       32.5,
       35.3,
-      14.0,
+      14.9,
       2.1,
-      0.8,
-      15.3
+      1.3,
+      13.8
     ]
   },
   "pnl": {
@@ -365,9 +365,9 @@
     "values": [
       55.31,
       -17.87,
-      19.45,
+      19.35,
       -9.48,
-      -0.08
+      -0.15
     ]
   },
   "confidence": [
@@ -385,7 +385,7 @@
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 76.0
+      "score": 81.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -542,20 +542,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 53,
+      "article_count": 63,
       "latest_at": "20 Jun 2026 17:00 UTC",
       "headline": "Chip Industry Week In Review",
       "regions": [
+        "asia_pacific",
         "india",
-        "middle_east",
-        "europe",
-        "asia_pacific"
+        "global",
+        "americas"
       ],
       "sources": [
+        "Defense News",
+        "Bloomberg Markets",
         "Oilprice.com",
-        "Tech",
-        "US Top News and Analysis",
-        "BBC News"
+        "Tech"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -580,35 +580,35 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.7,
-        "recency": 1.3,
+        "source_diversity": 17.0,
+        "recency": 0.8,
         "geopolitical_severity": 13.0
       }
     },
     {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 76.0,
+      "confidence": 81.0,
       "severity": "HIGH",
       "direction": "BEARISH",
-      "direction_score": -5.5,
+      "direction_score": -7.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "21 Jun 2026 11:58 UTC",
+      "article_count": 11,
+      "latest_at": "21 Jun 2026 22:00 UTC",
       "headline": "Traders boost US rate-hike bets on hawkish Fed",
       "regions": [
-        "middle_east",
-        "europe",
         "asia_pacific",
-        "africa"
+        "global",
+        "americas",
+        "europe"
       ],
       "sources": [
-        "US Top News and Analysis",
+        "Bloomberg Markets",
         "Finance",
-        "Cointelegraph.com News",
-        "Bloomberg Markets"
+        "US Top News and Analysis",
+        "Latest from Tom's Hardware"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -631,10 +631,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 20.9,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.9,
-        "recency": 8.4,
+        "signal_strength": 20.5,
+        "volume_confirmation": 16.8,
+        "source_diversity": 12.8,
+        "recency": 15.1,
         "geopolitical_severity": 13.0
       }
     },
@@ -1156,12 +1156,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 53 articles - CRITICAL / BULLISH - Chip Industry Week In Review"
+      "text": "Technology & AI / Semiconductors - 63 articles - CRITICAL / BULLISH - Chip Industry Week In Review"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / BEARISH - Traders boost US rate-hike bets on hawkish Fed"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / BEARISH - Traders boost US rate-hike bets on hawkish Fed"
     },
     {
       "tag": "tag-bull",
@@ -1307,45 +1307,45 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4172.9,
+      "price": 4175.3,
       "currency": "USD",
-      "change": -51.2,
-      "change_pct": -1.21,
-      "change_str": "-1.21%",
+      "change": -48.8,
+      "change_pct": -1.16,
+      "change_str": "-1.16%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 76.54,
+      "price": 77.61,
       "currency": "USD",
-      "change": -0.06,
-      "change_pct": -0.08,
-      "change_str": "-0.08%",
-      "direction": "down"
+      "change": 1.01,
+      "change_pct": 1.32,
+      "change_str": "+1.32%",
+      "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63586.81,
+      "price": 63634.27,
       "currency": "USD",
-      "change": -652.87,
-      "change_pct": -1.02,
-      "change_str": "-1.02%",
+      "change": -605.41,
+      "change_pct": -0.94,
+      "change_str": "-0.94%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.76,
+      "price": 100.84,
       "currency": "USD",
-      "change": 0.67,
-      "change_pct": 0.67,
-      "change_str": "+0.67%",
-      "direction": "up"
+      "change": -0.01,
+      "change_pct": -0.01,
+      "change_str": "-0.01%",
+      "direction": "down"
     },
     {
       "label": "VIX",
@@ -1378,7 +1378,7 @@
       },
       {
         "sector": "Technology & AI / Semiconductors",
-        "weight": 14.0,
+        "weight": 14.9,
         "at_cap": false
       },
       {
@@ -1388,7 +1388,7 @@
       },
       {
         "sector": "Energy / Oil & Gas",
-        "weight": 0.8,
+        "weight": 1.3,
         "at_cap": false
       }
     ],
@@ -1483,17 +1483,17 @@
           "target_weight_pct": 18.0,
           "drift_pct": 17.32,
           "action": "TRIM",
-          "amount": 1750.35,
+          "amount": 1750.38,
           "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
         {
           "ticker": "SH",
-          "actual_weight_pct": 0.76,
+          "actual_weight_pct": 1.35,
           "target_weight_pct": 18.0,
-          "drift_pct": -17.24,
+          "drift_pct": -16.65,
           "action": "ADD",
-          "amount": 1742.25,
+          "amount": 1682.73,
           "etf_name": "ProShares Short S&P500",
           "regime_note": ""
         },
@@ -1503,7 +1503,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -15.9,
           "action": "ADD",
-          "amount": 1606.66,
+          "amount": 1606.63,
           "etf_name": "iShares Bitcoin Trust ETF",
           "regime_note": ""
         },
@@ -1513,18 +1513,8 @@
           "target_weight_pct": 18.0,
           "drift_pct": 14.48,
           "action": "TRIM",
-          "amount": 1463.53,
+          "amount": 1463.56,
           "etf_name": "iShares MSCI India ETF",
-          "regime_note": ""
-        },
-        {
-          "ticker": "CASH",
-          "actual_weight_pct": 15.31,
-          "target_weight_pct": 10.0,
-          "drift_pct": 5.31,
-          "action": "DEPLOY",
-          "amount": 536.43,
-          "etf_name": "Cash Reserve",
           "regime_note": ""
         }
       ],
@@ -1534,8 +1524,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -3477.34,
-          "portfolio_loss_pct": -34.41,
+          "total_impact": -3546.34,
+          "portfolio_loss_pct": -35.09,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1553,7 +1543,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -567.03
+              "impact": -603.31
             },
             {
               "ticker": "IBIT",
@@ -1565,13 +1555,13 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -42.2
+              "impact": -74.92
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -2946.38,
-          "portfolio_loss_pct": -29.16,
+          "total_impact": -3015.89,
+          "portfolio_loss_pct": -29.84,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1589,7 +1579,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -481.98
+              "impact": -512.82
             },
             {
               "ticker": "IBIT",
@@ -1601,13 +1591,13 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -49.87
+              "impact": -88.54
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1290.54,
-          "portfolio_loss_pct": -12.77,
+          "total_impact": -1310.1,
+          "portfolio_loss_pct": -12.96,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1625,7 +1615,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -212.64
+              "impact": -226.24
             },
             {
               "ticker": "IBIT",
@@ -1637,13 +1627,13 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -7.67
+              "impact": -13.62
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -694.29,
-          "portfolio_loss_pct": -6.87,
+          "total_impact": -710.47,
+          "portfolio_loss_pct": -7.03,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1661,7 +1651,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -113.41
+              "impact": -120.66
             },
             {
               "ticker": "IBIT",
@@ -1673,13 +1663,13 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -11.51
+              "impact": -20.43
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1556.91,
-          "portfolio_loss_pct": -15.41,
+          "total_impact": -1585.14,
+          "portfolio_loss_pct": -15.69,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1697,7 +1687,7 @@
               "ticker": "QQQ",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -255.16
+              "impact": -271.49
             },
             {
               "ticker": "IBIT",
@@ -1709,21 +1699,21 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -15.34
+              "impact": -27.24
             }
           ]
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -34.41
+      "worst_loss_pct": -35.09
     }
   },
   "logs": [
-    "2026-06-21 22:01:01 [INFO] AZALYST - status.json generated",
-    "2026-06-21 22:01:01 [INFO] PORTFOLIO - NAV USD 10,105.39 | Return -0.47%",
-    "2026-06-21 22:01:01 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-06-21 22:01:01 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH",
-    "2026-06-21 22:01:01 [INFO] TRADER - Closed trades: 9"
+    "2026-06-21 23:17:08 [INFO] AZALYST - status.json generated",
+    "2026-06-21 23:17:08 [INFO] PORTFOLIO - NAV USD 10,105.22 | Return -0.47%",
+    "2026-06-21 23:17:08 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-06-21 23:17:08 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH",
+    "2026-06-21 23:17:08 [INFO] TRADER - Closed trades: 9"
   ],
-  "generated_at": "2026-06-21 22:00:59 UTC"
+  "generated_at": "2026-06-21 23:17:06 UTC"
 }
