@@ -315,7 +315,18 @@
       "news": 10
     }
   },
-  "top_signal": {},
+  "top_signal": {
+    "ticker": "SMH",
+    "rank_score": 12.394838709677419,
+    "flow_score": 9.842914102258113,
+    "options_score": 0.0,
+    "rotation_score": 12.0,
+    "macro_score": 3.1751125329030154,
+    "news_score": 10.319999999999999,
+    "total": 47.73286534483855,
+    "publish": false,
+    "direction": "long"
+  },
   "allocation": {
     "labels": [
       "INDA",
@@ -357,15 +368,11 @@
   "confidence": [
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 95.0
+      "score": 89.0
     },
     {
       "symbol": "Technology & AI / Semiconductors",
-      "score": 90.0
-    },
-    {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 82.0
+      "score": 86.0
     },
     {
       "symbol": "India Equity Markets",
@@ -374,6 +381,10 @@
     {
       "symbol": "Bonds & Fixed Income",
       "score": 77.0
+    },
+    {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 76.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -416,26 +427,26 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 95.0,
+      "confidence": 89.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -10.5,
+      "direction_score": -10.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
+      "article_count": 27,
       "latest_at": "20 Jun 2026 21:00 UTC",
       "headline": "Energy Security, Not Climate Goals, Is Now Driving the Clean Power Boom",
       "regions": [
-        "europe",
+        "global",
         "india",
-        "asia_pacific",
-        "global"
+        "europe",
+        "asia_pacific"
       ],
       "sources": [
         "Defense News",
         "Finance",
-        "US Top News and Analysis",
+        "Oilprice.com",
         "Bloomberg Markets"
       ],
       "primary_etf": "XLE",
@@ -462,34 +473,34 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 15.6,
-        "recency": 15.2,
+        "recency": 8.8,
         "geopolitical_severity": 13.0
       }
     },
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 90.0,
+      "confidence": 86.0,
       "severity": "CRITICAL",
       "direction": "BULLISH",
       "direction_score": 2.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 57,
+      "article_count": 54,
       "latest_at": "20 Jun 2026 17:00 UTC",
       "headline": "Chip Industry Week In Review",
       "regions": [
         "americas",
+        "global",
         "india",
-        "asia_pacific",
         "europe"
       ],
       "sources": [
-        "Latest from Tom's Hardware",
         "Defense News",
-        "EE Times",
-        "US Top News and Analysis"
+        "Semiconductor Engineering",
+        "Latest from Tom's Hardware",
+        "Oilprice.com"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -514,61 +525,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.5,
-        "recency": 10.2,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 82.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -3.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "20 Jun 2026 20:00 UTC",
-      "headline": "Traders boost US rate-hike bets on hawkish Fed",
-      "regions": [
-        "americas",
-        "europe",
-        "asia_pacific",
-        "africa"
-      ],
-      "sources": [
-        "Finance",
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 21.9,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.1,
-        "recency": 13.8,
+        "source_diversity": 16.3,
+        "recency": 5.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -672,6 +630,59 @@
         "volume_confirmation": 14.6,
         "source_diversity": 14.2,
         "recency": 14.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 76.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -3.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "20 Jun 2026 20:00 UTC",
+      "headline": "Traders boost US rate-hike bets on hawkish Fed",
+      "regions": [
+        "americas",
+        "global",
+        "europe",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Finance",
+        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.9,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.1,
+        "recency": 8.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -1132,17 +1143,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 25 articles - CRITICAL / BEARISH - Energy Security, Not Climate Goals, Is Now Driving the Clean Power Boom"
+      "text": "Energy / Oil & Gas - 27 articles - CRITICAL / BEARISH - Energy Security, Not Climate Goals, Is Now Driving the Clean Power Boom"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 57 articles - CRITICAL / BULLISH - Chip Industry Week In Review"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / BEARISH - Traders boost US rate-hike bets on hawkish Fed"
+      "text": "Technology & AI / Semiconductors - 54 articles - CRITICAL / BULLISH - Chip Industry Week In Review"
     },
     {
       "tag": "tag-bull",
@@ -1153,6 +1159,11 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Bonds & Fixed Income - 8 articles - HIGH / BULLISH - Bears step up bets against high-yield sector, shaking up bond traders"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / BEARISH - Traders boost US rate-hike bets on hawkish Fed"
     },
     {
       "tag": "tag-bull",
@@ -1315,11 +1326,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64204.01,
+      "price": 64326.16,
       "currency": "USD",
-      "change": 663.17,
-      "change_pct": 1.04,
-      "change_str": "+1.04%",
+      "change": 785.32,
+      "change_pct": 1.24,
+      "change_str": "+1.24%",
       "direction": "up"
     },
     {
@@ -1755,11 +1766,11 @@
     }
   },
   "logs": [
-    "2026-06-20 23:51:43 [INFO] AZALYST - status.json generated",
-    "2026-06-20 23:51:43 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
-    "2026-06-20 23:51:43 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-06-20 23:51:43 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
-    "2026-06-20 23:51:43 [INFO] TRADER - Closed trades: 7"
+    "2026-06-21 03:41:20 [INFO] AZALYST - status.json generated",
+    "2026-06-21 03:41:20 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
+    "2026-06-21 03:41:20 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-06-21 03:41:20 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
+    "2026-06-21 03:41:20 [INFO] TRADER - Closed trades: 7"
   ],
-  "generated_at": "2026-06-20 23:51:41 UTC"
+  "generated_at": "2026-06-21 03:41:19 UTC"
 }
