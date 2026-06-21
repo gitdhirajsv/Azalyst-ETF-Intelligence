@@ -61,7 +61,7 @@
       "pnl_pct_str": "-0.50%",
       "confidence": 92,
       "severity": "HIGH",
-      "days_held": 8,
+      "days_held": 9,
       "half_exited": false
     },
     {
@@ -107,7 +107,7 @@
       "pnl_pct_str": "-5.27%",
       "confidence": 91,
       "severity": "CRITICAL",
-      "days_held": 4,
+      "days_held": 5,
       "half_exited": false
     },
     {
@@ -130,7 +130,7 @@
       "pnl_pct_str": "-0.31%",
       "confidence": 96,
       "severity": "CRITICAL",
-      "days_held": 3,
+      "days_held": 4,
       "half_exited": false
     },
     {
@@ -367,12 +367,12 @@
   },
   "confidence": [
     {
-      "symbol": "India Equity Markets",
-      "score": 87.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 95.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 85.0
+      "symbol": "India Equity Markets",
+      "score": 87.0
     },
     {
       "symbol": "Technology & AI / Semiconductors",
@@ -425,6 +425,59 @@
   ],
   "signals": [
     {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 95.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -8.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 27,
+      "latest_at": "21 Jun 2026 10:22 UTC",
+      "headline": "Energy Security, Not Climate Goals, Is Now Driving the Clean Power Boom",
+      "regions": [
+        "middle_east",
+        "asia_pacific",
+        "global",
+        "india"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "BBC News",
+        "Cointelegraph.com News",
+        "Finance"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.6,
+        "recency": 15.2,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 87.0,
@@ -471,59 +524,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 13.3,
         "recency": 14.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 85.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -9.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
-      "latest_at": "20 Jun 2026 21:00 UTC",
-      "headline": "Energy Security, Not Climate Goals, Is Now Driving the Clean Power Boom",
-      "regions": [
-        "europe",
-        "middle_east",
-        "global",
-        "india"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "BBC News"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.2,
-        "recency": 5.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -1140,14 +1140,14 @@
   ],
   "articles": [
     {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Energy / Oil & Gas - 27 articles - CRITICAL / BEARISH - Energy Security, Not Climate Goals, Is Now Driving the Clean Power Boom"
+    },
+    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "India Equity Markets - 33 articles - CRITICAL / BULLISH - F&amp;O Talk: Mid, smallcaps look strong on charts; Sudeep Shah picks 8 stocks, outlines Infosys, IFCI strategy"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Energy / Oil & Gas - 28 articles - CRITICAL / BEARISH - Energy Security, Not Climate Goals, Is Now Driving the Clean Power Boom"
     },
     {
       "tag": "tag-bull",
@@ -1325,11 +1325,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63942.59,
+      "price": 64168.0,
       "currency": "USD",
-      "change": -297.09,
-      "change_pct": -0.46,
-      "change_str": "-0.46%",
+      "change": -71.68,
+      "change_pct": -0.11,
+      "change_str": "-0.11%",
       "direction": "down"
     },
     {
@@ -1765,11 +1765,11 @@
     }
   },
   "logs": [
-    "2026-06-21 08:34:07 [INFO] AZALYST - status.json generated",
-    "2026-06-21 08:34:07 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
-    "2026-06-21 08:34:07 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-06-21 08:34:07 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
-    "2026-06-21 08:34:07 [INFO] TRADER - Closed trades: 7"
+    "2026-06-21 11:42:09 [INFO] AZALYST - status.json generated",
+    "2026-06-21 11:42:09 [INFO] PORTFOLIO - NAV USD 10,107.18 | Return -0.45%",
+    "2026-06-21 11:42:09 [INFO] SIGNALS - 14 active signal buckets in state",
+    "2026-06-21 11:42:09 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH, XLV",
+    "2026-06-21 11:42:09 [INFO] TRADER - Closed trades: 7"
   ],
-  "generated_at": "2026-06-21 08:34:05 UTC"
+  "generated_at": "2026-06-21 11:42:06 UTC"
 }
