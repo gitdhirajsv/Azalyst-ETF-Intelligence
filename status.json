@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 10132.61,
+  "portfolio_value": 10132.42,
   "total_deposited": 10114.29,
-  "cash": 842.42,
+  "cash": 666.02,
   "monthly_reserve": 0.0,
-  "market_value": 9290.19,
-  "total_invested": 9177.6,
-  "unrealised_pnl": 112.59,
-  "unrealised_str": "+112.59",
+  "market_value": 9466.4,
+  "total_invested": 9354.01,
+  "unrealised_pnl": 112.4,
+  "unrealised_str": "+112.40",
   "realised_pnl": -94.27,
   "realised_str": "-94.27",
   "change": "+0.18%",
@@ -117,20 +117,20 @@
       "sector": "Energy / Oil & Gas",
       "platform": "ProShares -- IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 33.26,
+      "entry": 33.31,
       "current": 33.4,
-      "peak_price": 33.4,
-      "trail_stop": 30.94,
-      "dist_to_trail_pct": 7.38,
-      "units": 13.708161,
-      "invested": 455.98,
-      "pnl": 1.87,
-      "pnl_str": "+1.87",
-      "pnl_pct": 0.41,
-      "pnl_pct_str": "+0.41%",
+      "peak_price": 33.43,
+      "trail_stop": 30.98,
+      "dist_to_trail_pct": 7.25,
+      "units": 18.983973,
+      "invested": 632.39,
+      "pnl": 1.68,
+      "pnl_str": "+1.68",
+      "pnl_pct": 0.26,
+      "pnl_pct_str": "+0.26%",
       "confidence": 97,
       "severity": "HIGH",
-      "days_held": 0,
+      "days_held": 1,
       "half_exited": false
     }
   ],
@@ -309,12 +309,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
+    "risk_state": "NEUTRAL",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.1295404891280087,
-    "vix_level": 17.280000686645508,
-    "vix_percentile_1y": 0.5436507936507936,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -328,11 +328,11 @@
     "ticker": "XLF",
     "rank_score": 13.630188679245283,
     "flow_score": 6.627692779597745,
-    "options_score": 14.908582145733476,
+    "options_score": 14.908582163598934,
     "rotation_score": 15.0,
     "macro_score": 5.258957977815351,
     "news_score": 5.44,
-    "total": 60.86542158239185,
+    "total": 60.86542160025731,
     "publish": true,
     "direction": "long"
   },
@@ -350,8 +350,8 @@
       35.3,
       16.6,
       2.6,
-      4.5,
-      8.3
+      6.3,
+      6.6
     ]
   },
   "pnl": {
@@ -367,17 +367,21 @@
       4.35,
       18.76,
       -2.42,
-      1.87
+      1.68
     ]
   },
   "confidence": [
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 96.0
+      "score": 93.0
     },
     {
       "symbol": "Technology & AI / Semiconductors",
       "score": 90.0
+    },
+    {
+      "symbol": "Emerging Markets + Crypto & Digital Assets",
+      "score": 87.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
@@ -385,11 +389,15 @@
     },
     {
       "symbol": "India Equity Markets",
-      "score": 86.0
+      "score": 80.0
     },
     {
       "symbol": "Asia Pacific Equity",
       "score": 80.0
+    },
+    {
+      "symbol": "Commodities & Mining + Clean Energy & Renewables",
+      "score": 75.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -416,10 +424,6 @@
       "score": 64.0
     },
     {
-      "symbol": "Commodities & Mining",
-      "score": 64.0
-    },
-    {
       "symbol": "Healthcare & Pharma",
       "score": 64.0
     },
@@ -432,27 +436,27 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 96.0,
-      "severity": "CRITICAL",
+      "confidence": 93.0,
+      "severity": "HIGH",
       "direction": "BEARISH",
-      "direction_score": -7.0,
+      "direction_score": -8.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 34,
-      "latest_at": "22 Jun 2026 18:00 UTC",
+      "article_count": 32,
+      "latest_at": "22 Jun 2026 21:00 UTC",
       "headline": "U.S. Airlines Set To Pocket $40 Billion As Jet Fuel Prices Crash",
       "regions": [
-        "europe",
         "middle_east",
         "americas",
-        "asia_pacific"
+        "global",
+        "europe"
       ],
       "sources": [
+        "Finance",
         "Markets-Economic Times",
-        "Bloomberg Markets",
         "Cointelegraph.com News",
-        "Oilprice.com"
+        "US Top News and Analysis"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -478,7 +482,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 14.9,
-        "recency": 16.6,
+        "recency": 13.8,
         "geopolitical_severity": 13.0
       }
     },
@@ -536,6 +540,57 @@
       }
     },
     {
+      "sector_key": "emerging_markets",
+      "sector_label": "Emerging Markets + Crypto & Digital Assets",
+      "confidence": 87.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 9,
+      "latest_at": "22 Jun 2026 23:01 UTC",
+      "headline": "Fact check: AI fakes around the World Cup spread political narratives",
+      "regions": [
+        "middle_east",
+        "global",
+        "asia_pacific",
+        "india"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Cointelegraph.com News",
+        "Bloomberg Markets",
+        "Semiconductor Engineering"
+      ],
+      "primary_etf": "EEM",
+      "top_etfs": [
+        "EEM",
+        "SPEM",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES"
+      ],
+      "global_etfs": [
+        "EEM",
+        "SPEM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.8,
+        "volume_confirmation": 15.4,
+        "source_diversity": 10.3,
+        "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
       "confidence": 86.0,
@@ -545,20 +600,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "22 Jun 2026 18:12 UTC",
-      "headline": "Citadel Securities Says Warsh Could Stabilize Long US Bonds",
+      "article_count": 12,
+      "latest_at": "22 Jun 2026 23:01 UTC",
+      "headline": "US stocks: S&amp;P 500, Nasdaq close lower, dragged by Alphabet and megacap tech; focus on Iran",
       "regions": [
-        "middle_east",
         "africa",
         "americas",
-        "asia_pacific"
+        "asia_pacific",
+        "middle_east"
       ],
       "sources": [
         "Markets-Economic Times",
-        "World | Deutsche Welle",
-        "Bloomberg Markets",
-        "Latest from Tom's Hardware"
+        "EE Times",
+        "Cointelegraph.com News",
+        "BBC News"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -581,9 +636,9 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 19.7,
-        "volume_confirmation": 16.2,
-        "source_diversity": 15.7,
+        "signal_strength": 18.0,
+        "volume_confirmation": 17.4,
+        "source_diversity": 16.2,
         "recency": 17.0,
         "geopolitical_severity": 13.0
       }
@@ -591,15 +646,15 @@
     {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
-      "confidence": 86.0,
+      "confidence": 80.0,
       "severity": "HIGH",
       "direction": "BULLISH",
-      "direction_score": 6.0,
+      "direction_score": 4.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 18,
-      "latest_at": "22 Jun 2026 17:48 UTC",
+      "latest_at": "22 Jun 2026 18:18 UTC",
       "headline": "RBI sold net $8.9 billion in April, gold holdings unchanged",
       "regions": [
         "asia_pacific",
@@ -608,10 +663,10 @@
         "global"
       ],
       "sources": [
-        "BBC News",
-        "Markets-Economic Times",
         "Oilprice.com",
-        "US Top News and Analysis"
+        "US Top News and Analysis",
+        "BBC News",
+        "Markets-Economic Times"
       ],
       "primary_etf": "INDA",
       "top_etfs": [
@@ -635,7 +690,7 @@
         "signal_strength": 20.0,
         "volume_confirmation": 18.0,
         "source_diversity": 12.6,
-        "recency": 16.3,
+        "recency": 10.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -686,6 +741,55 @@
         "volume_confirmation": 17.4,
         "source_diversity": 14.9,
         "recency": 14.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining + Clean Energy & Renewables",
+      "confidence": 75.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "22 Jun 2026 22:37 UTC",
+      "headline": "Global EV Industry Faces Outsized Risk From Cobalt Supply Disruptions",
+      "regions": [
+        "europe",
+        "global",
+        "americas"
+      ],
+      "sources": [
+        "EE Times",
+        "Oilprice.com",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.6,
+        "volume_confirmation": 12.6,
+        "source_diversity": 9.9,
+        "recency": 16.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -996,57 +1100,6 @@
       }
     },
     {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 64.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "19 Jun 2026 20:00 UTC",
-      "headline": "First Quantum Deemed Broadly Compliant at Panama Copper Mine",
-      "regions": [
-        "middle_east",
-        "americas",
-        "europe",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "EE Times",
-        "Oilprice.com"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.2,
-        "volume_confirmation": 13.7,
-        "source_diversity": 13.3,
-        "recency": 8.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "healthcare_pharma",
       "sector_label": "Healthcare & Pharma",
       "confidence": 64.0,
@@ -1146,7 +1199,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 34 articles - CRITICAL / BEARISH - U.S. Airlines Set To Pocket $40 Billion As Jet Fuel Prices Crash"
+      "text": "Energy / Oil & Gas - 32 articles - HIGH / BEARISH - U.S. Airlines Set To Pocket $40 Billion As Jet Fuel Prices Crash"
     },
     {
       "tag": "tag-bull",
@@ -1156,7 +1209,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 10 articles - HIGH / BEARISH - Citadel Securities Says Warsh Could Stabilize Long US Bonds"
+      "text": "Emerging Markets + Crypto & Digital Assets - 9 articles - HIGH / BEARISH - Fact check: AI fakes around the World Cup spread political narratives"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BEARISH - US stocks: S&amp;P 500, Nasdaq close lower, dragged by Alphabet and megacap tech; focus on Iran"
     },
     {
       "tag": "tag-bull",
@@ -1167,6 +1225,11 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Asia Pacific Equity - 12 articles - HIGH / BULLISH - SK Hynix overtakes Samsung to become South Korea's most valuable company"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Commodities & Mining + Clean Energy & Renewables - 6 articles - HIGH / BEARISH - Global EV Industry Faces Outsized Risk From Cobalt Supply Disruptions"
     },
     {
       "tag": "tag-bull",
@@ -1197,11 +1260,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Clean Energy & Renewables + Europe Equity - 6 articles - MEDIUM / BEARISH - Denmark and Germany Launch Europe\u2019s First Hydrogen Superhighway"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Commodities & Mining - 7 articles - HIGH / BULLISH - First Quantum Deemed Broadly Compliant at Panama Copper Mine"
     },
     {
       "tag": "tag-bull",
@@ -1254,9 +1312,9 @@
       "region": "UK",
       "price": 10437.85,
       "currency": "GBP",
-      "change": 74.55,
-      "change_pct": 0.72,
-      "change_str": "+0.72%",
+      "change": 38.15,
+      "change_pct": 0.37,
+      "change_str": "+0.37%",
       "direction": "up"
     },
     {
@@ -1265,9 +1323,9 @@
       "region": "EU",
       "price": 25139.69,
       "currency": "EUR",
-      "change": 153.87,
-      "change_pct": 0.62,
-      "change_str": "+0.62%",
+      "change": 112.89,
+      "change_pct": 0.45,
+      "change_str": "+0.45%",
       "direction": "up"
     },
     {
@@ -1307,33 +1365,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4172.9,
+      "price": 4208.1,
       "currency": "USD",
-      "change": -51.2,
-      "change_pct": -1.21,
-      "change_str": "-1.21%",
+      "change": -16.0,
+      "change_pct": -0.38,
+      "change_str": "-0.38%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 76.54,
+      "price": 74.32,
       "currency": "USD",
-      "change": -0.06,
-      "change_pct": -0.08,
-      "change_str": "-0.08%",
+      "change": -2.28,
+      "change_pct": -2.98,
+      "change_str": "-2.98%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64236.0,
+      "price": 63930.48,
       "currency": "USD",
-      "change": 998.46,
-      "change_pct": 1.58,
-      "change_str": "+1.58%",
+      "change": 692.94,
+      "change_pct": 1.1,
+      "change_str": "+1.10%",
       "direction": "up"
     },
     {
@@ -1343,8 +1401,8 @@
       "price": 101.0,
       "currency": "USD",
       "change": 0.15,
-      "change_pct": 0.15,
-      "change_str": "+0.15%",
+      "change_pct": 0.14,
+      "change_str": "+0.14%",
       "direction": "up"
     },
     {
@@ -1383,7 +1441,7 @@
       },
       {
         "sector": "Energy / Oil & Gas",
-        "weight": 4.5,
+        "weight": 6.3,
         "at_cap": false
       },
       {
@@ -1483,7 +1541,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": 17.31,
           "action": "TRIM",
-          "amount": 1754.11,
+          "amount": 1754.14,
           "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
@@ -1493,7 +1551,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -15.41,
           "action": "ADD",
-          "amount": 1561.24,
+          "amount": 1561.21,
           "etf_name": "iShares Bitcoin Trust ETF",
           "regime_note": ""
         },
@@ -1503,17 +1561,17 @@
           "target_weight_pct": 18.0,
           "drift_pct": 14.62,
           "action": "TRIM",
-          "amount": 1481.14,
+          "amount": 1481.18,
           "etf_name": "iShares MSCI India ETF",
           "regime_note": ""
         },
         {
           "ticker": "SH",
-          "actual_weight_pct": 4.52,
+          "actual_weight_pct": 6.26,
           "target_weight_pct": 18.0,
-          "drift_pct": -13.48,
+          "drift_pct": -11.74,
           "action": "ADD",
-          "amount": 1366.02,
+          "amount": 1189.77,
           "etf_name": "ProShares Short S&P500",
           "regime_note": ""
         }
@@ -1524,8 +1582,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -3837.28,
-          "portfolio_loss_pct": -37.87,
+          "total_impact": -3934.2,
+          "portfolio_loss_pct": -38.83,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1555,13 +1613,13 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -251.82
+              "impact": -348.74
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -3316.36,
-          "portfolio_loss_pct": -32.73,
+          "total_impact": -3430.89,
+          "portfolio_loss_pct": -33.86,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1591,13 +1649,13 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -297.6
+              "impact": -412.14
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1383.77,
-          "portfolio_loss_pct": -13.66,
+          "total_impact": -1401.39,
+          "portfolio_loss_pct": -13.83,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1627,13 +1685,13 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -45.79
+              "impact": -63.41
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -780.52,
-          "portfolio_loss_pct": -7.7,
+          "total_impact": -806.95,
+          "portfolio_loss_pct": -7.96,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1663,13 +1721,13 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -68.68
+              "impact": -95.11
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1699.78,
-          "portfolio_loss_pct": -16.78,
+          "total_impact": -1735.02,
+          "portfolio_loss_pct": -17.12,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1699,21 +1757,21 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -91.57
+              "impact": -126.81
             }
           ]
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -37.87
+      "worst_loss_pct": -38.83
     }
   },
   "logs": [
-    "2026-06-22 21:35:07 [INFO] AZALYST - status.json generated",
-    "2026-06-22 21:35:07 [INFO] PORTFOLIO - NAV USD 10,132.61 | Return +0.18%",
-    "2026-06-22 21:35:07 [INFO] SIGNALS - 14 active signal buckets in state",
-    "2026-06-22 21:35:07 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH",
-    "2026-06-22 21:35:07 [INFO] TRADER - Closed trades: 9"
+    "2026-06-22 23:09:25 [INFO] AZALYST - status.json generated",
+    "2026-06-22 23:09:25 [INFO] PORTFOLIO - NAV USD 10,132.42 | Return +0.18%",
+    "2026-06-22 23:09:25 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-22 23:09:25 [INFO] TRADER - Open positions: INDA, XLF, QQQ, IBIT, SH",
+    "2026-06-22 23:09:25 [INFO] TRADER - Closed trades: 9"
   ],
-  "generated_at": "2026-06-22 21:35:03 UTC"
+  "generated_at": "2026-06-22 23:09:23 UTC"
 }
