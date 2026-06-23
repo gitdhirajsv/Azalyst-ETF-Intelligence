@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 10034.17,
+  "portfolio_value": 10034.12,
   "total_deposited": 10108.21,
-  "cash": 302.04,
+  "cash": 257.97,
   "monthly_reserve": 0.0,
-  "market_value": 9732.13,
-  "total_invested": 9700.54,
-  "unrealised_pnl": 31.59,
-  "unrealised_str": "+31.59",
+  "market_value": 9776.15,
+  "total_invested": 9744.61,
+  "unrealised_pnl": 31.54,
+  "unrealised_str": "+31.54",
   "realised_pnl": -105.63,
   "realised_str": "-105.63",
   "change": "-0.73%",
@@ -94,20 +94,20 @@
       "sector": "Energy / Oil & Gas",
       "platform": "ProShares -- IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 33.45,
+      "entry": 33.47,
       "current": 33.87,
       "peak_price": 33.9,
-      "trail_stop": 31.11,
-      "dist_to_trail_pct": 8.16,
-      "units": 34.706569,
-      "invested": 1160.91,
-      "pnl": 14.6,
-      "pnl_str": "+14.60",
-      "pnl_pct": 1.26,
-      "pnl_pct_str": "+1.26%",
+      "trail_stop": 31.12,
+      "dist_to_trail_pct": 8.11,
+      "units": 36.006437,
+      "invested": 1204.98,
+      "pnl": 14.55,
+      "pnl_str": "+14.55",
+      "pnl_pct": 1.21,
+      "pnl_pct_str": "+1.21%",
       "confidence": 97,
       "severity": "HIGH",
-      "days_held": 1,
+      "days_held": 2,
       "half_exited": false
     },
     {
@@ -341,30 +341,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "HIGH_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.11675846915985312,
-    "vix_level": 19.489999771118164,
-    "vix_percentile_1y": 0.7658730158730159,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 18,
-      "flow": 18,
-      "options": 28,
-      "rotation": 12,
-      "macro": 12,
-      "news": 12
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
+      "rotation": 15,
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
     "ticker": "XLF",
-    "rank_score": 12.786938775510203,
+    "rank_score": 12.785718608169438,
     "flow_score": 2.4378983076929805,
-    "options_score": 23.699319330701247,
+    "options_score": 23.69931930308315,
     "rotation_score": 12.0,
     "macro_score": 0.0,
     "news_score": 6.5280000000000005,
-    "total": 57.452156413904426,
+    "total": 57.450936218945564,
     "publish": false,
     "direction": "long"
   },
@@ -381,9 +381,9 @@
       32.4,
       35.8,
       16.7,
-      11.7,
+      12.2,
       0.4,
-      3.0
+      2.6
     ]
   },
   "pnl": {
@@ -398,7 +398,7 @@
       35.69,
       18.5,
       -37.26,
-      14.6,
+      14.55,
       0.06
     ]
   },
@@ -420,12 +420,12 @@
       "score": 80.0
     },
     {
-      "symbol": "Commodities & Mining",
-      "score": 78.0
-    },
-    {
       "symbol": "Healthcare & Pharma",
       "score": 74.0
+    },
+    {
+      "symbol": "Commodities & Mining",
+      "score": 72.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -676,56 +676,6 @@
       }
     },
     {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 78.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "23 Jun 2026 16:00 UTC",
-      "headline": "China\u2019s Antimony Ban Sent Prices Up 2,600%. Rare Earths Are Next",
-      "regions": [
-        "global",
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "EE Times",
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.7,
-        "volume_confirmation": 14.6,
-        "source_diversity": 12.7,
-        "recency": 15.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "healthcare_pharma",
       "sector_label": "Healthcare & Pharma",
       "confidence": 74.0,
@@ -771,6 +721,57 @@
         "volume_confirmation": 9.7,
         "source_diversity": 9.9,
         "recency": 16.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 72.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "23 Jun 2026 19:00 UTC",
+      "headline": "China\u2019s Antimony Ban Sent Prices Up 2,600%. Rare Earths Are Next",
+      "regions": [
+        "middle_east",
+        "global",
+        "europe",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "EE Times",
+        "Cointelegraph.com News",
+        "Oilprice.com"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 14.2,
+        "volume_confirmation": 14.6,
+        "source_diversity": 10.0,
+        "recency": 11.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -1245,14 +1246,14 @@
       "text": "India Equity Markets - 18 articles - HIGH / BULLISH - RBI sold net $8.9 billion in April, gold holdings unchanged"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Commodities & Mining - 8 articles - HIGH / BEARISH - China\u2019s Antimony Ban Sent Prices Up 2,600%. Rare Earths Are Next"
-    },
-    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Healthcare & Pharma - 4 articles - CRITICAL / BULLISH - Biosimilars and innovation will drive Indian pharma's next growth phase: Vishal Manchanda"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Commodities & Mining - 8 articles - HIGH / BEARISH - China\u2019s Antimony Ban Sent Prices Up 2,600%. Rare Earths Are Next"
     },
     {
       "tag": "tag-bull",
@@ -1351,9 +1352,9 @@
       "region": "EU",
       "price": 24893.58,
       "currency": "EUR",
-      "change": -246.11,
-      "change_pct": -0.98,
-      "change_str": "-0.98%",
+      "change": -92.24,
+      "change_pct": -0.37,
+      "change_str": "-0.37%",
       "direction": "down"
     },
     {
@@ -1393,44 +1394,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4129.0,
+      "price": 4123.5,
       "currency": "USD",
-      "change": -52.9,
-      "change_pct": -1.26,
-      "change_str": "-1.26%",
+      "change": -58.4,
+      "change_pct": -1.4,
+      "change_str": "-1.40%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 73.05,
+      "price": 73.03,
       "currency": "USD",
-      "change": -1.77,
-      "change_pct": -2.37,
-      "change_str": "-2.37%",
+      "change": -1.79,
+      "change_pct": -2.39,
+      "change_str": "-2.39%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 62441.99,
+      "price": 62506.21,
       "currency": "USD",
-      "change": -1510.12,
-      "change_pct": -2.36,
-      "change_str": "-2.36%",
+      "change": -1445.9,
+      "change_pct": -2.26,
+      "change_str": "-2.26%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.35,
+      "price": 101.39,
       "currency": "USD",
-      "change": 0.33,
-      "change_pct": 0.33,
-      "change_str": "+0.33%",
+      "change": 0.37,
+      "change_pct": 0.37,
+      "change_str": "+0.37%",
       "direction": "up"
     },
     {
@@ -1469,7 +1470,7 @@
       },
       {
         "sector": "Energy / Oil & Gas",
-        "weight": 11.7,
+        "weight": 12.2,
         "at_cap": false
       },
       {
@@ -1569,7 +1570,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": 17.78,
           "action": "TRIM",
-          "amount": 1783.82,
+          "amount": 1783.83,
           "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
@@ -1579,7 +1580,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -17.56,
           "action": "ADD",
-          "amount": 1762.02,
+          "amount": 1762.01,
           "etf_name": "Health Care Select Sector SPDR",
           "regime_note": ""
         },
@@ -1589,27 +1590,27 @@
           "target_weight_pct": 18.0,
           "drift_pct": 14.38,
           "action": "TRIM",
-          "amount": 1442.59,
+          "amount": 1442.6,
           "etf_name": "iShares MSCI India ETF",
           "regime_note": ""
         },
         {
           "ticker": "CASH",
-          "actual_weight_pct": 3.01,
+          "actual_weight_pct": 2.57,
           "target_weight_pct": 10.0,
-          "drift_pct": -6.99,
+          "drift_pct": -7.43,
           "action": "RAISE",
-          "amount": 701.37,
+          "amount": 745.44,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
         {
           "ticker": "SH",
-          "actual_weight_pct": 11.72,
+          "actual_weight_pct": 12.15,
           "target_weight_pct": 18.0,
-          "drift_pct": -6.28,
+          "drift_pct": -5.85,
           "action": "ADD",
-          "amount": 630.64,
+          "amount": 586.6,
           "etf_name": "ProShares Short S&P500",
           "regime_note": ""
         }
@@ -1620,8 +1621,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -4069.18,
-          "portfolio_loss_pct": -40.55,
+          "total_impact": -4093.39,
+          "portfolio_loss_pct": -40.79,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1645,7 +1646,7 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -646.53
+              "impact": -670.75
             },
             {
               "ticker": "XLV",
@@ -1656,8 +1657,8 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -3673.33,
-          "portfolio_loss_pct": -36.61,
+          "total_impact": -3701.95,
+          "portfolio_loss_pct": -36.89,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1681,7 +1682,7 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -764.08
+              "impact": -792.7
             },
             {
               "ticker": "XLV",
@@ -1692,8 +1693,8 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1401.04,
-          "portfolio_loss_pct": -13.96,
+          "total_impact": -1405.45,
+          "portfolio_loss_pct": -14.01,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1717,7 +1718,7 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -117.55
+              "impact": -121.95
             },
             {
               "ticker": "XLV",
@@ -1728,8 +1729,8 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -860.86,
-          "portfolio_loss_pct": -8.58,
+          "total_impact": -867.46,
+          "portfolio_loss_pct": -8.65,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1753,7 +1754,7 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -176.33
+              "impact": -182.93
             },
             {
               "ticker": "XLV",
@@ -1764,8 +1765,8 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1775.29,
-          "portfolio_loss_pct": -17.69,
+          "total_impact": -1784.1,
+          "portfolio_loss_pct": -17.78,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1789,7 +1790,7 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -235.1
+              "impact": -243.91
             },
             {
               "ticker": "XLV",
@@ -1801,15 +1802,15 @@
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -40.55
+      "worst_loss_pct": -40.79
     }
   },
   "logs": [
-    "2026-06-23 21:25:00 [INFO] AZALYST - status.json generated",
-    "2026-06-23 21:25:00 [INFO] PORTFOLIO - NAV USD 10,034.17 | Return -0.73%",
-    "2026-06-23 21:25:00 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-23 21:25:00 [INFO] TRADER - Open positions: INDA, XLF, QQQ, SH, XLV",
-    "2026-06-23 21:25:00 [INFO] TRADER - Closed trades: 11"
+    "2026-06-23 22:56:39 [INFO] AZALYST - status.json generated",
+    "2026-06-23 22:56:39 [INFO] PORTFOLIO - NAV USD 10,034.12 | Return -0.73%",
+    "2026-06-23 22:56:39 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-23 22:56:39 [INFO] TRADER - Open positions: INDA, XLF, QQQ, SH, XLV",
+    "2026-06-23 22:56:39 [INFO] TRADER - Closed trades: 11"
   ],
-  "generated_at": "2026-06-23 21:24:57 UTC"
+  "generated_at": "2026-06-23 22:56:38 UTC"
 }
