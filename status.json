@@ -1,16 +1,16 @@
 {
-  "portfolio_value": 10033.32,
+  "portfolio_value": 10033.06,
   "total_deposited": 10114.61,
-  "cash": 1388.61,
+  "cash": 1150.93,
   "monthly_reserve": 0.0,
-  "market_value": 8644.72,
-  "total_invested": 8633.25,
-  "unrealised_pnl": 11.47,
-  "unrealised_str": "+11.47",
+  "market_value": 8882.14,
+  "total_invested": 8870.93,
+  "unrealised_pnl": 11.21,
+  "unrealised_str": "+11.21",
   "realised_pnl": -92.76,
   "realised_str": "-92.76",
-  "change": "-0.80%",
-  "change_raw": -0.8,
+  "change": "-0.81%",
+  "change_raw": -0.81,
   "closed_trades": 12,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 10160.21,
@@ -61,7 +61,7 @@
       "pnl_pct_str": "+0.45%",
       "confidence": 92,
       "severity": "HIGH",
-      "days_held": 11,
+      "days_held": 12,
       "half_exited": false
     },
     {
@@ -120,15 +120,15 @@
       "entry": 33.91,
       "current": 33.87,
       "peak_price": 33.91,
-      "trail_stop": 31.54,
-      "dist_to_trail_pct": 6.89,
-      "units": 2.601178,
-      "invested": 88.21,
-      "pnl": -0.1,
-      "pnl_str": "-0.10",
-      "pnl_pct": -0.12,
-      "pnl_pct_str": "-0.12%",
-      "confidence": 93,
+      "trail_stop": 31.53,
+      "dist_to_trail_pct": 6.9,
+      "units": 9.610866,
+      "invested": 325.89,
+      "pnl": -0.37,
+      "pnl_str": "-0.37",
+      "pnl_pct": -0.11,
+      "pnl_pct_str": "-0.11%",
+      "confidence": 96,
       "severity": "HIGH",
       "days_held": 0,
       "half_exited": false
@@ -360,9 +360,9 @@
     "risk_state": "RISK_ON",
     "vol_regime": "HIGH_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.11683846932197775,
-    "vix_level": 19.239999771118164,
-    "vix_percentile_1y": 0.753968253968254,
+    "spy_excess_vs_tbill_3m": 0.11675846915985312,
+    "vix_level": 18.809999465942383,
+    "vix_percentile_1y": 0.7142857142857143,
     "weight_matrix": {
       "rank": 18,
       "flow": 18,
@@ -376,12 +376,12 @@
     "ticker": "XLF",
     "rank_score": 12.76517006802721,
     "flow_score": 1.629517212428678,
-    "options_score": 23.800020733667345,
+    "options_score": 34.699812516276495,
     "rotation_score": 12.0,
     "macro_score": 0.0,
     "news_score": 6.5280000000000005,
-    "total": 56.722708014123235,
-    "publish": false,
+    "total": 67.62249979673238,
+    "publish": true,
     "direction": "long"
   },
   "allocation": {
@@ -398,8 +398,8 @@
       35.8,
       16.7,
       0.4,
-      0.9,
-      13.8
+      3.2,
+      11.5
     ]
   },
   "pnl": {
@@ -415,29 +415,29 @@
       16.23,
       -38.34,
       0.03,
-      -0.1
+      -0.37
     ]
   },
   "confidence": [
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 96.0
+    },
     {
       "symbol": "Technology & AI / Semiconductors + Asia Pacific Equity",
       "score": 93.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 91.0
-    },
-    {
       "symbol": "Gold & Precious Metals",
-      "score": 81.0
-    },
-    {
-      "symbol": "India Equity Markets",
-      "score": 80.0
+      "score": 86.0
     },
     {
       "symbol": "Emerging Markets",
       "score": 79.0
+    },
+    {
+      "symbol": "Nuclear Energy & Uranium",
+      "score": 78.0
     },
     {
       "symbol": "Healthcare & Pharma",
@@ -456,12 +456,12 @@
       "score": 68.0
     },
     {
-      "symbol": "Nuclear Energy & Uranium",
-      "score": 68.0
-    },
-    {
       "symbol": "Defense & Aerospace",
       "score": 66.0
+    },
+    {
+      "symbol": "Asia Pacific Equity + Technology & AI / Semiconductors",
+      "score": 65.0
     },
     {
       "symbol": "Clean Energy & Renewables + Europe Equity",
@@ -472,15 +472,68 @@
       "score": 64.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 62.0
+      "symbol": "India Equity Markets",
+      "score": 63.0
     },
     {
-      "symbol": "Asia Pacific Equity",
+      "symbol": "Crypto & Digital Assets",
       "score": 62.0
     }
   ],
   "signals": [
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 96.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -10.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 27,
+      "latest_at": "24 Jun 2026 12:30 UTC",
+      "headline": "Why the Next Billion Barrels of Oil Demand Could Come From Storage",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "americas",
+        "europe"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "Oilprice.com",
+        "World News - Breaking international news and headlines | Sky News"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.2,
+        "recency": 16.8,
+        "geopolitical_severity": 13.0
+      }
+    },
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors + Asia Pacific Equity",
@@ -535,81 +588,27 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 91.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 26,
-      "latest_at": "24 Jun 2026 04:37 UTC",
-      "headline": "Why the Next Billion Barrels of Oil Demand Could Come From Storage",
-      "regions": [
-        "global",
-        "middle_east",
-        "asia_pacific",
-        "europe"
-      ],
-      "sources": [
-        "World News - Breaking international news and headlines | Sky News",
-        "BBC News",
-        "Markets-Economic Times",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.2,
-        "recency": 13.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals",
-      "confidence": 81.0,
-      "severity": "HIGH",
+      "confidence": 86.0,
+      "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -2.0,
+      "direction_score": -8.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "24 Jun 2026 05:48 UTC",
-      "headline": "Gold prices fall Rs 2,200/10 gms; silver tanks Rs 3,300/kg as rate hike fears outweigh falling oil prices. Key levels to watch",
+      "article_count": 12,
+      "latest_at": "24 Jun 2026 10:18 UTC",
+      "headline": "Global markets | Australian shares rise modestly as sticky core inflation keeps rate hike bets alive",
       "regions": [
         "global",
-        "middle_east",
         "asia_pacific",
-        "americas"
+        "americas",
+        "india"
       ],
       "sources": [
-        "Bloomberg Markets",
         "Markets-Economic Times",
-        "Oilprice.com"
+        "Bloomberg Markets"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -632,61 +631,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 15.6,
-        "volume_confirmation": 13.7,
-        "source_diversity": 11.7,
-        "recency": 15.5,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 80.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 4.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 18,
-      "latest_at": "22 Jun 2026 18:18 UTC",
-      "headline": "RBI sold net $8.9 billion in April, gold holdings unchanged",
-      "regions": [
-        "asia_pacific",
-        "middle_east",
-        "india",
-        "global"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "US Top News and Analysis",
-        "BBC News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 20.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.6,
-        "recency": 10.6,
+        "signal_strength": 20.6,
+        "volume_confirmation": 17.4,
+        "source_diversity": 9.9,
+        "recency": 13.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -737,6 +685,58 @@
         "source_diversity": 13.6,
         "recency": 17.0,
         "geopolitical_severity": 10.7
+      }
+    },
+    {
+      "sector_key": "nuclear_uranium",
+      "sector_label": "Nuclear Energy & Uranium",
+      "confidence": 78.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "24 Jun 2026 11:45 UTC",
+      "headline": "Adani Targets 10 GW Nuclear Power Capacity in India by 2035",
+      "regions": [
+        "americas",
+        "middle_east",
+        "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "Oilprice.com",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "URA",
+      "top_etfs": [
+        "URA",
+        "URNM",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "URA",
+        "URNM",
+        "SRUUF"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 15.5,
+        "volume_confirmation": 13.7,
+        "source_diversity": 13.3,
+        "recency": 15.6,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -943,57 +943,6 @@
       }
     },
     {
-      "sector_key": "nuclear_uranium",
-      "sector_label": "Nuclear Energy & Uranium",
-      "confidence": 68.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "19 Jun 2026 05:56 UTC",
-      "headline": "Stocks Slide as Iran Nuclear Talks Hit Early Snag: Markets Wrap",
-      "regions": [
-        "middle_east",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "BBC News",
-        "Markets-Economic Times",
-        "Oilprice.com"
-      ],
-      "primary_etf": "URA",
-      "top_etfs": [
-        "URA",
-        "URNM",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "URA",
-        "URNM",
-        "SRUUF"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.0,
-        "volume_confirmation": 11.3,
-        "source_diversity": 13.8,
-        "recency": 9.2,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
       "confidence": 66.0,
@@ -1043,6 +992,56 @@
         "volume_confirmation": 18.0,
         "source_diversity": 15.7,
         "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity + Technology & AI / Semiconductors",
+      "confidence": 65.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -2.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "24 Jun 2026 12:30 UTC",
+      "headline": "Global Market: BOJ policymakers push for faster rate hikes as inflation risks mount",
+      "regions": [
+        "middle_east",
+        "global",
+        "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "Oilprice.com",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 17.4,
+        "source_diversity": 16.7,
+        "recency": 16.8,
         "geopolitical_severity": 13.0
       }
     },
@@ -1145,6 +1144,57 @@
       }
     },
     {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 63.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 3.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 37,
+      "latest_at": "24 Jun 2026 12:22 UTC",
+      "headline": "Why did market rise today? Sensex rallied 791 pts, Nifty closed above 24,000; 6 key factors drove D-St rebound",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "europe",
+        "india"
+      ],
+      "sources": [
+        "Defense News",
+        "Oilprice.com",
+        "Cointelegraph.com News",
+        "World | Deutsche Welle"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.4,
+        "recency": 16.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 62.0,
@@ -1187,59 +1237,14 @@
         "recency": 16.8,
         "geopolitical_severity": 12.9
       }
-    },
-    {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 62.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -6.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "23 Jun 2026 16:37 UTC",
-      "headline": "Japan bond yields mixed after relatively weak 5-year auction",
-      "regions": [
-        "global",
-        "europe",
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 19.4,
-        "volume_confirmation": 17.4,
-        "source_diversity": 12.7,
-        "recency": 15.9,
-        "geopolitical_severity": 13.0
-      }
     }
   ],
   "articles": [
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Energy / Oil & Gas - 27 articles - CRITICAL / BEARISH - Why the Next Billion Barrels of Oil Demand Could Come From Storage"
+    },
     {
       "tag": "tag-bear",
       "label": "Bearish",
@@ -1248,22 +1253,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 26 articles - CRITICAL / BEARISH - Why the Next Billion Barrels of Oil Demand Could Come From Storage"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Gold & Precious Metals - 7 articles - HIGH / BEARISH - Gold prices fall Rs 2,200/10 gms; silver tanks Rs 3,300/kg as rate hike fears outweigh falling oil prices. Key levels to watch"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "India Equity Markets - 18 articles - HIGH / BULLISH - RBI sold net $8.9 billion in April, gold holdings unchanged"
+      "text": "Gold & Precious Metals - 12 articles - CRITICAL / BEARISH - Global markets | Australian shares rise modestly as sticky core inflation keeps rate hike bets alive"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Emerging Markets - 7 articles - MEDIUM / BEARISH - MSCI keeps South Korea as emerging market, delays Indonesia review amid downgrade risk"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Nuclear Energy & Uranium - 7 articles - HIGH / BEARISH - Adani Targets 10 GW Nuclear Power Capacity in India by 2035"
     },
     {
       "tag": "tag-bull",
@@ -1288,12 +1288,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Nuclear Energy & Uranium - 5 articles - HIGH / BULLISH - Stocks Slide as Iran Nuclear Talks Hit Early Snag: Markets Wrap"
+      "text": "Defense & Aerospace - 28 articles - HIGH / BULLISH - Ukraine launches \u2018TrophyLab\u2019 platform to share captured Russian weapons with allies"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Defense & Aerospace - 28 articles - HIGH / BULLISH - Ukraine launches \u2018TrophyLab\u2019 platform to share captured Russian weapons with allies"
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Asia Pacific Equity + Technology & AI / Semiconductors - 12 articles - HIGH / BEARISH - Global Market: BOJ policymakers push for faster rate hikes as inflation risks mount"
     },
     {
       "tag": "tag-bear",
@@ -1308,12 +1308,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Crypto & Digital Assets - 4 articles - HIGH / BULLISH - Bitcoin stabilises near $64,000 as long-term holders continue accumulation despite ETF inflow pause"
+      "text": "India Equity Markets - 37 articles - HIGH / BULLISH - Why did market rise today? Sensex rallied 791 pts, Nifty closed above 24,000; 6 key factors drove D-St rebound"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Asia Pacific Equity - 12 articles - HIGH / BEARISH - Japan bond yields mixed after relatively weak 5-year auction"
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Crypto & Digital Assets - 4 articles - HIGH / BULLISH - Bitcoin stabilises near $64,000 as long-term holders continue accumulation despite ETF inflow pause"
     }
   ],
   "market_snapshot": [
@@ -1354,22 +1354,22 @@
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10426.99,
+      "price": 10445.36,
       "currency": "GBP",
-      "change": -1.91,
-      "change_pct": -0.02,
-      "change_str": "-0.02%",
-      "direction": "down"
+      "change": 16.46,
+      "change_pct": 0.16,
+      "change_str": "+0.16%",
+      "direction": "up"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 24649.31,
+      "price": 24663.89,
       "currency": "EUR",
-      "change": -244.27,
-      "change_pct": -0.98,
-      "change_str": "-0.98%",
+      "change": -229.69,
+      "change_pct": -0.92,
+      "change_str": "-0.92%",
       "direction": "down"
     },
     {
@@ -1409,55 +1409,55 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4075.6,
+      "price": 4028.0,
       "currency": "USD",
-      "change": -54.3,
-      "change_pct": -1.31,
-      "change_str": "-1.31%",
+      "change": -101.9,
+      "change_pct": -2.47,
+      "change_str": "-2.47%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 71.94,
+      "price": 71.01,
       "currency": "USD",
-      "change": -1.27,
-      "change_pct": -1.73,
-      "change_str": "-1.73%",
+      "change": -2.2,
+      "change_pct": -3.01,
+      "change_str": "-3.01%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 62445.97,
+      "price": 62732.68,
       "currency": "USD",
-      "change": -222.05,
-      "change_pct": -0.35,
-      "change_str": "-0.35%",
-      "direction": "down"
+      "change": 64.66,
+      "change_pct": 0.1,
+      "change_str": "+0.10%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.68,
+      "price": 101.73,
       "currency": "USD",
-      "change": 0.27,
-      "change_pct": 0.26,
-      "change_str": "+0.26%",
+      "change": 0.32,
+      "change_pct": 0.31,
+      "change_str": "+0.31%",
       "direction": "up"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 19.24,
+      "price": 18.81,
       "currency": "USD",
-      "change": -0.25,
-      "change_pct": -1.28,
-      "change_str": "-1.28%",
+      "change": -0.68,
+      "change_pct": -3.49,
+      "change_str": "-3.49%",
       "direction": "down"
     }
   ],
@@ -1465,7 +1465,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 1.25,
     "portfolio_peak": 10160.21,
-    "vix": 19.24,
+    "vix": 18.81,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -1485,7 +1485,7 @@
       },
       {
         "sector": "Gold & Precious Metals",
-        "weight": 0.9,
+        "weight": 3.2,
         "at_cap": false
       },
       {
@@ -1574,8 +1574,8 @@
       "benchmark_price_start": 741.75,
       "benchmark_price_now": 733.58,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.8,
-      "alpha": 0.3
+      "portfolio_return_pct": -0.81,
+      "alpha": 0.29
     },
     "rebalance": {
       "alerts": [
@@ -1585,7 +1585,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": 17.78,
           "action": "TRIM",
-          "amount": 1783.97,
+          "amount": 1784.02,
           "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
@@ -1595,17 +1595,17 @@
           "target_weight_pct": 18.0,
           "drift_pct": -17.56,
           "action": "ADD",
-          "amount": 1761.87,
+          "amount": 1761.82,
           "etf_name": "Health Care Select Sector SPDR",
           "regime_note": ""
         },
         {
           "ticker": "SH",
-          "actual_weight_pct": 0.88,
+          "actual_weight_pct": 3.24,
           "target_weight_pct": 18.0,
-          "drift_pct": -17.12,
+          "drift_pct": -14.76,
           "action": "ADD",
-          "amount": 1717.9,
+          "amount": 1480.43,
           "etf_name": "ProShares Short S&P500",
           "regime_note": ""
         },
@@ -1615,7 +1615,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": 14.38,
           "action": "TRIM",
-          "amount": 1442.74,
+          "amount": 1442.79,
           "etf_name": "iShares MSCI India ETF",
           "regime_note": ""
         }
@@ -1626,8 +1626,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -3400.62,
-          "portfolio_loss_pct": -33.89,
+          "total_impact": -3341.27,
+          "portfolio_loss_pct": -33.3,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1657,13 +1657,13 @@
               "ticker": "SH",
               "factor": "gold",
               "shock_pct": 25.0,
-              "impact": 22.03
+              "impact": 81.38
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -2906.61,
-          "portfolio_loss_pct": -28.97,
+          "total_impact": -2899.48,
+          "portfolio_loss_pct": -28.9,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1693,13 +1693,13 @@
               "ticker": "SH",
               "factor": "gold",
               "shock_pct": 3.0,
-              "impact": 2.64
+              "impact": 9.77
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1287.9,
-          "portfolio_loss_pct": -12.84,
+          "total_impact": -1299.77,
+          "portfolio_loss_pct": -12.95,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1729,13 +1729,13 @@
               "ticker": "SH",
               "factor": "gold",
               "shock_pct": -5.0,
-              "impact": -4.41
+              "impact": -16.28
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -695.1,
-          "portfolio_loss_pct": -6.93,
+          "total_impact": -723.59,
+          "portfolio_loss_pct": -7.21,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1765,13 +1765,13 @@
               "ticker": "SH",
               "factor": "gold",
               "shock_pct": -12.0,
-              "impact": -10.57
+              "impact": -39.06
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1533.14,
-          "portfolio_loss_pct": -15.28,
+          "total_impact": -1514.15,
+          "portfolio_loss_pct": -15.09,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1801,21 +1801,21 @@
               "ticker": "SH",
               "factor": "gold",
               "shock_pct": 8.0,
-              "impact": 7.05
+              "impact": 26.04
             }
           ]
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -33.89
+      "worst_loss_pct": -33.3
     }
   },
   "logs": [
-    "2026-06-24 10:29:29 [INFO] AZALYST - status.json generated",
-    "2026-06-24 10:29:29 [INFO] PORTFOLIO - NAV USD 10,033.32 | Return -0.80%",
-    "2026-06-24 10:29:29 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-24 10:29:29 [INFO] TRADER - Open positions: INDA, XLF, QQQ, XLV, SH",
-    "2026-06-24 10:29:29 [INFO] TRADER - Closed trades: 12"
+    "2026-06-24 12:48:28 [INFO] AZALYST - status.json generated",
+    "2026-06-24 12:48:28 [INFO] PORTFOLIO - NAV USD 10,033.06 | Return -0.81%",
+    "2026-06-24 12:48:28 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-24 12:48:28 [INFO] TRADER - Open positions: INDA, XLF, QQQ, XLV, SH",
+    "2026-06-24 12:48:28 [INFO] TRADER - Closed trades: 12"
   ],
-  "generated_at": "2026-06-24 10:29:26 UTC"
+  "generated_at": "2026-06-24 12:48:25 UTC"
 }
