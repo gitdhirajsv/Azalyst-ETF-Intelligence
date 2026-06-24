@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 10034.12,
+  "portfolio_value": 10034.07,
   "total_deposited": 10108.21,
-  "cash": 257.97,
+  "cash": 213.89,
   "monthly_reserve": 0.0,
-  "market_value": 9776.15,
-  "total_invested": 9744.61,
-  "unrealised_pnl": 31.54,
-  "unrealised_str": "+31.54",
+  "market_value": 9820.18,
+  "total_invested": 9788.69,
+  "unrealised_pnl": 31.49,
+  "unrealised_str": "+31.49",
   "realised_pnl": -105.63,
   "realised_str": "-105.63",
   "change": "-0.73%",
@@ -94,17 +94,17 @@
       "sector": "Energy / Oil & Gas",
       "platform": "ProShares -- IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 33.47,
+      "entry": 33.48,
       "current": 33.87,
       "peak_price": 33.9,
-      "trail_stop": 31.12,
-      "dist_to_trail_pct": 8.11,
-      "units": 36.006437,
-      "invested": 1204.98,
-      "pnl": 14.55,
-      "pnl_str": "+14.55",
-      "pnl_pct": 1.21,
-      "pnl_pct_str": "+1.21%",
+      "trail_stop": 31.14,
+      "dist_to_trail_pct": 8.07,
+      "units": 37.306305,
+      "invested": 1249.06,
+      "pnl": 14.51,
+      "pnl_str": "+14.51",
+      "pnl_pct": 1.16,
+      "pnl_pct_str": "+1.16%",
       "confidence": 97,
       "severity": "HIGH",
       "days_held": 2,
@@ -357,14 +357,14 @@
     }
   },
   "top_signal": {
-    "ticker": "XLF",
-    "rank_score": 12.785718608169438,
-    "flow_score": 2.4378983076929805,
-    "options_score": 23.69931930308315,
-    "rotation_score": 12.0,
+    "ticker": "AGG",
+    "rank_score": 10.155102040816326,
+    "flow_score": 18.0,
+    "options_score": 0.0,
+    "rotation_score": 0.0,
     "macro_score": 0.0,
-    "news_score": 6.5280000000000005,
-    "total": 57.450936218945564,
+    "news_score": 6.912000000000001,
+    "total": 35.06710204081632,
     "publish": false,
     "direction": "long"
   },
@@ -381,9 +381,9 @@
       32.4,
       35.8,
       16.7,
-      12.2,
+      12.6,
       0.4,
-      2.6
+      2.1
     ]
   },
   "pnl": {
@@ -398,14 +398,14 @@
       35.69,
       18.5,
       -37.26,
-      14.55,
+      14.51,
       0.06
     ]
   },
   "confidence": [
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 93.0
+      "score": 89.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -444,6 +444,10 @@
       "score": 66.0
     },
     {
+      "symbol": "Emerging Markets",
+      "score": 65.0
+    },
+    {
       "symbol": "Clean Energy & Renewables + Europe Equity",
       "score": 64.0
     },
@@ -458,37 +462,33 @@
     {
       "symbol": "Asia Pacific Equity",
       "score": 62.0
-    },
-    {
-      "symbol": "Emerging Markets",
-      "score": 62.0
     }
   ],
   "signals": [
     {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 93.0,
+      "confidence": 89.0,
       "severity": "HIGH",
       "direction": "BEARISH",
-      "direction_score": -14.0,
+      "direction_score": -20.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 12,
-      "latest_at": "23 Jun 2026 18:17 UTC",
+      "latest_at": "23 Jun 2026 20:47 UTC",
       "headline": "Gold may fall to $3,800 on Fed hike risk; ETF outflows, weak Asia demand weigh: Deutsche Bank report",
       "regions": [
-        "europe",
-        "global",
+        "asia_pacific",
         "americas",
-        "asia_pacific"
+        "europe",
+        "global"
       ],
       "sources": [
-        "Bloomberg Markets",
         "Oilprice.com",
-        "US Top News and Analysis",
-        "EE Times"
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "US Top News and Analysis"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -513,8 +513,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 17.4,
-        "source_diversity": 14.0,
-        "recency": 15.1,
+        "source_diversity": 12.7,
+        "recency": 12.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -983,6 +983,55 @@
       }
     },
     {
+      "sector_key": "emerging_markets",
+      "sector_label": "Emerging Markets",
+      "confidence": 65.0,
+      "severity": "MEDIUM",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 4,
+      "latest_at": "23 Jun 2026 23:53 UTC",
+      "headline": "Fact check: AI fakes around the World Cup spread political narratives",
+      "regions": [
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "World | Deutsche Welle",
+        "Bloomberg Markets",
+        "Finance"
+      ],
+      "primary_etf": "EEM",
+      "top_etfs": [
+        "EEM",
+        "SPEM",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES"
+      ],
+      "global_etfs": [
+        "EEM",
+        "SPEM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 8.2,
+        "volume_confirmation": 9.7,
+        "source_diversity": 10.3,
+        "recency": 16.9,
+        "geopolitical_severity": 10.3
+      }
+    },
+    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables + Europe Equity",
       "confidence": 64.0,
@@ -1173,55 +1222,6 @@
         "recency": 15.9,
         "geopolitical_severity": 13.0
       }
-    },
-    {
-      "sector_key": "emerging_markets",
-      "sector_label": "Emerging Markets",
-      "confidence": 62.0,
-      "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 3,
-      "latest_at": "23 Jun 2026 17:15 UTC",
-      "headline": "Fact check: AI fakes around the World Cup spread political narratives",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "europe"
-      ],
-      "sources": [
-        "World | Deutsche Welle",
-        "US Top News and Analysis",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "EEM",
-      "top_etfs": [
-        "EEM",
-        "SPEM",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES"
-      ],
-      "global_etfs": [
-        "EEM",
-        "SPEM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 6.9,
-        "volume_confirmation": 7.7,
-        "source_diversity": 9.1,
-        "recency": 16.9,
-        "geopolitical_severity": 11.9
-      }
     }
   ],
   "articles": [
@@ -1278,6 +1278,11 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Emerging Markets - 4 articles - MEDIUM / BEARISH - Fact check: AI fakes around the World Cup spread political narratives"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "Clean Energy & Renewables + Europe Equity - 6 articles - MEDIUM / BEARISH - Denmark and Germany Launch Europe\u2019s First Hydrogen Superhighway"
     },
     {
@@ -1294,11 +1299,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Asia Pacific Equity - 12 articles - HIGH / BEARISH - Japan bond yields mixed after relatively weak 5-year auction"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Emerging Markets - 3 articles - MEDIUM / BEARISH - Fact check: AI fakes around the World Cup spread political narratives"
     }
   ],
   "market_snapshot": [
@@ -1341,10 +1341,10 @@
       "region": "UK",
       "price": 10428.85,
       "currency": "GBP",
-      "change": -9.05,
-      "change_pct": -0.09,
-      "change_str": "-0.09%",
-      "direction": "down"
+      "change": 65.55,
+      "change_pct": 0.63,
+      "change_str": "+0.63%",
+      "direction": "up"
     },
     {
       "label": "DAX",
@@ -1394,44 +1394,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4123.5,
+      "price": 4117.0,
       "currency": "USD",
-      "change": -58.4,
-      "change_pct": -1.4,
-      "change_str": "-1.40%",
+      "change": -64.9,
+      "change_pct": -1.55,
+      "change_str": "-1.55%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 73.03,
+      "price": 72.67,
       "currency": "USD",
-      "change": -1.79,
-      "change_pct": -2.39,
-      "change_str": "-2.39%",
+      "change": -2.15,
+      "change_pct": -2.87,
+      "change_str": "-2.87%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 62506.21,
+      "price": 62688.69,
       "currency": "USD",
-      "change": -1445.9,
-      "change_pct": -2.26,
-      "change_str": "-2.26%",
+      "change": -1263.42,
+      "change_pct": -1.98,
+      "change_str": "-1.98%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.39,
+      "price": 101.36,
       "currency": "USD",
-      "change": 0.37,
-      "change_pct": 0.37,
-      "change_str": "+0.37%",
+      "change": 0.35,
+      "change_pct": 0.34,
+      "change_str": "+0.34%",
       "direction": "up"
     },
     {
@@ -1470,7 +1470,7 @@
       },
       {
         "sector": "Energy / Oil & Gas",
-        "weight": 12.2,
+        "weight": 12.6,
         "at_cap": false
       },
       {
@@ -1570,7 +1570,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": 17.78,
           "action": "TRIM",
-          "amount": 1783.83,
+          "amount": 1783.84,
           "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
@@ -1580,7 +1580,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -17.56,
           "action": "ADD",
-          "amount": 1762.01,
+          "amount": 1762.0,
           "etf_name": "Health Care Select Sector SPDR",
           "regime_note": ""
         },
@@ -1590,27 +1590,27 @@
           "target_weight_pct": 18.0,
           "drift_pct": 14.38,
           "action": "TRIM",
-          "amount": 1442.6,
+          "amount": 1442.61,
           "etf_name": "iShares MSCI India ETF",
           "regime_note": ""
         },
         {
           "ticker": "CASH",
-          "actual_weight_pct": 2.57,
+          "actual_weight_pct": 2.13,
           "target_weight_pct": 10.0,
-          "drift_pct": -7.43,
+          "drift_pct": -7.87,
           "action": "RAISE",
-          "amount": 745.44,
+          "amount": 789.51,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
         {
           "ticker": "SH",
-          "actual_weight_pct": 12.15,
+          "actual_weight_pct": 12.59,
           "target_weight_pct": 18.0,
-          "drift_pct": -5.85,
+          "drift_pct": -5.41,
           "action": "ADD",
-          "amount": 586.6,
+          "amount": 542.57,
           "etf_name": "ProShares Short S&P500",
           "regime_note": ""
         }
@@ -1621,8 +1621,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -4093.39,
-          "portfolio_loss_pct": -40.79,
+          "total_impact": -4117.61,
+          "portfolio_loss_pct": -41.04,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1646,7 +1646,7 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -670.75
+              "impact": -694.96
             },
             {
               "ticker": "XLV",
@@ -1657,8 +1657,8 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -3701.95,
-          "portfolio_loss_pct": -36.89,
+          "total_impact": -3730.57,
+          "portfolio_loss_pct": -37.18,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1682,7 +1682,7 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -792.7
+              "impact": -821.32
             },
             {
               "ticker": "XLV",
@@ -1693,8 +1693,8 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1405.45,
-          "portfolio_loss_pct": -14.01,
+          "total_impact": -1409.85,
+          "portfolio_loss_pct": -14.05,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1718,7 +1718,7 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -121.95
+              "impact": -126.36
             },
             {
               "ticker": "XLV",
@@ -1729,8 +1729,8 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -867.46,
-          "portfolio_loss_pct": -8.65,
+          "total_impact": -874.06,
+          "portfolio_loss_pct": -8.71,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1754,7 +1754,7 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -182.93
+              "impact": -189.53
             },
             {
               "ticker": "XLV",
@@ -1765,8 +1765,8 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1784.1,
-          "portfolio_loss_pct": -17.78,
+          "total_impact": -1792.9,
+          "portfolio_loss_pct": -17.87,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1790,7 +1790,7 @@
               "ticker": "SH",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -243.91
+              "impact": -252.71
             },
             {
               "ticker": "XLV",
@@ -1802,15 +1802,15 @@
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -40.79
+      "worst_loss_pct": -41.04
     }
   },
   "logs": [
-    "2026-06-23 22:56:39 [INFO] AZALYST - status.json generated",
-    "2026-06-23 22:56:39 [INFO] PORTFOLIO - NAV USD 10,034.12 | Return -0.73%",
-    "2026-06-23 22:56:39 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-23 22:56:39 [INFO] TRADER - Open positions: INDA, XLF, QQQ, SH, XLV",
-    "2026-06-23 22:56:39 [INFO] TRADER - Closed trades: 11"
+    "2026-06-24 00:04:30 [INFO] AZALYST - status.json generated",
+    "2026-06-24 00:04:30 [INFO] PORTFOLIO - NAV USD 10,034.07 | Return -0.73%",
+    "2026-06-24 00:04:30 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-24 00:04:30 [INFO] TRADER - Open positions: INDA, XLF, QQQ, SH, XLV",
+    "2026-06-24 00:04:30 [INFO] TRADER - Closed trades: 11"
   ],
-  "generated_at": "2026-06-23 22:56:38 UTC"
+  "generated_at": "2026-06-24 00:04:26 UTC"
 }
