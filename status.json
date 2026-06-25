@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 10050.1,
+  "portfolio_value": 10050.05,
   "total_deposited": 10115.68,
-  "cash": 763.03,
+  "cash": 718.93,
   "monthly_reserve": 0.0,
-  "market_value": 9287.06,
-  "total_invested": 9259.88,
-  "unrealised_pnl": 27.18,
-  "unrealised_str": "+27.18",
+  "market_value": 9331.12,
+  "total_invested": 9303.99,
+  "unrealised_pnl": 27.14,
+  "unrealised_str": "+27.14",
   "realised_pnl": -92.77,
   "realised_str": "-92.77",
   "change": "-0.65%",
@@ -121,13 +121,13 @@
       "current": 33.59,
       "peak_price": 33.91,
       "trail_stop": 31.38,
-      "dist_to_trail_pct": 6.57,
-      "units": 19.850202,
-      "invested": 669.83,
-      "pnl": -3.06,
-      "pnl_str": "-3.06",
-      "pnl_pct": -0.46,
-      "pnl_pct_str": "-0.46%",
+      "dist_to_trail_pct": 6.59,
+      "units": 21.161874,
+      "invested": 713.93,
+      "pnl": -3.11,
+      "pnl_str": "-3.11",
+      "pnl_pct": -0.44,
+      "pnl_pct_str": "-0.44%",
       "confidence": 96,
       "severity": "HIGH",
       "days_held": 0,
@@ -357,32 +357,32 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "HIGH_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.10999946757474867,
+    "vix_level": 18.6299991607666,
+    "vix_percentile_1y": 0.7023809523809523,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
-      "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "rank": 18,
+      "flow": 18,
+      "options": 28,
+      "rotation": 12,
+      "macro": 12,
+      "news": 12
     }
   },
   "top_signal": {
-    "ticker": "TLT",
-    "rank_score": 14.443652830188679,
-    "flow_score": 18.0,
-    "options_score": 0.0,
-    "rotation_score": 0.0,
-    "macro_score": 9.803426064074053,
-    "news_score": 6.912000000000001,
-    "total": 49.159078894262734,
+    "ticker": "EWY",
+    "rank_score": 7.668407547169811,
+    "flow_score": 0.0,
+    "options_score": 28.281487673134002,
+    "rotation_score": 12.0,
+    "macro_score": 0.0,
+    "news_score": 6.24,
+    "total": 54.18989522030382,
     "publish": false,
-    "direction": "long"
+    "direction": "short"
   },
   "allocation": {
     "labels": [
@@ -398,8 +398,8 @@
       35.6,
       16.6,
       0.9,
-      6.6,
-      7.6
+      7.1,
+      7.2
     ]
   },
   "pnl": {
@@ -415,14 +415,10 @@
       5.2,
       -45.63,
       0.29,
-      -3.06
+      -3.11
     ]
   },
   "confidence": [
-    {
-      "symbol": "Energy / Oil & Gas",
-      "score": 96.0
-    },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 93.0
@@ -430,6 +426,10 @@
     {
       "symbol": "Crypto & Digital Assets",
       "score": 91.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 89.0
     },
     {
       "symbol": "Emerging Markets",
@@ -481,59 +481,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 96.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -5.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 30,
-      "latest_at": "24 Jun 2026 17:01 UTC",
-      "headline": "Euro Sinks To One-Year Low As Oil Price Drop Fuels ECB Rate Cut Bets",
-      "regions": [
-        "europe",
-        "asia_pacific",
-        "americas",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "Oilprice.com",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.6,
-        "recency": 15.6,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
@@ -631,6 +578,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 12.0,
         "recency": 14.1,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 89.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -12.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 25,
+      "latest_at": "24 Jun 2026 20:00 UTC",
+      "headline": "Euro Sinks To One-Year Low As Oil Price Drop Fuels ECB Rate Cut Bets",
+      "regions": [
+        "asia_pacific",
+        "india",
+        "global",
+        "europe"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Oilprice.com",
+        "Bloomberg Markets",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.3,
+        "recency": 11.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -1252,17 +1252,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 30 articles - CRITICAL / BEARISH - Euro Sinks To One-Year Low As Oil Price Drop Fuels ECB Rate Cut Bets"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - CRITICAL / BEARISH - Gold futures sink to three-month low as dollar rally batters bullion"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Crypto & Digital Assets - 24 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Energy / Oil & Gas - 25 articles - CRITICAL / BEARISH - Euro Sinks To One-Year Low As Oil Price Drop Fuels ECB Rate Cut Bets"
     },
     {
       "tag": "tag-bear",
@@ -1365,9 +1365,9 @@
       "region": "UK",
       "price": 10461.63,
       "currency": "GBP",
-      "change": 32.73,
-      "change_pct": 0.31,
-      "change_str": "+0.31%",
+      "change": 23.73,
+      "change_pct": 0.23,
+      "change_str": "+0.23%",
       "direction": "up"
     },
     {
@@ -1418,44 +1418,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4017.7,
+      "price": 4027.4,
       "currency": "USD",
-      "change": -112.2,
-      "change_pct": -2.72,
-      "change_str": "-2.72%",
+      "change": -102.5,
+      "change_pct": -2.48,
+      "change_str": "-2.48%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 69.9,
+      "price": 70.05,
       "currency": "USD",
-      "change": -3.31,
-      "change_pct": -4.52,
-      "change_str": "-4.52%",
+      "change": -3.16,
+      "change_pct": -4.32,
+      "change_str": "-4.32%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 60775.7,
+      "price": 60956.77,
       "currency": "USD",
-      "change": -1892.32,
-      "change_pct": -3.02,
-      "change_str": "-3.02%",
+      "change": -1711.25,
+      "change_pct": -2.73,
+      "change_str": "-2.73%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.58,
+      "price": 101.61,
       "currency": "USD",
-      "change": 0.17,
-      "change_pct": 0.17,
-      "change_str": "+0.17%",
+      "change": 0.2,
+      "change_pct": 0.2,
+      "change_str": "+0.20%",
       "direction": "up"
     },
     {
@@ -1494,7 +1494,7 @@
       },
       {
         "sector": "Gold & Precious Metals",
-        "weight": 6.6,
+        "weight": 7.1,
         "at_cap": false
       },
       {
@@ -1594,7 +1594,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": 17.61,
           "action": "TRIM",
-          "amount": 1770.29,
+          "amount": 1770.3,
           "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
@@ -1604,7 +1604,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -17.12,
           "action": "ADD",
-          "amount": 1720.52,
+          "amount": 1720.51,
           "etf_name": "Health Care Select Sector SPDR",
           "regime_note": ""
         },
@@ -1620,11 +1620,11 @@
         },
         {
           "ticker": "SH",
-          "actual_weight_pct": 6.63,
+          "actual_weight_pct": 7.07,
           "target_weight_pct": 18.0,
-          "drift_pct": -11.37,
+          "drift_pct": -10.93,
           "action": "ADD",
-          "amount": 1142.25,
+          "amount": 1098.18,
           "etf_name": "ProShares Short S&P500",
           "regime_note": ""
         }
@@ -1635,8 +1635,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -3281.43,
-          "portfolio_loss_pct": -32.65,
+          "total_impact": -3270.41,
+          "portfolio_loss_pct": -32.54,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1666,13 +1666,13 @@
               "ticker": "SH",
               "factor": "gold",
               "shock_pct": 25.0,
-              "impact": 166.69
+              "impact": 177.71
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -2910.9,
-          "portfolio_loss_pct": -28.96,
+          "total_impact": -2909.58,
+          "portfolio_loss_pct": -28.95,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1702,13 +1702,13 @@
               "ticker": "SH",
               "factor": "gold",
               "shock_pct": 3.0,
-              "impact": 20.0
+              "impact": 21.32
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1326.38,
-          "portfolio_loss_pct": -13.2,
+          "total_impact": -1328.59,
+          "portfolio_loss_pct": -13.22,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1738,13 +1738,13 @@
               "ticker": "SH",
               "factor": "gold",
               "shock_pct": -5.0,
-              "impact": -33.34
+              "impact": -35.54
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -769.64,
-          "portfolio_loss_pct": -7.66,
+          "total_impact": -774.92,
+          "portfolio_loss_pct": -7.71,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1774,13 +1774,13 @@
               "ticker": "SH",
               "factor": "gold",
               "shock_pct": -12.0,
-              "impact": -80.01
+              "impact": -85.3
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1498.31,
-          "portfolio_loss_pct": -14.91,
+          "total_impact": -1494.79,
+          "portfolio_loss_pct": -14.87,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1810,21 +1810,21 @@
               "ticker": "SH",
               "factor": "gold",
               "shock_pct": 8.0,
-              "impact": 53.34
+              "impact": 56.87
             }
           ]
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -32.65
+      "worst_loss_pct": -32.54
     }
   },
   "logs": [
-    "2026-06-24 22:55:16 [INFO] AZALYST - status.json generated",
-    "2026-06-24 22:55:16 [INFO] PORTFOLIO - NAV USD 10,050.10 | Return -0.65%",
-    "2026-06-24 22:55:16 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-24 22:55:16 [INFO] TRADER - Open positions: INDA, XLF, QQQ, XLV, SH",
-    "2026-06-24 22:55:16 [INFO] TRADER - Closed trades: 12"
+    "2026-06-25 00:14:18 [INFO] AZALYST - status.json generated",
+    "2026-06-25 00:14:18 [INFO] PORTFOLIO - NAV USD 10,050.05 | Return -0.65%",
+    "2026-06-25 00:14:18 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-25 00:14:18 [INFO] TRADER - Open positions: INDA, XLF, QQQ, XLV, SH",
+    "2026-06-25 00:14:18 [INFO] TRADER - Closed trades: 12"
   ],
-  "generated_at": "2026-06-24 22:55:14 UTC"
+  "generated_at": "2026-06-25 00:14:16 UTC"
 }
