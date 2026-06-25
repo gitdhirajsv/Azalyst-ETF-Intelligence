@@ -78,16 +78,18 @@ class SignalFuser:
     # COT engine adds institutional positioning data (independent source).
     # News is confirmation; constituents used for sector conviction.
     # When COT is unavailable, its 25% weight is redistributed: PRICE +10%, NEWS +10%, CONST +5%.
-    W_PRICE = 0.40
+    W_PRICE = 0.35
     W_COT = 0.25        # COT engine — set to 0 until cot_fetcher is integrated
-    W_NEWS = 0.20
+    W_NEWS = 0.15
     W_CONSTITUENTS = 0.15
+    W_MACRO = 0.10
 
     def fuse(self,
              news_signals: List[Dict],
              price_signals: List[Dict],
              constituent_signals: List[Dict],
-             cot_signals: List[Dict] = None) -> List[FusedSignal]:
+             cot_signals: List[Dict] = None,
+             macro_events: List[Dict] = None) -> List[FusedSignal]:
 
         cot_signals = cot_signals or []
         # Index every input by sector_id

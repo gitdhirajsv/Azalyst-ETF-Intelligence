@@ -45,6 +45,7 @@ def _get_risk_engine():
 MONTHLY_BUDGET_USD      = 10_000
 MIN_TRADE_USD           = 50
 MAX_POSITIONS           = 6
+MAX_HEDGE_POSITIONS     = 2
 MAX_SINGLE_POSITION_PCT = 0.22
 STOP_LOSS_PCT           = 0.10   # fallback hard stop if instrument risk is unknown
 TRAILING_STOP_PCT       = 0.08
@@ -77,11 +78,9 @@ MAX_HOLD_DAYS           = 180
 # never a position to sit in. Tightened windows: leverage decays fastest, so the
 # 3x names get the shortest leash.
 INVERSE_ETF_MAX_HOLD_DAYS: dict = {
-    "SQQQ": 7,  "SDS": 10,   # 3x / 2x leveraged inverse — out within days
-    "PSQ": 14,  "SH": 14,    # 1x inverse — still don't sit for weeks
-    "SPXS": 7,  "SPXU": 7,   # Direxion / ProShares 3x inverse
-    "SOXS": 7,  "FAZ": 10,   # sector inverse leveraged
-    "UVXY": 5,  "VIXY": 10,  # volatility products
+    "SQQQ": 3,   "SDS": 5,    "PSQ": 7,    "SH": 7,
+    "SPXS": 3,   "SPXU": 3,   "SOXS": 3,   "FAZ": 5,
+    "UVXY": 3,   "VIXY": 5,
 }
 
 # Decay-aware exit policy for inverse / leveraged / vol ETFs. These rebalance
@@ -115,8 +114,11 @@ DECAY_ETF_PROFILE = {
 }
 _DECAY_DEFAULT_PROFILE     = {"take_profit": 0.10, "trail": 0.05}
 DECAY_ETF_TICKERS          = set(DECAY_ETF_PROFILE)
-DECAY_STALL_DAYS           = 3     # if a short hasn't worked in this many days...
-DECAY_STALL_MIN_GAIN_PCT   = 0.03  # ...and is below this gain, cut the decay bleed
+DECAY_STALL_DAYS           = 2     # if a short hasn't worked in this many days...
+# Lowered 0.015 -> 0.005. Trade #12 (SH 2026-06-21 -> 24) was cut at +0.97% in
+# 3 days against a +10% take-profit target — the old 1.5% threshold killed a
+# working winner. 0.5% is "literally not moving"; anything above gets time.
+DECAY_STALL_MIN_GAIN_PCT   = 0.005
 
 
 def _is_decay_etf(ticker: str) -> bool:
@@ -155,8 +157,17 @@ def _decay_profile(ticker: str) -> dict:
 STALE_MARK_ALERT        = 3
 CIRCUIT_BREAKER_DRAWDOWN_PCT = 0.12
 ROTATION_CONFIDENCE_DELTA    = 10
-ROTATION_MIN_HOLD_DAYS       = 14
+# Rotation minimum hold is now enforced INSIDE _select_rotation_candidate (3 days,
+# dynamic multi-factor scoring). The old 14-day static lock and its bypass paths
+# were removed; the constant was kept only briefly for migration and is now dead.
 TRADE_CALENDAR_TZ            = timezone(timedelta(hours=5, minutes=30))
+# Positions whose unrealized PnL exceeds this percent are NOT eligible for
+# rotation eviction. Asymmetry fix: the old _select_rotation_candidate scored
+# only losers (+10 if pnl < -2%) but had no symmetric "let winners run" guard,
+# so a Tier-A signal could evict a +1.7% winner like INDA at day 13. The exit
+# engine (trailing stops, partial profit, time-unclogging) still owns winner
+# exits — this only stops the rotation engine from kicking a working position.
+ROTATION_WINNER_PROTECT_PCT  = 3.0
 
 BASE_RISK_BUDGET_BY_SEVERITY = {
     "CRITICAL": 0.13,
@@ -693,6 +704,7 @@ class PaperPortfolio:
         self.portfolio_peak              = 0.0
         self.max_drawdown_pct            = 0.0
         self.open_positions: List[Position]   = []
+        self.open_hedge_positions: List[Position] = []
         self.closed_trades: List[ClosedTrade] = []
         self.monthly_deposits: Dict[str, float] = {}
         self.trade_counter               = 0
@@ -736,6 +748,7 @@ class PaperPortfolio:
             self.trade_counter              = data.get("trade_counter", 0)
             self.monthly_reserve_inr        = data.get("monthly_reserve_inr", 0.0)
             self.open_positions             = [Position.from_dict(p) for p in data.get("open_positions", [])]
+            self.open_hedge_positions       = [Position.from_dict(p) for p in data.get("open_hedge_positions", [])]
             self.closed_trades              = [ClosedTrade.__new__(ClosedTrade) for _ in data.get("closed_trades", [])]
             for ct, raw in zip(self.closed_trades, data.get("closed_trades", [])):
                 ct.__dict__.update(raw)
@@ -795,6 +808,7 @@ class PaperPortfolio:
                 "trade_counter":               self.trade_counter,
                 "monthly_reserve_inr":         round(self.monthly_reserve_inr, 2),
                 "open_positions":              [p.to_dict() for p in self.open_positions],
+                "open_hedge_positions":        [p.to_dict() for p in getattr(self, "open_hedge_positions", [])],
                 "closed_trades":               [ct.to_dict() for ct in self.closed_trades],
                 "last_saved":                  datetime.now(timezone.utc).isoformat(),
             }
@@ -954,6 +968,38 @@ class PaperPortfolio:
             return HARD_STOP_BY_RISK["LOW"]
         return HARD_STOP_BY_RISK["MEDIUM"]
 
+    def _log_entry_rejection(self, ticker: str, signal: Dict, reason: str) -> None:
+        """Append one rejection record to entry_rejection_log.json.
+
+        Was the single biggest observability gap: long-side rejections were
+        log.info only, so we had no record of WHICH signals were dropped by
+        sector cap, spread check, circuit breaker, position cap, etc. Without
+        it any future patch is being judged against an unknown miss rate.
+        Never raises — file IO failures must not break entry attempts."""
+        try:
+            path = "entry_rejection_log.json"
+            records = []
+            if os.path.exists(path):
+                try:
+                    with open(path, "r", encoding="utf-8") as f:
+                        records = json.load(f) or []
+                except Exception:
+                    records = []
+            records.append({
+                "ts":         datetime.now(timezone.utc).isoformat(),
+                "ticker":     ticker,
+                "sector":     signal.get("sector_label", ""),
+                "confidence": signal.get("confidence", 0),
+                "tier":       signal.get("consensus_tier"),
+                "direction":  signal.get("direction"),
+                "reason":     reason,
+            })
+            if len(records) > 1000:
+                records = records[-1000:]
+            atomic_write_json(path, records)
+        except Exception as exc:
+            log.warning("entry_rejection_log write failed: %s", exc)
+
     def _update_position_risk(self, position: Position):
         position.peak_price = max(position.peak_price or 0.0, position.current_price, position.entry_price)
         # Tighten the hard stop in a high-VIX regime (multiplier < 1.0 shrinks the
@@ -1040,25 +1086,54 @@ class PaperPortfolio:
         return round(min(fraction, MAX_SINGLE_POSITION_PCT), 4)
 
     def _select_rotation_candidate(self, signal: Dict, force: bool = False) -> Optional[Position]:
-        incoming_conf   = signal.get("confidence", 0)
+        incoming_conf = signal.get("confidence", 0)
+        incoming_tier = signal.get("consensus_tier", "C")
         incoming_sector = signal.get("sector_label", "")
         candidates = []
 
         for pos in self.open_positions:
-            if not force and pos.days_held() < ROTATION_MIN_HOLD_DAYS:
+            # Skip inverse/hedge positions (they are managed separately)
+            if _is_decay_etf(pos.ticker):
+                continue
+
+            # Minimum hold of 3 days to prevent excessive turnover
+            if pos.days_held() < 3:
                 continue
 
             pnl_pct = pos.unrealised_pnl_pct()
-            score   = 0.0
 
-            if incoming_conf >= pos.confidence + ROTATION_CONFIDENCE_DELTA:
-                score += (incoming_conf - pos.confidence)
-            if pnl_pct < 0:
-                score += abs(pnl_pct) * 2.0
-            elif pnl_pct < 2:
-                score += 2.0
-            if pos.days_held() >= ROTATION_MIN_HOLD_DAYS:
-                score += min(pos.days_held(), 20) * 0.3
+            # Winner protection: don't evict a working position via rotation.
+            # The exit engine (trailing stops / partial profit / time-unclog) is
+            # still allowed to close winners on actual price action — this only
+            # blocks "incoming signal looks stronger" eviction of a green book.
+            if pnl_pct > ROTATION_WINNER_PROTECT_PCT:
+                continue
+
+            # Same-sector veto: never rotate X out to buy another X. Trade #2
+            # (XLE -> XLE on 2026-06-14, -4.62%) paid round-trip cost for zero
+            # net exposure change. Sector top-up is handled separately by
+            # _best_existing_for_topup; this branch is for cross-sector signals.
+            if incoming_sector and pos.sector == incoming_sector:
+                continue
+
+            conf_diff = incoming_conf - pos.confidence
+            score = 0.0
+
+            # 1. Confidence advantage
+            if conf_diff >= 5:
+                score += conf_diff
+
+            # 2. Weak performance – cut losers early
+            if pnl_pct < -2.0:
+                score += 10   # strong incentive to rotate
+
+            # 3. Multi-engine consensus (Tier A)
+            if incoming_tier == "A":
+                score += 8
+
+            # 4. Time held bonus (diminishing after 10 days)
+            if pos.days_held() > 10:
+                score += min(pos.days_held() - 10, 10) * 0.5
 
             if score > 0:
                 candidates.append((score, pnl_pct, pos.confidence, -pos.days_held(), pos))
@@ -1066,7 +1141,7 @@ class PaperPortfolio:
         if not candidates:
             return None
 
-        candidates.sort(key=lambda item: (-item[0], item[1], item[2], item[3]))
+        candidates.sort(key=lambda x: (-x[0], x[1], x[2], x[3]))
         return candidates[0][-1]
 
     def _close_position(
@@ -1087,6 +1162,8 @@ class PaperPortfolio:
 
         if position in self.open_positions:
             self.open_positions.remove(position)
+        elif hasattr(self, "open_hedge_positions") and position in self.open_hedge_positions:
+            self.open_hedge_positions.remove(position)
 
         ct = ClosedTrade(
             position,
@@ -1326,6 +1403,24 @@ class PaperPortfolio:
 
         return max(same_sector_stronger, key=lambda p: (p.confidence, p.unrealised_pnl_pct()))
 
+    def _rotate_hedge_if_needed(self, signal: Dict) -> None:
+        if not hasattr(self, "open_hedge_positions"):
+            self.open_hedge_positions = []
+        max_hedge = MAX_HEDGE_POSITIONS if 'MAX_HEDGE_POSITIONS' in globals() else 2
+        if len(self.open_hedge_positions) < max_hedge:
+            return
+        
+        # Sort by PnL (worst first)
+        candidates = sorted(self.open_hedge_positions, key=lambda p: p.unrealised_pnl_pct())
+        worst_hedge = candidates[0]
+        
+        usd_inr = fetch_usd_to_inr()
+        current_price = get_current_price_inr(worst_hedge.ticker, worst_hedge.exchange, usd_inr)
+        if current_price and current_price > 0:
+            worst_hedge.current_price = current_price
+            exit_reason = f"Hedge rotation: evicting worst performer for {signal.get('ticker', 'new hedge')}"
+            self._close_position(worst_hedge, current_price, datetime.now(timezone.utc).isoformat(), exit_reason)
+
     def enter_position(self, signal: Dict, etf: Dict, platform: str, is_hedge: bool = False) -> Optional[Dict]:
         confidence = signal.get("confidence", 0)
         severity   = signal.get("severity", "LOW")
@@ -1338,19 +1433,22 @@ class PaperPortfolio:
 
         if not is_weekday_trade_session():
             log.info("Position skipped - paper trading is weekday-only (Mon-Fri IST)")
+            # Not logged to rejection log: weekend skip is expected, not a miss.
             return None
 
         self._update_drawdown_state()
-        
+
         # ======== REVIEW BOARD CHANGE: External shock circuit breaker ========
         # Tudor Jones / Ken Griffin: stop trading when cross-asset stress spikes
         if self._circuit_breaker_active():
             log.info("Position rejected - drawdown circuit breaker active")
+            self._log_entry_rejection(ticker, signal, "drawdown_circuit_breaker")
             return None
         try:
             from risk_engine import CIRCUIT_BREAKER_ACTIVE
             if CIRCUIT_BREAKER_ACTIVE:
                 log.warning("Position rejected - external shock circuit breaker active")
+                self._log_entry_rejection(ticker, signal, "external_shock_circuit_breaker")
                 return None
         except ImportError:
             pass  # risk_engine not loaded, skip check
@@ -1361,15 +1459,16 @@ class PaperPortfolio:
         if liquidity:
             adv_inr = liquidity.get("adv_inr", 0)
             spread_bps = liquidity.get("spread_bps", 100)
-            
+
             # Skip if spread is too wide
             if spread_bps > MAX_SPREAD_BPS_WARNING:
                 log.warning(
                     "Position rejected - spread too wide for %s: %.1f bps (threshold: %.0f bps)",
                     ticker, spread_bps, MAX_SPREAD_BPS_WARNING,
                 )
+                self._log_entry_rejection(ticker, signal, f"spread_too_wide_{spread_bps:.0f}bps")
                 return None
-            
+
             # Cap position size at 1% of ADV
             max_by_adv = adv_inr * MAX_POSITION_PCT_OF_ADV
             if max_by_adv > 0 and max_by_adv < MIN_TRADE_INR:
@@ -1377,8 +1476,9 @@ class PaperPortfolio:
                     "Position rejected - %s is too illiquid: ADV=%.0f, max_position=%.0f < min_trade=%.0f",
                     ticker, adv_inr, max_by_adv, MIN_TRADE_INR,
                 )
+                self._log_entry_rejection(ticker, signal, "illiquid_below_min_trade")
                 return None
-            
+
             # Store liquidity data for sizing
             signal["_liquidity"] = liquidity
             signal["_max_by_adv"] = max_by_adv
@@ -1395,6 +1495,10 @@ class PaperPortfolio:
                         "Position rejected - correlation %.2f with %s exceeds threshold",
                         corr_result["max_corr"], corr_result["corr_with"],
                     )
+                    self._log_entry_rejection(
+                        ticker, signal,
+                        f"correlation_{corr_result['max_corr']:.2f}_with_{corr_result.get('corr_with', '?')}",
+                    )
                     return None
 
         fraction = self._position_size(
@@ -1403,6 +1507,7 @@ class PaperPortfolio:
         # Volatility-regime dampener: invest in the dip but smaller when shaky.
         fraction *= float(signal.get("_regime_size_mult", 1.0))
         if fraction <= 0:
+            self._log_entry_rejection(ticker, signal, "position_size_zero")
             return None
 
         if re:
@@ -1442,17 +1547,24 @@ class PaperPortfolio:
         target_alloc = max(target_alloc, MIN_TRADE_INR)
 
         rotation_exits: List[Dict] = []
-        if self.cash_inr < target_alloc or len(self.open_positions) >= MAX_POSITIONS:
-            rotation_exits = self._rotate_for_signal(signal, target_alloc, force=is_hedge)
+        if is_hedge:
+            max_hedge = MAX_HEDGE_POSITIONS if 'MAX_HEDGE_POSITIONS' in globals() else 2
+            if len(getattr(self, "open_hedge_positions", [])) >= max_hedge:
+                self._rotate_hedge_if_needed(signal)
+        else:
+            if self.cash_inr < target_alloc or len(self.open_positions) >= MAX_POSITIONS:
+                rotation_exits = self._rotate_for_signal(signal, target_alloc, force=False)
 
         if self.cash_inr < MIN_TRADE_INR:
             log.info("Position rejected - insufficient cash (%.0f)", self.cash_inr)
+            self._log_entry_rejection(ticker, signal, f"insufficient_cash_{self.cash_inr:.0f}")
             return None
 
         usd_inr     = fetch_usd_to_inr()
         entry_price = get_current_price_inr(ticker, exchange, usd_inr)
         if entry_price is None or entry_price <= 0:
             log.warning(f"Cannot enter {ticker} - price unavailable")
+            self._log_entry_rejection(ticker, signal, "price_unavailable")
             return None
 
         alloc_inr = round(min(self.cash_inr * fraction, self.cash_inr * MAX_SINGLE_POSITION_PCT), 2)
@@ -1462,11 +1574,13 @@ class PaperPortfolio:
         alloc_inr = round(min(alloc_inr, sector_capacity, self.cash_inr), 2)
         if alloc_inr < MIN_TRADE_INR:
             log.info("Position rejected - sector cap reached for %s", sector)
+            self._log_entry_rejection(ticker, signal, f"sector_cap_reached_{sector}")
             return None
 
         execution = build_entry_execution(entry_price, alloc_inr, exchange, instrument_risk)
         if not execution:
             log.warning("Cannot build entry execution for %s", ticker)
+            self._log_entry_rejection(ticker, signal, "build_entry_execution_failed")
             return None
 
         units = execution["units"]
@@ -1476,9 +1590,11 @@ class PaperPortfolio:
                 "Insufficient cash for %s - need %.2f, have %.2f",
                 ticker, invested, self.cash_inr,
             )
+            self._log_entry_rejection(ticker, signal, f"insufficient_cash_at_execution_{self.cash_inr:.0f}")
             return None
 
-        existing = next((pos for pos in self.open_positions if pos.ticker == ticker), None)
+        target_list = getattr(self, "open_hedge_positions", []) if is_hedge else self.open_positions
+        existing = next((pos for pos in target_list if pos.ticker == ticker), None)
         if existing:
             new_invested          = round(existing.invested_inr + invested, 2)
             new_units             = round(existing.units + units, 6)
@@ -1521,15 +1637,14 @@ class PaperPortfolio:
                 "rotation_exits": rotation_exits,
             }
 
-        if len(self.open_positions) >= MAX_POSITIONS:
-            if is_hedge:
-                log.warning(
-                    "Hedge entry forced despite max positions (%s) — rotation could not free a slot",
-                    MAX_POSITIONS,
-                )
-            else:
-                log.info("New position rejected - max positions (%s) reached", MAX_POSITIONS)
-                return None
+        max_cap = MAX_HEDGE_POSITIONS if is_hedge else MAX_POSITIONS
+        if len(target_list) >= max_cap:
+            log.info("New position rejected - max positions (%s) reached for %s", max_cap, "hedge" if is_hedge else "long")
+            self._log_entry_rejection(
+                ticker, signal,
+                f"max_positions_{max_cap}_{'hedge' if is_hedge else 'long'}",
+            )
+            return None
 
         self.cash_inr -= invested
         position = Position(
@@ -1552,7 +1667,7 @@ class PaperPortfolio:
         )
         position.current_price = execution["fill_price"]
         self._update_position_risk(position)
-        self.open_positions.append(position)
+        target_list.append(position)
         self.total_execution_costs_inr += execution["total_cost_inr"]
         self._update_drawdown_state()
         self.save()
@@ -1597,7 +1712,8 @@ class PaperPortfolio:
 
         usd_inr = fetch_usd_to_inr()
 
-        for position in list(self.open_positions):
+        all_positions = list(self.open_positions) + list(getattr(self, "open_hedge_positions", []))
+        for position in all_positions:
             current = get_current_price_inr(position.ticker, position.exchange, usd_inr)
             if current is None or current <= 0:
                 # No fresh price. Hold the last mark but DO NOT evaluate stops or

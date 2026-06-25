@@ -1,4 +1,4 @@
-﻿"""
+"""
 AZALYST ETF INTELLIGENCE — CORE ENGINE
 Macro hedge fund-grade global news + paper trading track record system
 + Aladdin-grade risk engine (correlation, benchmark, vol-sizing, rebalancing, stress testing)
@@ -192,6 +192,16 @@ def run_intelligence_cycle(
 ):
     log.info("--- Intelligence cycle starting ---")
     try:
+        # ── 0. MACRO engine (Forex Factory calendar) ────────────────────────
+        macro_events = []
+        try:
+            from forex_fetcher import ForexFactoryFetcher
+            ff = ForexFactoryFetcher()
+            macro_events = ff.fetch_events()
+        except ImportError:
+            log.warning("ForexFactoryFetcher not found. Skipping macro events.")
+        except Exception as exc:
+            log.warning("Macro engine failed: %s", exc)
         # ── 1. NEWS engine (lagging, deep narrative) ─────────────────────────
         articles = fetcher.fetch_all()
         log.info(f"Fetched {len(articles)} articles")
@@ -199,8 +209,8 @@ def run_intelligence_cycle(
         news_signals_raw = classifier.classify_articles(articles) if articles else []
         # Pre-score so signal_fusion can use confidence
         for s in news_signals_raw:
-            s["confidence"] = scorer.score(s, articles)
-            s["confidence_breakdown"] = scorer.breakdown(s, articles)
+            s["confidence"] = scorer.score(s, articles, macro_events)
+            s["confidence_breakdown"] = scorer.breakdown(s, articles, macro_events)
 
         # ── 2. PRICE engine (leading, momentum/breakouts) ────────────────────
         price_signals: list = []
@@ -248,7 +258,11 @@ def run_intelligence_cycle(
         # ── 5. FUSE signals across all 4 engines ────────────────────────────
         if signal_fuser is not None:
             fused = signal_fuser.fuse(
-                news_signals_raw, price_signals, constituent_signals, cot_signals
+                news_signals=news_signals_raw,
+                price_signals=price_signals,
+                constituent_signals=constituent_signals,
+                cot_signals=cot_signals,
+                macro_events=macro_events
             )
             log.info(
                 "Fused: %d signals (TierA=%d TierB=%d TierC=%d divergent=%d)",
@@ -272,6 +286,8 @@ def run_intelligence_cycle(
                 scored_signals.append(signal)
 
         new_signals = state.filter_new_or_updated(scored_signals)
+        # Sort signals so the highest momentum / highest confidence ETFs are bought FIRST
+        new_signals.sort(key=lambda s: s.get("confidence", 0), reverse=True)
         log.info(f"{len(new_signals)} new/updated signals after multi-engine scoring")
 
         # Volatility regime (size dampener) + market direction (downturn = no longs).
@@ -320,9 +336,30 @@ def run_intelligence_cycle(
                                     "BEARISH signal -> inverse ETF entry: %s (sector=%s conf=%d)",
                                     b_etf.get("ticker"), signal.get("sector_label"), confidence,
                                 )
-                                b_entry = portfolio.enter_position(signal, b_etf, b_platform, is_hedge=True)
+                                hedge_signal = dict(signal)
+                                hedge_signal["sector_label"] = "Inverse / Hedge"
+                                b_entry = portfolio.enter_position(hedge_signal, b_etf, b_platform, is_hedge=True)
                                 if b_entry and not b_entry.get("is_topup"):
-                                    port_reporter.send_trade_entry(b_entry, signal)
+                                    port_reporter.send_trade_entry(b_entry, hedge_signal)
+                                elif not b_entry:
+                                    missed_file = "missed_opportunities.json"
+                                    try:
+                                        import json, os
+                                        missed = []
+                                        if os.path.exists(missed_file):
+                                            with open(missed_file, "r") as f:
+                                                missed = json.load(f)
+                                        missed.append({
+                                            "date": datetime.now(timezone.utc).isoformat(),
+                                            "ticker": b_etf.get("ticker"),
+                                            "sector": "Inverse / Hedge",
+                                            "confidence": confidence,
+                                            "headline": signal.get("best_headline")
+                                        })
+                                        from state import atomic_write_json
+                                        atomic_write_json(missed_file, missed)
+                                    except Exception as ex:
+                                        log.warning(f"Failed to track missed opportunity: {ex}")
                         else:
                             log.info(
                                 "BEARISH signal skipped — not HIGH/CRITICAL: %s (conf=%d)",
@@ -430,6 +467,25 @@ def run_intelligence_cycle(
                             if not entry.get("is_topup"):
                                 port_reporter.send_trade_entry(entry, signal)
                             log.info(f"Paper trade {'topped up' if entry.get('is_topup') else 'entered'}: {entry['ticker']}")
+                        else:
+                            missed_file = "missed_opportunities.json"
+                            try:
+                                import json, os
+                                missed = []
+                                if os.path.exists(missed_file):
+                                    with open(missed_file, "r") as f:
+                                        missed = json.load(f)
+                                missed.append({
+                                    "date": datetime.now(timezone.utc).isoformat(),
+                                    "ticker": etf.get("ticker"),
+                                    "sector": signal.get("sector_label"),
+                                    "confidence": signal.get("confidence"),
+                                    "headline": signal.get("best_headline")
+                                })
+                                from state import atomic_write_json
+                                atomic_write_json(missed_file, missed)
+                            except Exception as ex:
+                                log.warning(f"Failed to track missed opportunity: {ex}")
 
         # ── Always send 30-min digest (even if 0 new signals) ────────────────
         for sig in scored_signals:

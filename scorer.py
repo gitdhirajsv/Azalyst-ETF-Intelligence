@@ -119,7 +119,7 @@ class ConfidenceScorer:
         self._factor_history: deque = deque(maxlen=MAX_FACTOR_HISTORY)
         self._factor_names = [
             "signal_strength", "volume_confirmation", "source_diversity",
-            "recency", "geopolitical_severity", "cross_engine_confirmation",
+            "recency", "geopolitical_severity", "cross_engine_confirmation", "macro_events",
         ]
         # Resolve caps from config (config-driven; see config.py SCORER_CAP_*).
         self._caps = {
@@ -137,7 +137,7 @@ class ConfidenceScorer:
                                                        self._DEFAULT_CAPS["cross_engine_confirmation"])),
         }
 
-    def score(self, signal: Dict, all_articles: List[Dict]) -> int:
+    def score(self, signal: Dict, all_articles: List[Dict], macro_events: List[Dict] = None) -> int:
         """Compute final confidence score (0–100) for a signal."""
         f1 = self._factor_signal_strength(signal)
         f2 = self._factor_volume(signal)
@@ -145,6 +145,7 @@ class ConfidenceScorer:
         f4 = self._factor_recency(signal)
         f5 = self._factor_geopolitical_severity(signal)
         f6 = self._factor_cross_engine_confirmation(signal)
+        f7 = self._factor_macro_events(signal, macro_events)
 
         # ======== REVIEW BOARD CHANGE: Factor orthogonalization ========
         # López de Prado: when any pair of factors has correlation >0.7,
@@ -156,6 +157,7 @@ class ConfidenceScorer:
             "recency": f4,
             "geopolitical_severity": f5,
             "cross_engine_confirmation": f6,
+            "macro_events": f7,
         }
         self._factor_history.append(raw_scores)
         
@@ -197,7 +199,7 @@ class ConfidenceScorer:
         raw = sum(raw_scores[fn] * weight_multipliers[fn] for fn in self._factor_names)
         return min(int(raw), 100)
 
-    def breakdown(self, signal: Dict, all_articles: List[Dict]) -> Dict:
+    def breakdown(self, signal: Dict, all_articles: List[Dict], macro_events: List[Dict] = None) -> Dict:
         """Return component breakdown for transparency in report."""
         return {
             "signal_strength":            round(self._factor_signal_strength(signal), 1),
@@ -206,6 +208,7 @@ class ConfidenceScorer:
             "recency":                    round(self._factor_recency(signal), 1),
             "geopolitical_severity":      round(self._factor_geopolitical_severity(signal), 1),
             "cross_engine_confirmation":  round(self._factor_cross_engine_confirmation(signal), 1),
+            "macro_events":               round(self._factor_macro_events(signal, macro_events), 1),
         }
 
     # ── Factor 1: Signal Strength ─────────────────────────────────────────
@@ -230,6 +233,37 @@ class ConfidenceScorer:
             return 0.0
         normalized = math.log1p(max(count - 1, 0)) / math.log1p(12)
         return min(max(normalized, 0.0) * cap, cap)
+
+    # ── Factor 7: Macro Events ───────────────────────────────────────────
+    def _factor_macro_events(self, signal: Dict, macro_events: List[Dict]) -> float:
+        """Boost score if sector matches upcoming high/medium impact macro events."""
+        if not macro_events:
+            return 0.0
+        
+        score = 0.0
+        sector = signal.get("sector_label", "").lower()
+        
+        for event in macro_events:
+            title = event.get("title", "").lower()
+            impact = event.get("impact", "")
+            
+            is_relevant = False
+            if "energy" in sector and ("oil" in title or "inventory" in title):
+                is_relevant = True
+            elif "financials" in sector and ("rate" in title or "fed" in title or "fomc" in title or "ecb" in title):
+                is_relevant = True
+            elif "technology" in sector and ("cpi" in title or "fed" in title or "pmi" in title):
+                is_relevant = True
+            elif "gold" in sector and ("cpi" in title or "fed" in title or "rate" in title):
+                is_relevant = True
+                
+            if is_relevant:
+                if impact == "High":
+                    score += 6.0
+                elif impact == "Medium":
+                    score += 2.5
+                    
+        return min(score, 15.0)
 
     # ── Factor 3: Source Diversity ────────────────────────────────────────
     def _factor_source_diversity(self, signal: Dict) -> float:
