@@ -1,23 +1,47 @@
 {
-  "portfolio_value": 10000.0,
+  "portfolio_value": 9157.19,
   "total_deposited": 10000.0,
-  "cash": 5000.0,
-  "monthly_reserve": 5000.0,
-  "market_value": 0.0,
-  "total_invested": 0.0,
-  "unrealised_pnl": 0.0,
-  "unrealised_str": "+0.00",
+  "cash": 7218.3,
+  "monthly_reserve": 0.0,
+  "market_value": 1938.9,
+  "total_invested": 1940.0,
+  "unrealised_pnl": -1.1,
+  "unrealised_str": "-1.10",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "+0.00%",
-  "change_raw": 0.0,
+  "change": "-8.43%",
+  "change_raw": -8.43,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 10000.0,
-  "drawdown_now_pct": 0.0,
-  "max_drawdown_pct": 0.0,
+  "drawdown_now_pct": 8.43,
+  "max_drawdown_pct": 8.43,
   "usd_inr_rate": 94.385,
-  "positions": [],
+  "positions": [
+    {
+      "trade_id": "T0001",
+      "ticker": "BND",
+      "etf_name": "Vanguard Total Bond Market ETF",
+      "sector": "Bonds & Fixed Income",
+      "platform": "Vanguard \u2014 IBKR / Fidelity / Schwab",
+      "exchange": "NASDAQ",
+      "entry": 73.68,
+      "current": 73.64,
+      "peak_price": 73.68,
+      "trail_stop": 70.0,
+      "dist_to_trail_pct": 4.96,
+      "units": 26.327636,
+      "invested": 1940.0,
+      "pnl": -0.91,
+      "pnl_str": "-0.91",
+      "pnl_pct": -0.05,
+      "pnl_pct_str": "-0.05%",
+      "confidence": 82,
+      "severity": "HIGH",
+      "days_held": 0,
+      "half_exited": false
+    }
+  ],
   "closed_trades_list": [],
   "track_record": {
     "total_trades": 0,
@@ -34,44 +58,50 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "HIGH_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.1312929393374968,
-    "vix_level": 19.3700008392334,
-    "vix_percentile_1y": 0.7579365079365079,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 18,
-      "flow": 18,
-      "options": 28,
-      "rotation": 12,
-      "macro": 12,
-      "news": 12
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
+      "rotation": 15,
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
-    "ticker": "XLF",
-    "rank_score": 10.739541984732822,
-    "flow_score": 10.049196477338914,
-    "options_score": 29.355600776004245,
+    "ticker": "XLK",
+    "rank_score": 6.379024390243902,
+    "flow_score": 13.847734744686443,
+    "options_score": 16.799999999999997,
     "rotation_score": 12.0,
-    "macro_score": 0.0,
-    "news_score": 6.5280000000000005,
-    "total": 68.67233923807598,
-    "publish": true,
-    "direction": "long"
+    "macro_score": 2.1235252285827264,
+    "news_score": 6.720000000000001,
+    "total": 57.87028436351307,
+    "publish": false,
+    "direction": "short"
   },
   "allocation": {
     "labels": [
+      "BND",
       "CASH"
     ],
     "values": [
-      100.0
+      21.2,
+      78.8
     ]
   },
   "pnl": {
-    "labels": [],
-    "values": []
+    "labels": [
+      "BND"
+    ],
+    "values": [
+      -0.91
+    ]
   },
   "confidence": [
     {
@@ -87,6 +117,10 @@
       "score": 91.0
     },
     {
+      "symbol": "Bonds & Fixed Income",
+      "score": 82.0
+    },
+    {
       "symbol": "Emerging Markets",
       "score": 79.0
     },
@@ -95,12 +129,8 @@
       "score": 78.0
     },
     {
-      "symbol": "Commodities & Mining + Clean Energy & Renewables",
-      "score": 78.0
-    },
-    {
-      "symbol": "Bonds & Fixed Income",
-      "score": 72.0
+      "symbol": "Commodities & Mining",
+      "score": 73.0
     },
     {
       "symbol": "Technology & AI / Semiconductors",
@@ -111,23 +141,23 @@
       "score": 68.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 66.0
+      "symbol": "Clean Energy & Renewables",
+      "score": 65.0
     },
     {
       "symbol": "Asia Pacific Equity + Technology & AI / Semiconductors",
       "score": 65.0
     },
     {
-      "symbol": "Clean Energy & Renewables + Europe Equity",
-      "score": 64.0
+      "symbol": "Healthcare & Pharma",
+      "score": 65.0
     },
     {
       "symbol": "Europe Equity",
       "score": 64.0
     },
     {
-      "symbol": "Healthcare & Pharma",
+      "symbol": "Defense & Aerospace + Europe Equity",
       "score": 64.0
     },
     {
@@ -290,6 +320,58 @@
       }
     },
     {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 82.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "25 Jun 2026 16:05 UTC",
+      "headline": "Japan's super-long bonds briefly change course to fall after weak auction",
+      "regions": [
+        "india",
+        "asia_pacific",
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 16.1,
+        "volume_confirmation": 16.8,
+        "source_diversity": 13.8,
+        "recency": 16.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "emerging_markets",
       "sector_label": "Emerging Markets",
       "confidence": 79.0,
@@ -392,27 +474,26 @@
     },
     {
       "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining + Clean Energy & Renewables",
-      "confidence": 78.0,
+      "sector_label": "Commodities & Mining",
+      "confidence": 73.0,
       "severity": "HIGH",
       "direction": "BEARISH",
-      "direction_score": -1.5,
+      "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "25 Jun 2026 04:00 UTC",
-      "headline": "Copper Climbs as Lower Dollar, AI Rally Counter Rate Concerns",
+      "article_count": 6,
+      "latest_at": "25 Jun 2026 14:52 UTC",
+      "headline": "Copper rebounds on bargain hunting amid softer dollar, firmer risk appetite",
       "regions": [
-        "europe",
-        "americas",
         "global",
-        "asia_pacific"
+        "asia_pacific",
+        "americas"
       ],
       "sources": [
+        "Markets-Economic Times",
         "Bloomberg Markets",
-        "Oilprice.com",
-        "Tech"
+        "Oilprice.com"
       ],
       "primary_etf": "DBC",
       "top_etfs": [
@@ -433,63 +514,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 14.1,
-        "volume_confirmation": 16.2,
-        "source_diversity": 9.9,
-        "recency": 15.8,
+        "signal_strength": 13.6,
+        "volume_confirmation": 12.6,
+        "source_diversity": 11.7,
+        "recency": 14.6,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
-      "confidence": 72.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 2.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "21 Jun 2026 19:00 UTC",
-      "headline": "Bond Traders Burned by Fed\u2019s Pivot Look to Prices Gauge, Oil",
-      "regions": [
-        "india",
-        "americas",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Finance",
-        "Semiconductor Engineering",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 13.7,
-        "volume_confirmation": 14.6,
-        "source_diversity": 12.8,
-        "recency": 12.7,
-        "geopolitical_severity": 12.9
       }
     },
     {
@@ -597,56 +626,52 @@
       }
     },
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 66.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables",
+      "confidence": 65.0,
+      "severity": "MEDIUM",
+      "direction": "BEARISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
-      "latest_at": "23 Jun 2026 04:40 UTC",
-      "headline": "Ukraine launches \u2018TrophyLab\u2019 platform to share captured Russian weapons with allies",
+      "article_count": 6,
+      "latest_at": "25 Jun 2026 16:20 UTC",
+      "headline": "Slate&#8217;s electric truck: all the news about the ultra-minimal EV",
       "regions": [
-        "americas",
-        "global",
-        "asia_pacific",
-        "middle_east"
+        "global"
       ],
       "sources": [
-        "Oilprice.com",
-        "Defense News",
         "Bloomberg Markets",
-        "Latest from Tom's Hardware"
+        "Tech",
+        "Oilprice.com",
+        "The Verge"
       ],
-      "primary_etf": "ITA",
+      "primary_etf": "ICLN",
       "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
+        "ICLN",
+        "QCLN",
+        "PBW"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
+        "NEWENERGY"
       ],
       "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
+        "ICLN",
+        "QCLN",
+        "PBW"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 21.9,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.7,
-        "recency": 17.0,
-        "geopolitical_severity": 13.0
+        "signal_strength": 11.1,
+        "volume_confirmation": 12.6,
+        "source_diversity": 12.0,
+        "recency": 16.9,
+        "geopolitical_severity": 5.9
       }
     },
     {
@@ -700,53 +725,53 @@
       }
     },
     {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables + Europe Equity",
-      "confidence": 64.0,
+      "sector_key": "healthcare_pharma",
+      "sector_label": "Healthcare & Pharma",
+      "confidence": 65.0,
       "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": -2.0,
+      "direction": "BULLISH",
+      "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "22 Jun 2026 20:00 UTC",
-      "headline": "Denmark and Germany Launch Europe\u2019s First Hydrogen Superhighway",
+      "article_count": 4,
+      "latest_at": "25 Jun 2026 15:12 UTC",
+      "headline": "US Airline Stocks Erase Pandemic-Era Losses as Oil Prices Ease",
       "regions": [
-        "europe",
+        "middle_east",
+        "asia_pacific",
         "global"
       ],
       "sources": [
-        "Oilprice.com",
-        "BBC News",
-        "US Top News and Analysis",
-        "Cointelegraph.com News"
+        "Markets-Economic Times",
+        "Bloomberg Markets"
       ],
-      "primary_etf": "ICLN",
+      "primary_etf": "XLV",
       "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
+        "XLV",
+        "IXJ",
+        "XBI"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "NEWENERGY"
+        "HEALTHCARE",
+        "PHARMABEES"
       ],
       "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
+        "XLV",
+        "IXJ",
+        "XBI"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 8.9,
-        "volume_confirmation": 12.6,
-        "source_diversity": 10.0,
-        "recency": 14.8,
-        "geopolitical_severity": 9.3
+        "signal_strength": 9.3,
+        "volume_confirmation": 9.7,
+        "source_diversity": 9.9,
+        "recency": 15.1,
+        "geopolitical_severity": 11.7
       }
     },
     {
@@ -798,53 +823,55 @@
       }
     },
     {
-      "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma",
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace + Europe Equity",
       "confidence": 64.0,
       "severity": "HIGH",
-      "direction": "BULLISH",
+      "direction": "BEARISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 3,
-      "latest_at": "25 Jun 2026 11:14 UTC",
-      "headline": "India's CDMO industry set for global shift as pharma diversifies beyond China: Sai Life Sciences",
+      "article_count": 13,
+      "latest_at": "25 Jun 2026 16:20 UTC",
+      "headline": "NATO needs to see a credible trajectory for when the UK will be ready for war - and that is no longer in Sir Keir's gift",
       "regions": [
-        "europe",
         "asia_pacific",
-        "africa"
+        "europe",
+        "africa",
+        "middle_east"
       ],
       "sources": [
+        "Bloomberg Markets",
+        "Oilprice.com",
         "World | Deutsche Welle",
-        "World News - Breaking international news and headlines | Sky News",
         "Markets-Economic Times"
       ],
-      "primary_etf": "XLV",
+      "primary_etf": "ITA",
       "top_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
+        "ITA",
+        "XAR",
+        "PPA"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "HEALTHCARE",
-        "PHARMABEES"
+        "CPSEETF",
+        "DEFENCEETF"
       ],
       "global_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
+        "ITA",
+        "XAR",
+        "PPA"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 8.1,
-        "volume_confirmation": 7.7,
-        "source_diversity": 9.9,
-        "recency": 17.0,
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.8,
+        "recency": 16.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -917,6 +944,11 @@
       "text": "Crypto & Digital Assets - 23 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Bonds & Fixed Income - 11 articles - HIGH / BULLISH - Japan's super-long bonds briefly change course to fall after weak auction"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Emerging Markets - 7 articles - MEDIUM / BEARISH - MSCI keeps South Korea as emerging market, delays Indonesia review amid downgrade risk"
@@ -929,12 +961,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Commodities & Mining + Clean Energy & Renewables - 10 articles - HIGH / BEARISH - Copper Climbs as Lower Dollar, AI Rally Counter Rate Concerns"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Bonds & Fixed Income - 8 articles - HIGH / BULLISH - Bond Traders Burned by Fed\u2019s Pivot Look to Prices Gauge, Oil"
+      "text": "Commodities & Mining - 6 articles - HIGH / BEARISH - Copper rebounds on bargain hunting amid softer dollar, firmer risk appetite"
     },
     {
       "tag": "tag-bear",
@@ -947,9 +974,9 @@
       "text": "Banking & Financial Sector - 9 articles - HIGH / BULLISH - Traders boost US rate-hike bets on hawkish Fed"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Defense & Aerospace - 28 articles - HIGH / BULLISH - Ukraine launches \u2018TrophyLab\u2019 platform to share captured Russian weapons with allies"
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Clean Energy & Renewables - 6 articles - MEDIUM / BEARISH - Slate&#8217;s electric truck: all the news about the ultra-minimal EV"
     },
     {
       "tag": "tag-bear",
@@ -957,9 +984,9 @@
       "text": "Asia Pacific Equity + Technology & AI / Semiconductors - 12 articles - HIGH / BEARISH - Global Market: BOJ policymakers push for faster rate hikes as inflation risks mount"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Clean Energy & Renewables + Europe Equity - 6 articles - MEDIUM / BEARISH - Denmark and Germany Launch Europe\u2019s First Hydrogen Superhighway"
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Healthcare & Pharma - 4 articles - MEDIUM / BULLISH - US Airline Stocks Erase Pandemic-Era Losses as Oil Prices Ease"
     },
     {
       "tag": "tag-bear",
@@ -967,9 +994,9 @@
       "text": "Europe Equity - 10 articles - HIGH / BEARISH - Euro zone yields fall as investors cut bets on ECB hikes"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Healthcare & Pharma - 3 articles - HIGH / BULLISH - India's CDMO industry set for global shift as pharma diversifies beyond China: Sai Life Sciences"
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Defense & Aerospace + Europe Equity - 13 articles - HIGH / BEARISH - NATO needs to see a credible trajectory for when the UK will be ready for war - and that is no longer in Sir Keir's gift"
     },
     {
       "tag": "tag-bull",
@@ -982,55 +1009,55 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7367.01,
+      "price": 7363.02,
       "currency": "USD",
-      "change": 8.79,
-      "change_pct": 0.12,
-      "change_str": "+0.12%",
+      "change": 4.8,
+      "change_pct": 0.07,
+      "change_str": "+0.07%",
       "direction": "up"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 25281.65,
+      "price": 25344.36,
       "currency": "USD",
-      "change": -194.99,
-      "change_pct": -0.77,
-      "change_str": "-0.77%",
+      "change": -132.28,
+      "change_pct": -0.52,
+      "change_str": "-0.52%",
       "direction": "down"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 52447.85,
+      "price": 52132.23,
       "currency": "USD",
-      "change": 598.95,
-      "change_pct": 1.16,
-      "change_str": "+1.16%",
+      "change": 283.33,
+      "change_pct": 0.55,
+      "change_str": "+0.55%",
       "direction": "up"
     },
     {
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10537.05,
+      "price": 10529.89,
       "currency": "GBP",
-      "change": 75.45,
-      "change_pct": 0.72,
-      "change_str": "+0.72%",
+      "change": 68.29,
+      "change_pct": 0.65,
+      "change_str": "+0.65%",
       "direction": "up"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 24913.95,
+      "price": 24994.83,
       "currency": "EUR",
-      "change": 173.59,
-      "change_pct": 0.7,
-      "change_str": "+0.70%",
+      "change": 254.47,
+      "change_pct": 1.03,
+      "change_str": "+1.03%",
       "direction": "up"
     },
     {
@@ -1039,9 +1066,9 @@
       "region": "JP",
       "price": 72366.34,
       "currency": "JPY",
-      "change": 3191.37,
-      "change_pct": 4.61,
-      "change_str": "+4.61%",
+      "change": 2577.96,
+      "change_pct": 3.69,
+      "change_str": "+3.69%",
       "direction": "up"
     },
     {
@@ -1050,9 +1077,9 @@
       "region": "HK",
       "price": 23076.91,
       "currency": "HKD",
-      "change": -335.27,
-      "change_pct": -1.43,
-      "change_str": "-1.43%",
+      "change": -259.37,
+      "change_pct": -1.11,
+      "change_str": "-1.11%",
       "direction": "down"
     },
     {
@@ -1070,66 +1097,72 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4031.6,
+      "price": 4059.0,
       "currency": "USD",
-      "change": 41.3,
-      "change_pct": 1.04,
-      "change_str": "+1.04%",
+      "change": 68.7,
+      "change_pct": 1.72,
+      "change_str": "+1.72%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 70.43,
+      "price": 71.63,
       "currency": "USD",
-      "change": 0.09,
-      "change_pct": 0.13,
-      "change_str": "+0.13%",
+      "change": 1.29,
+      "change_pct": 1.83,
+      "change_str": "+1.83%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 58844.2,
+      "price": 59414.97,
       "currency": "USD",
-      "change": -2150.93,
-      "change_pct": -3.53,
-      "change_str": "-3.53%",
+      "change": -1580.16,
+      "change_pct": -2.59,
+      "change_str": "-2.59%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.4,
+      "price": 101.32,
       "currency": "USD",
-      "change": -0.21,
-      "change_pct": -0.21,
-      "change_str": "-0.21%",
+      "change": -0.29,
+      "change_pct": -0.28,
+      "change_str": "-0.28%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 19.37,
+      "price": 18.62,
       "currency": "USD",
-      "change": 0.74,
-      "change_pct": 3.97,
-      "change_str": "+3.97%",
-      "direction": "up"
+      "change": -0.01,
+      "change_pct": -0.05,
+      "change_str": "-0.05%",
+      "direction": "down"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.0,
+    "drawdown_from_peak_pct": 8.43,
     "portfolio_peak": 10000.0,
-    "vix": 19.37,
+    "vix": 18.62,
     "vix_regime": "ELEVATED",
-    "sector_concentration": [],
-    "max_drawdown_pct": 0.0,
+    "sector_concentration": [
+      {
+        "sector": "Bonds & Fixed Income",
+        "weight": 21.2,
+        "at_cap": false
+      }
+    ],
+    "max_drawdown_pct": 8.43,
     "sector_cap_pct": 30,
     "trailing_stop_pct": 8,
     "hard_stop_pct": 10,
@@ -1140,39 +1173,130 @@
       "matrix": {},
       "tickers": [],
       "max_corr": 0.0,
-      "max_corr_pair": [],
+      "max_corr_pair": [
+        "",
+        ""
+      ],
       "most_negative_corr": 0.0,
-      "most_negative_pair": [],
+      "most_negative_pair": [
+        "",
+        ""
+      ],
       "status": "OK"
     },
     "volatility": {
-      "per_ticker": {},
-      "portfolio_avg_vol_pct": 0.0,
+      "per_ticker": {
+        "BND": 4.08
+      },
+      "portfolio_avg_vol_pct": 4.08,
       "target_vol_pct": 15.0
     },
     "benchmark": {
       "benchmark_return_pct": 0.0,
-      "benchmark_price_start": 0,
-      "benchmark_price_now": 0,
+      "benchmark_price_start": 733.46,
+      "benchmark_price_now": 733.46,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": 0.0,
-      "alpha": 0.0
+      "portfolio_return_pct": -8.43,
+      "alpha": -8.43
     },
     "rebalance": {
-      "alerts": [],
+      "alerts": [
+        {
+          "ticker": "BND",
+          "actual_weight_pct": 21.17,
+          "target_weight_pct": 90.0,
+          "drift_pct": -68.83,
+          "action": "ADD",
+          "amount": 6302.57,
+          "etf_name": "Vanguard Total Bond Market ETF",
+          "regime_note": ""
+        },
+        {
+          "ticker": "CASH",
+          "actual_weight_pct": 78.83,
+          "target_weight_pct": 10.0,
+          "drift_pct": 68.83,
+          "action": "DEPLOY",
+          "amount": 6302.58,
+          "etf_name": "Cash Reserve",
+          "regime_note": ""
+        }
+      ],
       "drift_threshold_pct": 5.0,
-      "needs_rebalance": false
+      "needs_rebalance": true
     },
     "stress_test": {
-      "scenarios": {},
-      "worst_scenario": "",
-      "worst_loss_pct": 0.0
+      "scenarios": {
+        "2008_GFC": {
+          "total_impact": 193.89,
+          "portfolio_loss_pct": 2.12,
+          "position_impacts": [
+            {
+              "ticker": "BND",
+              "factor": "bonds",
+              "shock_pct": 10.0,
+              "impact": 193.89
+            }
+          ]
+        },
+        "2020_COVID": {
+          "total_impact": 96.94,
+          "portfolio_loss_pct": 1.06,
+          "position_impacts": [
+            {
+              "ticker": "BND",
+              "factor": "bonds",
+              "shock_pct": 5.0,
+              "impact": 96.94
+            }
+          ]
+        },
+        "RATES_SHOCK_+2%": {
+          "total_impact": -232.67,
+          "portfolio_loss_pct": -2.54,
+          "position_impacts": [
+            {
+              "ticker": "BND",
+              "factor": "bonds",
+              "shock_pct": -12.0,
+              "impact": -232.67
+            }
+          ]
+        },
+        "USD_SPIKE_+10%": {
+          "total_impact": 38.78,
+          "portfolio_loss_pct": 0.42,
+          "position_impacts": [
+            {
+              "ticker": "BND",
+              "factor": "bonds",
+              "shock_pct": 2.0,
+              "impact": 38.78
+            }
+          ]
+        },
+        "VIX_SPIKE_40": {
+          "total_impact": 77.56,
+          "portfolio_loss_pct": 0.85,
+          "position_impacts": [
+            {
+              "ticker": "BND",
+              "factor": "bonds",
+              "shock_pct": 4.0,
+              "impact": 77.56
+            }
+          ]
+        }
+      },
+      "worst_scenario": "RATES_SHOCK_+2%",
+      "worst_loss_pct": -2.54
     }
   },
   "logs": [
-    "2026-06-25 14:17:53 [INFO] AZALYST - status.json generated",
-    "2026-06-25 14:17:53 [INFO] PORTFOLIO - NAV USD 10,000.00 | Return +0.00%",
-    "2026-06-25 14:17:53 [INFO] SIGNALS - 15 active signal buckets in state"
+    "2026-06-25 16:32:53 [INFO] AZALYST - status.json generated",
+    "2026-06-25 16:32:53 [INFO] PORTFOLIO - NAV USD 9,157.19 | Return -8.43%",
+    "2026-06-25 16:32:53 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-25 16:32:53 [INFO] TRADER - Open positions: BND"
   ],
-  "generated_at": "2026-06-25 14:17:51 UTC"
+  "generated_at": "2026-06-25 16:32:50 UTC"
 }
