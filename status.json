@@ -1,21 +1,21 @@
 {
-  "portfolio_value": 9157.19,
+  "portfolio_value": 8340.55,
   "total_deposited": 10000.0,
-  "cash": 7218.3,
+  "cash": 6402.57,
   "monthly_reserve": 0.0,
-  "market_value": 1938.9,
+  "market_value": 1937.98,
   "total_invested": 1940.0,
-  "unrealised_pnl": -1.1,
-  "unrealised_str": "-1.10",
+  "unrealised_pnl": -2.02,
+  "unrealised_str": "-2.02",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "-8.43%",
-  "change_raw": -8.43,
+  "change": "-16.59%",
+  "change_raw": -16.59,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 10000.0,
-  "drawdown_now_pct": 8.43,
-  "max_drawdown_pct": 8.43,
+  "drawdown_now_pct": 16.59,
+  "max_drawdown_pct": 16.59,
   "usd_inr_rate": 94.385,
   "positions": [
     {
@@ -26,16 +26,16 @@
       "platform": "Vanguard \u2014 IBKR / Fidelity / Schwab",
       "exchange": "NASDAQ",
       "entry": 73.68,
-      "current": 73.64,
+      "current": 73.61,
       "peak_price": 73.68,
       "trail_stop": 70.0,
-      "dist_to_trail_pct": 4.96,
+      "dist_to_trail_pct": 4.91,
       "units": 26.327636,
       "invested": 1940.0,
-      "pnl": -0.91,
-      "pnl_str": "-0.91",
-      "pnl_pct": -0.05,
-      "pnl_pct_str": "-0.05%",
+      "pnl": -1.83,
+      "pnl_str": "-1.83",
+      "pnl_pct": -0.09,
+      "pnl_pct_str": "-0.09%",
       "confidence": 82,
       "severity": "HIGH",
       "days_held": 0,
@@ -58,30 +58,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "HIGH_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.1317279613200512,
+    "vix_level": 18.579999923706055,
+    "vix_percentile_1y": 0.6944444444444444,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
-      "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "rank": 18,
+      "flow": 18,
+      "options": 28,
+      "rotation": 12,
+      "macro": 12,
+      "news": 12
     }
   },
   "top_signal": {
     "ticker": "XLK",
-    "rank_score": 6.379024390243902,
-    "flow_score": 13.847734744686443,
-    "options_score": 16.799999999999997,
+    "rank_score": 6.843823975720789,
+    "flow_score": 7.296404401505017,
+    "options_score": 18.2,
     "rotation_score": 12.0,
-    "macro_score": 2.1235252285827264,
+    "macro_score": 1.9725522175116592,
     "news_score": 6.720000000000001,
-    "total": 57.87028436351307,
+    "total": 53.03278059473747,
     "publish": false,
     "direction": "short"
   },
@@ -91,8 +91,8 @@
       "CASH"
     ],
     "values": [
-      21.2,
-      78.8
+      23.2,
+      76.8
     ]
   },
   "pnl": {
@@ -100,7 +100,7 @@
       "BND"
     ],
     "values": [
-      -0.91
+      -1.83
     ]
   },
   "confidence": [
@@ -109,12 +109,12 @@
       "score": 94.0
     },
     {
-      "symbol": "Gold & Precious Metals",
-      "score": 92.0
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 91.0
     },
     {
       "symbol": "Crypto & Digital Assets",
-      "score": 91.0
+      "score": 90.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -221,28 +221,28 @@
     },
     {
       "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 92.0,
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 91.0,
       "severity": "HIGH",
       "direction": "BEARISH",
-      "direction_score": -6.0,
+      "direction_score": -13.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 15,
-      "latest_at": "25 Jun 2026 12:51 UTC",
-      "headline": "Vedanta, NALCO, Hindustan Zinc shares fall up to 3% as silver, aluminium, other metal prices tumble. Here's why",
+      "article_count": 12,
+      "latest_at": "25 Jun 2026 16:25 UTC",
+      "headline": "Treasuries Gain as Inflation Gauge Cools Fed Rate-Hike Bets",
       "regions": [
+        "asia_pacific",
         "americas",
         "global",
-        "middle_east",
-        "asia_pacific"
+        "middle_east"
       ],
       "sources": [
-        "Finance",
         "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
+        "Oilprice.com",
+        "www.theregister.com - Articles",
+        "Bloomberg Markets"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -265,35 +265,35 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 21.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 13.4,
-        "recency": 15.7,
+        "signal_strength": 22.0,
+        "volume_confirmation": 17.4,
+        "source_diversity": 14.0,
+        "recency": 13.7,
         "geopolitical_severity": 13.0
       }
     },
     {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
-      "confidence": 91.0,
+      "confidence": 90.0,
       "severity": "HIGH",
       "direction": "BEARISH",
-      "direction_score": -5.5,
+      "direction_score": 1.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "25 Jun 2026 13:19 UTC",
+      "article_count": 24,
+      "latest_at": "25 Jun 2026 18:05 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "europe",
+        "asia_pacific",
         "americas",
-        "global",
-        "asia_pacific"
+        "europe",
+        "global"
       ],
       "sources": [
         "US Top News and Analysis",
-        "Cointelegraph.com News",
+        "Bloomberg Markets",
         "Markets-Economic Times",
         "Tech"
       ],
@@ -314,8 +314,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 12.0,
-        "recency": 16.5,
+        "source_diversity": 12.8,
+        "recency": 16.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -936,12 +936,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Gold & Precious Metals - 15 articles - HIGH / BEARISH - Vedanta, NALCO, Hindustan Zinc shares fall up to 3% as silver, aluminium, other metal prices tumble. Here's why"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BEARISH - Treasuries Gain as Inflation Gauge Cools Fed Rate-Hike Bets"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Crypto & Digital Assets - 23 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
+      "text": "Crypto & Digital Assets - 24 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
@@ -1009,33 +1009,33 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7363.02,
+      "price": 7369.67,
       "currency": "USD",
-      "change": 4.8,
-      "change_pct": 0.07,
-      "change_str": "+0.07%",
+      "change": 11.45,
+      "change_pct": 0.16,
+      "change_str": "+0.16%",
       "direction": "up"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 25344.36,
+      "price": 25415.84,
       "currency": "USD",
-      "change": -132.28,
-      "change_pct": -0.52,
-      "change_str": "-0.52%",
+      "change": -60.8,
+      "change_pct": -0.24,
+      "change_str": "-0.24%",
       "direction": "down"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 52132.23,
+      "price": 51974.0,
       "currency": "USD",
-      "change": 283.33,
-      "change_pct": 0.55,
-      "change_str": "+0.55%",
+      "change": 125.1,
+      "change_pct": 0.24,
+      "change_str": "+0.24%",
       "direction": "up"
     },
     {
@@ -1088,81 +1088,81 @@
       "region": "IN",
       "price": 24056.0,
       "currency": "INR",
-      "change": 34.35,
-      "change_pct": 0.14,
-      "change_str": "+0.14%",
+      "change": 231.9,
+      "change_pct": 0.97,
+      "change_str": "+0.97%",
       "direction": "up"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4059.0,
+      "price": 4050.7,
       "currency": "USD",
-      "change": 68.7,
-      "change_pct": 1.72,
-      "change_str": "+1.72%",
+      "change": 60.4,
+      "change_pct": 1.51,
+      "change_str": "+1.51%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 71.63,
+      "price": 72.14,
       "currency": "USD",
-      "change": 1.29,
-      "change_pct": 1.83,
-      "change_str": "+1.83%",
+      "change": 1.8,
+      "change_pct": 2.56,
+      "change_str": "+2.56%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 59414.97,
+      "price": 59345.91,
       "currency": "USD",
-      "change": -1580.16,
-      "change_pct": -2.59,
-      "change_str": "-2.59%",
+      "change": -1649.22,
+      "change_pct": -2.7,
+      "change_str": "-2.70%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.32,
+      "price": 101.4,
       "currency": "USD",
-      "change": -0.29,
-      "change_pct": -0.28,
-      "change_str": "-0.28%",
+      "change": -0.21,
+      "change_pct": -0.2,
+      "change_str": "-0.20%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 18.62,
+      "price": 18.58,
       "currency": "USD",
-      "change": -0.01,
-      "change_pct": -0.05,
-      "change_str": "-0.05%",
+      "change": -0.05,
+      "change_pct": -0.27,
+      "change_str": "-0.27%",
       "direction": "down"
     }
   ],
   "risk_controls": {
-    "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 8.43,
+    "circuit_breaker_active": true,
+    "drawdown_from_peak_pct": 16.59,
     "portfolio_peak": 10000.0,
-    "vix": 18.62,
+    "vix": 18.58,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
         "sector": "Bonds & Fixed Income",
-        "weight": 21.2,
+        "weight": 23.2,
         "at_cap": false
       }
     ],
-    "max_drawdown_pct": 8.43,
+    "max_drawdown_pct": 16.59,
     "sector_cap_pct": 30,
     "trailing_stop_pct": 8,
     "hard_stop_pct": 10,
@@ -1186,38 +1186,38 @@
     },
     "volatility": {
       "per_ticker": {
-        "BND": 4.08
+        "BND": 4.06
       },
-      "portfolio_avg_vol_pct": 4.08,
+      "portfolio_avg_vol_pct": 4.06,
       "target_vol_pct": 15.0
     },
     "benchmark": {
       "benchmark_return_pct": 0.0,
-      "benchmark_price_start": 733.46,
-      "benchmark_price_now": 733.46,
+      "benchmark_price_start": 734.14,
+      "benchmark_price_now": 734.14,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -8.43,
-      "alpha": -8.43
+      "portfolio_return_pct": -16.59,
+      "alpha": -16.59
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "BND",
-          "actual_weight_pct": 21.17,
+          "actual_weight_pct": 23.24,
           "target_weight_pct": 90.0,
-          "drift_pct": -68.83,
+          "drift_pct": -66.76,
           "action": "ADD",
-          "amount": 6302.57,
+          "amount": 5568.52,
           "etf_name": "Vanguard Total Bond Market ETF",
           "regime_note": ""
         },
         {
           "ticker": "CASH",
-          "actual_weight_pct": 78.83,
+          "actual_weight_pct": 76.76,
           "target_weight_pct": 10.0,
-          "drift_pct": 68.83,
+          "drift_pct": 66.76,
           "action": "DEPLOY",
-          "amount": 6302.58,
+          "amount": 5568.52,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         }
@@ -1228,75 +1228,76 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": 193.89,
-          "portfolio_loss_pct": 2.12,
+          "total_impact": 193.8,
+          "portfolio_loss_pct": 2.32,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 10.0,
-              "impact": 193.89
+              "impact": 193.8
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": 96.94,
-          "portfolio_loss_pct": 1.06,
+          "total_impact": 96.9,
+          "portfolio_loss_pct": 1.16,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 5.0,
-              "impact": 96.94
+              "impact": 96.9
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -232.67,
-          "portfolio_loss_pct": -2.54,
+          "total_impact": -232.56,
+          "portfolio_loss_pct": -2.79,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": -12.0,
-              "impact": -232.67
+              "impact": -232.56
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": 38.78,
-          "portfolio_loss_pct": 0.42,
+          "total_impact": 38.76,
+          "portfolio_loss_pct": 0.46,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 2.0,
-              "impact": 38.78
+              "impact": 38.76
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": 77.56,
-          "portfolio_loss_pct": 0.85,
+          "total_impact": 77.52,
+          "portfolio_loss_pct": 0.93,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 4.0,
-              "impact": 77.56
+              "impact": 77.52
             }
           ]
         }
       },
       "worst_scenario": "RATES_SHOCK_+2%",
-      "worst_loss_pct": -2.54
+      "worst_loss_pct": -2.79
     }
   },
   "logs": [
-    "2026-06-25 16:32:53 [INFO] AZALYST - status.json generated",
-    "2026-06-25 16:32:53 [INFO] PORTFOLIO - NAV USD 9,157.19 | Return -8.43%",
-    "2026-06-25 16:32:53 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-25 16:32:53 [INFO] TRADER - Open positions: BND"
+    "2026-06-25 18:44:30 [INFO] AZALYST - status.json generated",
+    "2026-06-25 18:44:30 [INFO] PORTFOLIO - NAV USD 8,340.55 | Return -16.59%",
+    "2026-06-25 18:44:30 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-25 18:44:30 [INFO] TRADER - Open positions: BND",
+    "2026-06-25 18:44:30 [WARN] RISK - Circuit breaker threshold reached"
   ],
-  "generated_at": "2026-06-25 16:32:50 UTC"
+  "generated_at": "2026-06-25 18:44:27 UTC"
 }
