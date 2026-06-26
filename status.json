@@ -61,9 +61,9 @@
     "risk_state": "RISK_ON",
     "vol_regime": "HIGH_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.13207825603245074,
-    "vix_level": 20.170000076293945,
-    "vix_percentile_1y": 0.8055555555555556,
+    "spy_excess_vs_tbill_3m": 0.13205325605629262,
+    "vix_level": 19.959999084472656,
+    "vix_percentile_1y": 0.7976190476190477,
     "weight_matrix": {
       "rank": 18,
       "flow": 18,
@@ -77,11 +77,11 @@
     "ticker": "SOXX",
     "rank_score": 9.006782215523739,
     "flow_score": 18.0,
-    "options_score": 16.799999999999997,
+    "options_score": 22.416325719639385,
     "rotation_score": 12.0,
     "macro_score": 0.0,
     "news_score": 6.720000000000001,
-    "total": 62.52678221552374,
+    "total": 68.14310793516313,
     "publish": true,
     "direction": "long"
   },
@@ -113,12 +113,12 @@
       "score": 93.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 90.0
+      "symbol": "Crypto & Digital Assets",
+      "score": 91.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 86.0
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 90.0
     },
     {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
@@ -273,6 +273,53 @@
       }
     },
     {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 91.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 25,
+      "latest_at": "26 Jun 2026 12:05 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "europe",
+        "india",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Finance",
+        "Cointelegraph.com News",
+        "Bloomberg Markets",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.8,
+        "recency": 16.2,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
       "confidence": 90.0,
@@ -322,52 +369,6 @@
         "volume_confirmation": 17.4,
         "source_diversity": 12.1,
         "recency": 14.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 86.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": 1.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "26 Jun 2026 06:04 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "india",
-        "americas",
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 9.1,
-        "recency": 15.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -940,12 +941,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - CRITICAL / BEARISH - Gold poised for fourth weekly loss as hawkish Fed bets buoy dollar"
+      "text": "Crypto & Digital Assets - 25 articles - CRITICAL / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Crypto & Digital Assets - 24 articles - CRITICAL / BEARISH - Here\u2019s what happened in crypto today"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - CRITICAL / BEARISH - Gold poised for fourth weekly loss as hawkish Fed bets buoy dollar"
     },
     {
       "tag": "tag-bull",
@@ -1041,22 +1042,22 @@
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10452.99,
+      "price": 10425.88,
       "currency": "GBP",
-      "change": -76.91,
-      "change_pct": -0.73,
-      "change_str": "-0.73%",
+      "change": -104.02,
+      "change_pct": -0.99,
+      "change_str": "-0.99%",
       "direction": "down"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 24697.14,
+      "price": 24682.73,
       "currency": "EUR",
-      "change": -297.69,
-      "change_pct": -1.19,
-      "change_str": "-1.19%",
+      "change": -312.1,
+      "change_pct": -1.25,
+      "change_str": "-1.25%",
       "direction": "down"
     },
     {
@@ -1096,33 +1097,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4062.6,
+      "price": 4061.4,
       "currency": "USD",
-      "change": 32.1,
-      "change_pct": 0.8,
-      "change_str": "+0.80%",
+      "change": 30.9,
+      "change_pct": 0.77,
+      "change_str": "+0.77%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 69.31,
+      "price": 69.69,
       "currency": "USD",
-      "change": -2.61,
-      "change_pct": -3.63,
-      "change_str": "-3.63%",
+      "change": -2.23,
+      "change_pct": -3.1,
+      "change_str": "-3.10%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 59659.35,
+      "price": 59371.57,
       "currency": "USD",
-      "change": -62.33,
-      "change_pct": -0.1,
-      "change_str": "-0.10%",
+      "change": -350.11,
+      "change_pct": -0.59,
+      "change_str": "-0.59%",
       "direction": "down"
     },
     {
@@ -1140,11 +1141,11 @@
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 20.17,
+      "price": 19.96,
       "currency": "USD",
-      "change": 1.28,
-      "change_pct": 6.78,
-      "change_str": "+6.78%",
+      "change": 1.07,
+      "change_pct": 5.66,
+      "change_str": "+5.66%",
       "direction": "up"
     }
   ],
@@ -1152,7 +1153,7 @@
     "circuit_breaker_active": true,
     "drawdown_from_peak_pct": 16.6,
     "portfolio_peak": 10000.0,
-    "vix": 20.17,
+    "vix": 19.96,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -1292,11 +1293,11 @@
     }
   },
   "logs": [
-    "2026-06-26 10:29:34 [INFO] AZALYST - status.json generated",
-    "2026-06-26 10:29:34 [INFO] PORTFOLIO - NAV USD 8,340.29 | Return -16.60%",
-    "2026-06-26 10:29:34 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-26 10:29:34 [INFO] TRADER - Open positions: BND",
-    "2026-06-26 10:29:34 [WARN] RISK - Circuit breaker threshold reached"
+    "2026-06-26 12:39:07 [INFO] AZALYST - status.json generated",
+    "2026-06-26 12:39:07 [INFO] PORTFOLIO - NAV USD 8,340.29 | Return -16.60%",
+    "2026-06-26 12:39:07 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-26 12:39:07 [INFO] TRADER - Open positions: BND",
+    "2026-06-26 12:39:07 [WARN] RISK - Circuit breaker threshold reached"
   ],
-  "generated_at": "2026-06-26 10:29:32 UTC"
+  "generated_at": "2026-06-26 12:39:06 UTC"
 }
