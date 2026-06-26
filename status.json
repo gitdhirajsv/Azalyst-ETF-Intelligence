@@ -58,31 +58,31 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "HIGH_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.13207825603245074,
+    "vix_level": 20.170000076293945,
+    "vix_percentile_1y": 0.8055555555555556,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
-      "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "rank": 18,
+      "flow": 18,
+      "options": 28,
+      "rotation": 12,
+      "macro": 12,
+      "news": 12
     }
   },
   "top_signal": {
     "ticker": "SOXX",
     "rank_score": 9.006782215523739,
     "flow_score": 18.0,
-    "options_score": 0.0,
+    "options_score": 16.799999999999997,
     "rotation_score": 12.0,
     "macro_score": 0.0,
     "news_score": 6.720000000000001,
-    "total": 45.72678221552374,
-    "publish": false,
+    "total": 62.52678221552374,
+    "publish": true,
     "direction": "long"
   },
   "allocation": {
@@ -107,6 +107,10 @@
     {
       "symbol": "Energy / Oil & Gas",
       "score": 94.0
+    },
+    {
+      "symbol": "Defense & Aerospace",
+      "score": 93.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
@@ -143,10 +147,6 @@
     {
       "symbol": "Healthcare & Pharma",
       "score": 69.0
-    },
-    {
-      "symbol": "Defense & Aerospace",
-      "score": 66.0
     },
     {
       "symbol": "Asia Pacific Equity + Technology & AI / Semiconductors",
@@ -216,6 +216,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.9,
         "recency": 15.1,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 93.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "26 Jun 2026 10:20 UTC",
+      "headline": "Ukraine\u2019s top strike-drone maker moves into ballistic missile defense",
+      "regions": [
+        "asia_pacific",
+        "europe",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Latest from Tom's Hardware",
+        "World | Deutsche Welle",
+        "Defense News",
+        "BBC News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.2,
+        "recency": 17.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -674,59 +727,6 @@
       }
     },
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 66.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 21,
-      "latest_at": "26 Jun 2026 02:48 UTC",
-      "headline": "Ukraine\u2019s top strike-drone maker moves into ballistic missile defense",
-      "regions": [
-        "middle_east",
-        "global",
-        "asia_pacific",
-        "europe"
-      ],
-      "sources": [
-        "Semiconductor Engineering",
-        "US Top News and Analysis",
-        "World | Deutsche Welle",
-        "www.theregister.com - Articles"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 21.7,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.7,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity + Technology & AI / Semiconductors",
       "confidence": 65.0,
@@ -935,6 +935,11 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Defense & Aerospace - 24 articles - HIGH / BEARISH - Ukraine\u2019s top strike-drone maker moves into ballistic missile defense"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - CRITICAL / BEARISH - Gold poised for fourth weekly loss as hawkish Fed bets buoy dollar"
     },
     {
@@ -976,11 +981,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Healthcare & Pharma - 4 articles - HIGH / BULLISH - Moderna's Flu Vaccine Moves Closer to FDA Approval"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Defense & Aerospace - 21 articles - HIGH / BEARISH - Ukraine\u2019s top strike-drone maker moves into ballistic missile defense"
     },
     {
       "tag": "tag-bear",
@@ -1041,23 +1041,23 @@
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10529.89,
+      "price": 10452.99,
       "currency": "GBP",
-      "change": 68.29,
-      "change_pct": 0.65,
-      "change_str": "+0.65%",
-      "direction": "up"
+      "change": -76.91,
+      "change_pct": -0.73,
+      "change_str": "-0.73%",
+      "direction": "down"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 24994.83,
+      "price": 24697.14,
       "currency": "EUR",
-      "change": 254.47,
-      "change_pct": 1.03,
-      "change_str": "+1.03%",
-      "direction": "up"
+      "change": -297.69,
+      "change_pct": -1.19,
+      "change_str": "-1.19%",
+      "direction": "down"
     },
     {
       "label": "Nikkei 225",
@@ -1074,11 +1074,11 @@
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 22659.08,
+      "price": 22671.86,
       "currency": "HKD",
-      "change": -417.83,
-      "change_pct": -1.81,
-      "change_str": "-1.81%",
+      "change": -405.05,
+      "change_pct": -1.76,
+      "change_str": "-1.76%",
       "direction": "down"
     },
     {
@@ -1096,55 +1096,55 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4042.4,
+      "price": 4062.6,
       "currency": "USD",
-      "change": 11.9,
-      "change_pct": 0.3,
-      "change_str": "+0.30%",
+      "change": 32.1,
+      "change_pct": 0.8,
+      "change_str": "+0.80%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 70.49,
+      "price": 69.31,
       "currency": "USD",
-      "change": -1.43,
-      "change_pct": -1.99,
-      "change_str": "-1.99%",
+      "change": -2.61,
+      "change_pct": -3.63,
+      "change_str": "-3.63%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 60225.56,
+      "price": 59659.35,
       "currency": "USD",
-      "change": 503.88,
-      "change_pct": 0.84,
-      "change_str": "+0.84%",
-      "direction": "up"
+      "change": -62.33,
+      "change_pct": -0.1,
+      "change_str": "-0.10%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.39,
+      "price": 101.21,
       "currency": "USD",
-      "change": -0.04,
-      "change_pct": -0.04,
-      "change_str": "-0.04%",
+      "change": -0.22,
+      "change_pct": -0.22,
+      "change_str": "-0.22%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 18.89,
+      "price": 20.17,
       "currency": "USD",
-      "change": 0.26,
-      "change_pct": 1.4,
-      "change_str": "+1.40%",
+      "change": 1.28,
+      "change_pct": 6.78,
+      "change_str": "+6.78%",
       "direction": "up"
     }
   ],
@@ -1152,7 +1152,7 @@
     "circuit_breaker_active": true,
     "drawdown_from_peak_pct": 16.6,
     "portfolio_peak": 10000.0,
-    "vix": 18.89,
+    "vix": 20.17,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -1292,11 +1292,11 @@
     }
   },
   "logs": [
-    "2026-06-26 06:58:18 [INFO] AZALYST - status.json generated",
-    "2026-06-26 06:58:18 [INFO] PORTFOLIO - NAV USD 8,340.29 | Return -16.60%",
-    "2026-06-26 06:58:18 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-26 06:58:18 [INFO] TRADER - Open positions: BND",
-    "2026-06-26 06:58:18 [WARN] RISK - Circuit breaker threshold reached"
+    "2026-06-26 10:29:34 [INFO] AZALYST - status.json generated",
+    "2026-06-26 10:29:34 [INFO] PORTFOLIO - NAV USD 8,340.29 | Return -16.60%",
+    "2026-06-26 10:29:34 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-26 10:29:34 [INFO] TRADER - Open positions: BND",
+    "2026-06-26 10:29:34 [WARN] RISK - Circuit breaker threshold reached"
   ],
-  "generated_at": "2026-06-26 06:58:17 UTC"
+  "generated_at": "2026-06-26 10:29:32 UTC"
 }
