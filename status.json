@@ -1,22 +1,22 @@
 {
-  "portfolio_value": 8342.26,
-  "total_deposited": 10000.0,
-  "cash": 6402.57,
+  "portfolio_value": 8349.65,
+  "total_deposited": 10009.01,
+  "cash": 6408.34,
   "monthly_reserve": 0.0,
-  "market_value": 1939.69,
-  "total_invested": 1940.0,
-  "unrealised_pnl": -0.31,
-  "unrealised_str": "-0.31",
+  "market_value": 1941.31,
+  "total_invested": 1941.75,
+  "unrealised_pnl": -0.44,
+  "unrealised_str": "-0.44",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
   "change": "-16.58%",
   "change_raw": -16.58,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 10000.0,
+  "portfolio_peak": 10009.01,
   "drawdown_now_pct": 16.58,
   "max_drawdown_pct": 16.6,
-  "usd_inr_rate": 94.385,
+  "usd_inr_rate": 94.3,
   "positions": [
     {
       "trade_id": "T0001",
@@ -25,15 +25,15 @@
       "sector": "Bonds & Fixed Income",
       "platform": "Vanguard \u2014 IBKR / Fidelity / Schwab",
       "exchange": "NASDAQ",
-      "entry": 73.68,
-      "current": 73.68,
-      "peak_price": 73.7,
-      "trail_stop": 70.0,
+      "entry": 73.75,
+      "current": 73.74,
+      "peak_price": 73.77,
+      "trail_stop": 70.06,
       "dist_to_trail_pct": 4.99,
       "units": 26.327636,
-      "invested": 1940.0,
-      "pnl": -0.12,
-      "pnl_str": "-0.12",
+      "invested": 1941.75,
+      "pnl": -0.25,
+      "pnl_str": "-0.25",
       "pnl_pct": -0.01,
       "pnl_pct_str": "-0.01%",
       "confidence": 82,
@@ -61,9 +61,9 @@
     "risk_state": "RISK_ON",
     "vol_regime": "HIGH_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.14857459131360026,
-    "vix_level": 18.829999923706055,
-    "vix_percentile_1y": 0.7142857142857143,
+    "spy_excess_vs_tbill_3m": 0.1434675849583111,
+    "vix_level": 18.40999984741211,
+    "vix_percentile_1y": 0.6785714285714286,
     "weight_matrix": {
       "rank": 18,
       "flow": 18,
@@ -74,15 +74,15 @@
     }
   },
   "top_signal": {
-    "ticker": "XLF",
-    "rank_score": 11.065034013605443,
-    "flow_score": 11.670850508275036,
-    "options_score": 22.641286240350023,
-    "rotation_score": 12.0,
+    "ticker": "IWM",
+    "rank_score": 10.559277108433735,
+    "flow_score": 18.0,
+    "options_score": 27.299999999999997,
+    "rotation_score": 0.0,
     "macro_score": 0.0,
-    "news_score": 8.16,
-    "total": 65.5371707622305,
-    "publish": true,
+    "news_score": 0.0,
+    "total": 55.85927710843373,
+    "publish": false,
     "direction": "long"
   },
   "allocation": {
@@ -100,7 +100,7 @@
       "BND"
     ],
     "values": [
-      -0.12
+      -0.25
     ]
   },
   "confidence": [
@@ -117,16 +117,16 @@
       "score": 92.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 91.0
-    },
-    {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
       "score": 85.0
     },
     {
       "symbol": "Bonds & Fixed Income",
       "score": 82.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 81.0
     },
     {
       "symbol": "Emerging Markets",
@@ -137,27 +137,27 @@
       "score": 78.0
     },
     {
-      "symbol": "Commodities & Mining",
-      "score": 73.0
-    },
-    {
-      "symbol": "Healthcare & Pharma + Commodities & Mining",
-      "score": 71.0
+      "symbol": "Clean Energy & Renewables",
+      "score": 70.0
     },
     {
       "symbol": "Technology & AI / Semiconductors",
       "score": 70.0
     },
     {
+      "symbol": "Commodities & Mining",
+      "score": 66.0
+    },
+    {
       "symbol": "Asia Pacific Equity + Technology & AI / Semiconductors",
       "score": 65.0
     },
     {
-      "symbol": "Clean Energy & Renewables",
+      "symbol": "Europe Equity",
       "score": 64.0
     },
     {
-      "symbol": "Europe Equity",
+      "symbol": "Healthcare & Pharma",
       "score": 64.0
     },
     {
@@ -326,53 +326,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 91.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "26 Jun 2026 12:05 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "europe",
-        "india",
-        "americas",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Finance",
-        "Cointelegraph.com News",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.8,
-        "recency": 16.2,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
       "confidence": 85.0,
@@ -471,6 +424,53 @@
         "volume_confirmation": 16.8,
         "source_diversity": 13.8,
         "recency": 16.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 81.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "26 Jun 2026 16:23 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "europe",
+        "global",
+        "india",
+        "americas"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "Finance"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 10.3,
+        "recency": 10.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -576,104 +576,53 @@
       }
     },
     {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 73.0,
-      "severity": "HIGH",
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables",
+      "confidence": 70.0,
+      "severity": "MEDIUM",
       "direction": "BEARISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 6,
-      "latest_at": "25 Jun 2026 14:52 UTC",
-      "headline": "Copper rebounds on bargain hunting amid softer dollar, firmer risk appetite",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "americas"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "Oilprice.com"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 13.6,
-        "volume_confirmation": 12.6,
-        "source_diversity": 11.7,
-        "recency": 14.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma + Commodities & Mining",
-      "confidence": 71.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": 1.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "26 Jun 2026 14:08 UTC",
-      "headline": "Why breakthrough GLP-1 weight loss pills may be a bad thing for employer insurance coverage",
+      "latest_at": "26 Jun 2026 21:05 UTC",
+      "headline": "China's Battery Giant Bets Big on Sodium as Lithium Volatility Persists",
       "regions": [
         "asia_pacific",
-        "global",
-        "africa"
+        "global"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times",
+        "The Verge",
         "Oilprice.com",
-        "BBC News"
+        "Markets-Economic Times",
+        "Latest from Tom's Hardware"
       ],
-      "primary_etf": "XLV",
+      "primary_etf": "ICLN",
       "top_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
+        "ICLN",
+        "QCLN",
+        "PBW"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "HEALTHCARE",
-        "PHARMABEES"
+        "NEWENERGY"
       ],
       "global_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
+        "ICLN",
+        "QCLN",
+        "PBW"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 10.0,
-        "volume_confirmation": 9.7,
-        "source_diversity": 12.6,
-        "recency": 15.2,
-        "geopolitical_severity": 13.0
+        "signal_strength": 11.5,
+        "volume_confirmation": 12.6,
+        "source_diversity": 11.0,
+        "recency": 16.9,
+        "geopolitical_severity": 9.5
       }
     },
     {
@@ -730,6 +679,56 @@
       }
     },
     {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 66.0,
+      "severity": "MEDIUM",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "26 Jun 2026 19:00 UTC",
+      "headline": "Canada and Japan Consider Joint Critical Mineral Projects to Counter China",
+      "regions": [
+        "africa",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "BBC News"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 9.4,
+        "volume_confirmation": 11.3,
+        "source_diversity": 12.6,
+        "recency": 13.7,
+        "geopolitical_severity": 10.5
+      }
+    },
+    {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity + Technology & AI / Semiconductors",
       "confidence": 65.0,
@@ -780,56 +779,6 @@
       }
     },
     {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables",
-      "confidence": 64.0,
-      "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "26 Jun 2026 14:00 UTC",
-      "headline": "Second worker dies at BYD's Hungary factory already under scrutiny for labor practices",
-      "regions": [
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "Latest from Tom's Hardware",
-        "Tech"
-      ],
-      "primary_etf": "ICLN",
-      "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NEWENERGY"
-      ],
-      "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 9.2,
-        "volume_confirmation": 9.7,
-        "source_diversity": 11.0,
-        "recency": 15.0,
-        "geopolitical_severity": 9.8
-      }
-    },
-    {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity",
       "confidence": 64.0,
@@ -875,6 +824,56 @@
         "source_diversity": 13.4,
         "recency": 15.6,
         "geopolitical_severity": 12.9
+      }
+    },
+    {
+      "sector_key": "healthcare_pharma",
+      "sector_label": "Healthcare & Pharma",
+      "confidence": 64.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 1.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 3,
+      "latest_at": "26 Jun 2026 20:03 UTC",
+      "headline": "Why breakthrough GLP-1 weight loss pills may be a bad thing for employer insurance coverage",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "americas"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLV",
+      "top_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "HEALTHCARE",
+        "PHARMABEES"
+      ],
+      "global_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 10.4,
+        "volume_confirmation": 7.7,
+        "source_diversity": 7.6,
+        "recency": 15.3,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -946,11 +945,6 @@
       "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - CRITICAL / BEARISH - Gold heads for fourth weekly loss amid Fed rate hike expectations"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Crypto & Digital Assets - 25 articles - CRITICAL / BEARISH - Here\u2019s what happened in crypto today"
-    },
-    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Banking & Financial Sector + Gold & Precious Metals - 12 articles - HIGH / BULLISH - JPMorgan Chase unveils $50 billion buyback, Goldman Sachs raises dividend after Fed stress test"
@@ -959,6 +953,11 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Bonds & Fixed Income - 11 articles - HIGH / BULLISH - Japan's super-long bonds briefly change course to fall after weak auction"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Crypto & Digital Assets - 24 articles - CRITICAL / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
@@ -973,12 +972,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Commodities & Mining - 6 articles - HIGH / BEARISH - Copper rebounds on bargain hunting amid softer dollar, firmer risk appetite"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Healthcare & Pharma + Commodities & Mining - 4 articles - CRITICAL / BULLISH - Why breakthrough GLP-1 weight loss pills may be a bad thing for employer insurance coverage"
+      "text": "Clean Energy & Renewables - 6 articles - MEDIUM / BEARISH - China's Battery Giant Bets Big on Sodium as Lithium Volatility Persists"
     },
     {
       "tag": "tag-bear",
@@ -988,17 +982,22 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Commodities & Mining - 5 articles - MEDIUM / BEARISH - Canada and Japan Consider Joint Critical Mineral Projects to Counter China"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "Asia Pacific Equity + Technology & AI / Semiconductors - 12 articles - HIGH / BEARISH - Global Market: BOJ policymakers push for faster rate hikes as inflation risks mount"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Clean Energy & Renewables - 4 articles - MEDIUM / BEARISH - Second worker dies at BYD's Hungary factory already under scrutiny for labor practices"
+      "text": "Europe Equity - 10 articles - HIGH / BEARISH - Euro zone yields fall as investors cut bets on ECB hikes"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Europe Equity - 10 articles - HIGH / BEARISH - Euro zone yields fall as investors cut bets on ECB hikes"
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Healthcare & Pharma - 3 articles - HIGH / BULLISH - Why breakthrough GLP-1 weight loss pills may be a bad thing for employer insurance coverage"
     },
     {
       "tag": "tag-bull",
@@ -1011,33 +1010,33 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7349.4,
+      "price": 7354.02,
       "currency": "USD",
-      "change": -8.09,
-      "change_pct": -0.11,
-      "change_str": "-0.11%",
+      "change": -3.47,
+      "change_pct": -0.05,
+      "change_str": "-0.05%",
       "direction": "down"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 25282.81,
+      "price": 25297.62,
       "currency": "USD",
-      "change": -75.79,
-      "change_pct": -0.3,
-      "change_str": "-0.30%",
+      "change": -60.98,
+      "change_pct": -0.24,
+      "change_str": "-0.24%",
       "direction": "down"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 51849.81,
+      "price": 51876.11,
       "currency": "USD",
-      "change": -70.81,
-      "change_pct": -0.14,
-      "change_str": "-0.14%",
+      "change": -44.51,
+      "change_pct": -0.09,
+      "change_str": "-0.09%",
       "direction": "down"
     },
     {
@@ -1099,63 +1098,63 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4083.9,
+      "price": 4103.0,
       "currency": "USD",
-      "change": 53.4,
-      "change_pct": 1.32,
-      "change_str": "+1.32%",
+      "change": 72.5,
+      "change_pct": 1.8,
+      "change_str": "+1.80%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 69.16,
+      "price": 70.24,
       "currency": "USD",
-      "change": -2.76,
-      "change_pct": -3.84,
-      "change_str": "-3.84%",
+      "change": -1.68,
+      "change_pct": -2.34,
+      "change_str": "-2.34%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 59820.18,
+      "price": 59634.46,
       "currency": "USD",
-      "change": 98.5,
-      "change_pct": 0.16,
-      "change_str": "+0.16%",
-      "direction": "up"
+      "change": -87.22,
+      "change_pct": -0.15,
+      "change_str": "-0.15%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.36,
+      "price": 101.37,
       "currency": "USD",
-      "change": -0.07,
-      "change_pct": -0.07,
-      "change_str": "-0.07%",
+      "change": -0.06,
+      "change_pct": -0.06,
+      "change_str": "-0.06%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 18.83,
+      "price": 18.41,
       "currency": "USD",
-      "change": -0.06,
-      "change_pct": -0.32,
-      "change_str": "-0.32%",
+      "change": -0.48,
+      "change_pct": -2.54,
+      "change_str": "-2.54%",
       "direction": "down"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": true,
     "drawdown_from_peak_pct": 16.58,
-    "portfolio_peak": 10000.0,
-    "vix": 18.83,
+    "portfolio_peak": 10009.01,
+    "vix": 18.41,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -1188,18 +1187,18 @@
     },
     "volatility": {
       "per_ticker": {
-        "BND": 3.98
+        "BND": 4.06
       },
-      "portfolio_avg_vol_pct": 3.98,
+      "portfolio_avg_vol_pct": 4.06,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": -0.29,
+      "benchmark_return_pct": -0.72,
       "benchmark_price_start": 734.3,
-      "benchmark_price_now": 732.18,
+      "benchmark_price_now": 728.99,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": -16.58,
-      "alpha": -16.29
+      "alpha": -15.86
     },
     "rebalance": {
       "alerts": [
@@ -1209,7 +1208,7 @@
           "target_weight_pct": 90.0,
           "drift_pct": -66.75,
           "action": "ADD",
-          "amount": 5568.35,
+          "amount": 5573.38,
           "etf_name": "Vanguard Total Bond Market ETF",
           "regime_note": ""
         },
@@ -1219,7 +1218,7 @@
           "target_weight_pct": 10.0,
           "drift_pct": 66.75,
           "action": "DEPLOY",
-          "amount": 5568.35,
+          "amount": 5573.38,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         }
@@ -1230,62 +1229,62 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": 193.97,
+          "total_impact": 194.13,
           "portfolio_loss_pct": 2.33,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 10.0,
-              "impact": 193.97
+              "impact": 194.13
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": 96.98,
+          "total_impact": 97.07,
           "portfolio_loss_pct": 1.16,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 5.0,
-              "impact": 96.98
+              "impact": 97.07
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -232.76,
+          "total_impact": -232.96,
           "portfolio_loss_pct": -2.79,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": -12.0,
-              "impact": -232.76
+              "impact": -232.96
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": 38.79,
+          "total_impact": 38.83,
           "portfolio_loss_pct": 0.47,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 2.0,
-              "impact": 38.79
+              "impact": 38.83
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": 77.59,
+          "total_impact": 77.65,
           "portfolio_loss_pct": 0.93,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 4.0,
-              "impact": 77.59
+              "impact": 77.65
             }
           ]
         }
@@ -1295,11 +1294,11 @@
     }
   },
   "logs": [
-    "2026-06-26 19:26:25 [INFO] AZALYST - status.json generated",
-    "2026-06-26 19:26:25 [INFO] PORTFOLIO - NAV USD 8,342.26 | Return -16.58%",
-    "2026-06-26 19:26:25 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-26 19:26:25 [INFO] TRADER - Open positions: BND",
-    "2026-06-26 19:26:25 [WARN] RISK - Circuit breaker threshold reached"
+    "2026-06-26 21:17:23 [INFO] AZALYST - status.json generated",
+    "2026-06-26 21:17:23 [INFO] PORTFOLIO - NAV USD 8,349.65 | Return -16.58%",
+    "2026-06-26 21:17:23 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-26 21:17:23 [INFO] TRADER - Open positions: BND",
+    "2026-06-26 21:17:23 [WARN] RISK - Circuit breaker threshold reached"
   ],
-  "generated_at": "2026-06-26 19:26:24 UTC"
+  "generated_at": "2026-06-26 21:17:19 UTC"
 }
