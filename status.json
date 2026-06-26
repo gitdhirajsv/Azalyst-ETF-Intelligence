@@ -1,20 +1,20 @@
 {
-  "portfolio_value": 8342.52,
+  "portfolio_value": 8342.26,
   "total_deposited": 10000.0,
   "cash": 6402.57,
   "monthly_reserve": 0.0,
-  "market_value": 1939.95,
+  "market_value": 1939.69,
   "total_invested": 1940.0,
-  "unrealised_pnl": -0.05,
-  "unrealised_str": "-0.05",
+  "unrealised_pnl": -0.31,
+  "unrealised_str": "-0.31",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "-16.57%",
-  "change_raw": -16.57,
+  "change": "-16.58%",
+  "change_raw": -16.58,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 10000.0,
-  "drawdown_now_pct": 16.57,
+  "drawdown_now_pct": 16.58,
   "max_drawdown_pct": 16.6,
   "usd_inr_rate": 94.385,
   "positions": [
@@ -29,13 +29,13 @@
       "current": 73.68,
       "peak_price": 73.7,
       "trail_stop": 70.0,
-      "dist_to_trail_pct": 5.01,
+      "dist_to_trail_pct": 4.99,
       "units": 26.327636,
       "invested": 1940.0,
-      "pnl": 0.15,
-      "pnl_str": "+0.15",
-      "pnl_pct": 0.01,
-      "pnl_pct_str": "+0.01%",
+      "pnl": -0.12,
+      "pnl_str": "-0.12",
+      "pnl_pct": -0.01,
+      "pnl_pct_str": "-0.01%",
       "confidence": 82,
       "severity": "HIGH",
       "days_held": 1,
@@ -58,30 +58,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "HIGH_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.14857459131360026,
+    "vix_level": 18.829999923706055,
+    "vix_percentile_1y": 0.7142857142857143,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
-      "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "rank": 18,
+      "flow": 18,
+      "options": 28,
+      "rotation": 12,
+      "macro": 12,
+      "news": 12
     }
   },
   "top_signal": {
     "ticker": "XLF",
-    "rank_score": 11.206293494704992,
-    "flow_score": 13.883492279837357,
-    "options_score": 26.377220481194037,
+    "rank_score": 11.065034013605443,
+    "flow_score": 11.670850508275036,
+    "options_score": 22.641286240350023,
     "rotation_score": 12.0,
     "macro_score": 0.0,
     "news_score": 8.16,
-    "total": 71.62700625573639,
+    "total": 65.5371707622305,
     "publish": true,
     "direction": "long"
   },
@@ -100,13 +100,13 @@
       "BND"
     ],
     "values": [
-      0.15
+      -0.12
     ]
   },
   "confidence": [
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 94.0
+      "score": 93.0
     },
     {
       "symbol": "Defense & Aerospace",
@@ -169,26 +169,26 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 94.0,
+      "confidence": 93.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -15.0,
+      "direction_score": -15.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
-      "latest_at": "26 Jun 2026 14:30 UTC",
-      "headline": "Oil Heads for Weekly Loss as Hormuz Tanker Traffic Rebounds",
+      "article_count": 26,
+      "latest_at": "26 Jun 2026 17:44 UTC",
+      "headline": "Saudi Arabia Set to Slash Oil Prices as Hormuz Reopens",
       "regions": [
-        "americas",
         "europe",
+        "middle_east",
         "asia_pacific",
-        "middle_east"
+        "global"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "Bloomberg Markets",
+        "Oilprice.com",
         "World News - Breaking international news and headlines | Sky News",
+        "US Top News and Analysis",
         "Markets-Economic Times"
       ],
       "primary_etf": "XLE",
@@ -215,7 +215,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 15.2,
-        "recency": 15.7,
+        "recency": 14.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -933,7 +933,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 28 articles - CRITICAL / BEARISH - Oil Heads for Weekly Loss as Hormuz Tanker Traffic Rebounds"
+      "text": "Energy / Oil & Gas - 26 articles - CRITICAL / BEARISH - Saudi Arabia Set to Slash Oil Prices as Hormuz Reopens"
     },
     {
       "tag": "tag-bear",
@@ -1011,34 +1011,34 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7372.06,
+      "price": 7349.4,
       "currency": "USD",
-      "change": 14.57,
-      "change_pct": 0.2,
-      "change_str": "+0.20%",
-      "direction": "up"
+      "change": -8.09,
+      "change_pct": -0.11,
+      "change_str": "-0.11%",
+      "direction": "down"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 25407.63,
+      "price": 25282.81,
       "currency": "USD",
-      "change": 49.03,
-      "change_pct": 0.19,
-      "change_str": "+0.19%",
-      "direction": "up"
+      "change": -75.79,
+      "change_pct": -0.3,
+      "change_str": "-0.30%",
+      "direction": "down"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 51968.27,
+      "price": 51849.81,
       "currency": "USD",
-      "change": 47.65,
-      "change_pct": 0.09,
-      "change_str": "+0.09%",
-      "direction": "up"
+      "change": -70.81,
+      "change_pct": -0.14,
+      "change_str": "-0.14%",
+      "direction": "down"
     },
     {
       "label": "FTSE 100",
@@ -1099,63 +1099,63 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4097.8,
+      "price": 4083.9,
       "currency": "USD",
-      "change": 67.3,
-      "change_pct": 1.67,
-      "change_str": "+1.67%",
+      "change": 53.4,
+      "change_pct": 1.32,
+      "change_str": "+1.32%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 69.09,
+      "price": 69.16,
       "currency": "USD",
-      "change": -2.83,
-      "change_pct": -3.93,
-      "change_str": "-3.93%",
+      "change": -2.76,
+      "change_pct": -3.84,
+      "change_str": "-3.84%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 60127.17,
+      "price": 59820.18,
       "currency": "USD",
-      "change": 405.49,
-      "change_pct": 0.68,
-      "change_str": "+0.68%",
+      "change": 98.5,
+      "change_pct": 0.16,
+      "change_str": "+0.16%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.32,
+      "price": 101.36,
       "currency": "USD",
-      "change": -0.11,
-      "change_pct": -0.11,
-      "change_str": "-0.11%",
+      "change": -0.07,
+      "change_pct": -0.07,
+      "change_str": "-0.07%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 18.68,
+      "price": 18.83,
       "currency": "USD",
-      "change": -0.21,
-      "change_pct": -1.11,
-      "change_str": "-1.11%",
+      "change": -0.06,
+      "change_pct": -0.32,
+      "change_str": "-0.32%",
       "direction": "down"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": true,
-    "drawdown_from_peak_pct": 16.57,
+    "drawdown_from_peak_pct": 16.58,
     "portfolio_peak": 10000.0,
-    "vix": 18.68,
+    "vix": 18.83,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -1194,12 +1194,12 @@
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 0.02,
+      "benchmark_return_pct": -0.29,
       "benchmark_price_start": 734.3,
-      "benchmark_price_now": 734.46,
+      "benchmark_price_now": 732.18,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -16.57,
-      "alpha": -16.59
+      "portfolio_return_pct": -16.58,
+      "alpha": -16.29
     },
     "rebalance": {
       "alerts": [
@@ -1209,7 +1209,7 @@
           "target_weight_pct": 90.0,
           "drift_pct": -66.75,
           "action": "ADD",
-          "amount": 5568.32,
+          "amount": 5568.35,
           "etf_name": "Vanguard Total Bond Market ETF",
           "regime_note": ""
         },
@@ -1219,7 +1219,7 @@
           "target_weight_pct": 10.0,
           "drift_pct": 66.75,
           "action": "DEPLOY",
-          "amount": 5568.32,
+          "amount": 5568.35,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         }
@@ -1230,62 +1230,62 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": 194.0,
+          "total_impact": 193.97,
           "portfolio_loss_pct": 2.33,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 10.0,
-              "impact": 194.0
+              "impact": 193.97
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": 97.0,
+          "total_impact": 96.98,
           "portfolio_loss_pct": 1.16,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 5.0,
-              "impact": 97.0
+              "impact": 96.98
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -232.79,
+          "total_impact": -232.76,
           "portfolio_loss_pct": -2.79,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": -12.0,
-              "impact": -232.79
+              "impact": -232.76
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": 38.8,
+          "total_impact": 38.79,
           "portfolio_loss_pct": 0.47,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 2.0,
-              "impact": 38.8
+              "impact": 38.79
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": 77.6,
+          "total_impact": 77.59,
           "portfolio_loss_pct": 0.93,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 4.0,
-              "impact": 77.6
+              "impact": 77.59
             }
           ]
         }
@@ -1295,11 +1295,11 @@
     }
   },
   "logs": [
-    "2026-06-26 17:27:39 [INFO] AZALYST - status.json generated",
-    "2026-06-26 17:27:39 [INFO] PORTFOLIO - NAV USD 8,342.52 | Return -16.57%",
-    "2026-06-26 17:27:39 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-26 17:27:39 [INFO] TRADER - Open positions: BND",
-    "2026-06-26 17:27:39 [WARN] RISK - Circuit breaker threshold reached"
+    "2026-06-26 19:26:25 [INFO] AZALYST - status.json generated",
+    "2026-06-26 19:26:25 [INFO] PORTFOLIO - NAV USD 8,342.26 | Return -16.58%",
+    "2026-06-26 19:26:25 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-26 19:26:25 [INFO] TRADER - Open positions: BND",
+    "2026-06-26 19:26:25 [WARN] RISK - Circuit breaker threshold reached"
   ],
-  "generated_at": "2026-06-26 17:27:37 UTC"
+  "generated_at": "2026-06-26 19:26:24 UTC"
 }
