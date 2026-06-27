@@ -58,30 +58,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "HIGH_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.14348008524441339,
-    "vix_level": 18.40999984741211,
-    "vix_percentile_1y": 0.6785714285714286,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 18,
-      "flow": 18,
-      "options": 28,
-      "rotation": 12,
-      "macro": 12,
-      "news": 12
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
+      "rotation": 15,
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
     "ticker": "XLE",
-    "rank_score": 6.689661399548532,
+    "rank_score": 6.684631578947368,
     "flow_score": 0.0,
     "options_score": 22.409986271471638,
     "rotation_score": 9.025447208196939,
     "macro_score": 0.0,
     "news_score": 8.04,
-    "total": 46.16509487921711,
+    "total": 46.16006505861594,
     "publish": false,
     "direction": "short"
   },
@@ -114,7 +114,7 @@
     },
     {
       "symbol": "Crypto & Digital Assets",
-      "score": 85.0
+      "score": 89.0
     },
     {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
@@ -275,26 +275,26 @@
     {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
-      "confidence": 85.0,
+      "confidence": 89.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
       "direction_score": -3.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "27 Jun 2026 11:30 UTC",
+      "article_count": 24,
+      "latest_at": "27 Jun 2026 19:34 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "global",
         "india",
+        "global",
         "americas",
         "europe"
       ],
       "sources": [
-        "Cointelegraph.com News",
-        "Markets-Economic Times",
         "Finance",
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
         "US Top News and Analysis"
       ],
       "primary_etf": "IBIT",
@@ -315,7 +315,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 10.3,
-        "recency": 10.6,
+        "recency": 15.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -945,7 +945,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Crypto & Digital Assets - 25 articles - CRITICAL / BEARISH - Here\u2019s what happened in crypto today"
+      "text": "Crypto & Digital Assets - 24 articles - CRITICAL / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
@@ -1123,11 +1123,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 60345.05,
+      "price": 60189.97,
       "currency": "USD",
-      "change": 328.62,
-      "change_pct": 0.55,
-      "change_str": "+0.55%",
+      "change": 173.54,
+      "change_pct": 0.29,
+      "change_str": "+0.29%",
       "direction": "up"
     },
     {
@@ -1297,11 +1297,11 @@
     }
   },
   "logs": [
-    "2026-06-27 19:21:17 [INFO] AZALYST - status.json generated",
-    "2026-06-27 19:21:17 [INFO] PORTFOLIO - NAV USD 8,347.90 | Return -16.60%",
-    "2026-06-27 19:21:17 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-27 19:21:17 [INFO] TRADER - Open positions: BND",
-    "2026-06-27 19:21:17 [WARN] RISK - Circuit breaker threshold reached"
+    "2026-06-27 20:51:08 [INFO] AZALYST - status.json generated",
+    "2026-06-27 20:51:08 [INFO] PORTFOLIO - NAV USD 8,347.90 | Return -16.60%",
+    "2026-06-27 20:51:08 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-27 20:51:08 [INFO] TRADER - Open positions: BND",
+    "2026-06-27 20:51:08 [WARN] RISK - Circuit breaker threshold reached"
   ],
-  "generated_at": "2026-06-27 19:21:15 UTC"
+  "generated_at": "2026-06-27 20:51:05 UTC"
 }
