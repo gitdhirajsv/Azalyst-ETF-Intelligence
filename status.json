@@ -58,32 +58,32 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "HIGH_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.1434675849583111,
+    "vix_level": 18.40999984741211,
+    "vix_percentile_1y": 0.6785714285714286,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
-      "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "rank": 18,
+      "flow": 18,
+      "options": 28,
+      "rotation": 12,
+      "macro": 12,
+      "news": 12
     }
   },
   "top_signal": {
-    "ticker": "IWM",
-    "rank_score": 10.559277108433735,
-    "flow_score": 18.0,
-    "options_score": 27.299999999999997,
-    "rotation_score": 0.0,
+    "ticker": "XLE",
+    "rank_score": 6.707710843373493,
+    "flow_score": 0.0,
+    "options_score": 22.409986271471638,
+    "rotation_score": 9.025447208196939,
     "macro_score": 0.0,
-    "news_score": 0.0,
-    "total": 55.85927710843373,
+    "news_score": 11.16,
+    "total": 49.303144323042076,
     "publish": false,
-    "direction": "long"
+    "direction": "short"
   },
   "allocation": {
     "labels": [
@@ -1045,10 +1045,10 @@
       "region": "UK",
       "price": 10508.02,
       "currency": "GBP",
-      "change": -21.88,
-      "change_pct": -0.21,
-      "change_str": "-0.21%",
-      "direction": "down"
+      "change": 46.42,
+      "change_pct": 0.44,
+      "change_str": "+0.44%",
+      "direction": "up"
     },
     {
       "label": "DAX",
@@ -1120,11 +1120,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 59951.63,
+      "price": 60052.51,
       "currency": "USD",
-      "change": 229.95,
-      "change_pct": 0.39,
-      "change_str": "+0.39%",
+      "change": 330.83,
+      "change_pct": 0.55,
+      "change_str": "+0.55%",
       "direction": "up"
     },
     {
@@ -1294,11 +1294,11 @@
     }
   },
   "logs": [
-    "2026-06-26 22:55:02 [INFO] AZALYST - status.json generated",
-    "2026-06-26 22:55:02 [INFO] PORTFOLIO - NAV USD 8,347.90 | Return -16.60%",
-    "2026-06-26 22:55:02 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-26 22:55:02 [INFO] TRADER - Open positions: BND",
-    "2026-06-26 22:55:02 [WARN] RISK - Circuit breaker threshold reached"
+    "2026-06-27 00:12:30 [INFO] AZALYST - status.json generated",
+    "2026-06-27 00:12:30 [INFO] PORTFOLIO - NAV USD 8,347.90 | Return -16.60%",
+    "2026-06-27 00:12:30 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-27 00:12:30 [INFO] TRADER - Open positions: BND",
+    "2026-06-27 00:12:30 [WARN] RISK - Circuit breaker threshold reached"
   ],
-  "generated_at": "2026-06-26 22:55:00 UTC"
+  "generated_at": "2026-06-27 00:12:28 UTC"
 }
