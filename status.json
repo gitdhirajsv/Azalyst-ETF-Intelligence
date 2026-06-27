@@ -58,19 +58,19 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "HIGH_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.14348008524441339,
-    "vix_level": 18.40999984741211,
-    "vix_percentile_1y": 0.6785714285714286,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 18,
-      "flow": 18,
-      "options": 28,
-      "rotation": 12,
-      "macro": 12,
-      "news": 12
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
+      "rotation": 15,
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
@@ -118,7 +118,7 @@
     },
     {
       "symbol": "Crypto & Digital Assets",
-      "score": 86.0
+      "score": 85.0
     },
     {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
@@ -328,25 +328,27 @@
     {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
-      "confidence": 86.0,
-      "severity": "HIGH",
+      "confidence": 85.0,
+      "severity": "CRITICAL",
       "direction": "BEARISH",
       "direction_score": -3.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 20,
-      "latest_at": "27 Jun 2026 05:30 UTC",
+      "article_count": 25,
+      "latest_at": "27 Jun 2026 08:21 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "global",
         "india",
-        "europe"
+        "global",
+        "europe",
+        "americas"
       ],
       "sources": [
+        "Finance",
         "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
+        "Cointelegraph.com News",
+        "Markets-Economic Times"
       ],
       "primary_etf": "IBIT",
       "top_etfs": [
@@ -365,8 +367,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 9.1,
-        "recency": 13.8,
+        "source_diversity": 10.3,
+        "recency": 12.1,
         "geopolitical_severity": 13.0
       }
     },
@@ -945,7 +947,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Crypto & Digital Assets - 20 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
+      "text": "Crypto & Digital Assets - 25 articles - CRITICAL / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
@@ -1118,11 +1120,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 60327.47,
+      "price": 60261.6,
       "currency": "USD",
-      "change": 311.04,
-      "change_pct": 0.52,
-      "change_str": "+0.52%",
+      "change": 245.17,
+      "change_pct": 0.41,
+      "change_str": "+0.41%",
       "direction": "up"
     },
     {
@@ -1292,11 +1294,11 @@
     }
   },
   "logs": [
-    "2026-06-27 10:08:01 [INFO] AZALYST - status.json generated",
-    "2026-06-27 10:08:01 [INFO] PORTFOLIO - NAV USD 8,347.90 | Return -16.60%",
-    "2026-06-27 10:08:01 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-27 10:08:01 [INFO] TRADER - Open positions: BND",
-    "2026-06-27 10:08:01 [WARN] RISK - Circuit breaker threshold reached"
+    "2026-06-27 11:48:04 [INFO] AZALYST - status.json generated",
+    "2026-06-27 11:48:04 [INFO] PORTFOLIO - NAV USD 8,347.90 | Return -16.60%",
+    "2026-06-27 11:48:04 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-27 11:48:04 [INFO] TRADER - Open positions: BND",
+    "2026-06-27 11:48:04 [WARN] RISK - Circuit breaker threshold reached"
   ],
-  "generated_at": "2026-06-27 10:07:59 UTC"
+  "generated_at": "2026-06-27 11:48:03 UTC"
 }
