@@ -77,11 +77,11 @@
     "ticker": "XLE",
     "rank_score": 6.684631578947368,
     "flow_score": 0.0,
-    "options_score": 22.409986271471638,
+    "options_score": 22.4,
     "rotation_score": 9.025447208196939,
     "macro_score": 0.0,
     "news_score": 8.04,
-    "total": 46.16006505861594,
+    "total": 46.1500787871443,
     "publish": false,
     "direction": "short"
   },
@@ -129,6 +129,10 @@
       "score": 79.0
     },
     {
+      "symbol": "Clean Energy & Renewables",
+      "score": 78.0
+    },
+    {
       "symbol": "Nuclear Energy & Uranium",
       "score": 78.0
     },
@@ -151,10 +155,6 @@
     {
       "symbol": "Europe Equity",
       "score": 64.0
-    },
-    {
-      "symbol": "Clean Energy & Renewables",
-      "score": 63.0
     },
     {
       "symbol": "India Equity Markets",
@@ -471,6 +471,57 @@
       }
     },
     {
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables",
+      "confidence": 78.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 9,
+      "latest_at": "27 Jun 2026 21:00 UTC",
+      "headline": "China Is Quietly Winning the Clean Energy Trade War",
+      "regions": [
+        "americas",
+        "india",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "Oilprice.com"
+      ],
+      "primary_etf": "ICLN",
+      "top_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NEWENERGY"
+      ],
+      "global_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 15.2,
+        "volume_confirmation": 15.4,
+        "source_diversity": 9.9,
+        "recency": 15.3,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 78.0,
@@ -776,57 +827,6 @@
       }
     },
     {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables",
-      "confidence": 63.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 9,
-      "latest_at": "27 Jun 2026 19:00 UTC",
-      "headline": "China's Battery Giant Bets Big on Sodium as Lithium Volatility Persists",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "india",
-        "americas"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "Bloomberg Markets",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "ICLN",
-      "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NEWENERGY"
-      ],
-      "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.1,
-        "volume_confirmation": 15.4,
-        "source_diversity": 9.9,
-        "recency": 16.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 63.0,
@@ -965,6 +965,11 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Clean Energy & Renewables - 9 articles - HIGH / BEARISH - China Is Quietly Winning the Clean Energy Trade War"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "Nuclear Energy & Uranium - 7 articles - HIGH / BEARISH - Adani Targets 10 GW Nuclear Power Capacity in India by 2035"
     },
     {
@@ -991,11 +996,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Europe Equity - 10 articles - HIGH / BEARISH - Euro zone yields fall as investors cut bets on ECB hikes"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Clean Energy & Renewables - 9 articles - HIGH / BEARISH - China's Battery Giant Bets Big on Sodium as Lithium Volatility Persists"
     },
     {
       "tag": "tag-bull",
@@ -1123,11 +1123,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 60189.97,
+      "price": 60046.73,
       "currency": "USD",
-      "change": 173.54,
-      "change_pct": 0.29,
-      "change_str": "+0.29%",
+      "change": 30.3,
+      "change_pct": 0.05,
+      "change_str": "+0.05%",
       "direction": "up"
     },
     {
@@ -1297,11 +1297,11 @@
     }
   },
   "logs": [
-    "2026-06-27 20:51:08 [INFO] AZALYST - status.json generated",
-    "2026-06-27 20:51:08 [INFO] PORTFOLIO - NAV USD 8,347.90 | Return -16.60%",
-    "2026-06-27 20:51:08 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-27 20:51:08 [INFO] TRADER - Open positions: BND",
-    "2026-06-27 20:51:08 [WARN] RISK - Circuit breaker threshold reached"
+    "2026-06-27 22:12:38 [INFO] AZALYST - status.json generated",
+    "2026-06-27 22:12:38 [INFO] PORTFOLIO - NAV USD 8,347.90 | Return -16.60%",
+    "2026-06-27 22:12:38 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-27 22:12:38 [INFO] TRADER - Open positions: BND",
+    "2026-06-27 22:12:38 [WARN] RISK - Circuit breaker threshold reached"
   ],
-  "generated_at": "2026-06-27 20:51:05 UTC"
+  "generated_at": "2026-06-27 22:12:36 UTC"
 }
