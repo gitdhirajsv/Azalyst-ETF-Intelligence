@@ -75,13 +75,13 @@
   },
   "top_signal": {
     "ticker": "XLE",
-    "rank_score": 6.684631578947368,
+    "rank_score": 6.72298600311042,
     "flow_score": 0.0,
     "options_score": 22.409986271471638,
     "rotation_score": 9.025447208196939,
     "macro_score": 0.0,
     "news_score": 11.16,
-    "total": 49.280065058615946,
+    "total": 49.31841948277899,
     "publish": false,
     "direction": "short"
   },
@@ -114,7 +114,7 @@
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 87.0
+      "score": 92.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -138,7 +138,7 @@
     },
     {
       "symbol": "Clean Energy & Renewables",
-      "score": 70.0
+      "score": 69.0
     },
     {
       "symbol": "Healthcare & Pharma",
@@ -275,27 +275,27 @@
     {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 87.0,
+      "confidence": 92.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -19.5,
+      "direction_score": -9.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "27 Jun 2026 03:59 UTC",
+      "article_count": 11,
+      "latest_at": "27 Jun 2026 12:23 UTC",
       "headline": "Gold heads for fourth weekly loss amid Fed rate hike expectations",
       "regions": [
+        "africa",
+        "europe",
         "india",
-        "global",
-        "asia_pacific",
-        "middle_east"
+        "global"
       ],
       "sources": [
-        "Markets-Economic Times",
-        "US Top News and Analysis",
+        "BBC News",
         "Finance",
-        "BBC News"
+        "Bloomberg Markets",
+        "US Top News and Analysis"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -319,9 +319,9 @@
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
-        "volume_confirmation": 16.2,
+        "volume_confirmation": 16.8,
         "source_diversity": 14.0,
-        "recency": 11.8,
+        "recency": 15.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -578,7 +578,7 @@
     {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
-      "confidence": 70.0,
+      "confidence": 69.0,
       "severity": "MEDIUM",
       "direction": "BEARISH",
       "direction_score": 0.0,
@@ -586,17 +586,18 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 6,
-      "latest_at": "26 Jun 2026 21:05 UTC",
+      "latest_at": "27 Jun 2026 12:00 UTC",
       "headline": "China's Battery Giant Bets Big on Sodium as Lithium Volatility Persists",
       "regions": [
         "asia_pacific",
-        "global"
+        "europe",
+        "global",
+        "india"
       ],
       "sources": [
-        "The Verge",
+        "US Top News and Analysis",
         "Oilprice.com",
-        "Markets-Economic Times",
-        "Latest from Tom's Hardware"
+        "Bloomberg Markets"
       ],
       "primary_etf": "ICLN",
       "top_etfs": [
@@ -620,9 +621,9 @@
       "breakdown": {
         "signal_strength": 11.5,
         "volume_confirmation": 12.6,
-        "source_diversity": 11.0,
-        "recency": 16.9,
-        "geopolitical_severity": 9.5
+        "source_diversity": 9.9,
+        "recency": 14.8,
+        "geopolitical_severity": 11.6
       }
     },
     {
@@ -942,7 +943,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 10 articles - CRITICAL / BEARISH - Gold heads for fourth weekly loss amid Fed rate hike expectations"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - CRITICAL / BEARISH - Gold heads for fourth weekly loss amid Fed rate hike expectations"
     },
     {
       "tag": "tag-bear",
@@ -1120,11 +1121,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 60261.6,
+      "price": 60345.98,
       "currency": "USD",
-      "change": 245.17,
-      "change_pct": 0.41,
-      "change_str": "+0.41%",
+      "change": 329.55,
+      "change_pct": 0.55,
+      "change_str": "+0.55%",
       "direction": "up"
     },
     {
@@ -1294,11 +1295,11 @@
     }
   },
   "logs": [
-    "2026-06-27 11:48:04 [INFO] AZALYST - status.json generated",
-    "2026-06-27 11:48:04 [INFO] PORTFOLIO - NAV USD 8,347.90 | Return -16.60%",
-    "2026-06-27 11:48:04 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-27 11:48:04 [INFO] TRADER - Open positions: BND",
-    "2026-06-27 11:48:04 [WARN] RISK - Circuit breaker threshold reached"
+    "2026-06-27 13:32:24 [INFO] AZALYST - status.json generated",
+    "2026-06-27 13:32:24 [INFO] PORTFOLIO - NAV USD 8,347.90 | Return -16.60%",
+    "2026-06-27 13:32:24 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-27 13:32:24 [INFO] TRADER - Open positions: BND",
+    "2026-06-27 13:32:24 [WARN] RISK - Circuit breaker threshold reached"
   ],
-  "generated_at": "2026-06-27 11:48:03 UTC"
+  "generated_at": "2026-06-27 13:32:23 UTC"
 }
