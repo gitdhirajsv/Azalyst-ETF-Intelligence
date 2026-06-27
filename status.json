@@ -58,32 +58,32 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "HIGH_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.14348008524441339,
+    "vix_level": 18.40999984741211,
+    "vix_percentile_1y": 0.6785714285714286,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
-      "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "rank": 18,
+      "flow": 18,
+      "options": 28,
+      "rotation": 12,
+      "macro": 12,
+      "news": 12
     }
   },
   "top_signal": {
-    "ticker": "UNG",
-    "rank_score": 8.442947368421052,
-    "flow_score": 18.0,
-    "options_score": 0.0,
-    "rotation_score": 0.0,
+    "ticker": "XLE",
+    "rank_score": 6.684631578947368,
+    "flow_score": 0.0,
+    "options_score": 22.409986271471638,
+    "rotation_score": 9.025447208196939,
     "macro_score": 0.0,
     "news_score": 11.16,
-    "total": 37.602947368421056,
+    "total": 49.280065058615946,
     "publish": false,
-    "direction": "long"
+    "direction": "short"
   },
   "allocation": {
     "labels": [
@@ -114,7 +114,11 @@
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 92.0
+      "score": 87.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 86.0
     },
     {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
@@ -131,10 +135,6 @@
     {
       "symbol": "Nuclear Energy & Uranium",
       "score": 78.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 76.0
     },
     {
       "symbol": "Clean Energy & Renewables",
@@ -275,27 +275,27 @@
     {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 92.0,
+      "confidence": 87.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -12.5,
+      "direction_score": -19.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "26 Jun 2026 13:35 UTC",
+      "article_count": 10,
+      "latest_at": "27 Jun 2026 03:59 UTC",
       "headline": "Gold heads for fourth weekly loss amid Fed rate hike expectations",
       "regions": [
-        "africa",
-        "americas",
-        "europe",
-        "asia_pacific"
+        "india",
+        "global",
+        "asia_pacific",
+        "middle_east"
       ],
       "sources": [
+        "Markets-Economic Times",
         "US Top News and Analysis",
-        "Bloomberg Markets",
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
+        "Finance",
+        "BBC News"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -319,9 +319,54 @@
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
+        "volume_confirmation": 16.2,
         "source_diversity": 14.0,
-        "recency": 14.4,
+        "recency": 11.8,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -3.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 20,
+      "latest_at": "27 Jun 2026 05:30 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "global",
+        "india",
+        "europe"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Markets-Economic Times",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 9.1,
+        "recency": 13.8,
         "geopolitical_severity": 13.0
       }
     },
@@ -525,52 +570,6 @@
         "volume_confirmation": 13.7,
         "source_diversity": 13.3,
         "recency": 15.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 76.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "26 Jun 2026 16:23 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "global",
-        "europe",
-        "india"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "Finance"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 10.3,
-        "recency": 5.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -941,7 +940,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - CRITICAL / BEARISH - Gold heads for fourth weekly loss amid Fed rate hike expectations"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 10 articles - CRITICAL / BEARISH - Gold heads for fourth weekly loss amid Fed rate hike expectations"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Crypto & Digital Assets - 20 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
@@ -962,11 +966,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Nuclear Energy & Uranium - 7 articles - HIGH / BEARISH - Adani Targets 10 GW Nuclear Power Capacity in India by 2035"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Crypto & Digital Assets - 23 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
@@ -1097,33 +1096,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4103.0,
+      "price": 4096.3,
       "currency": "USD",
-      "change": 72.5,
-      "change_pct": 1.8,
-      "change_str": "+1.80%",
+      "change": 65.8,
+      "change_pct": 1.63,
+      "change_str": "+1.63%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 70.24,
+      "price": 69.23,
       "currency": "USD",
-      "change": -1.68,
-      "change_pct": -2.34,
-      "change_str": "-2.34%",
+      "change": -2.69,
+      "change_pct": -3.74,
+      "change_str": "-3.74%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 60288.69,
+      "price": 60371.98,
       "currency": "USD",
-      "change": 567.01,
-      "change_pct": 0.95,
-      "change_str": "+0.95%",
+      "change": 355.55,
+      "change_pct": 0.59,
+      "change_str": "+0.59%",
       "direction": "up"
     },
     {
@@ -1293,11 +1292,11 @@
     }
   },
   "logs": [
-    "2026-06-27 04:12:00 [INFO] AZALYST - status.json generated",
-    "2026-06-27 04:12:00 [INFO] PORTFOLIO - NAV USD 8,347.90 | Return -16.60%",
-    "2026-06-27 04:12:00 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-27 04:12:00 [INFO] TRADER - Open positions: BND",
-    "2026-06-27 04:12:00 [WARN] RISK - Circuit breaker threshold reached"
+    "2026-06-27 07:44:46 [INFO] AZALYST - status.json generated",
+    "2026-06-27 07:44:46 [INFO] PORTFOLIO - NAV USD 8,347.90 | Return -16.60%",
+    "2026-06-27 07:44:46 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-27 07:44:46 [INFO] TRADER - Open positions: BND",
+    "2026-06-27 07:44:46 [WARN] RISK - Circuit breaker threshold reached"
   ],
-  "generated_at": "2026-06-27 04:11:59 UTC"
+  "generated_at": "2026-06-27 07:44:43 UTC"
 }
