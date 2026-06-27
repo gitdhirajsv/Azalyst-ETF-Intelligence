@@ -141,6 +141,10 @@
       "score": 70.0
     },
     {
+      "symbol": "Healthcare & Pharma",
+      "score": 67.0
+    },
+    {
       "symbol": "Commodities & Mining",
       "score": 66.0
     },
@@ -150,10 +154,6 @@
     },
     {
       "symbol": "Europe Equity",
-      "score": 64.0
-    },
-    {
-      "symbol": "Healthcare & Pharma",
       "score": 64.0
     },
     {
@@ -624,6 +624,56 @@
       }
     },
     {
+      "sector_key": "healthcare_pharma",
+      "sector_label": "Healthcare & Pharma",
+      "confidence": 67.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "27 Jun 2026 09:02 UTC",
+      "headline": "Africa CDC Calls for More Ebola Funding",
+      "regions": [
+        "americas",
+        "africa",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLV",
+      "top_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "HEALTHCARE",
+        "PHARMABEES"
+      ],
+      "global_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 8.9,
+        "volume_confirmation": 11.3,
+        "source_diversity": 9.9,
+        "recency": 15.4,
+        "geopolitical_severity": 11.0
+      }
+    },
+    {
       "sector_key": "commodities_mining",
       "sector_label": "Commodities & Mining",
       "confidence": 66.0,
@@ -769,56 +819,6 @@
         "source_diversity": 13.4,
         "recency": 15.6,
         "geopolitical_severity": 12.9
-      }
-    },
-    {
-      "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma",
-      "confidence": 64.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 1.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 3,
-      "latest_at": "26 Jun 2026 20:03 UTC",
-      "headline": "Why breakthrough GLP-1 weight loss pills may be a bad thing for employer insurance coverage",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "americas"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "XLV",
-      "top_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "HEALTHCARE",
-        "PHARMABEES"
-      ],
-      "global_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 10.4,
-        "volume_confirmation": 7.7,
-        "source_diversity": 7.6,
-        "recency": 15.3,
-        "geopolitical_severity": 13.0
       }
     },
     {
@@ -973,6 +973,11 @@
       "text": "Clean Energy & Renewables - 6 articles - MEDIUM / BEARISH - China's Battery Giant Bets Big on Sodium as Lithium Volatility Persists"
     },
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Healthcare & Pharma - 5 articles - MEDIUM / BULLISH - Africa CDC Calls for More Ebola Funding"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Commodities & Mining - 5 articles - MEDIUM / BEARISH - Canada and Japan Consider Joint Critical Mineral Projects to Counter China"
@@ -986,11 +991,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Europe Equity - 10 articles - HIGH / BEARISH - Euro zone yields fall as investors cut bets on ECB hikes"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Healthcare & Pharma - 3 articles - HIGH / BULLISH - Why breakthrough GLP-1 weight loss pills may be a bad thing for employer insurance coverage"
     },
     {
       "tag": "tag-bull",
@@ -1118,11 +1118,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 60371.98,
+      "price": 60327.47,
       "currency": "USD",
-      "change": 355.55,
-      "change_pct": 0.59,
-      "change_str": "+0.59%",
+      "change": 311.04,
+      "change_pct": 0.52,
+      "change_str": "+0.52%",
       "direction": "up"
     },
     {
@@ -1292,11 +1292,11 @@
     }
   },
   "logs": [
-    "2026-06-27 07:44:46 [INFO] AZALYST - status.json generated",
-    "2026-06-27 07:44:46 [INFO] PORTFOLIO - NAV USD 8,347.90 | Return -16.60%",
-    "2026-06-27 07:44:46 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-27 07:44:46 [INFO] TRADER - Open positions: BND",
-    "2026-06-27 07:44:46 [WARN] RISK - Circuit breaker threshold reached"
+    "2026-06-27 10:08:01 [INFO] AZALYST - status.json generated",
+    "2026-06-27 10:08:01 [INFO] PORTFOLIO - NAV USD 8,347.90 | Return -16.60%",
+    "2026-06-27 10:08:01 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-27 10:08:01 [INFO] TRADER - Open positions: BND",
+    "2026-06-27 10:08:01 [WARN] RISK - Circuit breaker threshold reached"
   ],
-  "generated_at": "2026-06-27 07:44:43 UTC"
+  "generated_at": "2026-06-27 10:07:59 UTC"
 }
