@@ -1,34 +1,4 @@
 --- .gitignore (原始)
-# Bytecode
-__pycache__/
-*.pyc
-*.pyo
-
-# Secrets
-.env
-
-# Runtime data — never commit live state/portfolio
-azalyst_portfolio.json
-azalyst_state.json
-status.json
-
-# Logs
-*.log
-
-# OS files
-Thumbs.db
-.DS_Store
-Desktop.ini
-
-# IDE
-.vscode/
-.idea/
-
-# Temp
-*.tmp
-data/.last_startup_msg
-
-+++ .gitignore (修改后)
 ```
 # Python
 __pycache__/
@@ -92,5 +62,60 @@ MANIFEST
 .Spotlight-V100
 .Trashes
 ehthumbs.db
+Thumbs.db
+```
+
++++ .gitignore (修改后)
+```
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Dependencies
+.venv/
+venv/
+node_modules/
+
+# Build artifacts
+dist/
+build/
+target/
+*.o
+*.obj
+*.so
+*.a
+*.dll
+*.exe
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Coverage
+.coverage
+coverage/
+htmlcov/
+
+# MyPy
+.mypy_cache/
+
+# Pytest
+.pytest_cache/
+
+# OS
+.DS_Store
 Thumbs.db
 ```
