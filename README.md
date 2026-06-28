@@ -337,3 +337,9 @@ Azalyst is designed as an all-in-one institutional macro engine, migrating and c
 MIT
 
 <!-- build: 1778270333 -->
+
+---
+
+Built by [Azalyst](https://github.com/gitdhirajsv/Azalyst-Alpha-Research-Engine) | Azalyst Alpha Quant Research
+
+*"Evidence over claims. Always."*
