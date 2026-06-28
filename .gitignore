@@ -1,28 +1,65 @@
-# Bytecode
+```
+# Python
 __pycache__/
 *.pyc
 *.pyo
-
-# Secrets
-.env
-
-# Runtime data — never commit live state/portfolio
-azalyst_portfolio.json
-azalyst_state.json
-status.json
-
-# Logs
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.ENV
+.venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
 *.log
+.pytest_cache/
+.mypy_cache/
+.hypothesis/
 
-# OS files
-Thumbs.db
-.DS_Store
-Desktop.ini
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
-# IDE
+# IDEs
 .vscode/
 .idea/
+*.swp
+*.swo
 
-# Temp
-*.tmp
-data/.last_startup_msg
+# Environment
+.env
+.env.local
+*.env.*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+```

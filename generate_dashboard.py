@@ -756,6 +756,54 @@ def generate_status():
     # v2 alpha stack: regime + top-signal factor breakdown (best-effort load)
     regime_payload = {}
     top_signal_payload = {}
+    
+    # J LAW HARD GATES: Distribution days, FTD, stage classification
+    jlaw_risk_payload = {}
+    stage_map_payload = {}
+    try:
+        import yfinance as yf
+        from distribution_tracker import get_spy_risk_multiplier
+        from bottom_detector import get_bottom_signal
+        from stage_classifier import get_stage_map
+        
+        spy_data = yf.Ticker("SPY").history(period="3mo")
+        if not spy_data.empty:
+            dist_info = get_spy_risk_multiplier(spy_data)
+            bottom_info = get_bottom_signal(spy_data)
+            jlaw_risk_payload = {
+                'distribution_count': dist_info['distribution_count'],
+                'risk_multiplier': dist_info['risk_multiplier'],
+                'regime': dist_info['regime'],
+                'ftd_date': str(bottom_info['ftd_date']) if bottom_info['ftd_date'] else None,
+                'ftd_active': bottom_info['ftd_active'],
+            }
+        
+        # Get stage map for ETFs in the portfolio
+        etf_tickers = list(set(pos.get('ticker', '') for pos in positions if pos.get('ticker')))
+        if etf_tickers:
+            etf_close_df = {}
+            for ticker in etf_tickers:
+                try:
+                    hist = yf.Ticker(ticker).history(period="6mo")
+                    if not hist.empty and len(hist) >= 160:
+                        etf_close_df[ticker] = hist['Close']
+                except Exception:
+                    pass
+            if etf_close_df:
+                import pandas as pd
+                close_df = pd.DataFrame(etf_close_df)
+                stage_map_payload = get_stage_map(close_df)
+    except Exception as exc:
+        print(f"INFO: J Law gates unavailable ({exc}); dashboard will show defaults")
+        jlaw_risk_payload = {
+            'distribution_count': 0,
+            'risk_multiplier': 1.0,
+            'regime': 'NORMAL',
+            'ftd_date': None,
+            'ftd_active': False,
+        }
+        stage_map_payload = {}
+    
     try:
         from azalyst_alpha import regime_engine as _re
         r = _re.detect_regime()
@@ -803,6 +851,8 @@ def generate_status():
         "confidence_threshold": 60,
         "regime":             regime_payload,
         "top_signal":         top_signal_payload,
+        "jlaw_risk":          jlaw_risk_payload,
+        "stage_map":          stage_map_payload,
         "allocation":  build_alloc(positions, metrics["cash"] + metrics.get("monthly_reserve", 0)),
         "pnl":         build_pnl(positions),
         "confidence":  build_conf(state),
