@@ -1421,7 +1421,7 @@ class PaperPortfolio:
             exit_reason = f"Hedge rotation: evicting worst performer for {signal.get('ticker', 'new hedge')}"
             self._close_position(worst_hedge, current_price, datetime.now(timezone.utc).isoformat(), exit_reason)
 
-    def enter_position(self, signal: Dict, etf: Dict, platform: str, is_hedge: bool = False) -> Optional[Dict]:
+    def enter_position(self, signal: Dict, etf: Dict, platform: str, is_hedge: bool = False, size_multiplier: float = 1.0) -> Optional[Dict]:
         confidence = signal.get("confidence", 0)
         severity   = signal.get("severity", "LOW")
         ticker     = etf["ticker"]
@@ -1506,6 +1506,8 @@ class PaperPortfolio:
         )
         # Volatility-regime dampener: invest in the dip but smaller when shaky.
         fraction *= float(signal.get("_regime_size_mult", 1.0))
+        # J LAW: Apply explicit size_multiplier parameter (from distribution/FTD logic)
+        fraction *= size_multiplier
         if fraction <= 0:
             self._log_entry_rejection(ticker, signal, "position_size_zero")
             return None

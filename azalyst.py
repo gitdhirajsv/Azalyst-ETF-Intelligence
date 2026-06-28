@@ -50,6 +50,17 @@ except ImportError:
     CIRCUIT_BREAKER_ACTIVE = False
     _RISK_ADVANCED = False
 
+# ── J LAW HARD GATES: Stage classification, distribution tracking, FTD ───────
+try:
+    from stage_classifier import apply_stage_gate, classify_weinstein_stage, get_stage_map
+    from distribution_tracker import get_spy_risk_multiplier
+    from bottom_detector import get_bottom_signal
+    _JLAW_GATES_AVAILABLE = True
+except ImportError:
+    apply_stage_gate = classify_weinstein_stage = get_stage_map = None
+    get_spy_risk_multiplier = get_bottom_signal = None
+    _JLAW_GATES_AVAILABLE = False
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s - %(message)s",
@@ -96,22 +107,62 @@ MAX_SEED_POSITIONS = 2
 
 
 def _market_regime():
-    """Return (vix_level, regime) where regime is NORMAL / ELEVATED / EXTREME.
+    """Return (vix_level, regime, jlaw_risk_info) where regime is NORMAL / ELEVATED / EXTREME.
 
     A long book has no business adding risk into a spiking-VIX, risk-off tape.
     This is the regime awareness the entry path was missing — the 6 startup-seed
-    longs were opened straight into a falling market with VIX ramping."""
+    longs were opened straight into a falling market with VIX ramping.
+    
+    J LAW ADDITION: Also computes distribution days and FTD signals for sizing.
+    """
     vix = 20.0
     try:
         if _RISK_ADVANCED and external_shock_check is not None:
             vix = float(external_shock_check().get("indicators", {}).get("vix", 20.0))
     except Exception:
         vix = 20.0
+    
+    # Default J Law risk info
+    jlaw_risk = {
+        'distribution_count': 0,
+        'risk_multiplier': 1.0,
+        'ftd_date': None,
+        'regime': 'NORMAL'
+    }
+    
+    # J LAW: Distribution days and FTD detection via SPY
+    if _JLAW_GATES_AVAILABLE:
+        try:
+            import yfinance as yf
+            spy_data = yf.Ticker("SPY").history(period="3mo")
+            if not spy_data.empty:
+                dist_info = get_spy_risk_multiplier(spy_data)
+                bottom_info = get_bottom_signal(spy_data)
+                
+                jlaw_risk['distribution_count'] = dist_info['distribution_count']
+                jlaw_risk['regime'] = dist_info['regime']
+                
+                # Start with distribution-based multiplier
+                size_mult = dist_info['risk_multiplier']
+                
+                # If FTD is active, allow aggressive sizing (multiply by 1.2)
+                if bottom_info['ftd_active']:
+                    size_mult *= bottom_info['aggressive_multiplier']
+                    jlaw_risk['ftd_date'] = bottom_info['ftd_date']
+                    log.info(f"FTD detected on {bottom_info['ftd_date']} – aggressive mode ON")
+                
+                jlaw_risk['risk_multiplier'] = size_mult
+                
+                if dist_info['regime'] == 'DEFENSIVE':
+                    log.warning(f"Distribution count: {dist_info['distribution_count']} – DEFENSIVE mode")
+        except Exception as exc:
+            log.warning(f"J Law gates failed: {exc}")
+    
     if vix >= VIX_EXTREME:
-        return vix, "EXTREME"
+        return vix, "EXTREME", jlaw_risk
     if vix >= VIX_ELEVATED:
-        return vix, "ELEVATED"
-    return vix, "NORMAL"
+        return vix, "ELEVATED", jlaw_risk
+    return vix, "NORMAL", jlaw_risk
 
 
 def _regime_size_multiplier(regime: str) -> float:
@@ -292,13 +343,20 @@ def run_intelligence_cycle(
 
         # Volatility regime (size dampener) + market direction (downturn = no longs).
         # Both computed once per cycle and applied to every long entry below.
-        cycle_vix, cycle_regime = _market_regime()
+        cycle_vix, cycle_regime, jlaw_risk = _market_regime()
         cycle_downturn, cycle_downturn_detail = _market_downturn()
         log.info("Market regime: VIX %.1f → %s", cycle_vix, cycle_regime)
         log.info(
             "Market direction: %s (%s)",
             "DOWNTURN — longs off, shorts only" if cycle_downturn else "not a downturn — longs allowed",
             cycle_downturn_detail,
+        )
+        log.info(
+            "J Law risk: dist_count=%d, multiplier=%.2f, ftd=%s, regime=%s",
+            jlaw_risk['distribution_count'],
+            jlaw_risk['risk_multiplier'],
+            jlaw_risk['ftd_date'] or 'None',
+            jlaw_risk['regime'],
         )
 
         for signal in new_signals:
@@ -381,17 +439,43 @@ def run_intelligence_cycle(
                     # REGIME SIZING: outside a downturn, don't skip longs in a dip —
                     # assess and invest, just size down when volatility is high.
                     regime_mult = _regime_size_multiplier(cycle_regime)
-                    if regime_mult < 1.0:
-                        signal["_regime_size_mult"] = regime_mult
+                    
+                    # J LAW: Apply distribution/FTD multiplier on top of VIX regime
+                    jlaw_mult = jlaw_risk.get('risk_multiplier', 1.0)
+                    combined_size_mult = regime_mult * jlaw_mult
+                    
+                    if combined_size_mult < 1.0:
+                        signal["_regime_size_mult"] = combined_size_mult
                         log.info(
-                            "VIX %.1f %s — sizing %s long to %.0f%% (%s)",
-                            cycle_vix, cycle_regime, severity, regime_mult * 100,
+                            "VIX %.1f %s + J Law mult %.2f — sizing %s long to %.0f%% (%s)",
+                            cycle_vix, cycle_regime, jlaw_mult, severity, combined_size_mult * 100,
                             signal.get("sector_label"),
                         )
 
                     etf, platform = _select_etf_for_trade(signal)
                     if etf and platform:
                         ticker = etf.get("ticker")
+
+                        # J LAW STAGE GATE: Only Stage 2 ETFs allowed for long entries
+                        if _JLAW_GATES_AVAILABLE and ticker:
+                            try:
+                                import yfinance as yf
+                                hist = yf.Ticker(ticker).history(period="6mo")
+                                if not hist.empty and len(hist) >= 160:
+                                    stage, stage_desc = classify_weinstein_stage(hist['Close'])
+                                    if stage != 2:
+                                        log.info(
+                                            "Trade skipped — %s is %s (only Stage 2 allowed)",
+                                            ticker, stage_desc
+                                        )
+                                        continue
+                                else:
+                                    log.warning(
+                                        "Stage check skipped for %s — insufficient history (%d days)",
+                                        ticker, len(hist)
+                                    )
+                            except Exception as exc:
+                                log.warning(f"Stage check failed for {ticker}: {exc}")
 
                         # SCOPE GATE: India-domestic signals must not buy globally-traded ETFs.
                         # Example: Sensex falling or India gold import duty should not
@@ -459,7 +543,7 @@ def run_intelligence_cycle(
                             except Exception as exc:
                                 log.warning("Trend adjustment failed for %s: %s", ticker, exc)
                         
-                        entry = portfolio.enter_position(signal, etf, platform)
+                        entry = portfolio.enter_position(signal, etf, platform, size_multiplier=signal.get('_regime_size_mult', 1.0))
                         if entry:
                             rotation_exits = entry.get("rotation_exits") or []
                             if rotation_exits:
@@ -544,13 +628,20 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, quant_fetcher, 
     # Regime (size) + direction (downturn) for the cold-start seeder too — never
     # seed a fresh long book into a falling market (the exact failure that opened
     # 6 sinking longs). Both computed once here.
-    seed_vix, seed_regime = _market_regime()
+    seed_vix, seed_regime, jlaw_risk = _market_regime()
     seed_downturn, seed_downturn_detail = _market_downturn()
     log.info("Seed-time market regime: VIX %.1f → %s", seed_vix, seed_regime)
     log.info(
         "Seed-time market direction: %s (%s)",
         "DOWNTURN — long seeds off" if seed_downturn else "not a downturn",
         seed_downturn_detail,
+    )
+    log.info(
+        "J Law risk: dist_count=%d, multiplier=%.2f, ftd=%s, regime=%s",
+        jlaw_risk['distribution_count'],
+        jlaw_risk['risk_multiplier'],
+        jlaw_risk['ftd_date'] or 'None',
+        jlaw_risk['regime'],
     )
 
     # Stage entries by conviction instead of dumping every stored signal at once.
@@ -599,7 +690,11 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, quant_fetcher, 
         # REGIME SIZING: outside a downturn, don't skip seeds in a dip — invest,
         # just size down when volatility is high.
         regime_mult = _regime_size_multiplier(seed_regime)
-
+        
+        # J LAW: Apply distribution/FTD multiplier on top of VIX regime for seeds
+        jlaw_mult = jlaw_risk.get('risk_multiplier', 1.0)
+        combined_size_mult = regime_mult * jlaw_mult
+        
         etf_recs = mapper.get_etfs(sectors, record)
         signal = {
             "sectors":              sectors,
@@ -610,20 +705,42 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, quant_fetcher, 
             "direction_score":      record.get("direction_score", 2.0),
             "signal_scope":         signal_scope,
             "india_article_ratio":  record.get("india_article_ratio", 0.0),
-            "_regime_size_mult":    regime_mult,
+            "_regime_size_mult":    combined_size_mult,
+            "_jlaw_risk":           jlaw_risk,
             "top_headlines":        [f"Startup seed — {sector_label} (conf: {confidence})"],
             "etf_recommendations":  etf_recs,
         }
-        if regime_mult < 1.0:
+        if combined_size_mult < 1.0:
             log.info(
-                "VIX %.1f %s — sizing seed %s to %.0f%% (%s)",
-                seed_vix, seed_regime, severity, regime_mult * 100, sector_label,
+                "VIX %.1f %s + J Law mult %.2f — sizing seed %s to %.0f%% (%s)",
+                seed_vix, seed_regime, jlaw_mult, severity, combined_size_mult * 100, sector_label,
             )
 
         etf, platform = _select_etf_for_trade(signal)
         if etf and platform:
             seed_ticker = etf.get("ticker")
             etf_scope   = etf.get("market_scope", "International-listed")
+
+            # J LAW STAGE GATE: Only Stage 2 ETFs allowed for startup seeds
+            if _JLAW_GATES_AVAILABLE and seed_ticker:
+                try:
+                    import yfinance as yf
+                    hist = yf.Ticker(seed_ticker).history(period="6mo")
+                    if not hist.empty and len(hist) >= 160:
+                        stage, stage_desc = classify_weinstein_stage(hist['Close'])
+                        if stage != 2:
+                            log.info(
+                                "Seed skipped — %s is %s (only Stage 2 allowed)",
+                                seed_ticker, stage_desc
+                            )
+                            continue
+                    else:
+                        log.warning(
+                            "Stage check skipped for %s — insufficient history (%d days)",
+                            seed_ticker, len(hist)
+                        )
+                except Exception as exc:
+                    log.warning(f"Stage check failed for {seed_ticker}: {exc}")
 
             # SCOPE GATE: India-domestic stored signals must not seed global ETFs
             if signal_scope == "india_domestic" and etf_scope != "India-listed":
@@ -671,7 +788,7 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, quant_fetcher, 
                     )
                     continue
 
-            entry = portfolio.enter_position(signal, etf, platform)
+            entry = portfolio.enter_position(signal, etf, platform, size_multiplier=signal.get('_regime_size_mult', 1.0))
             if entry:
                 rotation_exits = entry.get("rotation_exits") or []
                 if rotation_exits:
