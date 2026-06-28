@@ -952,25 +952,3 @@ def _empty_report() -> Dict:
             "worst_loss_pct": 0.0,
         },
     }
-
-
-# ── J LAW HARD GATES: Distribution-based risk multiplier helper ─────────────
-
-def get_jlaw_risk_summary(jlaw_risk: Optional[Dict] = None) -> Dict:
-    """
-    Return a summary dict for dashboard/logging with J Law risk metrics.
-    If jlaw_risk is None, returns defaults.
-    """
-    if jlaw_risk is None:
-        return {
-            'distribution_count': 0,
-            'risk_multiplier': 1.0,
-            'ftd_date': None,
-            'regime': 'NORMAL'
-        }
-    return {
-        'distribution_count': jlaw_risk.get('distribution_count', 0),
-        'risk_multiplier': jlaw_risk.get('risk_multiplier', 1.0),
-        'ftd_date': jlaw_risk.get('ftd_date'),
-        'regime': jlaw_risk.get('regime', 'NORMAL')
-    }

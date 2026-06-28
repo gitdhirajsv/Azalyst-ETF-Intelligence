@@ -1,4 +1,3 @@
-# stage_classifier.py
 """
 Weinstein Stage Classification for ETFs (Stage 1-4).
 Only Stage 2 is eligible for long positions.
@@ -38,18 +37,18 @@ def classify_weinstein_stage(close: pd.Series) -> Tuple[int, str]:
 
     # Stage 2: price > 50MA > 150MA, both rising
     if (price > last_sma50 > last_sma150) and (slope50 > 0) and (slope150 > 0):
-        return (2, "Stage 2 – Advancing (BUY)")
+        return (2, "Stage 2 - Advancing (BUY)")
 
     # Stage 4: price < 50MA < 150MA, both falling
     if (price < last_sma50 < last_sma150) and (slope50 < 0) and (slope150 < 0):
-        return (4, "Stage 4 – Declining (AVOID)")
+        return (4, "Stage 4 - Declining (AVOID)")
 
     # Stage 3: 150MA rolling over, or price below 150MA
     if (slope150 < 0) or (price < last_sma150):
-        return (3, "Stage 3 – Topping/Distribution (AVOID)")
+        return (3, "Stage 3 - Topping/Distribution (AVOID)")
 
     # Everything else = Stage 1
-    return (1, "Stage 1 – Basing (WAIT)")
+    return (1, "Stage 1 - Basing (WAIT)")
 
 def apply_stage_gate(close_df: pd.DataFrame, min_stage_allowed: int = 2) -> pd.Series:
     """
@@ -63,10 +62,7 @@ def apply_stage_gate(close_df: pd.DataFrame, min_stage_allowed: int = 2) -> pd.S
     return pd.Series(stages) >= min_stage_allowed
 
 def get_stage_map(close_df: pd.DataFrame) -> dict:
-    """
-    Returns a dict mapping ticker -> (stage, description) for all columns.
-    Useful for dashboard display.
-    """
+    """Returns a dict mapping ticker -> {stage, description} for the dashboard."""
     stage_map = {}
     for ticker in close_df.columns:
         stage, desc = classify_weinstein_stage(close_df[ticker])

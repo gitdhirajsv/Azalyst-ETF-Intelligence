@@ -1,0 +1,34 @@
+# J Law Filter Integration — Completion Summary for DeepSeek
+
+The following changes have been successfully implemented into the `Azalyst-ETF-Intelligence` codebase based on the provided integration plan:
+
+### 1. New Core Modules Added
+Three new python modules were placed in the root directory:
+- `stage_classifier.py`: Contains Weinstein stage classification logic.
+- `distribution_tracker.py`: Tracks institutional selling and applies the Defensive regime dampener.
+- `bottom_detector.py`: Scans for Follow-Through Days (FTD) to enable Aggressive sizing.
+
+### 2. Core Logic (`azalyst.py`)
+- **Imports Added**: Imported the new J Law tools at the top.
+- **J Law Risk Aggregator**: Added a `_get_jlaw_risk()` function that dynamically fetches 6 months of `SPY` data via `yfinance` to run the distribution and FTD checks.
+- **Cycle & Seeder Integrations**: Inserted J Law overrides directly into `run_intelligence_cycle` and `seed_startup_trades`. Overrode the native `cycle_regime` and established a `jlaw_size_mult`.
+- **Stage Gate Check**: Implemented the strict Weinstein Stage 2 check for each `ticker` during long entry loops. If it’s not in Stage 2, the trade is skipped.
+- **Final Multiplier**: Combined the native `_regime_size_multiplier` with the `jlaw_size_mult` into `signal['_regime_size_mult']` which gets passed to the portfolio execution function.
+
+### 3. Sizing Adjustment (`paper_trader.py`)
+- **Signature Mod**: Modified `enter_position` to safely accept a `size_multiplier` argument.
+- **Sizing Math**: Updated the `fraction` calculation (`fraction *= size_multiplier`) so that the J Law constraints (defensive cuts or aggressive FTD boosts) directly impact the fractional capital allocated to the trade.
+
+### 4. Data Export (`generate_dashboard.py`)
+- **Payload Injection**: Added logic near the bottom of `generate_status()` to execute `_get_jlaw_risk()` and generate a `stage_map` for all active open positions using `yfinance` data. 
+- **JSON Formatting**: Injected `jlaw_risk` and `stage_map` seamlessly into the final `status.json` payload.
+
+### 5. UI Updates (`index.html`)
+- **Risk Dashboard**: Extended the Risk Dashboard grid from 4 columns to 6 columns. Embedded two new visual metrics boxes: `J-Law Regime` (Sizing multiplier) and `Dist / FTD` (Market bottom metrics).
+- **Position Tables**: Modified both the MKTD live positions table and the PORT open positions table headers. Shaved down the width on Sector labels to slip in a new `STAGE` column which dynamically renders the ticker's current Weinstein Stage with color coding (Green for S2, Red for others).
+
+### 6. Cron Schedule (`.github/workflows/run_azalyst.yml`)
+- Altered the cron job configurations to align with the market-aware requirements:
+  - `0 14-21 * * 1-5` (Hourly during market hours)
+  - `0 22,2,6,10 * * 1-5` (Every 4 hours after-hours)
+  - `0 0,6,12,18 * * 0,6` (Every 6 hours on weekends)

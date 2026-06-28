@@ -318,9 +318,10 @@ body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-
         </div>
       </div>
       <div class="prow" style="border-bottom:1px solid #333;margin-bottom:3px">
-        <span style="color:#444;font-size:8px;min-width:55px">TICKER</span>
-        <span style="color:#444;font-size:8px;min-width:110px">SECTOR</span>
-        <span style="color:#444;font-size:8px;min-width:55px;text-align:right">% BOOK</span>
+        <span style="color:#444;font-size:8px;min-width:50px">TICKER</span>
+        <span style="color:#444;font-size:8px;min-width:85px">SECTOR</span>
+        <span style="color:#444;font-size:8px;min-width:35px;text-align:center">STAGE</span>
+        <span style="color:#444;font-size:8px;min-width:50px;text-align:right">% BOOK</span>
         <span style="color:#444;font-size:8px;min-width:65px;text-align:right">UNREAL P&L</span>
         <span style="color:#444;font-size:8px;min-width:52px;text-align:right">RET%</span>
         <span style="color:#444;font-size:8px;min-width:45px;text-align:right">CONF</span>
@@ -376,8 +377,8 @@ body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-
 
     <!-- Panel 6: Risk Dashboard (span3 to fill row after Factor Breakdown insertion) -->
     <div class="panel span3">
-      <div class="panel-header">RISK DASHBOARD</div>
-      <div class="mgrid" style="grid-template-columns:repeat(4,1fr);margin-bottom:8px" id="riskBoxes"></div>
+      <div class="panel-header">RISK DASHBOARD & J LAW REGIME</div>
+      <div class="mgrid" style="grid-template-columns:repeat(6,1fr);margin-bottom:8px" id="riskBoxes"></div>
       <div style="font-size:8px;color:#444;margin-bottom:4px">— SECTOR CONCENTRATION —</div>
       <div id="sectorConc"></div>
       <div style="display:flex;gap:10px;margin-top:6px;font-size:9px;flex-wrap:wrap">
@@ -443,8 +444,8 @@ body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-
 
     <div class="panel">
       <div class="panel-header">OPEN POSITIONS</div>
-      <div style="display:grid;grid-template-columns:55px 120px 70px 70px 70px 70px 60px 55px;gap:0;font-size:8px;color:#444;border-bottom:1px solid #333;padding-bottom:3px;margin-bottom:3px">
-        <span>ID</span><span>ETF NAME</span><span style="text-align:right">ENTRY</span><span style="text-align:right">CURRENT</span><span style="text-align:right">P&L USD</span><span style="text-align:right">RET%</span><span style="text-align:right">STOP</span><span style="text-align:right">DAYS</span>
+      <div style="display:grid;grid-template-columns:55px 90px 30px 70px 70px 70px 70px 60px 55px;gap:0;font-size:8px;color:#444;border-bottom:1px solid #333;padding-bottom:3px;margin-bottom:3px">
+        <span>ID</span><span>ETF NAME</span><span style="text-align:center">STG</span><span style="text-align:right">ENTRY</span><span style="text-align:right">CURRENT</span><span style="text-align:right">P&L USD</span><span style="text-align:right">RET%</span><span style="text-align:right">STOP</span><span style="text-align:right">DAYS</span>
       </div>
       <div id="portPositions"></div>
     </div>
@@ -780,10 +781,13 @@ function renderMktdPage() {
       ? Number(p.pct_of_book) * 100
       : (navRef > 0 && p.market_value ? (Number(p.market_value) / navRef) * 100 : null);
     const pctStr = (pctBook === null || isNaN(pctBook)) ? '—' : pctBook.toFixed(1) + '%';
+    const stage = DATA.stage_map ? (DATA.stage_map[p.ticker] || '?') : '?';
+    const stageColor = stage === 2 ? '#00ff41' : (stage === '?' ? '#444' : '#ff3333');
     return `<div class="${rowCls}">
       <span class="pticker">${p.ticker}</span>
-      <span class="psector" style="min-width:110px">${(p.sector||'').substring(0,26)}</span>
-      <span style="min-width:55px;text-align:right;font-size:10px;color:#ffaa00;font-weight:700">${pctStr}</span>
+      <span class="psector" style="min-width:85px">${(p.sector||'').substring(0,20)}</span>
+      <span style="min-width:35px;text-align:center;font-size:9px;color:${stageColor};font-weight:700">S${stage}</span>
+      <span style="min-width:50px;text-align:right;font-size:10px;color:#ffaa00;font-weight:700">${pctStr}</span>
       <span class="ppnl ${colorClass(p.pnl)}">${fmt.usd(p.pnl)}</span>
       <span class="ppct ${colorClass(p.pnl_pct)}">${p.pnl_pct_str}</span>
       <span class="pconf" style="color:${p.confidence>=80?'#ff9900':p.confidence>=70?'#ffcc00':'#666'}">${p.confidence}/100</span>
@@ -850,7 +854,9 @@ function renderMktdPage() {
     <div class="mbox"><div class="mlabel">VIX</div><div class="mval" style="color:${vixColor}">${rc.vix!=null?rc.vix:'--'}</div><div class="mchg dn">${rc.vix_regime||'--'}</div></div>
     <div class="mbox"><div class="mlabel">Drawdown</div><div class="mval ${colorClass(-(rc.drawdown_from_peak_pct||0))}">${fmt.pct(-(rc.drawdown_from_peak_pct||0))}</div><div class="mchg" style="color:#444">from peak</div></div>
     <div class="mbox"><div class="mlabel">Circuit Bkr</div><div class="mval" style="color:${rc.circuit_breaker_active?'#ff3333':'#00ff41'}">${rc.circuit_breaker_active?'TRIPPED':'CLEAR'}</div><div class="mchg" style="color:#444">-12% limit</div></div>
-    <div class="mbox"><div class="mlabel">Max DD</div><div class="mval dn">-${fmt.num(DATA.max_drawdown_pct)}%</div><div class="mchg" style="color:#444">historical</div></div>`;
+    <div class="mbox"><div class="mlabel">Max DD</div><div class="mval dn">-${fmt.num(DATA.max_drawdown_pct)}%</div><div class="mchg" style="color:#444">historical</div></div>
+    <div class="mbox"><div class="mlabel">J-Law Regime</div><div class="mval" style="color:${(DATA.jlaw_risk||{}).regime==='DEFENSIVE'?'#ff3333':'#00ff41'}">${(DATA.jlaw_risk||{}).regime||'--'}</div><div class="mchg" style="color:#444">sizing mul: ${(DATA.jlaw_risk||{}).risk_multiplier||1.0}</div></div>
+    <div class="mbox"><div class="mlabel">Dist / FTD</div><div class="mval" style="color:#ffaa00">${(DATA.jlaw_risk||{}).distribution_count||0} / ${(DATA.jlaw_risk||{}).ftd_active?'YES':'NO'}</div><div class="mchg" style="color:#444">market bottom</div></div>`;
 
   // Sector concentration
   document.getElementById('sectorConc').innerHTML = (rc.sector_concentration||[]).map(sc => {
@@ -999,9 +1005,13 @@ function renderPortPage() {
     let bg = '#050505'; let bl = 'none';
     if (p.pnl_pct <= -8) { bg='#0d0000'; bl='2px solid #ff0000'; }
     else if (p.pnl_pct < -5) { bg='#0d0600'; bl='2px solid #ff6600'; }
-    return `<div style="display:grid;grid-template-columns:55px 120px 70px 70px 70px 70px 60px 55px;gap:0;font-size:10px;padding:3px 0;border-bottom:1px solid #0d0d0d;background:${bg};border-left:${bl}">
+    const stage = DATA.stage_map ? (DATA.stage_map[p.ticker] || '?') : '?';
+    const stageColor = stage === 2 ? '#00ff41' : (stage === '?' ? '#444' : '#ff3333');
+    return `<div style="display:grid;grid-template-columns:55px 90px 30px 70px 70px 70px 70px 60px 55px;gap:0;font-size:10px;padding:3px 0;border-bottom:1px solid #0d0d0d;background:${bg};border-left:${bl}">
       <span style="color:#ff9900;font-weight:700">${p.trade_id}</span>
-      <span style="color:#888;font-size:9px">${(p.etf_name||'').substring(0,22)}</span>
+      <span style="color:#888;font-size:9px">${(p.etf_name||'').substring(0,16)}</span>
+      <span style="text-align:center;font-size:9px;color:${stageColor};font-weight:700">S${stage}</span>
+      <span style="text-align:right;color:#fff">${fmt.usd(p.avg_price)}</span>
       <span style="text-align:right;color:#aaa">${fmt.num(p.entry)}</span>
       <span style="text-align:right;color:#fff">${fmt.num(p.current)}</span>
       <span style="text-align:right" class="${colorClass(p.pnl)}">${fmt.usd(p.pnl)}</span>

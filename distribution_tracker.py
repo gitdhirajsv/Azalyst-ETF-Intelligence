@@ -1,4 +1,3 @@
-# distribution_tracker.py
 """
 Institutional selling (distribution days) on SPY.
 Count over trailing 25 days. 5+ days = defensive mode.

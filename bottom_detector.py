@@ -1,4 +1,3 @@
-# bottom_detector.py
 """
 Follow-Through Day (FTD) detection for early bullish confirmation.
 """
@@ -40,7 +39,7 @@ def get_bottom_signal(spy_data: pd.DataFrame) -> dict:
     volume = spy_data['Volume']
     ftd = detect_follow_through_day(close, volume)
     return {
-        'ftd_date': ftd,
+        'ftd_date': ftd.strftime('%Y-%m-%d') if ftd else None,
         'ftd_active': ftd is not None,
         'aggressive_multiplier': 1.2 if ftd is not None else 1.0
     }

@@ -7,7 +7,12 @@ on:
       - "azalyst_state.json"
       - "status.json"
   schedule:
-    - cron: "*/30 * * * *"
+    # Market hours: every hour (14:00 to 21:00) UTC Mon-Fri
+    - cron: "0 14-21 * * 1-5"
+    # After hours: every 4 hours UTC Mon-Fri
+    - cron: "0 22,2,6,10 * * 1-5"
+    # Weekends: every 6 hours
+    - cron: "0 0,6,12,18 * * 0,6"
   workflow_dispatch:
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true

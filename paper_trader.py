@@ -1505,8 +1505,6 @@ class PaperPortfolio:
             confidence, severity, float(signal.get("direction_score", 2.0))
         )
         # Volatility-regime dampener: invest in the dip but smaller when shaky.
-        fraction *= float(signal.get("_regime_size_mult", 1.0))
-        # J LAW: Apply explicit size_multiplier parameter (from distribution/FTD logic)
         fraction *= size_multiplier
         if fraction <= 0:
             self._log_entry_rejection(ticker, signal, "position_size_zero")
