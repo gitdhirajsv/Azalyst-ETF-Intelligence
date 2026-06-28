@@ -74,16 +74,16 @@
     }
   },
   "top_signal": {
-    "ticker": "XLE",
-    "rank_score": 6.684631578947368,
-    "flow_score": 0.0,
-    "options_score": 22.418655852346955,
-    "rotation_score": 9.025447208196939,
+    "ticker": "ARKG",
+    "rank_score": 12.890706766917294,
+    "flow_score": 18.0,
+    "options_score": 0.0,
+    "rotation_score": 0.0,
     "macro_score": 0.0,
-    "news_score": 8.04,
-    "total": 46.16873463949126,
+    "news_score": 7.104000000000001,
+    "total": 37.9947067669173,
     "publish": false,
-    "direction": "short"
+    "direction": "long"
   },
   "jlaw_risk": {
     "distribution_count": 0,
@@ -125,6 +125,10 @@
       "score": 82.0
     },
     {
+      "symbol": "Commodities & Mining + Clean Energy & Renewables",
+      "score": 81.0
+    },
+    {
       "symbol": "Emerging Markets",
       "score": 79.0
     },
@@ -143,10 +147,6 @@
     {
       "symbol": "Healthcare & Pharma",
       "score": 74.0
-    },
-    {
-      "symbol": "Commodities & Mining",
-      "score": 71.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -326,6 +326,57 @@
         "volume_confirmation": 16.8,
         "source_diversity": 13.8,
         "recency": 16.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining + Clean Energy & Renewables",
+      "confidence": 81.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 10,
+      "latest_at": "28 Jun 2026 08:28 UTC",
+      "headline": "China Is Quietly Winning the Clean Energy Trade War",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "india",
+        "americas"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Oilprice.com",
+        "The Verge",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "CPSEETF",
+        "COPP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 15.3,
+        "volume_confirmation": 16.2,
+        "source_diversity": 11.0,
+        "recency": 16.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -578,55 +629,6 @@
         "source_diversity": 11.0,
         "recency": 16.9,
         "geopolitical_severity": 12.7
-      }
-    },
-    {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 71.0,
-      "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "28 Jun 2026 06:14 UTC",
-      "headline": "China Is Quietly Winning the Clean Energy Trade War",
-      "regions": [
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "US Top News and Analysis",
-        "The Verge",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 12.0,
-        "volume_confirmation": 12.6,
-        "source_diversity": 11.0,
-        "recency": 16.9,
-        "geopolitical_severity": 10.0
       }
     },
     {
@@ -957,6 +959,11 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Commodities & Mining + Clean Energy & Renewables - 10 articles - HIGH / BEARISH - China Is Quietly Winning the Clean Energy Trade War"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "Emerging Markets - 7 articles - MEDIUM / BEARISH - MSCI keeps South Korea as emerging market, delays Indonesia review amid downgrade risk"
     },
     {
@@ -978,11 +985,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Healthcare & Pharma - 6 articles - HIGH / BULLISH - Africa CDC Calls for More Ebola Funding"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Commodities & Mining - 6 articles - MEDIUM / BEARISH - China Is Quietly Winning the Clean Energy Trade War"
     },
     {
       "tag": "tag-bear",
@@ -1130,11 +1132,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 60092.28,
+      "price": 60344.01,
       "currency": "USD",
-      "change": 152.18,
-      "change_pct": 0.25,
-      "change_str": "+0.25%",
+      "change": 403.91,
+      "change_pct": 0.67,
+      "change_str": "+0.67%",
       "direction": "up"
     },
     {
@@ -1304,11 +1306,11 @@
     }
   },
   "logs": [
-    "2026-06-28 08:19:44 [INFO] AZALYST - status.json generated",
-    "2026-06-28 08:19:44 [INFO] PORTFOLIO - NAV USD 8,347.90 | Return -16.60%",
-    "2026-06-28 08:19:44 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-28 08:19:44 [INFO] TRADER - Open positions: BND",
-    "2026-06-28 08:19:44 [WARN] RISK - Circuit breaker threshold reached"
+    "2026-06-28 08:39:30 [INFO] AZALYST - status.json generated",
+    "2026-06-28 08:39:30 [INFO] PORTFOLIO - NAV USD 8,347.90 | Return -16.60%",
+    "2026-06-28 08:39:30 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-28 08:39:30 [INFO] TRADER - Open positions: BND",
+    "2026-06-28 08:39:30 [WARN] RISK - Circuit breaker threshold reached"
   ],
-  "generated_at": "2026-06-28 08:19:41 UTC"
+  "generated_at": "2026-06-28 08:39:28 UTC"
 }

@@ -3582,24 +3582,27 @@
     }
   },
   "commodities_mining": {
-    "sent_at": "2026-06-28T06:16:29.951258+00:00",
-    "confidence": 71,
-    "sector_label": "Commodities & Mining",
-    "article_count": 6,
-    "severity": "MEDIUM",
+    "sent_at": "2026-06-28T08:30:04.767694+00:00",
+    "confidence": 81,
+    "sector_label": "Commodities & Mining + Clean Energy & Renewables",
+    "article_count": 10,
+    "severity": "HIGH",
     "direction": "BEARISH",
     "direction_score": 0.0,
     "signal_scope": "global",
     "india_article_ratio": 0.0,
     "regions": [
+      "asia_pacific",
       "global",
-      "asia_pacific"
+      "india",
+      "americas",
+      "europe"
     ],
     "sources": [
-      "Oilprice.com",
       "US Top News and Analysis",
+      "Oilprice.com",
       "The Verge",
-      "Markets-Economic Times"
+      "Bloomberg Markets"
     ],
     "top_headlines": [
       "China Is Quietly Winning the Clean Energy Trade War",
@@ -3608,13 +3611,13 @@
       "Apple wants permission to buy memory from a blacklisted Chinese supplier",
       "Trump threatens 100% tariffs on countries putting 'Digital Services Tax on American Companies'"
     ],
-    "latest_ts": "2026-06-28T06:14:38.657536+00:00",
+    "latest_ts": "2026-06-28T08:28:05.626605+00:00",
     "confidence_breakdown": {
-      "signal_strength": 12.0,
-      "volume_confirmation": 12.6,
+      "signal_strength": 15.3,
+      "volume_confirmation": 16.2,
       "source_diversity": 11.0,
       "recency": 16.9,
-      "geopolitical_severity": 10.0,
+      "geopolitical_severity": 13.0,
       "cross_engine_confirmation": 8.9,
       "macro_events": 0.0
     },
@@ -3658,6 +3661,23 @@
           ]
         },
         {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NMDC, Coal India \u2014 commodity exposure",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u20139 months",
+          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
+          "sector_key": "commodities_mining",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 72.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        },
+        {
           "name": "Sprott Physical Copper Trust",
           "ticker": "COPP",
           "platform": "Sprott \u2014 IBKR / Schwab",
@@ -3673,21 +3693,6 @@
             "clean thematic exposure",
             "matches international access"
           ]
-        },
-        {
-          "name": "CPSE ETF",
-          "ticker": "CPSEETF",
-          "note": "NMDC, Coal India \u2014 commodity exposure",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "3\u20139 months",
-          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
-          "sector_key": "commodities_mining",
-          "market_bucket": "india",
-          "market_scope": "India-listed",
-          "selection_score": 69.0,
-          "selection_notes": []
         }
       ],
       "top_etfs": [
@@ -3710,6 +3715,23 @@
           ]
         },
         {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NMDC, Coal India \u2014 commodity exposure",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u20139 months",
+          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
+          "sector_key": "commodities_mining",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 72.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        },
+        {
           "name": "Sprott Physical Copper Trust",
           "ticker": "COPP",
           "platform": "Sprott \u2014 IBKR / Schwab",
@@ -3725,21 +3747,6 @@
             "clean thematic exposure",
             "matches international access"
           ]
-        },
-        {
-          "name": "CPSE ETF",
-          "ticker": "CPSEETF",
-          "note": "NMDC, Coal India \u2014 commodity exposure",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "3\u20139 months",
-          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
-          "sector_key": "commodities_mining",
-          "market_bucket": "india",
-          "market_scope": "India-listed",
-          "selection_score": 69.0,
-          "selection_notes": []
         }
       ],
       "regional_alternatives": {
@@ -3756,8 +3763,10 @@
             "sector_key": "commodities_mining",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 69.0,
-            "selection_notes": []
+            "selection_score": 72.0,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
           }
         ],
         "International-listed": [
@@ -3811,8 +3820,10 @@
           "sector_key": "commodities_mining",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 69.0,
-          "selection_notes": []
+          "selection_score": 72.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "global": [
