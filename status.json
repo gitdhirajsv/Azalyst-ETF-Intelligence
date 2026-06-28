@@ -34,30 +34,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "HIGH_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.1434675849583111,
+    "vix_level": 18.40999984741211,
+    "vix_percentile_1y": 0.6785714285714286,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
-      "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "rank": 18,
+      "flow": 18,
+      "options": 28,
+      "rotation": 12,
+      "macro": 12,
+      "news": 12
     }
   },
   "top_signal": {
     "ticker": "XLE",
     "rank_score": 6.684631578947368,
     "flow_score": 0.0,
-    "options_score": 22.418655852346955,
+    "options_score": 22.418659658886792,
     "rotation_score": 9.025447208196939,
     "macro_score": 0.0,
     "news_score": 8.04,
-    "total": 46.16873463949126,
+    "total": 46.1687384460311,
     "publish": false,
     "direction": "short"
   },
@@ -83,6 +83,10 @@
     "values": []
   },
   "confidence": [
+    {
+      "symbol": "Asia Pacific Equity + Technology & AI / Semiconductors",
+      "score": 94.0
+    },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 91.0
@@ -128,10 +132,6 @@
       "score": 65.0
     },
     {
-      "symbol": "Asia Pacific Equity + Technology & AI / Semiconductors",
-      "score": 65.0
-    },
-    {
       "symbol": "Europe Equity",
       "score": 64.0
     },
@@ -145,6 +145,56 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity + Technology & AI / Semiconductors",
+      "confidence": 94.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "28 Jun 2026 10:03 UTC",
+      "headline": "Funding the 'mother of all cycles': Chris Wood cuts Indian stocks to double down on South Korean chip giants",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "americas",
+        "middle_east"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "World | Deutsche Welle",
+        "Tech",
+        "Oilprice.com"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.4,
+        "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
+    },
     {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
@@ -709,56 +759,6 @@
       }
     },
     {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity + Technology & AI / Semiconductors",
-      "confidence": 65.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -2.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "24 Jun 2026 12:30 UTC",
-      "headline": "Global Market: BOJ policymakers push for faster rate hikes as inflation risks mount",
-      "regions": [
-        "middle_east",
-        "global",
-        "asia_pacific",
-        "europe"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "US Top News and Analysis",
-        "Oilprice.com",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 17.4,
-        "source_diversity": 16.7,
-        "recency": 16.8,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity",
       "confidence": 64.0,
@@ -915,6 +915,11 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Asia Pacific Equity + Technology & AI / Semiconductors - 13 articles - CRITICAL / BEARISH - Funding the 'mother of all cycles': Chris Wood cuts Indian stocks to double down on South Korean chip giants"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - CRITICAL / BEARISH - Gold heads for fourth weekly loss amid Fed rate hike expectations"
     },
     {
@@ -966,11 +971,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Defense & Aerospace - 20 articles - HIGH / BEARISH - Romania bolsters Black Sea fleet with Turkish-built corvette"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Asia Pacific Equity + Technology & AI / Semiconductors - 12 articles - HIGH / BEARISH - Global Market: BOJ policymakers push for faster rate hikes as inflation risks mount"
     },
     {
       "tag": "tag-bear",
@@ -1103,11 +1103,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 60300.36,
+      "price": 60117.75,
       "currency": "USD",
-      "change": 360.26,
-      "change_pct": 0.6,
-      "change_str": "+0.60%",
+      "change": 177.65,
+      "change_pct": 0.3,
+      "change_str": "+0.30%",
       "direction": "up"
     },
     {
@@ -1181,9 +1181,9 @@
     }
   },
   "logs": [
-    "2026-06-28 09:44:01 [INFO] AZALYST - status.json generated",
-    "2026-06-28 09:44:01 [INFO] PORTFOLIO - NAV USD 10,009.01 | Return +0.00%",
-    "2026-06-28 09:44:01 [INFO] SIGNALS - 15 active signal buckets in state"
+    "2026-06-28 10:10:48 [INFO] AZALYST - status.json generated",
+    "2026-06-28 10:10:48 [INFO] PORTFOLIO - NAV USD 10,009.01 | Return +0.00%",
+    "2026-06-28 10:10:48 [INFO] SIGNALS - 15 active signal buckets in state"
   ],
-  "generated_at": "2026-06-28 09:43:59 UTC"
+  "generated_at": "2026-06-28 10:10:47 UTC"
 }
