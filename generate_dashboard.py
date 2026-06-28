@@ -219,7 +219,7 @@ def infer_vix_regime(vix_value):
 
 def calc_metrics(portfolio, usd_inr_rate=83.5):
     """Compute portfolio metrics and output everything in USD."""
-    positions     = portfolio.get("open_positions", [])
+    positions     = portfolio.get("open_positions", []) + portfolio.get("open_hedge_positions", [])
     total_invested = sum(pos.get("invested_inr", 0) for pos in positions)
     market_value  = sum(
         pos.get("current_price", pos.get("entry_price", 0)) * pos.get("units", 0)
@@ -642,7 +642,7 @@ def build_logs(portfolio, state, metrics):
     )
     if state:
         logs.append(f"{now} [INFO] SIGNALS - {len(state)} active signal buckets in state")
-    positions = portfolio.get("open_positions", [])
+    positions = portfolio.get("open_positions", []) + portfolio.get("open_hedge_positions", [])
     if positions:
         logs.append(f"{now} [INFO] TRADER - Open positions: {', '.join(p['ticker'] for p in positions)}")
     closed = portfolio.get("closed_trades", [])
@@ -734,7 +734,8 @@ def generate_status():
 
     market_snapshot = fetch_market_snapshot()
     metrics         = calc_metrics(portfolio, usd_inr_rate)
-    positions       = build_positions(portfolio.get("open_positions", []), usd_inr_rate)
+    all_pos         = portfolio.get("open_positions", []) + portfolio.get("open_hedge_positions", [])
+    positions       = build_positions(all_pos, usd_inr_rate)
     signal_cards    = build_signal_cards(state)
 
     # ── Aladdin Risk Engine ──────────────────────────────────────────────
