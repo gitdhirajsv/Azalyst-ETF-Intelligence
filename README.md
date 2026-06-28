@@ -340,6 +340,10 @@ MIT
 
 ---
 
+<div align="center">
+
 Built by [Azalyst](https://github.com/gitdhirajsv/Azalyst-Alpha-Research-Engine) | Azalyst Alpha Quant Research
 
 *"Evidence over claims. Always."*
+
+</div>
