@@ -50,14 +50,14 @@
     }
   },
   "top_signal": {
-    "ticker": "ARKG",
-    "rank_score": 12.890706766917294,
-    "flow_score": 18.0,
-    "options_score": 0.0,
-    "rotation_score": 0.0,
-    "macro_score": 0.0,
-    "news_score": 7.104000000000001,
-    "total": 37.9947067669173,
+    "ticker": "IGV",
+    "rank_score": 6.242887218045112,
+    "flow_score": 0.8023770174543584,
+    "options_score": 21.0,
+    "rotation_score": 7.526695693367893,
+    "macro_score": 0.06656489192276518,
+    "news_score": 11.28,
+    "total": 46.91852482079013,
     "publish": false,
     "direction": "long"
   },
@@ -84,12 +84,20 @@
   },
   "confidence": [
     {
+      "symbol": "Technology & AI / Semiconductors + Asia Pacific Equity",
+      "score": 94.0
+    },
+    {
       "symbol": "Asia Pacific Equity + Technology & AI / Semiconductors",
       "score": 94.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 91.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 85.0
     },
     {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
@@ -101,7 +109,7 @@
     },
     {
       "symbol": "Commodities & Mining + Clean Energy & Renewables",
-      "score": 81.0
+      "score": 80.0
     },
     {
       "symbol": "Emerging Markets",
@@ -116,12 +124,8 @@
       "score": 78.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 75.0
-    },
-    {
       "symbol": "Healthcare & Pharma",
-      "score": 74.0
+      "score": 73.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -138,13 +142,62 @@
     {
       "symbol": "India Equity Markets",
       "score": 63.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors + Asia Pacific Equity",
-      "score": 62.0
     }
   ],
   "signals": [
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors + Asia Pacific Equity",
+      "confidence": 94.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "28 Jun 2026 13:27 UTC",
+      "headline": "Chip Industry Week In Review",
+      "regions": [
+        "middle_east",
+        "asia_pacific",
+        "americas",
+        "india"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Oilprice.com",
+        "www.theregister.com - Articles",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.4,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
     {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity + Technology & AI / Semiconductors",
@@ -245,6 +298,52 @@
         "volume_confirmation": 17.4,
         "source_diversity": 12.0,
         "recency": 16.1,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 85.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -1.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 23,
+      "latest_at": "28 Jun 2026 13:04 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "americas",
+        "global",
+        "india",
+        "europe"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Tech",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 9.1,
+        "recency": 16.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -353,7 +452,7 @@
     {
       "sector_key": "commodities_mining",
       "sector_label": "Commodities & Mining + Clean Energy & Renewables",
-      "confidence": 81.0,
+      "confidence": 80.0,
       "severity": "HIGH",
       "direction": "BEARISH",
       "direction_score": 0.0,
@@ -361,19 +460,19 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 10,
-      "latest_at": "28 Jun 2026 08:28 UTC",
+      "latest_at": "28 Jun 2026 13:27 UTC",
       "headline": "China Is Quietly Winning the Clean Energy Trade War",
       "regions": [
         "asia_pacific",
         "global",
-        "india",
-        "americas"
+        "americas",
+        "india"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "Oilprice.com",
         "The Verge",
-        "Bloomberg Markets"
+        "Oilprice.com",
+        "Tech",
+        "US Top News and Analysis"
       ],
       "primary_etf": "DBC",
       "top_etfs": [
@@ -396,7 +495,7 @@
       "breakdown": {
         "signal_strength": 15.3,
         "volume_confirmation": 16.2,
-        "source_diversity": 11.0,
+        "source_diversity": 10.3,
         "recency": 16.9,
         "geopolitical_severity": 13.0
       }
@@ -554,75 +653,28 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 75.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "27 Jun 2026 19:34 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "global",
-        "europe",
-        "india",
-        "americas"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Finance",
-        "Cointelegraph.com News",
-        "Tech"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 10.3,
-        "recency": 5.1,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "healthcare_pharma",
       "sector_label": "Healthcare & Pharma",
-      "confidence": 74.0,
+      "confidence": 73.0,
       "severity": "HIGH",
       "direction": "BULLISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "28 Jun 2026 06:14 UTC",
-      "headline": "Africa CDC Calls for More Ebola Funding",
+      "article_count": 5,
+      "latest_at": "28 Jun 2026 13:27 UTC",
+      "headline": "Seniors in Medicare are about to get landmark obesity drug coverage \u2014 but many may not know it yet",
       "regions": [
-        "africa",
-        "americas",
         "asia_pacific",
+        "americas",
+        "global",
         "europe"
       ],
       "sources": [
-        "Bloomberg Markets",
         "Markets-Economic Times",
-        "World | Deutsche Welle"
+        "World | Deutsche Welle",
+        "US Top News and Analysis"
       ],
       "primary_etf": "XLV",
       "top_etfs": [
@@ -645,11 +697,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 10.3,
-        "volume_confirmation": 12.6,
-        "source_diversity": 11.0,
+        "signal_strength": 12.1,
+        "volume_confirmation": 11.3,
+        "source_diversity": 9.1,
         "recency": 16.9,
-        "geopolitical_severity": 12.7
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -856,62 +908,14 @@
         "recency": 16.6,
         "geopolitical_severity": 13.0
       }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors + Asia Pacific Equity",
-      "confidence": 62.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": 7.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "27 Jun 2026 04:05 UTC",
-      "headline": "Chip Industry Week In Review",
-      "regions": [
-        "asia_pacific",
-        "middle_east",
-        "india",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "EE Times",
-        "Earnings",
-        "Semiconductor Engineering"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.7,
-        "recency": 17.0,
-        "geopolitical_severity": 13.0
-      }
     }
   ],
   "articles": [
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Technology & AI / Semiconductors + Asia Pacific Equity - 13 articles - CRITICAL / BEARISH - Chip Industry Week In Review"
+    },
     {
       "tag": "tag-bear",
       "label": "Bearish",
@@ -921,6 +925,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - CRITICAL / BEARISH - Gold heads for fourth weekly loss amid Fed rate hike expectations"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Crypto & Digital Assets - 23 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
@@ -953,14 +962,9 @@
       "text": "Nuclear Energy & Uranium - 7 articles - HIGH / BEARISH - Adani Targets 10 GW Nuclear Power Capacity in India by 2035"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Crypto & Digital Assets - 23 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
-    },
-    {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Healthcare & Pharma - 6 articles - HIGH / BULLISH - Africa CDC Calls for More Ebola Funding"
+      "text": "Healthcare & Pharma - 5 articles - HIGH / BULLISH - Seniors in Medicare are about to get landmark obesity drug coverage \u2014 but many may not know it yet"
     },
     {
       "tag": "tag-bear",
@@ -981,11 +985,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "India Equity Markets - 37 articles - HIGH / BULLISH - Why did market rise today? Sensex rallied 791 pts, Nifty closed above 24,000; 6 key factors drove D-St rebound"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Technology & AI / Semiconductors + Asia Pacific Equity - 13 articles - CRITICAL / BEARISH - Chip Industry Week In Review"
     }
   ],
   "market_snapshot": [
@@ -1103,11 +1102,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 60016.87,
+      "price": 60086.93,
       "currency": "USD",
-      "change": 76.77,
-      "change_pct": 0.13,
-      "change_str": "+0.13%",
+      "change": 146.83,
+      "change_pct": 0.24,
+      "change_str": "+0.24%",
       "direction": "up"
     },
     {
@@ -1181,9 +1180,9 @@
     }
   },
   "logs": [
-    "2026-06-28 10:28:22 [INFO] AZALYST - status.json generated",
-    "2026-06-28 10:28:22 [INFO] PORTFOLIO - NAV USD 10,009.01 | Return +0.00%",
-    "2026-06-28 10:28:22 [INFO] SIGNALS - 15 active signal buckets in state"
+    "2026-06-28 13:34:34 [INFO] AZALYST - status.json generated",
+    "2026-06-28 13:34:34 [INFO] PORTFOLIO - NAV USD 10,009.01 | Return +0.00%",
+    "2026-06-28 13:34:34 [INFO] SIGNALS - 15 active signal buckets in state"
   ],
-  "generated_at": "2026-06-28 10:28:20 UTC"
+  "generated_at": "2026-06-28 13:34:33 UTC"
 }
