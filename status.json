@@ -58,33 +58,41 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "HIGH_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.1434675849583111,
+    "vix_level": 18.40999984741211,
+    "vix_percentile_1y": 0.6785714285714286,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
-      "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "rank": 18,
+      "flow": 18,
+      "options": 28,
+      "rotation": 12,
+      "macro": 12,
+      "news": 12
     }
   },
   "top_signal": {
-    "ticker": "ARKG",
-    "rank_score": 14.107914893617021,
-    "flow_score": 18.0,
-    "options_score": 0.0,
-    "rotation_score": 0.0,
+    "ticker": "XLE",
+    "rank_score": 6.684631578947368,
+    "flow_score": 0.0,
+    "options_score": 22.418655852346955,
+    "rotation_score": 9.025447208196939,
     "macro_score": 0.0,
-    "news_score": 7.104000000000001,
-    "total": 39.21191489361702,
+    "news_score": 8.04,
+    "total": 46.16873463949126,
     "publish": false,
-    "direction": "long"
+    "direction": "short"
   },
+  "jlaw_risk": {
+    "distribution_count": 0,
+    "risk_multiplier": 1.0,
+    "regime": "NORMAL",
+    "ftd_date": null,
+    "ftd_active": false
+  },
+  "stage_map": {},
   "allocation": {
     "labels": [
       "BND",
@@ -109,10 +117,6 @@
       "score": 92.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 89.0
-    },
-    {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
       "score": 85.0
     },
@@ -131,6 +135,10 @@
     {
       "symbol": "Nuclear Energy & Uranium",
       "score": 78.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 75.0
     },
     {
       "symbol": "Healthcare & Pharma",
@@ -216,53 +224,6 @@
         "volume_confirmation": 17.4,
         "source_diversity": 14.0,
         "recency": 15.4,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 89.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -3.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "27 Jun 2026 19:34 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "india",
-        "global",
-        "americas",
-        "europe"
-      ],
-      "sources": [
-        "Finance",
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 10.3,
-        "recency": 15.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -517,6 +478,53 @@
         "volume_confirmation": 13.7,
         "source_diversity": 13.3,
         "recency": 15.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 75.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 23,
+      "latest_at": "27 Jun 2026 19:34 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "global",
+        "europe",
+        "india",
+        "americas"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Finance",
+        "Cointelegraph.com News",
+        "Tech"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 10.3,
+        "recency": 5.1,
         "geopolitical_severity": 13.0
       }
     },
@@ -937,11 +945,6 @@
       "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - CRITICAL / BEARISH - Gold heads for fourth weekly loss amid Fed rate hike expectations"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Crypto & Digital Assets - 24 articles - CRITICAL / BEARISH - Here\u2019s what happened in crypto today"
-    },
-    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Banking & Financial Sector + Gold & Precious Metals - 12 articles - HIGH / BULLISH - JPMorgan Chase unveils $50 billion buyback, Goldman Sachs raises dividend after Fed stress test"
@@ -965,6 +968,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Nuclear Energy & Uranium - 7 articles - HIGH / BEARISH - Adani Targets 10 GW Nuclear Power Capacity in India by 2035"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Crypto & Digital Assets - 23 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
@@ -1014,9 +1022,9 @@
       "region": "US",
       "price": 7354.02,
       "currency": "USD",
-      "change": -4.2,
-      "change_pct": -0.06,
-      "change_str": "-0.06%",
+      "change": -3.47,
+      "change_pct": -0.05,
+      "change_str": "-0.05%",
       "direction": "down"
     },
     {
@@ -1025,9 +1033,9 @@
       "region": "US",
       "price": 25297.62,
       "currency": "USD",
-      "change": -179.02,
-      "change_pct": -0.7,
-      "change_str": "-0.70%",
+      "change": -60.98,
+      "change_pct": -0.24,
+      "change_str": "-0.24%",
       "direction": "down"
     },
     {
@@ -1036,10 +1044,10 @@
       "region": "US",
       "price": 51876.11,
       "currency": "USD",
-      "change": 27.21,
-      "change_pct": 0.05,
-      "change_str": "+0.05%",
-      "direction": "up"
+      "change": -44.51,
+      "change_pct": -0.09,
+      "change_str": "-0.09%",
+      "direction": "down"
     },
     {
       "label": "FTSE 100",
@@ -1047,10 +1055,10 @@
       "region": "UK",
       "price": 10508.02,
       "currency": "GBP",
-      "change": 46.42,
-      "change_pct": 0.44,
-      "change_str": "+0.44%",
-      "direction": "up"
+      "change": -21.88,
+      "change_pct": -0.21,
+      "change_str": "-0.21%",
+      "direction": "down"
     },
     {
       "label": "DAX",
@@ -1058,9 +1066,9 @@
       "region": "EU",
       "price": 24671.22,
       "currency": "EUR",
-      "change": -69.14,
-      "change_pct": -0.28,
-      "change_str": "-0.28%",
+      "change": -323.61,
+      "change_pct": -1.29,
+      "change_str": "-1.29%",
       "direction": "down"
     },
     {
@@ -1069,10 +1077,10 @@
       "region": "JP",
       "price": 69360.88,
       "currency": "JPY",
-      "change": 185.91,
-      "change_pct": 0.27,
-      "change_str": "+0.27%",
-      "direction": "up"
+      "change": -3005.46,
+      "change_pct": -4.15,
+      "change_str": "-4.15%",
+      "direction": "down"
     },
     {
       "label": "Hang Seng",
@@ -1080,9 +1088,9 @@
       "region": "HK",
       "price": 22671.86,
       "currency": "HKD",
-      "change": -740.32,
-      "change_pct": -3.16,
-      "change_str": "-3.16%",
+      "change": -405.05,
+      "change_pct": -1.76,
+      "change_str": "-1.76%",
       "direction": "down"
     },
     {
@@ -1122,12 +1130,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 59829.27,
+      "price": 60156.01,
       "currency": "USD",
-      "change": -110.83,
-      "change_pct": -0.18,
-      "change_str": "-0.18%",
-      "direction": "down"
+      "change": 215.91,
+      "change_pct": 0.36,
+      "change_str": "+0.36%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
@@ -1135,9 +1143,9 @@
       "region": "FX",
       "price": 101.37,
       "currency": "USD",
-      "change": -0.24,
-      "change_pct": -0.24,
-      "change_str": "-0.24%",
+      "change": -0.06,
+      "change_pct": -0.06,
+      "change_str": "-0.06%",
       "direction": "down"
     },
     {
@@ -1189,9 +1197,9 @@
     },
     "volatility": {
       "per_ticker": {
-        "BND": 4.15
+        "BND": 4.06
       },
-      "portfolio_avg_vol_pct": 4.15,
+      "portfolio_avg_vol_pct": 4.06,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -1296,11 +1304,11 @@
     }
   },
   "logs": [
-    "2026-06-28 06:22:23 [INFO] AZALYST - status.json generated",
-    "2026-06-28 06:22:23 [INFO] PORTFOLIO - NAV USD 8,347.90 | Return -16.60%",
-    "2026-06-28 06:22:23 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-28 06:22:23 [INFO] TRADER - Open positions: BND",
-    "2026-06-28 06:22:23 [WARN] RISK - Circuit breaker threshold reached"
+    "2026-06-28 07:48:44 [INFO] AZALYST - status.json generated",
+    "2026-06-28 07:48:44 [INFO] PORTFOLIO - NAV USD 8,347.90 | Return -16.60%",
+    "2026-06-28 07:48:44 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-28 07:48:44 [INFO] TRADER - Open positions: BND",
+    "2026-06-28 07:48:44 [WARN] RISK - Circuit breaker threshold reached"
   ],
-  "generated_at": "2026-06-28 06:22:22 UTC"
+  "generated_at": "2026-06-28 07:48:42 UTC"
 }
