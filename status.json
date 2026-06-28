@@ -1,47 +1,23 @@
 {
-  "portfolio_value": 8347.9,
+  "portfolio_value": 10009.01,
   "total_deposited": 10009.01,
-  "cash": 6408.34,
+  "cash": 10009.01,
   "monthly_reserve": 0.0,
-  "market_value": 1939.56,
-  "total_invested": 1941.75,
-  "unrealised_pnl": -2.19,
-  "unrealised_str": "-2.19",
+  "market_value": 0.0,
+  "total_invested": 0.0,
+  "unrealised_pnl": 0.0,
+  "unrealised_str": "+0.00",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "-16.60%",
-  "change_raw": -16.6,
+  "change": "+0.00%",
+  "change_raw": 0.0,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 10009.01,
-  "drawdown_now_pct": 16.6,
-  "max_drawdown_pct": 16.6,
+  "drawdown_now_pct": 0.0,
+  "max_drawdown_pct": 0.0,
   "usd_inr_rate": 94.3,
-  "positions": [
-    {
-      "trade_id": "T0001",
-      "ticker": "BND",
-      "etf_name": "Vanguard Total Bond Market ETF",
-      "sector": "Bonds & Fixed Income",
-      "platform": "Vanguard \u2014 IBKR / Fidelity / Schwab",
-      "exchange": "NASDAQ",
-      "entry": 73.75,
-      "current": 73.67,
-      "peak_price": 73.77,
-      "trail_stop": 70.06,
-      "dist_to_trail_pct": 4.9,
-      "units": 26.327636,
-      "invested": 1941.75,
-      "pnl": -2.0,
-      "pnl_str": "-2.00",
-      "pnl_pct": -0.1,
-      "pnl_pct_str": "-0.10%",
-      "confidence": 82,
-      "severity": "HIGH",
-      "days_held": 2,
-      "half_exited": false
-    }
-  ],
+  "positions": [],
   "closed_trades_list": [],
   "track_record": {
     "total_trades": 0,
@@ -58,63 +34,58 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "HIGH_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.1434675849583111,
-    "vix_level": 18.40999984741211,
-    "vix_percentile_1y": 0.6785714285714286,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 18,
-      "flow": 18,
-      "options": 28,
-      "rotation": 12,
-      "macro": 12,
-      "news": 12
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
+      "rotation": 15,
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
-    "ticker": "ARKG",
-    "rank_score": 12.890706766917294,
-    "flow_score": 18.0,
-    "options_score": 0.0,
-    "rotation_score": 0.0,
+    "ticker": "XLE",
+    "rank_score": 6.684631578947368,
+    "flow_score": 0.0,
+    "options_score": 22.418655852346955,
+    "rotation_score": 9.025447208196939,
     "macro_score": 0.0,
-    "news_score": 7.104000000000001,
-    "total": 37.9947067669173,
+    "news_score": 8.04,
+    "total": 46.16873463949126,
     "publish": false,
-    "direction": "long"
+    "direction": "short"
   },
   "jlaw_risk": {
-    "distribution_count": 0,
-    "risk_multiplier": 1.0,
-    "regime": "NORMAL",
+    "distribution_count": 5,
+    "risk_multiplier": 0.5,
+    "regime": "DEFENSIVE",
     "ftd_date": null,
-    "ftd_active": false
+    "ftd_active": false,
+    "aggressive_multiplier": 1.0
   },
   "stage_map": {},
   "allocation": {
     "labels": [
-      "BND",
       "CASH"
     ],
     "values": [
-      23.2,
-      76.8
+      100.0
     ]
   },
   "pnl": {
-    "labels": [
-      "BND"
-    ],
-    "values": [
-      -2.0
-    ]
+    "labels": [],
+    "values": []
   },
   "confidence": [
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 92.0
+      "score": 91.0
     },
     {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
@@ -177,7 +148,7 @@
     {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 92.0,
+      "confidence": 91.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
       "direction_score": -9.0,
@@ -185,16 +156,16 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 12,
-      "latest_at": "27 Jun 2026 16:39 UTC",
+      "latest_at": "28 Jun 2026 09:00 UTC",
       "headline": "Gold heads for fourth weekly loss amid Fed rate hike expectations",
       "regions": [
-        "africa",
-        "middle_east",
+        "europe",
+        "americas",
         "india",
-        "americas"
+        "global"
       ],
       "sources": [
-        "BBC News",
+        "Bloomberg Markets",
         "Markets-Economic Times",
         "US Top News and Analysis",
         "Finance"
@@ -222,8 +193,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 17.4,
-        "source_diversity": 14.0,
-        "recency": 15.4,
+        "source_diversity": 12.0,
+        "recency": 16.1,
         "geopolitical_severity": 13.0
       }
     },
@@ -1132,11 +1103,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 60344.01,
+      "price": 60300.36,
       "currency": "USD",
-      "change": 403.91,
-      "change_pct": 0.67,
-      "change_str": "+0.67%",
+      "change": 360.26,
+      "change_pct": 0.6,
+      "change_str": "+0.60%",
       "direction": "up"
     },
     {
@@ -1163,19 +1134,13 @@
     }
   ],
   "risk_controls": {
-    "circuit_breaker_active": true,
-    "drawdown_from_peak_pct": 16.6,
+    "circuit_breaker_active": false,
+    "drawdown_from_peak_pct": 0.0,
     "portfolio_peak": 10009.01,
     "vix": 18.41,
     "vix_regime": "ELEVATED",
-    "sector_concentration": [
-      {
-        "sector": "Bonds & Fixed Income",
-        "weight": 23.2,
-        "at_cap": false
-      }
-    ],
-    "max_drawdown_pct": 16.6,
+    "sector_concentration": [],
+    "max_drawdown_pct": 0.0,
     "sector_cap_pct": 30,
     "trailing_stop_pct": 8,
     "hard_stop_pct": 10,
@@ -1186,131 +1151,39 @@
       "matrix": {},
       "tickers": [],
       "max_corr": 0.0,
-      "max_corr_pair": [
-        "",
-        ""
-      ],
+      "max_corr_pair": [],
       "most_negative_corr": 0.0,
-      "most_negative_pair": [
-        "",
-        ""
-      ],
+      "most_negative_pair": [],
       "status": "OK"
     },
     "volatility": {
-      "per_ticker": {
-        "BND": 4.06
-      },
-      "portfolio_avg_vol_pct": 4.06,
+      "per_ticker": {},
+      "portfolio_avg_vol_pct": 0.0,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": -0.72,
-      "benchmark_price_start": 734.3,
-      "benchmark_price_now": 728.99,
+      "benchmark_return_pct": 0.0,
+      "benchmark_price_start": 0,
+      "benchmark_price_now": 0,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -16.6,
-      "alpha": -15.88
+      "portfolio_return_pct": 0.0,
+      "alpha": 0.0
     },
     "rebalance": {
-      "alerts": [
-        {
-          "ticker": "BND",
-          "actual_weight_pct": 23.23,
-          "target_weight_pct": 90.0,
-          "drift_pct": -66.77,
-          "action": "ADD",
-          "amount": 5573.55,
-          "etf_name": "Vanguard Total Bond Market ETF",
-          "regime_note": ""
-        },
-        {
-          "ticker": "CASH",
-          "actual_weight_pct": 76.77,
-          "target_weight_pct": 10.0,
-          "drift_pct": 66.77,
-          "action": "DEPLOY",
-          "amount": 5573.55,
-          "etf_name": "Cash Reserve",
-          "regime_note": ""
-        }
-      ],
+      "alerts": [],
       "drift_threshold_pct": 5.0,
-      "needs_rebalance": true
+      "needs_rebalance": false
     },
     "stress_test": {
-      "scenarios": {
-        "2008_GFC": {
-          "total_impact": 193.96,
-          "portfolio_loss_pct": 2.32,
-          "position_impacts": [
-            {
-              "ticker": "BND",
-              "factor": "bonds",
-              "shock_pct": 10.0,
-              "impact": 193.96
-            }
-          ]
-        },
-        "2020_COVID": {
-          "total_impact": 96.98,
-          "portfolio_loss_pct": 1.16,
-          "position_impacts": [
-            {
-              "ticker": "BND",
-              "factor": "bonds",
-              "shock_pct": 5.0,
-              "impact": 96.98
-            }
-          ]
-        },
-        "RATES_SHOCK_+2%": {
-          "total_impact": -232.75,
-          "portfolio_loss_pct": -2.79,
-          "position_impacts": [
-            {
-              "ticker": "BND",
-              "factor": "bonds",
-              "shock_pct": -12.0,
-              "impact": -232.75
-            }
-          ]
-        },
-        "USD_SPIKE_+10%": {
-          "total_impact": 38.79,
-          "portfolio_loss_pct": 0.46,
-          "position_impacts": [
-            {
-              "ticker": "BND",
-              "factor": "bonds",
-              "shock_pct": 2.0,
-              "impact": 38.79
-            }
-          ]
-        },
-        "VIX_SPIKE_40": {
-          "total_impact": 77.58,
-          "portfolio_loss_pct": 0.93,
-          "position_impacts": [
-            {
-              "ticker": "BND",
-              "factor": "bonds",
-              "shock_pct": 4.0,
-              "impact": 77.58
-            }
-          ]
-        }
-      },
-      "worst_scenario": "RATES_SHOCK_+2%",
-      "worst_loss_pct": -2.79
+      "scenarios": {},
+      "worst_scenario": "",
+      "worst_loss_pct": 0.0
     }
   },
   "logs": [
-    "2026-06-28 08:39:30 [INFO] AZALYST - status.json generated",
-    "2026-06-28 08:39:30 [INFO] PORTFOLIO - NAV USD 8,347.90 | Return -16.60%",
-    "2026-06-28 08:39:30 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-28 08:39:30 [INFO] TRADER - Open positions: BND",
-    "2026-06-28 08:39:30 [WARN] RISK - Circuit breaker threshold reached"
+    "2026-06-28 09:44:01 [INFO] AZALYST - status.json generated",
+    "2026-06-28 09:44:01 [INFO] PORTFOLIO - NAV USD 10,009.01 | Return +0.00%",
+    "2026-06-28 09:44:01 [INFO] SIGNALS - 15 active signal buckets in state"
   ],
-  "generated_at": "2026-06-28 08:39:28 UTC"
+  "generated_at": "2026-06-28 09:43:59 UTC"
 }
