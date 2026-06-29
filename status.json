@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 9944.97,
+  "portfolio_value": 9944.83,
   "total_deposited": 9984.66,
-  "cash": 5368.45,
+  "cash": 4959.91,
   "monthly_reserve": 0.0,
-  "market_value": 4576.53,
-  "total_invested": 4616.21,
-  "unrealised_pnl": -39.69,
-  "unrealised_str": "-39.69",
+  "market_value": 4984.93,
+  "total_invested": 5024.75,
+  "unrealised_pnl": -39.83,
+  "unrealised_str": "-39.83",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
   "change": "-0.40%",
@@ -26,16 +26,16 @@
       "platform": "Vanguard \u2014 IBKR / Fidelity / Schwab",
       "exchange": "NASDAQ",
       "entry": 73.7,
-      "current": 73.7,
-      "peak_price": 73.7,
+      "current": 73.71,
+      "peak_price": 73.71,
       "trail_stop": 70.01,
-      "dist_to_trail_pct": 5.0,
+      "dist_to_trail_pct": 5.01,
       "units": 12.153916,
       "invested": 895.83,
-      "pnl": -0.04,
-      "pnl_str": "-0.04",
-      "pnl_pct": -0.0,
-      "pnl_pct_str": "+-0.00%",
+      "pnl": 0.13,
+      "pnl_str": "+0.13",
+      "pnl_pct": 0.01,
+      "pnl_pct_str": "+0.01%",
       "confidence": 82,
       "severity": "CRITICAL",
       "days_held": 0,
@@ -49,16 +49,16 @@
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 160.68,
-      "current": 160.58,
-      "peak_price": 160.68,
+      "current": 160.74,
+      "peak_price": 160.74,
       "trail_stop": 149.43,
-      "dist_to_trail_pct": 6.94,
+      "dist_to_trail_pct": 7.04,
       "units": 0.864062,
       "invested": 138.85,
-      "pnl": -0.08,
-      "pnl_str": "-0.08",
-      "pnl_pct": -0.06,
-      "pnl_pct_str": "-0.06%",
+      "pnl": 0.06,
+      "pnl_str": "+0.06",
+      "pnl_pct": 0.04,
+      "pnl_pct_str": "+0.04%",
       "confidence": 76,
       "severity": "HIGH",
       "days_held": 0,
@@ -71,17 +71,17 @@
       "sector": "Inverse / Hedge",
       "platform": "ProShares -- IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 33.63,
+      "entry": 33.6,
       "current": 33.26,
       "peak_price": 33.75,
-      "trail_stop": 31.28,
-      "dist_to_trail_pct": 5.96,
-      "units": 106.496712,
-      "invested": 3581.54,
-      "pnl": -39.46,
-      "pnl_str": "-39.46",
-      "pnl_pct": -1.1,
-      "pnl_pct_str": "-1.10%",
+      "trail_stop": 31.24,
+      "dist_to_trail_pct": 6.06,
+      "units": 118.766403,
+      "invested": 3990.08,
+      "pnl": -39.91,
+      "pnl_str": "-39.91",
+      "pnl_pct": -1.0,
+      "pnl_pct_str": "-1.00%",
       "confidence": 92,
       "severity": "CRITICAL",
       "days_held": 1,
@@ -120,15 +120,15 @@
     }
   },
   "top_signal": {
-    "ticker": "IGV",
-    "rank_score": 8.725357411587659,
-    "flow_score": 4.395075797401687,
-    "options_score": 20.60659692658968,
-    "rotation_score": 15.0,
-    "macro_score": 2.174813195124254,
-    "news_score": 9.2,
-    "total": 60.101843330703275,
-    "publish": true,
+    "ticker": "GSY",
+    "rank_score": 24.80780780780781,
+    "flow_score": 20.0,
+    "options_score": 0.0,
+    "rotation_score": 0.0,
+    "macro_score": 0.0,
+    "news_score": 0.0,
+    "total": 44.807807807807805,
+    "publish": false,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -163,8 +163,8 @@
     "values": [
       9.0,
       1.4,
-      35.6,
-      54.0
+      39.7,
+      49.9
     ]
   },
   "pnl": {
@@ -174,9 +174,9 @@
       "SH"
     ],
     "values": [
-      -0.04,
-      -0.08,
-      -39.46
+      0.13,
+      0.06,
+      -39.91
     ]
   },
   "confidence": [
@@ -197,6 +197,10 @@
       "score": 89.0
     },
     {
+      "symbol": "Energy / Oil & Gas",
+      "score": 85.0
+    },
+    {
       "symbol": "Bonds & Fixed Income",
       "score": 82.0
     },
@@ -213,15 +217,11 @@
       "score": 76.0
     },
     {
-      "symbol": "Commodities & Mining",
-      "score": 72.0
-    },
-    {
-      "symbol": "Energy / Oil & Gas",
-      "score": 67.0
-    },
-    {
       "symbol": "Defense & Aerospace",
+      "score": 65.0
+    },
+    {
+      "symbol": "Commodities & Mining",
       "score": 65.0
     },
     {
@@ -445,6 +445,59 @@
       }
     },
     {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 85.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": 0.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 21,
+      "latest_at": "29 Jun 2026 18:30 UTC",
+      "headline": "Halliburton, Valero and 3 More Stocks Set Up for a Fragile Hormuz Truce",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Oilprice.com",
+        "World | Deutsche Welle",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.3,
+        "recency": 12.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income",
       "confidence": 82.0,
@@ -650,110 +703,6 @@
       }
     },
     {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 72.0,
-      "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "29 Jun 2026 16:49 UTC",
-      "headline": "Congo Orders Cobalt Miners to Give Up Unused Export Quotas",
-      "regions": [
-        "global",
-        "africa",
-        "asia_pacific",
-        "india"
-      ],
-      "sources": [
-        "EE Times",
-        "Tech",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "CPSEETF",
-        "COPP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 10.7,
-        "volume_confirmation": 13.7,
-        "source_diversity": 12.0,
-        "recency": 16.8,
-        "geopolitical_severity": 10.8
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 67.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -12.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 22,
-      "latest_at": "27 Jun 2026 19:11 UTC",
-      "headline": "Crude oil prices fall up to 2%, head for weekly losses as Hormuz supply fears ease",
-      "regions": [
-        "global",
-        "middle_east",
-        "europe",
-        "asia_pacific"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Oilprice.com",
-        "World News - Breaking international news and headlines | Sky News",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 13.8,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
       "confidence": 65.0,
@@ -804,6 +753,56 @@
         "source_diversity": 16.0,
         "recency": 16.9,
         "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 65.0,
+      "severity": "MEDIUM",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "29 Jun 2026 21:00 UTC",
+      "headline": "U.S. Eyes China\u2019s Expanding Role in Latin America",
+      "regions": [
+        "asia_pacific",
+        "india",
+        "global"
+      ],
+      "sources": [
+        "Tech",
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "EE Times"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "CPSEETF",
+        "COPP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 8.4,
+        "volume_confirmation": 11.3,
+        "source_diversity": 11.0,
+        "recency": 16.2,
+        "geopolitical_severity": 10.0
       }
     },
     {
@@ -1029,6 +1028,11 @@
       "text": "Asia Pacific Equity - 11 articles - HIGH / BEARISH - South Korea says Samsung and SK Hynix investing in AI, semiconductor mega-projects"
     },
     {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Energy / Oil & Gas - 21 articles - CRITICAL / BEARISH - Halliburton, Valero and 3 More Stocks Set Up for a Fragile Hormuz Truce"
+    },
+    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Bonds & Fixed Income - 11 articles - HIGH / BULLISH - Japan's super-long bonds briefly change course to fall after weak auction"
@@ -1051,17 +1055,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Commodities & Mining - 7 articles - MEDIUM / BEARISH - Congo Orders Cobalt Miners to Give Up Unused Export Quotas"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Energy / Oil & Gas - 22 articles - CRITICAL / BEARISH - Crude oil prices fall up to 2%, head for weekly losses as Hormuz supply fears ease"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Defense & Aerospace - 20 articles - HIGH / BEARISH - Romania bolsters Black Sea fleet with Turkish-built corvette"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Commodities & Mining - 5 articles - MEDIUM / BEARISH - U.S. Eyes China\u2019s Expanding Role in Latin America"
     },
     {
       "tag": "tag-bear",
@@ -1089,33 +1088,33 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7435.29,
+      "price": 7440.43,
       "currency": "USD",
-      "change": 81.27,
-      "change_pct": 1.11,
-      "change_str": "+1.11%",
+      "change": 86.41,
+      "change_pct": 1.18,
+      "change_str": "+1.18%",
       "direction": "up"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 25799.44,
+      "price": 25820.15,
       "currency": "USD",
-      "change": 501.83,
-      "change_pct": 1.98,
-      "change_str": "+1.98%",
+      "change": 522.53,
+      "change_pct": 2.07,
+      "change_str": "+2.07%",
       "direction": "up"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 52200.45,
+      "price": 52182.74,
       "currency": "USD",
-      "change": 324.34,
-      "change_pct": 0.63,
-      "change_str": "+0.63%",
+      "change": 306.63,
+      "change_pct": 0.59,
+      "change_str": "+0.59%",
       "direction": "up"
     },
     {
@@ -1177,33 +1176,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4024.7,
+      "price": 4030.5,
       "currency": "USD",
-      "change": -54.0,
-      "change_pct": -1.32,
-      "change_str": "-1.32%",
+      "change": -48.2,
+      "change_pct": -1.18,
+      "change_str": "-1.18%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 70.52,
+      "price": 70.42,
       "currency": "USD",
-      "change": 1.29,
-      "change_pct": 1.86,
-      "change_str": "+1.86%",
+      "change": 1.19,
+      "change_pct": 1.72,
+      "change_str": "+1.72%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 60097.7,
+      "price": 60370.4,
       "currency": "USD",
-      "change": 565.36,
-      "change_pct": 0.95,
-      "change_str": "+0.95%",
+      "change": 838.06,
+      "change_pct": 1.41,
+      "change_str": "+1.41%",
       "direction": "up"
     },
     {
@@ -1212,7 +1211,7 @@
       "region": "FX",
       "price": 101.11,
       "currency": "USD",
-      "change": -0.25,
+      "change": -0.26,
       "change_pct": -0.25,
       "change_str": "-0.25%",
       "direction": "down"
@@ -1221,11 +1220,11 @@
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 17.62,
+      "price": 17.65,
       "currency": "USD",
-      "change": -0.79,
-      "change_pct": -4.29,
-      "change_str": "-4.29%",
+      "change": -0.76,
+      "change_pct": -4.13,
+      "change_str": "-4.13%",
       "direction": "down"
     }
   ],
@@ -1233,12 +1232,12 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.4,
     "portfolio_peak": 9984.66,
-    "vix": 17.62,
+    "vix": 17.65,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
         "sector": "Inverse / Hedge",
-        "weight": 35.6,
+        "weight": 39.7,
         "at_cap": true
       },
       {
@@ -1263,10 +1262,10 @@
       "matrix": {
         "BND": {
           "BND": 1.0,
-          "XLV": 0.336
+          "XLV": 0.267
         },
         "XLV": {
-          "BND": 0.336,
+          "BND": 0.267,
           "XLV": 1.0
         }
       },
@@ -1274,7 +1273,7 @@
         "BND",
         "XLV"
       ],
-      "max_corr": 0.336,
+      "max_corr": 0.267,
       "max_corr_pair": [
         "BND",
         "XLV"
@@ -1288,16 +1287,16 @@
     },
     "volatility": {
       "per_ticker": {
-        "BND": 4.12,
-        "XLV": 19.58
+        "BND": 3.95,
+        "XLV": 19.31
       },
-      "portfolio_avg_vol_pct": 11.85,
+      "portfolio_avg_vol_pct": 11.63,
       "target_vol_pct": 15.0
     },
     "benchmark": {
       "benchmark_return_pct": 0.0,
-      "benchmark_price_start": 740.61,
-      "benchmark_price_now": 740.61,
+      "benchmark_price_start": 741.0,
+      "benchmark_price_now": 741.0,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": -0.4,
       "alpha": -0.4
@@ -1305,23 +1304,23 @@
     "rebalance": {
       "alerts": [
         {
-          "ticker": "CASH",
-          "actual_weight_pct": 53.98,
-          "target_weight_pct": 10.0,
-          "drift_pct": 43.98,
-          "action": "DEPLOY",
-          "amount": 4373.95,
-          "etf_name": "Cash Reserve",
-          "regime_note": ""
-        },
-        {
           "ticker": "XLV",
           "actual_weight_pct": 1.4,
           "target_weight_pct": 45.0,
           "drift_pct": -43.6,
           "action": "ADD",
-          "amount": 4336.49,
+          "amount": 4336.28,
           "etf_name": "Health Care Select Sector SPDR",
+          "regime_note": ""
+        },
+        {
+          "ticker": "CASH",
+          "actual_weight_pct": 49.87,
+          "target_weight_pct": 10.0,
+          "drift_pct": 39.87,
+          "action": "DEPLOY",
+          "amount": 3965.43,
+          "etf_name": "Cash Reserve",
           "regime_note": ""
         },
         {
@@ -1330,7 +1329,7 @@
           "target_weight_pct": 45.0,
           "drift_pct": -35.99,
           "action": "ADD",
-          "amount": 3579.54,
+          "amount": 3579.31,
           "etf_name": "Vanguard Total Bond Market ETF",
           "regime_note": ""
         }
@@ -1341,56 +1340,56 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": 34.07,
+          "total_impact": 34.03,
           "portfolio_loss_pct": 0.34,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 10.0,
-              "impact": 89.57
+              "impact": 89.59
             },
             {
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -55.5
+              "impact": -55.56
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -2.39,
+          "total_impact": -2.43,
           "portfolio_loss_pct": -0.02,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 5.0,
-              "impact": 44.78
+              "impact": 44.79
             },
             {
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -47.18
+              "impact": -47.22
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -128.3,
+          "total_impact": -128.34,
           "portfolio_loss_pct": -1.29,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": -12.0,
-              "impact": -107.48
+              "impact": -107.5
             },
             {
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -20.81
+              "impact": -20.83
             }
           ]
         },
@@ -1402,18 +1401,18 @@
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 2.0,
-              "impact": 17.91
+              "impact": 17.92
             },
             {
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -11.1
+              "impact": -11.11
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": 10.85,
+          "total_impact": 10.83,
           "portfolio_loss_pct": 0.11,
           "position_impacts": [
             {
@@ -1426,7 +1425,7 @@
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -24.98
+              "impact": -25.0
             }
           ]
         }
@@ -1436,10 +1435,10 @@
     }
   },
   "logs": [
-    "2026-06-29 19:18:27 [INFO] AZALYST - status.json generated",
-    "2026-06-29 19:18:27 [INFO] PORTFOLIO - NAV USD 9,944.97 | Return -0.40%",
-    "2026-06-29 19:18:27 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-29 19:18:27 [INFO] TRADER - Open positions: BND, XLV, SH"
+    "2026-06-29 21:40:38 [INFO] AZALYST - status.json generated",
+    "2026-06-29 21:40:38 [INFO] PORTFOLIO - NAV USD 9,944.83 | Return -0.40%",
+    "2026-06-29 21:40:38 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-29 21:40:38 [INFO] TRADER - Open positions: BND, XLV, SH"
   ],
-  "generated_at": "2026-06-29 19:18:24 UTC"
+  "generated_at": "2026-06-29 21:40:35 UTC"
 }
