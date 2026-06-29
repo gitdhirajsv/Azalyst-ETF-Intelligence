@@ -913,7 +913,8 @@ class PaperPortfolio:
         return incoming_conf > max_existing_conf
 
     def _total_market_value(self) -> float:
-        return round(sum(pos.current_value() for pos in self.open_positions), 2)
+        hedge_val = sum(pos.current_value() for pos in getattr(self, "open_hedge_positions", []))
+        return round(sum(pos.current_value() for pos in self.open_positions) + hedge_val, 2)
 
     def _portfolio_value(self) -> float:
         return round(self.cash_inr + self.monthly_reserve_inr + self._total_market_value(), 2)
@@ -1801,8 +1802,11 @@ class PaperPortfolio:
         return exits
 
     def get_summary(self) -> Dict:
-        total_invested = round(sum(pos.invested_inr for pos in self.open_positions), 2)
-        total_current  = round(sum(pos.current_value() for pos in self.open_positions), 2)
+        hedge_invested = sum(pos.invested_inr for pos in getattr(self, "open_hedge_positions", []))
+        hedge_current = sum(pos.current_value() for pos in getattr(self, "open_hedge_positions", []))
+
+        total_invested = round(sum(pos.invested_inr for pos in self.open_positions) + hedge_invested, 2)
+        total_current  = round(sum(pos.current_value() for pos in self.open_positions) + hedge_current, 2)
         unrealised_pnl = round(total_current - total_invested, 2)
         closed_realised = round(sum(ct.realised_pnl for ct in self.closed_trades), 2)
         total_realised  = round(closed_realised + self.partial_realised_pnl_total, 2)
@@ -1817,6 +1821,8 @@ class PaperPortfolio:
 
         usd_inr_rate = fetch_usd_to_inr()
         self._update_drawdown_state()
+
+        all_open_positions = self.open_positions + getattr(self, "open_hedge_positions", [])
 
         return {
             "cash_inr":              round(self.cash_inr, 2),
@@ -1835,8 +1841,8 @@ class PaperPortfolio:
                 2,
             ),
             "usd_inr_rate":          usd_inr_rate,
-            "open_positions":  [pos.to_dict() for pos in self.open_positions],
-            "open_count":      len(self.open_positions),
+            "open_positions":  [pos.to_dict() for pos in all_open_positions],
+            "open_count":      len(all_open_positions),
             "closed_count":    len(self.closed_trades),
             "win_rate":        round(win_rate, 1),
             "winners":         len(winners),
