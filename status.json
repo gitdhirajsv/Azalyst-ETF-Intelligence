@@ -1,20 +1,20 @@
 {
-  "portfolio_value": 9909.92,
+  "portfolio_value": 9904.26,
   "total_deposited": 9972.0,
-  "cash": 4473.94,
+  "cash": 3814.79,
   "monthly_reserve": 0.0,
-  "market_value": 5435.98,
-  "total_invested": 5455.79,
-  "unrealised_pnl": -19.81,
-  "unrealised_str": "-19.81",
+  "market_value": 6089.46,
+  "total_invested": 6114.93,
+  "unrealised_pnl": -25.47,
+  "unrealised_str": "-25.47",
   "realised_pnl": -42.27,
   "realised_str": "-42.27",
-  "change": "-0.62%",
-  "change_raw": -0.62,
+  "change": "-0.68%",
+  "change_raw": -0.68,
   "closed_trades": 1,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 9972.0,
-  "drawdown_now_pct": 0.62,
+  "drawdown_now_pct": 0.68,
   "max_drawdown_pct": 12.69,
   "usd_inr_rate": 94.65,
   "positions": [
@@ -26,16 +26,16 @@
       "platform": "Vanguard \u2014 IBKR / Fidelity / Schwab",
       "exchange": "NASDAQ",
       "entry": 73.68,
-      "current": 73.5,
+      "current": 73.41,
       "peak_price": 73.72,
       "trail_stop": 70.0,
-      "dist_to_trail_pct": 4.77,
+      "dist_to_trail_pct": 4.65,
       "units": 40.424415,
       "invested": 2978.45,
-      "pnl": -7.26,
-      "pnl_str": "-7.26",
-      "pnl_pct": -0.24,
-      "pnl_pct_str": "-0.24%",
+      "pnl": -10.89,
+      "pnl_str": "-10.89",
+      "pnl_pct": -0.37,
+      "pnl_pct_str": "-0.37%",
       "confidence": 82,
       "severity": "CRITICAL",
       "days_held": 1,
@@ -49,19 +49,42 @@
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 160.51,
-      "current": 159.55,
+      "current": 158.66,
       "peak_price": 160.85,
       "trail_stop": 149.27,
-      "dist_to_trail_pct": 6.44,
+      "dist_to_trail_pct": 5.92,
       "units": 3.957891,
       "invested": 635.28,
-      "pnl": -3.8,
-      "pnl_str": "-3.80",
-      "pnl_pct": -0.6,
-      "pnl_pct_str": "-0.60%",
+      "pnl": -7.32,
+      "pnl_str": "-7.32",
+      "pnl_pct": -1.15,
+      "pnl_pct_str": "-1.15%",
       "confidence": 82,
       "severity": "HIGH",
       "days_held": 1,
+      "half_exited": false
+    },
+    {
+      "trade_id": "T0005",
+      "ticker": "QQQ",
+      "etf_name": "Invesco QQQ Trust",
+      "sector": "Technology & AI / Semiconductors + Asia Pacific Equity",
+      "platform": "Invesco \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NASDAQ",
+      "entry": 737.14,
+      "current": 736.4,
+      "peak_price": 737.14,
+      "trail_stop": 685.54,
+      "dist_to_trail_pct": 6.91,
+      "units": 0.13594,
+      "invested": 100.22,
+      "pnl": -0.1,
+      "pnl_str": "-0.10",
+      "pnl_pct": -0.1,
+      "pnl_pct_str": "-0.10%",
+      "confidence": 94,
+      "severity": "CRITICAL",
+      "days_held": 0,
       "half_exited": false
     },
     {
@@ -71,17 +94,17 @@
       "sector": "Inverse / Hedge",
       "platform": "ProShares -- IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 33.14,
-      "current": 32.98,
+      "entry": 33.12,
+      "current": 33.02,
       "peak_price": 33.3,
-      "trail_stop": 30.82,
-      "dist_to_trail_pct": 6.56,
-      "units": 55.588441,
-      "invested": 1842.06,
-      "pnl": -8.76,
-      "pnl_str": "-8.76",
-      "pnl_pct": -0.48,
-      "pnl_pct_str": "-0.48%",
+      "trail_stop": 30.8,
+      "dist_to_trail_pct": 6.72,
+      "units": 72.496706,
+      "invested": 2400.99,
+      "pnl": -7.15,
+      "pnl_str": "-7.15",
+      "pnl_pct": -0.3,
+      "pnl_pct_str": "-0.30%",
       "confidence": 96,
       "severity": "CRITICAL",
       "days_held": 0,
@@ -135,12 +158,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
+    "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.14190453249548274,
+    "vix_level": 16.450000762939453,
+    "vix_percentile_1y": 0.36507936507936506,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -151,16 +174,16 @@
     }
   },
   "top_signal": {
-    "ticker": "XLK",
-    "rank_score": 8.927231807951987,
-    "flow_score": 20.0,
-    "options_score": 0.0,
+    "ticker": "SMH",
+    "rank_score": 12.077611940298508,
+    "flow_score": 3.686077445282839,
+    "options_score": 11.0,
     "rotation_score": 15.0,
-    "macro_score": 7.097922933701788,
-    "news_score": 9.6,
-    "total": 60.62515474165377,
-    "publish": true,
-    "direction": "short"
+    "macro_score": 5.757556708038299,
+    "news_score": 9.4,
+    "total": 56.921246093619644,
+    "publish": false,
+    "direction": "long"
   },
   "jlaw_risk": {
     "distribution_count": 6,
@@ -172,6 +195,10 @@
   },
   "stage_map": {
     "BND": {
+      "stage": 0,
+      "description": "Insufficient data"
+    },
+    "QQQ": {
       "stage": 0,
       "description": "Insufficient data"
     },
@@ -188,48 +215,52 @@
     "labels": [
       "BND",
       "XLV",
+      "QQQ",
       "SH",
       "CASH"
     ],
     "values": [
       30.0,
-      6.4,
-      18.5,
-      45.1
+      6.3,
+      1.0,
+      24.2,
+      38.5
     ]
   },
   "pnl": {
     "labels": [
       "BND",
       "XLV",
+      "QQQ",
       "SH"
     ],
     "values": [
-      -7.26,
-      -3.8,
-      -8.76
+      -10.89,
+      -7.32,
+      -0.1,
+      -7.15
     ]
   },
   "confidence": [
     {
       "symbol": "Technology & AI / Semiconductors + Asia Pacific Equity",
-      "score": 96.0
+      "score": 94.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 93.0
+      "score": 92.0
     },
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 91.0
+      "score": 92.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 89.0
     },
     {
       "symbol": "Asia Pacific Equity",
       "score": 89.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 88.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -268,6 +299,10 @@
       "score": 63.0
     },
     {
+      "symbol": "Cybersecurity",
+      "score": 63.0
+    },
+    {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
       "score": 62.0
     }
@@ -276,27 +311,27 @@
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors + Asia Pacific Equity",
-      "confidence": 96.0,
+      "confidence": 94.0,
       "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -2.0,
+      "direction": "BULLISH",
+      "direction_score": 0.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 13,
-      "latest_at": "30 Jun 2026 15:29 UTC",
+      "latest_at": "30 Jun 2026 20:38 UTC",
       "headline": "Global Markets: S.Korean shares log best quarter in nearly 30 years on chipmaker rally",
       "regions": [
-        "india",
+        "americas",
+        "middle_east",
         "global",
-        "europe",
-        "asia_pacific"
+        "india"
       ],
       "sources": [
-        "Bloomberg Markets",
         "Latest from Tom's Hardware",
-        "Semiconductor Engineering",
-        "www.theregister.com - Articles"
+        "www.theregister.com - Articles",
+        "Cointelegraph.com News",
+        "EE Times"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -321,35 +356,35 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.7,
-        "recency": 15.5,
+        "source_diversity": 16.5,
+        "recency": 16.4,
         "geopolitical_severity": 13.0
       }
     },
     {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 93.0,
+      "confidence": 92.0,
       "severity": "HIGH",
       "direction": "BEARISH",
-      "direction_score": -9.0,
+      "direction_score": -10.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 12,
-      "latest_at": "30 Jun 2026 15:43 UTC",
+      "latest_at": "30 Jun 2026 20:14 UTC",
       "headline": "Gold poised for biggest monthly drop since 2008 amid Fed rate hike expectations",
       "regions": [
+        "americas",
+        "middle_east",
         "global",
-        "europe",
-        "asia_pacific",
-        "americas"
+        "asia_pacific"
       ],
       "sources": [
-        "Bloomberg Markets",
-        "Markets-Economic Times",
         "US Top News and Analysis",
-        "Finance"
+        "Bloomberg Markets",
+        "Oilprice.com",
+        "Markets-Economic Times"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -374,34 +409,34 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 17.4,
-        "source_diversity": 14.9,
-        "recency": 15.8,
+        "source_diversity": 14.4,
+        "recency": 15.7,
         "geopolitical_severity": 13.0
       }
     },
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 91.0,
+      "confidence": 92.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -9.5,
+      "direction_score": -7.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 21,
-      "latest_at": "30 Jun 2026 15:30 UTC",
+      "article_count": 20,
+      "latest_at": "30 Jun 2026 20:57 UTC",
       "headline": "Morgan Stanley Cuts Brent Forecast to $75 a Barrel",
       "regions": [
+        "americas",
+        "middle_east",
         "global",
-        "europe",
-        "asia_pacific",
-        "americas"
+        "asia_pacific"
       ],
       "sources": [
-        "Bloomberg Markets",
         "World | Deutsche Welle",
         "Markets-Economic Times",
+        "US Top News and Analysis",
         "Oilprice.com"
       ],
       "primary_etf": "XLE",
@@ -428,7 +463,54 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 13.3,
-        "recency": 15.5,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 89.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -1.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 32,
+      "latest_at": "30 Jun 2026 19:31 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "americas",
+        "global",
+        "india",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Semiconductor Engineering",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.8,
+        "recency": 14.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -478,53 +560,6 @@
         "volume_confirmation": 16.8,
         "source_diversity": 15.3,
         "recency": 16.5,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 88.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -1.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 33,
-      "latest_at": "30 Jun 2026 15:31 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "india",
-        "global",
-        "europe",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Oilprice.com",
-        "Markets-Economic Times",
-        "Semiconductor Engineering"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 11.0,
-        "recency": 15.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -986,6 +1021,49 @@
       }
     },
     {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 63.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 3,
+      "latest_at": "30 Jun 2026 20:36 UTC",
+      "headline": "Palo Alto, CrowdStrike both have best quarter ever as AI threats bolster cyber demand",
+      "regions": [
+        "global"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Latest from Tom's Hardware",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.0,
+        "volume_confirmation": 7.7,
+        "source_diversity": 6.5,
+        "recency": 16.3,
+        "geopolitical_severity": 10.3
+      }
+    },
+    {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
       "confidence": 62.0,
@@ -1039,9 +1117,9 @@
   ],
   "articles": [
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Technology & AI / Semiconductors + Asia Pacific Equity - 13 articles - CRITICAL / BEARISH - Global Markets: S.Korean shares log best quarter in nearly 30 years on chipmaker rally"
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Technology & AI / Semiconductors + Asia Pacific Equity - 13 articles - CRITICAL / BULLISH - Global Markets: S.Korean shares log best quarter in nearly 30 years on chipmaker rally"
     },
     {
       "tag": "tag-bear",
@@ -1051,17 +1129,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 21 articles - CRITICAL / BEARISH - Morgan Stanley Cuts Brent Forecast to $75 a Barrel"
+      "text": "Energy / Oil & Gas - 20 articles - CRITICAL / BEARISH - Morgan Stanley Cuts Brent Forecast to $75 a Barrel"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Crypto & Digital Assets - 32 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Asia Pacific Equity - 11 articles - HIGH / BEARISH - South Korea says Samsung and SK Hynix investing in AI, semiconductor mega-projects"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Crypto & Digital Assets - 33 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
@@ -1111,6 +1189,11 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Cybersecurity - 3 articles - HIGH / BULLISH - Palo Alto, CrowdStrike both have best quarter ever as AI threats bolster cyber demand"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Banking & Financial Sector + Gold & Precious Metals - 11 articles - HIGH / BULLISH - PBOC\u2019s New Overnight Rate Said Below Forecasts in Hint at Easing"
     }
   ],
@@ -1119,33 +1202,33 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7501.33,
+      "price": 7499.36,
       "currency": "USD",
-      "change": 60.9,
-      "change_pct": 0.82,
-      "change_str": "+0.82%",
+      "change": 58.93,
+      "change_pct": 0.79,
+      "change_str": "+0.79%",
       "direction": "up"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 26194.22,
+      "price": 26213.72,
       "currency": "USD",
-      "change": 374.08,
-      "change_pct": 1.45,
-      "change_str": "+1.45%",
+      "change": 393.58,
+      "change_pct": 1.52,
+      "change_str": "+1.52%",
       "direction": "up"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 52329.81,
+      "price": 52319.2,
       "currency": "USD",
-      "change": 147.07,
-      "change_pct": 0.28,
-      "change_str": "+0.28%",
+      "change": 136.46,
+      "change_pct": 0.26,
+      "change_str": "+0.26%",
       "direction": "up"
     },
     {
@@ -1207,63 +1290,63 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4046.0,
+      "price": 4021.4,
       "currency": "USD",
-      "change": 23.7,
-      "change_pct": 0.59,
-      "change_str": "+0.59%",
-      "direction": "up"
+      "change": -0.9,
+      "change_pct": -0.02,
+      "change_str": "-0.02%",
+      "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 69.98,
+      "price": 70.07,
       "currency": "USD",
-      "change": -0.77,
-      "change_pct": -1.09,
-      "change_str": "-1.09%",
+      "change": -0.68,
+      "change_pct": -0.96,
+      "change_str": "-0.96%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 58590.65,
+      "price": 58638.66,
       "currency": "USD",
-      "change": -1547.73,
-      "change_pct": -2.57,
-      "change_str": "-2.57%",
+      "change": -1499.72,
+      "change_pct": -2.49,
+      "change_str": "-2.49%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.18,
+      "price": 101.17,
       "currency": "USD",
-      "change": 0.07,
-      "change_pct": 0.07,
-      "change_str": "+0.07%",
+      "change": 0.06,
+      "change_pct": 0.06,
+      "change_str": "+0.06%",
       "direction": "up"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 16.51,
+      "price": 16.45,
       "currency": "USD",
-      "change": -1.14,
-      "change_pct": -6.46,
-      "change_str": "-6.46%",
+      "change": -1.2,
+      "change_pct": -6.8,
+      "change_str": "-6.80%",
       "direction": "down"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.62,
+    "drawdown_from_peak_pct": 0.68,
     "portfolio_peak": 9972.0,
-    "vix": 16.51,
+    "vix": 16.45,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -1273,12 +1356,17 @@
       },
       {
         "sector": "Inverse / Hedge",
-        "weight": 18.5,
+        "weight": 24.2,
         "at_cap": false
       },
       {
         "sector": "Healthcare & Pharma",
-        "weight": 6.4,
+        "weight": 6.3,
+        "at_cap": false
+      },
+      {
+        "sector": "Technology & AI / Semiconductors + Asia Pacific Equity",
+        "weight": 1.0,
         "at_cap": false
       }
     ],
@@ -1293,75 +1381,84 @@
       "matrix": {
         "BND": {
           "BND": 1.0,
-          "XLV": 0.317
+          "QQQ": 0.354,
+          "XLV": 0.349
+        },
+        "QQQ": {
+          "BND": 0.354,
+          "QQQ": 1.0,
+          "XLV": -0.271
         },
         "XLV": {
-          "BND": 0.317,
+          "BND": 0.349,
+          "QQQ": -0.271,
           "XLV": 1.0
         }
       },
       "tickers": [
         "BND",
+        "QQQ",
         "XLV"
       ],
-      "max_corr": 0.317,
+      "max_corr": 0.354,
       "max_corr_pair": [
         "BND",
-        "XLV"
+        "QQQ"
       ],
-      "most_negative_corr": 0.0,
+      "most_negative_corr": -0.271,
       "most_negative_pair": [
-        "",
-        ""
+        "QQQ",
+        "XLV"
       ],
       "status": "OK"
     },
     "volatility": {
       "per_ticker": {
-        "BND": 4.03,
-        "XLV": 19.39
+        "BND": 4.15,
+        "XLV": 19.76,
+        "QQQ": 33.15
       },
-      "portfolio_avg_vol_pct": 11.71,
+      "portfolio_avg_vol_pct": 19.02,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 0.86,
+      "benchmark_return_pct": 0.78,
       "benchmark_price_start": 741.0,
-      "benchmark_price_now": 747.34,
+      "benchmark_price_now": 746.77,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.62,
-      "alpha": -1.48
+      "portfolio_return_pct": -0.68,
+      "alpha": -1.46
     },
     "rebalance": {
       "alerts": [
         {
-          "ticker": "XLV",
-          "actual_weight_pct": 6.37,
-          "target_weight_pct": 45.0,
-          "drift_pct": -38.63,
+          "ticker": "QQQ",
+          "actual_weight_pct": 1.01,
+          "target_weight_pct": 30.0,
+          "drift_pct": -28.99,
           "action": "ADD",
-          "amount": 3827.98,
-          "etf_name": "Health Care Select Sector SPDR",
+          "amount": 2871.17,
+          "etf_name": "Invesco QQQ Trust",
           "regime_note": ""
         },
         {
           "ticker": "CASH",
-          "actual_weight_pct": 45.15,
+          "actual_weight_pct": 38.52,
           "target_weight_pct": 10.0,
-          "drift_pct": 35.15,
+          "drift_pct": 28.52,
           "action": "DEPLOY",
-          "amount": 3482.94,
+          "amount": 2824.37,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
         {
-          "ticker": "BND",
-          "actual_weight_pct": 29.98,
-          "target_weight_pct": 45.0,
-          "drift_pct": -15.02,
+          "ticker": "XLV",
+          "actual_weight_pct": 6.34,
+          "target_weight_pct": 30.0,
+          "drift_pct": -23.66,
           "action": "ADD",
-          "amount": 1488.27,
-          "etf_name": "Vanguard Total Bond Market ETF",
+          "amount": 2343.32,
+          "etf_name": "Health Care Select Sector SPDR",
           "regime_note": ""
         }
       ],
@@ -1371,106 +1468,136 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": 44.53,
-          "portfolio_loss_pct": 0.45,
+          "total_impact": 5.53,
+          "portfolio_loss_pct": 0.06,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 10.0,
-              "impact": 297.12
+              "impact": 296.76
             },
             {
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -252.59
+              "impact": -251.18
+            },
+            {
+              "ticker": "QQQ",
+              "factor": "equities",
+              "shock_pct": -40.0,
+              "impact": -40.04
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -66.14,
-          "portfolio_loss_pct": -0.67,
+          "total_impact": -99.16,
+          "portfolio_loss_pct": -1.0,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 5.0,
-              "impact": 148.56
+              "impact": 148.38
             },
             {
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -214.7
+              "impact": -213.51
+            },
+            {
+              "ticker": "QQQ",
+              "factor": "equities",
+              "shock_pct": -34.0,
+              "impact": -34.04
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -451.27,
-          "portfolio_loss_pct": -4.55,
+          "total_impact": -465.32,
+          "portfolio_loss_pct": -4.7,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": -12.0,
-              "impact": -356.54
+              "impact": -356.11
             },
             {
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -94.72
+              "impact": -94.19
+            },
+            {
+              "ticker": "QQQ",
+              "factor": "equities",
+              "shock_pct": -15.0,
+              "impact": -15.02
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": 8.91,
-          "portfolio_loss_pct": 0.09,
+          "total_impact": 1.11,
+          "portfolio_loss_pct": 0.01,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 2.0,
-              "impact": 59.42
+              "impact": 59.35
             },
             {
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -50.52
+              "impact": -50.24
+            },
+            {
+              "ticker": "QQQ",
+              "factor": "equities",
+              "shock_pct": -8.0,
+              "impact": -8.01
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": 5.18,
-          "portfolio_loss_pct": 0.05,
+          "total_impact": -12.35,
+          "portfolio_loss_pct": -0.12,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 4.0,
-              "impact": 118.85
+              "impact": 118.7
             },
             {
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -113.67
+              "impact": -113.03
+            },
+            {
+              "ticker": "QQQ",
+              "factor": "equities",
+              "shock_pct": -18.0,
+              "impact": -18.02
             }
           ]
         }
       },
       "worst_scenario": "RATES_SHOCK_+2%",
-      "worst_loss_pct": -4.55
+      "worst_loss_pct": -4.7
     }
   },
   "logs": [
-    "2026-06-30 19:08:29 [INFO] AZALYST - status.json generated",
-    "2026-06-30 19:08:29 [INFO] PORTFOLIO - NAV USD 9,909.92 | Return -0.62%",
-    "2026-06-30 19:08:29 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-30 19:08:29 [INFO] TRADER - Open positions: BND, XLV, SH",
-    "2026-06-30 19:08:29 [INFO] TRADER - Closed trades: 1"
+    "2026-06-30 21:07:38 [INFO] AZALYST - status.json generated",
+    "2026-06-30 21:07:38 [INFO] PORTFOLIO - NAV USD 9,904.26 | Return -0.68%",
+    "2026-06-30 21:07:38 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-06-30 21:07:38 [INFO] TRADER - Open positions: BND, XLV, QQQ, SH",
+    "2026-06-30 21:07:38 [INFO] TRADER - Closed trades: 1"
   ],
-  "generated_at": "2026-06-30 19:08:28 UTC"
+  "generated_at": "2026-06-30 21:07:37 UTC"
 }
