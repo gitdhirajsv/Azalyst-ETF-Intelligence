@@ -1,22 +1,22 @@
 {
-  "portfolio_value": 9944.75,
-  "total_deposited": 9984.66,
-  "cash": 4838.39,
+  "portfolio_value": 9935.24,
+  "total_deposited": 9977.8,
+  "cash": 6587.79,
   "monthly_reserve": 0.0,
-  "market_value": 5106.36,
-  "total_invested": 5146.27,
-  "unrealised_pnl": -39.91,
-  "unrealised_str": "-39.91",
-  "realised_pnl": 0.0,
-  "realised_str": "+0.00",
-  "change": "-0.40%",
-  "change_raw": -0.4,
-  "closed_trades": 0,
+  "market_value": 3347.44,
+  "total_invested": 3347.71,
+  "unrealised_pnl": -0.27,
+  "unrealised_str": "-0.27",
+  "realised_pnl": -42.3,
+  "realised_str": "-42.30",
+  "change": "-0.43%",
+  "change_raw": -0.43,
+  "closed_trades": 1,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 9984.66,
-  "drawdown_now_pct": 0.4,
+  "portfolio_peak": 9977.8,
+  "drawdown_now_pct": 0.43,
   "max_drawdown_pct": 12.69,
-  "usd_inr_rate": 94.53,
+  "usd_inr_rate": 94.595,
   "positions": [
     {
       "trade_id": "T0002",
@@ -25,17 +25,17 @@
       "sector": "Bonds & Fixed Income",
       "platform": "Vanguard \u2014 IBKR / Fidelity / Schwab",
       "exchange": "NASDAQ",
-      "entry": 73.7,
+      "entry": 73.72,
       "current": 73.71,
-      "peak_price": 73.71,
-      "trail_stop": 70.01,
-      "dist_to_trail_pct": 5.01,
-      "units": 12.153916,
-      "invested": 895.83,
-      "pnl": 0.13,
-      "pnl_str": "+0.13",
-      "pnl_pct": 0.01,
-      "pnl_pct_str": "+0.01%",
+      "peak_price": 73.74,
+      "trail_stop": 70.04,
+      "dist_to_trail_pct": 4.99,
+      "units": 40.424415,
+      "invested": 2980.18,
+      "pnl": -0.34,
+      "pnl_str": "-0.34",
+      "pnl_pct": -0.01,
+      "pnl_pct_str": "-0.01%",
       "confidence": 82,
       "severity": "CRITICAL",
       "days_held": 0,
@@ -48,59 +48,67 @@
       "sector": "Healthcare & Pharma",
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 160.77,
-      "current": 160.74,
+      "entry": 160.72,
+      "current": 160.75,
       "peak_price": 160.84,
-      "trail_stop": 149.51,
-      "dist_to_trail_pct": 6.98,
-      "units": 1.619523,
-      "invested": 260.37,
-      "pnl": -0.04,
-      "pnl_str": "-0.04",
-      "pnl_pct": -0.02,
-      "pnl_pct_str": "-0.02%",
+      "trail_stop": 149.47,
+      "dist_to_trail_pct": 7.02,
+      "units": 2.286814,
+      "invested": 367.53,
+      "pnl": 0.07,
+      "pnl_str": "+0.07",
+      "pnl_pct": 0.02,
+      "pnl_pct_str": "+0.02%",
       "confidence": 76,
       "severity": "HIGH",
       "days_held": 0,
       "half_exited": false
-    },
+    }
+  ],
+  "closed_trades_list": [
     {
       "trade_id": "T0001",
       "ticker": "SH",
       "etf_name": "ProShares Short S&P500",
-      "sector": "Inverse / Hedge",
       "platform": "ProShares -- IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 33.6,
-      "current": 33.26,
-      "peak_price": 33.75,
-      "trail_stop": 31.24,
-      "dist_to_trail_pct": 6.06,
-      "units": 118.766403,
-      "invested": 3990.08,
-      "pnl": -39.91,
-      "pnl_str": "-39.91",
-      "pnl_pct": -1.0,
-      "pnl_pct_str": "-1.00%",
-      "confidence": 92,
-      "severity": "CRITICAL",
-      "days_held": 1,
-      "half_exited": false
+      "entry": 33.54,
+      "exit": 33.23,
+      "pnl": -42.3,
+      "pnl_str": "-42.30",
+      "pnl_pct": -0.95,
+      "pnl_pct_str": "-0.95%",
+      "days_held": 2,
+      "exit_reason": "Decay-ETF stall exit (2d, -0.8%)",
+      "winner": false
     }
   ],
-  "closed_trades_list": [],
   "track_record": {
-    "total_trades": 0,
+    "total_trades": 1,
     "winners": 0,
-    "losers": 0,
+    "losers": 1,
     "win_rate": 0.0,
     "avg_win": 0.0,
-    "avg_loss": 0.0,
+    "avg_loss": -0.95,
     "profit_factor": 0.0,
-    "expectancy": 0.0,
+    "expectancy": -0.95,
     "sharpe_proxy": 0.0,
-    "best": null,
-    "worst": null
+    "best": {
+      "ticker": "SH",
+      "etf_name": "ProShares Short S&P500",
+      "pnl_pct": -0.95,
+      "pnl_pct_str": "-0.95%",
+      "exit_reason": "Decay-ETF stall exit (2d, -0.8%)",
+      "days_held": 2
+    },
+    "worst": {
+      "ticker": "SH",
+      "etf_name": "ProShares Short S&P500",
+      "pnl_pct": -0.95,
+      "pnl_pct_str": "-0.95%",
+      "exit_reason": "Decay-ETF stall exit (2d, -0.8%)",
+      "days_held": 2
+    }
   },
   "confidence_threshold": 60,
   "regime": {
@@ -120,14 +128,14 @@
     }
   },
   "top_signal": {
-    "ticker": "IGV",
-    "rank_score": 8.696696696696698,
-    "flow_score": 1.9027516077116684,
-    "options_score": 17.608748317855053,
-    "rotation_score": 15.0,
-    "macro_score": 2.0639425580426245,
-    "news_score": 9.2,
-    "total": 54.472139180306044,
+    "ticker": "GSY",
+    "rank_score": 24.801652892561982,
+    "flow_score": 20.0,
+    "options_score": 0.0,
+    "rotation_score": 0.0,
+    "macro_score": 0.0,
+    "news_score": 0.0,
+    "total": 44.80165289256198,
     "publish": false,
     "direction": "long"
   },
@@ -144,10 +152,6 @@
       "stage": 0,
       "description": "Insufficient data"
     },
-    "SH": {
-      "stage": 0,
-      "description": "Insufficient data"
-    },
     "XLV": {
       "stage": 0,
       "description": "Insufficient data"
@@ -157,26 +161,22 @@
     "labels": [
       "BND",
       "XLV",
-      "SH",
       "CASH"
     ],
     "values": [
-      9.0,
-      2.6,
-      39.7,
-      48.7
+      30.0,
+      3.7,
+      66.3
     ]
   },
   "pnl": {
     "labels": [
       "BND",
-      "XLV",
-      "SH"
+      "XLV"
     ],
     "values": [
-      0.13,
-      -0.04,
-      -39.91
+      -0.34,
+      0.07
     ]
   },
   "confidence": [
@@ -189,20 +189,20 @@
       "score": 92.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 90.0
-    },
-    {
       "symbol": "Asia Pacific Equity",
       "score": 89.0
     },
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 85.0
+      "score": 88.0
     },
     {
       "symbol": "Bonds & Fixed Income",
       "score": 82.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 81.0
     },
     {
       "symbol": "Emerging Markets",
@@ -349,53 +349,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 90.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -5.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
-      "latest_at": "29 Jun 2026 21:57 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "europe",
-        "global",
-        "americas",
-        "india"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Semiconductor Engineering",
-        "Markets-Economic Times",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.0,
-        "recency": 15.1,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
       "confidence": 89.0,
@@ -447,27 +400,27 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 85.0,
+      "confidence": 88.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": 0.5,
+      "direction_score": -6.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 21,
-      "latest_at": "29 Jun 2026 18:30 UTC",
-      "headline": "Halliburton, Valero and 3 More Stocks Set Up for a Fragile Hormuz Truce",
+      "article_count": 22,
+      "latest_at": "30 Jun 2026 04:47 UTC",
+      "headline": "ING: Oil Prices Have Overshot To The Downside",
       "regions": [
-        "asia_pacific",
-        "middle_east",
+        "global",
         "europe",
-        "global"
+        "asia_pacific",
+        "middle_east"
       ],
       "sources": [
-        "Bloomberg Markets",
         "Oilprice.com",
+        "US Top News and Analysis",
         "World | Deutsche Welle",
-        "US Top News and Analysis"
+        "Bloomberg Markets"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -492,8 +445,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 13.3,
-        "recency": 12.6,
+        "source_diversity": 11.0,
+        "recency": 14.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -546,6 +499,53 @@
         "volume_confirmation": 16.8,
         "source_diversity": 13.8,
         "recency": 16.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 81.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 29,
+      "latest_at": "29 Jun 2026 21:57 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "europe",
+        "asia_pacific",
+        "global",
+        "india"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Cointelegraph.com News",
+        "Semiconductor Engineering",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 11.0,
+        "recency": 7.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -661,18 +661,18 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 5,
-      "latest_at": "29 Jun 2026 21:56 UTC",
-      "headline": "Seniors in Medicare are about to get landmark obesity drug coverage \u2014 but many may not know it yet",
+      "latest_at": "30 Jun 2026 05:17 UTC",
+      "headline": "Eli Lilly, Regeneron among first companies selected for FDA initiative to speed review of new manufacturing facilities",
       "regions": [
-        "india",
-        "asia_pacific",
+        "global",
         "africa",
-        "global"
+        "middle_east"
       ],
       "sources": [
         "Markets-Economic Times",
         "US Top News and Analysis",
-        "BBC News"
+        "BBC News",
+        "Bloomberg Markets"
       ],
       "primary_etf": "XLV",
       "top_etfs": [
@@ -695,10 +695,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 14.5,
+        "signal_strength": 12.5,
         "volume_confirmation": 11.3,
-        "source_diversity": 11.0,
-        "recency": 15.0,
+        "source_diversity": 13.3,
+        "recency": 15.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -1020,22 +1020,22 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Crypto & Digital Assets - 28 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Asia Pacific Equity - 11 articles - HIGH / BEARISH - South Korea says Samsung and SK Hynix investing in AI, semiconductor mega-projects"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 21 articles - CRITICAL / BEARISH - Halliburton, Valero and 3 More Stocks Set Up for a Fragile Hormuz Truce"
+      "text": "Energy / Oil & Gas - 22 articles - CRITICAL / BEARISH - ING: Oil Prices Have Overshot To The Downside"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Bonds & Fixed Income - 11 articles - HIGH / BULLISH - Japan's super-long bonds briefly change course to fall after weak auction"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Crypto & Digital Assets - 29 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
@@ -1050,7 +1050,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Healthcare & Pharma - 5 articles - HIGH / BULLISH - Seniors in Medicare are about to get landmark obesity drug coverage \u2014 but many may not know it yet"
+      "text": "Healthcare & Pharma - 5 articles - HIGH / BULLISH - Eli Lilly, Regeneron among first companies selected for FDA initiative to speed review of new manufacturing facilities"
     },
     {
       "tag": "tag-bear",
@@ -1123,9 +1123,9 @@
       "region": "UK",
       "price": 10484.22,
       "currency": "GBP",
-      "change": -45.68,
-      "change_pct": -0.43,
-      "change_str": "-0.43%",
+      "change": -23.78,
+      "change_pct": -0.23,
+      "change_str": "-0.23%",
       "direction": "down"
     },
     {
@@ -1134,87 +1134,87 @@
       "region": "EU",
       "price": 24626.89,
       "currency": "EUR",
-      "change": -367.94,
-      "change_pct": -1.47,
-      "change_str": "-1.47%",
+      "change": -44.33,
+      "change_pct": -0.18,
+      "change_str": "-0.18%",
       "direction": "down"
     },
     {
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 69468.11,
+      "price": 70274.51,
       "currency": "JPY",
-      "change": -2898.23,
-      "change_pct": -4.0,
-      "change_str": "-4.00%",
-      "direction": "down"
+      "change": 806.4,
+      "change_pct": 1.16,
+      "change_str": "+1.16%",
+      "direction": "up"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 23026.68,
+      "price": 22834.96,
       "currency": "HKD",
-      "change": -50.23,
-      "change_pct": -0.22,
-      "change_str": "-0.22%",
+      "change": -191.72,
+      "change_pct": -0.83,
+      "change_str": "-0.83%",
       "direction": "down"
     },
     {
       "label": "Nifty 50",
       "ticker": "^NSEI",
       "region": "IN",
-      "price": 23946.25,
+      "price": 23946.3,
       "currency": "INR",
-      "change": -75.4,
-      "change_pct": -0.31,
-      "change_str": "-0.31%",
-      "direction": "down"
+      "change": 0.05,
+      "change_pct": 0.0,
+      "change_str": "+0.00%",
+      "direction": "up"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4034.0,
+      "price": 4000.2,
       "currency": "USD",
-      "change": -44.7,
-      "change_pct": -1.1,
-      "change_str": "-1.10%",
+      "change": -22.1,
+      "change_pct": -0.55,
+      "change_str": "-0.55%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 70.22,
+      "price": 69.92,
       "currency": "USD",
-      "change": 0.99,
-      "change_pct": 1.43,
-      "change_str": "+1.43%",
-      "direction": "up"
+      "change": -0.83,
+      "change_pct": -1.17,
+      "change_str": "-1.17%",
+      "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 60249.0,
+      "price": 59597.15,
       "currency": "USD",
-      "change": 716.66,
-      "change_pct": 1.2,
-      "change_str": "+1.20%",
+      "change": 64.81,
+      "change_pct": 0.11,
+      "change_str": "+0.11%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.11,
+      "price": 101.38,
       "currency": "USD",
-      "change": -0.25,
-      "change_pct": -0.25,
-      "change_str": "-0.25%",
-      "direction": "down"
+      "change": 0.27,
+      "change_pct": 0.27,
+      "change_str": "+0.27%",
+      "direction": "up"
     },
     {
       "label": "VIX",
@@ -1230,24 +1230,19 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.4,
-    "portfolio_peak": 9984.66,
+    "drawdown_from_peak_pct": 0.43,
+    "portfolio_peak": 9977.8,
     "vix": 17.65,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
-        "sector": "Inverse / Hedge",
-        "weight": 39.7,
+        "sector": "Bonds & Fixed Income",
+        "weight": 30.0,
         "at_cap": true
       },
       {
-        "sector": "Bonds & Fixed Income",
-        "weight": 9.0,
-        "at_cap": false
-      },
-      {
         "sector": "Healthcare & Pharma",
-        "weight": 2.6,
+        "weight": 3.7,
         "at_cap": false
       }
     ],
@@ -1298,38 +1293,38 @@
       "benchmark_price_start": 741.0,
       "benchmark_price_now": 741.0,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.4,
-      "alpha": -0.4
+      "portfolio_return_pct": -0.43,
+      "alpha": -0.43
     },
     "rebalance": {
       "alerts": [
         {
-          "ticker": "XLV",
-          "actual_weight_pct": 2.62,
-          "target_weight_pct": 45.0,
-          "drift_pct": -42.38,
-          "action": "ADD",
-          "amount": 4214.82,
-          "etf_name": "Health Care Select Sector SPDR",
-          "regime_note": ""
-        },
-        {
           "ticker": "CASH",
-          "actual_weight_pct": 48.65,
+          "actual_weight_pct": 66.31,
           "target_weight_pct": 10.0,
-          "drift_pct": 38.65,
+          "drift_pct": 56.31,
           "action": "DEPLOY",
-          "amount": 3843.92,
+          "amount": 5594.27,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
         {
-          "ticker": "BND",
-          "actual_weight_pct": 9.01,
+          "ticker": "XLV",
+          "actual_weight_pct": 3.7,
           "target_weight_pct": 45.0,
-          "drift_pct": -35.99,
+          "drift_pct": -41.3,
           "action": "ADD",
-          "amount": 3579.27,
+          "amount": 4103.26,
+          "etf_name": "Health Care Select Sector SPDR",
+          "regime_note": ""
+        },
+        {
+          "ticker": "BND",
+          "actual_weight_pct": 29.99,
+          "target_weight_pct": 45.0,
+          "drift_pct": -15.01,
+          "action": "ADD",
+          "amount": 1491.02,
           "etf_name": "Vanguard Total Bond Market ETF",
           "regime_note": ""
         }
@@ -1340,105 +1335,106 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -14.54,
-          "portfolio_loss_pct": -0.15,
+          "total_impact": 150.94,
+          "portfolio_loss_pct": 1.52,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 10.0,
-              "impact": 89.59
+              "impact": 297.98
             },
             {
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -104.13
+              "impact": -147.04
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -43.72,
-          "portfolio_loss_pct": -0.44,
+          "total_impact": 24.01,
+          "portfolio_loss_pct": 0.24,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 5.0,
-              "impact": 44.79
+              "impact": 148.99
             },
             {
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -88.51
+              "impact": -124.98
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -146.55,
-          "portfolio_loss_pct": -1.47,
+          "total_impact": -412.72,
+          "portfolio_loss_pct": -4.15,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": -12.0,
-              "impact": -107.5
+              "impact": -357.58
             },
             {
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -39.05
+              "impact": -55.14
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -2.91,
-          "portfolio_loss_pct": -0.03,
+          "total_impact": 30.19,
+          "portfolio_loss_pct": 0.3,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 2.0,
-              "impact": 17.92
+              "impact": 59.6
             },
             {
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -20.83
+              "impact": -29.41
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -11.02,
-          "portfolio_loss_pct": -0.11,
+          "total_impact": 53.03,
+          "portfolio_loss_pct": 0.53,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 4.0,
-              "impact": 35.83
+              "impact": 119.19
             },
             {
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -46.86
+              "impact": -66.17
             }
           ]
         }
       },
       "worst_scenario": "RATES_SHOCK_+2%",
-      "worst_loss_pct": -1.47
+      "worst_loss_pct": -4.15
     }
   },
   "logs": [
-    "2026-06-29 23:18:00 [INFO] AZALYST - status.json generated",
-    "2026-06-29 23:18:00 [INFO] PORTFOLIO - NAV USD 9,944.75 | Return -0.40%",
-    "2026-06-29 23:18:00 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-29 23:18:00 [INFO] TRADER - Open positions: BND, XLV, SH"
+    "2026-06-30 06:30:01 [INFO] AZALYST - status.json generated",
+    "2026-06-30 06:30:01 [INFO] PORTFOLIO - NAV USD 9,935.24 | Return -0.43%",
+    "2026-06-30 06:30:01 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-30 06:30:01 [INFO] TRADER - Open positions: BND, XLV",
+    "2026-06-30 06:30:01 [INFO] TRADER - Closed trades: 1"
   ],
-  "generated_at": "2026-06-29 23:17:56 UTC"
+  "generated_at": "2026-06-30 06:30:00 UTC"
 }
