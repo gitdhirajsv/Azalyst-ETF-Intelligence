@@ -1,22 +1,22 @@
 {
-  "portfolio_value": 9935.24,
-  "total_deposited": 9977.8,
-  "cash": 6587.79,
+  "portfolio_value": 9929.61,
+  "total_deposited": 9970.95,
+  "cash": 5685.72,
   "monthly_reserve": 0.0,
-  "market_value": 3347.44,
-  "total_invested": 3347.71,
-  "unrealised_pnl": -0.27,
-  "unrealised_str": "-0.27",
-  "realised_pnl": -42.3,
-  "realised_str": "-42.30",
-  "change": "-0.43%",
-  "change_raw": -0.43,
+  "market_value": 4243.89,
+  "total_invested": 4242.96,
+  "unrealised_pnl": 0.93,
+  "unrealised_str": "+0.93",
+  "realised_pnl": -42.27,
+  "realised_str": "-42.27",
+  "change": "-0.41%",
+  "change_raw": -0.41,
   "closed_trades": 1,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 9977.8,
-  "drawdown_now_pct": 0.43,
+  "portfolio_peak": 9970.95,
+  "drawdown_now_pct": 0.41,
   "max_drawdown_pct": 12.69,
-  "usd_inr_rate": 94.595,
+  "usd_inr_rate": 94.66,
   "positions": [
     {
       "trade_id": "T0002",
@@ -25,17 +25,17 @@
       "sector": "Bonds & Fixed Income",
       "platform": "Vanguard \u2014 IBKR / Fidelity / Schwab",
       "exchange": "NASDAQ",
-      "entry": 73.72,
+      "entry": 73.67,
       "current": 73.71,
-      "peak_price": 73.74,
-      "trail_stop": 70.04,
-      "dist_to_trail_pct": 4.99,
+      "peak_price": 73.71,
+      "trail_stop": 69.99,
+      "dist_to_trail_pct": 5.05,
       "units": 40.424415,
-      "invested": 2980.18,
-      "pnl": -0.34,
-      "pnl_str": "-0.34",
-      "pnl_pct": -0.01,
-      "pnl_pct_str": "-0.01%",
+      "invested": 2978.14,
+      "pnl": 1.55,
+      "pnl_str": "+1.55",
+      "pnl_pct": 0.05,
+      "pnl_pct_str": "+0.05%",
       "confidence": 82,
       "severity": "CRITICAL",
       "days_held": 0,
@@ -48,19 +48,42 @@
       "sector": "Healthcare & Pharma",
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 160.72,
-      "current": 160.75,
+      "entry": 160.68,
+      "current": 160.74,
       "peak_price": 160.84,
-      "trail_stop": 149.47,
-      "dist_to_trail_pct": 7.02,
-      "units": 2.286814,
-      "invested": 367.53,
-      "pnl": 0.07,
-      "pnl_str": "+0.07",
-      "pnl_pct": 0.02,
-      "pnl_pct_str": "+0.02%",
-      "confidence": 76,
+      "trail_stop": 149.43,
+      "dist_to_trail_pct": 7.04,
+      "units": 3.245289,
+      "invested": 521.45,
+      "pnl": 0.2,
+      "pnl_str": "+0.20",
+      "pnl_pct": 0.04,
+      "pnl_pct_str": "+0.04%",
+      "confidence": 82,
       "severity": "HIGH",
+      "days_held": 0,
+      "half_exited": false
+    },
+    {
+      "trade_id": "T0004",
+      "ticker": "SH",
+      "etf_name": "ProShares Short S&P500",
+      "sector": "Inverse / Hedge",
+      "platform": "ProShares -- IBKR / Schwab / Fidelity",
+      "exchange": "NYSE",
+      "entry": 33.3,
+      "current": 33.26,
+      "peak_price": 33.3,
+      "trail_stop": 30.97,
+      "dist_to_trail_pct": 6.9,
+      "units": 22.325871,
+      "invested": 743.38,
+      "pnl": -0.82,
+      "pnl_str": "-0.82",
+      "pnl_pct": -0.11,
+      "pnl_pct_str": "-0.11%",
+      "confidence": 93,
+      "severity": "CRITICAL",
       "days_held": 0,
       "half_exited": false
     }
@@ -72,10 +95,10 @@
       "etf_name": "ProShares Short S&P500",
       "platform": "ProShares -- IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 33.54,
-      "exit": 33.23,
-      "pnl": -42.3,
-      "pnl_str": "-42.30",
+      "entry": 33.52,
+      "exit": 33.21,
+      "pnl": -42.27,
+      "pnl_str": "-42.27",
       "pnl_pct": -0.95,
       "pnl_pct_str": "-0.95%",
       "days_held": 2,
@@ -112,12 +135,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
+    "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.16638722991687668,
+    "vix_level": 17.579999923706055,
+    "vix_percentile_1y": 0.5793650793650794,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -128,14 +151,14 @@
     }
   },
   "top_signal": {
-    "ticker": "GSY",
-    "rank_score": 24.801652892561982,
-    "flow_score": 20.0,
-    "options_score": 0.0,
-    "rotation_score": 0.0,
-    "macro_score": 0.0,
-    "news_score": 0.0,
-    "total": 44.80165289256198,
+    "ticker": "IGV",
+    "rank_score": 8.622088655146506,
+    "flow_score": 0.0,
+    "options_score": 18.8258970204497,
+    "rotation_score": 15.0,
+    "macro_score": 6.57692801840304,
+    "news_score": 9.2,
+    "total": 58.22491369399924,
     "publish": false,
     "direction": "long"
   },
@@ -152,6 +175,10 @@
       "stage": 0,
       "description": "Insufficient data"
     },
+    "SH": {
+      "stage": 0,
+      "description": "Insufficient data"
+    },
     "XLV": {
       "stage": 0,
       "description": "Insufficient data"
@@ -161,40 +188,48 @@
     "labels": [
       "BND",
       "XLV",
+      "SH",
       "CASH"
     ],
     "values": [
       30.0,
-      3.7,
-      66.3
+      5.3,
+      7.5,
+      57.3
     ]
   },
   "pnl": {
     "labels": [
       "BND",
-      "XLV"
+      "XLV",
+      "SH"
     ],
     "values": [
-      -0.34,
-      0.07
+      1.55,
+      0.2,
+      -0.82
     ]
   },
   "confidence": [
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 92.0
+      "score": 93.0
     },
     {
       "symbol": "Technology & AI / Semiconductors + Asia Pacific Equity",
       "score": 92.0
     },
     {
+      "symbol": "Energy / Oil & Gas",
+      "score": 91.0
+    },
+    {
       "symbol": "Asia Pacific Equity",
       "score": 89.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 88.0
+      "symbol": "Healthcare & Pharma",
+      "score": 82.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -211,10 +246,6 @@
     {
       "symbol": "Nuclear Energy & Uranium",
       "score": 78.0
-    },
-    {
-      "symbol": "Healthcare & Pharma",
-      "score": 75.0
     },
     {
       "symbol": "Clean Energy & Renewables",
@@ -245,27 +276,27 @@
     {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 92.0,
+      "confidence": 93.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -5.5,
+      "direction_score": -9.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "29 Jun 2026 06:21 UTC",
-      "headline": "From the Fed to chip stocks: Key events that will drive global markets this week",
+      "article_count": 13,
+      "latest_at": "30 Jun 2026 12:07 UTC",
+      "headline": "Gold poised for biggest monthly drop since 2008 amid Fed rate hike expectations",
       "regions": [
+        "asia_pacific",
+        "europe",
         "middle_east",
-        "global",
-        "americas",
-        "asia_pacific"
+        "americas"
       ],
       "sources": [
-        "Tech",
-        "Finance",
         "US Top News and Analysis",
-        "Bloomberg Markets"
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "BBC News"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -289,9 +320,9 @@
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
-        "volume_confirmation": 17.4,
-        "source_diversity": 12.9,
-        "recency": 15.9,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.4,
+        "recency": 16.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -349,6 +380,58 @@
       }
     },
     {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 91.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -5.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 22,
+      "latest_at": "30 Jun 2026 11:30 UTC",
+      "headline": "ING: Oil Prices Have Overshot To The Downside",
+      "regions": [
+        "global",
+        "middle_east",
+        "europe"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "World | Deutsche Welle",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.3,
+        "recency": 15.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
       "confidence": 89.0,
@@ -398,55 +481,55 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 88.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -6.5,
+      "sector_key": "healthcare_pharma",
+      "sector_label": "Healthcare & Pharma",
+      "confidence": 82.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 22,
-      "latest_at": "30 Jun 2026 04:47 UTC",
-      "headline": "ING: Oil Prices Have Overshot To The Downside",
+      "article_count": 7,
+      "latest_at": "30 Jun 2026 11:40 UTC",
+      "headline": "Eli Lilly, Regeneron among first companies selected for FDA initiative to speed review of new manufacturing facilities",
       "regions": [
         "global",
-        "europe",
-        "asia_pacific",
-        "middle_east"
+        "middle_east",
+        "americas",
+        "africa"
       ],
       "sources": [
-        "Oilprice.com",
         "US Top News and Analysis",
-        "World | Deutsche Welle",
-        "Bloomberg Markets"
+        "Bloomberg Markets",
+        "BBC News",
+        "Markets-Economic Times"
       ],
-      "primary_etf": "XLE",
+      "primary_etf": "XLV",
       "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
+        "XLV",
+        "IXJ",
+        "XBI"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
+        "HEALTHCARE",
+        "PHARMABEES"
       ],
       "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
+        "XLV",
+        "IXJ",
+        "XBI"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 11.0,
-        "recency": 14.4,
+        "signal_strength": 16.2,
+        "volume_confirmation": 13.7,
+        "source_diversity": 13.3,
+        "recency": 15.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -647,58 +730,6 @@
         "volume_confirmation": 13.7,
         "source_diversity": 13.3,
         "recency": 15.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma",
-      "confidence": 75.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "30 Jun 2026 05:17 UTC",
-      "headline": "Eli Lilly, Regeneron among first companies selected for FDA initiative to speed review of new manufacturing facilities",
-      "regions": [
-        "global",
-        "africa",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "BBC News",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "XLV",
-      "top_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "HEALTHCARE",
-        "PHARMABEES"
-      ],
-      "global_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 12.5,
-        "volume_confirmation": 11.3,
-        "source_diversity": 13.3,
-        "recency": 15.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -1010,7 +1041,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - CRITICAL / BEARISH - From the Fed to chip stocks: Key events that will drive global markets this week"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - CRITICAL / BEARISH - Gold poised for biggest monthly drop since 2008 amid Fed rate hike expectations"
     },
     {
       "tag": "tag-bear",
@@ -1020,12 +1051,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Asia Pacific Equity - 11 articles - HIGH / BEARISH - South Korea says Samsung and SK Hynix investing in AI, semiconductor mega-projects"
+      "text": "Energy / Oil & Gas - 22 articles - CRITICAL / BEARISH - ING: Oil Prices Have Overshot To The Downside"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 22 articles - CRITICAL / BEARISH - ING: Oil Prices Have Overshot To The Downside"
+      "text": "Asia Pacific Equity - 11 articles - HIGH / BEARISH - South Korea says Samsung and SK Hynix investing in AI, semiconductor mega-projects"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Healthcare & Pharma - 7 articles - HIGH / BULLISH - Eli Lilly, Regeneron among first companies selected for FDA initiative to speed review of new manufacturing facilities"
     },
     {
       "tag": "tag-bull",
@@ -1046,11 +1082,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Nuclear Energy & Uranium - 7 articles - HIGH / BEARISH - Adani Targets 10 GW Nuclear Power Capacity in India by 2035"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Healthcare & Pharma - 5 articles - HIGH / BULLISH - Eli Lilly, Regeneron among first companies selected for FDA initiative to speed review of new manufacturing facilities"
     },
     {
       "tag": "tag-bear",
@@ -1121,89 +1152,89 @@
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10484.22,
+      "price": 10577.6,
       "currency": "GBP",
-      "change": -23.78,
-      "change_pct": -0.23,
-      "change_str": "-0.23%",
-      "direction": "down"
+      "change": 93.4,
+      "change_pct": 0.89,
+      "change_str": "+0.89%",
+      "direction": "up"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 24626.89,
+      "price": 24958.79,
       "currency": "EUR",
-      "change": -44.33,
-      "change_pct": -0.18,
-      "change_str": "-0.18%",
-      "direction": "down"
+      "change": 331.9,
+      "change_pct": 1.35,
+      "change_str": "+1.35%",
+      "direction": "up"
     },
     {
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 70274.51,
+      "price": 70062.32,
       "currency": "JPY",
-      "change": 806.4,
-      "change_pct": 1.16,
-      "change_str": "+1.16%",
+      "change": 594.21,
+      "change_pct": 0.86,
+      "change_str": "+0.86%",
       "direction": "up"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 22834.96,
+      "price": 22881.02,
       "currency": "HKD",
-      "change": -191.72,
-      "change_pct": -0.83,
-      "change_str": "-0.83%",
+      "change": -145.66,
+      "change_pct": -0.63,
+      "change_str": "-0.63%",
       "direction": "down"
     },
     {
       "label": "Nifty 50",
       "ticker": "^NSEI",
       "region": "IN",
-      "price": 23946.3,
+      "price": 23865.75,
       "currency": "INR",
-      "change": 0.05,
-      "change_pct": 0.0,
-      "change_str": "+0.00%",
-      "direction": "up"
+      "change": -80.5,
+      "change_pct": -0.34,
+      "change_str": "-0.34%",
+      "direction": "down"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4000.2,
+      "price": 4038.1,
       "currency": "USD",
-      "change": -22.1,
-      "change_pct": -0.55,
-      "change_str": "-0.55%",
-      "direction": "down"
+      "change": 15.8,
+      "change_pct": 0.39,
+      "change_str": "+0.39%",
+      "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 69.92,
+      "price": 71.21,
       "currency": "USD",
-      "change": -0.83,
-      "change_pct": -1.17,
-      "change_str": "-1.17%",
-      "direction": "down"
+      "change": 0.46,
+      "change_pct": 0.65,
+      "change_str": "+0.65%",
+      "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 59597.15,
+      "price": 58723.0,
       "currency": "USD",
-      "change": 64.81,
-      "change_pct": 0.11,
-      "change_str": "+0.11%",
-      "direction": "up"
+      "change": -1415.38,
+      "change_pct": -2.35,
+      "change_str": "-2.35%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
@@ -1220,19 +1251,19 @@
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 17.65,
+      "price": 17.58,
       "currency": "USD",
-      "change": -0.76,
-      "change_pct": -4.13,
-      "change_str": "-4.13%",
+      "change": -0.07,
+      "change_pct": -0.4,
+      "change_str": "-0.40%",
       "direction": "down"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.43,
-    "portfolio_peak": 9977.8,
-    "vix": 17.65,
+    "drawdown_from_peak_pct": 0.41,
+    "portfolio_peak": 9970.95,
+    "vix": 17.58,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -1241,8 +1272,13 @@
         "at_cap": true
       },
       {
+        "sector": "Inverse / Hedge",
+        "weight": 7.5,
+        "at_cap": false
+      },
+      {
         "sector": "Healthcare & Pharma",
-        "weight": 3.7,
+        "weight": 5.3,
         "at_cap": false
       }
     ],
@@ -1293,38 +1329,38 @@
       "benchmark_price_start": 741.0,
       "benchmark_price_now": 741.0,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.43,
-      "alpha": -0.43
+      "portfolio_return_pct": -0.41,
+      "alpha": -0.41
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 66.31,
+          "actual_weight_pct": 57.26,
           "target_weight_pct": 10.0,
-          "drift_pct": 56.31,
+          "drift_pct": 47.26,
           "action": "DEPLOY",
-          "amount": 5594.27,
+          "amount": 4692.76,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
         {
           "ticker": "XLV",
-          "actual_weight_pct": 3.7,
+          "actual_weight_pct": 5.25,
           "target_weight_pct": 45.0,
-          "drift_pct": -41.3,
+          "drift_pct": -39.75,
           "action": "ADD",
-          "amount": 4103.26,
+          "amount": 3946.68,
           "etf_name": "Health Care Select Sector SPDR",
           "regime_note": ""
         },
         {
           "ticker": "BND",
-          "actual_weight_pct": 29.99,
+          "actual_weight_pct": 30.01,
           "target_weight_pct": 45.0,
-          "drift_pct": -15.01,
+          "drift_pct": -14.99,
           "action": "ADD",
-          "amount": 1491.02,
+          "amount": 1488.64,
           "etf_name": "Vanguard Total Bond Market ETF",
           "regime_note": ""
         }
@@ -1335,80 +1371,80 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": 150.94,
-          "portfolio_loss_pct": 1.52,
+          "total_impact": 89.31,
+          "portfolio_loss_pct": 0.9,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 10.0,
-              "impact": 297.98
+              "impact": 297.97
             },
             {
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -147.04
+              "impact": -208.66
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": 24.01,
-          "portfolio_loss_pct": 0.24,
+          "total_impact": -28.38,
+          "portfolio_loss_pct": -0.29,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 5.0,
-              "impact": 148.99
+              "impact": 148.98
             },
             {
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -124.98
+              "impact": -177.36
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -412.72,
-          "portfolio_loss_pct": -4.15,
+          "total_impact": -435.81,
+          "portfolio_loss_pct": -4.39,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": -12.0,
-              "impact": -357.58
+              "impact": -357.56
             },
             {
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -55.14
+              "impact": -78.25
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": 30.19,
-          "portfolio_loss_pct": 0.3,
+          "total_impact": 17.86,
+          "portfolio_loss_pct": 0.18,
           "position_impacts": [
             {
               "ticker": "BND",
               "factor": "bonds",
               "shock_pct": 2.0,
-              "impact": 59.6
+              "impact": 59.59
             },
             {
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -29.41
+              "impact": -41.73
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": 53.03,
-          "portfolio_loss_pct": 0.53,
+          "total_impact": 25.29,
+          "portfolio_loss_pct": 0.25,
           "position_impacts": [
             {
               "ticker": "BND",
@@ -1420,21 +1456,21 @@
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -66.17
+              "impact": -93.9
             }
           ]
         }
       },
       "worst_scenario": "RATES_SHOCK_+2%",
-      "worst_loss_pct": -4.15
+      "worst_loss_pct": -4.39
     }
   },
   "logs": [
-    "2026-06-30 06:30:01 [INFO] AZALYST - status.json generated",
-    "2026-06-30 06:30:01 [INFO] PORTFOLIO - NAV USD 9,935.24 | Return -0.43%",
-    "2026-06-30 06:30:01 [INFO] SIGNALS - 15 active signal buckets in state",
-    "2026-06-30 06:30:01 [INFO] TRADER - Open positions: BND, XLV",
-    "2026-06-30 06:30:01 [INFO] TRADER - Closed trades: 1"
+    "2026-06-30 12:30:55 [INFO] AZALYST - status.json generated",
+    "2026-06-30 12:30:55 [INFO] PORTFOLIO - NAV USD 9,929.61 | Return -0.41%",
+    "2026-06-30 12:30:55 [INFO] SIGNALS - 15 active signal buckets in state",
+    "2026-06-30 12:30:55 [INFO] TRADER - Open positions: BND, XLV, SH",
+    "2026-06-30 12:30:55 [INFO] TRADER - Closed trades: 1"
   ],
-  "generated_at": "2026-06-30 06:30:00 UTC"
+  "generated_at": "2026-06-30 12:30:52 UTC"
 }
