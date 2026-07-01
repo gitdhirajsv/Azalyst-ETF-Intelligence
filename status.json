@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 19816.38,
+  "portfolio_value": 19814.98,
   "total_deposited": 19857.09,
-  "cash": 9729.17,
+  "cash": 8458.27,
   "monthly_reserve": 0.0,
-  "market_value": 10087.21,
-  "total_invested": 10085.92,
-  "unrealised_pnl": 1.29,
-  "unrealised_str": "+1.29",
+  "market_value": 11356.71,
+  "total_invested": 11356.81,
+  "unrealised_pnl": -0.1,
+  "unrealised_str": "-0.10",
   "realised_pnl": -42.01,
   "realised_str": "-42.01",
   "change": "-0.21%",
@@ -14,7 +14,7 @@
   "closed_trades": 1,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 19833.22,
-  "drawdown_now_pct": 0.08,
+  "drawdown_now_pct": 0.09,
   "max_drawdown_pct": 12.69,
   "usd_inr_rate": 95.238,
   "positions": [
@@ -117,17 +117,17 @@
       "sector": "Inverse / Hedge",
       "platform": "ProShares -- IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 32.96,
+      "entry": 32.98,
       "current": 33.05,
       "peak_price": 33.09,
-      "trail_stop": 30.65,
-      "dist_to_trail_pct": 7.27,
-      "units": 171.396772,
-      "invested": 5648.43,
-      "pnl": 16.23,
-      "pnl_str": "+16.23",
-      "pnl_pct": 0.29,
-      "pnl_pct_str": "+0.29%",
+      "trail_stop": 30.67,
+      "dist_to_trail_pct": 7.2,
+      "units": 209.808159,
+      "invested": 6919.33,
+      "pnl": 14.83,
+      "pnl_str": "+14.83",
+      "pnl_pct": 0.21,
+      "pnl_pct_str": "+0.21%",
       "confidence": 96,
       "severity": "CRITICAL",
       "days_held": 1,
@@ -200,11 +200,11 @@
     "ticker": "IGV",
     "rank_score": 13.75872308834447,
     "flow_score": 20.0,
-    "options_score": 20.754534946722114,
+    "options_score": 18.0,
     "rotation_score": 15.0,
     "macro_score": 4.993762815483283,
     "news_score": 7.6000000000000005,
-    "total": 82.10702085054986,
+    "total": 79.35248590382774,
     "publish": true,
     "direction": "long"
   },
@@ -252,8 +252,8 @@
       3.2,
       3.3,
       1.0,
-      28.6,
-      49.1
+      35.0,
+      42.7
     ]
   },
   "pnl": {
@@ -269,7 +269,7 @@
       0.08,
       -8.16,
       -0.19,
-      16.23
+      14.83
     ]
   },
   "confidence": [
@@ -278,15 +278,11 @@
       "score": 95.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 93.0
-    },
-    {
       "symbol": "Defense & Aerospace",
       "score": 93.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "symbol": "Energy / Oil & Gas",
       "score": 92.0
     },
     {
@@ -316,6 +312,10 @@
     {
       "symbol": "Commodities & Mining",
       "score": 73.0
+    },
+    {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 66.0
     },
     {
       "symbol": "Cybersecurity",
@@ -393,59 +393,6 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 93.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -13.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 22,
-      "latest_at": "01 Jul 2026 17:59 UTC",
-      "headline": "Goldman Sachs Warns Oil Inventory Rebuild Won\u2019t Prevent 2027 Supply Glut",
-      "regions": [
-        "global",
-        "europe",
-        "americas",
-        "india"
-      ],
-      "sources": [
-        "The Verge",
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "World | Deutsche Welle"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.3,
-        "recency": 15.3,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
       "confidence": 93.0,
@@ -499,55 +446,55 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
       "confidence": 92.0,
-      "severity": "HIGH",
+      "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -10.5,
+      "direction_score": -13.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "30 Jun 2026 20:14 UTC",
-      "headline": "Gold poised for biggest monthly drop since 2008 amid Fed rate hike expectations",
+      "article_count": 19,
+      "latest_at": "01 Jul 2026 22:01 UTC",
+      "headline": "Putin Admits Shortage of Fuel After Weeks of Refinery Strikes",
       "regions": [
-        "americas",
-        "middle_east",
+        "asia_pacific",
         "global",
-        "asia_pacific"
+        "europe",
+        "india"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "The Verge",
         "Oilprice.com",
-        "Markets-Economic Times"
+        "Bloomberg Markets"
       ],
-      "primary_etf": "GLDM",
+      "primary_etf": "XLE",
       "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
+        "XLE",
+        "IXC",
+        "CPSEETF"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
+        "CPSEETF",
+        "PSUBNKBEES"
       ],
       "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
+        "XLE",
+        "IXC",
+        "USO"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
-        "volume_confirmation": 17.4,
-        "source_diversity": 14.4,
-        "recency": 15.7,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.9,
+        "recency": 14.8,
         "geopolitical_severity": 13.0
       }
     },
@@ -555,25 +502,25 @@
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 91.0,
-      "severity": "HIGH",
+      "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -5.0,
+      "direction_score": -6.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 31,
-      "latest_at": "01 Jul 2026 17:10 UTC",
+      "article_count": 29,
+      "latest_at": "01 Jul 2026 22:02 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
+        "asia_pacific",
         "global",
-        "europe",
-        "americas",
-        "india"
+        "india",
+        "europe"
       ],
       "sources": [
-        "Markets-Economic Times",
-        "Bloomberg Markets",
         "US Top News and Analysis",
+        "Markets-Economic Times",
+        "BBC News",
         "Cointelegraph.com News"
       ],
       "primary_etf": "IBIT",
@@ -593,8 +540,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 14.0,
-        "recency": 14.1,
+        "source_diversity": 12.0,
+        "recency": 14.8,
         "geopolitical_severity": 13.0
       }
     },
@@ -903,6 +850,59 @@
       }
     },
     {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 66.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -9.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "01 Jul 2026 22:05 UTC",
+      "headline": "Fed's Warsh: Will decide on rate hike when policymakers 'shut the door' at next meeting",
+      "regions": [
+        "americas",
+        "global",
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "www.theregister.com - Articles",
+        "Oilprice.com",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 17.4,
+        "source_diversity": 13.4,
+        "recency": 14.8,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
       "confidence": 65.0,
@@ -1153,11 +1153,6 @@
       "text": "Technology & AI / Semiconductors - 74 articles - HIGH / BULLISH - Record chip rally adds $2 trillion in combined value to Micron, Intel and AMD in second quarter"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Energy / Oil & Gas - 22 articles - CRITICAL / BEARISH - Goldman Sachs Warns Oil Inventory Rebuild Won\u2019t Prevent 2027 Supply Glut"
-    },
-    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Defense & Aerospace - 26 articles - HIGH / BULLISH - The US military wants a fleet of laser trucks. Here\u2019s what they might look like."
@@ -1165,12 +1160,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BEARISH - Gold poised for biggest monthly drop since 2008 amid Fed rate hike expectations"
+      "text": "Energy / Oil & Gas - 19 articles - CRITICAL / BEARISH - Putin Admits Shortage of Fuel After Weeks of Refinery Strikes"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Crypto & Digital Assets - 31 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
+      "text": "Crypto & Digital Assets - 29 articles - CRITICAL / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
@@ -1201,6 +1196,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Commodities & Mining - 7 articles - HIGH / BEARISH - Nigeria Unveils World-Class Critical Minerals Discovery"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BEARISH - Fed's Warsh: Will decide on rate hike when policymakers 'shut the door' at next meeting"
     },
     {
       "tag": "tag-bull",
@@ -1268,9 +1268,9 @@
       "region": "UK",
       "price": 10478.34,
       "currency": "GBP",
-      "change": -18.76,
-      "change_pct": -0.18,
-      "change_str": "-0.18%",
+      "change": -5.86,
+      "change_pct": -0.06,
+      "change_str": "-0.06%",
       "direction": "down"
     },
     {
@@ -1321,11 +1321,11 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4049.3,
+      "price": 4050.1,
       "currency": "USD",
-      "change": 26.4,
-      "change_pct": 0.66,
-      "change_str": "+0.66%",
+      "change": 27.2,
+      "change_pct": 0.68,
+      "change_str": "+0.68%",
       "direction": "up"
     },
     {
@@ -1343,11 +1343,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 60567.88,
+      "price": 60157.12,
       "currency": "USD",
-      "change": 2009.02,
-      "change_pct": 3.43,
-      "change_str": "+3.43%",
+      "change": 1598.26,
+      "change_pct": 2.73,
+      "change_str": "+2.73%",
       "direction": "up"
     },
     {
@@ -1375,15 +1375,15 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.08,
+    "drawdown_from_peak_pct": 0.09,
     "portfolio_peak": 19833.22,
     "vix": 16.59,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
         "sector": "Inverse / Hedge",
-        "weight": 28.6,
-        "at_cap": false
+        "weight": 35.0,
+        "at_cap": true
       },
       {
         "sector": "Bonds & Fixed Income",
@@ -1480,11 +1480,11 @@
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 49.1,
+          "actual_weight_pct": 42.69,
           "target_weight_pct": 10.0,
-          "drift_pct": 39.1,
+          "drift_pct": 32.69,
           "action": "DEPLOY",
-          "amount": 7747.53,
+          "amount": 6476.78,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
@@ -1494,7 +1494,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": -21.54,
           "action": "ADD",
-          "amount": 4268.44,
+          "amount": 4268.12,
           "etf_name": "iShares U.S. Aerospace & Defense ETF",
           "regime_note": ""
         },
@@ -1504,7 +1504,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": -19.31,
           "action": "ADD",
-          "amount": 3827.24,
+          "amount": 3826.93,
           "etf_name": "Health Care Select Sector SPDR",
           "regime_note": ""
         },
@@ -1514,7 +1514,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": -19.23,
           "action": "ADD",
-          "amount": 3811.24,
+          "amount": 3810.92,
           "etf_name": "Invesco QQQ Trust",
           "regime_note": ""
         },
@@ -1524,7 +1524,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": -7.6,
           "action": "ADD",
-          "amount": 1505.28,
+          "amount": 1504.96,
           "etf_name": "Vanguard Total Bond Market ETF",
           "regime_note": ""
         }
@@ -1690,11 +1690,11 @@
     }
   },
   "logs": [
-    "2026-07-01 22:30:55 [INFO] AZALYST - status.json generated",
-    "2026-07-01 22:30:55 [INFO] PORTFOLIO - NAV USD 19,816.38 | Return -0.21%",
-    "2026-07-01 22:30:55 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-01 22:30:55 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, SH",
-    "2026-07-01 22:30:55 [INFO] TRADER - Closed trades: 1"
+    "2026-07-01 23:32:23 [INFO] AZALYST - status.json generated",
+    "2026-07-01 23:32:23 [INFO] PORTFOLIO - NAV USD 19,814.98 | Return -0.21%",
+    "2026-07-01 23:32:23 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-01 23:32:23 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, SH",
+    "2026-07-01 23:32:23 [INFO] TRADER - Closed trades: 1"
   ],
-  "generated_at": "2026-07-01 22:30:52 UTC"
+  "generated_at": "2026-07-01 23:32:22 UTC"
 }
