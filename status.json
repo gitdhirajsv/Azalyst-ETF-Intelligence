@@ -84,7 +84,7 @@
       "pnl_pct_str": "-3.00%",
       "confidence": 98,
       "severity": "CRITICAL",
-      "days_held": 2,
+      "days_held": 3,
       "half_exited": false
     },
     {
@@ -107,7 +107,7 @@
       "pnl_pct_str": "+0.62%",
       "confidence": 93,
       "severity": "HIGH",
-      "days_held": 1,
+      "days_held": 2,
       "half_exited": false
     },
     {
@@ -236,14 +236,14 @@
     }
   },
   "top_signal": {
-    "ticker": "XLF",
-    "rank_score": 22.20624071322437,
+    "ticker": "GDX",
+    "rank_score": 11.29034175334324,
     "flow_score": 22.0,
-    "options_score": 0.0,
+    "options_score": 13.563029556773017,
     "rotation_score": 15.0,
-    "macro_score": 1.159484273785644,
-    "news_score": 3.4720000000000004,
-    "total": 63.83772498701002,
+    "macro_score": 5.198047449607174,
+    "news_score": 3.6959999999999997,
+    "total": 70.74741875972343,
     "publish": true,
     "direction": "long"
   },
@@ -326,7 +326,7 @@
     },
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 93.0
+      "score": 94.0
     },
     {
       "symbol": "Defense & Aerospace",
@@ -353,16 +353,16 @@
       "score": 78.0
     },
     {
-      "symbol": "Clean Energy & Renewables",
-      "score": 76.0
-    },
-    {
       "symbol": "Healthcare & Pharma",
       "score": 76.0
     },
     {
       "symbol": "Commodities & Mining",
       "score": 73.0
+    },
+    {
+      "symbol": "Clean Energy & Renewables",
+      "score": 67.0
     },
     {
       "symbol": "Cybersecurity",
@@ -442,27 +442,27 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 93.0,
+      "confidence": 94.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -0.5,
+      "direction_score": -2.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "03 Jul 2026 15:30 UTC",
+      "article_count": 23,
+      "latest_at": "03 Jul 2026 19:30 UTC",
       "headline": "Oil Set for Fourth Straight Weekly Loss as Hormuz Flows Return",
       "regions": [
         "asia_pacific",
-        "middle_east",
+        "europe",
         "global",
-        "americas"
+        "middle_east"
       ],
       "sources": [
-        "Oilprice.com",
-        "World | Deutsche Welle",
         "Defense News",
-        "Bloomberg Markets"
+        "Bloomberg Markets",
+        "World | Deutsche Welle",
+        "BBC News"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -488,7 +488,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 15.6,
-        "recency": 16.3,
+        "recency": 14.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -793,58 +793,6 @@
       }
     },
     {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables",
-      "confidence": 76.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "03 Jul 2026 13:34 UTC",
-      "headline": "Hitachi Energy, GE Vernova, Siemens Energy, other power equipment stocks crash up to 10%. Here\u2019s why",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "americas",
-        "india"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "Semiconductor Engineering",
-        "Latest from Tom's Hardware",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "ICLN",
-      "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NEWENERGY"
-      ],
-      "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.7,
-        "volume_confirmation": 14.6,
-        "source_diversity": 12.8,
-        "recency": 13.4,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "healthcare_pharma",
       "sector_label": "Healthcare & Pharma",
       "confidence": 76.0,
@@ -944,6 +892,57 @@
         "source_diversity": 12.1,
         "recency": 13.7,
         "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables",
+      "confidence": 67.0,
+      "severity": "MEDIUM",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "03 Jul 2026 17:52 UTC",
+      "headline": "Hitachi Energy, GE Vernova, Siemens Energy, other power equipment stocks crash up to 10%. Here\u2019s why",
+      "regions": [
+        "asia_pacific",
+        "americas",
+        "global"
+      ],
+      "sources": [
+        "Latest from Tom's Hardware",
+        "Bloomberg Markets",
+        "Semiconductor Engineering",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "ICLN",
+      "top_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NEWENERGY"
+      ],
+      "global_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.5,
+        "volume_confirmation": 12.6,
+        "source_diversity": 12.0,
+        "recency": 12.2,
+        "geopolitical_severity": 10.9
       }
     },
     {
@@ -1205,7 +1204,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 24 articles - CRITICAL / BEARISH - Oil Set for Fourth Straight Weekly Loss as Hormuz Flows Return"
+      "text": "Energy / Oil & Gas - 23 articles - CRITICAL / BEARISH - Oil Set for Fourth Straight Weekly Loss as Hormuz Flows Return"
     },
     {
       "tag": "tag-bull",
@@ -1238,11 +1237,6 @@
       "text": "Nuclear Energy & Uranium - 7 articles - HIGH / BEARISH - Adani Targets 10 GW Nuclear Power Capacity in India by 2035"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Clean Energy & Renewables - 8 articles - HIGH / BEARISH - Hitachi Energy, GE Vernova, Siemens Energy, other power equipment stocks crash up to 10%. Here\u2019s why"
-    },
-    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Healthcare & Pharma - 6 articles - HIGH / BULLISH - Medicare will start covering obesity drugs for the first time. Here's what patients should know"
@@ -1251,6 +1245,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Commodities & Mining - 7 articles - HIGH / BEARISH - Nigeria Unveils World-Class Critical Minerals Discovery"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Clean Energy & Renewables - 6 articles - MEDIUM / BEARISH - Hitachi Energy, GE Vernova, Siemens Energy, other power equipment stocks crash up to 10%. Here\u2019s why"
     },
     {
       "tag": "tag-bull",
@@ -1393,11 +1392,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 62168.01,
+      "price": 62690.33,
       "currency": "USD",
-      "change": 682.71,
-      "change_pct": 1.11,
-      "change_str": "+1.11%",
+      "change": 1205.03,
+      "change_pct": 1.96,
+      "change_str": "+1.96%",
       "direction": "up"
     },
     {
@@ -1788,11 +1787,11 @@
     }
   },
   "logs": [
-    "2026-07-03 19:29:46 [INFO] AZALYST - status.json generated",
-    "2026-07-03 19:29:46 [INFO] PORTFOLIO - NAV USD 19,952.57 | Return +0.44%",
-    "2026-07-03 19:29:46 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-03 19:29:46 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, CIBR, SH",
-    "2026-07-03 19:29:46 [INFO] TRADER - Closed trades: 2"
+    "2026-07-03 21:14:47 [INFO] AZALYST - status.json generated",
+    "2026-07-03 21:14:47 [INFO] PORTFOLIO - NAV USD 19,952.57 | Return +0.44%",
+    "2026-07-03 21:14:47 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-03 21:14:47 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, CIBR, SH",
+    "2026-07-03 21:14:47 [INFO] TRADER - Closed trades: 2"
   ],
-  "generated_at": "2026-07-03 19:29:44 UTC"
+  "generated_at": "2026-07-03 21:14:45 UTC"
 }
