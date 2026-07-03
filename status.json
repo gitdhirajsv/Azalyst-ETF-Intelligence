@@ -1,16 +1,16 @@
 {
-  "portfolio_value": 19953.45,
+  "portfolio_value": 19952.7,
   "total_deposited": 19865.02,
-  "cash": 6806.74,
+  "cash": 6123.66,
   "monthly_reserve": 0.0,
-  "market_value": 13146.7,
-  "total_invested": 13022.51,
-  "unrealised_pnl": 124.19,
-  "unrealised_str": "+124.19",
+  "market_value": 13829.04,
+  "total_invested": 13705.6,
+  "unrealised_pnl": 123.44,
+  "unrealised_str": "+123.44",
   "realised_pnl": -35.77,
   "realised_str": "-35.77",
-  "change": "+0.45%",
-  "change_raw": 0.45,
+  "change": "+0.44%",
+  "change_raw": 0.44,
   "closed_trades": 2,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 19981.46,
@@ -140,17 +140,17 @@
       "sector": "Inverse / Hedge",
       "platform": "ProShares -- IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 33.22,
+      "entry": 33.2,
       "current": 33.12,
       "peak_price": 33.32,
-      "trail_stop": 30.89,
-      "dist_to_trail_pct": 6.73,
-      "units": 63.219001,
-      "invested": 2099.92,
-      "pnl": -6.11,
-      "pnl_str": "-6.11",
-      "pnl_pct": -0.29,
-      "pnl_pct_str": "-0.29%",
+      "trail_stop": 30.88,
+      "dist_to_trail_pct": 6.77,
+      "units": 83.820849,
+      "invested": 2783.01,
+      "pnl": -6.86,
+      "pnl_str": "-6.86",
+      "pnl_pct": -0.25,
+      "pnl_pct_str": "-0.25%",
       "confidence": 95,
       "severity": "HIGH",
       "days_held": 1,
@@ -220,30 +220,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "LOW_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.1293978430086655,
-    "vix_level": 15.949999809265137,
-    "vix_percentile_1y": 0.24206349206349206,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 30,
-      "flow": 22,
-      "options": 18,
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
       "rotation": 15,
-      "macro": 8,
-      "news": 7
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
     "ticker": "XLF",
     "rank_score": 22.20624071322437,
     "flow_score": 22.0,
-    "options_score": 9.348888094897037,
+    "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 1.1594775707588985,
+    "macro_score": 1.159484273785644,
     "news_score": 3.4720000000000004,
-    "total": 73.1866063788803,
+    "total": 63.83772498701002,
     "publish": true,
     "direction": "long"
   },
@@ -297,8 +297,8 @@
       3.2,
       5.6,
       1.3,
-      10.5,
-      34.1
+      13.9,
+      30.7
     ]
   },
   "pnl": {
@@ -316,17 +316,17 @@
       -19.64,
       7.68,
       -1.84,
-      -6.11
+      -6.86
     ]
   },
   "confidence": [
     {
-      "symbol": "Energy / Oil & Gas",
+      "symbol": "Technology & AI / Semiconductors",
       "score": 95.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 95.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 93.0
     },
     {
       "symbol": "Defense & Aerospace",
@@ -349,16 +349,16 @@
       "score": 78.0
     },
     {
+      "symbol": "Clean Energy & Renewables",
+      "score": 76.0
+    },
+    {
       "symbol": "Healthcare & Pharma",
       "score": 76.0
     },
     {
       "symbol": "Commodities & Mining",
       "score": 73.0
-    },
-    {
-      "symbol": "Clean Energy & Renewables",
-      "score": 67.0
     },
     {
       "symbol": "Cybersecurity",
@@ -386,59 +386,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 95.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -7.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 21,
-      "latest_at": "02 Jul 2026 12:05 UTC",
-      "headline": "Saudi Arabia Rushes Crude Exports Through Reopened Strait of Hormuz",
-      "regions": [
-        "global",
-        "europe",
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "BBC News",
-        "Bloomberg Markets",
-        "World | Deutsche Welle",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.6,
-        "recency": 16.6,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
@@ -489,6 +436,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 16.7,
         "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 93.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -0.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "03 Jul 2026 15:30 UTC",
+      "headline": "Oil Set for Fourth Straight Weekly Loss as Hormuz Flows Return",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "global",
+        "americas"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "World | Deutsche Welle",
+        "Defense News",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.6,
+        "recency": 16.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -744,6 +744,58 @@
       }
     },
     {
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables",
+      "confidence": 76.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "03 Jul 2026 13:34 UTC",
+      "headline": "Hitachi Energy, GE Vernova, Siemens Energy, other power equipment stocks crash up to 10%. Here\u2019s why",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "americas",
+        "india"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Semiconductor Engineering",
+        "Latest from Tom's Hardware",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "ICLN",
+      "top_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NEWENERGY"
+      ],
+      "global_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 14.7,
+        "volume_confirmation": 14.6,
+        "source_diversity": 12.8,
+        "recency": 13.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "healthcare_pharma",
       "sector_label": "Healthcare & Pharma",
       "confidence": 76.0,
@@ -843,57 +895,6 @@
         "source_diversity": 12.1,
         "recency": 13.7,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables",
-      "confidence": 67.0,
-      "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "02 Jul 2026 17:44 UTC",
-      "headline": "Shares of BYD and Xiaomi surge as June delivery figures fuel optimism",
-      "regions": [
-        "india",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Semiconductor Engineering",
-        "Tech",
-        "US Top News and Analysis",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "ICLN",
-      "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NEWENERGY"
-      ],
-      "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.6,
-        "volume_confirmation": 13.7,
-        "source_diversity": 10.3,
-        "recency": 13.1,
-        "geopolitical_severity": 10.4
       }
     },
     {
@@ -1196,14 +1197,14 @@
   ],
   "articles": [
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Energy / Oil & Gas - 21 articles - HIGH / BEARISH - Saudi Arabia Rushes Crude Exports Through Reopened Strait of Hormuz"
-    },
-    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Technology & AI / Semiconductors - 74 articles - HIGH / BULLISH - Record chip rally adds $2 trillion in combined value to Micron, Intel and AMD in second quarter"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Energy / Oil & Gas - 24 articles - CRITICAL / BEARISH - Oil Set for Fourth Straight Weekly Loss as Hormuz Flows Return"
     },
     {
       "tag": "tag-bull",
@@ -1231,6 +1232,11 @@
       "text": "Nuclear Energy & Uranium - 7 articles - HIGH / BEARISH - Adani Targets 10 GW Nuclear Power Capacity in India by 2035"
     },
     {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Clean Energy & Renewables - 8 articles - HIGH / BEARISH - Hitachi Energy, GE Vernova, Siemens Energy, other power equipment stocks crash up to 10%. Here\u2019s why"
+    },
+    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Healthcare & Pharma - 6 articles - HIGH / BULLISH - Medicare will start covering obesity drugs for the first time. Here's what patients should know"
@@ -1239,11 +1245,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Commodities & Mining - 7 articles - HIGH / BEARISH - Nigeria Unveils World-Class Critical Minerals Discovery"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Clean Energy & Renewables - 7 articles - MEDIUM / BEARISH - Shares of BYD and Xiaomi surge as June delivery figures fuel optimism"
     },
     {
       "tag": "tag-bull",
@@ -1314,22 +1315,22 @@
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10637.47,
+      "price": 10679.03,
       "currency": "GBP",
-      "change": -15.43,
-      "change_pct": -0.14,
-      "change_str": "-0.14%",
-      "direction": "down"
+      "change": 26.13,
+      "change_pct": 0.25,
+      "change_str": "+0.25%",
+      "direction": "up"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 25710.88,
+      "price": 25779.31,
       "currency": "EUR",
-      "change": 130.0,
-      "change_pct": 0.51,
-      "change_str": "+0.51%",
+      "change": 198.43,
+      "change_pct": 0.78,
+      "change_str": "+0.78%",
       "direction": "up"
     },
     {
@@ -1338,10 +1339,10 @@
       "region": "JP",
       "price": 69744.07,
       "currency": "JPY",
-      "change": 1010.92,
-      "change_pct": 1.47,
-      "change_str": "+1.47%",
-      "direction": "up"
+      "change": -730.89,
+      "change_pct": -1.04,
+      "change_str": "-1.04%",
+      "direction": "down"
     },
     {
       "label": "Hang Seng",
@@ -1349,9 +1350,9 @@
       "region": "HK",
       "price": 23350.03,
       "currency": "HKD",
-      "change": 295.0,
-      "change_pct": 1.28,
-      "change_str": "+1.28%",
+      "change": 469.01,
+      "change_pct": 2.05,
+      "change_str": "+2.05%",
       "direction": "up"
     },
     {
@@ -1369,55 +1370,55 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4188.1,
+      "price": 4180.4,
       "currency": "USD",
-      "change": 75.4,
-      "change_pct": 1.83,
-      "change_str": "+1.83%",
+      "change": 67.7,
+      "change_pct": 1.65,
+      "change_str": "+1.65%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 68.32,
+      "price": 68.68,
       "currency": "USD",
-      "change": -0.37,
-      "change_pct": -0.54,
-      "change_str": "-0.54%",
+      "change": -0.01,
+      "change_pct": -0.01,
+      "change_str": "-0.01%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 61877.2,
+      "price": 61871.04,
       "currency": "USD",
-      "change": 391.9,
-      "change_pct": 0.64,
-      "change_str": "+0.64%",
+      "change": 385.74,
+      "change_pct": 0.63,
+      "change_str": "+0.63%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.77,
+      "price": 100.84,
       "currency": "USD",
-      "change": -0.09,
-      "change_pct": -0.09,
-      "change_str": "-0.09%",
+      "change": -0.02,
+      "change_pct": -0.02,
+      "change_str": "-0.02%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 15.95,
+      "price": 15.81,
       "currency": "USD",
-      "change": -0.2,
-      "change_pct": -1.24,
-      "change_str": "-1.24%",
+      "change": -0.34,
+      "change_pct": -2.11,
+      "change_str": "-2.11%",
       "direction": "down"
     }
   ],
@@ -1425,7 +1426,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.14,
     "portfolio_peak": 19981.46,
-    "vix": 15.95,
+    "vix": 15.81,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -1440,7 +1441,7 @@
       },
       {
         "sector": "Inverse / Hedge",
-        "weight": 10.5,
+        "weight": 13.9,
         "at_cap": false
       },
       {
@@ -1539,18 +1540,18 @@
       "benchmark_price_start": 741.0,
       "benchmark_price_now": 744.78,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": 0.45,
-      "alpha": -0.06
+      "portfolio_return_pct": 0.44,
+      "alpha": -0.07
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 34.11,
+          "actual_weight_pct": 30.69,
           "target_weight_pct": 10.0,
-          "drift_pct": 24.11,
+          "drift_pct": 20.69,
           "action": "DEPLOY",
-          "amount": 4811.4,
+          "amount": 4128.39,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
@@ -1560,7 +1561,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -16.71,
           "action": "ADD",
-          "amount": 3333.65,
+          "amount": 3333.51,
           "etf_name": "First Trust Nasdaq CEA Cybersecurity ETF",
           "regime_note": ""
         },
@@ -1570,7 +1571,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -14.81,
           "action": "ADD",
-          "amount": 2955.39,
+          "amount": 2955.26,
           "etf_name": "Invesco QQQ Trust",
           "regime_note": ""
         },
@@ -1580,7 +1581,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": 12.54,
           "action": "TRIM",
-          "amount": 2502.47,
+          "amount": 2502.6,
           "etf_name": "Health Care Select Sector SPDR",
           "regime_note": ""
         },
@@ -1590,7 +1591,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -12.44,
           "action": "ADD",
-          "amount": 2482.45,
+          "amount": 2482.31,
           "etf_name": "iShares U.S. Aerospace & Defense ETF",
           "regime_note": ""
         }
@@ -1786,11 +1787,11 @@
     }
   },
   "logs": [
-    "2026-07-03 12:26:56 [INFO] AZALYST - status.json generated",
-    "2026-07-03 12:26:56 [INFO] PORTFOLIO - NAV USD 19,953.45 | Return +0.45%",
-    "2026-07-03 12:26:56 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-03 12:26:56 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, CIBR, SH",
-    "2026-07-03 12:26:56 [INFO] TRADER - Closed trades: 2"
+    "2026-07-03 16:00:37 [INFO] AZALYST - status.json generated",
+    "2026-07-03 16:00:37 [INFO] PORTFOLIO - NAV USD 19,952.70 | Return +0.44%",
+    "2026-07-03 16:00:37 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-03 16:00:37 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, CIBR, SH",
+    "2026-07-03 16:00:37 [INFO] TRADER - Closed trades: 2"
   ],
-  "generated_at": "2026-07-03 12:26:53 UTC"
+  "generated_at": "2026-07-03 16:00:36 UTC"
 }
