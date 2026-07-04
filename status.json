@@ -153,7 +153,7 @@
       "pnl_pct_str": "-0.25%",
       "confidence": 95,
       "severity": "HIGH",
-      "days_held": 1,
+      "days_held": 2,
       "half_exited": false
     }
   ],
@@ -239,11 +239,11 @@
     "ticker": "XLF",
     "rank_score": 22.207572383073497,
     "flow_score": 22.0,
-    "options_score": 9.358340561070492,
+    "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 1.1594861429977712,
     "news_score": 3.4720000000000004,
-    "total": 73.19739908714176,
+    "total": 63.83905852607127,
     "publish": true,
     "direction": "long"
   },
@@ -329,12 +329,12 @@
       "score": 94.0
     },
     {
-      "symbol": "Europe Equity",
-      "score": 90.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 91.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 89.0
+      "symbol": "Europe Equity",
+      "score": 87.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -353,10 +353,6 @@
       "score": 78.0
     },
     {
-      "symbol": "Healthcare & Pharma",
-      "score": 76.0
-    },
-    {
       "symbol": "Commodities & Mining",
       "score": 73.0
     },
@@ -370,6 +366,10 @@
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 66.0
+    },
+    {
+      "symbol": "Healthcare & Pharma",
       "score": 66.0
     },
     {
@@ -449,20 +449,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 36,
-      "latest_at": "04 Jul 2026 08:31 UTC",
+      "article_count": 32,
+      "latest_at": "04 Jul 2026 13:14 UTC",
       "headline": "Russia Escalates Kyiv Strikes Days Before NATO Summit Showdown",
       "regions": [
         "global",
-        "americas",
-        "africa",
-        "india"
+        "india",
+        "middle_east",
+        "europe"
       ],
       "sources": [
-        "Markets-Economic Times",
+        "Bloomberg Markets",
         "Tech",
-        "Defense News",
-        "Oilprice.com"
+        "BBC News",
+        "Defense News"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -487,84 +487,35 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 15.9,
-        "recency": 17.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "europe_equity",
-      "sector_label": "Europe Equity",
-      "confidence": 90.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 1.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "03 Jul 2026 17:26 UTC",
-      "headline": "Global Market Update: Europe's STOXX 600 hits record high, eyes best weekly gain since mid-May",
-      "regions": [
-        "americas",
-        "europe",
-        "asia_pacific"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "World | Deutsche Welle",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "VGK",
-      "top_etfs": [
-        "VGK",
-        "IEV",
-        "EWU"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "VGK",
-        "IEV",
-        "EWU",
-        "EWG"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 19.9,
-        "volume_confirmation": 17.4,
-        "source_diversity": 14.9,
-        "recency": 17.0,
+        "source_diversity": 16.2,
+        "recency": 16.9,
         "geopolitical_severity": 13.0
       }
     },
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 89.0,
+      "confidence": 91.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -7.0,
+      "direction_score": -9.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "04 Jul 2026 03:49 UTC",
+      "article_count": 28,
+      "latest_at": "04 Jul 2026 09:49 UTC",
       "headline": "Oil Set for Fourth Straight Weekly Loss as Hormuz Flows Return",
       "regions": [
         "global",
         "americas",
-        "asia_pacific",
+        "middle_east",
         "europe"
       ],
       "sources": [
-        "Markets-Economic Times",
-        "Oilprice.com",
+        "Bloomberg Markets",
+        "BBC News",
         "Defense News",
-        "US Top News and Analysis"
+        "Oilprice.com"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -589,9 +540,56 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 15.2,
-        "recency": 10.6,
+        "source_diversity": 15.6,
+        "recency": 12.0,
         "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "europe_equity",
+      "sector_label": "Europe Equity",
+      "confidence": 87.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": -0.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "04 Jul 2026 11:38 UTC",
+      "headline": "Europe's STOXX 600 clocks best week in over a month as rally broadens",
+      "regions": [
+        "europe"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "BBC News",
+        "US Top News and Analysis",
+        "Oilprice.com"
+      ],
+      "primary_etf": "VGK",
+      "top_etfs": [
+        "VGK",
+        "IEV",
+        "EWU"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "VGK",
+        "IEV",
+        "EWU",
+        "EWG"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.3,
+        "volume_confirmation": 16.8,
+        "source_diversity": 14.9,
+        "recency": 14.4,
+        "geopolitical_severity": 12.3
       }
     },
     {
@@ -789,58 +787,6 @@
         "volume_confirmation": 13.7,
         "source_diversity": 13.3,
         "recency": 15.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma",
-      "confidence": 76.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "30 Jun 2026 17:57 UTC",
-      "headline": "Medicare will start covering obesity drugs for the first time. Here's what patients should know",
-      "regions": [
-        "middle_east",
-        "africa",
-        "global"
-      ],
-      "sources": [
-        "BBC News",
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Oilprice.com"
-      ],
-      "primary_etf": "XLV",
-      "top_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "HEALTHCARE",
-        "PHARMABEES"
-      ],
-      "global_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 13.6,
-        "volume_confirmation": 12.6,
-        "source_diversity": 12.6,
-        "recency": 15.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -1043,6 +989,56 @@
       }
     },
     {
+      "sector_key": "healthcare_pharma",
+      "sector_label": "Healthcare & Pharma",
+      "confidence": 66.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "04 Jul 2026 11:37 UTC",
+      "headline": "F&amp;O Talk: Smallcap index better placed than Nifty, says Sudeep Shah; picks 9 stocks for next week",
+      "regions": [
+        "india",
+        "africa",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLV",
+      "top_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "HEALTHCARE",
+        "PHARMABEES"
+      ],
+      "global_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 9.7,
+        "volume_confirmation": 11.3,
+        "source_diversity": 9.9,
+        "recency": 14.4,
+        "geopolitical_severity": 11.4
+      }
+    },
+    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 63.0,
@@ -1204,17 +1200,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Defense & Aerospace - 36 articles - HIGH / BULLISH - Russia Escalates Kyiv Strikes Days Before NATO Summit Showdown"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Europe Equity - 12 articles - HIGH / BULLISH - Global Market Update: Europe's STOXX 600 hits record high, eyes best weekly gain since mid-May"
+      "text": "Defense & Aerospace - 32 articles - HIGH / BULLISH - Russia Escalates Kyiv Strikes Days Before NATO Summit Showdown"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 23 articles - CRITICAL / BEARISH - Oil Set for Fourth Straight Weekly Loss as Hormuz Flows Return"
+      "text": "Energy / Oil & Gas - 28 articles - CRITICAL / BEARISH - Oil Set for Fourth Straight Weekly Loss as Hormuz Flows Return"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Europe Equity - 11 articles - HIGH / BULLISH - Europe's STOXX 600 clocks best week in over a month as rally broadens"
     },
     {
       "tag": "tag-bull",
@@ -1237,11 +1233,6 @@
       "text": "Nuclear Energy & Uranium - 7 articles - HIGH / BEARISH - Adani Targets 10 GW Nuclear Power Capacity in India by 2035"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Healthcare & Pharma - 6 articles - HIGH / BULLISH - Medicare will start covering obesity drugs for the first time. Here's what patients should know"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Commodities & Mining - 7 articles - HIGH / BEARISH - Nigeria Unveils World-Class Critical Minerals Discovery"
@@ -1260,6 +1251,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BEARISH - Fed's Warsh: Will decide on rate hike when policymakers 'shut the door' at next meeting"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Healthcare & Pharma - 5 articles - MEDIUM / BULLISH - F&amp;O Talk: Smallcap index better placed than Nifty, says Sudeep Shah; picks 9 stocks for next week"
     },
     {
       "tag": "tag-bull",
@@ -1392,11 +1388,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 62551.72,
+      "price": 62612.99,
       "currency": "USD",
-      "change": 1066.42,
-      "change_pct": 1.73,
-      "change_str": "+1.73%",
+      "change": 68.79,
+      "change_pct": 0.11,
+      "change_str": "+0.11%",
       "direction": "up"
     },
     {
@@ -1787,11 +1783,11 @@
     }
   },
   "logs": [
-    "2026-07-04 08:38:51 [INFO] AZALYST - status.json generated",
-    "2026-07-04 08:38:51 [INFO] PORTFOLIO - NAV USD 19,952.57 | Return +0.44%",
-    "2026-07-04 08:38:51 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-04 08:38:51 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, CIBR, SH",
-    "2026-07-04 08:38:51 [INFO] TRADER - Closed trades: 2"
+    "2026-07-04 13:23:40 [INFO] AZALYST - status.json generated",
+    "2026-07-04 13:23:40 [INFO] PORTFOLIO - NAV USD 19,952.57 | Return +0.44%",
+    "2026-07-04 13:23:40 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-04 13:23:40 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, CIBR, SH",
+    "2026-07-04 13:23:40 [INFO] TRADER - Closed trades: 2"
   ],
-  "generated_at": "2026-07-04 08:38:48 UTC"
+  "generated_at": "2026-07-04 13:23:38 UTC"
 }
