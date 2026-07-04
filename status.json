@@ -237,13 +237,13 @@
   },
   "top_signal": {
     "ticker": "XLF",
-    "rank_score": 22.20624071322437,
+    "rank_score": 22.207572383073497,
     "flow_score": 22.0,
     "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 1.159484273785644,
     "news_score": 3.4720000000000004,
-    "total": 63.83772498701002,
+    "total": 63.83905665685914,
     "publish": true,
     "direction": "long"
   },
@@ -325,12 +325,12 @@
       "score": 95.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 94.0
-    },
-    {
       "symbol": "Europe Equity",
       "score": 90.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 88.0
     },
     {
       "symbol": "Defense & Aerospace",
@@ -440,59 +440,6 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 94.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "03 Jul 2026 19:30 UTC",
-      "headline": "Oil Set for Fourth Straight Weekly Loss as Hormuz Flows Return",
-      "regions": [
-        "asia_pacific",
-        "europe",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Defense News",
-        "Bloomberg Markets",
-        "World | Deutsche Welle",
-        "BBC News"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.6,
-        "recency": 14.4,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity",
       "confidence": 90.0,
@@ -538,6 +485,59 @@
         "volume_confirmation": 17.4,
         "source_diversity": 14.9,
         "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 88.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -3.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 25,
+      "latest_at": "03 Jul 2026 19:30 UTC",
+      "headline": "Oil Set for Fourth Straight Weekly Loss as Hormuz Flows Return",
+      "regions": [
+        "americas",
+        "asia_pacific",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "World | Deutsche Welle",
+        "Oilprice.com",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.6,
+        "recency": 8.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -1202,14 +1202,14 @@
       "text": "Technology & AI / Semiconductors - 74 articles - HIGH / BULLISH - Record chip rally adds $2 trillion in combined value to Micron, Intel and AMD in second quarter"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Energy / Oil & Gas - 23 articles - CRITICAL / BEARISH - Oil Set for Fourth Straight Weekly Loss as Hormuz Flows Return"
-    },
-    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Europe Equity - 12 articles - HIGH / BULLISH - Global Market Update: Europe's STOXX 600 hits record high, eyes best weekly gain since mid-May"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Energy / Oil & Gas - 25 articles - CRITICAL / BEARISH - Oil Set for Fourth Straight Weekly Loss as Hormuz Flows Return"
     },
     {
       "tag": "tag-bull",
@@ -1317,9 +1317,9 @@
       "region": "UK",
       "price": 10679.03,
       "currency": "GBP",
-      "change": 200.73,
-      "change_pct": 1.92,
-      "change_str": "+1.92%",
+      "change": 26.13,
+      "change_pct": 0.25,
+      "change_str": "+0.25%",
       "direction": "up"
     },
     {
@@ -1328,9 +1328,9 @@
       "region": "EU",
       "price": 25779.31,
       "currency": "EUR",
-      "change": 739.03,
-      "change_pct": 2.95,
-      "change_str": "+2.95%",
+      "change": 198.43,
+      "change_pct": 0.78,
+      "change_str": "+0.78%",
       "direction": "up"
     },
     {
@@ -1339,10 +1339,10 @@
       "region": "JP",
       "price": 69744.07,
       "currency": "JPY",
-      "change": -730.89,
-      "change_pct": -1.04,
-      "change_str": "-1.04%",
-      "direction": "down"
+      "change": 1010.92,
+      "change_pct": 1.47,
+      "change_str": "+1.47%",
+      "direction": "up"
     },
     {
       "label": "Hang Seng",
@@ -1350,9 +1350,9 @@
       "region": "HK",
       "price": 23350.03,
       "currency": "HKD",
-      "change": 469.01,
-      "change_pct": 2.05,
-      "change_str": "+2.05%",
+      "change": 295.0,
+      "change_pct": 1.28,
+      "change_str": "+1.28%",
       "direction": "up"
     },
     {
@@ -1361,9 +1361,9 @@
       "region": "IN",
       "price": 24270.85,
       "currency": "INR",
-      "change": 265.0,
-      "change_pct": 1.1,
-      "change_str": "+1.10%",
+      "change": 95.15,
+      "change_pct": 0.39,
+      "change_str": "+0.39%",
       "direction": "up"
     },
     {
@@ -1392,11 +1392,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 62586.13,
+      "price": 62398.3,
       "currency": "USD",
-      "change": 1100.83,
-      "change_pct": 1.79,
-      "change_str": "+1.79%",
+      "change": 913.0,
+      "change_pct": 1.48,
+      "change_str": "+1.48%",
       "direction": "up"
     },
     {
@@ -1787,11 +1787,11 @@
     }
   },
   "logs": [
-    "2026-07-03 23:24:17 [INFO] AZALYST - status.json generated",
-    "2026-07-03 23:24:17 [INFO] PORTFOLIO - NAV USD 19,952.57 | Return +0.44%",
-    "2026-07-03 23:24:17 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-03 23:24:17 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, CIBR, SH",
-    "2026-07-03 23:24:17 [INFO] TRADER - Closed trades: 2"
+    "2026-07-04 02:33:36 [INFO] AZALYST - status.json generated",
+    "2026-07-04 02:33:36 [INFO] PORTFOLIO - NAV USD 19,952.57 | Return +0.44%",
+    "2026-07-04 02:33:36 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-04 02:33:36 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, CIBR, SH",
+    "2026-07-04 02:33:36 [INFO] TRADER - Closed trades: 2"
   ],
-  "generated_at": "2026-07-03 23:24:15 UTC"
+  "generated_at": "2026-07-04 02:33:35 UTC"
 }
