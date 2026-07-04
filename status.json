@@ -38,7 +38,7 @@
       "pnl_pct_str": "-0.20%",
       "confidence": 82,
       "severity": "CRITICAL",
-      "days_held": 4,
+      "days_held": 5,
       "half_exited": false
     },
     {
@@ -61,7 +61,7 @@
       "pnl_pct_str": "+2.52%",
       "confidence": 82,
       "severity": "HIGH",
-      "days_held": 4,
+      "days_held": 5,
       "half_exited": false
     },
     {
@@ -241,9 +241,9 @@
     "flow_score": 22.0,
     "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 1.1594861429977712,
+    "macro_score": 7.999991970916352,
     "news_score": 3.4720000000000004,
-    "total": 63.83905852607127,
+    "total": 70.67956435398985,
     "publish": true,
     "direction": "long"
   },
@@ -326,15 +326,15 @@
     },
     {
       "symbol": "Defense & Aerospace",
-      "score": 94.0
-    },
-    {
-      "symbol": "Energy / Oil & Gas",
-      "score": 91.0
+      "score": 95.0
     },
     {
       "symbol": "Europe Equity",
       "score": 87.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 86.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -357,6 +357,10 @@
       "score": 73.0
     },
     {
+      "symbol": "Healthcare & Pharma",
+      "score": 70.0
+    },
+    {
       "symbol": "Clean Energy & Renewables",
       "score": 67.0
     },
@@ -366,10 +370,6 @@
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 66.0
-    },
-    {
-      "symbol": "Healthcare & Pharma",
       "score": 66.0
     },
     {
@@ -442,27 +442,27 @@
     {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
-      "confidence": 94.0,
+      "confidence": 95.0,
       "severity": "HIGH",
       "direction": "BULLISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 32,
-      "latest_at": "04 Jul 2026 13:14 UTC",
+      "article_count": 33,
+      "latest_at": "04 Jul 2026 19:04 UTC",
       "headline": "Russia Escalates Kyiv Strikes Days Before NATO Summit Showdown",
       "regions": [
         "global",
-        "india",
         "middle_east",
-        "europe"
+        "india",
+        "asia_pacific"
       ],
       "sources": [
-        "Bloomberg Markets",
-        "Tech",
         "BBC News",
-        "Defense News"
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "The Verge"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -487,61 +487,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.2,
+        "source_diversity": 16.4,
         "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 91.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -9.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
-      "latest_at": "04 Jul 2026 09:49 UTC",
-      "headline": "Oil Set for Fourth Straight Weekly Loss as Hormuz Flows Return",
-      "regions": [
-        "global",
-        "americas",
-        "middle_east",
-        "europe"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "BBC News",
-        "Defense News",
-        "Oilprice.com"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.6,
-        "recency": 12.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -590,6 +537,59 @@
         "source_diversity": 14.9,
         "recency": 14.4,
         "geopolitical_severity": 12.3
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 86.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -7.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "04 Jul 2026 09:49 UTC",
+      "headline": "OPEC Oil Production Jumps, But Gulf Supply Is Still Far From Normal",
+      "regions": [
+        "global",
+        "middle_east",
+        "asia_pacific",
+        "americas"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "BBC News",
+        "Bloomberg Markets",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.6,
+        "recency": 6.7,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -841,6 +841,58 @@
       }
     },
     {
+      "sector_key": "healthcare_pharma",
+      "sector_label": "Healthcare & Pharma",
+      "confidence": 70.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "04 Jul 2026 17:00 UTC",
+      "headline": "Asia Bets on Biofuels to Dodge Middle East Oil Shortages",
+      "regions": [
+        "africa",
+        "global",
+        "asia_pacific",
+        "india"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "Oilprice.com"
+      ],
+      "primary_etf": "XLV",
+      "top_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "HEALTHCARE",
+        "PHARMABEES"
+      ],
+      "global_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.5,
+        "volume_confirmation": 12.6,
+        "source_diversity": 11.7,
+        "recency": 13.8,
+        "geopolitical_severity": 11.6
+      }
+    },
+    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 67.0,
@@ -986,56 +1038,6 @@
         "source_diversity": 13.4,
         "recency": 14.8,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma",
-      "confidence": 66.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "04 Jul 2026 11:37 UTC",
-      "headline": "F&amp;O Talk: Smallcap index better placed than Nifty, says Sudeep Shah; picks 9 stocks for next week",
-      "regions": [
-        "india",
-        "africa",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "XLV",
-      "top_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "HEALTHCARE",
-        "PHARMABEES"
-      ],
-      "global_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 9.7,
-        "volume_confirmation": 11.3,
-        "source_diversity": 9.9,
-        "recency": 14.4,
-        "geopolitical_severity": 11.4
       }
     },
     {
@@ -1200,17 +1202,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Defense & Aerospace - 32 articles - HIGH / BULLISH - Russia Escalates Kyiv Strikes Days Before NATO Summit Showdown"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Energy / Oil & Gas - 28 articles - CRITICAL / BEARISH - Oil Set for Fourth Straight Weekly Loss as Hormuz Flows Return"
+      "text": "Defense & Aerospace - 33 articles - HIGH / BULLISH - Russia Escalates Kyiv Strikes Days Before NATO Summit Showdown"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Europe Equity - 11 articles - HIGH / BULLISH - Europe's STOXX 600 clocks best week in over a month as rally broadens"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Energy / Oil & Gas - 24 articles - CRITICAL / BEARISH - OPEC Oil Production Jumps, But Gulf Supply Is Still Far From Normal"
     },
     {
       "tag": "tag-bull",
@@ -1238,6 +1240,11 @@
       "text": "Commodities & Mining - 7 articles - HIGH / BEARISH - Nigeria Unveils World-Class Critical Minerals Discovery"
     },
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Healthcare & Pharma - 6 articles - MEDIUM / BULLISH - Asia Bets on Biofuels to Dodge Middle East Oil Shortages"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Clean Energy & Renewables - 6 articles - MEDIUM / BEARISH - Hitachi Energy, GE Vernova, Siemens Energy, other power equipment stocks crash up to 10%. Here\u2019s why"
@@ -1251,11 +1258,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BEARISH - Fed's Warsh: Will decide on rate hike when policymakers 'shut the door' at next meeting"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Healthcare & Pharma - 5 articles - MEDIUM / BULLISH - F&amp;O Talk: Smallcap index better placed than Nifty, says Sudeep Shah; picks 9 stocks for next week"
     },
     {
       "tag": "tag-bull",
@@ -1388,11 +1390,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 62612.99,
+      "price": 63162.4,
       "currency": "USD",
-      "change": 68.79,
-      "change_pct": 0.11,
-      "change_str": "+0.11%",
+      "change": 618.2,
+      "change_pct": 0.99,
+      "change_str": "+0.99%",
       "direction": "up"
     },
     {
@@ -1783,11 +1785,11 @@
     }
   },
   "logs": [
-    "2026-07-04 13:23:40 [INFO] AZALYST - status.json generated",
-    "2026-07-04 13:23:40 [INFO] PORTFOLIO - NAV USD 19,952.57 | Return +0.44%",
-    "2026-07-04 13:23:40 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-04 13:23:40 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, CIBR, SH",
-    "2026-07-04 13:23:40 [INFO] TRADER - Closed trades: 2"
+    "2026-07-04 19:11:22 [INFO] AZALYST - status.json generated",
+    "2026-07-04 19:11:22 [INFO] PORTFOLIO - NAV USD 19,952.57 | Return +0.44%",
+    "2026-07-04 19:11:22 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-04 19:11:22 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, CIBR, SH",
+    "2026-07-04 19:11:22 [INFO] TRADER - Closed trades: 2"
   ],
-  "generated_at": "2026-07-04 13:23:38 UTC"
+  "generated_at": "2026-07-04 19:11:20 UTC"
 }
