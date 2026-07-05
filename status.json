@@ -84,7 +84,7 @@
       "pnl_pct_str": "-3.00%",
       "confidence": 98,
       "severity": "CRITICAL",
-      "days_held": 3,
+      "days_held": 4,
       "half_exited": false
     },
     {
@@ -107,7 +107,7 @@
       "pnl_pct_str": "+0.62%",
       "confidence": 93,
       "severity": "HIGH",
-      "days_held": 2,
+      "days_held": 3,
       "half_exited": false
     },
     {
@@ -329,12 +329,8 @@
       "score": 95.0
     },
     {
-      "symbol": "Europe Equity",
-      "score": 87.0
-    },
-    {
       "symbol": "Energy / Oil & Gas",
-      "score": 86.0
+      "score": 92.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -361,10 +357,6 @@
       "score": 70.0
     },
     {
-      "symbol": "Clean Energy & Renewables",
-      "score": 67.0
-    },
-    {
       "symbol": "Cybersecurity",
       "score": 67.0
     },
@@ -373,7 +365,15 @@
       "score": 66.0
     },
     {
+      "symbol": "Clean Energy & Renewables",
+      "score": 65.0
+    },
+    {
       "symbol": "India Equity Markets",
+      "score": 63.0
+    },
+    {
+      "symbol": "Europe Equity",
       "score": 63.0
     },
     {
@@ -449,20 +449,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 33,
-      "latest_at": "04 Jul 2026 19:04 UTC",
+      "article_count": 36,
+      "latest_at": "05 Jul 2026 02:37 UTC",
       "headline": "Russia Escalates Kyiv Strikes Days Before NATO Summit Showdown",
       "regions": [
-        "global",
+        "europe",
         "middle_east",
-        "india",
-        "asia_pacific"
+        "americas",
+        "india"
       ],
       "sources": [
-        "BBC News",
+        "World | Deutsche Welle",
         "Markets-Economic Times",
-        "Bloomberg Markets",
-        "The Verge"
+        "BBC News",
+        "Latest from Tom's Hardware"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -487,81 +487,34 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.4,
-        "recency": 16.9,
+        "source_diversity": 16.8,
+        "recency": 17.0,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "europe_equity",
-      "sector_label": "Europe Equity",
-      "confidence": 87.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": -0.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "04 Jul 2026 11:38 UTC",
-      "headline": "Europe's STOXX 600 clocks best week in over a month as rally broadens",
-      "regions": [
-        "europe"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "BBC News",
-        "US Top News and Analysis",
-        "Oilprice.com"
-      ],
-      "primary_etf": "VGK",
-      "top_etfs": [
-        "VGK",
-        "IEV",
-        "EWU"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "VGK",
-        "IEV",
-        "EWU",
-        "EWG"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 21.3,
-        "volume_confirmation": 16.8,
-        "source_diversity": 14.9,
-        "recency": 14.4,
-        "geopolitical_severity": 12.3
       }
     },
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 86.0,
+      "confidence": 92.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -7.0,
+      "direction_score": -5.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "04 Jul 2026 09:49 UTC",
+      "article_count": 23,
+      "latest_at": "04 Jul 2026 23:00 UTC",
       "headline": "OPEC Oil Production Jumps, But Gulf Supply Is Still Far From Normal",
       "regions": [
-        "global",
+        "europe",
         "middle_east",
-        "asia_pacific",
-        "americas"
+        "americas",
+        "asia_pacific"
       ],
       "sources": [
+        "World | Deutsche Welle",
         "Markets-Economic Times",
         "BBC News",
-        "Bloomberg Markets",
         "US Top News and Analysis"
       ],
       "primary_etf": "XLE",
@@ -587,8 +540,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 15.6,
-        "recency": 6.7,
+        "source_diversity": 16.1,
+        "recency": 11.8,
         "geopolitical_severity": 13.0
       }
     },
@@ -893,57 +846,6 @@
       }
     },
     {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables",
-      "confidence": 67.0,
-      "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "03 Jul 2026 17:52 UTC",
-      "headline": "Hitachi Energy, GE Vernova, Siemens Energy, other power equipment stocks crash up to 10%. Here\u2019s why",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "Bloomberg Markets",
-        "Semiconductor Engineering",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "ICLN",
-      "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NEWENERGY"
-      ],
-      "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.5,
-        "volume_confirmation": 12.6,
-        "source_diversity": 12.0,
-        "recency": 12.2,
-        "geopolitical_severity": 10.9
-      }
-    },
-    {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
       "confidence": 67.0,
@@ -1041,6 +943,57 @@
       }
     },
     {
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables",
+      "confidence": 65.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 4,
+      "latest_at": "05 Jul 2026 02:37 UTC",
+      "headline": "Courts and Congress Are Undoing Trump's War on Wind Power",
+      "regions": [
+        "india",
+        "americas",
+        "global"
+      ],
+      "sources": [
+        "The Verge",
+        "Oilprice.com",
+        "Semiconductor Engineering",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "ICLN",
+      "top_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NEWENERGY"
+      ],
+      "global_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 9.3,
+        "volume_confirmation": 9.7,
+        "source_diversity": 9.1,
+        "recency": 17.0,
+        "geopolitical_severity": 12.0
+      }
+    },
+    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 63.0,
@@ -1088,6 +1041,54 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.4,
         "recency": 16.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "europe_equity",
+      "sector_label": "Europe Equity",
+      "confidence": 63.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 1.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "05 Jul 2026 02:37 UTC",
+      "headline": "Europe's STOXX 600 clocks best week in over a month as rally broadens",
+      "regions": [
+        "europe",
+        "middle_east"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Markets-Economic Times",
+        "BBC News",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "VGK",
+      "top_etfs": [
+        "VGK",
+        "IEV",
+        "EWU"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "VGK",
+        "IEV",
+        "EWU",
+        "EWG"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 20.4,
+        "volume_confirmation": 16.8,
+        "source_diversity": 14.9,
+        "recency": 17.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -1202,17 +1203,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Defense & Aerospace - 33 articles - HIGH / BULLISH - Russia Escalates Kyiv Strikes Days Before NATO Summit Showdown"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Europe Equity - 11 articles - HIGH / BULLISH - Europe's STOXX 600 clocks best week in over a month as rally broadens"
+      "text": "Defense & Aerospace - 36 articles - HIGH / BULLISH - Russia Escalates Kyiv Strikes Days Before NATO Summit Showdown"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 24 articles - CRITICAL / BEARISH - OPEC Oil Production Jumps, But Gulf Supply Is Still Far From Normal"
+      "text": "Energy / Oil & Gas - 23 articles - CRITICAL / BEARISH - OPEC Oil Production Jumps, But Gulf Supply Is Still Far From Normal"
     },
     {
       "tag": "tag-bull",
@@ -1245,11 +1241,6 @@
       "text": "Healthcare & Pharma - 6 articles - MEDIUM / BULLISH - Asia Bets on Biofuels to Dodge Middle East Oil Shortages"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Clean Energy & Renewables - 6 articles - MEDIUM / BEARISH - Hitachi Energy, GE Vernova, Siemens Energy, other power equipment stocks crash up to 10%. Here\u2019s why"
-    },
-    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Cybersecurity - 7 articles - MEDIUM / BULLISH - Startup sues Palo Alto Networks' Koi Security, saying an AI-hallucinated report falsely linked it to Chinese espionage"
@@ -1260,9 +1251,19 @@
       "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BEARISH - Fed's Warsh: Will decide on rate hike when policymakers 'shut the door' at next meeting"
     },
     {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Clean Energy & Renewables - 4 articles - HIGH / BEARISH - Courts and Congress Are Undoing Trump's War on Wind Power"
+    },
+    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "India Equity Markets - 37 articles - HIGH / BULLISH - Why did market rise today? Sensex rallied 791 pts, Nifty closed above 24,000; 6 key factors drove D-St rebound"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Europe Equity - 11 articles - HIGH / BULLISH - Europe's STOXX 600 clocks best week in over a month as rally broadens"
     },
     {
       "tag": "tag-bull",
@@ -1390,11 +1391,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63162.4,
+      "price": 62574.42,
       "currency": "USD",
-      "change": 618.2,
-      "change_pct": 0.99,
-      "change_str": "+0.99%",
+      "change": 30.22,
+      "change_pct": 0.05,
+      "change_str": "+0.05%",
       "direction": "up"
     },
     {
@@ -1785,11 +1786,11 @@
     }
   },
   "logs": [
-    "2026-07-04 19:11:22 [INFO] AZALYST - status.json generated",
-    "2026-07-04 19:11:22 [INFO] PORTFOLIO - NAV USD 19,952.57 | Return +0.44%",
-    "2026-07-04 19:11:22 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-04 19:11:22 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, CIBR, SH",
-    "2026-07-04 19:11:22 [INFO] TRADER - Closed trades: 2"
+    "2026-07-05 02:48:40 [INFO] AZALYST - status.json generated",
+    "2026-07-05 02:48:40 [INFO] PORTFOLIO - NAV USD 19,952.57 | Return +0.44%",
+    "2026-07-05 02:48:40 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-05 02:48:40 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, CIBR, SH",
+    "2026-07-05 02:48:40 [INFO] TRADER - Closed trades: 2"
   ],
-  "generated_at": "2026-07-04 19:11:20 UTC"
+  "generated_at": "2026-07-05 02:48:38 UTC"
 }
