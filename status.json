@@ -1,20 +1,20 @@
 {
-  "portfolio_value": 19952.57,
+  "portfolio_value": 19948.78,
   "total_deposited": 19865.02,
-  "cash": 6004.86,
+  "cash": 8777.22,
   "monthly_reserve": 0.0,
-  "market_value": 13947.71,
-  "total_invested": 13824.39,
-  "unrealised_pnl": 123.31,
-  "unrealised_str": "+123.31",
-  "realised_pnl": -35.77,
-  "realised_str": "-35.77",
-  "change": "+0.44%",
-  "change_raw": 0.44,
-  "closed_trades": 2,
+  "market_value": 11171.56,
+  "total_invested": 11041.39,
+  "unrealised_pnl": 130.17,
+  "unrealised_str": "+130.17",
+  "realised_pnl": -46.41,
+  "realised_str": "-46.41",
+  "change": "+0.42%",
+  "change_raw": 0.42,
+  "closed_trades": 3,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 19981.46,
-  "drawdown_now_pct": 0.14,
+  "drawdown_now_pct": 0.16,
   "max_drawdown_pct": 12.69,
   "usd_inr_rate": 95.2,
   "positions": [
@@ -38,7 +38,7 @@
       "pnl_pct_str": "-0.20%",
       "confidence": 82,
       "severity": "CRITICAL",
-      "days_held": 5,
+      "days_held": 6,
       "half_exited": false
     },
     {
@@ -61,7 +61,7 @@
       "pnl_pct_str": "+2.52%",
       "confidence": 82,
       "severity": "HIGH",
-      "days_held": 5,
+      "days_held": 6,
       "half_exited": false
     },
     {
@@ -80,8 +80,8 @@
       "invested": 655.87,
       "pnl": -19.64,
       "pnl_str": "-19.64",
-      "pnl_pct": -3.0,
-      "pnl_pct_str": "-3.00%",
+      "pnl_pct": -2.99,
+      "pnl_pct_str": "-2.99%",
       "confidence": 98,
       "severity": "CRITICAL",
       "days_held": 4,
@@ -132,29 +132,6 @@
       "severity": "HIGH",
       "days_held": 3,
       "half_exited": false
-    },
-    {
-      "trade_id": "T0008",
-      "ticker": "SH",
-      "etf_name": "ProShares Short S&P500",
-      "sector": "Inverse / Hedge",
-      "platform": "ProShares -- IBKR / Schwab / Fidelity",
-      "exchange": "NYSE",
-      "entry": 33.2,
-      "current": 33.12,
-      "peak_price": 33.32,
-      "trail_stop": 30.88,
-      "dist_to_trail_pct": 6.77,
-      "units": 83.820849,
-      "invested": 2783.01,
-      "pnl": -6.86,
-      "pnl_str": "-6.86",
-      "pnl_pct": -0.25,
-      "pnl_pct_str": "-0.25%",
-      "confidence": 95,
-      "severity": "HIGH",
-      "days_held": 3,
-      "half_exited": false
     }
   ],
   "closed_trades_list": [
@@ -189,18 +166,34 @@
       "days_held": 2,
       "exit_reason": "Decay-ETF stall exit (2d, +0.2%)",
       "winner": true
+    },
+    {
+      "trade_id": "T0008",
+      "ticker": "SH",
+      "etf_name": "ProShares Short S&P500",
+      "platform": "ProShares -- IBKR / Schwab / Fidelity",
+      "exchange": "NYSE",
+      "entry": 33.2,
+      "exit": 33.09,
+      "pnl": -10.64,
+      "pnl_str": "-10.64",
+      "pnl_pct": -0.34,
+      "pnl_pct_str": "-0.34%",
+      "days_held": 3,
+      "exit_reason": "Decay-ETF stall exit (3d, -0.2%)",
+      "winner": false
     }
   ],
   "track_record": {
-    "total_trades": 2,
+    "total_trades": 3,
     "winners": 1,
-    "losers": 1,
-    "win_rate": 50.0,
+    "losers": 2,
+    "win_rate": 33.3,
     "avg_win": 0.08,
-    "avg_loss": -0.95,
-    "profit_factor": 0.15,
-    "expectancy": -0.43,
-    "sharpe_proxy": -0.84,
+    "avg_loss": -0.65,
+    "profit_factor": 0.12,
+    "expectancy": -0.4,
+    "sharpe_proxy": -0.95,
     "best": {
       "ticker": "SH",
       "etf_name": "ProShares Short S&P500",
@@ -272,10 +265,6 @@
       "stage": 0,
       "description": "Insufficient data"
     },
-    "SH": {
-      "stage": 0,
-      "description": "Insufficient data"
-    },
     "XLV": {
       "stage": 0,
       "description": "Insufficient data"
@@ -288,7 +277,6 @@
       "QQQ",
       "ITA",
       "CIBR",
-      "SH",
       "CASH"
     ],
     "values": [
@@ -297,8 +285,7 @@
       3.2,
       6.2,
       1.3,
-      13.9,
-      30.1
+      44.0
     ]
   },
   "pnl": {
@@ -307,26 +294,24 @@
       "XLV",
       "QQQ",
       "ITA",
-      "CIBR",
-      "SH"
+      "CIBR"
     ],
     "values": [
       -5.81,
       149.92,
       -19.64,
       7.55,
-      -1.84,
-      -6.86
+      -1.84
     ]
   },
   "confidence": [
     {
-      "symbol": "Defense & Aerospace",
-      "score": 95.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 96.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 92.0
+      "symbol": "Defense & Aerospace",
+      "score": 94.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -357,10 +342,6 @@
       "score": 66.0
     },
     {
-      "symbol": "Healthcare & Pharma",
-      "score": 66.0
-    },
-    {
       "symbol": "Clean Energy & Renewables",
       "score": 65.0
     },
@@ -370,6 +351,10 @@
     },
     {
       "symbol": "India Equity Markets",
+      "score": 63.0
+    },
+    {
+      "symbol": "Healthcare & Pharma",
       "score": 63.0
     },
     {
@@ -387,82 +372,29 @@
   ],
   "signals": [
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 95.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 35,
-      "latest_at": "05 Jul 2026 13:22 UTC",
-      "headline": "Iran War Looms Over NATO Summit",
-      "regions": [
-        "global",
-        "middle_east",
-        "asia_pacific",
-        "americas"
-      ],
-      "sources": [
-        "BBC News",
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "The Verge"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.6,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 92.0,
+      "confidence": 96.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -5.0,
+      "direction_score": -3.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "05 Jul 2026 10:17 UTC",
+      "article_count": 23,
+      "latest_at": "05 Jul 2026 19:00 UTC",
       "headline": "OPEC Oil Production Jumps, But Gulf Supply Is Still Far From Normal",
       "regions": [
-        "global",
+        "europe",
         "middle_east",
-        "asia_pacific",
-        "americas"
+        "americas",
+        "global"
       ],
       "sources": [
         "BBC News",
+        "World | Deutsche Welle",
         "Markets-Economic Times",
-        "Bloomberg Markets",
-        "Oilprice.com"
+        "Defense News"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -488,7 +420,60 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 16.1,
-        "recency": 12.5,
+        "recency": 16.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 94.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 33,
+      "latest_at": "05 Jul 2026 19:11 UTC",
+      "headline": "Iran War Looms Over NATO Summit",
+      "regions": [
+        "europe",
+        "middle_east",
+        "americas",
+        "global"
+      ],
+      "sources": [
+        "Latest from Tom's Hardware",
+        "BBC News",
+        "World | Deutsche Welle",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.4,
+        "recency": 16.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -838,58 +823,6 @@
       }
     },
     {
-      "sector_key": "healthcare_pharma",
-      "sector_label": "Healthcare & Pharma",
-      "confidence": 66.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "05 Jul 2026 05:00 UTC",
-      "headline": "Ebola Crisis Exposes Congo's Fragile Health System",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "india",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "Oilprice.com"
-      ],
-      "primary_etf": "XLV",
-      "top_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "HEALTHCARE",
-        "PHARMABEES"
-      ],
-      "global_etfs": [
-        "XLV",
-        "IXJ",
-        "XBI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 12.6,
-        "volume_confirmation": 12.6,
-        "source_diversity": 11.7,
-        "recency": 7.3,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 65.0,
@@ -1045,6 +978,58 @@
       }
     },
     {
+      "sector_key": "healthcare_pharma",
+      "sector_label": "Healthcare & Pharma",
+      "confidence": 63.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "05 Jul 2026 05:00 UTC",
+      "headline": "Ebola Crisis Exposes Congo's Fragile Health System",
+      "regions": [
+        "middle_east",
+        "asia_pacific",
+        "global",
+        "india"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "XLV",
+      "top_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "HEALTHCARE",
+        "PHARMABEES"
+      ],
+      "global_etfs": [
+        "XLV",
+        "IXJ",
+        "XBI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.6,
+        "volume_confirmation": 12.6,
+        "source_diversity": 11.7,
+        "recency": 4.1,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
       "confidence": 62.0,
@@ -1196,14 +1181,14 @@
   ],
   "articles": [
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Defense & Aerospace - 35 articles - HIGH / BULLISH - Iran War Looms Over NATO Summit"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 24 articles - CRITICAL / BEARISH - OPEC Oil Production Jumps, But Gulf Supply Is Still Far From Normal"
+      "text": "Energy / Oil & Gas - 23 articles - CRITICAL / BEARISH - OPEC Oil Production Jumps, But Gulf Supply Is Still Far From Normal"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Defense & Aerospace - 33 articles - HIGH / BULLISH - Iran War Looms Over NATO Summit"
     },
     {
       "tag": "tag-bull",
@@ -1241,11 +1226,6 @@
       "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BEARISH - Fed's Warsh: Will decide on rate hike when policymakers 'shut the door' at next meeting"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Healthcare & Pharma - 6 articles - HIGH / BULLISH - Ebola Crisis Exposes Congo's Fragile Health System"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Clean Energy & Renewables - 4 articles - HIGH / BEARISH - Courts and Congress Are Undoing Trump's War on Wind Power"
@@ -1259,6 +1239,11 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "India Equity Markets - 37 articles - HIGH / BULLISH - Why did market rise today? Sensex rallied 791 pts, Nifty closed above 24,000; 6 key factors drove D-St rebound"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Healthcare & Pharma - 6 articles - HIGH / BULLISH - Ebola Crisis Exposes Congo's Fragile Health System"
     },
     {
       "tag": "tag-bull",
@@ -1391,22 +1376,22 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 62628.79,
+      "price": 62791.14,
       "currency": "USD",
-      "change": 84.59,
-      "change_pct": 0.14,
-      "change_str": "+0.14%",
-      "direction": "up"
+      "change": -297.16,
+      "change_pct": -0.47,
+      "change_str": "-0.47%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.86,
+      "price": 100.88,
       "currency": "USD",
-      "change": -0.53,
-      "change_pct": -0.53,
-      "change_str": "-0.53%",
+      "change": -0.51,
+      "change_pct": -0.5,
+      "change_str": "-0.50%",
       "direction": "down"
     },
     {
@@ -1423,7 +1408,7 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.14,
+    "drawdown_from_peak_pct": 0.16,
     "portfolio_peak": 19981.46,
     "vix": 15.81,
     "vix_regime": "ELEVATED",
@@ -1436,11 +1421,6 @@
       {
         "sector": "Bonds & Fixed Income",
         "weight": 14.8,
-        "at_cap": false
-      },
-      {
-        "sector": "Inverse / Hedge",
-        "weight": 13.9,
         "at_cap": false
       },
       {
@@ -1539,18 +1519,18 @@
       "benchmark_price_start": 741.0,
       "benchmark_price_now": 744.78,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": 0.44,
-      "alpha": -0.07
+      "portfolio_return_pct": 0.42,
+      "alpha": -0.09
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 30.1,
+          "actual_weight_pct": 44.0,
           "target_weight_pct": 10.0,
-          "drift_pct": 20.1,
+          "drift_pct": 34.0,
           "action": "DEPLOY",
-          "amount": 4009.6,
+          "amount": 6782.34,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
@@ -1560,7 +1540,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -16.71,
           "action": "ADD",
-          "amount": 3333.49,
+          "amount": 3332.81,
           "etf_name": "First Trust Nasdaq CEA Cybersecurity ETF",
           "regime_note": ""
         },
@@ -1570,17 +1550,17 @@
           "target_weight_pct": 18.0,
           "drift_pct": -14.81,
           "action": "ADD",
-          "amount": 2955.24,
+          "amount": 2954.55,
           "etf_name": "Invesco QQQ Trust",
           "regime_note": ""
         },
         {
           "ticker": "XLV",
-          "actual_weight_pct": 30.54,
+          "actual_weight_pct": 30.55,
           "target_weight_pct": 18.0,
-          "drift_pct": 12.54,
+          "drift_pct": 12.55,
           "action": "TRIM",
-          "amount": 2502.63,
+          "amount": 2503.31,
           "etf_name": "Health Care Select Sector SPDR",
           "regime_note": ""
         },
@@ -1590,7 +1570,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -11.85,
           "action": "ADD",
-          "amount": 2363.62,
+          "amount": 2362.94,
           "etf_name": "iShares U.S. Aerospace & Defense ETF",
           "regime_note": ""
         }
@@ -1674,7 +1654,7 @@
         },
         "RATES_SHOCK_+2%": {
           "total_impact": -1587.07,
-          "portfolio_loss_pct": -7.95,
+          "portfolio_loss_pct": -7.96,
           "position_impacts": [
             {
               "ticker": "BND",
@@ -1786,11 +1766,11 @@
     }
   },
   "logs": [
-    "2026-07-05 13:34:10 [INFO] AZALYST - status.json generated",
-    "2026-07-05 13:34:10 [INFO] PORTFOLIO - NAV USD 19,952.57 | Return +0.44%",
-    "2026-07-05 13:34:10 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-05 13:34:10 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, CIBR, SH",
-    "2026-07-05 13:34:10 [INFO] TRADER - Closed trades: 2"
+    "2026-07-05 19:19:01 [INFO] AZALYST - status.json generated",
+    "2026-07-05 19:19:01 [INFO] PORTFOLIO - NAV USD 19,948.78 | Return +0.42%",
+    "2026-07-05 19:19:01 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-05 19:19:01 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, CIBR",
+    "2026-07-05 19:19:01 [INFO] TRADER - Closed trades: 3"
   ],
-  "generated_at": "2026-07-05 13:34:07 UTC"
+  "generated_at": "2026-07-05 19:18:58 UTC"
 }
