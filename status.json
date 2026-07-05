@@ -130,7 +130,7 @@
       "pnl_pct_str": "-0.71%",
       "confidence": 70,
       "severity": "HIGH",
-      "days_held": 2,
+      "days_held": 3,
       "half_exited": false
     },
     {
@@ -241,9 +241,9 @@
     "flow_score": 22.0,
     "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 7.999991970916352,
+    "macro_score": 7.140724196241425,
     "news_score": 3.4720000000000004,
-    "total": 70.67956435398985,
+    "total": 69.82029657931491,
     "publish": true,
     "direction": "long"
   },
@@ -321,16 +321,16 @@
   },
   "confidence": [
     {
+      "symbol": "Energy / Oil & Gas",
+      "score": 95.0
+    },
+    {
       "symbol": "Technology & AI / Semiconductors",
       "score": 95.0
     },
     {
       "symbol": "Defense & Aerospace",
       "score": 95.0
-    },
-    {
-      "symbol": "Energy / Oil & Gas",
-      "score": 92.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -354,7 +354,7 @@
     },
     {
       "symbol": "Healthcare & Pharma",
-      "score": 70.0
+      "score": 71.0
     },
     {
       "symbol": "Cybersecurity",
@@ -386,6 +386,59 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 95.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -5.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 23,
+      "latest_at": "05 Jul 2026 07:47 UTC",
+      "headline": "OPEC Oil Production Jumps, But Gulf Supply Is Still Far From Normal",
+      "regions": [
+        "europe",
+        "americas",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "BBC News",
+        "World News - Breaking international news and headlines | Sky News",
+        "Defense News",
+        "Oilprice.com"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.1,
+        "recency": 15.3,
+        "geopolitical_severity": 13.0
+      }
+    },
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
@@ -449,20 +502,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 36,
-      "latest_at": "05 Jul 2026 02:37 UTC",
+      "article_count": 35,
+      "latest_at": "05 Jul 2026 08:48 UTC",
       "headline": "Russia Escalates Kyiv Strikes Days Before NATO Summit Showdown",
       "regions": [
+        "india",
         "europe",
-        "middle_east",
         "americas",
-        "india"
+        "global"
       ],
       "sources": [
-        "World | Deutsche Welle",
-        "Markets-Economic Times",
         "BBC News",
-        "Latest from Tom's Hardware"
+        "World News - Breaking international news and headlines | Sky News",
+        "The Verge",
+        "Defense News"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -489,59 +542,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 16.8,
         "recency": 17.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 92.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -5.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "04 Jul 2026 23:00 UTC",
-      "headline": "OPEC Oil Production Jumps, But Gulf Supply Is Still Far From Normal",
-      "regions": [
-        "europe",
-        "middle_east",
-        "americas",
-        "asia_pacific"
-      ],
-      "sources": [
-        "World | Deutsche Welle",
-        "Markets-Economic Times",
-        "BBC News",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.1,
-        "recency": 11.8,
         "geopolitical_severity": 13.0
       }
     },
@@ -796,25 +796,25 @@
     {
       "sector_key": "healthcare_pharma",
       "sector_label": "Healthcare & Pharma",
-      "confidence": 70.0,
-      "severity": "MEDIUM",
+      "confidence": 71.0,
+      "severity": "HIGH",
       "direction": "BULLISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 6,
-      "latest_at": "04 Jul 2026 17:00 UTC",
-      "headline": "Asia Bets on Biofuels to Dodge Middle East Oil Shortages",
+      "latest_at": "05 Jul 2026 05:00 UTC",
+      "headline": "Ebola Crisis Exposes Congo's Fragile Health System",
       "regions": [
-        "africa",
         "global",
+        "india",
         "asia_pacific",
-        "india"
+        "middle_east"
       ],
       "sources": [
-        "Markets-Economic Times",
         "Bloomberg Markets",
+        "Markets-Economic Times",
         "Oilprice.com"
       ],
       "primary_etf": "XLV",
@@ -838,11 +838,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 11.5,
+        "signal_strength": 12.6,
         "volume_confirmation": 12.6,
         "source_diversity": 11.7,
-        "recency": 13.8,
-        "geopolitical_severity": 11.6
+        "recency": 11.6,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1196,6 +1196,11 @@
   ],
   "articles": [
     {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Energy / Oil & Gas - 23 articles - CRITICAL / BEARISH - OPEC Oil Production Jumps, But Gulf Supply Is Still Far From Normal"
+    },
+    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Technology & AI / Semiconductors - 74 articles - HIGH / BULLISH - Record chip rally adds $2 trillion in combined value to Micron, Intel and AMD in second quarter"
@@ -1203,12 +1208,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Defense & Aerospace - 36 articles - HIGH / BULLISH - Russia Escalates Kyiv Strikes Days Before NATO Summit Showdown"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Energy / Oil & Gas - 23 articles - CRITICAL / BEARISH - OPEC Oil Production Jumps, But Gulf Supply Is Still Far From Normal"
+      "text": "Defense & Aerospace - 35 articles - HIGH / BULLISH - Russia Escalates Kyiv Strikes Days Before NATO Summit Showdown"
     },
     {
       "tag": "tag-bull",
@@ -1238,7 +1238,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Healthcare & Pharma - 6 articles - MEDIUM / BULLISH - Asia Bets on Biofuels to Dodge Middle East Oil Shortages"
+      "text": "Healthcare & Pharma - 6 articles - HIGH / BULLISH - Ebola Crisis Exposes Congo's Fragile Health System"
     },
     {
       "tag": "tag-bull",
@@ -1391,11 +1391,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 62574.42,
+      "price": 62856.64,
       "currency": "USD",
-      "change": 30.22,
-      "change_pct": 0.05,
-      "change_str": "+0.05%",
+      "change": 312.44,
+      "change_pct": 0.5,
+      "change_str": "+0.50%",
       "direction": "up"
     },
     {
@@ -1404,10 +1404,10 @@
       "region": "FX",
       "price": 100.86,
       "currency": "USD",
-      "change": -0.0,
-      "change_pct": -0.0,
-      "change_str": "+-0.00%",
-      "direction": "up"
+      "change": -0.53,
+      "change_pct": -0.53,
+      "change_str": "-0.53%",
+      "direction": "down"
     },
     {
       "label": "VIX",
@@ -1786,11 +1786,11 @@
     }
   },
   "logs": [
-    "2026-07-05 02:48:40 [INFO] AZALYST - status.json generated",
-    "2026-07-05 02:48:40 [INFO] PORTFOLIO - NAV USD 19,952.57 | Return +0.44%",
-    "2026-07-05 02:48:40 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-05 02:48:40 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, CIBR, SH",
-    "2026-07-05 02:48:40 [INFO] TRADER - Closed trades: 2"
+    "2026-07-05 09:00:32 [INFO] AZALYST - status.json generated",
+    "2026-07-05 09:00:32 [INFO] PORTFOLIO - NAV USD 19,952.57 | Return +0.44%",
+    "2026-07-05 09:00:32 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-05 09:00:32 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, CIBR, SH",
+    "2026-07-05 09:00:32 [INFO] TRADER - Closed trades: 2"
   ],
-  "generated_at": "2026-07-05 02:48:38 UTC"
+  "generated_at": "2026-07-05 09:00:28 UTC"
 }
