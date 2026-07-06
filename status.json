@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 19892.34,
+  "portfolio_value": 19892.2,
   "total_deposited": 19827.53,
-  "cash": 6163.54,
+  "cash": 6034.72,
   "monthly_reserve": 0.0,
-  "market_value": 13728.8,
-  "total_invested": 13624.8,
-  "unrealised_pnl": 104.0,
-  "unrealised_str": "+104.00",
+  "market_value": 13857.48,
+  "total_invested": 13753.62,
+  "unrealised_pnl": 103.86,
+  "unrealised_str": "+103.86",
   "realised_pnl": -39.19,
   "realised_str": "-39.19",
   "change": "+0.33%",
@@ -14,7 +14,7 @@
   "closed_trades": 4,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 19955.2,
-  "drawdown_now_pct": 0.31,
+  "drawdown_now_pct": 0.32,
   "max_drawdown_pct": 12.69,
   "usd_inr_rate": 95.38,
   "positions": [
@@ -94,17 +94,17 @@
       "sector": "Defense & Aerospace",
       "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 247.19,
+      "entry": 247.47,
       "current": 250.78,
       "peak_price": 251.07,
-      "trail_stop": 229.89,
-      "dist_to_trail_pct": 8.33,
-      "units": 6.661643,
-      "invested": 1646.69,
-      "pnl": 23.92,
-      "pnl_str": "+23.92",
-      "pnl_pct": 1.45,
-      "pnl_pct_str": "+1.45%",
+      "trail_stop": 230.14,
+      "dist_to_trail_pct": 8.23,
+      "units": 7.174748,
+      "invested": 1775.51,
+      "pnl": 23.78,
+      "pnl_str": "+23.78",
+      "pnl_pct": 1.34,
+      "pnl_pct_str": "+1.34%",
       "confidence": 95,
       "severity": "HIGH",
       "days_held": 5,
@@ -252,30 +252,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.13386377781806538,
+    "vix_level": 15.569999694824219,
+    "vix_percentile_1y": 0.17857142857142858,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
+      "rank": 30,
+      "flow": 22,
+      "options": 18,
       "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "macro": 8,
+      "news": 7
     }
   },
   "top_signal": {
     "ticker": "ITA",
     "rank_score": 29.12857142857143,
     "flow_score": 22.0,
-    "options_score": 0.0,
+    "options_score": 13.506751173294903,
     "rotation_score": 15.0,
     "macro_score": 0.0,
     "news_score": 0.0,
-    "total": 66.12857142857143,
+    "total": 79.63532260186633,
     "publish": true,
     "direction": "long"
   },
@@ -327,10 +327,10 @@
       14.9,
       30.3,
       3.2,
-      8.4,
+      9.0,
       3.8,
       8.4,
-      31.0
+      30.3
     ]
   },
   "pnl": {
@@ -346,7 +346,7 @@
       0.99,
       94.89,
       -9.28,
-      23.92,
+      23.78,
       3.66,
       -10.18
     ]
@@ -361,11 +361,11 @@
       "score": 92.0
     },
     {
-      "symbol": "Asia Pacific Equity",
-      "score": 88.0
+      "symbol": "Technology & AI / Semiconductors + Asia Pacific Equity",
+      "score": 87.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors + Asia Pacific Equity",
+      "symbol": "Asia Pacific Equity",
       "score": 87.0
     },
     {
@@ -428,20 +428,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 36,
-      "latest_at": "06 Jul 2026 18:56 UTC",
-      "headline": "Trump to Meet Zelenskyy at NATO Summit as Ukraine War Diplomacy Resumes",
+      "article_count": 31,
+      "latest_at": "06 Jul 2026 23:16 UTC",
+      "headline": "'NATO 3.0': Defense spending pledges face the Trump test",
       "regions": [
-        "americas",
         "india",
-        "asia_pacific",
-        "global"
+        "global",
+        "americas",
+        "asia_pacific"
       ],
       "sources": [
-        "Markets-Economic Times",
+        "Defense News",
         "Oilprice.com",
-        "Cointelegraph.com News",
-        "World News - Breaking international news and headlines | Sky News"
+        "Latest from Tom's Hardware",
+        "Cointelegraph.com News"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -525,56 +525,6 @@
       }
     },
     {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 88.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 5.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 16,
-      "latest_at": "06 Jul 2026 17:24 UTC",
-      "headline": "Global Market: Japan's Topix rises on oil price drop, Nikkei weighed down by tech",
-      "regions": [
-        "americas",
-        "asia_pacific",
-        "global",
-        "europe"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "www.theregister.com - Articles",
-        "World News - Breaking international news and headlines | Sky News",
-        "Defense News"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 18.7,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.9,
-        "recency": 14.5,
-        "geopolitical_severity": 12.7
-      }
-    },
-    {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors + Asia Pacific Equity",
       "confidence": 87.0,
@@ -625,6 +575,55 @@
         "source_diversity": 16.5,
         "recency": 14.7,
         "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 87.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 7.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 16,
+      "latest_at": "06 Jul 2026 22:00 UTC",
+      "headline": "Global Market: Japan's Topix rises on oil price drop, Nikkei weighed down by tech",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "Latest from Tom's Hardware",
+        "World News - Breaking international news and headlines | Sky News",
+        "Bloomberg Markets",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 19.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.0,
+        "recency": 14.9,
+        "geopolitical_severity": 11.3
       }
     },
     {
@@ -1229,7 +1228,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Defense & Aerospace - 36 articles - HIGH / BULLISH - Trump to Meet Zelenskyy at NATO Summit as Ukraine War Diplomacy Resumes"
+      "text": "Defense & Aerospace - 31 articles - HIGH / BULLISH - 'NATO 3.0': Defense spending pledges face the Trump test"
     },
     {
       "tag": "tag-bear",
@@ -1239,12 +1238,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Asia Pacific Equity - 16 articles - HIGH / BULLISH - Global Market: Japan's Topix rises on oil price drop, Nikkei weighed down by tech"
+      "text": "Technology & AI / Semiconductors + Asia Pacific Equity - 12 articles - CRITICAL / BULLISH - Chip Industry Week In Review"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Technology & AI / Semiconductors + Asia Pacific Equity - 12 articles - CRITICAL / BULLISH - Chip Industry Week In Review"
+      "text": "Asia Pacific Equity - 16 articles - MEDIUM / BULLISH - Global Market: Japan's Topix rises on oil price drop, Nikkei weighed down by tech"
     },
     {
       "tag": "tag-bull",
@@ -1347,9 +1346,9 @@
       "region": "UK",
       "price": 10651.77,
       "currency": "GBP",
-      "change": -27.23,
-      "change_pct": -0.25,
-      "change_str": "-0.25%",
+      "change": -1.13,
+      "change_pct": -0.01,
+      "change_str": "-0.01%",
       "direction": "down"
     },
     {
@@ -1400,33 +1399,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4178.6,
+      "price": 4175.6,
       "currency": "USD",
-      "change": 65.9,
-      "change_pct": 1.6,
-      "change_str": "+1.60%",
+      "change": 62.9,
+      "change_pct": 1.53,
+      "change_str": "+1.53%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 68.67,
+      "price": 68.69,
       "currency": "USD",
-      "change": -0.02,
-      "change_pct": -0.03,
-      "change_str": "-0.03%",
-      "direction": "down"
+      "change": -0.0,
+      "change_pct": -0.0,
+      "change_str": "+-0.00%",
+      "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64186.09,
+      "price": 64057.91,
       "currency": "USD",
-      "change": 638.21,
-      "change_pct": 1.0,
-      "change_str": "+1.00%",
+      "change": 510.03,
+      "change_pct": 0.8,
+      "change_str": "+0.80%",
       "direction": "up"
     },
     {
@@ -1454,7 +1453,7 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.31,
+    "drawdown_from_peak_pct": 0.32,
     "portfolio_peak": 19955.2,
     "vix": 15.57,
     "vix_regime": "ELEVATED",
@@ -1471,7 +1470,7 @@
       },
       {
         "sector": "Defense & Aerospace",
-        "weight": 8.4,
+        "weight": 9.0,
         "at_cap": false
       },
       {
@@ -1577,11 +1576,11 @@
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 30.98,
+          "actual_weight_pct": 30.34,
           "target_weight_pct": 10.0,
-          "drift_pct": 20.98,
+          "drift_pct": 20.34,
           "action": "DEPLOY",
-          "amount": 4174.31,
+          "amount": 4045.5,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
@@ -1591,7 +1590,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -14.76,
           "action": "ADD",
-          "amount": 2935.27,
+          "amount": 2935.24,
           "etf_name": "Invesco QQQ Trust",
           "regime_note": ""
         },
@@ -1601,7 +1600,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -14.18,
           "action": "ADD",
-          "amount": 2819.84,
+          "amount": 2819.81,
           "etf_name": "iShares MSCI India ETF",
           "regime_note": ""
         },
@@ -1611,17 +1610,17 @@
           "target_weight_pct": 18.0,
           "drift_pct": 12.3,
           "action": "TRIM",
-          "amount": 2447.22,
+          "amount": 2447.24,
           "etf_name": "Health Care Select Sector SPDR",
           "regime_note": ""
         },
         {
           "ticker": "ITA",
-          "actual_weight_pct": 8.4,
+          "actual_weight_pct": 9.05,
           "target_weight_pct": 18.0,
-          "drift_pct": -9.6,
+          "drift_pct": -8.95,
           "action": "ADD",
-          "amount": 1910.01,
+          "amount": 1781.31,
           "etf_name": "iShares U.S. Aerospace & Defense ETF",
           "regime_note": ""
         }
@@ -1632,8 +1631,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -3346.17,
-          "portfolio_loss_pct": -16.82,
+          "total_impact": -3397.64,
+          "portfolio_loss_pct": -17.08,
           "position_impacts": [
             {
               "ticker": "BND",
@@ -1657,7 +1656,7 @@
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -668.24
+              "impact": -719.71
             },
             {
               "ticker": "INDA",
@@ -1668,8 +1667,8 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -2947.73,
-          "portfolio_loss_pct": -14.82,
+          "total_impact": -2991.48,
+          "portfolio_loss_pct": -15.04,
           "position_impacts": [
             {
               "ticker": "BND",
@@ -1693,7 +1692,7 @@
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -568.01
+              "impact": -611.76
             },
             {
               "ticker": "INDA",
@@ -1704,8 +1703,8 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1720.48,
-          "portfolio_loss_pct": -8.65,
+          "total_impact": -1739.79,
+          "portfolio_loss_pct": -8.75,
           "position_impacts": [
             {
               "ticker": "BND",
@@ -1729,7 +1728,7 @@
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -250.59
+              "impact": -269.89
             },
             {
               "ticker": "INDA",
@@ -1740,8 +1739,8 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -669.23,
-          "portfolio_loss_pct": -3.36,
+          "total_impact": -679.53,
+          "portfolio_loss_pct": -3.42,
           "position_impacts": [
             {
               "ticker": "BND",
@@ -1765,7 +1764,7 @@
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -133.65
+              "impact": -143.94
             },
             {
               "ticker": "INDA",
@@ -1776,8 +1775,8 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1520.56,
-          "portfolio_loss_pct": -7.64,
+          "total_impact": -1543.72,
+          "portfolio_loss_pct": -7.76,
           "position_impacts": [
             {
               "ticker": "BND",
@@ -1801,7 +1800,7 @@
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -300.71
+              "impact": -323.87
             },
             {
               "ticker": "INDA",
@@ -1813,15 +1812,15 @@
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -16.82
+      "worst_loss_pct": -17.08
     }
   },
   "logs": [
-    "2026-07-06 22:30:55 [INFO] AZALYST - status.json generated",
-    "2026-07-06 22:30:55 [INFO] PORTFOLIO - NAV USD 19,892.34 | Return +0.33%",
-    "2026-07-06 22:30:55 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-06 22:30:55 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, INDA, SH",
-    "2026-07-06 22:30:55 [INFO] TRADER - Closed trades: 4"
+    "2026-07-06 23:25:36 [INFO] AZALYST - status.json generated",
+    "2026-07-06 23:25:36 [INFO] PORTFOLIO - NAV USD 19,892.20 | Return +0.33%",
+    "2026-07-06 23:25:36 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-06 23:25:36 [INFO] TRADER - Open positions: BND, XLV, QQQ, ITA, INDA, SH",
+    "2026-07-06 23:25:36 [INFO] TRADER - Closed trades: 4"
   ],
-  "generated_at": "2026-07-06 22:30:53 UTC"
+  "generated_at": "2026-07-06 23:25:35 UTC"
 }
