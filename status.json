@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 19954.16,
+  "portfolio_value": 19953.6,
   "total_deposited": 19915.86,
-  "cash": 7904.73,
+  "cash": 7712.64,
   "monthly_reserve": 0.0,
-  "market_value": 12049.43,
-  "total_invested": 11936.58,
-  "unrealised_pnl": 112.85,
-  "unrealised_str": "+112.85",
+  "market_value": 12240.96,
+  "total_invested": 12128.67,
+  "unrealised_pnl": 112.29,
+  "unrealised_str": "+112.29",
   "realised_pnl": -74.55,
   "realised_str": "-74.55",
   "change": "+0.19%",
@@ -117,17 +117,17 @@
       "sector": "Crypto & Digital Assets",
       "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NASDAQ",
-      "entry": 36.21,
+      "entry": 36.22,
       "current": 36.15,
-      "peak_price": 36.23,
-      "trail_stop": 31.86,
-      "dist_to_trail_pct": 11.87,
-      "units": 8.733155,
-      "invested": 316.18,
-      "pnl": -0.48,
-      "pnl_str": "-0.48",
-      "pnl_pct": -0.15,
-      "pnl_pct_str": "-0.15%",
+      "peak_price": 36.25,
+      "trail_stop": 31.88,
+      "dist_to_trail_pct": 11.82,
+      "units": 14.031339,
+      "invested": 508.27,
+      "pnl": -1.04,
+      "pnl_str": "-1.04",
+      "pnl_pct": -0.2,
+      "pnl_pct_str": "-0.20%",
       "confidence": 89,
       "severity": "CRITICAL",
       "days_held": 0,
@@ -284,31 +284,31 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.12784408547178086,
+    "vix_level": 16.1299991607666,
+    "vix_percentile_1y": 0.2777777777777778,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
+      "rank": 30,
+      "flow": 22,
+      "options": 18,
       "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "macro": 8,
+      "news": 7
     }
   },
   "top_signal": {
     "ticker": "XLE",
     "rank_score": 10.86839378238342,
     "flow_score": 22.0,
-    "options_score": 0.0,
+    "options_score": 14.932473769859655,
     "rotation_score": 15.0,
-    "macro_score": 5.217931669907983,
+    "macro_score": 5.508254353302522,
     "news_score": 6.4399999999999995,
-    "total": 59.5263254522914,
-    "publish": false,
+    "total": 74.74912190554559,
+    "publish": true,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -360,9 +360,9 @@
       10.3,
       3.8,
       2.3,
-      1.6,
+      2.5,
       11.8,
-      39.6
+      38.7
     ]
   },
   "pnl": {
@@ -379,7 +379,7 @@
       -29.27,
       -8.1,
       -1.67,
-      -0.48,
+      -1.04,
       -8.39
     ]
   },
@@ -395,10 +395,6 @@
     {
       "symbol": "Europe Equity + Gold & Precious Metals",
       "score": 90.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 89.0
     },
     {
       "symbol": "Technology & AI / Semiconductors + Asia Pacific Equity",
@@ -421,6 +417,10 @@
       "score": 79.0
     },
     {
+      "symbol": "Crypto & Digital Assets",
+      "score": 78.0
+    },
+    {
       "symbol": "Nuclear Energy & Uranium",
       "score": 78.0
     },
@@ -429,15 +429,15 @@
       "score": 75.0
     },
     {
-      "symbol": "Commodities & Mining + Clean Energy & Renewables",
-      "score": 74.0
-    },
-    {
       "symbol": "Clean Energy & Renewables + Commodities & Mining",
       "score": 72.0
     },
     {
       "symbol": "Banking & Financial Sector",
+      "score": 71.0
+    },
+    {
+      "symbol": "Commodities & Mining + Clean Energy & Renewables",
       "score": 71.0
     },
     {
@@ -603,52 +603,6 @@
         "volume_confirmation": 16.8,
         "source_diversity": 14.4,
         "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 89.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": 3.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 30,
-      "latest_at": "07 Jul 2026 18:05 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "europe",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "Finance",
-        "Cointelegraph.com News",
-        "US Top News and Analysis",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 10.3,
-        "recency": 15.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -907,6 +861,52 @@
       }
     },
     {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 78.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": 4.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 31,
+      "latest_at": "07 Jul 2026 19:39 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "global",
+        "europe",
+        "americas",
+        "india"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Finance",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 9.1,
+        "recency": 11.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 78.0,
@@ -1011,55 +1011,6 @@
       }
     },
     {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining + Clean Energy & Renewables",
-      "confidence": 74.0,
-      "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "07 Jul 2026 19:03 UTC",
-      "headline": "Can India, Europe build a clean energy supply chain beyond China?",
-      "regions": [
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "World | Deutsche Welle",
-        "Latest from Tom's Hardware",
-        "Markets-Economic Times",
-        "BBC News"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.5,
-        "volume_confirmation": 13.7,
-        "source_diversity": 13.6,
-        "recency": 16.9,
-        "geopolitical_severity": 10.9
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables + Commodities & Mining",
       "confidence": 72.0,
@@ -1157,6 +1108,55 @@
         "source_diversity": 11.0,
         "recency": 15.5,
         "geopolitical_severity": 10.7
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining + Clean Energy & Renewables",
+      "confidence": 71.0,
+      "severity": "MEDIUM",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "07 Jul 2026 23:10 UTC",
+      "headline": "Can India, Europe build a clean energy supply chain beyond China?",
+      "regions": [
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "World | Deutsche Welle",
+        "BBC News",
+        "The Verge"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 10.7,
+        "volume_confirmation": 12.6,
+        "source_diversity": 12.8,
+        "recency": 16.9,
+        "geopolitical_severity": 10.9
       }
     },
     {
@@ -1275,11 +1275,6 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Crypto & Digital Assets - 30 articles - CRITICAL / BULLISH - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "Technology & AI / Semiconductors + Asia Pacific Equity - 12 articles - CRITICAL / BULLISH - Chip Industry Week In Review"
     },
     {
@@ -1303,6 +1298,11 @@
       "text": "Emerging Markets - 7 articles - MEDIUM / BEARISH - MSCI keeps South Korea as emerging market, delays Indonesia review amid downgrade risk"
     },
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Crypto & Digital Assets - 31 articles - CRITICAL / BULLISH - Here\u2019s what happened in crypto today"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Nuclear Energy & Uranium - 7 articles - HIGH / BEARISH - Adani Targets 10 GW Nuclear Power Capacity in India by 2035"
@@ -1315,17 +1315,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Commodities & Mining + Clean Energy & Renewables - 7 articles - MEDIUM / BEARISH - Can India, Europe build a clean energy supply chain beyond China?"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Clean Energy & Renewables + Commodities & Mining - 6 articles - MEDIUM / BEARISH - Can India, Europe build a clean energy supply chain beyond China?"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Banking & Financial Sector - 9 articles - MEDIUM / BULLISH - Klarna seeks U.S. bank charter in latest push beyond buy now, pay later"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Commodities & Mining + Clean Energy & Renewables - 6 articles - MEDIUM / BEARISH - Can India, Europe build a clean energy supply chain beyond China?"
     },
     {
       "tag": "tag-bull",
@@ -1378,10 +1378,10 @@
       "region": "UK",
       "price": 10665.88,
       "currency": "GBP",
-      "change": 14.08,
-      "change_pct": 0.13,
-      "change_str": "+0.13%",
-      "direction": "up"
+      "change": -13.12,
+      "change_pct": -0.12,
+      "change_str": "-0.12%",
+      "direction": "down"
     },
     {
       "label": "DAX",
@@ -1389,9 +1389,9 @@
       "region": "EU",
       "price": 25465.25,
       "currency": "EUR",
-      "change": -352.64,
-      "change_pct": -1.37,
-      "change_str": "-1.37%",
+      "change": -314.06,
+      "change_pct": -1.22,
+      "change_str": "-1.22%",
       "direction": "down"
     },
     {
@@ -1431,44 +1431,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4116.6,
+      "price": 4117.8,
       "currency": "USD",
-      "change": -38.5,
-      "change_pct": -0.93,
-      "change_str": "-0.93%",
+      "change": -37.3,
+      "change_pct": -0.9,
+      "change_str": "-0.90%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 72.2,
+      "price": 72.45,
       "currency": "USD",
-      "change": 3.65,
-      "change_pct": 5.32,
-      "change_str": "+5.32%",
+      "change": 3.9,
+      "change_pct": 5.69,
+      "change_str": "+5.69%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63315.86,
+      "price": 63657.64,
       "currency": "USD",
-      "change": -679.16,
-      "change_pct": -1.06,
-      "change_str": "-1.06%",
+      "change": -337.38,
+      "change_pct": -0.53,
+      "change_str": "-0.53%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.11,
+      "price": 101.12,
       "currency": "USD",
-      "change": 0.26,
-      "change_pct": 0.26,
-      "change_str": "+0.26%",
+      "change": 0.27,
+      "change_pct": 0.27,
+      "change_str": "+0.27%",
       "direction": "up"
     },
     {
@@ -1511,13 +1511,13 @@
         "at_cap": false
       },
       {
-        "sector": "Banking & Financial Sector",
-        "weight": 2.3,
+        "sector": "Crypto & Digital Assets",
+        "weight": 2.5,
         "at_cap": false
       },
       {
-        "sector": "Crypto & Digital Assets",
-        "weight": 1.6,
+        "sector": "Banking & Financial Sector",
+        "weight": 2.3,
         "at_cap": false
       }
     ],
@@ -1608,22 +1608,12 @@
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 39.61,
+          "actual_weight_pct": 38.65,
           "target_weight_pct": 10.0,
-          "drift_pct": 29.61,
+          "drift_pct": 28.65,
           "action": "DEPLOY",
-          "amount": 5909.31,
+          "amount": 5717.28,
           "etf_name": "Cash Reserve",
-          "regime_note": ""
-        },
-        {
-          "ticker": "IBIT",
-          "actual_weight_pct": 1.58,
-          "target_weight_pct": 18.0,
-          "drift_pct": -16.42,
-          "action": "ADD",
-          "amount": 3276.05,
-          "etf_name": "iShares Bitcoin Trust ETF",
           "regime_note": ""
         },
         {
@@ -1632,8 +1622,18 @@
           "target_weight_pct": 18.0,
           "drift_pct": -15.72,
           "action": "ADD",
-          "amount": 3136.1,
+          "amount": 3136.0,
           "etf_name": "Financial Select Sector SPDR",
+          "regime_note": ""
+        },
+        {
+          "ticker": "IBIT",
+          "actual_weight_pct": 2.54,
+          "target_weight_pct": 18.0,
+          "drift_pct": -15.46,
+          "action": "ADD",
+          "amount": 3084.42,
+          "etf_name": "iShares Bitcoin Trust ETF",
           "regime_note": ""
         },
         {
@@ -1642,7 +1642,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -14.23,
           "action": "ADD",
-          "amount": 2839.36,
+          "amount": 2839.25,
           "etf_name": "iShares MSCI India ETF",
           "regime_note": ""
         },
@@ -1652,7 +1652,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": 12.67,
           "action": "TRIM",
-          "amount": 2528.39,
+          "amount": 2528.49,
           "etf_name": "Health Care Select Sector SPDR",
           "regime_note": ""
         },
@@ -1662,7 +1662,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -7.73,
           "action": "ADD",
-          "amount": 1542.49,
+          "amount": 1542.38,
           "etf_name": "iShares U.S. Aerospace & Defense ETF",
           "regime_note": ""
         }
@@ -1673,8 +1673,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -3940.4,
-          "portfolio_loss_pct": -19.75,
+          "total_impact": -4055.32,
+          "portfolio_loss_pct": -20.32,
           "position_impacts": [
             {
               "ticker": "XLV",
@@ -1704,13 +1704,13 @@
               "ticker": "IBIT",
               "factor": "crypto",
               "shock_pct": -60.0,
-              "impact": -189.42
+              "impact": -304.34
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -3314.61,
-          "portfolio_loss_pct": -16.61,
+          "total_impact": -3391.23,
+          "portfolio_loss_pct": -17.0,
           "position_impacts": [
             {
               "ticker": "XLV",
@@ -1740,13 +1740,13 @@
               "ticker": "IBIT",
               "factor": "crypto",
               "shock_pct": -40.0,
-              "impact": -126.28
+              "impact": -202.89
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1469.76,
-          "portfolio_loss_pct": -7.37,
+          "total_impact": -1508.06,
+          "portfolio_loss_pct": -7.56,
           "position_impacts": [
             {
               "ticker": "XLV",
@@ -1776,13 +1776,13 @@
               "ticker": "IBIT",
               "factor": "crypto",
               "shock_pct": -20.0,
-              "impact": -63.14
+              "impact": -101.45
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -781.77,
-          "portfolio_loss_pct": -3.92,
+          "total_impact": -800.92,
+          "portfolio_loss_pct": -4.01,
           "position_impacts": [
             {
               "ticker": "XLV",
@@ -1812,13 +1812,13 @@
               "ticker": "IBIT",
               "factor": "crypto",
               "shock_pct": -10.0,
-              "impact": -31.57
+              "impact": -50.72
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1766.87,
-          "portfolio_loss_pct": -8.85,
+          "total_impact": -1814.75,
+          "portfolio_loss_pct": -9.09,
           "position_impacts": [
             {
               "ticker": "XLV",
@@ -1848,21 +1848,21 @@
               "ticker": "IBIT",
               "factor": "crypto",
               "shock_pct": -25.0,
-              "impact": -78.93
+              "impact": -126.81
             }
           ]
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -19.75
+      "worst_loss_pct": -20.32
     }
   },
   "logs": [
-    "2026-07-07 21:38:27 [INFO] AZALYST - status.json generated",
-    "2026-07-07 21:38:27 [INFO] PORTFOLIO - NAV USD 19,954.16 | Return +0.19%",
-    "2026-07-07 21:38:27 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-07 21:38:27 [INFO] TRADER - Open positions: XLV, ITA, INDA, XLF, IBIT, SH",
-    "2026-07-07 21:38:27 [INFO] TRADER - Closed trades: 6"
+    "2026-07-07 23:20:36 [INFO] AZALYST - status.json generated",
+    "2026-07-07 23:20:36 [INFO] PORTFOLIO - NAV USD 19,953.60 | Return +0.19%",
+    "2026-07-07 23:20:36 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-07 23:20:36 [INFO] TRADER - Open positions: XLV, ITA, INDA, XLF, IBIT, SH",
+    "2026-07-07 23:20:36 [INFO] TRADER - Closed trades: 6"
   ],
-  "generated_at": "2026-07-07 21:38:23 UTC"
+  "generated_at": "2026-07-07 23:20:33 UTC"
 }
