@@ -1,16 +1,16 @@
 {
-  "portfolio_value": 19712.13,
+  "portfolio_value": 19711.71,
   "total_deposited": 19827.95,
-  "cash": 9032.06,
+  "cash": 8643.68,
   "monthly_reserve": 0.0,
-  "market_value": 10680.07,
-  "total_invested": 10825.01,
-  "unrealised_pnl": -144.94,
-  "unrealised_str": "-144.94",
+  "market_value": 11068.03,
+  "total_invested": 11213.39,
+  "unrealised_pnl": -145.37,
+  "unrealised_str": "-145.37",
   "realised_pnl": 29.12,
   "realised_str": "+29.12",
-  "change": "-0.58%",
-  "change_raw": -0.58,
+  "change": "-0.59%",
+  "change_raw": -0.59,
   "closed_trades": 8,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 19955.62,
@@ -163,17 +163,17 @@
       "sector": "Inverse / Hedge",
       "platform": "ProShares -- IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 33.08,
+      "entry": 33.07,
       "current": 32.84,
       "peak_price": 33.38,
-      "trail_stop": 30.76,
-      "dist_to_trail_pct": 6.32,
-      "units": 164.190573,
-      "invested": 5431.44,
-      "pnl": -39.42,
-      "pnl_str": "-39.42",
-      "pnl_pct": -0.73,
-      "pnl_pct_str": "-0.73%",
+      "trail_stop": 30.75,
+      "dist_to_trail_pct": 6.36,
+      "units": 176.003964,
+      "invested": 5819.82,
+      "pnl": -39.85,
+      "pnl_str": "-39.85",
+      "pnl_pct": -0.68,
+      "pnl_pct_str": "-0.68%",
       "confidence": 90,
       "severity": "CRITICAL",
       "days_held": 1,
@@ -339,30 +339,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.0992456194905815,
+    "vix_level": 15.84000015258789,
+    "vix_percentile_1y": 0.23412698412698413,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
+      "rank": 30,
+      "flow": 22,
+      "options": 18,
       "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "macro": 8,
+      "news": 7
     }
   },
   "top_signal": {
-    "ticker": "EWS",
-    "rank_score": 29.815521064301553,
-    "flow_score": 22.0,
-    "options_score": 0.0,
-    "rotation_score": 0.0,
-    "macro_score": 0.0,
-    "news_score": 0.0,
-    "total": 51.81552106430155,
+    "ticker": "XLE",
+    "rank_score": 17.786252771618624,
+    "flow_score": 0.0,
+    "options_score": 15.094719226395938,
+    "rotation_score": 15.0,
+    "macro_score": 6.472831619845144,
+    "news_score": 4.984,
+    "total": 59.337803617859706,
     "publish": false,
     "direction": "long"
   },
@@ -422,8 +422,8 @@
       2.5,
       5.1,
       1.4,
-      27.4,
-      45.8
+      29.3,
+      43.9
     ]
   },
   "pnl": {
@@ -443,7 +443,7 @@
       -3.56,
       -15.94,
       0.67,
-      -39.42
+      -39.85
     ]
   },
   "confidence": [
@@ -468,16 +468,16 @@
       "score": 83.0
     },
     {
-      "symbol": "India Equity Markets + Bearish Market / Macro Selloff",
-      "score": 81.0
-    },
-    {
       "symbol": "Clean Energy & Renewables + Commodities & Mining",
       "score": 79.0
     },
     {
       "symbol": "Emerging Markets",
       "score": 79.0
+    },
+    {
+      "symbol": "India Equity Markets",
+      "score": 76.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -765,56 +765,6 @@
       }
     },
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets + Bearish Market / Macro Selloff",
-      "confidence": 81.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -4.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "09 Jul 2026 16:49 UTC",
-      "headline": "Ahead of Market: 10 things that will decide stock market action on Friday",
-      "regions": [
-        "asia_pacific",
-        "middle_east",
-        "india",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "World News - Breaking international news and headlines | Sky News",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 16.8,
-        "source_diversity": 8.7,
-        "recency": 13.8,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables + Commodities & Mining",
       "confidence": 79.0,
@@ -913,6 +863,55 @@
         "source_diversity": 13.6,
         "recency": 17.0,
         "geopolitical_severity": 10.7
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 76.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -2.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 18,
+      "latest_at": "09 Jul 2026 16:49 UTC",
+      "headline": "Ahead of Market: 10 things that will decide stock market action on Friday",
+      "regions": [
+        "india",
+        "middle_east",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "World News - Breaking international news and headlines | Sky News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 20.8,
+        "volume_confirmation": 18.0,
+        "source_diversity": 8.6,
+        "recency": 8.8,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1349,17 +1348,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "India Equity Markets + Bearish Market / Macro Selloff - 11 articles - HIGH / BEARISH - Ahead of Market: 10 things that will decide stock market action on Friday"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Clean Energy & Renewables + Commodities & Mining - 9 articles - MEDIUM / BEARISH - America\u2019s cheapest new EV is smaller than a ping-pong table and tops out at 19mph"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Emerging Markets - 7 articles - MEDIUM / BEARISH - MSCI keeps South Korea as emerging market, delays Indonesia review amid downgrade risk"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "India Equity Markets - 18 articles - HIGH / BEARISH - Ahead of Market: 10 things that will decide stock market action on Friday"
     },
     {
       "tag": "tag-bear",
@@ -1442,9 +1441,9 @@
       "region": "UK",
       "price": 10472.45,
       "currency": "GBP",
-      "change": -16.55,
-      "change_pct": -0.16,
-      "change_str": "-0.16%",
+      "change": -193.45,
+      "change_pct": -1.81,
+      "change_str": "-1.81%",
       "direction": "down"
     },
     {
@@ -1495,33 +1494,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4132.2,
+      "price": 4132.8,
       "currency": "USD",
-      "change": 61.3,
-      "change_pct": 1.51,
-      "change_str": "+1.51%",
+      "change": 61.9,
+      "change_pct": 1.52,
+      "change_str": "+1.52%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 71.73,
+      "price": 71.82,
       "currency": "USD",
-      "change": -1.79,
-      "change_pct": -2.43,
-      "change_str": "-2.43%",
+      "change": -1.7,
+      "change_pct": -2.31,
+      "change_str": "-2.31%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63249.84,
+      "price": 63129.01,
       "currency": "USD",
-      "change": 992.27,
-      "change_pct": 1.59,
-      "change_str": "+1.59%",
+      "change": 871.44,
+      "change_pct": 1.4,
+      "change_str": "+1.40%",
       "direction": "up"
     },
     {
@@ -1556,7 +1555,7 @@
     "sector_concentration": [
       {
         "sector": "Inverse / Hedge",
-        "weight": 27.4,
+        "weight": 29.3,
         "at_cap": false
       },
       {
@@ -1685,18 +1684,18 @@
       "benchmark_price_start": 745.76,
       "benchmark_price_now": 751.71,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.58,
-      "alpha": -1.38
+      "portfolio_return_pct": -0.59,
+      "alpha": -1.39
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 45.82,
+          "actual_weight_pct": 43.85,
           "target_weight_pct": 10.0,
-          "drift_pct": 35.82,
+          "drift_pct": 33.85,
           "action": "DEPLOY",
-          "amount": 7060.85,
+          "amount": 6672.51,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
@@ -1706,7 +1705,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -13.61,
           "action": "ADD",
-          "amount": 2683.0,
+          "amount": 2682.93,
           "etf_name": "Health Care Select Sector SPDR",
           "regime_note": ""
         },
@@ -1716,7 +1715,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -12.71,
           "action": "ADD",
-          "amount": 2505.31,
+          "amount": 2505.25,
           "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
@@ -1726,7 +1725,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -12.45,
           "action": "ADD",
-          "amount": 2454.36,
+          "amount": 2454.29,
           "etf_name": "iShares Bitcoin Trust ETF",
           "regime_note": ""
         },
@@ -1736,7 +1735,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -11.21,
           "action": "ADD",
-          "amount": 2209.15,
+          "amount": 2209.09,
           "etf_name": "iShares MSCI India ETF",
           "regime_note": ""
         },
@@ -1746,7 +1745,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -9.93,
           "action": "ADD",
-          "amount": 1957.48,
+          "amount": 1957.41,
           "etf_name": "Energy Select Sector SPDR",
           "regime_note": ""
         }
@@ -1972,11 +1971,11 @@
     }
   },
   "logs": [
-    "2026-07-09 22:36:51 [INFO] AZALYST - status.json generated",
-    "2026-07-09 22:36:51 [INFO] PORTFOLIO - NAV USD 19,712.13 | Return -0.58%",
-    "2026-07-09 22:36:51 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-09 22:36:51 [INFO] TRADER - Open positions: ITA, INDA, XLF, IBIT, XLE, XLV, SH",
-    "2026-07-09 22:36:51 [INFO] TRADER - Closed trades: 8"
+    "2026-07-09 23:32:27 [INFO] AZALYST - status.json generated",
+    "2026-07-09 23:32:27 [INFO] PORTFOLIO - NAV USD 19,711.71 | Return -0.59%",
+    "2026-07-09 23:32:27 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-09 23:32:27 [INFO] TRADER - Open positions: ITA, INDA, XLF, IBIT, XLE, XLV, SH",
+    "2026-07-09 23:32:27 [INFO] TRADER - Closed trades: 8"
   ],
-  "generated_at": "2026-07-09 22:36:50 UTC"
+  "generated_at": "2026-07-09 23:32:24 UTC"
 }
