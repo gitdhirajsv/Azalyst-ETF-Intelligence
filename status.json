@@ -107,7 +107,7 @@
       "pnl_pct_str": "-1.11%",
       "confidence": 96,
       "severity": "HIGH",
-      "days_held": 2,
+      "days_held": 3,
       "half_exited": false
     },
     {
@@ -130,7 +130,7 @@
       "pnl_pct_str": "-0.82%",
       "confidence": 73,
       "severity": "CRITICAL",
-      "days_held": 1,
+      "days_held": 2,
       "half_exited": false
     },
     {
@@ -153,7 +153,7 @@
       "pnl_pct_str": "-0.24%",
       "confidence": 93,
       "severity": "HIGH",
-      "days_held": 0,
+      "days_held": 1,
       "half_exited": false
     }
   ],
@@ -348,19 +348,19 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "LOW_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.10472791357491402,
-    "vix_level": 15.029999732971191,
-    "vix_percentile_1y": 0.0992063492063492,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 30,
-      "flow": 22,
-      "options": 18,
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
       "rotation": 15,
-      "macro": 8,
-      "news": 7
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
@@ -449,20 +449,16 @@
   },
   "confidence": [
     {
-      "symbol": "Defense & Aerospace",
-      "score": 91.0
-    },
-    {
       "symbol": "Europe Equity + Gold & Precious Metals",
       "score": 90.0
     },
     {
-      "symbol": "Asia Pacific Equity",
-      "score": 86.0
-    },
-    {
       "symbol": "Crypto & Digital Assets",
       "score": 81.0
+    },
+    {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 79.0
     },
     {
       "symbol": "Clean Energy & Renewables + Commodities & Mining",
@@ -477,11 +473,11 @@
       "score": 79.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 78.0
+      "symbol": "India Equity Markets",
+      "score": 76.0
     },
     {
-      "symbol": "India Equity Markets",
+      "symbol": "Asia Pacific Equity",
       "score": 76.0
     },
     {
@@ -509,64 +505,15 @@
       "score": 65.0
     },
     {
+      "symbol": "Defense & Aerospace",
+      "score": 63.0
+    },
+    {
       "symbol": "Nuclear Energy & Uranium",
       "score": 62.0
     }
   ],
   "signals": [
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 91.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 17,
-      "latest_at": "11 Jul 2026 13:08 UTC",
-      "headline": "Poland could cut arms aid to Ukraine as WWII spat continues",
-      "regions": [
-        "global",
-        "americas",
-        "middle_east",
-        "europe"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "The Verge",
-        "BBC News",
-        "Finance"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 20.8,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.2,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity + Gold & Precious Metals",
@@ -618,56 +565,6 @@
       }
     },
     {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 86.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 5.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "11 Jul 2026 13:00 UTC",
-      "headline": "Meet SK Hynix, the trillion-dollar South Korean chipmaker debuting on U.S. markets",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "middle_east",
-        "americas"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Tech",
-        "BBC News",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 20.3,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.1,
-        "recency": 16.7,
-        "geopolitical_severity": 11.5
-      }
-    },
-    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 81.0,
@@ -710,6 +607,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 9.1,
         "recency": 12.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 79.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "11 Jul 2026 13:30 UTC",
+      "headline": "Fed officials fret over inflation risk, weigh rate hikes",
+      "regions": [
+        "asia_pacific",
+        "americas",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "www.theregister.com - Articles",
+        "Markets-Economic Times",
+        "Finance"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 20.1,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.1,
+        "recency": 9.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -866,59 +816,6 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 78.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "11 Jul 2026 10:29 UTC",
-      "headline": "Fed officials fret over inflation risk, weigh rate hikes",
-      "regions": [
-        "asia_pacific",
-        "india",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "www.theregister.com - Articles",
-        "Finance",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 19.9,
-        "volume_confirmation": 17.4,
-        "source_diversity": 9.2,
-        "recency": 13.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 76.0,
@@ -965,6 +862,55 @@
         "source_diversity": 8.6,
         "recency": 8.8,
         "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 76.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 22,
+      "latest_at": "11 Jul 2026 13:00 UTC",
+      "headline": "SK Hynix says 2027 will be the 'worst year' for memory shortage, forecasts crunch to last until 2030 \u2014 CEO shares grim outlook on the day SK Hynix gets listed on Nasdaq",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "americas"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "BBC News",
+        "World | Deutsche Welle",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 19.3,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.1,
+        "recency": 9.4,
+        "geopolitical_severity": 10.0
       }
     },
     {
@@ -1273,6 +1219,59 @@
       }
     },
     {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 63.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 17,
+      "latest_at": "11 Jul 2026 18:55 UTC",
+      "headline": "Poland could cut arms aid to Ukraine as WWII spat continues",
+      "regions": [
+        "europe",
+        "global",
+        "americas",
+        "middle_east"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "BBC News",
+        "World | Deutsche Welle",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 20.6,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.6,
+        "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 62.0,
@@ -1324,11 +1323,6 @@
   ],
   "articles": [
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Defense & Aerospace - 17 articles - HIGH / BEARISH - Poland could cut arms aid to Ukraine as WWII spat continues"
-    },
-    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Europe Equity + Gold & Precious Metals - 11 articles - HIGH / BULLISH - Global Market: Euro zone inflation risks persist despite oil price retreat, ECB's Schnabel warns"
@@ -1336,12 +1330,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Asia Pacific Equity - 24 articles - MEDIUM / BULLISH - Meet SK Hynix, the trillion-dollar South Korean chipmaker debuting on U.S. markets"
+      "text": "Crypto & Digital Assets - 29 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Crypto & Digital Assets - 29 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / BEARISH - Fed officials fret over inflation risk, weigh rate hikes"
     },
     {
       "tag": "tag-bear",
@@ -1361,12 +1355,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BEARISH - Fed officials fret over inflation risk, weigh rate hikes"
+      "text": "India Equity Markets - 18 articles - HIGH / BEARISH - Ahead of Market: 10 things that will decide stock market action on Friday"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "India Equity Markets - 18 articles - HIGH / BEARISH - Ahead of Market: 10 things that will decide stock market action on Friday"
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Asia Pacific Equity - 22 articles - MEDIUM / BULLISH - SK Hynix says 2027 will be the 'worst year' for memory shortage, forecasts crunch to last until 2030 \u2014 CEO shares grim outlook on the day SK Hynix gets listed on Nasdaq"
     },
     {
       "tag": "tag-bull",
@@ -1397,6 +1391,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Bonds & Fixed Income - 11 articles - HIGH / BEARISH - India bonds dragged by rise in oil prices, Treasury yields on fresh US-Iran hostilities"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Defense & Aerospace - 17 articles - HIGH / BEARISH - Poland could cut arms aid to Ukraine as WWII spat continues"
     },
     {
       "tag": "tag-bear",
@@ -1519,11 +1518,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64159.6,
+      "price": 64271.09,
       "currency": "USD",
-      "change": 32.46,
-      "change_pct": 0.05,
-      "change_str": "+0.05%",
+      "change": 143.95,
+      "change_pct": 0.22,
+      "change_str": "+0.22%",
       "direction": "up"
     },
     {
@@ -1924,11 +1923,11 @@
     }
   },
   "logs": [
-    "2026-07-11 13:24:08 [INFO] AZALYST - status.json generated",
-    "2026-07-11 13:24:08 [INFO] PORTFOLIO - NAV USD 19,656.63 | Return -0.87%",
-    "2026-07-11 13:24:08 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-11 13:24:08 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, XLV, SH",
-    "2026-07-11 13:24:08 [INFO] TRADER - Closed trades: 10"
+    "2026-07-11 19:05:54 [INFO] AZALYST - status.json generated",
+    "2026-07-11 19:05:54 [INFO] PORTFOLIO - NAV USD 19,656.63 | Return -0.87%",
+    "2026-07-11 19:05:54 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-11 19:05:54 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, XLV, SH",
+    "2026-07-11 19:05:54 [INFO] TRADER - Closed trades: 10"
   ],
-  "generated_at": "2026-07-11 13:24:03 UTC"
+  "generated_at": "2026-07-11 19:05:50 UTC"
 }
