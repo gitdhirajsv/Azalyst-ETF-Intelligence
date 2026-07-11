@@ -38,7 +38,7 @@
       "pnl_pct_str": "-0.70%",
       "confidence": 86,
       "severity": "HIGH",
-      "days_held": 4,
+      "days_held": 5,
       "half_exited": false
     },
     {
@@ -61,7 +61,7 @@
       "pnl_pct_str": "-0.54%",
       "confidence": 77,
       "severity": "HIGH",
-      "days_held": 3,
+      "days_held": 4,
       "half_exited": false
     },
     {
@@ -365,13 +365,13 @@
   },
   "top_signal": {
     "ticker": "EWZ",
-    "rank_score": 23.740340488527018,
+    "rank_score": 23.742011834319523,
     "flow_score": 22.0,
     "options_score": 0.0,
     "rotation_score": 0.0,
-    "macro_score": 4.277584969357209,
+    "macro_score": 3.936013841150693,
     "news_score": 3.318,
-    "total": 53.33592545788422,
+    "total": 52.99602567547022,
     "publish": false,
     "direction": "long"
   },
@@ -465,6 +465,10 @@
       "score": 81.0
     },
     {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 79.0
+    },
+    {
       "symbol": "Clean Energy & Renewables + Commodities & Mining",
       "score": 79.0
     },
@@ -491,10 +495,6 @@
     {
       "symbol": "Banking & Financial Sector",
       "score": 71.0
-    },
-    {
-      "symbol": "Gold & Precious Metals",
-      "score": 68.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -524,20 +524,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 18,
-      "latest_at": "11 Jul 2026 02:09 UTC",
-      "headline": "U.S. Strikes Fail to Break Iran\u2019s Grip on the Strait of Hormuz",
+      "article_count": 19,
+      "latest_at": "11 Jul 2026 07:48 UTC",
+      "headline": "Poland could cut arms aid to Ukraine as WWII spat continues",
       "regions": [
-        "europe",
-        "americas",
+        "india",
+        "middle_east",
         "global",
-        "middle_east"
+        "americas"
       ],
       "sources": [
-        "Oilprice.com",
         "The Verge",
-        "US Top News and Analysis",
-        "World | Deutsche Welle"
+        "Defense News",
+        "BBC News",
+        "US Top News and Analysis"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -560,9 +560,9 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 20.5,
+        "signal_strength": 21.3,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.2,
+        "source_diversity": 15.3,
         "recency": 16.9,
         "geopolitical_severity": 13.0
       }
@@ -623,24 +623,24 @@
       "confidence": 87.0,
       "severity": "MEDIUM",
       "direction": "BULLISH",
-      "direction_score": 9.0,
+      "direction_score": 7.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "10 Jul 2026 23:07 UTC",
+      "article_count": 29,
+      "latest_at": "11 Jul 2026 07:48 UTC",
       "headline": "Meet SK Hynix, the trillion-dollar South Korean chipmaker debuting on U.S. markets",
       "regions": [
-        "global",
         "middle_east",
         "asia_pacific",
+        "global",
         "americas"
       ],
       "sources": [
-        "BBC News",
-        "Latest from Tom's Hardware",
         "Cointelegraph.com News",
-        "World | Deutsche Welle"
+        "Bloomberg Markets",
+        "The Verge",
+        "Tech"
       ],
       "primary_etf": "EWJ",
       "top_etfs": [
@@ -660,11 +660,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 20.4,
+        "signal_strength": 21.2,
         "volume_confirmation": 18.0,
         "source_diversity": 15.5,
         "recency": 16.9,
-        "geopolitical_severity": 11.7
+        "geopolitical_severity": 11.5
       }
     },
     {
@@ -710,6 +710,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 9.1,
         "recency": 12.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 79.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "11 Jul 2026 05:13 UTC",
+      "headline": "Fed officials fret over inflation risk, weigh rate hikes",
+      "regions": [
+        "middle_east",
+        "asia_pacific",
+        "global",
+        "americas"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "Cointelegraph.com News",
+        "Finance"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 19.9,
+        "volume_confirmation": 18.0,
+        "source_diversity": 9.2,
+        "recency": 13.1,
         "geopolitical_severity": 13.0
       }
     },
@@ -1070,59 +1123,6 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 68.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "10 Jul 2026 20:04 UTC",
-      "headline": "Gold Heads for Weekly Loss as Traders Consider Iran, Rates Path",
-      "regions": [
-        "india",
-        "americas",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "www.theregister.com - Articles",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.3,
-        "volume_confirmation": 13.7,
-        "source_diversity": 12.0,
-        "recency": 9.2,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
       "confidence": 68.0,
@@ -1325,7 +1325,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Defense & Aerospace - 18 articles - HIGH / BEARISH - U.S. Strikes Fail to Break Iran\u2019s Grip on the Strait of Hormuz"
+      "text": "Defense & Aerospace - 19 articles - HIGH / BEARISH - Poland could cut arms aid to Ukraine as WWII spat continues"
     },
     {
       "tag": "tag-bull",
@@ -1335,12 +1335,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Asia Pacific Equity - 24 articles - MEDIUM / BULLISH - Meet SK Hynix, the trillion-dollar South Korean chipmaker debuting on U.S. markets"
+      "text": "Asia Pacific Equity - 29 articles - MEDIUM / BULLISH - Meet SK Hynix, the trillion-dollar South Korean chipmaker debuting on U.S. markets"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Crypto & Digital Assets - 29 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / BEARISH - Fed officials fret over inflation risk, weigh rate hikes"
     },
     {
       "tag": "tag-bear",
@@ -1376,11 +1381,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Banking & Financial Sector - 9 articles - MEDIUM / BULLISH - Klarna seeks U.S. bank charter in latest push beyond buy now, pay later"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Gold & Precious Metals - 7 articles - HIGH / BEARISH - Gold Heads for Weekly Loss as Traders Consider Iran, Rates Path"
     },
     {
       "tag": "tag-bear",
@@ -1518,12 +1518,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63999.98,
+      "price": 64114.4,
       "currency": "USD",
-      "change": 806.83,
-      "change_pct": 1.28,
-      "change_str": "+1.28%",
-      "direction": "up"
+      "change": -12.74,
+      "change_pct": -0.02,
+      "change_str": "-0.02%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
@@ -1923,11 +1923,11 @@
     }
   },
   "logs": [
-    "2026-07-11 02:18:17 [INFO] AZALYST - status.json generated",
-    "2026-07-11 02:18:17 [INFO] PORTFOLIO - NAV USD 19,656.63 | Return -0.87%",
-    "2026-07-11 02:18:17 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-11 02:18:17 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, XLV, SH",
-    "2026-07-11 02:18:17 [INFO] TRADER - Closed trades: 10"
+    "2026-07-11 08:01:59 [INFO] AZALYST - status.json generated",
+    "2026-07-11 08:01:59 [INFO] PORTFOLIO - NAV USD 19,656.63 | Return -0.87%",
+    "2026-07-11 08:01:59 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-11 08:01:59 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, XLV, SH",
+    "2026-07-11 08:01:59 [INFO] TRADER - Closed trades: 10"
   ],
-  "generated_at": "2026-07-11 02:18:14 UTC"
+  "generated_at": "2026-07-11 08:01:57 UTC"
 }
