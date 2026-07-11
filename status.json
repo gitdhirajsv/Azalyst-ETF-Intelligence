@@ -84,7 +84,7 @@
       "pnl_pct_str": "+0.33%",
       "confidence": 89,
       "severity": "CRITICAL",
-      "days_held": 3,
+      "days_held": 4,
       "half_exited": false
     },
     {
@@ -348,30 +348,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.10472791357491402,
+    "vix_level": 15.029999732971191,
+    "vix_percentile_1y": 0.0992063492063492,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
+      "rank": 30,
+      "flow": 22,
+      "options": 18,
       "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "macro": 8,
+      "news": 7
     }
   },
   "top_signal": {
-    "ticker": "EWZ",
-    "rank_score": 23.742011834319523,
-    "flow_score": 22.0,
-    "options_score": 0.0,
-    "rotation_score": 0.0,
-    "macro_score": 3.936013841150693,
-    "news_score": 3.318,
-    "total": 52.99602567547022,
+    "ticker": "XLE",
+    "rank_score": 12.898224852071005,
+    "flow_score": 2.363836420117194,
+    "options_score": 14.158232899656294,
+    "rotation_score": 15.0,
+    "macro_score": 5.7842851730255065,
+    "news_score": 4.76,
+    "total": 54.964579344869996,
     "publish": false,
     "direction": "long"
   },
@@ -458,15 +458,11 @@
     },
     {
       "symbol": "Asia Pacific Equity",
-      "score": 87.0
+      "score": 86.0
     },
     {
       "symbol": "Crypto & Digital Assets",
       "score": 81.0
-    },
-    {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 79.0
     },
     {
       "symbol": "Clean Energy & Renewables + Commodities & Mining",
@@ -479,6 +475,10 @@
     {
       "symbol": "Emerging Markets",
       "score": 79.0
+    },
+    {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 78.0
     },
     {
       "symbol": "India Equity Markets",
@@ -501,11 +501,11 @@
       "score": 68.0
     },
     {
-      "symbol": "Bonds & Fixed Income",
-      "score": 65.0
+      "symbol": "Cybersecurity",
+      "score": 66.0
     },
     {
-      "symbol": "Cybersecurity",
+      "symbol": "Bonds & Fixed Income",
       "score": 65.0
     },
     {
@@ -524,20 +524,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 19,
-      "latest_at": "11 Jul 2026 07:48 UTC",
+      "article_count": 17,
+      "latest_at": "11 Jul 2026 13:08 UTC",
       "headline": "Poland could cut arms aid to Ukraine as WWII spat continues",
       "regions": [
-        "india",
-        "middle_east",
         "global",
-        "americas"
+        "americas",
+        "middle_east",
+        "europe"
       ],
       "sources": [
+        "US Top News and Analysis",
         "The Verge",
-        "Defense News",
         "BBC News",
-        "US Top News and Analysis"
+        "Finance"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -560,9 +560,9 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 21.3,
+        "signal_strength": 20.8,
         "volume_confirmation": 18.0,
-        "source_diversity": 15.3,
+        "source_diversity": 16.2,
         "recency": 16.9,
         "geopolitical_severity": 13.0
       }
@@ -620,27 +620,27 @@
     {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
-      "confidence": 87.0,
+      "confidence": 86.0,
       "severity": "MEDIUM",
       "direction": "BULLISH",
-      "direction_score": 7.0,
+      "direction_score": 5.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 29,
-      "latest_at": "11 Jul 2026 07:48 UTC",
+      "article_count": 24,
+      "latest_at": "11 Jul 2026 13:00 UTC",
       "headline": "Meet SK Hynix, the trillion-dollar South Korean chipmaker debuting on U.S. markets",
       "regions": [
-        "middle_east",
         "asia_pacific",
         "global",
+        "middle_east",
         "americas"
       ],
       "sources": [
-        "Cointelegraph.com News",
-        "Bloomberg Markets",
-        "The Verge",
-        "Tech"
+        "US Top News and Analysis",
+        "Tech",
+        "BBC News",
+        "Cointelegraph.com News"
       ],
       "primary_etf": "EWJ",
       "top_etfs": [
@@ -660,10 +660,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 21.2,
+        "signal_strength": 20.3,
         "volume_confirmation": 18.0,
-        "source_diversity": 15.5,
-        "recency": 16.9,
+        "source_diversity": 15.1,
+        "recency": 16.7,
         "geopolitical_severity": 11.5
       }
     },
@@ -710,59 +710,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 9.1,
         "recency": 12.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 79.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "11 Jul 2026 05:13 UTC",
-      "headline": "Fed officials fret over inflation risk, weigh rate hikes",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "global",
-        "americas"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "Finance"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 19.9,
-        "volume_confirmation": 18.0,
-        "source_diversity": 9.2,
-        "recency": 13.1,
         "geopolitical_severity": 13.0
       }
     },
@@ -916,6 +863,59 @@
         "source_diversity": 13.6,
         "recency": 17.0,
         "geopolitical_severity": 10.7
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 78.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "11 Jul 2026 10:29 UTC",
+      "headline": "Fed officials fret over inflation risk, weigh rate hikes",
+      "regions": [
+        "asia_pacific",
+        "india",
+        "americas",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "www.theregister.com - Articles",
+        "Finance",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 19.9,
+        "volume_confirmation": 17.4,
+        "source_diversity": 9.2,
+        "recency": 13.0,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1176,6 +1176,51 @@
       }
     },
     {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 66.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "11 Jul 2026 11:00 UTC",
+      "headline": "Destructive Windows backdoor stuffs multiple wipers and ransomware code into a single package",
+      "regions": [
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Tech",
+        "Cointelegraph.com News",
+        "Markets-Economic Times",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.0,
+        "volume_confirmation": 11.3,
+        "source_diversity": 10.4,
+        "recency": 13.7,
+        "geopolitical_severity": 10.9
+      }
+    },
+    {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income",
       "confidence": 65.0,
@@ -1225,50 +1270,6 @@
         "source_diversity": 12.9,
         "recency": 16.5,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 65.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "09 Jul 2026 18:50 UTC",
-      "headline": "Arrest and extradition of Scattered Spider hacker shines light on how Windows telemetry GDIDs can identify and track users \u2014 Microsoft device identifier is just one digital fingerprint in a software world rife with them",
-      "regions": [
-        "global"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Defense News",
-        "US Top News and Analysis",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.4,
-        "volume_confirmation": 14.6,
-        "source_diversity": 7.8,
-        "recency": 13.9,
-        "geopolitical_severity": 6.7
       }
     },
     {
@@ -1325,7 +1326,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Defense & Aerospace - 19 articles - HIGH / BEARISH - Poland could cut arms aid to Ukraine as WWII spat continues"
+      "text": "Defense & Aerospace - 17 articles - HIGH / BEARISH - Poland could cut arms aid to Ukraine as WWII spat continues"
     },
     {
       "tag": "tag-bull",
@@ -1335,17 +1336,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Asia Pacific Equity - 29 articles - MEDIUM / BULLISH - Meet SK Hynix, the trillion-dollar South Korean chipmaker debuting on U.S. markets"
+      "text": "Asia Pacific Equity - 24 articles - MEDIUM / BULLISH - Meet SK Hynix, the trillion-dollar South Korean chipmaker debuting on U.S. markets"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Crypto & Digital Assets - 29 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / BEARISH - Fed officials fret over inflation risk, weigh rate hikes"
     },
     {
       "tag": "tag-bear",
@@ -1361,6 +1357,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Emerging Markets - 7 articles - MEDIUM / BEARISH - MSCI keeps South Korea as emerging market, delays Indonesia review amid downgrade risk"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BEARISH - Fed officials fret over inflation risk, weigh rate hikes"
     },
     {
       "tag": "tag-bear",
@@ -1388,14 +1389,14 @@
       "text": "Energy / Oil & Gas - 17 articles - CRITICAL / BEARISH - U.S. Oil Dominance Keeps Growing Despite Lower Prices"
     },
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Cybersecurity - 5 articles - MEDIUM / BULLISH - Destructive Windows backdoor stuffs multiple wipers and ransomware code into a single package"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Bonds & Fixed Income - 11 articles - HIGH / BEARISH - India bonds dragged by rise in oil prices, Treasury yields on fresh US-Iran hostilities"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Cybersecurity - 8 articles - MEDIUM / BULLISH - Arrest and extradition of Scattered Spider hacker shines light on how Windows telemetry GDIDs can identify and track users \u2014 Microsoft device identifier is just one digital fingerprint in a software world rife with them"
     },
     {
       "tag": "tag-bear",
@@ -1496,34 +1497,34 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4128.9,
+      "price": 4113.7,
       "currency": "USD",
-      "change": -1.7,
-      "change_pct": -0.04,
-      "change_str": "-0.04%",
+      "change": -16.9,
+      "change_pct": -0.41,
+      "change_str": "-0.41%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 71.51,
+      "price": 71.41,
       "currency": "USD",
-      "change": -0.57,
-      "change_pct": -0.79,
-      "change_str": "-0.79%",
+      "change": -0.67,
+      "change_pct": -0.93,
+      "change_str": "-0.93%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64114.4,
+      "price": 64159.6,
       "currency": "USD",
-      "change": -12.74,
-      "change_pct": -0.02,
-      "change_str": "-0.02%",
-      "direction": "down"
+      "change": 32.46,
+      "change_pct": 0.05,
+      "change_str": "+0.05%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
@@ -1923,11 +1924,11 @@
     }
   },
   "logs": [
-    "2026-07-11 08:01:59 [INFO] AZALYST - status.json generated",
-    "2026-07-11 08:01:59 [INFO] PORTFOLIO - NAV USD 19,656.63 | Return -0.87%",
-    "2026-07-11 08:01:59 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-11 08:01:59 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, XLV, SH",
-    "2026-07-11 08:01:59 [INFO] TRADER - Closed trades: 10"
+    "2026-07-11 13:24:08 [INFO] AZALYST - status.json generated",
+    "2026-07-11 13:24:08 [INFO] PORTFOLIO - NAV USD 19,656.63 | Return -0.87%",
+    "2026-07-11 13:24:08 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-11 13:24:08 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, XLV, SH",
+    "2026-07-11 13:24:08 [INFO] TRADER - Closed trades: 10"
   ],
-  "generated_at": "2026-07-11 08:01:57 UTC"
+  "generated_at": "2026-07-11 13:24:03 UTC"
 }
