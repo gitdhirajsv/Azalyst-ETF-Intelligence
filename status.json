@@ -348,30 +348,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "LOW_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.10472791297886758,
-    "vix_level": 15.029999732971191,
-    "vix_percentile_1y": 0.0992063492063492,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 30,
-      "flow": 22,
-      "options": 18,
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
       "rotation": 15,
-      "macro": 8,
-      "news": 7
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
-    "ticker": "XLK",
-    "rank_score": 15.510155670867306,
-    "flow_score": 5.298031416381922,
-    "options_score": 16.341713122478676,
-    "rotation_score": 15.0,
-    "macro_score": 0.0,
-    "news_score": 4.032,
-    "total": 56.1819002097279,
+    "ticker": "EWZ",
+    "rank_score": 23.740340488527018,
+    "flow_score": 22.0,
+    "options_score": 0.0,
+    "rotation_score": 0.0,
+    "macro_score": 4.277584969357209,
+    "news_score": 3.318,
+    "total": 53.33592545788422,
     "publish": false,
     "direction": "long"
   },
@@ -449,11 +449,11 @@
   },
   "confidence": [
     {
-      "symbol": "Europe Equity + Gold & Precious Metals",
-      "score": 90.0
+      "symbol": "Defense & Aerospace",
+      "score": 91.0
     },
     {
-      "symbol": "Defense & Aerospace",
+      "symbol": "Europe Equity + Gold & Precious Metals",
       "score": 90.0
     },
     {
@@ -481,10 +481,6 @@
       "score": 76.0
     },
     {
-      "symbol": "Gold & Precious Metals",
-      "score": 75.0
-    },
-    {
       "symbol": "Healthcare & Pharma",
       "score": 73.0
     },
@@ -495,6 +491,10 @@
     {
       "symbol": "Banking & Financial Sector",
       "score": 71.0
+    },
+    {
+      "symbol": "Gold & Precious Metals",
+      "score": 68.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -514,6 +514,59 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 91.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 18,
+      "latest_at": "11 Jul 2026 02:09 UTC",
+      "headline": "U.S. Strikes Fail to Break Iran\u2019s Grip on the Strait of Hormuz",
+      "regions": [
+        "europe",
+        "americas",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "The Verge",
+        "US Top News and Analysis",
+        "World | Deutsche Welle"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 20.5,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.2,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
     {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity + Gold & Precious Metals",
@@ -561,58 +614,6 @@
         "volume_confirmation": 16.8,
         "source_diversity": 14.4,
         "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 90.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 16,
-      "latest_at": "10 Jul 2026 22:04 UTC",
-      "headline": "U.S. Strikes Fail to Break Iran\u2019s Grip on the Strait of Hormuz",
-      "regions": [
-        "europe",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Latest from Tom's Hardware",
-        "Defense News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 20.1,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.9,
-        "recency": 17.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -914,59 +915,6 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 75.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "10 Jul 2026 20:04 UTC",
-      "headline": "Gold Heads for Weekly Loss as Traders Consider Iran, Rates Path",
-      "regions": [
-        "middle_east",
-        "india",
-        "global",
-        "americas"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "www.theregister.com - Articles",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 15.2,
-        "volume_confirmation": 14.6,
-        "source_diversity": 12.0,
-        "recency": 13.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "healthcare_pharma",
       "sector_label": "Healthcare & Pharma",
       "confidence": 73.0,
@@ -1119,6 +1067,59 @@
         "source_diversity": 11.0,
         "recency": 15.5,
         "geopolitical_severity": 10.7
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 68.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "10 Jul 2026 20:04 UTC",
+      "headline": "Gold Heads for Weekly Loss as Traders Consider Iran, Rates Path",
+      "regions": [
+        "india",
+        "americas",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "www.theregister.com - Articles",
+        "Bloomberg Markets",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 14.3,
+        "volume_confirmation": 13.7,
+        "source_diversity": 12.0,
+        "recency": 9.2,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1322,14 +1323,14 @@
   ],
   "articles": [
     {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Defense & Aerospace - 18 articles - HIGH / BEARISH - U.S. Strikes Fail to Break Iran\u2019s Grip on the Strait of Hormuz"
+    },
+    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Europe Equity + Gold & Precious Metals - 11 articles - HIGH / BULLISH - Global Market: Euro zone inflation risks persist despite oil price retreat, ECB's Schnabel warns"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Defense & Aerospace - 16 articles - HIGH / BEARISH - U.S. Strikes Fail to Break Iran\u2019s Grip on the Strait of Hormuz"
     },
     {
       "tag": "tag-bull",
@@ -1362,11 +1363,6 @@
       "text": "India Equity Markets - 18 articles - HIGH / BEARISH - Ahead of Market: 10 things that will decide stock market action on Friday"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Gold & Precious Metals - 8 articles - HIGH / BEARISH - Gold Heads for Weekly Loss as Traders Consider Iran, Rates Path"
-    },
-    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Healthcare & Pharma - 5 articles - CRITICAL / BULLISH - AstraZeneca stock drops 9% after heart drug trial miss deals rare blow to pharma powerhouse"
@@ -1380,6 +1376,11 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Banking & Financial Sector - 9 articles - MEDIUM / BULLISH - Klarna seeks U.S. bank charter in latest push beyond buy now, pay later"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Gold & Precious Metals - 7 articles - HIGH / BEARISH - Gold Heads for Weekly Loss as Traders Consider Iran, Rates Path"
     },
     {
       "tag": "tag-bear",
@@ -1442,9 +1443,9 @@
       "region": "UK",
       "price": 10497.29,
       "currency": "GBP",
-      "change": 8.29,
-      "change_pct": 0.08,
-      "change_str": "+0.08%",
+      "change": 24.79,
+      "change_pct": 0.24,
+      "change_str": "+0.24%",
       "direction": "up"
     },
     {
@@ -1453,10 +1454,10 @@
       "region": "EU",
       "price": 25067.09,
       "currency": "EUR",
-      "change": 169.64,
-      "change_pct": 0.68,
-      "change_str": "+0.68%",
-      "direction": "up"
+      "change": -51.18,
+      "change_pct": -0.2,
+      "change_str": "-0.20%",
+      "direction": "down"
     },
     {
       "label": "Nikkei 225",
@@ -1464,9 +1465,9 @@
       "region": "JP",
       "price": 68557.73,
       "currency": "JPY",
-      "change": 1738.68,
-      "change_pct": 2.6,
-      "change_str": "+2.60%",
+      "change": 813.88,
+      "change_pct": 1.2,
+      "change_str": "+1.20%",
       "direction": "up"
     },
     {
@@ -1475,10 +1476,10 @@
       "region": "HK",
       "price": 24175.12,
       "currency": "HKD",
-      "change": -24.34,
-      "change_pct": -0.1,
-      "change_str": "-0.10%",
-      "direction": "down"
+      "change": 144.94,
+      "change_pct": 0.6,
+      "change_str": "+0.60%",
+      "direction": "up"
     },
     {
       "label": "Nifty 50",
@@ -1486,9 +1487,9 @@
       "region": "IN",
       "price": 24206.9,
       "currency": "INR",
-      "change": 324.85,
-      "change_pct": 1.36,
-      "change_str": "+1.36%",
+      "change": 244.1,
+      "change_pct": 1.02,
+      "change_str": "+1.02%",
       "direction": "up"
     },
     {
@@ -1517,11 +1518,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64082.01,
+      "price": 63999.98,
       "currency": "USD",
-      "change": 888.86,
-      "change_pct": 1.41,
-      "change_str": "+1.41%",
+      "change": 806.83,
+      "change_pct": 1.28,
+      "change_str": "+1.28%",
       "direction": "up"
     },
     {
@@ -1922,11 +1923,11 @@
     }
   },
   "logs": [
-    "2026-07-10 23:20:30 [INFO] AZALYST - status.json generated",
-    "2026-07-10 23:20:30 [INFO] PORTFOLIO - NAV USD 19,656.63 | Return -0.87%",
-    "2026-07-10 23:20:30 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-10 23:20:30 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, XLV, SH",
-    "2026-07-10 23:20:30 [INFO] TRADER - Closed trades: 10"
+    "2026-07-11 02:18:17 [INFO] AZALYST - status.json generated",
+    "2026-07-11 02:18:17 [INFO] PORTFOLIO - NAV USD 19,656.63 | Return -0.87%",
+    "2026-07-11 02:18:17 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-11 02:18:17 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, XLV, SH",
+    "2026-07-11 02:18:17 [INFO] TRADER - Closed trades: 10"
   ],
-  "generated_at": "2026-07-10 23:20:27 UTC"
+  "generated_at": "2026-07-11 02:18:14 UTC"
 }
