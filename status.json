@@ -84,7 +84,7 @@
       "pnl_pct_str": "+0.33%",
       "confidence": 89,
       "severity": "CRITICAL",
-      "days_held": 4,
+      "days_held": 5,
       "half_exited": false
     },
     {
@@ -449,24 +449,24 @@
   },
   "confidence": [
     {
-      "symbol": "Defense & Aerospace",
-      "score": 91.0
-    },
-    {
       "symbol": "Europe Equity + Gold & Precious Metals",
       "score": 90.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors + Asia Pacific Equity",
-      "score": 86.0
+      "symbol": "Defense & Aerospace",
+      "score": 90.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 84.0
+      "symbol": "Technology & AI / Semiconductors + Asia Pacific Equity",
+      "score": 82.0
     },
     {
       "symbol": "Crypto & Digital Assets",
       "score": 81.0
+    },
+    {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 79.0
     },
     {
       "symbol": "Clean Energy & Renewables + Commodities & Mining",
@@ -514,58 +514,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 91.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 16,
-      "latest_at": "12 Jul 2026 08:09 UTC",
-      "headline": "Poland could cut arms aid to Ukraine as WWII spat continues",
-      "regions": [
-        "europe",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "The Verge",
-        "BBC News",
-        "World News - Breaking international news and headlines | Sky News"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 20.6,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.6,
-        "recency": 17.0,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity + Gold & Precious Metals",
@@ -617,29 +565,81 @@
       }
     },
     {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 90.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 17,
+      "latest_at": "12 Jul 2026 13:08 UTC",
+      "headline": "Poland could cut arms aid to Ukraine as WWII spat continues",
+      "regions": [
+        "europe",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Defense News",
+        "The Verge",
+        "Bloomberg Markets",
+        "Oilprice.com"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.9,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors + Asia Pacific Equity",
-      "confidence": 86.0,
+      "confidence": 82.0,
       "severity": "CRITICAL",
       "direction": "BULLISH",
-      "direction_score": 12.0,
+      "direction_score": 10.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 13,
       "latest_at": "12 Jul 2026 04:07 UTC",
-      "headline": "Morgan Stanley warns AI chip rally may be running out of steam",
+      "headline": "Chip Industry Week In Review",
       "regions": [
-        "middle_east",
+        "americas",
         "india",
-        "asia_pacific",
-        "global"
+        "europe",
+        "middle_east"
       ],
       "sources": [
-        "Bloomberg Markets",
-        "Cointelegraph.com News",
+        "Tech",
+        "Semiconductor Engineering",
         "www.theregister.com - Articles",
-        "Tech"
+        "Latest from Tom's Hardware"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -664,61 +664,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.5,
-        "recency": 11.3,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 84.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "12 Jul 2026 06:15 UTC",
-      "headline": "Fed officials divided on US inflation views; US home prices hit all-time high",
-      "regions": [
-        "middle_east",
-        "india",
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "www.theregister.com - Articles",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 21.1,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.1,
-        "recency": 14.0,
+        "source_diversity": 16.9,
+        "recency": 6.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -765,6 +712,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 9.1,
         "recency": 12.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 79.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "12 Jul 2026 06:15 UTC",
+      "headline": "Fed officials divided on US inflation views; US home prices hit all-time high",
+      "regions": [
+        "americas",
+        "india",
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Latest from Tom's Hardware",
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.2,
+        "volume_confirmation": 17.4,
+        "source_diversity": 12.9,
+        "recency": 8.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -1322,29 +1322,29 @@
   ],
   "articles": [
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Defense & Aerospace - 16 articles - HIGH / BEARISH - Poland could cut arms aid to Ukraine as WWII spat continues"
-    },
-    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Europe Equity + Gold & Precious Metals - 11 articles - HIGH / BULLISH - Global Market: Euro zone inflation risks persist despite oil price retreat, ECB's Schnabel warns"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Technology & AI / Semiconductors + Asia Pacific Equity - 13 articles - CRITICAL / BULLISH - Morgan Stanley warns AI chip rally may be running out of steam"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / BEARISH - Fed officials divided on US inflation views; US home prices hit all-time high"
+      "text": "Defense & Aerospace - 17 articles - HIGH / BEARISH - Poland could cut arms aid to Ukraine as WWII spat continues"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Technology & AI / Semiconductors + Asia Pacific Equity - 13 articles - CRITICAL / BULLISH - Chip Industry Week In Review"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Crypto & Digital Assets - 29 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BEARISH - Fed officials divided on US inflation views; US home prices hit all-time high"
     },
     {
       "tag": "tag-bear",
@@ -1517,11 +1517,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63969.7,
+      "price": 64043.65,
       "currency": "USD",
-      "change": 167.67,
-      "change_pct": 0.26,
-      "change_str": "+0.26%",
+      "change": 241.62,
+      "change_pct": 0.38,
+      "change_str": "+0.38%",
       "direction": "up"
     },
     {
@@ -1922,11 +1922,11 @@
     }
   },
   "logs": [
-    "2026-07-12 08:20:49 [INFO] AZALYST - status.json generated",
-    "2026-07-12 08:20:49 [INFO] PORTFOLIO - NAV USD 19,656.63 | Return -0.87%",
-    "2026-07-12 08:20:49 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-12 08:20:49 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, XLV, SH",
-    "2026-07-12 08:20:49 [INFO] TRADER - Closed trades: 10"
+    "2026-07-12 13:20:16 [INFO] AZALYST - status.json generated",
+    "2026-07-12 13:20:16 [INFO] PORTFOLIO - NAV USD 19,656.63 | Return -0.87%",
+    "2026-07-12 13:20:16 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-12 13:20:16 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, XLV, SH",
+    "2026-07-12 13:20:16 [INFO] TRADER - Closed trades: 10"
   ],
-  "generated_at": "2026-07-12 08:20:45 UTC"
+  "generated_at": "2026-07-12 13:20:11 UTC"
 }
