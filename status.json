@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 19500.48,
+  "portfolio_value": 19500.03,
   "total_deposited": 19777.77,
-  "cash": 3057.72,
+  "cash": 2646.46,
   "monthly_reserve": 0.0,
-  "market_value": 16442.76,
-  "total_invested": 16608.65,
-  "unrealised_pnl": -165.89,
-  "unrealised_str": "-165.89",
+  "market_value": 16853.57,
+  "total_invested": 17019.91,
+  "unrealised_pnl": -166.34,
+  "unrealised_str": "-166.34",
   "realised_pnl": -111.4,
   "realised_str": "-111.40",
   "change": "-1.40%",
@@ -14,7 +14,7 @@
   "closed_trades": 11,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 19905.11,
-  "drawdown_now_pct": 2.03,
+  "drawdown_now_pct": 2.04,
   "max_drawdown_pct": 12.69,
   "usd_inr_rate": 95.62,
   "positions": [
@@ -166,14 +166,14 @@
       "entry": 32.95,
       "current": 32.97,
       "peak_price": 33.0,
-      "trail_stop": 30.64,
-      "dist_to_trail_pct": 7.07,
-      "units": 68.82439,
-      "invested": 2267.43,
-      "pnl": 1.71,
-      "pnl_str": "+1.71",
-      "pnl_pct": 0.08,
-      "pnl_pct_str": "+0.08%",
+      "trail_stop": 30.65,
+      "dist_to_trail_pct": 7.04,
+      "units": 81.284551,
+      "invested": 2678.7,
+      "pnl": 1.26,
+      "pnl_str": "+1.26",
+      "pnl_pct": 0.05,
+      "pnl_pct_str": "+0.05%",
       "confidence": 95,
       "severity": "HIGH",
       "days_held": 0,
@@ -408,9 +408,9 @@
     "flow_score": 20.0,
     "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 7.3689822473137845,
+    "macro_score": 7.374673350290961,
     "news_score": 6.8,
-    "total": 66.45342669175822,
+    "total": 66.4591177947354,
     "publish": true,
     "direction": "long"
   },
@@ -470,8 +470,8 @@
       5.3,
       30.2,
       1.8,
-      11.6,
-      15.7
+      13.7,
+      13.6
     ]
   },
   "pnl": {
@@ -491,7 +491,7 @@
       21.63,
       -12.02,
       -6.05,
-      1.71
+      1.26
     ]
   },
   "confidence": [
@@ -516,8 +516,8 @@
       "score": 88.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 81.0
+      "symbol": "Crypto & Digital Assets + Bonds & Fixed Income",
+      "score": 80.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -821,27 +821,28 @@
     },
     {
       "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 81.0,
-      "severity": "HIGH",
+      "sector_label": "Crypto & Digital Assets + Bonds & Fixed Income",
+      "confidence": 80.0,
+      "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -0.5,
+      "direction_score": 2.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 29,
-      "latest_at": "13 Jul 2026 14:07 UTC",
+      "article_count": 13,
+      "latest_at": "13 Jul 2026 18:37 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
+        "americas",
         "asia_pacific",
-        "middle_east",
-        "europe",
-        "global"
+        "global",
+        "europe"
       ],
       "sources": [
         "US Top News and Analysis",
         "Cointelegraph.com News",
-        "Tech"
+        "Bloomberg Markets",
+        "Markets-Economic Times"
       ],
       "primary_etf": "IBIT",
       "top_etfs": [
@@ -860,8 +861,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 6.5,
-        "recency": 13.3,
+        "source_diversity": 12.8,
+        "recency": 10.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -1396,7 +1397,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Crypto & Digital Assets - 29 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
+      "text": "Crypto & Digital Assets + Bonds & Fixed Income - 13 articles - CRITICAL / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
@@ -1489,9 +1490,9 @@
       "region": "UK",
       "price": 10498.29,
       "currency": "GBP",
-      "change": 0.99,
-      "change_pct": 0.01,
-      "change_str": "+0.01%",
+      "change": 25.79,
+      "change_pct": 0.25,
+      "change_str": "+0.25%",
       "direction": "up"
     },
     {
@@ -1542,33 +1543,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4011.4,
+      "price": 4008.6,
       "currency": "USD",
-      "change": -92.7,
-      "change_pct": -2.26,
-      "change_str": "-2.26%",
+      "change": -95.5,
+      "change_pct": -2.33,
+      "change_str": "-2.33%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 78.04,
+      "price": 78.7,
       "currency": "USD",
-      "change": 6.63,
-      "change_pct": 9.28,
-      "change_str": "+9.28%",
+      "change": 7.29,
+      "change_pct": 10.21,
+      "change_str": "+10.21%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63736.4,
+      "price": 61978.86,
       "currency": "USD",
-      "change": -21.82,
-      "change_pct": -0.03,
-      "change_str": "-0.03%",
+      "change": -1779.36,
+      "change_pct": -2.79,
+      "change_str": "-2.79%",
       "direction": "down"
     },
     {
@@ -1578,8 +1579,8 @@
       "price": 101.28,
       "currency": "USD",
       "change": 0.31,
-      "change_pct": 0.31,
-      "change_str": "+0.31%",
+      "change_pct": 0.3,
+      "change_str": "+0.30%",
       "direction": "up"
     },
     {
@@ -1596,7 +1597,7 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 2.03,
+    "drawdown_from_peak_pct": 2.04,
     "portfolio_peak": 19905.11,
     "vix": 17.16,
     "vix_regime": "ELEVATED",
@@ -1613,7 +1614,7 @@
       },
       {
         "sector": "Inverse / Hedge",
-        "weight": 11.6,
+        "weight": 13.7,
         "at_cap": false
       },
       {
@@ -1743,17 +1744,17 @@
           "target_weight_pct": 15.0,
           "drift_pct": 15.16,
           "action": "TRIM",
-          "amount": 2955.79,
+          "amount": 2955.86,
           "etf_name": "Health Care Select Sector SPDR",
           "regime_note": ""
         },
         {
           "ticker": "IBIT",
-          "actual_weight_pct": 29.31,
+          "actual_weight_pct": 29.32,
           "target_weight_pct": 15.0,
-          "drift_pct": 14.31,
+          "drift_pct": 14.32,
           "action": "TRIM",
-          "amount": 2791.46,
+          "amount": 2791.52,
           "etf_name": "iShares Bitcoin Trust ETF",
           "regime_note": ""
         },
@@ -1763,7 +1764,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -13.25,
           "action": "ADD",
-          "amount": 2583.16,
+          "amount": 2583.09,
           "etf_name": "Invesco QQQ Trust",
           "regime_note": ""
         },
@@ -1773,7 +1774,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -12.66,
           "action": "ADD",
-          "amount": 2469.26,
+          "amount": 2469.19,
           "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
@@ -1783,7 +1784,7 @@
           "target_weight_pct": 15.0,
           "drift_pct": -11.18,
           "action": "ADD",
-          "amount": 2180.92,
+          "amount": 2180.85,
           "etf_name": "iShares MSCI India ETF",
           "regime_note": ""
         },
@@ -1793,18 +1794,8 @@
           "target_weight_pct": 15.0,
           "drift_pct": -9.7,
           "action": "ADD",
-          "amount": 1890.73,
+          "amount": 1890.66,
           "etf_name": "Energy Select Sector SPDR",
-          "regime_note": ""
-        },
-        {
-          "ticker": "CASH",
-          "actual_weight_pct": 15.68,
-          "target_weight_pct": 10.0,
-          "drift_pct": 5.68,
-          "action": "DEPLOY",
-          "amount": 1107.67,
-          "etf_name": "Cash Reserve",
           "regime_note": ""
         }
       ],
@@ -2029,11 +2020,11 @@
     }
   },
   "logs": [
-    "2026-07-13 22:11:25 [INFO] AZALYST - status.json generated",
-    "2026-07-13 22:11:25 [INFO] PORTFOLIO - NAV USD 19,500.48 | Return -1.40%",
-    "2026-07-13 22:11:25 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-13 22:11:25 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, XLV, QQQ, SH",
-    "2026-07-13 22:11:25 [INFO] TRADER - Closed trades: 11"
+    "2026-07-13 23:15:45 [INFO] AZALYST - status.json generated",
+    "2026-07-13 23:15:45 [INFO] PORTFOLIO - NAV USD 19,500.03 | Return -1.40%",
+    "2026-07-13 23:15:45 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-13 23:15:45 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, XLV, QQQ, SH",
+    "2026-07-13 23:15:45 [INFO] TRADER - Closed trades: 11"
   ],
-  "generated_at": "2026-07-13 22:11:21 UTC"
+  "generated_at": "2026-07-13 23:15:42 UTC"
 }
