@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 19650.59,
+  "portfolio_value": 19650.5,
   "total_deposited": 19649.33,
-  "cash": 3319.74,
+  "cash": 3239.4,
   "monthly_reserve": 0.0,
-  "market_value": 16330.85,
-  "total_invested": 16221.36,
-  "unrealised_pnl": 109.5,
-  "unrealised_str": "+109.50",
+  "market_value": 16411.1,
+  "total_invested": 16301.69,
+  "unrealised_pnl": 109.41,
+  "unrealised_str": "+109.41",
   "realised_pnl": -108.24,
   "realised_str": "-108.24",
   "change": "+0.01%",
@@ -48,17 +48,17 @@
       "sector": "Banking & Financial Sector",
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 55.69,
+      "entry": 55.81,
       "current": 56.56,
       "peak_price": 56.66,
-      "trail_stop": 51.8,
-      "dist_to_trail_pct": 8.42,
-      "units": 9.827388,
-      "invested": 547.33,
-      "pnl": 8.51,
-      "pnl_str": "+8.51",
-      "pnl_pct": 1.55,
-      "pnl_pct_str": "+1.55%",
+      "trail_stop": 51.9,
+      "dist_to_trail_pct": 8.23,
+      "units": 11.246223,
+      "invested": 627.67,
+      "pnl": 8.42,
+      "pnl_str": "+8.42",
+      "pnl_pct": 1.34,
+      "pnl_pct_str": "+1.34%",
       "confidence": 87,
       "severity": "HIGH",
       "days_held": 8,
@@ -396,30 +396,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "LOW_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.07195062997627696,
-    "vix_level": 15.670000076293945,
-    "vix_percentile_1y": 0.19444444444444445,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 30,
-      "flow": 22,
-      "options": 18,
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
       "rotation": 15,
-      "macro": 8,
-      "news": 7
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
     "ticker": "XLF",
     "rank_score": 25.432335329341317,
     "flow_score": 22.0,
-    "options_score": 18.198789128156434,
+    "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 2.9674416077549752,
-    "news_score": 4.872,
-    "total": 88.47056606525273,
+    "news_score": 4.76,
+    "total": 70.1597769370963,
     "publish": true,
     "direction": "long"
   },
@@ -469,12 +469,12 @@
     ],
     "values": [
       3.8,
-      2.8,
+      3.2,
       30.4,
       30.1,
       2.8,
       13.2,
-      16.9
+      16.5
     ]
   },
   "pnl": {
@@ -488,7 +488,7 @@
     ],
     "values": [
       -7.23,
-      8.51,
+      8.42,
       134.52,
       -15.2,
       -1.88,
@@ -513,10 +513,6 @@
       "score": 88.0
     },
     {
-      "symbol": "Banking & Financial Sector",
-      "score": 87.0
-    },
-    {
       "symbol": "Technology & AI / Semiconductors",
       "score": 86.0
     },
@@ -530,6 +526,10 @@
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 85.0
+    },
+    {
+      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
       "score": 85.0
     },
     {
@@ -765,57 +765,6 @@
       }
     },
     {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector",
-      "confidence": 87.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": -1.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
-      "latest_at": "15 Jul 2026 15:26 UTC",
-      "headline": "Fed's Kevin Warsh says interested in probe of Bowman bank meeting, won't prejudge outcome",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "global",
-        "india"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "US Top News and Analysis",
-        "Tech",
-        "Finance"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "BANKBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 11.5,
-        "recency": 14.1,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
       "confidence": 86.0,
@@ -1022,6 +971,57 @@
         "volume_confirmation": 18.0,
         "source_diversity": 12.9,
         "recency": 15.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
+      "confidence": 85.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": -15.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "15 Jul 2026 20:03 UTC",
+      "headline": "US stocks today: US stocks end higher on cool inflation data, strong earnings",
+      "regions": [
+        "india",
+        "asia_pacific",
+        "middle_east",
+        "americas"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "Earnings",
+        "Finance"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "BANKBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 17.4,
+        "source_diversity": 14.6,
+        "recency": 13.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -1394,11 +1394,6 @@
       "text": "Bonds & Fixed Income + Banking & Financial Sector - 13 articles - HIGH / BEARISH - Global Market: Japan bond market sees steeper curve amid yield divergence"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Banking & Financial Sector - 28 articles - HIGH / BULLISH - Fed's Kevin Warsh says interested in probe of Bowman bank meeting, won't prejudge outcome"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Technology & AI / Semiconductors - 70 articles - HIGH / BEARISH - Chipmaker CXMT eyes $9.8 bn in blockbuster China IPO"
@@ -1417,6 +1412,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / BEARISH - Fed's Cook says she is prepared to act soon if inflation does not begin to slow"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Banking & Financial Sector + Gold & Precious Metals - 12 articles - HIGH / BULLISH - US stocks today: US stocks end higher on cool inflation data, strong earnings"
     },
     {
       "tag": "tag-bear",
@@ -1467,6 +1467,17 @@
       "direction": "up"
     },
     {
+      "label": "NASDAQ",
+      "ticker": "^IXIC",
+      "region": "US",
+      "price": 26269.23,
+      "currency": "USD",
+      "change": 162.22,
+      "change_pct": 0.62,
+      "change_str": "+0.62%",
+      "direction": "up"
+    },
+    {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
@@ -1494,9 +1505,9 @@
       "region": "EU",
       "price": 24999.53,
       "currency": "EUR",
-      "change": -147.5,
-      "change_pct": -0.59,
-      "change_str": "-0.59%",
+      "change": -114.72,
+      "change_pct": -0.46,
+      "change_str": "-0.46%",
       "direction": "down"
     },
     {
@@ -1536,44 +1547,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4066.9,
+      "price": 4068.5,
       "currency": "USD",
-      "change": 5.8,
-      "change_pct": 0.14,
-      "change_str": "+0.14%",
+      "change": 7.4,
+      "change_pct": 0.18,
+      "change_str": "+0.18%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 80.24,
+      "price": 80.26,
       "currency": "USD",
-      "change": 0.9,
-      "change_pct": 1.13,
-      "change_str": "+1.13%",
+      "change": 0.92,
+      "change_pct": 1.16,
+      "change_str": "+1.16%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64873.24,
+      "price": 64863.9,
       "currency": "USD",
-      "change": -82.87,
-      "change_pct": -0.13,
-      "change_str": "-0.13%",
+      "change": -92.21,
+      "change_pct": -0.14,
+      "change_str": "-0.14%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.51,
+      "price": 100.5,
       "currency": "USD",
-      "change": -0.43,
-      "change_pct": -0.43,
-      "change_str": "-0.43%",
+      "change": -0.45,
+      "change_pct": -0.44,
+      "change_str": "-0.44%",
       "direction": "down"
     },
     {
@@ -1617,7 +1628,7 @@
       },
       {
         "sector": "Banking & Financial Sector",
-        "weight": 2.8,
+        "weight": 3.2,
         "at_cap": false
       },
       {
@@ -1717,17 +1728,17 @@
           "target_weight_pct": 18.0,
           "drift_pct": -15.21,
           "action": "ADD",
-          "amount": 2988.63,
+          "amount": 2988.61,
           "etf_name": "Invesco QQQ Trust",
           "regime_note": ""
         },
         {
           "ticker": "XLF",
-          "actual_weight_pct": 2.83,
+          "actual_weight_pct": 3.24,
           "target_weight_pct": 18.0,
-          "drift_pct": -15.17,
+          "drift_pct": -14.76,
           "action": "ADD",
-          "amount": 2981.27,
+          "amount": 2901.0,
           "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
@@ -1737,7 +1748,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -14.22,
           "action": "ADD",
-          "amount": 2794.02,
+          "amount": 2794.0,
           "etf_name": "iShares MSCI India ETF",
           "regime_note": ""
         },
@@ -1747,7 +1758,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": 12.4,
           "action": "TRIM",
-          "amount": 2437.49,
+          "amount": 2437.51,
           "etf_name": "iShares Bitcoin Trust ETF",
           "regime_note": ""
         },
@@ -1757,17 +1768,17 @@
           "target_weight_pct": 18.0,
           "drift_pct": 12.09,
           "action": "TRIM",
-          "amount": 2375.26,
+          "amount": 2375.28,
           "etf_name": "Energy Select Sector SPDR",
           "regime_note": ""
         },
         {
           "ticker": "CASH",
-          "actual_weight_pct": 16.89,
+          "actual_weight_pct": 16.49,
           "target_weight_pct": 10.0,
-          "drift_pct": 6.89,
+          "drift_pct": 6.49,
           "action": "DEPLOY",
-          "amount": 1354.68,
+          "amount": 1274.35,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         }
@@ -1778,8 +1789,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -7575.52,
-          "portfolio_loss_pct": -38.55,
+          "total_impact": -7607.62,
+          "portfolio_loss_pct": -38.71,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1791,7 +1802,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -222.33
+              "impact": -254.43
             },
             {
               "ticker": "IBIT",
@@ -1814,8 +1825,8 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -6861.0,
-          "portfolio_loss_pct": -34.91,
+          "total_impact": -6888.28,
+          "portfolio_loss_pct": -35.05,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1827,7 +1838,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -188.98
+              "impact": -216.27
             },
             {
               "ticker": "IBIT",
@@ -1850,8 +1861,8 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -2063.27,
-          "portfolio_loss_pct": -10.5,
+          "total_impact": -2075.3,
+          "portfolio_loss_pct": -10.56,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1863,7 +1874,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -83.38
+              "impact": -95.41
             },
             {
               "ticker": "IBIT",
@@ -1886,8 +1897,8 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -1632.11,
-          "portfolio_loss_pct": -8.31,
+          "total_impact": -1638.53,
+          "portfolio_loss_pct": -8.34,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1899,7 +1910,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -44.47
+              "impact": -50.89
             },
             {
               "ticker": "IBIT",
@@ -1922,8 +1933,8 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -3008.66,
-          "portfolio_loss_pct": -15.31,
+          "total_impact": -3023.1,
+          "portfolio_loss_pct": -15.38,
           "position_impacts": [
             {
               "ticker": "INDA",
@@ -1935,7 +1946,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -100.05
+              "impact": -114.5
             },
             {
               "ticker": "IBIT",
@@ -1959,15 +1970,15 @@
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -38.55
+      "worst_loss_pct": -38.71
     }
   },
   "logs": [
-    "2026-07-15 21:18:16 [INFO] AZALYST - status.json generated",
-    "2026-07-15 21:18:16 [INFO] PORTFOLIO - NAV USD 19,650.59 | Return +0.01%",
-    "2026-07-15 21:18:16 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-15 21:18:16 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, QQQ, SH",
-    "2026-07-15 21:18:16 [INFO] TRADER - Closed trades: 13"
+    "2026-07-15 22:30:12 [INFO] AZALYST - status.json generated",
+    "2026-07-15 22:30:12 [INFO] PORTFOLIO - NAV USD 19,650.50 | Return +0.01%",
+    "2026-07-15 22:30:12 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-15 22:30:12 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, QQQ, SH",
+    "2026-07-15 22:30:12 [INFO] TRADER - Closed trades: 13"
   ],
-  "generated_at": "2026-07-15 21:18:11 UTC"
+  "generated_at": "2026-07-15 22:30:07 UTC"
 }
