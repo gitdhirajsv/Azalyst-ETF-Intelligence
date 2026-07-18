@@ -107,7 +107,7 @@
       "pnl_pct_str": "+1.86%",
       "confidence": 96,
       "severity": "HIGH",
-      "days_held": 9,
+      "days_held": 10,
       "half_exited": false
     },
     {
@@ -130,7 +130,7 @@
       "pnl_pct_str": "-3.42%",
       "confidence": 91,
       "severity": "CRITICAL",
-      "days_held": 5,
+      "days_held": 6,
       "half_exited": false
     }
   ],
@@ -408,12 +408,12 @@
     "ticker": "XLE",
     "rank_score": 14.124351087771942,
     "flow_score": 2.3418975403532203,
-    "options_score": 0.0,
+    "options_score": 18.538870707357407,
     "rotation_score": 12.0,
     "macro_score": 6.747227581027789,
-    "news_score": 10.08,
-    "total": 45.29347620915295,
-    "publish": false,
+    "news_score": 9.6,
+    "total": 63.352346916510356,
+    "publish": true,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -483,7 +483,7 @@
   "confidence": [
     {
       "symbol": "Defense & Aerospace",
-      "score": 93.0
+      "score": 94.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
@@ -506,16 +506,24 @@
       "score": 84.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 84.0
-    },
-    {
       "symbol": "India Equity Markets",
       "score": 84.0
     },
     {
+      "symbol": "Technology & AI / Semiconductors + Bearish Market / Macro Selloff",
+      "score": 83.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 80.0
+    },
+    {
       "symbol": "Asia Pacific Equity",
       "score": 78.0
+    },
+    {
+      "symbol": "Commodities & Mining",
+      "score": 77.0
     },
     {
       "symbol": "Emerging Markets + Cybersecurity",
@@ -524,10 +532,6 @@
     {
       "symbol": "Healthcare & Pharma",
       "score": 73.0
-    },
-    {
-      "symbol": "Commodities & Mining",
-      "score": 71.0
     },
     {
       "symbol": "Cybersecurity",
@@ -540,17 +544,13 @@
     {
       "symbol": "Nuclear Energy & Uranium",
       "score": 63.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors + Asia Pacific Equity",
-      "score": 62.0
     }
   ],
   "signals": [
     {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
-      "confidence": 93.0,
+      "confidence": 94.0,
       "severity": "HIGH",
       "direction": "BEARISH",
       "direction_score": 0.0,
@@ -558,18 +558,18 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 24,
-      "latest_at": "18 Jul 2026 13:03 UTC",
-      "headline": "US Navy 2 years behind on hypersonic missile installation on Zumwalt destroyers",
+      "latest_at": "18 Jul 2026 18:57 UTC",
+      "headline": "2 US troops killed, 1 missing after Iranian missile, drone attack in Jordan",
       "regions": [
-        "india",
+        "middle_east",
         "global",
         "europe",
-        "middle_east"
+        "india"
       ],
       "sources": [
-        "Bloomberg Markets",
-        "US Top News and Analysis",
-        "Markets-Economic Times",
+        "BBC News",
+        "Latest from Tom's Hardware",
+        "World News - Breaking international news and headlines | Sky News",
         "Oilprice.com"
       ],
       "primary_etf": "ITA",
@@ -593,7 +593,7 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 21.1,
+        "signal_strength": 21.6,
         "volume_confirmation": 18.0,
         "source_diversity": 16.4,
         "recency": 16.9,
@@ -850,59 +850,6 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 84.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": -1.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 19,
-      "latest_at": "18 Jul 2026 04:59 UTC",
-      "headline": "Oil settles up on renewed US-Iran hostilities and threat of Red Sea closure",
-      "regions": [
-        "europe",
-        "global",
-        "americas",
-        "india"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "BBC News",
-        "US Top News and Analysis",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.9,
-        "recency": 7.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 84.0,
@@ -954,6 +901,112 @@
       }
     },
     {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors + Bearish Market / Macro Selloff",
+      "confidence": 83.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "18 Jul 2026 08:54 UTC",
+      "headline": "Chip Industry Week In Review",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "europe",
+        "india"
+      ],
+      "sources": [
+        "The Verge",
+        "Latest from Tom's Hardware",
+        "www.theregister.com - Articles",
+        "Oilprice.com"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 17.4,
+        "source_diversity": 16.1,
+        "recency": 6.2,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 80.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": -1.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 16,
+      "latest_at": "18 Jul 2026 04:59 UTC",
+      "headline": "Oil settles up on renewed US-Iran hostilities and threat of Red Sea closure",
+      "regions": [
+        "middle_east",
+        "global",
+        "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "BBC News",
+        "Oilprice.com",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.8,
+        "recency": 4.2,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
       "confidence": 78.0,
@@ -1000,6 +1053,57 @@
         "source_diversity": 14.0,
         "recency": 15.4,
         "geopolitical_severity": 11.1
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 77.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "18 Jul 2026 17:00 UTC",
+      "headline": "U.S. Scientists Tap Seawater to Break China's Rare Earth Monopoly",
+      "regions": [
+        "asia_pacific",
+        "europe",
+        "global",
+        "india"
+      ],
+      "sources": [
+        "BBC News",
+        "Latest from Tom's Hardware",
+        "Oilprice.com",
+        "EE Times"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "CPSEETF",
+        "COPP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 15.7,
+        "volume_confirmation": 12.6,
+        "source_diversity": 13.3,
+        "recency": 13.9,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1101,57 +1205,6 @@
         "source_diversity": 11.0,
         "recency": 15.4,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 71.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "18 Jul 2026 05:46 UTC",
-      "headline": "The New Oil? Why the world is chasing copper",
-      "regions": [
-        "asia_pacific",
-        "india",
-        "global",
-        "europe"
-      ],
-      "sources": [
-        "Semiconductor Engineering",
-        "Markets-Economic Times",
-        "EE Times",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "CPSEETF",
-        "COPP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.1,
-        "volume_confirmation": 14.6,
-        "source_diversity": 12.8,
-        "recency": 8.2,
-        "geopolitical_severity": 12.9
       }
     },
     {
@@ -1297,66 +1350,13 @@
         "recency": 13.9,
         "geopolitical_severity": 12.7
       }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors + Asia Pacific Equity",
-      "confidence": 62.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": 3.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "17 Jul 2026 04:19 UTC",
-      "headline": "SoftBank sinks over 9% as Asia chip stocks track Wall Street AI sell-off",
-      "regions": [
-        "global",
-        "americas",
-        "europe",
-        "asia_pacific"
-      ],
-      "sources": [
-        "World News - Breaking international news and headlines | Sky News",
-        "Tech",
-        "Semiconductor Engineering",
-        "The Verge"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.7,
-        "recency": 15.3,
-        "geopolitical_severity": 13.0
-      }
     }
   ],
   "articles": [
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Defense & Aerospace - 24 articles - HIGH / BEARISH - US Navy 2 years behind on hypersonic missile installation on Zumwalt destroyers"
+      "text": "Defense & Aerospace - 24 articles - HIGH / BEARISH - 2 US troops killed, 1 missing after Iranian missile, drone attack in Jordan"
     },
     {
       "tag": "tag-bear",
@@ -1384,11 +1384,6 @@
       "text": "Crypto & Digital Assets - 23 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Energy / Oil & Gas - 19 articles - CRITICAL / BULLISH - Oil settles up on renewed US-Iran hostilities and threat of Red Sea closure"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "India Equity Markets - 20 articles - HIGH / BEARISH - Why stock market fell today? Rising oil prices among key factors behind Rs 3 lakh crore wealth erosion"
@@ -1396,7 +1391,22 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Technology & AI / Semiconductors + Bearish Market / Macro Selloff - 12 articles - CRITICAL / BEARISH - Chip Industry Week In Review"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Energy / Oil & Gas - 16 articles - CRITICAL / BULLISH - Oil settles up on renewed US-Iran hostilities and threat of Red Sea closure"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "Asia Pacific Equity - 12 articles - MEDIUM / BEARISH - Global Market: How leveraged ETFs are amplifying the AI chip trading frenzy"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Commodities & Mining - 6 articles - HIGH / BEARISH - U.S. Scientists Tap Seawater to Break China's Rare Earth Monopoly"
     },
     {
       "tag": "tag-bull",
@@ -1407,11 +1417,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Healthcare & Pharma - 5 articles - CRITICAL / BULLISH - AstraZeneca stock drops 9% after heart drug trial miss deals rare blow to pharma powerhouse"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Commodities & Mining - 8 articles - HIGH / BEARISH - The New Oil? Why the world is chasing copper"
     },
     {
       "tag": "tag-bull",
@@ -1427,11 +1432,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Nuclear Energy & Uranium - 4 articles - HIGH / BEARISH - NJ Takes Step Toward New Nuclear Plants as Sherrill Signs Bill"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Technology & AI / Semiconductors + Asia Pacific Equity - 13 articles - CRITICAL / BULLISH - SoftBank sinks over 9% as Asia chip stocks track Wall Street AI sell-off"
     }
   ],
   "market_snapshot": [
@@ -1549,11 +1549,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63982.4,
+      "price": 64480.75,
       "currency": "USD",
-      "change": 82.94,
-      "change_pct": 0.13,
-      "change_str": "+0.13%",
+      "change": 581.29,
+      "change_pct": 0.91,
+      "change_str": "+0.91%",
       "direction": "up"
     },
     {
@@ -1939,11 +1939,11 @@
     }
   },
   "logs": [
-    "2026-07-18 13:17:56 [INFO] AZALYST - status.json generated",
-    "2026-07-18 13:17:56 [INFO] PORTFOLIO - NAV USD 19,656.44 | Return +0.07%",
-    "2026-07-18 13:17:56 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-18 13:17:56 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, QQQ",
-    "2026-07-18 13:17:56 [INFO] TRADER - Closed trades: 14"
+    "2026-07-18 19:11:10 [INFO] AZALYST - status.json generated",
+    "2026-07-18 19:11:10 [INFO] PORTFOLIO - NAV USD 19,656.44 | Return +0.07%",
+    "2026-07-18 19:11:10 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-18 19:11:10 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, QQQ",
+    "2026-07-18 19:11:10 [INFO] TRADER - Closed trades: 14"
   ],
-  "generated_at": "2026-07-18 13:17:53 UTC"
+  "generated_at": "2026-07-18 19:11:07 UTC"
 }
