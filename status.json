@@ -84,7 +84,7 @@
       "pnl_pct_str": "+1.06%",
       "confidence": 89,
       "severity": "CRITICAL",
-      "days_held": 11,
+      "days_held": 12,
       "half_exited": false
     },
     {
@@ -482,10 +482,6 @@
   },
   "confidence": [
     {
-      "symbol": "Defense & Aerospace",
-      "score": 94.0
-    },
-    {
       "symbol": "Europe Equity + Gold & Precious Metals",
       "score": 90.0
     },
@@ -518,6 +514,14 @@
       "score": 78.0
     },
     {
+      "symbol": "Commodities & Mining",
+      "score": 75.0
+    },
+    {
+      "symbol": "Defense & Aerospace",
+      "score": 74.0
+    },
+    {
       "symbol": "Emerging Markets + Cybersecurity",
       "score": 74.0
     },
@@ -526,11 +530,11 @@
       "score": 73.0
     },
     {
-      "symbol": "Clean Energy & Renewables",
-      "score": 65.0
+      "symbol": "Cybersecurity",
+      "score": 69.0
     },
     {
-      "symbol": "Cybersecurity",
+      "symbol": "Clean Energy & Renewables",
       "score": 65.0
     },
     {
@@ -540,66 +544,9 @@
     {
       "symbol": "Nuclear Energy & Uranium",
       "score": 63.0
-    },
-    {
-      "symbol": "Commodities & Mining",
-      "score": 62.0
     }
   ],
   "signals": [
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 94.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 29,
-      "latest_at": "19 Jul 2026 08:08 UTC",
-      "headline": "2 US troops killed, 1 missing after Iranian missile, drone attack in Jordan",
-      "regions": [
-        "global",
-        "middle_east",
-        "india",
-        "europe"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "Oilprice.com",
-        "Markets-Economic Times",
-        "Defense News"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.1,
-        "recency": 17.0,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity + Gold & Precious Metals",
@@ -1003,6 +950,110 @@
       }
     },
     {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 75.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "19 Jul 2026 13:06 UTC",
+      "headline": "The New Oil? Why the world is chasing copper",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "india",
+        "europe"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "EE Times",
+        "World | Deutsche Welle",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "CPSEETF",
+        "COPP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.4,
+        "volume_confirmation": 12.6,
+        "source_diversity": 12.0,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 74.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 29,
+      "latest_at": "19 Jul 2026 13:06 UTC",
+      "headline": "2 US troops killed, 1 missing after Iranian missile, drone attack in Jordan",
+      "regions": [
+        "europe",
+        "india",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "US Top News and Analysis",
+        "World | Deutsche Welle",
+        "BBC News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.9,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "emerging_markets",
       "sector_label": "Emerging Markets + Cybersecurity",
       "confidence": 74.0,
@@ -1104,6 +1155,52 @@
       }
     },
     {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 69.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 9,
+      "latest_at": "19 Jul 2026 10:17 UTC",
+      "headline": "Kaspersky identifies malware framework targeting crypto investors",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "US Top News and Analysis",
+        "Cointelegraph.com News",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 14.5,
+        "volume_confirmation": 15.4,
+        "source_diversity": 6.7,
+        "recency": 12.8,
+        "geopolitical_severity": 11.1
+      }
+    },
+    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 65.0,
@@ -1152,51 +1249,6 @@
         "source_diversity": 12.6,
         "recency": 10.1,
         "geopolitical_severity": 11.1
-      }
-    },
-    {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 65.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "18 Jul 2026 23:01 UTC",
-      "headline": "Kaspersky identifies malware framework targeting crypto investors",
-      "regions": [
-        "europe",
-        "global"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "www.theregister.com - Articles",
-        "Tech",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 12.9,
-        "volume_confirmation": 13.7,
-        "source_diversity": 6.7,
-        "recency": 12.3,
-        "geopolitical_severity": 10.0
       }
     },
     {
@@ -1298,65 +1350,9 @@
         "recency": 13.9,
         "geopolitical_severity": 12.7
       }
-    },
-    {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 62.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "18 Jul 2026 23:00 UTC",
-      "headline": "The New Oil? Why the world is chasing copper",
-      "regions": [
-        "global",
-        "india",
-        "asia_pacific",
-        "europe"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "Oilprice.com",
-        "EE Times",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "CPSEETF",
-        "COPP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.4,
-        "volume_confirmation": 11.3,
-        "source_diversity": 11.0,
-        "recency": 6.8,
-        "geopolitical_severity": 13.0
-      }
     }
   ],
   "articles": [
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Defense & Aerospace - 29 articles - HIGH / BEARISH - 2 US troops killed, 1 missing after Iranian missile, drone attack in Jordan"
-    },
     {
       "tag": "tag-bull",
       "label": "Bullish",
@@ -1398,6 +1394,16 @@
       "text": "Asia Pacific Equity - 12 articles - MEDIUM / BEARISH - Global Market: How leveraged ETFs are amplifying the AI chip trading frenzy"
     },
     {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Commodities & Mining - 6 articles - HIGH / BEARISH - The New Oil? Why the world is chasing copper"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Defense & Aerospace - 29 articles - HIGH / BEARISH - 2 US troops killed, 1 missing after Iranian missile, drone attack in Jordan"
+    },
+    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Emerging Markets + Cybersecurity - 9 articles - MEDIUM / BULLISH - Aswath Damodaran explains why country risk is no longer just an emerging market problem"
@@ -1408,14 +1414,14 @@
       "text": "Healthcare & Pharma - 5 articles - CRITICAL / BULLISH - AstraZeneca stock drops 9% after heart drug trial miss deals rare blow to pharma powerhouse"
     },
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Cybersecurity - 9 articles - MEDIUM / BULLISH - Kaspersky identifies malware framework targeting crypto investors"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Clean Energy & Renewables - 6 articles - MEDIUM / BEARISH - SBI Capital Markets, HDFC Bank among 4 book runners appointed for NLC India Renewables IPO"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Cybersecurity - 7 articles - MEDIUM / BULLISH - Kaspersky identifies malware framework targeting crypto investors"
     },
     {
       "tag": "tag-bear",
@@ -1426,11 +1432,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Nuclear Energy & Uranium - 4 articles - HIGH / BEARISH - NJ Takes Step Toward New Nuclear Plants as Sherrill Signs Bill"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Commodities & Mining - 5 articles - HIGH / BEARISH - The New Oil? Why the world is chasing copper"
     }
   ],
   "market_snapshot": [
@@ -1548,11 +1549,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64649.32,
+      "price": 64289.59,
       "currency": "USD",
-      "change": -147.28,
-      "change_pct": -0.23,
-      "change_str": "-0.23%",
+      "change": -507.01,
+      "change_pct": -0.78,
+      "change_str": "-0.78%",
       "direction": "down"
     },
     {
@@ -1938,11 +1939,11 @@
     }
   },
   "logs": [
-    "2026-07-19 08:16:50 [INFO] AZALYST - status.json generated",
-    "2026-07-19 08:16:50 [INFO] PORTFOLIO - NAV USD 19,656.44 | Return +0.07%",
-    "2026-07-19 08:16:50 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-19 08:16:50 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, QQQ",
-    "2026-07-19 08:16:50 [INFO] TRADER - Closed trades: 14"
+    "2026-07-19 13:21:57 [INFO] AZALYST - status.json generated",
+    "2026-07-19 13:21:57 [INFO] PORTFOLIO - NAV USD 19,656.44 | Return +0.07%",
+    "2026-07-19 13:21:57 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-19 13:21:57 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, QQQ",
+    "2026-07-19 13:21:57 [INFO] TRADER - Closed trades: 14"
   ],
-  "generated_at": "2026-07-19 08:16:47 UTC"
+  "generated_at": "2026-07-19 13:21:54 UTC"
 }
