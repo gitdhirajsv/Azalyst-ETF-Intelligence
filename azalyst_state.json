@@ -1,42 +1,38 @@
 {
   "gold_precious_metals": {
-    "sent_at": "2026-07-19T19:01:17.104042+00:00",
-    "confidence": 86,
-    "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-    "article_count": 12,
-    "severity": "CRITICAL",
+    "sent_at": "2026-07-20T05:50:59.625751+00:00",
+    "confidence": 70,
+    "sector_label": "Gold & Precious Metals",
+    "article_count": 5,
+    "severity": "HIGH",
     "direction": "BEARISH",
     "direction_score": 0.0,
     "signal_scope": "global",
     "india_article_ratio": 0.0,
     "regions": [
-      "americas",
       "middle_east",
       "global",
-      "europe",
-      "asia_pacific"
+      "americas"
     ],
     "sources": [
-      "Bloomberg Markets",
-      "US Top News and Analysis",
-      "Finance",
       "Markets-Economic Times",
-      "Oilprice.com",
-      "Cointelegraph.com News"
+      "Finance",
+      "US Top News and Analysis",
+      "Bloomberg Markets"
     ],
     "top_headlines": [
-      "Gold set for biggest weekly drop since early June on inflation, rate-hike worries",
-      "Longer-dated yields lower after data, on track for weekly decline",
-      "Investors take to gold dip as Mideast war rages on",
-      "Bond Traders Take Warsh at Word, See Inflation Fight Continuing",
-      "Analysis: Fed Chairman Warsh faces an inflation credibility test after Congress hearings"
+      "Gold Steadies as Traders Assess Rates Path After US-Iran Clashes",
+      "US Stock Market: Earnings season gathers pace as AI heavyweights, chipmakers take centre stage",
+      "Oil Rises as US-Iran Attacks Escalate, Bonds Fall: Markets Wrap",
+      "Analysis: Fed Chairman Warsh faces an inflation credibility test after Congress hearings",
+      "Dallas Fed President Logan calls for 'modestly' higher interest rates"
     ],
-    "latest_ts": "2026-07-19T17:00:00+00:00",
+    "latest_ts": "2026-07-20T04:01:09+00:00",
     "confidence_breakdown": {
-      "signal_strength": 20.1,
-      "volume_confirmation": 17.4,
-      "source_diversity": 13.4,
-      "recency": 13.9,
+      "signal_strength": 11.9,
+      "volume_confirmation": 11.3,
+      "source_diversity": 12.0,
+      "recency": 14.2,
       "geopolitical_severity": 13.0,
       "cross_engine_confirmation": 8.1,
       "macro_events": 0.0
@@ -925,41 +921,43 @@
     }
   },
   "energy_oil": {
-    "sent_at": "2026-07-19T19:01:14.886011+00:00",
-    "confidence": 86,
+    "sent_at": "2026-07-20T05:50:53.631429+00:00",
+    "confidence": 92,
     "sector_label": "Energy / Oil & Gas",
-    "article_count": 17,
+    "article_count": 22,
     "severity": "CRITICAL",
     "direction": "BULLISH",
-    "direction_score": -1.5,
+    "direction_score": -1.0,
     "signal_scope": "global",
-    "india_article_ratio": 0.0,
+    "india_article_ratio": 0.05,
     "regions": [
-      "global",
-      "europe",
-      "middle_east",
       "asia_pacific",
-      "americas"
+      "middle_east",
+      "americas",
+      "europe",
+      "india",
+      "global"
     ],
     "sources": [
-      "Latest from Tom's Hardware",
-      "Oilprice.com",
+      "Markets-Economic Times",
       "Bloomberg Markets",
-      "Markets-Economic Times"
+      "Latest from Tom's Hardware",
+      "US Top News and Analysis",
+      "Oilprice.com"
     ],
     "top_headlines": [
-      "Oil settles up on renewed US-Iran hostilities and threat of Red Sea closure",
+      "Europe Was Supposed to Run Out of Jet Fuel by June. It Didn\u2019t",
+      "Latest Oil Market News and Analysis for July 20",
       "Geopolitical Risk Premium Returns as Crude Posts Biggest Weekly Gain in Months",
-      "Hormuz Closure Exposes Africa's Energy Dependence on Iran and China",
       "US Oil Drilling Picks Up As Brent Gains 4%",
-      "Iran Expands Oil Chokepoint Threat as Houthis Eye Red Sea Shipping"
+      "Gulf Oil Exports Briefly Recovered to Pre-War Levels Before Latest Escalation"
     ],
-    "latest_ts": "2026-07-19T15:00:00+00:00",
+    "latest_ts": "2026-07-20T05:47:37+00:00",
     "confidence_breakdown": {
       "signal_strength": 22.0,
       "volume_confirmation": 18.0,
-      "source_diversity": 12.6,
-      "recency": 11.4,
+      "source_diversity": 13.3,
+      "recency": 16.9,
       "geopolitical_severity": 13.0,
       "cross_engine_confirmation": 9.1,
       "macro_events": 0.0
@@ -1032,8 +1030,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 66.0,
-          "selection_notes": []
+          "selection_score": 69.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         },
         {
           "name": "United States Oil Fund",
@@ -1065,8 +1065,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 45.0,
-          "selection_notes": []
+          "selection_score": 48.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "top_etfs": [
@@ -1117,8 +1119,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 66.0,
-          "selection_notes": []
+          "selection_score": 69.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "regional_alternatives": {
@@ -1135,8 +1139,10 @@
             "sector_key": "energy_oil",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 66.0,
-            "selection_notes": []
+            "selection_score": 69.0,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
           },
           {
             "name": "Nippon India ETF Nifty PSU Bank BeES",
@@ -1150,8 +1156,10 @@
             "sector_key": "energy_oil",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 45.0,
-            "selection_notes": []
+            "selection_score": 48.0,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
           }
         ],
         "International-listed": [
@@ -1223,8 +1231,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 66.0,
-          "selection_notes": []
+          "selection_score": 69.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         },
         {
           "name": "Nippon India ETF Nifty PSU Bank BeES",
@@ -1238,8 +1248,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 45.0,
-          "selection_notes": []
+          "selection_score": 48.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "global": [
@@ -1698,43 +1710,45 @@
     }
   },
   "india_equity": {
-    "sent_at": "2026-07-14T15:27:12.485415+00:00",
-    "confidence": 84,
+    "sent_at": "2026-07-20T05:51:05.991318+00:00",
+    "confidence": 65,
     "sector_label": "India Equity Markets",
-    "article_count": 20,
+    "article_count": 19,
     "severity": "HIGH",
     "direction": "BEARISH",
-    "direction_score": -4.5,
+    "direction_score": -3.5,
     "signal_scope": "global",
-    "india_article_ratio": 0.2,
+    "india_article_ratio": 0.05,
     "regions": [
-      "global",
-      "middle_east",
-      "india",
       "asia_pacific",
-      "europe"
+      "middle_east",
+      "europe",
+      "india",
+      "global"
     ],
     "sources": [
-      "www.theregister.com - Articles",
-      "BBC News",
+      "Markets-Economic Times",
       "Bloomberg Markets",
-      "Markets-Economic Times"
+      "World | Deutsche Welle",
+      "Finance",
+      "World News - Breaking international news and headlines | Sky News",
+      "Oilprice.com"
     ],
     "top_headlines": [
-      "Why stock market fell today? Rising oil prices among key factors behind Rs 3 lakh crore wealth erosion",
-      "Rupee slides past 96/USD to one-month low as oil climbs; RBI likely intervenes",
-      "Market wrap: Top gainers and losers on Nifty and Sensex today",
-      "Zydex eyes Rs 300 cr revenue from paints business in 2 years",
-      "Sebi exempts Juhi Chawla-owned Mehta Family Trust from Saurashtra Cement open offer"
+      "Why is market falling today? Sensex slumps 600 points, Nifty tests 24,200. 6 factors behind the selloff",
+      "RBI Intervenes to Support Rupee as Currency Nears Record Low",
+      "India Proposes Stricter Vehicle Emission Rules To Cut Oil Consumption",
+      "Rs 91,000 crore wipeout: What spooked HDFC Bank, Axis Bank and Kotak investors even as credit growth picked up?",
+      "SBI Funds Management IPO listing tomorrow: GMP signals 18% listing gain"
     ],
-    "latest_ts": "2026-07-14T13:20:25+00:00",
+    "latest_ts": "2026-07-20T05:49:00.751508+00:00",
     "confidence_breakdown": {
-      "signal_strength": 21.9,
+      "signal_strength": 21.0,
       "volume_confirmation": 18.0,
-      "source_diversity": 13.3,
-      "recency": 13.8,
+      "source_diversity": 15.6,
+      "recency": 16.9,
       "geopolitical_severity": 13.0,
-      "cross_engine_confirmation": 4.6,
+      "cross_engine_confirmation": 6.7,
       "macro_events": 0.0
     },
     "etf_recommendations": {
@@ -2901,15 +2915,15 @@
     }
   },
   "defense": {
-    "sent_at": "2026-07-19T19:01:20.548927+00:00",
-    "confidence": 74,
+    "sent_at": "2026-07-20T05:51:03.539236+00:00",
+    "confidence": 66,
     "sector_label": "Defense & Aerospace",
     "article_count": 25,
     "severity": "HIGH",
     "direction": "BEARISH",
     "direction_score": 0.0,
     "signal_scope": "global",
-    "india_article_ratio": 0.04,
+    "india_article_ratio": 0.08,
     "regions": [
       "india",
       "middle_east",
@@ -2917,26 +2931,26 @@
       "europe"
     ],
     "sources": [
-      "BBC News",
       "Defense News",
+      "Bloomberg Markets",
       "World | Deutsche Welle",
       "Oilprice.com",
-      "Markets-Economic Times",
-      "Cointelegraph.com News"
+      "Latest from Tom's Hardware",
+      "BBC News"
     ],
     "top_headlines": [
       "2 US troops killed, 1 missing after Iranian missile, drone attack in Jordan",
       "Russia's largest ballistic assault of war rocks Kyiv",
       "Russia launches major ballistic missile attack on Ukrainian cities",
-      "US Navy 2 years behind on hypersonic missile installation on Zumwalt destroyers",
-      "Russian drones spotted using screwed-on magnetic compasses as navigation aids \u2014 the on-board camera can occasionally tilt down to check bearings if satellite comms are lost"
+      "Russia pounds Kyiv as NATO military chief warns Moscow would 'lose a lot' by attacking Baltics",
+      "US Navy 2 years behind on hypersonic missile installation on Zumwalt destroyers"
     ],
-    "latest_ts": "2026-07-19T18:59:30.459255+00:00",
+    "latest_ts": "2026-07-20T05:49:00.751418+00:00",
     "confidence_breakdown": {
       "signal_strength": 22.0,
       "volume_confirmation": 18.0,
-      "source_diversity": 15.9,
-      "recency": 17.0,
+      "source_diversity": 14.9,
+      "recency": 16.9,
       "geopolitical_severity": 13.0,
       "cross_engine_confirmation": 8.2,
       "macro_events": 0.0
@@ -3290,43 +3304,41 @@
     }
   },
   "asia_pacific": {
-    "sent_at": "2026-07-17T11:29:53.959544+00:00",
-    "confidence": 78,
+    "sent_at": "2026-07-20T05:50:58.418515+00:00",
+    "confidence": 77,
     "sector_label": "Asia Pacific Equity",
-    "article_count": 12,
+    "article_count": 9,
     "severity": "MEDIUM",
     "direction": "BEARISH",
-    "direction_score": -2.5,
+    "direction_score": -9.0,
     "signal_scope": "global",
     "india_article_ratio": 0.0,
     "regions": [
-      "americas",
-      "global",
-      "asia_pacific"
+      "asia_pacific",
+      "americas"
     ],
     "sources": [
-      "Latest from Tom's Hardware",
-      "Tech",
-      "Oilprice.com",
-      "BBC News",
       "Markets-Economic Times",
+      "Tech",
+      "Latest from Tom's Hardware",
+      "Cointelegraph.com News",
       "US Top News and Analysis"
     ],
     "top_headlines": [
-      "Global Market: How leveraged ETFs are amplifying the AI chip trading frenzy",
-      "Global Market: Japan reaffirms BOJ independence in economic blueprint after market jitters",
-      "Hang Seng crashes over 2% as tech selloff hits Asia markets. Why Hong Kong stocks are falling on Friday?",
-      "CXMT's DDR5 RAM isn't as performant or as consistent as SK hynix dies, early testing shows \u2014 reveals resistance to voltage scaling and inferior manual overclocking capabilities",
-      "SK Hynix South Korean shares jump 8% as Asia tech stocks rally"
+      "South Korea's share market losses deepen as leveraged AI bets take a heavy toll",
+      "'Give me my money back': South Korean traders' leveraged SK Hynix, Samsung bets unravel after selloff",
+      "Samsung Biologics makes $1.8 billion all-cash offer for Switzerland's PolyPeptide Group",
+      "Japanese logistics company eyes JPYC stablecoin to pay drivers",
+      "South Korea probed 40 cases of crypto manipulation over 2 years"
     ],
-    "latest_ts": "2026-07-17T10:30:00+00:00",
+    "latest_ts": "2026-07-20T05:20:06+00:00",
     "confidence_breakdown": {
-      "signal_strength": 16.4,
-      "volume_confirmation": 17.4,
-      "source_diversity": 14.0,
-      "recency": 15.4,
-      "geopolitical_severity": 11.1,
-      "cross_engine_confirmation": 4.2,
+      "signal_strength": 13.4,
+      "volume_confirmation": 15.4,
+      "source_diversity": 10.4,
+      "recency": 16.2,
+      "geopolitical_severity": 10.2,
+      "cross_engine_confirmation": 12.0,
       "macro_events": 0.0
     },
     "etf_recommendations": {
@@ -3591,41 +3603,43 @@
     }
   },
   "commodities_mining": {
-    "sent_at": "2026-07-19T19:01:19.270907+00:00",
-    "confidence": 74,
+    "sent_at": "2026-07-20T05:50:57.140658+00:00",
+    "confidence": 80,
     "sector_label": "Commodities & Mining",
-    "article_count": 6,
+    "article_count": 10,
     "severity": "MEDIUM",
     "direction": "BEARISH",
     "direction_score": 0.0,
     "signal_scope": "global",
-    "india_article_ratio": 0.0,
+    "india_article_ratio": 0.1,
     "regions": [
       "asia_pacific",
+      "india",
       "global",
       "europe"
     ],
     "sources": [
-      "World | Deutsche Welle",
       "EE Times",
-      "Oilprice.com",
       "Markets-Economic Times",
+      "Bloomberg Markets",
+      "World | Deutsche Welle",
+      "Oilprice.com",
       "Latest from Tom's Hardware"
     ],
     "top_headlines": [
-      "The New Oil? Why the world is chasing copper",
+      "China Solar Stocks Rise After Beijing Issues Consumption Tax",
+      "Key China Copper Gauge Rallies to $100 After Tax Crackdown",
       "Lawmakers want US government to ban memory chips from China, even in allied supply chains \u2014 citing 'unacceptable risk' to national, economic, and supply chain security",
       "China firm seeks damages over state control of British Steel",
-      "New Material Beats Copper\u2019s Thermal Conductivity",
-      "Energy Storage Key To Avoiding The Next Energy Crisis"
+      "Did Scientists Just Solve The Biggest Mystery Holding Back Solid-State Batteries"
     ],
-    "latest_ts": "2026-07-19T18:59:30.459174+00:00",
+    "latest_ts": "2026-07-20T05:49:00.751356+00:00",
     "confidence_breakdown": {
-      "signal_strength": 12.2,
-      "volume_confirmation": 12.6,
-      "source_diversity": 12.0,
-      "recency": 17.0,
-      "geopolitical_severity": 11.6,
+      "signal_strength": 14.1,
+      "volume_confirmation": 16.2,
+      "source_diversity": 14.0,
+      "recency": 16.9,
+      "geopolitical_severity": 11.0,
       "cross_engine_confirmation": 8.8,
       "macro_events": 0.0
     },
@@ -3669,6 +3683,23 @@
           ]
         },
         {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NMDC, Coal India \u2014 commodity exposure",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u20139 months",
+          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
+          "sector_key": "commodities_mining",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 72.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        },
+        {
           "name": "Sprott Physical Copper Trust",
           "ticker": "COPP",
           "platform": "Sprott \u2014 IBKR / Schwab",
@@ -3684,21 +3715,6 @@
             "clean thematic exposure",
             "matches international access"
           ]
-        },
-        {
-          "name": "CPSE ETF",
-          "ticker": "CPSEETF",
-          "note": "NMDC, Coal India \u2014 commodity exposure",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "3\u20139 months",
-          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
-          "sector_key": "commodities_mining",
-          "market_bucket": "india",
-          "market_scope": "India-listed",
-          "selection_score": 69.0,
-          "selection_notes": []
         }
       ],
       "top_etfs": [
@@ -3721,6 +3737,23 @@
           ]
         },
         {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NMDC, Coal India \u2014 commodity exposure",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u20139 months",
+          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
+          "sector_key": "commodities_mining",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 72.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        },
+        {
           "name": "Sprott Physical Copper Trust",
           "ticker": "COPP",
           "platform": "Sprott \u2014 IBKR / Schwab",
@@ -3736,21 +3769,6 @@
             "clean thematic exposure",
             "matches international access"
           ]
-        },
-        {
-          "name": "CPSE ETF",
-          "ticker": "CPSEETF",
-          "note": "NMDC, Coal India \u2014 commodity exposure",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "3\u20139 months",
-          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
-          "sector_key": "commodities_mining",
-          "market_bucket": "india",
-          "market_scope": "India-listed",
-          "selection_score": 69.0,
-          "selection_notes": []
         }
       ],
       "regional_alternatives": {
@@ -3767,8 +3785,10 @@
             "sector_key": "commodities_mining",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 69.0,
-            "selection_notes": []
+            "selection_score": 72.0,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
           }
         ],
         "International-listed": [
@@ -3822,8 +3842,10 @@
           "sector_key": "commodities_mining",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 69.0,
-          "selection_notes": []
+          "selection_score": 72.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "global": [
