@@ -1,19 +1,19 @@
 {
-  "portfolio_value": 19947.05,
+  "portfolio_value": 19946.97,
   "total_deposited": 19653.42,
-  "cash": 1079.73,
+  "cash": 1003.07,
   "monthly_reserve": 0.0,
-  "market_value": 18867.32,
-  "total_invested": 18471.74,
-  "unrealised_pnl": 395.58,
-  "unrealised_str": "+395.58",
+  "market_value": 18943.9,
+  "total_invested": 18548.4,
+  "unrealised_pnl": 395.5,
+  "unrealised_str": "+395.50",
   "realised_pnl": -101.94,
   "realised_str": "-101.94",
   "change": "+1.49%",
   "change_raw": 1.49,
   "closed_trades": 15,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 19947.05,
+  "portfolio_peak": 19947.87,
   "drawdown_now_pct": 0.0,
   "max_drawdown_pct": 12.69,
   "usd_inr_rate": 96.225,
@@ -140,17 +140,17 @@
       "sector": "Inverse / Hedge",
       "platform": "ProShares -- IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 33.28,
+      "entry": 33.26,
       "current": 33.06,
       "peak_price": 33.36,
-      "trail_stop": 30.95,
-      "dist_to_trail_pct": 6.39,
-      "units": 25.100864,
-      "invested": 835.24,
-      "pnl": -5.4,
-      "pnl_str": "-5.40",
-      "pnl_pct": -0.65,
-      "pnl_pct_str": "-0.65%",
+      "trail_stop": 30.93,
+      "dist_to_trail_pct": 6.44,
+      "units": 27.417159,
+      "invested": 911.9,
+      "pnl": -5.49,
+      "pnl_str": "-5.49",
+      "pnl_pct": -0.6,
+      "pnl_pct_str": "-0.60%",
       "confidence": 92,
       "severity": "CRITICAL",
       "days_held": 0,
@@ -428,12 +428,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
+    "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.05618992020482788,
+    "vix_level": 17.049999237060547,
+    "vix_percentile_1y": 0.49206349206349204,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -445,13 +445,13 @@
   },
   "top_signal": {
     "ticker": "XLE",
-    "rank_score": 24.100075244544772,
+    "rank_score": 24.100751879699246,
     "flow_score": 12.13672497063976,
     "options_score": 16.951018177153397,
     "rotation_score": 15.0,
-    "macro_score": 6.606293812600134,
+    "macro_score": 6.611975459770485,
     "news_score": 9.0,
-    "total": 83.79411220493806,
+    "total": 83.8004704872629,
     "publish": true,
     "direction": "long"
   },
@@ -505,8 +505,8 @@
       30.7,
       30.7,
       2.7,
-      4.2,
-      5.4
+      4.5,
+      5.0
     ]
   },
   "pnl": {
@@ -524,16 +524,12 @@
       272.9,
       192.86,
       -8.7,
-      -5.4
+      -5.49
     ]
   },
   "confidence": [
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 90.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
       "score": 90.0
     },
     {
@@ -549,6 +545,10 @@
       "score": 88.0
     },
     {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 86.0
+    },
+    {
       "symbol": "Crypto & Digital Assets",
       "score": 85.0
     },
@@ -558,7 +558,7 @@
     },
     {
       "symbol": "Commodities & Mining",
-      "score": 81.0
+      "score": 82.0
     },
     {
       "symbol": "Emerging Markets + Cybersecurity",
@@ -644,59 +644,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 13.8,
         "recency": 15.5,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 90.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 71,
-      "latest_at": "21 Jul 2026 16:04 UTC",
-      "headline": "Chip Industry Technical Paper Roundup: July 21",
-      "regions": [
-        "india",
-        "americas",
-        "asia_pacific",
-        "middle_east"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Semiconductor Engineering",
-        "World | Deutsche Welle",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.1,
-        "recency": 14.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -854,6 +801,59 @@
       }
     },
     {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 86.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 80,
+      "latest_at": "21 Jul 2026 18:31 UTC",
+      "headline": "Chip Industry Technical Paper Roundup: July 21",
+      "regions": [
+        "asia_pacific",
+        "europe",
+        "middle_east",
+        "americas"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Latest from Tom's Hardware",
+        "The Verge",
+        "World | Deutsche Welle"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.5,
+        "recency": 10.7,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 85.0,
@@ -954,7 +954,7 @@
     {
       "sector_key": "commodities_mining",
       "sector_label": "Commodities & Mining",
-      "confidence": 81.0,
+      "confidence": 82.0,
       "severity": "MEDIUM",
       "direction": "BEARISH",
       "direction_score": 0.0,
@@ -962,19 +962,19 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 11,
-      "latest_at": "21 Jul 2026 17:20 UTC",
+      "latest_at": "21 Jul 2026 23:06 UTC",
       "headline": "US ties to Israel rattle rare earth deal in Malaysia",
       "regions": [
-        "india",
-        "americas",
+        "europe",
         "middle_east",
-        "global"
+        "americas",
+        "india"
       ],
       "sources": [
-        "Cointelegraph.com News",
-        "World | Deutsche Welle",
         "US Top News and Analysis",
-        "Defense News"
+        "World | Deutsche Welle",
+        "Markets-Economic Times",
+        "Cointelegraph.com News"
       ],
       "primary_etf": "DBC",
       "top_etfs": [
@@ -997,7 +997,7 @@
       "breakdown": {
         "signal_strength": 14.2,
         "volume_confirmation": 16.8,
-        "source_diversity": 14.0,
+        "source_diversity": 14.9,
         "recency": 16.9,
         "geopolitical_severity": 12.1
       }
@@ -1412,11 +1412,6 @@
       "text": "Energy / Oil & Gas - 28 articles - CRITICAL / BULLISH - Houthi Threats Ignite New Oil Price Surge"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Technology & AI / Semiconductors - 71 articles - CRITICAL / BEARISH - Chip Industry Technical Paper Roundup: July 21"
-    },
-    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Europe Equity + Gold & Precious Metals - 11 articles - HIGH / BULLISH - Global Market: Euro zone inflation risks persist despite oil price retreat, ECB's Schnabel warns"
@@ -1430,6 +1425,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Bonds & Fixed Income + Banking & Financial Sector - 13 articles - HIGH / BEARISH - Global Market: Japan bond market sees steeper curve amid yield divergence"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Technology & AI / Semiconductors - 80 articles - CRITICAL / BEARISH - Chip Industry Technical Paper Roundup: July 21"
     },
     {
       "tag": "tag-bull",
@@ -1527,10 +1527,10 @@
       "region": "UK",
       "price": 10585.91,
       "currency": "GBP",
-      "change": 61.11,
-      "change_pct": 0.58,
-      "change_str": "+0.58%",
-      "direction": "up"
+      "change": -14.49,
+      "change_pct": -0.14,
+      "change_str": "-0.14%",
+      "direction": "down"
     },
     {
       "label": "DAX",
@@ -1538,9 +1538,9 @@
       "region": "EU",
       "price": 25011.35,
       "currency": "EUR",
-      "change": 164.66,
-      "change_pct": 0.66,
-      "change_str": "+0.66%",
+      "change": 180.37,
+      "change_pct": 0.73,
+      "change_str": "+0.73%",
       "direction": "up"
     },
     {
@@ -1580,33 +1580,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4082.2,
+      "price": 4085.2,
       "currency": "USD",
-      "change": 71.9,
-      "change_pct": 1.79,
-      "change_str": "+1.79%",
+      "change": 74.9,
+      "change_pct": 1.87,
+      "change_str": "+1.87%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 84.54,
+      "price": 84.68,
       "currency": "USD",
-      "change": 1.31,
-      "change_pct": 1.57,
-      "change_str": "+1.57%",
+      "change": 1.45,
+      "change_pct": 1.74,
+      "change_str": "+1.74%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 66326.07,
+      "price": 66284.04,
       "currency": "USD",
-      "change": 1096.04,
-      "change_pct": 1.68,
-      "change_str": "+1.68%",
+      "change": 1054.01,
+      "change_pct": 1.62,
+      "change_str": "+1.62%",
       "direction": "up"
     },
     {
@@ -1615,7 +1615,7 @@
       "region": "FX",
       "price": 101.19,
       "currency": "USD",
-      "change": 0.21,
+      "change": 0.2,
       "change_pct": 0.2,
       "change_str": "+0.20%",
       "direction": "up"
@@ -1635,7 +1635,7 @@
   "risk_controls": {
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
-    "portfolio_peak": 19947.05,
+    "portfolio_peak": 19947.87,
     "vix": 17.05,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
@@ -1656,7 +1656,7 @@
       },
       {
         "sector": "Inverse / Hedge",
-        "weight": 4.2,
+        "weight": 4.5,
         "at_cap": false
       },
       {
@@ -1761,7 +1761,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -15.28,
           "action": "ADD",
-          "amount": 3048.69,
+          "amount": 3048.68,
           "etf_name": "Invesco QQQ Trust",
           "regime_note": ""
         },
@@ -1771,7 +1771,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -14.27,
           "action": "ADD",
-          "amount": 2846.46,
+          "amount": 2846.45,
           "etf_name": "iShares MSCI India ETF",
           "regime_note": ""
         },
@@ -1781,7 +1781,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": 12.69,
           "action": "TRIM",
-          "amount": 2531.19,
+          "amount": 2531.2,
           "etf_name": "Energy Select Sector SPDR",
           "regime_note": ""
         },
@@ -1791,7 +1791,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": 12.65,
           "action": "TRIM",
-          "amount": 2523.72,
+          "amount": 2523.73,
           "etf_name": "iShares Bitcoin Trust ETF",
           "regime_note": ""
         }
@@ -1987,11 +1987,11 @@
     }
   },
   "logs": [
-    "2026-07-21 21:23:13 [INFO] AZALYST - status.json generated",
-    "2026-07-21 21:23:13 [INFO] PORTFOLIO - NAV USD 19,947.05 | Return +1.49%",
-    "2026-07-21 21:23:13 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-21 21:23:13 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, QQQ, SH",
-    "2026-07-21 21:23:13 [INFO] TRADER - Closed trades: 15"
+    "2026-07-21 23:20:29 [INFO] AZALYST - status.json generated",
+    "2026-07-21 23:20:29 [INFO] PORTFOLIO - NAV USD 19,946.97 | Return +1.49%",
+    "2026-07-21 23:20:29 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-21 23:20:29 [INFO] TRADER - Open positions: INDA, XLF, IBIT, XLE, QQQ, SH",
+    "2026-07-21 23:20:29 [INFO] TRADER - Closed trades: 15"
   ],
-  "generated_at": "2026-07-21 21:23:11 UTC"
+  "generated_at": "2026-07-21 23:20:26 UTC"
 }
