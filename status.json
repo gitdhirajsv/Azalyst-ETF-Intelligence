@@ -454,13 +454,13 @@
   },
   "top_signal": {
     "ticker": "XLE",
-    "rank_score": 17.66015128593041,
+    "rank_score": 17.660408163265306,
     "flow_score": 18.0,
-    "options_score": 22.318450339797316,
+    "options_score": 23.719215492391317,
     "rotation_score": 12.0,
-    "macro_score": 8.53329804337839,
-    "news_score": 11.16,
-    "total": 89.67189966910611,
+    "macro_score": 8.54804486859563,
+    "news_score": 11.04,
+    "total": 90.96766852425225,
     "publish": true,
     "direction": "long"
   },
@@ -531,7 +531,7 @@
   "confidence": [
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 93.0
+      "score": 92.0
     },
     {
       "symbol": "Europe Equity + Gold & Precious Metals",
@@ -551,7 +551,7 @@
     },
     {
       "symbol": "Crypto & Digital Assets",
-      "score": 85.0
+      "score": 82.0
     },
     {
       "symbol": "Nuclear Energy & Uranium + Bearish Market / Macro Selloff",
@@ -598,27 +598,27 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 93.0,
+      "confidence": 92.0,
       "severity": "CRITICAL",
       "direction": "BULLISH",
-      "direction_score": 10.5,
+      "direction_score": 8.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 34,
-      "latest_at": "23 Jul 2026 15:17 UTC",
+      "article_count": 40,
+      "latest_at": "23 Jul 2026 20:12 UTC",
       "headline": "Brent Tops $100 as Houthi Attacks Push Oil Rally Into Triple Digits",
       "regions": [
-        "asia_pacific",
-        "global",
+        "americas",
         "middle_east",
-        "europe"
+        "europe",
+        "asia_pacific"
       ],
       "sources": [
-        "BBC News",
+        "US Top News and Analysis",
+        "Cointelegraph.com News",
         "Markets-Economic Times",
-        "Oilprice.com",
-        "World | Deutsche Welle"
+        "BBC News"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -644,7 +644,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 14.9,
-        "recency": 13.7,
+        "recency": 12.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -855,26 +855,27 @@
     {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
-      "confidence": 85.0,
+      "confidence": 82.0,
       "severity": "HIGH",
       "direction": "BULLISH",
       "direction_score": 1.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 31,
-      "latest_at": "23 Jul 2026 16:57 UTC",
+      "article_count": 32,
+      "latest_at": "23 Jul 2026 19:45 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "india",
-        "asia_pacific",
-        "global",
-        "middle_east"
+        "americas",
+        "middle_east",
+        "europe",
+        "asia_pacific"
       ],
       "sources": [
-        "Markets-Economic Times",
+        "Cointelegraph.com News",
         "Tech",
-        "Cointelegraph.com News"
+        "Markets-Economic Times",
+        "Oilprice.com"
       ],
       "primary_etf": "IBIT",
       "top_etfs": [
@@ -893,8 +894,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 9.1,
-        "recency": 16.2,
+        "source_diversity": 11.0,
+        "recency": 12.1,
         "geopolitical_severity": 13.0
       }
     },
@@ -1414,7 +1415,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas - 34 articles - CRITICAL / BULLISH - Brent Tops $100 as Houthi Attacks Push Oil Rally Into Triple Digits"
+      "text": "Energy / Oil & Gas - 40 articles - CRITICAL / BULLISH - Brent Tops $100 as Houthi Attacks Push Oil Rally Into Triple Digits"
     },
     {
       "tag": "tag-bull",
@@ -1439,7 +1440,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Crypto & Digital Assets - 31 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
+      "text": "Crypto & Digital Assets - 32 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
@@ -1532,10 +1533,10 @@
       "region": "UK",
       "price": 10639.17,
       "currency": "GBP",
-      "change": -77.83,
-      "change_pct": -0.73,
-      "change_str": "-0.73%",
-      "direction": "down"
+      "change": 53.27,
+      "change_pct": 0.5,
+      "change_str": "+0.50%",
+      "direction": "up"
     },
     {
       "label": "DAX",
@@ -1543,9 +1544,9 @@
       "region": "EU",
       "price": 24763.12,
       "currency": "EUR",
-      "change": -392.29,
-      "change_pct": -1.56,
-      "change_str": "-1.56%",
+      "change": -248.23,
+      "change_pct": -0.99,
+      "change_str": "-0.99%",
       "direction": "down"
     },
     {
@@ -1585,44 +1586,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4052.3,
+      "price": 4050.0,
       "currency": "USD",
-      "change": -94.6,
-      "change_pct": -2.28,
-      "change_str": "-2.28%",
+      "change": -96.9,
+      "change_pct": -2.34,
+      "change_str": "-2.34%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 92.36,
+      "price": 92.2,
       "currency": "USD",
-      "change": 5.53,
-      "change_pct": 6.37,
-      "change_str": "+6.37%",
+      "change": 5.37,
+      "change_pct": 6.18,
+      "change_str": "+6.18%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64994.0,
+      "price": 65149.99,
       "currency": "USD",
-      "change": -1106.8,
-      "change_pct": -1.67,
-      "change_str": "-1.67%",
+      "change": -950.81,
+      "change_pct": -1.44,
+      "change_str": "-1.44%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.45,
+      "price": 101.44,
       "currency": "USD",
-      "change": 0.31,
-      "change_pct": 0.31,
-      "change_str": "+0.31%",
+      "change": 0.3,
+      "change_pct": 0.29,
+      "change_str": "+0.29%",
       "direction": "up"
     },
     {
@@ -1934,12 +1935,12 @@
     }
   },
   "logs": [
-    "2026-07-23 21:12:51 [INFO] AZALYST - status.json generated",
-    "2026-07-23 21:12:51 [INFO] PORTFOLIO - NAV USD 19,843.85 | Return +1.32%",
-    "2026-07-23 21:12:51 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-23 21:12:51 [INFO] TRADER - Open positions: XLF, IBIT, XLE, QQQ, SH",
-    "2026-07-23 21:12:51 [INFO] TRADER - Closed trades: 17",
-    "2026-07-23 21:12:51 [INFO] RISK - Partial profits realised: USD 15,016.61"
+    "2026-07-23 23:22:23 [INFO] AZALYST - status.json generated",
+    "2026-07-23 23:22:23 [INFO] PORTFOLIO - NAV USD 19,843.85 | Return +1.32%",
+    "2026-07-23 23:22:23 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-23 23:22:23 [INFO] TRADER - Open positions: XLF, IBIT, XLE, QQQ, SH",
+    "2026-07-23 23:22:23 [INFO] TRADER - Closed trades: 17",
+    "2026-07-23 23:22:23 [INFO] RISK - Partial profits realised: USD 15,016.61"
   ],
-  "generated_at": "2026-07-23 21:12:49 UTC"
+  "generated_at": "2026-07-23 23:22:16 UTC"
 }
