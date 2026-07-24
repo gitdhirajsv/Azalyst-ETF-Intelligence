@@ -920,46 +920,45 @@
     }
   },
   "energy_oil": {
-    "sent_at": "2026-07-24T11:51:38.189431+00:00",
-    "confidence": 96,
+    "sent_at": "2026-07-24T17:41:09.985507+00:00",
+    "confidence": 91,
     "sector_label": "Energy / Oil & Gas",
-    "article_count": 32,
+    "article_count": 30,
     "severity": "CRITICAL",
     "direction": "BULLISH",
-    "direction_score": 12.0,
+    "direction_score": 0.0,
     "signal_scope": "global",
     "india_article_ratio": 0.0,
     "regions": [
-      "middle_east",
-      "asia_pacific",
-      "africa",
-      "global",
       "americas",
-      "europe"
+      "asia_pacific",
+      "middle_east",
+      "europe",
+      "global"
     ],
     "sources": [
-      "World | Deutsche Welle",
-      "Markets-Economic Times",
-      "Oilprice.com",
-      "Cointelegraph.com News",
       "US Top News and Analysis",
-      "Bloomberg Markets"
+      "World | Deutsche Welle",
+      "BBC News",
+      "Bloomberg Markets",
+      "Oilprice.com",
+      "Cointelegraph.com News"
     ],
     "top_headlines": [
-      "Oil Tops $100 as Supply Crisis Deepens",
+      "Why the Latest Oil Rally May Be Far From Over",
       "Saudi Crude Tanker Goes Dark to Slip Through Bab el-Mandeb",
       "WTI Explodes Higher as Middle East Shipping Risks Multiply",
-      "China Rushes to Secure Russian Oil as Middle East Supply Risks Escalate",
-      "Tanker Exits Red Sea Dark as China Ship Heads Toward Strait"
+      "ADNOC Issues Seventh Crude Tender Since June Despite Hormuz, Red Sea Risks",
+      "Hormuz Tanker Crossings Sink to Lowest Level Since May as War Risk Spikes"
     ],
-    "latest_ts": "2026-07-24T11:49:50.775566+00:00",
+    "latest_ts": "2026-07-24T17:15:00+00:00",
     "confidence_breakdown": {
       "signal_strength": 22.0,
       "volume_confirmation": 18.0,
       "source_diversity": 14.9,
-      "recency": 17.0,
+      "recency": 16.3,
       "geopolitical_severity": 13.0,
-      "cross_engine_confirmation": 12.0,
+      "cross_engine_confirmation": 7.4,
       "macro_events": 0.0
     },
     "etf_recommendations": {
@@ -3597,44 +3596,43 @@
     }
   },
   "commodities_mining": {
-    "sent_at": "2026-07-24T11:51:41.245156+00:00",
-    "confidence": 78,
+    "sent_at": "2026-07-24T17:41:11.330237+00:00",
+    "confidence": 81,
     "sector_label": "Commodities & Mining",
-    "article_count": 13,
+    "article_count": 12,
     "severity": "MEDIUM",
-    "direction": "BULLISH",
-    "direction_score": -2.0,
+    "direction": "BEARISH",
+    "direction_score": 0.0,
     "signal_scope": "global",
-    "india_article_ratio": 0.08,
+    "india_article_ratio": 0.0,
     "regions": [
-      "global",
       "asia_pacific",
-      "india",
-      "europe"
+      "americas",
+      "global"
     ],
     "sources": [
-      "Markets-Economic Times",
-      "Oilprice.com",
-      "Cointelegraph.com News",
       "US Top News and Analysis",
       "Semiconductor Engineering",
-      "EE Times"
+      "EE Times",
+      "Latest from Tom's Hardware",
+      "World | Deutsche Welle",
+      "Bloomberg Markets"
     ],
     "top_headlines": [
-      "Lithium Prices Sink To Five-Month Lows Amid Oversupply Jitters",
       "Sweden eases mining permits to cut China minerals reliance",
+      "Geekom A9 Max 2026 review: Gorgon Point in a compact Mini PC",
       "Chip Industry Week In Review",
       "Inside optical and the battle for scale \u2013 how the AI industry is racing to integrate photonic interconnects",
-      "Canada-EU: Closer trade ties to counter Trump?"
+      "The future of USB connectivity (2026) \u2014 How USB4 Version 2 and Thunderbolt 5 are bringing copper to its physical limits"
     ],
-    "latest_ts": "2026-07-24T11:49:50.775539+00:00",
+    "latest_ts": "2026-07-24T17:38:57.939313+00:00",
     "confidence_breakdown": {
-      "signal_strength": 15.0,
-      "volume_confirmation": 18.0,
-      "source_diversity": 13.6,
-      "recency": 17.0,
-      "geopolitical_severity": 10.6,
-      "cross_engine_confirmation": 4.7,
+      "signal_strength": 14.3,
+      "volume_confirmation": 17.4,
+      "source_diversity": 15.1,
+      "recency": 16.9,
+      "geopolitical_severity": 9.8,
+      "cross_engine_confirmation": 7.9,
       "macro_events": 0.0
     },
     "etf_recommendations": {
@@ -3677,23 +3675,6 @@
           ]
         },
         {
-          "name": "CPSE ETF",
-          "ticker": "CPSEETF",
-          "note": "NMDC, Coal India \u2014 commodity exposure",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "3\u20139 months",
-          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
-          "sector_key": "commodities_mining",
-          "market_bucket": "india",
-          "market_scope": "India-listed",
-          "selection_score": 72.0,
-          "selection_notes": [
-            "matches India-listed access"
-          ]
-        },
-        {
           "name": "Sprott Physical Copper Trust",
           "ticker": "COPP",
           "platform": "Sprott \u2014 IBKR / Schwab",
@@ -3709,6 +3690,21 @@
             "clean thematic exposure",
             "matches international access"
           ]
+        },
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NMDC, Coal India \u2014 commodity exposure",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u20139 months",
+          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
+          "sector_key": "commodities_mining",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 69.0,
+          "selection_notes": []
         }
       ],
       "top_etfs": [
@@ -3731,23 +3727,6 @@
           ]
         },
         {
-          "name": "CPSE ETF",
-          "ticker": "CPSEETF",
-          "note": "NMDC, Coal India \u2014 commodity exposure",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "3\u20139 months",
-          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
-          "sector_key": "commodities_mining",
-          "market_bucket": "india",
-          "market_scope": "India-listed",
-          "selection_score": 72.0,
-          "selection_notes": [
-            "matches India-listed access"
-          ]
-        },
-        {
           "name": "Sprott Physical Copper Trust",
           "ticker": "COPP",
           "platform": "Sprott \u2014 IBKR / Schwab",
@@ -3763,6 +3742,21 @@
             "clean thematic exposure",
             "matches international access"
           ]
+        },
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NMDC, Coal India \u2014 commodity exposure",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u20139 months",
+          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
+          "sector_key": "commodities_mining",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 69.0,
+          "selection_notes": []
         }
       ],
       "regional_alternatives": {
@@ -3779,10 +3773,8 @@
             "sector_key": "commodities_mining",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 72.0,
-            "selection_notes": [
-              "matches India-listed access"
-            ]
+            "selection_score": 69.0,
+            "selection_notes": []
           }
         ],
         "International-listed": [
@@ -3836,10 +3828,8 @@
           "sector_key": "commodities_mining",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 72.0,
-          "selection_notes": [
-            "matches India-listed access"
-          ]
+          "selection_score": 69.0,
+          "selection_notes": []
         }
       ],
       "global": [
