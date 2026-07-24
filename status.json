@@ -437,31 +437,31 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "HIGH_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.028156813617925644,
+    "vix_level": 18.579999923706055,
+    "vix_percentile_1y": 0.6785714285714286,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
-      "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "rank": 18,
+      "flow": 18,
+      "options": 28,
+      "rotation": 12,
+      "macro": 12,
+      "news": 12
     }
   },
   "top_signal": {
     "ticker": "XLE",
     "rank_score": 17.70199395770393,
     "flow_score": 7.639077703692845,
-    "options_score": 0.0,
+    "options_score": 22.247086029124013,
     "rotation_score": 12.0,
     "macro_score": 8.562175354567051,
-    "news_score": 10.92,
-    "total": 56.82324701596383,
-    "publish": false,
+    "news_score": 10.799999999999999,
+    "total": 78.95033304508783,
+    "publish": true,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -531,7 +531,7 @@
   "confidence": [
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 91.0
+      "score": 90.0
     },
     {
       "symbol": "India Equity Markets",
@@ -598,27 +598,27 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 91.0,
+      "confidence": 90.0,
       "severity": "CRITICAL",
       "direction": "BULLISH",
-      "direction_score": 0.0,
+      "direction_score": 2.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 30,
-      "latest_at": "24 Jul 2026 17:15 UTC",
+      "article_count": 35,
+      "latest_at": "24 Jul 2026 19:01 UTC",
       "headline": "Why the Latest Oil Rally May Be Far From Over",
       "regions": [
-        "americas",
+        "europe",
+        "global",
         "asia_pacific",
-        "middle_east",
-        "europe"
+        "middle_east"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "World | Deutsche Welle",
+        "Cointelegraph.com News",
+        "Bloomberg Markets",
         "BBC News",
-        "Bloomberg Markets"
+        "World | Deutsche Welle"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -643,8 +643,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 14.9,
-        "recency": 16.3,
+        "source_diversity": 15.6,
+        "recency": 11.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -959,18 +959,19 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 12,
-      "latest_at": "24 Jul 2026 17:38 UTC",
+      "latest_at": "24 Jul 2026 23:11 UTC",
       "headline": "Sweden eases mining permits to cut China minerals reliance",
       "regions": [
+        "europe",
         "asia_pacific",
-        "americas",
-        "global"
+        "global",
+        "americas"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "Semiconductor Engineering",
-        "EE Times",
-        "Latest from Tom's Hardware"
+        "Cointelegraph.com News",
+        "Bloomberg Markets",
+        "Latest from Tom's Hardware",
+        "World | Deutsche Welle"
       ],
       "primary_etf": "DBC",
       "top_etfs": [
@@ -991,11 +992,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 14.3,
+        "signal_strength": 14.1,
         "volume_confirmation": 17.4,
-        "source_diversity": 15.1,
-        "recency": 16.9,
-        "geopolitical_severity": 9.8
+        "source_diversity": 14.2,
+        "recency": 17.0,
+        "geopolitical_severity": 10.5
       }
     },
     {
@@ -1411,7 +1412,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas - 30 articles - CRITICAL / BULLISH - Why the Latest Oil Rally May Be Far From Over"
+      "text": "Energy / Oil & Gas - 35 articles - CRITICAL / BULLISH - Why the Latest Oil Rally May Be Far From Over"
     },
     {
       "tag": "tag-bear",
@@ -1529,9 +1530,9 @@
       "region": "UK",
       "price": 10736.23,
       "currency": "GBP",
-      "change": 97.03,
-      "change_pct": 0.91,
-      "change_str": "+0.91%",
+      "change": 19.23,
+      "change_pct": 0.18,
+      "change_str": "+0.18%",
       "direction": "up"
     },
     {
@@ -1540,10 +1541,10 @@
       "region": "EU",
       "price": 25099.0,
       "currency": "EUR",
-      "change": 335.88,
-      "change_pct": 1.36,
-      "change_str": "+1.36%",
-      "direction": "up"
+      "change": -56.41,
+      "change_pct": -0.22,
+      "change_str": "-0.22%",
+      "direction": "down"
     },
     {
       "label": "Nikkei 225",
@@ -1604,11 +1605,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64089.46,
+      "price": 64105.02,
       "currency": "USD",
-      "change": -955.35,
-      "change_pct": -1.47,
-      "change_str": "-1.47%",
+      "change": -939.79,
+      "change_pct": -1.44,
+      "change_str": "-1.44%",
       "direction": "down"
     },
     {
@@ -1931,12 +1932,12 @@
     }
   },
   "logs": [
-    "2026-07-24 21:15:01 [INFO] AZALYST - status.json generated",
-    "2026-07-24 21:15:01 [INFO] PORTFOLIO - NAV USD 19,861.88 | Return +1.40%",
-    "2026-07-24 21:15:01 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-24 21:15:01 [INFO] TRADER - Open positions: XLF, IBIT, XLE, QQQ, SH",
-    "2026-07-24 21:15:01 [INFO] TRADER - Closed trades: 17",
-    "2026-07-24 21:15:01 [INFO] RISK - Partial profits realised: USD 15,016.61"
+    "2026-07-24 23:23:18 [INFO] AZALYST - status.json generated",
+    "2026-07-24 23:23:18 [INFO] PORTFOLIO - NAV USD 19,861.88 | Return +1.40%",
+    "2026-07-24 23:23:18 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-24 23:23:18 [INFO] TRADER - Open positions: XLF, IBIT, XLE, QQQ, SH",
+    "2026-07-24 23:23:18 [INFO] TRADER - Closed trades: 17",
+    "2026-07-24 23:23:18 [INFO] RISK - Partial profits realised: USD 15,016.61"
   ],
-  "generated_at": "2026-07-24 21:14:58 UTC"
+  "generated_at": "2026-07-24 23:23:16 UTC"
 }
