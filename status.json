@@ -61,7 +61,7 @@
       "pnl_pct_str": "+1.19%",
       "confidence": 89,
       "severity": "CRITICAL",
-      "days_held": 17,
+      "days_held": 18,
       "half_exited": true
     },
     {
@@ -452,7 +452,18 @@
       "news": 10
     }
   },
-  "top_signal": {},
+  "top_signal": {
+    "ticker": "XLE",
+    "rank_score": 0.0,
+    "flow_score": 4.5,
+    "options_score": 0.0,
+    "rotation_score": 12.0,
+    "macro_score": 8.551745802947393,
+    "news_score": 9.0,
+    "total": 34.051745802947394,
+    "publish": false,
+    "direction": "long"
+  },
   "jlaw_risk": {
     "distribution_count": 4,
     "risk_multiplier": 1.0,
@@ -519,8 +530,8 @@
   },
   "confidence": [
     {
-      "symbol": "India Equity Markets",
-      "score": 90.0
+      "symbol": "Defense & Aerospace",
+      "score": 93.0
     },
     {
       "symbol": "Europe Equity + Gold & Precious Metals",
@@ -531,32 +542,36 @@
       "score": 89.0
     },
     {
-      "symbol": "Emerging Markets + Crypto & Digital Assets",
-      "score": 86.0
+      "symbol": "India Equity Markets",
+      "score": 87.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 82.0
+      "symbol": "Emerging Markets + Crypto & Digital Assets",
+      "score": 86.0
     },
     {
       "symbol": "Nuclear Energy & Uranium + Bearish Market / Macro Selloff",
       "score": 82.0
     },
     {
-      "symbol": "Commodities & Mining",
-      "score": 81.0
-    },
-    {
       "symbol": "Bonds & Fixed Income",
       "score": 81.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 78.0
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 80.0
+    },
+    {
+      "symbol": "Commodities & Mining",
+      "score": 79.0
     },
     {
       "symbol": "Crypto & Digital Assets",
       "score": 77.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 75.0
     },
     {
       "symbol": "Healthcare & Pharma",
@@ -571,10 +586,6 @@
       "score": 67.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 67.0
-    },
-    {
       "symbol": "Asia Pacific Equity + Bonds & Fixed Income",
       "score": 64.0
     },
@@ -585,53 +596,55 @@
   ],
   "signals": [
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 90.0,
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 93.0,
       "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -13.0,
+      "direction": "BULLISH",
+      "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "25 Jul 2026 07:35 UTC",
-      "headline": "Market wrap: HCLTech, Bajaj Finance, Eternal among top gainers and losers on Nifty and Sensex on Friday",
+      "article_count": 42,
+      "latest_at": "25 Jul 2026 13:15 UTC",
+      "headline": "Iran-backed Houthis claim missile attack on Saudi Arabia",
       "regions": [
-        "global",
-        "asia_pacific",
+        "africa",
+        "india",
         "middle_east",
-        "india"
+        "europe"
       ],
       "sources": [
-        "World | Deutsche Welle",
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "Cointelegraph.com News"
+        "BBC News",
+        "Latest from Tom's Hardware",
+        "World News - Breaking international news and headlines | Sky News",
+        "Finance"
       ],
-      "primary_etf": "INDA",
+      "primary_etf": "ITA",
       "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
+        "ITA",
+        "XAR",
+        "PPA"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
+        "CPSEETF",
+        "DEFENCEETF"
       ],
       "global_etfs": [
-        "INDA"
+        "ITA",
+        "XAR",
+        "PPA"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 14.4,
-        "recency": 16.3,
+        "source_diversity": 16.8,
+        "recency": 16.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -737,6 +750,57 @@
       }
     },
     {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 87.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -7.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 25,
+      "latest_at": "25 Jul 2026 10:16 UTC",
+      "headline": "F&amp;O Talk: Nifty looks weak on chart, says Sudeep Shah; outlines HDFC Bank, Bluestone Strategy after Q1",
+      "regions": [
+        "asia_pacific",
+        "india",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "BBC News",
+        "World News - Breaking international news and headlines | Sky News",
+        "World | Deutsche Welle",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.2,
+        "recency": 12.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "emerging_markets",
       "sector_label": "Emerging Markets + Crypto & Digital Assets",
       "confidence": 86.0,
@@ -784,59 +848,6 @@
         "volume_confirmation": 15.4,
         "source_diversity": 11.0,
         "recency": 16.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 82.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": 1.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 85,
-      "latest_at": "24 Jul 2026 20:07 UTC",
-      "headline": "Chip Industry Week In Review",
-      "regions": [
-        "asia_pacific",
-        "middle_east",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "www.theregister.com - Articles",
-        "EE Times",
-        "World | Deutsche Welle",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.8,
-        "recency": 5.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -893,57 +904,6 @@
       }
     },
     {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 81.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "25 Jul 2026 08:00 UTC",
-      "headline": "Sweden eases mining permits to cut China minerals reliance",
-      "regions": [
-        "americas",
-        "europe",
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "World | Deutsche Welle",
-        "EE Times",
-        "Markets-Economic Times",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 13.5,
-        "volume_confirmation": 16.8,
-        "source_diversity": 14.2,
-        "recency": 17.0,
-        "geopolitical_severity": 10.5
-      }
-    },
-    {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income",
       "confidence": 81.0,
@@ -996,34 +956,87 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 78.0,
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 80.0,
       "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": -19.5,
+      "direction": "BEARISH",
+      "direction_score": 1.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 41,
-      "latest_at": "24 Jul 2026 19:00 UTC",
-      "headline": "Why the Latest Oil Rally May Be Far From Over",
+      "article_count": 80,
+      "latest_at": "24 Jul 2026 20:07 UTC",
+      "headline": "Chip Industry Week In Review",
       "regions": [
-        "asia_pacific",
-        "middle_east",
+        "india",
         "americas",
-        "global"
+        "middle_east",
+        "europe"
       ],
       "sources": [
-        "World | Deutsche Welle",
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "Defense News"
+        "EE Times",
+        "BBC News",
+        "Latest from Tom's Hardware",
+        "Finance"
       ],
-      "primary_etf": "XLE",
+      "primary_etf": "QQQ",
       "top_etfs": [
-        "XLE",
-        "IXC",
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.8,
+        "recency": 3.1,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 79.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 10,
+      "latest_at": "25 Jul 2026 13:15 UTC",
+      "headline": "Sweden eases mining permits to cut China minerals reliance",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "americas",
+        "europe"
+      ],
+      "sources": [
+        "EE Times",
+        "Latest from Tom's Hardware",
+        "US Top News and Analysis",
+        "World | Deutsche Welle"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
         "CPSEETF"
       ],
       "access_markets": [
@@ -1031,21 +1044,19 @@
         "International-listed"
       ],
       "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
+        "CPSEETF"
       ],
       "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
+        "DBC",
+        "COPP"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.9,
-        "recency": 4.6,
-        "geopolitical_severity": 13.0
+        "signal_strength": 12.6,
+        "volume_confirmation": 16.2,
+        "source_diversity": 14.2,
+        "recency": 16.9,
+        "geopolitical_severity": 10.4
       }
     },
     {
@@ -1090,6 +1101,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 7.6,
         "recency": 10.2,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 75.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": -21.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 38,
+      "latest_at": "24 Jul 2026 19:00 UTC",
+      "headline": "Why the Latest Oil Rally May Be Far From Over",
+      "regions": [
+        "americas",
+        "middle_east",
+        "europe",
+        "asia_pacific"
+      ],
+      "sources": [
+        "BBC News",
+        "Finance",
+        "US Top News and Analysis",
+        "Defense News"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.6,
+        "recency": 2.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -1245,59 +1309,6 @@
       }
     },
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 67.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 36,
-      "latest_at": "24 Jul 2026 21:04 UTC",
-      "headline": "Russia hits drone demonstration near Kyiv, killing 10",
-      "regions": [
-        "africa",
-        "india",
-        "europe",
-        "global"
-      ],
-      "sources": [
-        "World News - Breaking international news and headlines | Sky News",
-        "Bloomberg Markets",
-        "Cointelegraph.com News",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.4,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity + Bonds & Fixed Income",
       "confidence": 64.0,
@@ -1399,9 +1410,9 @@
   ],
   "articles": [
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "India Equity Markets - 25 articles - HIGH / BEARISH - Market wrap: HCLTech, Bajaj Finance, Eternal among top gainers and losers on Nifty and Sensex on Friday"
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Defense & Aerospace - 42 articles - HIGH / BULLISH - Iran-backed Houthis claim missile attack on Saudi Arabia"
     },
     {
       "tag": "tag-bull",
@@ -1416,12 +1427,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Emerging Markets + Crypto & Digital Assets - 9 articles - HIGH / BEARISH - Binance & OKX users face $1,900 fines in Vietnam, Coinbase in China? Asia Express"
+      "text": "India Equity Markets - 25 articles - HIGH / BEARISH - F&amp;O Talk: Nifty looks weak on chart, says Sudeep Shah; outlines HDFC Bank, Bluestone Strategy after Q1"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Technology & AI / Semiconductors - 85 articles - CRITICAL / BEARISH - Chip Industry Week In Review"
+      "text": "Emerging Markets + Crypto & Digital Assets - 9 articles - HIGH / BEARISH - Binance & OKX users face $1,900 fines in Vietnam, Coinbase in China? Asia Express"
     },
     {
       "tag": "tag-bear",
@@ -1429,24 +1440,29 @@
       "text": "Nuclear Energy & Uranium + Bearish Market / Macro Selloff - 9 articles - CRITICAL / BEARISH - Iran Says U.S. Struck Unfinished Nuclear Plant, Warns of Safety Risk"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Commodities & Mining - 11 articles - MEDIUM / BULLISH - Sweden eases mining permits to cut China minerals reliance"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Bonds & Fixed Income - 10 articles - HIGH / BEARISH - Oil shock, Treasury yield spike put Indian bonds under pressure before debt sale"
     },
     {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Technology & AI / Semiconductors - 80 articles - CRITICAL / BEARISH - Chip Industry Week In Review"
+    },
+    {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas - 41 articles - CRITICAL / BULLISH - Why the Latest Oil Rally May Be Far From Over"
+      "text": "Commodities & Mining - 10 articles - MEDIUM / BULLISH - Sweden eases mining permits to cut China minerals reliance"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Crypto & Digital Assets - 22 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Energy / Oil & Gas - 38 articles - CRITICAL / BULLISH - Why the Latest Oil Rally May Be Far From Over"
     },
     {
       "tag": "tag-bull",
@@ -1462,11 +1478,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BULLISH - Gold softens on prospects of Fed rate hikes as Brent tops $100"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Defense & Aerospace - 36 articles - HIGH / BULLISH - Russia hits drone demonstration near Kyiv, killing 10"
     },
     {
       "tag": "tag-bear",
@@ -1594,11 +1605,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63876.09,
+      "price": 64052.82,
       "currency": "USD",
-      "change": -222.41,
-      "change_pct": -0.35,
-      "change_str": "-0.35%",
+      "change": -45.68,
+      "change_pct": -0.07,
+      "change_str": "-0.07%",
       "direction": "down"
     },
     {
@@ -1921,12 +1932,12 @@
     }
   },
   "logs": [
-    "2026-07-25 08:10:27 [INFO] AZALYST - status.json generated",
-    "2026-07-25 08:10:27 [INFO] PORTFOLIO - NAV USD 19,861.60 | Return +1.41%",
-    "2026-07-25 08:10:27 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-25 08:10:27 [INFO] TRADER - Open positions: XLF, IBIT, XLE, QQQ, SH",
-    "2026-07-25 08:10:27 [INFO] TRADER - Closed trades: 17",
-    "2026-07-25 08:10:27 [INFO] RISK - Partial profits realised: USD 15,016.61"
+    "2026-07-25 13:22:21 [INFO] AZALYST - status.json generated",
+    "2026-07-25 13:22:21 [INFO] PORTFOLIO - NAV USD 19,861.60 | Return +1.41%",
+    "2026-07-25 13:22:21 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-25 13:22:21 [INFO] TRADER - Open positions: XLF, IBIT, XLE, QQQ, SH",
+    "2026-07-25 13:22:21 [INFO] TRADER - Closed trades: 17",
+    "2026-07-25 13:22:21 [INFO] RISK - Partial profits realised: USD 15,016.61"
   ],
-  "generated_at": "2026-07-25 08:10:26 UTC"
+  "generated_at": "2026-07-25 13:22:20 UTC"
 }
