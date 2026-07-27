@@ -446,32 +446,32 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "HIGH_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.02840154658080965,
+    "vix_level": 18.670000076293945,
+    "vix_percentile_1y": 0.6984126984126984,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
-      "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "rank": 18,
+      "flow": 18,
+      "options": 28,
+      "rotation": 12,
+      "macro": 12,
+      "news": 12
     }
   },
   "top_signal": {
-    "ticker": "IGV",
-    "rank_score": 7.567915087187263,
-    "flow_score": 18.0,
-    "options_score": 0.0,
+    "ticker": "XLF",
+    "rank_score": 14.576202531645569,
+    "flow_score": 0.3130838138108382,
+    "options_score": 27.3757555008057,
     "rotation_score": 12.0,
-    "macro_score": 0.0,
-    "news_score": 10.68,
-    "total": 48.24791508718726,
-    "publish": false,
-    "direction": "short"
+    "macro_score": 2.2960937946633058,
+    "news_score": 8.544,
+    "total": 65.10513564092541,
+    "publish": true,
+    "direction": "long"
   },
   "jlaw_risk": {
     "distribution_count": 4,
@@ -1501,9 +1501,9 @@
       "region": "US",
       "price": 7413.18,
       "currency": "USD",
-      "change": 4.88,
-      "change_pct": 0.07,
-      "change_str": "+0.07%",
+      "change": 1.2,
+      "change_pct": 0.02,
+      "change_str": "+0.02%",
       "direction": "up"
     },
     {
@@ -1512,9 +1512,9 @@
       "region": "US",
       "price": 24932.08,
       "currency": "USD",
-      "change": -205.61,
-      "change_pct": -0.82,
-      "change_str": "-0.82%",
+      "change": -43.74,
+      "change_pct": -0.18,
+      "change_str": "-0.18%",
       "direction": "down"
     },
     {
@@ -1523,9 +1523,9 @@
       "region": "US",
       "price": 52210.08,
       "currency": "USD",
-      "change": 498.43,
-      "change_pct": 0.96,
-      "change_str": "+0.96%",
+      "change": 262.83,
+      "change_pct": 0.51,
+      "change_str": "+0.51%",
       "direction": "up"
     },
     {
@@ -1534,9 +1534,9 @@
       "region": "UK",
       "price": 10781.75,
       "currency": "GBP",
-      "change": 142.55,
-      "change_pct": 1.34,
-      "change_str": "+1.34%",
+      "change": 45.55,
+      "change_pct": 0.42,
+      "change_str": "+0.42%",
       "direction": "up"
     },
     {
@@ -1556,9 +1556,9 @@
       "region": "JP",
       "price": 64931.19,
       "currency": "JPY",
-      "change": -1184.41,
-      "change_pct": -1.79,
-      "change_str": "-1.79%",
+      "change": -1491.41,
+      "change_pct": -2.25,
+      "change_str": "-2.25%",
       "direction": "down"
     },
     {
@@ -1567,10 +1567,10 @@
       "region": "HK",
       "price": 25207.18,
       "currency": "HKD",
-      "change": 314.52,
-      "change_pct": 1.26,
-      "change_str": "+1.26%",
-      "direction": "up"
+      "change": -3.63,
+      "change_pct": -0.01,
+      "change_str": "-0.01%",
+      "direction": "down"
     },
     {
       "label": "Nifty 50",
@@ -1587,33 +1587,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4081.8,
+      "price": 4080.8,
       "currency": "USD",
-      "change": 14.2,
-      "change_pct": 0.35,
-      "change_str": "+0.35%",
+      "change": 13.2,
+      "change_pct": 0.32,
+      "change_str": "+0.32%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 81.85,
+      "price": 82.01,
       "currency": "USD",
-      "change": -7.46,
-      "change_pct": -8.35,
-      "change_str": "-8.35%",
+      "change": -7.3,
+      "change_pct": -8.17,
+      "change_str": "-8.17%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64932.58,
+      "price": 64676.22,
       "currency": "USD",
-      "change": -407.72,
-      "change_pct": -0.62,
-      "change_str": "-0.62%",
+      "change": -664.08,
+      "change_pct": -1.02,
+      "change_str": "-1.02%",
       "direction": "down"
     },
     {
@@ -1622,9 +1622,9 @@
       "region": "FX",
       "price": 101.51,
       "currency": "USD",
-      "change": 0.08,
-      "change_pct": 0.08,
-      "change_str": "+0.08%",
+      "change": 0.04,
+      "change_pct": 0.04,
+      "change_str": "+0.04%",
       "direction": "up"
     },
     {
@@ -1633,10 +1633,10 @@
       "region": "VOL",
       "price": 18.67,
       "currency": "USD",
-      "change": -0.03,
-      "change_pct": -0.16,
-      "change_str": "-0.16%",
-      "direction": "down"
+      "change": 0.09,
+      "change_pct": 0.48,
+      "change_str": "+0.48%",
+      "direction": "up"
     }
   ],
   "risk_controls": {
@@ -1678,17 +1678,17 @@
       "matrix": {
         "IBIT": {
           "IBIT": 1.0,
-          "XLE": -0.335,
-          "XLF": 0.492
+          "XLE": -0.362,
+          "XLF": 0.51
         },
         "XLE": {
-          "IBIT": -0.335,
+          "IBIT": -0.362,
           "XLE": 1.0,
-          "XLF": -0.493
+          "XLF": -0.428
         },
         "XLF": {
-          "IBIT": 0.492,
-          "XLE": -0.493,
+          "IBIT": 0.51,
+          "XLE": -0.428,
           "XLF": 1.0
         }
       },
@@ -1697,25 +1697,25 @@
         "XLE",
         "XLF"
       ],
-      "max_corr": 0.492,
+      "max_corr": 0.51,
       "max_corr_pair": [
         "IBIT",
         "XLF"
       ],
-      "most_negative_corr": -0.493,
+      "most_negative_corr": -0.428,
       "most_negative_pair": [
         "XLE",
         "XLF"
       ],
-      "status": "OK"
+      "status": "HIGH"
     },
     "volatility": {
       "per_ticker": {
-        "XLF": 15.25,
-        "IBIT": 31.95,
-        "XLE": 19.85
+        "XLF": 14.1,
+        "IBIT": 31.53,
+        "XLE": 19.98
       },
-      "portfolio_avg_vol_pct": 22.35,
+      "portfolio_avg_vol_pct": 21.87,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -1890,12 +1890,12 @@
     }
   },
   "logs": [
-    "2026-07-27 20:38:15 [INFO] AZALYST - status.json generated",
-    "2026-07-27 20:38:15 [INFO] PORTFOLIO - NAV USD 19,862.47 | Return +0.72%",
-    "2026-07-27 20:38:15 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-27 20:38:15 [INFO] TRADER - Open positions: XLF, IBIT, XLE, SH",
-    "2026-07-27 20:38:15 [INFO] TRADER - Closed trades: 19",
-    "2026-07-27 20:38:15 [INFO] RISK - Partial profits realised: USD 15,016.61"
+    "2026-07-27 22:19:51 [INFO] AZALYST - status.json generated",
+    "2026-07-27 22:19:51 [INFO] PORTFOLIO - NAV USD 19,862.47 | Return +0.72%",
+    "2026-07-27 22:19:51 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-27 22:19:51 [INFO] TRADER - Open positions: XLF, IBIT, XLE, SH",
+    "2026-07-27 22:19:51 [INFO] TRADER - Closed trades: 19",
+    "2026-07-27 22:19:51 [INFO] RISK - Partial profits realised: USD 15,016.61"
   ],
-  "generated_at": "2026-07-27 20:38:11 UTC"
+  "generated_at": "2026-07-27 22:19:48 UTC"
 }
