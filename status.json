@@ -15,7 +15,8 @@
   "partial_realised_pnl": 156.68,
   "portfolio_peak": 20120.3,
   "drawdown_now_pct": 1.27,
-  "max_drawdown_pct": 12.69,
+  "max_drawdown_pct": 1.27,
+  "deposited_anomaly": false,
   "usd_inr_rate": 95.842,
   "positions": [
     {
@@ -61,7 +62,7 @@
       "pnl_pct_str": "+1.60%",
       "confidence": 89,
       "severity": "CRITICAL",
-      "days_held": 20,
+      "days_held": 21,
       "half_exited": true
     },
     {
@@ -442,23 +443,72 @@
       "pnl_pct_str": "-4.80%",
       "exit_reason": "Time-based unclogging (14 days, -4.7%)",
       "days_held": 14
-    }
+    },
+    "legacy_partial_pnl_not_itemized": 15016.61
+  },
+  "all_eras_summary": {
+    "eras": [
+      {
+        "era": "v1_paper_track_record_2026-05-08",
+        "total_deposited": 10043.4,
+        "portfolio_value": 10035.64,
+        "realised_pnl": 5.68,
+        "change": "-0.08%",
+        "total_trades": 0,
+        "winners": 0,
+        "losers": 0,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      {
+        "era": "v2_paper_track_record_2026-06-25",
+        "total_deposited": 10158.88,
+        "portfolio_value": 10050.65,
+        "realised_pnl": -93.17,
+        "change": "-1.07%",
+        "total_trades": 12,
+        "winners": 1,
+        "losers": 11,
+        "win_rate": 8.3,
+        "profit_factor": 0.12
+      },
+      {
+        "era": "current",
+        "total_deposited": 19731.95,
+        "portfolio_value": 19864.3,
+        "realised_pnl": -3.8,
+        "change": "+0.67%",
+        "total_trades": 19,
+        "winners": 5,
+        "losers": 14,
+        "win_rate": 26.3,
+        "profit_factor": 0.48
+      }
+    ],
+    "era_count": 3,
+    "reset_count": 2,
+    "combined_total_trades": 31,
+    "combined_win_rate": 19.4,
+    "combined_realised_pnl": -91.29,
+    "combined_realised_pnl_str": "-91.29",
+    "combined_total_deposited": 39934.23,
+    "note": "Each entry in `eras` is a separate paper-trading book (a prior book is archived, deposits restart, and NAV resets to par when the engine is reset). The headline NAV/return above the fold reflects only the CURRENT era -- this section exists so a reset cannot make the published track record look better than the full history."
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "HIGH_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.03212300252003424,
+    "vix_level": 18.670000076293945,
+    "vix_percentile_1y": 0.6944444444444444,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
-      "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "rank": 18,
+      "flow": 18,
+      "options": 28,
+      "rotation": 12,
+      "macro": 12,
+      "news": 12
     }
   },
   "top_signal": {
@@ -466,10 +516,10 @@
     "rank_score": 5.240547945205479,
     "flow_score": 18.0,
     "options_score": 32.308742113931444,
-    "rotation_score": 6.4113060930158,
+    "rotation_score": 4.456913956961205,
     "macro_score": 0.0,
     "news_score": 11.28,
-    "total": 73.24059615215272,
+    "total": 71.28620401609813,
     "publish": true,
     "direction": "short"
   },
@@ -551,6 +601,10 @@
       "score": 87.0
     },
     {
+      "symbol": "Asia Pacific Equity",
+      "score": 87.0
+    },
+    {
       "symbol": "Emerging Markets + Crypto & Digital Assets",
       "score": 86.0
     },
@@ -573,10 +627,6 @@
     {
       "symbol": "Cybersecurity",
       "score": 70.0
-    },
-    {
-      "symbol": "Asia Pacific Equity + Bonds & Fixed Income",
-      "score": 64.0
     },
     {
       "symbol": "Bonds & Fixed Income",
@@ -856,6 +906,56 @@
         "volume_confirmation": 17.4,
         "source_diversity": 13.4,
         "recency": 16.3,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 87.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -5.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "28 Jul 2026 13:11 UTC",
+      "headline": "Global Market: Japan's 10-year bond yield climbs as fiscal concerns weigh on market ahead of BOJ meeting",
+      "regions": [
+        "americas",
+        "asia_pacific",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "BBC News",
+        "World News - Breaking international news and headlines | Sky News",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 16.2,
+        "volume_confirmation": 16.8,
+        "source_diversity": 14.4,
+        "recency": 16.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -1157,56 +1257,6 @@
       }
     },
     {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity + Bonds & Fixed Income",
-      "confidence": 64.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "22 Jul 2026 05:29 UTC",
-      "headline": "Global Market Today: Asian stocks advance on tech rally, yen weakens",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "europe",
-        "middle_east"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "BBC News",
-        "Markets-Economic Times",
-        "EE Times"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 17.6,
-        "volume_confirmation": 17.4,
-        "source_diversity": 15.9,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income",
       "confidence": 64.0,
@@ -1439,6 +1489,11 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Asia Pacific Equity - 11 articles - HIGH / BEARISH - Global Market: Japan's 10-year bond yield climbs as fiscal concerns weigh on market ahead of BOJ meeting"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "Emerging Markets + Crypto & Digital Assets - 9 articles - HIGH / BEARISH - Binance & OKX users face $1,900 fines in Vietnam, Coinbase in China? Asia Express"
     },
     {
@@ -1469,11 +1524,6 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Asia Pacific Equity + Bonds & Fixed Income - 12 articles - HIGH / BEARISH - Global Market Today: Asian stocks advance on tech rally, yen weakens"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Bonds & Fixed Income - 10 articles - HIGH / BEARISH - Why bond investors are pushing up some of your interest rates"
     },
     {
@@ -1497,12 +1547,12 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7413.18,
+      "price": 7412.8,
       "currency": "USD",
-      "change": 1.2,
-      "change_pct": 0.02,
-      "change_str": "+0.02%",
-      "direction": "up"
+      "change": -0.38,
+      "change_pct": -0.01,
+      "change_str": "-0.01%",
+      "direction": "down"
     },
     {
       "label": "NASDAQ",
@@ -1519,34 +1569,34 @@
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 52210.08,
+      "price": 52572.97,
       "currency": "USD",
-      "change": 262.83,
-      "change_pct": 0.51,
-      "change_str": "+0.51%",
+      "change": 362.89,
+      "change_pct": 0.7,
+      "change_str": "+0.70%",
       "direction": "up"
     },
     {
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10826.98,
+      "price": 10810.09,
       "currency": "GBP",
-      "change": 45.18,
-      "change_pct": 0.42,
-      "change_str": "+0.42%",
+      "change": 28.29,
+      "change_pct": 0.26,
+      "change_str": "+0.26%",
       "direction": "up"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 25393.52,
+      "price": 25317.03,
       "currency": "EUR",
-      "change": 32.49,
-      "change_pct": 0.13,
-      "change_str": "+0.13%",
-      "direction": "up"
+      "change": -44.0,
+      "change_pct": -0.17,
+      "change_str": "-0.17%",
+      "direction": "down"
     },
     {
       "label": "Nikkei 225",
@@ -1585,55 +1635,55 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4025.5,
+      "price": 4030.9,
       "currency": "USD",
-      "change": -49.0,
-      "change_pct": -1.2,
-      "change_str": "-1.20%",
+      "change": -43.6,
+      "change_pct": -1.07,
+      "change_str": "-1.07%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 81.47,
+      "price": 81.26,
       "currency": "USD",
-      "change": -1.14,
-      "change_pct": -1.38,
-      "change_str": "-1.38%",
+      "change": -1.35,
+      "change_pct": -1.63,
+      "change_str": "-1.63%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63381.01,
+      "price": 63269.24,
       "currency": "USD",
-      "change": -343.89,
-      "change_pct": -0.54,
-      "change_str": "-0.54%",
+      "change": -455.66,
+      "change_pct": -0.72,
+      "change_str": "-0.72%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.57,
+      "price": 101.52,
       "currency": "USD",
-      "change": 0.1,
-      "change_pct": 0.1,
-      "change_str": "+0.10%",
+      "change": 0.05,
+      "change_pct": 0.05,
+      "change_str": "+0.05%",
       "direction": "up"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 18.78,
+      "price": 18.67,
       "currency": "USD",
-      "change": 0.11,
-      "change_pct": 0.59,
-      "change_str": "+0.59%",
+      "change": -0.0,
+      "change_pct": -0.0,
+      "change_str": "+-0.00%",
       "direction": "up"
     }
   ],
@@ -1641,7 +1691,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 1.27,
     "portfolio_peak": 20120.3,
-    "vix": 18.78,
+    "vix": 18.67,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -1665,28 +1715,29 @@
         "at_cap": false
       }
     ],
-    "max_drawdown_pct": 12.69,
+    "max_drawdown_pct": 1.27,
     "sector_cap_pct": 30,
     "trailing_stop_pct": 8,
     "hard_stop_pct": 10,
-    "partial_profit_pct": 8
+    "partial_profit_pct": 8,
+    "deposited_anomaly": false
   },
   "aladdin_risk": {
     "correlation": {
       "matrix": {
         "IBIT": {
           "IBIT": 1.0,
-          "XLE": -0.362,
-          "XLF": 0.51
+          "XLE": -0.327,
+          "XLF": 0.485
         },
         "XLE": {
-          "IBIT": -0.362,
+          "IBIT": -0.327,
           "XLE": 1.0,
-          "XLF": -0.428
+          "XLF": -0.427
         },
         "XLF": {
-          "IBIT": 0.51,
-          "XLE": -0.428,
+          "IBIT": 0.485,
+          "XLE": -0.427,
           "XLF": 1.0
         }
       },
@@ -1695,34 +1746,34 @@
         "XLE",
         "XLF"
       ],
-      "max_corr": 0.51,
+      "max_corr": 0.485,
       "max_corr_pair": [
         "IBIT",
         "XLF"
       ],
-      "most_negative_corr": -0.428,
+      "most_negative_corr": -0.427,
       "most_negative_pair": [
         "XLE",
         "XLF"
       ],
-      "status": "HIGH"
+      "status": "OK"
     },
     "volatility": {
       "per_ticker": {
-        "XLF": 14.1,
-        "IBIT": 31.53,
-        "XLE": 19.98
+        "XLF": 13.74,
+        "IBIT": 32.53,
+        "XLE": 19.49
       },
-      "portfolio_avg_vol_pct": 21.87,
+      "portfolio_avg_vol_pct": 21.92,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": -1.15,
-      "benchmark_price_start": 747.71,
-      "benchmark_price_now": 739.09,
+      "benchmark_return_pct": -2.53,
+      "benchmark_price_start": 758.54,
+      "benchmark_price_now": 739.39,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": 0.67,
-      "alpha": 1.82
+      "alpha": 3.2
     },
     "rebalance": {
       "alerts": [
@@ -1878,12 +1929,12 @@
     }
   },
   "logs": [
-    "2026-07-28 12:14:39 [INFO] AZALYST - status.json generated",
-    "2026-07-28 12:14:39 [INFO] PORTFOLIO - NAV USD 19,864.30 | Return +0.67%",
-    "2026-07-28 12:14:39 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-07-28 12:14:39 [INFO] TRADER - Open positions: XLF, IBIT, XLE, SH",
-    "2026-07-28 12:14:39 [INFO] TRADER - Closed trades: 19",
-    "2026-07-28 12:14:39 [INFO] RISK - Partial profits realised: USD 15,016.61"
+    "2026-07-28 13:30:15 [INFO] AZALYST - status.json generated",
+    "2026-07-28 13:30:15 [INFO] PORTFOLIO - NAV USD 19,864.30 | Return +0.67%",
+    "2026-07-28 13:30:15 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-28 13:30:15 [INFO] TRADER - Open positions: XLF, IBIT, XLE, SH",
+    "2026-07-28 13:30:15 [INFO] TRADER - Closed trades: 19",
+    "2026-07-28 13:30:15 [INFO] RISK - Partial profits realised: USD 15,016.61"
   ],
-  "generated_at": "2026-07-28 12:14:38 UTC"
+  "generated_at": "2026-07-28 13:30:13 UTC"
 }
