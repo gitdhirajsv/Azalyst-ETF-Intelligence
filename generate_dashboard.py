@@ -853,13 +853,19 @@ def generate_status():
         print(f"Written minimal dashboard status -> {OUTPUT_FILE}")
         return
 
-    # Fetch live USD/INR rate FIRST — needed for INR→USD conversion
+    # Fetch live USD/INR rate FIRST — needed for INR→USD conversion.
+    # ETF-05 remediation (forensic audit 2026-07-28): pass the portfolio's
+    # own persisted last-known-good rate as the fallback instead of relying
+    # on the static 83.5 constant, so a single fetch outage while generating
+    # the dashboard can't misprice the whole USD book by ~12% (83.5 static
+    # vs ~94.7 live as of this book's July deposits).
+    last_good_rate = portfolio.get("last_good_usd_inr_rate")
     usd_inr_rate = None
     try:
         from paper_trader import fetch_usd_to_inr
-        usd_inr_rate = fetch_usd_to_inr()
+        usd_inr_rate = fetch_usd_to_inr(fallback=last_good_rate)
     except Exception:
-        usd_inr_rate = 83.5  # fallback
+        usd_inr_rate = last_good_rate or 83.5  # last resort only
 
     market_snapshot = fetch_market_snapshot()
     metrics         = calc_metrics(portfolio, usd_inr_rate)

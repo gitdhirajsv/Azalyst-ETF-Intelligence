@@ -422,14 +422,25 @@ def build_exit_execution(
 # the last close in the quote array so a flaky response no longer means stale data.
 _PRICE_RETRIES = 3
 _PRICE_BACKOFF_SEC = 0.6
+# ETF-05 remediation (forensic audit 2026-07-28): a weekend/holiday cron run
+# (or a genuinely stuck/cached feed) could previously act on Friday's last
+# close as if it were a live, tradeable quote -- opening, closing, and
+# marking positions, and ticking stall-exit/hold-day clocks, against a price
+# nobody could actually trade at. A quote older than this is now treated
+# exactly like a fetch failure (return None): every existing call site
+# already fails safe on None (skip the action), so this closes the gap with
+# no new failure mode.
+_MAX_QUOTE_AGE_HOURS = 24.0
 
 
-def _yahoo_chart_price(symbol: str) -> Optional[float]:
+def _yahoo_chart_price(symbol: str, max_age_hours: float = _MAX_QUOTE_AGE_HOURS) -> Optional[float]:
     """Latest price for a Yahoo symbol, with retries and close-array fallback.
 
     Tries regularMarketPrice first; if absent, walks the most recent non-null
-    close in the quote array, then previousClose/chartPreviousClose. Returns None
-    only after all retries are exhausted with no usable price."""
+    close in the quote array, then previousClose/chartPreviousClose. Returns
+    None if all retries are exhausted with no usable price, OR if the freshest
+    quote available is older than `max_age_hours` (a stale/weekend/cached
+    quote is treated the same as a fetch failure, not a tradeable price)."""
     url = (
         f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}"
         f"?interval=1d&range=5d"
@@ -442,6 +453,23 @@ def _yahoo_chart_price(symbol: str) -> Optional[float]:
                 data = json.loads(resp.read())
             result = data["chart"]["result"][0]
             meta = result.get("meta", {}) or {}
+
+            quote_time = meta.get("regularMarketTime")
+            if quote_time is None:
+                timestamps = result.get("timestamp") or []
+                quote_time = timestamps[-1] if timestamps else None
+            if quote_time is not None:
+                age_hours = (time.time() - float(quote_time)) / 3600.0
+                if age_hours > max_age_hours:
+                    # A retry cannot un-stale a quote (the exchange is closed
+                    # or the feed is cached either way) -- fail immediately
+                    # instead of burning the retry budget on a no-op.
+                    log.warning(
+                        "Price for %s is %.1fh stale (> %.0fh) -- treating as "
+                        "unavailable, not a tradeable price",
+                        symbol, age_hours, max_age_hours,
+                    )
+                    return None
 
             px = meta.get("regularMarketPrice")
             if px is None:
@@ -472,10 +500,33 @@ def _yahoo_chart_price(symbol: str) -> Optional[float]:
     return None
 
 
-def fetch_usd_to_inr() -> float:
-    """Fetch live USD/INR rate from Yahoo Finance (falls back to static rate)."""
+def fetch_usd_to_inr(fallback: Optional[float] = None) -> float:
+    """Fetch live USD/INR rate from Yahoo Finance.
+
+    ETF-05 remediation (forensic audit 2026-07-28): on fetch failure this
+    used to fall back to a hardcoded static constant (83.5) regardless of
+    how far that was from the real rate -- as of this book's July deposits
+    the live rate is ~94.7, so a single failed fetch during mark-to-market
+    could misprice the entire USD book by ~12% in one cycle, potentially
+    tripping every trailing stop simultaneously. Callers that track a
+    persisted last-known-good rate (see PaperPortfolio._fetch_usd_inr)
+    should pass it as `fallback`; the static constant is used only when no
+    such rate is available (a brand-new book with nothing persisted yet).
+    """
     px = _yahoo_chart_price("USDINR=X")
-    return px if px is not None else USD_TO_INR
+    if px is not None:
+        return px
+    if fallback is not None and fallback > 0:
+        log.warning(
+            "USD/INR live fetch failed; using last-known-good rate %.4f "
+            "instead of the static fallback %.2f", fallback, USD_TO_INR,
+        )
+        return fallback
+    log.warning(
+        "USD/INR live fetch failed and no last-known-good rate is available; "
+        "using static fallback %.2f", USD_TO_INR,
+    )
+    return USD_TO_INR
 
 
 def fetch_price_usd(ticker: str) -> Optional[float]:
@@ -714,6 +765,14 @@ class PaperPortfolio:
         # partial P&L realized before this field existed has no per-event
         # record and is disclosed as an aggregate-only adjustment instead.
         self.partial_realised_pnl_events: List[Dict] = []
+        # ETF-05 remediation (forensic audit 2026-07-28): persisted
+        # last-known-good USD/INR rate, updated on every successful live
+        # fetch. Used as the fallback instead of the static USD_TO_INR
+        # constant when a live fetch fails, so a single outage can't
+        # misprice the whole USD book by ~12% (83.5 static vs ~94.7 live as
+        # of this book's July deposits). None only until the first
+        # successful fetch on a brand-new book.
+        self.last_good_usd_inr_rate: Optional[float] = None
         self.total_execution_costs_inr   = 0.0
         self.portfolio_peak              = 0.0
         self.max_drawdown_pct            = 0.0
@@ -756,6 +815,7 @@ class PaperPortfolio:
             self.total_deposited            = data.get("total_deposited", 0.0)
             self.partial_realised_pnl_total = data.get("partial_realised_pnl_total", 0.0)
             self.partial_realised_pnl_events = data.get("partial_realised_pnl_events", [])
+            self.last_good_usd_inr_rate     = data.get("last_good_usd_inr_rate")
             self.total_execution_costs_inr  = data.get("total_execution_costs_inr", 0.0)
             self.portfolio_peak             = data.get("portfolio_peak", 0.0)
             self.max_drawdown_pct           = data.get("max_drawdown_pct", 0.0)
@@ -817,6 +877,7 @@ class PaperPortfolio:
                 "total_deposited":             self.total_deposited,
                 "partial_realised_pnl_total":  round(self.partial_realised_pnl_total, 2),
                 "partial_realised_pnl_events": self.partial_realised_pnl_events,
+                "last_good_usd_inr_rate":      self.last_good_usd_inr_rate,
                 "total_execution_costs_inr":   round(self.total_execution_costs_inr, 2),
                 "portfolio_peak":              round(self.portfolio_peak, 2),
                 "max_drawdown_pct":            round(self.max_drawdown_pct, 2),
@@ -878,13 +939,37 @@ class PaperPortfolio:
             return False
         return True
 
+    def _fetch_usd_inr(self) -> float:
+        """USD/INR rate with a persisted last-known-good fallback.
+
+        ETF-05 remediation (forensic audit 2026-07-28): replaces the static
+        83.5 fallback with the last rate this book actually observed live,
+        so a single fetch outage during mark-to-market can't misprice the
+        entire USD book by ~12% (83.5 vs ~94.7 live as of this book's July
+        deposits) and potentially trip every trailing stop at once. Updates
+        the persisted rate on every successful live fetch. A single-fetch
+        variant of the module-level fetch_usd_to_inr() (which is kept for
+        callers with no persisted rate of their own, e.g. generate_dashboard.py).
+        """
+        live = _yahoo_chart_price("USDINR=X")
+        if live is not None:
+            self.last_good_usd_inr_rate = live
+            return live
+        fallback = self.last_good_usd_inr_rate if self.last_good_usd_inr_rate else USD_TO_INR
+        log.warning(
+            "USD/INR live fetch failed; using last-known-good rate %.4f "
+            "(static constant %.2f used only if no persisted rate exists yet)",
+            fallback, USD_TO_INR,
+        )
+        return fallback
+
     def _process_monthly_deposit(self):
         month_key = date.today().strftime("%Y-%m")
         if month_key in self.monthly_deposits:
             log.info(f"Monthly deposit already credited for {month_key}")
             return
 
-        usd_inr_rate   = fetch_usd_to_inr()
+        usd_inr_rate   = self._fetch_usd_inr()
         budget_inr     = round(MONTHLY_BUDGET_USD * usd_inr_rate, 2)
         deploy_half  = round(budget_inr * 0.50, 2)
         reserve_half = round(budget_inr - deploy_half, 2)
@@ -1233,7 +1318,7 @@ class PaperPortfolio:
     def _rotate_for_signal(self, signal: Dict, min_cash_needed: float, force: bool = False) -> List[Dict]:
         rotation_exits: List[Dict] = []
         attempts = 0
-        usd_inr = fetch_usd_to_inr()
+        usd_inr = self._fetch_usd_inr()
 
         while (self.cash_inr < min_cash_needed or len(self.open_positions) >= MAX_POSITIONS) and attempts < 2:
             candidate = self._select_rotation_candidate(signal, force=force)
@@ -1367,7 +1452,7 @@ class PaperPortfolio:
         if deployable < MIN_TRADE_INR:
             return
 
-        usd_inr       = fetch_usd_to_inr()
+        usd_inr       = self._fetch_usd_inr()
         current_price = get_current_price_inr(best_pos.ticker, best_pos.exchange, usd_inr)
         if current_price is None or current_price <= 0:
             return
@@ -1454,7 +1539,7 @@ class PaperPortfolio:
         candidates = sorted(self.open_hedge_positions, key=lambda p: p.unrealised_pnl_pct())
         worst_hedge = candidates[0]
         
-        usd_inr = fetch_usd_to_inr()
+        usd_inr = self._fetch_usd_inr()
         current_price = get_current_price_inr(worst_hedge.ticker, worst_hedge.exchange, usd_inr)
         if current_price and current_price > 0:
             worst_hedge.current_price = current_price
@@ -1600,7 +1685,7 @@ class PaperPortfolio:
             self._log_entry_rejection(ticker, signal, f"insufficient_cash_{self.cash_inr:.0f}")
             return None
 
-        usd_inr     = fetch_usd_to_inr()
+        usd_inr     = self._fetch_usd_inr()
         entry_price = get_current_price_inr(ticker, exchange, usd_inr)
         if entry_price is None or entry_price <= 0:
             log.warning(f"Cannot enter {ticker} - price unavailable")
@@ -1750,7 +1835,7 @@ class PaperPortfolio:
         if self._regime_stop_mult < 1.0:
             log.info("High-VIX regime — hard stops tightened (multiplier %.2f)", self._regime_stop_mult)
 
-        usd_inr = fetch_usd_to_inr()
+        usd_inr = self._fetch_usd_inr()
 
         all_positions = list(self.open_positions) + list(getattr(self, "open_hedge_positions", []))
         for position in all_positions:
@@ -1858,7 +1943,7 @@ class PaperPortfolio:
         best_trade  = max(self.closed_trades, key=lambda t: t.realised_pnl_pct, default=None)
         worst_trade = min(self.closed_trades, key=lambda t: t.realised_pnl_pct, default=None)
 
-        usd_inr_rate = fetch_usd_to_inr()
+        usd_inr_rate = self._fetch_usd_inr()
         self._update_drawdown_state()
 
         all_open_positions = self.open_positions + getattr(self, "open_hedge_positions", [])
