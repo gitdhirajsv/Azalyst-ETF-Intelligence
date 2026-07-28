@@ -168,26 +168,42 @@ Replacement validation pipeline:
 - **Paper trading reset**: portfolio re-initialized to 948,800 INR cash / 0 positions / 0 trades on v2 inception. The prior v1 paper-trading record is archived at `archive/v1_paper_track_record_2026-05-08/` for reference.
 - **Dashboard updates**: regime banner (risk state, vol regime, VIX percentile, SPY vs 200MA, 3M excess vs T-bill, active weight matrix), factor breakdown panel showing per-layer points for the top published signal, threshold display updated 62 → 60, and a v2-inception tag.
 
-## Directional Risk Controls (Long / Short Regime Logic)
+## Remediation Pass (2026-07-28)
 
-The live engine (`azalyst.py`, `paper_trader.py`, `risk_engine.py`) applies a layered set of gates before any paper position is opened, and a matching set of exits. The guiding principle: **invest through a dip intelligently — size down when it is merely volatile, stand aside from longs when the market is actually falling, and use inverse ETFs as the short side.**
+A forensic audit of the live engine found six defects severe enough to invalidate the paper track record on their own. All six are fixed; the pre-fix v2 book is archived at `archive/v3_paper_track_record_2026-07-28/` and the portfolio was reset to a fresh 958,420 INR (~$10k) starting balance so the new rules can be judged on a clean ledger rather than one shaped by the old bugs. The dashboard's **All Eras** panel sums every archived era plus the current one, so this reset cannot make the published record look better than the full history — see `build_all_eras_summary` in `generate_dashboard.py`.
+
+1. **Killed the bearish-news → inverse-ETF branch.** Any HIGH/CRITICAL bearish headline, from any sector, routed directly into SH/PSQ/SDS/SQQQ with none of the long-side gates applied. 11 of the 19 closed trades in the pre-reset book were this loop, each stall-exited at a small loss within 2-3 days during a `RISK_ON` tape. Bearish signals are now informational only (see Directional Risk Controls above).
+2. **Restored the rotation loss-ban.** An April hard rule ("never rotate out at a loss") had been silently replaced by a "cut losers early" scoring bonus that did the opposite — turning rotation into a loss-realization machine chasing whatever sector had the loudest news that cycle. The ban is restored and the minimum hold before rotation eligibility raised from 3 to 10 days.
+3. **Added a price-confirmation gate.** Live confidence was ~88% news-derived while price/flow evidence was capped at 12 points — a pure tape signal could never open a trade, but a pure news signal always could. Entry now also requires the ticker to be above its own 50-day MA with a non-negative 20-day return.
+4. **Fixed the track record's own arithmetic.** Partial profit-taking exits were invisible to win/loss stats (only an aggregate scalar reflected them); the deposited-figure "sanity check" silently substituted a recomputed number with no trace in the output; and the persisted `max_drawdown_pct` (12.69%) was a valuation-bug artifact, not a real historical loss — corrected to the honestly-recomputed current drawdown.
+5. **Fixed stale-quote and FX-fallback risk.** A single failed FX fetch fell back to a static USD/INR constant that could be ~12% away from the live rate, capable of tripping every trailing stop simultaneously in one bad cycle. Quotes older than 24h (a weekend/holiday Friday-close, or a genuinely stuck feed) are now rejected exactly like a fetch failure instead of being traded as if live.
+6. **Made the Stage-2 gate reachable and wired the circuit breaker.** The Stage-2 gate fetched 6 months of history against a 160-bar internal requirement that 6 months of daily bars can never reach — "only Stage 2 allowed" never filtered a single trade. The external-shock circuit breaker read a module-level import that was frozen at `False` at import time and never updated — confirmed by test that the breaker did not block an entry even when "active." Both are now correctly wired.
+
+All six fixes ship with regression tests (`tests/`) that fail against the pre-fix code and pass against the fix, verified directly against this repo's own historical commits and live state where applicable.
+
+## Directional Risk Controls (Long-Only Regime Logic)
+
+The live engine (`azalyst.py`, `paper_trader.py`, `risk_engine.py`) applies a layered set of gates before any paper position is opened, and a matching set of exits. The guiding principle: **invest through a dip intelligently — size down when it is merely volatile, stand aside entirely when the market is actually falling.**
+
+> **Long-only since the 2026-07-28 remediation pass** (see below): news-driven shorting into inverse ETFs has been removed. Confidence measures how much news exists, not which way the market is actually moving, so a steady drip of bearish-flavoured headlines could re-open an inverse position during a `RISK_ON` tape with none of the long-side gates applied to it — 11 of the 19 closed trades in the pre-reset track record were exactly this loop. If a short book is reintroduced, it will be gated on the regime engine's own `RISK_OFF` state, not on news severity.
 
 ### Entry gates (in order)
 
-1. **Direction gate** — a `BEARISH` signal is never bought long. HIGH/CRITICAL bearish signals route to inverse ProShares ETFs (`bearish_macro`: SH / PSQ / SDS / SQQQ); weaker bearish signals are skipped.
+1. **Direction gate** — a `BEARISH` signal never opens a position of any kind (long or short); it is logged as informational only.
 2. **Market-direction filter (downturn = no longs)** — `_market_downturn()` checks the broad market (SPY). A downturn is SPY below its 50-day MA (sustained downtrend) **or** SPY down more than 3% over the last 5 sessions (sharp drop). While the market is in a downturn, no new long is opened — participation is via the short (inverse) side only. High volatility alone is not a downturn.
 3. **Volatility dampener (size down, do not block)** — `_market_regime()` / `_regime_size_multiplier()` read live VIX. Outside a downturn, longs still fire but smaller in shaky tape: full size normally, 0.6x when VIX >= 25 (elevated), 0.4x when VIX >= 30 (extreme).
 4. **Scope gate** — an India-domestic signal (more than 70% India-region articles) cannot buy a globally-traded ETF. A Sensex move or India import-duty headline routes to India-listed ETFs only, never INDA / GLD / XLE which track global, not domestic, drivers.
 5. **Correlation block** — a new name is rejected if its return correlation to any held position exceeds 0.65, so the book cannot stack several highly-correlated equity ETFs and pass as diversified.
 6. **Price-divergence gate** — a long is skipped if the ticker is already down more than 2% over 5 sessions despite bullish news (price leads narrative).
-7. **Direction-aware sizing** — position size scales with directional conviction (`direction_score`), not just news volume: a NEUTRAL volume-only signal is cut to 0.7x and a strongly bullish one lifted to 1.15x, so the noisiest sector is no longer the largest bet.
+7. **Price-confirmation gate** (added 2026-07-28) — news alone is never sufficient to open a position: live confidence is ~88% derived from RSS news-article statistics, while price/flow evidence is capped at 12 points, well under the publish threshold, so a pure tape signal could never open a trade but a pure news signal always could. Entry now also requires the ticker to be above its own 50-day MA with a non-negative 20-day return (fails open only on a data outage).
+8. **Direction-aware sizing** — position size scales with directional conviction (`direction_score`), not just news volume: a NEUTRAL volume-only signal is cut to 0.7x and a strongly bullish one lifted to 1.15x, so the noisiest sector is no longer the largest bet.
 
 ### Exit / protection
 
 - **Trail activation at +3%** (lowered from +5%, which rarely armed) so gains lock in instead of riding a wide hard stop down.
 - **Regime-tightened hard stops** — `regime_stop_multiplier()` tightens stops to 0.75x at VIX >= 25 and 0.6x at VIX >= 30. Inverse / decay ETFs are exempt — they are the hedge and need room.
-- **Short side is short-term only** — inverse / leveraged ETFs bleed from daily rebalancing decay, so they are a few-day tactical capture, never a hold. Max-hold windows: 3x names 7 days, 2x 10 days, 1x inverse 14 days; stall-cut at 3 days if under +3%; take-profit banks the sharp move in full (leverage-scaled per `DECAY_ETF_PROFILE`).
-- **Live-VIX circuit breaker** — `external_shock_check()` now reads live VIX (previously a hardcoded placeholder), halting new entries in genuine cross-asset stress.
+- **Decay-ETF exit discipline (legacy)** — inverse / leveraged ETFs bleed from daily rebalancing decay, so they were never meant to be a hold: max-hold windows of 3x names 7 days, 2x 10 days, 1x inverse 14 days; stall-cut at 3 days if under +3%. This machinery still exists and still winds down any already-open hedge position, but no new inverse position can be opened by the news path since the 2026-07-28 remediation (see above), so it applies only to legacy positions closing out.
+- **Live-VIX circuit breaker** — `external_shock_check()` reads live VIX and is now correctly wired into the entry loop (a stale module-level import previously meant the breaker check always read `False` regardless of actual conditions; fixed 2026-07-28), halting new entries in genuine cross-asset stress.
 
 ### Cold-start seeder
 
