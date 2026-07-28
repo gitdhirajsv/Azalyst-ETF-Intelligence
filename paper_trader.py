@@ -157,9 +157,13 @@ def _decay_profile(ticker: str) -> dict:
 STALE_MARK_ALERT        = 3
 CIRCUIT_BREAKER_DRAWDOWN_PCT = 0.12
 ROTATION_CONFIDENCE_DELTA    = 10
-# Rotation minimum hold is now enforced INSIDE _select_rotation_candidate (3 days,
-# dynamic multi-factor scoring). The old 14-day static lock and its bypass paths
-# were removed; the constant was kept only briefly for migration and is now dead.
+# Rotation minimum hold is enforced INSIDE _select_rotation_candidate.
+# ETF-02 remediation (forensic audit 2026-07-28): raised 3 -> 10 calendar days.
+# 3 days made rotation indistinguishable from noise trading around any
+# short-lived confidence spike; a position needs long enough for its own
+# thesis to play out before "a stronger signal exists elsewhere" is allowed
+# to end it.
+ROTATION_MIN_HOLD_DAYS       = 10
 TRADE_CALENDAR_TZ            = timezone(timedelta(hours=5, minutes=30))
 # Positions whose unrealized PnL exceeds this percent are NOT eligible for
 # rotation eviction. Asymmetry fix: the old _select_rotation_candidate scored
@@ -1097,11 +1101,26 @@ class PaperPortfolio:
             if _is_decay_etf(pos.ticker):
                 continue
 
-            # Minimum hold of 3 days to prevent excessive turnover
-            if pos.days_held() < 3:
+            # Minimum hold before rotation eviction (ETF-02: 3 -> 10 days).
+            if pos.days_held() < ROTATION_MIN_HOLD_DAYS:
                 continue
 
             pnl_pct = pos.unrealised_pnl_pct()
+
+            # HARD LOSS BAN (ETF-02 remediation, forensic audit 2026-07-28):
+            # never rotate out of a losing position. This rule existed once
+            # (commit 0c28054, 2026-04-18: "never rotate out at a loss") and
+            # was silently replaced by commit 50e969e (2026-06-25) with a
+            # "cut losers early" bonus (+10 score for pnl_pct < -2.0) that
+            # did the exact opposite: it turned the rotation engine into a
+            # loss-realization machine, chasing whatever sector had the
+            # loudest news that cycle. Crystallizing a loss to chase a new
+            # signal destroys alpha; cutting an actual loser is the hard
+            # stop / trailing stop's job, not rotation's. A losing position
+            # may only be closed by risk_engine's stop logic, never by
+            # "something else looks more confident right now."
+            if pnl_pct < 0:
+                continue
 
             # Winner protection: don't evict a working position via rotation.
             # The exit engine (trailing stops / partial profit / time-unclog) is
@@ -1124,15 +1143,11 @@ class PaperPortfolio:
             if conf_diff >= 5:
                 score += conf_diff
 
-            # 2. Weak performance – cut losers early
-            if pnl_pct < -2.0:
-                score += 10   # strong incentive to rotate
-
-            # 3. Multi-engine consensus (Tier A)
+            # 2. Multi-engine consensus (Tier A)
             if incoming_tier == "A":
                 score += 8
 
-            # 4. Time held bonus (diminishing after 10 days)
+            # 3. Time held bonus (diminishing after 10 days)
             if pos.days_held() > 10:
                 score += min(pos.days_held() - 10, 10) * 0.5
 
