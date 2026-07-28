@@ -89,6 +89,38 @@ def _get_5d_return(ticker: str):
         return None
 
 
+def _price_confirms_signal(ticker: str):
+    """True if ticker's own price action confirms a bullish entry: above its
+    50-day MA and a non-negative 20-day return. None if history could not be
+    fetched (the caller fails open on None, matching _get_5d_return above).
+
+    ETF-03 remediation (forensic audit 2026-07-28): the entry gate previously
+    checked only `score >= cfg.CONFIDENCE_THRESHOLD`. Live confidence is ~88%
+    derived from RSS news-article statistics (count, source diversity,
+    recency, keyword severity) -- see scorer.py -- while price/flow evidence
+    is capped at 12 points by the cross-engine-confirmation factor, well
+    under the ~60-62 point threshold. That means a pure tape signal can
+    mathematically never open a trade, but a pure news signal always could,
+    inverting the "price-led discovery" design the README claims. This uses
+    the identical 50MA/20D-return definition price_scanner.PriceSignal
+    already computes per ticker (above_50ma, ret_20d) as a single-ticker
+    lookup, so the entry path doesn't need a full universe scan to check
+    one candidate.
+    """
+    try:
+        import yfinance as yf
+        hist = yf.Ticker(ticker).history(period="4mo")
+        closes = hist["Close"].dropna()
+        if len(closes) < 51:
+            return None
+        last = float(closes.iloc[-1])
+        ma_50 = float(closes.rolling(window=50).mean().iloc[-1])
+        ret_20d = float(last / closes.iloc[-21] - 1)
+        return bool(last > ma_50 and ret_20d >= 0)
+    except Exception:
+        return None
+
+
 # Volatility regime thresholds (live VIX). Below ELEVATED = trade normally.
 # ELEVATED = only highest-conviction longs allowed (the market is shaky).
 # EXTREME  = no new longs at all; only inverse/bearish entries make sense.
@@ -436,6 +468,24 @@ def run_intelligence_cycle(
                                 log.warning(
                                     "Trade skipped — news BULLISH but %s price down %.1f%% over 5 days",
                                     ticker, ret_5d * 100,
+                                )
+                                continue
+
+                            # PRICE-CONFIRMATION GATE (ETF-03): news alone is
+                            # never sufficient. Require independent evidence
+                            # from the ticker's own tape -- above its 50-day
+                            # MA and a non-negative 20-day return -- so a
+                            # confidence score that is ~88% news-derived
+                            # cannot open a position on a flat or declining
+                            # chart. Fails open (None) only on a data outage,
+                            # consistent with every other yfinance-backed gate
+                            # in this cycle.
+                            price_confirms = _price_confirms_signal(ticker)
+                            if price_confirms is False:
+                                log.info(
+                                    "Trade skipped — %s price action does not confirm the "
+                                    "news signal (below 50MA or negative 20D return)",
+                                    ticker,
                                 )
                                 continue
 
