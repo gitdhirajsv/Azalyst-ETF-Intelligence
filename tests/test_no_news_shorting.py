@@ -66,7 +66,7 @@ def _run_cycle_with_signal(raw_signal):
     quant_fetcher = MagicMock()
     cfg = _make_cfg()
 
-    with patch("azalyst._market_regime", return_value=(20.0, "NORMAL")), \
+    with patch("azalyst._market_regime", return_value=(20.0, "NORMAL", False)), \
          patch("azalyst._market_downturn", return_value=(False, "no downturn")), \
          patch("azalyst._get_jlaw_risk", return_value={
              "distribution_count": 0, "risk_multiplier": 1.0, "regime": "NORMAL",

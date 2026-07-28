@@ -133,22 +133,39 @@ MAX_SEED_POSITIONS = 2
 
 
 def _market_regime():
-    """Return (vix_level, regime) where regime is NORMAL / ELEVATED / EXTREME.
+    """Return (vix_level, regime, circuit_breaker_active).
 
-    A long book has no business adding risk into a spiking-VIX, risk-off tape.
-    This is the regime awareness the entry path was missing — the 6 startup-seed
-    longs were opened straight into a falling market with VIX ramping."""
+    regime is NORMAL / ELEVATED / EXTREME. A long book has no business adding
+    risk into a spiking-VIX, risk-off tape. This is the regime awareness the
+    entry path was missing — the 6 startup-seed longs were opened straight
+    into a falling market with VIX ramping.
+
+    ETF-06 remediation (forensic audit 2026-07-28): circuit_breaker_active is
+    read directly from this cycle's external_shock_check() call, not from
+    the module-level CIRCUIT_BREAKER_ACTIVE name imported at line ~51.
+    `from risk_engine import CIRCUIT_BREAKER_ACTIVE` binds a snapshot of that
+    value at import time (False); risk_engine later rebinding its OWN
+    module-level global via `global CIRCUIT_BREAKER_ACTIVE` never propagates
+    to azalyst's separately-bound name, so the breaker check was permanently
+    reading a stale False regardless of live shock conditions. Reusing this
+    same external_shock_check() call (already made for VIX) avoids a second
+    network round-trip per cycle.
+    """
     vix = 20.0
+    breaker_active = False
     try:
         if _RISK_ADVANCED and external_shock_check is not None:
-            vix = float(external_shock_check().get("indicators", {}).get("vix", 20.0))
+            shock = external_shock_check()
+            vix = float(shock.get("indicators", {}).get("vix", 20.0))
+            breaker_active = bool(shock.get("circuit_breaker_active", False))
     except Exception:
         vix = 20.0
+        breaker_active = False
     if vix >= VIX_EXTREME:
-        return vix, "EXTREME"
+        return vix, "EXTREME", breaker_active
     if vix >= VIX_ELEVATED:
-        return vix, "ELEVATED"
-    return vix, "NORMAL"
+        return vix, "ELEVATED", breaker_active
+    return vix, "NORMAL", breaker_active
 
 
 def _regime_size_multiplier(regime: str) -> float:
@@ -350,7 +367,7 @@ def run_intelligence_cycle(
 
         # Volatility regime (size dampener) + market direction (downturn = no longs).
         # Both computed once per cycle and applied to every long entry below.
-        cycle_vix, cycle_regime = _market_regime()
+        cycle_vix, cycle_regime, cycle_breaker_active = _market_regime()
         cycle_downturn, cycle_downturn_detail = _market_downturn()
         
         jlaw_risk = _get_jlaw_risk()
@@ -389,7 +406,7 @@ def run_intelligence_cycle(
                 direction  = signal.get("direction", "BULLISH")
 
                 # External shock check — don't trade if cross-asset stress is extreme
-                if _RISK_ADVANCED and CIRCUIT_BREAKER_ACTIVE:
+                if cycle_breaker_active:
                     log.warning("Trade skipped — external shock circuit breaker active")
                     continue
 
@@ -531,7 +548,15 @@ def run_intelligence_cycle(
                         if _JLAW_GATES_AVAILABLE and ticker:
                             try:
                                 import yfinance as yf
-                                hist = yf.Ticker(ticker).history(period="6mo")
+                                # ETF-06 remediation (forensic audit 2026-07-28):
+                                # was period="6mo" (~126 trading-day rows), but
+                                # classify_weinstein_stage requires >=160 bars
+                                # to compute its 150-day SMA and slope -- so the
+                                # `len(hist) >= 160` check below was never true
+                                # and "only Stage 2 allowed" never actually
+                                # filtered a single trade. 1y comfortably clears
+                                # the 160-bar floor.
+                                hist = yf.Ticker(ticker).history(period="1y")
                                 if not hist.empty and len(hist) >= 160:
                                     stage, _ = classify_weinstein_stage(hist['Close'])
                                     if stage != 2:
@@ -626,8 +651,16 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, quant_fetcher, 
     # Regime (size) + direction (downturn) for the cold-start seeder too — never
     # seed a fresh long book into a falling market (the exact failure that opened
     # 6 sinking longs). Both computed once here.
-    seed_vix, seed_regime = _market_regime()
+    seed_vix, seed_regime, seed_breaker_active = _market_regime()
     seed_downturn, seed_downturn_detail = _market_downturn()
+
+    # ETF-06 remediation (forensic audit 2026-07-28): the cold-start seeder
+    # previously had no circuit-breaker check at all -- it could seed a
+    # fresh long book straight into a genuine cross-asset shock. Gate it
+    # here, same as the live cycle.
+    if seed_breaker_active:
+        log.warning("Startup trade seed skipped — external shock circuit breaker active")
+        return
     
     jlaw_seed_risk = _get_jlaw_risk()
     if jlaw_seed_risk['regime'] == 'DEFENSIVE':
@@ -768,7 +801,10 @@ def seed_startup_trades(state, mapper, portfolio, port_reporter, quant_fetcher, 
             if _JLAW_GATES_AVAILABLE and ticker:
                 try:
                     import yfinance as yf
-                    hist = yf.Ticker(ticker).history(period="6mo")
+                    # ETF-06 remediation: see matching fix in run_intelligence_cycle
+                    # above -- period="6mo" (~126 rows) never reached the
+                    # 160-bar floor classify_weinstein_stage requires.
+                    hist = yf.Ticker(ticker).history(period="1y")
                     if not hist.empty and len(hist) >= 160:
                         stage, _ = classify_weinstein_stage(hist['Close'])
                         if stage != 2:

@@ -72,6 +72,24 @@ def test_fails_open_to_none_on_fetch_error():
 
 # ── Integration test: the gate inside run_intelligence_cycle ────────────────
 
+def _rising_history(n=200, start=100.0, step=0.4):
+    """A strictly rising daily-close series: price > SMA50 > SMA150, both
+    slopes positive -- unambiguously Weinstein Stage 2. Used to keep the
+    (now-reachable, see ETF-06) Stage-2 gate from rejecting these
+    ETF-03-focused tests on real, non-deterministic network data."""
+    idx = pd.bdate_range(end="2026-07-28", periods=n)
+    closes = [start + i * step for i in range(n)]
+    return pd.DataFrame({"Close": closes}, index=idx)
+
+
+class _StageTwoTicker:
+    def __init__(self, ticker):
+        self.ticker = ticker
+
+    def history(self, period=None):
+        return _rising_history()
+
+
 def _make_bullish_signal():
     return {
         "sector_id": "gold",
@@ -111,7 +129,7 @@ def _run_cycle(price_confirms_return):
     cfg.CONFIDENCE_THRESHOLD = 60
     cfg.PAPER_TRADING_ENABLED = True
 
-    with patch("azalyst._market_regime", return_value=(20.0, "NORMAL")), \
+    with patch("azalyst._market_regime", return_value=(20.0, "NORMAL", False)), \
          patch("azalyst._market_downturn", return_value=(False, "no downturn")), \
          patch("azalyst._get_jlaw_risk", return_value={
              "distribution_count": 0, "risk_multiplier": 1.0, "regime": "NORMAL",
@@ -121,6 +139,8 @@ def _run_cycle(price_confirms_return):
          patch("azalyst._COT_AVAILABLE", False), \
          patch("azalyst._get_5d_return", return_value=0.01), \
          patch("azalyst._price_confirms_signal", return_value=price_confirms_return), \
+         patch("paper_trader.get_current_price_inr", return_value=None), \
+         patch("yfinance.Ticker", _StageTwoTicker), \
          patch("forex_fetcher.ForexFactoryFetcher") as MockForex:
         MockForex.return_value.fetch_events.return_value = []
         azalyst.run_intelligence_cycle(
