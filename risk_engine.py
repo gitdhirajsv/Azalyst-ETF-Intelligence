@@ -870,9 +870,20 @@ def generate_risk_report(
     ) if vol_map else 0.0
 
     # 4. Benchmark tracking
-    # Use earliest position entry date as inception
-    entry_dates = [pos.get("entry_date", "") for pos in positions if pos.get("entry_date")]
-    inception = min(entry_dates) if entry_dates else datetime.now(timezone.utc).isoformat()
+    # ETF-04 remediation (forensic audit 2026-07-28): inception used to be
+    # the earliest OPEN position's entry_date, so the benchmark window
+    # shrank to whatever the oldest still-live position happened to be --
+    # if the oldest open position was 5 days old, "vs SPY" silently meant
+    # SPY's trailing 5 days, not the book's true multi-month record. Use
+    # the earliest month the book was actually funded (monthly_deposits)
+    # instead, so alpha is measured over the real money-weighted holding
+    # period rather than whatever happens to still be open today.
+    monthly_deposits = portfolio.get("monthly_deposits", {}) or {}
+    if monthly_deposits:
+        inception = f"{min(monthly_deposits.keys())}-01"
+    else:
+        entry_dates = [pos.get("entry_date", "") for pos in positions if pos.get("entry_date")]
+        inception = min(entry_dates) if entry_dates else datetime.now(timezone.utc).isoformat()
     benchmark_data = fetch_benchmark_return(inception)
     alpha = compute_alpha(portfolio_return_pct, benchmark_data.get("benchmark_return_pct", 0))
 

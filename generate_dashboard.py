@@ -234,12 +234,27 @@ def calc_metrics(portfolio, usd_inr_rate=83.5):
     partial_realised = portfolio.get("partial_realised_pnl_total", 0)
     realised  = closed_realised + partial_realised
 
-    # Sanity check: total_deposited should be roughly (total - unrealised - realised).
-    # If it is far below that figure it was almost certainly stored in the wrong currency
-    # (e.g. raw USD instead of INR), so recompute it from the actual portfolio data.
+    # ETF-04 remediation (forensic audit 2026-07-28): total_deposited should be
+    # roughly (total - unrealised - realised). This used to SILENTLY replace
+    # `deposited` with the recomputed figure whenever it looked far too low
+    # (e.g. a currency-unit bug storing raw USD instead of INR) -- which
+    # mechanically altered the published return denominator with no trace in
+    # the output. "Evidence over claims" cuts against laundering a bad number
+    # into a plausible one: publish what is actually on file, surface the
+    # anomaly loudly instead, and let a real data bug show up as a visibly
+    # wrong return rather than a silently "corrected" one.
     expected_deposited = total - unrealised - realised
-    if deposited > 0 and expected_deposited > 0 and deposited < expected_deposited * 0.5:
-        deposited = expected_deposited
+    deposited_anomaly = bool(
+        deposited > 0 and expected_deposited > 0 and deposited < expected_deposited * 0.5
+    )
+    if deposited_anomaly:
+        print(
+            f"WARNING: total_deposited ({deposited:.2f}) is less than half of "
+            f"the expected figure derived from current holdings "
+            f"({expected_deposited:.2f}) -- possible currency-unit or "
+            f"deposit-ledger bug. Publishing the on-file value unmodified; "
+            f"see status.json.risk_controls.deposited_anomaly."
+        )
 
     change_raw = ((total - deposited) / deposited * 100) if deposited > 0 else 0
 
@@ -268,6 +283,7 @@ def calc_metrics(portfolio, usd_inr_rate=83.5):
         "portfolio_peak":    safe_round(portfolio_peak / r),
         "drawdown_now_pct":  safe_round(drawdown_now),
         "max_drawdown_pct":  safe_round(max_drawdown),
+        "deposited_anomaly": deposited_anomaly,
     }
 
 
@@ -369,10 +385,33 @@ def summarise_trade(trade):
 
 
 def build_track(portfolio):
-    closed  = portfolio.get("closed_trades", [])
-    winners = [t for t in closed if t.get("realised_pnl", 0) > 0]
-    losers  = [t for t in closed if t.get("realised_pnl", 0) < 0]
-    returns = [safe_round(t.get("realised_pnl_pct", 0)) for t in closed]
+    closed = portfolio.get("closed_trades", [])
+
+    # ETF-04 remediation (forensic audit 2026-07-28): partial profit-taking
+    # exits (Step-ROI) used to be entirely invisible to win/loss/expectancy
+    # stats -- only the running partial_realised_pnl_total scalar reflected
+    # them, nowhere in this function. That overstated how bad the realized
+    # record looked, since real banked profit was silently excluded. Partial
+    # exits are folded in here as pseudo-trades; they are always winners by
+    # construction (Step-ROI only fires once price is 5/10/15% above entry),
+    # so this can only ever reveal a hidden gain, never hide a loss.
+    partial_events = portfolio.get("partial_realised_pnl_events", [])
+    partial_as_trades = [
+        {
+            "ticker":          ev.get("ticker", "-"),
+            "etf_name":        ev.get("etf_name", "-"),
+            "realised_pnl":    ev.get("realised_pnl", 0),
+            "realised_pnl_pct": ev.get("realised_pnl_pct", 0),
+            "exit_reason":     f"Partial profit-take (step {ev.get('roi_step', '?')})",
+            "days_held":       ev.get("days_held", 0),
+        }
+        for ev in partial_events
+    ]
+    all_trades = closed + partial_as_trades
+
+    winners = [t for t in all_trades if t.get("realised_pnl", 0) > 0]
+    losers  = [t for t in all_trades if t.get("realised_pnl", 0) < 0]
+    returns = [safe_round(t.get("realised_pnl_pct", 0)) for t in all_trades]
 
     avg_win  = safe_round(sum(t.get("realised_pnl_pct", 0) for t in winners) / len(winners)) if winners else 0.0
     avg_loss = safe_round(sum(t.get("realised_pnl_pct", 0) for t in losers) / len(losers)) if losers else 0.0
@@ -393,14 +432,23 @@ def build_track(portfolio):
     else:
         sharpe_proxy = 0.0
 
-    best  = max(closed, key=lambda t: t.get("realised_pnl_pct", 0), default=None)
-    worst = min(closed, key=lambda t: t.get("realised_pnl_pct", 0), default=None)
+    best  = max(all_trades, key=lambda t: t.get("realised_pnl_pct", 0), default=None)
+    worst = min(all_trades, key=lambda t: t.get("realised_pnl_pct", 0), default=None)
+
+    # Partial P&L realized before the itemized event log existed (captured
+    # only in the aggregate partial_realised_pnl_total scalar) has no
+    # per-event record and cannot be folded into the stats above -- disclose
+    # it explicitly instead of letting it vanish from the reconciliation.
+    itemized_partial_total = sum(ev.get("realised_pnl", 0) for ev in partial_events)
+    legacy_partial_pnl = safe_round(
+        portfolio.get("partial_realised_pnl_total", 0) - itemized_partial_total
+    )
 
     return {
-        "total_trades":  len(closed),
+        "total_trades":  len(all_trades),
         "winners":       len(winners),
         "losers":        len(losers),
-        "win_rate":      safe_round((len(winners) / len(closed) * 100) if closed else 0.0, 1),
+        "win_rate":      safe_round((len(winners) / len(all_trades) * 100) if all_trades else 0.0, 1),
         "avg_win":       avg_win,
         "avg_loss":      avg_loss,
         "profit_factor": safe_round(profit_factor),
@@ -408,6 +456,79 @@ def build_track(portfolio):
         "sharpe_proxy":  safe_round(sharpe_proxy),
         "best":          summarise_trade(best),
         "worst":         summarise_trade(worst),
+        "legacy_partial_pnl_not_itemized": legacy_partial_pnl,
+    }
+
+
+def build_all_eras_summary(current_metrics, current_track):
+    """Sum every archived paper-trading era plus the current one.
+
+    ETF-04 remediation (forensic audit 2026-07-28): the public dashboard only
+    ever showed the CURRENT book's stats. The forensic audit found nine
+    separate paper books over ~4.5 months, most reset without being archived
+    at all, and even the two eras that WERE archived (v1, v2) were invisible
+    on the live dashboard -- a reader saw "+0.57%, 19 trades" with no way to
+    learn two earlier books existed and lost money (one at an 8.3% win rate,
+    profit factor 0.12). This sums every archived era plus the current one so
+    a reset can no longer make the published record look better than the
+    full history.
+    """
+    eras = []
+    archive_root = ROOT / "archive"
+    if archive_root.exists() and archive_root.is_dir():
+        for era_dir in sorted(p for p in archive_root.iterdir() if p.is_dir()):
+            era_status = load_json(era_dir / "status.json")
+            if not era_status:
+                continue
+            era_track = era_status.get("track_record", {}) or {}
+            eras.append({
+                "era":              era_dir.name,
+                "total_deposited":  era_status.get("total_deposited", 0),
+                "portfolio_value":  era_status.get("portfolio_value", 0),
+                "realised_pnl":     era_status.get("realised_pnl", 0),
+                "change":           era_status.get("change", "+0.00%"),
+                "total_trades":     era_track.get("total_trades", 0),
+                "winners":          era_track.get("winners", 0),
+                "losers":           era_track.get("losers", 0),
+                "win_rate":         era_track.get("win_rate", 0),
+                "profit_factor":    era_track.get("profit_factor", 0),
+            })
+
+    eras.append({
+        "era":              "current",
+        "total_deposited":  current_metrics.get("total_deposited", 0),
+        "portfolio_value":  current_metrics.get("portfolio_value", 0),
+        "realised_pnl":     current_metrics.get("realised_pnl", 0),
+        "change":           current_metrics.get("change", "+0.00%"),
+        "total_trades":     current_track.get("total_trades", 0),
+        "winners":          current_track.get("winners", 0),
+        "losers":           current_track.get("losers", 0),
+        "win_rate":         current_track.get("win_rate", 0),
+        "profit_factor":    current_track.get("profit_factor", 0),
+    })
+
+    total_trades  = sum(e["total_trades"] for e in eras)
+    total_winners = sum(e["winners"] for e in eras)
+    total_realised = safe_round(sum(e["realised_pnl"] for e in eras))
+    total_deposited_all = safe_round(sum(e["total_deposited"] for e in eras))
+
+    return {
+        "eras":                  eras,
+        "era_count":             len(eras),
+        "reset_count":           max(len(eras) - 1, 0),
+        "combined_total_trades": total_trades,
+        "combined_win_rate":     safe_round((total_winners / total_trades * 100) if total_trades else 0.0, 1),
+        "combined_realised_pnl": total_realised,
+        "combined_realised_pnl_str": sign(total_realised),
+        "combined_total_deposited": total_deposited_all,
+        "note": (
+            "Each entry in `eras` is a separate paper-trading book (a prior "
+            "book is archived, deposits restart, and NAV resets to par when "
+            "the engine is reset). The headline NAV/return above the fold "
+            "reflects only the CURRENT era -- this section exists so a reset "
+            "cannot make the published track record look better than the "
+            "full history."
+        ),
     }
 
 
@@ -630,6 +751,7 @@ def build_risk_controls(metrics, positions, market_snapshot):
         "trailing_stop_pct":       int(TRAILING_STOP_PCT * 100),
         "hard_stop_pct":           int(HARD_STOP_PCT * 100),
         "partial_profit_pct":      int(PARTIAL_PROFIT_PCT * 100),
+        "deposited_anomaly":       metrics.get("deposited_anomaly", False),
     }
 
 
@@ -655,6 +777,12 @@ def build_logs(portfolio, state, metrics):
         )
     if metrics.get("drawdown_now_pct", 0) >= CIRCUIT_BREAKER_DRAWDOWN_PCT:
         logs.append(f"{now} [WARN] RISK - Circuit breaker threshold reached")
+    if metrics.get("deposited_anomaly", False):
+        logs.append(
+            f"{now} [WARN] RISK - total_deposited looks inconsistent with current "
+            f"holdings (possible currency-unit or ledger bug) -- published as-is, "
+            f"not silently corrected"
+        )
     return logs
 
 
@@ -680,6 +808,7 @@ def minimal_status(now_str):
             "total_trades": 0, "winners": 0, "losers": 0, "win_rate": 0,
             "avg_win": 0, "avg_loss": 0, "profit_factor": 0,
             "expectancy": 0, "sharpe_proxy": 0, "best": None, "worst": None,
+            "legacy_partial_pnl_not_itemized": 0,
         },
         "confidence_threshold": 60,
         "allocation":    {"labels": [], "values": []},
@@ -816,12 +945,14 @@ def generate_status():
         print(f"INFO: J Law dashboard data fetch failed: {exc}")
     # ===================================
 
+    track_record = build_track(portfolio)
     status = {
         **metrics,
         "usd_inr_rate":       safe_round(usd_inr_rate, 4),
         "positions":          positions,
         "closed_trades_list": build_closed(portfolio.get("closed_trades", []), usd_inr_rate),
-        "track_record":       build_track(portfolio),
+        "track_record":       track_record,
+        "all_eras_summary":   build_all_eras_summary(metrics, track_record),
         "confidence_threshold": 60,
         "regime":             regime_payload,
         "top_signal":         top_signal_payload,

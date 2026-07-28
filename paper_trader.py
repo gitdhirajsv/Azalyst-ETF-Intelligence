@@ -704,6 +704,16 @@ class PaperPortfolio:
         self.cash_inr                    = 0.0
         self.total_deposited             = 0.0
         self.partial_realised_pnl_total  = 0.0
+        # ETF-04 remediation (forensic audit 2026-07-28): the running total
+        # above has no itemized breakdown, so the dashboard's win/loss/
+        # profit-factor stats (build_track in generate_dashboard.py) were
+        # computed from closed_trades only and silently excluded every
+        # partial-profit-taking exit -- overstating how bad the realized
+        # record looked. This is an itemized log of each partial exit going
+        # forward so those events can be folded into trade-level stats;
+        # partial P&L realized before this field existed has no per-event
+        # record and is disclosed as an aggregate-only adjustment instead.
+        self.partial_realised_pnl_events: List[Dict] = []
         self.total_execution_costs_inr   = 0.0
         self.portfolio_peak              = 0.0
         self.max_drawdown_pct            = 0.0
@@ -745,6 +755,7 @@ class PaperPortfolio:
             self.cash_inr                   = data.get("cash_inr", 0.0)
             self.total_deposited            = data.get("total_deposited", 0.0)
             self.partial_realised_pnl_total = data.get("partial_realised_pnl_total", 0.0)
+            self.partial_realised_pnl_events = data.get("partial_realised_pnl_events", [])
             self.total_execution_costs_inr  = data.get("total_execution_costs_inr", 0.0)
             self.portfolio_peak             = data.get("portfolio_peak", 0.0)
             self.max_drawdown_pct           = data.get("max_drawdown_pct", 0.0)
@@ -805,6 +816,7 @@ class PaperPortfolio:
                 "cash_inr":                    self.cash_inr,
                 "total_deposited":             self.total_deposited,
                 "partial_realised_pnl_total":  round(self.partial_realised_pnl_total, 2),
+                "partial_realised_pnl_events": self.partial_realised_pnl_events,
                 "total_execution_costs_inr":   round(self.total_execution_costs_inr, 2),
                 "portfolio_peak":              round(self.portfolio_peak, 2),
                 "max_drawdown_pct":            round(self.max_drawdown_pct, 2),
@@ -1298,6 +1310,18 @@ class PaperPortfolio:
         )
         self.cash_inr                   += sale_value
         self.partial_realised_pnl_total += realised_pnl
+        realised_pnl_pct = round((realised_pnl / cost_basis_sold) * 100, 2) if cost_basis_sold > 0 else 0.0
+        self.partial_realised_pnl_events.append({
+            "ticker":           position.ticker,
+            "etf_name":         position.etf_name,
+            "date":             datetime.now(timezone.utc).isoformat(),
+            "roi_step":         position.roi_step,
+            "sell_units":       sell_units,
+            "realised_pnl":     realised_pnl,
+            "realised_pnl_pct": realised_pnl_pct,
+            "execution_costs_inr": execution["total_cost_inr"],
+            "days_held":        position.days_held(),
+        })
         self.total_execution_costs_inr  += execution["total_cost_inr"]
         self._update_position_risk(position)
         self._update_drawdown_state()
