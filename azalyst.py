@@ -363,46 +363,27 @@ def run_intelligence_cycle(
 
                 if severity in ("HIGH", "CRITICAL") or confidence >= 75:
 
-                    # DIRECTION GATE: BEARISH signals must route to inverse ETFs, never long
+                    # DIRECTION GATE: BEARISH signals are informational only — they no
+                    # longer open a position of any kind.
+                    #
+                    # ETF-01 remediation (forensic audit 2026-07-28): this branch used
+                    # to route any HIGH/CRITICAL-severity bearish headline, from ANY
+                    # sector, directly into an inverse ETF (SH/PSQ/SDS/SQQQ) via
+                    # is_hedge=True — bypassing every long-side gate (no downturn
+                    # check, no price-divergence gate, no stage gate, no cooldown).
+                    # Confidence here measures how much news exists, not which way
+                    # the market is actually moving, so a steady drip of bearish-
+                    # flavoured headlines during a RISK_ON tape kept re-opening SH.
+                    # 11 of the 19 closed trades in the live track record were SH,
+                    # entered this way and stall-exited at a small loss 2-3 days
+                    # later (see paper_trader.py DECAY_ETF_PROFILE). If a short book
+                    # is reintroduced, it must be gated on regime_engine's own
+                    # RISK_OFF state, not on news severity.
                     if direction == "BEARISH":
-                        if severity in ("HIGH", "CRITICAL"):
-                            bearish_recs = mapper.get_etfs(["bearish_macro"], signal)
-                            b_etf = bearish_recs.get("primary")
-                            b_platform = b_etf.get("platform", "Broker") if b_etf else None
-                            if b_etf and b_platform:
-                                log.info(
-                                    "BEARISH signal -> inverse ETF entry: %s (sector=%s conf=%d)",
-                                    b_etf.get("ticker"), signal.get("sector_label"), confidence,
-                                )
-                                hedge_signal = dict(signal)
-                                hedge_signal["sector_label"] = "Inverse / Hedge"
-                                b_entry = portfolio.enter_position(hedge_signal, b_etf, b_platform, is_hedge=True)
-                                if b_entry and not b_entry.get("is_topup"):
-                                    port_reporter.send_trade_entry(b_entry, hedge_signal)
-                                elif not b_entry:
-                                    missed_file = "missed_opportunities.json"
-                                    try:
-                                        import json, os
-                                        missed = []
-                                        if os.path.exists(missed_file):
-                                            with open(missed_file, "r") as f:
-                                                missed = json.load(f)
-                                        missed.append({
-                                            "date": datetime.now(timezone.utc).isoformat(),
-                                            "ticker": b_etf.get("ticker"),
-                                            "sector": "Inverse / Hedge",
-                                            "confidence": confidence,
-                                            "headline": signal.get("best_headline")
-                                        })
-                                        from state import atomic_write_json
-                                        atomic_write_json(missed_file, missed)
-                                    except Exception as ex:
-                                        log.warning(f"Failed to track missed opportunity: {ex}")
-                        else:
-                            log.info(
-                                "BEARISH signal skipped — not HIGH/CRITICAL: %s (conf=%d)",
-                                signal.get("sector_label"), confidence,
-                            )
+                        log.info(
+                            "BEARISH signal skipped — news-driven shorting is disabled: %s (conf=%d)",
+                            signal.get("sector_label"), confidence,
+                        )
                         continue
 
                     # DIRECTION FILTER: if the broad market is in a downturn it is
