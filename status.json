@@ -96,30 +96,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "HIGH_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.018623162470432185,
+    "vix_level": 20.65999984741211,
+    "vix_percentile_1y": 0.8333333333333334,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
-      "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "rank": 18,
+      "flow": 18,
+      "options": 28,
+      "rotation": 12,
+      "macro": 12,
+      "news": 12
     }
   },
   "top_signal": {
-    "ticker": "SLV",
-    "rank_score": 10.123867069486405,
-    "flow_score": 20.0,
-    "options_score": 22.558693233863785,
+    "ticker": "GLD",
+    "rank_score": 7.60442089326268,
+    "flow_score": 18.0,
+    "options_score": 31.218963004193373,
     "rotation_score": 0.0,
-    "macro_score": 2.0466989293027384,
-    "news_score": 6.96,
-    "total": 61.68925923265292,
+    "macro_score": 5.6363383136328205,
+    "news_score": 8.352,
+    "total": 70.81172221108888,
     "publish": true,
     "direction": "long"
   },
@@ -162,10 +162,6 @@
       "score": 87.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 87.0
-    },
-    {
       "symbol": "Emerging Markets + Crypto & Digital Assets",
       "score": 86.0
     },
@@ -174,12 +170,16 @@
       "score": 84.0
     },
     {
+      "symbol": "Crypto & Digital Assets",
+      "score": 82.0
+    },
+    {
       "symbol": "Nuclear Energy & Uranium + Bearish Market / Macro Selloff",
       "score": 82.0
     },
     {
       "symbol": "Commodities & Mining",
-      "score": 75.0
+      "score": 77.0
     },
     {
       "symbol": "Cybersecurity",
@@ -422,52 +422,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 87.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -5.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "29 Jul 2026 13:47 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "americas",
-        "india",
-        "global",
-        "europe"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "Tech"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 9.1,
-        "recency": 13.8,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "emerging_markets",
       "sector_label": "Emerging Markets + Crypto & Digital Assets",
       "confidence": 86.0,
@@ -572,6 +526,52 @@
       }
     },
     {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 82.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -5.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 25,
+      "latest_at": "29 Jul 2026 13:47 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "global",
+        "americas",
+        "middle_east",
+        "europe"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "Tech"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 9.1,
+        "recency": 8.3,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium + Bearish Market / Macro Selloff",
       "confidence": 82.0,
@@ -626,26 +626,27 @@
     {
       "sector_key": "commodities_mining",
       "sector_label": "Commodities & Mining",
-      "confidence": 75.0,
+      "confidence": 77.0,
       "severity": "HIGH",
       "direction": "BEARISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "29 Jul 2026 13:47 UTC",
-      "headline": "Vedanta Iron and Steel reports Rs 122 crore net profit in Q1",
+      "article_count": 8,
+      "latest_at": "29 Jul 2026 20:11 UTC",
+      "headline": "Middle East Turmoil and the AI Boom Fuel Windfall for Mining Giants",
       "regions": [
+        "middle_east",
+        "asia_pacific",
         "europe",
-        "global",
-        "asia_pacific"
+        "global"
       ],
       "sources": [
         "Markets-Economic Times",
+        "Cointelegraph.com News",
         "Oilprice.com",
-        "www.theregister.com - Articles",
-        "Bloomberg Markets"
+        "www.theregister.com - Articles"
       ],
       "primary_etf": "DBC",
       "top_etfs": [
@@ -666,10 +667,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 14.2,
-        "volume_confirmation": 13.7,
-        "source_diversity": 12.6,
-        "recency": 13.8,
+        "signal_strength": 15.9,
+        "volume_confirmation": 14.6,
+        "source_diversity": 10.0,
+        "recency": 15.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -1046,11 +1047,6 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Crypto & Digital Assets - 25 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Emerging Markets + Crypto & Digital Assets - 9 articles - HIGH / BEARISH - Binance & OKX users face $1,900 fines in Vietnam, Coinbase in China? Asia Express"
     },
     {
@@ -1061,12 +1057,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Crypto & Digital Assets - 25 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "Nuclear Energy & Uranium + Bearish Market / Macro Selloff - 9 articles - CRITICAL / BEARISH - Iran Says U.S. Struck Unfinished Nuclear Plant, Warns of Safety Risk"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Commodities & Mining - 7 articles - HIGH / BEARISH - Vedanta Iron and Steel reports Rs 122 crore net profit in Q1"
+      "text": "Commodities & Mining - 8 articles - HIGH / BEARISH - Middle East Turmoil and the AI Boom Fuel Windfall for Mining Giants"
     },
     {
       "tag": "tag-bull",
@@ -1109,33 +1110,33 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7378.88,
+      "price": 7316.15,
       "currency": "USD",
-      "change": -49.9,
-      "change_pct": -0.67,
-      "change_str": "-0.67%",
+      "change": -112.63,
+      "change_pct": -1.52,
+      "change_str": "-1.52%",
       "direction": "down"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 24744.74,
+      "price": 24442.94,
       "currency": "USD",
-      "change": -132.17,
-      "change_pct": -0.53,
-      "change_str": "-0.53%",
+      "change": -433.97,
+      "change_pct": -1.74,
+      "change_str": "-1.74%",
       "direction": "down"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 51900.37,
+      "price": 51594.14,
       "currency": "USD",
-      "change": -846.95,
-      "change_pct": -1.61,
-      "change_str": "-1.61%",
+      "change": -1153.18,
+      "change_pct": -2.19,
+      "change_str": "-2.19%",
       "direction": "down"
     },
     {
@@ -1197,55 +1198,55 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4159.4,
+      "price": 4123.8,
       "currency": "USD",
-      "change": 123.1,
-      "change_pct": 3.05,
-      "change_str": "+3.05%",
+      "change": 87.5,
+      "change_pct": 2.17,
+      "change_str": "+2.17%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 84.36,
+      "price": 84.54,
       "currency": "USD",
-      "change": 5.1,
-      "change_pct": 6.43,
-      "change_str": "+6.43%",
+      "change": 5.28,
+      "change_pct": 6.66,
+      "change_str": "+6.66%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64054.65,
+      "price": 63207.9,
       "currency": "USD",
-      "change": 183.29,
-      "change_pct": 0.29,
-      "change_str": "+0.29%",
-      "direction": "up"
+      "change": -663.46,
+      "change_pct": -1.04,
+      "change_str": "-1.04%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.89,
+      "price": 100.82,
       "currency": "USD",
-      "change": -0.49,
-      "change_pct": -0.49,
-      "change_str": "-0.49%",
+      "change": -0.56,
+      "change_pct": -0.55,
+      "change_str": "-0.55%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 18.34,
+      "price": 20.66,
       "currency": "USD",
-      "change": 0.13,
-      "change_pct": 0.71,
-      "change_str": "+0.71%",
+      "change": 2.45,
+      "change_pct": 13.45,
+      "change_str": "+13.45%",
       "direction": "up"
     }
   ],
@@ -1253,7 +1254,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
     "portfolio_peak": 10021.12,
-    "vix": 18.34,
+    "vix": 20.66,
     "vix_regime": "ELEVATED",
     "sector_concentration": [],
     "max_drawdown_pct": 0.0,
@@ -1298,9 +1299,9 @@
     }
   },
   "logs": [
-    "2026-07-29 19:24:33 [INFO] AZALYST - status.json generated",
-    "2026-07-29 19:24:33 [INFO] PORTFOLIO - NAV USD 10,021.12 | Return +0.00%",
-    "2026-07-29 19:24:33 [INFO] SIGNALS - 16 active signal buckets in state"
+    "2026-07-29 21:05:24 [INFO] AZALYST - status.json generated",
+    "2026-07-29 21:05:24 [INFO] PORTFOLIO - NAV USD 10,021.12 | Return +0.00%",
+    "2026-07-29 21:05:24 [INFO] SIGNALS - 16 active signal buckets in state"
   ],
-  "generated_at": "2026-07-29 19:24:31 UTC"
+  "generated_at": "2026-07-29 21:05:22 UTC"
 }
