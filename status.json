@@ -1,8 +1,8 @@
 {
-  "portfolio_value": 10025.31,
-  "total_deposited": 10025.31,
-  "cash": 5012.66,
-  "monthly_reserve": 5012.66,
+  "portfolio_value": 10020.34,
+  "total_deposited": 10020.34,
+  "cash": 5010.17,
+  "monthly_reserve": 5010.17,
   "market_value": 0.0,
   "total_invested": 0.0,
   "unrealised_pnl": 0.0,
@@ -13,11 +13,11 @@
   "change_raw": 0.0,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 10025.31,
+  "portfolio_peak": 10020.34,
   "drawdown_now_pct": 0.0,
   "max_drawdown_pct": 0.0,
   "deposited_anomaly": false,
-  "usd_inr_rate": 95.6,
+  "usd_inr_rate": 95.6475,
   "positions": [],
   "closed_trades_list": [],
   "track_record": {
@@ -74,8 +74,8 @@
       },
       {
         "era": "current",
-        "total_deposited": 10025.31,
-        "portfolio_value": 10025.31,
+        "total_deposited": 10020.34,
+        "portfolio_value": 10020.34,
         "realised_pnl": 0.0,
         "change": "+0.00%",
         "total_trades": 0,
@@ -91,24 +91,24 @@
     "combined_win_rate": 19.4,
     "combined_realised_pnl": -91.29,
     "combined_realised_pnl_str": "-91.29",
-    "combined_total_deposited": 49959.54,
+    "combined_total_deposited": 49954.57,
     "note": "Each entry in `eras` is a separate paper-trading book (a prior book is archived, deposits restart, and NAV resets to par when the engine is reset). The headline NAV/return above the fold reflects only the CURRENT era -- this section exists so a reset cannot make the published track record look better than the full history."
   },
   "confidence_threshold": 60,
   "regime": {
     "risk_state": "RISK_ON",
-    "vol_regime": "MID_VOL",
+    "vol_regime": "HIGH_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.026709050957698273,
-    "vix_level": 18.190000534057617,
-    "vix_percentile_1y": 0.6349206349206349,
+    "spy_excess_vs_tbill_3m": 0.02661655110551779,
+    "vix_level": 18.450000762939453,
+    "vix_percentile_1y": 0.6706349206349206,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
-      "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "rank": 18,
+      "flow": 18,
+      "options": 28,
+      "rotation": 12,
+      "macro": 12,
+      "news": 12
     }
   },
   "top_signal": {},
@@ -135,8 +135,8 @@
   },
   "confidence": [
     {
-      "symbol": "Technology & AI / Semiconductors + Cybersecurity",
-      "score": 96.0
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 94.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -144,11 +144,15 @@
     },
     {
       "symbol": "Defense & Aerospace",
-      "score": 91.0
+      "score": 90.0
     },
     {
       "symbol": "Banking & Financial Sector",
       "score": 89.0
+    },
+    {
+      "symbol": "Asia Pacific Equity + Bearish Market / Macro Selloff",
+      "score": 88.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
@@ -165,10 +169,6 @@
     {
       "symbol": "Crypto & Digital Assets",
       "score": 81.0
-    },
-    {
-      "symbol": "Asia Pacific Equity",
-      "score": 80.0
     },
     {
       "symbol": "Clean Energy & Renewables",
@@ -202,28 +202,28 @@
   "signals": [
     {
       "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors + Cybersecurity",
-      "confidence": 96.0,
-      "severity": "CRITICAL",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 94.0,
+      "severity": "HIGH",
       "direction": "BEARISH",
       "direction_score": 0.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "29 Jul 2026 05:31 UTC",
-      "headline": "OpenAI, Google, and Anthropic absent from Nvidia-led Open Secure AI Alliance \u2014 30+ companies join security alliance after OpenAI agent breach",
+      "article_count": 95,
+      "latest_at": "29 Jul 2026 12:10 UTC",
+      "headline": "AI leaders sign a statement asking the government to do something about automated AI",
       "regions": [
-        "asia_pacific",
-        "middle_east",
         "europe",
-        "americas"
+        "americas",
+        "asia_pacific",
+        "india"
       ],
       "sources": [
-        "Oilprice.com",
         "Semiconductor Engineering",
-        "BBC News",
-        "Latest from Tom's Hardware"
+        "Markets-Economic Times",
+        "The Verge",
+        "BBC News"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -248,8 +248,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 17.0,
-        "recency": 17.0,
+        "source_diversity": 16.5,
+        "recency": 16.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -309,27 +309,27 @@
     {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
-      "confidence": 91.0,
+      "confidence": 90.0,
       "severity": "HIGH",
       "direction": "BULLISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 26,
-      "latest_at": "29 Jul 2026 03:55 UTC",
-      "headline": "Iran launches surprise ballistic missile attack on U.S. forces in the Middle East",
+      "article_count": 17,
+      "latest_at": "29 Jul 2026 12:10 UTC",
+      "headline": "Houthis Claim Attack on Saudi Oil Tanker in Red Sea",
       "regions": [
+        "europe",
+        "americas",
         "asia_pacific",
-        "middle_east",
-        "africa",
-        "europe"
+        "india"
       ],
       "sources": [
-        "Oilprice.com",
         "World | Deutsche Welle",
-        "BBC News",
-        "Defense News"
+        "Oilprice.com",
+        "Latest from Tom's Hardware",
+        "www.theregister.com - Articles"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -352,10 +352,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 22.0,
+        "signal_strength": 21.3,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.2,
-        "recency": 14.4,
+        "source_diversity": 14.0,
+        "recency": 16.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -407,6 +407,56 @@
         "volume_confirmation": 18.0,
         "source_diversity": 13.6,
         "recency": 16.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity + Bearish Market / Macro Selloff",
+      "confidence": 88.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -3.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "29 Jul 2026 11:56 UTC",
+      "headline": "Kospi crashes 12% after SK Hynix earnings; best performing Asian market of 2026 plunges 43% in a month. What\u2019s ahead?",
+      "regions": [
+        "global",
+        "europe",
+        "asia_pacific",
+        "americas"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "BBC News",
+        "Tech",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 17.4,
+        "source_diversity": 15.7,
+        "recency": 16.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -610,55 +660,6 @@
         "source_diversity": 9.1,
         "recency": 14.9,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 80.0,
-      "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": -2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 15,
-      "latest_at": "29 Jul 2026 04:54 UTC",
-      "headline": "Kospi crashes 12% after SK Hynix earnings; best performing Asian market of 2026 plunges 43% in a month. What\u2019s ahead?",
-      "regions": [
-        "asia_pacific",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "BBC News",
-        "Cointelegraph.com News",
-        "Markets-Economic Times",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 18.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 13.4,
-        "recency": 15.9,
-        "geopolitical_severity": 11.2
       }
     },
     {
@@ -1017,7 +1018,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Technology & AI / Semiconductors + Cybersecurity - 13 articles - CRITICAL / BEARISH - OpenAI, Google, and Anthropic absent from Nvidia-led Open Secure AI Alliance \u2014 30+ companies join security alliance after OpenAI agent breach"
+      "text": "Technology & AI / Semiconductors - 95 articles - HIGH / BEARISH - AI leaders sign a statement asking the government to do something about automated AI"
     },
     {
       "tag": "tag-bull",
@@ -1027,12 +1028,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Defense & Aerospace - 26 articles - HIGH / BULLISH - Iran launches surprise ballistic missile attack on U.S. forces in the Middle East"
+      "text": "Defense & Aerospace - 17 articles - HIGH / BULLISH - Houthis Claim Attack on Saudi Oil Tanker in Red Sea"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Banking & Financial Sector - 17 articles - HIGH / BULLISH - US Stock Market: Fed's Jefferson signals openness to rate hike if inflation stays elevated"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Asia Pacific Equity + Bearish Market / Macro Selloff - 12 articles - HIGH / BEARISH - Kospi crashes 12% after SK Hynix earnings; best performing Asian market of 2026 plunges 43% in a month. What\u2019s ahead?"
     },
     {
       "tag": "tag-bull",
@@ -1053,11 +1059,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Crypto & Digital Assets - 27 articles - CRITICAL / BEARISH - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Asia Pacific Equity - 15 articles - MEDIUM / BEARISH - Kospi crashes 12% after SK Hynix earnings; best performing Asian market of 2026 plunges 43% in a month. What\u2019s ahead?"
     },
     {
       "tag": "tag-bear",
@@ -1102,9 +1103,9 @@
       "region": "US",
       "price": 7428.78,
       "currency": "USD",
-      "change": 15.6,
-      "change_pct": 0.21,
-      "change_str": "+0.21%",
+      "change": 20.48,
+      "change_pct": 0.28,
+      "change_str": "+0.28%",
       "direction": "up"
     },
     {
@@ -1113,9 +1114,9 @@
       "region": "US",
       "price": 24876.91,
       "currency": "USD",
-      "change": -55.17,
-      "change_pct": -0.22,
-      "change_str": "-0.22%",
+      "change": -260.78,
+      "change_pct": -1.04,
+      "change_str": "-1.04%",
       "direction": "down"
     },
     {
@@ -1124,32 +1125,32 @@
       "region": "US",
       "price": 52747.32,
       "currency": "USD",
-      "change": 537.24,
-      "change_pct": 1.03,
-      "change_str": "+1.03%",
+      "change": 1035.67,
+      "change_pct": 2.0,
+      "change_str": "+2.00%",
       "direction": "up"
     },
     {
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10888.62,
+      "price": 10904.65,
       "currency": "GBP",
-      "change": 17.62,
-      "change_pct": 0.16,
-      "change_str": "+0.16%",
+      "change": 122.85,
+      "change_pct": 1.14,
+      "change_str": "+1.14%",
       "direction": "up"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 25404.16,
+      "price": 25549.12,
       "currency": "EUR",
-      "change": -59.85,
-      "change_pct": -0.24,
-      "change_str": "-0.24%",
-      "direction": "down"
+      "change": 188.09,
+      "change_pct": 0.74,
+      "change_str": "+0.74%",
+      "direction": "up"
     },
     {
       "label": "Nikkei 225",
@@ -1157,9 +1158,9 @@
       "region": "JP",
       "price": 61434.19,
       "currency": "JPY",
-      "change": -930.73,
-      "change_pct": -1.49,
-      "change_str": "-1.49%",
+      "change": -3497.0,
+      "change_pct": -5.39,
+      "change_str": "-5.39%",
       "direction": "down"
     },
     {
@@ -1168,83 +1169,83 @@
       "region": "HK",
       "price": 25807.92,
       "currency": "HKD",
-      "change": 497.07,
-      "change_pct": 1.96,
-      "change_str": "+1.96%",
+      "change": 600.74,
+      "change_pct": 2.38,
+      "change_str": "+2.38%",
       "direction": "up"
     },
     {
       "label": "Nifty 50",
       "ticker": "^NSEI",
       "region": "IN",
-      "price": 24274.75,
+      "price": 24250.2,
       "currency": "INR",
-      "change": 289.4,
-      "change_pct": 1.21,
-      "change_str": "+1.21%",
+      "change": 254.25,
+      "change_pct": 1.06,
+      "change_str": "+1.06%",
       "direction": "up"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4096.8,
+      "price": 4082.7,
       "currency": "USD",
-      "change": 60.5,
-      "change_pct": 1.5,
-      "change_str": "+1.50%",
+      "change": 46.4,
+      "change_pct": 1.15,
+      "change_str": "+1.15%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 81.64,
+      "price": 84.04,
       "currency": "USD",
-      "change": 2.38,
-      "change_pct": 3.0,
-      "change_str": "+3.00%",
+      "change": 4.78,
+      "change_pct": 6.03,
+      "change_str": "+6.03%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64340.38,
+      "price": 64282.9,
       "currency": "USD",
-      "change": 469.02,
-      "change_pct": 0.73,
-      "change_str": "+0.73%",
+      "change": 411.54,
+      "change_pct": 0.64,
+      "change_str": "+0.64%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.3,
+      "price": 101.48,
       "currency": "USD",
-      "change": -0.08,
-      "change_pct": -0.08,
-      "change_str": "-0.08%",
+      "change": -0.03,
+      "change_pct": -0.03,
+      "change_str": "-0.03%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 18.19,
+      "price": 18.45,
       "currency": "USD",
-      "change": -0.02,
-      "change_pct": -0.11,
-      "change_str": "-0.11%",
+      "change": -0.22,
+      "change_pct": -1.18,
+      "change_str": "-1.18%",
       "direction": "down"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
-    "portfolio_peak": 10025.31,
-    "vix": 18.19,
+    "portfolio_peak": 10020.34,
+    "vix": 18.45,
     "vix_regime": "ELEVATED",
     "sector_concentration": [],
     "max_drawdown_pct": 0.0,
@@ -1289,9 +1290,9 @@
     }
   },
   "logs": [
-    "2026-07-29 09:00:26 [INFO] AZALYST - status.json generated",
-    "2026-07-29 09:00:26 [INFO] PORTFOLIO - NAV USD 10,025.31 | Return +0.00%",
-    "2026-07-29 09:00:26 [INFO] SIGNALS - 16 active signal buckets in state"
+    "2026-07-29 12:26:49 [INFO] AZALYST - status.json generated",
+    "2026-07-29 12:26:49 [INFO] PORTFOLIO - NAV USD 10,020.34 | Return +0.00%",
+    "2026-07-29 12:26:49 [INFO] SIGNALS - 16 active signal buckets in state"
   ],
-  "generated_at": "2026-07-29 09:00:25 UTC"
+  "generated_at": "2026-07-29 12:26:47 UTC"
 }
