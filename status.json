@@ -1,8 +1,8 @@
 {
-  "portfolio_value": 10000.0,
-  "total_deposited": 10000.0,
-  "cash": 5000.0,
-  "monthly_reserve": 5000.0,
+  "portfolio_value": 10016.67,
+  "total_deposited": 10016.67,
+  "cash": 5008.33,
+  "monthly_reserve": 5008.33,
   "market_value": 0.0,
   "total_invested": 0.0,
   "unrealised_pnl": 0.0,
@@ -13,11 +13,11 @@
   "change_raw": 0.0,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 10000.0,
+  "portfolio_peak": 10016.67,
   "drawdown_now_pct": 0.0,
   "max_drawdown_pct": 0.0,
   "deposited_anomaly": false,
-  "usd_inr_rate": 95.842,
+  "usd_inr_rate": 95.6825,
   "positions": [],
   "closed_trades_list": [],
   "track_record": {
@@ -74,8 +74,8 @@
       },
       {
         "era": "current",
-        "total_deposited": 10000.0,
-        "portfolio_value": 10000.0,
+        "total_deposited": 10016.67,
+        "portfolio_value": 10016.67,
         "realised_pnl": 0.0,
         "change": "+0.00%",
         "total_trades": 0,
@@ -91,7 +91,7 @@
     "combined_win_rate": 19.4,
     "combined_realised_pnl": -91.29,
     "combined_realised_pnl_str": "-91.29",
-    "combined_total_deposited": 49934.23,
+    "combined_total_deposited": 49950.9,
     "note": "Each entry in `eras` is a separate paper-trading book (a prior book is archived, deposits restart, and NAV resets to par when the engine is reset). The headline NAV/return above the fold reflects only the CURRENT era -- this section exists so a reset cannot make the published track record look better than the full history."
   },
   "confidence_threshold": 60,
@@ -99,7 +99,7 @@
     "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.034268789719044804,
+    "spy_excess_vs_tbill_3m": 0.03426878912299836,
     "vix_level": 18.209999084472656,
     "vix_percentile_1y": 0.6388888888888888,
     "weight_matrix": {
@@ -111,18 +111,7 @@
       "news": 10
     }
   },
-  "top_signal": {
-    "ticker": "XLF",
-    "rank_score": 22.21867881548975,
-    "flow_score": 20.0,
-    "options_score": 16.626812293374755,
-    "rotation_score": 15.0,
-    "macro_score": 0.0,
-    "news_score": 7.120000000000001,
-    "total": 80.96549110886451,
-    "publish": true,
-    "direction": "long"
-  },
+  "top_signal": {},
   "jlaw_risk": {
     "distribution_count": 4,
     "risk_multiplier": 1.0,
@@ -146,15 +135,15 @@
   },
   "confidence": [
     {
+      "symbol": "Technology & AI / Semiconductors + Cybersecurity",
+      "score": 96.0
+    },
+    {
       "symbol": "Defense & Aerospace",
-      "score": 93.0
+      "score": 91.0
     },
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 90.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors + Cybersecurity",
       "score": 90.0
     },
     {
@@ -178,8 +167,12 @@
       "score": 82.0
     },
     {
+      "symbol": "Asia Pacific Equity",
+      "score": 80.0
+    },
+    {
       "symbol": "Clean Energy & Renewables",
-      "score": 74.0
+      "score": 71.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -188,10 +181,6 @@
     {
       "symbol": "Cybersecurity",
       "score": 70.0
-    },
-    {
-      "symbol": "Asia Pacific Equity",
-      "score": 66.0
     },
     {
       "symbol": "Healthcare & Pharma",
@@ -212,29 +201,82 @@
   ],
   "signals": [
     {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors + Cybersecurity",
+      "confidence": 96.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": 0.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "29 Jul 2026 05:31 UTC",
+      "headline": "OpenAI, Google, and Anthropic absent from Nvidia-led Open Secure AI Alliance \u2014 30+ companies join security alliance after OpenAI agent breach",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "europe",
+        "americas"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Semiconductor Engineering",
+        "BBC News",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 17.0,
+        "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
-      "confidence": 93.0,
+      "confidence": 91.0,
       "severity": "HIGH",
       "direction": "BULLISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "28 Jul 2026 20:18 UTC",
-      "headline": "Defense Tech Investment Hits Record High as Arms Giants Ramp Up Startup Funding",
+      "article_count": 26,
+      "latest_at": "29 Jul 2026 03:55 UTC",
+      "headline": "Iran launches surprise ballistic missile attack on U.S. forces in the Middle East",
       "regions": [
+        "asia_pacific",
         "middle_east",
         "africa",
-        "americas",
-        "global"
+        "europe"
       ],
       "sources": [
-        "www.theregister.com - Articles",
-        "BBC News",
         "Oilprice.com",
-        "US Top News and Analysis"
+        "World | Deutsche Welle",
+        "BBC News",
+        "Defense News"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -259,8 +301,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 15.3,
-        "recency": 16.9,
+        "source_diversity": 16.2,
+        "recency": 14.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -314,59 +356,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.4,
         "recency": 16.1,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors + Cybersecurity",
-      "confidence": 90.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": 2.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "28 Jul 2026 20:18 UTC",
-      "headline": "OpenAI, Google, and Anthropic absent from Nvidia-led Open Secure AI Alliance \u2014 30+ companies join security alliance after OpenAI agent breach",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "global",
-        "india"
-      ],
-      "sources": [
-        "www.theregister.com - Articles",
-        "EE Times",
-        "BBC News",
-        "Oilprice.com"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 17.4,
-        "source_diversity": 17.0,
-        "recency": 16.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -625,28 +614,77 @@
       }
     },
     {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 80.0,
+      "severity": "MEDIUM",
+      "direction": "BEARISH",
+      "direction_score": -2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 15,
+      "latest_at": "29 Jul 2026 04:54 UTC",
+      "headline": "Kospi crashes 12% after SK Hynix earnings; best performing Asian market of 2026 plunges 43% in a month. What\u2019s ahead?",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "BBC News",
+        "Cointelegraph.com News",
+        "Markets-Economic Times",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 18.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.4,
+        "recency": 15.9,
+        "geopolitical_severity": 11.2
+      }
+    },
+    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
-      "confidence": 74.0,
+      "confidence": 71.0,
       "severity": "MEDIUM",
       "direction": "BEARISH",
       "direction_score": 1.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "28 Jul 2026 20:18 UTC",
-      "headline": "New Solar Cell Design Solves A Problem That's Plagued Panels for Decades",
+      "article_count": 6,
+      "latest_at": "29 Jul 2026 05:31 UTC",
+      "headline": "The World\u2019s Largest Sand Battery Is Now Online",
       "regions": [
         "asia_pacific",
-        "global",
         "americas",
-        "india"
+        "europe",
+        "global"
       ],
       "sources": [
-        "www.theregister.com - Articles",
-        "EE Times",
         "Oilprice.com",
+        "Latest from Tom's Hardware",
+        "The Verge",
         "Markets-Economic Times"
       ],
       "primary_etf": "ICLN",
@@ -669,11 +707,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 10.7,
-        "volume_confirmation": 14.6,
-        "source_diversity": 12.8,
-        "recency": 16.9,
-        "geopolitical_severity": 11.2
+        "signal_strength": 10.0,
+        "volume_confirmation": 12.6,
+        "source_diversity": 12.0,
+        "recency": 17.0,
+        "geopolitical_severity": 11.1
       }
     },
     {
@@ -770,54 +808,6 @@
         "source_diversity": 10.4,
         "recency": 15.5,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 66.0,
-      "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "28 Jul 2026 17:15 UTC",
-      "headline": "Global Market: Japan's 10-year bond yield climbs as fiscal concerns weigh on market ahead of BOJ meeting",
-      "regions": [
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "Cointelegraph.com News",
-        "BBC News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 12.1,
-        "volume_confirmation": 13.7,
-        "source_diversity": 12.1,
-        "recency": 10.4,
-        "geopolitical_severity": 9.5
       }
     },
     {
@@ -1026,19 +1016,19 @@
   ],
   "articles": [
     {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Technology & AI / Semiconductors + Cybersecurity - 13 articles - CRITICAL / BEARISH - OpenAI, Google, and Anthropic absent from Nvidia-led Open Secure AI Alliance \u2014 30+ companies join security alliance after OpenAI agent breach"
+    },
+    {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Defense & Aerospace - 25 articles - HIGH / BULLISH - Defense Tech Investment Hits Record High as Arms Giants Ramp Up Startup Funding"
+      "text": "Defense & Aerospace - 26 articles - HIGH / BULLISH - Iran launches surprise ballistic missile attack on U.S. forces in the Middle East"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Energy / Oil & Gas - 20 articles - CRITICAL / BULLISH - Saudi Arabia Weighs Higher Asia Crude Prices as Red Sea Shipping Costs Rise"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Technology & AI / Semiconductors + Cybersecurity - 12 articles - CRITICAL / BEARISH - OpenAI, Google, and Anthropic absent from Nvidia-led Open Secure AI Alliance \u2014 30+ companies join security alliance after OpenAI agent breach"
     },
     {
       "tag": "tag-bull",
@@ -1068,7 +1058,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Clean Energy & Renewables - 8 articles - MEDIUM / BEARISH - New Solar Cell Design Solves A Problem That's Plagued Panels for Decades"
+      "text": "Asia Pacific Equity - 15 articles - MEDIUM / BEARISH - Kospi crashes 12% after SK Hynix earnings; best performing Asian market of 2026 plunges 43% in a month. What\u2019s ahead?"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Clean Energy & Renewables - 6 articles - MEDIUM / BEARISH - The World\u2019s Largest Sand Battery Is Now Online"
     },
     {
       "tag": "tag-bull",
@@ -1079,11 +1074,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Cybersecurity - 6 articles - HIGH / BULLISH - Sebi imposes Rs 1 crore penalty on CDSL over 2022 malware attack"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Asia Pacific Equity - 7 articles - MEDIUM / BEARISH - Global Market: Japan's 10-year bond yield climbs as fiscal concerns weigh on market ahead of BOJ meeting"
     },
     {
       "tag": "tag-bull",
@@ -1146,9 +1136,9 @@
       "region": "UK",
       "price": 10871.02,
       "currency": "GBP",
-      "change": 134.82,
-      "change_pct": 1.26,
-      "change_str": "+1.26%",
+      "change": 89.22,
+      "change_pct": 0.83,
+      "change_str": "+0.83%",
       "direction": "up"
     },
     {
@@ -1157,86 +1147,86 @@
       "region": "EU",
       "price": 25464.01,
       "currency": "EUR",
-      "change": 365.01,
-      "change_pct": 1.45,
-      "change_str": "+1.45%",
+      "change": 102.98,
+      "change_pct": 0.41,
+      "change_str": "+0.41%",
       "direction": "up"
     },
     {
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 62364.92,
+      "price": 61345.15,
       "currency": "JPY",
-      "change": -2246.23,
-      "change_pct": -3.48,
-      "change_str": "-3.48%",
+      "change": -1019.77,
+      "change_pct": -1.64,
+      "change_str": "-1.64%",
       "direction": "down"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 25310.85,
+      "price": 25634.42,
       "currency": "HKD",
-      "change": 347.62,
-      "change_pct": 1.39,
-      "change_str": "+1.39%",
+      "change": 323.57,
+      "change_pct": 1.28,
+      "change_str": "+1.28%",
       "direction": "up"
     },
     {
       "label": "Nifty 50",
       "ticker": "^NSEI",
       "region": "IN",
-      "price": 23985.35,
+      "price": 24236.9,
       "currency": "INR",
-      "change": 217.9,
-      "change_pct": 0.92,
-      "change_str": "+0.92%",
+      "change": 240.95,
+      "change_pct": 1.0,
+      "change_str": "+1.00%",
       "direction": "up"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4018.2,
+      "price": 4030.9,
       "currency": "USD",
-      "change": -56.3,
-      "change_pct": -1.38,
-      "change_str": "-1.38%",
+      "change": -5.4,
+      "change_pct": -0.13,
+      "change_str": "-0.13%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 83.17,
+      "price": 82.04,
       "currency": "USD",
-      "change": 0.56,
-      "change_pct": 0.68,
-      "change_str": "+0.68%",
+      "change": 2.78,
+      "change_pct": 3.51,
+      "change_str": "+3.51%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63549.97,
+      "price": 63964.99,
       "currency": "USD",
-      "change": -174.93,
-      "change_pct": -0.27,
-      "change_str": "-0.27%",
-      "direction": "down"
+      "change": 240.09,
+      "change_pct": 0.38,
+      "change_str": "+0.38%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.39,
+      "price": 101.29,
       "currency": "USD",
-      "change": -0.08,
-      "change_pct": -0.08,
-      "change_str": "-0.08%",
+      "change": -0.09,
+      "change_pct": -0.09,
+      "change_str": "-0.09%",
       "direction": "down"
     },
     {
@@ -1245,16 +1235,16 @@
       "region": "VOL",
       "price": 18.21,
       "currency": "USD",
-      "change": -0.46,
-      "change_pct": -2.46,
-      "change_str": "-2.46%",
+      "change": -0.49,
+      "change_pct": -2.62,
+      "change_str": "-2.62%",
       "direction": "down"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
-    "portfolio_peak": 10000.0,
+    "portfolio_peak": 10016.67,
     "vix": 18.21,
     "vix_regime": "ELEVATED",
     "sector_concentration": [],
@@ -1300,9 +1290,9 @@
     }
   },
   "logs": [
-    "2026-07-28 23:18:56 [INFO] AZALYST - status.json generated",
-    "2026-07-28 23:18:56 [INFO] PORTFOLIO - NAV USD 10,000.00 | Return +0.00%",
-    "2026-07-28 23:18:56 [INFO] SIGNALS - 16 active signal buckets in state"
+    "2026-07-29 05:43:26 [INFO] AZALYST - status.json generated",
+    "2026-07-29 05:43:26 [INFO] PORTFOLIO - NAV USD 10,016.67 | Return +0.00%",
+    "2026-07-29 05:43:26 [INFO] SIGNALS - 16 active signal buckets in state"
   ],
-  "generated_at": "2026-07-28 23:18:55 UTC"
+  "generated_at": "2026-07-29 05:43:24 UTC"
 }
