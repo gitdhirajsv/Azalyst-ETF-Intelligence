@@ -99,9 +99,9 @@
     "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.025265985474491985,
-    "vix_level": 17.540000915527344,
-    "vix_percentile_1y": 0.5555555555555556,
+    "spy_excess_vs_tbill_3m": 0.025517086671169247,
+    "vix_level": 17.09000015258789,
+    "vix_percentile_1y": 0.47619047619047616,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -113,13 +113,13 @@
   },
   "top_signal": {
     "ticker": "GDX",
-    "rank_score": 11.987887963663892,
-    "flow_score": 1.2331293750946906,
-    "options_score": 19.92137179553692,
+    "rank_score": 12.266666666666666,
+    "flow_score": 8.913409088578682,
+    "options_score": 19.91086203611835,
     "rotation_score": 15.0,
-    "macro_score": 7.296338144120113,
+    "macro_score": 7.089363305817697,
     "news_score": 7.28,
-    "total": 62.71872727841562,
+    "total": 70.4603010971814,
     "publish": true,
     "direction": "long"
   },
@@ -166,24 +166,24 @@
       "score": 89.0
     },
     {
-      "symbol": "Europe Equity",
-      "score": 89.0
-    },
-    {
       "symbol": "Emerging Markets + Crypto & Digital Assets",
       "score": 86.0
-    },
-    {
-      "symbol": "Asia Pacific Equity",
-      "score": 85.0
     },
     {
       "symbol": "Nuclear Energy & Uranium + Bearish Market / Macro Selloff",
       "score": 82.0
     },
     {
+      "symbol": "Europe Equity",
+      "score": 80.0
+    },
+    {
       "symbol": "Commodities & Mining",
       "score": 76.0
+    },
+    {
+      "symbol": "Asia Pacific Equity",
+      "score": 73.0
     },
     {
       "symbol": "Cybersecurity",
@@ -467,56 +467,6 @@
       }
     },
     {
-      "sector_key": "europe_equity",
-      "sector_label": "Europe Equity",
-      "confidence": 89.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "30 Jul 2026 15:53 UTC",
-      "headline": "UK bond yields and sterling dip after BoE holds rates steady",
-      "regions": [
-        "middle_east",
-        "global",
-        "asia_pacific",
-        "europe"
-      ],
-      "sources": [
-        "Defense News",
-        "Bloomberg Markets",
-        "BBC News",
-        "World | Deutsche Welle"
-      ],
-      "primary_etf": "VGK",
-      "top_etfs": [
-        "VGK",
-        "IEV",
-        "EWU"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "VGK",
-        "IEV",
-        "EWU",
-        "EWG"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 17.5,
-        "volume_confirmation": 17.4,
-        "source_diversity": 14.9,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "emerging_markets",
       "sector_label": "Emerging Markets + Crypto & Digital Assets",
       "confidence": 86.0,
@@ -565,54 +515,6 @@
         "source_diversity": 11.0,
         "recency": 16.6,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 85.0,
-      "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": -2.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "30 Jul 2026 10:29 UTC",
-      "headline": "'Wait till payback time!': South Korean retail investors protest as govt apologises after Kospi crashes 40% in a month",
-      "regions": [
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "BBC News",
-        "Tech",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 17.2,
-        "volume_confirmation": 16.8,
-        "source_diversity": 14.9,
-        "recency": 14.6,
-        "geopolitical_severity": 10.4
       }
     },
     {
@@ -668,6 +570,56 @@
       }
     },
     {
+      "sector_key": "europe_equity",
+      "sector_label": "Europe Equity",
+      "confidence": 80.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": -2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 9,
+      "latest_at": "30 Jul 2026 21:11 UTC",
+      "headline": "UK bond yields and sterling dip after BoE holds rates steady",
+      "regions": [
+        "europe",
+        "asia_pacific",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "BBC News",
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "Defense News"
+      ],
+      "primary_etf": "VGK",
+      "top_etfs": [
+        "VGK",
+        "IEV",
+        "EWU"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "VGK",
+        "IEV",
+        "EWU",
+        "EWG"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 14.6,
+        "volume_confirmation": 15.4,
+        "source_diversity": 15.2,
+        "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "commodities_mining",
       "sector_label": "Commodities & Mining",
       "confidence": 76.0,
@@ -716,6 +668,52 @@
         "source_diversity": 10.0,
         "recency": 15.5,
         "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 73.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "30 Jul 2026 20:00 UTC",
+      "headline": "'Wait till payback time!': South Korean retail investors protest as govt apologises after Kospi crashes 40% in a month",
+      "regions": [
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 15.0,
+        "volume_confirmation": 12.6,
+        "source_diversity": 10.0,
+        "recency": 15.1,
+        "geopolitical_severity": 12.3
       }
     },
     {
@@ -1049,11 +1047,6 @@
       "text": "Banking & Financial Sector - 17 articles - HIGH / BULLISH - US Stock Market: Fed's Jefferson signals openness to rate hike if inflation stays elevated"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Europe Equity - 12 articles - HIGH / BULLISH - UK bond yields and sterling dip after BoE holds rates steady"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Emerging Markets + Crypto & Digital Assets - 9 articles - HIGH / BEARISH - Binance & OKX users face $1,900 fines in Vietnam, Coinbase in China? Asia Express"
@@ -1061,17 +1054,22 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Asia Pacific Equity - 11 articles - MEDIUM / BEARISH - 'Wait till payback time!': South Korean retail investors protest as govt apologises after Kospi crashes 40% in a month"
+      "text": "Nuclear Energy & Uranium + Bearish Market / Macro Selloff - 9 articles - CRITICAL / BEARISH - Iran Says U.S. Struck Unfinished Nuclear Plant, Warns of Safety Risk"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Nuclear Energy & Uranium + Bearish Market / Macro Selloff - 9 articles - CRITICAL / BEARISH - Iran Says U.S. Struck Unfinished Nuclear Plant, Warns of Safety Risk"
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Europe Equity - 9 articles - HIGH / BULLISH - UK bond yields and sterling dip after BoE holds rates steady"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Commodities & Mining - 7 articles - HIGH / BEARISH - Middle East Turmoil and the AI Boom Fuel Windfall for Mining Giants"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Asia Pacific Equity - 6 articles - HIGH / BULLISH - 'Wait till payback time!': South Korean retail investors protest as govt apologises after Kospi crashes 40% in a month"
     },
     {
       "tag": "tag-bull",
@@ -1109,33 +1107,33 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7439.16,
+      "price": 7437.63,
       "currency": "USD",
-      "change": 123.01,
-      "change_pct": 1.68,
-      "change_str": "+1.68%",
+      "change": 121.48,
+      "change_pct": 1.66,
+      "change_str": "+1.66%",
       "direction": "up"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 25125.78,
+      "price": 25122.18,
       "currency": "USD",
-      "change": 682.84,
-      "change_pct": 2.79,
-      "change_str": "+2.79%",
+      "change": 679.24,
+      "change_pct": 2.78,
+      "change_str": "+2.78%",
       "direction": "up"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 52219.37,
+      "price": 52208.06,
       "currency": "USD",
-      "change": 625.23,
-      "change_pct": 1.21,
-      "change_str": "+1.21%",
+      "change": 613.92,
+      "change_pct": 1.19,
+      "change_str": "+1.19%",
       "direction": "up"
     },
     {
@@ -1197,55 +1195,55 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4173.3,
+      "price": 4162.8,
       "currency": "USD",
-      "change": 138.6,
-      "change_pct": 3.44,
-      "change_str": "+3.44%",
+      "change": 128.1,
+      "change_pct": 3.17,
+      "change_str": "+3.17%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 83.6,
+      "price": 83.96,
       "currency": "USD",
-      "change": -0.86,
-      "change_pct": -1.02,
-      "change_str": "-1.02%",
+      "change": -0.5,
+      "change_pct": -0.59,
+      "change_str": "-0.59%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64797.24,
+      "price": 64698.89,
       "currency": "USD",
-      "change": 889.07,
-      "change_pct": 1.39,
-      "change_str": "+1.39%",
+      "change": 790.72,
+      "change_pct": 1.24,
+      "change_str": "+1.24%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.9,
+      "price": 100.0,
       "currency": "USD",
-      "change": -0.9,
-      "change_pct": -0.89,
-      "change_str": "-0.89%",
+      "change": -0.8,
+      "change_pct": -0.79,
+      "change_str": "-0.79%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 17.54,
+      "price": 17.09,
       "currency": "USD",
-      "change": -3.12,
-      "change_pct": -15.1,
-      "change_str": "-15.10%",
+      "change": -3.57,
+      "change_pct": -17.28,
+      "change_str": "-17.28%",
       "direction": "down"
     }
   ],
@@ -1253,7 +1251,7 @@
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
     "portfolio_peak": 10017.98,
-    "vix": 17.54,
+    "vix": 17.09,
     "vix_regime": "ELEVATED",
     "sector_concentration": [],
     "max_drawdown_pct": 0.0,
@@ -1298,9 +1296,9 @@
     }
   },
   "logs": [
-    "2026-07-30 19:36:23 [INFO] AZALYST - status.json generated",
-    "2026-07-30 19:36:23 [INFO] PORTFOLIO - NAV USD 10,017.98 | Return +0.00%",
-    "2026-07-30 19:36:23 [INFO] SIGNALS - 16 active signal buckets in state"
+    "2026-07-30 21:23:49 [INFO] AZALYST - status.json generated",
+    "2026-07-30 21:23:49 [INFO] PORTFOLIO - NAV USD 10,017.98 | Return +0.00%",
+    "2026-07-30 21:23:49 [INFO] SIGNALS - 16 active signal buckets in state"
   ],
-  "generated_at": "2026-07-30 19:36:21 UTC"
+  "generated_at": "2026-07-30 21:23:47 UTC"
 }
