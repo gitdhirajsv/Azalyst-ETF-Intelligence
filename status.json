@@ -1,8 +1,8 @@
 {
-  "portfolio_value": 10021.44,
-  "total_deposited": 10021.44,
-  "cash": 5010.72,
-  "monthly_reserve": 5010.72,
+  "portfolio_value": 10019.86,
+  "total_deposited": 10019.86,
+  "cash": 5009.93,
+  "monthly_reserve": 5009.93,
   "market_value": 0.0,
   "total_invested": 0.0,
   "unrealised_pnl": 0.0,
@@ -13,11 +13,11 @@
   "change_raw": 0.0,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 10021.44,
+  "portfolio_peak": 10019.86,
   "drawdown_now_pct": 0.0,
   "max_drawdown_pct": 0.0,
   "deposited_anomaly": false,
-  "usd_inr_rate": 95.637,
+  "usd_inr_rate": 95.652,
   "positions": [],
   "closed_trades_list": [],
   "track_record": {
@@ -74,8 +74,8 @@
       },
       {
         "era": "current",
-        "total_deposited": 10021.44,
-        "portfolio_value": 10021.44,
+        "total_deposited": 10019.86,
+        "portfolio_value": 10019.86,
         "realised_pnl": 0.0,
         "change": "+0.00%",
         "total_trades": 0,
@@ -91,36 +91,36 @@
     "combined_win_rate": 19.4,
     "combined_realised_pnl": -91.29,
     "combined_realised_pnl_str": "-91.29",
-    "combined_total_deposited": 49955.67,
+    "combined_total_deposited": 49954.09,
     "note": "Each entry in `eras` is a separate paper-trading book (a prior book is archived, deposits restart, and NAV resets to par when the engine is reset). The headline NAV/return above the fold reflects only the CURRENT era -- this section exists so a reset cannot make the published track record look better than the full history."
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "HIGH_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.018623162470432185,
-    "vix_level": 20.65999984741211,
-    "vix_percentile_1y": 0.8333333333333334,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 18,
-      "flow": 18,
-      "options": 28,
-      "rotation": 12,
-      "macro": 12,
-      "news": 12
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
+      "rotation": 15,
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
-    "ticker": "GLD",
-    "rank_score": 7.60442089326268,
+    "ticker": "FXI",
+    "rank_score": 15.299591836734695,
     "flow_score": 18.0,
-    "options_score": 31.218978768634525,
+    "options_score": 0.0,
     "rotation_score": 0.0,
-    "macro_score": 5.687191567719928,
-    "news_score": 8.352,
-    "total": 70.86259122961714,
-    "publish": true,
+    "macro_score": 0.48477025736411605,
+    "news_score": 8.256,
+    "total": 42.04036209409881,
+    "publish": false,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -146,8 +146,8 @@
   },
   "confidence": [
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 92.0
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 90.0
     },
     {
       "symbol": "Defense & Aerospace",
@@ -158,36 +158,36 @@
       "score": 89.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 87.0
-    },
-    {
       "symbol": "Emerging Markets + Crypto & Digital Assets",
       "score": 86.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 84.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 82.0
     },
     {
       "symbol": "Nuclear Energy & Uranium + Bearish Market / Macro Selloff",
       "score": 82.0
     },
     {
+      "symbol": "Crypto & Digital Assets",
+      "score": 81.0
+    },
+    {
+      "symbol": "Asia Pacific Equity",
+      "score": 81.0
+    },
+    {
       "symbol": "Commodities & Mining",
-      "score": 77.0
+      "score": 76.0
     },
     {
       "symbol": "Cybersecurity",
       "score": 70.0
     },
     {
-      "symbol": "Asia Pacific Equity",
-      "score": 64.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 68.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 68.0
     },
     {
       "symbol": "Healthcare & Pharma",
@@ -198,69 +198,69 @@
       "score": 64.0
     },
     {
-      "symbol": "Europe Equity",
-      "score": 63.0
-    },
-    {
       "symbol": "Clean Energy & Renewables",
       "score": 62.0
     },
     {
       "symbol": "India Equity Markets",
       "score": 62.0
+    },
+    {
+      "symbol": "Europe Equity",
+      "score": 62.0
     }
   ],
   "signals": [
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 92.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": 12.5,
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 90.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -15.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 29,
-      "latest_at": "29 Jul 2026 14:44 UTC",
-      "headline": "ADNOC Defies Hormuz Risks as UAE LNG Exports Continue",
+      "article_count": 11,
+      "latest_at": "30 Jul 2026 04:50 UTC",
+      "headline": "US Stock Market: Trump backs Warsh as Fed\u2019s hawkish tilt raises rate hike odds",
       "regions": [
-        "americas",
+        "middle_east",
         "india",
-        "global",
-        "europe"
+        "asia_pacific",
+        "americas"
       ],
       "sources": [
-        "Markets-Economic Times",
-        "Latest from Tom's Hardware",
+        "Bloomberg Markets",
+        "Finance",
         "US Top News and Analysis",
-        "Oilprice.com"
+        "Markets-Economic Times"
       ],
-      "primary_etf": "XLE",
+      "primary_etf": "GLDM",
       "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
+        "GOLDBEES",
+        "HDFCGOLD"
       ],
       "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
+        "GLDM",
+        "GDX",
+        "GDXJ"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.3,
-        "recency": 15.1,
+        "volume_confirmation": 16.8,
+        "source_diversity": 13.4,
+        "recency": 16.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -369,59 +369,6 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 87.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": -1.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "27 Jul 2026 20:01 UTC",
-      "headline": "Bond investors, unsure about Fed policy outlook, hedge against US rate shock",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "middle_east",
-        "americas"
-      ],
-      "sources": [
-        "BBC News",
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 19.8,
-        "volume_confirmation": 17.4,
-        "source_diversity": 13.4,
-        "recency": 16.3,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "emerging_markets",
       "sector_label": "Emerging Markets + Crypto & Digital Assets",
       "confidence": 86.0,
@@ -469,105 +416,6 @@
         "volume_confirmation": 15.4,
         "source_diversity": 11.0,
         "recency": 16.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 84.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 84,
-      "latest_at": "29 Jul 2026 11:25 UTC",
-      "headline": "Chip stocks shed more than $1 trillion as selloff hits companies powering AI boom",
-      "regions": [
-        "europe",
-        "americas",
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "BBC News",
-        "Bloomberg Markets",
-        "Cointelegraph.com News",
-        "Oilprice.com"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 17.2,
-        "recency": 9.4,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 82.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -5.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "29 Jul 2026 13:47 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "global",
-        "americas",
-        "middle_east",
-        "europe"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "Tech"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 9.1,
-        "recency": 8.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -624,35 +472,127 @@
       }
     },
     {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 81.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -3.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 23,
+      "latest_at": "30 Jul 2026 03:19 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "asia_pacific",
+        "india",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 2.5,
+        "recency": 13.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 81.0,
+      "severity": "MEDIUM",
+      "direction": "BEARISH",
+      "direction_score": -0.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "30 Jul 2026 04:50 UTC",
+      "headline": "Global Market: BOJ may shift to inflation-fighting mode by December, says former official Watanabe",
+      "regions": [
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Tech",
+        "Latest from Tom's Hardware",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 15.3,
+        "volume_confirmation": 16.8,
+        "source_diversity": 14.6,
+        "recency": 16.2,
+        "geopolitical_severity": 9.2
+      }
+    },
+    {
       "sector_key": "commodities_mining",
       "sector_label": "Commodities & Mining",
-      "confidence": 77.0,
+      "confidence": 76.0,
       "severity": "HIGH",
       "direction": "BEARISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "29 Jul 2026 20:11 UTC",
+      "article_count": 7,
+      "latest_at": "30 Jul 2026 04:25 UTC",
       "headline": "Middle East Turmoil and the AI Boom Fuel Windfall for Mining Giants",
       "regions": [
-        "middle_east",
         "asia_pacific",
-        "europe",
-        "global"
+        "americas",
+        "india",
+        "middle_east"
       ],
       "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
+        "www.theregister.com - Articles",
         "Oilprice.com",
-        "www.theregister.com - Articles"
+        "Bloomberg Markets",
+        "Cointelegraph.com News"
       ],
       "primary_etf": "DBC",
       "top_etfs": [
         "DBC",
-        "COPP",
-        "CPSEETF"
+        "CPSEETF",
+        "COPP"
       ],
       "access_markets": [
         "India-listed",
@@ -667,10 +607,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 15.9,
-        "volume_confirmation": 14.6,
+        "signal_strength": 15.5,
+        "volume_confirmation": 13.7,
         "source_diversity": 10.0,
-        "recency": 15.7,
+        "recency": 15.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -721,51 +661,108 @@
       }
     },
     {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 64.0,
-      "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": -0.5,
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 68.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 5.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "29 Jul 2026 11:56 UTC",
-      "headline": "Chip stocks shed more than $1 trillion as selloff hits companies powering AI boom",
+      "article_count": 20,
+      "latest_at": "30 Jul 2026 05:17 UTC",
+      "headline": "Oil Prices Slip Despite New Attacks Across the Middle East",
       "regions": [
-        "global",
-        "asia_pacific"
+        "middle_east",
+        "asia_pacific",
+        "global"
       ],
       "sources": [
-        "Cointelegraph.com News",
-        "BBC News",
+        "Bloomberg Markets",
+        "Latest from Tom's Hardware",
         "US Top News and Analysis",
-        "Latest from Tom's Hardware"
+        "BBC News"
       ],
-      "primary_etf": "EWJ",
+      "primary_etf": "XLE",
       "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
+        "XLE",
+        "IXC",
+        "CPSEETF"
       ],
       "access_markets": [
+        "India-listed",
         "International-listed"
       ],
-      "india_etfs": [],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
       "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
+        "XLE",
+        "IXC",
+        "USO"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 12.0,
-        "volume_confirmation": 14.6,
-        "source_diversity": 10.4,
-        "recency": 10.0,
-        "geopolitical_severity": 8.7
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.3,
+        "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 68.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 4.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 82,
+      "latest_at": "30 Jul 2026 03:16 UTC",
+      "headline": "Chip stocks shed more than $1 trillion as selloff hits companies powering AI boom",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "americas",
+        "india"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "EE Times",
+        "Semiconductor Engineering",
+        "Tech"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.7,
+        "recency": 13.8,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -873,54 +870,6 @@
       }
     },
     {
-      "sector_key": "europe_equity",
-      "sector_label": "Europe Equity",
-      "confidence": 63.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "28 Jul 2026 09:32 UTC",
-      "headline": "Global Market: ECB may need more rate hikes to curb inflation risks, says Kazimir",
-      "regions": [
-        "europe",
-        "global"
-      ],
-      "sources": [
-        "Semiconductor Engineering",
-        "World News - Breaking international news and headlines | Sky News",
-        "BBC News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "VGK",
-      "top_etfs": [
-        "VGK",
-        "IEV",
-        "EWU"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "VGK",
-        "IEV",
-        "EWU",
-        "EWG"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 9.3,
-        "volume_confirmation": 9.7,
-        "source_diversity": 12.6,
-        "recency": 13.2,
-        "geopolitical_severity": 10.4
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 62.0,
@@ -1021,13 +970,63 @@
         "recency": 14.4,
         "geopolitical_severity": 13.0
       }
+    },
+    {
+      "sector_key": "europe_equity",
+      "sector_label": "Europe Equity",
+      "confidence": 62.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "30 Jul 2026 05:17 UTC",
+      "headline": "Airbus keeps an A350 flying for 24 hours",
+      "regions": [
+        "india",
+        "asia_pacific",
+        "global",
+        "europe"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Defense News",
+        "www.theregister.com - Articles",
+        "BBC News"
+      ],
+      "primary_etf": "VGK",
+      "top_etfs": [
+        "VGK",
+        "IEV",
+        "EWU"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "VGK",
+        "IEV",
+        "EWU",
+        "EWG"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.4,
+        "volume_confirmation": 13.7,
+        "source_diversity": 14.9,
+        "recency": 17.0,
+        "geopolitical_severity": 11.0
+      }
     }
   ],
   "articles": [
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Energy / Oil & Gas - 29 articles - CRITICAL / BULLISH - ADNOC Defies Hormuz Risks as UAE LNG Exports Continue"
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 11 articles - HIGH / BEARISH - US Stock Market: Trump backs Warsh as Fed\u2019s hawkish tilt raises rate hike odds"
     },
     {
       "tag": "tag-bull",
@@ -1040,24 +1039,9 @@
       "text": "Banking & Financial Sector - 17 articles - HIGH / BULLISH - US Stock Market: Fed's Jefferson signals openness to rate hike if inflation stays elevated"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BULLISH - Bond investors, unsure about Fed policy outlook, hedge against US rate shock"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Emerging Markets + Crypto & Digital Assets - 9 articles - HIGH / BEARISH - Binance & OKX users face $1,900 fines in Vietnam, Coinbase in China? Asia Express"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Technology & AI / Semiconductors - 84 articles - HIGH / BEARISH - Chip stocks shed more than $1 trillion as selloff hits companies powering AI boom"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Crypto & Digital Assets - 25 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
@@ -1067,7 +1051,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Commodities & Mining - 8 articles - HIGH / BEARISH - Middle East Turmoil and the AI Boom Fuel Windfall for Mining Giants"
+      "text": "Crypto & Digital Assets - 23 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Asia Pacific Equity - 11 articles - MEDIUM / BEARISH - Global Market: BOJ may shift to inflation-fighting mode by December, says former official Watanabe"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Commodities & Mining - 7 articles - HIGH / BEARISH - Middle East Turmoil and the AI Boom Fuel Windfall for Mining Giants"
     },
     {
       "tag": "tag-bull",
@@ -1075,9 +1069,14 @@
       "text": "Cybersecurity - 6 articles - HIGH / BULLISH - Sebi imposes Rs 1 crore penalty on CDSL over 2022 malware attack"
     },
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Energy / Oil & Gas - 20 articles - HIGH / BULLISH - Oil Prices Slip Despite New Attacks Across the Middle East"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Asia Pacific Equity - 8 articles - MEDIUM / BEARISH - Chip stocks shed more than $1 trillion as selloff hits companies powering AI boom"
+      "text": "Technology & AI / Semiconductors - 82 articles - HIGH / BEARISH - Chip stocks shed more than $1 trillion as selloff hits companies powering AI boom"
     },
     {
       "tag": "tag-bull",
@@ -1090,11 +1089,6 @@
       "text": "Bonds & Fixed Income - 10 articles - HIGH / BEARISH - Why bond investors are pushing up some of your interest rates"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Europe Equity - 4 articles - MEDIUM / BULLISH - Global Market: ECB may need more rate hikes to curb inflation risks, says Kazimir"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Clean Energy & Renewables - 4 articles - MEDIUM / BEARISH - World Nuclear Association: $6 Trillion Needed to Hit 2050 Capacity Goals"
@@ -1103,6 +1097,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "India Equity Markets - 26 articles - HIGH / BEARISH - Will Nifty, Sensex fall for 6th straight session on Monday? US Fed among 5 factors to watch this week"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Europe Equity - 7 articles - MEDIUM / BULLISH - Airbus keeps an A350 flying for 24 hours"
     }
   ],
   "market_snapshot": [
@@ -1145,9 +1144,9 @@
       "region": "UK",
       "price": 10908.41,
       "currency": "GBP",
-      "change": 126.61,
-      "change_pct": 1.17,
-      "change_str": "+1.17%",
+      "change": 37.41,
+      "change_pct": 0.34,
+      "change_str": "+0.34%",
       "direction": "up"
     },
     {
@@ -1156,73 +1155,73 @@
       "region": "EU",
       "price": 25460.48,
       "currency": "EUR",
-      "change": 99.45,
-      "change_pct": 0.39,
-      "change_str": "+0.39%",
-      "direction": "up"
+      "change": -3.53,
+      "change_pct": -0.01,
+      "change_str": "-0.01%",
+      "direction": "down"
     },
     {
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 61434.19,
+      "price": 61570.28,
       "currency": "JPY",
-      "change": -3497.0,
-      "change_pct": -5.39,
-      "change_str": "-5.39%",
-      "direction": "down"
+      "change": 136.09,
+      "change_pct": 0.22,
+      "change_str": "+0.22%",
+      "direction": "up"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 25807.92,
+      "price": 25702.58,
       "currency": "HKD",
-      "change": 600.74,
-      "change_pct": 2.38,
-      "change_str": "+2.38%",
-      "direction": "up"
+      "change": -105.34,
+      "change_pct": -0.41,
+      "change_str": "-0.41%",
+      "direction": "down"
     },
     {
       "label": "Nifty 50",
       "ticker": "^NSEI",
       "region": "IN",
-      "price": 24250.2,
+      "price": 24260.55,
       "currency": "INR",
-      "change": 254.25,
-      "change_pct": 1.06,
-      "change_str": "+1.06%",
+      "change": 10.35,
+      "change_pct": 0.04,
+      "change_str": "+0.04%",
       "direction": "up"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4152.2,
+      "price": 4101.9,
       "currency": "USD",
-      "change": 115.9,
-      "change_pct": 2.87,
-      "change_str": "+2.87%",
+      "change": 67.2,
+      "change_pct": 1.67,
+      "change_str": "+1.67%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 84.42,
+      "price": 84.45,
       "currency": "USD",
-      "change": 5.16,
-      "change_pct": 6.51,
-      "change_str": "+6.51%",
-      "direction": "up"
+      "change": -0.01,
+      "change_pct": -0.01,
+      "change_str": "-0.01%",
+      "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63839.99,
+      "price": 63836.78,
       "currency": "USD",
-      "change": -31.37,
+      "change": -34.58,
       "change_pct": -0.05,
       "change_str": "-0.05%",
       "direction": "down"
@@ -1231,12 +1230,12 @@
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.8,
+      "price": 100.92,
       "currency": "USD",
-      "change": -0.58,
-      "change_pct": -0.57,
-      "change_str": "-0.57%",
-      "direction": "down"
+      "change": 0.12,
+      "change_pct": 0.12,
+      "change_str": "+0.12%",
+      "direction": "up"
     },
     {
       "label": "VIX",
@@ -1253,7 +1252,7 @@
   "risk_controls": {
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
-    "portfolio_peak": 10021.44,
+    "portfolio_peak": 10019.86,
     "vix": 20.66,
     "vix_regime": "ELEVATED",
     "sector_concentration": [],
@@ -1299,9 +1298,9 @@
     }
   },
   "logs": [
-    "2026-07-29 23:16:00 [INFO] AZALYST - status.json generated",
-    "2026-07-29 23:16:00 [INFO] PORTFOLIO - NAV USD 10,021.44 | Return +0.00%",
-    "2026-07-29 23:16:00 [INFO] SIGNALS - 16 active signal buckets in state"
+    "2026-07-30 05:24:59 [INFO] AZALYST - status.json generated",
+    "2026-07-30 05:24:59 [INFO] PORTFOLIO - NAV USD 10,019.86 | Return +0.00%",
+    "2026-07-30 05:24:59 [INFO] SIGNALS - 16 active signal buckets in state"
   ],
-  "generated_at": "2026-07-29 23:15:59 UTC"
+  "generated_at": "2026-07-30 05:24:58 UTC"
 }
