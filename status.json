@@ -1,8 +1,8 @@
 {
-  "portfolio_value": 10043.17,
-  "total_deposited": 10043.17,
-  "cash": 5021.59,
-  "monthly_reserve": 5021.59,
+  "portfolio_value": 10048.44,
+  "total_deposited": 10048.44,
+  "cash": 5024.22,
+  "monthly_reserve": 5024.22,
   "market_value": 0.0,
   "total_invested": 0.0,
   "unrealised_pnl": 0.0,
@@ -13,11 +13,11 @@
   "change_raw": 0.0,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 10043.17,
+  "portfolio_peak": 10048.44,
   "drawdown_now_pct": 0.0,
   "max_drawdown_pct": 0.0,
   "deposited_anomaly": false,
-  "usd_inr_rate": 95.43,
+  "usd_inr_rate": 95.38,
   "positions": [],
   "closed_trades_list": [],
   "track_record": {
@@ -74,8 +74,8 @@
       },
       {
         "era": "current",
-        "total_deposited": 10043.17,
-        "portfolio_value": 10043.17,
+        "total_deposited": 10048.44,
+        "portfolio_value": 10048.44,
         "realised_pnl": 0.0,
         "change": "+0.00%",
         "total_trades": 0,
@@ -91,7 +91,7 @@
     "combined_win_rate": 19.4,
     "combined_realised_pnl": -91.29,
     "combined_realised_pnl_str": "-91.29",
-    "combined_total_deposited": 49977.4,
+    "combined_total_deposited": 49982.67,
     "note": "Each entry in `eras` is a separate paper-trading book (a prior book is archived, deposits restart, and NAV resets to par when the engine is reset). The headline NAV/return above the fold reflects only the CURRENT era -- this section exists so a reset cannot make the published track record look better than the full history."
   },
   "confidence_threshold": 60,
@@ -100,8 +100,8 @@
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
     "spy_excess_vs_tbill_3m": 0.025517086671169247,
-    "vix_level": 16.719999313354492,
-    "vix_percentile_1y": 0.40476190476190477,
+    "vix_level": 17.06999969482422,
+    "vix_percentile_1y": 0.46825396825396826,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -115,11 +115,11 @@
     "ticker": "GDX",
     "rank_score": 12.145344436033309,
     "flow_score": 8.950203094270945,
-    "options_score": 17.000119317621223,
+    "options_score": 20.19597536264377,
     "rotation_score": 15.0,
-    "macro_score": 5.189492327683246,
+    "macro_score": 4.8493500921570165,
     "news_score": 7.28,
-    "total": 65.56515917560871,
+    "total": 68.42087298510504,
     "publish": true,
     "direction": "long"
   },
@@ -146,10 +146,6 @@
   },
   "confidence": [
     {
-      "symbol": "Asia Pacific Equity + Gold & Precious Metals",
-      "score": 96.0
-    },
-    {
       "symbol": "Technology & AI / Semiconductors",
       "score": 93.0
     },
@@ -158,12 +154,12 @@
       "score": 91.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 90.0
+      "symbol": "Asia Pacific Equity",
+      "score": 91.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 89.0
+      "symbol": "Defense & Aerospace",
+      "score": 90.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -172,6 +168,10 @@
     {
       "symbol": "Emerging Markets + Crypto & Digital Assets",
       "score": 86.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 84.0
     },
     {
       "symbol": "India Equity Markets",
@@ -186,12 +186,12 @@
       "score": 76.0
     },
     {
-      "symbol": "Europe Equity",
+      "symbol": "Cybersecurity",
       "score": 70.0
     },
     {
-      "symbol": "Cybersecurity",
-      "score": 70.0
+      "symbol": "Europe Equity",
+      "score": 69.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -211,56 +211,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity + Gold & Precious Metals",
-      "confidence": 96.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 14.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "31 Jul 2026 05:02 UTC",
-      "headline": "Global Market: BOJ keeps rates unchanged, signals readiness for further hikes as yen remains under pressure",
-      "regions": [
-        "europe",
-        "middle_east",
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.7,
-        "recency": 15.8,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
@@ -368,6 +318,54 @@
       }
     },
     {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 91.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 8.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 17,
+      "latest_at": "31 Jul 2026 10:44 UTC",
+      "headline": "Explained: Why Kospi skyrocketed 18% today after massive selloff and what\u2019s ahead for South Korea\u2019s 'bipolar' stock market",
+      "regions": [
+        "asia_pacific",
+        "americas"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "Cointelegraph.com News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.7,
+        "recency": 14.7,
+        "geopolitical_severity": 12.9
+      }
+    },
+    {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
       "confidence": 90.0,
@@ -417,51 +415,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.0,
         "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 89.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -3.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 27,
-      "latest_at": "30 Jul 2026 11:46 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "global",
-        "india",
-        "middle_east",
-        "americas"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 7.6,
-        "recency": 16.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -564,6 +517,53 @@
         "volume_confirmation": 15.4,
         "source_diversity": 11.0,
         "recency": 16.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 84.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 3.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 29,
+      "latest_at": "31 Jul 2026 10:39 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "americas",
+        "europe",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "Cointelegraph.com News",
+        "World | Deutsche Welle"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.8,
+        "recency": 14.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -719,56 +719,6 @@
       }
     },
     {
-      "sector_key": "europe_equity",
-      "sector_label": "Europe Equity",
-      "confidence": 70.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": -2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "31 Jul 2026 05:44 UTC",
-      "headline": "Global Market: BoE outlines inflation, growth paths under three economic scenarios after holding rates",
-      "regions": [
-        "global",
-        "europe",
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "BBC News",
-        "Markets-Economic Times",
-        "World | Deutsche Welle",
-        "Oilprice.com"
-      ],
-      "primary_etf": "VGK",
-      "top_etfs": [
-        "VGK",
-        "IEV",
-        "EWU"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "VGK",
-        "IEV",
-        "EWU",
-        "EWG"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 10.8,
-        "volume_confirmation": 12.6,
-        "source_diversity": 12.6,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
       "confidence": 70.0,
@@ -811,6 +761,55 @@
         "volume_confirmation": 12.6,
         "source_diversity": 10.4,
         "recency": 15.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "europe_equity",
+      "sector_label": "Europe Equity",
+      "confidence": 69.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": -2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "31 Jul 2026 12:08 UTC",
+      "headline": "Global Market: European shares hit record high as tech rally, earnings lift sentiment",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "europe",
+        "middle_east"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "World | Deutsche Welle",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "VGK",
+      "top_etfs": [
+        "VGK",
+        "IEV",
+        "EWU"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "VGK",
+        "IEV",
+        "EWU",
+        "EWG"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.4,
+        "volume_confirmation": 12.6,
+        "source_diversity": 9.9,
+        "recency": 17.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -1023,11 +1022,6 @@
   ],
   "articles": [
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Asia Pacific Equity + Gold & Precious Metals - 13 articles - HIGH / BULLISH - Global Market: BOJ keeps rates unchanged, signals readiness for further hikes as yen remains under pressure"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Technology & AI / Semiconductors - 76 articles - CRITICAL / BEARISH - US stocks: Amazon beats estimates for quarterly cloud revenue growth"
@@ -1040,12 +1034,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Defense & Aerospace - 17 articles - HIGH / BULLISH - Houthis Claim Attack on Saudi Oil Tanker in Red Sea"
+      "text": "Asia Pacific Equity - 17 articles - HIGH / BULLISH - Explained: Why Kospi skyrocketed 18% today after massive selloff and what\u2019s ahead for South Korea\u2019s 'bipolar' stock market"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Crypto & Digital Assets - 27 articles - CRITICAL / BEARISH - Here\u2019s what happened in crypto today"
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Defense & Aerospace - 17 articles - HIGH / BULLISH - Houthis Claim Attack on Saudi Oil Tanker in Red Sea"
     },
     {
       "tag": "tag-bull",
@@ -1056,6 +1050,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Emerging Markets + Crypto & Digital Assets - 9 articles - HIGH / BEARISH - Binance & OKX users face $1,900 fines in Vietnam, Coinbase in China? Asia Express"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Crypto & Digital Assets - 29 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
@@ -1075,12 +1074,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Europe Equity - 6 articles - HIGH / BULLISH - Global Market: BoE outlines inflation, growth paths under three economic scenarios after holding rates"
+      "text": "Cybersecurity - 6 articles - HIGH / BULLISH - Sebi imposes Rs 1 crore penalty on CDSL over 2022 malware attack"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Cybersecurity - 6 articles - HIGH / BULLISH - Sebi imposes Rs 1 crore penalty on CDSL over 2022 malware attack"
+      "text": "Europe Equity - 6 articles - HIGH / BULLISH - Global Market: European shares hit record high as tech rally, earnings lift sentiment"
     },
     {
       "tag": "tag-bull",
@@ -1141,22 +1140,22 @@
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10970.46,
+      "price": 10912.04,
       "currency": "GBP",
-      "change": 73.16,
-      "change_pct": 0.67,
-      "change_str": "+0.67%",
+      "change": 14.74,
+      "change_pct": 0.14,
+      "change_str": "+0.14%",
       "direction": "up"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 25799.73,
+      "price": 25688.55,
       "currency": "EUR",
-      "change": 187.7,
-      "change_pct": 0.73,
-      "change_str": "+0.73%",
+      "change": 76.52,
+      "change_pct": 0.3,
+      "change_str": "+0.30%",
       "direction": "up"
     },
     {
@@ -1185,74 +1184,74 @@
       "label": "Nifty 50",
       "ticker": "^NSEI",
       "region": "IN",
-      "price": 24369.1,
+      "price": 24383.6,
       "currency": "INR",
-      "change": 51.95,
-      "change_pct": 0.21,
-      "change_str": "+0.21%",
+      "change": 66.45,
+      "change_pct": 0.27,
+      "change_str": "+0.27%",
       "direction": "up"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4113.8,
+      "price": 4113.2,
       "currency": "USD",
-      "change": 13.7,
-      "change_pct": 0.33,
-      "change_str": "+0.33%",
+      "change": 13.1,
+      "change_pct": 0.32,
+      "change_str": "+0.32%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 82.92,
+      "price": 85.46,
       "currency": "USD",
-      "change": -0.67,
-      "change_pct": -0.8,
-      "change_str": "-0.80%",
-      "direction": "down"
+      "change": 1.87,
+      "change_pct": 2.24,
+      "change_str": "+2.24%",
+      "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63633.61,
+      "price": 63667.42,
       "currency": "USD",
-      "change": -1091.7,
-      "change_pct": -1.69,
-      "change_str": "-1.69%",
+      "change": -1057.89,
+      "change_pct": -1.63,
+      "change_str": "-1.63%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.03,
+      "price": 100.35,
       "currency": "USD",
-      "change": 0.02,
-      "change_pct": 0.02,
-      "change_str": "+0.02%",
+      "change": 0.34,
+      "change_pct": 0.34,
+      "change_str": "+0.34%",
       "direction": "up"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 16.72,
+      "price": 17.07,
       "currency": "USD",
-      "change": -0.37,
-      "change_pct": -2.17,
-      "change_str": "-2.17%",
+      "change": -0.02,
+      "change_pct": -0.12,
+      "change_str": "-0.12%",
       "direction": "down"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
-    "portfolio_peak": 10043.17,
-    "vix": 16.72,
+    "portfolio_peak": 10048.44,
+    "vix": 17.07,
     "vix_regime": "ELEVATED",
     "sector_concentration": [],
     "max_drawdown_pct": 0.0,
@@ -1297,9 +1296,9 @@
     }
   },
   "logs": [
-    "2026-07-31 09:23:08 [INFO] AZALYST - status.json generated",
-    "2026-07-31 09:23:08 [INFO] PORTFOLIO - NAV USD 10,043.17 | Return +0.00%",
-    "2026-07-31 09:23:08 [INFO] SIGNALS - 16 active signal buckets in state"
+    "2026-07-31 12:21:07 [INFO] AZALYST - status.json generated",
+    "2026-07-31 12:21:07 [INFO] PORTFOLIO - NAV USD 10,048.44 | Return +0.00%",
+    "2026-07-31 12:21:07 [INFO] SIGNALS - 16 active signal buckets in state"
   ],
-  "generated_at": "2026-07-31 09:23:07 UTC"
+  "generated_at": "2026-07-31 12:21:05 UTC"
 }
