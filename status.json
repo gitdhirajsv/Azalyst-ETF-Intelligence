@@ -1,24 +1,71 @@
 {
-  "portfolio_value": 10049.49,
-  "total_deposited": 10049.49,
-  "cash": 5024.75,
-  "monthly_reserve": 5024.75,
-  "market_value": 0.0,
-  "total_invested": 0.0,
-  "unrealised_pnl": 0.0,
-  "unrealised_str": "+0.00",
+  "portfolio_value": 10047.33,
+  "total_deposited": 10048.44,
+  "cash": 8810.73,
+  "monthly_reserve": 0.0,
+  "market_value": 1236.6,
+  "total_invested": 1237.71,
+  "unrealised_pnl": -1.11,
+  "unrealised_str": "-1.11",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "+0.00%",
-  "change_raw": 0.0,
+  "change": "-0.01%",
+  "change_raw": -0.01,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 10049.49,
-  "drawdown_now_pct": 0.0,
-  "max_drawdown_pct": 0.0,
+  "portfolio_peak": 10048.44,
+  "drawdown_now_pct": 0.01,
+  "max_drawdown_pct": 0.01,
   "deposited_anomaly": false,
-  "usd_inr_rate": 95.37,
-  "positions": [],
+  "usd_inr_rate": 95.38,
+  "positions": [
+    {
+      "trade_id": "T0001",
+      "ticker": "ITA",
+      "etf_name": "iShares U.S. Aerospace & Defense ETF",
+      "sector": "Defense & Aerospace",
+      "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NYSE",
+      "entry": 240.16,
+      "current": 240.02,
+      "peak_price": 240.16,
+      "trail_stop": 223.35,
+      "dist_to_trail_pct": 6.95,
+      "units": 2.476666,
+      "invested": 594.87,
+      "pnl": -0.35,
+      "pnl_str": "-0.35",
+      "pnl_pct": -0.06,
+      "pnl_pct_str": "-0.06%",
+      "confidence": 90,
+      "severity": "CRITICAL",
+      "days_held": 0,
+      "half_exited": false
+    },
+    {
+      "trade_id": "T0002",
+      "ticker": "XLF",
+      "etf_name": "Financial Select Sector SPDR",
+      "sector": "Banking & Financial Sector",
+      "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NYSE",
+      "entry": 57.12,
+      "current": 57.06,
+      "peak_price": 57.12,
+      "trail_stop": 53.12,
+      "dist_to_trail_pct": 6.91,
+      "units": 11.252913,
+      "invested": 642.84,
+      "pnl": -0.64,
+      "pnl_str": "-0.64",
+      "pnl_pct": -0.1,
+      "pnl_pct_str": "-0.10%",
+      "confidence": 89,
+      "severity": "CRITICAL",
+      "days_held": 0,
+      "half_exited": false
+    }
+  ],
   "closed_trades_list": [],
   "track_record": {
     "total_trades": 0,
@@ -74,10 +121,10 @@
       },
       {
         "era": "current",
-        "total_deposited": 10049.49,
-        "portfolio_value": 10049.49,
+        "total_deposited": 10048.44,
+        "portfolio_value": 10047.33,
         "realised_pnl": 0.0,
-        "change": "+0.00%",
+        "change": "-0.01%",
         "total_trades": 0,
         "winners": 0,
         "losers": 0,
@@ -91,17 +138,17 @@
     "combined_win_rate": 19.4,
     "combined_realised_pnl": -91.29,
     "combined_realised_pnl_str": "-91.29",
-    "combined_total_deposited": 49983.72,
+    "combined_total_deposited": 49982.67,
     "note": "Each entry in `eras` is a separate paper-trading book (a prior book is archived, deposits restart, and NAV resets to par when the engine is reset). The headline NAV/return above the fold reflects only the CURRENT era -- this section exists so a reset cannot make the published track record look better than the full history."
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
+    "risk_state": "NEUTRAL",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.024735545408356964,
-    "vix_level": 17.34000015258789,
-    "vix_percentile_1y": 0.5198412698412699,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -113,14 +160,14 @@
   },
   "top_signal": {
     "ticker": "XLF",
-    "rank_score": 16.403053435114504,
-    "flow_score": 10.29797824181163,
-    "options_score": 14.595568318440737,
+    "rank_score": 16.01219512195122,
+    "flow_score": 7.203444167098147,
+    "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 7.589275268370659,
+    "macro_score": 8.038246642696167,
     "news_score": 7.120000000000001,
-    "total": 71.00587526373754,
-    "publish": true,
+    "total": 53.373885931745534,
+    "publish": false,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -131,24 +178,39 @@
     "ftd_active": false,
     "aggressive_multiplier": 1.0
   },
-  "stage_map": {},
+  "stage_map": {
+    "ITA": {
+      "stage": 0,
+      "description": "Insufficient data"
+    },
+    "XLF": {
+      "stage": 0,
+      "description": "Insufficient data"
+    }
+  },
   "allocation": {
     "labels": [
+      "ITA",
+      "XLF",
       "CASH"
     ],
     "values": [
-      100.0
+      5.9,
+      6.4,
+      87.7
     ]
   },
   "pnl": {
-    "labels": [],
-    "values": []
+    "labels": [
+      "ITA",
+      "XLF"
+    ],
+    "values": [
+      -0.35,
+      -0.64
+    ]
   },
   "confidence": [
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 93.0
-    },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 91.0
@@ -156,6 +218,10 @@
     {
       "symbol": "Asia Pacific Equity",
       "score": 91.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 90.0
     },
     {
       "symbol": "Defense & Aerospace",
@@ -211,59 +277,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 93.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 76,
-      "latest_at": "30 Jul 2026 23:15 UTC",
-      "headline": "US stocks: Amazon beats estimates for quarterly cloud revenue growth",
-      "regions": [
-        "asia_pacific",
-        "europe",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Semiconductor Engineering",
-        "Tech",
-        "The Verge"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.6,
-        "recency": 17.0,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
@@ -363,6 +376,59 @@
         "source_diversity": 12.7,
         "recency": 14.7,
         "geopolitical_severity": 12.9
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 90.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": 4.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 77,
+      "latest_at": "31 Jul 2026 18:22 UTC",
+      "headline": "Chip Industry Week In Review",
+      "regions": [
+        "europe",
+        "india",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Semiconductor Engineering",
+        "Cointelegraph.com News",
+        "US Top News and Analysis",
+        "Earnings"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 17.2,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -626,21 +692,22 @@
       "confidence": 83.0,
       "severity": "HIGH",
       "direction": "BULLISH",
-      "direction_score": 6.0,
+      "direction_score": 3.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 14,
-      "latest_at": "31 Jul 2026 07:23 UTC",
-      "headline": "Sensex rises over 50 points, Nifty above 24,350; Bajaj twins, M&amp;M among top gainers",
+      "article_count": 22,
+      "latest_at": "31 Jul 2026 16:18 UTC",
+      "headline": "Market wrap: Bajaj Finance, Bajaj Finserv, TCS among top gainers and losers on Nifty and Sensex on Friday",
       "regions": [
         "india",
+        "middle_east",
         "asia_pacific"
       ],
       "sources": [
+        "World | Deutsche Welle",
         "BBC News",
-        "Markets-Economic Times",
-        "US Top News and Analysis"
+        "Markets-Economic Times"
       ],
       "primary_etf": "INDA",
       "top_etfs": [
@@ -661,11 +728,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 20.6,
+        "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 11.0,
-        "recency": 14.1,
-        "geopolitical_severity": 12.9
+        "recency": 13.8,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1026,17 +1093,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Technology & AI / Semiconductors - 76 articles - CRITICAL / BEARISH - US stocks: Amazon beats estimates for quarterly cloud revenue growth"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BEARISH - US Stock Market: JP Morgan brings forward Fed rate hike call to December after July policy meeting"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Asia Pacific Equity - 17 articles - HIGH / BULLISH - Explained: Why Kospi skyrocketed 18% today after massive selloff and what\u2019s ahead for South Korea\u2019s 'bipolar' stock market"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Technology & AI / Semiconductors - 77 articles - CRITICAL / BEARISH - Chip Industry Week In Review"
     },
     {
       "tag": "tag-bull",
@@ -1066,7 +1133,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "India Equity Markets - 14 articles - HIGH / BULLISH - Sensex rises over 50 points, Nifty above 24,350; Bajaj twins, M&amp;M among top gainers"
+      "text": "India Equity Markets - 22 articles - HIGH / BULLISH - Market wrap: Bajaj Finance, Bajaj Finserv, TCS among top gainers and losers on Nifty and Sensex on Friday"
     },
     {
       "tag": "tag-bear",
@@ -1109,33 +1176,33 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7455.15,
+      "price": 7485.35,
       "currency": "USD",
-      "change": 17.52,
-      "change_pct": 0.24,
-      "change_str": "+0.24%",
+      "change": 47.72,
+      "change_pct": 0.64,
+      "change_str": "+0.64%",
       "direction": "up"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 25190.22,
+      "price": 25333.7,
       "currency": "USD",
-      "change": 68.04,
-      "change_pct": 0.27,
-      "change_str": "+0.27%",
+      "change": 211.52,
+      "change_pct": 0.84,
+      "change_str": "+0.84%",
       "direction": "up"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 52393.56,
+      "price": 52529.6,
       "currency": "USD",
-      "change": 185.5,
-      "change_pct": 0.36,
-      "change_str": "+0.36%",
+      "change": 321.54,
+      "change_pct": 0.62,
+      "change_str": "+0.62%",
       "direction": "up"
     },
     {
@@ -1188,75 +1255,86 @@
       "region": "IN",
       "price": 24383.6,
       "currency": "INR",
-      "change": 66.45,
-      "change_pct": 0.27,
-      "change_str": "+0.27%",
+      "change": 133.4,
+      "change_pct": 0.55,
+      "change_str": "+0.55%",
       "direction": "up"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4100.5,
+      "price": 4105.8,
       "currency": "USD",
-      "change": 0.4,
-      "change_pct": 0.01,
-      "change_str": "+0.01%",
+      "change": 5.7,
+      "change_pct": 0.14,
+      "change_str": "+0.14%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 84.19,
+      "price": 85.1,
       "currency": "USD",
-      "change": 0.6,
-      "change_pct": 0.72,
-      "change_str": "+0.72%",
+      "change": 1.51,
+      "change_pct": 1.81,
+      "change_str": "+1.81%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 62811.66,
+      "price": 63013.92,
       "currency": "USD",
-      "change": -1913.65,
-      "change_pct": -2.96,
-      "change_str": "-2.96%",
+      "change": -1711.39,
+      "change_pct": -2.64,
+      "change_str": "-2.64%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.03,
+      "price": 99.91,
       "currency": "USD",
-      "change": 0.02,
-      "change_pct": 0.02,
-      "change_str": "+0.02%",
-      "direction": "up"
+      "change": -0.1,
+      "change_pct": -0.1,
+      "change_str": "-0.10%",
+      "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 17.35,
+      "price": 16.64,
       "currency": "USD",
-      "change": 0.26,
-      "change_pct": 1.52,
-      "change_str": "+1.52%",
-      "direction": "up"
+      "change": -0.45,
+      "change_pct": -2.63,
+      "change_str": "-2.63%",
+      "direction": "down"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.0,
-    "portfolio_peak": 10049.49,
-    "vix": 17.35,
+    "drawdown_from_peak_pct": 0.01,
+    "portfolio_peak": 10048.44,
+    "vix": 16.64,
     "vix_regime": "ELEVATED",
-    "sector_concentration": [],
-    "max_drawdown_pct": 0.0,
+    "sector_concentration": [
+      {
+        "sector": "Banking & Financial Sector",
+        "weight": 6.4,
+        "at_cap": false
+      },
+      {
+        "sector": "Defense & Aerospace",
+        "weight": 5.9,
+        "at_cap": false
+      }
+    ],
+    "max_drawdown_pct": 0.01,
     "sector_cap_pct": 30,
     "trailing_stop_pct": 8,
     "hard_stop_pct": 10,
@@ -1265,42 +1343,186 @@
   },
   "aladdin_risk": {
     "correlation": {
-      "matrix": {},
-      "tickers": [],
-      "max_corr": 0.0,
-      "max_corr_pair": [],
+      "matrix": {
+        "ITA": {
+          "ITA": 1.0,
+          "XLF": 0.526
+        },
+        "XLF": {
+          "ITA": 0.526,
+          "XLF": 1.0
+        }
+      },
+      "tickers": [
+        "ITA",
+        "XLF"
+      ],
+      "max_corr": 0.526,
+      "max_corr_pair": [
+        "ITA",
+        "XLF"
+      ],
       "most_negative_corr": 0.0,
-      "most_negative_pair": [],
-      "status": "OK"
+      "most_negative_pair": [
+        "",
+        ""
+      ],
+      "status": "HIGH"
     },
     "volatility": {
-      "per_ticker": {},
-      "portfolio_avg_vol_pct": 0.0,
+      "per_ticker": {
+        "ITA": 24.22,
+        "XLF": 14.91
+      },
+      "portfolio_avg_vol_pct": 19.56,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 0.0,
-      "benchmark_price_start": 0,
-      "benchmark_price_now": 0,
+      "benchmark_return_pct": 0.06,
+      "benchmark_price_start": 745.76,
+      "benchmark_price_now": 746.18,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": 0.0,
-      "alpha": 0.0
+      "portfolio_return_pct": -0.01,
+      "alpha": -0.07
     },
     "rebalance": {
-      "alerts": [],
+      "alerts": [
+        {
+          "ticker": "CASH",
+          "actual_weight_pct": 87.69,
+          "target_weight_pct": 10.0,
+          "drift_pct": 77.69,
+          "action": "DEPLOY",
+          "amount": 7805.99,
+          "etf_name": "Cash Reserve",
+          "regime_note": ""
+        },
+        {
+          "ticker": "ITA",
+          "actual_weight_pct": 5.92,
+          "target_weight_pct": 45.0,
+          "drift_pct": -39.08,
+          "action": "ADD",
+          "amount": 3926.84,
+          "etf_name": "iShares U.S. Aerospace & Defense ETF",
+          "regime_note": ""
+        },
+        {
+          "ticker": "XLF",
+          "actual_weight_pct": 6.39,
+          "target_weight_pct": 45.0,
+          "drift_pct": -38.61,
+          "action": "ADD",
+          "amount": 3879.16,
+          "etf_name": "Financial Select Sector SPDR",
+          "regime_note": ""
+        }
+      ],
       "drift_threshold_pct": 5.0,
-      "needs_rebalance": false
+      "needs_rebalance": true
     },
     "stress_test": {
-      "scenarios": {},
-      "worst_scenario": "",
-      "worst_loss_pct": 0.0
+      "scenarios": {
+        "2008_GFC": {
+          "total_impact": -494.64,
+          "portfolio_loss_pct": -4.92,
+          "position_impacts": [
+            {
+              "ticker": "ITA",
+              "factor": "equities",
+              "shock_pct": -40.0,
+              "impact": -237.78
+            },
+            {
+              "ticker": "XLF",
+              "factor": "equities",
+              "shock_pct": -40.0,
+              "impact": -256.85
+            }
+          ]
+        },
+        "2020_COVID": {
+          "total_impact": -420.44,
+          "portfolio_loss_pct": -4.18,
+          "position_impacts": [
+            {
+              "ticker": "ITA",
+              "factor": "equities",
+              "shock_pct": -34.0,
+              "impact": -202.12
+            },
+            {
+              "ticker": "XLF",
+              "factor": "equities",
+              "shock_pct": -34.0,
+              "impact": -218.33
+            }
+          ]
+        },
+        "RATES_SHOCK_+2%": {
+          "total_impact": -185.49,
+          "portfolio_loss_pct": -1.85,
+          "position_impacts": [
+            {
+              "ticker": "ITA",
+              "factor": "equities",
+              "shock_pct": -15.0,
+              "impact": -89.17
+            },
+            {
+              "ticker": "XLF",
+              "factor": "equities",
+              "shock_pct": -15.0,
+              "impact": -96.32
+            }
+          ]
+        },
+        "USD_SPIKE_+10%": {
+          "total_impact": -98.93,
+          "portfolio_loss_pct": -0.98,
+          "position_impacts": [
+            {
+              "ticker": "ITA",
+              "factor": "equities",
+              "shock_pct": -8.0,
+              "impact": -47.56
+            },
+            {
+              "ticker": "XLF",
+              "factor": "equities",
+              "shock_pct": -8.0,
+              "impact": -51.37
+            }
+          ]
+        },
+        "VIX_SPIKE_40": {
+          "total_impact": -222.59,
+          "portfolio_loss_pct": -2.22,
+          "position_impacts": [
+            {
+              "ticker": "ITA",
+              "factor": "equities",
+              "shock_pct": -18.0,
+              "impact": -107.0
+            },
+            {
+              "ticker": "XLF",
+              "factor": "equities",
+              "shock_pct": -18.0,
+              "impact": -115.58
+            }
+          ]
+        }
+      },
+      "worst_scenario": "2008_GFC",
+      "worst_loss_pct": -4.92
     }
   },
   "logs": [
-    "2026-07-31 16:11:02 [INFO] AZALYST - status.json generated",
-    "2026-07-31 16:11:02 [INFO] PORTFOLIO - NAV USD 10,049.49 | Return +0.00%",
-    "2026-07-31 16:11:02 [INFO] SIGNALS - 16 active signal buckets in state"
+    "2026-07-31 18:30:56 [INFO] AZALYST - status.json generated",
+    "2026-07-31 18:30:56 [INFO] PORTFOLIO - NAV USD 10,047.33 | Return -0.01%",
+    "2026-07-31 18:30:56 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-07-31 18:30:56 [INFO] TRADER - Open positions: ITA, XLF"
   ],
-  "generated_at": "2026-07-31 16:11:01 UTC"
+  "generated_at": "2026-07-31 18:30:53 UTC"
 }
