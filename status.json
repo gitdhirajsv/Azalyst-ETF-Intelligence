@@ -1,8 +1,8 @@
 {
-  "portfolio_value": 10046.33,
-  "total_deposited": 10046.33,
-  "cash": 5023.17,
-  "monthly_reserve": 5023.17,
+  "portfolio_value": 10043.17,
+  "total_deposited": 10043.17,
+  "cash": 5021.59,
+  "monthly_reserve": 5021.59,
   "market_value": 0.0,
   "total_invested": 0.0,
   "unrealised_pnl": 0.0,
@@ -13,11 +13,11 @@
   "change_raw": 0.0,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 10046.33,
+  "portfolio_peak": 10043.17,
   "drawdown_now_pct": 0.0,
   "max_drawdown_pct": 0.0,
   "deposited_anomaly": false,
-  "usd_inr_rate": 95.4,
+  "usd_inr_rate": 95.43,
   "positions": [],
   "closed_trades_list": [],
   "track_record": {
@@ -74,8 +74,8 @@
       },
       {
         "era": "current",
-        "total_deposited": 10046.33,
-        "portfolio_value": 10046.33,
+        "total_deposited": 10043.17,
+        "portfolio_value": 10043.17,
         "realised_pnl": 0.0,
         "change": "+0.00%",
         "total_trades": 0,
@@ -91,17 +91,17 @@
     "combined_win_rate": 19.4,
     "combined_realised_pnl": -91.29,
     "combined_realised_pnl_str": "-91.29",
-    "combined_total_deposited": 49980.56,
+    "combined_total_deposited": 49977.4,
     "note": "Each entry in `eras` is a separate paper-trading book (a prior book is archived, deposits restart, and NAV resets to par when the engine is reset). The headline NAV/return above the fold reflects only the CURRENT era -- this section exists so a reset cannot make the published track record look better than the full history."
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
+    "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.025517086671169247,
+    "vix_level": 16.719999313354492,
+    "vix_percentile_1y": 0.40476190476190477,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -117,9 +117,9 @@
     "flow_score": 8.950203094270945,
     "options_score": 17.000119317621223,
     "rotation_score": 15.0,
-    "macro_score": 5.7413507451107835,
+    "macro_score": 5.189492327683246,
     "news_score": 7.28,
-    "total": 66.11701759303625,
+    "total": 65.56515917560871,
     "publish": true,
     "direction": "long"
   },
@@ -174,6 +174,10 @@
       "score": 86.0
     },
     {
+      "symbol": "India Equity Markets",
+      "score": 83.0
+    },
+    {
       "symbol": "Nuclear Energy & Uranium + Bearish Market / Macro Selloff",
       "score": 82.0
     },
@@ -204,10 +208,6 @@
     {
       "symbol": "Bonds & Fixed Income",
       "score": 64.0
-    },
-    {
-      "symbol": "India Equity Markets",
-      "score": 62.0
     }
   ],
   "signals": [
@@ -565,6 +565,54 @@
         "source_diversity": 11.0,
         "recency": 16.6,
         "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 83.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 6.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 14,
+      "latest_at": "31 Jul 2026 07:23 UTC",
+      "headline": "Sensex rises over 50 points, Nifty above 24,350; Bajaj twins, M&amp;M among top gainers",
+      "regions": [
+        "india",
+        "asia_pacific"
+      ],
+      "sources": [
+        "BBC News",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 20.6,
+        "volume_confirmation": 18.0,
+        "source_diversity": 11.0,
+        "recency": 14.1,
+        "geopolitical_severity": 12.9
       }
     },
     {
@@ -971,57 +1019,6 @@
         "recency": 15.7,
         "geopolitical_severity": 13.0
       }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 62.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -11.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 26,
-      "latest_at": "26 Jul 2026 11:33 UTC",
-      "headline": "Will Nifty, Sensex fall for 6th straight session on Monday? US Fed among 5 factors to watch this week",
-      "regions": [
-        "middle_east",
-        "global",
-        "asia_pacific",
-        "india"
-      ],
-      "sources": [
-        "World News - Breaking international news and headlines | Sky News",
-        "Bloomberg Markets",
-        "BBC News",
-        "Oilprice.com"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.2,
-        "recency": 14.4,
-        "geopolitical_severity": 13.0
-      }
     }
   ],
   "articles": [
@@ -1059,6 +1056,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Emerging Markets + Crypto & Digital Assets - 9 articles - HIGH / BEARISH - Binance & OKX users face $1,900 fines in Vietnam, Coinbase in China? Asia Express"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "India Equity Markets - 14 articles - HIGH / BULLISH - Sensex rises over 50 points, Nifty above 24,350; Bajaj twins, M&amp;M among top gainers"
     },
     {
       "tag": "tag-bear",
@@ -1099,11 +1101,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Bonds & Fixed Income - 10 articles - HIGH / BEARISH - Why bond investors are pushing up some of your interest rates"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "India Equity Markets - 26 articles - HIGH / BEARISH - Will Nifty, Sensex fall for 6th straight session on Monday? US Fed among 5 factors to watch this week"
     }
   ],
   "market_snapshot": [
@@ -1144,118 +1141,118 @@
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10897.27,
+      "price": 10970.46,
       "currency": "GBP",
-      "change": -11.13,
-      "change_pct": -0.1,
-      "change_str": "-0.10%",
-      "direction": "down"
+      "change": 73.16,
+      "change_pct": 0.67,
+      "change_str": "+0.67%",
+      "direction": "up"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 25612.03,
+      "price": 25799.73,
       "currency": "EUR",
-      "change": 151.55,
-      "change_pct": 0.6,
-      "change_str": "+0.60%",
+      "change": 187.7,
+      "change_pct": 0.73,
+      "change_str": "+0.73%",
       "direction": "up"
     },
     {
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 64069.33,
+      "price": 64362.02,
       "currency": "JPY",
-      "change": 2201.9,
-      "change_pct": 3.56,
-      "change_str": "+3.56%",
+      "change": 2494.59,
+      "change_pct": 4.03,
+      "change_str": "+4.03%",
       "direction": "up"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 25789.6,
+      "price": 25884.43,
       "currency": "HKD",
-      "change": -69.28,
-      "change_pct": -0.27,
-      "change_str": "-0.27%",
-      "direction": "down"
+      "change": 25.55,
+      "change_pct": 0.1,
+      "change_str": "+0.10%",
+      "direction": "up"
     },
     {
       "label": "Nifty 50",
       "ticker": "^NSEI",
       "region": "IN",
-      "price": 24366.6,
+      "price": 24369.1,
       "currency": "INR",
-      "change": 49.45,
-      "change_pct": 0.2,
-      "change_str": "+0.20%",
+      "change": 51.95,
+      "change_pct": 0.21,
+      "change_str": "+0.21%",
       "direction": "up"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4132.4,
+      "price": 4113.8,
       "currency": "USD",
-      "change": 32.3,
-      "change_pct": 0.79,
-      "change_str": "+0.79%",
+      "change": 13.7,
+      "change_pct": 0.33,
+      "change_str": "+0.33%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 81.46,
+      "price": 82.92,
       "currency": "USD",
-      "change": -2.13,
-      "change_pct": -2.55,
-      "change_str": "-2.55%",
+      "change": -0.67,
+      "change_pct": -0.8,
+      "change_str": "-0.80%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64283.52,
+      "price": 63633.61,
       "currency": "USD",
-      "change": 375.35,
-      "change_pct": 0.59,
-      "change_str": "+0.59%",
-      "direction": "up"
+      "change": -1091.7,
+      "change_pct": -1.69,
+      "change_str": "-1.69%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.25,
+      "price": 100.03,
       "currency": "USD",
-      "change": 0.23,
-      "change_pct": 0.23,
-      "change_str": "+0.23%",
+      "change": 0.02,
+      "change_pct": 0.02,
+      "change_str": "+0.02%",
       "direction": "up"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 17.09,
+      "price": 16.72,
       "currency": "USD",
-      "change": -3.57,
-      "change_pct": -17.28,
-      "change_str": "-17.28%",
+      "change": -0.37,
+      "change_pct": -2.17,
+      "change_str": "-2.17%",
       "direction": "down"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
-    "portfolio_peak": 10046.33,
-    "vix": 17.09,
+    "portfolio_peak": 10043.17,
+    "vix": 16.72,
     "vix_regime": "ELEVATED",
     "sector_concentration": [],
     "max_drawdown_pct": 0.0,
@@ -1300,9 +1297,9 @@
     }
   },
   "logs": [
-    "2026-07-31 06:00:22 [INFO] AZALYST - status.json generated",
-    "2026-07-31 06:00:22 [INFO] PORTFOLIO - NAV USD 10,046.33 | Return +0.00%",
-    "2026-07-31 06:00:22 [INFO] SIGNALS - 16 active signal buckets in state"
+    "2026-07-31 09:23:08 [INFO] AZALYST - status.json generated",
+    "2026-07-31 09:23:08 [INFO] PORTFOLIO - NAV USD 10,043.17 | Return +0.00%",
+    "2026-07-31 09:23:08 [INFO] SIGNALS - 16 active signal buckets in state"
   ],
-  "generated_at": "2026-07-31 06:00:21 UTC"
+  "generated_at": "2026-07-31 09:23:07 UTC"
 }
