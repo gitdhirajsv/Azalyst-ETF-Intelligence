@@ -143,31 +143,31 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "LOW_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0300714074338084,
-    "vix_level": 15.989999771118164,
-    "vix_percentile_1y": 0.23412698412698413,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 30,
-      "flow": 22,
-      "options": 18,
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
       "rotation": 15,
-      "macro": 8,
-      "news": 7
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
-    "ticker": "XLF",
-    "rank_score": 18.211550151975686,
-    "flow_score": 1.7517558078891955,
-    "options_score": 14.83087352444089,
-    "rotation_score": 15.0,
-    "macro_score": 6.43082384276302,
-    "news_score": 4.984,
-    "total": 61.20900332706879,
-    "publish": true,
+    "ticker": "MCHI",
+    "rank_score": 29.361702127659573,
+    "flow_score": 22.0,
+    "options_score": 0.0,
+    "rotation_score": 0.0,
+    "macro_score": 0.0,
+    "news_score": 4.816,
+    "total": 56.17770212765957,
+    "publish": false,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -228,10 +228,6 @@
       "score": 89.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 87.0
-    },
-    {
       "symbol": "Emerging Markets + Crypto & Digital Assets",
       "score": 86.0
     },
@@ -240,8 +236,16 @@
       "score": 84.0
     },
     {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 84.0
+    },
+    {
       "symbol": "Nuclear Energy & Uranium + Bearish Market / Macro Selloff",
       "score": 82.0
+    },
+    {
+      "symbol": "Asia Pacific Equity",
+      "score": 78.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -254,10 +258,6 @@
     {
       "symbol": "Europe Equity",
       "score": 72.0
-    },
-    {
-      "symbol": "Asia Pacific Equity",
-      "score": 70.0
     },
     {
       "symbol": "Cybersecurity",
@@ -485,59 +485,6 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 87.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 62,
-      "latest_at": "02 Aug 2026 06:34 UTC",
-      "headline": "Chip Industry Week In Review",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "europe",
-        "india"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "EE Times",
-        "Finance",
-        "Defense News"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.9,
-        "recency": 14.3,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "emerging_markets",
       "sector_label": "Emerging Markets + Crypto & Digital Assets",
       "confidence": 86.0,
@@ -636,6 +583,59 @@
       }
     },
     {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 84.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 62,
+      "latest_at": "02 Aug 2026 06:34 UTC",
+      "headline": "Chip Industry Week In Review",
+      "regions": [
+        "india",
+        "europe",
+        "asia_pacific",
+        "americas"
+      ],
+      "sources": [
+        "Tech",
+        "Latest from Tom's Hardware",
+        "Semiconductor Engineering",
+        "The Verge"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.7,
+        "recency": 8.8,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium + Bearish Market / Macro Selloff",
       "confidence": 82.0,
@@ -685,6 +685,54 @@
         "source_diversity": 11.8,
         "recency": 15.3,
         "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 78.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 4.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "02 Aug 2026 12:47 UTC",
+      "headline": "SK Hynix, Samsung shares skyrocket to clock best days as AI rally roars back",
+      "regions": [
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "Tech",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 15.2,
+        "volume_confirmation": 13.7,
+        "source_diversity": 11.1,
+        "recency": 16.3,
+        "geopolitical_severity": 12.6
       }
     },
     {
@@ -837,54 +885,6 @@
         "source_diversity": 11.8,
         "recency": 14.9,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 70.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 2.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "02 Aug 2026 04:07 UTC",
-      "headline": "SK Hynix, Samsung shares skyrocket to clock best days as AI rally roars back",
-      "regions": [
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "Tech",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.0,
-        "volume_confirmation": 12.6,
-        "source_diversity": 11.1,
-        "recency": 11.2,
-        "geopolitical_severity": 12.6
       }
     },
     {
@@ -1112,11 +1112,6 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Technology & AI / Semiconductors - 62 articles - CRITICAL / BEARISH - Chip Industry Week In Review"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Emerging Markets + Crypto & Digital Assets - 9 articles - HIGH / BEARISH - Binance & OKX users face $1,900 fines in Vietnam, Coinbase in China? Asia Express"
     },
     {
@@ -1127,7 +1122,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Technology & AI / Semiconductors - 62 articles - CRITICAL / BEARISH - Chip Industry Week In Review"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "Nuclear Energy & Uranium + Bearish Market / Macro Selloff - 9 articles - CRITICAL / BEARISH - Iran Says U.S. Struck Unfinished Nuclear Plant, Warns of Safety Risk"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Asia Pacific Equity - 7 articles - HIGH / BULLISH - SK Hynix, Samsung shares skyrocket to clock best days as AI rally roars back"
     },
     {
       "tag": "tag-bull",
@@ -1143,11 +1148,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Europe Equity - 6 articles - HIGH / BULLISH - ECB says digital euro app will exceed EU accessibility standards"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Asia Pacific Equity - 6 articles - HIGH / BULLISH - SK Hynix, Samsung shares skyrocket to clock best days as AI rally roars back"
     },
     {
       "tag": "tag-bull",
@@ -1285,11 +1285,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63399.01,
+      "price": 63006.95,
       "currency": "USD",
-      "change": 635.69,
-      "change_pct": 1.01,
-      "change_str": "+1.01%",
+      "change": 243.63,
+      "change_pct": 0.39,
+      "change_str": "+0.39%",
       "direction": "up"
     },
     {
@@ -1518,10 +1518,10 @@
     }
   },
   "logs": [
-    "2026-08-02 08:25:41 [INFO] AZALYST - status.json generated",
-    "2026-08-02 08:25:41 [INFO] PORTFOLIO - NAV USD 20,043.05 | Return -0.02%",
-    "2026-08-02 08:25:41 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-02 08:25:41 [INFO] TRADER - Open positions: ITA, XLF"
+    "2026-08-02 13:21:52 [INFO] AZALYST - status.json generated",
+    "2026-08-02 13:21:52 [INFO] PORTFOLIO - NAV USD 20,043.05 | Return -0.02%",
+    "2026-08-02 13:21:52 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-02 13:21:52 [INFO] TRADER - Open positions: ITA, XLF"
   ],
-  "generated_at": "2026-08-02 08:25:39 UTC"
+  "generated_at": "2026-08-02 13:21:49 UTC"
 }
