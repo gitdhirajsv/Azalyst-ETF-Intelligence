@@ -1,23 +1,23 @@
 {
-  "portfolio_value": 20072.56,
-  "total_deposited": 20058.95,
-  "cash": 12917.04,
-  "monthly_reserve": 5002.62,
-  "market_value": 2152.89,
-  "total_invested": 2139.29,
-  "unrealised_pnl": 13.6,
-  "unrealised_str": "+13.60",
+  "portfolio_value": 20076.01,
+  "total_deposited": 20059.58,
+  "cash": 12178.57,
+  "monthly_reserve": 5002.78,
+  "market_value": 2894.66,
+  "total_invested": 2878.24,
+  "unrealised_pnl": 16.42,
+  "unrealised_str": "+16.42",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "+0.07%",
-  "change_raw": 0.07,
+  "change": "+0.08%",
+  "change_raw": 0.08,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 20072.56,
+  "portfolio_peak": 20076.01,
   "drawdown_now_pct": 0.0,
   "max_drawdown_pct": 0.04,
   "deposited_anomaly": false,
-  "usd_inr_rate": 95.33,
+  "usd_inr_rate": 95.327,
   "positions": [
     {
       "trade_id": "T0001",
@@ -26,17 +26,17 @@
       "sector": "Defense & Aerospace",
       "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 240.29,
-      "current": 245.13,
-      "peak_price": 245.13,
-      "trail_stop": 223.47,
-      "dist_to_trail_pct": 8.84,
+      "entry": 240.3,
+      "current": 246.08,
+      "peak_price": 246.08,
+      "trail_stop": 223.48,
+      "dist_to_trail_pct": 9.19,
       "units": 2.476666,
-      "invested": 595.18,
-      "pnl": 12.0,
-      "pnl_str": "+12.00",
-      "pnl_pct": 2.02,
-      "pnl_pct_str": "+2.02%",
+      "invested": 595.2,
+      "pnl": 14.32,
+      "pnl_str": "+14.32",
+      "pnl_pct": 2.41,
+      "pnl_pct_str": "+2.41%",
       "confidence": 90,
       "severity": "CRITICAL",
       "days_held": 3,
@@ -50,16 +50,16 @@
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 57.15,
-      "current": 57.24,
-      "peak_price": 57.24,
+      "current": 57.37,
+      "peak_price": 57.37,
       "trail_stop": 53.15,
-      "dist_to_trail_pct": 7.15,
+      "dist_to_trail_pct": 7.35,
       "units": 11.252913,
-      "invested": 643.18,
-      "pnl": 1.06,
-      "pnl_str": "+1.06",
-      "pnl_pct": 0.16,
-      "pnl_pct_str": "+0.16%",
+      "invested": 643.2,
+      "pnl": 2.44,
+      "pnl_str": "+2.44",
+      "pnl_pct": 0.38,
+      "pnl_pct_str": "+0.38%",
       "confidence": 89,
       "severity": "CRITICAL",
       "days_held": 3,
@@ -72,17 +72,17 @@
       "sector": "Europe Equity",
       "platform": "Vanguard \u2014 IBKR / Fidelity / Schwab",
       "exchange": "NYSE",
-      "entry": 90.86,
+      "entry": 90.94,
       "current": 90.93,
-      "peak_price": 90.93,
-      "trail_stop": 84.5,
-      "dist_to_trail_pct": 7.08,
-      "units": 9.91484,
-      "invested": 900.93,
-      "pnl": 0.76,
-      "pnl_str": "+0.76",
-      "pnl_pct": 0.08,
-      "pnl_pct_str": "+0.08%",
+      "peak_price": 91.02,
+      "trail_stop": 84.58,
+      "dist_to_trail_pct": 6.99,
+      "units": 18.031698,
+      "invested": 1639.84,
+      "pnl": -0.22,
+      "pnl_str": "-0.22",
+      "pnl_pct": -0.01,
+      "pnl_pct_str": "-0.01%",
       "confidence": 72,
       "severity": "HIGH",
       "days_held": 0,
@@ -144,10 +144,10 @@
       },
       {
         "era": "current",
-        "total_deposited": 20058.95,
-        "portfolio_value": 20072.56,
+        "total_deposited": 20059.58,
+        "portfolio_value": 20076.01,
         "realised_pnl": 0.0,
-        "change": "+0.07%",
+        "change": "+0.08%",
         "total_trades": 0,
         "winners": 0,
         "losers": 0,
@@ -161,36 +161,36 @@
     "combined_win_rate": 19.4,
     "combined_realised_pnl": -91.29,
     "combined_realised_pnl_str": "-91.29",
-    "combined_total_deposited": 59993.18,
+    "combined_total_deposited": 59993.81,
     "note": "Each entry in `eras` is a separate paper-trading book (a prior book is archived, deposits restart, and NAV resets to par when the engine is reset). The headline NAV/return above the fold reflects only the CURRENT era -- this section exists so a reset cannot make the published track record look better than the full history."
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "LOW_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.04980069400854137,
-    "vix_level": 15.75,
-    "vix_percentile_1y": 0.20238095238095238,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 30,
-      "flow": 22,
-      "options": 18,
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
       "rotation": 15,
-      "macro": 8,
-      "news": 7
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
-    "ticker": "IGV",
-    "rank_score": 27.934039334341907,
-    "flow_score": 3.369984851616477,
-    "options_score": 13.544643947476645,
-    "rotation_score": 15.0,
-    "macro_score": 1.6562844283041511,
-    "news_score": 4.984,
-    "total": 66.48895256173918,
-    "publish": true,
+    "ticker": "EWS",
+    "rank_score": 29.01315192743764,
+    "flow_score": 22.0,
+    "options_score": 0.0,
+    "rotation_score": 0.0,
+    "macro_score": 0.0,
+    "news_score": 0.0,
+    "total": 51.01315192743764,
+    "publish": false,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -225,8 +225,8 @@
     "values": [
       3.0,
       3.2,
-      4.5,
-      89.3
+      8.2,
+      85.6
     ]
   },
   "pnl": {
@@ -236,9 +236,9 @@
       "VGK"
     ],
     "values": [
-      12.0,
-      1.06,
-      0.76
+      14.32,
+      2.44,
+      -0.22
     ]
   },
   "confidence": [
@@ -263,11 +263,11 @@
       "score": 89.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 86.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 87.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
+      "symbol": "Crypto & Digital Assets",
       "score": 86.0
     },
     {
@@ -284,7 +284,7 @@
     },
     {
       "symbol": "Europe Equity",
-      "score": 72.0
+      "score": 70.0
     },
     {
       "symbol": "Cybersecurity",
@@ -570,6 +570,59 @@
       }
     },
     {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 87.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -5.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 31,
+      "latest_at": "03 Aug 2026 20:02 UTC",
+      "headline": "Dark Tanker Transits Surge at Bab el-Mandeb as Houthi Threat Persists",
+      "regions": [
+        "global",
+        "americas",
+        "india",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Oilprice.com",
+        "BBC News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.3,
+        "recency": 16.2,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 86.0,
@@ -612,59 +665,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 9.1,
         "recency": 16.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 86.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -10.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 27,
-      "latest_at": "03 Aug 2026 15:00 UTC",
-      "headline": "Saudi Oil Reroutes Hit Capacity and Security Limits",
-      "regions": [
-        "india",
-        "middle_east",
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "Earnings",
-        "Markets-Economic Times",
-        "BBC News",
-        "Oilprice.com"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.9,
-        "recency": 14.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -825,25 +825,25 @@
     {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity",
-      "confidence": 72.0,
+      "confidence": 70.0,
       "severity": "HIGH",
       "direction": "BULLISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "03 Aug 2026 16:26 UTC",
+      "article_count": 4,
+      "latest_at": "03 Aug 2026 20:28 UTC",
       "headline": "Global Market: Euro zone bond yields decline as falling oil prices boost market sentiment",
       "regions": [
-        "middle_east",
-        "europe"
+        "europe",
+        "middle_east"
       ],
       "sources": [
-        "World | Deutsche Welle",
         "Oilprice.com",
         "Latest from Tom's Hardware",
-        "Markets-Economic Times"
+        "Markets-Economic Times",
+        "World | Deutsche Welle"
       ],
       "primary_etf": "VGK",
       "top_etfs": [
@@ -863,11 +863,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 11.7,
-        "volume_confirmation": 11.3,
+        "signal_strength": 10.7,
+        "volume_confirmation": 9.7,
         "source_diversity": 11.0,
         "recency": 16.9,
-        "geopolitical_severity": 12.7
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1148,12 +1148,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Crypto & Digital Assets - 28 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
+      "text": "Energy / Oil & Gas - 31 articles - CRITICAL / BEARISH - Dark Tanker Transits Surge at Bab el-Mandeb as Houthi Threat Persists"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 27 articles - CRITICAL / BEARISH - Saudi Oil Reroutes Hit Capacity and Security Limits"
+      "text": "Crypto & Digital Assets - 28 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
@@ -1173,7 +1173,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Europe Equity - 5 articles - HIGH / BULLISH - Global Market: Euro zone bond yields decline as falling oil prices boost market sentiment"
+      "text": "Europe Equity - 4 articles - HIGH / BULLISH - Global Market: Euro zone bond yields decline as falling oil prices boost market sentiment"
     },
     {
       "tag": "tag-bull",
@@ -1206,33 +1206,33 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7608.89,
+      "price": 7600.5,
       "currency": "USD",
-      "change": 119.17,
-      "change_pct": 1.59,
-      "change_str": "+1.59%",
+      "change": 110.78,
+      "change_pct": 1.48,
+      "change_str": "+1.48%",
       "direction": "up"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 25956.57,
+      "price": 25913.9,
       "currency": "USD",
-      "change": 582.72,
-      "change_pct": 2.3,
-      "change_str": "+2.30%",
+      "change": 540.05,
+      "change_pct": 2.13,
+      "change_str": "+2.13%",
       "direction": "up"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 53167.76,
+      "price": 53178.41,
       "currency": "USD",
-      "change": 682.73,
-      "change_pct": 1.3,
-      "change_str": "+1.30%",
+      "change": 693.38,
+      "change_pct": 1.32,
+      "change_str": "+1.32%",
       "direction": "up"
     },
     {
@@ -1294,68 +1294,68 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4099.6,
+      "price": 4110.5,
       "currency": "USD",
-      "change": 50.5,
-      "change_pct": 1.25,
-      "change_str": "+1.25%",
+      "change": 61.4,
+      "change_pct": 1.52,
+      "change_str": "+1.52%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 80.56,
+      "price": 80.08,
       "currency": "USD",
-      "change": -4.11,
-      "change_pct": -4.85,
-      "change_str": "-4.85%",
+      "change": -4.59,
+      "change_pct": -5.42,
+      "change_str": "-5.42%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63840.1,
+      "price": 63873.13,
       "currency": "USD",
-      "change": 358.1,
-      "change_pct": 0.56,
-      "change_str": "+0.56%",
+      "change": 391.13,
+      "change_pct": 0.62,
+      "change_str": "+0.62%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.9,
+      "price": 99.97,
       "currency": "USD",
-      "change": 0.1,
-      "change_pct": 0.1,
-      "change_str": "+0.10%",
+      "change": 0.17,
+      "change_pct": 0.17,
+      "change_str": "+0.17%",
       "direction": "up"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 15.75,
+      "price": 15.86,
       "currency": "USD",
-      "change": -0.24,
-      "change_pct": -1.5,
-      "change_str": "-1.50%",
+      "change": -0.13,
+      "change_pct": -0.81,
+      "change_str": "-0.81%",
       "direction": "down"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
-    "portfolio_peak": 20072.56,
-    "vix": 15.75,
+    "portfolio_peak": 20076.01,
+    "vix": 15.86,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
         "sector": "Europe Equity",
-        "weight": 4.5,
+        "weight": 8.2,
         "at_cap": false
       },
       {
@@ -1381,16 +1381,16 @@
       "matrix": {
         "ITA": {
           "ITA": 1.0,
-          "VGK": 0.341,
-          "XLF": 0.484
+          "VGK": 0.337,
+          "XLF": 0.499
         },
         "VGK": {
-          "ITA": 0.341,
+          "ITA": 0.337,
           "VGK": 1.0,
           "XLF": 0.516
         },
         "XLF": {
-          "ITA": 0.484,
+          "ITA": 0.499,
           "VGK": 0.516,
           "XLF": 1.0
         }
@@ -1414,60 +1414,60 @@
     },
     "volatility": {
       "per_ticker": {
-        "ITA": 25.51,
-        "XLF": 13.02,
-        "VGK": 14.06
+        "ITA": 25.93,
+        "XLF": 13.13,
+        "VGK": 14.05
       },
-      "portfolio_avg_vol_pct": 17.53,
+      "portfolio_avg_vol_pct": 17.7,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 1.71,
+      "benchmark_return_pct": 1.6,
       "benchmark_price_start": 745.76,
-      "benchmark_price_now": 758.49,
+      "benchmark_price_now": 757.67,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": 0.07,
-      "alpha": -1.64
+      "portfolio_return_pct": 0.08,
+      "alpha": -1.52
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 64.35,
+          "actual_weight_pct": 60.66,
           "target_weight_pct": 10.0,
-          "drift_pct": 54.35,
+          "drift_pct": 50.66,
           "action": "DEPLOY",
-          "amount": 10909.78,
+          "amount": 10170.97,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
         {
           "ticker": "ITA",
-          "actual_weight_pct": 3.02,
+          "actual_weight_pct": 3.04,
           "target_weight_pct": 30.0,
-          "drift_pct": -26.98,
+          "drift_pct": -26.96,
           "action": "ADD",
-          "amount": 5414.65,
+          "amount": 5413.35,
           "etf_name": "iShares U.S. Aerospace & Defense ETF",
           "regime_note": ""
         },
         {
           "ticker": "XLF",
-          "actual_weight_pct": 3.21,
+          "actual_weight_pct": 3.22,
           "target_weight_pct": 30.0,
-          "drift_pct": -26.79,
+          "drift_pct": -26.78,
           "action": "ADD",
-          "amount": 5377.59,
+          "amount": 5377.22,
           "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
         {
           "ticker": "VGK",
-          "actual_weight_pct": 4.49,
+          "actual_weight_pct": 8.17,
           "target_weight_pct": 30.0,
-          "drift_pct": -25.51,
+          "drift_pct": -21.83,
           "action": "ADD",
-          "amount": 5120.16,
+          "amount": 4383.18,
           "etf_name": "Vanguard FTSE Europe ETF",
           "regime_note": ""
         }
@@ -1478,135 +1478,135 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -861.16,
-          "portfolio_loss_pct": -4.29,
+          "total_impact": -1157.86,
+          "portfolio_loss_pct": -5.77,
           "position_impacts": [
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -242.85
+              "impact": -243.78
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -257.67
+              "impact": -258.23
             },
             {
               "ticker": "VGK",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -360.64
+              "impact": -655.85
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -731.98,
-          "portfolio_loss_pct": -3.65,
+          "total_impact": -984.18,
+          "portfolio_loss_pct": -4.9,
           "position_impacts": [
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -206.42
+              "impact": -207.22
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -219.02
+              "impact": -219.5
             },
             {
               "ticker": "VGK",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -306.55
+              "impact": -557.47
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -322.93,
-          "portfolio_loss_pct": -1.61,
+          "total_impact": -434.2,
+          "portfolio_loss_pct": -2.16,
           "position_impacts": [
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -91.07
+              "impact": -91.42
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -96.63
+              "impact": -96.84
             },
             {
               "ticker": "VGK",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -135.24
+              "impact": -245.94
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -172.23,
-          "portfolio_loss_pct": -0.86,
+          "total_impact": -231.57,
+          "portfolio_loss_pct": -1.15,
           "position_impacts": [
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -48.57
+              "impact": -48.76
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -51.53
+              "impact": -51.65
             },
             {
               "ticker": "VGK",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -72.13
+              "impact": -131.17
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -387.52,
-          "portfolio_loss_pct": -1.93,
+          "total_impact": -521.04,
+          "portfolio_loss_pct": -2.6,
           "position_impacts": [
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -109.28
+              "impact": -109.7
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -115.95
+              "impact": -116.2
             },
             {
               "ticker": "VGK",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -162.29
+              "impact": -295.13
             }
           ]
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -4.29
+      "worst_loss_pct": -5.77
     }
   },
   "logs": [
-    "2026-08-03 19:04:49 [INFO] AZALYST - status.json generated",
-    "2026-08-03 19:04:49 [INFO] PORTFOLIO - NAV USD 20,072.56 | Return +0.07%",
-    "2026-08-03 19:04:49 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-03 19:04:49 [INFO] TRADER - Open positions: ITA, XLF, VGK"
+    "2026-08-03 20:37:56 [INFO] AZALYST - status.json generated",
+    "2026-08-03 20:37:56 [INFO] PORTFOLIO - NAV USD 20,076.01 | Return +0.08%",
+    "2026-08-03 20:37:56 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-03 20:37:56 [INFO] TRADER - Open positions: ITA, XLF, VGK"
   ],
-  "generated_at": "2026-08-03 19:04:47 UTC"
+  "generated_at": "2026-08-03 20:37:54 UTC"
 }
