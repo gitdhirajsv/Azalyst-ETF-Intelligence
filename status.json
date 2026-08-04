@@ -1,16 +1,16 @@
 {
-  "portfolio_value": 20101.99,
+  "portfolio_value": 20102.1,
   "total_deposited": 20050.96,
   "cash": 14101.69,
   "monthly_reserve": 0.0,
-  "market_value": 6000.3,
+  "market_value": 6000.42,
   "total_invested": 5949.27,
-  "unrealised_pnl": 51.03,
-  "unrealised_str": "+51.03",
+  "unrealised_pnl": 51.14,
+  "unrealised_str": "+51.14",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "+0.25%",
-  "change_raw": 0.25,
+  "change": "+0.26%",
+  "change_raw": 0.26,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 20104.49,
@@ -50,16 +50,16 @@
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 57.13,
-      "current": 57.87,
+      "current": 57.88,
       "peak_price": 57.93,
       "trail_stop": 53.13,
-      "dist_to_trail_pct": 8.19,
+      "dist_to_trail_pct": 8.21,
       "units": 11.252913,
       "invested": 642.92,
-      "pnl": 8.35,
-      "pnl_str": "+8.35",
-      "pnl_pct": 1.3,
-      "pnl_pct_str": "+1.30%",
+      "pnl": 8.46,
+      "pnl_str": "+8.46",
+      "pnl_pct": 1.32,
+      "pnl_pct_str": "+1.32%",
       "confidence": 89,
       "severity": "CRITICAL",
       "days_held": 4,
@@ -168,9 +168,9 @@
       {
         "era": "current",
         "total_deposited": 20050.96,
-        "portfolio_value": 20101.99,
+        "portfolio_value": 20102.1,
         "realised_pnl": 0.0,
-        "change": "+0.25%",
+        "change": "+0.26%",
         "total_trades": 0,
         "winners": 0,
         "losers": 0,
@@ -205,15 +205,15 @@
     }
   },
   "top_signal": {
-    "ticker": "COPX",
-    "rank_score": 16.89894419306184,
-    "flow_score": 20.0,
-    "options_score": 0.0,
-    "rotation_score": 0.0,
-    "macro_score": 8.789729417572723,
-    "news_score": 7.28,
-    "total": 52.96867361063456,
-    "publish": false,
+    "ticker": "IGV",
+    "rank_score": 23.624434389140273,
+    "flow_score": 0.0,
+    "options_score": 18.0,
+    "rotation_score": 15.0,
+    "macro_score": 3.0327794108868282,
+    "news_score": 7.359999999999999,
+    "total": 67.01721380002711,
+    "publish": true,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -267,7 +267,7 @@
     ],
     "values": [
       28.69,
-      8.35,
+      8.46,
       16.9,
       -2.84
     ]
@@ -322,16 +322,16 @@
       "score": 84.0
     },
     {
+      "symbol": "Clean Energy & Renewables + Commodities & Mining",
+      "score": 82.0
+    },
+    {
       "symbol": "Cybersecurity",
       "score": 76.0
     },
     {
       "symbol": "Europe Equity",
       "score": 70.0
-    },
-    {
-      "symbol": "Clean Energy & Renewables",
-      "score": 64.0
     },
     {
       "symbol": "Healthcare & Pharma",
@@ -955,6 +955,58 @@
       }
     },
     {
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables + Commodities & Mining",
+      "confidence": 82.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 9,
+      "latest_at": "04 Aug 2026 22:08 UTC",
+      "headline": "Lucid begins 'operational reset' as CEO says EV maker will delay midsize vehicle",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "india",
+        "middle_east"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "US Top News and Analysis",
+        "Latest from Tom's Hardware",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "ICLN",
+      "top_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NEWENERGY"
+      ],
+      "global_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 15.7,
+        "volume_confirmation": 15.4,
+        "source_diversity": 13.4,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
       "confidence": 76.0,
@@ -1047,56 +1099,6 @@
         "source_diversity": 11.0,
         "recency": 16.9,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables",
-      "confidence": 64.0,
-      "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "30 Jul 2026 15:53 UTC",
-      "headline": "Ferrari CEO says he 'would not change anything' about polarizing Luce EV debut",
-      "regions": [
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "The Verge",
-        "www.theregister.com - Articles",
-        "Latest from Tom's Hardware",
-        "EE Times"
-      ],
-      "primary_etf": "ICLN",
-      "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NEWENERGY"
-      ],
-      "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 9.6,
-        "volume_confirmation": 12.6,
-        "source_diversity": 9.5,
-        "recency": 16.9,
-        "geopolitical_severity": 8.6
       }
     },
     {
@@ -1215,17 +1217,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Clean Energy & Renewables + Commodities & Mining - 9 articles - HIGH / BULLISH - Lucid begins 'operational reset' as CEO says EV maker will delay midsize vehicle"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Cybersecurity - 10 articles - MEDIUM / BULLISH - US mulling ban on key Chinese networking tech in data center component crackdown \u2014 White House wants to impose restrictions in 2026, China says it will respond if necessary"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Europe Equity - 4 articles - HIGH / BULLISH - Global Market: Euro zone bond yields decline as falling oil prices boost market sentiment"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Clean Energy & Renewables - 6 articles - MEDIUM / BEARISH - Ferrari CEO says he 'would not change anything' about polarizing Luce EV debut"
     },
     {
       "tag": "tag-bear",
@@ -1284,9 +1286,9 @@
       "region": "EU",
       "price": 26202.35,
       "currency": "EUR",
-      "change": 201.04,
-      "change_pct": 0.77,
-      "change_str": "+0.77%",
+      "change": 573.11,
+      "change_pct": 2.24,
+      "change_str": "+2.24%",
       "direction": "up"
     },
     {
@@ -1326,44 +1328,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4132.2,
+      "price": 4133.9,
       "currency": "USD",
-      "change": 98.5,
-      "change_pct": 2.44,
-      "change_str": "+2.44%",
+      "change": 100.2,
+      "change_pct": 2.48,
+      "change_str": "+2.48%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 75.38,
+      "price": 75.26,
       "currency": "USD",
-      "change": -4.96,
-      "change_pct": -6.17,
-      "change_str": "-6.17%",
+      "change": -5.08,
+      "change_pct": -6.32,
+      "change_str": "-6.32%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64191.29,
+      "price": 64184.99,
       "currency": "USD",
-      "change": 730.39,
-      "change_pct": 1.15,
-      "change_str": "+1.15%",
+      "change": 724.09,
+      "change_pct": 1.14,
+      "change_str": "+1.14%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.86,
+      "price": 99.88,
       "currency": "USD",
-      "change": -0.1,
-      "change_pct": -0.1,
-      "change_str": "-0.10%",
+      "change": -0.08,
+      "change_pct": -0.08,
+      "change_str": "-0.08%",
       "direction": "down"
     },
     {
@@ -1474,8 +1476,8 @@
       "benchmark_price_start": 745.76,
       "benchmark_price_now": 771.33,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": 0.25,
-      "alpha": -3.18
+      "portfolio_return_pct": 0.26,
+      "alpha": -3.17
     },
     "rebalance": {
       "alerts": [
@@ -1485,7 +1487,7 @@
           "target_weight_pct": 10.0,
           "drift_pct": 60.15,
           "action": "DEPLOY",
-          "amount": 12091.49,
+          "amount": 12091.48,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
@@ -1495,7 +1497,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": -19.26,
           "action": "ADD",
-          "amount": 3871.74,
+          "amount": 3871.65,
           "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
@@ -1505,7 +1507,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": -17.29,
           "action": "ADD",
-          "amount": 3475.16,
+          "amount": 3475.19,
           "etf_name": "iShares U.S. Aerospace & Defense ETF",
           "regime_note": ""
         },
@@ -1515,7 +1517,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": -14.26,
           "action": "ADD",
-          "amount": 2866.92,
+          "amount": 2866.94,
           "etf_name": "Vanguard FTSE Europe ETF",
           "regime_note": ""
         },
@@ -1525,7 +1527,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": -9.34,
           "action": "ADD",
-          "amount": 1877.67,
+          "amount": 1877.69,
           "etf_name": "Energy Select Sector SPDR",
           "regime_note": ""
         }
@@ -1536,7 +1538,7 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -2796.91,
+          "total_impact": -2796.96,
           "portfolio_loss_pct": -13.91,
           "position_impacts": [
             {
@@ -1549,7 +1551,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -260.48
+              "impact": -260.53
             },
             {
               "ticker": "VGK",
@@ -1566,7 +1568,7 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -2860.14,
+          "total_impact": -2860.18,
           "portfolio_loss_pct": -14.23,
           "position_impacts": [
             {
@@ -1579,7 +1581,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -221.41
+              "impact": -221.45
             },
             {
               "ticker": "VGK",
@@ -1596,7 +1598,7 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -767.78,
+          "total_impact": -767.8,
           "portfolio_loss_pct": -3.82,
           "position_impacts": [
             {
@@ -1609,7 +1611,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -97.68
+              "impact": -97.7
             },
             {
               "ticker": "VGK",
@@ -1626,7 +1628,7 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -665.19,
+          "total_impact": -665.2,
           "portfolio_loss_pct": -3.31,
           "position_impacts": [
             {
@@ -1639,7 +1641,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -52.1
+              "impact": -52.11
             },
             {
               "ticker": "VGK",
@@ -1656,7 +1658,7 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1132.96,
+          "total_impact": -1132.98,
           "portfolio_loss_pct": -5.64,
           "position_impacts": [
             {
@@ -1669,7 +1671,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -117.22
+              "impact": -117.24
             },
             {
               "ticker": "VGK",
@@ -1691,10 +1693,10 @@
     }
   },
   "logs": [
-    "2026-08-04 20:39:06 [INFO] AZALYST - status.json generated",
-    "2026-08-04 20:39:06 [INFO] PORTFOLIO - NAV USD 20,101.99 | Return +0.25%",
-    "2026-08-04 20:39:06 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-04 20:39:06 [INFO] TRADER - Open positions: ITA, XLF, VGK, XLE"
+    "2026-08-04 22:20:40 [INFO] AZALYST - status.json generated",
+    "2026-08-04 22:20:40 [INFO] PORTFOLIO - NAV USD 20,102.10 | Return +0.26%",
+    "2026-08-04 22:20:40 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-04 22:20:40 [INFO] TRADER - Open positions: ITA, XLF, VGK, XLE"
   ],
-  "generated_at": "2026-08-04 20:39:02 UTC"
+  "generated_at": "2026-08-04 22:20:37 UTC"
 }
