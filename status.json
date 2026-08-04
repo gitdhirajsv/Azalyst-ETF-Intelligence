@@ -1,23 +1,23 @@
 {
-  "portfolio_value": 20076.12,
-  "total_deposited": 20059.58,
-  "cash": 12178.57,
-  "monthly_reserve": 5002.78,
-  "market_value": 2894.77,
-  "total_invested": 2878.24,
-  "unrealised_pnl": 16.54,
-  "unrealised_str": "+16.54",
+  "portfolio_value": 20080.84,
+  "total_deposited": 20065.27,
+  "cash": 12182.02,
+  "monthly_reserve": 5004.2,
+  "market_value": 2894.62,
+  "total_invested": 2879.05,
+  "unrealised_pnl": 15.57,
+  "unrealised_str": "+15.57",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
   "change": "+0.08%",
   "change_raw": 0.08,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 20076.12,
+  "portfolio_peak": 20081.81,
   "drawdown_now_pct": 0.0,
   "max_drawdown_pct": 0.04,
   "deposited_anomaly": false,
-  "usd_inr_rate": 95.327,
+  "usd_inr_rate": 95.3,
   "positions": [
     {
       "trade_id": "T0001",
@@ -26,17 +26,17 @@
       "sector": "Defense & Aerospace",
       "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 240.3,
-      "current": 246.08,
-      "peak_price": 246.08,
-      "trail_stop": 223.48,
-      "dist_to_trail_pct": 9.19,
+      "entry": 240.37,
+      "current": 246.07,
+      "peak_price": 246.15,
+      "trail_stop": 223.54,
+      "dist_to_trail_pct": 9.15,
       "units": 2.476666,
-      "invested": 595.2,
-      "pnl": 14.32,
-      "pnl_str": "+14.32",
-      "pnl_pct": 2.41,
-      "pnl_pct_str": "+2.41%",
+      "invested": 595.37,
+      "pnl": 14.12,
+      "pnl_str": "+14.12",
+      "pnl_pct": 2.37,
+      "pnl_pct_str": "+2.37%",
       "confidence": 90,
       "severity": "CRITICAL",
       "days_held": 3,
@@ -49,17 +49,17 @@
       "sector": "Banking & Financial Sector",
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 57.15,
+      "entry": 57.17,
       "current": 57.38,
-      "peak_price": 57.38,
-      "trail_stop": 53.15,
-      "dist_to_trail_pct": 7.37,
+      "peak_price": 57.4,
+      "trail_stop": 53.17,
+      "dist_to_trail_pct": 7.34,
       "units": 11.252913,
-      "invested": 643.2,
-      "pnl": 2.56,
-      "pnl_str": "+2.56",
-      "pnl_pct": 0.4,
-      "pnl_pct_str": "+0.40%",
+      "invested": 643.38,
+      "pnl": 2.34,
+      "pnl_str": "+2.34",
+      "pnl_pct": 0.36,
+      "pnl_pct_str": "+0.36%",
       "confidence": 89,
       "severity": "CRITICAL",
       "days_held": 3,
@@ -72,17 +72,17 @@
       "sector": "Europe Equity",
       "platform": "Vanguard \u2014 IBKR / Fidelity / Schwab",
       "exchange": "NYSE",
-      "entry": 90.94,
+      "entry": 90.97,
       "current": 90.93,
-      "peak_price": 91.02,
-      "trail_stop": 84.58,
-      "dist_to_trail_pct": 6.99,
+      "peak_price": 91.05,
+      "trail_stop": 84.6,
+      "dist_to_trail_pct": 6.96,
       "units": 18.031698,
-      "invested": 1639.84,
-      "pnl": -0.22,
-      "pnl_str": "-0.22",
-      "pnl_pct": -0.01,
-      "pnl_pct_str": "-0.01%",
+      "invested": 1640.3,
+      "pnl": -0.77,
+      "pnl_str": "-0.77",
+      "pnl_pct": -0.05,
+      "pnl_pct_str": "-0.05%",
       "confidence": 72,
       "severity": "HIGH",
       "days_held": 0,
@@ -144,8 +144,8 @@
       },
       {
         "era": "current",
-        "total_deposited": 20059.58,
-        "portfolio_value": 20076.12,
+        "total_deposited": 20065.27,
+        "portfolio_value": 20080.84,
         "realised_pnl": 0.0,
         "change": "+0.08%",
         "total_trades": 0,
@@ -161,36 +161,36 @@
     "combined_win_rate": 19.4,
     "combined_realised_pnl": -91.29,
     "combined_realised_pnl_str": "-91.29",
-    "combined_total_deposited": 59993.81,
+    "combined_total_deposited": 59999.5,
     "note": "Each entry in `eras` is a separate paper-trading book (a prior book is archived, deposits restart, and NAV resets to par when the engine is reset). The headline NAV/return above the fold reflects only the CURRENT era -- this section exists so a reset cannot make the published track record look better than the full history."
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "LOW_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.04870453013042231,
-    "vix_level": 15.859999656677246,
-    "vix_percentile_1y": 0.2261904761904762,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 30,
-      "flow": 22,
-      "options": 18,
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
       "rotation": 15,
-      "macro": 8,
-      "news": 7
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
     "ticker": "XLF",
-    "rank_score": 16.616780045351472,
-    "flow_score": 2.4949983954372557,
-    "options_score": 17.618089609643732,
-    "rotation_score": 13.703965307883003,
-    "macro_score": 5.800348152434868,
+    "rank_score": 0.0,
+    "flow_score": 1.7517558078891955,
+    "options_score": 0.0,
+    "rotation_score": 15.0,
+    "macro_score": 6.43082384276302,
     "news_score": 4.984,
-    "total": 61.218181510750334,
-    "publish": true,
+    "total": 28.166579650652217,
+    "publish": false,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -236,19 +236,15 @@
       "VGK"
     ],
     "values": [
-      14.32,
-      2.56,
-      -0.22
+      14.12,
+      2.34,
+      -0.77
     ]
   },
   "confidence": [
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 91.0
-    },
-    {
-      "symbol": "India Equity Markets",
-      "score": 90.0
     },
     {
       "symbol": "Defense & Aerospace",
@@ -259,12 +255,12 @@
       "score": 89.0
     },
     {
-      "symbol": "Banking & Financial Sector",
+      "symbol": "India Equity Markets",
       "score": 89.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 87.0
+      "symbol": "Banking & Financial Sector",
+      "score": 89.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -277,6 +273,10 @@
     {
       "symbol": "Nuclear Energy & Uranium + Bearish Market / Macro Selloff",
       "score": 82.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 78.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -358,57 +358,6 @@
         "volume_confirmation": 17.4,
         "source_diversity": 13.4,
         "recency": 16.5,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 90.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": 5.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 21,
-      "latest_at": "03 Aug 2026 16:26 UTC",
-      "headline": "Market wrap: TCS, IndiGo, Sun Pharma among top gainers and losers on Nifty and Sensex on Monday",
-      "regions": [
-        "middle_east",
-        "india",
-        "europe",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "BBC News",
-        "World | Deutsche Welle",
-        "Oilprice.com"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.4,
-        "recency": 16.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -519,6 +468,57 @@
       }
     },
     {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 89.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 9.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 23,
+      "latest_at": "04 Aug 2026 04:29 UTC",
+      "headline": "Reliance Industries, ICICI Bank among 11 stocks with over 3% FY27 earnings upgrades. Own any?",
+      "regions": [
+        "middle_east",
+        "india",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "World | Deutsche Welle"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.5,
+        "recency": 15.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector",
       "confidence": 89.0,
@@ -566,59 +566,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 13.6,
         "recency": 16.4,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 87.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -5.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 31,
-      "latest_at": "03 Aug 2026 20:02 UTC",
-      "headline": "Dark Tanker Transits Surge at Bab el-Mandeb as Houthi Threat Persists",
-      "regions": [
-        "global",
-        "americas",
-        "india",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Oilprice.com",
-        "BBC News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.3,
-        "recency": 16.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -768,6 +715,59 @@
         "volume_confirmation": 15.4,
         "source_diversity": 11.8,
         "recency": 15.3,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 78.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -2.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 18,
+      "latest_at": "03 Aug 2026 23:00 UTC",
+      "headline": "Big Oil Warns Global Fuel Stocks Are Running Dangerously Low",
+      "regions": [
+        "europe",
+        "middle_east",
+        "africa",
+        "global"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Oilprice.com",
+        "BBC News",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.6,
+        "recency": 8.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -1128,11 +1128,6 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "India Equity Markets - 21 articles - CRITICAL / BULLISH - Market wrap: TCS, IndiGo, Sun Pharma among top gainers and losers on Nifty and Sensex on Monday"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "Defense & Aerospace - 17 articles - HIGH / BULLISH - Houthis Claim Attack on Saudi Oil Tanker in Red Sea"
     },
     {
@@ -1143,12 +1138,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Banking & Financial Sector - 17 articles - HIGH / BULLISH - US Stock Market: Fed's Jefferson signals openness to rate hike if inflation stays elevated"
+      "text": "India Equity Markets - 23 articles - HIGH / BULLISH - Reliance Industries, ICICI Bank among 11 stocks with over 3% FY27 earnings upgrades. Own any?"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Energy / Oil & Gas - 31 articles - CRITICAL / BEARISH - Dark Tanker Transits Surge at Bab el-Mandeb as Houthi Threat Persists"
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Banking & Financial Sector - 17 articles - HIGH / BULLISH - US Stock Market: Fed's Jefferson signals openness to rate hike if inflation stays elevated"
     },
     {
       "tag": "tag-bear",
@@ -1164,6 +1159,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Nuclear Energy & Uranium + Bearish Market / Macro Selloff - 9 articles - CRITICAL / BEARISH - Iran Says U.S. Struck Unfinished Nuclear Plant, Warns of Safety Risk"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Energy / Oil & Gas - 18 articles - CRITICAL / BEARISH - Big Oil Warns Global Fuel Stocks Are Running Dangerously Low"
     },
     {
       "tag": "tag-bear",
@@ -1208,9 +1208,9 @@
       "region": "US",
       "price": 7600.5,
       "currency": "USD",
-      "change": 110.78,
-      "change_pct": 1.48,
-      "change_str": "+1.48%",
+      "change": 162.87,
+      "change_pct": 2.19,
+      "change_str": "+2.19%",
       "direction": "up"
     },
     {
@@ -1219,9 +1219,9 @@
       "region": "US",
       "price": 25913.9,
       "currency": "USD",
-      "change": 540.05,
-      "change_pct": 2.13,
-      "change_str": "+2.13%",
+      "change": 791.72,
+      "change_pct": 3.15,
+      "change_str": "+3.15%",
       "direction": "up"
     },
     {
@@ -1230,9 +1230,9 @@
       "region": "US",
       "price": 53178.41,
       "currency": "USD",
-      "change": 693.38,
-      "change_pct": 1.32,
-      "change_str": "+1.32%",
+      "change": 970.35,
+      "change_pct": 1.86,
+      "change_str": "+1.86%",
       "direction": "up"
     },
     {
@@ -1261,77 +1261,77 @@
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 63754.9,
+      "price": 63454.51,
       "currency": "JPY",
-      "change": 1887.47,
-      "change_pct": 3.05,
-      "change_str": "+3.05%",
-      "direction": "up"
+      "change": -907.51,
+      "change_pct": -1.41,
+      "change_str": "-1.41%",
+      "direction": "down"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 26009.4,
+      "price": 25826.06,
       "currency": "HKD",
-      "change": 150.52,
-      "change_pct": 0.58,
-      "change_str": "+0.58%",
-      "direction": "up"
+      "change": -58.37,
+      "change_pct": -0.23,
+      "change_str": "-0.23%",
+      "direction": "down"
     },
     {
       "label": "Nifty 50",
       "ticker": "^NSEI",
       "region": "IN",
-      "price": 24774.3,
+      "price": 24577.95,
       "currency": "INR",
-      "change": 457.15,
-      "change_pct": 1.88,
-      "change_str": "+1.88%",
+      "change": 194.35,
+      "change_pct": 0.8,
+      "change_str": "+0.80%",
       "direction": "up"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4107.2,
+      "price": 4118.0,
       "currency": "USD",
-      "change": 58.1,
-      "change_pct": 1.43,
-      "change_str": "+1.43%",
+      "change": 68.9,
+      "change_pct": 1.7,
+      "change_str": "+1.70%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 80.22,
+      "price": 81.28,
       "currency": "USD",
-      "change": -4.45,
-      "change_pct": -5.26,
-      "change_str": "-5.26%",
+      "change": -3.39,
+      "change_pct": -4.0,
+      "change_str": "-4.00%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63489.5,
+      "price": 63768.17,
       "currency": "USD",
-      "change": 7.5,
-      "change_pct": 0.01,
-      "change_str": "+0.01%",
+      "change": 286.17,
+      "change_pct": 0.45,
+      "change_str": "+0.45%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.99,
+      "price": 100.02,
       "currency": "USD",
-      "change": 0.19,
-      "change_pct": 0.19,
-      "change_str": "+0.19%",
+      "change": 0.22,
+      "change_pct": 0.22,
+      "change_str": "+0.22%",
       "direction": "up"
     },
     {
@@ -1340,16 +1340,16 @@
       "region": "VOL",
       "price": 15.86,
       "currency": "USD",
-      "change": -0.13,
-      "change_pct": -0.81,
-      "change_str": "-0.81%",
+      "change": -1.23,
+      "change_pct": -7.2,
+      "change_str": "-7.20%",
       "direction": "down"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.0,
-    "portfolio_peak": 20076.12,
+    "portfolio_peak": 20081.81,
     "vix": 15.86,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
@@ -1381,17 +1381,17 @@
       "matrix": {
         "ITA": {
           "ITA": 1.0,
-          "VGK": 0.337,
-          "XLF": 0.499
+          "VGK": 0.331,
+          "XLF": 0.472
         },
         "VGK": {
-          "ITA": 0.337,
+          "ITA": 0.331,
           "VGK": 1.0,
-          "XLF": 0.516
+          "XLF": 0.511
         },
         "XLF": {
-          "ITA": 0.499,
-          "VGK": 0.516,
+          "ITA": 0.472,
+          "VGK": 0.511,
           "XLF": 1.0
         }
       },
@@ -1400,7 +1400,7 @@
         "VGK",
         "XLF"
       ],
-      "max_corr": 0.516,
+      "max_corr": 0.511,
       "max_corr_pair": [
         "VGK",
         "XLF"
@@ -1414,20 +1414,20 @@
     },
     "volatility": {
       "per_ticker": {
-        "ITA": 25.93,
-        "XLF": 13.13,
-        "VGK": 14.05
+        "ITA": 24.55,
+        "XLF": 13.24,
+        "VGK": 14.36
       },
-      "portfolio_avg_vol_pct": 17.7,
+      "portfolio_avg_vol_pct": 17.38,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 1.6,
+      "benchmark_return_pct": 0.17,
       "benchmark_price_start": 745.76,
-      "benchmark_price_now": 757.67,
+      "benchmark_price_now": 747.03,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": 0.08,
-      "alpha": -1.52
+      "alpha": -0.09
     },
     "rebalance": {
       "alerts": [
@@ -1437,17 +1437,17 @@
           "target_weight_pct": 10.0,
           "drift_pct": 50.66,
           "action": "DEPLOY",
-          "amount": 10170.96,
+          "amount": 10173.93,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
         {
           "ticker": "ITA",
-          "actual_weight_pct": 3.04,
+          "actual_weight_pct": 3.03,
           "target_weight_pct": 30.0,
-          "drift_pct": -26.96,
+          "drift_pct": -26.97,
           "action": "ADD",
-          "amount": 5413.38,
+          "amount": 5414.83,
           "etf_name": "iShares U.S. Aerospace & Defense ETF",
           "regime_note": ""
         },
@@ -1457,17 +1457,17 @@
           "target_weight_pct": 30.0,
           "drift_pct": -26.78,
           "action": "ADD",
-          "amount": 5377.14,
+          "amount": 5378.59,
           "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
         {
           "ticker": "VGK",
-          "actual_weight_pct": 8.17,
+          "actual_weight_pct": 8.16,
           "target_weight_pct": 30.0,
-          "drift_pct": -21.83,
+          "drift_pct": -21.84,
           "action": "ADD",
-          "amount": 4383.21,
+          "amount": 4384.72,
           "etf_name": "Vanguard FTSE Europe ETF",
           "regime_note": ""
         }
@@ -1478,62 +1478,62 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -1157.91,
+          "total_impact": -1157.85,
           "portfolio_loss_pct": -5.77,
           "position_impacts": [
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -243.78
+              "impact": -243.77
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -258.28
+              "impact": -258.26
             },
             {
               "ticker": "VGK",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -655.85
+              "impact": -655.81
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -984.22,
+          "total_impact": -984.17,
           "portfolio_loss_pct": -4.9,
           "position_impacts": [
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -207.22
+              "impact": -207.2
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -219.54
+              "impact": -219.52
             },
             {
               "ticker": "VGK",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -557.47
+              "impact": -557.44
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -434.22,
+          "total_impact": -434.19,
           "portfolio_loss_pct": -2.16,
           "position_impacts": [
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -91.42
+              "impact": -91.41
             },
             {
               "ticker": "XLF",
@@ -1545,37 +1545,37 @@
               "ticker": "VGK",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -245.94
+              "impact": -245.93
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -231.58,
+          "total_impact": -231.57,
           "portfolio_loss_pct": -1.15,
           "position_impacts": [
             {
               "ticker": "ITA",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -48.76
+              "impact": -48.75
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -51.66
+              "impact": -51.65
             },
             {
               "ticker": "VGK",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -131.17
+              "impact": -131.16
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -521.06,
-          "portfolio_loss_pct": -2.6,
+          "total_impact": -521.03,
+          "portfolio_loss_pct": -2.59,
           "position_impacts": [
             {
               "ticker": "ITA",
@@ -1593,7 +1593,7 @@
               "ticker": "VGK",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -295.13
+              "impact": -295.12
             }
           ]
         }
@@ -1603,10 +1603,10 @@
     }
   },
   "logs": [
-    "2026-08-03 23:21:34 [INFO] AZALYST - status.json generated",
-    "2026-08-03 23:21:34 [INFO] PORTFOLIO - NAV USD 20,076.12 | Return +0.08%",
-    "2026-08-03 23:21:34 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-03 23:21:34 [INFO] TRADER - Open positions: ITA, XLF, VGK"
+    "2026-08-04 05:30:23 [INFO] AZALYST - status.json generated",
+    "2026-08-04 05:30:23 [INFO] PORTFOLIO - NAV USD 20,080.84 | Return +0.08%",
+    "2026-08-04 05:30:23 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-04 05:30:23 [INFO] TRADER - Open positions: ITA, XLF, VGK"
   ],
-  "generated_at": "2026-08-03 23:21:26 UTC"
+  "generated_at": "2026-08-04 05:30:20 UTC"
 }
