@@ -189,12 +189,12 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
+    "risk_state": "RISK_ON",
     "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.05913198895371535,
+    "vix_level": 16.5,
+    "vix_percentile_1y": 0.3611111111111111,
     "weight_matrix": {
       "rank": 25,
       "flow": 20,
@@ -208,11 +208,11 @@
     "ticker": "IGV",
     "rank_score": 23.624434389140273,
     "flow_score": 0.0,
-    "options_score": 18.0,
+    "options_score": 20.653514358393117,
     "rotation_score": 15.0,
     "macro_score": 3.0327794108868282,
     "news_score": 7.359999999999999,
-    "total": 67.01721380002711,
+    "total": 69.67072815842022,
     "publish": true,
     "direction": "long"
   },
@@ -282,10 +282,6 @@
       "score": 92.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 92.0
-    },
-    {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 91.0
     },
@@ -304,6 +300,10 @@
     {
       "symbol": "Banking & Financial Sector",
       "score": 89.0
+    },
+    {
+      "symbol": "Defense & Aerospace",
+      "score": 88.0
     },
     {
       "symbol": "Nuclear Energy & Uranium + Energy / Oil & Gas",
@@ -327,7 +327,7 @@
     },
     {
       "symbol": "Cybersecurity",
-      "score": 76.0
+      "score": 82.0
     },
     {
       "symbol": "Europe Equity",
@@ -335,7 +335,7 @@
     },
     {
       "symbol": "Healthcare & Pharma",
-      "score": 63.0
+      "score": 69.0
     }
   ],
   "signals": [
@@ -442,59 +442,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 16.6,
         "recency": 10.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 92.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 30,
-      "latest_at": "04 Aug 2026 17:26 UTC",
-      "headline": "Pentagon moves to triple Patriot, quadruple THAAD interceptor production",
-      "regions": [
-        "americas",
-        "middle_east",
-        "india",
-        "asia_pacific"
-      ],
-      "sources": [
-        "EE Times",
-        "BBC News",
-        "Bloomberg Markets",
-        "Defense News"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 17.1,
-        "recency": 15.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -754,6 +701,59 @@
       }
     },
     {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 88.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 30,
+      "latest_at": "04 Aug 2026 19:29 UTC",
+      "headline": "Pentagon moves to triple Patriot, quadruple THAAD interceptor production",
+      "regions": [
+        "global",
+        "india",
+        "americas",
+        "middle_east"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Markets-Economic Times",
+        "World News - Breaking international news and headlines | Sky News",
+        "EE Times"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.4,
+        "recency": 11.7,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium + Energy / Oil & Gas",
       "confidence": 87.0,
@@ -1009,27 +1009,27 @@
     {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
-      "confidence": 76.0,
+      "confidence": 82.0,
       "severity": "MEDIUM",
       "direction": "BULLISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "04 Aug 2026 16:54 UTC",
+      "article_count": 12,
+      "latest_at": "04 Aug 2026 22:00 UTC",
       "headline": "US mulling ban on key Chinese networking tech in data center component crackdown \u2014 White House wants to impose restrictions in 2026, China says it will respond if necessary",
       "regions": [
         "middle_east",
-        "asia_pacific",
+        "global",
         "europe",
-        "global"
+        "asia_pacific"
       ],
       "sources": [
-        "BBC News",
-        "Latest from Tom's Hardware",
+        "EE Times",
+        "Tech",
         "Finance",
-        "www.theregister.com - Articles"
+        "BBC News"
       ],
       "primary_etf": "CIBR",
       "top_etfs": [
@@ -1046,11 +1046,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 14.7,
-        "volume_confirmation": 16.2,
-        "source_diversity": 11.5,
-        "recency": 14.5,
-        "geopolitical_severity": 11.7
+        "signal_strength": 16.2,
+        "volume_confirmation": 17.4,
+        "source_diversity": 13.6,
+        "recency": 15.0,
+        "geopolitical_severity": 11.6
       }
     },
     {
@@ -1104,25 +1104,24 @@
     {
       "sector_key": "healthcare_pharma",
       "sector_label": "Healthcare & Pharma",
-      "confidence": 63.0,
-      "severity": "HIGH",
+      "confidence": 69.0,
+      "severity": "MEDIUM",
       "direction": "BEARISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "04 Aug 2026 18:08 UTC",
+      "article_count": 7,
+      "latest_at": "04 Aug 2026 20:15 UTC",
       "headline": "Novo Nordisk shares slide after guidance disappoints investors",
       "regions": [
-        "americas",
         "global"
       ],
       "sources": [
-        "Bloomberg Markets",
         "US Top News and Analysis",
-        "Earnings",
-        "Markets-Economic Times"
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "Earnings"
       ],
       "primary_etf": "XLV",
       "top_etfs": [
@@ -1145,11 +1144,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 16.8,
-        "volume_confirmation": 14.6,
+        "signal_strength": 15.5,
+        "volume_confirmation": 13.7,
         "source_diversity": 12.0,
-        "recency": 16.4,
-        "geopolitical_severity": 12.1
+        "recency": 12.6,
+        "geopolitical_severity": 8.2
       }
     }
   ],
@@ -1163,11 +1162,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Technology & AI / Semiconductors - 72 articles - HIGH / BULLISH - Chip Industry Technical Paper Roundup: Aug. 4"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Defense & Aerospace - 30 articles - HIGH / BULLISH - Pentagon moves to triple Patriot, quadruple THAAD interceptor production"
     },
     {
       "tag": "tag-bear",
@@ -1197,6 +1191,11 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Defense & Aerospace - 30 articles - HIGH / BULLISH - Pentagon moves to triple Patriot, quadruple THAAD interceptor production"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Nuclear Energy & Uranium + Energy / Oil & Gas - 9 articles - CRITICAL / BULLISH - Global Market: Goldman Sachs sees Brent crude trading at $80-$90 until Iran conflict outlook clears"
     },
     {
@@ -1222,7 +1221,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Cybersecurity - 10 articles - MEDIUM / BULLISH - US mulling ban on key Chinese networking tech in data center component crackdown \u2014 White House wants to impose restrictions in 2026, China says it will respond if necessary"
+      "text": "Cybersecurity - 12 articles - MEDIUM / BULLISH - US mulling ban on key Chinese networking tech in data center component crackdown \u2014 White House wants to impose restrictions in 2026, China says it will respond if necessary"
     },
     {
       "tag": "tag-bull",
@@ -1232,7 +1231,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Healthcare & Pharma - 8 articles - HIGH / BEARISH - Novo Nordisk shares slide after guidance disappoints investors"
+      "text": "Healthcare & Pharma - 7 articles - MEDIUM / BEARISH - Novo Nordisk shares slide after guidance disappoints investors"
     }
   ],
   "market_snapshot": [
@@ -1275,9 +1274,9 @@
       "region": "UK",
       "price": 10879.38,
       "currency": "GBP",
-      "change": 21.68,
-      "change_pct": 0.2,
-      "change_str": "+0.20%",
+      "change": 11.28,
+      "change_pct": 0.1,
+      "change_str": "+0.10%",
       "direction": "up"
     },
     {
@@ -1328,33 +1327,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4133.9,
+      "price": 4128.9,
       "currency": "USD",
-      "change": 100.2,
-      "change_pct": 2.48,
-      "change_str": "+2.48%",
+      "change": 95.2,
+      "change_pct": 2.36,
+      "change_str": "+2.36%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 75.26,
+      "price": 75.32,
       "currency": "USD",
-      "change": -5.08,
-      "change_pct": -6.32,
-      "change_str": "-6.32%",
+      "change": -5.02,
+      "change_pct": -6.25,
+      "change_str": "-6.25%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64184.99,
+      "price": 64441.6,
       "currency": "USD",
-      "change": 724.09,
-      "change_pct": 1.14,
-      "change_str": "+1.14%",
+      "change": 980.7,
+      "change_pct": 1.55,
+      "change_str": "+1.55%",
       "direction": "up"
     },
     {
@@ -1693,10 +1692,10 @@
     }
   },
   "logs": [
-    "2026-08-04 22:20:40 [INFO] AZALYST - status.json generated",
-    "2026-08-04 22:20:40 [INFO] PORTFOLIO - NAV USD 20,102.10 | Return +0.26%",
-    "2026-08-04 22:20:40 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-04 22:20:40 [INFO] TRADER - Open positions: ITA, XLF, VGK, XLE"
+    "2026-08-04 23:20:06 [INFO] AZALYST - status.json generated",
+    "2026-08-04 23:20:06 [INFO] PORTFOLIO - NAV USD 20,102.10 | Return +0.26%",
+    "2026-08-04 23:20:06 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-04 23:20:06 [INFO] TRADER - Open positions: ITA, XLF, VGK, XLE"
   ],
-  "generated_at": "2026-08-04 22:20:37 UTC"
+  "generated_at": "2026-08-04 23:20:04 UTC"
 }
