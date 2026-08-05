@@ -1312,42 +1312,44 @@
     }
   },
   "technology_ai": {
-    "sent_at": "2026-08-05T18:25:11.433272+00:00",
-    "confidence": 98,
+    "sent_at": "2026-08-05T23:13:17.897863+00:00",
+    "confidence": 95,
     "sector_label": "Technology & AI / Semiconductors",
-    "article_count": 75,
+    "article_count": 86,
     "severity": "HIGH",
     "direction": "BULLISH",
-    "direction_score": 12.0,
+    "direction_score": 10.0,
     "signal_scope": "global",
-    "india_article_ratio": 0.04,
+    "india_article_ratio": 0.03,
     "regions": [
-      "americas",
-      "asia_pacific",
       "india",
-      "global"
+      "asia_pacific",
+      "global",
+      "americas",
+      "middle_east",
+      "europe"
     ],
     "sources": [
+      "www.theregister.com - Articles",
       "The Verge",
-      "Earnings",
-      "Markets-Economic Times",
-      "Semiconductor Engineering",
-      "Cointelegraph.com News",
-      "Defense News"
+      "Bloomberg Markets",
+      "BBC News",
+      "Tech",
+      "Latest from Tom's Hardware"
     ],
     "top_headlines": [
       "AMD shares fall 6% as investors demand bigger AI payoff",
       "Manager of DRAM memory chip stock trade blockbuster ETF is back with new AI thematic bet",
+      "US stocks: Alphabet shares fall 4% as DeepMind chief shifts role in Google\u2019s AI shakeup",
       "What lies ahead for AMD shares after its record-breaking earnings?",
-      "Lisa Su brushes off Musk's Nvidia commitment as AMD stock sinks after earnings",
-      "Elon Musk says SpaceX will exclusively use Nvidia GPUs 'because they are the best' \u2014 says optimized Vera Rubin NVL72 will be launched into space next year"
+      "Meta debuts first AI coding agent to take on Anthropic and OpenAI"
     ],
-    "latest_ts": "2026-08-05T18:23:15.048573+00:00",
+    "latest_ts": "2026-08-05T21:15:37+00:00",
     "confidence_breakdown": {
       "signal_strength": 22.0,
       "volume_confirmation": 18.0,
-      "source_diversity": 16.4,
-      "recency": 16.9,
+      "source_diversity": 17.0,
+      "recency": 14.0,
       "geopolitical_severity": 13.0,
       "cross_engine_confirmation": 12.0,
       "macro_events": 0.0
@@ -3603,44 +3605,41 @@
     }
   },
   "commodities_mining": {
-    "sent_at": "2026-08-05T18:25:18.288354+00:00",
-    "confidence": 78,
+    "sent_at": "2026-08-05T23:13:21.894553+00:00",
+    "confidence": 62,
     "sector_label": "Commodities & Mining",
-    "article_count": 8,
+    "article_count": 5,
     "severity": "MEDIUM",
     "direction": "BULLISH",
     "direction_score": 0.0,
     "signal_scope": "global",
-    "india_article_ratio": 0.12,
+    "india_article_ratio": 0.0,
     "regions": [
-      "middle_east",
-      "india",
       "asia_pacific",
+      "middle_east",
       "global"
     ],
     "sources": [
+      "US Top News and Analysis",
       "Markets-Economic Times",
-      "Semiconductor Engineering",
-      "Cointelegraph.com News",
-      "Latest from Tom's Hardware",
-      "Oilprice.com",
-      "Tech"
+      "Tech",
+      "Semiconductor Engineering"
     ],
     "top_headlines": [
-      "Oil Price Rally Boosts Glencore\u2019s First-Half Profit",
-      "Comex Copper Climbs to Record High on Tariff Speculation",
       "How the 'Baby iPhone' and an Apple supplier leak explain China's recent supply chain moves",
+      "E.l.f. Beauty sees $50 million windfall in tariff refunds as profits surge 100%",
       "Trump admin refunds $100 billion in 'liberation day' tariffs",
-      "Global Market: European shares climb as earnings, US-Iran diplomacy lift sentiment"
+      "Global Market: European shares climb as earnings, US-Iran diplomacy lift sentiment",
+      "Implementing the Cyber Resilience Act: eBook"
     ],
-    "latest_ts": "2026-08-05T16:47:52+00:00",
+    "latest_ts": "2026-08-05T21:00:48+00:00",
     "confidence_breakdown": {
-      "signal_strength": 13.3,
-      "volume_confirmation": 14.6,
-      "source_diversity": 14.6,
-      "recency": 14.5,
-      "geopolitical_severity": 12.1,
-      "cross_engine_confirmation": 9.4,
+      "signal_strength": 7.8,
+      "volume_confirmation": 11.3,
+      "source_diversity": 10.3,
+      "recency": 13.6,
+      "geopolitical_severity": 10.1,
+      "cross_engine_confirmation": 9.3,
       "macro_events": 0.0
     },
     "etf_recommendations": {
@@ -3683,23 +3682,6 @@
           ]
         },
         {
-          "name": "CPSE ETF",
-          "ticker": "CPSEETF",
-          "note": "NMDC, Coal India \u2014 commodity exposure",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "3\u20139 months",
-          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
-          "sector_key": "commodities_mining",
-          "market_bucket": "india",
-          "market_scope": "India-listed",
-          "selection_score": 72.0,
-          "selection_notes": [
-            "matches India-listed access"
-          ]
-        },
-        {
           "name": "Sprott Physical Copper Trust",
           "ticker": "COPP",
           "platform": "Sprott \u2014 IBKR / Schwab",
@@ -3715,6 +3697,21 @@
             "clean thematic exposure",
             "matches international access"
           ]
+        },
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NMDC, Coal India \u2014 commodity exposure",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u20139 months",
+          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
+          "sector_key": "commodities_mining",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 69.0,
+          "selection_notes": []
         }
       ],
       "top_etfs": [
@@ -3737,23 +3734,6 @@
           ]
         },
         {
-          "name": "CPSE ETF",
-          "ticker": "CPSEETF",
-          "note": "NMDC, Coal India \u2014 commodity exposure",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "3\u20139 months",
-          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
-          "sector_key": "commodities_mining",
-          "market_bucket": "india",
-          "market_scope": "India-listed",
-          "selection_score": 72.0,
-          "selection_notes": [
-            "matches India-listed access"
-          ]
-        },
-        {
           "name": "Sprott Physical Copper Trust",
           "ticker": "COPP",
           "platform": "Sprott \u2014 IBKR / Schwab",
@@ -3769,6 +3749,21 @@
             "clean thematic exposure",
             "matches international access"
           ]
+        },
+        {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NMDC, Coal India \u2014 commodity exposure",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u20139 months",
+          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
+          "sector_key": "commodities_mining",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 69.0,
+          "selection_notes": []
         }
       ],
       "regional_alternatives": {
@@ -3785,10 +3780,8 @@
             "sector_key": "commodities_mining",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 72.0,
-            "selection_notes": [
-              "matches India-listed access"
-            ]
+            "selection_score": 69.0,
+            "selection_notes": []
           }
         ],
         "International-listed": [
@@ -3842,10 +3835,8 @@
           "sector_key": "commodities_mining",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 72.0,
-          "selection_notes": [
-            "matches India-listed access"
-          ]
+          "selection_score": 69.0,
+          "selection_notes": []
         }
       ],
       "global": [
@@ -4893,10 +4884,10 @@
     }
   },
   "cybersecurity": {
-    "sent_at": "2026-08-05T18:25:15.361368+00:00",
-    "confidence": 79,
+    "sent_at": "2026-08-05T23:13:19.719988+00:00",
+    "confidence": 78,
     "sector_label": "Cybersecurity",
-    "article_count": 10,
+    "article_count": 9,
     "severity": "MEDIUM",
     "direction": "BULLISH",
     "direction_score": 2.0,
@@ -4908,12 +4899,12 @@
       "global"
     ],
     "sources": [
-      "The Verge",
-      "Cointelegraph.com News",
-      "Latest from Tom's Hardware",
-      "EE Times",
       "www.theregister.com - Articles",
-      "US Top News and Analysis"
+      "The Verge",
+      "Latest from Tom's Hardware",
+      "Cointelegraph.com News",
+      "US Top News and Analysis",
+      "EE Times"
     ],
     "top_headlines": [
       "Rogue AI agents created fake online identities in another hacking attempt",
@@ -4922,14 +4913,14 @@
       "AI researchers let models off the leash \u2013 then watched as they tried to add malware to a FOSS project",
       "Anthropic's Mythos created fake identities to fool humans in new cyber incident"
     ],
-    "latest_ts": "2026-08-05T18:23:15.048573+00:00",
+    "latest_ts": "2026-08-05T23:11:29.071879+00:00",
     "confidence_breakdown": {
-      "signal_strength": 14.7,
-      "volume_confirmation": 16.2,
+      "signal_strength": 14.1,
+      "volume_confirmation": 15.4,
       "source_diversity": 9.6,
       "recency": 16.9,
-      "geopolitical_severity": 10.6,
-      "cross_engine_confirmation": 11.6,
+      "geopolitical_severity": 10.7,
+      "cross_engine_confirmation": 11.5,
       "macro_events": 0.0
     },
     "etf_recommendations": {
