@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 20025.51,
+  "portfolio_value": 20025.39,
   "total_deposited": 20105.99,
   "cash": 9223.39,
   "monthly_reserve": 0.0,
-  "market_value": 10802.11,
+  "market_value": 10802.0,
   "total_invested": 10882.59,
-  "unrealised_pnl": -80.48,
-  "unrealised_str": "-80.48",
+  "unrealised_pnl": -80.59,
+  "unrealised_str": "-80.59",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
   "change": "-0.40%",
@@ -50,16 +50,16 @@
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 57.29,
-      "current": 58.01,
+      "current": 58.0,
       "peak_price": 58.09,
       "trail_stop": 53.28,
-      "dist_to_trail_pct": 8.16,
+      "dist_to_trail_pct": 8.15,
       "units": 11.252913,
       "invested": 644.69,
-      "pnl": 8.16,
-      "pnl_str": "+8.16",
-      "pnl_pct": 1.27,
-      "pnl_pct_str": "+1.27%",
+      "pnl": 8.05,
+      "pnl_str": "+8.05",
+      "pnl_pct": 1.25,
+      "pnl_pct_str": "+1.25%",
       "confidence": 89,
       "severity": "CRITICAL",
       "days_held": 5,
@@ -191,7 +191,7 @@
       {
         "era": "current",
         "total_deposited": 20105.99,
-        "portfolio_value": 20025.51,
+        "portfolio_value": 20025.39,
         "realised_pnl": 0.0,
         "change": "-0.40%",
         "total_trades": 0,
@@ -231,11 +231,11 @@
     "ticker": "GDX",
     "rank_score": 15.886661642803316,
     "flow_score": 22.0,
-    "options_score": 0.0,
+    "options_score": 18.651043457567628,
     "rotation_score": 15.0,
-    "macro_score": 5.2550912657759685,
+    "macro_score": 5.279352278499535,
     "news_score": 5.096,
-    "total": 63.23775290857928,
+    "total": 81.91305737887048,
     "publish": true,
     "direction": "long"
   },
@@ -297,7 +297,7 @@
     ],
     "values": [
       37.42,
-      8.16,
+      8.05,
       12.58,
       -135.13,
       -3.4
@@ -309,12 +309,12 @@
       "score": 98.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 96.0
-    },
-    {
       "symbol": "Defense & Aerospace",
       "score": 94.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 93.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
@@ -424,59 +424,6 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 96.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": 10.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "05 Aug 2026 11:44 UTC",
-      "headline": "Oil Markets Price In an Iran Deal That Does Not Exist Yet",
-      "regions": [
-        "americas",
-        "global",
-        "india",
-        "middle_east"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "BBC News"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.9,
-        "recency": 16.3,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
       "confidence": 94.0,
@@ -526,6 +473,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 15.2,
         "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 93.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": 4.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 21,
+      "latest_at": "05 Aug 2026 22:01 UTC",
+      "headline": "Hormuz Bottleneck Pushes Indian Refiners Toward West African Grades",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "americas",
+        "middle_east"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.4,
+        "recency": 16.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -1193,12 +1193,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas - 25 articles - CRITICAL / BULLISH - Oil Markets Price In an Iran Deal That Does Not Exist Yet"
+      "text": "Defense & Aerospace - 21 articles - HIGH / BULLISH - Ukraine Calls for Faster Patriot Deliveries After Deadly Russian Missile Barrage"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Defense & Aerospace - 21 articles - HIGH / BULLISH - Ukraine Calls for Faster Patriot Deliveries After Deadly Russian Missile Barrage"
+      "text": "Energy / Oil & Gas - 21 articles - CRITICAL / BULLISH - Hormuz Bottleneck Pushes Indian Refiners Toward West African Grades"
     },
     {
       "tag": "tag-bear",
@@ -1317,10 +1317,10 @@
       "region": "EU",
       "price": 26126.3,
       "currency": "EUR",
-      "change": -76.05,
-      "change_pct": -0.29,
-      "change_str": "-0.29%",
-      "direction": "down"
+      "change": 124.99,
+      "change_pct": 0.48,
+      "change_str": "+0.48%",
+      "direction": "up"
     },
     {
       "label": "Nikkei 225",
@@ -1359,9 +1359,9 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4306.6,
+      "price": 4306.7,
       "currency": "USD",
-      "change": 211.2,
+      "change": 211.3,
       "change_pct": 5.16,
       "change_str": "+5.16%",
       "direction": "up"
@@ -1370,33 +1370,33 @@
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 75.02,
+      "price": 75.14,
       "currency": "USD",
-      "change": -0.75,
-      "change_pct": -0.99,
-      "change_str": "-0.99%",
+      "change": -0.63,
+      "change_pct": -0.83,
+      "change_str": "-0.83%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64918.46,
+      "price": 64615.36,
       "currency": "USD",
-      "change": 862.51,
-      "change_pct": 1.35,
-      "change_str": "+1.35%",
+      "change": 559.41,
+      "change_pct": 0.87,
+      "change_str": "+0.87%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.72,
+      "price": 99.69,
       "currency": "USD",
-      "change": -0.17,
-      "change_pct": -0.17,
-      "change_str": "-0.17%",
+      "change": -0.2,
+      "change_pct": -0.2,
+      "change_str": "-0.20%",
       "direction": "down"
     },
     {
@@ -1536,7 +1536,7 @@
           "target_weight_pct": 10.0,
           "drift_pct": 36.06,
           "action": "DEPLOY",
-          "amount": 7220.84,
+          "amount": 7220.86,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
@@ -1546,7 +1546,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -16.16,
           "action": "ADD",
-          "amount": 3236.71,
+          "amount": 3236.69,
           "etf_name": "First Trust Nasdaq CEA Cybersecurity ETF",
           "regime_note": ""
         },
@@ -1556,7 +1556,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -14.74,
           "action": "ADD",
-          "amount": 2951.81,
+          "amount": 2951.9,
           "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
@@ -1566,7 +1566,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": 10.84,
           "action": "TRIM",
-          "amount": 2171.28,
+          "amount": 2171.31,
           "etf_name": "Energy Select Sector SPDR",
           "regime_note": ""
         },
@@ -1576,7 +1576,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -9.73,
           "action": "ADD",
-          "amount": 1948.38,
+          "amount": 1948.36,
           "etf_name": "Vanguard FTSE Europe ETF",
           "regime_note": ""
         },
@@ -1586,7 +1586,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -6.27,
           "action": "ADD",
-          "amount": 1255.23,
+          "amount": 1255.21,
           "etf_name": "iShares U.S. Aerospace & Defense ETF",
           "regime_note": ""
         }
@@ -1597,7 +1597,7 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -5187.23,
+          "total_impact": -5187.18,
           "portfolio_loss_pct": -25.9,
           "position_impacts": [
             {
@@ -1610,7 +1610,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -261.11
+              "impact": -261.07
             },
             {
               "ticker": "VGK",
@@ -1633,7 +1633,7 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -5463.24,
+          "total_impact": -5463.2,
           "portfolio_loss_pct": -27.28,
           "position_impacts": [
             {
@@ -1646,7 +1646,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -221.95
+              "impact": -221.91
             },
             {
               "ticker": "VGK",
@@ -1669,7 +1669,7 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1331.52,
+          "total_impact": -1331.51,
           "portfolio_loss_pct": -6.65,
           "position_impacts": [
             {
@@ -1682,7 +1682,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -97.92
+              "impact": -97.9
             },
             {
               "ticker": "VGK",
@@ -1705,7 +1705,7 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -1268.48,
+          "total_impact": -1268.47,
           "portfolio_loss_pct": -6.33,
           "position_impacts": [
             {
@@ -1718,7 +1718,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -52.22
+              "impact": -52.21
             },
             {
               "ticker": "VGK",
@@ -1741,7 +1741,7 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -2059.9,
+          "total_impact": -2059.88,
           "portfolio_loss_pct": -10.29,
           "position_impacts": [
             {
@@ -1754,7 +1754,7 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -117.5
+              "impact": -117.48
             },
             {
               "ticker": "VGK",
@@ -1782,10 +1782,10 @@
     }
   },
   "logs": [
-    "2026-08-05 20:36:50 [INFO] AZALYST - status.json generated",
-    "2026-08-05 20:36:50 [INFO] PORTFOLIO - NAV USD 20,025.51 | Return -0.40%",
-    "2026-08-05 20:36:50 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-05 20:36:50 [INFO] TRADER - Open positions: ITA, XLF, VGK, XLE, CIBR"
+    "2026-08-05 22:22:33 [INFO] AZALYST - status.json generated",
+    "2026-08-05 22:22:33 [INFO] PORTFOLIO - NAV USD 20,025.39 | Return -0.40%",
+    "2026-08-05 22:22:33 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-05 22:22:33 [INFO] TRADER - Open positions: ITA, XLF, VGK, XLE, CIBR"
   ],
-  "generated_at": "2026-08-05 20:36:46 UTC"
+  "generated_at": "2026-08-05 22:22:30 UTC"
 }
