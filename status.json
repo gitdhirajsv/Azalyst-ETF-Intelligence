@@ -235,30 +235,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.04174327542628108,
+    "vix_level": 14.899999618530273,
+    "vix_percentile_1y": 0.07936507936507936,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
+      "rank": 30,
+      "flow": 22,
+      "options": 18,
       "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "macro": 8,
+      "news": 7
     }
   },
   "top_signal": {
     "ticker": "GDX",
     "rank_score": 24.550602409638557,
     "flow_score": 22.0,
-    "options_score": 0.0,
+    "options_score": 18.047899976730033,
     "rotation_score": 15.0,
     "macro_score": 5.3762906503927645,
     "news_score": 4.83,
-    "total": 71.75689306003132,
+    "total": 89.80479303676135,
     "publish": true,
     "direction": "long"
   },
@@ -1348,9 +1348,9 @@
       "region": "EU",
       "price": 26319.45,
       "currency": "EUR",
-      "change": 179.32,
-      "change_pct": 0.69,
-      "change_str": "+0.69%",
+      "change": 193.15,
+      "change_pct": 0.74,
+      "change_str": "+0.74%",
       "direction": "up"
     },
     {
@@ -1412,11 +1412,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64938.85,
+      "price": 64848.22,
       "currency": "USD",
-      "change": 676.74,
-      "change_pct": 1.05,
-      "change_str": "+1.05%",
+      "change": 586.11,
+      "change_pct": 0.91,
+      "change_str": "+0.91%",
       "direction": "up"
     },
     {
@@ -1853,10 +1853,10 @@
     }
   },
   "logs": [
-    "2026-08-07 21:51:22 [INFO] AZALYST - status.json generated",
-    "2026-08-07 21:51:22 [INFO] PORTFOLIO - NAV USD 20,058.13 | Return -0.14%",
-    "2026-08-07 21:51:22 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-07 21:51:22 [INFO] TRADER - Open positions: ITA, XLF, VGK, XLE, CIBR, EWJ"
+    "2026-08-07 22:58:57 [INFO] AZALYST - status.json generated",
+    "2026-08-07 22:58:57 [INFO] PORTFOLIO - NAV USD 20,058.13 | Return -0.14%",
+    "2026-08-07 22:58:57 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-07 22:58:57 [INFO] TRADER - Open positions: ITA, XLF, VGK, XLE, CIBR, EWJ"
   ],
-  "generated_at": "2026-08-07 21:51:19 UTC"
+  "generated_at": "2026-08-07 22:58:53 UTC"
 }
