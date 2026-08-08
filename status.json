@@ -108,7 +108,7 @@
       "pnl_pct_str": "-1.87%",
       "confidence": 96,
       "severity": "CRITICAL",
-      "days_held": 3,
+      "days_held": 4,
       "half_exited": false
     },
     {
@@ -254,11 +254,11 @@
     "ticker": "GDX",
     "rank_score": 24.553869271224645,
     "flow_score": 22.0,
-    "options_score": 13.5,
+    "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 5.376426784482852,
-    "news_score": 4.4799999999999995,
-    "total": 84.91029605570749,
+    "news_score": 4.536,
+    "total": 71.46629605570749,
     "publish": true,
     "direction": "long"
   },
@@ -337,7 +337,7 @@
   "confidence": [
     {
       "symbol": "Technology & AI / Semiconductors",
-      "score": 98.0
+      "score": 97.0
     },
     {
       "symbol": "Asia Pacific Equity",
@@ -369,11 +369,15 @@
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 80.0
+      "score": 81.0
     },
     {
       "symbol": "Commodities & Mining",
       "score": 74.0
+    },
+    {
+      "symbol": "Cybersecurity",
+      "score": 72.0
     },
     {
       "symbol": "Europe Equity",
@@ -382,10 +386,6 @@
     {
       "symbol": "Defense & Aerospace",
       "score": 66.0
-    },
-    {
-      "symbol": "Cybersecurity",
-      "score": 64.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -404,27 +404,27 @@
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 98.0,
+      "confidence": 97.0,
       "severity": "HIGH",
       "direction": "BULLISH",
       "direction_score": 4.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 63,
-      "latest_at": "08 Aug 2026 06:43 UTC",
+      "article_count": 62,
+      "latest_at": "08 Aug 2026 12:37 UTC",
       "headline": "Chip Industry Week in Review",
       "regions": [
-        "india",
         "europe",
-        "global",
-        "asia_pacific"
+        "middle_east",
+        "asia_pacific",
+        "india"
       ],
       "sources": [
-        "Oilprice.com",
         "www.theregister.com - Articles",
-        "Cointelegraph.com News",
-        "EE Times"
+        "Semiconductor Engineering",
+        "Tech",
+        "Oilprice.com"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -449,7 +449,7 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.1,
+        "source_diversity": 15.8,
         "recency": 16.9,
         "geopolitical_severity": 13.0
       }
@@ -811,27 +811,26 @@
     {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 80.0,
+      "confidence": 81.0,
       "severity": "HIGH",
       "direction": "BULLISH",
-      "direction_score": -14.5,
+      "direction_score": -24.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "07 Aug 2026 20:08 UTC",
+      "article_count": 10,
+      "latest_at": "08 Aug 2026 10:43 UTC",
       "headline": "US stocks: S&amp;P closes at record high as soft jobs report eases rate-hike concerns",
       "regions": [
         "global",
-        "india",
         "americas",
         "asia_pacific"
       ],
       "sources": [
-        "Cointelegraph.com News",
         "Markets-Economic Times",
-        "Bloomberg Markets",
-        "US Top News and Analysis"
+        "US Top News and Analysis",
+        "Cointelegraph.com News",
+        "Bloomberg Markets"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -855,9 +854,9 @@
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
-        "volume_confirmation": 17.4,
-        "source_diversity": 12.9,
-        "recency": 10.2,
+        "volume_confirmation": 16.2,
+        "source_diversity": 11.1,
+        "recency": 14.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -909,6 +908,52 @@
         "source_diversity": 13.4,
         "recency": 16.6,
         "geopolitical_severity": 9.8
+      }
+    },
+    {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 72.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "08 Aug 2026 12:00 UTC",
+      "headline": "'AI Kill Switch' bill needs to be passed this year amid ongoing rogue agent hacks, Rep. Lieu says",
+      "regions": [
+        "global",
+        "europe",
+        "asia_pacific"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "US Top News and Analysis",
+        "Tech",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 13.4,
+        "volume_confirmation": 13.7,
+        "source_diversity": 6.7,
+        "recency": 15.9,
+        "geopolitical_severity": 11.7
       }
     },
     {
@@ -1010,51 +1055,6 @@
         "source_diversity": 16.6,
         "recency": 17.0,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 64.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "08 Aug 2026 04:11 UTC",
-      "headline": "'AI Kill Switch' bill needs to be passed this year amid ongoing rogue agent hacks, Rep. Lieu says",
-      "regions": [
-        "global",
-        "europe",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Tech",
-        "www.theregister.com - Articles",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.7,
-        "volume_confirmation": 12.6,
-        "source_diversity": 4.9,
-        "recency": 13.2,
-        "geopolitical_severity": 11.5
       }
     },
     {
@@ -1218,7 +1218,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 63 articles - HIGH / BULLISH - Chip Industry Week in Review"
+      "text": "Technology & AI / Semiconductors - 62 articles - HIGH / BULLISH - Chip Industry Week in Review"
     },
     {
       "tag": "tag-bull",
@@ -1258,12 +1258,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BULLISH - US stocks: S&amp;P closes at record high as soft jobs report eases rate-hike concerns"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 10 articles - HIGH / BULLISH - US stocks: S&amp;P closes at record high as soft jobs report eases rate-hike concerns"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Commodities & Mining - 8 articles - MEDIUM / BULLISH - Global Market: China\u2019s July exports top forecasts as AI boom and pre-tariff rush fuel trade growth"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Cybersecurity - 7 articles - MEDIUM / BULLISH - 'AI Kill Switch' bill needs to be passed this year amid ongoing rogue agent hacks, Rep. Lieu says"
     },
     {
       "tag": "tag-bull",
@@ -1274,11 +1279,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Defense & Aerospace - 23 articles - HIGH / BULLISH - Why was Taiwan\u2019s president evacuated in the middle of the night?"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Cybersecurity - 6 articles - MEDIUM / BULLISH - 'AI Kill Switch' bill needs to be passed this year amid ongoing rogue agent hacks, Rep. Lieu says"
     },
     {
       "tag": "tag-bear",
@@ -1411,11 +1411,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64975.0,
+      "price": 64956.08,
       "currency": "USD",
-      "change": 712.89,
-      "change_pct": 1.11,
-      "change_str": "+1.11%",
+      "change": 75.89,
+      "change_pct": 0.12,
+      "change_str": "+0.12%",
       "direction": "up"
     },
     {
@@ -1852,10 +1852,10 @@
     }
   },
   "logs": [
-    "2026-08-08 06:55:18 [INFO] AZALYST - status.json generated",
-    "2026-08-08 06:55:18 [INFO] PORTFOLIO - NAV USD 20,058.02 | Return -0.14%",
-    "2026-08-08 06:55:18 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-08 06:55:18 [INFO] TRADER - Open positions: ITA, XLF, VGK, XLE, CIBR, EWJ"
+    "2026-08-08 12:45:15 [INFO] AZALYST - status.json generated",
+    "2026-08-08 12:45:15 [INFO] PORTFOLIO - NAV USD 20,058.02 | Return -0.14%",
+    "2026-08-08 12:45:15 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-08 12:45:15 [INFO] TRADER - Open positions: ITA, XLF, VGK, XLE, CIBR, EWJ"
   ],
-  "generated_at": "2026-08-08 06:55:15 UTC"
+  "generated_at": "2026-08-08 12:45:11 UTC"
 }
