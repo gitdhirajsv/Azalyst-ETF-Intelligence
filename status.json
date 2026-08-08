@@ -39,7 +39,7 @@
       "pnl_pct_str": "+0.74%",
       "confidence": 94,
       "severity": "CRITICAL",
-      "days_held": 7,
+      "days_held": 8,
       "half_exited": false
     },
     {
@@ -62,7 +62,7 @@
       "pnl_pct_str": "+0.65%",
       "confidence": 89,
       "severity": "CRITICAL",
-      "days_held": 7,
+      "days_held": 8,
       "half_exited": false
     },
     {
@@ -85,7 +85,7 @@
       "pnl_pct_str": "+1.69%",
       "confidence": 72,
       "severity": "HIGH",
-      "days_held": 4,
+      "days_held": 5,
       "half_exited": false
     },
     {
@@ -131,7 +131,7 @@
       "pnl_pct_str": "+0.54%",
       "confidence": 79,
       "severity": "MEDIUM",
-      "days_held": 2,
+      "days_held": 3,
       "half_exited": false
     },
     {
@@ -344,6 +344,10 @@
       "score": 94.0
     },
     {
+      "symbol": "Defense & Aerospace",
+      "score": 92.0
+    },
+    {
       "symbol": "Banking & Financial Sector",
       "score": 89.0
     },
@@ -376,16 +380,12 @@
       "score": 74.0
     },
     {
-      "symbol": "Cybersecurity",
-      "score": 72.0
-    },
-    {
       "symbol": "Europe Equity",
       "score": 70.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 66.0
+      "symbol": "Cybersecurity",
+      "score": 65.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -411,20 +411,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 62,
-      "latest_at": "08 Aug 2026 12:37 UTC",
+      "article_count": 68,
+      "latest_at": "08 Aug 2026 18:30 UTC",
       "headline": "Chip Industry Week in Review",
       "regions": [
+        "india",
         "europe",
-        "middle_east",
-        "asia_pacific",
-        "india"
+        "global",
+        "asia_pacific"
       ],
       "sources": [
-        "www.theregister.com - Articles",
-        "Semiconductor Engineering",
-        "Tech",
-        "Oilprice.com"
+        "Bloomberg Markets",
+        "The Verge",
+        "Markets-Economic Times",
+        "Tech"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -450,7 +450,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 15.8,
-        "recency": 16.9,
+        "recency": 17.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -501,6 +501,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 16.0,
         "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 92.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 27,
+      "latest_at": "08 Aug 2026 17:41 UTC",
+      "headline": "How North Korean forces are bolstering Russia\u2019s war against Ukraine",
+      "regions": [
+        "india",
+        "africa",
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Oilprice.com",
+        "Tech",
+        "Defense News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.6,
+        "recency": 15.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -911,52 +964,6 @@
       }
     },
     {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 72.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "08 Aug 2026 12:00 UTC",
-      "headline": "'AI Kill Switch' bill needs to be passed this year amid ongoing rogue agent hacks, Rep. Lieu says",
-      "regions": [
-        "global",
-        "europe",
-        "asia_pacific"
-      ],
-      "sources": [
-        "www.theregister.com - Articles",
-        "US Top News and Analysis",
-        "Tech",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 13.4,
-        "volume_confirmation": 13.7,
-        "source_diversity": 6.7,
-        "recency": 15.9,
-        "geopolitical_severity": 11.7
-      }
-    },
-    {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity",
       "confidence": 70.0,
@@ -1005,56 +1012,49 @@
       }
     },
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 66.0,
-      "severity": "HIGH",
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 65.0,
+      "severity": "MEDIUM",
       "direction": "BULLISH",
-      "direction_score": 0.0,
+      "direction_score": 2.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "07 Aug 2026 11:02 UTC",
-      "headline": "Why was Taiwan\u2019s president evacuated in the middle of the night?",
+      "article_count": 7,
+      "latest_at": "08 Aug 2026 12:00 UTC",
+      "headline": "'AI Kill Switch' bill needs to be passed this year amid ongoing rogue agent hacks, Rep. Lieu says",
       "regions": [
-        "india",
-        "asia_pacific",
-        "middle_east",
-        "europe"
+        "europe",
+        "global",
+        "asia_pacific"
       ],
       "sources": [
-        "World News - Breaking international news and headlines | Sky News",
-        "Earnings",
-        "Markets-Economic Times",
-        "World | Deutsche Welle"
+        "US Top News and Analysis",
+        "www.theregister.com - Articles",
+        "Tech",
+        "Cointelegraph.com News"
       ],
-      "primary_etf": "ITA",
+      "primary_etf": "CIBR",
       "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
+        "CIBR",
+        "HACK"
       ],
       "access_markets": [
-        "India-listed",
         "International-listed"
       ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
+      "india_etfs": [],
       "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
+        "CIBR",
+        "HACK"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 21.5,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.6,
-        "recency": 17.0,
-        "geopolitical_severity": 13.0
+        "signal_strength": 13.4,
+        "volume_confirmation": 13.7,
+        "source_diversity": 6.7,
+        "recency": 8.8,
+        "geopolitical_severity": 11.7
       }
     },
     {
@@ -1218,12 +1218,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 62 articles - HIGH / BULLISH - Chip Industry Week in Review"
+      "text": "Technology & AI / Semiconductors - 68 articles - HIGH / BULLISH - Chip Industry Week in Review"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Asia Pacific Equity - 20 articles - HIGH / BULLISH - Yen rally fades a week after U.S.-Japan intervention as focus shifts to policy"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Defense & Aerospace - 27 articles - HIGH / BULLISH - How North Korean forces are bolstering Russia\u2019s war against Ukraine"
     },
     {
       "tag": "tag-bull",
@@ -1268,17 +1273,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Cybersecurity - 7 articles - MEDIUM / BULLISH - 'AI Kill Switch' bill needs to be passed this year amid ongoing rogue agent hacks, Rep. Lieu says"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "Europe Equity - 4 articles - HIGH / BULLISH - Global Market: Euro zone bond yields decline as falling oil prices boost market sentiment"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Defense & Aerospace - 23 articles - HIGH / BULLISH - Why was Taiwan\u2019s president evacuated in the middle of the night?"
+      "text": "Cybersecurity - 7 articles - MEDIUM / BULLISH - 'AI Kill Switch' bill needs to be passed this year amid ongoing rogue agent hacks, Rep. Lieu says"
     },
     {
       "tag": "tag-bear",
@@ -1411,11 +1411,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64956.08,
+      "price": 65017.43,
       "currency": "USD",
-      "change": 75.89,
-      "change_pct": 0.12,
-      "change_str": "+0.12%",
+      "change": 137.24,
+      "change_pct": 0.21,
+      "change_str": "+0.21%",
       "direction": "up"
     },
     {
@@ -1852,10 +1852,10 @@
     }
   },
   "logs": [
-    "2026-08-08 12:45:15 [INFO] AZALYST - status.json generated",
-    "2026-08-08 12:45:15 [INFO] PORTFOLIO - NAV USD 20,058.02 | Return -0.14%",
-    "2026-08-08 12:45:15 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-08 12:45:15 [INFO] TRADER - Open positions: ITA, XLF, VGK, XLE, CIBR, EWJ"
+    "2026-08-08 18:37:57 [INFO] AZALYST - status.json generated",
+    "2026-08-08 18:37:57 [INFO] PORTFOLIO - NAV USD 20,058.02 | Return -0.14%",
+    "2026-08-08 18:37:57 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-08 18:37:57 [INFO] TRADER - Open positions: ITA, XLF, VGK, XLE, CIBR, EWJ"
   ],
-  "generated_at": "2026-08-08 12:45:11 UTC"
+  "generated_at": "2026-08-08 18:37:54 UTC"
 }
