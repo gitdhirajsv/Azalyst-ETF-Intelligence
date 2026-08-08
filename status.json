@@ -235,30 +235,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "LOW_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.04174327542628108,
-    "vix_level": 14.899999618530273,
-    "vix_percentile_1y": 0.07936507936507936,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 30,
-      "flow": 22,
-      "options": 18,
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
       "rotation": 15,
-      "macro": 8,
-      "news": 7
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
     "ticker": "GDX",
     "rank_score": 24.550602409638557,
     "flow_score": 22.0,
-    "options_score": 18.047899976730033,
+    "options_score": 13.5,
     "rotation_score": 15.0,
     "macro_score": 5.3762906503927645,
-    "news_score": 4.83,
-    "total": 89.80479303676135,
+    "news_score": 4.4799999999999995,
+    "total": 84.90689306003132,
     "publish": true,
     "direction": "long"
   },
@@ -337,7 +337,7 @@
   "confidence": [
     {
       "symbol": "Technology & AI / Semiconductors",
-      "score": 98.0
+      "score": 96.0
     },
     {
       "symbol": "Asia Pacific Equity",
@@ -368,16 +368,16 @@
       "score": 82.0
     },
     {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 80.0
+    },
+    {
       "symbol": "Commodities & Mining",
       "score": 74.0
     },
     {
       "symbol": "Europe Equity",
       "score": 70.0
-    },
-    {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income",
-      "score": 69.0
     },
     {
       "symbol": "Defense & Aerospace",
@@ -404,27 +404,27 @@
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 98.0,
+      "confidence": 96.0,
       "severity": "HIGH",
       "direction": "BULLISH",
       "direction_score": 4.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 75,
-      "latest_at": "07 Aug 2026 18:56 UTC",
+      "article_count": 66,
+      "latest_at": "08 Aug 2026 01:12 UTC",
       "headline": "Global Market: SK Hynix approves $38.3 billion investment plan through 2031 to expand AI chip production",
       "regions": [
         "europe",
-        "middle_east",
+        "india",
         "americas",
-        "india"
+        "global"
       ],
       "sources": [
         "Latest from Tom's Hardware",
         "www.theregister.com - Articles",
-        "Tech",
-        "Semiconductor Engineering"
+        "Cointelegraph.com News",
+        "EE Times"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -449,8 +449,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.4,
-        "recency": 16.9,
+        "source_diversity": 14.8,
+        "recency": 17.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -809,6 +809,59 @@
       }
     },
     {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 80.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": -14.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "07 Aug 2026 20:08 UTC",
+      "headline": "US stocks: S&amp;P closes at record high as soft jobs report eases rate-hike concerns",
+      "regions": [
+        "global",
+        "india",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 17.4,
+        "source_diversity": 12.9,
+        "recency": 10.2,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "commodities_mining",
       "sector_label": "Commodities & Mining",
       "confidence": 74.0,
@@ -903,59 +956,6 @@
         "volume_confirmation": 9.7,
         "source_diversity": 11.0,
         "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income",
-      "confidence": 69.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": -12.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 14,
-      "latest_at": "07 Aug 2026 14:46 UTC",
-      "headline": "Fed Rate Hike Doesn't Make Sense Right Now, BlackRock's Rieder Says",
-      "regions": [
-        "middle_east",
-        "india",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "Oilprice.com",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.0,
-        "recency": 16.8,
         "geopolitical_severity": 13.0
       }
     },
@@ -1219,7 +1219,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 75 articles - HIGH / BULLISH - Global Market: SK Hynix approves $38.3 billion investment plan through 2031 to expand AI chip production"
+      "text": "Technology & AI / Semiconductors - 66 articles - HIGH / BULLISH - Global Market: SK Hynix approves $38.3 billion investment plan through 2031 to expand AI chip production"
     },
     {
       "tag": "tag-bull",
@@ -1259,17 +1259,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BULLISH - US stocks: S&amp;P closes at record high as soft jobs report eases rate-hike concerns"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Commodities & Mining - 8 articles - MEDIUM / BULLISH - Global Market: China\u2019s July exports top forecasts as AI boom and pre-tariff rush fuel trade growth"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Europe Equity - 4 articles - HIGH / BULLISH - Global Market: Euro zone bond yields decline as falling oil prices boost market sentiment"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income - 14 articles - CRITICAL / BULLISH - Fed Rate Hike Doesn't Make Sense Right Now, BlackRock's Rieder Says"
     },
     {
       "tag": "tag-bull",
@@ -1337,9 +1337,9 @@
       "region": "UK",
       "price": 10901.09,
       "currency": "GBP",
-      "change": 33.19,
-      "change_pct": 0.31,
-      "change_str": "+0.31%",
+      "change": 12.79,
+      "change_pct": 0.12,
+      "change_str": "+0.12%",
       "direction": "up"
     },
     {
@@ -1412,11 +1412,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64848.22,
+      "price": 64899.62,
       "currency": "USD",
-      "change": 586.11,
-      "change_pct": 0.91,
-      "change_str": "+0.91%",
+      "change": 637.51,
+      "change_pct": 0.99,
+      "change_str": "+0.99%",
       "direction": "up"
     },
     {
@@ -1853,10 +1853,10 @@
     }
   },
   "logs": [
-    "2026-08-07 22:58:57 [INFO] AZALYST - status.json generated",
-    "2026-08-07 22:58:57 [INFO] PORTFOLIO - NAV USD 20,058.13 | Return -0.14%",
-    "2026-08-07 22:58:57 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-07 22:58:57 [INFO] TRADER - Open positions: ITA, XLF, VGK, XLE, CIBR, EWJ"
+    "2026-08-08 01:19:18 [INFO] AZALYST - status.json generated",
+    "2026-08-08 01:19:18 [INFO] PORTFOLIO - NAV USD 20,058.13 | Return -0.14%",
+    "2026-08-08 01:19:18 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-08 01:19:18 [INFO] TRADER - Open positions: ITA, XLF, VGK, XLE, CIBR, EWJ"
   ],
-  "generated_at": "2026-08-07 22:58:53 UTC"
+  "generated_at": "2026-08-08 01:19:17 UTC"
 }
