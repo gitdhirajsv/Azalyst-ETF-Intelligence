@@ -108,7 +108,7 @@
       "pnl_pct_str": "-1.87%",
       "confidence": 96,
       "severity": "CRITICAL",
-      "days_held": 4,
+      "days_held": 5,
       "half_exited": false
     },
     {
@@ -235,19 +235,19 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.04174327483023464,
+    "vix_level": 14.899999618530273,
+    "vix_percentile_1y": 0.07936507936507936,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
+      "rank": 30,
+      "flow": 22,
+      "options": 18,
       "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "macro": 8,
+      "news": 7
     }
   },
   "top_signal": {
@@ -257,8 +257,8 @@
     "options_score": 15.981180013061447,
     "rotation_score": 15.0,
     "macro_score": 5.380996850427138,
-    "news_score": 4.536,
-    "total": 87.45204613471323,
+    "news_score": 4.816,
+    "total": 87.73204613471323,
     "publish": true,
     "direction": "long"
   },
@@ -336,6 +336,10 @@
   },
   "confidence": [
     {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 95.0
+    },
+    {
       "symbol": "Asia Pacific Equity",
       "score": 94.0
     },
@@ -346,6 +350,10 @@
     {
       "symbol": "Nuclear Energy & Uranium + Energy / Oil & Gas",
       "score": 87.0
+    },
+    {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 86.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -360,20 +368,8 @@
       "score": 84.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 83.0
-    },
-    {
       "symbol": "Clean Energy & Renewables + Commodities & Mining",
       "score": 82.0
-    },
-    {
-      "symbol": "Defense & Aerospace",
-      "score": 82.0
-    },
-    {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 81.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -382,6 +378,10 @@
     {
       "symbol": "Europe Equity",
       "score": 70.0
+    },
+    {
+      "symbol": "Defense & Aerospace",
+      "score": 66.0
     },
     {
       "symbol": "Cybersecurity",
@@ -401,6 +401,59 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 95.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 4.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 68,
+      "latest_at": "09 Aug 2026 11:31 UTC",
+      "headline": "Chip Industry Week in Review",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "europe",
+        "middle_east"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Tech",
+        "Semiconductor Engineering",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.8,
+        "recency": 15.1,
+        "geopolitical_severity": 13.0
+      }
+    },
     {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
@@ -555,6 +608,59 @@
       }
     },
     {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": -9.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "09 Aug 2026 12:01 UTC",
+      "headline": "Is 'Trumpflation' real? Why Wall Street fears this could be a reason for stock market crash",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "global",
+        "americas"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Finance",
+        "US Top News and Analysis",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 17.4,
+        "source_diversity": 12.9,
+        "recency": 15.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 86.0,
@@ -704,59 +810,6 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 83.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 4.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 65,
-      "latest_at": "08 Aug 2026 13:00 UTC",
-      "headline": "Chip Industry Week in Review",
-      "regions": [
-        "americas",
-        "global",
-        "asia_pacific",
-        "europe"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "Semiconductor Engineering",
-        "Oilprice.com",
-        "Tech"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.1,
-        "recency": 2.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables + Commodities & Mining",
       "confidence": 82.0,
@@ -805,111 +858,6 @@
         "volume_confirmation": 15.4,
         "source_diversity": 13.4,
         "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 82.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
-      "latest_at": "08 Aug 2026 17:41 UTC",
-      "headline": "How North Korean forces are bolstering Russia\u2019s war against Ukraine",
-      "regions": [
-        "americas",
-        "middle_east",
-        "global",
-        "europe"
-      ],
-      "sources": [
-        "BBC News",
-        "World News - Breaking international news and headlines | Sky News",
-        "Oilprice.com",
-        "World | Deutsche Welle"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.1,
-        "recency": 4.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 81.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": -24.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "08 Aug 2026 10:43 UTC",
-      "headline": "US stocks: S&amp;P closes at record high as soft jobs report eases rate-hike concerns",
-      "regions": [
-        "global",
-        "americas",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 16.2,
-        "source_diversity": 11.1,
-        "recency": 14.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -1008,6 +956,59 @@
         "volume_confirmation": 9.7,
         "source_diversity": 11.0,
         "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 66.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 28,
+      "latest_at": "09 Aug 2026 12:12 UTC",
+      "headline": "How North Korean forces are bolstering Russia\u2019s war against Ukraine",
+      "regions": [
+        "global",
+        "india",
+        "europe",
+        "middle_east"
+      ],
+      "sources": [
+        "Defense News",
+        "World News - Breaking international news and headlines | Sky News",
+        "Tech",
+        "BBC News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.6,
+        "recency": 16.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -1218,6 +1219,11 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Technology & AI / Semiconductors - 68 articles - HIGH / BULLISH - Chip Industry Week in Review"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Asia Pacific Equity - 20 articles - HIGH / BULLISH - Yen rally fades a week after U.S.-Japan intervention as focus shifts to policy"
     },
     {
@@ -1229,6 +1235,11 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Nuclear Energy & Uranium + Energy / Oil & Gas - 9 articles - CRITICAL / BULLISH - Global Market: Goldman Sachs sees Brent crude trading at $80-$90 until Iran conflict outlook clears"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BULLISH - Is 'Trumpflation' real? Why Wall Street fears this could be a reason for stock market crash"
     },
     {
       "tag": "tag-bear",
@@ -1248,22 +1259,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 65 articles - HIGH / BULLISH - Chip Industry Week in Review"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "Clean Energy & Renewables + Commodities & Mining - 9 articles - HIGH / BULLISH - Lucid begins 'operational reset' as CEO says EV maker will delay midsize vehicle"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Defense & Aerospace - 28 articles - HIGH / BULLISH - How North Korean forces are bolstering Russia\u2019s war against Ukraine"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 10 articles - HIGH / BULLISH - US stocks: S&amp;P closes at record high as soft jobs report eases rate-hike concerns"
     },
     {
       "tag": "tag-bull",
@@ -1274,6 +1270,11 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Europe Equity - 4 articles - HIGH / BULLISH - Global Market: Euro zone bond yields decline as falling oil prices boost market sentiment"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Defense & Aerospace - 28 articles - HIGH / BULLISH - How North Korean forces are bolstering Russia\u2019s war against Ukraine"
     },
     {
       "tag": "tag-bull",
@@ -1411,11 +1412,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64803.66,
+      "price": 64887.89,
       "currency": "USD",
-      "change": -76.53,
-      "change_pct": -0.12,
-      "change_str": "-0.12%",
+      "change": -16.8,
+      "change_pct": -0.03,
+      "change_str": "-0.03%",
       "direction": "down"
     },
     {
@@ -1852,10 +1853,10 @@
     }
   },
   "logs": [
-    "2026-08-09 06:53:28 [INFO] AZALYST - status.json generated",
-    "2026-08-09 06:53:28 [INFO] PORTFOLIO - NAV USD 20,058.02 | Return -0.14%",
-    "2026-08-09 06:53:28 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-09 06:53:28 [INFO] TRADER - Open positions: ITA, XLF, VGK, XLE, CIBR, EWJ"
+    "2026-08-09 12:50:54 [INFO] AZALYST - status.json generated",
+    "2026-08-09 12:50:54 [INFO] PORTFOLIO - NAV USD 20,058.02 | Return -0.14%",
+    "2026-08-09 12:50:54 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-09 12:50:54 [INFO] TRADER - Open positions: ITA, XLF, VGK, XLE, CIBR, EWJ"
   ],
-  "generated_at": "2026-08-09 06:53:27 UTC"
+  "generated_at": "2026-08-09 12:50:52 UTC"
 }
