@@ -336,16 +336,8 @@
   },
   "confidence": [
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 97.0
-    },
-    {
       "symbol": "Asia Pacific Equity",
       "score": 94.0
-    },
-    {
-      "symbol": "Defense & Aerospace",
-      "score": 92.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -360,8 +352,16 @@
       "score": 86.0
     },
     {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 86.0
+    },
+    {
       "symbol": "Emerging Markets + Crypto & Digital Assets",
       "score": 86.0
+    },
+    {
+      "symbol": "Defense & Aerospace",
+      "score": 85.0
     },
     {
       "symbol": "Bonds & Fixed Income + Banking & Financial Sector",
@@ -401,59 +401,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 97.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 4.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 68,
-      "latest_at": "08 Aug 2026 18:30 UTC",
-      "headline": "Chip Industry Week in Review",
-      "regions": [
-        "india",
-        "europe",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "The Verge",
-        "Markets-Economic Times",
-        "Tech"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.8,
-        "recency": 17.0,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
@@ -501,59 +448,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 16.0,
         "recency": 17.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 92.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 27,
-      "latest_at": "08 Aug 2026 17:41 UTC",
-      "headline": "How North Korean forces are bolstering Russia\u2019s war against Ukraine",
-      "regions": [
-        "india",
-        "africa",
-        "europe",
-        "global"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Oilprice.com",
-        "Tech",
-        "Defense News"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.6,
-        "recency": 15.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -707,6 +601,59 @@
       }
     },
     {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 4.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 64,
+      "latest_at": "08 Aug 2026 13:00 UTC",
+      "headline": "Chip Industry Week in Review",
+      "regions": [
+        "europe",
+        "asia_pacific",
+        "india",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Semiconductor Engineering",
+        "Latest from Tom's Hardware",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.1,
+        "recency": 5.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "emerging_markets",
       "sector_label": "Emerging Markets + Crypto & Digital Assets",
       "confidence": 86.0,
@@ -754,6 +701,59 @@
         "volume_confirmation": 15.4,
         "source_diversity": 11.0,
         "recency": 16.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 85.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 28,
+      "latest_at": "08 Aug 2026 17:41 UTC",
+      "headline": "How North Korean forces are bolstering Russia\u2019s war against Ukraine",
+      "regions": [
+        "europe",
+        "india",
+        "global",
+        "africa"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "World | Deutsche Welle",
+        "Cointelegraph.com News",
+        "BBC News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.6,
+        "recency": 7.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -1218,17 +1218,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 68 articles - HIGH / BULLISH - Chip Industry Week in Review"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "Asia Pacific Equity - 20 articles - HIGH / BULLISH - Yen rally fades a week after U.S.-Japan intervention as focus shifts to policy"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Defense & Aerospace - 27 articles - HIGH / BULLISH - How North Korean forces are bolstering Russia\u2019s war against Ukraine"
     },
     {
       "tag": "tag-bull",
@@ -1246,9 +1236,19 @@
       "text": "Crypto & Digital Assets - 28 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Technology & AI / Semiconductors - 64 articles - HIGH / BULLISH - Chip Industry Week in Review"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Emerging Markets + Crypto & Digital Assets - 9 articles - HIGH / BEARISH - Binance & OKX users face $1,900 fines in Vietnam, Coinbase in China? Asia Express"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Defense & Aerospace - 28 articles - HIGH / BULLISH - How North Korean forces are bolstering Russia\u2019s war against Ukraine"
     },
     {
       "tag": "tag-bear",
@@ -1411,11 +1411,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 65017.43,
+      "price": 64889.96,
       "currency": "USD",
-      "change": 137.24,
-      "change_pct": 0.21,
-      "change_str": "+0.21%",
+      "change": 9.77,
+      "change_pct": 0.02,
+      "change_str": "+0.02%",
       "direction": "up"
     },
     {
@@ -1852,10 +1852,10 @@
     }
   },
   "logs": [
-    "2026-08-08 18:37:57 [INFO] AZALYST - status.json generated",
-    "2026-08-08 18:37:57 [INFO] PORTFOLIO - NAV USD 20,058.02 | Return -0.14%",
-    "2026-08-08 18:37:57 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-08 18:37:57 [INFO] TRADER - Open positions: ITA, XLF, VGK, XLE, CIBR, EWJ"
+    "2026-08-09 01:25:05 [INFO] AZALYST - status.json generated",
+    "2026-08-09 01:25:05 [INFO] PORTFOLIO - NAV USD 20,058.02 | Return -0.14%",
+    "2026-08-09 01:25:05 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-09 01:25:05 [INFO] TRADER - Open positions: ITA, XLF, VGK, XLE, CIBR, EWJ"
   ],
-  "generated_at": "2026-08-08 18:37:54 UTC"
+  "generated_at": "2026-08-09 01:25:00 UTC"
 }
