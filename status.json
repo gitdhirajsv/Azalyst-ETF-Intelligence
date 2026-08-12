@@ -259,15 +259,15 @@
     }
   },
   "top_signal": {
-    "ticker": "XAR",
-    "rank_score": 28.640752351097177,
-    "flow_score": 22.0,
-    "options_score": 0.0,
-    "rotation_score": 0.0,
-    "macro_score": 0.0,
-    "news_score": 0.0,
-    "total": 50.64075235109718,
-    "publish": false,
+    "ticker": "GDX",
+    "rank_score": 27.191061452513964,
+    "flow_score": 0.0,
+    "options_score": 16.17395357857178,
+    "rotation_score": 15.0,
+    "macro_score": 2.6245826633028586,
+    "news_score": 4.816,
+    "total": 65.80559769438861,
+    "publish": true,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -388,15 +388,15 @@
       "score": 70.0
     },
     {
-      "symbol": "Nuclear Energy & Uranium + Europe Equity",
-      "score": 69.0
-    },
-    {
       "symbol": "Cybersecurity",
       "score": 69.0
     },
     {
       "symbol": "India Equity Markets",
+      "score": 63.0
+    },
+    {
+      "symbol": "Nuclear Energy & Uranium + Clean Energy & Renewables",
       "score": 63.0
     }
   ],
@@ -1065,57 +1065,6 @@
       }
     },
     {
-      "sector_key": "nuclear_uranium",
-      "sector_label": "Nuclear Energy & Uranium + Europe Equity",
-      "confidence": 69.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "11 Aug 2026 16:04 UTC",
-      "headline": "When extreme heat threatens Europe's nuclear power",
-      "regions": [
-        "india",
-        "europe",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "World | Deutsche Welle",
-        "Oilprice.com",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "URA",
-      "top_etfs": [
-        "URA",
-        "URNM",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "URA",
-        "URNM",
-        "SRUUF"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 9.7,
-        "volume_confirmation": 11.3,
-        "source_diversity": 9.9,
-        "recency": 17.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
       "confidence": 69.0,
@@ -1210,6 +1159,56 @@
         "recency": 16.4,
         "geopolitical_severity": 13.0
       }
+    },
+    {
+      "sector_key": "nuclear_uranium",
+      "sector_label": "Nuclear Energy & Uranium + Clean Energy & Renewables",
+      "confidence": 63.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "12 Aug 2026 21:45 UTC",
+      "headline": "MIT's New Framework Aims to Tackle Nuclear Fusion's Money Problem",
+      "regions": [
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "Oilprice.com",
+        "Latest from Tom's Hardware",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "URA",
+      "top_etfs": [
+        "URA",
+        "URNM",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "URA",
+        "URNM",
+        "SRUUF"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 8.1,
+        "volume_confirmation": 12.6,
+        "source_diversity": 9.1,
+        "recency": 15.1,
+        "geopolitical_severity": 9.9
+      }
     }
   ],
   "articles": [
@@ -1281,17 +1280,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Nuclear Energy & Uranium + Europe Equity - 5 articles - HIGH / BULLISH - When extreme heat threatens Europe's nuclear power"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "Cybersecurity - 8 articles - HIGH / BULLISH - Passenger returning from DEF CON 34 spoofs Delta Wi-Fi network while in flight using pentest tool \u2014 pilots tell ground crew to alert corporate security after attendee from hacking conference brings the party to the sky"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "India Equity Markets - 23 articles - HIGH / BULLISH - CAS chaos continues: Sensex falls 456 points, Nifty trims losses to close at 24,571. What lies ahead?"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Nuclear Energy & Uranium + Clean Energy & Renewables - 6 articles - MEDIUM / BULLISH - MIT's New Framework Aims to Tackle Nuclear Fusion's Money Problem"
     }
   ],
   "market_snapshot": [
@@ -1345,10 +1344,10 @@
       "region": "EU",
       "price": 26331.07,
       "currency": "EUR",
-      "change": -60.35,
-      "change_pct": -0.23,
-      "change_str": "-0.23%",
-      "direction": "down"
+      "change": 7.19,
+      "change_pct": 0.03,
+      "change_str": "+0.03%",
+      "direction": "up"
     },
     {
       "label": "Nikkei 225",
@@ -1387,33 +1386,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4469.0,
+      "price": 4459.4,
       "currency": "USD",
-      "change": 86.0,
-      "change_pct": 1.96,
-      "change_str": "+1.96%",
+      "change": 76.4,
+      "change_pct": 1.74,
+      "change_str": "+1.74%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 82.58,
+      "price": 82.69,
       "currency": "USD",
-      "change": -0.62,
-      "change_pct": -0.75,
-      "change_str": "-0.75%",
+      "change": -0.51,
+      "change_pct": -0.61,
+      "change_str": "-0.61%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63499.98,
+      "price": 63368.64,
       "currency": "USD",
-      "change": -51.89,
-      "change_pct": -0.08,
-      "change_str": "-0.08%",
+      "change": -183.24,
+      "change_pct": -0.29,
+      "change_str": "-0.29%",
       "direction": "down"
     },
     {
@@ -1422,9 +1421,9 @@
       "region": "FX",
       "price": 99.98,
       "currency": "USD",
-      "change": 0.16,
-      "change_pct": 0.16,
-      "change_str": "+0.16%",
+      "change": 0.17,
+      "change_pct": 0.17,
+      "change_str": "+0.17%",
       "direction": "up"
     },
     {
@@ -1485,35 +1484,35 @@
         "CIBR": {
           "CIBR": 1.0,
           "EWJ": 0.323,
-          "ITA": -0.193,
+          "ITA": 0.292,
           "VGK": 0.286,
           "XLE": -0.008
         },
         "EWJ": {
           "CIBR": 0.323,
           "EWJ": 1.0,
-          "ITA": 0.266,
+          "ITA": 0.2,
           "VGK": 0.732,
           "XLE": -0.194
         },
         "ITA": {
-          "CIBR": -0.193,
-          "EWJ": 0.266,
+          "CIBR": 0.292,
+          "EWJ": 0.2,
           "ITA": 1.0,
-          "VGK": 0.167,
-          "XLE": 0.478
+          "VGK": 0.177,
+          "XLE": -0.421
         },
         "VGK": {
           "CIBR": 0.286,
           "EWJ": 0.732,
-          "ITA": 0.167,
+          "ITA": 0.177,
           "VGK": 1.0,
           "XLE": -0.276
         },
         "XLE": {
           "CIBR": -0.008,
           "EWJ": -0.194,
-          "ITA": 0.478,
+          "ITA": -0.421,
           "VGK": -0.276,
           "XLE": 1.0
         }
@@ -1530,22 +1529,22 @@
         "EWJ",
         "VGK"
       ],
-      "most_negative_corr": -0.276,
+      "most_negative_corr": -0.421,
       "most_negative_pair": [
-        "VGK",
+        "ITA",
         "XLE"
       ],
       "status": "HIGH"
     },
     "volatility": {
       "per_ticker": {
-        "ITA": 26.05,
+        "ITA": 22.2,
         "VGK": 12.53,
         "XLE": 23.07,
         "CIBR": 26.37,
         "EWJ": 23.42
       },
-      "portfolio_avg_vol_pct": 22.29,
+      "portfolio_avg_vol_pct": 21.52,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -1780,11 +1779,11 @@
     }
   },
   "logs": [
-    "2026-08-12 21:54:20 [INFO] AZALYST - status.json generated",
-    "2026-08-12 21:54:20 [INFO] PORTFOLIO - NAV USD 20,496.89 | Return +2.17%",
-    "2026-08-12 21:54:20 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-12 21:54:20 [INFO] TRADER - Open positions: ITA, VGK, XLE, CIBR, EWJ",
-    "2026-08-12 21:54:20 [INFO] TRADER - Closed trades: 1"
+    "2026-08-12 22:59:14 [INFO] AZALYST - status.json generated",
+    "2026-08-12 22:59:14 [INFO] PORTFOLIO - NAV USD 20,496.89 | Return +2.17%",
+    "2026-08-12 22:59:14 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-12 22:59:14 [INFO] TRADER - Open positions: ITA, VGK, XLE, CIBR, EWJ",
+    "2026-08-12 22:59:14 [INFO] TRADER - Closed trades: 1"
   ],
-  "generated_at": "2026-08-12 21:54:18 UTC"
+  "generated_at": "2026-08-12 22:59:13 UTC"
 }
