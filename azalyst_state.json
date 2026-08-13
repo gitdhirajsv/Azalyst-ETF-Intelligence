@@ -929,44 +929,46 @@
     }
   },
   "energy_oil": {
-    "sent_at": "2026-08-13T07:48:38.132057+00:00",
+    "sent_at": "2026-08-13T15:01:44.090425+00:00",
     "confidence": 92,
     "sector_label": "Energy / Oil & Gas",
-    "article_count": 20,
+    "article_count": 27,
     "severity": "CRITICAL",
     "direction": "BULLISH",
-    "direction_score": 0.0,
+    "direction_score": -1.5,
     "signal_scope": "global",
-    "india_article_ratio": 0.0,
+    "india_article_ratio": 0.04,
     "regions": [
-      "global",
       "europe",
-      "middle_east",
+      "india",
+      "americas",
+      "global",
       "asia_pacific",
-      "americas"
+      "middle_east"
     ],
     "sources": [
-      "World | Deutsche Welle",
-      "Oilprice.com",
-      "Markets-Economic Times",
       "US Top News and Analysis",
+      "Markets-Economic Times",
+      "Oilprice.com",
+      "World | Deutsche Welle",
+      "BBC News",
       "Bloomberg Markets"
     ],
     "top_headlines": [
       "Oil Prices Fall as OPEC and IEA Slash 2026 Demand Outlooks",
       "EIA Sees 600,000 Bpd of Middle East Oil Still Offline by End-2027",
-      "Goh: Long Mideast Conflict Hit Crude Product Prices",
-      "Trump Puts 81 Million Gulf Acres Up for Oil and Gas Auction",
+      "New Zealand Approves New Oil and Gas Production as Energy Security Concerns Grow",
+      "High Oil Prices Deliver a Windfall for China\u2019s Coal-to-Chemicals Industry",
       "Saudi Arabia ramps up oil exports through Mediterranean pipeline to avoid attacks in Red Sea"
     ],
-    "latest_ts": "2026-08-13T07:46:54.568092+00:00",
+    "latest_ts": "2026-08-13T14:59:47.855867+00:00",
     "confidence_breakdown": {
       "signal_strength": 22.0,
       "volume_confirmation": 18.0,
-      "source_diversity": 13.3,
-      "recency": 17.0,
+      "source_diversity": 14.9,
+      "recency": 16.9,
       "geopolitical_severity": 13.0,
-      "cross_engine_confirmation": 9.2,
+      "cross_engine_confirmation": 7.7,
       "macro_events": 0.0
     },
     "etf_recommendations": {
@@ -1037,8 +1039,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 66.0,
-          "selection_notes": []
+          "selection_score": 69.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         },
         {
           "name": "United States Oil Fund",
@@ -1070,8 +1074,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 45.0,
-          "selection_notes": []
+          "selection_score": 48.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "top_etfs": [
@@ -1122,8 +1128,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 66.0,
-          "selection_notes": []
+          "selection_score": 69.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "regional_alternatives": {
@@ -1140,8 +1148,10 @@
             "sector_key": "energy_oil",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 66.0,
-            "selection_notes": []
+            "selection_score": 69.0,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
           },
           {
             "name": "Nippon India ETF Nifty PSU Bank BeES",
@@ -1155,8 +1165,10 @@
             "sector_key": "energy_oil",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 45.0,
-            "selection_notes": []
+            "selection_score": 48.0,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
           }
         ],
         "International-listed": [
@@ -1228,8 +1240,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 66.0,
-          "selection_notes": []
+          "selection_score": 69.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         },
         {
           "name": "Nippon India ETF Nifty PSU Bank BeES",
@@ -1243,8 +1257,10 @@
           "sector_key": "energy_oil",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 45.0,
-          "selection_notes": []
+          "selection_score": 48.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "global": [
@@ -4870,40 +4886,38 @@
     }
   },
   "cybersecurity": {
-    "sent_at": "2026-08-12T19:04:00.148456+00:00",
-    "confidence": 69,
+    "sent_at": "2026-08-13T15:01:46.709188+00:00",
+    "confidence": 68,
     "sector_label": "Cybersecurity",
-    "article_count": 8,
+    "article_count": 6,
     "severity": "HIGH",
     "direction": "BULLISH",
-    "direction_score": 10.0,
+    "direction_score": 6.0,
     "signal_scope": "global",
     "india_article_ratio": 0.0,
     "regions": [
-      "europe",
-      "middle_east",
-      "global"
+      "global",
+      "middle_east"
     ],
     "sources": [
-      "Cointelegraph.com News",
       "www.theregister.com - Articles",
       "Latest from Tom's Hardware"
     ],
     "top_headlines": [
       "Passenger returning from DEF CON 34 spoofs Delta Wi-Fi network while in flight using pentest tool \u2014 pilots tell ground crew to alert corporate security after attendee from hacking conference brings the party to the sky",
       "Suspected China-linked hackers used AI to run the first-ever end-to-end autonomous cyberattack on Taiwan's government, Israeli firm says \u2014 open-source-built tool continuously devised effective hack strategies in real-time",
-      "Feds warn Gunra ransomware is exploiting known bugs to hit critical infrastructure",
+      "Critical 'Zoomsday' flaw enables total device takeover during Zoom calls \u2014 AI-assisted research only used 20 prompts to find an exploit to hack hundreds of millions of people.",
       "Akira ransomware scum blocked victim's security tools \u2013 and broke their own encryptor",
-      "Two wars and a World Cup lead to epic DDoS attacks on publishers"
+      "Smooth-talking fraudsters clone contactless cards, authorize payments in just 13 minutes"
     ],
-    "latest_ts": "2026-08-12T15:05:00+00:00",
+    "latest_ts": "2026-08-13T12:04:32+00:00",
     "confidence_breakdown": {
-      "signal_strength": 17.0,
-      "volume_confirmation": 14.6,
-      "source_diversity": 4.9,
-      "recency": 11.4,
+      "signal_strength": 14.5,
+      "volume_confirmation": 12.6,
+      "source_diversity": 4.7,
+      "recency": 12.7,
       "geopolitical_severity": 13.0,
-      "cross_engine_confirmation": 9.0,
+      "cross_engine_confirmation": 10.6,
       "macro_events": 0.0
     },
     "etf_recommendations": {
