@@ -963,3 +963,110 @@ def _empty_report() -> Dict:
             "worst_loss_pct": 0.0,
         },
     }
+
+
+# ── 6. CFA-grade Statistical Risk Metrics ────────────────────────────────────
+# Complements deterministic stress tests with statistical risk measures.
+# CFA L1V9: VaR, CVaR, beta, Treynor ratio, Jensen's alpha.
+
+def compute_portfolio_var(
+    equity_curve: List[float],
+    confidence: float = 0.95,
+) -> Dict[str, Optional[float]]:
+    """Historical Value at Risk from the portfolio equity time series.
+
+    CFA L1V9: "VaR answers the question: what is the maximum expected loss
+    at a given confidence level over a given time horizon?"
+
+    Returns daily VaR and CVaR (Expected Shortfall) at the given confidence.
+    """
+    if not equity_curve or len(equity_curve) < 10:
+        return {"var_daily_pct": None, "cvar_daily_pct": None, "data_points": 0}
+
+    eq = np.array(equity_curve, dtype=float)
+    returns = eq[1:] / eq[:-1] - 1.0
+
+    var_threshold = float(np.percentile(returns, (1 - confidence) * 100))
+    tail = returns[returns <= var_threshold]
+    cvar = float(np.mean(tail)) if len(tail) > 0 else var_threshold
+
+    return {
+        "var_daily_pct": round(var_threshold * 100, 2),
+        "cvar_daily_pct": round(cvar * 100, 2),
+        "confidence": confidence,
+        "data_points": len(returns),
+    }
+
+
+def compute_portfolio_beta(
+    portfolio_curve: List[float],
+    benchmark_curve: Optional[List[float]] = None,
+    benchmark_ticker: str = BENCHMARK_TICKER,
+) -> Dict[str, Optional[float]]:
+    """Portfolio beta and CAPM decomposition vs benchmark.
+
+    CFA L1V9: β = Cov(R_p, R_m) / Var(R_m).
+    Jensen's Alpha = R_p - [R_f + β(R_m - R_f)].
+    Treynor = (R_p - R_f) / β.
+    """
+    rf = 0.05  # annualized risk-free rate
+
+    if benchmark_curve is None:
+        # Fetch benchmark from Yahoo
+        closes = _fetch_chart(benchmark_ticker, range_str="1y", interval="1d")
+        if not closes or len(closes) < 10:
+            return {"beta": None, "jensens_alpha": None, "treynor": None}
+        benchmark_curve = closes
+
+    n = min(len(portfolio_curve), len(benchmark_curve))
+    if n < 10:
+        return {"beta": None, "jensens_alpha": None, "treynor": None}
+
+    p_eq = np.array(portfolio_curve[:n], dtype=float)
+    b_eq = np.array(benchmark_curve[:n], dtype=float)
+    p_rets = p_eq[1:] / p_eq[:-1] - 1.0
+    b_rets = b_eq[1:] / b_eq[:-1] - 1.0
+
+    cov_matrix = np.cov(p_rets, b_rets)
+    beta = float(cov_matrix[0, 1] / cov_matrix[1, 1]) if cov_matrix[1, 1] != 0 else None
+
+    if beta is None:
+        return {"beta": None, "jensens_alpha": None, "treynor": None}
+
+    ann_p = float(np.mean(p_rets) * ANNUALISE_FACTOR ** 2)  # approximate annualization
+    ann_b = float(np.mean(b_rets) * ANNUALISE_FACTOR ** 2)
+    jensens = ann_p - (rf + beta * (ann_b - rf))
+    treynor = (ann_p - rf) / beta if beta != 0 else None
+
+    return {
+        "beta": round(beta, 4),
+        "jensens_alpha": round(jensens, 4),
+        "treynor": round(treynor, 4) if treynor is not None else None,
+        "annualized_portfolio_return": round(ann_p * 100, 2),
+        "annualized_benchmark_return": round(ann_b * 100, 2),
+    }
+
+
+def compute_factor_exposure(
+    positions: List[Dict],
+    portfolio_value: float,
+) -> Dict[str, float]:
+    """Factor exposure breakdown — what % of the portfolio is in each risk factor.
+
+    CFA L3 Asset Allocation: Factor-based decomposition shows the portfolio's
+    true risk concentrations beyond what simple sector labels reveal.
+    """
+    if not positions or portfolio_value <= 0:
+        return {}
+
+    factor_weights: Dict[str, float] = {}
+    for pos in positions:
+        ticker = pos.get("ticker", "")
+        sector = pos.get("sector", "")
+        value = pos.get("current_price", pos.get("entry_price", 0)) * pos.get("units", 0)
+        weight = value / portfolio_value if portfolio_value > 0 else 0
+
+        factor = _get_factor(sector, ticker)
+        factor_weights[factor] = factor_weights.get(factor, 0) + weight
+
+    return {k: round(v * 100, 2) for k, v in sorted(factor_weights.items(), key=lambda x: -x[1])}

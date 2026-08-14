@@ -65,6 +65,17 @@ HARD_STOP_BY_RISK       = {"LOW": 0.05, "MEDIUM": 0.07, "HIGH": 0.12}
 # ratchets upward (see _update_position_risk) — it never actually loosens in
 # rupee terms; a wider pct just means new highs raise the stop more gently.
 TRAIL_STEP_PCTS         = (0.08, 0.09, 0.10, 0.12)
+# Minervini-style multi-step scale-out ladder:
+#   "Sell into strength in tranches. Nail down partial profits at key
+#   targets, and trail the rest." — Think and Trade Like a Champion, Ch.9
+# Each tuple = (ROI threshold, fraction of REMAINING position to bank)
+PROFIT_LADDER = [
+    (0.08, 0.25),   # +8%  → bank 25% of remaining
+    (0.15, 0.33),   # +15% → bank 33% of remaining (~25% of original)
+    (0.25, 0.50),   # +25% → bank 50% of remaining (~25% of original)
+    # Remaining ~25% rides the trailing stop
+]
+# Legacy single-step constants (kept for backward compat; ladder takes priority)
 PARTIAL_PROFIT_PCT      = 0.08
 PARTIAL_PROFIT_FRACTION = 0.50
 SECTOR_CAP_PCT          = 0.30
@@ -782,6 +793,9 @@ class PaperPortfolio:
         self.monthly_deposits: Dict[str, float] = {}
         self.trade_counter               = 0
         self.monthly_reserve_inr         = 0.0
+        # CFA L3 Performance Evaluation: equity curve for Sharpe/Sortino/VaR.
+        # Each entry = {date, total_equity, cash, invested, benchmark_spy}.
+        self.equity_curve: List[Dict]    = []
         # Regime stop multiplier: <1.0 tightens hard stops in high-VIX tape.
         # Refreshed once per mark_to_market; defaults to neutral until then.
         self._regime_stop_mult           = 1.0
@@ -822,6 +836,7 @@ class PaperPortfolio:
             self.monthly_deposits           = data.get("monthly_deposits", {})
             self.trade_counter              = data.get("trade_counter", 0)
             self.monthly_reserve_inr        = data.get("monthly_reserve_inr", 0.0)
+            self.equity_curve               = data.get("equity_curve", [])
             self.open_positions             = [Position.from_dict(p) for p in data.get("open_positions", [])]
             self.open_hedge_positions       = [Position.from_dict(p) for p in data.get("open_hedge_positions", [])]
             self.closed_trades              = [ClosedTrade.__new__(ClosedTrade) for _ in data.get("closed_trades", [])]
@@ -884,6 +899,7 @@ class PaperPortfolio:
                 "monthly_deposits":            self.monthly_deposits,
                 "trade_counter":               self.trade_counter,
                 "monthly_reserve_inr":         round(self.monthly_reserve_inr, 2),
+                "equity_curve":                self.equity_curve,
                 "open_positions":              [p.to_dict() for p in self.open_positions],
                 "open_hedge_positions":        [p.to_dict() for p in getattr(self, "open_hedge_positions", [])],
                 "closed_trades":               [ct.to_dict() for ct in self.closed_trades],
@@ -1038,6 +1054,39 @@ class PaperPortfolio:
 
     def _circuit_breaker_active(self) -> bool:
         return self._current_drawdown_pct() >= CIRCUIT_BREAKER_DRAWDOWN_PCT * 100
+
+    def _record_equity_snapshot(self):
+        """Record a point on the equity curve for CFA L3 performance analytics.
+
+        Called once per mark_to_market cycle. Captures total portfolio value,
+        cash, invested amount, and a SPY benchmark point for relative metrics
+        (Information Ratio, beta, Jensen's alpha, up/down capture).
+        """
+        today = date.today().isoformat()
+        # Avoid duplicate entries for same date (idempotent reruns)
+        if self.equity_curve and self.equity_curve[-1].get("date") == today:
+            self.equity_curve[-1]["total_equity"] = self._portfolio_value()
+            return
+
+        # Fetch SPY benchmark price for relative performance metrics
+        spy_price = None
+        try:
+            spy_price = _yahoo_chart_price("SPY")
+        except Exception:
+            pass
+
+        snapshot = {
+            "date": today,
+            "total_equity": round(self._portfolio_value(), 2),
+            "cash": round(self.cash_inr + self.monthly_reserve_inr, 2),
+            "invested": round(self._total_market_value(), 2),
+            "benchmark_spy": round(spy_price, 2) if spy_price else None,
+        }
+        self.equity_curve.append(snapshot)
+        # Keep max 500 entries (~2 years of daily data) to prevent JSON bloat
+        if len(self.equity_curve) > 500:
+            self.equity_curve = self.equity_curve[-500:]
+
 
     def _sector_market_value(self, sector: str) -> float:
         return round(
@@ -1345,25 +1394,29 @@ class PaperPortfolio:
         return rotation_exits
 
     def _execute_partial_profit(self, position: Position) -> Optional[Dict]:
-        """Freqtrade-inspired Dynamic Step-ROI Logic."""
+        """Minervini-style multi-step profit ladder.
+
+        "Sell into strength in tranches — nail down partial profits at key
+        targets, and trail the rest." — Think and Trade Like a Champion, Ch.9
+
+        Uses PROFIT_LADDER defined at module level:
+          +8%  → bank 25% of remaining
+          +15% → bank 33% of remaining
+          +25% → bank 50% of remaining
+          Remainder rides the trailing stop.
+        """
         if not is_weekday_trade_session():
             return None
 
-        roi_table = [
-            {"target_pct": 0.05, "sell_fraction": 0.25},
-            {"target_pct": 0.10, "sell_fraction": 0.33},
-            {"target_pct": 0.15, "sell_fraction": 0.50},
-        ]
-
         step = getattr(position, "roi_step", 0)
-        if step >= len(roi_table):
+        if step >= len(PROFIT_LADDER):
             return None
 
-        current_step = roi_table[step]
-        if position.current_price < position.entry_price * (1 + current_step["target_pct"]):
+        target_pct, sell_fraction = PROFIT_LADDER[step]
+        if position.current_price < position.entry_price * (1 + target_pct):
             return None
 
-        sell_units      = round(position.units * current_step["sell_fraction"], 6)
+        sell_units      = round(position.units * sell_fraction, 6)
         remaining_units = round(position.units - sell_units, 6)
         if sell_units <= 0 or remaining_units <= 0:
             return None
@@ -1905,6 +1958,8 @@ class PaperPortfolio:
             exits.append(self._close_position(position, exit_price, exit_date, reason))
 
         self._update_drawdown_state()
+        # Record equity curve snapshot for performance analytics
+        self._record_equity_snapshot()
         self.save()
 
         if exits:
