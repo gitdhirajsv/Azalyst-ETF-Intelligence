@@ -1,20 +1,20 @@
 {
-  "portfolio_value": 9992.67,
+  "portfolio_value": 9991.59,
   "total_deposited": 10000.0,
   "cash": 6676.13,
   "monthly_reserve": 0.0,
-  "market_value": 3316.54,
+  "market_value": 3315.46,
   "total_invested": 3323.87,
-  "unrealised_pnl": -7.33,
-  "unrealised_str": "-7.33",
+  "unrealised_pnl": -8.41,
+  "unrealised_str": "-8.41",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "-0.07%",
-  "change_raw": -0.07,
+  "change": "-0.08%",
+  "change_raw": -0.08,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 10000.0,
-  "drawdown_now_pct": 0.07,
+  "drawdown_now_pct": 0.08,
   "max_drawdown_pct": 0.09,
   "deposited_anomaly": false,
   "usd_inr_rate": 95.415,
@@ -50,16 +50,16 @@
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 58.32,
-      "current": 58.19,
+      "current": 58.15,
       "peak_price": 58.32,
       "trail_stop": 54.24,
-      "dist_to_trail_pct": 6.8,
+      "dist_to_trail_pct": 6.74,
       "units": 17.548769,
       "invested": 1023.52,
-      "pnl": -2.25,
-      "pnl_str": "-2.25",
-      "pnl_pct": -0.22,
-      "pnl_pct_str": "-0.22%",
+      "pnl": -2.87,
+      "pnl_str": "-2.87",
+      "pnl_pct": -0.28,
+      "pnl_pct_str": "-0.28%",
       "confidence": 89,
       "severity": "CRITICAL",
       "days_held": 0,
@@ -73,16 +73,16 @@
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 61.93,
-      "current": 62.01,
+      "current": 61.97,
       "peak_price": 62.01,
       "trail_stop": 57.59,
-      "dist_to_trail_pct": 7.12,
+      "dist_to_trail_pct": 7.06,
       "units": 13.43268,
       "invested": 831.93,
-      "pnl": 1.05,
-      "pnl_str": "+1.05",
-      "pnl_pct": 0.13,
-      "pnl_pct_str": "+0.13%",
+      "pnl": 0.58,
+      "pnl_str": "+0.58",
+      "pnl_pct": 0.07,
+      "pnl_pct_str": "+0.07%",
       "confidence": 90,
       "severity": "CRITICAL",
       "days_held": 0,
@@ -145,9 +145,9 @@
       {
         "era": "current",
         "total_deposited": 10000.0,
-        "portfolio_value": 9992.67,
+        "portfolio_value": 9991.59,
         "realised_pnl": 0.0,
-        "change": "-0.07%",
+        "change": "-0.08%",
         "total_trades": 0,
         "winners": 0,
         "losers": 0,
@@ -166,30 +166,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "LOW_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.04299587348985301,
-    "vix_level": 14.460000038146973,
-    "vix_percentile_1y": 0.031746031746031744,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 30,
-      "flow": 22,
-      "options": 18,
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
       "rotation": 15,
-      "macro": 8,
-      "news": 7
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
-    "ticker": "EWY",
-    "rank_score": 19.966101694915253,
-    "flow_score": 6.2559962449764015,
-    "options_score": 20.13610646227696,
-    "rotation_score": 15.0,
-    "macro_score": 2.8530562789927107,
-    "news_score": 4.816,
-    "total": 69.02726068116132,
+    "ticker": "XLF",
+    "rank_score": 21.721297602256698,
+    "flow_score": 8.02227488415531,
+    "options_score": 16.8673416280653,
+    "rotation_score": 11.249736503462106,
+    "macro_score": 5.290237680225346,
+    "news_score": 4.984,
+    "total": 68.13488829816475,
     "publish": true,
     "direction": "long"
   },
@@ -237,8 +237,8 @@
     ],
     "values": [
       -5.94,
-      -2.25,
-      1.05
+      -2.87,
+      0.58
     ]
   },
   "confidence": [
@@ -1206,33 +1206,33 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7779.71,
+      "price": 7781.62,
       "currency": "USD",
-      "change": -19.28,
-      "change_pct": -0.25,
-      "change_str": "-0.25%",
+      "change": -17.37,
+      "change_pct": -0.22,
+      "change_str": "-0.22%",
       "direction": "down"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 26677.19,
+      "price": 26696.91,
       "currency": "USD",
-      "change": -125.84,
-      "change_pct": -0.47,
-      "change_str": "-0.47%",
+      "change": -106.12,
+      "change_pct": -0.4,
+      "change_str": "-0.40%",
       "direction": "down"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 53690.78,
+      "price": 53742.89,
       "currency": "USD",
-      "change": -149.21,
-      "change_pct": -0.28,
-      "change_str": "-0.28%",
+      "change": -97.1,
+      "change_pct": -0.18,
+      "change_str": "-0.18%",
       "direction": "down"
     },
     {
@@ -1294,63 +1294,63 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4442.8,
+      "price": 4435.5,
       "currency": "USD",
-      "change": 79.2,
-      "change_pct": 1.82,
-      "change_str": "+1.82%",
+      "change": 71.9,
+      "change_pct": 1.65,
+      "change_str": "+1.65%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 81.95,
+      "price": 82.38,
       "currency": "USD",
-      "change": 0.7,
-      "change_pct": 0.86,
-      "change_str": "+0.86%",
+      "change": 1.13,
+      "change_pct": 1.39,
+      "change_str": "+1.39%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63084.98,
+      "price": 62968.2,
       "currency": "USD",
-      "change": -317.19,
-      "change_pct": -0.5,
-      "change_str": "-0.50%",
+      "change": -433.97,
+      "change_pct": -0.68,
+      "change_str": "-0.68%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.61,
+      "price": 99.68,
       "currency": "USD",
-      "change": -0.35,
-      "change_pct": -0.35,
-      "change_str": "-0.35%",
+      "change": -0.28,
+      "change_pct": -0.28,
+      "change_str": "-0.28%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 14.46,
+      "price": 14.34,
       "currency": "USD",
-      "change": -0.17,
-      "change_pct": -1.16,
-      "change_str": "-1.16%",
+      "change": -0.29,
+      "change_pct": -1.98,
+      "change_str": "-1.98%",
       "direction": "down"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.07,
+    "drawdown_from_peak_pct": 0.08,
     "portfolio_peak": 10000.0,
-    "vix": 14.46,
+    "vix": 14.34,
     "vix_regime": "NORMAL",
     "sector_concentration": [
       {
@@ -1382,7 +1382,7 @@
         "EWJ": {
           "EWJ": 1.0,
           "XLE": -0.209,
-          "XLF": 0.193
+          "XLF": 0.194
         },
         "XLE": {
           "EWJ": -0.209,
@@ -1390,7 +1390,7 @@
           "XLF": -0.446
         },
         "XLF": {
-          "EWJ": 0.193,
+          "EWJ": 0.194,
           "XLE": -0.446,
           "XLF": 1.0
         }
@@ -1400,7 +1400,7 @@
         "XLE",
         "XLF"
       ],
-      "max_corr": 0.193,
+      "max_corr": 0.194,
       "max_corr_pair": [
         "EWJ",
         "XLF"
@@ -1415,49 +1415,49 @@
     "volatility": {
       "per_ticker": {
         "EWJ": 22.78,
-        "XLF": 10.22,
-        "XLE": 22.92
+        "XLF": 10.23,
+        "XLE": 22.84
       },
-      "portfolio_avg_vol_pct": 18.64,
+      "portfolio_avg_vol_pct": 18.62,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 2.39,
+      "benchmark_return_pct": 2.42,
       "benchmark_price_start": 757.67,
-      "benchmark_price_now": 775.79,
+      "benchmark_price_now": 776.02,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.07,
-      "alpha": -2.46
+      "portfolio_return_pct": -0.08,
+      "alpha": -2.5
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 66.81,
+          "actual_weight_pct": 66.82,
           "target_weight_pct": 10.0,
-          "drift_pct": 56.81,
+          "drift_pct": 56.82,
           "action": "DEPLOY",
-          "amount": 5676.86,
+          "amount": 5676.97,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
         {
           "ticker": "XLE",
-          "actual_weight_pct": 8.34,
+          "actual_weight_pct": 8.33,
           "target_weight_pct": 30.0,
-          "drift_pct": -21.66,
+          "drift_pct": -21.67,
           "action": "ADD",
-          "amount": 2164.91,
+          "amount": 2165.05,
           "etf_name": "Energy Select Sector SPDR",
           "regime_note": ""
         },
         {
           "ticker": "XLF",
-          "actual_weight_pct": 10.22,
+          "actual_weight_pct": 10.21,
           "target_weight_pct": 30.0,
-          "drift_pct": -19.78,
+          "drift_pct": -19.79,
           "action": "ADD",
-          "amount": 1976.64,
+          "amount": 1976.93,
           "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
@@ -1467,7 +1467,7 @@
           "target_weight_pct": 30.0,
           "drift_pct": -15.36,
           "action": "ADD",
-          "amount": 1535.32,
+          "amount": 1534.99,
           "etf_name": "iShares MSCI Japan ETF",
           "regime_note": ""
         }
@@ -1478,8 +1478,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -1451.55,
-          "portfolio_loss_pct": -14.53,
+          "total_impact": -1451.05,
+          "portfolio_loss_pct": -14.52,
           "position_impacts": [
             {
               "ticker": "EWJ",
@@ -1491,19 +1491,19 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -408.47
+              "impact": -408.22
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -458.09
+              "impact": -457.83
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -1385.82,
-          "portfolio_loss_pct": -13.87,
+          "total_impact": -1385.31,
+          "portfolio_loss_pct": -13.86,
           "position_impacts": [
             {
               "ticker": "EWJ",
@@ -1515,18 +1515,18 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -347.2
+              "impact": -346.99
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -541.38
+              "impact": -541.08
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -455.84,
+          "total_impact": -455.7,
           "portfolio_loss_pct": -4.56,
           "position_impacts": [
             {
@@ -1539,18 +1539,18 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -153.17
+              "impact": -153.08
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -83.29
+              "impact": -83.24
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -323.63,
+          "total_impact": -323.51,
           "portfolio_loss_pct": -3.24,
           "position_impacts": [
             {
@@ -1563,18 +1563,18 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -81.69
+              "impact": -81.64
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -124.93
+              "impact": -124.86
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -613.64,
+          "total_impact": -613.43,
           "portfolio_loss_pct": -6.14,
           "position_impacts": [
             {
@@ -1587,26 +1587,26 @@
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -183.81
+              "impact": -183.7
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -166.58
+              "impact": -166.48
             }
           ]
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -14.53
+      "worst_loss_pct": -14.52
     }
   },
   "logs": [
-    "2026-08-14 17:01:14 [INFO] AZALYST - status.json generated",
-    "2026-08-14 17:01:14 [INFO] PORTFOLIO - NAV USD 9,992.67 | Return -0.07%",
-    "2026-08-14 17:01:14 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-14 17:01:14 [INFO] TRADER - Open positions: EWJ, XLF, XLE"
+    "2026-08-14 18:04:08 [INFO] AZALYST - status.json generated",
+    "2026-08-14 18:04:08 [INFO] PORTFOLIO - NAV USD 9,991.59 | Return -0.08%",
+    "2026-08-14 18:04:08 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-14 18:04:08 [INFO] TRADER - Open positions: EWJ, XLF, XLE"
   ],
-  "generated_at": "2026-08-14 17:01:12 UTC"
+  "generated_at": "2026-08-14 18:04:06 UTC"
 }
