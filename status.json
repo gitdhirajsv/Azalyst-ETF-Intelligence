@@ -85,7 +85,7 @@
       "pnl_pct_str": "-0.01%",
       "confidence": 90,
       "severity": "CRITICAL",
-      "days_held": 0,
+      "days_held": 1,
       "half_exited": false
     }
   ],
@@ -183,13 +183,13 @@
   },
   "top_signal": {
     "ticker": "XLF",
-    "rank_score": 19.163939899833057,
+    "rank_score": 19.77313432835821,
     "flow_score": 22.0,
-    "options_score": 0.0,
+    "options_score": 14.168311592395261,
     "rotation_score": 10.872191009721616,
     "macro_score": 5.37185958942462,
     "news_score": 4.984,
-    "total": 62.39199049897929,
+    "total": 77.1694965198997,
     "publish": true,
     "direction": "long"
   },
@@ -243,16 +243,20 @@
   },
   "confidence": [
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 91.0
-    },
-    {
       "symbol": "Banking & Financial Sector",
       "score": 89.0
     },
     {
+      "symbol": "Energy / Oil & Gas",
+      "score": 86.0
+    },
+    {
       "symbol": "Emerging Markets + Crypto & Digital Assets",
       "score": 86.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 85.0
     },
     {
       "symbol": "Bonds & Fixed Income + Banking & Financial Sector",
@@ -265,14 +269,6 @@
     {
       "symbol": "Crypto & Digital Assets",
       "score": 78.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 77.0
-    },
-    {
-      "symbol": "Asia Pacific Equity",
-      "score": 74.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -305,62 +301,13 @@
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 64.0
+    },
+    {
+      "symbol": "Asia Pacific Equity",
+      "score": 63.0
     }
   ],
   "signals": [
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 91.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 20,
-      "latest_at": "15 Aug 2026 11:49 UTC",
-      "headline": "Oil inches toward $90 on tanker attacks, lack of progress in Iran war peace deal",
-      "regions": [
-        "europe",
-        "americas",
-        "asia_pacific",
-        "africa"
-      ],
-      "sources": [
-        "World | Deutsche Welle",
-        "US Top News and Analysis",
-        "Oilprice.com",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 13.3,
-        "recency": 15.9,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector",
@@ -413,6 +360,59 @@
       }
     },
     {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 86.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": -1.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 21,
+      "latest_at": "15 Aug 2026 14:19 UTC",
+      "headline": "Oil inches toward $90 on tanker attacks, lack of progress in Iran war peace deal",
+      "regions": [
+        "europe",
+        "global",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "World | Deutsche Welle",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.3,
+        "recency": 11.3,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "emerging_markets",
       "sector_label": "Emerging Markets + Crypto & Digital Assets",
       "confidence": 86.0,
@@ -460,6 +460,59 @@
         "volume_confirmation": 15.4,
         "source_diversity": 11.0,
         "recency": 16.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 85.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 64,
+      "latest_at": "15 Aug 2026 14:22 UTC",
+      "headline": "Chip Industry Week In Review",
+      "regions": [
+        "europe",
+        "global",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Tech",
+        "www.theregister.com - Articles",
+        "Bloomberg Markets",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.5,
+        "recency": 11.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -577,20 +630,19 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 26,
-      "latest_at": "15 Aug 2026 09:02 UTC",
+      "article_count": 25,
+      "latest_at": "15 Aug 2026 14:40 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "global",
+        "middle_east",
         "europe",
-        "asia_pacific",
-        "middle_east"
+        "global"
       ],
       "sources": [
-        "US Top News and Analysis",
         "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "www.theregister.com - Articles"
+        "www.theregister.com - Articles",
+        "US Top News and Analysis",
+        "Cointelegraph.com News"
       ],
       "primary_etf": "IBIT",
       "top_etfs": [
@@ -610,110 +662,8 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 10.3,
-        "recency": 12.0,
+        "recency": 11.7,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 77.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 67,
-      "latest_at": "14 Aug 2026 22:00 UTC",
-      "headline": "Chip Industry Week In Review",
-      "regions": [
-        "global",
-        "europe",
-        "india",
-        "asia_pacific"
-      ],
-      "sources": [
-        "The Verge",
-        "Tech",
-        "US Top News and Analysis",
-        "Finance"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.1,
-        "recency": 4.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 74.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "15 Aug 2026 11:50 UTC",
-      "headline": "South Korea's Kospi swings from bear to bull-market territory in just over a month on AI trade",
-      "regions": [
-        "europe",
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "BBC News",
-        "World News - Breaking international news and headlines | Sky News",
-        "Tech",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.5,
-        "volume_confirmation": 14.6,
-        "source_diversity": 14.0,
-        "recency": 15.9,
-        "geopolitical_severity": 9.9
       }
     },
     {
@@ -1118,23 +1068,77 @@
         "recency": 15.1,
         "geopolitical_severity": 13.0
       }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 63.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "15 Aug 2026 14:40 UTC",
+      "headline": "SK hynix runs out of replacement SSDs and defaults to original purchase price refunds \u2014 fine-print warranty clause shortchanges buyers as drive prices double",
+      "regions": [
+        "asia_pacific",
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "BBC News",
+        "World News - Breaking international news and headlines | Sky News"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 8.5,
+        "volume_confirmation": 12.6,
+        "source_diversity": 13.3,
+        "recency": 11.7,
+        "geopolitical_severity": 9.5
+      }
     }
   ],
   "articles": [
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas - 20 articles - CRITICAL / BULLISH - Oil inches toward $90 on tanker attacks, lack of progress in Iran war peace deal"
+      "text": "Banking & Financial Sector - 17 articles - HIGH / BULLISH - US Stock Market: Fed's Jefferson signals openness to rate hike if inflation stays elevated"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Banking & Financial Sector - 17 articles - HIGH / BULLISH - US Stock Market: Fed's Jefferson signals openness to rate hike if inflation stays elevated"
+      "text": "Energy / Oil & Gas - 21 articles - CRITICAL / BULLISH - Oil inches toward $90 on tanker attacks, lack of progress in Iran war peace deal"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Emerging Markets + Crypto & Digital Assets - 9 articles - HIGH / BEARISH - Binance & OKX users face $1,900 fines in Vietnam, Coinbase in China? Asia Express"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Technology & AI / Semiconductors - 64 articles - HIGH / BULLISH - Chip Industry Week In Review"
     },
     {
       "tag": "tag-bear",
@@ -1149,17 +1153,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Crypto & Digital Assets - 26 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 67 articles - HIGH / BULLISH - Chip Industry Week In Review"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Asia Pacific Equity - 8 articles - MEDIUM / BULLISH - South Korea's Kospi swings from bear to bull-market territory in just over a month on AI trade"
+      "text": "Crypto & Digital Assets - 25 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
@@ -1200,6 +1194,11 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BULLISH - Gold rises on weaker dollar as inflation data cements rate-hold bets"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Asia Pacific Equity - 6 articles - MEDIUM / BULLISH - SK hynix runs out of replacement SSDs and defaults to original purchase price refunds \u2014 fine-print warranty clause shortchanges buyers as drive prices double"
     }
   ],
   "market_snapshot": [
@@ -1317,12 +1316,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 62916.22,
+      "price": 62974.71,
       "currency": "USD",
-      "change": -59.37,
-      "change_pct": -0.09,
-      "change_str": "-0.09%",
-      "direction": "down"
+      "change": -0.88,
+      "change_pct": -0.0,
+      "change_str": "+-0.00%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
@@ -1604,10 +1603,10 @@
     }
   },
   "logs": [
-    "2026-08-15 12:36:00 [INFO] AZALYST - status.json generated",
-    "2026-08-15 12:36:00 [INFO] PORTFOLIO - NAV USD 9,991.01 | Return -0.07%",
-    "2026-08-15 12:36:00 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-15 12:36:00 [INFO] TRADER - Open positions: EWJ, XLF, XLE"
+    "2026-08-15 18:32:45 [INFO] AZALYST - status.json generated",
+    "2026-08-15 18:32:45 [INFO] PORTFOLIO - NAV USD 9,991.01 | Return -0.07%",
+    "2026-08-15 18:32:45 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-15 18:32:45 [INFO] TRADER - Open positions: EWJ, XLF, XLE"
   ],
-  "generated_at": "2026-08-15 12:35:57 UTC"
+  "generated_at": "2026-08-15 18:32:42 UTC"
 }
