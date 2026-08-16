@@ -39,7 +39,7 @@
       "pnl_pct_str": "-0.31%",
       "confidence": 93,
       "severity": "CRITICAL",
-      "days_held": 1,
+      "days_held": 2,
       "half_exited": false
     },
     {
@@ -62,7 +62,7 @@
       "pnl_pct_str": "-0.26%",
       "confidence": 89,
       "severity": "CRITICAL",
-      "days_held": 1,
+      "days_held": 2,
       "half_exited": false
     },
     {
@@ -183,13 +183,13 @@
   },
   "top_signal": {
     "ticker": "XLF",
-    "rank_score": 19.143612334801762,
+    "rank_score": 21.125633802816903,
     "flow_score": 22.0,
     "options_score": 14.173026941979854,
     "rotation_score": 10.872191009721616,
     "macro_score": 5.37185958942462,
     "news_score": 4.984,
-    "total": 76.54468987592784,
+    "total": 78.52671134394299,
     "publish": true,
     "direction": "long"
   },
@@ -251,10 +251,6 @@
       "score": 86.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 85.0
-    },
-    {
       "symbol": "Bonds & Fixed Income + Banking & Financial Sector",
       "score": 84.0
     },
@@ -263,12 +259,16 @@
       "score": 82.0
     },
     {
+      "symbol": "Energy / Oil & Gas",
+      "score": 81.0
+    },
+    {
       "symbol": "Crypto & Digital Assets",
       "score": 78.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 75.0
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 76.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -411,59 +411,6 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 85.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 64,
-      "latest_at": "15 Aug 2026 14:22 UTC",
-      "headline": "Chip Industry Week In Review",
-      "regions": [
-        "europe",
-        "global",
-        "americas",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Tech",
-        "www.theregister.com - Articles",
-        "Bloomberg Markets",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.5,
-        "recency": 11.4,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income + Banking & Financial Sector",
       "confidence": 84.0,
@@ -568,6 +515,59 @@
       }
     },
     {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 81.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": -3.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 25,
+      "latest_at": "16 Aug 2026 07:13 UTC",
+      "headline": "Oil inches toward $90 on tanker attacks, lack of progress in Iran war peace deal",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "europe",
+        "africa"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "World | Deutsche Welle",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.3,
+        "recency": 10.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 78.0,
@@ -614,55 +614,55 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 75.0,
-      "severity": "CRITICAL",
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 76.0,
+      "severity": "HIGH",
       "direction": "BULLISH",
-      "direction_score": -4.5,
+      "direction_score": 2.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "15 Aug 2026 17:00 UTC",
-      "headline": "Oil inches toward $90 on tanker attacks, lack of progress in Iran war peace deal",
+      "article_count": 64,
+      "latest_at": "15 Aug 2026 14:22 UTC",
+      "headline": "Chip Industry Week In Review",
       "regions": [
-        "americas",
+        "asia_pacific",
         "global",
         "europe",
-        "asia_pacific"
+        "india"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "World | Deutsche Welle",
-        "Oilprice.com",
-        "Markets-Economic Times"
+        "Semiconductor Engineering",
+        "Cointelegraph.com News",
+        "Finance",
+        "BBC News"
       ],
-      "primary_etf": "XLE",
+      "primary_etf": "QQQ",
       "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
+        "NIFTYBEES",
+        "MAFANG"
       ],
       "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
+        "QQQ",
+        "SOXX",
+        "AIQ"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 13.3,
-        "recency": 4.4,
+        "source_diversity": 16.7,
+        "recency": 1.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -1131,11 +1131,6 @@
       "text": "Emerging Markets + Crypto & Digital Assets - 9 articles - HIGH / BEARISH - Binance & OKX users face $1,900 fines in Vietnam, Coinbase in China? Asia Express"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 64 articles - HIGH / BULLISH - Chip Industry Week In Review"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Bonds & Fixed Income + Banking & Financial Sector - 12 articles - HIGH / BEARISH - Treasury yields are broadly flat as investors mull uncertainty around peace talks"
@@ -1146,6 +1141,11 @@
       "text": "Clean Energy & Renewables + Commodities & Mining - 9 articles - HIGH / BULLISH - Lucid begins 'operational reset' as CEO says EV maker will delay midsize vehicle"
     },
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Energy / Oil & Gas - 25 articles - CRITICAL / BULLISH - Oil inches toward $90 on tanker attacks, lack of progress in Iran war peace deal"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Crypto & Digital Assets - 25 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
@@ -1153,7 +1153,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas - 23 articles - CRITICAL / BULLISH - Oil inches toward $90 on tanker attacks, lack of progress in Iran war peace deal"
+      "text": "Technology & AI / Semiconductors - 64 articles - HIGH / BULLISH - Chip Industry Week In Review"
     },
     {
       "tag": "tag-bull",
@@ -1316,12 +1316,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 62986.18,
+      "price": 62944.43,
       "currency": "USD",
-      "change": 10.59,
-      "change_pct": 0.02,
-      "change_str": "+0.02%",
-      "direction": "up"
+      "change": -79.89,
+      "change_pct": -0.13,
+      "change_str": "-0.13%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
@@ -1603,10 +1603,10 @@
     }
   },
   "logs": [
-    "2026-08-16 06:38:40 [INFO] AZALYST - status.json generated",
-    "2026-08-16 06:38:40 [INFO] PORTFOLIO - NAV USD 9,991.01 | Return -0.07%",
-    "2026-08-16 06:38:40 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-16 06:38:40 [INFO] TRADER - Open positions: EWJ, XLF, XLE"
+    "2026-08-16 12:37:57 [INFO] AZALYST - status.json generated",
+    "2026-08-16 12:37:57 [INFO] PORTFOLIO - NAV USD 9,991.01 | Return -0.07%",
+    "2026-08-16 12:37:57 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-16 12:37:57 [INFO] TRADER - Open positions: EWJ, XLF, XLE"
   ],
-  "generated_at": "2026-08-16 06:38:38 UTC"
+  "generated_at": "2026-08-16 12:37:54 UTC"
 }
