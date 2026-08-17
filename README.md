@@ -181,6 +181,10 @@ A forensic audit of the live engine found six defects severe enough to invalidat
 
 All six fixes ship with regression tests (`tests/`) that fail against the pre-fix code and pass against the fix, verified directly against this repo's own historical commits and live state where applicable.
 
+## Test Suite Fix (2026-08-18)
+
+A cross-repo review across all three Azalyst projects found `tests/test_scorer.py::test_breakdown_returns_all_factor_keys` failing on `main`. This was a stale test, not a production defect: `ConfidenceScorer.breakdown()` has returned a seventh factor, `macro_events`, since that factor was added — it's computed in `score()`, listed in the canonical factor-name tuple, and consumed in production by `azalyst.py`. The test's expected-keys set was simply never updated to include it. Fixed by adding `"macro_events"` to the expected set; no production code changed. Suite went from 1 failed / 59 passed to 60 passed.
+
 ## Directional Risk Controls (Long-Only Regime Logic)
 
 The live engine (`azalyst.py`, `paper_trader.py`, `risk_engine.py`) applies a layered set of gates before any paper position is opened, and a matching set of exits. The guiding principle: **invest through a dip intelligently — size down when it is merely volatile, stand aside entirely when the market is actually falling.**
