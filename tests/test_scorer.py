@@ -58,6 +58,7 @@ def test_breakdown_returns_all_factor_keys():
         "recency",
         "geopolitical_severity",
         "cross_engine_confirmation",
+        "macro_events",
     }
     assert set(bd.keys()) == expected
 
