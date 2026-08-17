@@ -185,11 +185,11 @@
     "ticker": "XLF",
     "rank_score": 21.125633802816903,
     "flow_score": 22.0,
-    "options_score": 14.173026941979854,
+    "options_score": 0.0,
     "rotation_score": 10.872191009721616,
     "macro_score": 5.37185958942462,
     "news_score": 4.984,
-    "total": 78.52671134394299,
+    "total": 64.35368440196314,
     "publish": true,
     "direction": "long"
   },
@@ -247,6 +247,10 @@
       "score": 89.0
     },
     {
+      "symbol": "Energy / Oil & Gas",
+      "score": 86.0
+    },
+    {
       "symbol": "Emerging Markets + Crypto & Digital Assets",
       "score": 86.0
     },
@@ -263,15 +267,11 @@
       "score": 78.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 76.0
-    },
-    {
       "symbol": "Technology & AI / Semiconductors",
       "score": 75.0
     },
     {
-      "symbol": "Commodities & Mining",
+      "symbol": "Asia Pacific Equity",
       "score": 72.0
     },
     {
@@ -283,19 +283,15 @@
       "score": 70.0
     },
     {
-      "symbol": "India Equity Markets",
-      "score": 68.0
-    },
-    {
       "symbol": "Nuclear Energy & Uranium",
       "score": 68.0
     },
     {
-      "symbol": "Cybersecurity",
-      "score": 67.0
+      "symbol": "Defense & Aerospace",
+      "score": 66.0
     },
     {
-      "symbol": "Defense & Aerospace",
+      "symbol": "Commodities & Mining",
       "score": 66.0
     },
     {
@@ -303,8 +299,12 @@
       "score": 64.0
     },
     {
-      "symbol": "Asia Pacific Equity",
-      "score": 63.0
+      "symbol": "India Equity Markets",
+      "score": 64.0
+    },
+    {
+      "symbol": "Cybersecurity",
+      "score": 64.0
     }
   ],
   "signals": [
@@ -356,6 +356,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 13.6,
         "recency": 16.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 86.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": -3.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 20,
+      "latest_at": "17 Aug 2026 02:12 UTC",
+      "headline": "Oil treads water as US-Iran peace talks stall, Hormuz shipping slows",
+      "regions": [
+        "europe",
+        "asia_pacific",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.3,
+        "recency": 15.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -561,59 +614,6 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 76.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": -3.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "16 Aug 2026 07:13 UTC",
-      "headline": "Oil inches toward $90 on tanker attacks, lack of progress in Iran war peace deal",
-      "regions": [
-        "middle_east",
-        "europe",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "World | Deutsche Welle",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 13.3,
-        "recency": 5.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
       "confidence": 75.0,
@@ -667,53 +667,52 @@
       }
     },
     {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
       "confidence": 72.0,
       "severity": "MEDIUM",
       "direction": "BULLISH",
-      "direction_score": 0.0,
+      "direction_score": 1.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 8,
-      "latest_at": "12 Aug 2026 19:37 UTC",
-      "headline": "How optical interconnects and silicon photonics emerged as AI's next hot commodity \u2014 looming US-China summit puts photonics into the crosshairs",
+      "latest_at": "17 Aug 2026 02:51 UTC",
+      "headline": "SK hynix runs out of replacement SSDs and defaults to original purchase price refunds \u2014 fine-print warranty clause shortchanges buyers as drive prices double",
       "regions": [
         "global",
         "asia_pacific",
-        "europe"
+        "middle_east"
       ],
       "sources": [
-        "Latest from Tom's Hardware",
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "Bloomberg Markets"
+        "BBC News",
+        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "Markets-Economic Times"
       ],
-      "primary_etf": "DBC",
+      "primary_etf": "EWJ",
       "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
+        "EWJ",
+        "EWY",
+        "FLAX"
       ],
       "access_markets": [
-        "India-listed",
         "International-listed"
       ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
+      "india_etfs": [],
       "global_etfs": [
-        "DBC",
-        "COPP"
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 11.5,
+        "signal_strength": 10.4,
         "volume_confirmation": 14.6,
-        "source_diversity": 12.1,
-        "recency": 16.2,
-        "geopolitical_severity": 9.9
+        "source_diversity": 14.0,
+        "recency": 16.5,
+        "geopolitical_severity": 10.0
       }
     },
     {
@@ -817,56 +816,6 @@
       }
     },
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 68.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -5.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 26,
-      "latest_at": "15 Aug 2026 05:59 UTC",
-      "headline": "Independence Day 2026: 4 stocks that have been part of Sensex since inception. Do you own any?",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "india"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "Oilprice.com",
-        "Markets-Economic Times",
-        "BBC News"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.4,
-        "recency": 16.1,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 68.0,
@@ -915,52 +864,6 @@
         "source_diversity": 11.0,
         "recency": 17.0,
         "geopolitical_severity": 12.8
-      }
-    },
-    {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 67.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 6.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "14 Aug 2026 12:15 UTC",
-      "headline": "Microsoft's nemesis drops new zero-day privilege escalation vulnerability \u2014 attack grants system-level privileges, but it could already be patched",
-      "regions": [
-        "americas",
-        "global",
-        "india"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "www.theregister.com - Articles",
-        "Latest from Tom's Hardware",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 13.9,
-        "volume_confirmation": 14.6,
-        "source_diversity": 6.7,
-        "recency": 11.8,
-        "geopolitical_severity": 11.0
       }
     },
     {
@@ -1017,6 +920,57 @@
       }
     },
     {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 66.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "17 Aug 2026 01:45 UTC",
+      "headline": "A2 Milk Sees Slow Recovery From China Formula Supply Problem",
+      "regions": [
+        "global",
+        "europe",
+        "asia_pacific",
+        "india"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "www.theregister.com - Articles",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "CPSEETF",
+        "COPP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 9.6,
+        "volume_confirmation": 12.6,
+        "source_diversity": 12.0,
+        "recency": 14.7,
+        "geopolitical_severity": 10.7
+      }
+    },
+    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
       "confidence": 64.0,
@@ -1070,52 +1024,97 @@
       }
     },
     {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 63.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 64.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -2.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "15 Aug 2026 14:40 UTC",
-      "headline": "SK hynix runs out of replacement SSDs and defaults to original purchase price refunds \u2014 fine-print warranty clause shortchanges buyers as drive prices double",
+      "article_count": 27,
+      "latest_at": "17 Aug 2026 02:33 UTC",
+      "headline": "Independence Day 2026: 4 stocks that have been part of Sensex since inception. Do you own any?",
       "regions": [
-        "asia_pacific",
+        "global",
         "europe",
-        "global"
+        "asia_pacific",
+        "india"
       ],
       "sources": [
         "Bloomberg Markets",
-        "US Top News and Analysis",
-        "BBC News",
-        "World News - Breaking international news and headlines | Sky News"
+        "Markets-Economic Times",
+        "Latest from Tom's Hardware"
       ],
-      "primary_etf": "EWJ",
+      "primary_etf": "INDA",
       "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 11.0,
+        "recency": 16.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 64.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 4.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "17 Aug 2026 03:09 UTC",
+      "headline": "Critical macOS Screen Sharing flaw gives attackers remote root access \u2014 CISA bumps bug to 9.8 severity following active Monero cryptojacking attacks",
+      "regions": [
+        "global"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "www.theregister.com - Articles",
+        "The Verge",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
       ],
       "access_markets": [
         "International-listed"
       ],
       "india_etfs": [],
       "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
+        "CIBR",
+        "HACK"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 8.5,
-        "volume_confirmation": 12.6,
-        "source_diversity": 13.3,
-        "recency": 11.7,
-        "geopolitical_severity": 9.5
+        "signal_strength": 11.6,
+        "volume_confirmation": 13.7,
+        "source_diversity": 6.7,
+        "recency": 16.9,
+        "geopolitical_severity": 6.0
       }
     }
   ],
@@ -1124,6 +1123,11 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Banking & Financial Sector - 17 articles - HIGH / BULLISH - US Stock Market: Fed's Jefferson signals openness to rate hike if inflation stays elevated"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Energy / Oil & Gas - 20 articles - CRITICAL / BULLISH - Oil treads water as US-Iran peace talks stall, Hormuz shipping slows"
     },
     {
       "tag": "tag-bear",
@@ -1148,17 +1152,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas - 25 articles - CRITICAL / BULLISH - Oil inches toward $90 on tanker attacks, lack of progress in Iran war peace deal"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "Technology & AI / Semiconductors - 64 articles - HIGH / BULLISH - Chip Industry Week In Review"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Commodities & Mining - 8 articles - MEDIUM / BULLISH - How optical interconnects and silicon photonics emerged as AI's next hot commodity \u2014 looming US-China summit puts photonics into the crosshairs"
+      "text": "Asia Pacific Equity - 8 articles - MEDIUM / BULLISH - SK hynix runs out of replacement SSDs and defaults to original purchase price refunds \u2014 fine-print warranty clause shortchanges buyers as drive prices double"
     },
     {
       "tag": "tag-bull",
@@ -1171,19 +1170,9 @@
       "text": "Europe Equity - 4 articles - HIGH / BULLISH - Global Market: Euro zone bond yields decline as falling oil prices boost market sentiment"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "India Equity Markets - 26 articles - HIGH / BEARISH - Independence Day 2026: 4 stocks that have been part of Sensex since inception. Do you own any?"
-    },
-    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Nuclear Energy & Uranium - 4 articles - HIGH / BULLISH - Romania shuts nuclear plant, Hungary dams dry Danube River"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Cybersecurity - 8 articles - MEDIUM / BULLISH - Microsoft's nemesis drops new zero-day privilege escalation vulnerability \u2014 attack grants system-level privileges, but it could already be patched"
     },
     {
       "tag": "tag-bull",
@@ -1193,12 +1182,22 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BULLISH - Gold rises on weaker dollar as inflation data cements rate-hold bets"
+      "text": "Commodities & Mining - 6 articles - MEDIUM / BULLISH - A2 Milk Sees Slow Recovery From China Formula Supply Problem"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Asia Pacific Equity - 6 articles - MEDIUM / BULLISH - SK hynix runs out of replacement SSDs and defaults to original purchase price refunds \u2014 fine-print warranty clause shortchanges buyers as drive prices double"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BULLISH - Gold rises on weaker dollar as inflation data cements rate-hold bets"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "India Equity Markets - 27 articles - CRITICAL / BEARISH - Independence Day 2026: 4 stocks that have been part of Sensex since inception. Do you own any?"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Cybersecurity - 7 articles - MEDIUM / BULLISH - Critical macOS Screen Sharing flaw gives attackers remote root access \u2014 CISA bumps bug to 9.8 severity following active Monero cryptojacking attacks"
     }
   ],
   "market_snapshot": [
@@ -1261,23 +1260,23 @@
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 68713.8,
+      "price": 68721.44,
       "currency": "JPY",
-      "change": 405.21,
-      "change_pct": 0.59,
-      "change_str": "+0.59%",
+      "change": 7.64,
+      "change_pct": 0.01,
+      "change_str": "+0.01%",
       "direction": "up"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 25116.85,
+      "price": 25522.3,
       "currency": "HKD",
-      "change": -279.66,
-      "change_pct": -1.1,
-      "change_str": "-1.10%",
-      "direction": "down"
+      "change": 405.45,
+      "change_pct": 1.61,
+      "change_str": "+1.61%",
+      "direction": "up"
     },
     {
       "label": "Nifty 50",
@@ -1294,44 +1293,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4437.3,
+      "price": 4450.0,
       "currency": "USD",
-      "change": 73.7,
-      "change_pct": 1.69,
-      "change_str": "+1.69%",
+      "change": 69.6,
+      "change_pct": 1.59,
+      "change_str": "+1.59%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 82.4,
+      "price": 82.36,
       "currency": "USD",
-      "change": 1.15,
-      "change_pct": 1.42,
-      "change_str": "+1.42%",
-      "direction": "up"
+      "change": -0.04,
+      "change_pct": -0.05,
+      "change_str": "-0.05%",
+      "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63086.29,
+      "price": 63321.24,
       "currency": "USD",
-      "change": 61.97,
-      "change_pct": 0.1,
-      "change_str": "+0.10%",
+      "change": 296.92,
+      "change_pct": 0.47,
+      "change_str": "+0.47%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.64,
+      "price": 99.54,
       "currency": "USD",
-      "change": -0.32,
-      "change_pct": -0.32,
-      "change_str": "-0.32%",
+      "change": -0.13,
+      "change_pct": -0.13,
+      "change_str": "-0.13%",
       "direction": "down"
     },
     {
@@ -1603,10 +1602,10 @@
     }
   },
   "logs": [
-    "2026-08-16 18:32:05 [INFO] AZALYST - status.json generated",
-    "2026-08-16 18:32:05 [INFO] PORTFOLIO - NAV USD 9,992.58 | Return -0.07%",
-    "2026-08-16 18:32:05 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-16 18:32:05 [INFO] TRADER - Open positions: EWJ, XLF, XLE"
+    "2026-08-17 03:18:32 [INFO] AZALYST - status.json generated",
+    "2026-08-17 03:18:32 [INFO] PORTFOLIO - NAV USD 9,992.58 | Return -0.07%",
+    "2026-08-17 03:18:32 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-17 03:18:32 [INFO] TRADER - Open positions: EWJ, XLF, XLE"
   ],
-  "generated_at": "2026-08-16 18:32:03 UTC"
+  "generated_at": "2026-08-17 03:18:30 UTC"
 }
