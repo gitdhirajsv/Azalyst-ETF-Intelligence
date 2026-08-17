@@ -1,20 +1,20 @@
 {
-  "portfolio_value": 9986.19,
+  "portfolio_value": 9981.51,
   "total_deposited": 9981.48,
   "cash": 5880.33,
   "monthly_reserve": 0.0,
-  "market_value": 4105.86,
+  "market_value": 4101.18,
   "total_invested": 4101.16,
-  "unrealised_pnl": 4.7,
-  "unrealised_str": "+4.70",
+  "unrealised_pnl": 0.03,
+  "unrealised_str": "+0.03",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "+0.05%",
-  "change_raw": 0.05,
+  "change": "+0.00%",
+  "change_raw": 0.0,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 9989.08,
-  "drawdown_now_pct": 0.03,
+  "drawdown_now_pct": 0.08,
   "max_drawdown_pct": 0.09,
   "deposited_anomaly": false,
   "usd_inr_rate": 95.592,
@@ -27,16 +27,16 @@
       "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 98.39,
-      "current": 98.45,
-      "peak_price": 98.55,
+      "current": 98.56,
+      "peak_price": 98.56,
       "trail_stop": 91.5,
-      "dist_to_trail_pct": 7.06,
+      "dist_to_trail_pct": 7.16,
       "units": 18.329273,
       "invested": 1803.34,
-      "pnl": 1.17,
-      "pnl_str": "+1.17",
-      "pnl_pct": 0.07,
-      "pnl_pct_str": "+0.07%",
+      "pnl": 3.19,
+      "pnl_str": "+3.19",
+      "pnl_pct": 0.18,
+      "pnl_pct_str": "+0.18%",
       "confidence": 93,
       "severity": "CRITICAL",
       "days_held": 3,
@@ -50,16 +50,16 @@
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 58.21,
-      "current": 58.06,
+      "current": 57.92,
       "peak_price": 58.21,
       "trail_stop": 54.14,
-      "dist_to_trail_pct": 6.75,
+      "dist_to_trail_pct": 6.53,
       "units": 17.548769,
       "invested": 1021.62,
-      "pnl": -2.72,
-      "pnl_str": "-2.72",
-      "pnl_pct": -0.27,
-      "pnl_pct_str": "-0.27%",
+      "pnl": -5.09,
+      "pnl_str": "-5.09",
+      "pnl_pct": -0.5,
+      "pnl_pct_str": "-0.50%",
       "confidence": 89,
       "severity": "CRITICAL",
       "days_held": 3,
@@ -73,19 +73,19 @@
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 62.01,
-      "current": 62.32,
+      "current": 62.11,
       "peak_price": 62.37,
       "trail_stop": 57.67,
-      "dist_to_trail_pct": 7.46,
+      "dist_to_trail_pct": 7.15,
       "units": 20.58004,
       "invested": 1276.19,
-      "pnl": 6.36,
-      "pnl_str": "+6.36",
-      "pnl_pct": 0.5,
-      "pnl_pct_str": "+0.50%",
+      "pnl": 2.03,
+      "pnl_str": "+2.03",
+      "pnl_pct": 0.16,
+      "pnl_pct_str": "+0.16%",
       "confidence": 91,
       "severity": "CRITICAL",
-      "days_held": 2,
+      "days_held": 3,
       "half_exited": false
     }
   ],
@@ -145,9 +145,9 @@
       {
         "era": "current",
         "total_deposited": 9981.48,
-        "portfolio_value": 9986.19,
+        "portfolio_value": 9981.51,
         "realised_pnl": 0.0,
-        "change": "+0.05%",
+        "change": "+0.00%",
         "total_trades": 0,
         "winners": 0,
         "losers": 0,
@@ -183,14 +183,14 @@
   },
   "top_signal": {
     "ticker": "XLE",
-    "rank_score": 23.328859060402685,
-    "flow_score": 13.82049445886388,
-    "options_score": 12.149014238735589,
+    "rank_score": 23.152542372881353,
+    "flow_score": 11.385545931696024,
+    "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 1.2548215652364516,
+    "macro_score": 1.9920255279163748,
     "news_score": 6.369999999999999,
-    "total": 71.92318932323862,
-    "publish": true,
+    "total": 57.90011383249375,
+    "publish": false,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -236,9 +236,9 @@
       "XLE"
     ],
     "values": [
-      1.17,
-      -2.72,
-      6.36
+      3.19,
+      -5.09,
+      2.03
     ]
   },
   "confidence": [
@@ -252,6 +252,10 @@
     },
     {
       "symbol": "Asia Pacific Equity",
+      "score": 89.0
+    },
+    {
+      "symbol": "Bonds & Fixed Income",
       "score": 89.0
     },
     {
@@ -269,10 +273,6 @@
     {
       "symbol": "Europe Equity + Gold & Precious Metals",
       "score": 84.0
-    },
-    {
-      "symbol": "Bonds & Fixed Income",
-      "score": 80.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -460,6 +460,58 @@
         "source_diversity": 15.7,
         "recency": 16.9,
         "geopolitical_severity": 12.0
+      }
+    },
+    {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 89.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 20,
+      "latest_at": "17 Aug 2026 15:09 UTC",
+      "headline": "Steven Major Sees List of Factors in \u2018Drip, Drip Higher\u2019 of Long-End Bonds",
+      "regions": [
+        "middle_east",
+        "americas",
+        "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "www.theregister.com - Articles",
+        "BBC News",
+        "Semiconductor Engineering"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.7,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.1,
+        "recency": 16.5,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -663,57 +715,6 @@
         "source_diversity": 14.6,
         "recency": 16.9,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
-      "confidence": 80.0,
-      "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": -2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "17 Aug 2026 07:04 UTC",
-      "headline": "Japan 10-Year Yield Rises to Highest Since 1996 on BOJ Hike Bets",
-      "regions": [
-        "americas",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "World News - Breaking international news and headlines | Sky News",
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 16.8,
-        "volume_confirmation": 18.0,
-        "source_diversity": 13.4,
-        "recency": 16.8,
-        "geopolitical_severity": 10.9
       }
     },
     {
@@ -1135,6 +1136,11 @@
       "text": "Asia Pacific Equity - 12 articles - MEDIUM / BULLISH - Global market: Japan Q2 GDP misses estimates, but BOJ rate hike bets remain intact"
     },
     {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Bonds & Fixed Income - 20 articles - HIGH / BEARISH - Steven Major Sees List of Factors in \u2018Drip, Drip Higher\u2019 of Long-End Bonds"
+    },
+    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Gold & Precious Metals + Asia Pacific Equity - 13 articles - HIGH / BULLISH - Global Markets: 5 big triggers to watch this week"
@@ -1153,11 +1159,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Europe Equity + Gold & Precious Metals - 11 articles - HIGH / BEARISH - Global Market: Euro zone bond yields hover near 15-year highs as Middle East war fuels inflation fears"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Bonds & Fixed Income - 13 articles - MEDIUM / BEARISH - Japan 10-Year Yield Rises to Highest Since 1996 on BOJ Hike Bets"
     },
     {
       "tag": "tag-bear",
@@ -1205,55 +1206,55 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7772.64,
+      "price": 7773.08,
       "currency": "USD",
-      "change": -13.12,
-      "change_pct": -0.17,
-      "change_str": "-0.17%",
+      "change": -12.68,
+      "change_pct": -0.16,
+      "change_str": "-0.16%",
       "direction": "down"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 26730.97,
+      "price": 26751.4,
       "currency": "USD",
-      "change": 1.81,
-      "change_pct": 0.01,
-      "change_str": "+0.01%",
+      "change": 22.24,
+      "change_pct": 0.08,
+      "change_str": "+0.08%",
       "direction": "up"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 53524.55,
+      "price": 53528.29,
       "currency": "USD",
-      "change": -207.86,
-      "change_pct": -0.39,
-      "change_str": "-0.39%",
+      "change": -204.12,
+      "change_pct": -0.38,
+      "change_str": "-0.38%",
       "direction": "down"
     },
     {
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10741.08,
+      "price": 10726.54,
       "currency": "GBP",
-      "change": -9.02,
-      "change_pct": -0.08,
-      "change_str": "-0.08%",
+      "change": -23.56,
+      "change_pct": -0.22,
+      "change_str": "-0.22%",
       "direction": "down"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 26411.67,
+      "price": 26370.88,
       "currency": "EUR",
-      "change": -28.64,
-      "change_pct": -0.11,
-      "change_str": "-0.11%",
+      "change": -69.43,
+      "change_pct": -0.26,
+      "change_str": "-0.26%",
       "direction": "down"
     },
     {
@@ -1262,9 +1263,9 @@
       "region": "JP",
       "price": 69220.25,
       "currency": "JPY",
-      "change": 506.45,
-      "change_pct": 0.74,
-      "change_str": "+0.74%",
+      "change": 911.66,
+      "change_pct": 1.33,
+      "change_str": "+1.33%",
       "direction": "up"
     },
     {
@@ -1293,63 +1294,63 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4476.4,
+      "price": 4480.8,
       "currency": "USD",
-      "change": 96.0,
-      "change_pct": 2.19,
-      "change_str": "+2.19%",
+      "change": 100.4,
+      "change_pct": 2.29,
+      "change_str": "+2.29%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 82.48,
+      "price": 82.73,
       "currency": "USD",
-      "change": 0.08,
-      "change_pct": 0.1,
-      "change_str": "+0.10%",
+      "change": 0.33,
+      "change_pct": 0.4,
+      "change_str": "+0.40%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 63535.54,
+      "price": 63955.06,
       "currency": "USD",
-      "change": 716.89,
-      "change_pct": 1.14,
-      "change_str": "+1.14%",
+      "change": 1136.41,
+      "change_pct": 1.81,
+      "change_str": "+1.81%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.45,
+      "price": 99.52,
       "currency": "USD",
-      "change": -0.22,
-      "change_pct": -0.22,
-      "change_str": "-0.22%",
+      "change": -0.15,
+      "change_pct": -0.15,
+      "change_str": "-0.15%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 14.99,
+      "price": 14.93,
       "currency": "USD",
-      "change": 0.74,
-      "change_pct": 5.19,
-      "change_str": "+5.19%",
+      "change": 0.68,
+      "change_pct": 4.77,
+      "change_str": "+4.77%",
       "direction": "up"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.03,
+    "drawdown_from_peak_pct": 0.08,
     "portfolio_peak": 9989.08,
-    "vix": 14.99,
+    "vix": 14.93,
     "vix_regime": "NORMAL",
     "sector_concentration": [
       {
@@ -1381,16 +1382,16 @@
         "EWJ": {
           "EWJ": 1.0,
           "XLE": -0.191,
-          "XLF": 0.163
+          "XLF": 0.164
         },
         "XLE": {
           "EWJ": -0.191,
           "XLE": 1.0,
-          "XLF": -0.425
+          "XLF": -0.419
         },
         "XLF": {
-          "EWJ": 0.163,
-          "XLE": -0.425,
+          "EWJ": 0.164,
+          "XLE": -0.419,
           "XLF": 1.0
         }
       },
@@ -1399,12 +1400,12 @@
         "XLE",
         "XLF"
       ],
-      "max_corr": 0.163,
+      "max_corr": 0.164,
       "max_corr_pair": [
         "EWJ",
         "XLF"
       ],
-      "most_negative_corr": -0.425,
+      "most_negative_corr": -0.419,
       "most_negative_pair": [
         "XLE",
         "XLF"
@@ -1414,59 +1415,59 @@
     "volatility": {
       "per_ticker": {
         "EWJ": 21.71,
-        "XLF": 10.07,
-        "XLE": 23.34
+        "XLF": 10.14,
+        "XLE": 23.33
       },
-      "portfolio_avg_vol_pct": 18.37,
+      "portfolio_avg_vol_pct": 18.39,
       "target_vol_pct": 15.0
     },
     "benchmark": {
       "benchmark_return_pct": 2.32,
       "benchmark_price_start": 757.67,
-      "benchmark_price_now": 775.23,
+      "benchmark_price_now": 775.25,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": 0.05,
-      "alpha": -2.27
+      "portfolio_return_pct": 0.0,
+      "alpha": -2.32
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 58.88,
+          "actual_weight_pct": 58.91,
           "target_weight_pct": 10.0,
-          "drift_pct": 48.88,
+          "drift_pct": 48.91,
           "action": "DEPLOY",
-          "amount": 4881.71,
+          "amount": 4882.18,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
         {
           "ticker": "XLF",
-          "actual_weight_pct": 10.2,
+          "actual_weight_pct": 10.18,
           "target_weight_pct": 30.0,
-          "drift_pct": -19.8,
+          "drift_pct": -19.82,
           "action": "ADD",
-          "amount": 1977.06,
+          "amount": 1978.03,
           "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
         {
           "ticker": "XLE",
-          "actual_weight_pct": 12.84,
+          "actual_weight_pct": 12.81,
           "target_weight_pct": 30.0,
-          "drift_pct": -17.16,
+          "drift_pct": -17.19,
           "action": "ADD",
-          "amount": 1713.31,
+          "amount": 1716.23,
           "etf_name": "Energy Select Sector SPDR",
           "regime_note": ""
         },
         {
           "ticker": "EWJ",
-          "actual_weight_pct": 18.07,
+          "actual_weight_pct": 18.1,
           "target_weight_pct": 30.0,
-          "drift_pct": -11.93,
+          "drift_pct": -11.9,
           "action": "ADD",
-          "amount": 1191.34,
+          "amount": 1187.92,
           "etf_name": "iShares MSCI Japan ETF",
           "regime_note": ""
         }
@@ -1477,135 +1478,135 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -1834.73,
-          "portfolio_loss_pct": -18.37,
+          "total_impact": -1832.21,
+          "portfolio_loss_pct": -18.36,
           "position_impacts": [
             {
               "ticker": "EWJ",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -721.81
+              "impact": -722.61
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -407.52
+              "impact": -406.57
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -705.4
+              "impact": -703.02
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -1793.58,
-          "portfolio_loss_pct": -17.96,
+          "total_impact": -1790.65,
+          "portfolio_loss_pct": -17.94,
           "position_impacts": [
             {
               "ticker": "EWJ",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -613.54
+              "impact": -614.22
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -346.39
+              "impact": -345.58
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -833.66
+              "impact": -830.85
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -551.75,
-          "portfolio_loss_pct": -5.53,
+          "total_impact": -551.27,
+          "portfolio_loss_pct": -5.52,
           "position_impacts": [
             {
               "ticker": "EWJ",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -270.68
+              "impact": -270.98
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -152.82
+              "impact": -152.46
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -128.25
+              "impact": -127.82
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -418.25,
-          "portfolio_loss_pct": -4.19,
+          "total_impact": -417.57,
+          "portfolio_loss_pct": -4.18,
           "position_impacts": [
             {
               "ticker": "EWJ",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -144.36
+              "impact": -144.52
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -81.5
+              "impact": -81.31
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -192.38
+              "impact": -191.73
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -764.71,
-          "portfolio_loss_pct": -7.66,
+          "total_impact": -763.78,
+          "portfolio_loss_pct": -7.65,
           "position_impacts": [
             {
               "ticker": "EWJ",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -324.81
+              "impact": -325.18
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -183.38
+              "impact": -182.96
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -256.51
+              "impact": -255.65
             }
           ]
         }
       },
       "worst_scenario": "2008_GFC",
-      "worst_loss_pct": -18.37
+      "worst_loss_pct": -18.36
     }
   },
   "logs": [
-    "2026-08-17 14:41:54 [INFO] AZALYST - status.json generated",
-    "2026-08-17 14:41:54 [INFO] PORTFOLIO - NAV USD 9,986.19 | Return +0.05%",
-    "2026-08-17 14:41:54 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-17 14:41:54 [INFO] TRADER - Open positions: EWJ, XLF, XLE"
+    "2026-08-17 15:35:20 [INFO] AZALYST - status.json generated",
+    "2026-08-17 15:35:20 [INFO] PORTFOLIO - NAV USD 9,981.51 | Return +0.00%",
+    "2026-08-17 15:35:20 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-17 15:35:20 [INFO] TRADER - Open positions: EWJ, XLF, XLE"
   ],
-  "generated_at": "2026-08-17 14:41:51 UTC"
+  "generated_at": "2026-08-17 15:35:17 UTC"
 }
