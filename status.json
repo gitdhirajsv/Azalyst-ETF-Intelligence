@@ -166,30 +166,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "LOW_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.03949436274766317,
-    "vix_level": 15.1899995803833,
-    "vix_percentile_1y": 0.12301587301587301,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 30,
-      "flow": 22,
-      "options": 18,
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
       "rotation": 15,
-      "macro": 8,
-      "news": 7
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
-    "ticker": "SMH",
-    "rank_score": 18.478490566037735,
-    "flow_score": 15.788886683324591,
-    "options_score": 9.103844155295224,
+    "ticker": "XLE",
+    "rank_score": 20.406891981444662,
+    "flow_score": 0.0,
+    "options_score": 11.498864560755097,
     "rotation_score": 15.0,
-    "macro_score": 1.4304984493088189,
-    "news_score": 4.199999999999999,
-    "total": 64.00171985396636,
+    "macro_score": 6.434093640988406,
+    "news_score": 9.6,
+    "total": 62.93985018318817,
     "publish": true,
     "direction": "long"
   },
@@ -255,6 +255,10 @@
       "score": 89.0
     },
     {
+      "symbol": "Bonds & Fixed Income",
+      "score": 87.0
+    },
+    {
       "symbol": "Europe Equity + Gold & Precious Metals",
       "score": 86.0
     },
@@ -301,10 +305,6 @@
     {
       "symbol": "Commodities & Mining",
       "score": 65.0
-    },
-    {
-      "symbol": "Bonds & Fixed Income",
-      "score": 62.0
     }
   ],
   "signals": [
@@ -459,6 +459,58 @@
         "volume_confirmation": 18.0,
         "source_diversity": 13.6,
         "recency": 16.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 87.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -4.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 25,
+      "latest_at": "17 Aug 2026 20:04 UTC",
+      "headline": "Global Market: Euro zone bond yields hover near 15-year highs as Middle East war fuels inflation fears",
+      "regions": [
+        "americas",
+        "india",
+        "europe",
+        "middle_east"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "www.theregister.com - Articles",
+        "BBC News",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.9,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.1,
+        "recency": 13.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -1067,58 +1119,6 @@
         "recency": 13.8,
         "geopolitical_severity": 11.0
       }
-    },
-    {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
-      "confidence": 62.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -4.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 29,
-      "latest_at": "17 Aug 2026 19:01 UTC",
-      "headline": "Global Market: Euro zone bond yields hover near 15-year highs as Middle East war fuels inflation fears",
-      "regions": [
-        "europe",
-        "americas",
-        "global",
-        "india"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Semiconductor Engineering",
-        "www.theregister.com - Articles",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.1,
-        "recency": 16.2,
-        "geopolitical_severity": 13.0
-      }
     }
   ],
   "articles": [
@@ -1136,6 +1136,11 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Banking & Financial Sector - 17 articles - HIGH / BULLISH - US Stock Market: Fed's Jefferson signals openness to rate hike if inflation stays elevated"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Bonds & Fixed Income - 25 articles - HIGH / BEARISH - Global Market: Euro zone bond yields hover near 15-year highs as Middle East war fuels inflation fears"
     },
     {
       "tag": "tag-bear",
@@ -1196,11 +1201,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Commodities & Mining - 6 articles - MEDIUM / BULLISH - NMDC shares decline 4% after Q1 results. Should you buy, sell or hold the stock?"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Bonds & Fixed Income - 29 articles - HIGH / BEARISH - Global Market: Euro zone bond yields hover near 15-year highs as Middle East war fuels inflation fears"
     }
   ],
   "market_snapshot": [
@@ -1254,10 +1254,10 @@
       "region": "EU",
       "price": 26338.61,
       "currency": "EUR",
-      "change": -101.7,
-      "change_pct": -0.38,
-      "change_str": "-0.38%",
-      "direction": "down"
+      "change": 38.87,
+      "change_pct": 0.15,
+      "change_str": "+0.15%",
+      "direction": "up"
     },
     {
       "label": "Nikkei 225",
@@ -1296,33 +1296,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4473.1,
+      "price": 4470.3,
       "currency": "USD",
-      "change": 92.7,
-      "change_pct": 2.12,
-      "change_str": "+2.12%",
+      "change": 89.9,
+      "change_pct": 2.05,
+      "change_str": "+2.05%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 84.95,
+      "price": 85.1,
       "currency": "USD",
-      "change": 2.55,
-      "change_pct": 3.09,
-      "change_str": "+3.09%",
+      "change": 2.7,
+      "change_pct": 3.28,
+      "change_str": "+3.28%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64290.84,
+      "price": 64249.82,
       "currency": "USD",
-      "change": 1472.19,
-      "change_pct": 2.34,
-      "change_str": "+2.34%",
+      "change": 1431.17,
+      "change_pct": 2.28,
+      "change_str": "+2.28%",
       "direction": "up"
     },
     {
@@ -1605,10 +1605,10 @@
     }
   },
   "logs": [
-    "2026-08-17 21:38:47 [INFO] AZALYST - status.json generated",
-    "2026-08-17 21:38:47 [INFO] PORTFOLIO - NAV USD 9,977.07 | Return -0.04%",
-    "2026-08-17 21:38:47 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-17 21:38:47 [INFO] TRADER - Open positions: EWJ, XLF, XLE"
+    "2026-08-17 22:46:48 [INFO] AZALYST - status.json generated",
+    "2026-08-17 22:46:48 [INFO] PORTFOLIO - NAV USD 9,977.07 | Return -0.04%",
+    "2026-08-17 22:46:48 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-17 22:46:48 [INFO] TRADER - Open positions: EWJ, XLF, XLE"
   ],
-  "generated_at": "2026-08-17 21:38:44 UTC"
+  "generated_at": "2026-08-17 22:46:45 UTC"
 }
