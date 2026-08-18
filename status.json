@@ -1,21 +1,21 @@
 {
-  "portfolio_value": 9972.92,
+  "portfolio_value": 9959.61,
   "total_deposited": 9973.35,
   "cash": 4777.41,
   "monthly_reserve": 0.0,
-  "market_value": 5195.51,
+  "market_value": 5182.2,
   "total_invested": 5195.94,
-  "unrealised_pnl": -0.42,
-  "unrealised_str": "-0.42",
+  "unrealised_pnl": -13.73,
+  "unrealised_str": "-13.73",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "-0.00%",
-  "change_raw": -0.0,
+  "change": "-0.14%",
+  "change_raw": -0.14,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 9980.93,
-  "drawdown_now_pct": 0.08,
-  "max_drawdown_pct": 0.13,
+  "drawdown_now_pct": 0.21,
+  "max_drawdown_pct": 0.21,
   "deposited_anomaly": false,
   "usd_inr_rate": 95.67,
   "positions": [
@@ -27,19 +27,19 @@
       "platform": "iShares by BlackRock \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 98.28,
-      "current": 98.17,
+      "current": 96.12,
       "peak_price": 98.48,
       "trail_stop": 91.4,
-      "dist_to_trail_pct": 6.89,
+      "dist_to_trail_pct": 4.91,
       "units": 21.278144,
       "invested": 2091.25,
-      "pnl": -2.38,
-      "pnl_str": "-2.38",
-      "pnl_pct": -0.11,
-      "pnl_pct_str": "-0.11%",
+      "pnl": -45.89,
+      "pnl_str": "-45.89",
+      "pnl_pct": -2.19,
+      "pnl_pct_str": "-2.19%",
       "confidence": 93,
       "severity": "CRITICAL",
-      "days_held": 3,
+      "days_held": 4,
       "half_exited": false
     },
     {
@@ -50,19 +50,19 @@
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 58.16,
-      "current": 57.58,
+      "current": 57.86,
       "peak_price": 58.16,
       "trail_stop": 54.09,
-      "dist_to_trail_pct": 6.06,
+      "dist_to_trail_pct": 6.51,
       "units": 17.548769,
       "invested": 1020.79,
-      "pnl": -10.23,
-      "pnl_str": "-10.23",
-      "pnl_pct": -1.0,
-      "pnl_pct_str": "-1.00%",
+      "pnl": -5.31,
+      "pnl_str": "-5.31",
+      "pnl_pct": -0.52,
+      "pnl_pct_str": "-0.52%",
       "confidence": 89,
       "severity": "CRITICAL",
-      "days_held": 3,
+      "days_held": 4,
       "half_exited": false
     },
     {
@@ -73,16 +73,16 @@
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 62.21,
-      "current": 62.58,
-      "peak_price": 62.62,
+      "current": 63.34,
+      "peak_price": 63.34,
       "trail_stop": 57.86,
-      "dist_to_trail_pct": 7.54,
+      "dist_to_trail_pct": 8.65,
       "units": 33.496025,
       "invested": 2083.9,
-      "pnl": 12.28,
-      "pnl_str": "+12.28",
-      "pnl_pct": 0.59,
-      "pnl_pct_str": "+0.59%",
+      "pnl": 37.57,
+      "pnl_str": "+37.57",
+      "pnl_pct": 1.8,
+      "pnl_pct_str": "+1.80%",
       "confidence": 96,
       "severity": "CRITICAL",
       "days_held": 3,
@@ -145,9 +145,9 @@
       {
         "era": "current",
         "total_deposited": 9973.35,
-        "portfolio_value": 9972.92,
+        "portfolio_value": 9959.61,
         "realised_pnl": 0.0,
-        "change": "-0.00%",
+        "change": "-0.14%",
         "total_trades": 0,
         "winners": 0,
         "losers": 0,
@@ -166,32 +166,32 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "LOW_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.043749434494458554,
-    "vix_level": 15.890000343322754,
-    "vix_percentile_1y": 0.24603174603174602,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 30,
-      "flow": 22,
-      "options": 18,
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
       "rotation": 15,
-      "macro": 8,
-      "news": 7
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
-    "ticker": "XLK",
-    "rank_score": 0.0,
-    "flow_score": 14.148322795257,
-    "options_score": 0.0,
+    "ticker": "XLE",
+    "rank_score": 25.69855715871254,
+    "flow_score": 10.608334871540125,
+    "options_score": 13.953925714240972,
     "rotation_score": 15.0,
-    "macro_score": 0.0,
-    "news_score": 4.199999999999999,
-    "total": 33.348322795257005,
-    "publish": false,
-    "direction": "short"
+    "macro_score": 2.3700671366838537,
+    "news_score": 6.72,
+    "total": 74.35088488117749,
+    "publish": true,
+    "direction": "long"
   },
   "jlaw_risk": {
     "distribution_count": 3,
@@ -223,10 +223,10 @@
       "CASH"
     ],
     "values": [
-      20.9,
-      10.1,
-      21.0,
-      47.9
+      20.5,
+      10.2,
+      21.3,
+      48.0
     ]
   },
   "pnl": {
@@ -236,9 +236,9 @@
       "XLE"
     ],
     "values": [
-      -2.38,
-      -10.23,
-      12.28
+      -45.89,
+      -5.31,
+      37.57
     ]
   },
   "confidence": [
@@ -255,8 +255,8 @@
       "score": 89.0
     },
     {
-      "symbol": "Bonds & Fixed Income",
-      "score": 89.0
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 87.0
     },
     {
       "symbol": "Europe Equity + Gold & Precious Metals",
@@ -277,10 +277,6 @@
     {
       "symbol": "Crypto & Digital Assets",
       "score": 77.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 75.0
     },
     {
       "symbol": "Cybersecurity",
@@ -305,6 +301,10 @@
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 65.0
+    },
+    {
+      "symbol": "Bonds & Fixed Income",
+      "score": 62.0
     }
   ],
   "signals": [
@@ -462,54 +462,55 @@
       }
     },
     {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
-      "confidence": 89.0,
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 87.0,
       "severity": "HIGH",
       "direction": "BEARISH",
-      "direction_score": -2.0,
+      "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "18 Aug 2026 02:20 UTC",
-      "headline": "30-year Treasury yield tops 5.31%, the highest in 19 years",
+      "article_count": 70,
+      "latest_at": "18 Aug 2026 11:20 UTC",
+      "headline": "Cerebras Stock Outlook: Can CBRS extend its rally?",
       "regions": [
-        "middle_east",
-        "global",
+        "europe",
+        "india",
         "americas",
-        "india"
+        "asia_pacific"
       ],
       "sources": [
-        "Latest from Tom's Hardware",
+        "Tech",
         "Bloomberg Markets",
-        "Semiconductor Engineering",
-        "Cointelegraph.com News"
+        "Oilprice.com",
+        "The Verge"
       ],
-      "primary_etf": "BND",
+      "primary_etf": "QQQ",
       "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "BHARATBOND"
+        "NIFTYBEES",
+        "MAFANG"
       ],
       "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
+        "QQQ",
+        "SOXX",
+        "AIQ"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 21.4,
+        "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 15.1,
-        "recency": 15.7,
+        "source_diversity": 16.4,
+        "recency": 12.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -757,59 +758,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 2.5,
         "recency": 15.6,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 75.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 64,
-      "latest_at": "15 Aug 2026 14:22 UTC",
-      "headline": "Chip Industry Week In Review",
-      "regions": [
-        "europe",
-        "middle_east",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "www.theregister.com - Articles",
-        "BBC News",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.7,
-        "recency": 1.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -1116,6 +1064,58 @@
         "recency": 16.7,
         "geopolitical_severity": 13.0
       }
+    },
+    {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 62.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -8.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 32,
+      "latest_at": "18 Aug 2026 14:11 UTC",
+      "headline": "Global Market: Japan\u2019s 10-year JGB yield hits three-decade high on BOJ rate hike bets",
+      "regions": [
+        "europe",
+        "americas",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "Tech",
+        "Bloomberg Markets",
+        "www.theregister.com - Articles",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.5,
+        "recency": 16.3,
+        "geopolitical_severity": 13.0
+      }
     }
   ],
   "articles": [
@@ -1137,7 +1137,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Bonds & Fixed Income - 25 articles - HIGH / BEARISH - 30-year Treasury yield tops 5.31%, the highest in 19 years"
+      "text": "Technology & AI / Semiconductors - 70 articles - HIGH / BEARISH - Cerebras Stock Outlook: Can CBRS extend its rally?"
     },
     {
       "tag": "tag-bear",
@@ -1163,11 +1163,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Crypto & Digital Assets - 18 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 64 articles - HIGH / BULLISH - Chip Industry Week In Review"
     },
     {
       "tag": "tag-bull",
@@ -1198,6 +1193,11 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BULLISH - Gold Advances as Dollar Pushes Lower on Easing Fed Hike Bets"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Bonds & Fixed Income - 32 articles - HIGH / BEARISH - Global Market: Japan\u2019s 10-year JGB yield hits three-decade high on BOJ rate hike bets"
     }
   ],
   "market_snapshot": [
@@ -1205,55 +1205,55 @@
       "label": "S&P 500",
       "ticker": "^GSPC",
       "region": "US",
-      "price": 7745.06,
+      "price": 7706.26,
       "currency": "USD",
-      "change": -53.93,
-      "change_pct": -0.69,
-      "change_str": "-0.69%",
+      "change": -79.5,
+      "change_pct": -1.02,
+      "change_str": "-1.02%",
       "direction": "down"
     },
     {
       "label": "NASDAQ",
       "ticker": "^IXIC",
       "region": "US",
-      "price": 26644.91,
+      "price": 26336.3,
       "currency": "USD",
-      "change": -158.12,
-      "change_pct": -0.59,
-      "change_str": "-0.59%",
+      "change": -392.86,
+      "change_pct": -1.47,
+      "change_str": "-1.47%",
       "direction": "down"
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 53459.78,
+      "price": 53420.79,
       "currency": "USD",
-      "change": -380.21,
-      "change_pct": -0.71,
-      "change_str": "-0.71%",
+      "change": -311.62,
+      "change_pct": -0.58,
+      "change_str": "-0.58%",
       "direction": "down"
     },
     {
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10724.63,
+      "price": 10759.45,
       "currency": "GBP",
-      "change": -25.47,
-      "change_pct": -0.24,
-      "change_str": "-0.24%",
-      "direction": "down"
+      "change": 9.35,
+      "change_pct": 0.09,
+      "change_str": "+0.09%",
+      "direction": "up"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 26263.91,
+      "price": 26195.42,
       "currency": "EUR",
-      "change": -176.4,
-      "change_pct": -0.67,
-      "change_str": "-0.67%",
+      "change": -244.89,
+      "change_pct": -0.93,
+      "change_str": "-0.93%",
       "direction": "down"
     },
     {
@@ -1293,82 +1293,82 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4452.5,
+      "price": 4450.6,
       "currency": "USD",
-      "change": 34.7,
-      "change_pct": 0.79,
-      "change_str": "+0.79%",
+      "change": 32.8,
+      "change_pct": 0.74,
+      "change_str": "+0.74%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 83.94,
+      "price": 83.92,
       "currency": "USD",
-      "change": -0.56,
-      "change_pct": -0.66,
-      "change_str": "-0.66%",
+      "change": -0.58,
+      "change_pct": -0.69,
+      "change_str": "-0.69%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64140.03,
+      "price": 64735.64,
       "currency": "USD",
-      "change": -366.22,
-      "change_pct": -0.57,
-      "change_str": "-0.57%",
-      "direction": "down"
+      "change": 229.39,
+      "change_pct": 0.36,
+      "change_str": "+0.36%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.64,
+      "price": 99.57,
       "currency": "USD",
-      "change": -0.03,
-      "change_pct": -0.03,
-      "change_str": "-0.03%",
+      "change": -0.1,
+      "change_pct": -0.1,
+      "change_str": "-0.10%",
       "direction": "down"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 15.89,
+      "price": 15.73,
       "currency": "USD",
-      "change": 1.64,
-      "change_pct": 11.51,
-      "change_str": "+11.51%",
+      "change": 1.48,
+      "change_pct": 10.39,
+      "change_str": "+10.39%",
       "direction": "up"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.08,
+    "drawdown_from_peak_pct": 0.21,
     "portfolio_peak": 9980.93,
-    "vix": 15.89,
+    "vix": 15.73,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
         "sector": "Energy / Oil & Gas",
-        "weight": 21.0,
+        "weight": 21.3,
         "at_cap": false
       },
       {
         "sector": "Asia Pacific Equity",
-        "weight": 20.9,
+        "weight": 20.5,
         "at_cap": false
       },
       {
         "sector": "Banking & Financial Sector",
-        "weight": 10.1,
+        "weight": 10.2,
         "at_cap": false
       }
     ],
-    "max_drawdown_pct": 0.13,
+    "max_drawdown_pct": 0.21,
     "sector_cap_pct": 30,
     "trailing_stop_pct": 8,
     "hard_stop_pct": 10,
@@ -1380,17 +1380,17 @@
       "matrix": {
         "EWJ": {
           "EWJ": 1.0,
-          "XLE": -0.19,
-          "XLF": 0.151
+          "XLE": -0.273,
+          "XLF": 0.233
         },
         "XLE": {
-          "EWJ": -0.19,
+          "EWJ": -0.273,
           "XLE": 1.0,
-          "XLF": -0.432
+          "XLF": -0.47
         },
         "XLF": {
-          "EWJ": 0.151,
-          "XLE": -0.432,
+          "EWJ": 0.233,
+          "XLE": -0.47,
           "XLF": 1.0
         }
       },
@@ -1399,12 +1399,12 @@
         "XLE",
         "XLF"
       ],
-      "max_corr": 0.151,
+      "max_corr": 0.233,
       "max_corr_pair": [
         "EWJ",
         "XLF"
       ],
-      "most_negative_corr": -0.432,
+      "most_negative_corr": -0.47,
       "most_negative_pair": [
         "XLE",
         "XLF"
@@ -1413,60 +1413,60 @@
     },
     "volatility": {
       "per_ticker": {
-        "EWJ": 22.75,
-        "XLF": 10.22,
-        "XLE": 24.53
+        "EWJ": 24.14,
+        "XLF": 10.3,
+        "XLE": 24.79
       },
-      "portfolio_avg_vol_pct": 19.17,
+      "portfolio_avg_vol_pct": 19.74,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 2.46,
+      "benchmark_return_pct": 1.45,
       "benchmark_price_start": 757.67,
-      "benchmark_price_now": 776.34,
+      "benchmark_price_now": 768.68,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.0,
-      "alpha": -2.46
+      "portfolio_return_pct": -0.14,
+      "alpha": -1.59
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 47.9,
+          "actual_weight_pct": 47.97,
           "target_weight_pct": 10.0,
-          "drift_pct": 37.9,
+          "drift_pct": 37.97,
           "action": "DEPLOY",
-          "amount": 3780.11,
+          "amount": 3781.45,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
         {
           "ticker": "XLF",
-          "actual_weight_pct": 10.13,
+          "actual_weight_pct": 10.19,
           "target_weight_pct": 30.0,
-          "drift_pct": -19.87,
+          "drift_pct": -19.81,
           "action": "ADD",
-          "amount": 1981.42,
+          "amount": 1972.51,
           "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
         {
           "ticker": "EWJ",
-          "actual_weight_pct": 20.95,
+          "actual_weight_pct": 20.54,
           "target_weight_pct": 30.0,
-          "drift_pct": -9.05,
+          "drift_pct": -9.46,
           "action": "ADD",
-          "amount": 903.0,
+          "amount": 942.52,
           "etf_name": "iShares MSCI Japan ETF",
           "regime_note": ""
         },
         {
           "ticker": "XLE",
-          "actual_weight_pct": 21.02,
+          "actual_weight_pct": 21.3,
           "target_weight_pct": 30.0,
-          "drift_pct": -8.98,
+          "drift_pct": -8.7,
           "action": "ADD",
-          "amount": 895.69,
+          "amount": 866.41,
           "etf_name": "Energy Select Sector SPDR",
           "regime_note": ""
         }
@@ -1477,135 +1477,135 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -2392.63,
-          "portfolio_loss_pct": -23.99,
+          "total_impact": -2391.1,
+          "portfolio_loss_pct": -24.01,
           "position_impacts": [
             {
               "ticker": "EWJ",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -835.55
+              "impact": -818.14
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -404.18
+              "impact": -406.15
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -1152.9
+              "impact": -1166.81
             }
           ]
         },
         "2020_COVID": {
-          "total_impact": -2416.29,
-          "portfolio_loss_pct": -24.23,
+          "total_impact": -2419.61,
+          "portfolio_loss_pct": -24.29,
           "position_impacts": [
             {
               "ticker": "EWJ",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -710.22
+              "impact": -695.42
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -343.56
+              "impact": -345.23
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -1362.52
+              "impact": -1378.96
             }
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -674.52,
-          "portfolio_loss_pct": -6.76,
+          "total_impact": -671.26,
+          "portfolio_loss_pct": -6.74,
           "position_impacts": [
             {
               "ticker": "EWJ",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -313.33
+              "impact": -306.8
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -151.57
+              "impact": -152.31
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -209.62
+              "impact": -212.15
             }
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -562.37,
-          "portfolio_loss_pct": -5.64,
+          "total_impact": -563.08,
+          "portfolio_loss_pct": -5.65,
           "position_impacts": [
             {
               "ticker": "EWJ",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -167.11
+              "impact": -163.63
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -80.84
+              "impact": -81.23
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -314.43
+              "impact": -318.22
             }
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -977.12,
-          "portfolio_loss_pct": -9.8,
+          "total_impact": -975.23,
+          "portfolio_loss_pct": -9.79,
           "position_impacts": [
             {
               "ticker": "EWJ",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -376.0
+              "impact": -368.17
             },
             {
               "ticker": "XLF",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -181.88
+              "impact": -182.77
             },
             {
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -419.24
+              "impact": -424.29
             }
           ]
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -24.23
+      "worst_loss_pct": -24.29
     }
   },
   "logs": [
-    "2026-08-18 10:48:59 [INFO] AZALYST - status.json generated",
-    "2026-08-18 10:48:59 [INFO] PORTFOLIO - NAV USD 9,972.92 | Return -0.00%",
-    "2026-08-18 10:48:59 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-18 10:48:59 [INFO] TRADER - Open positions: EWJ, XLF, XLE"
+    "2026-08-18 14:43:35 [INFO] AZALYST - status.json generated",
+    "2026-08-18 14:43:35 [INFO] PORTFOLIO - NAV USD 9,959.61 | Return -0.14%",
+    "2026-08-18 14:43:35 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-18 14:43:35 [INFO] TRADER - Open positions: EWJ, XLF, XLE"
   ],
-  "generated_at": "2026-08-18 10:48:54 UTC"
+  "generated_at": "2026-08-18 14:43:34 UTC"
 }
