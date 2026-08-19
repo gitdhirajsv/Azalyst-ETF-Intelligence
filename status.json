@@ -1,12 +1,12 @@
 {
-  "portfolio_value": 9953.77,
+  "portfolio_value": 9953.6,
   "total_deposited": 9973.35,
-  "cash": 3495.38,
+  "cash": 3338.09,
   "monthly_reserve": 0.0,
-  "market_value": 6458.39,
-  "total_invested": 6477.96,
-  "unrealised_pnl": -19.58,
-  "unrealised_str": "-19.58",
+  "market_value": 6615.51,
+  "total_invested": 6635.25,
+  "unrealised_pnl": -19.75,
+  "unrealised_str": "-19.75",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
   "change": "-0.20%",
@@ -72,17 +72,17 @@
       "sector": "Energy / Oil & Gas",
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 62.55,
+      "entry": 62.62,
       "current": 63.68,
       "peak_price": 63.74,
-      "trail_stop": 58.18,
-      "dist_to_trail_pct": 8.64,
-      "units": 43.504751,
-      "invested": 2721.42,
-      "pnl": 48.96,
-      "pnl_str": "+48.96",
-      "pnl_pct": 1.8,
-      "pnl_pct_str": "+1.80%",
+      "trail_stop": 58.24,
+      "dist_to_trail_pct": 8.55,
+      "units": 45.972078,
+      "invested": 2878.71,
+      "pnl": 48.79,
+      "pnl_str": "+48.79",
+      "pnl_pct": 1.69,
+      "pnl_pct_str": "+1.69%",
       "confidence": 96,
       "severity": "CRITICAL",
       "days_held": 4,
@@ -168,7 +168,7 @@
       {
         "era": "current",
         "total_deposited": 9973.35,
-        "portfolio_value": 9953.77,
+        "portfolio_value": 9953.6,
         "realised_pnl": 0.0,
         "change": "-0.20%",
         "total_trades": 0,
@@ -210,9 +210,9 @@
     "flow_score": 22.0,
     "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 3.50970086452079,
-    "news_score": 6.4399999999999995,
-    "total": 75.6516726955067,
+    "macro_score": 4.094229162456254,
+    "news_score": 6.089999999999999,
+    "total": 75.88620099344217,
     "publish": true,
     "direction": "long"
   },
@@ -253,9 +253,9 @@
     "values": [
       22.4,
       10.2,
-      27.8,
+      29.4,
       4.4,
-      35.1
+      33.5
     ]
   },
   "pnl": {
@@ -268,18 +268,18 @@
     "values": [
       -62.26,
       -5.67,
-      48.96,
+      48.79,
       -0.47
     ]
   },
   "confidence": [
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 92.0
-    },
-    {
       "symbol": "Banking & Financial Sector",
       "score": 89.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 87.0
     },
     {
       "symbol": "Technology & AI / Semiconductors",
@@ -307,7 +307,7 @@
     },
     {
       "symbol": "Crypto & Digital Assets",
-      "score": 77.0
+      "score": 74.0
     },
     {
       "symbol": "Healthcare & Pharma",
@@ -326,72 +326,19 @@
       "score": 68.0
     },
     {
+      "symbol": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector",
+      "score": 67.0
+    },
+    {
       "symbol": "Defense & Aerospace",
       "score": 66.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 65.0
-    },
-    {
-      "symbol": "Bonds & Fixed Income",
-      "score": 62.0
     }
   ],
   "signals": [
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 92.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": 4.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "18 Aug 2026 18:18 UTC",
-      "headline": "Jeff Currie: Forget $91 Brent, The Real Crisis Is $170 Diesel",
-      "regions": [
-        "europe",
-        "middle_east",
-        "asia_pacific",
-        "americas"
-      ],
-      "sources": [
-        "BBC News",
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "Defense News"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.8,
-        "recency": 13.7,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector",
@@ -440,6 +387,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 13.6,
         "recency": 16.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 87.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": -2.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 29,
+      "latest_at": "19 Aug 2026 01:54 UTC",
+      "headline": "Jeff Currie: Forget $91 Brent, The Real Crisis Is $170 Diesel",
+      "regions": [
+        "global",
+        "americas",
+        "middle_east",
+        "europe"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "BBC News",
+        "Oilprice.com",
+        "Defense News"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.8,
+        "recency": 15.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -752,24 +752,26 @@
     {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
-      "confidence": 77.0,
-      "severity": "HIGH",
+      "confidence": 74.0,
+      "severity": "CRITICAL",
       "direction": "BEARISH",
       "direction_score": 1.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 18,
-      "latest_at": "18 Aug 2026 06:09 UTC",
+      "article_count": 24,
+      "latest_at": "18 Aug 2026 20:21 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
         "global",
         "middle_east",
-        "europe",
-        "americas"
+        "americas",
+        "india"
       ],
       "sources": [
-        "Cointelegraph.com News"
+        "Cointelegraph.com News",
+        "Latest from Tom's Hardware",
+        "US Top News and Analysis"
       ],
       "primary_etf": "IBIT",
       "top_etfs": [
@@ -786,10 +788,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 21.8,
+        "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 2.5,
-        "recency": 15.6,
+        "source_diversity": 6.5,
+        "recency": 8.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -992,6 +994,58 @@
       }
     },
     {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 67.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -7.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "19 Aug 2026 01:59 UTC",
+      "headline": "30-year Treasury yields at highest level since 2007 amid Iran worries, broader selloff",
+      "regions": [
+        "global",
+        "americas",
+        "middle_east",
+        "india"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Latest from Tom's Hardware",
+        "US Top News and Analysis",
+        "World | Deutsche Welle"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.6,
+        "recency": 15.1,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
       "confidence": 66.0,
@@ -1096,70 +1150,18 @@
         "recency": 16.7,
         "geopolitical_severity": 13.0
       }
-    },
-    {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
-      "confidence": 62.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -8.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 32,
-      "latest_at": "18 Aug 2026 14:11 UTC",
-      "headline": "Global Market: Japan\u2019s 10-year JGB yield hits three-decade high on BOJ rate hike bets",
-      "regions": [
-        "europe",
-        "americas",
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "Tech",
-        "Bloomberg Markets",
-        "www.theregister.com - Articles",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.5,
-        "recency": 16.3,
-        "geopolitical_severity": 13.0
-      }
     }
   ],
   "articles": [
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas - 25 articles - CRITICAL / BULLISH - Jeff Currie: Forget $91 Brent, The Real Crisis Is $170 Diesel"
+      "text": "Banking & Financial Sector - 17 articles - HIGH / BULLISH - US Stock Market: Fed's Jefferson signals openness to rate hike if inflation stays elevated"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Banking & Financial Sector - 17 articles - HIGH / BULLISH - US Stock Market: Fed's Jefferson signals openness to rate hike if inflation stays elevated"
+      "text": "Energy / Oil & Gas - 29 articles - CRITICAL / BULLISH - Jeff Currie: Forget $91 Brent, The Real Crisis Is $170 Diesel"
     },
     {
       "tag": "tag-bear",
@@ -1194,7 +1196,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Crypto & Digital Assets - 18 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
+      "text": "Crypto & Digital Assets - 24 articles - CRITICAL / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
@@ -1217,6 +1219,11 @@
       "text": "Nuclear Energy & Uranium - 4 articles - HIGH / BULLISH - Romania shuts nuclear plant, Hungary dams dry Danube River"
     },
     {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / BEARISH - 30-year Treasury yields at highest level since 2007 amid Iran worries, broader selloff"
+    },
+    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Defense & Aerospace - 25 articles - HIGH / BULLISH - Patriot makers hedge on Ukraine production deal as officials question cause of hold-up"
@@ -1225,11 +1232,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BULLISH - Gold Advances as Dollar Pushes Lower on Easing Fed Hike Bets"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Bonds & Fixed Income - 32 articles - HIGH / BEARISH - Global Market: Japan\u2019s 10-year JGB yield hits three-decade high on BOJ rate hike bets"
     }
   ],
   "market_snapshot": [
@@ -1281,33 +1283,33 @@
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 26128.36,
+      "price": 26128.4,
       "currency": "EUR",
-      "change": -311.95,
-      "change_pct": -1.18,
-      "change_str": "-1.18%",
+      "change": -210.21,
+      "change_pct": -0.8,
+      "change_str": "-0.80%",
       "direction": "down"
     },
     {
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 67460.73,
+      "price": 65724.25,
       "currency": "JPY",
-      "change": -1253.07,
-      "change_pct": -1.82,
-      "change_str": "-1.82%",
+      "change": -1736.48,
+      "change_pct": -2.57,
+      "change_str": "-2.57%",
       "direction": "down"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 25471.15,
+      "price": 25514.82,
       "currency": "HKD",
-      "change": 354.3,
-      "change_pct": 1.41,
-      "change_str": "+1.41%",
+      "change": 43.67,
+      "change_pct": 0.17,
+      "change_str": "+0.17%",
       "direction": "up"
     },
     {
@@ -1316,54 +1318,54 @@
       "region": "IN",
       "price": 24154.9,
       "currency": "INR",
-      "change": -211.1,
-      "change_pct": -0.87,
-      "change_str": "-0.87%",
+      "change": -132.75,
+      "change_pct": -0.55,
+      "change_str": "-0.55%",
       "direction": "down"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4388.8,
+      "price": 4409.4,
       "currency": "USD",
-      "change": -29.0,
-      "change_pct": -0.66,
-      "change_str": "-0.66%",
-      "direction": "down"
+      "change": 43.4,
+      "change_pct": 0.99,
+      "change_str": "+0.99%",
+      "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 84.42,
+      "price": 84.76,
       "currency": "USD",
-      "change": -0.08,
-      "change_pct": -0.09,
-      "change_str": "-0.09%",
+      "change": -0.18,
+      "change_pct": -0.21,
+      "change_str": "-0.21%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 64596.43,
+      "price": 64294.17,
       "currency": "USD",
-      "change": 90.18,
-      "change_pct": 0.14,
-      "change_str": "+0.14%",
-      "direction": "up"
+      "change": -212.08,
+      "change_pct": -0.33,
+      "change_str": "-0.33%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.64,
+      "price": 99.56,
       "currency": "USD",
-      "change": 0.0,
-      "change_pct": 0.0,
-      "change_str": "+0.00%",
-      "direction": "up"
+      "change": -0.09,
+      "change_pct": -0.09,
+      "change_str": "-0.09%",
+      "direction": "down"
     },
     {
       "label": "VIX",
@@ -1386,7 +1388,7 @@
     "sector_concentration": [
       {
         "sector": "Energy / Oil & Gas",
-        "weight": 27.8,
+        "weight": 29.4,
         "at_cap": false
       },
       {
@@ -1480,11 +1482,11 @@
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 35.12,
+          "actual_weight_pct": 33.54,
           "target_weight_pct": 10.0,
-          "drift_pct": 25.12,
+          "drift_pct": 23.54,
           "action": "DEPLOY",
-          "amount": 2500.01,
+          "amount": 2342.73,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
@@ -1494,7 +1496,7 @@
           "target_weight_pct": 22.5,
           "drift_pct": -18.09,
           "action": "ADD",
-          "amount": 1800.59,
+          "amount": 1800.56,
           "etf_name": "Health Care Select Sector SPDR",
           "regime_note": ""
         },
@@ -1504,17 +1506,17 @@
           "target_weight_pct": 22.5,
           "drift_pct": -12.3,
           "action": "ADD",
-          "amount": 1224.58,
+          "amount": 1224.54,
           "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         },
         {
           "ticker": "XLE",
-          "actual_weight_pct": 27.83,
+          "actual_weight_pct": 29.41,
           "target_weight_pct": 22.5,
-          "drift_pct": 5.33,
+          "drift_pct": 6.91,
           "action": "TRIM",
-          "amount": 530.78,
+          "amount": 687.94,
           "etf_name": "Energy Select Sector SPDR",
           "regime_note": ""
         }
@@ -1525,8 +1527,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -2998.91,
-          "portfolio_loss_pct": -30.13,
+          "total_impact": -3085.33,
+          "portfolio_loss_pct": -31.0,
           "position_impacts": [
             {
               "ticker": "EWJ",
@@ -1544,7 +1546,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -1523.71
+              "impact": -1610.13
             },
             {
               "ticker": "XLV",
@@ -1555,8 +1557,8 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -3054.67,
-          "portfolio_loss_pct": -30.69,
+          "total_impact": -3156.8,
+          "portfolio_loss_pct": -31.72,
           "position_impacts": [
             {
               "ticker": "EWJ",
@@ -1574,7 +1576,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -1800.75
+              "impact": -1902.88
             },
             {
               "ticker": "XLV",
@@ -1585,8 +1587,8 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -830.24,
-          "portfolio_loss_pct": -8.34,
+          "total_impact": -845.95,
+          "portfolio_loss_pct": -8.5,
           "position_impacts": [
             {
               "ticker": "EWJ",
@@ -1604,7 +1606,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -277.04
+              "impact": -292.75
             },
             {
               "ticker": "XLV",
@@ -1615,8 +1617,8 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -710.6,
-          "portfolio_loss_pct": -7.14,
+          "total_impact": -734.17,
+          "portfolio_loss_pct": -7.38,
           "position_impacts": [
             {
               "ticker": "EWJ",
@@ -1634,7 +1636,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -415.56
+              "impact": -439.13
             },
             {
               "ticker": "XLV",
@@ -1645,8 +1647,8 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1217.92,
-          "portfolio_loss_pct": -12.24,
+          "total_impact": -1249.34,
+          "portfolio_loss_pct": -12.55,
           "position_impacts": [
             {
               "ticker": "EWJ",
@@ -1664,7 +1666,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -554.08
+              "impact": -585.5
             },
             {
               "ticker": "XLV",
@@ -1676,14 +1678,14 @@
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -30.69
+      "worst_loss_pct": -31.72
     }
   },
   "logs": [
-    "2026-08-18 22:41:31 [INFO] AZALYST - status.json generated",
-    "2026-08-18 22:41:31 [INFO] PORTFOLIO - NAV USD 9,953.77 | Return -0.20%",
-    "2026-08-18 22:41:31 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-18 22:41:31 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV"
+    "2026-08-19 03:14:34 [INFO] AZALYST - status.json generated",
+    "2026-08-19 03:14:34 [INFO] PORTFOLIO - NAV USD 9,953.60 | Return -0.20%",
+    "2026-08-19 03:14:34 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-19 03:14:34 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV"
   ],
-  "generated_at": "2026-08-18 22:41:30 UTC"
+  "generated_at": "2026-08-19 03:14:31 UTC"
 }
