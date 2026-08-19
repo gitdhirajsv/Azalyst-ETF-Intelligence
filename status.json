@@ -1,16 +1,16 @@
 {
-  "portfolio_value": 9939.74,
+  "portfolio_value": 9940.4,
   "total_deposited": 9965.74,
   "cash": 2728.43,
   "monthly_reserve": 0.0,
-  "market_value": 7211.32,
+  "market_value": 7211.97,
   "total_invested": 7237.32,
-  "unrealised_pnl": -26.0,
-  "unrealised_str": "-26.00",
+  "unrealised_pnl": -25.34,
+  "unrealised_str": "-25.34",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "-0.26%",
-  "change_raw": -0.26,
+  "change": "-0.25%",
+  "change_raw": -0.25,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 9989.03,
@@ -73,16 +73,16 @@
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
       "entry": 62.59,
-      "current": 63.57,
+      "current": 63.58,
       "peak_price": 64.08,
       "trail_stop": 58.21,
-      "dist_to_trail_pct": 8.42,
+      "dist_to_trail_pct": 8.44,
       "units": 46.87942,
       "invested": 2934.36,
-      "pnl": 45.58,
-      "pnl_str": "+45.58",
-      "pnl_pct": 1.55,
-      "pnl_pct_str": "+1.55%",
+      "pnl": 46.23,
+      "pnl_str": "+46.23",
+      "pnl_pct": 1.58,
+      "pnl_pct_str": "+1.58%",
       "confidence": 96,
       "severity": "CRITICAL",
       "days_held": 5,
@@ -191,9 +191,9 @@
       {
         "era": "current",
         "total_deposited": 9965.74,
-        "portfolio_value": 9939.74,
+        "portfolio_value": 9940.4,
         "realised_pnl": 0.0,
-        "change": "-0.26%",
+        "change": "-0.25%",
         "total_trades": 0,
         "winners": 0,
         "losers": 0,
@@ -212,30 +212,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.030940588296147542,
+    "vix_level": 14.890000343322754,
+    "vix_percentile_1y": 0.07936507936507936,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
+      "rank": 30,
+      "flow": 22,
+      "options": 18,
       "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "macro": 8,
+      "news": 7
     }
   },
   "top_signal": {
     "ticker": "GDX",
-    "rank_score": 19.578042959427204,
+    "rank_score": 20.078994614003587,
     "flow_score": 22.0,
     "options_score": 13.943429510864792,
     "rotation_score": 15.0,
-    "macro_score": 5.586954853447147,
+    "macro_score": 5.622597111384086,
     "news_score": 4.816,
-    "total": 80.92442732373915,
+    "total": 81.46102123625246,
     "publish": true,
     "direction": "long"
   },
@@ -298,7 +298,7 @@
     "values": [
       -74.33,
       -11.2,
-      45.58,
+      46.23,
       14.36,
       -0.29
     ]
@@ -330,7 +330,7 @@
     },
     {
       "symbol": "Crypto & Digital Assets",
-      "score": 83.0
+      "score": 85.0
     },
     {
       "symbol": "India Equity Markets",
@@ -683,27 +683,26 @@
     {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
-      "confidence": 83.0,
-      "severity": "CRITICAL",
+      "confidence": 85.0,
+      "severity": "HIGH",
       "direction": "BEARISH",
       "direction_score": -2.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "19 Aug 2026 16:00 UTC",
+      "article_count": 26,
+      "latest_at": "19 Aug 2026 20:33 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "europe",
-        "middle_east",
-        "global",
-        "asia_pacific"
+        "asia_pacific",
+        "india",
+        "global"
       ],
       "sources": [
-        "Tech",
-        "Cointelegraph.com News",
+        "Markets-Economic Times",
         "Latest from Tom's Hardware",
-        "Markets-Economic Times"
+        "Cointelegraph.com News",
+        "Bloomberg Markets"
       ],
       "primary_etf": "IBIT",
       "top_etfs": [
@@ -722,8 +721,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 10.3,
-        "recency": 16.1,
+        "source_diversity": 12.8,
+        "recency": 15.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -1217,7 +1216,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Crypto & Digital Assets - 23 articles - CRITICAL / BEARISH - Here\u2019s what happened in crypto today"
+      "text": "Crypto & Digital Assets - 26 articles - HIGH / BEARISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
@@ -1358,44 +1357,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4575.9,
+      "price": 4580.7,
       "currency": "USD",
-      "change": 209.9,
-      "change_pct": 4.81,
-      "change_str": "+4.81%",
+      "change": 214.7,
+      "change_pct": 4.92,
+      "change_str": "+4.92%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 84.27,
+      "price": 84.4,
       "currency": "USD",
-      "change": -0.67,
-      "change_pct": -0.79,
-      "change_str": "-0.79%",
+      "change": -0.54,
+      "change_pct": -0.64,
+      "change_str": "-0.64%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 68701.92,
+      "price": 69757.48,
       "currency": "USD",
-      "change": 4021.21,
-      "change_pct": 6.22,
-      "change_str": "+6.22%",
+      "change": 5076.77,
+      "change_pct": 7.85,
+      "change_str": "+7.85%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.82,
+      "price": 98.8,
       "currency": "USD",
-      "change": -0.83,
-      "change_pct": -0.83,
-      "change_str": "-0.83%",
+      "change": -0.86,
+      "change_pct": -0.86,
+      "change_str": "-0.86%",
       "direction": "down"
     },
     {
@@ -1524,8 +1523,8 @@
       "benchmark_price_start": 757.67,
       "benchmark_price_now": 769.06,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.26,
-      "alpha": -1.76
+      "portfolio_return_pct": -0.25,
+      "alpha": -1.75
     },
     "rebalance": {
       "alerts": [
@@ -1535,7 +1534,7 @@
           "target_weight_pct": 10.0,
           "drift_pct": 17.45,
           "action": "DEPLOY",
-          "amount": 1734.45,
+          "amount": 1734.39,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
@@ -1545,7 +1544,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -17.25,
           "action": "ADD",
-          "amount": 1714.47,
+          "amount": 1714.59,
           "etf_name": "Invesco DB Commodity Index Tracking Fund",
           "regime_note": ""
         },
@@ -1555,7 +1554,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": 11.98,
           "action": "TRIM",
-          "amount": 1190.78,
+          "amount": 1191.32,
           "etf_name": "Energy Select Sector SPDR",
           "regime_note": ""
         },
@@ -1565,7 +1564,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -8.67,
           "action": "ADD",
-          "amount": 861.31,
+          "amount": 861.43,
           "etf_name": "Health Care Select Sector SPDR",
           "regime_note": ""
         },
@@ -1575,7 +1574,7 @@
           "target_weight_pct": 18.0,
           "drift_pct": -7.85,
           "action": "ADD",
-          "amount": 780.45,
+          "amount": 780.57,
           "etf_name": "Financial Select Sector SPDR",
           "regime_note": ""
         }
@@ -1586,7 +1585,7 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -3342.72,
+          "total_impact": -3343.08,
           "portfolio_loss_pct": -33.63,
           "position_impacts": [
             {
@@ -1605,7 +1604,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -1638.97
+              "impact": -1639.33
             },
             {
               "ticker": "XLV",
@@ -1622,8 +1621,8 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -3398.78,
-          "portfolio_loss_pct": -34.19,
+          "total_impact": -3399.21,
+          "portfolio_loss_pct": -34.2,
           "position_impacts": [
             {
               "ticker": "EWJ",
@@ -1641,7 +1640,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -1936.96
+              "impact": -1937.39
             },
             {
               "ticker": "XLV",
@@ -1658,7 +1657,7 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -928.97,
+          "total_impact": -929.03,
           "portfolio_loss_pct": -9.35,
           "position_impacts": [
             {
@@ -1677,7 +1676,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -297.99
+              "impact": -298.06
             },
             {
               "ticker": "XLV",
@@ -1694,7 +1693,7 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -790.73,
+          "total_impact": -790.83,
           "portfolio_loss_pct": -7.96,
           "position_impacts": [
             {
@@ -1713,7 +1712,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -446.99
+              "impact": -447.09
             },
             {
               "ticker": "XLV",
@@ -1730,7 +1729,7 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1359.13,
+          "total_impact": -1359.26,
           "portfolio_loss_pct": -13.67,
           "position_impacts": [
             {
@@ -1749,7 +1748,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -595.99
+              "impact": -596.12
             },
             {
               "ticker": "XLV",
@@ -1767,14 +1766,14 @@
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -34.19
+      "worst_loss_pct": -34.2
     }
   },
   "logs": [
-    "2026-08-19 20:39:21 [INFO] AZALYST - status.json generated",
-    "2026-08-19 20:39:21 [INFO] PORTFOLIO - NAV USD 9,939.74 | Return -0.26%",
-    "2026-08-19 20:39:21 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-19 20:39:21 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
+    "2026-08-19 21:34:36 [INFO] AZALYST - status.json generated",
+    "2026-08-19 21:34:36 [INFO] PORTFOLIO - NAV USD 9,940.40 | Return -0.25%",
+    "2026-08-19 21:34:36 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-19 21:34:36 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
   ],
-  "generated_at": "2026-08-19 20:39:18 UTC"
+  "generated_at": "2026-08-19 21:34:31 UTC"
 }
