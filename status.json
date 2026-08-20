@@ -212,31 +212,31 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.020154185163896016,
+    "vix_level": 16.010000228881836,
+    "vix_percentile_1y": 0.2619047619047619,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
+      "rank": 30,
+      "flow": 22,
+      "options": 18,
       "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "macro": 8,
+      "news": 7
     }
   },
   "top_signal": {
-    "ticker": "BITO",
-    "rank_score": 26.86336633663366,
-    "flow_score": 22.0,
-    "options_score": 0.0,
-    "rotation_score": 0.0,
-    "macro_score": 3.2003822195448173,
-    "news_score": 6.3,
-    "total": 58.36374855617848,
-    "publish": false,
+    "ticker": "XLE",
+    "rank_score": 27.109293680297398,
+    "flow_score": 3.630995430241772,
+    "options_score": 14.404540461551136,
+    "rotation_score": 15.0,
+    "macro_score": 6.443329018676313,
+    "news_score": 5.096,
+    "total": 71.68415859076661,
+    "publish": true,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -310,7 +310,7 @@
     },
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 92.0
+      "score": 91.0
     },
     {
       "symbol": "Gold & Precious Metals + Bonds & Fixed Income + Banking & Financial Sector",
@@ -335,6 +335,10 @@
     {
       "symbol": "Technology & AI / Semiconductors",
       "score": 84.0
+    },
+    {
+      "symbol": "Commodities & Mining",
+      "score": 75.0
     },
     {
       "symbol": "Cybersecurity",
@@ -363,10 +367,6 @@
     {
       "symbol": "Emerging Markets",
       "score": 65.0
-    },
-    {
-      "symbol": "Commodities & Mining",
-      "score": 62.0
     }
   ],
   "signals": [
@@ -426,27 +426,27 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 92.0,
+      "confidence": 91.0,
       "severity": "HIGH",
       "direction": "BULLISH",
-      "direction_score": 2.0,
+      "direction_score": 0.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 18,
-      "latest_at": "20 Aug 2026 15:30 UTC",
-      "headline": "Brent Oil Price Tops $93 as U.S.-Iran Impasse Persists",
+      "article_count": 20,
+      "latest_at": "20 Aug 2026 22:00 UTC",
+      "headline": "Europe\u2019s Energy Reserves Worked. The Next Test Will Be Harder",
       "regions": [
-        "global",
+        "asia_pacific",
         "europe",
         "middle_east",
-        "asia_pacific"
+        "global"
       ],
       "sources": [
         "US Top News and Analysis",
-        "World News - Breaking international news and headlines | Sky News",
-        "Markets-Economic Times",
-        "Oilprice.com"
+        "Tech",
+        "Bloomberg Markets",
+        "Markets-Economic Times"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -471,8 +471,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 11.7,
-        "recency": 16.9,
+        "source_diversity": 14.4,
+        "recency": 15.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -778,6 +778,57 @@
         "source_diversity": 15.6,
         "recency": 12.2,
         "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 75.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "20 Aug 2026 22:00 UTC",
+      "headline": "Coal India Ventures into Critical Minerals Trading",
+      "regions": [
+        "asia_pacific",
+        "europe",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Latest from Tom's Hardware",
+        "Oilprice.com",
+        "Earnings"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.6,
+        "volume_confirmation": 13.7,
+        "source_diversity": 11.0,
+        "recency": 15.9,
+        "geopolitical_severity": 11.7
       }
     },
     {
@@ -1128,56 +1179,6 @@
         "recency": 13.0,
         "geopolitical_severity": 13.0
       }
-    },
-    {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 62.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "20 Aug 2026 14:30 UTC",
-      "headline": "Coal India Ventures into Critical Minerals Trading",
-      "regions": [
-        "europe",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Latest from Tom's Hardware",
-        "Oilprice.com",
-        "Earnings"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 10.6,
-        "volume_confirmation": 12.6,
-        "source_diversity": 11.0,
-        "recency": 9.3,
-        "geopolitical_severity": 10.4
-      }
     }
   ],
   "articles": [
@@ -1189,7 +1190,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas - 18 articles - HIGH / BULLISH - Brent Oil Price Tops $93 as U.S.-Iran Impasse Persists"
+      "text": "Energy / Oil & Gas - 20 articles - HIGH / BULLISH - Europe\u2019s Energy Reserves Worked. The Next Test Will Be Harder"
     },
     {
       "tag": "tag-bull",
@@ -1220,6 +1221,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Technology & AI / Semiconductors - 64 articles - HIGH / BEARISH - Marvell's stock pops 10% on AI chip deal that lets Google buy up to $12.2 billion in shares"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Commodities & Mining - 7 articles - MEDIUM / BULLISH - Coal India Ventures into Critical Minerals Trading"
     },
     {
       "tag": "tag-bull",
@@ -1255,11 +1261,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Emerging Markets - 5 articles - HIGH / BEARISH - Asia bond foreign inflows hit four-month low in July on oil shock"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Commodities & Mining - 6 articles - MEDIUM / BULLISH - Coal India Ventures into Critical Minerals Trading"
     }
   ],
   "market_snapshot": [
@@ -1313,9 +1314,9 @@
       "region": "EU",
       "price": 25983.04,
       "currency": "EUR",
-      "change": -108.29,
-      "change_pct": -0.42,
-      "change_str": "-0.42%",
+      "change": -145.32,
+      "change_pct": -0.56,
+      "change_str": "-0.56%",
       "direction": "down"
     },
     {
@@ -1355,44 +1356,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4575.1,
+      "price": 4576.2,
       "currency": "USD",
-      "change": 85.7,
-      "change_pct": 1.91,
-      "change_str": "+1.91%",
+      "change": 86.8,
+      "change_pct": 1.93,
+      "change_str": "+1.93%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 86.21,
+      "price": 86.27,
       "currency": "USD",
-      "change": 0.38,
-      "change_pct": 0.44,
-      "change_str": "+0.44%",
+      "change": 0.44,
+      "change_pct": 0.51,
+      "change_str": "+0.51%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 72798.25,
+      "price": 72686.76,
       "currency": "USD",
-      "change": 3532.06,
-      "change_pct": 5.1,
-      "change_str": "+5.10%",
+      "change": 3420.57,
+      "change_pct": 4.94,
+      "change_str": "+4.94%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.87,
+      "price": 98.84,
       "currency": "USD",
-      "change": 0.04,
-      "change_pct": 0.04,
-      "change_str": "+0.04%",
+      "change": 0.01,
+      "change_pct": 0.01,
+      "change_str": "+0.01%",
       "direction": "up"
     },
     {
@@ -1452,34 +1453,34 @@
       "matrix": {
         "DBC": {
           "DBC": 1.0,
-          "EWJ": -0.251,
-          "XLE": 0.722,
-          "XLF": -0.749,
-          "XLV": -0.003
+          "EWJ": 0.106,
+          "XLE": -0.473,
+          "XLF": 0.174,
+          "XLV": 0.03
         },
         "EWJ": {
-          "DBC": -0.251,
+          "DBC": 0.106,
           "EWJ": 1.0,
           "XLE": -0.287,
           "XLF": 0.155,
           "XLV": -0.441
         },
         "XLE": {
-          "DBC": 0.722,
+          "DBC": -0.473,
           "EWJ": -0.287,
           "XLE": 1.0,
           "XLF": -0.351,
           "XLV": -0.119
         },
         "XLF": {
-          "DBC": -0.749,
+          "DBC": 0.174,
           "EWJ": 0.155,
           "XLE": -0.351,
           "XLF": 1.0,
           "XLV": 0.222
         },
         "XLV": {
-          "DBC": -0.003,
+          "DBC": 0.03,
           "EWJ": -0.441,
           "XLE": -0.119,
           "XLF": 0.222,
@@ -1493,17 +1494,17 @@
         "XLF",
         "XLV"
       ],
-      "max_corr": 0.722,
+      "max_corr": 0.222,
       "max_corr_pair": [
+        "XLF",
+        "XLV"
+      ],
+      "most_negative_corr": -0.473,
+      "most_negative_pair": [
         "DBC",
         "XLE"
       ],
-      "most_negative_corr": -0.749,
-      "most_negative_pair": [
-        "DBC",
-        "XLF"
-      ],
-      "status": "HIGH"
+      "status": "OK"
     },
     "volatility": {
       "per_ticker": {
@@ -1511,9 +1512,9 @@
         "XLF": 11.2,
         "XLE": 23.37,
         "XLV": 19.3,
-        "DBC": 25.33
+        "DBC": 26.23
       },
-      "portfolio_avg_vol_pct": 20.39,
+      "portfolio_avg_vol_pct": 20.57,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -1758,10 +1759,10 @@
     }
   },
   "logs": [
-    "2026-08-20 21:38:36 [INFO] AZALYST - status.json generated",
-    "2026-08-20 21:38:36 [INFO] PORTFOLIO - NAV USD 9,903.26 | Return -0.68%",
-    "2026-08-20 21:38:36 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-20 21:38:36 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
+    "2026-08-20 22:44:26 [INFO] AZALYST - status.json generated",
+    "2026-08-20 22:44:26 [INFO] PORTFOLIO - NAV USD 9,903.26 | Return -0.68%",
+    "2026-08-20 22:44:26 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-20 22:44:26 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
   ],
-  "generated_at": "2026-08-20 21:38:33 UTC"
+  "generated_at": "2026-08-20 22:44:24 UTC"
 }
