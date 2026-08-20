@@ -212,31 +212,31 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "LOW_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.020154185163896016,
-    "vix_level": 16.010000228881836,
-    "vix_percentile_1y": 0.2619047619047619,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 30,
-      "flow": 22,
-      "options": 18,
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
       "rotation": 15,
-      "macro": 8,
-      "news": 7
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
-    "ticker": "XLE",
-    "rank_score": 27.109293680297398,
-    "flow_score": 2.0233417606694997,
-    "options_score": 14.404540461551136,
-    "rotation_score": 15.0,
-    "macro_score": 6.420766536308221,
-    "news_score": 5.151999999999999,
-    "total": 70.10994243882625,
-    "publish": true,
+    "ticker": "BITO",
+    "rank_score": 26.86336633663366,
+    "flow_score": 22.0,
+    "options_score": 0.0,
+    "rotation_score": 0.0,
+    "macro_score": 3.2003822195448173,
+    "news_score": 6.3,
+    "total": 58.36374855617848,
+    "publish": false,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -313,6 +313,10 @@
       "score": 92.0
     },
     {
+      "symbol": "Gold & Precious Metals + Bonds & Fixed Income + Banking & Financial Sector",
+      "score": 90.0
+    },
+    {
       "symbol": "Crypto & Digital Assets",
       "score": 90.0
     },
@@ -323,10 +327,6 @@
     {
       "symbol": "Asia Pacific Equity + Bearish Market / Macro Selloff",
       "score": 88.0
-    },
-    {
-      "symbol": "Gold & Precious Metals",
-      "score": 86.0
     },
     {
       "symbol": "Europe Equity + Gold & Precious Metals",
@@ -357,12 +357,12 @@
       "score": 67.0
     },
     {
-      "symbol": "Emerging Markets",
+      "symbol": "Clean Energy & Renewables",
       "score": 65.0
     },
     {
-      "symbol": "Clean Energy & Renewables",
-      "score": 62.0
+      "symbol": "Emerging Markets",
+      "score": 65.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -472,6 +472,59 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 11.7,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Bonds & Fixed Income + Banking & Financial Sector",
+      "confidence": 90.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": -12.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 14,
+      "latest_at": "20 Aug 2026 21:27 UTC",
+      "headline": "Fed officials saw need for rate hike if inflation doesn't cool, minutes show",
+      "regions": [
+        "americas",
+        "global",
+        "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Finance",
+        "World | Deutsche Welle",
+        "BBC News"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.0,
         "recency": 16.9,
         "geopolitical_severity": 13.0
       }
@@ -621,59 +674,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 15.9,
         "recency": 17.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 86.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": -7.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 16,
-      "latest_at": "20 Aug 2026 15:39 UTC",
-      "headline": "Gold Wavers as Yields Rebound, Oil Jump Fuels Inflation Worries",
-      "regions": [
-        "europe",
-        "americas",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Latest from Tom's Hardware",
-        "Finance",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 21.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.0,
-        "recency": 15.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -1030,6 +1030,56 @@
       }
     },
     {
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables",
+      "confidence": 65.0,
+      "severity": "MEDIUM",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "20 Aug 2026 21:27 UTC",
+      "headline": "How Solar Panel Prices Fell 90 Percent In 15 Years",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "The Verge",
+        "US Top News and Analysis",
+        "Oilprice.com"
+      ],
+      "primary_etf": "ICLN",
+      "top_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NEWENERGY"
+      ],
+      "global_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 10.9,
+        "volume_confirmation": 11.3,
+        "source_diversity": 7.6,
+        "recency": 16.9,
+        "geopolitical_severity": 11.7
+      }
+    },
+    {
       "sector_key": "emerging_markets",
       "sector_label": "Emerging Markets",
       "confidence": 65.0,
@@ -1077,56 +1127,6 @@
         "source_diversity": 12.7,
         "recency": 13.0,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables",
-      "confidence": 62.0,
-      "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "20 Aug 2026 14:23 UTC",
-      "headline": "Jefferies raises Emmvee Photovoltaic Power target price to Rs 440: Can the stock rally further?",
-      "regions": [
-        "global",
-        "europe"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Oilprice.com"
-      ],
-      "primary_etf": "ICLN",
-      "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NEWENERGY"
-      ],
-      "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 7.9,
-        "volume_confirmation": 9.7,
-        "source_diversity": 12.6,
-        "recency": 16.6,
-        "geopolitical_severity": 9.0
       }
     },
     {
@@ -1194,6 +1194,11 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Gold & Precious Metals + Bonds & Fixed Income + Banking & Financial Sector - 14 articles - HIGH / BULLISH - Fed officials saw need for rate hike if inflation doesn't cool, minutes show"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Crypto & Digital Assets - 32 articles - CRITICAL / BULLISH - US stocks: Crypto shares climb after Trump advocates for Clarity Act"
     },
     {
@@ -1205,11 +1210,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Asia Pacific Equity + Bearish Market / Macro Selloff - 13 articles - HIGH / BEARISH - Global Market: Japan shares slide as chip stocks tumble on global tech rout"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Gold & Precious Metals - 16 articles - HIGH / BULLISH - Gold Wavers as Yields Rebound, Oil Jump Fuels Inflation Worries"
     },
     {
       "tag": "tag-bear",
@@ -1249,12 +1249,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Emerging Markets - 5 articles - HIGH / BEARISH - Asia bond foreign inflows hit four-month low in July on oil shock"
+      "text": "Clean Energy & Renewables - 5 articles - MEDIUM / BEARISH - How Solar Panel Prices Fell 90 Percent In 15 Years"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Clean Energy & Renewables - 4 articles - MEDIUM / BEARISH - Jefferies raises Emmvee Photovoltaic Power target price to Rs 440: Can the stock rally further?"
+      "text": "Emerging Markets - 5 articles - HIGH / BEARISH - Asia bond foreign inflows hit four-month low in July on oil shock"
     },
     {
       "tag": "tag-bull",
@@ -1355,44 +1355,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4576.8,
+      "price": 4575.1,
       "currency": "USD",
-      "change": 87.4,
-      "change_pct": 1.95,
-      "change_str": "+1.95%",
+      "change": 85.7,
+      "change_pct": 1.91,
+      "change_str": "+1.91%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 86.58,
+      "price": 86.21,
       "currency": "USD",
-      "change": 0.75,
-      "change_pct": 0.87,
-      "change_str": "+0.87%",
+      "change": 0.38,
+      "change_pct": 0.44,
+      "change_str": "+0.44%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 72886.38,
+      "price": 72798.25,
       "currency": "USD",
-      "change": 3620.19,
-      "change_pct": 5.23,
-      "change_str": "+5.23%",
+      "change": 3532.06,
+      "change_pct": 5.1,
+      "change_str": "+5.10%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.89,
+      "price": 98.87,
       "currency": "USD",
-      "change": 0.06,
-      "change_pct": 0.06,
-      "change_str": "+0.06%",
+      "change": 0.04,
+      "change_pct": 0.04,
+      "change_str": "+0.04%",
       "direction": "up"
     },
     {
@@ -1452,34 +1452,34 @@
       "matrix": {
         "DBC": {
           "DBC": 1.0,
-          "EWJ": 0.106,
-          "XLE": -0.473,
-          "XLF": 0.174,
-          "XLV": 0.03
+          "EWJ": -0.251,
+          "XLE": 0.722,
+          "XLF": -0.749,
+          "XLV": -0.003
         },
         "EWJ": {
-          "DBC": 0.106,
+          "DBC": -0.251,
           "EWJ": 1.0,
           "XLE": -0.287,
           "XLF": 0.155,
           "XLV": -0.441
         },
         "XLE": {
-          "DBC": -0.473,
+          "DBC": 0.722,
           "EWJ": -0.287,
           "XLE": 1.0,
           "XLF": -0.351,
           "XLV": -0.119
         },
         "XLF": {
-          "DBC": 0.174,
+          "DBC": -0.749,
           "EWJ": 0.155,
           "XLE": -0.351,
           "XLF": 1.0,
           "XLV": 0.222
         },
         "XLV": {
-          "DBC": 0.03,
+          "DBC": -0.003,
           "EWJ": -0.441,
           "XLE": -0.119,
           "XLF": 0.222,
@@ -1493,17 +1493,17 @@
         "XLF",
         "XLV"
       ],
-      "max_corr": 0.222,
+      "max_corr": 0.722,
       "max_corr_pair": [
-        "XLF",
-        "XLV"
-      ],
-      "most_negative_corr": -0.473,
-      "most_negative_pair": [
         "DBC",
         "XLE"
       ],
-      "status": "OK"
+      "most_negative_corr": -0.749,
+      "most_negative_pair": [
+        "DBC",
+        "XLF"
+      ],
+      "status": "HIGH"
     },
     "volatility": {
       "per_ticker": {
@@ -1511,9 +1511,9 @@
         "XLF": 11.2,
         "XLE": 23.37,
         "XLV": 19.3,
-        "DBC": 26.23
+        "DBC": 25.33
       },
-      "portfolio_avg_vol_pct": 20.57,
+      "portfolio_avg_vol_pct": 20.39,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -1758,10 +1758,10 @@
     }
   },
   "logs": [
-    "2026-08-20 20:35:40 [INFO] AZALYST - status.json generated",
-    "2026-08-20 20:35:40 [INFO] PORTFOLIO - NAV USD 9,903.26 | Return -0.68%",
-    "2026-08-20 20:35:40 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-20 20:35:40 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
+    "2026-08-20 21:38:36 [INFO] AZALYST - status.json generated",
+    "2026-08-20 21:38:36 [INFO] PORTFOLIO - NAV USD 9,903.26 | Return -0.68%",
+    "2026-08-20 21:38:36 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-20 21:38:36 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
   ],
-  "generated_at": "2026-08-20 20:35:38 UTC"
+  "generated_at": "2026-08-20 21:38:33 UTC"
 }
