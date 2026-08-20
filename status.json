@@ -1,16 +1,16 @@
 {
-  "portfolio_value": 9940.4,
+  "portfolio_value": 9940.29,
   "total_deposited": 9965.74,
-  "cash": 2728.43,
+  "cash": 2571.27,
   "monthly_reserve": 0.0,
-  "market_value": 7211.97,
-  "total_invested": 7237.32,
-  "unrealised_pnl": -25.34,
-  "unrealised_str": "-25.34",
+  "market_value": 7369.02,
+  "total_invested": 7394.47,
+  "unrealised_pnl": -25.45,
+  "unrealised_str": "-25.45",
   "realised_pnl": 0.0,
   "realised_str": "+0.00",
-  "change": "-0.25%",
-  "change_raw": -0.25,
+  "change": "-0.26%",
+  "change_raw": -0.26,
   "closed_trades": 0,
   "partial_realised_pnl": 0.0,
   "portfolio_peak": 9989.03,
@@ -95,17 +95,17 @@
       "sector": "Healthcare & Pharma",
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 172.96,
+      "entry": 173.37,
       "current": 175.68,
       "peak_price": 176.09,
-      "trail_stop": 160.85,
-      "dist_to_trail_pct": 8.44,
-      "units": 5.281423,
-      "invested": 913.48,
-      "pnl": 14.36,
-      "pnl_str": "+14.36",
-      "pnl_pct": 1.57,
-      "pnl_pct_str": "+1.57%",
+      "trail_stop": 161.24,
+      "dist_to_trail_pct": 8.22,
+      "units": 6.175363,
+      "invested": 1070.64,
+      "pnl": 14.25,
+      "pnl_str": "+14.25",
+      "pnl_pct": 1.33,
+      "pnl_pct_str": "+1.33%",
       "confidence": 80,
       "severity": "HIGH",
       "days_held": 1,
@@ -191,9 +191,9 @@
       {
         "era": "current",
         "total_deposited": 9965.74,
-        "portfolio_value": 9940.4,
+        "portfolio_value": 9940.29,
         "realised_pnl": 0.0,
-        "change": "-0.25%",
+        "change": "-0.26%",
         "total_trades": 0,
         "winners": 0,
         "losers": 0,
@@ -212,30 +212,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "LOW_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.030940588296147542,
-    "vix_level": 14.890000343322754,
-    "vix_percentile_1y": 0.07936507936507936,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 30,
-      "flow": 22,
-      "options": 18,
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
       "rotation": 15,
-      "macro": 8,
-      "news": 7
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
     "ticker": "GDX",
-    "rank_score": 19.66779661016949,
+    "rank_score": 19.613793103448277,
     "flow_score": 22.0,
-    "options_score": 13.5,
+    "options_score": 13.940446627999927,
     "rotation_score": 15.0,
-    "macro_score": 5.629341025190656,
+    "macro_score": 5.443625607595096,
     "news_score": 4.816,
-    "total": 80.61313763536015,
+    "total": 80.8138653390433,
     "publish": true,
     "direction": "long"
   },
@@ -282,9 +282,9 @@
       22.3,
       10.1,
       30.0,
-      9.3,
+      10.9,
       0.8,
-      27.4
+      25.9
     ]
   },
   "pnl": {
@@ -299,11 +299,15 @@
       -74.33,
       -11.2,
       46.23,
-      14.36,
+      14.25,
       -0.29
     ]
   },
   "confidence": [
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 93.0
+    },
     {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
       "score": 93.0
@@ -311,10 +315,6 @@
     {
       "symbol": "Technology & AI / Semiconductors",
       "score": 92.0
-    },
-    {
-      "symbol": "Energy / Oil & Gas",
-      "score": 88.0
     },
     {
       "symbol": "Asia Pacific Equity + Bearish Market / Macro Selloff",
@@ -371,27 +371,80 @@
   ],
   "signals": [
     {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 93.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": 2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 17,
+      "latest_at": "20 Aug 2026 01:56 UTC",
+      "headline": "$100 Diesel Cracks Signal a Much Tighter Oil Market Than Brent Suggests",
+      "regions": [
+        "global",
+        "middle_east",
+        "americas",
+        "europe"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "World News - Breaking international news and headlines | Sky News",
+        "Markets-Economic Times",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.7,
+        "recency": 15.1,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
       "confidence": 93.0,
       "severity": "HIGH",
       "direction": "BEARISH",
-      "direction_score": -13.5,
+      "direction_score": -12.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "19 Aug 2026 19:19 UTC",
-      "headline": "Fed Minutes Show Many Officials Wanted Rate Hike in July",
+      "article_count": 11,
+      "latest_at": "20 Aug 2026 02:39 UTC",
+      "headline": "RBI MPC puts Q3 rate hike in play if inflation risks show up big",
       "regions": [
-        "asia_pacific",
         "global",
         "europe",
+        "asia_pacific",
         "americas"
       ],
       "sources": [
+        "Finance",
         "US Top News and Analysis",
-        "Bloomberg Markets",
         "Markets-Economic Times",
         "Tech"
       ],
@@ -414,10 +467,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 21.7,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.0,
-        "recency": 16.8,
+        "signal_strength": 22.0,
+        "volume_confirmation": 16.8,
+        "source_diversity": 14.5,
+        "recency": 16.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -471,59 +524,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 16.7,
         "recency": 16.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 88.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": -1.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 21,
-      "latest_at": "19 Aug 2026 14:39 UTC",
-      "headline": "Oil Prices Rise for Fourth Day as Hormuz Traffic Slows",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "middle_east",
-        "europe"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "BBC News",
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 11.8,
-        "recency": 15.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -832,24 +832,25 @@
       "sector_key": "healthcare_pharma",
       "sector_label": "Healthcare & Pharma",
       "confidence": 75.0,
-      "severity": "CRITICAL",
+      "severity": "HIGH",
       "direction": "BULLISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "19 Aug 2026 17:48 UTC",
-      "headline": "Moderna, Merck Revive mRNA Hopes With Melanoma Success",
+      "article_count": 6,
+      "latest_at": "20 Aug 2026 01:42 UTC",
+      "headline": "Moderna shares soar 159% in a day after cancer vaccine succeeds in late-stage trial",
       "regions": [
         "global",
+        "africa",
         "asia_pacific",
         "americas"
       ],
       "sources": [
-        "Markets-Economic Times",
+        "US Top News and Analysis",
         "Bloomberg Markets",
-        "US Top News and Analysis"
+        "Markets-Economic Times"
       ],
       "primary_etf": "XLV",
       "top_etfs": [
@@ -872,10 +873,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 15.9,
-        "volume_confirmation": 11.3,
+        "signal_strength": 15.0,
+        "volume_confirmation": 12.6,
         "source_diversity": 11.0,
-        "recency": 15.7,
+        "recency": 14.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -1184,19 +1185,19 @@
   ],
   "articles": [
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Energy / Oil & Gas - 17 articles - CRITICAL / BULLISH - $100 Diesel Cracks Signal a Much Tighter Oil Market Than Brent Suggests"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Banking & Financial Sector + Gold & Precious Metals - 13 articles - HIGH / BEARISH - Fed Minutes Show Many Officials Wanted Rate Hike in July"
+      "text": "Banking & Financial Sector + Gold & Precious Metals - 11 articles - HIGH / BEARISH - RBI MPC puts Q3 rate hike in play if inflation risks show up big"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Technology & AI / Semiconductors - 71 articles - HIGH / BEARISH - Nvidia plays matchmaker in Nordics, sources tell CNBC, as AI data center deals boom in region"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Energy / Oil & Gas - 21 articles - CRITICAL / BULLISH - Oil Prices Rise for Fourth Day as Hormuz Traffic Slows"
     },
     {
       "tag": "tag-bear",
@@ -1231,7 +1232,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Healthcare & Pharma - 5 articles - CRITICAL / BULLISH - Moderna, Merck Revive mRNA Hopes With Melanoma Success"
+      "text": "Healthcare & Pharma - 6 articles - HIGH / BULLISH - Moderna shares soar 159% in a day after cancer vaccine succeeds in late-stage trial"
     },
     {
       "tag": "tag-bull",
@@ -1291,9 +1292,9 @@
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 53463.05,
+      "price": 53463.1,
       "currency": "USD",
-      "change": 119.65,
+      "change": 119.7,
       "change_pct": 0.22,
       "change_str": "+0.22%",
       "direction": "up"
@@ -1313,33 +1314,33 @@
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 26091.33,
+      "price": 26091.3,
       "currency": "EUR",
-      "change": -247.28,
-      "change_pct": -0.94,
-      "change_str": "-0.94%",
+      "change": -37.06,
+      "change_pct": -0.14,
+      "change_str": "-0.14%",
       "direction": "down"
     },
     {
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 65326.42,
+      "price": 65982.49,
       "currency": "JPY",
-      "change": -3893.83,
-      "change_pct": -5.63,
-      "change_str": "-5.63%",
-      "direction": "down"
+      "change": 656.07,
+      "change_pct": 1.0,
+      "change_str": "+1.00%",
+      "direction": "up"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 25495.07,
+      "price": 25671.63,
       "currency": "HKD",
-      "change": 41.84,
-      "change_pct": 0.16,
-      "change_str": "+0.16%",
+      "change": 176.56,
+      "change_pct": 0.69,
+      "change_str": "+0.69%",
       "direction": "up"
     },
     {
@@ -1348,54 +1349,54 @@
       "region": "IN",
       "price": 24078.3,
       "currency": "INR",
-      "change": -209.35,
-      "change_pct": -0.86,
-      "change_str": "-0.86%",
+      "change": -76.6,
+      "change_pct": -0.32,
+      "change_str": "-0.32%",
       "direction": "down"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4576.0,
+      "price": 4552.3,
       "currency": "USD",
-      "change": 210.0,
-      "change_pct": 4.81,
-      "change_str": "+4.81%",
+      "change": 186.3,
+      "change_pct": 4.27,
+      "change_str": "+4.27%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 84.31,
+      "price": 84.5,
       "currency": "USD",
-      "change": -0.63,
-      "change_pct": -0.74,
-      "change_str": "-0.74%",
+      "change": -0.44,
+      "change_pct": -0.52,
+      "change_str": "-0.52%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 69226.78,
+      "price": 68962.75,
       "currency": "USD",
-      "change": 4546.07,
-      "change_pct": 7.03,
-      "change_str": "+7.03%",
+      "change": 4282.04,
+      "change_pct": 6.62,
+      "change_str": "+6.62%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.77,
+      "price": 98.84,
       "currency": "USD",
-      "change": -0.88,
-      "change_pct": -0.89,
-      "change_str": "-0.89%",
-      "direction": "down"
+      "change": 0.01,
+      "change_pct": 0.01,
+      "change_str": "+0.01%",
+      "direction": "up"
     },
     {
       "label": "VIX",
@@ -1427,13 +1428,13 @@
         "at_cap": false
       },
       {
-        "sector": "Banking & Financial Sector",
-        "weight": 10.1,
+        "sector": "Healthcare & Pharma",
+        "weight": 10.9,
         "at_cap": false
       },
       {
-        "sector": "Healthcare & Pharma",
-        "weight": 9.3,
+        "sector": "Banking & Financial Sector",
+        "weight": 10.1,
         "at_cap": false
       },
       {
@@ -1454,34 +1455,34 @@
       "matrix": {
         "DBC": {
           "DBC": 1.0,
-          "EWJ": -0.17,
-          "XLE": 0.731,
-          "XLF": -0.742,
-          "XLV": 0.056
+          "EWJ": 0.257,
+          "XLE": -0.394,
+          "XLF": 0.21,
+          "XLV": 0.084
         },
         "EWJ": {
-          "DBC": -0.17,
+          "DBC": 0.257,
           "EWJ": 1.0,
           "XLE": -0.246,
           "XLF": 0.127,
           "XLV": -0.482
         },
         "XLE": {
-          "DBC": 0.731,
+          "DBC": -0.394,
           "EWJ": -0.246,
           "XLE": 1.0,
           "XLF": -0.373,
           "XLV": -0.134
         },
         "XLF": {
-          "DBC": -0.742,
+          "DBC": 0.21,
           "EWJ": 0.127,
           "XLE": -0.373,
           "XLF": 1.0,
           "XLV": 0.114
         },
         "XLV": {
-          "DBC": 0.056,
+          "DBC": 0.084,
           "EWJ": -0.482,
           "XLE": -0.134,
           "XLF": 0.114,
@@ -1495,17 +1496,17 @@
         "XLF",
         "XLV"
       ],
-      "max_corr": 0.731,
+      "max_corr": 0.257,
       "max_corr_pair": [
         "DBC",
-        "XLE"
+        "EWJ"
       ],
-      "most_negative_corr": -0.742,
+      "most_negative_corr": -0.482,
       "most_negative_pair": [
-        "DBC",
-        "XLF"
+        "EWJ",
+        "XLV"
       ],
-      "status": "HIGH"
+      "status": "OK"
     },
     "volatility": {
       "per_ticker": {
@@ -1513,9 +1514,9 @@
         "XLF": 10.66,
         "XLE": 23.44,
         "XLV": 17.71,
-        "DBC": 25.48
+        "DBC": 29.34
       },
-      "portfolio_avg_vol_pct": 20.26,
+      "portfolio_avg_vol_pct": 21.03,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -1523,29 +1524,29 @@
       "benchmark_price_start": 757.67,
       "benchmark_price_now": 769.06,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.25,
-      "alpha": -1.75
+      "portfolio_return_pct": -0.26,
+      "alpha": -1.76
     },
     "rebalance": {
       "alerts": [
-        {
-          "ticker": "CASH",
-          "actual_weight_pct": 27.45,
-          "target_weight_pct": 10.0,
-          "drift_pct": 17.45,
-          "action": "DEPLOY",
-          "amount": 1734.39,
-          "etf_name": "Cash Reserve",
-          "regime_note": ""
-        },
         {
           "ticker": "DBC",
           "actual_weight_pct": 0.75,
           "target_weight_pct": 18.0,
           "drift_pct": -17.25,
           "action": "ADD",
-          "amount": 1714.59,
+          "amount": 1714.57,
           "etf_name": "Invesco DB Commodity Index Tracking Fund",
+          "regime_note": ""
+        },
+        {
+          "ticker": "CASH",
+          "actual_weight_pct": 25.87,
+          "target_weight_pct": 10.0,
+          "drift_pct": 15.87,
+          "action": "DEPLOY",
+          "amount": 1577.24,
+          "etf_name": "Cash Reserve",
           "regime_note": ""
         },
         {
@@ -1554,18 +1555,8 @@
           "target_weight_pct": 18.0,
           "drift_pct": 11.98,
           "action": "TRIM",
-          "amount": 1191.32,
+          "amount": 1191.34,
           "etf_name": "Energy Select Sector SPDR",
-          "regime_note": ""
-        },
-        {
-          "ticker": "XLV",
-          "actual_weight_pct": 9.33,
-          "target_weight_pct": 18.0,
-          "drift_pct": -8.67,
-          "action": "ADD",
-          "amount": 861.43,
-          "etf_name": "Health Care Select Sector SPDR",
           "regime_note": ""
         },
         {
@@ -1574,8 +1565,18 @@
           "target_weight_pct": 18.0,
           "drift_pct": -7.85,
           "action": "ADD",
-          "amount": 780.57,
+          "amount": 780.55,
           "etf_name": "Financial Select Sector SPDR",
+          "regime_note": ""
+        },
+        {
+          "ticker": "XLV",
+          "actual_weight_pct": 10.91,
+          "target_weight_pct": 18.0,
+          "drift_pct": -7.09,
+          "action": "ADD",
+          "amount": 704.36,
+          "etf_name": "Health Care Select Sector SPDR",
           "regime_note": ""
         }
       ],
@@ -1585,8 +1586,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -3343.08,
-          "portfolio_loss_pct": -33.63,
+          "total_impact": -3405.9,
+          "portfolio_loss_pct": -34.26,
           "position_impacts": [
             {
               "ticker": "EWJ",
@@ -1610,7 +1611,7 @@
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -40.0,
-              "impact": -371.14
+              "impact": -433.96
             },
             {
               "ticker": "DBC",
@@ -1621,8 +1622,8 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -3399.21,
-          "portfolio_loss_pct": -34.2,
+          "total_impact": -3452.6,
+          "portfolio_loss_pct": -34.73,
           "position_impacts": [
             {
               "ticker": "EWJ",
@@ -1646,7 +1647,7 @@
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -34.0,
-              "impact": -315.47
+              "impact": -368.86
             },
             {
               "ticker": "DBC",
@@ -1657,8 +1658,8 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -929.03,
-          "portfolio_loss_pct": -9.35,
+          "total_impact": -952.59,
+          "portfolio_loss_pct": -9.58,
           "position_impacts": [
             {
               "ticker": "EWJ",
@@ -1682,7 +1683,7 @@
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -15.0,
-              "impact": -139.18
+              "impact": -162.73
             },
             {
               "ticker": "DBC",
@@ -1693,8 +1694,8 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -790.83,
-          "portfolio_loss_pct": -7.96,
+          "total_impact": -803.39,
+          "portfolio_loss_pct": -8.08,
           "position_impacts": [
             {
               "ticker": "EWJ",
@@ -1718,7 +1719,7 @@
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -8.0,
-              "impact": -74.23
+              "impact": -86.79
             },
             {
               "ticker": "DBC",
@@ -1729,8 +1730,8 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1359.26,
-          "portfolio_loss_pct": -13.67,
+          "total_impact": -1387.53,
+          "portfolio_loss_pct": -13.96,
           "position_impacts": [
             {
               "ticker": "EWJ",
@@ -1754,7 +1755,7 @@
               "ticker": "XLV",
               "factor": "equities",
               "shock_pct": -18.0,
-              "impact": -167.01
+              "impact": -195.28
             },
             {
               "ticker": "DBC",
@@ -1766,14 +1767,14 @@
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -34.2
+      "worst_loss_pct": -34.73
     }
   },
   "logs": [
-    "2026-08-19 22:46:06 [INFO] AZALYST - status.json generated",
-    "2026-08-19 22:46:06 [INFO] PORTFOLIO - NAV USD 9,940.40 | Return -0.25%",
-    "2026-08-19 22:46:06 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-19 22:46:06 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
+    "2026-08-20 03:14:10 [INFO] AZALYST - status.json generated",
+    "2026-08-20 03:14:10 [INFO] PORTFOLIO - NAV USD 9,940.29 | Return -0.26%",
+    "2026-08-20 03:14:10 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-20 03:14:10 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
   ],
-  "generated_at": "2026-08-19 22:46:01 UTC"
+  "generated_at": "2026-08-20 03:14:08 UTC"
 }
