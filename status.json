@@ -212,19 +212,19 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.020300450141365382,
+    "vix_level": 15.130000114440918,
+    "vix_percentile_1y": 0.11507936507936507,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
+      "rank": 30,
+      "flow": 22,
+      "options": 18,
       "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "macro": 8,
+      "news": 7
     }
   },
   "top_signal": {
@@ -309,6 +309,10 @@
       "score": 94.0
     },
     {
+      "symbol": "Energy / Oil & Gas",
+      "score": 94.0
+    },
+    {
       "symbol": "Defense & Aerospace",
       "score": 94.0
     },
@@ -327,10 +331,6 @@
     {
       "symbol": "Banking & Financial Sector",
       "score": 85.0
-    },
-    {
-      "symbol": "Energy / Oil & Gas",
-      "score": 72.0
     },
     {
       "symbol": "Cybersecurity",
@@ -414,6 +414,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 12.8,
         "recency": 16.3,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 94.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": 2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 21,
+      "latest_at": "21 Aug 2026 22:00 UTC",
+      "headline": "Saudi Oil Exports from Mediterranean Soar with Shuttles North to Avoid Houthis",
+      "regions": [
+        "europe",
+        "middle_east",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "Tech",
+        "World News - Breaking international news and headlines | Sky News"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.9,
+        "recency": 16.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -673,59 +726,6 @@
         "volume_confirmation": 16.8,
         "source_diversity": 12.8,
         "recency": 16.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 72.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": -1.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 21,
-      "latest_at": "21 Aug 2026 17:16 UTC",
-      "headline": "Saudi Oil Exports from Mediterranean Soar with Shuttles North to Avoid Houthis",
-      "regions": [
-        "africa",
-        "asia_pacific",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "World News - Breaking international news and headlines | Sky News",
-        "Tech",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.9,
-        "recency": 16.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -1188,6 +1188,11 @@
       "text": "Crypto & Digital Assets - 39 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Energy / Oil & Gas - 21 articles - CRITICAL / BULLISH - Saudi Oil Exports from Mediterranean Soar with Shuttles North to Avoid Houthis"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Defense & Aerospace - 30 articles - HIGH / BEARISH - Iran Warns Gulf States as U.S. Turns Up Economic Pressure"
@@ -1211,11 +1216,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Banking & Financial Sector - 11 articles - HIGH / BEARISH - India bond yields hit two-month high as rate hike fears intensify"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Energy / Oil & Gas - 21 articles - CRITICAL / BULLISH - Saudi Oil Exports from Mediterranean Soar with Shuttles North to Avoid Houthis"
     },
     {
       "tag": "tag-bull",
@@ -1314,9 +1314,9 @@
       "region": "EU",
       "price": 26136.56,
       "currency": "EUR",
-      "change": 153.52,
-      "change_pct": 0.59,
-      "change_str": "+0.59%",
+      "change": 45.23,
+      "change_pct": 0.17,
+      "change_str": "+0.17%",
       "direction": "up"
     },
     {
@@ -1378,11 +1378,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78159.31,
+      "price": 78501.0,
       "currency": "USD",
-      "change": 5126.55,
-      "change_pct": 7.02,
-      "change_str": "+7.02%",
+      "change": 5468.24,
+      "change_pct": 7.49,
+      "change_str": "+7.49%",
       "direction": "up"
     },
     {
@@ -1759,10 +1759,10 @@
     }
   },
   "logs": [
-    "2026-08-21 21:32:07 [INFO] AZALYST - status.json generated",
-    "2026-08-21 21:32:07 [INFO] PORTFOLIO - NAV USD 9,946.72 | Return -0.25%",
-    "2026-08-21 21:32:07 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-21 21:32:07 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
+    "2026-08-21 22:45:03 [INFO] AZALYST - status.json generated",
+    "2026-08-21 22:45:03 [INFO] PORTFOLIO - NAV USD 9,946.72 | Return -0.25%",
+    "2026-08-21 22:45:03 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-21 22:45:03 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
   ],
-  "generated_at": "2026-08-21 21:32:05 UTC"
+  "generated_at": "2026-08-21 22:45:00 UTC"
 }
