@@ -230,12 +230,12 @@
   "top_signal": {
     "ticker": "GDX",
     "rank_score": 24.182270606531883,
-    "flow_score": 5.434525539263694,
-    "options_score": 18.0,
+    "flow_score": 6.28705431566537,
+    "options_score": 18.52248273752898,
     "rotation_score": 15.0,
-    "macro_score": 4.269106913717056,
+    "macro_score": 4.26196060577947,
     "news_score": 4.76,
-    "total": 71.64590305951263,
+    "total": 73.0137682655057,
     "publish": true,
     "direction": "long"
   },
@@ -321,11 +321,11 @@
       "score": 88.0
     },
     {
-      "symbol": "Banking & Financial Sector",
-      "score": 86.0
+      "symbol": "Gold & Precious Metals + Bearish Market / Macro Selloff",
+      "score": 85.0
     },
     {
-      "symbol": "Gold & Precious Metals + Bearish Market / Macro Selloff",
+      "symbol": "Banking & Financial Sector",
       "score": 85.0
     },
     {
@@ -573,57 +573,6 @@
       }
     },
     {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector",
-      "confidence": 86.0,
-      "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": -3.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "21 Aug 2026 14:06 UTC",
-      "headline": "India bonds log worst week in FY27 on RBI surprise U-turns",
-      "regions": [
-        "global",
-        "europe",
-        "americas",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Finance",
-        "Latest from Tom's Hardware",
-        "Markets-Economic Times",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "BANKBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 16.1,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.8,
-        "recency": 16.1,
-        "geopolitical_severity": 11.1
-      }
-    },
-    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Bearish Market / Macro Selloff",
       "confidence": 85.0,
@@ -673,6 +622,57 @@
         "volume_confirmation": 16.8,
         "source_diversity": 12.1,
         "recency": 16.8,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector",
+      "confidence": 85.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -3.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "21 Aug 2026 20:50 UTC",
+      "headline": "India bond yields hit two-month high as rate hike fears intensify",
+      "regions": [
+        "europe",
+        "americas",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Finance",
+        "US Top News and Analysis",
+        "Latest from Tom's Hardware",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "BANKBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 15.7,
+        "volume_confirmation": 16.8,
+        "source_diversity": 12.8,
+        "recency": 16.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -1203,14 +1203,14 @@
       "text": "Asia Pacific Equity + Bearish Market / Macro Selloff - 13 articles - HIGH / BEARISH - Global Market: Japan shares slide as chip stocks tumble on global tech rout"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Banking & Financial Sector - 13 articles - MEDIUM / BEARISH - India bonds log worst week in FY27 on RBI surprise U-turns"
-    },
-    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Gold & Precious Metals + Bearish Market / Macro Selloff - 11 articles - HIGH / BULLISH - Ray Dalio says Bessent move is sign that a debt crisis is getting closer; recommends gold and bitcoin"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Banking & Financial Sector - 11 articles - HIGH / BEARISH - India bond yields hit two-month high as rate hike fears intensify"
     },
     {
       "tag": "tag-bull",
@@ -1356,44 +1356,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4669.4,
+      "price": 4661.6,
       "currency": "USD",
-      "change": 153.1,
-      "change_pct": 3.39,
-      "change_str": "+3.39%",
+      "change": 145.3,
+      "change_pct": 3.22,
+      "change_str": "+3.22%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 86.86,
+      "price": 86.64,
       "currency": "USD",
-      "change": -0.97,
-      "change_pct": -1.1,
-      "change_str": "-1.10%",
+      "change": -1.19,
+      "change_pct": -1.35,
+      "change_str": "-1.35%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77492.52,
+      "price": 78159.31,
       "currency": "USD",
-      "change": 4459.76,
-      "change_pct": 6.11,
-      "change_str": "+6.11%",
+      "change": 5126.55,
+      "change_pct": 7.02,
+      "change_str": "+7.02%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.83,
+      "price": 98.84,
       "currency": "USD",
-      "change": -0.07,
-      "change_pct": -0.07,
-      "change_str": "-0.07%",
+      "change": -0.06,
+      "change_pct": -0.06,
+      "change_str": "-0.06%",
       "direction": "down"
     },
     {
@@ -1759,10 +1759,10 @@
     }
   },
   "logs": [
-    "2026-08-21 20:33:17 [INFO] AZALYST - status.json generated",
-    "2026-08-21 20:33:17 [INFO] PORTFOLIO - NAV USD 9,946.72 | Return -0.25%",
-    "2026-08-21 20:33:17 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-21 20:33:17 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
+    "2026-08-21 21:32:07 [INFO] AZALYST - status.json generated",
+    "2026-08-21 21:32:07 [INFO] PORTFOLIO - NAV USD 9,946.72 | Return -0.25%",
+    "2026-08-21 21:32:07 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-21 21:32:07 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
   ],
-  "generated_at": "2026-08-21 20:33:14 UTC"
+  "generated_at": "2026-08-21 21:32:05 UTC"
 }
