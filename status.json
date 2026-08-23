@@ -212,19 +212,19 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.020300449545318937,
+    "vix_level": 15.130000114440918,
+    "vix_percentile_1y": 0.11507936507936507,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
+      "rank": 30,
+      "flow": 22,
+      "options": 18,
       "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "macro": 8,
+      "news": 7
     }
   },
   "top_signal": {
@@ -233,9 +233,9 @@
     "flow_score": 6.308585428577975,
     "options_score": 16.394946373619202,
     "rotation_score": 15.0,
-    "macro_score": 4.283747495829946,
+    "macro_score": 4.305876084282072,
     "news_score": 4.592,
-    "total": 70.76437246572898,
+    "total": 70.78650105418112,
     "publish": true,
     "direction": "long"
   },
@@ -309,16 +309,16 @@
       "score": 91.0
     },
     {
+      "symbol": "Crypto & Digital Assets",
+      "score": 90.0
+    },
+    {
       "symbol": "Asia Pacific Equity + Bearish Market / Macro Selloff",
       "score": 88.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 82.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 79.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -423,6 +423,53 @@
       }
     },
     {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 90.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 7.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 31,
+      "latest_at": "23 Aug 2026 04:33 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "americas",
+        "global"
+      ],
+      "sources": [
+        "Finance",
+        "Tech",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 11.4,
+        "recency": 13.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity + Bearish Market / Macro Selloff",
       "confidence": 88.0,
@@ -522,53 +569,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 13.6,
         "recency": 11.3,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 79.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 7.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 30,
-      "latest_at": "22 Aug 2026 08:22 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "middle_east",
-        "americas"
-      ],
-      "sources": [
-        "Finance",
-        "Markets-Economic Times",
-        "Tech",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 11.4,
-        "recency": 3.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -1188,6 +1188,11 @@
       "text": "Technology & AI / Semiconductors - 57 articles - HIGH / BEARISH - Marvell's stock pops 10% on AI chip deal that lets Google buy up to $12.2 billion in shares"
     },
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Crypto & Digital Assets - 31 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Asia Pacific Equity + Bearish Market / Macro Selloff - 13 articles - HIGH / BEARISH - Global Market: Japan shares slide as chip stocks tumble on global tech rout"
@@ -1196,11 +1201,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / BULLISH - Fed officials saw need for rate hike if inflation doesn't cool, minutes show"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Crypto & Digital Assets - 30 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
@@ -1378,11 +1378,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77247.01,
+      "price": 76262.48,
       "currency": "USD",
-      "change": -1088.18,
-      "change_pct": -1.39,
-      "change_str": "-1.39%",
+      "change": -2072.71,
+      "change_pct": -2.65,
+      "change_str": "-2.65%",
       "direction": "down"
     },
     {
@@ -1759,10 +1759,10 @@
     }
   },
   "logs": [
-    "2026-08-23 01:10:12 [INFO] AZALYST - status.json generated",
-    "2026-08-23 01:10:12 [INFO] PORTFOLIO - NAV USD 9,946.16 | Return -0.23%",
-    "2026-08-23 01:10:12 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-23 01:10:12 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
+    "2026-08-23 06:43:09 [INFO] AZALYST - status.json generated",
+    "2026-08-23 06:43:09 [INFO] PORTFOLIO - NAV USD 9,946.16 | Return -0.23%",
+    "2026-08-23 06:43:09 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-23 06:43:09 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
   ],
-  "generated_at": "2026-08-23 01:10:10 UTC"
+  "generated_at": "2026-08-23 06:43:06 UTC"
 }
