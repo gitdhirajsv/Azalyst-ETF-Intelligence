@@ -39,7 +39,7 @@
       "pnl_pct_str": "-2.86%",
       "confidence": 93,
       "severity": "CRITICAL",
-      "days_held": 8,
+      "days_held": 9,
       "half_exited": false
     },
     {
@@ -62,7 +62,7 @@
       "pnl_pct_str": "-1.13%",
       "confidence": 89,
       "severity": "CRITICAL",
-      "days_held": 8,
+      "days_held": 9,
       "half_exited": false
     },
     {
@@ -212,19 +212,19 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "RISK_ON",
-    "vol_regime": "LOW_VOL",
+    "risk_state": "NEUTRAL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.020300449545318937,
-    "vix_level": 15.130000114440918,
-    "vix_percentile_1y": 0.11507936507936507,
+    "spy_excess_vs_tbill_3m": 0.0,
+    "vix_level": 20.0,
+    "vix_percentile_1y": 0.5,
     "weight_matrix": {
-      "rank": 30,
-      "flow": 22,
-      "options": 18,
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
       "rotation": 15,
-      "macro": 8,
-      "news": 7
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
@@ -234,8 +234,8 @@
     "options_score": 16.394946373619202,
     "rotation_score": 15.0,
     "macro_score": 4.305876084282072,
-    "news_score": 4.592,
-    "total": 70.78650105418112,
+    "news_score": 5.39,
+    "total": 71.58450105418112,
     "publish": true,
     "direction": "long"
   },
@@ -309,20 +309,20 @@
       "score": 91.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 90.0
-    },
-    {
       "symbol": "Asia Pacific Equity + Bearish Market / Macro Selloff",
       "score": 88.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "symbol": "Crypto & Digital Assets",
       "score": 82.0
     },
     {
       "symbol": "Banking & Financial Sector",
       "score": 79.0
+    },
+    {
+      "symbol": "Gold & Precious Metals",
+      "score": 77.0
     },
     {
       "symbol": "Cybersecurity",
@@ -423,53 +423,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 90.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 7.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 31,
-      "latest_at": "23 Aug 2026 04:33 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "asia_pacific",
-        "middle_east",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "Finance",
-        "Tech",
-        "Markets-Economic Times",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 11.4,
-        "recency": 13.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity + Bearish Market / Macro Selloff",
       "confidence": 88.0,
@@ -520,55 +473,48 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
       "confidence": 82.0,
       "severity": "HIGH",
       "direction": "BULLISH",
-      "direction_score": -8.5,
+      "direction_score": 7.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "21 Aug 2026 20:50 UTC",
-      "headline": "Fed officials saw need for rate hike if inflation doesn't cool, minutes show",
+      "article_count": 28,
+      "latest_at": "23 Aug 2026 04:33 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "asia_pacific",
         "americas",
-        "india",
-        "middle_east"
+        "global",
+        "asia_pacific"
       ],
       "sources": [
+        "Latest from Tom's Hardware",
+        "US Top News and Analysis",
         "Cointelegraph.com News",
-        "World | Deutsche Welle",
-        "Bloomberg Markets",
-        "Finance"
+        "Markets-Economic Times"
       ],
-      "primary_etf": "GLDM",
+      "primary_etf": "IBIT",
       "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
+        "IBIT",
+        "BITQ"
       ],
       "access_markets": [
-        "India-listed",
         "International-listed"
       ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
+      "india_etfs": [],
       "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
+        "IBIT",
+        "BITQ"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 13.6,
-        "recency": 11.3,
+        "source_diversity": 10.3,
+        "recency": 7.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -624,6 +570,59 @@
       }
     },
     {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 77.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": -1.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "22 Aug 2026 23:22 UTC",
+      "headline": "Gold regains momentum as weak dollar, safe haven demand and seasonal buying support prices",
+      "regions": [
+        "europe",
+        "americas",
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Cointelegraph.com News",
+        "US Top News and Analysis",
+        "BBC News"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 19.9,
+        "volume_confirmation": 17.4,
+        "source_diversity": 13.4,
+        "recency": 4.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
       "confidence": 72.0,
@@ -674,23 +673,22 @@
       "confidence": 70.0,
       "severity": "MEDIUM",
       "direction": "BULLISH",
-      "direction_score": 2.0,
+      "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "21 Aug 2026 02:15 UTC",
-      "headline": "Coal India Ventures into Critical Minerals Trading",
+      "article_count": 6,
+      "latest_at": "23 Aug 2026 12:03 UTC",
+      "headline": "Can Canada Still Trust America on Trade?",
       "regions": [
-        "asia_pacific",
-        "global",
-        "middle_east"
+        "americas",
+        "global"
       ],
       "sources": [
-        "Oilprice.com",
         "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Earnings"
+        "Cointelegraph.com News",
+        "Latest from Tom's Hardware",
+        "US Top News and Analysis"
       ],
       "primary_etf": "DBC",
       "top_etfs": [
@@ -711,11 +709,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 9.4,
-        "volume_confirmation": 11.3,
-        "source_diversity": 12.6,
-        "recency": 15.4,
-        "geopolitical_severity": 11.1
+        "signal_strength": 10.6,
+        "volume_confirmation": 12.6,
+        "source_diversity": 13.4,
+        "recency": 16.3,
+        "geopolitical_severity": 8.7
       }
     },
     {
@@ -1188,11 +1186,6 @@
       "text": "Technology & AI / Semiconductors - 57 articles - HIGH / BEARISH - Marvell's stock pops 10% on AI chip deal that lets Google buy up to $12.2 billion in shares"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Crypto & Digital Assets - 31 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Asia Pacific Equity + Bearish Market / Macro Selloff - 13 articles - HIGH / BEARISH - Global Market: Japan shares slide as chip stocks tumble on global tech rout"
@@ -1200,7 +1193,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / BULLISH - Fed officials saw need for rate hike if inflation doesn't cool, minutes show"
+      "text": "Crypto & Digital Assets - 28 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
@@ -1210,12 +1203,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Gold & Precious Metals - 12 articles - CRITICAL / BULLISH - Gold regains momentum as weak dollar, safe haven demand and seasonal buying support prices"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Cybersecurity - 8 articles - MEDIUM / BULLISH - Critical macOS Screen Sharing flaw gives attackers remote root access \u2014 CISA bumps bug to 9.8 severity following active Monero cryptojacking attacks"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Commodities & Mining - 5 articles - MEDIUM / BULLISH - Coal India Ventures into Critical Minerals Trading"
+      "text": "Commodities & Mining - 6 articles - MEDIUM / BULLISH - Can Canada Still Trust America on Trade?"
     },
     {
       "tag": "tag-bull",
@@ -1369,20 +1367,20 @@
       "region": "COMMOD",
       "price": 87.06,
       "currency": "USD",
-      "change": -0.77,
-      "change_pct": -0.88,
-      "change_str": "-0.88%",
-      "direction": "down"
+      "change": 0.0,
+      "change_pct": 0.0,
+      "change_str": "+0.00%",
+      "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 76262.48,
+      "price": 77054.78,
       "currency": "USD",
-      "change": -2072.71,
-      "change_pct": -2.65,
-      "change_str": "-2.65%",
+      "change": -28.63,
+      "change_pct": -0.04,
+      "change_str": "-0.04%",
       "direction": "down"
     },
     {
@@ -1759,10 +1757,10 @@
     }
   },
   "logs": [
-    "2026-08-23 06:43:09 [INFO] AZALYST - status.json generated",
-    "2026-08-23 06:43:09 [INFO] PORTFOLIO - NAV USD 9,946.16 | Return -0.23%",
-    "2026-08-23 06:43:09 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-23 06:43:09 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
+    "2026-08-23 12:38:47 [INFO] AZALYST - status.json generated",
+    "2026-08-23 12:38:47 [INFO] PORTFOLIO - NAV USD 9,946.16 | Return -0.23%",
+    "2026-08-23 12:38:47 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-23 12:38:47 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
   ],
-  "generated_at": "2026-08-23 06:43:06 UTC"
+  "generated_at": "2026-08-23 12:38:44 UTC"
 }
