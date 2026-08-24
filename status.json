@@ -231,12 +231,12 @@
     "ticker": "GDX",
     "rank_score": 24.185093167701865,
     "flow_score": 6.308585428577975,
-    "options_score": 16.2,
+    "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 4.305876084282072,
-    "news_score": 5.39,
-    "total": 71.38955468056191,
-    "publish": true,
+    "macro_score": 4.2357081161131225,
+    "news_score": 4.592,
+    "total": 54.32138671239296,
+    "publish": false,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -305,10 +305,6 @@
   },
   "confidence": [
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 94.0
-    },
-    {
       "symbol": "Defense & Aerospace",
       "score": 93.0
     },
@@ -321,12 +317,12 @@
       "score": 88.0
     },
     {
-      "symbol": "Banking & Financial Sector",
-      "score": 79.0
+      "symbol": "Gold & Precious Metals",
+      "score": 82.0
     },
     {
-      "symbol": "Gold & Precious Metals",
-      "score": 77.0
+      "symbol": "Crypto & Digital Assets",
+      "score": 80.0
     },
     {
       "symbol": "Cybersecurity",
@@ -338,7 +334,7 @@
     },
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 69.0
+      "score": 68.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -346,6 +342,10 @@
     },
     {
       "symbol": "India Equity Markets",
+      "score": 67.0
+    },
+    {
+      "symbol": "Banking & Financial Sector",
       "score": 67.0
     },
     {
@@ -371,52 +371,6 @@
   ],
   "signals": [
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 94.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 7.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 26,
-      "latest_at": "23 Aug 2026 18:00 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "americas"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Cointelegraph.com News",
-        "Finance",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 13.6,
-        "recency": 16.3,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
       "confidence": 93.0,
@@ -426,20 +380,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "23 Aug 2026 18:22 UTC",
-      "headline": "Alliance Tested as Trump Pulls Out of South Korea Drill",
+      "article_count": 27,
+      "latest_at": "24 Aug 2026 03:12 UTC",
+      "headline": "China Challenges Russia\u2019s Arms Dominance in Central Asia",
       "regions": [
-        "americas",
-        "global",
+        "europe",
         "middle_east",
-        "europe"
+        "asia_pacific",
+        "global"
       ],
       "sources": [
-        "Defense News",
-        "World | Deutsche Welle",
+        "Markets-Economic Times",
         "www.theregister.com - Articles",
-        "Bloomberg Markets"
+        "World | Deutsche Welle",
+        "US Top News and Analysis"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -572,80 +526,29 @@
       }
     },
     {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector",
-      "confidence": 79.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -4.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "22 Aug 2026 21:00 UTC",
-      "headline": "5 world market themes for the week ahead",
-      "regions": [
-        "americas",
-        "india",
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "Markets-Economic Times",
-        "Latest from Tom's Hardware",
-        "Finance"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "BANKBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 16.6,
-        "volume_confirmation": 16.2,
-        "source_diversity": 11.0,
-        "recency": 11.4,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals",
-      "confidence": 77.0,
-      "severity": "CRITICAL",
+      "confidence": 82.0,
+      "severity": "HIGH",
       "direction": "BULLISH",
-      "direction_score": -1.5,
+      "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "22 Aug 2026 23:22 UTC",
-      "headline": "Gold regains momentum as weak dollar, safe haven demand and seasonal buying support prices",
+      "article_count": 9,
+      "latest_at": "24 Aug 2026 01:58 UTC",
+      "headline": "Gold hits over three-month high ahead of US inflation data, Fed chair speech",
       "regions": [
+        "india",
         "europe",
-        "americas",
-        "middle_east",
-        "asia_pacific"
+        "asia_pacific",
+        "africa"
       ],
       "sources": [
-        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "BBC News",
         "Cointelegraph.com News",
-        "US Top News and Analysis",
-        "BBC News"
+        "Bloomberg Markets"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -668,10 +571,56 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 19.9,
-        "volume_confirmation": 17.4,
-        "source_diversity": 13.4,
-        "recency": 4.6,
+        "signal_strength": 17.0,
+        "volume_confirmation": 15.4,
+        "source_diversity": 12.7,
+        "recency": 15.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 80.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 5.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "23 Aug 2026 15:30 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "global",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Finance",
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 10.3,
+        "recency": 5.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -772,26 +721,26 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 69.0,
+      "confidence": 68.0,
       "severity": "CRITICAL",
       "direction": "BULLISH",
-      "direction_score": 0.0,
+      "direction_score": 1.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 18,
-      "latest_at": "22 Aug 2026 17:00 UTC",
-      "headline": "Oil Nears $100 as Trump\u2019s \u2018Economic D-Day\u2019 Raises the Stakes",
+      "article_count": 17,
+      "latest_at": "24 Aug 2026 02:18 UTC",
+      "headline": "Oil Prices Slide 2% as Markets Brace for Bessent\u2019s \u2018Economic D-Day\u2019",
       "regions": [
+        "europe",
+        "middle_east",
         "asia_pacific",
-        "global",
-        "americas",
-        "europe"
+        "global"
       ],
       "sources": [
-        "Tech",
+        "Markets-Economic Times",
+        "World | Deutsche Welle",
         "US Top News and Analysis",
-        "Bloomberg Markets",
         "Oilprice.com"
       ],
       "primary_etf": "XLE",
@@ -817,8 +766,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 14.0,
-        "recency": 14.8,
+        "source_diversity": 12.0,
+        "recency": 15.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -921,6 +870,57 @@
         "volume_confirmation": 18.0,
         "source_diversity": 12.8,
         "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector",
+      "confidence": 67.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 14,
+      "latest_at": "24 Aug 2026 02:00 UTC",
+      "headline": "Wells Fargo and Citigroup have room to buy a big bank. These 5 regionals fit the bill",
+      "regions": [
+        "india",
+        "europe",
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "BANKBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 19.2,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.9,
+        "recency": 15.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -1180,14 +1180,9 @@
   ],
   "articles": [
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Crypto & Digital Assets - 26 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Defense & Aerospace - 23 articles - HIGH / BEARISH - Alliance Tested as Trump Pulls Out of South Korea Drill"
+      "text": "Defense & Aerospace - 27 articles - HIGH / BEARISH - China Challenges Russia\u2019s Arms Dominance in Central Asia"
     },
     {
       "tag": "tag-bear",
@@ -1200,14 +1195,14 @@
       "text": "Asia Pacific Equity + Bearish Market / Macro Selloff - 13 articles - HIGH / BEARISH - Global Market: Japan shares slide as chip stocks tumble on global tech rout"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Banking & Financial Sector - 10 articles - HIGH / BEARISH - 5 world market themes for the week ahead"
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Gold & Precious Metals - 9 articles - HIGH / BULLISH - Gold hits over three-month high ahead of US inflation data, Fed chair speech"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Gold & Precious Metals - 12 articles - CRITICAL / BULLISH - Gold regains momentum as weak dollar, safe haven demand and seasonal buying support prices"
+      "text": "Crypto & Digital Assets - 24 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
@@ -1222,7 +1217,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas - 18 articles - CRITICAL / BULLISH - Oil Nears $100 as Trump\u2019s \u2018Economic D-Day\u2019 Raises the Stakes"
+      "text": "Energy / Oil & Gas - 17 articles - CRITICAL / BULLISH - Oil Prices Slide 2% as Markets Brace for Bessent\u2019s \u2018Economic D-Day\u2019"
     },
     {
       "tag": "tag-bull",
@@ -1233,6 +1228,11 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "India Equity Markets - 21 articles - HIGH / BULLISH - Why is market rising today? Sensex rallies 500 points, Nifty tops 24,200. 5 key factors behind market rebound"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Banking & Financial Sector - 14 articles - HIGH / BEARISH - Wells Fargo and Citigroup have room to buy a big bank. These 5 regionals fit the bill"
     },
     {
       "tag": "tag-bull",
@@ -1320,23 +1320,23 @@
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 66016.36,
+      "price": 65968.71,
       "currency": "JPY",
-      "change": -200.43,
-      "change_pct": -0.3,
-      "change_str": "-0.30%",
+      "change": -47.65,
+      "change_pct": -0.07,
+      "change_str": "-0.07%",
       "direction": "down"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 26009.46,
+      "price": 25457.15,
       "currency": "HKD",
-      "change": 310.97,
-      "change_pct": 1.21,
-      "change_str": "+1.21%",
-      "direction": "up"
+      "change": -552.31,
+      "change_pct": -2.12,
+      "change_str": "-2.12%",
+      "direction": "down"
     },
     {
       "label": "Nifty 50",
@@ -1353,45 +1353,45 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4680.6,
+      "price": 4692.2,
       "currency": "USD",
-      "change": 164.3,
-      "change_pct": 3.64,
-      "change_str": "+3.64%",
+      "change": 68.1,
+      "change_pct": 1.47,
+      "change_str": "+1.47%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 87.06,
+      "price": 85.69,
       "currency": "USD",
-      "change": -0.77,
-      "change_pct": -0.88,
-      "change_str": "-0.88%",
+      "change": -1.37,
+      "change_pct": -1.57,
+      "change_str": "-1.57%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77375.44,
+      "price": 77142.38,
       "currency": "USD",
-      "change": 292.03,
-      "change_pct": 0.38,
-      "change_str": "+0.38%",
+      "change": 58.97,
+      "change_pct": 0.08,
+      "change_str": "+0.08%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.84,
+      "price": 98.83,
       "currency": "USD",
-      "change": -0.06,
-      "change_pct": -0.06,
-      "change_str": "-0.06%",
-      "direction": "down"
+      "change": 0.03,
+      "change_pct": 0.03,
+      "change_str": "+0.03%",
+      "direction": "up"
     },
     {
       "label": "VIX",
@@ -1756,10 +1756,10 @@
     }
   },
   "logs": [
-    "2026-08-23 18:29:13 [INFO] AZALYST - status.json generated",
-    "2026-08-23 18:29:13 [INFO] PORTFOLIO - NAV USD 9,949.28 | Return -0.23%",
-    "2026-08-23 18:29:13 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-23 18:29:13 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
+    "2026-08-24 03:21:13 [INFO] AZALYST - status.json generated",
+    "2026-08-24 03:21:13 [INFO] PORTFOLIO - NAV USD 9,949.28 | Return -0.23%",
+    "2026-08-24 03:21:13 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-24 03:21:13 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
   ],
-  "generated_at": "2026-08-23 18:29:11 UTC"
+  "generated_at": "2026-08-24 03:21:11 UTC"
 }
