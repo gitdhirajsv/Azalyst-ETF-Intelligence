@@ -3592,42 +3592,43 @@
     }
   },
   "commodities_mining": {
-    "sent_at": "2026-08-25T10:43:39.548027+00:00",
-    "confidence": 77,
+    "sent_at": "2026-08-25T16:39:10.782390+00:00",
+    "confidence": 73,
     "sector_label": "Commodities & Mining",
-    "article_count": 8,
+    "article_count": 7,
     "severity": "MEDIUM",
     "direction": "BULLISH",
     "direction_score": 0.0,
     "signal_scope": "global",
-    "india_article_ratio": 0.0,
+    "india_article_ratio": 0.14,
     "regions": [
-      "americas",
       "global",
-      "asia_pacific"
+      "asia_pacific",
+      "india",
+      "americas"
     ],
     "sources": [
-      "Markets-Economic Times",
-      "US Top News and Analysis",
       "BBC News",
+      "World News - Breaking international news and headlines | Sky News",
+      "Markets-Economic Times",
       "www.theregister.com - Articles",
-      "Oilprice.com"
+      "Latest from Tom's Hardware"
     ],
     "top_headlines": [
-      "US-Canada trade war escalates as Trump threatens tariff hike on vehicles",
       "Hindustan Zinc shares fall 3% on reports of fresh government stake sale via OFS",
-      "Trump says U.S. will hike Canada auto tariffs to 50% as trade war escalates",
+      "Canada announces retaliatory tariffs - as trade war with US heats up",
       "'Half my business will be gone' - firms in Canada and US fear trade war",
-      "US Accuses More Than 40 Countries of Helping China Evade Tariffs"
+      "China strategically slows exports of critical materials used in semiconductor fabrication to Taiwan \u2014 germanium and quartz exports to the region also threaten optical and robotics supply chain",
+      "Hindustan Copper OFS subscribed over 3 times; govt to exercise greenshoe option"
     ],
-    "latest_ts": "2026-08-25T10:06:58+00:00",
+    "latest_ts": "2026-08-25T14:29:00+00:00",
     "confidence_breakdown": {
-      "signal_strength": 14.1,
-      "volume_confirmation": 14.6,
+      "signal_strength": 12.5,
+      "volume_confirmation": 13.7,
       "source_diversity": 13.3,
-      "recency": 16.0,
-      "geopolitical_severity": 11.3,
-      "cross_engine_confirmation": 8.3,
+      "recency": 13.7,
+      "geopolitical_severity": 11.5,
+      "cross_engine_confirmation": 9.1,
       "macro_events": 0.0
     },
     "etf_recommendations": {
@@ -3670,6 +3671,23 @@
           ]
         },
         {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NMDC, Coal India \u2014 commodity exposure",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u20139 months",
+          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
+          "sector_key": "commodities_mining",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 72.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        },
+        {
           "name": "Sprott Physical Copper Trust",
           "ticker": "COPP",
           "platform": "Sprott \u2014 IBKR / Schwab",
@@ -3685,21 +3703,6 @@
             "clean thematic exposure",
             "matches international access"
           ]
-        },
-        {
-          "name": "CPSE ETF",
-          "ticker": "CPSEETF",
-          "note": "NMDC, Coal India \u2014 commodity exposure",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "3\u20139 months",
-          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
-          "sector_key": "commodities_mining",
-          "market_bucket": "india",
-          "market_scope": "India-listed",
-          "selection_score": 69.0,
-          "selection_notes": []
         }
       ],
       "top_etfs": [
@@ -3722,6 +3725,23 @@
           ]
         },
         {
+          "name": "CPSE ETF",
+          "ticker": "CPSEETF",
+          "note": "NMDC, Coal India \u2014 commodity exposure",
+          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
+          "exchange": "NSE",
+          "risk": "Medium",
+          "timeframe": "3\u20139 months",
+          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
+          "sector_key": "commodities_mining",
+          "market_bucket": "india",
+          "market_scope": "India-listed",
+          "selection_score": 72.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
+        },
+        {
           "name": "Sprott Physical Copper Trust",
           "ticker": "COPP",
           "platform": "Sprott \u2014 IBKR / Schwab",
@@ -3737,21 +3757,6 @@
             "clean thematic exposure",
             "matches international access"
           ]
-        },
-        {
-          "name": "CPSE ETF",
-          "ticker": "CPSEETF",
-          "note": "NMDC, Coal India \u2014 commodity exposure",
-          "platform": "NSE/BSE listed \u2014 Zerodha / Dhan / Groww",
-          "exchange": "NSE",
-          "risk": "Medium",
-          "timeframe": "3\u20139 months",
-          "thesis": "NMDC (iron ore), Coal India in CPSE basket. India infrastructure demand driver.",
-          "sector_key": "commodities_mining",
-          "market_bucket": "india",
-          "market_scope": "India-listed",
-          "selection_score": 69.0,
-          "selection_notes": []
         }
       ],
       "regional_alternatives": {
@@ -3768,8 +3773,10 @@
             "sector_key": "commodities_mining",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 69.0,
-            "selection_notes": []
+            "selection_score": 72.0,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
           }
         ],
         "International-listed": [
@@ -3823,8 +3830,10 @@
           "sector_key": "commodities_mining",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 69.0,
-          "selection_notes": []
+          "selection_score": 72.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "global": [
