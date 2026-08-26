@@ -212,30 +212,30 @@
   },
   "confidence_threshold": 60,
   "regime": {
-    "risk_state": "NEUTRAL",
-    "vol_regime": "MID_VOL",
+    "risk_state": "RISK_ON",
+    "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0,
-    "vix_level": 20.0,
-    "vix_percentile_1y": 0.5,
+    "spy_excess_vs_tbill_3m": 0.013954097268574826,
+    "vix_level": 15.449999809265137,
+    "vix_percentile_1y": 0.15873015873015872,
     "weight_matrix": {
-      "rank": 25,
-      "flow": 20,
-      "options": 20,
+      "rank": 30,
+      "flow": 22,
+      "options": 18,
       "rotation": 15,
-      "macro": 10,
-      "news": 10
+      "macro": 8,
+      "news": 7
     }
   },
   "top_signal": {
     "ticker": "GDX",
     "rank_score": 24.81771561771562,
     "flow_score": 0.0,
-    "options_score": 16.2,
+    "options_score": 15.3,
     "rotation_score": 15.0,
-    "macro_score": 5.7748330821702325,
+    "macro_score": 4.6962066309264605,
     "news_score": 6.6499999999999995,
-    "total": 68.44254869988586,
+    "total": 66.46392224864208,
     "publish": true,
     "direction": "long"
   },
@@ -321,6 +321,10 @@
       "score": 85.0
     },
     {
+      "symbol": "Asia Pacific Equity",
+      "score": 85.0
+    },
+    {
       "symbol": "Healthcare & Pharma + India Equity Markets",
       "score": 82.0
     },
@@ -358,10 +362,6 @@
     },
     {
       "symbol": "Banking & Financial Sector",
-      "score": 63.0
-    },
-    {
-      "symbol": "Asia Pacific Equity",
       "score": 63.0
     },
     {
@@ -576,6 +576,56 @@
         "volume_confirmation": 16.2,
         "source_diversity": 15.2,
         "recency": 14.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 85.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 4.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 10,
+      "latest_at": "26 Aug 2026 06:28 UTC",
+      "headline": "Global Market: Japan stocks rise ahead of Nvidia earnings, US inflation data",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "global",
+        "europe"
+      ],
+      "sources": [
+        "Defense News",
+        "Markets-Economic Times",
+        "EE Times",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 16.4,
+        "volume_confirmation": 16.2,
+        "source_diversity": 14.0,
+        "recency": 16.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -1079,56 +1129,6 @@
       }
     },
     {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 63.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": -0.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "26 Aug 2026 02:06 UTC",
-      "headline": "Global Market Today: Asian stocks mixed ahead of Nvidia results, oil prices slide",
-      "regions": [
-        "europe",
-        "middle_east",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Latest from Tom's Hardware",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 13.7,
-        "volume_confirmation": 14.6,
-        "source_diversity": 14.0,
-        "recency": 15.1,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
       "confidence": 62.0,
@@ -1206,6 +1206,11 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Asia Pacific Equity - 10 articles - HIGH / BULLISH - Global Market: Japan stocks rise ahead of Nvidia earnings, US inflation data"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Healthcare & Pharma + India Equity Markets - 9 articles - HIGH / BULLISH - Market wrap: Adani Enterprise, InterGlobe, HDFC Life, HCL Tech, top gainers and losers on Nifty and Sensex on Tuesday"
     },
     {
@@ -1252,11 +1257,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Banking & Financial Sector - 11 articles - HIGH / BEARISH - Wells Fargo and Citigroup have room to buy a big bank. These 5 regionals fit the bill"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Asia Pacific Equity - 8 articles - HIGH / BULLISH - Global Market Today: Asian stocks mixed ahead of Nvidia results, oil prices slide"
     },
     {
       "tag": "tag-bull",
@@ -1324,77 +1324,77 @@
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 66227.55,
+      "price": 66262.16,
       "currency": "JPY",
-      "change": 371.12,
-      "change_pct": 0.56,
-      "change_str": "+0.56%",
+      "change": 405.73,
+      "change_pct": 0.62,
+      "change_str": "+0.62%",
       "direction": "up"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 25717.67,
+      "price": 25708.55,
       "currency": "HKD",
-      "change": 206.57,
-      "change_pct": 0.81,
-      "change_str": "+0.81%",
+      "change": 197.45,
+      "change_pct": 0.77,
+      "change_str": "+0.77%",
       "direction": "up"
     },
     {
       "label": "Nifty 50",
       "ticker": "^NSEI",
       "region": "IN",
-      "price": 24334.55,
+      "price": 24285.05,
       "currency": "INR",
-      "change": 115.5,
-      "change_pct": 0.48,
-      "change_str": "+0.48%",
-      "direction": "up"
+      "change": -49.5,
+      "change_pct": -0.2,
+      "change_str": "-0.20%",
+      "direction": "down"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4705.7,
+      "price": 4689.1,
       "currency": "USD",
-      "change": 67.6,
-      "change_pct": 1.46,
-      "change_str": "+1.46%",
+      "change": 51.0,
+      "change_pct": 1.1,
+      "change_str": "+1.10%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 80.28,
+      "price": 80.46,
       "currency": "USD",
-      "change": -2.08,
-      "change_pct": -2.53,
-      "change_str": "-2.53%",
+      "change": -1.9,
+      "change_pct": -2.31,
+      "change_str": "-2.31%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 79086.27,
+      "price": 79011.86,
       "currency": "USD",
-      "change": 121.79,
-      "change_pct": 0.15,
-      "change_str": "+0.15%",
+      "change": 47.38,
+      "change_pct": 0.06,
+      "change_str": "+0.06%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.96,
+      "price": 98.99,
       "currency": "USD",
-      "change": 0.04,
-      "change_pct": 0.04,
-      "change_str": "+0.04%",
+      "change": 0.07,
+      "change_pct": 0.07,
+      "change_str": "+0.07%",
       "direction": "up"
     },
     {
@@ -1760,10 +1760,10 @@
     }
   },
   "logs": [
-    "2026-08-26 03:24:18 [INFO] AZALYST - status.json generated",
-    "2026-08-26 03:24:18 [INFO] PORTFOLIO - NAV USD 9,903.92 | Return -0.97%",
-    "2026-08-26 03:24:18 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-26 03:24:18 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
+    "2026-08-26 07:08:49 [INFO] AZALYST - status.json generated",
+    "2026-08-26 07:08:49 [INFO] PORTFOLIO - NAV USD 9,903.92 | Return -0.97%",
+    "2026-08-26 07:08:49 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-26 07:08:49 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
   ],
-  "generated_at": "2026-08-26 03:24:13 UTC"
+  "generated_at": "2026-08-26 07:08:47 UTC"
 }
