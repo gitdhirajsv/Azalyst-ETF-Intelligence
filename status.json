@@ -228,15 +228,15 @@
     }
   },
   "top_signal": {
-    "ticker": "IGV",
-    "rank_score": 12.197822706065317,
-    "flow_score": 22.0,
-    "options_score": 0.0,
-    "rotation_score": 11.817377369691277,
-    "macro_score": 5.044096857839818,
-    "news_score": 3.4720000000000004,
-    "total": 54.531296933596415,
-    "publish": false,
+    "ticker": "GDX",
+    "rank_score": 24.81771561771562,
+    "flow_score": 0.0,
+    "options_score": 16.2,
+    "rotation_score": 15.0,
+    "macro_score": 5.7748330821702325,
+    "news_score": 6.6499999999999995,
+    "total": 68.44254869988586,
+    "publish": true,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -305,20 +305,16 @@
   },
   "confidence": [
     {
+      "symbol": "Defense & Aerospace",
+      "score": 96.0
+    },
+    {
+      "symbol": "Gold & Precious Metals + Bonds & Fixed Income",
+      "score": 95.0
+    },
+    {
       "symbol": "Energy / Oil & Gas",
       "score": 93.0
-    },
-    {
-      "symbol": "Gold & Precious Metals + Bonds & Fixed Income + Banking & Financial Sector",
-      "score": 92.0
-    },
-    {
-      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
-      "score": 91.0
-    },
-    {
-      "symbol": "Asia Pacific Equity + Bearish Market / Macro Selloff",
-      "score": 88.0
     },
     {
       "symbol": "Europe Equity",
@@ -329,28 +325,20 @@
       "score": 82.0
     },
     {
+      "symbol": "Nuclear Energy & Uranium",
+      "score": 81.0
+    },
+    {
+      "symbol": "Commodities & Mining",
+      "score": 80.0
+    },
+    {
       "symbol": "Crypto & Digital Assets",
       "score": 79.0
     },
     {
-      "symbol": "Commodities & Mining",
-      "score": 73.0
-    },
-    {
       "symbol": "Cybersecurity",
       "score": 72.0
-    },
-    {
-      "symbol": "Defense & Aerospace",
-      "score": 69.0
-    },
-    {
-      "symbol": "Nuclear Energy & Uranium",
-      "score": 68.0
-    },
-    {
-      "symbol": "India Equity Markets",
-      "score": 67.0
     },
     {
       "symbol": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector",
@@ -365,11 +353,129 @@
       "score": 65.0
     },
     {
+      "symbol": "India Equity Markets",
+      "score": 64.0
+    },
+    {
+      "symbol": "Banking & Financial Sector",
+      "score": 63.0
+    },
+    {
+      "symbol": "Asia Pacific Equity",
+      "score": 63.0
+    },
+    {
       "symbol": "Technology & AI / Semiconductors",
       "score": 62.0
     }
   ],
   "signals": [
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 96.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 38,
+      "latest_at": "26 Aug 2026 03:14 UTC",
+      "headline": "Is UK's Storm Shadow missile a game changer for Ukraine?",
+      "regions": [
+        "americas",
+        "europe",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "US Top News and Analysis",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 17.0,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Bonds & Fixed Income",
+      "confidence": 95.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": 4.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "26 Aug 2026 02:49 UTC",
+      "headline": "Gold little changed with US inflation data in spotlight",
+      "regions": [
+        "americas",
+        "europe",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "US Top News and Analysis",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 17.4,
+        "source_diversity": 14.6,
+        "recency": 16.3,
+        "geopolitical_severity": 13.0
+      }
+    },
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
@@ -420,160 +526,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.5,
         "recency": 15.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Bonds & Fixed Income + Banking & Financial Sector",
-      "confidence": 92.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 0.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 15,
-      "latest_at": "25 Aug 2026 18:35 UTC",
-      "headline": "US Markets Today: US stocks rebound on tech recovery ahead of Nvidia earnings, inflation data",
-      "regions": [
-        "americas",
-        "europe",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "World | Deutsche Welle"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.6,
-        "recency": 15.4,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
-      "confidence": 91.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -3.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "24 Aug 2026 05:56 UTC",
-      "headline": "Wells Fargo and Citigroup have room to buy a big bank. These 5 regionals fit the bill",
-      "regions": [
-        "global",
-        "india",
-        "asia_pacific",
-        "americas"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Latest from Tom's Hardware",
-        "Markets-Economic Times",
-        "Finance"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "BANKBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 20.1,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.6,
-        "recency": 14.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity + Bearish Market / Macro Selloff",
-      "confidence": 88.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -7.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "19 Aug 2026 06:58 UTC",
-      "headline": "Global Market: Japan shares slide as chip stocks tumble on global tech rout",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "europe",
-        "americas"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "BBC News",
-        "Defense News",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 20.5,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.9,
-        "recency": 17.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -681,6 +633,107 @@
       }
     },
     {
+      "sector_key": "nuclear_uranium",
+      "sector_label": "Nuclear Energy & Uranium",
+      "confidence": 81.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "26 Aug 2026 03:14 UTC",
+      "headline": "Trump's Saudi nuclear deal reaches Congress as experts warn of proliferation risk",
+      "regions": [
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "Oilprice.com",
+        "World | Deutsche Welle"
+      ],
+      "primary_etf": "URA",
+      "top_etfs": [
+        "URA",
+        "URNM",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "URA",
+        "URNM",
+        "SRUUF"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 16.2,
+        "volume_confirmation": 13.7,
+        "source_diversity": 12.0,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 80.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "26 Aug 2026 03:06 UTC",
+      "headline": "Canada announces 'dollar-for-dollar' retaliatory tariffs on US as high as 50%",
+      "regions": [
+        "india",
+        "americas",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Latest from Tom's Hardware",
+        "Bloomberg Markets",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "CPSEETF",
+        "COPP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 13.3,
+        "volume_confirmation": 14.6,
+        "source_diversity": 14.9,
+        "recency": 16.7,
+        "geopolitical_severity": 11.7
+      }
+    },
+    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 79.0,
@@ -728,57 +781,6 @@
       }
     },
     {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 73.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "25 Aug 2026 14:29 UTC",
-      "headline": "Hindustan Zinc shares fall 3% on reports of fresh government stake sale via OFS",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "india",
-        "americas"
-      ],
-      "sources": [
-        "BBC News",
-        "World News - Breaking international news and headlines | Sky News",
-        "Markets-Economic Times",
-        "www.theregister.com - Articles"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "CPSEETF",
-        "COPP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 12.5,
-        "volume_confirmation": 13.7,
-        "source_diversity": 13.3,
-        "recency": 13.7,
-        "geopolitical_severity": 11.5
-      }
-    },
-    {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
       "confidence": 72.0,
@@ -821,159 +823,6 @@
         "source_diversity": 10.4,
         "recency": 17.0,
         "geopolitical_severity": 8.5
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 69.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 44,
-      "latest_at": "25 Aug 2026 22:36 UTC",
-      "headline": "Is UK's Storm Shadow missile a game changer for Ukraine?",
-      "regions": [
-        "americas",
-        "middle_east",
-        "global",
-        "europe"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "Cointelegraph.com News",
-        "EE Times",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 17.1,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "nuclear_uranium",
-      "sector_label": "Nuclear Energy & Uranium",
-      "confidence": 68.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "25 Aug 2026 20:28 UTC",
-      "headline": "Uranium Prices Surge as Nuclear Demand Accelerates",
-      "regions": [
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "EE Times",
-        "World | Deutsche Welle",
-        "Oilprice.com"
-      ],
-      "primary_etf": "URA",
-      "top_etfs": [
-        "URA",
-        "URNM",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "URA",
-        "URNM",
-        "SRUUF"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.2,
-        "volume_confirmation": 9.7,
-        "source_diversity": 7.6,
-        "recency": 16.9,
-        "geopolitical_severity": 12.8
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 67.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 21,
-      "latest_at": "20 Aug 2026 06:59 UTC",
-      "headline": "Why is market rising today? Sensex rallies 500 points, Nifty tops 24,200. 5 key factors behind market rebound",
-      "regions": [
-        "india",
-        "global",
-        "asia_pacific",
-        "middle_east"
-      ],
-      "sources": [
-        "World | Deutsche Welle",
-        "Markets-Economic Times",
-        "Latest from Tom's Hardware",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 21.3,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.8,
-        "recency": 17.0,
-        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1129,6 +978,157 @@
       }
     },
     {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 64.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 11.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 21,
+      "latest_at": "26 Aug 2026 02:04 UTC",
+      "headline": "D-Street set for a positive start as GIFT Nifty trades firmly higher",
+      "regions": [
+        "india",
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "US Top News and Analysis",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 11.1,
+        "recency": 15.1,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector",
+      "confidence": 63.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -1.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "26 Aug 2026 01:49 UTC",
+      "headline": "Wells Fargo and Citigroup have room to buy a big bank. These 5 regionals fit the bill",
+      "regions": [
+        "americas",
+        "europe",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "Finance",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "BANKBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 17.2,
+        "volume_confirmation": 16.8,
+        "source_diversity": 11.1,
+        "recency": 14.7,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 63.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": -0.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "26 Aug 2026 02:06 UTC",
+      "headline": "Global Market Today: Asian stocks mixed ahead of Nvidia results, oil prices slide",
+      "regions": [
+        "europe",
+        "middle_east",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "Latest from Tom's Hardware",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 13.7,
+        "volume_confirmation": 14.6,
+        "source_diversity": 14.0,
+        "recency": 15.1,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
       "confidence": 62.0,
@@ -1184,24 +1184,19 @@
   ],
   "articles": [
     {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Defense & Aerospace - 38 articles - HIGH / BEARISH - Is UK's Storm Shadow missile a game changer for Ukraine?"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Gold & Precious Metals + Bonds & Fixed Income - 12 articles - CRITICAL / BULLISH - Gold little changed with US inflation data in spotlight"
+    },
+    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Energy / Oil & Gas - 17 articles - HIGH / BULLISH - Oil Prices Slide 2% as Markets Brace for Bessent\u2019s \u2018Economic D-Day\u2019"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Gold & Precious Metals + Bonds & Fixed Income + Banking & Financial Sector - 15 articles - HIGH / BULLISH - US Markets Today: US stocks rebound on tech recovery ahead of Nvidia earnings, inflation data"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Banking & Financial Sector + Gold & Precious Metals - 13 articles - CRITICAL / BEARISH - Wells Fargo and Citigroup have room to buy a big bank. These 5 regionals fit the bill"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Asia Pacific Equity + Bearish Market / Macro Selloff - 13 articles - HIGH / BEARISH - Global Market: Japan shares slide as chip stocks tumble on global tech rout"
     },
     {
       "tag": "tag-bull",
@@ -1216,32 +1211,22 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Nuclear Energy & Uranium - 7 articles - HIGH / BULLISH - Trump's Saudi nuclear deal reaches Congress as experts warn of proliferation risk"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Commodities & Mining - 8 articles - MEDIUM / BULLISH - Canada announces 'dollar-for-dollar' retaliatory tariffs on US as high as 50%"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Crypto & Digital Assets - 28 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Commodities & Mining - 7 articles - MEDIUM / BULLISH - Hindustan Zinc shares fall 3% on reports of fresh government stake sale via OFS"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "Cybersecurity - 8 articles - MEDIUM / BULLISH - Critical macOS Screen Sharing flaw gives attackers remote root access \u2014 CISA bumps bug to 9.8 severity following active Monero cryptojacking attacks"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Defense & Aerospace - 44 articles - HIGH / BEARISH - Is UK's Storm Shadow missile a game changer for Ukraine?"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Nuclear Energy & Uranium - 4 articles - HIGH / BULLISH - Uranium Prices Surge as Nuclear Demand Accelerates"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "India Equity Markets - 21 articles - HIGH / BULLISH - Why is market rising today? Sensex rallies 500 points, Nifty tops 24,200. 5 key factors behind market rebound"
     },
     {
       "tag": "tag-bear",
@@ -1257,6 +1242,21 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Emerging Markets - 5 articles - HIGH / BEARISH - Asia bond foreign inflows hit four-month low in July on oil shock"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "India Equity Markets - 21 articles - HIGH / BULLISH - D-Street set for a positive start as GIFT Nifty trades firmly higher"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Banking & Financial Sector - 11 articles - HIGH / BEARISH - Wells Fargo and Citigroup have room to buy a big bank. These 5 regionals fit the bill"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Asia Pacific Equity - 8 articles - HIGH / BULLISH - Global Market Today: Asian stocks mixed ahead of Nvidia results, oil prices slide"
     },
     {
       "tag": "tag-bull",
@@ -1315,32 +1315,32 @@
       "region": "EU",
       "price": 26266.14,
       "currency": "EUR",
-      "change": 129.58,
-      "change_pct": 0.5,
-      "change_str": "+0.50%",
+      "change": 159.54,
+      "change_pct": 0.61,
+      "change_str": "+0.61%",
       "direction": "up"
     },
     {
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 65856.43,
+      "price": 66227.55,
       "currency": "JPY",
-      "change": -159.93,
-      "change_pct": -0.24,
-      "change_str": "-0.24%",
-      "direction": "down"
+      "change": 371.12,
+      "change_pct": 0.56,
+      "change_str": "+0.56%",
+      "direction": "up"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 25511.1,
+      "price": 25717.67,
       "currency": "HKD",
-      "change": -498.36,
-      "change_pct": -1.92,
-      "change_str": "-1.92%",
-      "direction": "down"
+      "change": 206.57,
+      "change_pct": 0.81,
+      "change_str": "+0.81%",
+      "direction": "up"
     },
     {
       "label": "Nifty 50",
@@ -1348,54 +1348,54 @@
       "region": "IN",
       "price": 24334.55,
       "currency": "INR",
-      "change": 82.55,
-      "change_pct": 0.34,
-      "change_str": "+0.34%",
+      "change": 115.5,
+      "change_pct": 0.48,
+      "change_str": "+0.48%",
       "direction": "up"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4727.3,
+      "price": 4705.7,
       "currency": "USD",
-      "change": 86.5,
-      "change_pct": 1.86,
-      "change_str": "+1.86%",
+      "change": 67.6,
+      "change_pct": 1.46,
+      "change_str": "+1.46%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 80.96,
+      "price": 80.28,
       "currency": "USD",
-      "change": -4.05,
-      "change_pct": -4.76,
-      "change_str": "-4.76%",
+      "change": -2.08,
+      "change_pct": -2.53,
+      "change_str": "-2.53%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78803.4,
+      "price": 79086.27,
       "currency": "USD",
-      "change": -161.08,
-      "change_pct": -0.2,
-      "change_str": "-0.20%",
-      "direction": "down"
+      "change": 121.79,
+      "change_pct": 0.15,
+      "change_str": "+0.15%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.9,
+      "price": 98.96,
       "currency": "USD",
-      "change": -0.1,
-      "change_pct": -0.1,
-      "change_str": "-0.10%",
-      "direction": "down"
+      "change": 0.04,
+      "change_pct": 0.04,
+      "change_str": "+0.04%",
+      "direction": "up"
     },
     {
       "label": "VIX",
@@ -1760,10 +1760,10 @@
     }
   },
   "logs": [
-    "2026-08-25 22:49:35 [INFO] AZALYST - status.json generated",
-    "2026-08-25 22:49:35 [INFO] PORTFOLIO - NAV USD 9,903.92 | Return -0.97%",
-    "2026-08-25 22:49:35 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-25 22:49:35 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
+    "2026-08-26 03:24:18 [INFO] AZALYST - status.json generated",
+    "2026-08-26 03:24:18 [INFO] PORTFOLIO - NAV USD 9,903.92 | Return -0.97%",
+    "2026-08-26 03:24:18 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-26 03:24:18 [INFO] TRADER - Open positions: EWJ, XLF, XLE, XLV, DBC"
   ],
-  "generated_at": "2026-08-25 22:49:32 UTC"
+  "generated_at": "2026-08-26 03:24:13 UTC"
 }
