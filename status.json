@@ -246,9 +246,9 @@
     "risk_state": "RISK_ON",
     "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.007539010102700363,
-    "vix_level": 14.430000305175781,
-    "vix_percentile_1y": 0.027777777777777776,
+    "spy_excess_vs_tbill_3m": 0.01275735205246864,
+    "vix_level": 14.510000228881836,
+    "vix_percentile_1y": 0.03571428571428571,
     "weight_matrix": {
       "rank": 30,
       "flow": 22,
@@ -259,16 +259,16 @@
     }
   },
   "top_signal": {
-    "ticker": "EWY",
-    "rank_score": 16.172365339578455,
-    "flow_score": 22.0,
-    "options_score": 9.350195414084068,
-    "rotation_score": 9.48478966537379,
-    "macro_score": 2.051409223595444,
-    "news_score": 6.6499999999999995,
-    "total": 65.70875964263176,
-    "publish": true,
-    "direction": "short"
+    "ticker": "IGV",
+    "rank_score": 0.0,
+    "flow_score": 5.5,
+    "options_score": 0.0,
+    "rotation_score": 15.0,
+    "macro_score": 3.1909493000666047,
+    "news_score": 6.72,
+    "total": 30.410949300066605,
+    "publish": false,
+    "direction": "long"
   },
   "jlaw_risk": {
     "distribution_count": 1,
@@ -963,25 +963,26 @@
       "sector_key": "commodities_mining",
       "sector_label": "Commodities & Mining",
       "confidence": 70.0,
-      "severity": "MEDIUM",
+      "severity": "HIGH",
       "direction": "BULLISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 8,
-      "latest_at": "28 Aug 2026 05:10 UTC",
-      "headline": "Trump signs order to rename Lake Ontario 'Lake America' amid Canada trade war",
+      "latest_at": "28 Aug 2026 21:17 UTC",
+      "headline": "Tariffs Could Bring Canada Auto \"To Its Knees\"",
       "regions": [
+        "india",
         "americas",
-        "global",
-        "india"
+        "middle_east",
+        "global"
       ],
       "sources": [
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "EE Times",
-        "World News - Breaking international news and headlines | Sky News"
+        "Bloomberg Markets",
+        "Cointelegraph.com News",
+        "www.theregister.com - Articles",
+        "Oilprice.com"
       ],
       "primary_etf": "DBC",
       "top_etfs": [
@@ -1002,11 +1003,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 11.5,
+        "signal_strength": 13.2,
         "volume_confirmation": 14.6,
-        "source_diversity": 11.1,
-        "recency": 15.5,
-        "geopolitical_severity": 9.3
+        "source_diversity": 13.4,
+        "recency": 7.6,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1273,7 +1274,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Commodities & Mining - 8 articles - MEDIUM / BULLISH - Trump signs order to rename Lake Ontario 'Lake America' amid Canada trade war"
+      "text": "Commodities & Mining - 8 articles - HIGH / BULLISH - Tariffs Could Bring Canada Auto \"To Its Knees\""
     },
     {
       "tag": "tag-bear",
@@ -1303,10 +1304,10 @@
       "region": "US",
       "price": 7711.76,
       "currency": "USD",
-      "change": -19.23,
-      "change_pct": -0.25,
-      "change_str": "-0.25%",
-      "direction": "down"
+      "change": 36.06,
+      "change_pct": 0.47,
+      "change_str": "+0.47%",
+      "direction": "up"
     },
     {
       "label": "NASDAQ",
@@ -1314,10 +1315,10 @@
       "region": "US",
       "price": 26402.42,
       "currency": "USD",
-      "change": -138.93,
-      "change_pct": -0.52,
-      "change_str": "-0.52%",
-      "direction": "down"
+      "change": 272.22,
+      "change_pct": 1.04,
+      "change_str": "+1.04%",
+      "direction": "up"
     },
     {
       "label": "Dow Jones",
@@ -1325,10 +1326,10 @@
       "region": "US",
       "price": 53559.99,
       "currency": "USD",
-      "change": -9.45,
-      "change_pct": -0.02,
-      "change_str": "-0.02%",
-      "direction": "down"
+      "change": 96.11,
+      "change_pct": 0.18,
+      "change_str": "+0.18%",
+      "direction": "up"
     },
     {
       "label": "FTSE 100",
@@ -1389,33 +1390,33 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4504.1,
+      "price": 4529.9,
       "currency": "USD",
-      "change": -105.6,
-      "change_pct": -2.29,
-      "change_str": "-2.29%",
+      "change": -68.3,
+      "change_pct": -1.49,
+      "change_str": "-1.49%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 83.44,
+      "price": 83.4,
       "currency": "USD",
-      "change": -0.09,
-      "change_pct": -0.11,
-      "change_str": "-0.11%",
-      "direction": "down"
+      "change": 1.17,
+      "change_pct": 1.42,
+      "change_str": "+1.42%",
+      "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77572.35,
+      "price": 77670.9,
       "currency": "USD",
-      "change": -2685.19,
-      "change_pct": -3.35,
-      "change_str": "-3.35%",
+      "change": -2586.64,
+      "change_pct": -3.22,
+      "change_str": "-3.22%",
       "direction": "down"
     },
     {
@@ -1424,9 +1425,9 @@
       "region": "FX",
       "price": 99.68,
       "currency": "USD",
-      "change": 0.52,
-      "change_pct": 0.52,
-      "change_str": "+0.52%",
+      "change": 0.51,
+      "change_pct": 0.51,
+      "change_str": "+0.51%",
       "direction": "up"
     },
     {
@@ -1435,9 +1436,9 @@
       "region": "VOL",
       "price": 14.43,
       "currency": "USD",
-      "change": -0.08,
-      "change_pct": -0.55,
-      "change_str": "-0.55%",
+      "change": -0.78,
+      "change_pct": -5.13,
+      "change_str": "-5.13%",
       "direction": "down"
     }
   ],
@@ -1486,37 +1487,37 @@
       "matrix": {
         "CIBR": {
           "CIBR": 1.0,
-          "DBC": -0.069,
-          "XLE": -0.03,
-          "XLF": 0.173,
-          "XLV": -0.15
+          "DBC": -0.091,
+          "XLE": -0.018,
+          "XLF": 0.205,
+          "XLV": -0.173
         },
         "DBC": {
-          "CIBR": -0.069,
+          "CIBR": -0.091,
           "DBC": 1.0,
-          "XLE": 0.653,
-          "XLF": -0.572,
-          "XLV": 0.171
+          "XLE": 0.66,
+          "XLF": -0.569,
+          "XLV": 0.166
         },
         "XLE": {
-          "CIBR": -0.03,
-          "DBC": 0.653,
+          "CIBR": -0.018,
+          "DBC": 0.66,
           "XLE": 1.0,
-          "XLF": -0.143,
-          "XLV": 0.037
+          "XLF": -0.149,
+          "XLV": 0.041
         },
         "XLF": {
-          "CIBR": 0.173,
-          "DBC": -0.572,
-          "XLE": -0.143,
+          "CIBR": 0.205,
+          "DBC": -0.569,
+          "XLE": -0.149,
           "XLF": 1.0,
-          "XLV": 0.118
+          "XLV": 0.125
         },
         "XLV": {
-          "CIBR": -0.15,
-          "DBC": 0.171,
-          "XLE": 0.037,
-          "XLF": 0.118,
+          "CIBR": -0.173,
+          "DBC": 0.166,
+          "XLE": 0.041,
+          "XLF": 0.125,
           "XLV": 1.0
         }
       },
@@ -1527,12 +1528,12 @@
         "XLF",
         "XLV"
       ],
-      "max_corr": 0.653,
+      "max_corr": 0.66,
       "max_corr_pair": [
         "DBC",
         "XLE"
       ],
-      "most_negative_corr": -0.572,
+      "most_negative_corr": -0.569,
       "most_negative_pair": [
         "DBC",
         "XLF"
@@ -1541,22 +1542,22 @@
     },
     "volatility": {
       "per_ticker": {
-        "XLF": 9.44,
-        "XLE": 21.89,
-        "XLV": 18.62,
-        "DBC": 19.87,
-        "CIBR": 37.73
+        "XLF": 9.62,
+        "XLE": 22.37,
+        "XLV": 19.01,
+        "DBC": 20.28,
+        "CIBR": 37.4
       },
-      "portfolio_avg_vol_pct": 21.51,
+      "portfolio_avg_vol_pct": 21.74,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 1.54,
+      "benchmark_return_pct": 1.77,
       "benchmark_price_start": 757.67,
-      "benchmark_price_now": 769.35,
+      "benchmark_price_now": 771.1,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": -1.23,
-      "alpha": -2.77
+      "alpha": -3.0
     },
     "rebalance": {
       "alerts": [
@@ -1792,11 +1793,11 @@
     }
   },
   "logs": [
-    "2026-08-29 03:46:38 [INFO] AZALYST - status.json generated",
-    "2026-08-29 03:46:38 [INFO] PORTFOLIO - NAV USD 9,880.19 | Return -1.23%",
-    "2026-08-29 03:46:38 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-29 03:46:38 [INFO] TRADER - Open positions: XLF, XLE, XLV, DBC, CIBR",
-    "2026-08-29 03:46:38 [INFO] TRADER - Closed trades: 1"
+    "2026-08-29 05:25:33 [INFO] AZALYST - status.json generated",
+    "2026-08-29 05:25:33 [INFO] PORTFOLIO - NAV USD 9,880.19 | Return -1.23%",
+    "2026-08-29 05:25:33 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-29 05:25:33 [INFO] TRADER - Open positions: XLF, XLE, XLV, DBC, CIBR",
+    "2026-08-29 05:25:33 [INFO] TRADER - Closed trades: 1"
   ],
-  "generated_at": "2026-08-29 03:46:36 UTC"
+  "generated_at": "2026-08-29 05:25:29 UTC"
 }
