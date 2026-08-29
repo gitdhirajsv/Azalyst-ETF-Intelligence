@@ -39,7 +39,7 @@
       "pnl_pct_str": "-0.41%",
       "confidence": 89,
       "severity": "CRITICAL",
-      "days_held": 14,
+      "days_held": 15,
       "half_exited": false
     },
     {
@@ -259,14 +259,14 @@
     }
   },
   "top_signal": {
-    "ticker": "IGV",
+    "ticker": "GDX",
     "rank_score": 0.0,
-    "flow_score": 5.5,
+    "flow_score": 6.556469385167227,
     "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 3.1909493000666047,
-    "news_score": 6.72,
-    "total": 30.410949300066605,
+    "macro_score": 3.1886091163449097,
+    "news_score": 5.46,
+    "total": 30.205078501512137,
     "publish": false,
     "direction": "long"
   },
@@ -336,10 +336,6 @@
   },
   "confidence": [
     {
-      "symbol": "Technology & AI / Semiconductors + Asia Pacific Equity",
-      "score": 96.0
-    },
-    {
       "symbol": "Asia Pacific Equity + Technology & AI / Semiconductors",
       "score": 95.0
     },
@@ -348,8 +344,16 @@
       "score": 91.0
     },
     {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 90.0
+    },
+    {
       "symbol": "India Equity Markets",
       "score": 89.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 87.0
     },
     {
       "symbol": "Healthcare & Pharma + India Equity Markets",
@@ -364,23 +368,11 @@
       "score": 78.0
     },
     {
-      "symbol": "Cybersecurity",
-      "score": 75.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 73.0
-    },
-    {
       "symbol": "Europe Equity",
       "score": 72.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
-      "score": 70.0
-    },
-    {
-      "symbol": "Commodities & Mining",
       "score": 70.0
     },
     {
@@ -392,8 +384,16 @@
       "score": 66.0
     },
     {
+      "symbol": "Cybersecurity",
+      "score": 66.0
+    },
+    {
       "symbol": "Emerging Markets",
       "score": 65.0
+    },
+    {
+      "symbol": "Commodities & Mining",
+      "score": 64.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -401,59 +401,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors + Asia Pacific Equity",
-      "confidence": 96.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": 9.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "29 Aug 2026 03:39 UTC",
-      "headline": "Chip Industry Week in Review",
-      "regions": [
-        "india",
-        "global",
-        "asia_pacific",
-        "europe"
-      ],
-      "sources": [
-        "www.theregister.com - Articles",
-        "Latest from Tom's Hardware",
-        "Markets-Economic Times",
-        "Tech"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.7,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity + Technology & AI / Semiconductors",
@@ -558,6 +505,59 @@
       }
     },
     {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 90.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": 6.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 70,
+      "latest_at": "29 Aug 2026 07:01 UTC",
+      "headline": "Chip Industry Week in Review",
+      "regions": [
+        "asia_pacific",
+        "india",
+        "americas",
+        "global"
+      ],
+      "sources": [
+        "Semiconductor Engineering",
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.8,
+        "recency": 10.1,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 89.0,
@@ -605,6 +605,53 @@
         "volume_confirmation": 18.0,
         "source_diversity": 15.3,
         "recency": 16.3,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 87.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": 2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "29 Aug 2026 09:23 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "americas",
+        "asia_pacific",
+        "global",
+        "europe"
+      ],
+      "sources": [
+        "Tech",
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 10.3,
+        "recency": 12.8,
         "geopolitical_severity": 13.0
       }
     },
@@ -768,98 +815,6 @@
       }
     },
     {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 75.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 6.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "27 Aug 2026 22:45 UTC",
-      "headline": "CrowdStrike posts best day ever, Okta's stock pops nearly 29% as rising AI threat lifts earnings",
-      "regions": [
-        "americas",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Earnings",
-        "Tech",
-        "Latest from Tom's Hardware",
-        "www.theregister.com - Articles"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 17.3,
-        "volume_confirmation": 16.8,
-        "source_diversity": 9.5,
-        "recency": 8.2,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 73.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 3.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "28 Aug 2026 20:42 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "europe",
-        "americas",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 9.1,
-        "recency": 8.5,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity",
       "confidence": 72.0,
@@ -956,57 +911,6 @@
         "volume_confirmation": 11.3,
         "source_diversity": 11.7,
         "recency": 12.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 70.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "28 Aug 2026 21:17 UTC",
-      "headline": "Tariffs Could Bring Canada Auto \"To Its Knees\"",
-      "regions": [
-        "india",
-        "americas",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Cointelegraph.com News",
-        "www.theregister.com - Articles",
-        "Oilprice.com"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "CPSEETF",
-        "COPP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 13.2,
-        "volume_confirmation": 14.6,
-        "source_diversity": 13.4,
-        "recency": 7.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -1114,6 +1018,51 @@
       }
     },
     {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 66.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "29 Aug 2026 09:18 UTC",
+      "headline": "CrowdStrike posts best day ever, Okta's stock pops nearly 29% as rising AI threat lifts earnings",
+      "regions": [
+        "india",
+        "global"
+      ],
+      "sources": [
+        "Semiconductor Engineering",
+        "Markets-Economic Times",
+        "www.theregister.com - Articles",
+        "Tech"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.5,
+        "volume_confirmation": 13.7,
+        "source_diversity": 11.4,
+        "recency": 12.7,
+        "geopolitical_severity": 8.4
+      }
+    },
+    {
       "sector_key": "emerging_markets",
       "sector_label": "Emerging Markets",
       "confidence": 65.0,
@@ -1160,6 +1109,57 @@
         "volume_confirmation": 11.3,
         "source_diversity": 12.7,
         "recency": 13.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 64.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "28 Aug 2026 21:17 UTC",
+      "headline": "Tariffs Could Bring Canada Auto \"To Its Knees\"",
+      "regions": [
+        "asia_pacific",
+        "middle_east",
+        "india",
+        "americas"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "www.theregister.com - Articles",
+        "World News - Breaking international news and headlines | Sky News",
+        "Tech"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "CPSEETF",
+        "COPP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.5,
+        "volume_confirmation": 13.7,
+        "source_diversity": 12.7,
+        "recency": 3.8,
         "geopolitical_severity": 13.0
       }
     },
@@ -1219,11 +1219,6 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Technology & AI / Semiconductors + Asia Pacific Equity - 13 articles - CRITICAL / BULLISH - Chip Industry Week in Review"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "Asia Pacific Equity + Technology & AI / Semiconductors - 13 articles - CRITICAL / BULLISH - Micron workers increasingly support strike over bonus pay \u2014 labor union wants profit-sharing scheme, as employees at Samsung, SK hynix enjoy bonuses worth hundreds of thousands of dollars"
     },
     {
@@ -1234,7 +1229,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Technology & AI / Semiconductors - 70 articles - CRITICAL / BULLISH - Chip Industry Week in Review"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "India Equity Markets - 26 articles - HIGH / BULLISH - Sensex falls 183 points, Nifty closes below 24,250 as market erases all morning gains. What lies ahead?"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Crypto & Digital Assets - 24 articles - CRITICAL / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
@@ -1254,27 +1259,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Cybersecurity - 11 articles - HIGH / BULLISH - CrowdStrike posts best day ever, Okta's stock pops nearly 29% as rising AI threat lifts earnings"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Crypto & Digital Assets - 24 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "Europe Equity - 4 articles - HIGH / BULLISH - Global Market: ECB may raise rates in September as Iran war fuels inflation concerns: Reports"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Nuclear Energy & Uranium - 5 articles - HIGH / BULLISH - Jellyfish force partial shutdown of French nuclear plant"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Commodities & Mining - 8 articles - HIGH / BULLISH - Tariffs Could Bring Canada Auto \"To Its Knees\""
     },
     {
       "tag": "tag-bear",
@@ -1287,9 +1277,19 @@
       "text": "Clean Energy & Renewables - 5 articles - MEDIUM / BEARISH - Amazon Nears 1 GW of Wind Power in Sweden With Four New Deals"
     },
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Cybersecurity - 7 articles - MEDIUM / BULLISH - CrowdStrike posts best day ever, Okta's stock pops nearly 29% as rising AI threat lifts earnings"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Emerging Markets - 5 articles - HIGH / BEARISH - Asia bond foreign inflows hit four-month low in July on oil shock"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Commodities & Mining - 7 articles - HIGH / BULLISH - Tariffs Could Bring Canada Auto \"To Its Knees\""
     },
     {
       "tag": "tag-bear",
@@ -1324,9 +1324,9 @@
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 53559.99,
+      "price": 53560.0,
       "currency": "USD",
-      "change": 96.11,
+      "change": 96.12,
       "change_pct": 0.18,
       "change_str": "+0.18%",
       "direction": "up"
@@ -1412,11 +1412,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77670.9,
+      "price": 77614.98,
       "currency": "USD",
-      "change": -2586.64,
-      "change_pct": -3.22,
-      "change_str": "-3.22%",
+      "change": -2642.56,
+      "change_pct": -3.29,
+      "change_str": "-3.29%",
       "direction": "down"
     },
     {
@@ -1793,11 +1793,11 @@
     }
   },
   "logs": [
-    "2026-08-29 05:25:33 [INFO] AZALYST - status.json generated",
-    "2026-08-29 05:25:33 [INFO] PORTFOLIO - NAV USD 9,880.19 | Return -1.23%",
-    "2026-08-29 05:25:33 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-29 05:25:33 [INFO] TRADER - Open positions: XLF, XLE, XLV, DBC, CIBR",
-    "2026-08-29 05:25:33 [INFO] TRADER - Closed trades: 1"
+    "2026-08-29 12:16:37 [INFO] AZALYST - status.json generated",
+    "2026-08-29 12:16:37 [INFO] PORTFOLIO - NAV USD 9,880.19 | Return -1.23%",
+    "2026-08-29 12:16:37 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-29 12:16:37 [INFO] TRADER - Open positions: XLF, XLE, XLV, DBC, CIBR",
+    "2026-08-29 12:16:37 [INFO] TRADER - Closed trades: 1"
   ],
-  "generated_at": "2026-08-29 05:25:29 UTC"
+  "generated_at": "2026-08-29 12:16:35 UTC"
 }
