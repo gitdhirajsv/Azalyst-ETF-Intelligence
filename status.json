@@ -131,7 +131,7 @@
       "pnl_pct_str": "-2.34%",
       "confidence": 90,
       "severity": "HIGH",
-      "days_held": 2,
+      "days_held": 3,
       "half_exited": false
     }
   ],
@@ -260,13 +260,13 @@
   },
   "top_signal": {
     "ticker": "EWY",
-    "rank_score": 15.93884555382215,
+    "rank_score": 15.93255269320843,
     "flow_score": 22.0,
-    "options_score": 4.5,
+    "options_score": 9.355185217639772,
     "rotation_score": 15.0,
     "macro_score": 2.2850450337194133,
-    "news_score": 6.16,
-    "total": 65.88389058754156,
+    "news_score": 4.76,
+    "total": 69.33278294456763,
     "publish": true,
     "direction": "short"
   },
@@ -336,20 +336,20 @@
   },
   "confidence": [
     {
-      "symbol": "Defense & Aerospace",
-      "score": 91.0
-    },
-    {
       "symbol": "India Equity Markets",
       "score": 89.0
     },
     {
-      "symbol": "Asia Pacific Equity + Technology & AI / Semiconductors",
-      "score": 88.0
-    },
-    {
       "symbol": "Technology & AI / Semiconductors",
       "score": 85.0
+    },
+    {
+      "symbol": "Asia Pacific Equity + Technology & AI / Semiconductors",
+      "score": 85.0
+    },
+    {
+      "symbol": "Defense & Aerospace",
+      "score": 82.0
     },
     {
       "symbol": "Healthcare & Pharma + India Equity Markets",
@@ -360,24 +360,24 @@
       "score": 81.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 78.0
-    },
-    {
       "symbol": "Energy / Oil & Gas",
       "score": 76.0
-    },
-    {
-      "symbol": "Clean Energy & Renewables",
-      "score": 72.0
     },
     {
       "symbol": "Europe Equity",
       "score": 72.0
     },
     {
+      "symbol": "Crypto & Digital Assets",
+      "score": 71.0
+    },
+    {
       "symbol": "Nuclear Energy & Uranium",
       "score": 70.0
+    },
+    {
+      "symbol": "Clean Energy & Renewables",
+      "score": 67.0
     },
     {
       "symbol": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector",
@@ -401,59 +401,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 91.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 21,
-      "latest_at": "27 Aug 2026 03:04 UTC",
-      "headline": "Houthi strikes threaten to pull Yemen back into full-scale war",
-      "regions": [
-        "global",
-        "americas",
-        "middle_east",
-        "europe"
-      ],
-      "sources": [
-        "Defense News",
-        "Markets-Economic Times",
-        "World News - Breaking international news and headlines | Sky News",
-        "Finance"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 21.1,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.2,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
@@ -502,56 +449,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 15.3,
         "recency": 16.3,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity + Technology & AI / Semiconductors",
-      "confidence": 88.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": 2.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 11,
-      "latest_at": "30 Aug 2026 03:09 UTC",
-      "headline": "Micron workers increasingly support strike over bonus pay \u2014 labor union wants profit-sharing scheme, as employees at Samsung, SK hynix enjoy bonuses worth hundreds of thousands of dollars",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "india",
-        "americas"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "World | Deutsche Welle",
-        "Bloomberg Markets",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 16.8,
-        "source_diversity": 16.4,
-        "recency": 16.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -605,6 +502,109 @@
         "volume_confirmation": 18.0,
         "source_diversity": 15.8,
         "recency": 7.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity + Technology & AI / Semiconductors",
+      "confidence": 85.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "30 Aug 2026 20:25 UTC",
+      "headline": "Micron workers increasingly support strike over bonus pay \u2014 labor union wants profit-sharing scheme, as employees at Samsung, SK hynix enjoy bonuses worth hundreds of thousands of dollars",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "americas",
+        "india"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Bloomberg Markets",
+        "World | Deutsche Welle",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 16.8,
+        "source_diversity": 16.1,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 82.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 26,
+      "latest_at": "30 Aug 2026 16:33 UTC",
+      "headline": "Russia\u2019s Energy Crisis Puts Kazakhstan in a Tough Spot",
+      "regions": [
+        "asia_pacific",
+        "americas",
+        "africa",
+        "india"
+      ],
+      "sources": [
+        "Defense News",
+        "Tech",
+        "Markets-Economic Times",
+        "BBC News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.4,
+        "recency": 11.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -715,53 +715,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 78.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "30 Aug 2026 12:49 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "europe",
-        "asia_pacific",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "Tech",
-        "Latest from Tom's Hardware",
-        "Markets-Economic Times",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 10.3,
-        "recency": 12.4,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
       "confidence": 76.0,
@@ -815,56 +768,6 @@
       }
     },
     {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables",
-      "confidence": 72.0,
-      "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "30 Aug 2026 15:00 UTC",
-      "headline": "Mexico\u2019s Green Energy Push Is Finally Gaining Momentum",
-      "regions": [
-        "global",
-        "americas",
-        "middle_east"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "ICLN",
-      "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NEWENERGY"
-      ],
-      "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 13.6,
-        "volume_confirmation": 13.7,
-        "source_diversity": 11.7,
-        "recency": 15.5,
-        "geopolitical_severity": 12.0
-      }
-    },
-    {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity",
       "confidence": 72.0,
@@ -909,6 +812,51 @@
         "volume_confirmation": 9.7,
         "source_diversity": 11.7,
         "recency": 16.8,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 71.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 19,
+      "latest_at": "30 Aug 2026 12:49 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "americas",
+        "global",
+        "europe"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Markets-Economic Times",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 9.1,
+        "recency": 7.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -962,6 +910,56 @@
         "source_diversity": 11.7,
         "recency": 12.9,
         "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables",
+      "confidence": 67.0,
+      "severity": "MEDIUM",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "30 Aug 2026 15:00 UTC",
+      "headline": "Mexico\u2019s Green Energy Push Is Finally Gaining Momentum",
+      "regions": [
+        "americas",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Oilprice.com",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "ICLN",
+      "top_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NEWENERGY"
+      ],
+      "global_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 13.6,
+        "volume_confirmation": 13.7,
+        "source_diversity": 11.7,
+        "recency": 9.9,
+        "geopolitical_severity": 12.0
       }
     },
     {
@@ -1216,11 +1214,6 @@
   ],
   "articles": [
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Defense & Aerospace - 21 articles - HIGH / BEARISH - Houthi strikes threaten to pull Yemen back into full-scale war"
-    },
-    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "India Equity Markets - 26 articles - HIGH / BULLISH - Sensex falls 183 points, Nifty closes below 24,250 as market erases all morning gains. What lies ahead?"
@@ -1228,12 +1221,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Asia Pacific Equity + Technology & AI / Semiconductors - 11 articles - CRITICAL / BULLISH - Micron workers increasingly support strike over bonus pay \u2014 labor union wants profit-sharing scheme, as employees at Samsung, SK hynix enjoy bonuses worth hundreds of thousands of dollars"
+      "text": "Technology & AI / Semiconductors - 70 articles - HIGH / BULLISH - Hybrid HBM-HBF Architecture in LLM Inference (University of Oxford)"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 70 articles - HIGH / BULLISH - Hybrid HBM-HBF Architecture in LLM Inference (University of Oxford)"
+      "text": "Asia Pacific Equity + Technology & AI / Semiconductors - 11 articles - HIGH / BULLISH - Micron workers increasingly support strike over bonus pay \u2014 labor union wants profit-sharing scheme, as employees at Samsung, SK hynix enjoy bonuses worth hundreds of thousands of dollars"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Defense & Aerospace - 26 articles - HIGH / BEARISH - Russia\u2019s Energy Crisis Puts Kazakhstan in a Tough Spot"
     },
     {
       "tag": "tag-bull",
@@ -1248,17 +1246,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Crypto & Digital Assets - 23 articles - CRITICAL / BULLISH - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "Energy / Oil & Gas - 20 articles - CRITICAL / BULLISH - Crude oil prices end winning run with first weekly fall in nearly a month. Can liquid gold slide further?"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Clean Energy & Renewables - 7 articles - MEDIUM / BEARISH - Mexico\u2019s Green Energy Push Is Finally Gaining Momentum"
     },
     {
       "tag": "tag-bull",
@@ -1268,7 +1256,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
+      "text": "Crypto & Digital Assets - 19 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
       "text": "Nuclear Energy & Uranium - 5 articles - HIGH / BULLISH - Jellyfish force partial shutdown of French nuclear plant"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Clean Energy & Renewables - 7 articles - MEDIUM / BEARISH - Mexico\u2019s Green Energy Push Is Finally Gaining Momentum"
     },
     {
       "tag": "tag-bear",
@@ -1411,11 +1409,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78865.91,
+      "price": 78798.23,
       "currency": "USD",
-      "change": 1035.62,
-      "change_pct": 1.33,
-      "change_str": "+1.33%",
+      "change": 967.94,
+      "change_pct": 1.24,
+      "change_str": "+1.24%",
       "direction": "up"
     },
     {
@@ -1792,11 +1790,11 @@
     }
   },
   "logs": [
-    "2026-08-30 16:02:35 [INFO] AZALYST - status.json generated",
-    "2026-08-30 16:02:35 [INFO] PORTFOLIO - NAV USD 9,882.26 | Return -1.23%",
-    "2026-08-30 16:02:35 [INFO] SIGNALS - 16 active signal buckets in state",
-    "2026-08-30 16:02:35 [INFO] TRADER - Open positions: XLF, XLE, XLV, DBC, CIBR",
-    "2026-08-30 16:02:35 [INFO] TRADER - Closed trades: 1"
+    "2026-08-30 20:33:45 [INFO] AZALYST - status.json generated",
+    "2026-08-30 20:33:45 [INFO] PORTFOLIO - NAV USD 9,882.26 | Return -1.23%",
+    "2026-08-30 20:33:45 [INFO] SIGNALS - 16 active signal buckets in state",
+    "2026-08-30 20:33:45 [INFO] TRADER - Open positions: XLF, XLE, XLV, DBC, CIBR",
+    "2026-08-30 20:33:45 [INFO] TRADER - Closed trades: 1"
   ],
-  "generated_at": "2026-08-30 16:02:33 UTC"
+  "generated_at": "2026-08-30 20:33:43 UTC"
 }
