@@ -1,20 +1,20 @@
 {
-  "portfolio_value": 9978.89,
-  "total_deposited": 10027.64,
-  "cash": 1107.57,
-  "monthly_reserve": 0.0,
-  "market_value": 8871.32,
-  "total_invested": 8863.3,
-  "unrealised_pnl": 8.02,
-  "unrealised_str": "+8.02",
-  "realised_pnl": -56.77,
-  "realised_str": "-56.77",
-  "change": "-0.49%",
-  "change_raw": -0.49,
-  "closed_trades": 1,
+  "portfolio_value": 19974.33,
+  "total_deposited": 20027.64,
+  "cash": 4929.5,
+  "monthly_reserve": 5000.0,
+  "market_value": 10044.82,
+  "total_invested": 9991.0,
+  "unrealised_pnl": 53.82,
+  "unrealised_str": "+53.82",
+  "realised_pnl": -107.13,
+  "realised_str": "-107.13",
+  "change": "-0.27%",
+  "change_raw": -0.27,
+  "closed_trades": 2,
   "partial_realised_pnl": 0.0,
-  "portfolio_peak": 10051.08,
-  "drawdown_now_pct": 0.72,
+  "portfolio_peak": 19980.32,
+  "drawdown_now_pct": 0.03,
   "max_drawdown_pct": 1.48,
   "deposited_anomaly": false,
   "usd_inr_rate": 95.152,
@@ -49,43 +49,20 @@
       "sector": "Energy / Oil & Gas",
       "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
       "exchange": "NYSE",
-      "entry": 62.98,
+      "entry": 63.51,
       "current": 63.96,
       "peak_price": 64.83,
-      "trail_stop": 58.57,
-      "dist_to_trail_pct": 8.42,
-      "units": 46.87942,
-      "invested": 2952.59,
-      "pnl": 45.82,
-      "pnl_str": "+45.82",
-      "pnl_pct": 1.55,
-      "pnl_pct_str": "+1.55%",
+      "trail_stop": 59.06,
+      "dist_to_trail_pct": 7.66,
+      "units": 93.652196,
+      "invested": 5947.46,
+      "pnl": 42.53,
+      "pnl_str": "+42.53",
+      "pnl_pct": 0.72,
+      "pnl_pct_str": "+0.72%",
       "confidence": 96,
       "severity": "CRITICAL",
       "days_held": 17,
-      "half_exited": false
-    },
-    {
-      "trade_id": "T0004",
-      "ticker": "XLV",
-      "etf_name": "Health Care Select Sector SPDR",
-      "sector": "Healthcare & Pharma",
-      "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
-      "exchange": "NYSE",
-      "entry": 175.15,
-      "current": 170.54,
-      "peak_price": 177.18,
-      "trail_stop": 162.88,
-      "dist_to_trail_pct": 4.49,
-      "units": 10.660743,
-      "invested": 1867.18,
-      "pnl": -49.09,
-      "pnl_str": "-49.09",
-      "pnl_pct": -2.63,
-      "pnl_pct_str": "-2.63%",
-      "confidence": 87,
-      "severity": "HIGH",
-      "days_held": 13,
       "half_exited": false
     },
     {
@@ -151,18 +128,34 @@
       "days_held": 14,
       "exit_reason": "Time-based unclogging (14 days, -2.2%)",
       "winner": false
+    },
+    {
+      "trade_id": "T0004",
+      "ticker": "XLV",
+      "etf_name": "Health Care Select Sector SPDR",
+      "platform": "SPDR by State Street \u2014 IBKR / Schwab / Fidelity",
+      "exchange": "NYSE",
+      "entry": 175.15,
+      "exit": 170.44,
+      "pnl": -50.37,
+      "pnl_str": "-50.37",
+      "pnl_pct": -2.7,
+      "pnl_pct_str": "-2.70%",
+      "days_held": 14,
+      "exit_reason": "Time-based unclogging (14 days, -2.6%)",
+      "winner": false
     }
   ],
   "track_record": {
-    "total_trades": 1,
+    "total_trades": 2,
     "winners": 0,
-    "losers": 1,
+    "losers": 2,
     "win_rate": 0.0,
     "avg_win": 0.0,
-    "avg_loss": -2.3,
+    "avg_loss": -2.5,
     "profit_factor": 0.0,
-    "expectancy": -2.3,
-    "sharpe_proxy": 0.0,
+    "expectancy": -2.5,
+    "sharpe_proxy": -12.5,
     "best": {
       "ticker": "EWJ",
       "etf_name": "iShares MSCI Japan ETF",
@@ -172,11 +165,11 @@
       "days_held": 14
     },
     "worst": {
-      "ticker": "EWJ",
-      "etf_name": "iShares MSCI Japan ETF",
-      "pnl_pct": -2.3,
-      "pnl_pct_str": "-2.30%",
-      "exit_reason": "Time-based unclogging (14 days, -2.2%)",
+      "ticker": "XLV",
+      "etf_name": "Health Care Select Sector SPDR",
+      "pnl_pct": -2.7,
+      "pnl_pct_str": "-2.70%",
+      "exit_reason": "Time-based unclogging (14 days, -2.6%)",
       "days_held": 14
     },
     "legacy_partial_pnl_not_itemized": 0.0
@@ -221,24 +214,24 @@
       },
       {
         "era": "current",
-        "total_deposited": 10027.64,
-        "portfolio_value": 9978.89,
-        "realised_pnl": -56.77,
-        "change": "-0.49%",
-        "total_trades": 1,
+        "total_deposited": 20027.64,
+        "portfolio_value": 19974.33,
+        "realised_pnl": -107.13,
+        "change": "-0.27%",
+        "total_trades": 2,
         "winners": 0,
-        "losers": 1,
+        "losers": 2,
         "win_rate": 0.0,
         "profit_factor": 0.0
       }
     ],
     "era_count": 4,
     "reset_count": 3,
-    "combined_total_trades": 32,
-    "combined_win_rate": 18.8,
-    "combined_realised_pnl": -148.06,
-    "combined_realised_pnl_str": "-148.06",
-    "combined_total_deposited": 49961.87,
+    "combined_total_trades": 33,
+    "combined_win_rate": 18.2,
+    "combined_realised_pnl": -198.42,
+    "combined_realised_pnl_str": "-198.42",
+    "combined_total_deposited": 59961.87,
     "note": "Each entry in `eras` is a separate paper-trading book (a prior book is archived, deposits restart, and NAV resets to par when the engine is reset). The headline NAV/return above the fold reflects only the CURRENT era -- this section exists so a reset cannot make the published track record look better than the full history."
   },
   "confidence_threshold": 60,
@@ -262,11 +255,11 @@
     "ticker": "XLE",
     "rank_score": 18.83906976744186,
     "flow_score": 7.391920027856668,
-    "options_score": 17.843468645669347,
+    "options_score": 15.982440884425541,
     "rotation_score": 11.413993079662028,
-    "macro_score": 3.7341899081238723,
+    "macro_score": 3.727175002405352,
     "news_score": 6.3,
-    "total": 65.52264142875377,
+    "total": 63.65459876179145,
     "publish": true,
     "direction": "long"
   },
@@ -294,47 +287,43 @@
     "XLF": {
       "stage": 0,
       "description": "Insufficient data"
-    },
-    "XLV": {
-      "stage": 0,
-      "description": "Insufficient data"
     }
   },
   "allocation": {
     "labels": [
       "XLF",
       "XLE",
-      "XLV",
       "DBC",
       "CIBR",
       "CASH"
     ],
     "values": [
-      10.1,
+      5.1,
       30.0,
-      18.2,
-      28.8,
-      1.6,
-      11.1
+      14.4,
+      0.8,
+      49.7
     ]
   },
   "pnl": {
     "labels": [
       "XLF",
       "XLE",
-      "XLV",
       "DBC",
       "CIBR"
     ],
     "values": [
       -13.5,
-      45.82,
-      -49.09,
+      42.53,
       26.55,
       -1.66
     ]
   },
   "confidence": [
+    {
+      "symbol": "Banking & Financial Sector + Bonds & Fixed Income + Gold & Precious Metals",
+      "score": 93.0
+    },
     {
       "symbol": "Defense & Aerospace",
       "score": 93.0
@@ -346,10 +335,6 @@
     {
       "symbol": "Asia Pacific Equity + Technology & AI / Semiconductors",
       "score": 88.0
-    },
-    {
-      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
-      "score": 87.0
     },
     {
       "symbol": "India Equity Markets",
@@ -369,7 +354,7 @@
     },
     {
       "symbol": "Real Estate & REITs",
-      "score": 75.0
+      "score": 80.0
     },
     {
       "symbol": "Europe Equity",
@@ -396,15 +381,66 @@
       "score": 67.0
     },
     {
-      "symbol": "Emerging Markets",
-      "score": 65.0
-    },
-    {
       "symbol": "Commodities & Mining",
       "score": 64.0
+    },
+    {
+      "symbol": "Emerging Markets + Bearish Market / Macro Selloff",
+      "score": 63.0
     }
   ],
   "signals": [
+    {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector + Bonds & Fixed Income + Gold & Precious Metals",
+      "confidence": 93.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -51.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 15,
+      "latest_at": "01 Sep 2026 01:02 UTC",
+      "headline": "India 10-year bond yield sees biggest monthly rise in FY27 on rising rate hike bets",
+      "regions": [
+        "asia_pacific",
+        "americas",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Cointelegraph.com News",
+        "Bloomberg Markets",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "BANKBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.4,
+        "recency": 16.7,
+        "geopolitical_severity": 13.0
+      }
+    },
     {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
@@ -558,57 +594,6 @@
         "volume_confirmation": 16.8,
         "source_diversity": 16.4,
         "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
-      "confidence": 87.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -27.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "31 Aug 2026 16:51 UTC",
-      "headline": "India 10-year bond yield sees biggest monthly rise in FY27 on rising rate hike bets",
-      "regions": [
-        "europe",
-        "asia_pacific",
-        "middle_east",
-        "americas"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "Oilprice.com"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "BANKBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 17.4,
-        "source_diversity": 13.4,
-        "recency": 15.8,
         "geopolitical_severity": 13.0
       }
     },
@@ -825,26 +810,26 @@
     {
       "sector_key": "real_estate_reit",
       "sector_label": "Real Estate & REITs",
-      "confidence": 75.0,
+      "confidence": 80.0,
       "severity": "HIGH",
       "direction": "BEARISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "31 Aug 2026 19:29 UTC",
+      "article_count": 9,
+      "latest_at": "01 Sep 2026 00:36 UTC",
       "headline": "Blackstone\u2019s Knowledge Realty Trust OFS subscribed 1.4 times on Day 1",
       "regions": [
-        "americas",
+        "asia_pacific",
         "middle_east",
         "global",
-        "asia_pacific"
+        "india"
       ],
       "sources": [
-        "Markets-Economic Times",
         "US Top News and Analysis",
-        "Bloomberg Markets"
+        "Bloomberg Markets",
+        "Markets-Economic Times"
       ],
       "primary_etf": "VNQ",
       "top_etfs": [
@@ -865,10 +850,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 14.1,
-        "volume_confirmation": 12.6,
+        "signal_strength": 16.3,
+        "volume_confirmation": 15.4,
         "source_diversity": 11.0,
-        "recency": 16.3,
+        "recency": 16.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -1166,56 +1151,6 @@
       }
     },
     {
-      "sector_key": "emerging_markets",
-      "sector_label": "Emerging Markets",
-      "confidence": 65.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 4.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "19 Aug 2026 07:59 UTC",
-      "headline": "Asia bond foreign inflows hit four-month low in July on oil shock",
-      "regions": [
-        "americas",
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "BBC News",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "EEM",
-      "top_etfs": [
-        "EEM",
-        "SPEM",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES"
-      ],
-      "global_etfs": [
-        "EEM",
-        "SPEM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.7,
-        "volume_confirmation": 11.3,
-        "source_diversity": 12.7,
-        "recency": 13.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "commodities_mining",
       "sector_label": "Commodities & Mining",
       "confidence": 64.0,
@@ -1265,9 +1200,64 @@
         "recency": 3.8,
         "geopolitical_severity": 13.0
       }
+    },
+    {
+      "sector_key": "emerging_markets",
+      "sector_label": "Emerging Markets + Bearish Market / Macro Selloff",
+      "confidence": 63.0,
+      "severity": "MEDIUM",
+      "direction": "BEARISH",
+      "direction_score": -2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 4,
+      "latest_at": "31 Aug 2026 23:49 UTC",
+      "headline": "Global Market: China, Hong Kong stocks slip as weak economic data and property overhaul weigh",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "americas"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "World News - Breaking international news and headlines | Sky News"
+      ],
+      "primary_etf": "EEM",
+      "top_etfs": [
+        "EEM",
+        "SPEM",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES"
+      ],
+      "global_etfs": [
+        "EEM",
+        "SPEM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 6.4,
+        "volume_confirmation": 9.7,
+        "source_diversity": 13.1,
+        "recency": 14.8,
+        "geopolitical_severity": 11.2
+      }
     }
   ],
   "articles": [
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Banking & Financial Sector + Bonds & Fixed Income + Gold & Precious Metals - 15 articles - CRITICAL / BEARISH - India 10-year bond yield sees biggest monthly rise in FY27 on rising rate hike bets"
+    },
     {
       "tag": "tag-bear",
       "label": "Bearish",
@@ -1282,11 +1272,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Asia Pacific Equity + Technology & AI / Semiconductors - 11 articles - CRITICAL / BULLISH - Global Market: Japan's Nikkei falls nearly 2% as rate hike expectations weigh on sentiment"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Banking & Financial Sector + Gold & Precious Metals - 12 articles - CRITICAL / BEARISH - India 10-year bond yield sees biggest monthly rise in FY27 on rising rate hike bets"
     },
     {
       "tag": "tag-bear",
@@ -1311,7 +1296,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Real Estate & REITs - 6 articles - HIGH / BEARISH - Blackstone\u2019s Knowledge Realty Trust OFS subscribed 1.4 times on Day 1"
+      "text": "Real Estate & REITs - 9 articles - HIGH / BEARISH - Blackstone\u2019s Knowledge Realty Trust OFS subscribed 1.4 times on Day 1"
     },
     {
       "tag": "tag-bull",
@@ -1344,14 +1329,14 @@
       "text": "Cybersecurity - 7 articles - MEDIUM / BULLISH - CrowdStrike posts best day ever, Okta's stock pops nearly 29% as rising AI threat lifts earnings"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Emerging Markets - 5 articles - HIGH / BEARISH - Asia bond foreign inflows hit four-month low in July on oil shock"
-    },
-    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Commodities & Mining - 7 articles - HIGH / BULLISH - Tariffs Could Bring Canada Auto \"To Its Knees\""
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Emerging Markets + Bearish Market / Macro Selloff - 4 articles - MEDIUM / BEARISH - Global Market: China, Hong Kong stocks slip as weak economic data and property overhaul weigh"
     }
   ],
   "market_snapshot": [
@@ -1414,12 +1399,12 @@
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 66311.93,
+      "price": 66195.93,
       "currency": "JPY",
-      "change": 179.95,
-      "change_pct": 0.27,
-      "change_str": "+0.27%",
-      "direction": "up"
+      "change": -209.63,
+      "change_pct": -0.32,
+      "change_str": "-0.32%",
+      "direction": "down"
     },
     {
       "label": "Hang Seng",
@@ -1447,44 +1432,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4493.9,
+      "price": 4497.4,
       "currency": "USD",
-      "change": 15.8,
-      "change_pct": 0.35,
-      "change_str": "+0.35%",
+      "change": 19.3,
+      "change_pct": 0.43,
+      "change_str": "+0.43%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 86.4,
+      "price": 86.44,
       "currency": "USD",
-      "change": 3.0,
-      "change_pct": 3.6,
-      "change_str": "+3.60%",
+      "change": 3.04,
+      "change_pct": 3.65,
+      "change_str": "+3.65%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 78532.94,
+      "price": 78590.6,
       "currency": "USD",
-      "change": 287.13,
-      "change_pct": 0.37,
-      "change_str": "+0.37%",
+      "change": 760.31,
+      "change_pct": 0.98,
+      "change_str": "+0.98%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.41,
+      "price": 99.44,
       "currency": "USD",
-      "change": -0.29,
-      "change_pct": -0.29,
-      "change_str": "-0.29%",
+      "change": -0.26,
+      "change_pct": -0.26,
+      "change_str": "-0.26%",
       "direction": "down"
     },
     {
@@ -1501,8 +1486,8 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 0.72,
-    "portfolio_peak": 10051.08,
+    "drawdown_from_peak_pct": 0.03,
+    "portfolio_peak": 19980.32,
     "vix": 14.92,
     "vix_regime": "NORMAL",
     "sector_concentration": [
@@ -1513,22 +1498,17 @@
       },
       {
         "sector": "Commodities & Mining",
-        "weight": 28.8,
-        "at_cap": false
-      },
-      {
-        "sector": "Healthcare & Pharma",
-        "weight": 18.2,
+        "weight": 14.4,
         "at_cap": false
       },
       {
         "sector": "Banking & Financial Sector",
-        "weight": 10.1,
+        "weight": 5.1,
         "at_cap": false
       },
       {
         "sector": "Cybersecurity",
-        "weight": 1.6,
+        "weight": 0.8,
         "at_cap": false
       }
     ],
@@ -1546,44 +1526,32 @@
           "CIBR": 1.0,
           "DBC": 0.027,
           "XLE": 0.024,
-          "XLF": 0.1,
-          "XLV": -0.109
+          "XLF": 0.1
         },
         "DBC": {
           "CIBR": 0.027,
           "DBC": 1.0,
           "XLE": 0.654,
-          "XLF": -0.554,
-          "XLV": 0.1
+          "XLF": -0.554
         },
         "XLE": {
           "CIBR": 0.024,
           "DBC": 0.654,
           "XLE": 1.0,
-          "XLF": -0.149,
-          "XLV": 0.018
+          "XLF": -0.149
         },
         "XLF": {
           "CIBR": 0.1,
           "DBC": -0.554,
           "XLE": -0.149,
-          "XLF": 1.0,
-          "XLV": 0.229
-        },
-        "XLV": {
-          "CIBR": -0.109,
-          "DBC": 0.1,
-          "XLE": 0.018,
-          "XLF": 0.229,
-          "XLV": 1.0
+          "XLF": 1.0
         }
       },
       "tickers": [
         "CIBR",
         "DBC",
         "XLE",
-        "XLF",
-        "XLV"
+        "XLF"
       ],
       "max_corr": 0.654,
       "max_corr_pair": [
@@ -1601,11 +1569,10 @@
       "per_ticker": {
         "XLF": 9.77,
         "XLE": 22.85,
-        "XLV": 18.25,
         "DBC": 19.68,
         "CIBR": 38.7
       },
-      "portfolio_avg_vol_pct": 21.85,
+      "portfolio_avg_vol_pct": 22.75,
       "target_vol_pct": 15.0
     },
     "benchmark": {
@@ -1613,49 +1580,59 @@
       "benchmark_price_start": 757.67,
       "benchmark_price_now": 767.05,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.49,
-      "alpha": -1.73
+      "portfolio_return_pct": -0.27,
+      "alpha": -1.51
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "CIBR",
-          "actual_weight_pct": 1.65,
-          "target_weight_pct": 18.0,
-          "drift_pct": -16.35,
+          "actual_weight_pct": 0.82,
+          "target_weight_pct": 22.5,
+          "drift_pct": -21.68,
           "action": "ADD",
-          "amount": 1631.85,
+          "amount": 4329.88,
           "etf_name": "First Trust Nasdaq CEA Cybersecurity ETF",
           "regime_note": ""
         },
         {
-          "ticker": "XLE",
-          "actual_weight_pct": 30.05,
-          "target_weight_pct": 18.0,
-          "drift_pct": 12.05,
-          "action": "TRIM",
-          "amount": 1202.21,
-          "etf_name": "Energy Select Sector SPDR",
+          "ticker": "XLF",
+          "actual_weight_pct": 5.07,
+          "target_weight_pct": 22.5,
+          "drift_pct": -17.43,
+          "action": "ADD",
+          "amount": 3481.48,
+          "etf_name": "Financial Select Sector SPDR",
+          "regime_note": ""
+        },
+        {
+          "ticker": "CASH",
+          "actual_weight_pct": 24.68,
+          "target_weight_pct": 10.0,
+          "drift_pct": 14.68,
+          "action": "DEPLOY",
+          "amount": 2932.07,
+          "etf_name": "Cash Reserve",
           "regime_note": ""
         },
         {
           "ticker": "DBC",
-          "actual_weight_pct": 28.84,
-          "target_weight_pct": 18.0,
-          "drift_pct": 10.84,
-          "action": "TRIM",
-          "amount": 1081.54,
+          "actual_weight_pct": 14.41,
+          "target_weight_pct": 22.5,
+          "drift_pct": -8.09,
+          "action": "ADD",
+          "amount": 1616.48,
           "etf_name": "Invesco DB Commodity Index Tracking Fund",
           "regime_note": ""
         },
         {
-          "ticker": "XLF",
-          "actual_weight_pct": 10.15,
-          "target_weight_pct": 18.0,
-          "drift_pct": -7.85,
-          "action": "ADD",
-          "amount": 783.46,
-          "etf_name": "Financial Select Sector SPDR",
+          "ticker": "XLE",
+          "actual_weight_pct": 29.99,
+          "target_weight_pct": 22.5,
+          "drift_pct": 7.49,
+          "action": "TRIM",
+          "amount": 1495.77,
+          "etf_name": "Energy Select Sector SPDR",
           "regime_note": ""
         }
       ],
@@ -1665,8 +1642,8 @@
     "stress_test": {
       "scenarios": {
         "2008_GFC": {
-          "total_impact": -4429.95,
-          "portfolio_loss_pct": -44.39,
+          "total_impact": -5348.09,
+          "portfolio_loss_pct": -26.77,
           "position_impacts": [
             {
               "ticker": "XLF",
@@ -1678,13 +1655,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -55.0,
-              "impact": -1649.12
-            },
-            {
-              "ticker": "XLV",
-              "factor": "equities",
-              "shock_pct": -40.0,
-              "impact": -727.23
+              "impact": -3294.5
             },
             {
               "ticker": "DBC",
@@ -1701,8 +1672,8 @@
           ]
         },
         "2020_COVID": {
-          "total_impact": -4837.86,
-          "portfolio_loss_pct": -48.48,
+          "total_impact": -6164.24,
+          "portfolio_loss_pct": -30.86,
           "position_impacts": [
             {
               "ticker": "XLF",
@@ -1714,13 +1685,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -65.0,
-              "impact": -1948.97
-            },
-            {
-              "ticker": "XLV",
-              "factor": "equities",
-              "shock_pct": -34.0,
-              "impact": -618.15
+              "impact": -3893.5
             },
             {
               "ticker": "DBC",
@@ -1737,8 +1702,8 @@
           ]
         },
         "RATES_SHOCK_+2%": {
-          "total_impact": -1036.89,
-          "portfolio_loss_pct": -10.39,
+          "total_impact": -1063.34,
+          "portfolio_loss_pct": -5.32,
           "position_impacts": [
             {
               "ticker": "XLF",
@@ -1750,13 +1715,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -10.0,
-              "impact": -299.84
-            },
-            {
-              "ticker": "XLV",
-              "factor": "equities",
-              "shock_pct": -15.0,
-              "impact": -272.71
+              "impact": -599.0
             },
             {
               "ticker": "DBC",
@@ -1773,8 +1732,8 @@
           ]
         },
         "USD_SPIKE_+10%": {
-          "total_impact": -1121.04,
-          "portfolio_loss_pct": -11.23,
+          "total_impact": -1424.33,
+          "portfolio_loss_pct": -7.13,
           "position_impacts": [
             {
               "ticker": "XLF",
@@ -1786,13 +1745,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -15.0,
-              "impact": -449.76
-            },
-            {
-              "ticker": "XLV",
-              "factor": "equities",
-              "shock_pct": -8.0,
-              "impact": -145.45
+              "impact": -898.5
             },
             {
               "ticker": "DBC",
@@ -1809,8 +1762,8 @@
           ]
         },
         "VIX_SPIKE_40": {
-          "total_impact": -1714.36,
-          "portfolio_loss_pct": -17.18,
+          "total_impact": -1985.42,
+          "portfolio_loss_pct": -9.94,
           "position_impacts": [
             {
               "ticker": "XLF",
@@ -1822,13 +1775,7 @@
               "ticker": "XLE",
               "factor": "oil",
               "shock_pct": -20.0,
-              "impact": -599.68
-            },
-            {
-              "ticker": "XLV",
-              "factor": "equities",
-              "shock_pct": -18.0,
-              "impact": -327.25
+              "impact": -1198.0
             },
             {
               "ticker": "DBC",
@@ -1846,15 +1793,15 @@
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -48.48
+      "worst_loss_pct": -30.86
     }
   },
   "logs": [
-    "2026-08-31 23:48:06 [INFO] AZALYST - status.json generated",
-    "2026-08-31 23:48:06 [INFO] PORTFOLIO - NAV USD 9,978.89 | Return -0.49%",
-    "2026-08-31 23:48:06 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-08-31 23:48:06 [INFO] TRADER - Open positions: XLF, XLE, XLV, DBC, CIBR",
-    "2026-08-31 23:48:06 [INFO] TRADER - Closed trades: 1"
+    "2026-09-01 01:23:45 [INFO] AZALYST - status.json generated",
+    "2026-09-01 01:23:45 [INFO] PORTFOLIO - NAV USD 19,974.33 | Return -0.27%",
+    "2026-09-01 01:23:45 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-01 01:23:45 [INFO] TRADER - Open positions: XLF, XLE, DBC, CIBR",
+    "2026-09-01 01:23:45 [INFO] TRADER - Closed trades: 2"
   ],
-  "generated_at": "2026-08-31 23:48:02 UTC"
+  "generated_at": "2026-09-01 01:23:42 UTC"
 }
