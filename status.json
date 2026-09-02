@@ -263,13 +263,13 @@
   "top_signal": {
     "ticker": "XLE",
     "rank_score": 27.252672347017814,
-    "flow_score": 1.302906752075922,
-    "options_score": 15.2860604889882,
+    "flow_score": 1.9040554068588325,
+    "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 5.909997221661205,
+    "macro_score": 5.897616421348333,
     "news_score": 6.58,
-    "total": 71.33163680974315,
-    "publish": true,
+    "total": 56.634344175224975,
+    "publish": false,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -339,19 +339,19 @@
     },
     {
       "symbol": "India Equity Markets",
-      "score": 89.0
+      "score": 90.0
     },
     {
       "symbol": "Cybersecurity",
       "score": 89.0
     },
     {
-      "symbol": "Europe Equity",
-      "score": 84.0
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 87.0
     },
     {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
-      "score": 83.0
+      "symbol": "Europe Equity",
+      "score": 84.0
     },
     {
       "symbol": "Healthcare & Pharma + India Equity Markets",
@@ -605,26 +605,25 @@
     {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
-      "confidence": 89.0,
+      "confidence": 90.0,
       "severity": "HIGH",
       "direction": "BEARISH",
-      "direction_score": -8.0,
+      "direction_score": -3.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 29,
-      "latest_at": "02 Sep 2026 12:50 UTC",
-      "headline": "RBI backstop keeps Indian rupee stable, blunting importer dollar demand impact",
+      "article_count": 25,
+      "latest_at": "02 Sep 2026 23:01 UTC",
+      "headline": "Rising global bond yields, FCNR-B inflows and SEBI's CAS to shape market dynamics: HDFC Securities CEO Dhiraj Relli",
       "regions": [
         "asia_pacific",
-        "global",
-        "middle_east",
-        "india"
+        "india",
+        "middle_east"
       ],
       "sources": [
+        "BBC News",
         "Oilprice.com",
-        "Semiconductor Engineering",
-        "Bloomberg Markets",
+        "Finance",
         "Markets-Economic Times"
       ],
       "primary_etf": "INDA",
@@ -648,8 +647,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 15.3,
-        "recency": 14.6,
+        "source_diversity": 14.0,
+        "recency": 16.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -701,6 +700,59 @@
       }
     },
     {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 87.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -10.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 13,
+      "latest_at": "02 Sep 2026 22:08 UTC",
+      "headline": "US stocks today: S&amp;P 500, Dow gain as AI strength offsets US-Iran friction",
+      "regions": [
+        "americas",
+        "europe",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "www.theregister.com - Articles",
+        "BBC News"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 15.7,
+        "recency": 15.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity",
       "confidence": 84.0,
@@ -746,59 +798,6 @@
         "volume_confirmation": 15.4,
         "source_diversity": 14.0,
         "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 83.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -32.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "31 Aug 2026 19:38 UTC",
-      "headline": "India bonds slump on Fed rate hike bets, benchmark trades at discount",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "india",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "US Top News and Analysis",
-        "Finance"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 16.2,
-        "source_diversity": 12.1,
-        "recency": 16.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -1279,7 +1278,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "India Equity Markets - 29 articles - HIGH / BEARISH - RBI backstop keeps Indian rupee stable, blunting importer dollar demand impact"
+      "text": "India Equity Markets - 25 articles - HIGH / BEARISH - Rising global bond yields, FCNR-B inflows and SEBI's CAS to shape market dynamics: HDFC Securities CEO Dhiraj Relli"
     },
     {
       "tag": "tag-bull",
@@ -1289,12 +1288,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Europe Equity - 9 articles - HIGH / BEARISH - ECB\u2019s Nagel Scolds US for Blindsiding EU on Yen Interventions"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / BEARISH - US stocks today: S&amp;P 500, Dow gain as AI strength offsets US-Iran friction"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector - 10 articles - CRITICAL / BEARISH - India bonds slump on Fed rate hike bets, benchmark trades at discount"
+      "text": "Europe Equity - 9 articles - HIGH / BEARISH - ECB\u2019s Nagel Scolds US for Blindsiding EU on Yen Interventions"
     },
     {
       "tag": "tag-bull",
@@ -1382,9 +1381,9 @@
       "region": "UK",
       "price": 10756.45,
       "currency": "GBP",
-      "change": -32.85,
-      "change_pct": -0.3,
-      "change_str": "-0.30%",
+      "change": -67.85,
+      "change_pct": -0.63,
+      "change_str": "-0.63%",
       "direction": "down"
     },
     {
@@ -1393,9 +1392,9 @@
       "region": "EU",
       "price": 25839.33,
       "currency": "EUR",
-      "change": -130.78,
-      "change_pct": -0.5,
-      "change_str": "-0.50%",
+      "change": -418.78,
+      "change_pct": -1.59,
+      "change_str": "-1.59%",
       "direction": "down"
     },
     {
@@ -1435,44 +1434,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4434.5,
+      "price": 4430.2,
       "currency": "USD",
-      "change": 86.5,
-      "change_pct": 1.99,
-      "change_str": "+1.99%",
+      "change": 82.2,
+      "change_pct": 1.89,
+      "change_str": "+1.89%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 90.7,
+      "price": 90.76,
       "currency": "USD",
-      "change": 0.48,
-      "change_pct": 0.53,
-      "change_str": "+0.53%",
+      "change": 0.54,
+      "change_pct": 0.6,
+      "change_str": "+0.60%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77330.69,
+      "price": 77145.13,
       "currency": "USD",
-      "change": -72.93,
-      "change_pct": -0.09,
-      "change_str": "-0.09%",
+      "change": -258.49,
+      "change_pct": -0.33,
+      "change_str": "-0.33%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.56,
+      "price": 99.58,
       "currency": "USD",
-      "change": -0.11,
-      "change_pct": -0.11,
-      "change_str": "-0.11%",
+      "change": -0.09,
+      "change_pct": -0.09,
+      "change_str": "-0.09%",
       "direction": "down"
     },
     {
@@ -1714,11 +1713,11 @@
     }
   },
   "logs": [
-    "2026-09-02 20:43:10 [INFO] AZALYST - status.json generated",
-    "2026-09-02 20:43:10 [INFO] PORTFOLIO - NAV USD 20,142.53 | Return +0.37%",
-    "2026-09-02 20:43:10 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-02 20:43:10 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
-    "2026-09-02 20:43:10 [INFO] TRADER - Closed trades: 4"
+    "2026-09-02 23:08:12 [INFO] AZALYST - status.json generated",
+    "2026-09-02 23:08:12 [INFO] PORTFOLIO - NAV USD 20,142.53 | Return +0.37%",
+    "2026-09-02 23:08:12 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-02 23:08:12 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
+    "2026-09-02 23:08:12 [INFO] TRADER - Closed trades: 4"
   ],
-  "generated_at": "2026-09-02 20:43:06 UTC"
+  "generated_at": "2026-09-02 23:08:10 UTC"
 }
