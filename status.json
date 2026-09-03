@@ -248,7 +248,7 @@
     "risk_state": "RISK_ON",
     "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.003832864915228518,
+    "spy_excess_vs_tbill_3m": 0.003168864269269234,
     "vix_level": 15.199999809265137,
     "vix_percentile_1y": 0.12301587301587301,
     "weight_matrix": {
@@ -262,13 +262,13 @@
   },
   "top_signal": {
     "ticker": "XLE",
-    "rank_score": 27.252672347017814,
-    "flow_score": 1.9040554068588325,
+    "rank_score": 0.0,
+    "flow_score": 5.5,
     "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 5.897616421348333,
+    "macro_score": 5.879799702486714,
     "news_score": 6.58,
-    "total": 56.634344175224975,
+    "total": 32.95979970248671,
     "publish": false,
     "direction": "long"
   },
@@ -342,10 +342,6 @@
       "score": 90.0
     },
     {
-      "symbol": "Cybersecurity",
-      "score": 89.0
-    },
-    {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 87.0
     },
@@ -366,8 +362,8 @@
       "score": 80.0
     },
     {
-      "symbol": "Clean Energy & Renewables",
-      "score": 73.0
+      "symbol": "Cybersecurity",
+      "score": 77.0
     },
     {
       "symbol": "Asia Pacific Equity",
@@ -380,6 +376,10 @@
     {
       "symbol": "Nuclear Energy & Uranium",
       "score": 70.0
+    },
+    {
+      "symbol": "Clean Energy & Renewables",
+      "score": 65.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -653,53 +653,6 @@
       }
     },
     {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 89.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 17,
-      "latest_at": "02 Sep 2026 07:03 UTC",
-      "headline": "Palo Alto CEO says $1 trillion of cybersecurity infrastructure isn\u2019t ready for AI",
-      "regions": [
-        "europe",
-        "asia_pacific",
-        "global",
-        "india"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "Oilprice.com"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 18.7,
-        "volume_confirmation": 18.0,
-        "source_diversity": 13.6,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
       "confidence": 87.0,
@@ -956,54 +909,49 @@
       }
     },
     {
-      "sector_key": "clean_energy_renewables",
-      "sector_label": "Clean Energy & Renewables",
-      "confidence": 73.0,
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 77.0,
       "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
+      "direction": "BULLISH",
+      "direction_score": 2.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "01 Sep 2026 14:31 UTC",
-      "headline": "Ather Energy\u2019s 130% stock surge leaves Tesla and BYD behind in 2026",
+      "article_count": 10,
+      "latest_at": "02 Sep 2026 21:27 UTC",
+      "headline": "US officials work with CrowdStrike to fight malware behind crypto theft",
       "regions": [
-        "asia_pacific",
         "europe",
+        "india",
         "global"
       ],
       "sources": [
-        "Markets-Economic Times",
         "Latest from Tom's Hardware",
-        "EE Times",
-        "Oilprice.com"
+        "www.theregister.com - Articles",
+        "Tech",
+        "Cointelegraph.com News"
       ],
-      "primary_etf": "ICLN",
+      "primary_etf": "CIBR",
       "top_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
+        "CIBR",
+        "HACK"
       ],
       "access_markets": [
-        "India-listed",
         "International-listed"
       ],
-      "india_etfs": [
-        "NEWENERGY"
-      ],
+      "india_etfs": [],
       "global_etfs": [
-        "ICLN",
-        "QCLN",
-        "PBW"
+        "CIBR",
+        "HACK"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 13.0,
-        "volume_confirmation": 13.7,
-        "source_diversity": 11.0,
-        "recency": 16.6,
-        "geopolitical_severity": 11.6
+        "signal_strength": 15.3,
+        "volume_confirmation": 16.2,
+        "source_diversity": 11.5,
+        "recency": 13.1,
+        "geopolitical_severity": 11.3
       }
     },
     {
@@ -1153,6 +1101,55 @@
       }
     },
     {
+      "sector_key": "clean_energy_renewables",
+      "sector_label": "Clean Energy & Renewables",
+      "confidence": 65.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 4,
+      "latest_at": "03 Sep 2026 00:02 UTC",
+      "headline": "White Hydrogen Drilling Push Gains Momentum Across Three Continents",
+      "regions": [
+        "americas",
+        "global"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Latest from Tom's Hardware",
+        "The Verge"
+      ],
+      "primary_etf": "ICLN",
+      "top_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NEWENERGY"
+      ],
+      "global_etfs": [
+        "ICLN",
+        "QCLN",
+        "PBW"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.1,
+        "volume_confirmation": 9.7,
+        "source_diversity": 7.6,
+        "recency": 16.9,
+        "geopolitical_severity": 12.3
+      }
+    },
+    {
       "sector_key": "commodities_mining",
       "sector_label": "Commodities & Mining",
       "confidence": 64.0,
@@ -1281,11 +1278,6 @@
       "text": "India Equity Markets - 25 articles - HIGH / BEARISH - Rising global bond yields, FCNR-B inflows and SEBI's CAS to shape market dynamics: HDFC Securities CEO Dhiraj Relli"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Cybersecurity - 17 articles - HIGH / BULLISH - Palo Alto CEO says $1 trillion of cybersecurity infrastructure isn\u2019t ready for AI"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Gold & Precious Metals + Banking & Financial Sector - 13 articles - HIGH / BEARISH - US stocks today: S&amp;P 500, Dow gain as AI strength offsets US-Iran friction"
@@ -1311,9 +1303,9 @@
       "text": "Real Estate & REITs - 9 articles - HIGH / BEARISH - Blackstone\u2019s Knowledge Realty Trust OFS subscribed 1.4 times on Day 1"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Clean Energy & Renewables - 7 articles - MEDIUM / BEARISH - Ather Energy\u2019s 130% stock surge leaves Tesla and BYD behind in 2026"
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Cybersecurity - 10 articles - MEDIUM / BULLISH - US officials work with CrowdStrike to fight malware behind crypto theft"
     },
     {
       "tag": "tag-bull",
@@ -1329,6 +1321,11 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Nuclear Energy & Uranium - 5 articles - HIGH / BULLISH - Jellyfish force partial shutdown of French nuclear plant"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Clean Energy & Renewables - 4 articles - HIGH / BEARISH - White Hydrogen Drilling Push Gains Momentum Across Three Continents"
     },
     {
       "tag": "tag-bull",
@@ -1434,44 +1431,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4430.2,
+      "price": 4430.4,
       "currency": "USD",
-      "change": 82.2,
-      "change_pct": 1.89,
-      "change_str": "+1.89%",
+      "change": 82.4,
+      "change_pct": 1.9,
+      "change_str": "+1.90%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 90.76,
+      "price": 90.59,
       "currency": "USD",
-      "change": 0.54,
-      "change_pct": 0.6,
-      "change_str": "+0.60%",
+      "change": 0.37,
+      "change_pct": 0.41,
+      "change_str": "+0.41%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77145.13,
+      "price": 77156.34,
       "currency": "USD",
-      "change": -258.49,
-      "change_pct": -0.33,
-      "change_str": "-0.33%",
+      "change": -247.29,
+      "change_pct": -0.32,
+      "change_str": "-0.32%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.58,
+      "price": 99.6,
       "currency": "USD",
-      "change": -0.09,
-      "change_pct": -0.09,
-      "change_str": "-0.09%",
+      "change": -0.07,
+      "change_pct": -0.07,
+      "change_str": "-0.07%",
       "direction": "down"
     },
     {
@@ -1521,17 +1518,17 @@
       "matrix": {
         "DBC": {
           "DBC": 1.0,
-          "EWJ": -0.354,
-          "XLE": 0.656
+          "EWJ": -0.347,
+          "XLE": 0.659
         },
         "EWJ": {
-          "DBC": -0.354,
+          "DBC": -0.347,
           "EWJ": 1.0,
-          "XLE": -0.535
+          "XLE": -0.543
         },
         "XLE": {
-          "DBC": 0.656,
-          "EWJ": -0.535,
+          "DBC": 0.659,
+          "EWJ": -0.543,
           "XLE": 1.0
         }
       },
@@ -1540,12 +1537,12 @@
         "EWJ",
         "XLE"
       ],
-      "max_corr": 0.656,
+      "max_corr": 0.659,
       "max_corr_pair": [
         "DBC",
         "XLE"
       ],
-      "most_negative_corr": -0.535,
+      "most_negative_corr": -0.543,
       "most_negative_pair": [
         "EWJ",
         "XLE"
@@ -1554,20 +1551,20 @@
     },
     "volatility": {
       "per_ticker": {
-        "XLE": 21.96,
-        "DBC": 19.55,
-        "EWJ": 16.05
+        "XLE": 22.48,
+        "DBC": 19.94,
+        "EWJ": 16.23
       },
-      "portfolio_avg_vol_pct": 19.19,
+      "portfolio_avg_vol_pct": 19.55,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 0.99,
+      "benchmark_return_pct": 0.54,
       "benchmark_price_start": 757.67,
-      "benchmark_price_now": 765.16,
+      "benchmark_price_now": 761.78,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": 0.37,
-      "alpha": -0.62
+      "alpha": -0.17
     },
     "rebalance": {
       "alerts": [
@@ -1713,11 +1710,11 @@
     }
   },
   "logs": [
-    "2026-09-02 23:08:12 [INFO] AZALYST - status.json generated",
-    "2026-09-02 23:08:12 [INFO] PORTFOLIO - NAV USD 20,142.53 | Return +0.37%",
-    "2026-09-02 23:08:12 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-02 23:08:12 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
-    "2026-09-02 23:08:12 [INFO] TRADER - Closed trades: 4"
+    "2026-09-03 00:09:31 [INFO] AZALYST - status.json generated",
+    "2026-09-03 00:09:31 [INFO] PORTFOLIO - NAV USD 20,142.53 | Return +0.37%",
+    "2026-09-03 00:09:31 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-03 00:09:31 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
+    "2026-09-03 00:09:31 [INFO] TRADER - Closed trades: 4"
   ],
-  "generated_at": "2026-09-02 23:08:10 UTC"
+  "generated_at": "2026-09-03 00:09:28 UTC"
 }
