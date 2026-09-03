@@ -261,15 +261,15 @@
     }
   },
   "top_signal": {
-    "ticker": "XLE",
-    "rank_score": 28.651517509727626,
-    "flow_score": 2.4666515383555594,
-    "options_score": 0.0,
+    "ticker": "XLF",
+    "rank_score": 17.71330739299611,
+    "flow_score": 16.211130409440447,
+    "options_score": 9.493724502088849,
     "rotation_score": 15.0,
-    "macro_score": 6.130204258763552,
-    "news_score": 5.04,
-    "total": 57.288373306846744,
-    "publish": false,
+    "macro_score": 5.282142240257617,
+    "news_score": 4.536,
+    "total": 68.23630454478302,
+    "publish": true,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -322,12 +322,12 @@
   },
   "confidence": [
     {
-      "symbol": "Bonds & Fixed Income + Bearish Market / Macro Selloff",
-      "score": 92.0
+      "symbol": "Defense & Aerospace + Europe Equity",
+      "score": 95.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 91.0
+      "symbol": "Bonds & Fixed Income + Bearish Market / Macro Selloff",
+      "score": 92.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -338,16 +338,16 @@
       "score": 90.0
     },
     {
-      "symbol": "Gold & Precious Metals",
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
       "score": 85.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 84.0
     },
     {
       "symbol": "Europe Equity",
       "score": 84.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 83.0
     },
     {
       "symbol": "Healthcare & Pharma + India Equity Markets",
@@ -370,10 +370,6 @@
       "score": 70.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 66.0
-    },
-    {
       "symbol": "Clean Energy & Renewables",
       "score": 65.0
     },
@@ -386,11 +382,68 @@
       "score": 63.0
     },
     {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 62.0
+    },
+    {
       "symbol": "Real Estate & REITs",
       "score": 62.0
     }
   ],
   "signals": [
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace + Europe Equity",
+      "confidence": 95.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "03 Sep 2026 23:00 UTC",
+      "headline": "EU Vows Tougher Russia Measures After Leipzig Drone Attack",
+      "regions": [
+        "middle_east",
+        "europe",
+        "india",
+        "asia_pacific"
+      ],
+      "sources": [
+        "World News - Breaking international news and headlines | Sky News",
+        "Finance",
+        "BBC News",
+        "World | Deutsche Welle"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 16.8,
+        "source_diversity": 16.4,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
     {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income + Bearish Market / Macro Selloff",
@@ -440,59 +493,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.9,
         "recency": 16.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 91.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 76,
-      "latest_at": "02 Sep 2026 17:56 UTC",
-      "headline": "Blog Review: Sept. 2",
-      "regions": [
-        "global",
-        "europe",
-        "asia_pacific",
-        "india"
-      ],
-      "sources": [
-        "The Verge",
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Tech"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.4,
-        "recency": 13.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -601,28 +601,28 @@
     },
     {
       "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
       "confidence": 85.0,
       "severity": "HIGH",
       "direction": "BEARISH",
-      "direction_score": -6.0,
+      "direction_score": -28.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 20,
-      "latest_at": "03 Sep 2026 13:40 UTC",
-      "headline": "Waller Says August CPI Is Key to a Rate Decision",
+      "article_count": 12,
+      "latest_at": "03 Sep 2026 22:14 UTC",
+      "headline": "Gold jumps 2% as Fed Governor Waller's comments temper rate hike bets",
       "regions": [
-        "asia_pacific",
         "europe",
-        "global",
-        "americas"
+        "americas",
+        "asia_pacific",
+        "global"
       ],
       "sources": [
         "Finance",
-        "Oilprice.com",
-        "US Top News and Analysis",
-        "Latest from Tom's Hardware"
+        "Cointelegraph.com News",
+        "Bloomberg Markets",
+        "US Top News and Analysis"
       ],
       "primary_etf": "GLDM",
       "top_etfs": [
@@ -645,56 +645,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 21.4,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.0,
-        "recency": 15.8,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 84.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": -1.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 19,
-      "latest_at": "03 Sep 2026 16:04 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "europe",
-        "india",
-        "americas",
-        "global"
-      ],
-      "sources": [
-        "www.theregister.com - Articles",
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
         "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 9.1,
-        "recency": 14.6,
+        "volume_confirmation": 17.4,
+        "source_diversity": 14.0,
+        "recency": 15.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -744,6 +698,52 @@
         "volume_confirmation": 15.4,
         "source_diversity": 14.0,
         "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 83.0,
+      "severity": "CRITICAL",
+      "direction": "BULLISH",
+      "direction_score": -1.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 21,
+      "latest_at": "03 Sep 2026 20:30 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "india",
+        "europe",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "Markets-Economic Times",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 9.1,
+        "recency": 13.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -999,59 +999,6 @@
       }
     },
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 66.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "03 Sep 2026 20:34 UTC",
-      "headline": "EU Vows Tougher Russia Measures After Leipzig Drone Attack",
-      "regions": [
-        "europe",
-        "india",
-        "global",
-        "middle_east"
-      ],
-      "sources": [
-        "Finance",
-        "BBC News",
-        "US Top News and Analysis",
-        "World | Deutsche Welle"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.9,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 65.0,
@@ -1202,6 +1149,59 @@
       }
     },
     {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 62.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": 4.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 62,
+      "latest_at": "03 Sep 2026 22:31 UTC",
+      "headline": "Microsoft shares rise after Azure sales disclosure; AI cloud growth in focus",
+      "regions": [
+        "india",
+        "europe",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "The Verge",
+        "Cointelegraph.com News",
+        "Bloomberg Markets",
+        "Semiconductor Engineering"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.9,
+        "recency": 16.1,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "real_estate_reit",
       "sector_label": "Real Estate & REITs",
       "confidence": 62.0,
@@ -1255,12 +1255,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Bonds & Fixed Income + Bearish Market / Macro Selloff - 13 articles - HIGH / BEARISH - US Treasury selloff pushes India 10-year bond yield towards 7%"
+      "text": "Defense & Aerospace + Europe Equity - 11 articles - CRITICAL / BEARISH - EU Vows Tougher Russia Measures After Leipzig Drone Attack"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 76 articles - HIGH / BULLISH - Blog Review: Sept. 2"
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Bonds & Fixed Income + Bearish Market / Macro Selloff - 13 articles - HIGH / BEARISH - US Treasury selloff pushes India 10-year bond yield towards 7%"
     },
     {
       "tag": "tag-bull",
@@ -1275,17 +1275,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Gold & Precious Metals - 20 articles - HIGH / BEARISH - Waller Says August CPI Is Key to a Rate Decision"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Crypto & Digital Assets - 19 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BEARISH - Gold jumps 2% as Fed Governor Waller's comments temper rate hike bets"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Europe Equity - 9 articles - HIGH / BEARISH - ECB\u2019s Nagel Scolds US for Blindsiding EU on Yen Interventions"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Crypto & Digital Assets - 21 articles - CRITICAL / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bull",
@@ -1315,11 +1315,6 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Defense & Aerospace - 23 articles - HIGH / BEARISH - EU Vows Tougher Russia Measures After Leipzig Drone Attack"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Clean Energy & Renewables - 4 articles - HIGH / BEARISH - White Hydrogen Drilling Push Gains Momentum Across Three Continents"
     },
     {
@@ -1331,6 +1326,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Emerging Markets + Bearish Market / Macro Selloff - 4 articles - MEDIUM / BEARISH - Global Market: China, Hong Kong stocks slip as weak economic data and property overhaul weigh"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Technology & AI / Semiconductors - 62 articles - CRITICAL / BEARISH - Microsoft shares rise after Azure sales disclosure; AI cloud growth in focus"
     },
     {
       "tag": "tag-bear",
@@ -1378,9 +1378,9 @@
       "region": "UK",
       "price": 10831.52,
       "currency": "GBP",
-      "change": 75.02,
-      "change_pct": 0.7,
-      "change_str": "+0.70%",
+      "change": 42.22,
+      "change_pct": 0.39,
+      "change_str": "+0.39%",
       "direction": "up"
     },
     {
@@ -1389,9 +1389,9 @@
       "region": "EU",
       "price": 26003.32,
       "currency": "EUR",
-      "change": 163.99,
-      "change_pct": 0.63,
-      "change_str": "+0.63%",
+      "change": 33.21,
+      "change_pct": 0.13,
+      "change_str": "+0.13%",
       "direction": "up"
     },
     {
@@ -1431,44 +1431,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4519.5,
+      "price": 4522.4,
       "currency": "USD",
-      "change": 153.2,
-      "change_pct": 3.51,
-      "change_str": "+3.51%",
+      "change": 156.1,
+      "change_pct": 3.58,
+      "change_str": "+3.58%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 91.72,
+      "price": 91.8,
       "currency": "USD",
-      "change": 0.71,
-      "change_pct": 0.78,
-      "change_str": "+0.78%",
+      "change": 0.79,
+      "change_pct": 0.87,
+      "change_str": "+0.87%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 81460.68,
+      "price": 81098.06,
       "currency": "USD",
-      "change": 4160.2,
-      "change_pct": 5.38,
-      "change_str": "+5.38%",
+      "change": 3797.58,
+      "change_pct": 4.91,
+      "change_str": "+4.91%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 98.99,
+      "price": 99.0,
       "currency": "USD",
-      "change": -0.57,
-      "change_pct": -0.57,
-      "change_str": "-0.57%",
+      "change": -0.56,
+      "change_pct": -0.56,
+      "change_str": "-0.56%",
       "direction": "down"
     },
     {
@@ -1710,11 +1710,11 @@
     }
   },
   "logs": [
-    "2026-09-03 20:46:34 [INFO] AZALYST - status.json generated",
-    "2026-09-03 20:46:34 [INFO] PORTFOLIO - NAV USD 20,154.44 | Return -0.08%",
-    "2026-09-03 20:46:34 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-03 20:46:34 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
-    "2026-09-03 20:46:34 [INFO] TRADER - Closed trades: 4"
+    "2026-09-03 23:12:07 [INFO] AZALYST - status.json generated",
+    "2026-09-03 23:12:07 [INFO] PORTFOLIO - NAV USD 20,154.44 | Return -0.08%",
+    "2026-09-03 23:12:07 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-03 23:12:07 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
+    "2026-09-03 23:12:07 [INFO] TRADER - Closed trades: 4"
   ],
-  "generated_at": "2026-09-03 20:46:29 UTC"
+  "generated_at": "2026-09-03 23:12:04 UTC"
 }
