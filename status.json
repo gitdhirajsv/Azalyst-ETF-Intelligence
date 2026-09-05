@@ -264,11 +264,11 @@
     "ticker": "EWY",
     "rank_score": 20.475290472501936,
     "flow_score": 22.0,
-    "options_score": 0.0,
+    "options_score": 12.185032058208732,
     "rotation_score": 15.0,
     "macro_score": 0.6714686504931451,
-    "news_score": 2.73,
-    "total": 60.87675912299508,
+    "news_score": 2.94,
+    "total": 73.27179118120381,
     "publish": true,
     "direction": "short"
   },
@@ -322,10 +322,6 @@
   },
   "confidence": [
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 94.0
-    },
-    {
       "symbol": "Technology & AI / Semiconductors",
       "score": 94.0
     },
@@ -338,12 +334,16 @@
       "score": 92.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 89.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 88.0
     },
     {
       "symbol": "Gold & Precious Metals + Bonds & Fixed Income + Banking & Financial Sector",
       "score": 87.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 86.0
     },
     {
       "symbol": "Europe Equity",
@@ -366,19 +366,19 @@
       "score": 70.0
     },
     {
+      "symbol": "Asia Pacific Equity",
+      "score": 70.0
+    },
+    {
       "symbol": "Clean Energy & Renewables",
       "score": 65.0
     },
     {
-      "symbol": "Asia Pacific Equity",
-      "score": 65.0
+      "symbol": "Commodities & Mining",
+      "score": 64.0
     },
     {
       "symbol": "Cybersecurity",
-      "score": 65.0
-    },
-    {
-      "symbol": "Commodities & Mining",
       "score": 64.0
     },
     {
@@ -391,59 +391,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 94.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 21,
-      "latest_at": "05 Sep 2026 02:33 UTC",
-      "headline": "Hedge Funds\u00a0Hike Bullish Oil Bets to May High as Iran War Flares",
-      "regions": [
-        "india",
-        "americas",
-        "global",
-        "asia_pacific"
-      ],
-      "sources": [
-        "World News - Breaking international news and headlines | Sky News",
-        "World | Deutsche Welle",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.4,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
@@ -507,20 +454,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 35,
-      "latest_at": "05 Sep 2026 09:52 UTC",
+      "article_count": 39,
+      "latest_at": "05 Sep 2026 14:26 UTC",
       "headline": "The Iran War Has Put Venezuela\u2019s Oil Back in the Spotlight",
       "regions": [
+        "india",
         "global",
-        "europe",
         "middle_east",
-        "india"
+        "americas"
       ],
       "sources": [
-        "World | Deutsche Welle",
-        "Markets-Economic Times",
-        "BBC News",
-        "World News - Breaking international news and headlines | Sky News"
+        "World News - Breaking international news and headlines | Sky News",
+        "US Top News and Analysis",
+        "Oilprice.com",
+        "Defense News"
       ],
       "primary_etf": "ITA",
       "top_etfs": [
@@ -545,8 +492,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.4,
-        "recency": 16.9,
+        "source_diversity": 16.6,
+        "recency": 17.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -603,49 +550,55 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 89.0,
-      "severity": "HIGH",
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 88.0,
+      "severity": "CRITICAL",
       "direction": "BULLISH",
-      "direction_score": 9.0,
+      "direction_score": -3.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "05 Sep 2026 08:43 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
+      "article_count": 26,
+      "latest_at": "05 Sep 2026 14:26 UTC",
+      "headline": "Hedge Funds\u00a0Hike Bullish Oil Bets to May High as Iran War Flares",
       "regions": [
-        "americas",
-        "europe",
+        "africa",
+        "india",
         "global",
-        "asia_pacific"
+        "middle_east"
       ],
       "sources": [
-        "www.theregister.com - Articles",
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "Finance"
+        "World News - Breaking international news and headlines | Sky News",
+        "US Top News and Analysis",
+        "Oilprice.com",
+        "Latest from Tom's Hardware"
       ],
-      "primary_etf": "IBIT",
+      "primary_etf": "XLE",
       "top_etfs": [
-        "IBIT",
-        "BITQ"
+        "XLE",
+        "IXC",
+        "CPSEETF"
       ],
       "access_markets": [
+        "India-listed",
         "International-listed"
       ],
-      "india_etfs": [],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
       "global_etfs": [
-        "IBIT",
-        "BITQ"
+        "XLE",
+        "IXC",
+        "USO"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 10.3,
-        "recency": 15.1,
+        "source_diversity": 14.9,
+        "recency": 17.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -699,6 +652,53 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.0,
         "recency": 16.8,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 9.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "05 Sep 2026 11:16 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "americas",
+        "global",
+        "europe",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "Finance",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 10.3,
+        "recency": 12.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -959,6 +959,56 @@
       }
     },
     {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 70.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 3.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 7,
+      "latest_at": "05 Sep 2026 10:00 UTC",
+      "headline": "Bitcoin reclaims $80K as DXY falls amid continuing suspected yen intervention",
+      "regions": [
+        "americas",
+        "middle_east",
+        "europe",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "US Top News and Analysis",
+        "Tech",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 10.3,
+        "volume_confirmation": 13.7,
+        "source_diversity": 12.9,
+        "recency": 10.9,
+        "geopolitical_severity": 11.9
+      }
+    },
+    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 65.0,
@@ -1005,100 +1055,6 @@
         "source_diversity": 7.6,
         "recency": 16.9,
         "geopolitical_severity": 12.3
-      }
-    },
-    {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 65.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 3.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "05 Sep 2026 04:04 UTC",
-      "headline": "Bitcoin reclaims $80K as DXY falls amid continuing suspected yen intervention",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "Tech",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 9.3,
-        "volume_confirmation": 12.6,
-        "source_diversity": 12.1,
-        "recency": 9.5,
-        "geopolitical_severity": 11.3
-      }
-    },
-    {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 65.0,
-      "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "04 Sep 2026 13:37 UTC",
-      "headline": "Trezor says data breach affects another 67K US customers",
-      "regions": [
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "Tech",
-        "www.theregister.com - Articles",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 11.8,
-        "volume_confirmation": 13.7,
-        "source_diversity": 8.3,
-        "recency": 16.0,
-        "geopolitical_severity": 9.4
       }
     },
     {
@@ -1150,6 +1106,51 @@
         "source_diversity": 12.7,
         "recency": 3.8,
         "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 64.0,
+      "severity": "MEDIUM",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "05 Sep 2026 12:00 UTC",
+      "headline": "Trezor says data breach affects another 67K US customers",
+      "regions": [
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "US Top News and Analysis",
+        "Tech",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.0,
+        "volume_confirmation": 12.6,
+        "source_diversity": 9.6,
+        "recency": 13.3,
+        "geopolitical_severity": 10.0
       }
     },
     {
@@ -1256,17 +1257,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas - 21 articles - CRITICAL / BULLISH - Hedge Funds\u00a0Hike Bullish Oil Bets to May High as Iran War Flares"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "Technology & AI / Semiconductors - 55 articles - HIGH / BULLISH - Chip Industry Week In Review"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Defense & Aerospace - 35 articles - HIGH / BEARISH - The Iran War Has Put Venezuela\u2019s Oil Back in the Spotlight"
+      "text": "Defense & Aerospace - 39 articles - HIGH / BEARISH - The Iran War Has Put Venezuela\u2019s Oil Back in the Spotlight"
     },
     {
       "tag": "tag-bear",
@@ -1276,12 +1272,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Crypto & Digital Assets - 25 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
+      "text": "Energy / Oil & Gas - 26 articles - CRITICAL / BULLISH - Hedge Funds\u00a0Hike Bullish Oil Bets to May High as Iran War Flares"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Gold & Precious Metals + Bonds & Fixed Income + Banking & Financial Sector - 14 articles - HIGH / BEARISH - US Fed rate cut bets fall below 50% after Governor Chris Waller\u2019s comments. What did he say?"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Crypto & Digital Assets - 24 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
@@ -1309,6 +1310,11 @@
       "text": "Nuclear Energy & Uranium - 5 articles - HIGH / BULLISH - Jellyfish force partial shutdown of French nuclear plant"
     },
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Asia Pacific Equity - 7 articles - MEDIUM / BULLISH - Bitcoin reclaims $80K as DXY falls amid continuing suspected yen intervention"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Clean Energy & Renewables - 4 articles - HIGH / BEARISH - White Hydrogen Drilling Push Gains Momentum Across Three Continents"
@@ -1316,17 +1322,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Asia Pacific Equity - 6 articles - MEDIUM / BULLISH - Bitcoin reclaims $80K as DXY falls amid continuing suspected yen intervention"
+      "text": "Commodities & Mining - 7 articles - HIGH / BULLISH - Tariffs Could Bring Canada Auto \"To Its Knees\""
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Cybersecurity - 7 articles - MEDIUM / BEARISH - Trezor says data breach affects another 67K US customers"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Commodities & Mining - 7 articles - HIGH / BULLISH - Tariffs Could Bring Canada Auto \"To Its Knees\""
+      "text": "Cybersecurity - 6 articles - MEDIUM / BEARISH - Trezor says data breach affects another 67K US customers"
     },
     {
       "tag": "tag-bear",
@@ -1454,12 +1455,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 79635.19,
+      "price": 79740.0,
       "currency": "USD",
-      "change": -36.78,
-      "change_pct": -0.05,
-      "change_str": "-0.05%",
-      "direction": "down"
+      "change": 68.03,
+      "change_pct": 0.09,
+      "change_str": "+0.09%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
@@ -1711,11 +1712,11 @@
     }
   },
   "logs": [
-    "2026-09-05 10:08:15 [INFO] AZALYST - status.json generated",
-    "2026-09-05 10:08:15 [INFO] PORTFOLIO - NAV USD 20,092.68 | Return -0.37%",
-    "2026-09-05 10:08:15 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-05 10:08:15 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
-    "2026-09-05 10:08:15 [INFO] TRADER - Closed trades: 4"
+    "2026-09-05 14:33:37 [INFO] AZALYST - status.json generated",
+    "2026-09-05 14:33:37 [INFO] PORTFOLIO - NAV USD 20,092.68 | Return -0.37%",
+    "2026-09-05 14:33:37 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-05 14:33:37 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
+    "2026-09-05 14:33:37 [INFO] TRADER - Closed trades: 4"
   ],
-  "generated_at": "2026-09-05 10:08:12 UTC"
+  "generated_at": "2026-09-05 14:33:36 UTC"
 }
