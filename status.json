@@ -248,7 +248,7 @@
     "risk_state": "RISK_ON",
     "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.03518725987943716,
+    "spy_excess_vs_tbill_3m": 0.04160315525433811,
     "vix_level": 14.529999732971191,
     "vix_percentile_1y": 0.047619047619047616,
     "weight_matrix": {
@@ -260,18 +260,7 @@
       "news": 7
     }
   },
-  "top_signal": {
-    "ticker": "EWY",
-    "rank_score": 20.469821567106283,
-    "flow_score": 22.0,
-    "options_score": 0.0,
-    "rotation_score": 15.0,
-    "macro_score": 1.6545990160693689,
-    "news_score": 3.92,
-    "total": 63.04442058317565,
-    "publish": true,
-    "direction": "short"
-  },
+  "top_signal": {},
   "jlaw_risk": {
     "distribution_count": 0,
     "risk_multiplier": 1.0,
@@ -330,10 +319,6 @@
       "score": 94.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 93.0
-    },
-    {
       "symbol": "Bonds & Fixed Income + Bearish Market / Macro Selloff",
       "score": 92.0
     },
@@ -368,6 +353,10 @@
     {
       "symbol": "Asia Pacific Equity",
       "score": 70.0
+    },
+    {
+      "symbol": "Defense & Aerospace",
+      "score": 67.0
     },
     {
       "symbol": "Clean Energy & Renewables",
@@ -493,59 +482,6 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 15.6,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 93.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 30,
-      "latest_at": "04 Sep 2026 14:12 UTC",
-      "headline": "The Iran War Has Put Venezuela\u2019s Oil Back in the Spotlight",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "india",
-        "global"
-      ],
-      "sources": [
-        "World News - Breaking international news and headlines | Sky News",
-        "www.theregister.com - Articles",
-        "Oilprice.com",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.8,
         "recency": 16.9,
         "geopolitical_severity": 13.0
       }
@@ -1007,6 +943,59 @@
       }
     },
     {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 67.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 33,
+      "latest_at": "04 Sep 2026 23:56 UTC",
+      "headline": "The Iran War Has Put Venezuela\u2019s Oil Back in the Spotlight",
+      "regions": [
+        "asia_pacific",
+        "india",
+        "middle_east",
+        "europe"
+      ],
+      "sources": [
+        "BBC News",
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "Finance"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.4,
+        "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 65.0,
@@ -1265,11 +1254,6 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Defense & Aerospace - 30 articles - HIGH / BEARISH - The Iran War Has Put Venezuela\u2019s Oil Back in the Spotlight"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Bonds & Fixed Income + Bearish Market / Macro Selloff - 13 articles - HIGH / BEARISH - US Treasury selloff pushes India 10-year bond yield towards 7%"
     },
     {
@@ -1311,6 +1295,11 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Asia Pacific Equity - 7 articles - HIGH / BULLISH - Global Market: Japan stocks rebound on Wall Street boost, SoftBank rally"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Defense & Aerospace - 33 articles - HIGH / BEARISH - The Iran War Has Put Venezuela\u2019s Oil Back in the Spotlight"
     },
     {
       "tag": "tag-bear",
@@ -1378,9 +1367,9 @@
       "region": "UK",
       "price": 10831.09,
       "currency": "GBP",
-      "change": -0.41,
-      "change_pct": -0.0,
-      "change_str": "+-0.00%",
+      "change": 74.59,
+      "change_pct": 0.69,
+      "change_str": "+0.69%",
       "direction": "up"
     },
     {
@@ -1453,11 +1442,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 79674.04,
+      "price": 79637.11,
       "currency": "USD",
-      "change": -1597.7,
-      "change_pct": -1.97,
-      "change_str": "-1.97%",
+      "change": -1634.63,
+      "change_pct": -2.01,
+      "change_str": "-2.01%",
       "direction": "down"
     },
     {
@@ -1518,17 +1507,17 @@
       "matrix": {
         "DBC": {
           "DBC": 1.0,
-          "EWJ": -0.257,
-          "XLE": 0.737
+          "EWJ": -0.253,
+          "XLE": 0.732
         },
         "EWJ": {
-          "DBC": -0.257,
+          "DBC": -0.253,
           "EWJ": 1.0,
-          "XLE": -0.555
+          "XLE": -0.558
         },
         "XLE": {
-          "DBC": 0.737,
-          "EWJ": -0.555,
+          "DBC": 0.732,
+          "EWJ": -0.558,
           "XLE": 1.0
         }
       },
@@ -1537,12 +1526,12 @@
         "EWJ",
         "XLE"
       ],
-      "max_corr": 0.737,
+      "max_corr": 0.732,
       "max_corr_pair": [
         "DBC",
         "XLE"
       ],
-      "most_negative_corr": -0.555,
+      "most_negative_corr": -0.558,
       "most_negative_pair": [
         "EWJ",
         "XLE"
@@ -1551,20 +1540,20 @@
     },
     "volatility": {
       "per_ticker": {
-        "XLE": 20.84,
-        "DBC": 17.85,
-        "EWJ": 16.13
+        "XLE": 20.77,
+        "DBC": 18.1,
+        "EWJ": 16.49
       },
-      "portfolio_avg_vol_pct": 18.27,
+      "portfolio_avg_vol_pct": 18.45,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 1.65,
+      "benchmark_return_pct": 2.05,
       "benchmark_price_start": 757.67,
-      "benchmark_price_now": 770.19,
+      "benchmark_price_now": 773.17,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": -0.38,
-      "alpha": -2.03
+      "alpha": -2.43
     },
     "rebalance": {
       "alerts": [
@@ -1710,11 +1699,11 @@
     }
   },
   "logs": [
-    "2026-09-04 22:56:11 [INFO] AZALYST - status.json generated",
-    "2026-09-04 22:56:11 [INFO] PORTFOLIO - NAV USD 20,093.44 | Return -0.38%",
-    "2026-09-04 22:56:11 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-04 22:56:11 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
-    "2026-09-04 22:56:11 [INFO] TRADER - Closed trades: 4"
+    "2026-09-05 00:07:33 [INFO] AZALYST - status.json generated",
+    "2026-09-05 00:07:33 [INFO] PORTFOLIO - NAV USD 20,093.44 | Return -0.38%",
+    "2026-09-05 00:07:33 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-05 00:07:33 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
+    "2026-09-05 00:07:33 [INFO] TRADER - Closed trades: 4"
   ],
-  "generated_at": "2026-09-04 22:56:09 UTC"
+  "generated_at": "2026-09-05 00:07:31 UTC"
 }
