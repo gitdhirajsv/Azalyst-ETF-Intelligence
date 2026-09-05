@@ -39,7 +39,7 @@
       "pnl_pct_str": "+0.17%",
       "confidence": 96,
       "severity": "CRITICAL",
-      "days_held": 21,
+      "days_held": 22,
       "half_exited": false
     },
     {
@@ -62,7 +62,7 @@
       "pnl_pct_str": "+0.75%",
       "confidence": 82,
       "severity": "MEDIUM",
-      "days_held": 16,
+      "days_held": 17,
       "half_exited": false
     },
     {
@@ -264,11 +264,11 @@
     "ticker": "EWY",
     "rank_score": 20.475290472501936,
     "flow_score": 22.0,
-    "options_score": 12.185032058208732,
+    "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 0.6714686504931451,
-    "news_score": 2.94,
-    "total": 73.27179118120381,
+    "news_score": 2.646,
+    "total": 60.792759122995086,
     "publish": true,
     "direction": "short"
   },
@@ -335,15 +335,11 @@
     },
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 88.0
+      "score": 89.0
     },
     {
       "symbol": "Gold & Precious Metals + Bonds & Fixed Income + Banking & Financial Sector",
       "score": 87.0
-    },
-    {
-      "symbol": "Crypto & Digital Assets",
-      "score": 86.0
     },
     {
       "symbol": "Europe Equity",
@@ -352,6 +348,10 @@
     {
       "symbol": "Healthcare & Pharma + India Equity Markets",
       "score": 82.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 81.0
     },
     {
       "symbol": "Banking & Financial Sector",
@@ -363,10 +363,6 @@
     },
     {
       "symbol": "Nuclear Energy & Uranium",
-      "score": 70.0
-    },
-    {
-      "symbol": "Asia Pacific Equity",
       "score": 70.0
     },
     {
@@ -384,6 +380,10 @@
     {
       "symbol": "Emerging Markets + Bearish Market / Macro Selloff",
       "score": 63.0
+    },
+    {
+      "symbol": "Asia Pacific Equity",
+      "score": 62.0
     },
     {
       "symbol": "Real Estate & REITs",
@@ -454,19 +454,19 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 39,
-      "latest_at": "05 Sep 2026 14:26 UTC",
-      "headline": "The Iran War Has Put Venezuela\u2019s Oil Back in the Spotlight",
+      "article_count": 36,
+      "latest_at": "05 Sep 2026 19:50 UTC",
+      "headline": "US Strikes Iranian Tankers After Attack on US Warships",
       "regions": [
-        "india",
-        "global",
         "middle_east",
-        "americas"
+        "americas",
+        "europe",
+        "asia_pacific"
       ],
       "sources": [
-        "World News - Breaking international news and headlines | Sky News",
-        "US Top News and Analysis",
-        "Oilprice.com",
+        "BBC News",
+        "World | Deutsche Welle",
+        "www.theregister.com - Articles",
         "Defense News"
       ],
       "primary_etf": "ITA",
@@ -493,7 +493,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 16.6,
-        "recency": 17.0,
+        "recency": 16.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -552,27 +552,27 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 88.0,
+      "confidence": 89.0,
       "severity": "CRITICAL",
       "direction": "BULLISH",
-      "direction_score": -3.5,
+      "direction_score": -5.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 26,
-      "latest_at": "05 Sep 2026 14:26 UTC",
-      "headline": "Hedge Funds\u00a0Hike Bullish Oil Bets to May High as Iran War Flares",
+      "article_count": 25,
+      "latest_at": "05 Sep 2026 19:50 UTC",
+      "headline": "Energy Markets Strained by Iran, Ukraine Wars",
       "regions": [
-        "africa",
-        "india",
-        "global",
-        "middle_east"
+        "middle_east",
+        "americas",
+        "europe",
+        "asia_pacific"
       ],
       "sources": [
+        "BBC News",
+        "World | Deutsche Welle",
         "World News - Breaking international news and headlines | Sky News",
-        "US Top News and Analysis",
-        "Oilprice.com",
-        "Latest from Tom's Hardware"
+        "Markets-Economic Times"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -597,8 +597,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 14.9,
-        "recency": 17.0,
+        "source_diversity": 15.9,
+        "recency": 16.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -652,53 +652,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.0,
         "recency": 16.8,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 86.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 9.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "05 Sep 2026 11:16 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "americas",
-        "global",
-        "europe",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Finance",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 10.3,
-        "recency": 12.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -801,6 +754,53 @@
         "volume_confirmation": 15.4,
         "source_diversity": 10.0,
         "recency": 13.2,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 81.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 9.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "05 Sep 2026 11:16 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "asia_pacific",
+        "americas",
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Finance",
+        "Cointelegraph.com News",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 10.3,
+        "recency": 7.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -956,56 +956,6 @@
         "source_diversity": 11.7,
         "recency": 12.9,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 70.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 3.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "05 Sep 2026 10:00 UTC",
-      "headline": "Bitcoin reclaims $80K as DXY falls amid continuing suspected yen intervention",
-      "regions": [
-        "americas",
-        "middle_east",
-        "europe",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "US Top News and Analysis",
-        "Tech",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 10.3,
-        "volume_confirmation": 13.7,
-        "source_diversity": 12.9,
-        "recency": 10.9,
-        "geopolitical_severity": 11.9
       }
     },
     {
@@ -1204,6 +1154,55 @@
       }
     },
     {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 62.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 1.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "05 Sep 2026 15:30 UTC",
+      "headline": "Bitcoin reclaims $80K as DXY falls amid continuing suspected yen intervention",
+      "regions": [
+        "asia_pacific",
+        "americas",
+        "europe"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Markets-Economic Times",
+        "Latest from Tom's Hardware",
+        "Tech"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 9.3,
+        "volume_confirmation": 12.6,
+        "source_diversity": 10.4,
+        "recency": 11.0,
+        "geopolitical_severity": 10.8
+      }
+    },
+    {
       "sector_key": "real_estate_reit",
       "sector_label": "Real Estate & REITs",
       "confidence": 62.0,
@@ -1262,7 +1261,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Defense & Aerospace - 39 articles - HIGH / BEARISH - The Iran War Has Put Venezuela\u2019s Oil Back in the Spotlight"
+      "text": "Defense & Aerospace - 36 articles - HIGH / BEARISH - US Strikes Iranian Tankers After Attack on US Warships"
     },
     {
       "tag": "tag-bear",
@@ -1272,17 +1271,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas - 26 articles - CRITICAL / BULLISH - Hedge Funds\u00a0Hike Bullish Oil Bets to May High as Iran War Flares"
+      "text": "Energy / Oil & Gas - 25 articles - CRITICAL / BULLISH - Energy Markets Strained by Iran, Ukraine Wars"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Gold & Precious Metals + Bonds & Fixed Income + Banking & Financial Sector - 14 articles - HIGH / BEARISH - US Fed rate cut bets fall below 50% after Governor Chris Waller\u2019s comments. What did he say?"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Crypto & Digital Assets - 24 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
@@ -1293,6 +1287,11 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Healthcare & Pharma + India Equity Markets - 9 articles - HIGH / BULLISH - Market wrap: Adani Enterprise, InterGlobe, HDFC Life, HCL Tech, top gainers and losers on Nifty and Sensex on Tuesday"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Crypto & Digital Assets - 24 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
@@ -1308,11 +1307,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Nuclear Energy & Uranium - 5 articles - HIGH / BULLISH - Jellyfish force partial shutdown of French nuclear plant"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Asia Pacific Equity - 7 articles - MEDIUM / BULLISH - Bitcoin reclaims $80K as DXY falls amid continuing suspected yen intervention"
     },
     {
       "tag": "tag-bear",
@@ -1333,6 +1327,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Emerging Markets + Bearish Market / Macro Selloff - 4 articles - MEDIUM / BEARISH - Global Market: China, Hong Kong stocks slip as weak economic data and property overhaul weigh"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Asia Pacific Equity - 6 articles - MEDIUM / BULLISH - Bitcoin reclaims $80K as DXY falls amid continuing suspected yen intervention"
     },
     {
       "tag": "tag-bear",
@@ -1455,9 +1454,9 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 79740.0,
+      "price": 79745.21,
       "currency": "USD",
-      "change": 68.03,
+      "change": 73.24,
       "change_pct": 0.09,
       "change_str": "+0.09%",
       "direction": "up"
@@ -1712,11 +1711,11 @@
     }
   },
   "logs": [
-    "2026-09-05 14:33:37 [INFO] AZALYST - status.json generated",
-    "2026-09-05 14:33:37 [INFO] PORTFOLIO - NAV USD 20,092.68 | Return -0.37%",
-    "2026-09-05 14:33:37 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-05 14:33:37 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
-    "2026-09-05 14:33:37 [INFO] TRADER - Closed trades: 4"
+    "2026-09-05 19:59:21 [INFO] AZALYST - status.json generated",
+    "2026-09-05 19:59:21 [INFO] PORTFOLIO - NAV USD 20,092.68 | Return -0.37%",
+    "2026-09-05 19:59:21 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-05 19:59:21 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
+    "2026-09-05 19:59:21 [INFO] TRADER - Closed trades: 4"
   ],
-  "generated_at": "2026-09-05 14:33:36 UTC"
+  "generated_at": "2026-09-05 19:59:17 UTC"
 }
