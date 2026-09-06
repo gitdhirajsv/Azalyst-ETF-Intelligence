@@ -39,7 +39,7 @@
       "pnl_pct_str": "+0.17%",
       "confidence": 96,
       "severity": "CRITICAL",
-      "days_held": 22,
+      "days_held": 23,
       "half_exited": false
     },
     {
@@ -326,20 +326,24 @@
       "score": 94.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 93.0
-    },
-    {
       "symbol": "Bonds & Fixed Income + Bearish Market / Macro Selloff",
       "score": 92.0
+    },
+    {
+      "symbol": "Defense & Aerospace",
+      "score": 91.0
+    },
+    {
+      "symbol": "Crypto & Digital Assets",
+      "score": 90.0
     },
     {
       "symbol": "Gold & Precious Metals + Bonds & Fixed Income + Banking & Financial Sector",
       "score": 87.0
     },
     {
-      "symbol": "India Equity Markets",
-      "score": 85.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 87.0
     },
     {
       "symbol": "Europe Equity",
@@ -350,7 +354,7 @@
       "score": 82.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
+      "symbol": "India Equity Markets",
       "score": 81.0
     },
     {
@@ -358,19 +362,15 @@
       "score": 81.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 76.0
-    },
-    {
       "symbol": "Nuclear Energy & Uranium",
       "score": 70.0
     },
     {
-      "symbol": "Asia Pacific Equity",
-      "score": 67.0
+      "symbol": "Clean Energy & Renewables",
+      "score": 65.0
     },
     {
-      "symbol": "Clean Energy & Renewables",
+      "symbol": "Asia Pacific Equity",
       "score": 65.0
     },
     {
@@ -445,59 +445,6 @@
       }
     },
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 93.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 35,
-      "latest_at": "06 Sep 2026 10:08 UTC",
-      "headline": "US Strikes Iranian Tankers After Attack on US Warships",
-      "regions": [
-        "asia_pacific",
-        "middle_east",
-        "europe",
-        "global"
-      ],
-      "sources": [
-        "Defense News",
-        "World News - Breaking international news and headlines | Sky News",
-        "Markets-Economic Times",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.6,
-        "recency": 17.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income + Bearish Market / Macro Selloff",
       "confidence": 92.0,
@@ -546,6 +493,106 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.9,
         "recency": 16.7,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 91.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 33,
+      "latest_at": "06 Sep 2026 13:25 UTC",
+      "headline": "Japan to mass-procure 3D-printed rocket-powered drone interceptor \u2014 Terra B1 capable of countering one-way attack platforms",
+      "regions": [
+        "india",
+        "global",
+        "asia_pacific",
+        "americas"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "Latest from Tom's Hardware",
+        "Oilprice.com",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.8,
+        "recency": 14.7,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 90.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 9.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 26,
+      "latest_at": "06 Sep 2026 13:24 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "asia_pacific",
+        "europe",
+        "americas",
+        "global"
+      ],
+      "sources": [
+        "Latest from Tom's Hardware",
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 11.4,
+        "recency": 14.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -603,53 +650,55 @@
       }
     },
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 85.0,
-      "severity": "HIGH",
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 87.0,
+      "severity": "CRITICAL",
       "direction": "BULLISH",
-      "direction_score": 3.0,
+      "direction_score": -0.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "06 Sep 2026 09:37 UTC",
-      "headline": "How will Nifty, Sensex behave on Monday? US Fed rate hike bets, among 4 factors to drive D-Street action",
+      "article_count": 26,
+      "latest_at": "06 Sep 2026 11:25 UTC",
+      "headline": "Crude oil rally nears $100: Will geopolitical risks push prices higher?",
       "regions": [
+        "india",
+        "africa",
         "global",
-        "asia_pacific",
-        "middle_east",
-        "india"
+        "middle_east"
       ],
       "sources": [
         "Latest from Tom's Hardware",
-        "Semiconductor Engineering",
-        "Markets-Economic Times",
-        "Oilprice.com"
+        "Oilprice.com",
+        "BBC News",
+        "Markets-Economic Times"
       ],
-      "primary_etf": "INDA",
+      "primary_etf": "XLE",
       "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
+        "XLE",
+        "IXC",
+        "CPSEETF"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
+        "CPSEETF",
+        "PSUBNKBEES"
       ],
       "global_etfs": [
-        "INDA"
+        "XLE",
+        "IXC",
+        "USO"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 11.0,
-        "recency": 16.1,
+        "source_diversity": 15.3,
+        "recency": 12.1,
         "geopolitical_severity": 13.0
       }
     },
@@ -756,55 +805,53 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
       "confidence": 81.0,
-      "severity": "CRITICAL",
+      "severity": "HIGH",
       "direction": "BULLISH",
-      "direction_score": -2.0,
+      "direction_score": 3.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 26,
-      "latest_at": "06 Sep 2026 04:39 UTC",
-      "headline": "Crude oil rally nears $100: Will geopolitical risks push prices higher?",
+      "article_count": 24,
+      "latest_at": "06 Sep 2026 11:05 UTC",
+      "headline": "How will Nifty, Sensex behave on Monday? US Fed rate hike bets, among 4 factors to drive D-Street action",
       "regions": [
-        "asia_pacific",
+        "india",
+        "global",
         "middle_east",
-        "africa",
-        "europe"
+        "asia_pacific"
       ],
       "sources": [
-        "Markets-Economic Times",
         "Latest from Tom's Hardware",
-        "US Top News and Analysis",
-        "World | Deutsche Welle"
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "Semiconductor Engineering"
       ],
-      "primary_etf": "XLE",
+      "primary_etf": "INDA",
       "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
+        "NIFTYBEES",
+        "MIDCAPETF"
       ],
       "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
+        "INDA"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 15.3,
-        "recency": 9.8,
+        "source_diversity": 11.0,
+        "recency": 11.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -856,53 +903,6 @@
         "volume_confirmation": 14.6,
         "source_diversity": 13.4,
         "recency": 15.3,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 76.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 9.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "05 Sep 2026 11:16 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "europe",
-        "global"
-      ],
-      "sources": [
-        "Finance",
-        "US Top News and Analysis",
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 10.3,
-        "recency": 1.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -959,56 +959,6 @@
       }
     },
     {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 67.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 1.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "06 Sep 2026 01:00 UTC",
-      "headline": "Japan, South Korea and the U.S. Forge a New Nuclear Alliance",
-      "regions": [
-        "americas",
-        "europe",
-        "asia_pacific",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Latest from Tom's Hardware",
-        "US Top News and Analysis",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 12.0,
-        "volume_confirmation": 14.6,
-        "source_diversity": 14.0,
-        "recency": 6.8,
-        "geopolitical_severity": 12.1
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 65.0,
@@ -1055,6 +1005,56 @@
         "source_diversity": 7.6,
         "recency": 16.9,
         "geopolitical_severity": 12.3
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 65.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 1.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "06 Sep 2026 01:00 UTC",
+      "headline": "Japan, South Korea and the U.S. Forge a New Nuclear Alliance",
+      "regions": [
+        "americas",
+        "europe",
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Latest from Tom's Hardware",
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.0,
+        "volume_confirmation": 14.6,
+        "source_diversity": 14.0,
+        "recency": 4.3,
+        "geopolitical_severity": 12.1
       }
     },
     {
@@ -1262,12 +1262,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Defense & Aerospace - 35 articles - HIGH / BEARISH - US Strikes Iranian Tankers After Attack on US Warships"
+      "text": "Bonds & Fixed Income + Bearish Market / Macro Selloff - 13 articles - HIGH / BEARISH - US Treasury selloff pushes India 10-year bond yield towards 7%"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Bonds & Fixed Income + Bearish Market / Macro Selloff - 13 articles - HIGH / BEARISH - US Treasury selloff pushes India 10-year bond yield towards 7%"
+      "text": "Defense & Aerospace - 33 articles - HIGH / BEARISH - Japan to mass-procure 3D-printed rocket-powered drone interceptor \u2014 Terra B1 capable of countering one-way attack platforms"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Crypto & Digital Assets - 26 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
@@ -1277,7 +1282,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "India Equity Markets - 23 articles - HIGH / BULLISH - How will Nifty, Sensex behave on Monday? US Fed rate hike bets, among 4 factors to drive D-Street action"
+      "text": "Energy / Oil & Gas - 26 articles - CRITICAL / BULLISH - Crude oil rally nears $100: Will geopolitical risks push prices higher?"
     },
     {
       "tag": "tag-bear",
@@ -1292,7 +1297,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Energy / Oil & Gas - 26 articles - CRITICAL / BULLISH - Crude oil rally nears $100: Will geopolitical risks push prices higher?"
+      "text": "India Equity Markets - 24 articles - HIGH / BULLISH - How will Nifty, Sensex behave on Monday? US Fed rate hike bets, among 4 factors to drive D-Street action"
     },
     {
       "tag": "tag-bear",
@@ -1302,22 +1307,17 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Crypto & Digital Assets - 25 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
       "text": "Nuclear Energy & Uranium - 5 articles - HIGH / BULLISH - Jellyfish force partial shutdown of French nuclear plant"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Asia Pacific Equity - 8 articles - MEDIUM / BULLISH - Japan, South Korea and the U.S. Forge a New Nuclear Alliance"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Clean Energy & Renewables - 4 articles - HIGH / BEARISH - White Hydrogen Drilling Push Gains Momentum Across Three Continents"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Asia Pacific Equity - 8 articles - MEDIUM / BULLISH - Japan, South Korea and the U.S. Forge a New Nuclear Alliance"
     },
     {
       "tag": "tag-bull",
@@ -1455,12 +1455,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 79969.5,
+      "price": 79530.63,
       "currency": "USD",
-      "change": 145.63,
-      "change_pct": 0.18,
-      "change_str": "+0.18%",
-      "direction": "up"
+      "change": -293.24,
+      "change_pct": -0.37,
+      "change_str": "-0.37%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
@@ -1712,11 +1712,11 @@
     }
   },
   "logs": [
-    "2026-09-06 10:18:34 [INFO] AZALYST - status.json generated",
-    "2026-09-06 10:18:34 [INFO] PORTFOLIO - NAV USD 20,092.68 | Return -0.37%",
-    "2026-09-06 10:18:34 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-06 10:18:34 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
-    "2026-09-06 10:18:34 [INFO] TRADER - Closed trades: 4"
+    "2026-09-06 15:00:11 [INFO] AZALYST - status.json generated",
+    "2026-09-06 15:00:11 [INFO] PORTFOLIO - NAV USD 20,092.68 | Return -0.37%",
+    "2026-09-06 15:00:11 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-06 15:00:11 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
+    "2026-09-06 15:00:11 [INFO] TRADER - Closed trades: 4"
   ],
-  "generated_at": "2026-09-06 10:18:32 UTC"
+  "generated_at": "2026-09-06 15:00:08 UTC"
 }
