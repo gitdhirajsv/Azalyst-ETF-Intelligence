@@ -264,11 +264,11 @@
     "ticker": "XLE",
     "rank_score": 15.561977186311786,
     "flow_score": 5.0,
-    "options_score": 19.808438757943513,
+    "options_score": 19.808453886412746,
     "rotation_score": 10.559718796068216,
-    "macro_score": 8.269652431721045,
-    "news_score": 8.9,
-    "total": 68.09978717204457,
+    "macro_score": 8.288723168033123,
+    "news_score": 8.8,
+    "total": 68.01887303682587,
     "publish": true,
     "direction": "long"
   },
@@ -327,11 +327,7 @@
     },
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 89.0
-    },
-    {
-      "symbol": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector",
-      "score": 89.0
+      "score": 88.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
@@ -348,6 +344,10 @@
     {
       "symbol": "India Equity Markets",
       "score": 86.0
+    },
+    {
+      "symbol": "Bonds & Fixed Income",
+      "score": 85.0
     },
     {
       "symbol": "Europe Equity",
@@ -447,27 +447,27 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 89.0,
+      "confidence": 88.0,
       "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -2.0,
+      "direction": "BULLISH",
+      "direction_score": 6.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 39,
-      "latest_at": "10 Sep 2026 13:48 UTC",
-      "headline": "WTI Breaks $100\u2014and This Rally Has Legs",
+      "article_count": 38,
+      "latest_at": "10 Sep 2026 22:00 UTC",
+      "headline": "Oil surges 5%, Brent and US crude both over $100 on more tanker attacks",
       "regions": [
-        "europe",
+        "middle_east",
+        "africa",
         "global",
-        "asia_pacific",
-        "middle_east"
+        "americas"
       ],
       "sources": [
-        "World | Deutsche Welle",
-        "Markets-Economic Times",
         "Tech",
-        "Bloomberg Markets"
+        "Oilprice.com",
+        "US Top News and Analysis",
+        "Latest from Tom's Hardware"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -492,60 +492,8 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.2,
-        "recency": 16.2,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 89.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -25.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 15,
-      "latest_at": "10 Sep 2026 17:18 UTC",
-      "headline": "10-year Treasury yield tops 4.9%, highest since 2023, as oil surge raises inflation fears",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "americas",
-        "europe"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "Tech"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 13.4,
-        "recency": 16.6,
+        "source_diversity": 15.9,
+        "recency": 15.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -750,6 +698,58 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.4,
         "recency": 13.1,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 85.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -8.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 29,
+      "latest_at": "10 Sep 2026 20:15 UTC",
+      "headline": "US bond yields climb to multi-year highs as oil surge revives bets on higher Fed rates",
+      "regions": [
+        "middle_east",
+        "global",
+        "americas",
+        "europe"
+      ],
+      "sources": [
+        "Tech",
+        "US Top News and Analysis",
+        "Markets-Economic Times",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.1,
+        "recency": 12.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -1260,14 +1260,9 @@
       "text": "Defense & Aerospace - 36 articles - HIGH / BEARISH - Oil Holds Above $100 as U.S.-Iran Tanker War Escalates"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Energy / Oil & Gas - 39 articles - CRITICAL / BEARISH - WTI Breaks $100\u2014and This Rally Has Legs"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector - 15 articles - HIGH / BEARISH - 10-year Treasury yield tops 4.9%, highest since 2023, as oil surge raises inflation fears"
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Energy / Oil & Gas - 38 articles - CRITICAL / BULLISH - Oil surges 5%, Brent and US crude both over $100 on more tanker attacks"
     },
     {
       "tag": "tag-bear",
@@ -1288,6 +1283,11 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "India Equity Markets - 24 articles - CRITICAL / BULLISH - Market wrap:  L&amp;T, Bharti Airtel, Infosys, Tech Mahindra top gainers and losers on Nifty and Sensex on Monday"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Bonds & Fixed Income - 29 articles - HIGH / BEARISH - US bond yields climb to multi-year highs as oil surge revives bets on higher Fed rates"
     },
     {
       "tag": "tag-bear",
@@ -1380,9 +1380,9 @@
       "region": "UK",
       "price": 10608.92,
       "currency": "GBP",
-      "change": -61.18,
-      "change_pct": -0.57,
-      "change_str": "-0.57%",
+      "change": -202.78,
+      "change_pct": -1.88,
+      "change_str": "-1.88%",
       "direction": "down"
     },
     {
@@ -1391,9 +1391,9 @@
       "region": "EU",
       "price": 25361.15,
       "currency": "EUR",
-      "change": -215.3,
-      "change_pct": -0.84,
-      "change_str": "-0.84%",
+      "change": -646.48,
+      "change_pct": -2.49,
+      "change_str": "-2.49%",
       "direction": "down"
     },
     {
@@ -1433,44 +1433,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4358.5,
+      "price": 4358.1,
       "currency": "USD",
-      "change": -57.5,
-      "change_pct": -1.3,
-      "change_str": "-1.30%",
+      "change": -57.9,
+      "change_pct": -1.31,
+      "change_str": "-1.31%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 103.03,
+      "price": 103.86,
       "currency": "USD",
-      "change": 6.98,
-      "change_pct": 7.27,
-      "change_str": "+7.27%",
+      "change": 7.81,
+      "change_pct": 8.13,
+      "change_str": "+8.13%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77217.42,
+      "price": 76683.98,
       "currency": "USD",
-      "change": -1042.1,
-      "change_pct": -1.33,
-      "change_str": "-1.33%",
+      "change": -1575.54,
+      "change_pct": -2.01,
+      "change_str": "-2.01%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.11,
+      "price": 99.09,
       "currency": "USD",
-      "change": 0.34,
-      "change_pct": 0.34,
-      "change_str": "+0.34%",
+      "change": 0.32,
+      "change_pct": 0.32,
+      "change_str": "+0.32%",
       "direction": "up"
     },
     {
@@ -1712,11 +1712,11 @@
     }
   },
   "logs": [
-    "2026-09-10 20:36:20 [INFO] AZALYST - status.json generated",
-    "2026-09-10 20:36:20 [INFO] PORTFOLIO - NAV USD 20,407.77 | Return +2.21%",
-    "2026-09-10 20:36:20 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-10 20:36:20 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
-    "2026-09-10 20:36:20 [INFO] TRADER - Closed trades: 4"
+    "2026-09-10 23:10:21 [INFO] AZALYST - status.json generated",
+    "2026-09-10 23:10:21 [INFO] PORTFOLIO - NAV USD 20,407.77 | Return +2.21%",
+    "2026-09-10 23:10:21 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-10 23:10:21 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
+    "2026-09-10 23:10:21 [INFO] TRADER - Closed trades: 4"
   ],
-  "generated_at": "2026-09-10 20:36:18 UTC"
+  "generated_at": "2026-09-10 23:10:18 UTC"
 }
