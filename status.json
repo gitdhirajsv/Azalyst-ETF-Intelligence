@@ -262,13 +262,13 @@
   },
   "top_signal": {
     "ticker": "XLE",
-    "rank_score": 21.349199084668193,
-    "flow_score": 2.671309918118651,
-    "options_score": 16.12236619769346,
+    "rank_score": 21.351219512195122,
+    "flow_score": 2.767111897741632,
+    "options_score": 16.122352769954894,
     "rotation_score": 15.0,
-    "macro_score": 6.2520914259268245,
+    "macro_score": 6.286471639557508,
     "news_score": 6.2299999999999995,
-    "total": 67.62496662640713,
+    "total": 67.75715581944915,
     "publish": true,
     "direction": "long"
   },
@@ -322,6 +322,10 @@
   },
   "confidence": [
     {
+      "symbol": "Nuclear Energy & Uranium + Technology & AI / Semiconductors",
+      "score": 93.0
+    },
+    {
       "symbol": "Defense & Aerospace",
       "score": 92.0
     },
@@ -342,6 +346,10 @@
       "score": 84.0
     },
     {
+      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
+      "score": 84.0
+    },
+    {
       "symbol": "Europe Equity",
       "score": 84.0
     },
@@ -352,14 +360,6 @@
     {
       "symbol": "Technology & AI / Semiconductors",
       "score": 81.0
-    },
-    {
-      "symbol": "Banking & Financial Sector",
-      "score": 81.0
-    },
-    {
-      "symbol": "Nuclear Energy & Uranium",
-      "score": 73.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -391,6 +391,58 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "nuclear_uranium",
+      "sector_label": "Nuclear Energy & Uranium + Technology & AI / Semiconductors",
+      "confidence": 93.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -1.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 9,
+      "latest_at": "11 Sep 2026 23:01 UTC",
+      "headline": "Why North Korea's Kim Jong Un doesn't need a US deal",
+      "regions": [
+        "global",
+        "europe",
+        "india",
+        "middle_east"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "World | Deutsche Welle",
+        "US Top News and Analysis",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "URA",
+      "top_etfs": [
+        "URA",
+        "URNM",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "URA",
+        "URNM",
+        "SRUUF"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 15.4,
+        "source_diversity": 17.4,
+        "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
+    },
     {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
@@ -652,6 +704,57 @@
       }
     },
     {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
+      "confidence": 84.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -28.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 9,
+      "latest_at": "11 Sep 2026 21:13 UTC",
+      "headline": "UK Interest Rates Could Rise Four Times Over the Next Year",
+      "regions": [
+        "europe",
+        "india",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "BANKBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 15.4,
+        "source_diversity": 14.0,
+        "recency": 14.2,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "europe_equity",
       "sector_label": "Europe Equity",
       "confidence": 84.0,
@@ -795,109 +898,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 17.0,
         "recency": 6.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector",
-      "confidence": 81.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -4.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "02 Sep 2026 06:02 UTC",
-      "headline": "Indian 10-year bond yield tops 7% on global debt rout, oil rally",
-      "regions": [
-        "global",
-        "americas",
-        "asia_pacific",
-        "middle_east"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Finance",
-        "Cointelegraph.com News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "BANKBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.2,
-        "volume_confirmation": 14.6,
-        "source_diversity": 13.4,
-        "recency": 15.3,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "nuclear_uranium",
-      "sector_label": "Nuclear Energy & Uranium",
-      "confidence": 73.0,
-      "severity": "CRITICAL",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "09 Sep 2026 20:22 UTC",
-      "headline": "Google Bets \u20ac13 Billion on Finland to Power AI Boom With Nuclear Energy",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "middle_east",
-        "americas"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "www.theregister.com - Articles",
-        "BBC News",
-        "Oilprice.com"
-      ],
-      "primary_etf": "URA",
-      "top_etfs": [
-        "URA",
-        "URNM",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "URA",
-        "URNM",
-        "SRUUF"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 16.6,
-        "volume_confirmation": 12.6,
-        "source_diversity": 11.0,
-        "recency": 13.1,
         "geopolitical_severity": 13.0
       }
     },
@@ -1251,6 +1251,11 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Nuclear Energy & Uranium + Technology & AI / Semiconductors - 9 articles - CRITICAL / BEARISH - Why North Korea's Kim Jong Un doesn't need a US deal"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "Defense & Aerospace - 29 articles - HIGH / BEARISH - Iran war: Saudi-Houthi escalation intensifies Yemen conflict"
     },
     {
@@ -1276,6 +1281,11 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Banking & Financial Sector + Gold & Precious Metals - 9 articles - CRITICAL / BEARISH - UK Interest Rates Could Rise Four Times Over the Next Year"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "Europe Equity - 9 articles - HIGH / BEARISH - ECB\u2019s Nagel Scolds US for Blindsiding EU on Yen Interventions"
     },
     {
@@ -1287,16 +1297,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Technology & AI / Semiconductors - 68 articles - CRITICAL / BEARISH - Chip Industry Week in Review"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Banking & Financial Sector - 8 articles - HIGH / BEARISH - Indian 10-year bond yield tops 7% on global debt rout, oil rally"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Nuclear Energy & Uranium - 6 articles - CRITICAL / BULLISH - Google Bets \u20ac13 Billion on Finland to Power AI Boom With Nuclear Energy"
     },
     {
       "tag": "tag-bull",
@@ -1374,10 +1374,10 @@
       "region": "UK",
       "price": 10650.44,
       "currency": "GBP",
-      "change": 41.54,
-      "change_pct": 0.39,
-      "change_str": "+0.39%",
-      "direction": "up"
+      "change": -19.66,
+      "change_pct": -0.18,
+      "change_str": "-0.18%",
+      "direction": "down"
     },
     {
       "label": "DAX",
@@ -1385,10 +1385,10 @@
       "region": "EU",
       "price": 25568.56,
       "currency": "EUR",
-      "change": 207.41,
-      "change_pct": 0.82,
-      "change_str": "+0.82%",
-      "direction": "up"
+      "change": -7.89,
+      "change_pct": -0.03,
+      "change_str": "-0.03%",
+      "direction": "down"
     },
     {
       "label": "Nikkei 225",
@@ -1427,44 +1427,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4389.4,
+      "price": 4390.0,
       "currency": "USD",
-      "change": 24.9,
-      "change_pct": 0.57,
-      "change_str": "+0.57%",
+      "change": 25.5,
+      "change_pct": 0.58,
+      "change_str": "+0.58%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 100.38,
+      "price": 99.99,
       "currency": "USD",
-      "change": -2.1,
-      "change_pct": -2.05,
-      "change_str": "-2.05%",
+      "change": -2.49,
+      "change_pct": -2.43,
+      "change_str": "-2.43%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77387.44,
+      "price": 77195.67,
       "currency": "USD",
-      "change": 819.32,
-      "change_pct": 1.07,
-      "change_str": "+1.07%",
+      "change": 627.54,
+      "change_pct": 0.82,
+      "change_str": "+0.82%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.14,
+      "price": 99.09,
       "currency": "USD",
-      "change": 0.05,
-      "change_pct": 0.05,
-      "change_str": "+0.05%",
+      "change": 0.01,
+      "change_pct": 0.01,
+      "change_str": "+0.01%",
       "direction": "up"
     },
     {
@@ -1706,11 +1706,11 @@
     }
   },
   "logs": [
-    "2026-09-11 20:43:35 [INFO] AZALYST - status.json generated",
-    "2026-09-11 20:43:35 [INFO] PORTFOLIO - NAV USD 20,358.78 | Return +2.07%",
-    "2026-09-11 20:43:35 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-11 20:43:35 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
-    "2026-09-11 20:43:35 [INFO] TRADER - Closed trades: 4"
+    "2026-09-11 23:10:35 [INFO] AZALYST - status.json generated",
+    "2026-09-11 23:10:35 [INFO] PORTFOLIO - NAV USD 20,358.78 | Return +2.07%",
+    "2026-09-11 23:10:35 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-11 23:10:35 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
+    "2026-09-11 23:10:35 [INFO] TRADER - Closed trades: 4"
   ],
-  "generated_at": "2026-09-11 20:43:33 UTC"
+  "generated_at": "2026-09-11 23:10:33 UTC"
 }
