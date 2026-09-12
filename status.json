@@ -39,7 +39,7 @@
       "pnl_pct_str": "+2.99%",
       "confidence": 96,
       "severity": "CRITICAL",
-      "days_held": 28,
+      "days_held": 29,
       "half_exited": false
     },
     {
@@ -261,14 +261,14 @@
     }
   },
   "top_signal": {
-    "ticker": "XLE",
-    "rank_score": 21.34429223744292,
-    "flow_score": 2.7889501735897766,
-    "options_score": 7.930516056477691,
-    "rotation_score": 15.0,
-    "macro_score": 6.2663729744066945,
-    "news_score": 5.6,
-    "total": 58.930131441917084,
+    "ticker": "BIL",
+    "rank_score": 29.934246575342467,
+    "flow_score": 22.0,
+    "options_score": 0.0,
+    "rotation_score": 0.0,
+    "macro_score": 0.0,
+    "news_score": 0.0,
+    "total": 51.93424657534247,
     "publish": false,
     "direction": "long"
   },
@@ -330,11 +330,15 @@
       "score": 92.0
     },
     {
+      "symbol": "Bonds & Fixed Income",
+      "score": 87.0
+    },
+    {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income",
       "score": 86.0
     },
     {
-      "symbol": "Bonds & Fixed Income",
+      "symbol": "Energy / Oil & Gas",
       "score": 86.0
     },
     {
@@ -352,10 +356,6 @@
     {
       "symbol": "Technology & AI / Semiconductors",
       "score": 81.0
-    },
-    {
-      "symbol": "Energy / Oil & Gas",
-      "score": 80.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -497,6 +497,58 @@
       }
     },
     {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 87.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 17,
+      "latest_at": "12 Sep 2026 14:37 UTC",
+      "headline": "10-year bond yield crosses 7% as RBI trims auction bids",
+      "regions": [
+        "europe",
+        "global",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "Cointelegraph.com News",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 20.9,
+        "volume_confirmation": 18.0,
+        "source_diversity": 11.1,
+        "recency": 16.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income",
       "confidence": 86.0,
@@ -550,53 +602,54 @@
       }
     },
     {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
       "confidence": 86.0,
-      "severity": "HIGH",
+      "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -2.0,
+      "direction_score": -4.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 22,
-      "latest_at": "12 Sep 2026 07:54 UTC",
-      "headline": "10-year bond yield crosses 7% as RBI trims auction bids",
+      "article_count": 38,
+      "latest_at": "12 Sep 2026 12:47 UTC",
+      "headline": "Oil Supply Risks Rise After Saudi Pipeline Attack",
       "regions": [
-        "india",
-        "global",
+        "africa",
+        "asia_pacific",
         "middle_east",
-        "europe"
+        "global"
       ],
       "sources": [
-        "Bloomberg Markets",
-        "Markets-Economic Times",
+        "BBC News",
         "US Top News and Analysis",
-        "Tech"
+        "Oilprice.com",
+        "Bloomberg Markets"
       ],
-      "primary_etf": "BND",
+      "primary_etf": "XLE",
       "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
+        "XLE",
+        "IXC",
+        "CPSEETF"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "BHARATBOND"
+        "CPSEETF",
+        "PSUBNKBEES"
       ],
       "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
+        "XLE",
+        "IXC",
+        "USO"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 21.6,
+        "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 12.1,
+        "source_diversity": 15.6,
         "recency": 13.8,
         "geopolitical_severity": 13.0
       }
@@ -796,59 +849,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 17.0,
         "recency": 6.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 80.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -3.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 33,
-      "latest_at": "12 Sep 2026 02:45 UTC",
-      "headline": "Europe's \"Less\" Is Doing More Than Anyone Gives It Credit For",
-      "regions": [
-        "global",
-        "americas",
-        "middle_east",
-        "europe"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "BBC News"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.6,
-        "recency": 8.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -1065,17 +1065,17 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 6,
-      "latest_at": "12 Sep 2026 09:58 UTC",
+      "latest_at": "12 Sep 2026 14:52 UTC",
       "headline": "Ukrainian lawyer's second career as a Conti coder earns him 4 years behind bars",
       "regions": [
         "global",
-        "india",
-        "americas"
+        "americas",
+        "india"
       ],
       "sources": [
-        "Markets-Economic Times",
         "Latest from Tom's Hardware",
-        "The Verge",
+        "Cointelegraph.com News",
+        "Markets-Economic Times",
         "www.theregister.com - Articles"
       ],
       "primary_etf": "CIBR",
@@ -1096,7 +1096,7 @@
         "signal_strength": 9.6,
         "volume_confirmation": 12.6,
         "source_diversity": 10.4,
-        "recency": 16.9,
+        "recency": 17.0,
         "geopolitical_severity": 9.3
       }
     },
@@ -1260,12 +1260,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Bonds & Fixed Income - 17 articles - HIGH / BEARISH - 10-year bond yield crosses 7% as RBI trims auction bids"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income - 15 articles - CRITICAL / BEARISH - Bond Traders Price in Two Fed Hikes This Year After CPI Report"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Bonds & Fixed Income - 22 articles - HIGH / BEARISH - 10-year bond yield crosses 7% as RBI trims auction bids"
+      "text": "Energy / Oil & Gas - 38 articles - CRITICAL / BEARISH - Oil Supply Risks Rise After Saudi Pipeline Attack"
     },
     {
       "tag": "tag-bear",
@@ -1286,11 +1291,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Technology & AI / Semiconductors - 68 articles - CRITICAL / BEARISH - Chip Industry Week in Review"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Energy / Oil & Gas - 33 articles - CRITICAL / BEARISH - Europe's \"Less\" Is Doing More Than Anyone Gives It Credit For"
     },
     {
       "tag": "tag-bull",
@@ -1448,11 +1448,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77365.38,
+      "price": 77443.77,
       "currency": "USD",
-      "change": 191.58,
-      "change_pct": 0.25,
-      "change_str": "+0.25%",
+      "change": 269.97,
+      "change_pct": 0.35,
+      "change_str": "+0.35%",
       "direction": "up"
     },
     {
@@ -1705,11 +1705,11 @@
     }
   },
   "logs": [
-    "2026-09-12 10:05:25 [INFO] AZALYST - status.json generated",
-    "2026-09-12 10:05:25 [INFO] PORTFOLIO - NAV USD 20,358.78 | Return +2.07%",
-    "2026-09-12 10:05:25 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-12 10:05:25 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
-    "2026-09-12 10:05:25 [INFO] TRADER - Closed trades: 4"
+    "2026-09-12 14:58:09 [INFO] AZALYST - status.json generated",
+    "2026-09-12 14:58:09 [INFO] PORTFOLIO - NAV USD 20,358.78 | Return +2.07%",
+    "2026-09-12 14:58:09 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-12 14:58:09 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
+    "2026-09-12 14:58:09 [INFO] TRADER - Closed trades: 4"
   ],
-  "generated_at": "2026-09-12 10:05:24 UTC"
+  "generated_at": "2026-09-12 14:58:07 UTC"
 }
