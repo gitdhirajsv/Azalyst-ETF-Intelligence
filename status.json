@@ -62,7 +62,7 @@
       "pnl_pct_str": "+5.90%",
       "confidence": 82,
       "severity": "MEDIUM",
-      "days_held": 23,
+      "days_held": 24,
       "half_exited": false
     },
     {
@@ -322,23 +322,11 @@
   },
   "confidence": [
     {
-      "symbol": "Nuclear Energy & Uranium + Technology & AI / Semiconductors",
-      "score": 93.0
-    },
-    {
       "symbol": "Defense & Aerospace",
       "score": 92.0
     },
     {
-      "symbol": "Bonds & Fixed Income",
-      "score": 87.0
-    },
-    {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income",
-      "score": 86.0
-    },
-    {
-      "symbol": "Energy / Oil & Gas",
       "score": 86.0
     },
     {
@@ -354,12 +342,24 @@
       "score": 82.0
     },
     {
+      "symbol": "Energy / Oil & Gas",
+      "score": 81.0
+    },
+    {
       "symbol": "Technology & AI / Semiconductors",
       "score": 81.0
     },
     {
+      "symbol": "Bonds & Fixed Income",
+      "score": 80.0
+    },
+    {
       "symbol": "Commodities & Mining",
       "score": 73.0
+    },
+    {
+      "symbol": "Nuclear Energy & Uranium",
+      "score": 72.0
     },
     {
       "symbol": "Healthcare & Pharma + Europe Equity",
@@ -391,58 +391,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "nuclear_uranium",
-      "sector_label": "Nuclear Energy & Uranium + Technology & AI / Semiconductors",
-      "confidence": 93.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -1.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 9,
-      "latest_at": "12 Sep 2026 09:58 UTC",
-      "headline": "Why North Korea's Kim Jong Un doesn't need a US deal",
-      "regions": [
-        "global",
-        "europe",
-        "india",
-        "americas"
-      ],
-      "sources": [
-        "World | Deutsche Welle",
-        "www.theregister.com - Articles",
-        "EE Times",
-        "Earnings"
-      ],
-      "primary_etf": "URA",
-      "top_etfs": [
-        "URA",
-        "URNM",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "URA",
-        "URNM",
-        "SRUUF"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 15.4,
-        "source_diversity": 17.3,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
@@ -497,58 +445,6 @@
       }
     },
     {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
-      "confidence": 87.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 17,
-      "latest_at": "12 Sep 2026 14:37 UTC",
-      "headline": "10-year bond yield crosses 7% as RBI trims auction bids",
-      "regions": [
-        "europe",
-        "global",
-        "americas",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "Cointelegraph.com News",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 20.9,
-        "volume_confirmation": 18.0,
-        "source_diversity": 11.1,
-        "recency": 16.5,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income",
       "confidence": 86.0,
@@ -598,59 +494,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.0,
         "recency": 16.1,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 86.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -4.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 38,
-      "latest_at": "12 Sep 2026 12:47 UTC",
-      "headline": "Oil Supply Risks Rise After Saudi Pipeline Attack",
-      "regions": [
-        "africa",
-        "asia_pacific",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "BBC News",
-        "US Top News and Analysis",
-        "Oilprice.com",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.6,
-        "recency": 13.8,
         "geopolitical_severity": 13.0
       }
     },
@@ -800,6 +643,59 @@
       }
     },
     {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 81.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -4.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 30,
+      "latest_at": "12 Sep 2026 12:47 UTC",
+      "headline": "Oil Supply Risks Rise After Saudi Pipeline Attack",
+      "regions": [
+        "global",
+        "middle_east",
+        "americas",
+        "africa"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "Defense News",
+        "World | Deutsche Welle"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.2,
+        "recency": 8.2,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
       "confidence": 81.0,
@@ -853,6 +749,58 @@
       }
     },
     {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 80.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 17,
+      "latest_at": "12 Sep 2026 14:37 UTC",
+      "headline": "10-year bond yield crosses 7% as RBI trims auction bids",
+      "regions": [
+        "global",
+        "americas",
+        "europe",
+        "india"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "US Top News and Analysis",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 20.9,
+        "volume_confirmation": 18.0,
+        "source_diversity": 11.1,
+        "recency": 9.8,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "commodities_mining",
       "sector_label": "Commodities & Mining",
       "confidence": 73.0,
@@ -900,6 +848,56 @@
         "source_diversity": 12.0,
         "recency": 15.4,
         "geopolitical_severity": 11.3
+      }
+    },
+    {
+      "sector_key": "nuclear_uranium",
+      "sector_label": "Nuclear Energy & Uranium",
+      "confidence": 72.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 4,
+      "latest_at": "12 Sep 2026 20:04 UTC",
+      "headline": "Iran Nuclear Blind Spot Deepens as IAEA Loses Access",
+      "regions": [
+        "global",
+        "middle_east",
+        "europe"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Oilprice.com",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "URA",
+      "top_etfs": [
+        "URA",
+        "URNM",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "URA",
+        "URNM",
+        "SRUUF"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 14.8,
+        "volume_confirmation": 9.7,
+        "source_diversity": 9.9,
+        "recency": 16.9,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1250,27 +1248,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Nuclear Energy & Uranium + Technology & AI / Semiconductors - 9 articles - CRITICAL / BEARISH - Why North Korea's Kim Jong Un doesn't need a US deal"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Defense & Aerospace - 29 articles - HIGH / BEARISH - Iran war: Saudi-Houthi escalation intensifies Yemen conflict"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Bonds & Fixed Income - 17 articles - HIGH / BEARISH - 10-year bond yield crosses 7% as RBI trims auction bids"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income - 15 articles - CRITICAL / BEARISH - Bond Traders Price in Two Fed Hikes This Year After CPI Report"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Energy / Oil & Gas - 38 articles - CRITICAL / BEARISH - Oil Supply Risks Rise After Saudi Pipeline Attack"
     },
     {
       "tag": "tag-bear",
@@ -1290,12 +1273,27 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Energy / Oil & Gas - 30 articles - CRITICAL / BEARISH - Oil Supply Risks Rise After Saudi Pipeline Attack"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "Technology & AI / Semiconductors - 68 articles - CRITICAL / BEARISH - Chip Industry Week in Review"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Bonds & Fixed Income - 17 articles - HIGH / BEARISH - 10-year bond yield crosses 7% as RBI trims auction bids"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Commodities & Mining - 7 articles - MEDIUM / BULLISH - Copper Stocks Sink as White House Tariff Uncertainty Spooks Traders"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Nuclear Energy & Uranium - 4 articles - CRITICAL / BEARISH - Iran Nuclear Blind Spot Deepens as IAEA Loses Access"
     },
     {
       "tag": "tag-bull",
@@ -1448,11 +1446,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77443.77,
+      "price": 77170.4,
       "currency": "USD",
-      "change": 269.97,
-      "change_pct": 0.35,
-      "change_str": "+0.35%",
+      "change": -3.4,
+      "change_pct": -0.0,
+      "change_str": "+-0.00%",
       "direction": "up"
     },
     {
@@ -1705,11 +1703,11 @@
     }
   },
   "logs": [
-    "2026-09-12 14:58:09 [INFO] AZALYST - status.json generated",
-    "2026-09-12 14:58:09 [INFO] PORTFOLIO - NAV USD 20,358.78 | Return +2.07%",
-    "2026-09-12 14:58:09 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-12 14:58:09 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
-    "2026-09-12 14:58:09 [INFO] TRADER - Closed trades: 4"
+    "2026-09-12 20:13:55 [INFO] AZALYST - status.json generated",
+    "2026-09-12 20:13:55 [INFO] PORTFOLIO - NAV USD 20,358.78 | Return +2.07%",
+    "2026-09-12 20:13:55 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-12 20:13:55 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
+    "2026-09-12 20:13:55 [INFO] TRADER - Closed trades: 4"
   ],
-  "generated_at": "2026-09-12 14:58:07 UTC"
+  "generated_at": "2026-09-12 20:13:52 UTC"
 }

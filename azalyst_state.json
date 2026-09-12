@@ -933,44 +933,43 @@
     }
   },
   "energy_oil": {
-    "sent_at": "2026-09-12T14:54:12.892773+00:00",
-    "confidence": 86,
+    "sent_at": "2026-09-12T20:06:05.942632+00:00",
+    "confidence": 81,
     "sector_label": "Energy / Oil & Gas",
-    "article_count": 38,
+    "article_count": 30,
     "severity": "CRITICAL",
     "direction": "BEARISH",
-    "direction_score": -4.0,
+    "direction_score": -4.5,
     "signal_scope": "global",
     "india_article_ratio": 0.0,
     "regions": [
-      "africa",
-      "asia_pacific",
-      "middle_east",
       "global",
+      "middle_east",
       "americas",
-      "europe"
+      "africa",
+      "asia_pacific"
     ],
     "sources": [
-      "BBC News",
-      "US Top News and Analysis",
-      "Oilprice.com",
-      "Bloomberg Markets",
       "Markets-Economic Times",
-      "Defense News"
+      "Oilprice.com",
+      "Defense News",
+      "World | Deutsche Welle",
+      "BBC News",
+      "US Top News and Analysis"
     ],
     "top_headlines": [
       "Oil Supply Risks Rise After Saudi Pipeline Attack",
       "Europe's \"Less\" Is Doing More Than Anyone Gives It Credit For",
-      "Houthis Advance on Bab al-Mandeb as Saudi Oil Route Comes Under Threat",
       "Saudi Arabia\u2019s Critical Oil Bypass Comes Under Threat",
-      "Debunking the Viral Claim That America Has Only 14 Days of Oil Left"
+      "Debunking the Viral Claim That America Has Only 14 Days of Oil Left",
+      "Indian rupee weakens to 95.55 amid rising crude oil prices and Strait of Hormuz tensions"
     ],
     "latest_ts": "2026-09-12T12:47:06+00:00",
     "confidence_breakdown": {
       "signal_strength": 22.0,
       "volume_confirmation": 18.0,
-      "source_diversity": 15.6,
-      "recency": 13.8,
+      "source_diversity": 16.2,
+      "recency": 8.2,
       "geopolitical_severity": 13.0,
       "cross_engine_confirmation": 3.9,
       "macro_events": 0.0
@@ -2281,43 +2280,36 @@
     }
   },
   "nuclear_uranium": {
-    "sent_at": "2026-09-12T10:00:04.516577+00:00",
-    "confidence": 93,
-    "sector_label": "Nuclear Energy & Uranium + Technology & AI / Semiconductors",
-    "article_count": 9,
+    "sent_at": "2026-09-12T20:06:09.527750+00:00",
+    "confidence": 72,
+    "sector_label": "Nuclear Energy & Uranium",
+    "article_count": 4,
     "severity": "CRITICAL",
     "direction": "BEARISH",
-    "direction_score": -1.5,
+    "direction_score": 0.0,
     "signal_scope": "global",
     "india_article_ratio": 0.0,
     "regions": [
       "global",
-      "europe",
-      "india",
-      "americas",
       "middle_east",
-      "asia_pacific"
+      "europe"
     ],
     "sources": [
       "World | Deutsche Welle",
-      "www.theregister.com - Articles",
-      "EE Times",
-      "Earnings",
-      "Bloomberg Markets",
-      "Markets-Economic Times"
+      "Oilprice.com",
+      "Bloomberg Markets"
     ],
     "top_headlines": [
-      "Why North Korea's Kim Jong Un doesn't need a US deal",
-      "d-Matrix drinks the Nvidia Kool-Aid with NVLink Fusion and MGX rack designs",
-      "Chip Industry Week in Review",
-      "Reducing HBM ECC Controller Overhead For AI Inference (RPI, IBM)",
-      "China's AI accelerator supplier Biren posts 2,000% year-over-year revenue growth \u2014 US export controls benefit homegrown chips as Nvidia and AMD exit market"
+      "Iran Nuclear Blind Spot Deepens as IAEA Loses Access",
+      "The Race to Solve Nuclear Energy\u2019s Biggest Problem",
+      "Iran Nuclear Activity Raises New Concerns",
+      "Why North Korea's Kim Jong Un doesn't need a US deal"
     ],
-    "latest_ts": "2026-09-12T09:58:14.353735+00:00",
+    "latest_ts": "2026-09-12T20:04:16.520825+00:00",
     "confidence_breakdown": {
-      "signal_strength": 22.0,
-      "volume_confirmation": 15.4,
-      "source_diversity": 17.3,
+      "signal_strength": 14.8,
+      "volume_confirmation": 9.7,
+      "source_diversity": 9.9,
       "recency": 16.9,
       "geopolitical_severity": 13.0,
       "cross_engine_confirmation": 8.6,
@@ -2389,10 +2381,8 @@
           "sector_key": "nuclear_uranium",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 72.0,
-          "selection_notes": [
-            "matches India-listed access"
-          ]
+          "selection_score": 69.0,
+          "selection_notes": []
         },
         {
           "name": "Sprott Physical Uranium Trust",
@@ -2458,10 +2448,8 @@
           "sector_key": "nuclear_uranium",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 72.0,
-          "selection_notes": [
-            "matches India-listed access"
-          ]
+          "selection_score": 69.0,
+          "selection_notes": []
         }
       ],
       "regional_alternatives": {
@@ -2478,10 +2466,8 @@
             "sector_key": "nuclear_uranium",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 72.0,
-            "selection_notes": [
-              "matches India-listed access"
-            ]
+            "selection_score": 69.0,
+            "selection_notes": []
           }
         ],
         "International-listed": [
@@ -2550,10 +2536,8 @@
           "sector_key": "nuclear_uranium",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 72.0,
-          "selection_notes": [
-            "matches India-listed access"
-          ]
+          "selection_score": 69.0,
+          "selection_notes": []
         }
       ],
       "global": [
@@ -4257,8 +4241,8 @@
     }
   },
   "bonds_fixed_income": {
-    "sent_at": "2026-09-12T14:54:11.620905+00:00",
-    "confidence": 87,
+    "sent_at": "2026-09-12T20:06:08.134293+00:00",
+    "confidence": 80,
     "sector_label": "Bonds & Fixed Income",
     "article_count": 17,
     "severity": "HIGH",
@@ -4267,17 +4251,17 @@
     "signal_scope": "global",
     "india_article_ratio": 0.06,
     "regions": [
-      "europe",
       "global",
       "americas",
-      "asia_pacific",
-      "india"
+      "europe",
+      "india",
+      "asia_pacific"
     ],
     "sources": [
       "Markets-Economic Times",
-      "Bloomberg Markets",
       "Cointelegraph.com News",
-      "US Top News and Analysis"
+      "US Top News and Analysis",
+      "Bloomberg Markets"
     ],
     "top_headlines": [
       "10-year bond yield crosses 7% as RBI trims auction bids",
@@ -4291,7 +4275,7 @@
       "signal_strength": 20.9,
       "volume_confirmation": 18.0,
       "source_diversity": 11.1,
-      "recency": 16.5,
+      "recency": 9.8,
       "geopolitical_severity": 13.0,
       "cross_engine_confirmation": 7.9,
       "macro_events": 0.0
