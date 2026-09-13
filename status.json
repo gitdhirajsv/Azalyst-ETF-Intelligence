@@ -342,16 +342,16 @@
       "score": 82.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 81.0
-    },
-    {
       "symbol": "Technology & AI / Semiconductors",
       "score": 81.0
     },
     {
+      "symbol": "Energy / Oil & Gas",
+      "score": 77.0
+    },
+    {
       "symbol": "Bonds & Fixed Income",
-      "score": 80.0
+      "score": 76.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -375,7 +375,7 @@
     },
     {
       "symbol": "Cybersecurity",
-      "score": 66.0
+      "score": 64.0
     },
     {
       "symbol": "Emerging Markets + Bearish Market / Macro Selloff",
@@ -643,59 +643,6 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 81.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -4.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 30,
-      "latest_at": "12 Sep 2026 12:47 UTC",
-      "headline": "Oil Supply Risks Rise After Saudi Pipeline Attack",
-      "regions": [
-        "global",
-        "middle_east",
-        "americas",
-        "africa"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "Defense News",
-        "World | Deutsche Welle"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.2,
-        "recency": 8.2,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
       "confidence": 81.0,
@@ -749,9 +696,62 @@
       }
     },
     {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 77.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -4.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 30,
+      "latest_at": "12 Sep 2026 12:47 UTC",
+      "headline": "Oil Supply Risks Rise After Saudi Pipeline Attack",
+      "regions": [
+        "americas",
+        "global",
+        "africa",
+        "asia_pacific"
+      ],
+      "sources": [
+        "World | Deutsche Welle",
+        "Defense News",
+        "Markets-Economic Times",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.2,
+        "recency": 4.2,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income",
-      "confidence": 80.0,
+      "confidence": 76.0,
       "severity": "HIGH",
       "direction": "BEARISH",
       "direction_score": -2.0,
@@ -762,16 +762,16 @@
       "latest_at": "12 Sep 2026 14:37 UTC",
       "headline": "10-year bond yield crosses 7% as RBI trims auction bids",
       "regions": [
-        "global",
-        "americas",
+        "india",
         "europe",
-        "india"
+        "americas",
+        "global"
       ],
       "sources": [
-        "Markets-Economic Times",
         "Cointelegraph.com News",
+        "Bloomberg Markets",
         "US Top News and Analysis",
-        "Bloomberg Markets"
+        "Markets-Economic Times"
       ],
       "primary_etf": "BND",
       "top_etfs": [
@@ -796,7 +796,7 @@
         "signal_strength": 20.9,
         "volume_confirmation": 18.0,
         "source_diversity": 11.1,
-        "recency": 9.8,
+        "recency": 5.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -861,16 +861,16 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 4,
-      "latest_at": "12 Sep 2026 20:04 UTC",
+      "latest_at": "13 Sep 2026 02:43 UTC",
       "headline": "Iran Nuclear Blind Spot Deepens as IAEA Loses Access",
       "regions": [
         "global",
-        "middle_east",
-        "europe"
+        "europe",
+        "middle_east"
       ],
       "sources": [
-        "World | Deutsche Welle",
         "Oilprice.com",
+        "World | Deutsche Welle",
         "Bloomberg Markets"
       ],
       "primary_etf": "URA",
@@ -896,7 +896,7 @@
         "signal_strength": 14.8,
         "volume_confirmation": 9.7,
         "source_diversity": 9.9,
-        "recency": 16.9,
+        "recency": 17.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -1055,7 +1055,7 @@
     {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
-      "confidence": 66.0,
+      "confidence": 64.0,
       "severity": "MEDIUM",
       "direction": "BEARISH",
       "direction_score": 0.0,
@@ -1063,18 +1063,18 @@
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 6,
-      "latest_at": "12 Sep 2026 14:52 UTC",
+      "latest_at": "13 Sep 2026 02:43 UTC",
       "headline": "Ukrainian lawyer's second career as a Conti coder earns him 4 years behind bars",
       "regions": [
+        "india",
         "global",
-        "americas",
-        "india"
+        "americas"
       ],
       "sources": [
-        "Latest from Tom's Hardware",
         "Cointelegraph.com News",
-        "Markets-Economic Times",
-        "www.theregister.com - Articles"
+        "The Verge",
+        "www.theregister.com - Articles",
+        "Markets-Economic Times"
       ],
       "primary_etf": "CIBR",
       "top_etfs": [
@@ -1091,11 +1091,11 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 9.6,
+        "signal_strength": 9.3,
         "volume_confirmation": 12.6,
-        "source_diversity": 10.4,
+        "source_diversity": 9.2,
         "recency": 17.0,
-        "geopolitical_severity": 9.3
+        "geopolitical_severity": 9.2
       }
     },
     {
@@ -1273,12 +1273,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 30 articles - CRITICAL / BEARISH - Oil Supply Risks Rise After Saudi Pipeline Attack"
+      "text": "Technology & AI / Semiconductors - 68 articles - CRITICAL / BEARISH - Chip Industry Week in Review"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Technology & AI / Semiconductors - 68 articles - CRITICAL / BEARISH - Chip Industry Week in Review"
+      "text": "Energy / Oil & Gas - 30 articles - CRITICAL / BEARISH - Oil Supply Risks Rise After Saudi Pipeline Attack"
     },
     {
       "tag": "tag-bear",
@@ -1446,11 +1446,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77170.4,
+      "price": 77293.63,
       "currency": "USD",
-      "change": -3.4,
-      "change_pct": -0.0,
-      "change_str": "+-0.00%",
+      "change": 119.83,
+      "change_pct": 0.16,
+      "change_str": "+0.16%",
       "direction": "up"
     },
     {
@@ -1703,11 +1703,11 @@
     }
   },
   "logs": [
-    "2026-09-12 20:13:55 [INFO] AZALYST - status.json generated",
-    "2026-09-12 20:13:55 [INFO] PORTFOLIO - NAV USD 20,358.78 | Return +2.07%",
-    "2026-09-12 20:13:55 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-12 20:13:55 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
-    "2026-09-12 20:13:55 [INFO] TRADER - Closed trades: 4"
+    "2026-09-13 02:52:59 [INFO] AZALYST - status.json generated",
+    "2026-09-13 02:52:59 [INFO] PORTFOLIO - NAV USD 20,358.78 | Return +2.07%",
+    "2026-09-13 02:52:59 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-13 02:52:59 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
+    "2026-09-13 02:52:59 [INFO] TRADER - Closed trades: 4"
   ],
-  "generated_at": "2026-09-12 20:13:52 UTC"
+  "generated_at": "2026-09-13 02:52:55 UTC"
 }
