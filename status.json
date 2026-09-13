@@ -39,7 +39,7 @@
       "pnl_pct_str": "+2.99%",
       "confidence": 96,
       "severity": "CRITICAL",
-      "days_held": 29,
+      "days_held": 30,
       "half_exited": false
     },
     {
@@ -62,7 +62,7 @@
       "pnl_pct_str": "+5.90%",
       "confidence": 82,
       "severity": "MEDIUM",
-      "days_held": 24,
+      "days_held": 25,
       "half_exited": false
     },
     {
@@ -267,8 +267,8 @@
     "options_score": 7.941891350390642,
     "rotation_score": 15.0,
     "macro_score": 6.2663729744066945,
-    "news_score": 5.18,
-    "total": 58.52150673583003,
+    "news_score": 6.089999999999999,
+    "total": 59.43150673583003,
     "publish": false,
     "direction": "long"
   },
@@ -326,12 +326,24 @@
       "score": 92.0
     },
     {
+      "symbol": "Energy / Oil & Gas",
+      "score": 87.0
+    },
+    {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income",
+      "score": 86.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
       "score": 86.0
     },
     {
       "symbol": "India Equity Markets",
       "score": 84.0
+    },
+    {
+      "symbol": "Bonds & Fixed Income",
+      "score": 83.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -340,18 +352,6 @@
     {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
       "score": 82.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 81.0
-    },
-    {
-      "symbol": "Bonds & Fixed Income",
-      "score": 80.0
-    },
-    {
-      "symbol": "Energy / Oil & Gas",
-      "score": 74.0
     },
     {
       "symbol": "Commodities & Mining",
@@ -445,6 +445,59 @@
       }
     },
     {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 87.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -2.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 29,
+      "latest_at": "13 Sep 2026 13:50 UTC",
+      "headline": "Europe's \"Less\" Is Doing More Than Anyone Gives It Credit For",
+      "regions": [
+        "asia_pacific",
+        "americas",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "Defense News",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.2,
+        "recency": 14.3,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "gold_precious_metals",
       "sector_label": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income",
       "confidence": 86.0,
@@ -498,6 +551,59 @@
       }
     },
     {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -3.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 74,
+      "latest_at": "13 Sep 2026 12:00 UTC",
+      "headline": "Chip Industry Week in Review",
+      "regions": [
+        "asia_pacific",
+        "americas",
+        "india",
+        "middle_east"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Defense News",
+        "Tech",
+        "Oilprice.com"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 17.2,
+        "recency": 11.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 84.0,
@@ -544,6 +650,58 @@
         "source_diversity": 10.0,
         "recency": 15.1,
         "geopolitical_severity": 11.7
+      }
+    },
+    {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 83.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -4.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 17,
+      "latest_at": "13 Sep 2026 12:52 UTC",
+      "headline": "10-year bond yield crosses 7% as RBI trims auction bids",
+      "regions": [
+        "asia_pacific",
+        "india",
+        "americas",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "US Top News and Analysis",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 20.4,
+        "volume_confirmation": 18.0,
+        "source_diversity": 11.1,
+        "recency": 13.0,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -639,164 +797,6 @@
         "volume_confirmation": 16.8,
         "source_diversity": 14.0,
         "recency": 10.3,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 81.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -3.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 68,
-      "latest_at": "11 Sep 2026 08:13 UTC",
-      "headline": "Chip Industry Week in Review",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "india",
-        "europe"
-      ],
-      "sources": [
-        "EE Times",
-        "Tech",
-        "Cointelegraph.com News",
-        "World News - Breaking international news and headlines | Sky News"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 17.0,
-        "recency": 6.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
-      "confidence": 80.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 18,
-      "latest_at": "13 Sep 2026 04:35 UTC",
-      "headline": "10-year bond yield crosses 7% as RBI trims auction bids",
-      "regions": [
-        "global",
-        "india",
-        "asia_pacific",
-        "americas"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Cointelegraph.com News",
-        "US Top News and Analysis",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 21.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 11.1,
-        "recency": 9.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 74.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -6.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 30,
-      "latest_at": "12 Sep 2026 12:47 UTC",
-      "headline": "Oil Supply Risks Rise After Saudi Pipeline Attack",
-      "regions": [
-        "global",
-        "africa",
-        "asia_pacific",
-        "middle_east"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "US Top News and Analysis",
-        "Defense News",
-        "Earnings"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.2,
-        "recency": 1.8,
         "geopolitical_severity": 13.0
       }
     },
@@ -1253,12 +1253,27 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Energy / Oil & Gas - 29 articles - CRITICAL / BEARISH - Europe's \"Less\" Is Doing More Than Anyone Gives It Credit For"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income - 15 articles - CRITICAL / BEARISH - Bond Traders Price in Two Fed Hikes This Year After CPI Report"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Technology & AI / Semiconductors - 74 articles - HIGH / BEARISH - Chip Industry Week in Review"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "India Equity Markets - 24 articles - MEDIUM / BEARISH - Midcap rally hides a deeper split: Every second stock down but index up 11% in 1 year. Are investors walking on thin ice?"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Bonds & Fixed Income - 17 articles - HIGH / BEARISH - 10-year bond yield crosses 7% as RBI trims auction bids"
     },
     {
       "tag": "tag-bull",
@@ -1269,21 +1284,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Banking & Financial Sector + Gold & Precious Metals - 11 articles - CRITICAL / BEARISH - Wall St Week Ahead: Investors brace for possible rate hike at uncertain Fed meeting"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Technology & AI / Semiconductors - 68 articles - CRITICAL / BEARISH - Chip Industry Week in Review"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Bonds & Fixed Income - 18 articles - HIGH / BEARISH - 10-year bond yield crosses 7% as RBI trims auction bids"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Energy / Oil & Gas - 30 articles - CRITICAL / BEARISH - Oil Supply Risks Rise After Saudi Pipeline Attack"
     },
     {
       "tag": "tag-bull",
@@ -1446,11 +1446,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 76626.78,
+      "price": 77054.31,
       "currency": "USD",
-      "change": -643.69,
-      "change_pct": -0.83,
-      "change_str": "-0.83%",
+      "change": -216.16,
+      "change_pct": -0.28,
+      "change_str": "-0.28%",
       "direction": "down"
     },
     {
@@ -1703,11 +1703,11 @@
     }
   },
   "logs": [
-    "2026-09-13 11:05:55 [INFO] AZALYST - status.json generated",
-    "2026-09-13 11:05:55 [INFO] PORTFOLIO - NAV USD 20,356.65 | Return +2.07%",
-    "2026-09-13 11:05:55 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-13 11:05:55 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
-    "2026-09-13 11:05:55 [INFO] TRADER - Closed trades: 4"
+    "2026-09-13 15:37:58 [INFO] AZALYST - status.json generated",
+    "2026-09-13 15:37:58 [INFO] PORTFOLIO - NAV USD 20,356.65 | Return +2.07%",
+    "2026-09-13 15:37:58 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-13 15:37:58 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
+    "2026-09-13 15:37:58 [INFO] TRADER - Closed trades: 4"
   ],
-  "generated_at": "2026-09-13 11:05:53 UTC"
+  "generated_at": "2026-09-13 15:37:56 UTC"
 }
