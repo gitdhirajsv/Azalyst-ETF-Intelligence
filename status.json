@@ -85,7 +85,7 @@
       "pnl_pct_str": "+2.77%",
       "confidence": 91,
       "severity": "HIGH",
-      "days_held": 12,
+      "days_held": 13,
       "half_exited": false
     }
   ],
@@ -246,30 +246,30 @@
   "confidence_threshold": 60,
   "regime": {
     "risk_state": "RISK_ON",
-    "vol_regime": "LOW_VOL",
+    "vol_regime": "MID_VOL",
     "spy_above_200ma": true,
     "spy_excess_vs_tbill_3m": 0.023259578982548997,
-    "vix_level": 15.84000015258789,
-    "vix_percentile_1y": 0.21825396825396826,
+    "vix_level": 17.770000457763672,
+    "vix_percentile_1y": 0.5793650793650794,
     "weight_matrix": {
-      "rank": 30,
-      "flow": 22,
-      "options": 18,
+      "rank": 25,
+      "flow": 20,
+      "options": 20,
       "rotation": 15,
-      "macro": 8,
-      "news": 7
+      "macro": 10,
+      "news": 10
     }
   },
   "top_signal": {
-    "ticker": "XLE",
-    "rank_score": 21.34429223744292,
-    "flow_score": 2.7889501735897766,
-    "options_score": 7.9418787606099315,
+    "ticker": "SOXX",
+    "rank_score": 20.485540334855404,
+    "flow_score": 4.119377476447715,
+    "options_score": 15.0000476421469,
     "rotation_score": 15.0,
-    "macro_score": 6.2663729744066945,
-    "news_score": 6.089999999999999,
-    "total": 59.43149414604932,
-    "publish": false,
+    "macro_score": 0.0,
+    "news_score": 9.0,
+    "total": 63.60496545345002,
+    "publish": true,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -327,7 +327,7 @@
     },
     {
       "symbol": "Technology & AI / Semiconductors",
-      "score": 91.0
+      "score": 90.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -447,15 +447,15 @@
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 91.0,
+      "confidence": 90.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -6.0,
+      "direction_score": -11.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 74,
-      "latest_at": "13 Sep 2026 20:11 UTC",
+      "article_count": 86,
+      "latest_at": "14 Sep 2026 07:01 UTC",
       "headline": "Chip Industry Week in Review",
       "regions": [
         "americas",
@@ -464,10 +464,10 @@
         "global"
       ],
       "sources": [
-        "EE Times",
         "Oilprice.com",
-        "US Top News and Analysis",
-        "BBC News"
+        "Latest from Tom's Hardware",
+        "Semiconductor Engineering",
+        "The Verge"
       ],
       "primary_etf": "QQQ",
       "top_etfs": [
@@ -493,7 +493,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 17.0,
-        "recency": 17.0,
+        "recency": 15.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -1253,7 +1253,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Technology & AI / Semiconductors - 74 articles - CRITICAL / BEARISH - Chip Industry Week in Review"
+      "text": "Technology & AI / Semiconductors - 86 articles - CRITICAL / BEARISH - Chip Industry Week in Review"
     },
     {
       "tag": "tag-bear",
@@ -1369,45 +1369,45 @@
       "label": "FTSE 100",
       "ticker": "^FTSE",
       "region": "UK",
-      "price": 10650.44,
+      "price": 10700.81,
       "currency": "GBP",
-      "change": 41.54,
-      "change_pct": 0.39,
-      "change_str": "+0.39%",
+      "change": 50.41,
+      "change_pct": 0.47,
+      "change_str": "+0.47%",
       "direction": "up"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 25568.56,
+      "price": 25445.84,
       "currency": "EUR",
-      "change": 207.41,
-      "change_pct": 0.82,
-      "change_str": "+0.82%",
-      "direction": "up"
+      "change": -122.72,
+      "change_pct": -0.48,
+      "change_str": "-0.48%",
+      "direction": "down"
     },
     {
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 64011.34,
+      "price": 63492.99,
       "currency": "JPY",
-      "change": -1259.61,
-      "change_pct": -1.93,
-      "change_str": "-1.93%",
+      "change": -518.35,
+      "change_pct": -0.81,
+      "change_str": "-0.81%",
       "direction": "down"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 24805.63,
+      "price": 24900.25,
       "currency": "HKD",
-      "change": -148.84,
-      "change_pct": -0.6,
-      "change_str": "-0.60%",
-      "direction": "down"
+      "change": 94.62,
+      "change_pct": 0.38,
+      "change_str": "+0.38%",
+      "direction": "up"
     },
     {
       "label": "Nifty 50",
@@ -1424,63 +1424,63 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4408.9,
+      "price": 4357.4,
       "currency": "USD",
-      "change": 44.4,
-      "change_pct": 1.02,
-      "change_str": "+1.02%",
-      "direction": "up"
+      "change": -8.8,
+      "change_pct": -0.2,
+      "change_str": "-0.20%",
+      "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 100.05,
+      "price": 103.19,
       "currency": "USD",
-      "change": -2.43,
-      "change_pct": -2.37,
-      "change_str": "-2.37%",
-      "direction": "down"
+      "change": 3.14,
+      "change_pct": 3.14,
+      "change_str": "+3.14%",
+      "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 77286.47,
+      "price": 77855.5,
       "currency": "USD",
-      "change": 16.0,
-      "change_pct": 0.02,
-      "change_str": "+0.02%",
+      "change": 1017.34,
+      "change_pct": 1.32,
+      "change_str": "+1.32%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 99.09,
+      "price": 99.48,
       "currency": "USD",
-      "change": 0.01,
-      "change_pct": 0.01,
-      "change_str": "+0.01%",
+      "change": 0.36,
+      "change_pct": 0.36,
+      "change_str": "+0.36%",
       "direction": "up"
     },
     {
       "label": "VIX",
       "ticker": "^VIX",
       "region": "VOL",
-      "price": 15.84,
+      "price": 17.77,
       "currency": "USD",
-      "change": -2.0,
-      "change_pct": -11.21,
-      "change_str": "-11.21%",
-      "direction": "down"
+      "change": 1.93,
+      "change_pct": 12.18,
+      "change_str": "+12.18%",
+      "direction": "up"
     }
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
     "drawdown_from_peak_pct": 0.32,
     "portfolio_peak": 20423.75,
-    "vix": 15.84,
+    "vix": 17.77,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
@@ -1703,11 +1703,11 @@
     }
   },
   "logs": [
-    "2026-09-13 20:22:30 [INFO] AZALYST - status.json generated",
-    "2026-09-13 20:22:30 [INFO] PORTFOLIO - NAV USD 20,358.78 | Return +2.07%",
-    "2026-09-13 20:22:30 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-13 20:22:30 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
-    "2026-09-13 20:22:30 [INFO] TRADER - Closed trades: 4"
+    "2026-09-14 07:59:44 [INFO] AZALYST - status.json generated",
+    "2026-09-14 07:59:44 [INFO] PORTFOLIO - NAV USD 20,358.78 | Return +2.07%",
+    "2026-09-14 07:59:44 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-14 07:59:44 [INFO] TRADER - Open positions: XLE, DBC, EWJ",
+    "2026-09-14 07:59:44 [INFO] TRADER - Closed trades: 4"
   ],
-  "generated_at": "2026-09-13 20:22:27 UTC"
+  "generated_at": "2026-09-14 07:59:42 UTC"
 }
