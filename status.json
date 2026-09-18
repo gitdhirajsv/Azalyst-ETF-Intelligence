@@ -108,7 +108,7 @@
       "pnl_pct_str": "+0.73%",
       "confidence": 78,
       "severity": "MEDIUM",
-      "days_held": 2,
+      "days_held": 3,
       "half_exited": false
     }
   ],
@@ -271,7 +271,7 @@
     "risk_state": "RISK_ON",
     "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.011326465736555722,
+    "spy_excess_vs_tbill_3m": 0.010375484433407864,
     "vix_level": 15.4399995803833,
     "vix_percentile_1y": 0.14682539682539683,
     "weight_matrix": {
@@ -283,18 +283,7 @@
       "news": 7
     }
   },
-  "top_signal": {
-    "ticker": "ARKK",
-    "rank_score": 23.0506463878327,
-    "flow_score": 22.0,
-    "options_score": 0.0,
-    "rotation_score": 0.0,
-    "macro_score": 3.0543918156659857,
-    "news_score": 5.208,
-    "total": 53.313038203498685,
-    "publish": false,
-    "direction": "long"
-  },
+  "top_signal": {},
   "jlaw_risk": {
     "distribution_count": 3,
     "risk_multiplier": 1.0,
@@ -353,10 +342,6 @@
   },
   "confidence": [
     {
-      "symbol": "Gold & Precious Metals",
-      "score": 93.0
-    },
-    {
       "symbol": "Technology & AI / Semiconductors",
       "score": 93.0
     },
@@ -367,6 +352,10 @@
     {
       "symbol": "Defense & Aerospace",
       "score": 92.0
+    },
+    {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income",
+      "score": 91.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -389,10 +378,6 @@
       "score": 72.0
     },
     {
-      "symbol": "Commodities & Mining",
-      "score": 70.0
-    },
-    {
       "symbol": "Clean Energy & Renewables",
       "score": 69.0
     },
@@ -413,6 +398,10 @@
       "score": 63.0
     },
     {
+      "symbol": "Commodities & Mining",
+      "score": 63.0
+    },
+    {
       "symbol": "Emerging Markets + Bearish Market / Macro Selloff",
       "score": 63.0
     },
@@ -422,59 +411,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 93.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -34.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 30,
-      "latest_at": "17 Sep 2026 06:11 UTC",
-      "headline": "Infosys, TCS, other IT stocks in focus after first Fed rate hike in 3 years. Will inflationary pressures offset anti-AI euphoria?",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "global",
-        "europe"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "www.theregister.com - Articles",
-        "Latest from Tom's Hardware",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.6,
-        "recency": 14.8,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "technology_ai",
       "sector_label": "Technology & AI / Semiconductors",
@@ -629,6 +565,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 15.9,
         "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income",
+      "confidence": 91.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -72.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 15,
+      "latest_at": "17 Sep 2026 21:33 UTC",
+      "headline": "Global Market: Fed rate hike signals tougher road ahead for stocks, bonds",
+      "regions": [
+        "asia_pacific",
+        "americas",
+        "europe",
+        "middle_east"
+      ],
+      "sources": [
+        "World News - Breaking international news and headlines | Sky News",
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "Finance"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.6,
+        "recency": 13.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -888,57 +877,6 @@
       }
     },
     {
-      "sector_key": "commodities_mining",
-      "sector_label": "Commodities & Mining",
-      "confidence": 70.0,
-      "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "16 Sep 2026 14:43 UTC",
-      "headline": "Canada invited to become EU\u2019s first \u2018associate member\u2019 as Trump trade war intensifies",
-      "regions": [
-        "middle_east",
-        "global",
-        "asia_pacific",
-        "europe"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "EE Times",
-        "BBC News",
-        "Oilprice.com"
-      ],
-      "primary_etf": "DBC",
-      "top_etfs": [
-        "DBC",
-        "COPP",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF"
-      ],
-      "global_etfs": [
-        "DBC",
-        "COPP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 10.6,
-        "volume_confirmation": 12.6,
-        "source_diversity": 11.1,
-        "recency": 16.8,
-        "geopolitical_severity": 11.6
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 69.0,
@@ -1183,6 +1121,56 @@
       }
     },
     {
+      "sector_key": "commodities_mining",
+      "sector_label": "Commodities & Mining",
+      "confidence": 63.0,
+      "severity": "MEDIUM",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 4,
+      "latest_at": "17 Sep 2026 20:27 UTC",
+      "headline": "Suspended Glencore Executive Told Radiant \u2018Say Nothing on Email\u2019",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "europe"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "Oilprice.com",
+        "Bloomberg Markets",
+        "BBC News"
+      ],
+      "primary_etf": "DBC",
+      "top_etfs": [
+        "DBC",
+        "COPP",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF"
+      ],
+      "global_etfs": [
+        "DBC",
+        "COPP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 9.1,
+        "volume_confirmation": 9.7,
+        "source_diversity": 12.6,
+        "recency": 11.8,
+        "geopolitical_severity": 11.6
+      }
+    },
+    {
       "sector_key": "emerging_markets",
       "sector_label": "Emerging Markets + Bearish Market / Macro Selloff",
       "confidence": 63.0,
@@ -1286,11 +1274,6 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Gold & Precious Metals - 30 articles - CRITICAL / BEARISH - Infosys, TCS, other IT stocks in focus after first Fed rate hike in 3 years. Will inflationary pressures offset anti-AI euphoria?"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Technology & AI / Semiconductors - 79 articles - HIGH / BEARISH - SK hynix reportedly discussing US memory chip manufacturing with Intel \u2014 options include leasing Ohio plant or forming joint venture with other AI hyperscalers"
     },
     {
@@ -1302,6 +1285,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Defense & Aerospace - 34 articles - HIGH / BEARISH - US Navy awards defense startup $200 million for Blackbeard hypersonic missile"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income - 15 articles - CRITICAL / BEARISH - Global Market: Fed rate hike signals tougher road ahead for stocks, bonds"
     },
     {
       "tag": "tag-bull",
@@ -1331,11 +1319,6 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Commodities & Mining - 6 articles - MEDIUM / BEARISH - Canada invited to become EU\u2019s first \u2018associate member\u2019 as Trump trade war intensifies"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Clean Energy & Renewables - 6 articles - MEDIUM / BEARISH - GR Infraprojects shares drop 2% after terminating contract with NTPC. Here\u2019s why"
     },
     {
@@ -1357,6 +1340,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Nuclear Energy & Uranium - 4 articles - HIGH / BEARISH - Taiwan Mulls Nuclear Revival to Cut Its LNG Exposure"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Commodities & Mining - 4 articles - MEDIUM / BEARISH - Suspended Glencore Executive Told Radiant \u2018Say Nothing on Email\u2019"
     },
     {
       "tag": "tag-bear",
@@ -1409,9 +1397,9 @@
       "region": "UK",
       "price": 10816.14,
       "currency": "GBP",
-      "change": 127.64,
-      "change_pct": 1.19,
-      "change_str": "+1.19%",
+      "change": 158.04,
+      "change_pct": 1.48,
+      "change_str": "+1.48%",
       "direction": "up"
     },
     {
@@ -1420,9 +1408,9 @@
       "region": "EU",
       "price": 25716.71,
       "currency": "EUR",
-      "change": 178.96,
-      "change_pct": 0.7,
-      "change_str": "+0.70%",
+      "change": 314.43,
+      "change_pct": 1.24,
+      "change_str": "+1.24%",
       "direction": "up"
     },
     {
@@ -1462,44 +1450,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4380.6,
+      "price": 4381.9,
       "currency": "USD",
-      "change": -6.9,
-      "change_pct": -0.16,
-      "change_str": "-0.16%",
+      "change": -5.6,
+      "change_pct": -0.13,
+      "change_str": "-0.13%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 101.09,
+      "price": 101.23,
       "currency": "USD",
-      "change": -1.34,
-      "change_pct": -1.31,
-      "change_str": "-1.31%",
+      "change": -1.2,
+      "change_pct": -1.17,
+      "change_str": "-1.17%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 76436.65,
+      "price": 76392.95,
       "currency": "USD",
-      "change": 286.33,
-      "change_pct": 0.38,
-      "change_str": "+0.38%",
+      "change": 242.63,
+      "change_pct": 0.32,
+      "change_str": "+0.32%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.22,
+      "price": 100.25,
       "currency": "USD",
-      "change": -0.09,
-      "change_pct": -0.09,
-      "change_str": "-0.09%",
+      "change": -0.06,
+      "change_pct": -0.06,
+      "change_str": "-0.06%",
       "direction": "down"
     },
     {
@@ -1554,26 +1542,26 @@
       "matrix": {
         "CIBR": {
           "CIBR": 1.0,
-          "DBC": 0.045,
-          "EWJ": 0.104,
-          "XLE": -0.073
+          "DBC": 0.059,
+          "EWJ": 0.086,
+          "XLE": -0.086
         },
         "DBC": {
-          "CIBR": 0.045,
+          "CIBR": 0.059,
           "DBC": 1.0,
-          "EWJ": -0.535,
-          "XLE": 0.629
+          "EWJ": -0.523,
+          "XLE": 0.657
         },
         "EWJ": {
-          "CIBR": 0.104,
-          "DBC": -0.535,
+          "CIBR": 0.086,
+          "DBC": -0.523,
           "EWJ": 1.0,
-          "XLE": -0.194
+          "XLE": -0.226
         },
         "XLE": {
-          "CIBR": -0.073,
-          "DBC": 0.629,
-          "EWJ": -0.194,
+          "CIBR": -0.086,
+          "DBC": 0.657,
+          "EWJ": -0.226,
           "XLE": 1.0
         }
       },
@@ -1583,12 +1571,12 @@
         "EWJ",
         "XLE"
       ],
-      "max_corr": 0.629,
+      "max_corr": 0.657,
       "max_corr_pair": [
         "DBC",
         "XLE"
       ],
-      "most_negative_corr": -0.535,
+      "most_negative_corr": -0.523,
       "most_negative_pair": [
         "DBC",
         "EWJ"
@@ -1597,21 +1585,21 @@
     },
     "volatility": {
       "per_ticker": {
-        "XLE": 18.49,
-        "DBC": 18.29,
-        "EWJ": 13.78,
-        "CIBR": 41.4
+        "XLE": 18.8,
+        "DBC": 18.56,
+        "EWJ": 13.82,
+        "CIBR": 42.22
       },
-      "portfolio_avg_vol_pct": 22.99,
+      "portfolio_avg_vol_pct": 23.35,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 0.65,
+      "benchmark_return_pct": -0.48,
       "benchmark_price_start": 757.67,
-      "benchmark_price_now": 762.6,
+      "benchmark_price_now": 754.05,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": 2.05,
-      "alpha": 1.4
+      "alpha": 2.53
     },
     "rebalance": {
       "alerts": [
@@ -1817,12 +1805,12 @@
     }
   },
   "logs": [
-    "2026-09-17 21:13:06 [INFO] AZALYST - status.json generated",
-    "2026-09-17 21:13:06 [INFO] PORTFOLIO - NAV USD 20,275.33 | Return +2.05%",
-    "2026-09-17 21:13:06 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-17 21:13:06 [INFO] TRADER - Open positions: XLE, DBC, EWJ, CIBR",
-    "2026-09-17 21:13:06 [INFO] TRADER - Closed trades: 4",
-    "2026-09-17 21:13:06 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-09-18 00:13:48 [INFO] AZALYST - status.json generated",
+    "2026-09-18 00:13:48 [INFO] PORTFOLIO - NAV USD 20,275.33 | Return +2.05%",
+    "2026-09-18 00:13:48 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-18 00:13:48 [INFO] TRADER - Open positions: XLE, DBC, EWJ, CIBR",
+    "2026-09-18 00:13:48 [INFO] TRADER - Closed trades: 4",
+    "2026-09-18 00:13:48 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-09-17 21:13:03 UTC"
+  "generated_at": "2026-09-18 00:13:46 UTC"
 }
