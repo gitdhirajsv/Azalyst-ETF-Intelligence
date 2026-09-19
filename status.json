@@ -62,7 +62,7 @@
       "pnl_pct_str": "+5.54%",
       "confidence": 82,
       "severity": "MEDIUM",
-      "days_held": 30,
+      "days_held": 31,
       "half_exited": true
     },
     {
@@ -284,15 +284,15 @@
     }
   },
   "top_signal": {
-    "ticker": "QQQ",
-    "rank_score": 19.78501135503406,
+    "ticker": "IBIT",
+    "rank_score": 23.59091597274792,
     "flow_score": 22.0,
-    "options_score": 15.3,
+    "options_score": 0.0,
     "rotation_score": 0.0,
-    "macro_score": 0.0,
-    "news_score": 4.872,
-    "total": 61.957011355034055,
-    "publish": true,
+    "macro_score": 5.389178844009291,
+    "news_score": 5.04,
+    "total": 56.020094816757215,
+    "publish": false,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -365,6 +365,10 @@
       "score": 91.0
     },
     {
+      "symbol": "Crypto & Digital Assets",
+      "score": 90.0
+    },
+    {
       "symbol": "India Equity Markets",
       "score": 89.0
     },
@@ -373,8 +377,16 @@
       "score": 87.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 84.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 81.0
+    },
+    {
+      "symbol": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector",
+      "score": 81.0
+    },
+    {
+      "symbol": "Cybersecurity",
+      "score": 79.0
     },
     {
       "symbol": "Europe Equity",
@@ -385,20 +397,8 @@
       "score": 72.0
     },
     {
-      "symbol": "Bonds & Fixed Income",
-      "score": 71.0
-    },
-    {
       "symbol": "Clean Energy & Renewables",
       "score": 69.0
-    },
-    {
-      "symbol": "Cybersecurity",
-      "score": 69.0
-    },
-    {
-      "symbol": "Energy / Oil & Gas",
-      "score": 64.0
     },
     {
       "symbol": "Asia Pacific Equity",
@@ -580,6 +580,53 @@
       }
     },
     {
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 90.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 4.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 30,
+      "latest_at": "19 Sep 2026 19:14 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
+      "regions": [
+        "global",
+        "europe",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "Latest from Tom's Hardware",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 10.3,
+        "recency": 15.8,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 89.0,
@@ -589,20 +636,20 @@
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "19 Sep 2026 15:13 UTC",
+      "article_count": 23,
+      "latest_at": "19 Sep 2026 19:56 UTC",
       "headline": "Market wrap:  Adani Ports, Adani Ports SEZ, TCS, Tata Motors PV top gainers and losers on Nifty and Sensex on Friday",
       "regions": [
-        "global",
-        "middle_east",
         "india",
-        "asia_pacific"
+        "global",
+        "asia_pacific",
+        "middle_east"
       ],
       "sources": [
+        "Markets-Economic Times",
         "World | Deutsche Welle",
-        "World News - Breaking international news and headlines | Sky News",
-        "Semiconductor Engineering",
-        "Markets-Economic Times"
+        "BBC News",
+        "EE Times"
       ],
       "primary_etf": "INDA",
       "top_etfs": [
@@ -626,7 +673,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 15.3,
-        "recency": 17.0,
+        "recency": 16.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -684,49 +731,154 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 84.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 4.5,
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 81.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": 3.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 28,
-      "latest_at": "19 Sep 2026 09:39 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
+      "latest_at": "19 Sep 2026 14:47 UTC",
+      "headline": "Global Shipping Costs Explode as Hormuz Disruptions Hit Key Trade Routes",
       "regions": [
-        "europe",
         "global",
-        "middle_east",
-        "americas"
+        "europe",
+        "americas",
+        "asia_pacific"
       ],
       "sources": [
         "Markets-Economic Times",
-        "www.theregister.com - Articles",
+        "US Top News and Analysis",
+        "World | Deutsche Welle",
+        "BBC News"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.9,
+        "recency": 10.1,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 81.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -26.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 14,
+      "latest_at": "19 Sep 2026 13:40 UTC",
+      "headline": "Fed hike, RBI moves hand India bonds a fifth weekly loss",
+      "regions": [
+        "global",
+        "europe",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "Oilprice.com",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.4,
+        "recency": 9.1,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 79.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "19 Sep 2026 19:56 UTC",
+      "headline": "China's Salt Typhoon backdoors Latin American orgs with new snooping malware",
+      "regions": [
+        "global",
+        "americas",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "World News - Breaking international news and headlines | Sky News",
         "Cointelegraph.com News",
         "Latest from Tom's Hardware"
       ],
-      "primary_etf": "IBIT",
+      "primary_etf": "CIBR",
       "top_etfs": [
-        "IBIT",
-        "BITQ"
+        "CIBR",
+        "HACK"
       ],
       "access_markets": [
         "International-listed"
       ],
       "india_etfs": [],
       "global_etfs": [
-        "IBIT",
-        "BITQ"
+        "CIBR",
+        "HACK"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 10.3,
-        "recency": 9.7,
+        "signal_strength": 14.4,
+        "volume_confirmation": 14.6,
+        "source_diversity": 10.4,
+        "recency": 16.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -833,57 +985,6 @@
       }
     },
     {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income",
-      "confidence": 71.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 14,
-      "latest_at": "19 Sep 2026 04:21 UTC",
-      "headline": "Fed hike, RBI moves hand India bonds a fifth weekly loss",
-      "regions": [
-        "europe",
-        "global",
-        "middle_east",
-        "americas"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "Cointelegraph.com News"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 20.1,
-        "volume_confirmation": 18.0,
-        "source_diversity": 8.7,
-        "recency": 5.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 69.0,
@@ -933,106 +1034,6 @@
         "source_diversity": 12.6,
         "recency": 12.1,
         "geopolitical_severity": 12.1
-      }
-    },
-    {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 69.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 7,
-      "latest_at": "19 Sep 2026 07:42 UTC",
-      "headline": "China's Salt Typhoon backdoors Latin American orgs with new snooping malware",
-      "regions": [
-        "global",
-        "middle_east",
-        "americas",
-        "asia_pacific"
-      ],
-      "sources": [
-        "World News - Breaking international news and headlines | Sky News",
-        "Cointelegraph.com News",
-        "Latest from Tom's Hardware",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 13.6,
-        "volume_confirmation": 13.7,
-        "source_diversity": 10.4,
-        "recency": 8.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 64.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": 4.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 36,
-      "latest_at": "18 Sep 2026 21:00 UTC",
-      "headline": "Global Shipping Costs Explode as Hormuz Disruptions Hit Key Trade Routes",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "americas",
-        "europe"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "Bloomberg Markets",
-        "Oilprice.com"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.4,
-        "recency": 13.8,
-        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1302,9 +1303,14 @@
       "text": "Gold & Precious Metals - 22 articles - HIGH / BEARISH - Rising oil, borrowing costs fuel stagflation fears for global economy"
     },
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Crypto & Digital Assets - 30 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "India Equity Markets - 24 articles - HIGH / BEARISH - Market wrap:  Adani Ports, Adani Ports SEZ, TCS, Tata Motors PV top gainers and losers on Nifty and Sensex on Friday"
+      "text": "India Equity Markets - 23 articles - HIGH / BEARISH - Market wrap:  Adani Ports, Adani Ports SEZ, TCS, Tata Motors PV top gainers and losers on Nifty and Sensex on Friday"
     },
     {
       "tag": "tag-bull",
@@ -1312,9 +1318,19 @@
       "text": "Technology & AI / Semiconductors - 78 articles - HIGH / BULLISH - Chip Industry Week In Review"
     },
     {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Energy / Oil & Gas - 28 articles - CRITICAL / BEARISH - Global Shipping Costs Explode as Hormuz Disruptions Hit Key Trade Routes"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector - 14 articles - CRITICAL / BEARISH - Fed hike, RBI moves hand India bonds a fifth weekly loss"
+    },
+    {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Crypto & Digital Assets - 28 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
+      "text": "Cybersecurity - 8 articles - HIGH / BULLISH - China's Salt Typhoon backdoors Latin American orgs with new snooping malware"
     },
     {
       "tag": "tag-bear",
@@ -1329,22 +1345,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Bonds & Fixed Income - 14 articles - HIGH / BEARISH - Fed hike, RBI moves hand India bonds a fifth weekly loss"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Clean Energy & Renewables - 6 articles - MEDIUM / BEARISH - GR Infraprojects shares drop 2% after terminating contract with NTPC. Here\u2019s why"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Cybersecurity - 7 articles - HIGH / BULLISH - China's Salt Typhoon backdoors Latin American orgs with new snooping malware"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Energy / Oil & Gas - 36 articles - CRITICAL / BEARISH - Global Shipping Costs Explode as Hormuz Disruptions Hit Key Trade Routes"
     },
     {
       "tag": "tag-bull",
@@ -1487,11 +1488,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 81598.66,
+      "price": 81385.49,
       "currency": "USD",
-      "change": 697.2,
-      "change_pct": 0.86,
-      "change_str": "+0.86%",
+      "change": 484.03,
+      "change_pct": 0.6,
+      "change_str": "+0.60%",
       "direction": "up"
     },
     {
@@ -1810,12 +1811,12 @@
     }
   },
   "logs": [
-    "2026-09-19 15:20:23 [INFO] AZALYST - status.json generated",
-    "2026-09-19 15:20:23 [INFO] PORTFOLIO - NAV USD 20,229.08 | Return +1.78%",
-    "2026-09-19 15:20:23 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-19 15:20:23 [INFO] TRADER - Open positions: XLE, DBC, EWJ, CIBR",
-    "2026-09-19 15:20:23 [INFO] TRADER - Closed trades: 4",
-    "2026-09-19 15:20:23 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-09-19 20:06:20 [INFO] AZALYST - status.json generated",
+    "2026-09-19 20:06:20 [INFO] PORTFOLIO - NAV USD 20,229.08 | Return +1.78%",
+    "2026-09-19 20:06:20 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-19 20:06:20 [INFO] TRADER - Open positions: XLE, DBC, EWJ, CIBR",
+    "2026-09-19 20:06:20 [INFO] TRADER - Closed trades: 4",
+    "2026-09-19 20:06:20 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-09-19 15:20:21 UTC"
+  "generated_at": "2026-09-19 20:06:10 UTC"
 }
