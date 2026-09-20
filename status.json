@@ -108,7 +108,7 @@
       "pnl_pct_str": "-1.36%",
       "confidence": 78,
       "severity": "MEDIUM",
-      "days_held": 4,
+      "days_held": 5,
       "half_exited": false
     }
   ],
@@ -285,13 +285,13 @@
   },
   "top_signal": {
     "ticker": "IBIT",
-    "rank_score": 23.59091597274792,
+    "rank_score": 23.58909090909091,
     "flow_score": 22.0,
     "options_score": 0.0,
     "rotation_score": 0.0,
-    "macro_score": 5.389178844009291,
-    "news_score": 5.04,
-    "total": 56.020094816757215,
+    "macro_score": 4.936914532458935,
+    "news_score": 4.592,
+    "total": 55.11800544154985,
     "publish": false,
     "direction": "long"
   },
@@ -365,10 +365,6 @@
       "score": 91.0
     },
     {
-      "symbol": "Crypto & Digital Assets",
-      "score": 90.0
-    },
-    {
       "symbol": "India Equity Markets",
       "score": 89.0
     },
@@ -377,19 +373,19 @@
       "score": 87.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 81.0
+      "symbol": "Crypto & Digital Assets",
+      "score": 82.0
     },
     {
-      "symbol": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector",
-      "score": 81.0
+      "symbol": "Energy / Oil & Gas",
+      "score": 82.0
     },
     {
       "symbol": "Cybersecurity",
       "score": 79.0
     },
     {
-      "symbol": "Europe Equity",
+      "symbol": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector",
       "score": 77.0
     },
     {
@@ -415,6 +411,10 @@
     {
       "symbol": "Emerging Markets + Bearish Market / Macro Selloff",
       "score": 63.0
+    },
+    {
+      "symbol": "Europe Equity",
+      "score": 62.0
     },
     {
       "symbol": "Real Estate & REITs",
@@ -580,53 +580,6 @@
       }
     },
     {
-      "sector_key": "crypto_digital",
-      "sector_label": "Crypto & Digital Assets",
-      "confidence": 90.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 4.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 30,
-      "latest_at": "19 Sep 2026 19:14 UTC",
-      "headline": "Here\u2019s what happened in crypto today",
-      "regions": [
-        "global",
-        "europe",
-        "americas",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Cointelegraph.com News",
-        "Latest from Tom's Hardware",
-        "www.theregister.com - Articles"
-      ],
-      "primary_etf": "IBIT",
-      "top_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "IBIT",
-        "BITQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 10.3,
-        "recency": 15.8,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
       "confidence": 89.0,
@@ -731,29 +684,76 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 81.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": 3.5,
+      "sector_key": "crypto_digital",
+      "sector_label": "Crypto & Digital Assets",
+      "confidence": 82.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 4.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
-      "latest_at": "19 Sep 2026 14:47 UTC",
-      "headline": "Global Shipping Costs Explode as Hormuz Disruptions Hit Key Trade Routes",
+      "article_count": 30,
+      "latest_at": "19 Sep 2026 19:14 UTC",
+      "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "global",
         "europe",
+        "india",
         "americas",
         "asia_pacific"
       ],
       "sources": [
+        "www.theregister.com - Articles",
         "Markets-Economic Times",
-        "US Top News and Analysis",
-        "World | Deutsche Welle",
-        "BBC News"
+        "Cointelegraph.com News",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "IBIT",
+      "top_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "IBIT",
+        "BITQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 10.3,
+        "recency": 7.8,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 82.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": 4.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 28,
+      "latest_at": "19 Sep 2026 23:00 UTC",
+      "headline": "Global Shipping Costs Explode as Hormuz Disruptions Hit Key Trade Routes",
+      "regions": [
+        "europe",
+        "americas",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "Oilprice.com",
+        "World | Deutsche Welle"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -778,15 +778,62 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 14.9,
-        "recency": 10.1,
+        "source_diversity": 14.4,
+        "recency": 11.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 79.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "20 Sep 2026 02:59 UTC",
+      "headline": "China's Salt Typhoon backdoors Latin American orgs with new snooping malware",
+      "regions": [
+        "global",
+        "middle_east",
+        "americas",
+        "asia_pacific"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "US Top News and Analysis",
+        "The Verge",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 14.4,
+        "volume_confirmation": 14.6,
+        "source_diversity": 10.4,
+        "recency": 17.0,
         "geopolitical_severity": 13.0
       }
     },
     {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 81.0,
+      "confidence": 77.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
       "direction_score": -26.5,
@@ -797,10 +844,10 @@
       "latest_at": "19 Sep 2026 13:40 UTC",
       "headline": "Fed hike, RBI moves hand India bonds a fifth weekly loss",
       "regions": [
-        "global",
         "europe",
         "americas",
-        "asia_pacific"
+        "asia_pacific",
+        "middle_east"
       ],
       "sources": [
         "Markets-Economic Times",
@@ -831,104 +878,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 13.4,
-        "recency": 9.1,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 79.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "19 Sep 2026 19:56 UTC",
-      "headline": "China's Salt Typhoon backdoors Latin American orgs with new snooping malware",
-      "regions": [
-        "global",
-        "americas",
-        "asia_pacific",
-        "middle_east"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "World News - Breaking international news and headlines | Sky News",
-        "Cointelegraph.com News",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.4,
-        "volume_confirmation": 14.6,
-        "source_diversity": 10.4,
-        "recency": 16.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "europe_equity",
-      "sector_label": "Europe Equity",
-      "confidence": 77.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -4.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "19 Sep 2026 09:00 UTC",
-      "headline": "Global Market: Eurozone bond yields set for weekly decline as ECB hike bets ease",
-      "regions": [
-        "global",
-        "europe",
-        "middle_east",
-        "india"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "Cointelegraph.com News",
-        "Markets-Economic Times",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "VGK",
-      "top_etfs": [
-        "VGK",
-        "IEV",
-        "EWU"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "VGK",
-        "IEV",
-        "EWU",
-        "EWG"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 16.1,
-        "volume_confirmation": 14.6,
-        "source_diversity": 13.8,
-        "recency": 9.1,
+        "recency": 4.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -1237,6 +1187,56 @@
       }
     },
     {
+      "sector_key": "europe_equity",
+      "sector_label": "Europe Equity",
+      "confidence": 62.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 6,
+      "latest_at": "18 Sep 2026 21:00 UTC",
+      "headline": "Global Market: Eurozone bond yields set for weekly decline as ECB hike bets ease",
+      "regions": [
+        "global",
+        "india",
+        "middle_east",
+        "europe"
+      ],
+      "sources": [
+        "Defense News",
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
+        "Oilprice.com"
+      ],
+      "primary_etf": "VGK",
+      "top_etfs": [
+        "VGK",
+        "IEV",
+        "EWU"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "VGK",
+        "IEV",
+        "EWU",
+        "EWG"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 14.7,
+        "volume_confirmation": 12.6,
+        "source_diversity": 10.8,
+        "recency": 0.8,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "real_estate_reit",
       "sector_label": "Real Estate & REITs",
       "confidence": 62.0,
@@ -1303,11 +1303,6 @@
       "text": "Gold & Precious Metals - 22 articles - HIGH / BEARISH - Rising oil, borrowing costs fuel stagflation fears for global economy"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Crypto & Digital Assets - 30 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "India Equity Markets - 23 articles - HIGH / BEARISH - Market wrap:  Adani Ports, Adani Ports SEZ, TCS, Tata Motors PV top gainers and losers on Nifty and Sensex on Friday"
@@ -1318,14 +1313,14 @@
       "text": "Technology & AI / Semiconductors - 78 articles - HIGH / BULLISH - Chip Industry Week In Review"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Energy / Oil & Gas - 28 articles - CRITICAL / BEARISH - Global Shipping Costs Explode as Hormuz Disruptions Hit Key Trade Routes"
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Crypto & Digital Assets - 30 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector - 14 articles - CRITICAL / BEARISH - Fed hike, RBI moves hand India bonds a fifth weekly loss"
+      "text": "Energy / Oil & Gas - 28 articles - CRITICAL / BEARISH - Global Shipping Costs Explode as Hormuz Disruptions Hit Key Trade Routes"
     },
     {
       "tag": "tag-bull",
@@ -1335,7 +1330,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Europe Equity - 8 articles - HIGH / BEARISH - Global Market: Eurozone bond yields set for weekly decline as ECB hike bets ease"
+      "text": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector - 14 articles - CRITICAL / BEARISH - Fed hike, RBI moves hand India bonds a fifth weekly loss"
     },
     {
       "tag": "tag-bull",
@@ -1366,6 +1361,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Emerging Markets + Bearish Market / Macro Selloff - 4 articles - MEDIUM / BEARISH - Global Market: China, Hong Kong stocks slip as weak economic data and property overhaul weigh"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Europe Equity - 6 articles - HIGH / BEARISH - Global Market: Eurozone bond yields set for weekly decline as ECB hike bets ease"
     },
     {
       "tag": "tag-bear",
@@ -1488,12 +1488,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 81385.49,
+      "price": 80444.01,
       "currency": "USD",
-      "change": 484.03,
-      "change_pct": 0.6,
-      "change_str": "+0.60%",
-      "direction": "up"
+      "change": -457.45,
+      "change_pct": -0.57,
+      "change_str": "-0.57%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
@@ -1811,12 +1811,12 @@
     }
   },
   "logs": [
-    "2026-09-19 20:06:20 [INFO] AZALYST - status.json generated",
-    "2026-09-19 20:06:20 [INFO] PORTFOLIO - NAV USD 20,229.08 | Return +1.78%",
-    "2026-09-19 20:06:20 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-19 20:06:20 [INFO] TRADER - Open positions: XLE, DBC, EWJ, CIBR",
-    "2026-09-19 20:06:20 [INFO] TRADER - Closed trades: 4",
-    "2026-09-19 20:06:20 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-09-20 03:07:55 [INFO] AZALYST - status.json generated",
+    "2026-09-20 03:07:55 [INFO] PORTFOLIO - NAV USD 20,229.08 | Return +1.78%",
+    "2026-09-20 03:07:55 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-20 03:07:55 [INFO] TRADER - Open positions: XLE, DBC, EWJ, CIBR",
+    "2026-09-20 03:07:55 [INFO] TRADER - Closed trades: 4",
+    "2026-09-20 03:07:55 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-09-19 20:06:10 UTC"
+  "generated_at": "2026-09-20 03:07:52 UTC"
 }
