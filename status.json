@@ -62,7 +62,7 @@
       "pnl_pct_str": "+5.54%",
       "confidence": 82,
       "severity": "MEDIUM",
-      "days_held": 31,
+      "days_held": 32,
       "half_exited": true
     },
     {
@@ -289,9 +289,9 @@
     "flow_score": 22.0,
     "options_score": 0.0,
     "rotation_score": 0.0,
-    "macro_score": 5.579671600283224,
-    "news_score": 4.311999999999999,
-    "total": 55.48258757303115,
+    "macro_score": 5.584422951311599,
+    "news_score": 4.255999999999999,
+    "total": 55.431338924059524,
     "publish": false,
     "direction": "long"
   },
@@ -373,20 +373,20 @@
       "score": 87.0
     },
     {
-      "symbol": "Banking & Financial Sector + Asia Pacific Equity",
-      "score": 87.0
-    },
-    {
       "symbol": "Bonds & Fixed Income + Gold & Precious Metals",
       "score": 87.0
     },
     {
+      "symbol": "Banking & Financial Sector + Asia Pacific Equity",
+      "score": 86.0
+    },
+    {
       "symbol": "Cybersecurity",
-      "score": 82.0
+      "score": 81.0
     },
     {
       "symbol": "Crypto & Digital Assets",
-      "score": 77.0
+      "score": 76.0
     },
     {
       "symbol": "Asia Pacific Equity",
@@ -585,23 +585,23 @@
       "confidence": 87.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": 7.0,
+      "direction_score": 5.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 27,
-      "latest_at": "20 Sep 2026 14:23 UTC",
+      "article_count": 26,
+      "latest_at": "20 Sep 2026 19:00 UTC",
       "headline": "Global Shipping Costs Explode as Hormuz Disruptions Hit Key Trade Routes",
       "regions": [
-        "asia_pacific",
-        "americas",
+        "europe",
         "middle_east",
-        "global"
+        "asia_pacific",
+        "americas"
       ],
       "sources": [
         "World | Deutsche Welle",
         "Cointelegraph.com News",
-        "World News - Breaking international news and headlines | Sky News",
+        "US Top News and Analysis",
         "BBC News"
       ],
       "primary_etf": "XLE",
@@ -628,7 +628,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 15.6,
-        "recency": 15.5,
+        "recency": 15.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -686,57 +686,6 @@
       }
     },
     {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector + Asia Pacific Equity",
-      "confidence": 87.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -11.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "20 Sep 2026 12:46 UTC",
-      "headline": "Yen slumps to two-week low after BOJ rate hike underwhelms",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "middle_east",
-        "global"
-      ],
-      "sources": [
-        "www.theregister.com - Articles",
-        "Cointelegraph.com News",
-        "Bloomberg Markets",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "BANKBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 16.2,
-        "source_diversity": 12.1,
-        "recency": 13.2,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income + Gold & Precious Metals",
       "confidence": 87.0,
@@ -789,29 +738,80 @@
       }
     },
     {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector + Asia Pacific Equity",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -11.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 10,
+      "latest_at": "20 Sep 2026 16:34 UTC",
+      "headline": "Yen slumps to two-week low after BOJ rate hike underwhelms",
+      "regions": [
+        "europe",
+        "middle_east",
+        "asia_pacific",
+        "americas"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "Cointelegraph.com News",
+        "US Top News and Analysis",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "BANKBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 16.2,
+        "source_diversity": 12.1,
+        "recency": 11.8,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "cybersecurity",
       "sector_label": "Cybersecurity",
-      "confidence": 82.0,
+      "confidence": 81.0,
       "severity": "HIGH",
       "direction": "BULLISH",
       "direction_score": 4.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 9,
-      "latest_at": "20 Sep 2026 15:18 UTC",
+      "article_count": 8,
+      "latest_at": "20 Sep 2026 20:11 UTC",
       "headline": "Humans, not rogue AI, are still the biggest cybersecurity risk to energy systems",
       "regions": [
-        "asia_pacific",
+        "india",
         "middle_east",
-        "americas",
-        "global"
+        "asia_pacific",
+        "americas"
       ],
       "sources": [
         "www.theregister.com - Articles",
-        "Tech",
         "Cointelegraph.com News",
-        "World News - Breaking international news and headlines | Sky News"
+        "US Top News and Analysis",
+        "The Verge"
       ],
       "primary_etf": "CIBR",
       "top_etfs": [
@@ -828,8 +828,8 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 15.3,
-        "volume_confirmation": 15.4,
+        "signal_strength": 14.6,
+        "volume_confirmation": 14.6,
         "source_diversity": 11.5,
         "recency": 16.9,
         "geopolitical_severity": 13.0
@@ -838,7 +838,7 @@
     {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
-      "confidence": 77.0,
+      "confidence": 76.0,
       "severity": "HIGH",
       "direction": "BULLISH",
       "direction_score": 3.0,
@@ -849,16 +849,16 @@
       "latest_at": "19 Sep 2026 19:18 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "asia_pacific",
-        "americas",
         "india",
-        "global"
+        "middle_east",
+        "europe",
+        "asia_pacific"
       ],
       "sources": [
+        "Latest from Tom's Hardware",
         "www.theregister.com - Articles",
-        "Markets-Economic Times",
         "Cointelegraph.com News",
-        "Latest from Tom's Hardware"
+        "Markets-Economic Times"
       ],
       "primary_etf": "IBIT",
       "top_etfs": [
@@ -878,7 +878,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 10.3,
-        "recency": 2.3,
+        "recency": 1.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -1303,7 +1303,7 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 27 articles - CRITICAL / BEARISH - Global Shipping Costs Explode as Hormuz Disruptions Hit Key Trade Routes"
+      "text": "Energy / Oil & Gas - 26 articles - CRITICAL / BEARISH - Global Shipping Costs Explode as Hormuz Disruptions Hit Key Trade Routes"
     },
     {
       "tag": "tag-bull",
@@ -1313,17 +1313,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Banking & Financial Sector + Asia Pacific Equity - 10 articles - HIGH / BEARISH - Yen slumps to two-week low after BOJ rate hike underwhelms"
+      "text": "Bonds & Fixed Income + Gold & Precious Metals - 13 articles - HIGH / BEARISH - ETMarkets Smart Talk | India may see 50 bps of rate hikes in 2026 as Fed tightens: Garima Kapoor"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Bonds & Fixed Income + Gold & Precious Metals - 13 articles - HIGH / BEARISH - ETMarkets Smart Talk | India may see 50 bps of rate hikes in 2026 as Fed tightens: Garima Kapoor"
+      "text": "Banking & Financial Sector + Asia Pacific Equity - 10 articles - HIGH / BEARISH - Yen slumps to two-week low after BOJ rate hike underwhelms"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Cybersecurity - 9 articles - HIGH / BULLISH - Humans, not rogue AI, are still the biggest cybersecurity risk to energy systems"
+      "text": "Cybersecurity - 8 articles - HIGH / BULLISH - Humans, not rogue AI, are still the biggest cybersecurity risk to energy systems"
     },
     {
       "tag": "tag-bull",
@@ -1486,11 +1486,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 80780.96,
+      "price": 81130.06,
       "currency": "USD",
-      "change": -452.72,
-      "change_pct": -0.56,
-      "change_str": "-0.56%",
+      "change": -103.62,
+      "change_pct": -0.13,
+      "change_str": "-0.13%",
       "direction": "down"
     },
     {
@@ -1809,12 +1809,12 @@
     }
   },
   "logs": [
-    "2026-09-20 15:24:59 [INFO] AZALYST - status.json generated",
-    "2026-09-20 15:24:59 [INFO] PORTFOLIO - NAV USD 20,232.67 | Return +1.78%",
-    "2026-09-20 15:24:59 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-20 15:24:59 [INFO] TRADER - Open positions: XLE, DBC, EWJ, CIBR",
-    "2026-09-20 15:24:59 [INFO] TRADER - Closed trades: 4",
-    "2026-09-20 15:24:59 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-09-20 20:19:14 [INFO] AZALYST - status.json generated",
+    "2026-09-20 20:19:14 [INFO] PORTFOLIO - NAV USD 20,232.67 | Return +1.78%",
+    "2026-09-20 20:19:14 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-20 20:19:14 [INFO] TRADER - Open positions: XLE, DBC, EWJ, CIBR",
+    "2026-09-20 20:19:14 [INFO] TRADER - Closed trades: 4",
+    "2026-09-20 20:19:14 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-09-20 15:24:57 UTC"
+  "generated_at": "2026-09-20 20:19:12 UTC"
 }
