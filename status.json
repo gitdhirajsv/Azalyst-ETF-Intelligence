@@ -294,7 +294,7 @@
     "risk_state": "RISK_ON",
     "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.047081402150597626,
+    "spy_excess_vs_tbill_3m": 0.015826374380994306,
     "vix_level": 14.869999885559082,
     "vix_percentile_1y": 0.07142857142857142,
     "weight_matrix": {
@@ -307,16 +307,16 @@
     }
   },
   "top_signal": {
-    "ticker": "XLK",
-    "rank_score": 24.176800606520093,
-    "flow_score": 22.0,
+    "ticker": "XLE",
+    "rank_score": 0.0,
+    "flow_score": 4.755249113108552,
     "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 1.5988206624513581,
-    "news_score": 5.264,
-    "total": 68.03962126897144,
-    "publish": true,
-    "direction": "long"
+    "macro_score": 0.0,
+    "news_score": 6.58,
+    "total": 26.335249113108553,
+    "publish": false,
+    "direction": "short"
   },
   "jlaw_risk": {
     "distribution_count": 3,
@@ -412,11 +412,11 @@
       "score": 88.0
     },
     {
-      "symbol": "Bonds & Fixed Income + Gold & Precious Metals",
-      "score": 83.0
+      "symbol": "Bonds & Fixed Income",
+      "score": 81.0
     },
     {
-      "symbol": "Cybersecurity",
+      "symbol": "Europe Equity",
       "score": 74.0
     },
     {
@@ -432,12 +432,12 @@
       "score": 69.0
     },
     {
-      "symbol": "Europe Equity",
+      "symbol": "Asia Pacific Equity",
       "score": 68.0
     },
     {
-      "symbol": "Asia Pacific Equity",
-      "score": 68.0
+      "symbol": "Cybersecurity",
+      "score": 65.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -816,28 +816,28 @@
     },
     {
       "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income + Gold & Precious Metals",
-      "confidence": 83.0,
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 81.0,
       "severity": "HIGH",
       "direction": "BEARISH",
-      "direction_score": -4.0,
+      "direction_score": -2.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "21 Sep 2026 06:20 UTC",
-      "headline": "Global Markets: 5 key things to watch out for this week",
+      "article_count": 15,
+      "latest_at": "21 Sep 2026 21:40 UTC",
+      "headline": "Global Market: Euro area bond yields fall as oil prices ease",
       "regions": [
-        "global",
-        "asia_pacific",
+        "middle_east",
         "americas",
-        "europe"
+        "asia_pacific",
+        "global"
       ],
       "sources": [
+        "Markets-Economic Times",
+        "Cointelegraph.com News",
         "Bloomberg Markets",
-        "Semiconductor Engineering",
-        "US Top News and Analysis",
-        "Cointelegraph.com News"
+        "US Top News and Analysis"
       ],
       "primary_etf": "BND",
       "top_etfs": [
@@ -859,57 +859,59 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 19.9,
+        "signal_strength": 18.3,
         "volume_confirmation": 18.0,
-        "source_diversity": 12.1,
-        "recency": 14.5,
+        "source_diversity": 13.6,
+        "recency": 12.5,
         "geopolitical_severity": 13.0
       }
     },
     {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
+      "sector_key": "europe_equity",
+      "sector_label": "Europe Equity",
       "confidence": 74.0,
       "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 4.0,
+      "direction": "BEARISH",
+      "direction_score": 1.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "21 Sep 2026 07:54 UTC",
-      "headline": "Humans, not rogue AI, are still the biggest cybersecurity risk to energy systems",
+      "article_count": 7,
+      "latest_at": "21 Sep 2026 22:00 UTC",
+      "headline": "Wholesale Gas Prices Are Reaching Consumers Faster, ECB Says",
       "regions": [
-        "asia_pacific",
+        "europe",
         "global",
-        "americas",
-        "india"
+        "middle_east"
       ],
       "sources": [
-        "Latest from Tom's Hardware",
-        "US Top News and Analysis",
-        "www.theregister.com - Articles",
-        "The Verge"
+        "Markets-Economic Times",
+        "Oilprice.com",
+        "BBC News",
+        "Cointelegraph.com News"
       ],
-      "primary_etf": "CIBR",
+      "primary_etf": "VGK",
       "top_etfs": [
-        "CIBR",
-        "HACK"
+        "VGK",
+        "IEV",
+        "EWU"
       ],
       "access_markets": [
         "International-listed"
       ],
       "india_etfs": [],
       "global_etfs": [
-        "CIBR",
-        "HACK"
+        "VGK",
+        "IEV",
+        "EWU",
+        "EWG"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 12.4,
-        "volume_confirmation": 12.6,
-        "source_diversity": 9.5,
-        "recency": 17.0,
+        "signal_strength": 15.0,
+        "volume_confirmation": 13.7,
+        "source_diversity": 11.8,
+        "recency": 12.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -1067,55 +1069,6 @@
       }
     },
     {
-      "sector_key": "europe_equity",
-      "sector_label": "Europe Equity",
-      "confidence": 68.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 1.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 6,
-      "latest_at": "21 Sep 2026 14:30 UTC",
-      "headline": "Wholesale Gas Prices Are Reaching Consumers Faster, ECB Says",
-      "regions": [
-        "middle_east",
-        "europe",
-        "global"
-      ],
-      "sources": [
-        "Oilprice.com",
-        "Cointelegraph.com News",
-        "BBC News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "VGK",
-      "top_etfs": [
-        "VGK",
-        "IEV",
-        "EWU"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "VGK",
-        "IEV",
-        "EWU",
-        "EWG"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.3,
-        "volume_confirmation": 12.6,
-        "source_diversity": 11.8,
-        "recency": 10.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
       "confidence": 68.0,
@@ -1161,6 +1114,52 @@
         "volume_confirmation": 12.6,
         "source_diversity": 12.0,
         "recency": 15.8,
+        "geopolitical_severity": 10.4
+      }
+    },
+    {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 65.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "22 Sep 2026 00:39 UTC",
+      "headline": "North Korea used job interviews to deploy malware on 30,000 devices during coding tests \u2014 WaterPlum group loots $10.7 million in crypto and plants persistent RATs",
+      "regions": [
+        "americas",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "Latest from Tom's Hardware",
+        "Tech",
+        "www.theregister.com - Articles",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 9.2,
+        "volume_confirmation": 11.3,
+        "source_diversity": 10.3,
+        "recency": 16.8,
         "geopolitical_severity": 10.4
       }
     },
@@ -1354,12 +1353,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Bonds & Fixed Income + Gold & Precious Metals - 13 articles - HIGH / BEARISH - Global Markets: 5 key things to watch out for this week"
+      "text": "Bonds & Fixed Income - 15 articles - HIGH / BEARISH - Global Market: Euro area bond yields fall as oil prices ease"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Cybersecurity - 6 articles - HIGH / BULLISH - Humans, not rogue AI, are still the biggest cybersecurity risk to energy systems"
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Europe Equity - 7 articles - HIGH / BEARISH - Wholesale Gas Prices Are Reaching Consumers Faster, ECB Says"
     },
     {
       "tag": "tag-bull",
@@ -1377,14 +1376,14 @@
       "text": "Clean Energy & Renewables - 6 articles - MEDIUM / BEARISH - GR Infraprojects shares drop 2% after terminating contract with NTPC. Here\u2019s why"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Europe Equity - 6 articles - HIGH / BEARISH - Wholesale Gas Prices Are Reaching Consumers Faster, ECB Says"
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Asia Pacific Equity - 6 articles - MEDIUM / BULLISH - India becomes Asia\u2019s 4th-largest REIT market, overtakes Hong Kong: Cushman &amp; Wakefield"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Asia Pacific Equity - 6 articles - MEDIUM / BULLISH - India becomes Asia\u2019s 4th-largest REIT market, overtakes Hong Kong: Cushman &amp; Wakefield"
+      "text": "Cybersecurity - 5 articles - MEDIUM / BULLISH - North Korea used job interviews to deploy malware on 30,000 devices during coding tests \u2014 WaterPlum group loots $10.7 million in crypto and plants persistent RATs"
     },
     {
       "tag": "tag-bear",
@@ -1495,44 +1494,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4400.7,
+      "price": 4387.8,
       "currency": "USD",
-      "change": -24.2,
-      "change_pct": -0.55,
-      "change_str": "-0.55%",
+      "change": -37.1,
+      "change_pct": -0.84,
+      "change_str": "-0.84%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 92.15,
+      "price": 92.58,
       "currency": "USD",
-      "change": -8.15,
-      "change_pct": -8.13,
-      "change_str": "-8.13%",
+      "change": -7.72,
+      "change_pct": -7.7,
+      "change_str": "-7.70%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 86569.11,
+      "price": 86131.93,
       "currency": "USD",
-      "change": 5426.5,
-      "change_pct": 6.69,
-      "change_str": "+6.69%",
+      "change": 4989.32,
+      "change_pct": 6.15,
+      "change_str": "+6.15%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.42,
+      "price": 100.38,
       "currency": "USD",
-      "change": 0.2,
-      "change_pct": 0.2,
-      "change_str": "+0.20%",
+      "change": 0.16,
+      "change_pct": 0.16,
+      "change_str": "+0.16%",
       "direction": "up"
     },
     {
@@ -1592,37 +1591,37 @@
       "matrix": {
         "CIBR": {
           "CIBR": 1.0,
-          "DBC": 0.013,
-          "EWJ": 0.088,
-          "IBIT": 0.403,
-          "XLE": -0.192
+          "DBC": 0.079,
+          "EWJ": 0.041,
+          "IBIT": 0.343,
+          "XLE": -0.093
         },
         "DBC": {
-          "CIBR": 0.013,
+          "CIBR": 0.079,
           "DBC": 1.0,
-          "EWJ": -0.552,
-          "IBIT": -0.335,
-          "XLE": 0.658
+          "EWJ": -0.527,
+          "IBIT": -0.247,
+          "XLE": 0.629
         },
         "EWJ": {
-          "CIBR": 0.088,
-          "DBC": -0.552,
+          "CIBR": 0.041,
+          "DBC": -0.527,
           "EWJ": 1.0,
-          "IBIT": 0.289,
-          "XLE": -0.272
+          "IBIT": 0.219,
+          "XLE": -0.198
         },
         "IBIT": {
-          "CIBR": 0.403,
-          "DBC": -0.335,
-          "EWJ": 0.289,
+          "CIBR": 0.343,
+          "DBC": -0.247,
+          "EWJ": 0.219,
           "IBIT": 1.0,
-          "XLE": -0.454
+          "XLE": -0.288
         },
         "XLE": {
-          "CIBR": -0.192,
-          "DBC": 0.658,
-          "EWJ": -0.272,
-          "IBIT": -0.454,
+          "CIBR": -0.093,
+          "DBC": 0.629,
+          "EWJ": -0.198,
+          "IBIT": -0.288,
           "XLE": 1.0
         }
       },
@@ -1633,12 +1632,12 @@
         "IBIT",
         "XLE"
       ],
-      "max_corr": 0.658,
+      "max_corr": 0.629,
       "max_corr_pair": [
         "DBC",
         "XLE"
       ],
-      "most_negative_corr": -0.552,
+      "most_negative_corr": -0.527,
       "most_negative_pair": [
         "DBC",
         "EWJ"
@@ -1647,22 +1646,22 @@
     },
     "volatility": {
       "per_ticker": {
-        "XLE": 21.93,
-        "DBC": 19.09,
-        "EWJ": 14.43,
-        "CIBR": 42.73,
-        "IBIT": 45.44
+        "XLE": 19.66,
+        "DBC": 18.92,
+        "EWJ": 14.5,
+        "CIBR": 42.7,
+        "IBIT": 41.01
       },
-      "portfolio_avg_vol_pct": 28.72,
+      "portfolio_avg_vol_pct": 27.36,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 2.09,
+      "benchmark_return_pct": 0.53,
       "benchmark_price_start": 757.67,
-      "benchmark_price_now": 773.5,
+      "benchmark_price_now": 761.69,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": 0.71,
-      "alpha": -1.38
+      "alpha": 0.18
     },
     "rebalance": {
       "alerts": [
@@ -1908,12 +1907,12 @@
     }
   },
   "logs": [
-    "2026-09-21 23:12:29 [INFO] AZALYST - status.json generated",
-    "2026-09-21 23:12:29 [INFO] PORTFOLIO - NAV USD 20,032.44 | Return +0.71%",
-    "2026-09-21 23:12:29 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-21 23:12:29 [INFO] TRADER - Open positions: XLE, DBC, EWJ, CIBR, IBIT",
-    "2026-09-21 23:12:29 [INFO] TRADER - Closed trades: 4",
-    "2026-09-21 23:12:29 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-09-22 00:51:00 [INFO] AZALYST - status.json generated",
+    "2026-09-22 00:51:00 [INFO] PORTFOLIO - NAV USD 20,032.44 | Return +0.71%",
+    "2026-09-22 00:51:00 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-22 00:51:00 [INFO] TRADER - Open positions: XLE, DBC, EWJ, CIBR, IBIT",
+    "2026-09-22 00:51:00 [INFO] TRADER - Closed trades: 4",
+    "2026-09-22 00:51:00 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-09-21 23:12:25 UTC"
+  "generated_at": "2026-09-22 00:50:58 UTC"
 }
