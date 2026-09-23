@@ -85,7 +85,7 @@
       "pnl_pct_str": "+1.00%",
       "confidence": 78,
       "severity": "MEDIUM",
-      "days_held": 7,
+      "days_held": 8,
       "half_exited": false
     },
     {
@@ -287,7 +287,7 @@
     "risk_state": "RISK_ON",
     "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.04735000858640619,
+    "spy_excess_vs_tbill_3m": 0.0470239015497828,
     "vix_level": 14.210000038146973,
     "vix_percentile_1y": 0.01984126984126984,
     "weight_matrix": {
@@ -300,15 +300,15 @@
     }
   },
   "top_signal": {
-    "ticker": "EWY",
-    "rank_score": 19.398198198198195,
-    "flow_score": 10.765805754931051,
-    "options_score": 13.5,
+    "ticker": "XLK",
+    "rank_score": 0.0,
+    "flow_score": 5.5,
+    "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 3.4658821082414173,
-    "news_score": 3.066,
-    "total": 65.19588606137066,
-    "publish": true,
+    "macro_score": 2.804821065666209,
+    "news_score": 5.04,
+    "total": 28.34482106566621,
+    "publish": false,
     "direction": "long"
   },
   "jlaw_risk": {
@@ -373,10 +373,6 @@
       "score": 96.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 95.0
-    },
-    {
       "symbol": "Defense & Aerospace",
       "score": 93.0
     },
@@ -387,6 +383,10 @@
     {
       "symbol": "Gold & Precious Metals",
       "score": 91.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 90.0
     },
     {
       "symbol": "Energy / Oil & Gas",
@@ -486,59 +486,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.6,
         "recency": 16.7,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 95.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 78,
-      "latest_at": "22 Sep 2026 14:40 UTC",
-      "headline": "Concurrent HBM And Host Memory Access Improves LLM Inference Throughput (Georgia Tech, Nvidia, Stanford)",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "india",
-        "middle_east"
-      ],
-      "sources": [
-        "Cointelegraph.com News",
-        "EE Times",
-        "BBC News",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.7,
-        "recency": 17.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -691,6 +638,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.0,
         "recency": 15.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 90.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": -1.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 81,
+      "latest_at": "22 Sep 2026 20:43 UTC",
+      "headline": "Concurrent HBM And Host Memory Access Improves LLM Inference Throughput (Georgia Tech, Nvidia, Stanford)",
+      "regions": [
+        "middle_east",
+        "europe",
+        "global",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "The Verge",
+        "Cointelegraph.com News",
+        "World | Deutsche Welle"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.9,
+        "recency": 11.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -1304,11 +1304,6 @@
       "text": "Banking & Financial Sector + Bonds & Fixed Income + Gold & Precious Metals - 15 articles - HIGH / BEARISH - New York Fed's John Williams defends 'balance-sheet framework' amid policy review"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 78 articles - HIGH / BULLISH - Concurrent HBM And Host Memory Access Improves LLM Inference Throughput (Georgia Tech, Nvidia, Stanford)"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Defense & Aerospace - 31 articles - HIGH / BEARISH - U.S. Threatens to Ground Iranian Airlines Worldwide"
@@ -1322,6 +1317,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Gold & Precious Metals - 22 articles - HIGH / BEARISH - Rising oil, borrowing costs fuel stagflation fears for global economy"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Technology & AI / Semiconductors - 81 articles - HIGH / BULLISH - Concurrent HBM And Host Memory Access Improves LLM Inference Throughput (Georgia Tech, Nvidia, Stanford)"
     },
     {
       "tag": "tag-bear",
@@ -1424,10 +1424,10 @@
       "region": "UK",
       "price": 10708.33,
       "currency": "GBP",
-      "change": -30.67,
-      "change_pct": -0.29,
-      "change_str": "-0.29%",
-      "direction": "down"
+      "change": 49.23,
+      "change_pct": 0.46,
+      "change_str": "+0.46%",
+      "direction": "up"
     },
     {
       "label": "DAX",
@@ -1435,9 +1435,9 @@
       "region": "EU",
       "price": 25578.85,
       "currency": "EUR",
-      "change": 3.84,
-      "change_pct": 0.02,
-      "change_str": "+0.02%",
+      "change": 274.79,
+      "change_pct": 1.09,
+      "change_str": "+1.09%",
       "direction": "up"
     },
     {
@@ -1477,44 +1477,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4396.2,
+      "price": 4402.7,
       "currency": "USD",
-      "change": 12.3,
-      "change_pct": 0.28,
-      "change_str": "+0.28%",
+      "change": 18.8,
+      "change_pct": 0.43,
+      "change_str": "+0.43%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 89.85,
+      "price": 89.66,
       "currency": "USD",
-      "change": -5.93,
-      "change_pct": -6.19,
-      "change_str": "-6.19%",
+      "change": -6.12,
+      "change_pct": -6.39,
+      "change_str": "-6.39%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 86234.03,
+      "price": 86479.68,
       "currency": "USD",
-      "change": -368.88,
-      "change_pct": -0.43,
-      "change_str": "-0.43%",
+      "change": -123.23,
+      "change_pct": -0.14,
+      "change_str": "-0.14%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 100.53,
+      "price": 100.56,
       "currency": "USD",
-      "change": 0.1,
-      "change_pct": 0.1,
-      "change_str": "+0.10%",
+      "change": 0.13,
+      "change_pct": 0.13,
+      "change_str": "+0.13%",
       "direction": "up"
     },
     {
@@ -1569,26 +1569,26 @@
       "matrix": {
         "CIBR": {
           "CIBR": 1.0,
-          "DBC": 0.024,
-          "EWJ": 0.073,
-          "IBIT": 0.407
+          "DBC": 0.013,
+          "EWJ": 0.088,
+          "IBIT": 0.403
         },
         "DBC": {
-          "CIBR": 0.024,
+          "CIBR": 0.013,
           "DBC": 1.0,
-          "EWJ": -0.561,
-          "IBIT": -0.323
+          "EWJ": -0.552,
+          "IBIT": -0.335
         },
         "EWJ": {
-          "CIBR": 0.073,
-          "DBC": -0.561,
+          "CIBR": 0.088,
+          "DBC": -0.552,
           "EWJ": 1.0,
-          "IBIT": 0.274
+          "IBIT": 0.289
         },
         "IBIT": {
-          "CIBR": 0.407,
-          "DBC": -0.323,
-          "EWJ": 0.274,
+          "CIBR": 0.403,
+          "DBC": -0.335,
+          "EWJ": 0.289,
           "IBIT": 1.0
         }
       },
@@ -1598,12 +1598,12 @@
         "EWJ",
         "IBIT"
       ],
-      "max_corr": 0.407,
+      "max_corr": 0.403,
       "max_corr_pair": [
         "CIBR",
         "IBIT"
       ],
-      "most_negative_corr": -0.561,
+      "most_negative_corr": -0.552,
       "most_negative_pair": [
         "DBC",
         "EWJ"
@@ -1612,21 +1612,21 @@
     },
     "volatility": {
       "per_ticker": {
-        "DBC": 18.76,
-        "EWJ": 14.25,
-        "CIBR": 41.8,
-        "IBIT": 44.39
+        "DBC": 19.09,
+        "EWJ": 14.43,
+        "CIBR": 42.73,
+        "IBIT": 45.44
       },
-      "portfolio_avg_vol_pct": 29.8,
+      "portfolio_avg_vol_pct": 30.42,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 2.07,
+      "benchmark_return_pct": 2.09,
       "benchmark_price_start": 757.67,
-      "benchmark_price_now": 773.38,
+      "benchmark_price_now": 773.5,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": 0.16,
-      "alpha": -1.91
+      "alpha": -1.93
     },
     "rebalance": {
       "alerts": [
@@ -1842,12 +1842,12 @@
     }
   },
   "logs": [
-    "2026-09-22 21:15:47 [INFO] AZALYST - status.json generated",
-    "2026-09-22 21:15:47 [INFO] PORTFOLIO - NAV USD 19,969.78 | Return +0.16%",
-    "2026-09-22 21:15:47 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-22 21:15:47 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
-    "2026-09-22 21:15:47 [INFO] TRADER - Closed trades: 5",
-    "2026-09-22 21:15:47 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-09-23 00:25:23 [INFO] AZALYST - status.json generated",
+    "2026-09-23 00:25:23 [INFO] PORTFOLIO - NAV USD 19,969.78 | Return +0.16%",
+    "2026-09-23 00:25:23 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-23 00:25:23 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
+    "2026-09-23 00:25:23 [INFO] TRADER - Closed trades: 5",
+    "2026-09-23 00:25:23 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-09-22 21:15:45 UTC"
+  "generated_at": "2026-09-23 00:25:19 UTC"
 }
