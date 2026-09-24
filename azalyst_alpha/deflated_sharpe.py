@@ -41,7 +41,11 @@ def deflated_sharpe(
         else:
             sr0 = 0.0
     else:
-        sr0 = benchmark_sharpe
+        # ETF-10 fix (alpha post-mortem 2026-09-01): benchmark_sharpe is
+        # supplied ANNUALIZED (like realized_sharpe) but was compared to the
+        # per-period `sr` without conversion — mixed units made the deflation
+        # meaningless whenever a benchmark was passed. Convert it too.
+        sr0 = benchmark_sharpe / math.sqrt(252)
 
     sr = realized_sharpe / math.sqrt(252)  # convert to per-period
     if n_observations <= 1:

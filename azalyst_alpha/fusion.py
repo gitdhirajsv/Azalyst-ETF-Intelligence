@@ -182,7 +182,19 @@ def _regime_weighted_composite(
     )
 
 
-def run(book_value: float = 100_000, verbose: bool = True) -> dict:
+def run(book_value: float | None = None, verbose: bool = True) -> dict:
+    # ETF-09 remediation (alpha post-mortem 2026-09-01): sizing used a
+    # hardcoded $100,000 book regardless of the paper trader's actual
+    # equity, so position sizes never responded to PnL. Resolve the live
+    # book (cash + marked positions) from the v2 ledger; the hardcoded
+    # figure survives only as a first-run / failure fallback.
+    if book_value is None:
+        try:
+            from azalyst_alpha import paper_trader as _pt
+            book_value = _pt.mark_to_market()
+        except Exception as exc:
+            print(f"[book] live equity unavailable ({exc}); falling back to 100k")
+            book_value = 100_000
     if verbose: print("[regime] detecting...")
     regime = regime_engine.detect_regime()
     if verbose: print(f"  -> {regime.risk_state} / {regime.vol_regime} / VIX {regime.vix_level:.1f}")

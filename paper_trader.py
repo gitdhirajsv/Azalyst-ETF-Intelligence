@@ -987,19 +987,24 @@ class PaperPortfolio:
 
         usd_inr_rate   = self._fetch_usd_inr()
         budget_inr     = round(MONTHLY_BUDGET_USD * usd_inr_rate, 2)
-        deploy_half  = round(budget_inr * 0.50, 2)
-        reserve_half = round(budget_inr - deploy_half, 2)
 
-        self.cash_inr          += deploy_half
-        self.monthly_reserve_inr += reserve_half
+        # ETF-06 remediation (alpha post-mortem 2026-09-01): deposits used to
+        # be split 50/50 into deployable cash and a "monthly reserve" whose
+        # release condition (incoming confidence > max open-position
+        # confidence, see _should_release_reserve) could effectively never
+        # trigger once a high-confidence position existed. Combined with
+        # sizing off remaining cash, the book was structurally ~50%
+        # uninvested — it cannot beat a trending benchmark while holding half
+        # its capital idle. Deposits now go fully to deployable cash; the
+        # position sizer, sector caps, and circuit breaker are the risk
+        # controls, not an untouchable cash bucket.
+        self.cash_inr          += budget_inr
         self.total_deposited   += budget_inr
         self.monthly_deposits[month_key] = round(budget_inr, 2)
         log.info(
-            "Monthly deposit: $%s USD. "
-            "Deployed half: %.0f | Reserved half: %.0f | Cash: %.0f",
+            "Monthly deposit: $%s USD. Deployed in full: %.0f | Cash: %.0f",
             f"{MONTHLY_BUDGET_USD:,}",
-            deploy_half,
-            reserve_half,
+            budget_inr,
             self.cash_inr,
         )
         self.save()
@@ -1021,13 +1026,17 @@ class PaperPortfolio:
         return release
 
     def _should_release_reserve(self, signal: Dict) -> bool:
+        """ETF-06 remediation (alpha post-mortem 2026-09-01): the old
+        condition (incoming confidence must EXCEED the max open-position
+        confidence) was a deadlock — with a conf-96 position open, release
+        required conf > 96, so the reserve sat idle forever (₹475k of a
+        ₹1.9M book at the time of the post-mortem). New deposits no longer
+        feed the reserve at all (_process_monthly_deposit); this now only
+        drains any legacy persisted reserve using the same conf >= 75 bar
+        that qualifies a signal to trade in the first place."""
         if self.monthly_reserve_inr <= 0:
             return False
-        incoming_conf = signal.get("confidence", 0)
-        if not self.open_positions:
-            return incoming_conf >= 75
-        max_existing_conf = max(pos.confidence for pos in self.open_positions)
-        return incoming_conf > max_existing_conf
+        return signal.get("confidence", 0) >= 75
 
     def _total_market_value(self) -> float:
         hedge_val = sum(pos.current_value() for pos in getattr(self, "open_hedge_positions", []))
@@ -1721,7 +1730,17 @@ class PaperPortfolio:
             sector   = topup_target.sector
             instrument_risk = getattr(topup_target, "instrument_risk", instrument_risk)
 
-        target_alloc = round(min(self.cash_inr * fraction, self.cash_inr * MAX_SINGLE_POSITION_PCT), 2)
+        # ETF-07 remediation (alpha post-mortem 2026-09-01): sizing was a
+        # fraction of REMAINING CASH, not of the book — each successive entry
+        # sized off a shrinking pool, so deployment decayed geometrically
+        # (the live book held a $166 position on a $20k book: 0.8% of
+        # capital, unable to move the needle even if right). Fractions and
+        # the single-position cap now apply to portfolio value; available
+        # cash only bounds what can actually be spent.
+        sizing_base  = self._portfolio_value()
+        target_alloc = round(
+            min(sizing_base * fraction, sizing_base * MAX_SINGLE_POSITION_PCT, self.cash_inr), 2
+        )
         target_alloc = max(target_alloc, MIN_TRADE_INR)
 
         rotation_exits: List[Dict] = []
@@ -1745,7 +1764,12 @@ class PaperPortfolio:
             self._log_entry_rejection(ticker, signal, "price_unavailable")
             return None
 
-        alloc_inr = round(min(self.cash_inr * fraction, self.cash_inr * MAX_SINGLE_POSITION_PCT), 2)
+        # ETF-07: same portfolio-value basis as target_alloc above (recomputed
+        # here because a rotation exit may have just freed cash).
+        sizing_base = self._portfolio_value()
+        alloc_inr = round(
+            min(sizing_base * fraction, sizing_base * MAX_SINGLE_POSITION_PCT, self.cash_inr), 2
+        )
         alloc_inr = max(alloc_inr, MIN_TRADE_INR)
 
         sector_capacity = self._available_sector_capacity_inr(sector)
@@ -1946,8 +1970,15 @@ class PaperPortfolio:
                         exit_reason = f"Trailing stop hit ({change_pct * 100:.1f}%)"
                     else:
                         exit_reason = f"Stop-loss hit ({change_pct * 100:.1f}%)"
-                elif days >= 14 and change_pct <= -0.02:
-                    exit_reason = f"Time-based unclogging ({days} days, {change_pct * 100:.1f}%)"
+                # ETF-08 remediation (alpha post-mortem 2026-09-01): the
+                # 14-day "time-based unclogging" exit (force-close anything
+                # down >= 2% at day 14) is removed. It crystallized ordinary
+                # noise drawdowns as guaranteed realized losses — every
+                # current-era closed trade (EWJ -2.3%, XLV -2.7%) died this
+                # way, well inside its hard stop. Losses are now realized
+                # only by the stop engine (hard/trailing stops, sized to the
+                # instrument's volatility) or genuine max-hold expiry; a
+                # thesis gets its full stop-width of room, not 14 days.
                 elif days >= INVERSE_ETF_MAX_HOLD_DAYS.get(position.ticker, MAX_HOLD_DAYS):
                     exit_reason = f"Max hold period ({days} days)"
 

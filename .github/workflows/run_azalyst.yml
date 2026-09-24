@@ -55,7 +55,14 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
+          # data/paper_trader.db is the v2 alpha stack's ledger. It was never
+          # committed, so every CI run started from an EMPTY book: fusion
+          # re-"opened" the whole target portfolio each hour, could never
+          # close a dropped position, and its equity curve reset to $100k
+          # every run (alpha post-mortem 2026-09-01). Persisting it makes
+          # the v2 paper track record real.
           git add -f azalyst_portfolio.json azalyst_state.json status.json || true
+          git add -f data/paper_trader.db || true
           git diff --staged --quiet && echo "no state changes" && exit 0 || true
           git commit -m "chore: update portfolio and state [skip ci]"
           # Retry-with-rebase loop: cron and human pushes can land on main
