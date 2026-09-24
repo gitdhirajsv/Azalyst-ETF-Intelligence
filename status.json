@@ -85,7 +85,7 @@
       "pnl_pct_str": "+2.57%",
       "confidence": 78,
       "severity": "MEDIUM",
-      "days_held": 8,
+      "days_held": 9,
       "half_exited": false
     },
     {
@@ -287,7 +287,7 @@
     "risk_state": "RISK_ON",
     "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.03816185156386567,
+    "spy_excess_vs_tbill_3m": 0.04729250917768427,
     "vix_level": 15.180000305175781,
     "vix_percentile_1y": 0.11507936507936507,
     "weight_matrix": {
@@ -299,18 +299,7 @@
       "news": 7
     }
   },
-  "top_signal": {
-    "ticker": "SOXX",
-    "rank_score": 27.906976744186043,
-    "flow_score": 5.5,
-    "options_score": 0.0,
-    "rotation_score": 15.0,
-    "macro_score": 0.0,
-    "news_score": 5.264,
-    "total": 53.67097674418604,
-    "publish": false,
-    "direction": "long"
-  },
+  "top_signal": {},
   "jlaw_risk": {
     "distribution_count": 3,
     "risk_multiplier": 1.0,
@@ -421,11 +410,11 @@
       "score": 66.0
     },
     {
-      "symbol": "Cybersecurity",
-      "score": 65.0
+      "symbol": "Asia Pacific Equity",
+      "score": 64.0
     },
     {
-      "symbol": "Asia Pacific Equity",
+      "symbol": "Cybersecurity",
       "score": 64.0
     },
     {
@@ -1099,52 +1088,6 @@
       }
     },
     {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 65.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "22 Sep 2026 00:39 UTC",
-      "headline": "North Korea used job interviews to deploy malware on 30,000 devices during coding tests \u2014 WaterPlum group loots $10.7 million in crypto and plants persistent RATs",
-      "regions": [
-        "americas",
-        "asia_pacific",
-        "global"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "Tech",
-        "www.theregister.com - Articles",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 9.2,
-        "volume_confirmation": 11.3,
-        "source_diversity": 10.3,
-        "recency": 16.8,
-        "geopolitical_severity": 10.4
-      }
-    },
-    {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
       "confidence": 64.0,
@@ -1191,6 +1134,51 @@
         "source_diversity": 11.7,
         "recency": 15.0,
         "geopolitical_severity": 11.9
+      }
+    },
+    {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 64.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "23 Sep 2026 23:00 UTC",
+      "headline": "Windows CLOSEDQUORUM malware uses AI models to autonomously select post-compromise actions",
+      "regions": [
+        "europe",
+        "global",
+        "americas"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "Oilprice.com",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 11.5,
+        "volume_confirmation": 14.6,
+        "source_diversity": 6.1,
+        "recency": 14.7,
+        "geopolitical_severity": 9.9
       }
     },
     {
@@ -1364,12 +1352,12 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Cybersecurity - 5 articles - MEDIUM / BULLISH - North Korea used job interviews to deploy malware on 30,000 devices during coding tests \u2014 WaterPlum group loots $10.7 million in crypto and plants persistent RATs"
+      "text": "Asia Pacific Equity - 5 articles - MEDIUM / BULLISH - Global Market: South Korean stocks pare gains as investors turn cautious ahead of Chuseok break"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Asia Pacific Equity - 5 articles - MEDIUM / BULLISH - Global Market: South Korean stocks pare gains as investors turn cautious ahead of Chuseok break"
+      "text": "Cybersecurity - 8 articles - MEDIUM / BULLISH - Windows CLOSEDQUORUM malware uses AI models to autonomously select post-compromise actions"
     },
     {
       "tag": "tag-bear",
@@ -1422,10 +1410,10 @@
       "region": "UK",
       "price": 10705.26,
       "currency": "GBP",
-      "change": -33.74,
-      "change_pct": -0.31,
-      "change_str": "-0.31%",
-      "direction": "down"
+      "change": 46.16,
+      "change_pct": 0.43,
+      "change_str": "+0.43%",
+      "direction": "up"
     },
     {
       "label": "DAX",
@@ -1442,11 +1430,11 @@
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 65018.95,
+      "price": 66055.66,
       "currency": "JPY",
-      "change": 882.7,
-      "change_pct": 1.38,
-      "change_str": "+1.38%",
+      "change": 1036.71,
+      "change_pct": 1.59,
+      "change_str": "+1.59%",
       "direction": "up"
     },
     {
@@ -1475,44 +1463,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4328.1,
+      "price": 4323.9,
       "currency": "USD",
-      "change": -48.3,
-      "change_pct": -1.1,
-      "change_str": "-1.10%",
+      "change": -52.5,
+      "change_pct": -1.2,
+      "change_str": "-1.20%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 92.71,
+      "price": 91.64,
       "currency": "USD",
-      "change": -1.88,
-      "change_pct": -1.99,
-      "change_str": "-1.99%",
+      "change": -2.95,
+      "change_pct": -3.12,
+      "change_str": "-3.12%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 84596.66,
+      "price": 84323.93,
       "currency": "USD",
-      "change": -1575.62,
-      "change_pct": -1.83,
-      "change_str": "-1.83%",
+      "change": -1848.35,
+      "change_pct": -2.14,
+      "change_str": "-2.14%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.11,
+      "price": 101.14,
       "currency": "USD",
-      "change": 0.68,
-      "change_pct": 0.68,
-      "change_str": "+0.68%",
+      "change": 0.71,
+      "change_pct": 0.71,
+      "change_str": "+0.71%",
       "direction": "up"
     },
     {
@@ -1567,26 +1555,26 @@
       "matrix": {
         "CIBR": {
           "CIBR": 1.0,
-          "DBC": 0.016,
-          "EWJ": 0.077,
-          "IBIT": 0.4
+          "DBC": 0.013,
+          "EWJ": 0.088,
+          "IBIT": 0.403
         },
         "DBC": {
-          "CIBR": 0.016,
+          "CIBR": 0.013,
           "DBC": 1.0,
-          "EWJ": -0.561,
-          "IBIT": -0.34
+          "EWJ": -0.552,
+          "IBIT": -0.335
         },
         "EWJ": {
-          "CIBR": 0.077,
-          "DBC": -0.561,
+          "CIBR": 0.088,
+          "DBC": -0.552,
           "EWJ": 1.0,
-          "IBIT": 0.296
+          "IBIT": 0.289
         },
         "IBIT": {
-          "CIBR": 0.4,
-          "DBC": -0.34,
-          "EWJ": 0.296,
+          "CIBR": 0.403,
+          "DBC": -0.335,
+          "EWJ": 0.289,
           "IBIT": 1.0
         }
       },
@@ -1596,12 +1584,12 @@
         "EWJ",
         "IBIT"
       ],
-      "max_corr": 0.4,
+      "max_corr": 0.403,
       "max_corr_pair": [
         "CIBR",
         "IBIT"
       ],
-      "most_negative_corr": -0.561,
+      "most_negative_corr": -0.552,
       "most_negative_pair": [
         "DBC",
         "EWJ"
@@ -1610,21 +1598,21 @@
     },
     "volatility": {
       "per_ticker": {
-        "DBC": 18.74,
-        "EWJ": 14.58,
-        "CIBR": 41.66,
-        "IBIT": 44.08
+        "DBC": 19.09,
+        "EWJ": 14.43,
+        "CIBR": 42.73,
+        "IBIT": 44.39
       },
-      "portfolio_avg_vol_pct": 29.77,
+      "portfolio_avg_vol_pct": 30.16,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 1.34,
+      "benchmark_return_pct": 2.07,
       "benchmark_price_start": 757.67,
-      "benchmark_price_now": 767.81,
+      "benchmark_price_now": 773.38,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": 0.44,
-      "alpha": -0.9
+      "alpha": -1.63
     },
     "rebalance": {
       "alerts": [
@@ -1840,12 +1828,12 @@
     }
   },
   "logs": [
-    "2026-09-23 22:14:48 [INFO] AZALYST - status.json generated",
-    "2026-09-23 22:14:48 [INFO] PORTFOLIO - NAV USD 19,994.74 | Return +0.44%",
-    "2026-09-23 22:14:48 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-23 22:14:48 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
-    "2026-09-23 22:14:48 [INFO] TRADER - Closed trades: 5",
-    "2026-09-23 22:14:48 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-09-24 00:36:02 [INFO] AZALYST - status.json generated",
+    "2026-09-24 00:36:02 [INFO] PORTFOLIO - NAV USD 19,994.74 | Return +0.44%",
+    "2026-09-24 00:36:02 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-24 00:36:02 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
+    "2026-09-24 00:36:02 [INFO] TRADER - Closed trades: 5",
+    "2026-09-24 00:36:02 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-09-23 22:14:46 UTC"
+  "generated_at": "2026-09-24 00:36:00 UTC"
 }
