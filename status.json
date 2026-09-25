@@ -85,7 +85,7 @@
       "pnl_pct_str": "+0.53%",
       "confidence": 78,
       "severity": "MEDIUM",
-      "days_held": 9,
+      "days_held": 10,
       "half_exited": false
     },
     {
@@ -287,7 +287,7 @@
     "risk_state": "RISK_ON",
     "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.04483081581497313,
+    "spy_excess_vs_tbill_3m": 0.038061851659233106,
     "vix_level": 15.670000076293945,
     "vix_percentile_1y": 0.18253968253968253,
     "weight_matrix": {
@@ -299,18 +299,7 @@
       "news": 7
     }
   },
-  "top_signal": {
-    "ticker": "SMH",
-    "rank_score": 27.22543352601156,
-    "flow_score": 0.0,
-    "options_score": 18.607582853688967,
-    "rotation_score": 15.0,
-    "macro_score": 0.0,
-    "news_score": 5.264,
-    "total": 66.09701637970052,
-    "publish": true,
-    "direction": "long"
-  },
+  "top_signal": {},
   "jlaw_risk": {
     "distribution_count": 4,
     "risk_multiplier": 1.0,
@@ -373,12 +362,8 @@
       "score": 95.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
+      "symbol": "Banking & Financial Sector + Gold & Precious Metals + Bonds & Fixed Income",
       "score": 94.0
-    },
-    {
-      "symbol": "Banking & Financial Sector + Bonds & Fixed Income",
-      "score": 93.0
     },
     {
       "symbol": "Defense & Aerospace",
@@ -427,6 +412,10 @@
     {
       "symbol": "Energy / Oil & Gas",
       "score": 66.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 65.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -489,82 +478,29 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 94.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": -1.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 77,
-      "latest_at": "24 Sep 2026 07:03 UTC",
-      "headline": "Alibaba unveils Zhenwu V900 AI accelerator, claims it's 'the most powerful AI chip in China'",
-      "regions": [
-        "global",
-        "asia_pacific",
-        "india",
-        "europe"
-      ],
-      "sources": [
-        "US Top News and Analysis",
-        "Bloomberg Markets",
-        "BBC News",
-        "Tech"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.7,
-        "recency": 16.1,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector + Bonds & Fixed Income",
-      "confidence": 93.0,
-      "severity": "HIGH",
+      "sector_label": "Banking & Financial Sector + Gold & Precious Metals + Bonds & Fixed Income",
+      "confidence": 94.0,
+      "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -16.0,
+      "direction_score": -39.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "23 Sep 2026 17:54 UTC",
-      "headline": "India bonds little changed; traders track oil moves in run-up to RBI decision",
+      "article_count": 15,
+      "latest_at": "25 Sep 2026 00:00 UTC",
+      "headline": "Treasury rout, oil spike bleed Indian bonds; 10-year yield jumps most in over 2 months",
       "regions": [
         "middle_east",
-        "americas",
-        "europe",
-        "asia_pacific"
+        "india",
+        "asia_pacific",
+        "global"
       ],
       "sources": [
-        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "Oilprice.com",
         "Cointelegraph.com News",
-        "US Top News and Analysis",
-        "Bloomberg Markets"
+        "US Top News and Analysis"
       ],
       "primary_etf": "XLF",
       "top_etfs": [
@@ -586,9 +522,9 @@
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
-        "volume_confirmation": 17.4,
-        "source_diversity": 12.7,
-        "recency": 16.3,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.4,
+        "recency": 16.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -1196,6 +1132,59 @@
       }
     },
     {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 65.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 76,
+      "latest_at": "24 Sep 2026 23:07 UTC",
+      "headline": "Palo Alto CEO says slowing down AI is \u2018unrealistic\u2019, extinction threat \u2018extremely small\u2019",
+      "regions": [
+        "middle_east",
+        "india",
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Defense News",
+        "Oilprice.com",
+        "Semiconductor Engineering"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 17.2,
+        "recency": 14.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 63.0,
@@ -1304,14 +1293,9 @@
       "text": "Asia Pacific Equity + Bonds & Fixed Income + Banking & Financial Sector - 15 articles - HIGH / BEARISH - Global Market: Japan's Nikkei rises as CPU stocks surge on Meta gadget launch"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 77 articles - HIGH / BULLISH - Alibaba unveils Zhenwu V900 AI accelerator, claims it's 'the most powerful AI chip in China'"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Banking & Financial Sector + Bonds & Fixed Income - 12 articles - HIGH / BEARISH - India bonds little changed; traders track oil moves in run-up to RBI decision"
+      "text": "Banking & Financial Sector + Gold & Precious Metals + Bonds & Fixed Income - 15 articles - CRITICAL / BEARISH - Treasury rout, oil spike bleed Indian bonds; 10-year yield jumps most in over 2 months"
     },
     {
       "tag": "tag-bear",
@@ -1374,6 +1358,11 @@
       "text": "Energy / Oil & Gas - 26 articles - CRITICAL / BEARISH - Saudi Arabia Sells 100 Million Barrels of Crude to Asia via Hormuz"
     },
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Technology & AI / Semiconductors - 76 articles - HIGH / BULLISH - Palo Alto CEO says slowing down AI is \u2018unrealistic\u2019, extinction threat \u2018extremely small\u2019"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Nuclear Energy & Uranium - 4 articles - HIGH / BEARISH - Taiwan Mulls Nuclear Revival to Cut Its LNG Exposure"
@@ -1424,9 +1413,9 @@
       "region": "UK",
       "price": 10679.99,
       "currency": "GBP",
-      "change": -25.31,
-      "change_pct": -0.24,
-      "change_str": "-0.24%",
+      "change": -59.01,
+      "change_pct": -0.55,
+      "change_str": "-0.55%",
       "direction": "down"
     },
     {
@@ -1444,11 +1433,11 @@
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 65513.99,
+      "price": 65822.91,
       "currency": "JPY",
-      "change": 1377.74,
-      "change_pct": 2.15,
-      "change_str": "+2.15%",
+      "change": 803.96,
+      "change_pct": 1.24,
+      "change_str": "+1.24%",
       "direction": "up"
     },
     {
@@ -1477,44 +1466,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4310.8,
+      "price": 4303.7,
       "currency": "USD",
-      "change": -7.6,
-      "change_pct": -0.18,
-      "change_str": "-0.18%",
+      "change": -14.7,
+      "change_pct": -0.34,
+      "change_str": "-0.34%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 94.46,
+      "price": 93.83,
       "currency": "USD",
-      "change": 2.3,
-      "change_pct": 2.5,
-      "change_str": "+2.50%",
+      "change": 1.67,
+      "change_pct": 1.81,
+      "change_str": "+1.81%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 84310.49,
+      "price": 84575.5,
       "currency": "USD",
-      "change": -72.52,
-      "change_pct": -0.09,
-      "change_str": "-0.09%",
-      "direction": "down"
+      "change": 192.49,
+      "change_pct": 0.23,
+      "change_str": "+0.23%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.25,
+      "price": 101.3,
       "currency": "USD",
-      "change": 0.15,
-      "change_pct": 0.14,
-      "change_str": "+0.14%",
+      "change": 0.2,
+      "change_pct": 0.19,
+      "change_str": "+0.19%",
       "direction": "up"
     },
     {
@@ -1569,26 +1558,26 @@
       "matrix": {
         "CIBR": {
           "CIBR": 1.0,
-          "DBC": -0.043,
-          "EWJ": 0.132,
-          "IBIT": 0.413
+          "DBC": -0.032,
+          "EWJ": 0.101,
+          "IBIT": 0.401
         },
         "DBC": {
-          "CIBR": -0.043,
+          "CIBR": -0.032,
           "DBC": 1.0,
-          "EWJ": -0.543,
-          "IBIT": -0.387
+          "EWJ": -0.541,
+          "IBIT": -0.377
         },
         "EWJ": {
-          "CIBR": 0.132,
-          "DBC": -0.543,
+          "CIBR": 0.101,
+          "DBC": -0.541,
           "EWJ": 1.0,
-          "IBIT": 0.343
+          "IBIT": 0.305
         },
         "IBIT": {
-          "CIBR": 0.413,
-          "DBC": -0.387,
-          "EWJ": 0.343,
+          "CIBR": 0.401,
+          "DBC": -0.377,
+          "EWJ": 0.305,
           "IBIT": 1.0
         }
       },
@@ -1598,12 +1587,12 @@
         "EWJ",
         "IBIT"
       ],
-      "max_corr": 0.413,
+      "max_corr": 0.401,
       "max_corr_pair": [
         "CIBR",
         "IBIT"
       ],
-      "most_negative_corr": -0.543,
+      "most_negative_corr": -0.541,
       "most_negative_pair": [
         "DBC",
         "EWJ"
@@ -1612,21 +1601,21 @@
     },
     "volatility": {
       "per_ticker": {
-        "DBC": 17.4,
-        "EWJ": 15.1,
-        "CIBR": 41.65,
-        "IBIT": 44.11
+        "DBC": 17.76,
+        "EWJ": 14.72,
+        "CIBR": 42.43,
+        "IBIT": 45.17
       },
-      "portfolio_avg_vol_pct": 29.56,
+      "portfolio_avg_vol_pct": 30.02,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 1.26,
+      "benchmark_return_pct": 1.34,
       "benchmark_price_start": 757.67,
-      "benchmark_price_now": 767.18,
+      "benchmark_price_now": 767.81,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": 0.7,
-      "alpha": -0.56
+      "alpha": -0.64
     },
     "rebalance": {
       "alerts": [
@@ -1842,12 +1831,12 @@
     }
   },
   "logs": [
-    "2026-09-24 22:13:25 [INFO] AZALYST - status.json generated",
-    "2026-09-24 22:13:25 [INFO] PORTFOLIO - NAV USD 20,000.30 | Return +0.70%",
-    "2026-09-24 22:13:25 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-24 22:13:25 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
-    "2026-09-24 22:13:25 [INFO] TRADER - Closed trades: 5",
-    "2026-09-24 22:13:25 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-09-25 00:35:33 [INFO] AZALYST - status.json generated",
+    "2026-09-25 00:35:33 [INFO] PORTFOLIO - NAV USD 20,000.30 | Return +0.70%",
+    "2026-09-25 00:35:33 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-25 00:35:33 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
+    "2026-09-25 00:35:33 [INFO] TRADER - Closed trades: 5",
+    "2026-09-25 00:35:33 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-09-24 22:13:21 UTC"
+  "generated_at": "2026-09-25 00:35:32 UTC"
 }
