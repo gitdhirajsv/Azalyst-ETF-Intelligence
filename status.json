@@ -108,7 +108,7 @@
       "pnl_pct_str": "-1.25%",
       "confidence": 93,
       "severity": "HIGH",
-      "days_held": 4,
+      "days_held": 5,
       "half_exited": false
     }
   ],
@@ -306,8 +306,8 @@
     "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 0.0,
-    "news_score": 4.984,
-    "total": 52.5157118721981,
+    "news_score": 4.76,
+    "total": 52.2917118721981,
     "publish": false,
     "direction": "long"
   },
@@ -370,31 +370,23 @@
   "confidence": [
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 97.0
-    },
-    {
-      "symbol": "Defense & Aerospace",
-      "score": 91.0
-    },
-    {
-      "symbol": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income",
-      "score": 89.0
-    },
-    {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 89.0
-    },
-    {
-      "symbol": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector",
-      "score": 88.0
+      "score": 90.0
     },
     {
       "symbol": "Crypto & Digital Assets",
       "score": 85.0
     },
     {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 85.0
+    },
+    {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals + Bonds & Fixed Income",
       "score": 85.0
+    },
+    {
+      "symbol": "Gold & Precious Metals + Banking & Financial Sector",
+      "score": 83.0
     },
     {
       "symbol": "Cybersecurity",
@@ -429,39 +421,47 @@
       "score": 67.0
     },
     {
+      "symbol": "Defense & Aerospace",
+      "score": 65.0
+    },
+    {
       "symbol": "Nuclear Energy & Uranium",
       "score": 63.0
     },
     {
       "symbol": "Emerging Markets + Bearish Market / Macro Selloff",
       "score": 63.0
+    },
+    {
+      "symbol": "Bonds & Fixed Income",
+      "score": 62.0
     }
   ],
   "signals": [
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 97.0,
+      "confidence": 90.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
       "direction_score": -2.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 30,
+      "article_count": 29,
       "latest_at": "26 Sep 2026 15:00 UTC",
       "headline": "Oil prices slide about 2% as US, Iran explore path out of war",
       "regions": [
         "asia_pacific",
         "global",
-        "americas",
-        "africa"
+        "europe",
+        "middle_east"
       ],
       "sources": [
-        "Markets-Economic Times",
-        "BBC News",
+        "Oilprice.com",
+        "World News - Breaking international news and headlines | Sky News",
         "Defense News",
-        "World News - Breaking international news and headlines | Sky News"
+        "World | Deutsche Welle"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -487,218 +487,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 16.1,
-        "recency": 16.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 91.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "26 Sep 2026 15:35 UTC",
-      "headline": "Iran War Endgame Remains Elusive",
-      "regions": [
-        "india",
-        "asia_pacific",
-        "global",
-        "americas"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "BBC News",
-        "Latest from Tom's Hardware",
-        "www.theregister.com - Articles"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.2,
-        "recency": 17.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income",
-      "confidence": 89.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -16.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 15,
-      "latest_at": "26 Sep 2026 07:19 UTC",
-      "headline": "Mounting rate hike bets keep weekly loss in sight for gold",
-      "regions": [
-        "global",
-        "americas",
-        "middle_east",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Finance",
-        "Markets-Economic Times",
-        "Latest from Tom's Hardware",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.6,
-        "recency": 12.1,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 89.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 1.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 67,
-      "latest_at": "26 Sep 2026 12:00 UTC",
-      "headline": "Chip Industry Week In Review",
-      "regions": [
-        "india",
-        "asia_pacific",
-        "global",
-        "europe"
-      ],
-      "sources": [
-        "Semiconductor Engineering",
-        "Markets-Economic Times",
-        "Tech",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 17.2,
-        "recency": 11.8,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector",
-      "confidence": 88.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -12.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 14,
-      "latest_at": "26 Sep 2026 13:30 UTC",
-      "headline": "The 10-year Treasury yield is at its highest in nearly two decades. How we got here",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "americas",
-        "europe"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Finance",
-        "Cointelegraph.com News",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "BND",
-      "top_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BHARATBOND"
-      ],
-      "global_etfs": [
-        "BND",
-        "TLT",
-        "TIP"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.6,
-        "recency": 13.7,
+        "recency": 9.7,
         "geopolitical_severity": 13.0
       }
     },
@@ -750,6 +539,59 @@
       }
     },
     {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 85.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 1.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 68,
+      "latest_at": "26 Sep 2026 12:00 UTC",
+      "headline": "Chip Industry Week In Review",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "india",
+        "americas"
+      ],
+      "sources": [
+        "Tech",
+        "World News - Breaking international news and headlines | Sky News",
+        "Defense News",
+        "The Verge"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 17.2,
+        "recency": 7.2,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector + Gold & Precious Metals + Bonds & Fixed Income",
       "confidence": 85.0,
@@ -797,6 +639,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.0,
         "recency": 8.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals + Banking & Financial Sector",
+      "confidence": 83.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -8.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "26 Sep 2026 13:30 UTC",
+      "headline": "Mounting rate hike bets keep weekly loss in sight for gold",
+      "regions": [
+        "global",
+        "americas",
+        "middle_east",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Finance",
+        "Markets-Economic Times",
+        "Latest from Tom's Hardware",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 17.4,
+        "source_diversity": 12.8,
+        "recency": 8.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -1197,6 +1092,59 @@
       }
     },
     {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 65.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "26 Sep 2026 20:34 UTC",
+      "headline": "Iran War Endgame Remains Elusive",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "europe",
+        "middle_east"
+      ],
+      "sources": [
+        "Oilprice.com",
+        "Defense News",
+        "Cointelegraph.com News",
+        "World | Deutsche Welle"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.2,
+        "recency": 17.0,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 63.0,
@@ -1296,33 +1244,65 @@
         "recency": 14.8,
         "geopolitical_severity": 11.2
       }
+    },
+    {
+      "sector_key": "bonds_fixed_income",
+      "sector_label": "Bonds & Fixed Income",
+      "confidence": 62.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -6.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "26 Sep 2026 19:00 UTC",
+      "headline": "The 10-year Treasury yield is at its highest in nearly two decades. How we got here",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "europe",
+        "middle_east"
+      ],
+      "sources": [
+        "Tech",
+        "Oilprice.com",
+        "The Verge",
+        "Cointelegraph.com News"
+      ],
+      "primary_etf": "BND",
+      "top_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BHARATBOND"
+      ],
+      "global_etfs": [
+        "BND",
+        "TLT",
+        "TIP"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.8,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.0,
+        "recency": 14.5,
+        "geopolitical_severity": 13.0
+      }
     }
   ],
   "articles": [
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 30 articles - CRITICAL / BEARISH - Oil prices slide about 2% as US, Iran explore path out of war"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Defense & Aerospace - 24 articles - HIGH / BEARISH - Iran War Endgame Remains Elusive"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Gold & Precious Metals + Banking & Financial Sector + Bonds & Fixed Income - 15 articles - HIGH / BEARISH - Mounting rate hike bets keep weekly loss in sight for gold"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 67 articles - HIGH / BULLISH - Chip Industry Week In Review"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector - 14 articles - HIGH / BEARISH - The 10-year Treasury yield is at its highest in nearly two decades. How we got here"
+      "text": "Energy / Oil & Gas - 29 articles - CRITICAL / BEARISH - Oil prices slide about 2% as US, Iran explore path out of war"
     },
     {
       "tag": "tag-bull",
@@ -1330,9 +1310,19 @@
       "text": "Crypto & Digital Assets - 25 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Technology & AI / Semiconductors - 68 articles - HIGH / BULLISH - Chip Industry Week In Review"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Banking & Financial Sector + Gold & Precious Metals + Bonds & Fixed Income - 15 articles - HIGH / BEARISH - India bonds slide for sixth week as global rout deepens"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Gold & Precious Metals + Banking & Financial Sector - 12 articles - HIGH / BEARISH - Mounting rate hike bets keep weekly loss in sight for gold"
     },
     {
       "tag": "tag-bull",
@@ -1377,12 +1367,22 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Defense & Aerospace - 24 articles - HIGH / BEARISH - Iran War Endgame Remains Elusive"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "Nuclear Energy & Uranium - 4 articles - HIGH / BEARISH - Taiwan Mulls Nuclear Revival to Cut Its LNG Exposure"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Emerging Markets + Bearish Market / Macro Selloff - 4 articles - MEDIUM / BEARISH - Global Market: China, Hong Kong stocks slip as weak economic data and property overhaul weigh"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Bonds & Fixed Income - 24 articles - HIGH / BEARISH - The 10-year Treasury yield is at its highest in nearly two decades. How we got here"
     }
   ],
   "market_snapshot": [
@@ -1500,12 +1500,12 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 84095.39,
+      "price": 83865.63,
       "currency": "USD",
-      "change": 60.47,
-      "change_pct": 0.07,
-      "change_str": "+0.07%",
-      "direction": "up"
+      "change": -169.29,
+      "change_pct": -0.2,
+      "change_str": "-0.20%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
@@ -1843,12 +1843,12 @@
     }
   },
   "logs": [
-    "2026-09-26 15:43:10 [INFO] AZALYST - status.json generated",
-    "2026-09-26 15:43:10 [INFO] PORTFOLIO - NAV USD 19,921.45 | Return +0.17%",
-    "2026-09-26 15:43:10 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-26 15:43:10 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
-    "2026-09-26 15:43:10 [INFO] TRADER - Closed trades: 5",
-    "2026-09-26 15:43:10 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-09-26 20:41:33 [INFO] AZALYST - status.json generated",
+    "2026-09-26 20:41:33 [INFO] PORTFOLIO - NAV USD 19,921.45 | Return +0.17%",
+    "2026-09-26 20:41:33 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-26 20:41:33 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
+    "2026-09-26 20:41:33 [INFO] TRADER - Closed trades: 5",
+    "2026-09-26 20:41:33 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-09-26 15:43:08 UTC"
+  "generated_at": "2026-09-26 20:41:31 UTC"
 }
