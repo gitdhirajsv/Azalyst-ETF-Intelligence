@@ -287,7 +287,7 @@
     "risk_state": "RISK_ON",
     "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.04482581498527648,
+    "spy_excess_vs_tbill_3m": 0.03336806242942568,
     "vix_level": 14.869999885559082,
     "vix_percentile_1y": 0.07539682539682539,
     "weight_matrix": {
@@ -300,16 +300,16 @@
     }
   },
   "top_signal": {
-    "ticker": "XLF",
-    "rank_score": 0.0,
-    "flow_score": 2.9166869017794466,
-    "options_score": 0.0,
+    "ticker": "SMH",
+    "rank_score": 28.24320712694878,
+    "flow_score": 3.9789879317707504,
+    "options_score": 15.727693874805613,
     "rotation_score": 15.0,
-    "macro_score": 3.0116369552789557,
-    "news_score": 4.4799999999999995,
-    "total": 25.408323857058402,
-    "publish": false,
-    "direction": "short"
+    "macro_score": 0.0,
+    "news_score": 3.6399999999999997,
+    "total": 66.58988893352515,
+    "publish": true,
+    "direction": "long"
   },
   "jlaw_risk": {
     "distribution_count": 4,
@@ -377,28 +377,28 @@
       "score": 91.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 91.0
-    },
-    {
       "symbol": "Bonds & Fixed Income + Banking & Financial Sector",
       "score": 89.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 86.0
     },
     {
       "symbol": "Crypto & Digital Assets",
       "score": 85.0
     },
     {
-      "symbol": "Asia Pacific Equity",
-      "score": 81.0
-    },
-    {
-      "symbol": "Banking & Financial Sector",
-      "score": 80.0
+      "symbol": "Banking & Financial Sector + Gold & Precious Metals + Bonds & Fixed Income",
+      "score": 85.0
     },
     {
       "symbol": "Cybersecurity",
       "score": 80.0
+    },
+    {
+      "symbol": "Asia Pacific Equity",
+      "score": 77.0
     },
     {
       "symbol": "Healthcare & Pharma + Europe Equity",
@@ -545,59 +545,6 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 91.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": 1.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 29,
-      "latest_at": "25 Sep 2026 18:46 UTC",
-      "headline": "Aramco Restores East-West Pipeline as War Risk Closes In on Yanbu",
-      "regions": [
-        "americas",
-        "africa",
-        "europe",
-        "global"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "World | Deutsche Welle",
-        "Defense News",
-        "BBC News"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.1,
-        "recency": 12.3,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income + Banking & Financial Sector",
       "confidence": 89.0,
@@ -650,6 +597,59 @@
       }
     },
     {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 86.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": 1.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 30,
+      "latest_at": "25 Sep 2026 18:46 UTC",
+      "headline": "Aramco Restores East-West Pipeline as War Risk Closes In on Yanbu",
+      "regions": [
+        "americas",
+        "africa",
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "BBC News",
+        "US Top News and Analysis",
+        "Defense News"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.1,
+        "recency": 7.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 85.0,
@@ -697,76 +697,29 @@
       }
     },
     {
-      "sector_key": "asia_pacific",
-      "sector_label": "Asia Pacific Equity",
-      "confidence": 81.0,
-      "severity": "MEDIUM",
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector + Gold & Precious Metals + Bonds & Fixed Income",
+      "confidence": 85.0,
+      "severity": "HIGH",
       "direction": "BEARISH",
-      "direction_score": -4.0,
+      "direction_score": -10.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 10,
-      "latest_at": "25 Sep 2026 22:00 UTC",
-      "headline": "Hedge Funds Cut Bullish Yen Bets as BOJ Held Back on Rate Vows",
+      "article_count": 15,
+      "latest_at": "25 Sep 2026 20:39 UTC",
+      "headline": "India bonds slide for sixth week as global rout deepens",
       "regions": [
         "asia_pacific",
+        "americas",
         "global",
         "europe"
       ],
       "sources": [
         "Bloomberg Markets",
-        "Latest from Tom's Hardware",
-        "World | Deutsche Welle",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "EWJ",
-      "top_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "EWJ",
-        "EWY",
-        "FLAX",
-        "FXI"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 14.7,
-        "volume_confirmation": 16.2,
-        "source_diversity": 13.6,
-        "recency": 16.9,
-        "geopolitical_severity": 10.9
-      }
-    },
-    {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector",
-      "confidence": 80.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -3.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "25 Sep 2026 17:45 UTC",
-      "headline": "Polymarket Wagers on Bank Failures Trigger FDIC Concerns",
-      "regions": [
-        "global",
-        "americas",
-        "asia_pacific"
-      ],
-      "sources": [
-        "Bloomberg Markets",
+        "Markets-Economic Times",
         "US Top News and Analysis",
-        "Markets-Economic Times"
+        "Latest from Tom's Hardware"
       ],
       "primary_etf": "XLF",
       "top_etfs": [
@@ -787,10 +740,10 @@
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 16.5,
-        "volume_confirmation": 14.6,
-        "source_diversity": 11.0,
-        "recency": 16.1,
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.0,
+        "recency": 8.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -838,6 +791,55 @@
         "source_diversity": 10.4,
         "recency": 14.7,
         "geopolitical_severity": 11.6
+      }
+    },
+    {
+      "sector_key": "asia_pacific",
+      "sector_label": "Asia Pacific Equity",
+      "confidence": 77.0,
+      "severity": "MEDIUM",
+      "direction": "BEARISH",
+      "direction_score": -4.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 9,
+      "latest_at": "26 Sep 2026 03:07 UTC",
+      "headline": "Global Market: Hong Kong stocks slide as investors await Trump-Xi summit details",
+      "regions": [
+        "asia_pacific",
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "World | Deutsche Welle",
+        "Tech",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "EWJ",
+      "top_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "EWJ",
+        "EWY",
+        "FLAX",
+        "FXI"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 12.1,
+        "volume_confirmation": 15.4,
+        "source_diversity": 13.6,
+        "recency": 17.0,
+        "geopolitical_severity": 10.0
       }
     },
     {
@@ -1310,12 +1312,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 29 articles - CRITICAL / BEARISH - Aramco Restores East-West Pipeline as War Risk Closes In on Yanbu"
+      "text": "Bonds & Fixed Income + Banking & Financial Sector - 12 articles - HIGH / BEARISH - 30-year Treasury yield hits highest level since 2004 as bond market rout continues"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Bonds & Fixed Income + Banking & Financial Sector - 12 articles - HIGH / BEARISH - 30-year Treasury yield hits highest level since 2004 as bond market rout continues"
+      "text": "Energy / Oil & Gas - 30 articles - CRITICAL / BEARISH - Aramco Restores East-West Pipeline as War Risk Closes In on Yanbu"
     },
     {
       "tag": "tag-bull",
@@ -1325,17 +1327,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Asia Pacific Equity - 10 articles - MEDIUM / BEARISH - Hedge Funds Cut Bullish Yen Bets as BOJ Held Back on Rate Vows"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Banking & Financial Sector - 8 articles - HIGH / BEARISH - Polymarket Wagers on Bank Failures Trigger FDIC Concerns"
+      "text": "Banking & Financial Sector + Gold & Precious Metals + Bonds & Fixed Income - 15 articles - HIGH / BEARISH - India bonds slide for sixth week as global rout deepens"
     },
     {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Cybersecurity - 12 articles - MEDIUM / BULLISH - Bitget CEO suspects North Korea behind $352M hack, citing IP clues"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Asia Pacific Equity - 9 articles - MEDIUM / BEARISH - Global Market: Hong Kong stocks slide as investors await Trump-Xi summit details"
     },
     {
       "tag": "tag-bull",
@@ -1410,9 +1412,9 @@
       "label": "Dow Jones",
       "ticker": "^DJI",
       "region": "US",
-      "price": 51828.62,
+      "price": 51828.6,
       "currency": "USD",
-      "change": 478.64,
+      "change": 478.62,
       "change_pct": 0.93,
       "change_str": "+0.93%",
       "direction": "up"
@@ -1423,21 +1425,21 @@
       "region": "UK",
       "price": 10695.25,
       "currency": "GBP",
-      "change": -10.05,
-      "change_pct": -0.09,
-      "change_str": "-0.09%",
-      "direction": "down"
+      "change": 15.25,
+      "change_pct": 0.14,
+      "change_str": "+0.14%",
+      "direction": "up"
     },
     {
       "label": "DAX",
       "ticker": "^GDAXI",
       "region": "EU",
-      "price": 25408.64,
+      "price": 25408.6,
       "currency": "EUR",
-      "change": -1.99,
-      "change_pct": -0.01,
-      "change_str": "-0.01%",
-      "direction": "down"
+      "change": 142.07,
+      "change_pct": 0.56,
+      "change_str": "+0.56%",
+      "direction": "up"
     },
     {
       "label": "Nikkei 225",
@@ -1445,9 +1447,9 @@
       "region": "JP",
       "price": 66364.2,
       "currency": "JPY",
-      "change": 1345.25,
-      "change_pct": 2.07,
-      "change_str": "+2.07%",
+      "change": 850.21,
+      "change_pct": 1.3,
+      "change_str": "+1.30%",
       "direction": "up"
     },
     {
@@ -1456,9 +1458,9 @@
       "region": "HK",
       "price": 24510.09,
       "currency": "HKD",
-      "change": -324.03,
-      "change_pct": -1.3,
-      "change_str": "-1.30%",
+      "change": -251.04,
+      "change_pct": -1.01,
+      "change_str": "-1.01%",
       "direction": "down"
     },
     {
@@ -1467,10 +1469,10 @@
       "region": "IN",
       "price": 23140.5,
       "currency": "INR",
-      "change": -306.3,
-      "change_pct": -1.31,
-      "change_str": "-1.31%",
-      "direction": "down"
+      "change": 77.4,
+      "change_pct": 0.34,
+      "change_str": "+0.34%",
+      "direction": "up"
     },
     {
       "label": "Gold",
@@ -1498,22 +1500,22 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 83807.59,
+      "price": 83937.15,
       "currency": "USD",
-      "change": -571.47,
-      "change_pct": -0.68,
-      "change_str": "-0.68%",
+      "change": -441.91,
+      "change_pct": -0.52,
+      "change_str": "-0.52%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.03,
+      "price": 100.97,
       "currency": "USD",
-      "change": -0.26,
-      "change_pct": -0.25,
-      "change_str": "-0.25%",
+      "change": -0.32,
+      "change_pct": -0.32,
+      "change_str": "-0.32%",
       "direction": "down"
     },
     {
@@ -1568,26 +1570,26 @@
       "matrix": {
         "CIBR": {
           "CIBR": 1.0,
-          "DBC": -0.014,
-          "EWJ": 0.087,
-          "IBIT": 0.394
+          "DBC": 0.07,
+          "EWJ": -0.013,
+          "IBIT": 0.398
         },
         "DBC": {
-          "CIBR": -0.014,
+          "CIBR": 0.07,
           "DBC": 1.0,
-          "EWJ": -0.574,
-          "IBIT": -0.385
+          "EWJ": -0.642,
+          "IBIT": -0.33
         },
         "EWJ": {
-          "CIBR": 0.087,
-          "DBC": -0.574,
+          "CIBR": -0.013,
+          "DBC": -0.642,
           "EWJ": 1.0,
-          "IBIT": 0.323
+          "IBIT": 0.265
         },
         "IBIT": {
-          "CIBR": 0.394,
-          "DBC": -0.385,
-          "EWJ": 0.323,
+          "CIBR": 0.398,
+          "DBC": -0.33,
+          "EWJ": 0.265,
           "IBIT": 1.0
         }
       },
@@ -1597,12 +1599,12 @@
         "EWJ",
         "IBIT"
       ],
-      "max_corr": 0.394,
+      "max_corr": 0.398,
       "max_corr_pair": [
         "CIBR",
         "IBIT"
       ],
-      "most_negative_corr": -0.574,
+      "most_negative_corr": -0.642,
       "most_negative_pair": [
         "DBC",
         "EWJ"
@@ -1611,21 +1613,21 @@
     },
     "volatility": {
       "per_ticker": {
-        "DBC": 17.87,
-        "EWJ": 16.26,
-        "CIBR": 41.81,
-        "IBIT": 45.08
+        "DBC": 18.85,
+        "EWJ": 17.48,
+        "CIBR": 41.79,
+        "IBIT": 44.09
       },
-      "portfolio_avg_vol_pct": 30.25,
+      "portfolio_avg_vol_pct": 30.55,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 1.26,
+      "benchmark_return_pct": 1.81,
       "benchmark_price_start": 757.67,
-      "benchmark_price_now": 767.18,
+      "benchmark_price_now": 771.35,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": 0.16,
-      "alpha": -1.1
+      "alpha": -1.65
     },
     "rebalance": {
       "alerts": [
@@ -1841,12 +1843,12 @@
     }
   },
   "logs": [
-    "2026-09-26 00:36:32 [INFO] AZALYST - status.json generated",
-    "2026-09-26 00:36:32 [INFO] PORTFOLIO - NAV USD 19,923.28 | Return +0.16%",
-    "2026-09-26 00:36:32 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-26 00:36:32 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
-    "2026-09-26 00:36:32 [INFO] TRADER - Closed trades: 5",
-    "2026-09-26 00:36:32 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-09-26 03:15:16 [INFO] AZALYST - status.json generated",
+    "2026-09-26 03:15:16 [INFO] PORTFOLIO - NAV USD 19,923.28 | Return +0.16%",
+    "2026-09-26 03:15:16 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-26 03:15:16 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
+    "2026-09-26 03:15:16 [INFO] TRADER - Closed trades: 5",
+    "2026-09-26 03:15:16 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-09-26 00:36:31 UTC"
+  "generated_at": "2026-09-26 03:15:12 UTC"
 }
