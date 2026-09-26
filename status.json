@@ -85,7 +85,7 @@
       "pnl_pct_str": "-2.02%",
       "confidence": 82,
       "severity": "MEDIUM",
-      "days_held": 10,
+      "days_held": 11,
       "half_exited": false
     },
     {
@@ -287,7 +287,7 @@
     "risk_state": "RISK_ON",
     "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.03336806242942568,
+    "spy_excess_vs_tbill_3m": 0.04482581498527648,
     "vix_level": 14.869999885559082,
     "vix_percentile_1y": 0.07539682539682539,
     "weight_matrix": {
@@ -300,16 +300,16 @@
     }
   },
   "top_signal": {
-    "ticker": "SMH",
-    "rank_score": 28.267857142857142,
-    "flow_score": 4.114931489719725,
-    "options_score": 19.927803062252877,
+    "ticker": "XLF",
+    "rank_score": 0.0,
+    "flow_score": 2.9166869017794466,
+    "options_score": 0.0,
     "rotation_score": 15.0,
-    "macro_score": 0.0,
-    "news_score": 3.6399999999999997,
-    "total": 70.95059169482975,
-    "publish": true,
-    "direction": "long"
+    "macro_score": 3.0116369552789557,
+    "news_score": 4.4799999999999995,
+    "total": 25.408323857058402,
+    "publish": false,
+    "direction": "short"
   },
   "jlaw_risk": {
     "distribution_count": 4,
@@ -386,11 +386,7 @@
     },
     {
       "symbol": "Crypto & Digital Assets",
-      "score": 86.0
-    },
-    {
-      "symbol": "Cybersecurity",
-      "score": 82.0
+      "score": 85.0
     },
     {
       "symbol": "Asia Pacific Equity",
@@ -398,6 +394,10 @@
     },
     {
       "symbol": "Banking & Financial Sector",
+      "score": 80.0
+    },
+    {
+      "symbol": "Cybersecurity",
       "score": 80.0
     },
     {
@@ -652,26 +652,27 @@
     {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
-      "confidence": 86.0,
+      "confidence": 85.0,
       "severity": "HIGH",
       "direction": "BULLISH",
-      "direction_score": -1.0,
+      "direction_score": 4.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 23,
-      "latest_at": "25 Sep 2026 07:13 UTC",
+      "article_count": 25,
+      "latest_at": "25 Sep 2026 20:37 UTC",
       "headline": "Here\u2019s what happened in crypto today",
       "regions": [
-        "india",
         "americas",
-        "global",
-        "middle_east"
+        "europe",
+        "india",
+        "asia_pacific"
       ],
       "sources": [
+        "Markets-Economic Times",
+        "Finance",
         "Cointelegraph.com News",
-        "US Top News and Analysis",
-        "Markets-Economic Times"
+        "www.theregister.com - Articles"
       ],
       "primary_etf": "IBIT",
       "top_etfs": [
@@ -690,55 +691,9 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 9.1,
-        "recency": 16.3,
+        "source_diversity": 10.3,
+        "recency": 11.5,
         "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 82.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 4.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "25 Sep 2026 07:37 UTC",
-      "headline": "Bitget CEO suspects North Korea behind $352M hack, citing IP clues",
-      "regions": [
-        "asia_pacific",
-        "india",
-        "global"
-      ],
-      "sources": [
-        "BBC News",
-        "www.theregister.com - Articles",
-        "Cointelegraph.com News",
-        "World | Deutsche Welle"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 15.9,
-        "volume_confirmation": 17.4,
-        "source_diversity": 11.5,
-        "recency": 17.0,
-        "geopolitical_severity": 10.7
       }
     },
     {
@@ -837,6 +792,52 @@
         "source_diversity": 11.0,
         "recency": 16.1,
         "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 80.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 10.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 12,
+      "latest_at": "25 Sep 2026 23:05 UTC",
+      "headline": "Bitget CEO suspects North Korea behind $352M hack, citing IP clues",
+      "regions": [
+        "global",
+        "india",
+        "asia_pacific"
+      ],
+      "sources": [
+        "Latest from Tom's Hardware",
+        "Finance",
+        "www.theregister.com - Articles",
+        "BBC News"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 16.8,
+        "volume_confirmation": 17.4,
+        "source_diversity": 10.4,
+        "recency": 14.7,
+        "geopolitical_severity": 11.6
       }
     },
     {
@@ -1319,12 +1320,7 @@
     {
       "tag": "tag-bull",
       "label": "Bullish",
-      "text": "Crypto & Digital Assets - 23 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Cybersecurity - 12 articles - MEDIUM / BULLISH - Bitget CEO suspects North Korea behind $352M hack, citing IP clues"
+      "text": "Crypto & Digital Assets - 25 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
     },
     {
       "tag": "tag-bear",
@@ -1335,6 +1331,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Banking & Financial Sector - 8 articles - HIGH / BEARISH - Polymarket Wagers on Bank Failures Trigger FDIC Concerns"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Cybersecurity - 12 articles - MEDIUM / BULLISH - Bitget CEO suspects North Korea behind $352M hack, citing IP clues"
     },
     {
       "tag": "tag-bull",
@@ -1422,10 +1423,10 @@
       "region": "UK",
       "price": 10695.25,
       "currency": "GBP",
-      "change": 15.25,
-      "change_pct": 0.14,
-      "change_str": "+0.14%",
-      "direction": "up"
+      "change": -10.05,
+      "change_pct": -0.09,
+      "change_str": "-0.09%",
+      "direction": "down"
     },
     {
       "label": "DAX",
@@ -1497,11 +1498,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 83894.87,
+      "price": 83807.59,
       "currency": "USD",
-      "change": -484.19,
-      "change_pct": -0.57,
-      "change_str": "-0.57%",
+      "change": -571.47,
+      "change_pct": -0.68,
+      "change_str": "-0.68%",
       "direction": "down"
     },
     {
@@ -1567,26 +1568,26 @@
       "matrix": {
         "CIBR": {
           "CIBR": 1.0,
-          "DBC": 0.07,
-          "EWJ": -0.013,
-          "IBIT": 0.398
+          "DBC": -0.014,
+          "EWJ": 0.087,
+          "IBIT": 0.394
         },
         "DBC": {
-          "CIBR": 0.07,
+          "CIBR": -0.014,
           "DBC": 1.0,
-          "EWJ": -0.642,
-          "IBIT": -0.33
+          "EWJ": -0.574,
+          "IBIT": -0.385
         },
         "EWJ": {
-          "CIBR": -0.013,
-          "DBC": -0.642,
+          "CIBR": 0.087,
+          "DBC": -0.574,
           "EWJ": 1.0,
-          "IBIT": 0.265
+          "IBIT": 0.323
         },
         "IBIT": {
-          "CIBR": 0.398,
-          "DBC": -0.33,
-          "EWJ": 0.265,
+          "CIBR": 0.394,
+          "DBC": -0.385,
+          "EWJ": 0.323,
           "IBIT": 1.0
         }
       },
@@ -1596,12 +1597,12 @@
         "EWJ",
         "IBIT"
       ],
-      "max_corr": 0.398,
+      "max_corr": 0.394,
       "max_corr_pair": [
         "CIBR",
         "IBIT"
       ],
-      "most_negative_corr": -0.642,
+      "most_negative_corr": -0.574,
       "most_negative_pair": [
         "DBC",
         "EWJ"
@@ -1610,21 +1611,21 @@
     },
     "volatility": {
       "per_ticker": {
-        "DBC": 18.85,
-        "EWJ": 17.48,
-        "CIBR": 41.79,
-        "IBIT": 44.09
+        "DBC": 17.87,
+        "EWJ": 16.26,
+        "CIBR": 41.81,
+        "IBIT": 45.08
       },
-      "portfolio_avg_vol_pct": 30.55,
+      "portfolio_avg_vol_pct": 30.25,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 1.81,
+      "benchmark_return_pct": 1.26,
       "benchmark_price_start": 757.67,
-      "benchmark_price_now": 771.35,
+      "benchmark_price_now": 767.18,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": 0.16,
-      "alpha": -1.65
+      "alpha": -1.1
     },
     "rebalance": {
       "alerts": [
@@ -1840,12 +1841,12 @@
     }
   },
   "logs": [
-    "2026-09-25 22:09:36 [INFO] AZALYST - status.json generated",
-    "2026-09-25 22:09:36 [INFO] PORTFOLIO - NAV USD 19,923.28 | Return +0.16%",
-    "2026-09-25 22:09:36 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-25 22:09:36 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
-    "2026-09-25 22:09:36 [INFO] TRADER - Closed trades: 5",
-    "2026-09-25 22:09:36 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-09-26 00:36:32 [INFO] AZALYST - status.json generated",
+    "2026-09-26 00:36:32 [INFO] PORTFOLIO - NAV USD 19,923.28 | Return +0.16%",
+    "2026-09-26 00:36:32 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-26 00:36:32 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
+    "2026-09-26 00:36:32 [INFO] TRADER - Closed trades: 5",
+    "2026-09-26 00:36:32 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-09-25 22:09:33 UTC"
+  "generated_at": "2026-09-26 00:36:31 UTC"
 }
