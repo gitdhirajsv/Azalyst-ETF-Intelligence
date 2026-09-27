@@ -108,7 +108,7 @@
       "pnl_pct_str": "-1.25%",
       "confidence": 93,
       "severity": "HIGH",
-      "days_held": 5,
+      "days_held": 6,
       "half_exited": false
     }
   ],
@@ -306,8 +306,8 @@
     "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 0.0,
-    "news_score": 5.096,
-    "total": 52.627711872198105,
+    "news_score": 4.816,
+    "total": 52.347711872198104,
     "publish": false,
     "direction": "long"
   },
@@ -369,16 +369,20 @@
   },
   "confidence": [
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 91.0
-    },
-    {
       "symbol": "Bonds & Fixed Income + India Equity Markets",
       "score": 91.0
     },
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 89.0
+      "score": 87.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 86.0
+    },
+    {
+      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
+      "score": 86.0
     },
     {
       "symbol": "Gold & Precious Metals + Banking & Financial Sector",
@@ -386,10 +390,6 @@
     },
     {
       "symbol": "Crypto & Digital Assets",
-      "score": 85.0
-    },
-    {
-      "symbol": "Banking & Financial Sector + Gold & Precious Metals + Bonds & Fixed Income",
       "score": 85.0
     },
     {
@@ -438,59 +438,6 @@
     }
   ],
   "signals": [
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 91.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 1.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 72,
-      "latest_at": "27 Sep 2026 14:14 UTC",
-      "headline": "Chip Industry Week In Review",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "india",
-        "europe"
-      ],
-      "sources": [
-        "BBC News",
-        "Latest from Tom's Hardware",
-        "World | Deutsche Welle",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 17.2,
-        "recency": 13.9,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "bonds_fixed_income",
       "sector_label": "Bonds & Fixed Income + India Equity Markets",
@@ -546,27 +493,27 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 89.0,
+      "confidence": 87.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -1.5,
+      "direction_score": -5.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
+      "article_count": 26,
       "latest_at": "27 Sep 2026 12:31 UTC",
       "headline": "Natural gas defies energy shock as strong supply keeps prices in check",
       "regions": [
-        "middle_east",
-        "americas",
+        "global",
+        "europe",
         "asia_pacific",
-        "europe"
+        "middle_east"
       ],
       "sources": [
-        "World | Deutsche Welle",
         "Markets-Economic Times",
-        "Oilprice.com",
-        "Defense News"
+        "Bloomberg Markets",
+        "Defense News",
+        "Oilprice.com"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -591,8 +538,112 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 15.2,
-        "recency": 11.7,
+        "source_diversity": 14.7,
+        "recency": 7.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 1.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 77,
+      "latest_at": "27 Sep 2026 14:00 UTC",
+      "headline": "Chip Industry Week In Review",
+      "regions": [
+        "global",
+        "europe",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "US Top News and Analysis",
+        "The Verge",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 17.3,
+        "recency": 8.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "banking_financial",
+      "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
+      "confidence": 86.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -8.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 10,
+      "latest_at": "27 Sep 2026 19:00 UTC",
+      "headline": "Wall Street Week Ahead: Jobs report, inflation data to test US rate path, economic strength",
+      "regions": [
+        "asia_pacific",
+        "americas",
+        "global",
+        "middle_east"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "Finance",
+        "Latest from Tom's Hardware"
+      ],
+      "primary_etf": "XLF",
+      "top_etfs": [
+        "XLF",
+        "GLDM",
+        "BANKBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "BANKBEES"
+      ],
+      "global_etfs": [
+        "XLF",
+        "GLDM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 16.2,
+        "source_diversity": 12.0,
+        "recency": 14.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -693,57 +744,6 @@
         "volume_confirmation": 18.0,
         "source_diversity": 10.3,
         "recency": 11.5,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "banking_financial",
-      "sector_label": "Banking & Financial Sector + Gold & Precious Metals + Bonds & Fixed Income",
-      "confidence": 85.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -10.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 15,
-      "latest_at": "25 Sep 2026 20:39 UTC",
-      "headline": "India bonds slide for sixth week as global rout deepens",
-      "regions": [
-        "asia_pacific",
-        "americas",
-        "global",
-        "europe"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "US Top News and Analysis",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "XLF",
-      "top_etfs": [
-        "XLF",
-        "GLDM",
-        "BANKBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "BANKBEES"
-      ],
-      "global_etfs": [
-        "XLF",
-        "GLDM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 14.0,
-        "recency": 8.9,
         "geopolitical_severity": 13.0
       }
     },
@@ -1300,11 +1300,6 @@
   ],
   "articles": [
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 72 articles - HIGH / BULLISH - Chip Industry Week In Review"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Bonds & Fixed Income + India Equity Markets - 13 articles - HIGH / BEARISH - The 10-year Treasury yield is at its highest in nearly two decades. How we got here"
@@ -1312,7 +1307,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 28 articles - CRITICAL / BEARISH - Natural gas defies energy shock as strong supply keeps prices in check"
+      "text": "Energy / Oil & Gas - 26 articles - CRITICAL / BEARISH - Natural gas defies energy shock as strong supply keeps prices in check"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Technology & AI / Semiconductors - 77 articles - HIGH / BULLISH - Chip Industry Week In Review"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Banking & Financial Sector + Gold & Precious Metals - 10 articles - HIGH / BEARISH - Wall Street Week Ahead: Jobs report, inflation data to test US rate path, economic strength"
     },
     {
       "tag": "tag-bear",
@@ -1323,11 +1328,6 @@
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Crypto & Digital Assets - 25 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Banking & Financial Sector + Gold & Precious Metals + Bonds & Fixed Income - 15 articles - HIGH / BEARISH - India bonds slide for sixth week as global rout deepens"
     },
     {
       "tag": "tag-bull",
@@ -1500,11 +1500,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 84585.59,
+      "price": 84538.53,
       "currency": "USD",
-      "change": 179.14,
-      "change_pct": 0.21,
-      "change_str": "+0.21%",
+      "change": 132.08,
+      "change_pct": 0.16,
+      "change_str": "+0.16%",
       "direction": "up"
     },
     {
@@ -1843,12 +1843,12 @@
     }
   },
   "logs": [
-    "2026-09-27 16:24:12 [INFO] AZALYST - status.json generated",
-    "2026-09-27 16:24:12 [INFO] PORTFOLIO - NAV USD 19,925.20 | Return +0.17%",
-    "2026-09-27 16:24:12 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-27 16:24:12 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
-    "2026-09-27 16:24:12 [INFO] TRADER - Closed trades: 5",
-    "2026-09-27 16:24:12 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-09-27 20:55:43 [INFO] AZALYST - status.json generated",
+    "2026-09-27 20:55:43 [INFO] PORTFOLIO - NAV USD 19,925.20 | Return +0.17%",
+    "2026-09-27 20:55:43 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-27 20:55:43 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
+    "2026-09-27 20:55:43 [INFO] TRADER - Closed trades: 5",
+    "2026-09-27 20:55:43 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-09-27 16:24:07 UTC"
+  "generated_at": "2026-09-27 20:55:41 UTC"
 }
