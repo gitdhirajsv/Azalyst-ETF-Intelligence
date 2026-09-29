@@ -287,7 +287,7 @@
     "risk_state": "RISK_ON",
     "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.0334005624580359,
+    "spy_excess_vs_tbill_3m": 0.01763196127932575,
     "vix_level": 16.06999969482422,
     "vix_percentile_1y": 0.27380952380952384,
     "weight_matrix": {
@@ -299,7 +299,18 @@
       "news": 7
     }
   },
-  "top_signal": {},
+  "top_signal": {
+    "ticker": "XLE",
+    "rank_score": 17.801324503311253,
+    "flow_score": 8.227607088338356,
+    "options_score": 16.2,
+    "rotation_score": 6.964228386912156,
+    "macro_score": 0.0,
+    "news_score": 6.369999999999999,
+    "total": 55.563159978561764,
+    "publish": false,
+    "direction": "long"
+  },
   "jlaw_risk": {
     "distribution_count": 4,
     "risk_multiplier": 1.0,
@@ -402,10 +413,6 @@
       "score": 72.0
     },
     {
-      "symbol": "Real Estate & REITs",
-      "score": 72.0
-    },
-    {
       "symbol": "Clean Energy & Renewables",
       "score": 69.0
     },
@@ -423,6 +430,10 @@
     },
     {
       "symbol": "Europe Equity + Banking & Financial Sector",
+      "score": 62.0
+    },
+    {
+      "symbol": "Real Estate & REITs",
       "score": 62.0
     }
   ],
@@ -987,57 +998,6 @@
       }
     },
     {
-      "sector_key": "real_estate_reit",
-      "sector_label": "Real Estate & REITs",
-      "confidence": 72.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 5,
-      "latest_at": "28 Sep 2026 18:05 UTC",
-      "headline": "Rising Rates Pressure Property Values as REIT M&A Deals Pick Up",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "americas",
-        "india"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Bloomberg Markets",
-        "World News - Breaking international news and headlines | Sky News",
-        "World | Deutsche Welle"
-      ],
-      "primary_etf": "VNQ",
-      "top_etfs": [
-        "VNQ",
-        "REET",
-        "REALTY"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "REALTY"
-      ],
-      "global_etfs": [
-        "VNQ",
-        "REET"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 10.2,
-        "volume_confirmation": 11.3,
-        "source_diversity": 12.6,
-        "recency": 17.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 69.0,
@@ -1289,6 +1249,56 @@
         "recency": 17.0,
         "geopolitical_severity": 13.0
       }
+    },
+    {
+      "sector_key": "real_estate_reit",
+      "sector_label": "Real Estate & REITs",
+      "confidence": 62.0,
+      "severity": "MEDIUM",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 4,
+      "latest_at": "29 Sep 2026 01:46 UTC",
+      "headline": "Equity capital inflow in real estate, data centre, hotel assets doubles to USD 9.5 bn in Jul-Sep: CBRE",
+      "regions": [
+        "europe",
+        "india",
+        "asia_pacific",
+        "americas"
+      ],
+      "sources": [
+        "Markets-Economic Times",
+        "World | Deutsche Welle",
+        "World News - Breaking international news and headlines | Sky News"
+      ],
+      "primary_etf": "VNQ",
+      "top_etfs": [
+        "VNQ",
+        "REET",
+        "REALTY"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "REALTY"
+      ],
+      "global_etfs": [
+        "VNQ",
+        "REET"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 6.4,
+        "volume_confirmation": 9.7,
+        "source_diversity": 9.9,
+        "recency": 16.9,
+        "geopolitical_severity": 11.1
+      }
     }
   ],
   "articles": [
@@ -1350,11 +1360,6 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Real Estate & REITs - 5 articles - HIGH / BEARISH - Rising Rates Pressure Property Values as REIT M&A Deals Pick Up"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Clean Energy & Renewables - 6 articles - MEDIUM / BEARISH - GR Infraprojects shares drop 2% after terminating contract with NTPC. Here\u2019s why"
     },
     {
@@ -1376,6 +1381,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Europe Equity + Banking & Financial Sector - 11 articles - HIGH / BEARISH - Global Market: Eurozone bond yields rise as oil climbs, inflation data eyed"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Real Estate & REITs - 4 articles - MEDIUM / BEARISH - Equity capital inflow in real estate, data centre, hotel assets doubles to USD 9.5 bn in Jul-Sep: CBRE"
     }
   ],
   "market_snapshot": [
@@ -1418,10 +1428,10 @@
       "region": "UK",
       "price": 10684.88,
       "currency": "GBP",
-      "change": 4.88,
-      "change_pct": 0.05,
-      "change_str": "+0.05%",
-      "direction": "up"
+      "change": -10.42,
+      "change_pct": -0.1,
+      "change_str": "-0.10%",
+      "direction": "down"
     },
     {
       "label": "DAX",
@@ -1429,31 +1439,31 @@
       "region": "EU",
       "price": 25374.42,
       "currency": "EUR",
-      "change": 107.89,
-      "change_pct": 0.43,
-      "change_str": "+0.43%",
-      "direction": "up"
+      "change": -34.22,
+      "change_pct": -0.13,
+      "change_str": "-0.13%",
+      "direction": "down"
     },
     {
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 65375.23,
+      "price": 65278.45,
       "currency": "JPY",
-      "change": -988.97,
-      "change_pct": -1.49,
-      "change_str": "-1.49%",
+      "change": -599.17,
+      "change_pct": -0.91,
+      "change_str": "-0.91%",
       "direction": "down"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 24642.51,
+      "price": 24479.61,
       "currency": "HKD",
-      "change": -118.62,
-      "change_pct": -0.48,
-      "change_str": "-0.48%",
+      "change": -162.9,
+      "change_pct": -0.66,
+      "change_str": "-0.66%",
       "direction": "down"
     },
     {
@@ -1462,53 +1472,53 @@
       "region": "IN",
       "price": 22780.25,
       "currency": "INR",
-      "change": -282.85,
-      "change_pct": -1.23,
-      "change_str": "-1.23%",
+      "change": -360.25,
+      "change_pct": -1.56,
+      "change_str": "-1.56%",
       "direction": "down"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4151.4,
+      "price": 4164.6,
       "currency": "USD",
-      "change": -169.8,
-      "change_pct": -3.93,
-      "change_str": "-3.93%",
+      "change": -156.6,
+      "change_pct": -3.62,
+      "change_str": "-3.62%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 93.4,
+      "price": 93.96,
       "currency": "USD",
-      "change": 0.99,
-      "change_pct": 1.07,
-      "change_str": "+1.07%",
+      "change": 1.36,
+      "change_pct": 1.47,
+      "change_str": "+1.47%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 83083.78,
+      "price": 82980.89,
       "currency": "USD",
-      "change": -1374.31,
-      "change_pct": -1.63,
-      "change_str": "-1.63%",
+      "change": -1477.2,
+      "change_pct": -1.75,
+      "change_str": "-1.75%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.24,
+      "price": 101.23,
       "currency": "USD",
-      "change": 0.27,
-      "change_pct": 0.27,
-      "change_str": "+0.27%",
+      "change": 0.03,
+      "change_pct": 0.03,
+      "change_str": "+0.03%",
       "direction": "up"
     },
     {
@@ -1563,26 +1573,26 @@
       "matrix": {
         "CIBR": {
           "CIBR": 1.0,
-          "DBC": -0.103,
-          "EWJ": -0.066,
-          "IBIT": 0.355
+          "DBC": -0.11,
+          "EWJ": -0.08,
+          "IBIT": 0.347
         },
         "DBC": {
-          "CIBR": -0.103,
+          "CIBR": -0.11,
           "DBC": 1.0,
-          "EWJ": -0.684,
-          "IBIT": -0.447
+          "EWJ": -0.633,
+          "IBIT": -0.431
         },
         "EWJ": {
-          "CIBR": -0.066,
-          "DBC": -0.684,
+          "CIBR": -0.08,
+          "DBC": -0.633,
           "EWJ": 1.0,
-          "IBIT": 0.27
+          "IBIT": 0.282
         },
         "IBIT": {
-          "CIBR": 0.355,
-          "DBC": -0.447,
-          "EWJ": 0.27,
+          "CIBR": 0.347,
+          "DBC": -0.431,
+          "EWJ": 0.282,
           "IBIT": 1.0
         }
       },
@@ -1592,12 +1602,12 @@
         "EWJ",
         "IBIT"
       ],
-      "max_corr": 0.355,
+      "max_corr": 0.347,
       "max_corr_pair": [
         "CIBR",
         "IBIT"
       ],
-      "most_negative_corr": -0.684,
+      "most_negative_corr": -0.633,
       "most_negative_pair": [
         "DBC",
         "EWJ"
@@ -1606,21 +1616,21 @@
     },
     "volatility": {
       "per_ticker": {
-        "DBC": 19.33,
-        "EWJ": 18.84,
-        "CIBR": 34.86,
-        "IBIT": 45.18
+        "DBC": 18.95,
+        "EWJ": 18.86,
+        "CIBR": 34.01,
+        "IBIT": 44.15
       },
-      "portfolio_avg_vol_pct": 29.55,
+      "portfolio_avg_vol_pct": 28.99,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 1.81,
+      "benchmark_return_pct": 1.05,
       "benchmark_price_start": 757.67,
-      "benchmark_price_now": 771.35,
+      "benchmark_price_now": 765.61,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": -0.01,
-      "alpha": -1.82
+      "alpha": -1.06
     },
     "rebalance": {
       "alerts": [
@@ -1836,12 +1846,12 @@
     }
   },
   "logs": [
-    "2026-09-29 01:01:04 [INFO] AZALYST - status.json generated",
-    "2026-09-29 01:01:04 [INFO] PORTFOLIO - NAV USD 19,853.75 | Return -0.01%",
-    "2026-09-29 01:01:04 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-29 01:01:04 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
-    "2026-09-29 01:01:04 [INFO] TRADER - Closed trades: 5",
-    "2026-09-29 01:01:04 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-09-29 01:54:34 [INFO] AZALYST - status.json generated",
+    "2026-09-29 01:54:34 [INFO] PORTFOLIO - NAV USD 19,853.75 | Return -0.01%",
+    "2026-09-29 01:54:34 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-29 01:54:34 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
+    "2026-09-29 01:54:34 [INFO] TRADER - Closed trades: 5",
+    "2026-09-29 01:54:34 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-09-29 01:01:02 UTC"
+  "generated_at": "2026-09-29 01:54:31 UTC"
 }
