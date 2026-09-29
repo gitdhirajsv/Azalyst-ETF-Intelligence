@@ -85,7 +85,7 @@
       "pnl_pct_str": "-1.14%",
       "confidence": 82,
       "severity": "MEDIUM",
-      "days_held": 13,
+      "days_held": 14,
       "half_exited": false
     },
     {
@@ -287,7 +287,7 @@
     "risk_state": "RISK_ON",
     "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.01763196127932575,
+    "spy_excess_vs_tbill_3m": 0.0334005624580359,
     "vix_level": 16.06999969482422,
     "vix_percentile_1y": 0.27380952380952384,
     "weight_matrix": {
@@ -299,18 +299,7 @@
       "news": 7
     }
   },
-  "top_signal": {
-    "ticker": "SMH",
-    "rank_score": 27.918584070796463,
-    "flow_score": 1.2535557381878466,
-    "options_score": 17.726838019944363,
-    "rotation_score": 12.531250223078356,
-    "macro_score": 0.0,
-    "news_score": 4.872,
-    "total": 64.30222805200702,
-    "publish": true,
-    "direction": "long"
-  },
+  "top_signal": {},
   "jlaw_risk": {
     "distribution_count": 4,
     "risk_multiplier": 1.0,
@@ -369,32 +358,32 @@
   },
   "confidence": [
     {
-      "symbol": "Defense & Aerospace",
+      "symbol": "Technology & AI / Semiconductors",
       "score": 94.0
     },
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 93.0
+      "score": 91.0
+    },
+    {
+      "symbol": "Defense & Aerospace + Europe Equity",
+      "score": 91.0
     },
     {
       "symbol": "Bonds & Fixed Income + India Equity Markets",
       "score": 91.0
     },
     {
-      "symbol": "Gold & Precious Metals",
-      "score": 89.0
-    },
-    {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
       "score": 89.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 87.0
+      "symbol": "Gold & Precious Metals",
+      "score": 88.0
     },
     {
       "symbol": "India Equity Markets",
-      "score": 86.0
+      "score": 87.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -439,82 +428,82 @@
   ],
   "signals": [
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
       "confidence": 94.0,
       "severity": "HIGH",
-      "direction": "BEARISH",
+      "direction": "BULLISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 34,
-      "latest_at": "28 Sep 2026 18:05 UTC",
-      "headline": "What\u2019s Putin\u2019s Secret Post-Election Strategy To Test NATO?",
+      "article_count": 87,
+      "latest_at": "29 Sep 2026 00:00 UTC",
+      "headline": "Samsung to inject $1 billion into Nvidia- and KKR-backed AI infrastructure firm",
       "regions": [
-        "asia_pacific",
         "global",
-        "middle_east",
-        "india"
+        "europe",
+        "asia_pacific",
+        "americas"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "Oilprice.com",
+        "Bloomberg Markets",
+        "World | Deutsche Welle",
+        "EE Times",
         "BBC News"
       ],
-      "primary_etf": "ITA",
+      "primary_etf": "QQQ",
       "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
+        "NIFTYBEES",
+        "MAFANG"
       ],
       "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
+        "QQQ",
+        "SOXX",
+        "AIQ"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.8,
-        "recency": 17.0,
+        "source_diversity": 17.2,
+        "recency": 15.6,
         "geopolitical_severity": 13.0
       }
     },
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 93.0,
+      "confidence": 91.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -2.0,
+      "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 22,
-      "latest_at": "28 Sep 2026 07:15 UTC",
-      "headline": "Gold Slumps as Costlier Crude Oil Fans Gains in Treasury Yields",
+      "article_count": 27,
+      "latest_at": "29 Sep 2026 00:02 UTC",
+      "headline": "Can Fracking Reverse Colombia\u2019s Oil and Gas Decline?",
       "regions": [
-        "asia_pacific",
         "global",
-        "americas",
-        "europe"
+        "europe",
+        "asia_pacific",
+        "americas"
       ],
       "sources": [
-        "Markets-Economic Times",
+        "Bloomberg Markets",
         "World | Deutsche Welle",
-        "Defense News",
-        "Bloomberg Markets"
+        "Oilprice.com",
+        "Tech"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -539,8 +528,61 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 13.8,
-        "recency": 14.8,
+        "source_diversity": 13.3,
+        "recency": 15.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace + Europe Equity",
+      "confidence": 91.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 1.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 11,
+      "latest_at": "29 Sep 2026 00:51 UTC",
+      "headline": "The World Is Entering a New Era of Energy Security",
+      "regions": [
+        "global",
+        "asia_pacific",
+        "europe",
+        "middle_east"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "World | Deutsche Welle",
+        "BBC News",
+        "World News - Breaking international news and headlines | Sky News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 16.8,
+        "source_diversity": 16.8,
+        "recency": 17.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -597,59 +639,6 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 89.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "28 Sep 2026 16:28 UTC",
-      "headline": "Gold, silver plunge up to 3% as oil surge, rate-hike bets trigger sell-off. What lies ahead?",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "americas",
-        "middle_east"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Latest from Tom's Hardware",
-        "Finance",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "GLDM",
-      "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
-      ],
-      "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 19.8,
-        "volume_confirmation": 18.0,
-        "source_diversity": 12.1,
-        "recency": 14.4,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
       "confidence": 89.0,
@@ -701,76 +690,76 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 87.0,
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 88.0,
       "severity": "HIGH",
-      "direction": "BULLISH",
+      "direction": "BEARISH",
       "direction_score": 0.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 75,
-      "latest_at": "28 Sep 2026 15:55 UTC",
-      "headline": "Meta, Google, Amazon, Microsoft draw Sen. Warren questions about AI tax subsidies",
+      "article_count": 14,
+      "latest_at": "29 Sep 2026 00:07 UTC",
+      "headline": "Gold tumbles 4% to seven-week low as oil, dollar and yields climb",
       "regions": [
-        "europe",
+        "global",
         "asia_pacific",
-        "middle_east",
+        "europe",
         "americas"
       ],
       "sources": [
-        "World News - Breaking international news and headlines | Sky News",
-        "US Top News and Analysis",
-        "Finance",
-        "Markets-Economic Times"
+        "Bloomberg Markets",
+        "Cointelegraph.com News",
+        "Latest from Tom's Hardware",
+        "Finance"
       ],
-      "primary_etf": "QQQ",
+      "primary_etf": "GLDM",
       "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
+        "GOLDBEES",
+        "HDFCGOLD"
       ],
       "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
+        "GLDM",
+        "GDX",
+        "GDXJ"
       ],
       "is_legacy": false,
       "breakdown": {
-        "signal_strength": 22.0,
+        "signal_strength": 21.2,
         "volume_confirmation": 18.0,
-        "source_diversity": 16.9,
-        "recency": 10.8,
+        "source_diversity": 12.1,
+        "recency": 15.7,
         "geopolitical_severity": 13.0
       }
     },
     {
       "sector_key": "india_equity",
       "sector_label": "India Equity Markets",
-      "confidence": 86.0,
+      "confidence": 87.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -6.5,
+      "direction_score": -11.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 22,
-      "latest_at": "28 Sep 2026 17:02 UTC",
+      "article_count": 25,
+      "latest_at": "29 Sep 2026 00:30 UTC",
       "headline": "Market wrap: Infosys, Dr Reddy's Labs, Tata Motors PV, Power Grid top gainers and losers on Nifty and Sensex on Monday",
       "regions": [
-        "africa",
-        "asia_pacific",
         "middle_east",
-        "india"
+        "africa",
+        "india",
+        "asia_pacific"
       ],
       "sources": [
         "Markets-Economic Times",
@@ -799,7 +788,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 9.9,
-        "recency": 15.3,
+        "recency": 16.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -1304,14 +1293,19 @@
   ],
   "articles": [
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Defense & Aerospace - 34 articles - HIGH / BEARISH - What\u2019s Putin\u2019s Secret Post-Election Strategy To Test NATO?"
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Technology & AI / Semiconductors - 87 articles - HIGH / BULLISH - Samsung to inject $1 billion into Nvidia- and KKR-backed AI infrastructure firm"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 22 articles - CRITICAL / BEARISH - Gold Slumps as Costlier Crude Oil Fans Gains in Treasury Yields"
+      "text": "Energy / Oil & Gas - 27 articles - CRITICAL / BEARISH - Can Fracking Reverse Colombia\u2019s Oil and Gas Decline?"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Defense & Aerospace + Europe Equity - 11 articles - HIGH / BEARISH - The World Is Entering a New Era of Energy Security"
     },
     {
       "tag": "tag-bear",
@@ -1321,22 +1315,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Gold & Precious Metals - 13 articles - HIGH / BEARISH - Gold, silver plunge up to 3% as oil surge, rate-hike bets trigger sell-off. What lies ahead?"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Banking & Financial Sector + Gold & Precious Metals - 11 articles - HIGH / BEARISH - US Market: Wall Street rally faces fresh test as jobs, inflation data loom"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 75 articles - HIGH / BULLISH - Meta, Google, Amazon, Microsoft draw Sen. Warren questions about AI tax subsidies"
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Gold & Precious Metals - 14 articles - HIGH / BEARISH - Gold tumbles 4% to seven-week low as oil, dollar and yields climb"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "India Equity Markets - 22 articles - CRITICAL / BEARISH - Market wrap: Infosys, Dr Reddy's Labs, Tata Motors PV, Power Grid top gainers and losers on Nifty and Sensex on Monday"
+      "text": "India Equity Markets - 25 articles - CRITICAL / BEARISH - Market wrap: Infosys, Dr Reddy's Labs, Tata Motors PV, Power Grid top gainers and losers on Nifty and Sensex on Monday"
     },
     {
       "tag": "tag-bull",
@@ -1429,10 +1418,10 @@
       "region": "UK",
       "price": 10684.88,
       "currency": "GBP",
-      "change": -10.42,
-      "change_pct": -0.1,
-      "change_str": "-0.10%",
-      "direction": "down"
+      "change": 4.88,
+      "change_pct": 0.05,
+      "change_str": "+0.05%",
+      "direction": "up"
     },
     {
       "label": "DAX",
@@ -1440,21 +1429,21 @@
       "region": "EU",
       "price": 25374.42,
       "currency": "EUR",
-      "change": -34.22,
-      "change_pct": -0.13,
-      "change_str": "-0.13%",
-      "direction": "down"
+      "change": 107.89,
+      "change_pct": 0.43,
+      "change_str": "+0.43%",
+      "direction": "up"
     },
     {
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 65877.62,
+      "price": 65375.23,
       "currency": "JPY",
-      "change": 363.63,
-      "change_pct": 0.56,
-      "change_str": "+0.56%",
-      "direction": "up"
+      "change": -988.97,
+      "change_pct": -1.49,
+      "change_str": "-1.49%",
+      "direction": "down"
     },
     {
       "label": "Hang Seng",
@@ -1482,44 +1471,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4155.9,
+      "price": 4151.4,
       "currency": "USD",
-      "change": -165.3,
-      "change_pct": -3.83,
-      "change_str": "-3.83%",
+      "change": -169.8,
+      "change_pct": -3.93,
+      "change_str": "-3.93%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 92.98,
+      "price": 93.4,
       "currency": "USD",
-      "change": 0.57,
-      "change_pct": 0.62,
-      "change_str": "+0.62%",
+      "change": 0.99,
+      "change_pct": 1.07,
+      "change_str": "+1.07%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 83499.25,
+      "price": 83083.78,
       "currency": "USD",
-      "change": -958.84,
-      "change_pct": -1.14,
-      "change_str": "-1.14%",
+      "change": -1374.31,
+      "change_pct": -1.63,
+      "change_str": "-1.63%",
       "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.2,
+      "price": 101.24,
       "currency": "USD",
-      "change": 0.23,
-      "change_pct": 0.23,
-      "change_str": "+0.23%",
+      "change": 0.27,
+      "change_pct": 0.27,
+      "change_str": "+0.27%",
       "direction": "up"
     },
     {
@@ -1574,26 +1563,26 @@
       "matrix": {
         "CIBR": {
           "CIBR": 1.0,
-          "DBC": -0.11,
-          "EWJ": -0.08,
-          "IBIT": 0.347
+          "DBC": -0.103,
+          "EWJ": -0.066,
+          "IBIT": 0.355
         },
         "DBC": {
-          "CIBR": -0.11,
+          "CIBR": -0.103,
           "DBC": 1.0,
-          "EWJ": -0.633,
-          "IBIT": -0.431
+          "EWJ": -0.684,
+          "IBIT": -0.447
         },
         "EWJ": {
-          "CIBR": -0.08,
-          "DBC": -0.633,
+          "CIBR": -0.066,
+          "DBC": -0.684,
           "EWJ": 1.0,
-          "IBIT": 0.282
+          "IBIT": 0.27
         },
         "IBIT": {
-          "CIBR": 0.347,
-          "DBC": -0.431,
-          "EWJ": 0.282,
+          "CIBR": 0.355,
+          "DBC": -0.447,
+          "EWJ": 0.27,
           "IBIT": 1.0
         }
       },
@@ -1603,12 +1592,12 @@
         "EWJ",
         "IBIT"
       ],
-      "max_corr": 0.347,
+      "max_corr": 0.355,
       "max_corr_pair": [
         "CIBR",
         "IBIT"
       ],
-      "most_negative_corr": -0.633,
+      "most_negative_corr": -0.684,
       "most_negative_pair": [
         "DBC",
         "EWJ"
@@ -1617,21 +1606,21 @@
     },
     "volatility": {
       "per_ticker": {
-        "DBC": 18.95,
-        "EWJ": 18.86,
-        "CIBR": 34.01,
-        "IBIT": 44.15
+        "DBC": 19.33,
+        "EWJ": 18.84,
+        "CIBR": 34.86,
+        "IBIT": 45.18
       },
-      "portfolio_avg_vol_pct": 28.99,
+      "portfolio_avg_vol_pct": 29.55,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 1.05,
+      "benchmark_return_pct": 1.81,
       "benchmark_price_start": 757.67,
-      "benchmark_price_now": 765.61,
+      "benchmark_price_now": 771.35,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": -0.01,
-      "alpha": -1.06
+      "alpha": -1.82
     },
     "rebalance": {
       "alerts": [
@@ -1847,12 +1836,12 @@
     }
   },
   "logs": [
-    "2026-09-28 20:33:57 [INFO] AZALYST - status.json generated",
-    "2026-09-28 20:33:57 [INFO] PORTFOLIO - NAV USD 19,853.75 | Return -0.01%",
-    "2026-09-28 20:33:57 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-28 20:33:57 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
-    "2026-09-28 20:33:57 [INFO] TRADER - Closed trades: 5",
-    "2026-09-28 20:33:57 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-09-29 01:01:04 [INFO] AZALYST - status.json generated",
+    "2026-09-29 01:01:04 [INFO] PORTFOLIO - NAV USD 19,853.75 | Return -0.01%",
+    "2026-09-29 01:01:04 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-29 01:01:04 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
+    "2026-09-29 01:01:04 [INFO] TRADER - Closed trades: 5",
+    "2026-09-29 01:01:04 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-09-28 20:33:53 UTC"
+  "generated_at": "2026-09-29 01:01:02 UTC"
 }
