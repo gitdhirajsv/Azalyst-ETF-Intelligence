@@ -1,41 +1,44 @@
 {
   "gold_precious_metals": {
-    "sent_at": "2026-09-29T19:10:05.129537+00:00",
-    "confidence": 88,
+    "sent_at": "2026-09-29T23:30:34.043711+00:00",
+    "confidence": 91,
     "sector_label": "Gold & Precious Metals",
     "article_count": 13,
     "severity": "HIGH",
     "direction": "BEARISH",
-    "direction_score": -4.0,
+    "direction_score": -6.0,
     "signal_scope": "global",
-    "india_article_ratio": 0.0,
+    "india_article_ratio": 0.08,
     "regions": [
-      "europe",
-      "asia_pacific",
-      "middle_east",
       "americas",
-      "global"
+      "asia_pacific",
+      "global",
+      "europe",
+      "india",
+      "middle_east"
     ],
     "sources": [
+      "Markets-Economic Times",
+      "Oilprice.com",
       "Bloomberg Markets",
       "www.theregister.com - Articles",
-      "Markets-Economic Times"
+      "US Top News and Analysis"
     ],
     "top_headlines": [
+      "Fed rate hike 'not urgent', says John Williams; Austan Goolsbee warns against 'playing with fire'",
       "Global Market: Japan 2-year bond yield nears 2% as BOJ rate hike bets rise",
       "India bonds edge up on short covering as US yields cool",
-      "Bank of Canada on Monetary Policy",
-      "Fed\u2019s Barr Says Further Policy Adjustments Likely Needed to Tame Inflation",
-      "Global Market: ECB's Lagarde says eurozone inflation has yet to trigger second-round effects"
+      "Global Market: ECB's Lagarde says eurozone inflation has yet to trigger second-round effects",
+      "Europe\u2019s Gas Crisis Deepens as Hormuz LNG Crunch Drives Prices Higher"
     ],
-    "latest_ts": "2026-09-29T18:37:30+00:00",
+    "latest_ts": "2026-09-29T23:00:00+00:00",
     "confidence_breakdown": {
-      "signal_strength": 19.2,
+      "signal_strength": 19.5,
       "volume_confirmation": 18.0,
-      "source_diversity": 11.0,
-      "recency": 16.1,
+      "source_diversity": 13.3,
+      "recency": 16.2,
       "geopolitical_severity": 13.0,
-      "cross_engine_confirmation": 11.3,
+      "cross_engine_confirmation": 11.7,
       "macro_events": 0.0
     },
     "etf_recommendations": {
@@ -89,10 +92,11 @@
           "sector_key": "gold_precious_metals",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 99.0,
+          "selection_score": 102.0,
           "selection_notes": [
             "clean thematic exposure",
-            "institutional depth"
+            "institutional depth",
+            "matches India-listed access"
           ]
         },
         {
@@ -106,7 +110,7 @@
           "sector_key": "gold_precious_metals",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 95.5,
+          "selection_score": 98.5,
           "selection_notes": [
             "clean thematic exposure",
             "strong trading liquidity",
@@ -179,10 +183,11 @@
           "sector_key": "gold_precious_metals",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 99.0,
+          "selection_score": 102.0,
           "selection_notes": [
             "clean thematic exposure",
-            "institutional depth"
+            "institutional depth",
+            "matches India-listed access"
           ]
         },
         {
@@ -196,7 +201,7 @@
           "sector_key": "gold_precious_metals",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 95.5,
+          "selection_score": 98.5,
           "selection_notes": [
             "clean thematic exposure",
             "strong trading liquidity",
@@ -218,10 +223,11 @@
             "sector_key": "gold_precious_metals",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 99.0,
+            "selection_score": 102.0,
             "selection_notes": [
               "clean thematic exposure",
-              "institutional depth"
+              "institutional depth",
+              "matches India-listed access"
             ]
           },
           {
@@ -235,7 +241,7 @@
             "sector_key": "gold_precious_metals",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 95.5,
+            "selection_score": 98.5,
             "selection_notes": [
               "clean thematic exposure",
               "strong trading liquidity",
@@ -311,10 +317,11 @@
           "sector_key": "gold_precious_metals",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 99.0,
+          "selection_score": 102.0,
           "selection_notes": [
             "clean thematic exposure",
-            "institutional depth"
+            "institutional depth",
+            "matches India-listed access"
           ]
         },
         {
@@ -328,7 +335,7 @@
           "sector_key": "gold_precious_metals",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 95.5,
+          "selection_score": 98.5,
           "selection_notes": [
             "clean thematic exposure",
             "strong trading liquidity",
@@ -922,46 +929,45 @@
     }
   },
   "energy_oil": {
-    "sent_at": "2026-09-29T16:30:07.617758+00:00",
-    "confidence": 92,
+    "sent_at": "2026-09-29T23:30:35.250795+00:00",
+    "confidence": 90,
     "sector_label": "Energy / Oil & Gas",
-    "article_count": 27,
+    "article_count": 22,
     "severity": "CRITICAL",
     "direction": "BEARISH",
-    "direction_score": -7.5,
+    "direction_score": -1.5,
     "signal_scope": "global",
-    "india_article_ratio": 0.07,
+    "india_article_ratio": 0.09,
     "regions": [
-      "india",
-      "global",
+      "americas",
       "asia_pacific",
-      "middle_east",
+      "global",
       "europe",
-      "africa"
+      "africa",
+      "india"
     ],
     "sources": [
+      "Markets-Economic Times",
       "Oilprice.com",
       "Bloomberg Markets",
       "World | Deutsche Welle",
-      "US Top News and Analysis",
-      "Tech",
-      "Markets-Economic Times"
+      "Tech"
     ],
     "top_headlines": [
-      "Saudi Arabia Restarts Red Sea Crude Oil Loadings",
-      "Oil Extends Rally Despite Higher Hormuz Volume Reports",
-      "Standard Chartered: Record CTA Long Bets Are Capping Oil's Upside",
-      "India Looks to Boost Exploration as Hormuz Crisis Threatens Supply",
-      "Iran Talks Take the Heat Out of the Oil Rally"
+      "Europe\u2019s Gas Crisis Deepens as Hormuz LNG Crunch Drives Prices Higher",
+      "U.S. Taps Strategic Oil Reserve Again as Diesel Tops $6",
+      "US Distillate Stocks Continue to Fall As Crude Inventories Build",
+      "Latest Oil Market News and Analysis for Sept. 30",
+      "Iran Threatens Middle East Energy Infrastructure as Hormuz Standoff Deepens"
     ],
-    "latest_ts": "2026-09-29T15:30:00+00:00",
+    "latest_ts": "2026-09-29T23:00:00+00:00",
     "confidence_breakdown": {
       "signal_strength": 22.0,
       "volume_confirmation": 18.0,
-      "source_diversity": 14.0,
-      "recency": 15.4,
+      "source_diversity": 13.3,
+      "recency": 16.2,
       "geopolitical_severity": 13.0,
-      "cross_engine_confirmation": 10.4,
+      "cross_engine_confirmation": 8.3,
       "macro_events": 0.0
     },
     "etf_recommendations": {
@@ -2610,46 +2616,46 @@
     }
   },
   "europe_equity": {
-    "sent_at": "2026-09-29T16:30:14.254445+00:00",
-    "confidence": 64,
-    "sector_label": "Europe Equity + Banking & Financial Sector + Gold & Precious Metals",
-    "article_count": 14,
+    "sent_at": "2026-09-29T23:30:32.180724+00:00",
+    "confidence": 94,
+    "sector_label": "Europe Equity + Banking & Financial Sector",
+    "article_count": 12,
     "severity": "CRITICAL",
     "direction": "BEARISH",
-    "direction_score": -12.5,
+    "direction_score": -8.5,
     "signal_scope": "global",
     "india_article_ratio": 0.0,
     "regions": [
-      "global",
       "europe",
-      "india",
-      "asia_pacific",
       "middle_east",
-      "americas"
+      "global",
+      "americas",
+      "asia_pacific",
+      "india"
     ],
     "sources": [
-      "World | Deutsche Welle",
       "Markets-Economic Times",
+      "Oilprice.com",
       "Cointelegraph.com News",
+      "World | Deutsche Welle",
       "Bloomberg Markets",
-      "US Top News and Analysis",
-      "Finance"
+      "US Top News and Analysis"
     ],
     "top_headlines": [
       "Global Market: Eurozone bond selloff pauses, yields stay near multi-year highs",
       "Global Market: ECB's Lagarde says eurozone inflation has yet to trigger second-round effects",
+      "Europe\u2019s Gas Crisis Deepens as Hormuz LNG Crunch Drives Prices Higher",
       "Euro zone bond selloff hits pause, yields fall from multi-year highs",
-      "ECB puts AI agent payments on the digital euro drawing board",
-      "UK: US government questions bail for Fairford base suspects"
+      "ECB puts AI agent payments on the digital euro drawing board"
     ],
-    "latest_ts": "2026-09-29T16:28:43.118372+00:00",
+    "latest_ts": "2026-09-29T23:28:41.447939+00:00",
     "confidence_breakdown": {
       "signal_strength": 22.0,
-      "volume_confirmation": 18.0,
-      "source_diversity": 13.6,
-      "recency": 17.0,
+      "volume_confirmation": 17.4,
+      "source_diversity": 13.4,
+      "recency": 16.9,
       "geopolitical_severity": 13.0,
-      "cross_engine_confirmation": 6.9,
+      "cross_engine_confirmation": 11.3,
       "macro_events": 0.0
     },
     "etf_recommendations": {
@@ -3894,42 +3900,43 @@
     }
   },
   "healthcare_pharma": {
-    "sent_at": "2026-09-08T07:14:13.154745+00:00",
-    "confidence": 72,
-    "sector_label": "Healthcare & Pharma + Europe Equity",
-    "article_count": 6,
-    "severity": "HIGH",
-    "direction": "BULLISH",
-    "direction_score": 1.5,
+    "sent_at": "2026-09-29T23:30:37.899783+00:00",
+    "confidence": 83,
+    "sector_label": "Healthcare & Pharma + India Equity Markets",
+    "article_count": 9,
+    "severity": "CRITICAL",
+    "direction": "BEARISH",
+    "direction_score": -9.5,
     "signal_scope": "global",
     "india_article_ratio": 0.0,
     "regions": [
-      "global",
-      "africa",
-      "europe"
+      "asia_pacific",
+      "middle_east",
+      "india",
+      "global"
     ],
     "sources": [
+      "Markets-Economic Times",
       "US Top News and Analysis",
-      "World | Deutsche Welle",
-      "Oilprice.com",
-      "Bloomberg Markets",
-      "BBC News"
+      "EE Times",
+      "www.theregister.com - Articles",
+      "Latest from Tom's Hardware"
     ],
     "top_headlines": [
-      "Cholesterol drug setback casts doubt over multibillion-dollar race",
-      "Ebola: Why children are last to be treated in medical crises",
-      "Germany\u2019s Power Grid Could Be NATO\u2019s Weakest Link",
-      "How significant are AfD's historic gains for Germany and the rest of Europe?",
-      "FTSE 100 Live: Stocks Stable as Oil Keeps Creeping Higher"
+      "Medico Remedies among 5 Healthcare stocks hitting 52-week low; slipped up to 48% in a month",
+      "Two Indian nationals charged with smuggling counterfeit Ozempic from China: DOJ",
+      "Market wrap: Adani Enterprises, Adani Ports, Titan Company, Wipro top gainers and losers on Nifty and Sensex on Tuesday",
+      "Goldman Sachs, BNP Paribas divest over 68 lakh BSE shares worth Rs 2,186 crore ahead of Nifty 50 inclusion",
+      "Nifty Bank crashes 1,800 points in 2 days, slips below 54K for first time in 4 months. What\u2019s next?"
     ],
-    "latest_ts": "2026-09-08T07:12:22.834659+00:00",
+    "latest_ts": "2026-09-29T20:18:32+00:00",
     "confidence_breakdown": {
-      "signal_strength": 10.3,
-      "volume_confirmation": 12.6,
-      "source_diversity": 13.3,
-      "recency": 17.0,
+      "signal_strength": 22.0,
+      "volume_confirmation": 15.4,
+      "source_diversity": 11.4,
+      "recency": 12.3,
       "geopolitical_severity": 13.0,
-      "cross_engine_confirmation": 6.4,
+      "cross_engine_confirmation": 9.8,
       "macro_events": 0.0
     },
     "etf_recommendations": {
@@ -4017,9 +4024,10 @@
           "sector_key": "healthcare_pharma",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 82.5,
+          "selection_score": 85.5,
           "selection_notes": [
-            "clean thematic exposure"
+            "clean thematic exposure",
+            "matches India-listed access"
           ]
         },
         {
@@ -4033,8 +4041,10 @@
           "sector_key": "healthcare_pharma",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 78.0,
-          "selection_notes": []
+          "selection_score": 81.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "top_etfs": [
@@ -4105,9 +4115,10 @@
             "sector_key": "healthcare_pharma",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 82.5,
+            "selection_score": 85.5,
             "selection_notes": [
-              "clean thematic exposure"
+              "clean thematic exposure",
+              "matches India-listed access"
             ]
           },
           {
@@ -4121,8 +4132,10 @@
             "sector_key": "healthcare_pharma",
             "market_bucket": "india",
             "market_scope": "India-listed",
-            "selection_score": 78.0,
-            "selection_notes": []
+            "selection_score": 81.0,
+            "selection_notes": [
+              "matches India-listed access"
+            ]
           }
         ],
         "International-listed": [
@@ -4193,9 +4206,10 @@
           "sector_key": "healthcare_pharma",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 82.5,
+          "selection_score": 85.5,
           "selection_notes": [
-            "clean thematic exposure"
+            "clean thematic exposure",
+            "matches India-listed access"
           ]
         },
         {
@@ -4209,8 +4223,10 @@
           "sector_key": "healthcare_pharma",
           "market_bucket": "india",
           "market_scope": "India-listed",
-          "selection_score": 78.0,
-          "selection_notes": []
+          "selection_score": 81.0,
+          "selection_notes": [
+            "matches India-listed access"
+          ]
         }
       ],
       "global": [
@@ -4271,45 +4287,46 @@
     }
   },
   "bonds_fixed_income": {
-    "sent_at": "2026-09-29T16:30:08.879349+00:00",
-    "confidence": 90,
+    "sent_at": "2026-09-29T23:30:36.614411+00:00",
+    "confidence": 87,
     "sector_label": "Bonds & Fixed Income + Bearish Market / Macro Selloff",
     "article_count": 12,
     "severity": "HIGH",
     "direction": "BEARISH",
     "direction_score": -8.0,
     "signal_scope": "global",
-    "india_article_ratio": 0.2,
+    "india_article_ratio": 0.14,
     "regions": [
-      "india",
-      "global",
+      "americas",
       "asia_pacific",
-      "middle_east",
-      "europe"
+      "global",
+      "europe",
+      "india",
+      "middle_east"
     ],
     "sources": [
+      "Markets-Economic Times",
       "Bloomberg Markets",
       "Cointelegraph.com News",
       "US Top News and Analysis",
-      "Tech",
-      "Finance",
+      "Latest from Tom's Hardware",
       "www.theregister.com - Articles"
     ],
     "top_headlines": [
+      "US 30-year Treasury yield tops 5.6%, reaching highest level since 2002",
+      "30-year Treasury bond yield scales to highest level since 2002",
       "Global Market: Japan 2-year bond yield nears 2% as BOJ rate hike bets rise",
-      "US 30-Year Treasury Yield Rises to Highest Level Since 2002",
       "Global Market: Eurozone bond selloff pauses, yields stay near multi-year highs",
-      "India 10-year bond snaps four-day losing run as US yields ease",
-      "Barclays Says US 30-Year Yield Can Reach 6% in Productivity Boom"
+      "La Caisse, BCI on Bond Market Funding"
     ],
-    "latest_ts": "2026-09-29T15:28:03+00:00",
+    "latest_ts": "2026-09-29T20:31:35+00:00",
     "confidence_breakdown": {
       "signal_strength": 22.0,
       "volume_confirmation": 17.4,
-      "source_diversity": 14.2,
-      "recency": 15.3,
+      "source_diversity": 13.6,
+      "recency": 12.6,
       "geopolitical_severity": 13.0,
-      "cross_engine_confirmation": 8.6,
+      "cross_engine_confirmation": 8.5,
       "macro_events": 0.0
     },
     "etf_recommendations": {
