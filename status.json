@@ -287,7 +287,7 @@
     "risk_state": "RISK_ON",
     "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.01710856532270083,
+    "spy_excess_vs_tbill_3m": 0.01761196153681782,
     "vix_level": 16.040000915527344,
     "vix_percentile_1y": 0.26587301587301587,
     "weight_matrix": {
@@ -299,18 +299,7 @@
       "news": 7
     }
   },
-  "top_signal": {
-    "ticker": "SGOV",
-    "rank_score": 29.863357664233575,
-    "flow_score": 22.0,
-    "options_score": 0.0,
-    "rotation_score": 0.0,
-    "macro_score": 0.0,
-    "news_score": 0.0,
-    "total": 51.863357664233575,
-    "publish": false,
-    "direction": "long"
-  },
+  "top_signal": {},
   "jlaw_risk": {
     "distribution_count": 4,
     "risk_multiplier": 1.0,
@@ -377,6 +366,10 @@
       "score": 94.0
     },
     {
+      "symbol": "Defense & Aerospace",
+      "score": 93.0
+    },
+    {
       "symbol": "Gold & Precious Metals",
       "score": 91.0
     },
@@ -419,10 +412,6 @@
     {
       "symbol": "Clean Energy & Renewables",
       "score": 69.0
-    },
-    {
-      "symbol": "Defense & Aerospace",
-      "score": 66.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -538,6 +527,59 @@
         "volume_confirmation": 17.4,
         "source_diversity": 13.4,
         "recency": 16.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 93.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 22,
+      "latest_at": "30 Sep 2026 01:13 UTC",
+      "headline": "French artillery regiment reorganizes guns to survive drone threats",
+      "regions": [
+        "europe",
+        "global",
+        "asia_pacific",
+        "americas"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Defense News",
+        "World News - Breaking international news and headlines | Sky News",
+        "Oilprice.com"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.4,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.1,
+        "recency": 17.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -1100,59 +1142,6 @@
       }
     },
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 66.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 25,
-      "latest_at": "29 Sep 2026 16:28 UTC",
-      "headline": "Putin orders army expansion as Zelenskyy warns Russia preparing to deploy 10,000 North Korean troops",
-      "regions": [
-        "india",
-        "global",
-        "asia_pacific",
-        "middle_east"
-      ],
-      "sources": [
-        "World | Deutsche Welle",
-        "Oilprice.com",
-        "Cointelegraph.com News",
-        "BBC News"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 15.6,
-        "recency": 17.0,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "nuclear_uranium",
       "sector_label": "Nuclear Energy & Uranium",
       "confidence": 63.0,
@@ -1318,6 +1307,11 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Defense & Aerospace - 22 articles - HIGH / BEARISH - French artillery regiment reorganizes guns to survive drone threats"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "Gold & Precious Metals - 13 articles - HIGH / BEARISH - Fed rate hike 'not urgent', says John Williams; Austan Goolsbee warns against 'playing with fire'"
     },
     {
@@ -1369,11 +1363,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Clean Energy & Renewables - 6 articles - MEDIUM / BEARISH - GR Infraprojects shares drop 2% after terminating contract with NTPC. Here\u2019s why"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Defense & Aerospace - 25 articles - HIGH / BEARISH - Putin orders army expansion as Zelenskyy warns Russia preparing to deploy 10,000 North Korean troops"
     },
     {
       "tag": "tag-bear",
@@ -1451,12 +1440,12 @@
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 65481.27,
+      "price": 66201.34,
       "currency": "JPY",
-      "change": -882.93,
-      "change_pct": -1.33,
-      "change_str": "-1.33%",
-      "direction": "down"
+      "change": 323.72,
+      "change_pct": 0.49,
+      "change_str": "+0.49%",
+      "direction": "up"
     },
     {
       "label": "Hang Seng",
@@ -1484,44 +1473,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4212.7,
+      "price": 4206.7,
       "currency": "USD",
-      "change": -108.5,
-      "change_pct": -2.51,
-      "change_str": "-2.51%",
-      "direction": "down"
+      "change": 38.3,
+      "change_pct": 0.92,
+      "change_str": "+0.92%",
+      "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 89.36,
+      "price": 89.49,
       "currency": "USD",
-      "change": -3.24,
-      "change_pct": -3.5,
-      "change_str": "-3.50%",
+      "change": -3.11,
+      "change_pct": -3.36,
+      "change_str": "-3.36%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 83651.72,
+      "price": 83361.94,
       "currency": "USD",
-      "change": 149.11,
-      "change_pct": 0.18,
-      "change_str": "+0.18%",
-      "direction": "up"
+      "change": -140.67,
+      "change_pct": -0.17,
+      "change_str": "-0.17%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.38,
+      "price": 101.41,
       "currency": "USD",
-      "change": 0.18,
-      "change_pct": 0.17,
-      "change_str": "+0.17%",
+      "change": 0.21,
+      "change_pct": 0.21,
+      "change_str": "+0.21%",
       "direction": "up"
     },
     {
@@ -1576,25 +1565,25 @@
       "matrix": {
         "CIBR": {
           "CIBR": 1.0,
-          "DBC": -0.112,
-          "EWJ": -0.082,
-          "IBIT": 0.346
+          "DBC": -0.11,
+          "EWJ": -0.08,
+          "IBIT": 0.347
         },
         "DBC": {
-          "CIBR": -0.112,
+          "CIBR": -0.11,
           "DBC": 1.0,
-          "EWJ": -0.579,
-          "IBIT": -0.41
+          "EWJ": -0.633,
+          "IBIT": -0.431
         },
         "EWJ": {
-          "CIBR": -0.082,
-          "DBC": -0.579,
+          "CIBR": -0.08,
+          "DBC": -0.633,
           "EWJ": 1.0,
           "IBIT": 0.282
         },
         "IBIT": {
-          "CIBR": 0.346,
-          "DBC": -0.41,
+          "CIBR": 0.347,
+          "DBC": -0.431,
           "EWJ": 0.282,
           "IBIT": 1.0
         }
@@ -1605,12 +1594,12 @@
         "EWJ",
         "IBIT"
       ],
-      "max_corr": 0.346,
+      "max_corr": 0.347,
       "max_corr_pair": [
         "CIBR",
         "IBIT"
       ],
-      "most_negative_corr": -0.579,
+      "most_negative_corr": -0.633,
       "most_negative_pair": [
         "DBC",
         "EWJ"
@@ -1619,21 +1608,21 @@
     },
     "volatility": {
       "per_ticker": {
-        "DBC": 19.4,
-        "EWJ": 18.43,
-        "CIBR": 33.16,
-        "IBIT": 43.03
+        "DBC": 18.95,
+        "EWJ": 18.86,
+        "CIBR": 34.01,
+        "IBIT": 44.15
       },
-      "portfolio_avg_vol_pct": 28.51,
+      "portfolio_avg_vol_pct": 28.99,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 0.86,
+      "benchmark_return_pct": 1.05,
       "benchmark_price_start": 757.67,
-      "benchmark_price_now": 764.2,
+      "benchmark_price_now": 765.61,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": -0.46,
-      "alpha": -1.32
+      "alpha": -1.51
     },
     "rebalance": {
       "alerts": [
@@ -1849,12 +1838,12 @@
     }
   },
   "logs": [
-    "2026-09-29 23:36:15 [INFO] AZALYST - status.json generated",
-    "2026-09-29 23:36:15 [INFO] PORTFOLIO - NAV USD 19,764.75 | Return -0.46%",
-    "2026-09-29 23:36:15 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-29 23:36:15 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
-    "2026-09-29 23:36:15 [INFO] TRADER - Closed trades: 5",
-    "2026-09-29 23:36:15 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-09-30 01:20:08 [INFO] AZALYST - status.json generated",
+    "2026-09-30 01:20:08 [INFO] PORTFOLIO - NAV USD 19,764.75 | Return -0.46%",
+    "2026-09-30 01:20:08 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-09-30 01:20:08 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
+    "2026-09-30 01:20:08 [INFO] TRADER - Closed trades: 5",
+    "2026-09-30 01:20:08 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-09-29 23:36:12 UTC"
+  "generated_at": "2026-09-30 01:20:07 UTC"
 }
