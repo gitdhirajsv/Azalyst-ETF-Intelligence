@@ -1,20 +1,20 @@
 {
-  "portfolio_value": 19862.58,
-  "total_deposited": 19888.02,
-  "cash": 9742.26,
-  "monthly_reserve": 0.0,
+  "portfolio_value": 29862.58,
+  "total_deposited": 29888.02,
+  "cash": 14742.26,
+  "monthly_reserve": 5000.0,
   "market_value": 10120.33,
   "total_invested": 9980.87,
   "unrealised_pnl": 139.45,
   "unrealised_str": "+139.45",
   "realised_pnl": -164.89,
   "realised_str": "-164.89",
-  "change": "-0.13%",
-  "change_raw": -0.13,
+  "change": "-0.09%",
+  "change_raw": -0.09,
   "closed_trades": 5,
   "partial_realised_pnl": 121.19,
-  "portfolio_peak": 20539.79,
-  "drawdown_now_pct": 3.3,
+  "portfolio_peak": 29862.58,
+  "drawdown_now_pct": 0.0,
   "max_drawdown_pct": 3.69,
   "deposited_anomaly": false,
   "usd_inr_rate": 95.82,
@@ -262,10 +262,10 @@
       },
       {
         "era": "current",
-        "total_deposited": 19888.02,
-        "portfolio_value": 19862.58,
+        "total_deposited": 29888.02,
+        "portfolio_value": 29862.58,
         "realised_pnl": -164.89,
-        "change": "-0.13%",
+        "change": "-0.09%",
         "total_trades": 6,
         "winners": 1,
         "losers": 5,
@@ -279,7 +279,7 @@
     "combined_win_rate": 18.9,
     "combined_realised_pnl": -256.18,
     "combined_realised_pnl_str": "-256.18",
-    "combined_total_deposited": 59822.25,
+    "combined_total_deposited": 69822.25,
     "note": "Each entry in `eras` is a separate paper-trading book (a prior book is archived, deposits restart, and NAV resets to par when the engine is reset). The headline NAV/return above the fold reflects only the CURRENT era -- this section exists so a reset cannot make the published track record look better than the full history."
   },
   "confidence_threshold": 60,
@@ -287,7 +287,7 @@
     "risk_state": "RISK_ON",
     "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.01643447919454929,
+    "spy_excess_vs_tbill_3m": 0.017196066133323997,
     "vix_level": 16.34000015258789,
     "vix_percentile_1y": 0.3134920634920635,
     "weight_matrix": {
@@ -300,16 +300,16 @@
     }
   },
   "top_signal": {
-    "ticker": "XLK",
-    "rank_score": 21.70298181818182,
-    "flow_score": 22.0,
-    "options_score": 18.537208852517868,
-    "rotation_score": 5.699808572823089,
+    "ticker": "XLE",
+    "rank_score": 0.0,
+    "flow_score": 8.308318296702133,
+    "options_score": 0.0,
+    "rotation_score": 12.670729066537977,
     "macro_score": 0.0,
-    "news_score": 3.4720000000000004,
-    "total": 71.41199924352277,
-    "publish": true,
-    "direction": "short"
+    "news_score": 6.089999999999999,
+    "total": 27.06904736324011,
+    "publish": false,
+    "direction": "long"
   },
   "jlaw_risk": {
     "distribution_count": 4,
@@ -346,11 +346,11 @@
       "CASH"
     ],
     "values": [
-      30.0,
-      8.3,
-      3.3,
-      9.3,
-      49.0
+      20.0,
+      5.5,
+      2.2,
+      6.2,
+      66.1
     ]
   },
   "pnl": {
@@ -377,12 +377,16 @@
       "score": 94.0
     },
     {
-      "symbol": "Defense & Aerospace",
-      "score": 92.0
+      "symbol": "India Equity Markets",
+      "score": 91.0
     },
     {
-      "symbol": "Bonds & Fixed Income + Banking & Financial Sector",
+      "symbol": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector",
       "score": 91.0
+    },
+    {
+      "symbol": "Defense & Aerospace",
+      "score": 90.0
     },
     {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
@@ -405,10 +409,6 @@
       "score": 80.0
     },
     {
-      "symbol": "India Equity Markets",
-      "score": 79.0
-    },
-    {
       "symbol": "Asia Pacific Equity",
       "score": 72.0
     },
@@ -417,15 +417,15 @@
       "score": 67.0
     },
     {
+      "symbol": "Emerging Markets + Real Estate & REITs",
+      "score": 67.0
+    },
+    {
       "symbol": "Clean Energy & Renewables",
       "score": 65.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
-      "score": 63.0
-    },
-    {
-      "symbol": "Emerging Markets + Bearish Market / Macro Selloff",
       "score": 63.0
     },
     {
@@ -542,82 +542,80 @@
       }
     },
     {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 92.0,
-      "severity": "HIGH",
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 91.0,
+      "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": 0.0,
+      "direction_score": -21.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
       "article_count": 27,
-      "latest_at": "30 Sep 2026 18:51 UTC",
-      "headline": "US Army selects five companies for PrSM development",
+      "latest_at": "01 Oct 2026 00:30 UTC",
+      "headline": "PB Fintech, Wipro among  8 stocks that hit 52-week low and slipped up to 45% in a month",
       "regions": [
-        "middle_east",
+        "asia_pacific",
         "india",
-        "global",
-        "europe"
+        "middle_east",
+        "global"
       ],
       "sources": [
+        "Markets-Economic Times",
         "BBC News",
-        "Defense News",
-        "World | Deutsche Welle",
-        "Bloomberg Markets"
+        "US Top News and Analysis",
+        "Oilprice.com"
       ],
-      "primary_etf": "ITA",
+      "primary_etf": "INDA",
       "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
+        "NIFTYBEES",
+        "MIDCAPETF"
       ],
       "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
+        "INDA"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 14.9,
-        "recency": 17.0,
+        "source_diversity": 14.4,
+        "recency": 15.8,
         "geopolitical_severity": 13.0
       }
     },
     {
       "sector_key": "bonds_fixed_income",
-      "sector_label": "Bonds & Fixed Income + Banking & Financial Sector",
+      "sector_label": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector",
       "confidence": 91.0,
-      "severity": "HIGH",
+      "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -3.5,
+      "direction_score": -19.5,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 13,
-      "latest_at": "30 Sep 2026 07:32 UTC",
-      "headline": "30-year Treasury bond yield scales to highest level since 2002",
+      "article_count": 15,
+      "latest_at": "01 Oct 2026 01:00 UTC",
+      "headline": "France\u2019s 10-year bond yield heads for biggest quarterly surge since 1987",
       "regions": [
+        "americas",
         "europe",
-        "middle_east",
         "asia_pacific",
         "global"
       ],
       "sources": [
-        "www.theregister.com - Articles",
-        "Finance",
-        "Tech",
-        "Cointelegraph.com News"
+        "Markets-Economic Times",
+        "Bloomberg Markets",
+        "US Top News and Analysis",
+        "Finance"
       ],
       "primary_etf": "BND",
       "top_etfs": [
@@ -641,8 +639,61 @@
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 14.6,
-        "recency": 15.7,
+        "source_diversity": 13.3,
+        "recency": 16.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 90.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 20,
+      "latest_at": "01 Oct 2026 01:13 UTC",
+      "headline": "Putin shows no sign of stopping the war as Russia doubles down on Ukraine",
+      "regions": [
+        "europe",
+        "india",
+        "middle_east",
+        "global"
+      ],
+      "sources": [
+        "Defense News",
+        "BBC News",
+        "US Top News and Analysis",
+        "Oilprice.com"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 21.8,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.3,
+        "recency": 17.0,
         "geopolitical_severity": 13.0
       }
     },
@@ -897,56 +948,6 @@
       }
     },
     {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets",
-      "confidence": 79.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -16.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 18,
-      "latest_at": "30 Sep 2026 15:56 UTC",
-      "headline": "Indian markets are not vulnerable: Sebi chief Tuhin Kanta Pandey remains optimistic even as Sensex, Nifty bleed",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "india",
-        "global"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "Latest from Tom's Hardware"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 9.9,
-        "recency": 8.5,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
       "confidence": 72.0,
@@ -1046,6 +1047,54 @@
       }
     },
     {
+      "sector_key": "emerging_markets",
+      "sector_label": "Emerging Markets + Real Estate & REITs",
+      "confidence": 67.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 5,
+      "latest_at": "01 Oct 2026 00:24 UTC",
+      "headline": "China\u2019s Property Crisis: From Evergrande Collapse to Beijing\u2019s Latest Measures",
+      "regions": [
+        "asia_pacific",
+        "global"
+      ],
+      "sources": [
+        "Cointelegraph.com News",
+        "Bloomberg Markets",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "EEM",
+      "top_etfs": [
+        "EEM",
+        "SPEM",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES"
+      ],
+      "global_etfs": [
+        "EEM",
+        "SPEM"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 9.6,
+        "volume_confirmation": 11.3,
+        "source_diversity": 10.0,
+        "recency": 15.6,
+        "geopolitical_severity": 12.8
+      }
+    },
+    {
       "sector_key": "clean_energy_renewables",
       "sector_label": "Clean Energy & Renewables",
       "confidence": 65.0,
@@ -1142,56 +1191,6 @@
         "source_diversity": 8.7,
         "recency": 13.8,
         "geopolitical_severity": 12.8
-      }
-    },
-    {
-      "sector_key": "emerging_markets",
-      "sector_label": "Emerging Markets + Bearish Market / Macro Selloff",
-      "confidence": 63.0,
-      "severity": "MEDIUM",
-      "direction": "BEARISH",
-      "direction_score": -2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 4,
-      "latest_at": "31 Aug 2026 23:49 UTC",
-      "headline": "Global Market: China, Hong Kong stocks slip as weak economic data and property overhaul weigh",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "americas"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Markets-Economic Times",
-        "Oilprice.com",
-        "World News - Breaking international news and headlines | Sky News"
-      ],
-      "primary_etf": "EEM",
-      "top_etfs": [
-        "EEM",
-        "SPEM",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES"
-      ],
-      "global_etfs": [
-        "EEM",
-        "SPEM"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 6.4,
-        "volume_confirmation": 9.7,
-        "source_diversity": 13.1,
-        "recency": 14.8,
-        "geopolitical_severity": 11.2
       }
     },
     {
@@ -1312,12 +1311,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Defense & Aerospace - 27 articles - HIGH / BEARISH - US Army selects five companies for PrSM development"
+      "text": "India Equity Markets - 27 articles - CRITICAL / BEARISH - PB Fintech, Wipro among  8 stocks that hit 52-week low and slipped up to 45% in a month"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Bonds & Fixed Income + Banking & Financial Sector - 13 articles - HIGH / BEARISH - 30-year Treasury bond yield scales to highest level since 2002"
+      "text": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector - 15 articles - CRITICAL / BEARISH - France\u2019s 10-year bond yield heads for biggest quarterly surge since 1987"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Defense & Aerospace - 20 articles - HIGH / BEARISH - Putin shows no sign of stopping the war as Russia doubles down on Ukraine"
     },
     {
       "tag": "tag-bear",
@@ -1347,11 +1351,6 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "India Equity Markets - 18 articles - CRITICAL / BEARISH - Indian markets are not vulnerable: Sebi chief Tuhin Kanta Pandey remains optimistic even as Sensex, Nifty bleed"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Asia Pacific Equity - 5 articles - HIGH / BEARISH - Global Market: Nikkei falls as oil surge, global bond selloff rattle markets"
     },
     {
@@ -1362,17 +1361,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
+      "text": "Emerging Markets + Real Estate & REITs - 5 articles - HIGH / BEARISH - China\u2019s Property Crisis: From Evergrande Collapse to Beijing\u2019s Latest Measures"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
       "text": "Clean Energy & Renewables - 3 articles - HIGH / BEARISH - Inox Clean Energy files DRHP for Rs 10,000 crore IPO, largest in Indian private sector renewable energy space"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Nuclear Energy & Uranium - 4 articles - HIGH / BEARISH - Taiwan Mulls Nuclear Revival to Cut Its LNG Exposure"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Emerging Markets + Bearish Market / Macro Selloff - 4 articles - MEDIUM / BEARISH - Global Market: China, Hong Kong stocks slip as weak economic data and property overhaul weigh"
     },
     {
       "tag": "tag-bull",
@@ -1445,11 +1444,11 @@
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 66753.72,
+      "price": 67889.4,
       "currency": "JPY",
-      "change": 876.1,
-      "change_pct": 1.33,
-      "change_str": "+1.33%",
+      "change": 2408.13,
+      "change_pct": 3.68,
+      "change_str": "+3.68%",
       "direction": "up"
     },
     {
@@ -1478,44 +1477,44 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4184.6,
+      "price": 4189.1,
       "currency": "USD",
-      "change": 4.9,
-      "change_pct": 0.12,
-      "change_str": "+0.12%",
+      "change": 9.4,
+      "change_pct": 0.22,
+      "change_str": "+0.22%",
       "direction": "up"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 90.02,
+      "price": 90.06,
       "currency": "USD",
-      "change": 0.64,
-      "change_pct": 0.72,
-      "change_str": "+0.72%",
+      "change": 0.68,
+      "change_pct": 0.76,
+      "change_str": "+0.76%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 83695.99,
+      "price": 83606.24,
       "currency": "USD",
-      "change": 73.56,
-      "change_pct": 0.09,
-      "change_str": "+0.09%",
-      "direction": "up"
+      "change": -16.19,
+      "change_pct": -0.02,
+      "change_str": "-0.02%",
+      "direction": "down"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 101.46,
+      "price": 101.48,
       "currency": "USD",
-      "change": 0.09,
-      "change_pct": 0.09,
-      "change_str": "+0.09%",
+      "change": 0.11,
+      "change_pct": 0.11,
+      "change_str": "+0.11%",
       "direction": "up"
     },
     {
@@ -1532,29 +1531,29 @@
   ],
   "risk_controls": {
     "circuit_breaker_active": false,
-    "drawdown_from_peak_pct": 3.3,
-    "portfolio_peak": 20539.79,
+    "drawdown_from_peak_pct": 0.0,
+    "portfolio_peak": 29862.58,
     "vix": 16.34,
     "vix_regime": "ELEVATED",
     "sector_concentration": [
       {
         "sector": "Commodities & Mining",
-        "weight": 30.0,
-        "at_cap": true
+        "weight": 20.0,
+        "at_cap": false
       },
       {
         "sector": "Crypto & Digital Assets",
-        "weight": 9.3,
+        "weight": 6.2,
         "at_cap": false
       },
       {
         "sector": "Asia Pacific Equity + Bearish Market / Macro Selloff",
-        "weight": 8.3,
+        "weight": 5.5,
         "at_cap": false
       },
       {
         "sector": "Cybersecurity",
-        "weight": 3.3,
+        "weight": 2.2,
         "at_cap": false
       }
     ],
@@ -1570,26 +1569,26 @@
       "matrix": {
         "CIBR": {
           "CIBR": 1.0,
-          "DBC": 0.073,
-          "EWJ": -0.147,
-          "IBIT": 0.289
+          "DBC": 0.057,
+          "EWJ": -0.165,
+          "IBIT": 0.294
         },
         "DBC": {
-          "CIBR": 0.073,
+          "CIBR": 0.057,
           "DBC": 1.0,
-          "EWJ": -0.522,
+          "EWJ": -0.571,
           "IBIT": -0.37
         },
         "EWJ": {
-          "CIBR": -0.147,
-          "DBC": -0.522,
+          "CIBR": -0.165,
+          "DBC": -0.571,
           "EWJ": 1.0,
-          "IBIT": 0.252
+          "IBIT": 0.261
         },
         "IBIT": {
-          "CIBR": 0.289,
+          "CIBR": 0.294,
           "DBC": -0.37,
-          "EWJ": 0.252,
+          "EWJ": 0.261,
           "IBIT": 1.0
         }
       },
@@ -1599,12 +1598,12 @@
         "EWJ",
         "IBIT"
       ],
-      "max_corr": 0.289,
+      "max_corr": 0.294,
       "max_corr_pair": [
         "CIBR",
         "IBIT"
       ],
-      "most_negative_corr": -0.522,
+      "most_negative_corr": -0.571,
       "most_negative_pair": [
         "DBC",
         "EWJ"
@@ -1613,72 +1612,62 @@
     },
     "volatility": {
       "per_ticker": {
-        "DBC": 18.47,
-        "EWJ": 18.51,
-        "CIBR": 29.71,
-        "IBIT": 42.2
+        "DBC": 18.62,
+        "EWJ": 18.72,
+        "CIBR": 30.35,
+        "IBIT": 43.27
       },
-      "portfolio_avg_vol_pct": 27.22,
+      "portfolio_avg_vol_pct": 27.74,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 0.65,
+      "benchmark_return_pct": 0.86,
       "benchmark_price_start": 757.67,
-      "benchmark_price_now": 762.63,
+      "benchmark_price_now": 764.2,
       "benchmark_ticker": "SPY",
-      "portfolio_return_pct": -0.13,
-      "alpha": -0.78
+      "portfolio_return_pct": -0.09,
+      "alpha": -0.95
     },
     "rebalance": {
       "alerts": [
         {
           "ticker": "CASH",
-          "actual_weight_pct": 49.05,
+          "actual_weight_pct": 49.37,
           "target_weight_pct": 10.0,
-          "drift_pct": 39.05,
+          "drift_pct": 39.37,
           "action": "DEPLOY",
-          "amount": 7756.0,
+          "amount": 11756.0,
           "etf_name": "Cash Reserve",
           "regime_note": ""
         },
         {
           "ticker": "CIBR",
-          "actual_weight_pct": 3.27,
+          "actual_weight_pct": 2.18,
           "target_weight_pct": 22.5,
-          "drift_pct": -19.23,
+          "drift_pct": -20.32,
           "action": "ADD",
-          "amount": 3819.55,
+          "amount": 6069.55,
           "etf_name": "First Trust Nasdaq CEA Cybersecurity ETF",
           "regime_note": ""
         },
         {
           "ticker": "EWJ",
-          "actual_weight_pct": 8.3,
+          "actual_weight_pct": 5.52,
           "target_weight_pct": 22.5,
-          "drift_pct": -14.2,
+          "drift_pct": -16.98,
           "action": "ADD",
-          "amount": 2820.53,
+          "amount": 5070.53,
           "etf_name": "iShares MSCI Japan ETF",
           "regime_note": ""
         },
         {
           "ticker": "IBIT",
-          "actual_weight_pct": 9.34,
+          "actual_weight_pct": 6.21,
           "target_weight_pct": 22.5,
-          "drift_pct": -13.16,
+          "drift_pct": -16.29,
           "action": "ADD",
-          "amount": 2614.54,
+          "amount": 4864.54,
           "etf_name": "iShares Bitcoin Trust ETF",
-          "regime_note": ""
-        },
-        {
-          "ticker": "DBC",
-          "actual_weight_pct": 30.04,
-          "target_weight_pct": 22.5,
-          "drift_pct": 7.54,
-          "action": "TRIM",
-          "amount": 1498.62,
-          "etf_name": "Invesco DB Commodity Index Tracking Fund",
           "regime_note": ""
         }
       ],
@@ -1689,7 +1678,7 @@
       "scenarios": {
         "2008_GFC": {
           "total_impact": -5314.19,
-          "portfolio_loss_pct": -26.75,
+          "portfolio_loss_pct": -17.8,
           "position_impacts": [
             {
               "ticker": "DBC",
@@ -1719,7 +1708,7 @@
         },
         "2020_COVID": {
           "total_impact": -5402.17,
-          "portfolio_loss_pct": -27.2,
+          "portfolio_loss_pct": -18.09,
           "position_impacts": [
             {
               "ticker": "DBC",
@@ -1749,7 +1738,7 @@
         },
         "RATES_SHOCK_+2%": {
           "total_impact": -1312.39,
-          "portfolio_loss_pct": -6.61,
+          "portfolio_loss_pct": -4.39,
           "position_impacts": [
             {
               "ticker": "DBC",
@@ -1779,7 +1768,7 @@
         },
         "USD_SPIKE_+10%": {
           "total_impact": -1264.46,
-          "portfolio_loss_pct": -6.37,
+          "portfolio_loss_pct": -4.23,
           "position_impacts": [
             {
               "ticker": "DBC",
@@ -1809,7 +1798,7 @@
         },
         "VIX_SPIKE_40": {
           "total_impact": -2070.83,
-          "portfolio_loss_pct": -10.43,
+          "portfolio_loss_pct": -6.93,
           "position_impacts": [
             {
               "ticker": "DBC",
@@ -1839,16 +1828,16 @@
         }
       },
       "worst_scenario": "2020_COVID",
-      "worst_loss_pct": -27.2
+      "worst_loss_pct": -18.09
     }
   },
   "logs": [
-    "2026-09-30 23:03:06 [INFO] AZALYST - status.json generated",
-    "2026-09-30 23:03:06 [INFO] PORTFOLIO - NAV USD 19,862.58 | Return -0.13%",
-    "2026-09-30 23:03:06 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-09-30 23:03:06 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
-    "2026-09-30 23:03:06 [INFO] TRADER - Closed trades: 5",
-    "2026-09-30 23:03:06 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-10-01 01:24:50 [INFO] AZALYST - status.json generated",
+    "2026-10-01 01:24:50 [INFO] PORTFOLIO - NAV USD 29,862.58 | Return -0.09%",
+    "2026-10-01 01:24:50 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-10-01 01:24:50 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
+    "2026-10-01 01:24:50 [INFO] TRADER - Closed trades: 5",
+    "2026-10-01 01:24:50 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-09-30 23:03:03 UTC"
+  "generated_at": "2026-10-01 01:24:45 UTC"
 }
