@@ -301,13 +301,13 @@
   },
   "top_signal": {
     "ticker": "XLK",
-    "rank_score": 20.93285371702638,
+    "rank_score": 20.6537170263789,
     "flow_score": 20.0,
     "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 0.0,
     "news_score": 7.28,
-    "total": 63.21285371702638,
+    "total": 62.9337170263789,
     "publish": true,
     "direction": "long"
   },
@@ -373,6 +373,10 @@
       "score": 93.0
     },
     {
+      "symbol": "Defense & Aerospace",
+      "score": 92.0
+    },
+    {
       "symbol": "Technology & AI / Semiconductors",
       "score": 91.0
     },
@@ -387,10 +391,6 @@
     {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
       "score": 89.0
-    },
-    {
-      "symbol": "Defense & Aerospace",
-      "score": 87.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -488,6 +488,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 14.4,
         "recency": 15.8,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "defense",
+      "sector_label": "Defense & Aerospace",
+      "confidence": 92.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 26,
+      "latest_at": "02 Oct 2026 00:40 UTC",
+      "headline": "US May Add Carrier and 10,000 Troops to Mideast, Official Says",
+      "regions": [
+        "india",
+        "europe",
+        "africa",
+        "americas"
+      ],
+      "sources": [
+        "US Top News and Analysis",
+        "BBC News",
+        "World | Deutsche Welle",
+        "Defense News"
+      ],
+      "primary_etf": "ITA",
+      "top_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "DEFENCEETF"
+      ],
+      "global_etfs": [
+        "ITA",
+        "XAR",
+        "PPA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.4,
+        "recency": 15.5,
         "geopolitical_severity": 13.0
       }
     },
@@ -697,59 +750,6 @@
         "volume_confirmation": 16.8,
         "source_diversity": 14.0,
         "recency": 15.9,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "defense",
-      "sector_label": "Defense & Aerospace",
-      "confidence": 87.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 26,
-      "latest_at": "01 Oct 2026 14:13 UTC",
-      "headline": "Space Force picks two companies to build new \u2018space-to-space\u2019 satellites by 2028",
-      "regions": [
-        "africa",
-        "asia_pacific",
-        "global",
-        "india"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Defense News",
-        "Oilprice.com",
-        "US Top News and Analysis"
-      ],
-      "primary_etf": "ITA",
-      "top_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "DEFENCEETF"
-      ],
-      "global_etfs": [
-        "ITA",
-        "XAR",
-        "PPA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.2,
-        "recency": 12.8,
         "geopolitical_severity": 13.0
       }
     },
@@ -1297,6 +1297,11 @@
       "text": "Energy / Oil & Gas - 24 articles - HIGH / BEARISH - Middle East Oil Exports Stage a Remarkable Comeback"
     },
     {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Defense & Aerospace - 26 articles - HIGH / BEARISH - US May Add Carrier and 10,000 Troops to Mideast, Official Says"
+    },
+    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Technology & AI / Semiconductors - 83 articles - HIGH / BULLISH - Huawei boss claims homegrown AI chip sales top Nvidia in China"
@@ -1315,11 +1320,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Banking & Financial Sector + Gold & Precious Metals - 11 articles - HIGH / BEARISH - US Market: Wall Street rally faces fresh test as jobs, inflation data loom"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Defense & Aerospace - 26 articles - HIGH / BEARISH - Space Force picks two companies to build new \u2018space-to-space\u2019 satellites by 2028"
     },
     {
       "tag": "tag-bull",
@@ -1417,9 +1417,9 @@
       "region": "UK",
       "price": 10428.27,
       "currency": "GBP",
-      "change": -208.43,
-      "change_pct": -1.96,
-      "change_str": "-1.96%",
+      "change": -177.73,
+      "change_pct": -1.68,
+      "change_str": "-1.68%",
       "direction": "down"
     },
     {
@@ -1428,32 +1428,32 @@
       "region": "EU",
       "price": 24939.35,
       "currency": "EUR",
-      "change": -459.86,
-      "change_pct": -1.81,
-      "change_str": "-1.81%",
+      "change": -259.84,
+      "change_pct": -1.03,
+      "change_str": "-1.03%",
       "direction": "down"
     },
     {
       "label": "Nikkei 225",
       "ticker": "^N225",
       "region": "JP",
-      "price": 68956.72,
+      "price": 68283.86,
       "currency": "JPY",
-      "change": 3475.45,
-      "change_pct": 5.31,
-      "change_str": "+5.31%",
-      "direction": "up"
+      "change": -672.86,
+      "change_pct": -0.98,
+      "change_str": "-0.98%",
+      "direction": "down"
     },
     {
       "label": "Hang Seng",
       "ticker": "^HSI",
       "region": "HK",
-      "price": 24613.27,
+      "price": 24099.73,
       "currency": "HKD",
-      "change": 89.7,
-      "change_pct": 0.37,
-      "change_str": "+0.37%",
-      "direction": "up"
+      "change": -423.84,
+      "change_pct": -1.73,
+      "change_str": "-1.73%",
+      "direction": "down"
     },
     {
       "label": "Nifty 50",
@@ -1461,53 +1461,53 @@
       "region": "IN",
       "price": 22421.95,
       "currency": "INR",
-      "change": -294.25,
-      "change_pct": -1.3,
-      "change_str": "-1.30%",
+      "change": -198.5,
+      "change_pct": -0.88,
+      "change_str": "-0.88%",
       "direction": "down"
     },
     {
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4208.1,
+      "price": 4176.5,
       "currency": "USD",
-      "change": 21.4,
-      "change_pct": 0.51,
-      "change_str": "+0.51%",
-      "direction": "up"
+      "change": -25.8,
+      "change_pct": -0.61,
+      "change_str": "-0.61%",
+      "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 92.99,
+      "price": 92.95,
       "currency": "USD",
-      "change": 2.57,
-      "change_pct": 2.84,
-      "change_str": "+2.84%",
+      "change": 0.08,
+      "change_pct": 0.09,
+      "change_str": "+0.09%",
       "direction": "up"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 84806.32,
+      "price": 84555.4,
       "currency": "USD",
-      "change": 1252.47,
-      "change_pct": 1.5,
-      "change_str": "+1.50%",
+      "change": 1001.55,
+      "change_pct": 1.2,
+      "change_str": "+1.20%",
       "direction": "up"
     },
     {
       "label": "USD Index",
       "ticker": "DX-Y.NYB",
       "region": "FX",
-      "price": 102.02,
+      "price": 102.12,
       "currency": "USD",
-      "change": 0.57,
-      "change_pct": 0.56,
-      "change_str": "+0.56%",
+      "change": 0.02,
+      "change_pct": 0.02,
+      "change_str": "+0.02%",
       "direction": "up"
     },
     {
@@ -1825,12 +1825,12 @@
     }
   },
   "logs": [
-    "2026-10-01 23:51:11 [INFO] AZALYST - status.json generated",
-    "2026-10-01 23:51:11 [INFO] PORTFOLIO - NAV USD 29,868.82 | Return +0.45%",
-    "2026-10-01 23:51:11 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-10-01 23:51:11 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
-    "2026-10-01 23:51:11 [INFO] TRADER - Closed trades: 5",
-    "2026-10-01 23:51:11 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-10-02 01:43:08 [INFO] AZALYST - status.json generated",
+    "2026-10-02 01:43:08 [INFO] PORTFOLIO - NAV USD 29,868.82 | Return +0.45%",
+    "2026-10-02 01:43:08 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-10-02 01:43:08 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
+    "2026-10-02 01:43:08 [INFO] TRADER - Closed trades: 5",
+    "2026-10-02 01:43:08 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-10-01 23:51:10 UTC"
+  "generated_at": "2026-10-02 01:43:05 UTC"
 }
