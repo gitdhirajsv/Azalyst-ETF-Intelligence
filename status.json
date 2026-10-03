@@ -287,7 +287,7 @@
     "risk_state": "RISK_ON",
     "vol_regime": "LOW_VOL",
     "spy_above_200ma": true,
-    "spy_excess_vs_tbill_3m": 0.009460457123138397,
+    "spy_excess_vs_tbill_3m": 0.021903069773337922,
     "vix_level": 15.3100004196167,
     "vix_percentile_1y": 0.14682539682539683,
     "weight_matrix": {
@@ -299,7 +299,18 @@
       "news": 7
     }
   },
-  "top_signal": {},
+  "top_signal": {
+    "ticker": "SMH",
+    "rank_score": 29.10769230769231,
+    "flow_score": 22.0,
+    "options_score": 0.0,
+    "rotation_score": 15.0,
+    "macro_score": 0.0,
+    "news_score": 4.984,
+    "total": 71.0916923076923,
+    "publish": true,
+    "direction": "long"
+  },
   "jlaw_risk": {
     "distribution_count": 5,
     "risk_multiplier": 0.5,
@@ -358,10 +369,6 @@
   },
   "confidence": [
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 93.0
-    },
-    {
       "symbol": "Healthcare & Pharma + India Equity Markets",
       "score": 92.0
     },
@@ -370,20 +377,24 @@
       "score": 91.0
     },
     {
-      "symbol": "Gold & Precious Metals",
-      "score": 90.0
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 89.0
     },
     {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
       "score": 89.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 88.0
-    },
-    {
       "symbol": "Crypto & Digital Assets",
       "score": 85.0
+    },
+    {
+      "symbol": "Gold & Precious Metals",
+      "score": 84.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 84.0
     },
     {
       "symbol": "India Equity Markets + Healthcare & Pharma",
@@ -410,10 +421,6 @@
       "score": 65.0
     },
     {
-      "symbol": "Cybersecurity",
-      "score": 65.0
-    },
-    {
       "symbol": "Defense & Aerospace",
       "score": 63.0
     },
@@ -422,64 +429,15 @@
       "score": 63.0
     },
     {
+      "symbol": "Cybersecurity",
+      "score": 62.0
+    },
+    {
       "symbol": "Real Estate & REITs",
       "score": 62.0
     }
   ],
   "signals": [
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 93.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 65,
-      "latest_at": "02 Oct 2026 20:15 UTC",
-      "headline": "Amazon and Synopsys ink multi-year billion-dollar deal in multi-year IP agreement to accelerate AI chip design efforts",
-      "regions": [
-        "europe",
-        "asia_pacific",
-        "americas",
-        "india"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Earnings",
-        "BBC News",
-        "Defense News"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.4,
-        "recency": 13.0,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "healthcare_pharma",
       "sector_label": "Healthcare & Pharma + India Equity Markets",
@@ -586,55 +544,55 @@
       }
     },
     {
-      "sector_key": "gold_precious_metals",
-      "sector_label": "Gold & Precious Metals",
-      "confidence": 90.0,
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 89.0,
       "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -16.0,
+      "direction": "BULLISH",
+      "direction_score": 2.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 28,
-      "latest_at": "02 Oct 2026 21:32 UTC",
-      "headline": "Gold price today: Precious metal slips ahead of US Jobs data; MCX closed for Gandhi Jayanti",
+      "article_count": 66,
+      "latest_at": "02 Oct 2026 20:15 UTC",
+      "headline": "Amazon and Synopsys ink multi-year billion-dollar deal in multi-year IP agreement to accelerate AI chip design efforts",
       "regions": [
-        "middle_east",
         "asia_pacific",
-        "europe",
-        "americas"
+        "global",
+        "americas",
+        "europe"
       ],
       "sources": [
-        "US Top News and Analysis",
-        "Markets-Economic Times",
-        "www.theregister.com - Articles",
-        "Bloomberg Markets"
+        "Bloomberg Markets",
+        "Semiconductor Engineering",
+        "BBC News",
+        "Tech"
       ],
-      "primary_etf": "GLDM",
+      "primary_etf": "QQQ",
       "top_etfs": [
-        "GLDM",
-        "GOLDBEES",
-        "HDFCGOLD"
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
       ],
       "access_markets": [
         "India-listed",
         "International-listed"
       ],
       "india_etfs": [
-        "GOLDBEES",
-        "HDFCGOLD"
+        "NIFTYBEES",
+        "MAFANG"
       ],
       "global_etfs": [
-        "GLDM",
-        "GDX",
-        "GDXJ"
+        "QQQ",
+        "SOXX",
+        "AIQ"
       ],
       "is_legacy": false,
       "breakdown": {
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
-        "source_diversity": 12.0,
-        "recency": 14.7,
+        "source_diversity": 16.9,
+        "recency": 8.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -690,59 +648,6 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 88.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -2.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 24,
-      "latest_at": "02 Oct 2026 19:00 UTC",
-      "headline": "WTI Whipsaws as Gulf Supply Improves and Middle East Risk Returns",
-      "regions": [
-        "middle_east",
-        "asia_pacific",
-        "europe",
-        "americas"
-      ],
-      "sources": [
-        "Markets-Economic Times",
-        "Defense News",
-        "Oilprice.com",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 13.8,
-        "recency": 11.4,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "crypto_digital",
       "sector_label": "Crypto & Digital Assets",
       "confidence": 85.0,
@@ -786,6 +691,112 @@
         "volume_confirmation": 18.0,
         "source_diversity": 10.3,
         "recency": 11.5,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "gold_precious_metals",
+      "sector_label": "Gold & Precious Metals",
+      "confidence": 84.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -14.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 23,
+      "latest_at": "02 Oct 2026 21:32 UTC",
+      "headline": "Gold price today: Precious metal slips ahead of US Jobs data; MCX closed for Gandhi Jayanti",
+      "regions": [
+        "asia_pacific",
+        "global",
+        "americas",
+        "middle_east"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Markets-Economic Times",
+        "www.theregister.com - Articles",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "GLDM",
+      "top_etfs": [
+        "GLDM",
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "GOLDBEES",
+        "HDFCGOLD"
+      ],
+      "global_etfs": [
+        "GLDM",
+        "GDX",
+        "GDXJ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 12.0,
+        "recency": 9.4,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 84.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -4.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 21,
+      "latest_at": "02 Oct 2026 19:00 UTC",
+      "headline": "WTI Whipsaws as Gulf Supply Improves and Middle East Risk Returns",
+      "regions": [
+        "middle_east",
+        "europe",
+        "asia_pacific",
+        "americas"
+      ],
+      "sources": [
+        "Bloomberg Markets",
+        "Oilprice.com",
+        "US Top News and Analysis",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.8,
+        "recency": 7.3,
         "geopolitical_severity": 13.0
       }
     },
@@ -1083,52 +1094,6 @@
       }
     },
     {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 65.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "02 Oct 2026 15:58 UTC",
-      "headline": "Fortinet sounds the alarm over actively exploited FortiMail zero-day",
-      "regions": [
-        "europe",
-        "global",
-        "americas"
-      ],
-      "sources": [
-        "www.theregister.com - Articles",
-        "Tech",
-        "EE Times",
-        "Finance"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 13.0,
-        "volume_confirmation": 14.6,
-        "source_diversity": 8.1,
-        "recency": 8.5,
-        "geopolitical_severity": 10.9
-      }
-    },
-    {
       "sector_key": "defense",
       "sector_label": "Defense & Aerospace",
       "confidence": 63.0,
@@ -1230,6 +1195,52 @@
       }
     },
     {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 62.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 8,
+      "latest_at": "02 Oct 2026 15:58 UTC",
+      "headline": "Fortinet sounds the alarm over actively exploited FortiMail zero-day",
+      "regions": [
+        "global",
+        "europe",
+        "americas"
+      ],
+      "sources": [
+        "www.theregister.com - Articles",
+        "Finance",
+        "Tech",
+        "EE Times"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 13.0,
+        "volume_confirmation": 14.6,
+        "source_diversity": 8.1,
+        "recency": 5.4,
+        "geopolitical_severity": 10.9
+      }
+    },
+    {
       "sector_key": "real_estate_reit",
       "sector_label": "Real Estate & REITs",
       "confidence": 62.0,
@@ -1282,11 +1293,6 @@
   ],
   "articles": [
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 65 articles - HIGH / BULLISH - Amazon and Synopsys ink multi-year billion-dollar deal in multi-year IP agreement to accelerate AI chip design efforts"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Healthcare & Pharma + India Equity Markets - 12 articles - HIGH / BEARISH - Jefferies is bullish on 6 healthcare stocks with upside potential of up to 46%. Own any?"
@@ -1297,9 +1303,9 @@
       "text": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector - 15 articles - CRITICAL / BEARISH - France\u2019s 10-year bond yield heads for biggest quarterly surge since 1987"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Gold & Precious Metals - 28 articles - HIGH / BEARISH - Gold price today: Precious metal slips ahead of US Jobs data; MCX closed for Gandhi Jayanti"
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Technology & AI / Semiconductors - 66 articles - HIGH / BULLISH - Amazon and Synopsys ink multi-year billion-dollar deal in multi-year IP agreement to accelerate AI chip design efforts"
     },
     {
       "tag": "tag-bear",
@@ -1307,14 +1313,19 @@
       "text": "Banking & Financial Sector + Gold & Precious Metals - 11 articles - HIGH / BEARISH - US Market: Wall Street rally faces fresh test as jobs, inflation data loom"
     },
     {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "Energy / Oil & Gas - 24 articles - CRITICAL / BEARISH - WTI Whipsaws as Gulf Supply Improves and Middle East Risk Returns"
-    },
-    {
       "tag": "tag-bull",
       "label": "Bullish",
       "text": "Crypto & Digital Assets - 25 articles - HIGH / BULLISH - Here\u2019s what happened in crypto today"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Gold & Precious Metals - 23 articles - HIGH / BEARISH - Gold price today: Precious metal slips ahead of US Jobs data; MCX closed for Gandhi Jayanti"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Energy / Oil & Gas - 21 articles - CRITICAL / BEARISH - WTI Whipsaws as Gulf Supply Improves and Middle East Risk Returns"
     },
     {
       "tag": "tag-bear",
@@ -1347,11 +1358,6 @@
       "text": "Clean Energy & Renewables - 3 articles - HIGH / BEARISH - Inox Clean Energy files DRHP for Rs 10,000 crore IPO, largest in Indian private sector renewable energy space"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Cybersecurity - 8 articles - MEDIUM / BULLISH - Fortinet sounds the alarm over actively exploited FortiMail zero-day"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Defense & Aerospace - 23 articles - HIGH / BEARISH - U.S. Deploys Patriots to Shield Saudi Oil and Qatari Gas Facilities"
@@ -1360,6 +1366,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Commodities & Mining - 5 articles - MEDIUM / BEARISH - Why the Pentagon just dropped $450M on tungsten mining"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Cybersecurity - 8 articles - MEDIUM / BULLISH - Fortinet sounds the alarm over actively exploited FortiMail zero-day"
     },
     {
       "tag": "tag-bear",
@@ -1407,10 +1418,10 @@
       "region": "UK",
       "price": 10461.95,
       "currency": "GBP",
-      "change": -144.05,
-      "change_pct": -1.36,
-      "change_str": "-1.36%",
-      "direction": "down"
+      "change": 33.65,
+      "change_pct": 0.32,
+      "change_str": "+0.32%",
+      "direction": "up"
     },
     {
       "label": "DAX",
@@ -1418,9 +1429,9 @@
       "region": "EU",
       "price": 25231.2,
       "currency": "EUR",
-      "change": 32.01,
-      "change_pct": 0.13,
-      "change_str": "+0.13%",
+      "change": 291.85,
+      "change_pct": 1.17,
+      "change_str": "+1.17%",
       "direction": "up"
     },
     {
@@ -1429,10 +1440,10 @@
       "region": "JP",
       "price": 68309.46,
       "currency": "JPY",
-      "change": 1555.74,
-      "change_pct": 2.33,
-      "change_str": "+2.33%",
-      "direction": "up"
+      "change": -647.26,
+      "change_pct": -0.94,
+      "change_str": "-0.94%",
+      "direction": "down"
     },
     {
       "label": "Hang Seng",
@@ -1440,9 +1451,9 @@
       "region": "HK",
       "price": 23972.29,
       "currency": "HKD",
-      "change": -551.28,
-      "change_pct": -2.25,
-      "change_str": "-2.25%",
+      "change": -640.98,
+      "change_pct": -2.6,
+      "change_str": "-2.60%",
       "direction": "down"
     },
     {
@@ -1482,11 +1493,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 84663.74,
+      "price": 84602.89,
       "currency": "USD",
-      "change": -189.36,
-      "change_pct": -0.22,
-      "change_str": "-0.22%",
+      "change": -250.21,
+      "change_pct": -0.29,
+      "change_str": "-0.29%",
       "direction": "down"
     },
     {
@@ -1552,26 +1563,26 @@
       "matrix": {
         "CIBR": {
           "CIBR": 1.0,
-          "DBC": 0.079,
-          "EWJ": -0.182,
-          "IBIT": 0.252
+          "DBC": 0.07,
+          "EWJ": -0.155,
+          "IBIT": 0.247
         },
         "DBC": {
-          "CIBR": 0.079,
+          "CIBR": 0.07,
           "DBC": 1.0,
-          "EWJ": -0.555,
-          "IBIT": -0.381
+          "EWJ": -0.565,
+          "IBIT": -0.368
         },
         "EWJ": {
-          "CIBR": -0.182,
-          "DBC": -0.555,
+          "CIBR": -0.155,
+          "DBC": -0.565,
           "EWJ": 1.0,
-          "IBIT": 0.109
+          "IBIT": 0.085
         },
         "IBIT": {
-          "CIBR": 0.252,
-          "DBC": -0.381,
-          "EWJ": 0.109,
+          "CIBR": 0.247,
+          "DBC": -0.368,
+          "EWJ": 0.085,
           "IBIT": 1.0
         }
       },
@@ -1581,12 +1592,12 @@
         "EWJ",
         "IBIT"
       ],
-      "max_corr": 0.252,
+      "max_corr": 0.247,
       "max_corr_pair": [
         "CIBR",
         "IBIT"
       ],
-      "most_negative_corr": -0.555,
+      "most_negative_corr": -0.565,
       "most_negative_pair": [
         "DBC",
         "EWJ"
@@ -1595,21 +1606,21 @@
     },
     "volatility": {
       "per_ticker": {
-        "DBC": 19.46,
-        "EWJ": 17.48,
-        "CIBR": 27.65,
-        "IBIT": 38.75
+        "DBC": 19.16,
+        "EWJ": 17.92,
+        "CIBR": 26.99,
+        "IBIT": 37.84
       },
-      "portfolio_avg_vol_pct": 25.84,
+      "portfolio_avg_vol_pct": 25.48,
       "target_vol_pct": 15.0
     },
     "benchmark": {
-      "benchmark_return_pct": 0.83,
+      "benchmark_return_pct": 1.58,
       "benchmark_price_start": 757.67,
-      "benchmark_price_now": 763.99,
+      "benchmark_price_now": 769.64,
       "benchmark_ticker": "SPY",
       "portfolio_return_pct": 0.38,
-      "alpha": -0.45
+      "alpha": -1.2
     },
     "rebalance": {
       "alerts": [
@@ -1815,12 +1826,12 @@
     }
   },
   "logs": [
-    "2026-10-03 01:13:10 [INFO] AZALYST - status.json generated",
-    "2026-10-03 01:13:10 [INFO] PORTFOLIO - NAV USD 29,853.41 | Return +0.38%",
-    "2026-10-03 01:13:10 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-10-03 01:13:10 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
-    "2026-10-03 01:13:10 [INFO] TRADER - Closed trades: 5",
-    "2026-10-03 01:13:10 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-10-03 03:36:13 [INFO] AZALYST - status.json generated",
+    "2026-10-03 03:36:13 [INFO] PORTFOLIO - NAV USD 29,853.41 | Return +0.38%",
+    "2026-10-03 03:36:13 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-10-03 03:36:13 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
+    "2026-10-03 03:36:13 [INFO] TRADER - Closed trades: 5",
+    "2026-10-03 03:36:13 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-10-03 01:13:08 UTC"
+  "generated_at": "2026-10-03 03:36:10 UTC"
 }
