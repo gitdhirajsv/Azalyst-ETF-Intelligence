@@ -39,7 +39,7 @@
       "pnl_pct_str": "+3.84%",
       "confidence": 82,
       "severity": "MEDIUM",
-      "days_held": 44,
+      "days_held": 45,
       "half_exited": true
     },
     {
@@ -306,8 +306,8 @@
     "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 0.0,
-    "news_score": 5.264,
-    "total": 71.3716923076923,
+    "news_score": 5.04,
+    "total": 71.14769230769231,
     "publish": true,
     "direction": "long"
   },
@@ -369,16 +369,16 @@
   },
   "confidence": [
     {
-      "symbol": "Technology & AI / Semiconductors",
-      "score": 94.0
-    },
-    {
       "symbol": "Healthcare & Pharma + India Equity Markets",
       "score": 92.0
     },
     {
       "symbol": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector",
       "score": 91.0
+    },
+    {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 90.0
     },
     {
       "symbol": "Banking & Financial Sector + Gold & Precious Metals",
@@ -402,11 +402,15 @@
     },
     {
       "symbol": "Energy / Oil & Gas",
-      "score": 77.0
+      "score": 76.0
     },
     {
       "symbol": "Europe Equity",
       "score": 73.0
+    },
+    {
+      "symbol": "Cybersecurity",
+      "score": 72.0
     },
     {
       "symbol": "Nuclear Energy & Uranium",
@@ -429,68 +433,11 @@
       "score": 63.0
     },
     {
-      "symbol": "Cybersecurity",
-      "score": 62.0
-    },
-    {
       "symbol": "Real Estate & REITs",
       "score": 62.0
     }
   ],
   "signals": [
-    {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 94.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 0.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 66,
-      "latest_at": "03 Oct 2026 10:50 UTC",
-      "headline": "Amazon and Synopsys ink multi-year billion-dollar deal in multi-year IP agreement to accelerate AI chip design efforts",
-      "regions": [
-        "europe",
-        "americas",
-        "india",
-        "global"
-      ],
-      "sources": [
-        "Latest from Tom's Hardware",
-        "Finance",
-        "Defense News",
-        "Bloomberg Markets"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.5,
-        "recency": 16.7,
-        "geopolitical_severity": 13.0
-      }
-    },
     {
       "sector_key": "healthcare_pharma",
       "sector_label": "Healthcare & Pharma + India Equity Markets",
@@ -593,6 +540,59 @@
         "volume_confirmation": 18.0,
         "source_diversity": 13.3,
         "recency": 16.6,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 90.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 74,
+      "latest_at": "03 Oct 2026 12:39 UTC",
+      "headline": "Amazon and Synopsys ink multi-year billion-dollar deal in multi-year IP agreement to accelerate AI chip design efforts",
+      "regions": [
+        "americas",
+        "asia_pacific",
+        "europe",
+        "global"
+      ],
+      "sources": [
+        "Finance",
+        "Tech",
+        "EE Times",
+        "US Top News and Analysis"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.7,
+        "recency": 12.6,
         "geopolitical_severity": 13.0
       }
     },
@@ -850,27 +850,27 @@
     {
       "sector_key": "energy_oil",
       "sector_label": "Energy / Oil & Gas",
-      "confidence": 77.0,
+      "confidence": 76.0,
       "severity": "CRITICAL",
       "direction": "BEARISH",
-      "direction_score": -0.5,
+      "direction_score": 1.0,
       "ml_sentiment_label": "NEUTRAL",
       "ml_sentiment_score": 0.0,
       "ml_sentiment_mode": "rules-only",
-      "article_count": 18,
+      "article_count": 16,
       "latest_at": "02 Oct 2026 19:00 UTC",
       "headline": "WTI Whipsaws as Gulf Supply Improves and Middle East Risk Returns",
       "regions": [
-        "europe",
         "americas",
+        "middle_east",
         "asia_pacific",
-        "middle_east"
+        "europe"
       ],
       "sources": [
-        "Defense News",
         "Oilprice.com",
         "US Top News and Analysis",
-        "Markets-Economic Times"
+        "Markets-Economic Times",
+        "Bloomberg Markets"
       ],
       "primary_etf": "XLE",
       "top_etfs": [
@@ -896,7 +896,7 @@
         "signal_strength": 22.0,
         "volume_confirmation": 18.0,
         "source_diversity": 13.8,
-        "recency": 3.4,
+        "recency": 2.2,
         "geopolitical_severity": 13.0
       }
     },
@@ -945,6 +945,52 @@
         "volume_confirmation": 13.7,
         "source_diversity": 10.0,
         "recency": 13.8,
+        "geopolitical_severity": 10.8
+      }
+    },
+    {
+      "sector_key": "cybersecurity",
+      "sector_label": "Cybersecurity",
+      "confidence": 72.0,
+      "severity": "MEDIUM",
+      "direction": "BULLISH",
+      "direction_score": 2.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 9,
+      "latest_at": "03 Oct 2026 12:02 UTC",
+      "headline": "Fortinet sounds the alarm over actively exploited FortiMail zero-day",
+      "regions": [
+        "global",
+        "americas",
+        "europe"
+      ],
+      "sources": [
+        "Finance",
+        "Tech",
+        "EE Times",
+        "www.theregister.com - Articles"
+      ],
+      "primary_etf": "CIBR",
+      "top_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "access_markets": [
+        "International-listed"
+      ],
+      "india_etfs": [],
+      "global_etfs": [
+        "CIBR",
+        "HACK"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 13.8,
+        "volume_confirmation": 15.4,
+        "source_diversity": 9.5,
+        "recency": 11.9,
         "geopolitical_severity": 10.8
       }
     },
@@ -1195,52 +1241,6 @@
       }
     },
     {
-      "sector_key": "cybersecurity",
-      "sector_label": "Cybersecurity",
-      "confidence": 62.0,
-      "severity": "MEDIUM",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 8,
-      "latest_at": "02 Oct 2026 15:58 UTC",
-      "headline": "Fortinet sounds the alarm over actively exploited FortiMail zero-day",
-      "regions": [
-        "global",
-        "europe",
-        "americas"
-      ],
-      "sources": [
-        "www.theregister.com - Articles",
-        "Finance",
-        "Tech",
-        "EE Times"
-      ],
-      "primary_etf": "CIBR",
-      "top_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "access_markets": [
-        "International-listed"
-      ],
-      "india_etfs": [],
-      "global_etfs": [
-        "CIBR",
-        "HACK"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 13.0,
-        "volume_confirmation": 14.6,
-        "source_diversity": 8.1,
-        "recency": 5.4,
-        "geopolitical_severity": 10.9
-      }
-    },
-    {
       "sector_key": "real_estate_reit",
       "sector_label": "Real Estate & REITs",
       "confidence": 62.0,
@@ -1293,11 +1293,6 @@
   ],
   "articles": [
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 66 articles - HIGH / BULLISH - Amazon and Synopsys ink multi-year billion-dollar deal in multi-year IP agreement to accelerate AI chip design efforts"
-    },
-    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Healthcare & Pharma + India Equity Markets - 12 articles - HIGH / BEARISH - Jefferies is bullish on 6 healthcare stocks with upside potential of up to 46%. Own any?"
@@ -1306,6 +1301,11 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector - 15 articles - CRITICAL / BEARISH - France\u2019s 10-year bond yield heads for biggest quarterly surge since 1987"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Technology & AI / Semiconductors - 74 articles - HIGH / BULLISH - Amazon and Synopsys ink multi-year billion-dollar deal in multi-year IP agreement to accelerate AI chip design efforts"
     },
     {
       "tag": "tag-bear",
@@ -1335,12 +1335,17 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 18 articles - CRITICAL / BEARISH - WTI Whipsaws as Gulf Supply Improves and Middle East Risk Returns"
+      "text": "Energy / Oil & Gas - 16 articles - CRITICAL / BEARISH - WTI Whipsaws as Gulf Supply Improves and Middle East Risk Returns"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Europe Equity - 7 articles - MEDIUM / BEARISH - UK pound falls to three-month lows as investors fret over rates, oil"
+    },
+    {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Cybersecurity - 9 articles - MEDIUM / BULLISH - Fortinet sounds the alarm over actively exploited FortiMail zero-day"
     },
     {
       "tag": "tag-bear",
@@ -1366,11 +1371,6 @@
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Commodities & Mining - 5 articles - MEDIUM / BEARISH - Why the Pentagon just dropped $450M on tungsten mining"
-    },
-    {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Cybersecurity - 8 articles - MEDIUM / BULLISH - Fortinet sounds the alarm over actively exploited FortiMail zero-day"
     },
     {
       "tag": "tag-bear",
@@ -1493,11 +1493,11 @@
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 84635.56,
+      "price": 84827.85,
       "currency": "USD",
-      "change": 138.35,
-      "change_pct": 0.16,
-      "change_str": "+0.16%",
+      "change": 330.64,
+      "change_pct": 0.39,
+      "change_str": "+0.39%",
       "direction": "up"
     },
     {
@@ -1826,12 +1826,12 @@
     }
   },
   "logs": [
-    "2026-10-03 11:09:40 [INFO] AZALYST - status.json generated",
-    "2026-10-03 11:09:40 [INFO] PORTFOLIO - NAV USD 29,853.41 | Return +0.38%",
-    "2026-10-03 11:09:40 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-10-03 11:09:40 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
-    "2026-10-03 11:09:40 [INFO] TRADER - Closed trades: 5",
-    "2026-10-03 11:09:40 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-10-03 15:46:30 [INFO] AZALYST - status.json generated",
+    "2026-10-03 15:46:30 [INFO] PORTFOLIO - NAV USD 29,853.41 | Return +0.38%",
+    "2026-10-03 15:46:30 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-10-03 15:46:30 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
+    "2026-10-03 15:46:30 [INFO] TRADER - Closed trades: 5",
+    "2026-10-03 15:46:30 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-10-03 11:09:35 UTC"
+  "generated_at": "2026-10-03 15:46:27 UTC"
 }
