@@ -62,7 +62,7 @@
       "pnl_pct_str": "+3.21%",
       "confidence": 91,
       "severity": "HIGH",
-      "days_held": 31,
+      "days_held": 32,
       "half_exited": false
     },
     {
@@ -306,8 +306,8 @@
     "options_score": 0.0,
     "rotation_score": 15.0,
     "macro_score": 0.0,
-    "news_score": 4.984,
-    "total": 71.0916923076923,
+    "news_score": 5.264,
+    "total": 71.3716923076923,
     "publish": true,
     "direction": "long"
   },
@@ -369,6 +369,10 @@
   },
   "confidence": [
     {
+      "symbol": "Technology & AI / Semiconductors",
+      "score": 94.0
+    },
+    {
       "symbol": "Healthcare & Pharma + India Equity Markets",
       "score": 92.0
     },
@@ -377,12 +381,12 @@
       "score": 91.0
     },
     {
-      "symbol": "Technology & AI / Semiconductors",
+      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
       "score": 89.0
     },
     {
-      "symbol": "Banking & Financial Sector + Gold & Precious Metals",
-      "score": 89.0
+      "symbol": "India Equity Markets",
+      "score": 88.0
     },
     {
       "symbol": "Crypto & Digital Assets",
@@ -393,16 +397,12 @@
       "score": 84.0
     },
     {
-      "symbol": "Energy / Oil & Gas",
-      "score": 84.0
-    },
-    {
-      "symbol": "India Equity Markets + Healthcare & Pharma",
-      "score": 83.0
-    },
-    {
       "symbol": "Asia Pacific Equity",
       "score": 82.0
+    },
+    {
+      "symbol": "Energy / Oil & Gas",
+      "score": 77.0
     },
     {
       "symbol": "Europe Equity",
@@ -438,6 +438,59 @@
     }
   ],
   "signals": [
+    {
+      "sector_key": "technology_ai",
+      "sector_label": "Technology & AI / Semiconductors",
+      "confidence": 94.0,
+      "severity": "HIGH",
+      "direction": "BULLISH",
+      "direction_score": 0.0,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 66,
+      "latest_at": "03 Oct 2026 10:50 UTC",
+      "headline": "Amazon and Synopsys ink multi-year billion-dollar deal in multi-year IP agreement to accelerate AI chip design efforts",
+      "regions": [
+        "europe",
+        "americas",
+        "india",
+        "global"
+      ],
+      "sources": [
+        "Latest from Tom's Hardware",
+        "Finance",
+        "Defense News",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "QQQ",
+      "top_etfs": [
+        "QQQ",
+        "SOXX",
+        "NIFTYBEES"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MAFANG"
+      ],
+      "global_etfs": [
+        "QQQ",
+        "SOXX",
+        "AIQ"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 16.5,
+        "recency": 16.7,
+        "geopolitical_severity": 13.0
+      }
+    },
     {
       "sector_key": "healthcare_pharma",
       "sector_label": "Healthcare & Pharma + India Equity Markets",
@@ -544,59 +597,6 @@
       }
     },
     {
-      "sector_key": "technology_ai",
-      "sector_label": "Technology & AI / Semiconductors",
-      "confidence": 89.0,
-      "severity": "HIGH",
-      "direction": "BULLISH",
-      "direction_score": 2.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 66,
-      "latest_at": "02 Oct 2026 20:15 UTC",
-      "headline": "Amazon and Synopsys ink multi-year billion-dollar deal in multi-year IP agreement to accelerate AI chip design efforts",
-      "regions": [
-        "asia_pacific",
-        "global",
-        "americas",
-        "europe"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Semiconductor Engineering",
-        "BBC News",
-        "Tech"
-      ],
-      "primary_etf": "QQQ",
-      "top_etfs": [
-        "QQQ",
-        "SOXX",
-        "NIFTYBEES"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MAFANG"
-      ],
-      "global_etfs": [
-        "QQQ",
-        "SOXX",
-        "AIQ"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 16.9,
-        "recency": 8.3,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "banking_financial",
       "sector_label": "Banking & Financial Sector + Gold & Precious Metals",
       "confidence": 89.0,
@@ -644,6 +644,57 @@
         "volume_confirmation": 16.8,
         "source_diversity": 14.0,
         "recency": 15.9,
+        "geopolitical_severity": 13.0
+      }
+    },
+    {
+      "sector_key": "india_equity",
+      "sector_label": "India Equity Markets",
+      "confidence": 88.0,
+      "severity": "HIGH",
+      "direction": "BEARISH",
+      "direction_score": -2.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 24,
+      "latest_at": "03 Oct 2026 08:38 UTC",
+      "headline": "Bleak Winter! Why analysts are hinting at painful October even after 8 weeks of Nifty correction?",
+      "regions": [
+        "europe",
+        "americas",
+        "india",
+        "global"
+      ],
+      "sources": [
+        "EE Times",
+        "Oilprice.com",
+        "Markets-Economic Times",
+        "Bloomberg Markets"
+      ],
+      "primary_etf": "INDA",
+      "top_etfs": [
+        "INDA",
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "NIFTYBEES",
+        "MIDCAPETF"
+      ],
+      "global_etfs": [
+        "INDA"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 14.4,
+        "recency": 13.4,
         "geopolitical_severity": 13.0
       }
     },
@@ -748,110 +799,6 @@
       }
     },
     {
-      "sector_key": "energy_oil",
-      "sector_label": "Energy / Oil & Gas",
-      "confidence": 84.0,
-      "severity": "CRITICAL",
-      "direction": "BEARISH",
-      "direction_score": -4.5,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 21,
-      "latest_at": "02 Oct 2026 19:00 UTC",
-      "headline": "WTI Whipsaws as Gulf Supply Improves and Middle East Risk Returns",
-      "regions": [
-        "middle_east",
-        "europe",
-        "asia_pacific",
-        "americas"
-      ],
-      "sources": [
-        "Bloomberg Markets",
-        "Oilprice.com",
-        "US Top News and Analysis",
-        "Markets-Economic Times"
-      ],
-      "primary_etf": "XLE",
-      "top_etfs": [
-        "XLE",
-        "IXC",
-        "CPSEETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "CPSEETF",
-        "PSUBNKBEES"
-      ],
-      "global_etfs": [
-        "XLE",
-        "IXC",
-        "USO"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 18.0,
-        "source_diversity": 13.8,
-        "recency": 7.3,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
-      "sector_key": "india_equity",
-      "sector_label": "India Equity Markets + Healthcare & Pharma",
-      "confidence": 83.0,
-      "severity": "HIGH",
-      "direction": "BEARISH",
-      "direction_score": -14.0,
-      "ml_sentiment_label": "NEUTRAL",
-      "ml_sentiment_score": 0.0,
-      "ml_sentiment_mode": "rules-only",
-      "article_count": 12,
-      "latest_at": "02 Oct 2026 17:55 UTC",
-      "headline": "Stock market holiday today: Are NSE, BSE closed for Gandhi Jayanti? Check 2026 holiday list",
-      "regions": [
-        "india",
-        "asia_pacific",
-        "europe",
-        "global"
-      ],
-      "sources": [
-        "BBC News",
-        "EE Times",
-        "Markets-Economic Times",
-        "Oilprice.com"
-      ],
-      "primary_etf": "INDA",
-      "top_etfs": [
-        "INDA",
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "access_markets": [
-        "India-listed",
-        "International-listed"
-      ],
-      "india_etfs": [
-        "NIFTYBEES",
-        "MIDCAPETF"
-      ],
-      "global_etfs": [
-        "INDA"
-      ],
-      "is_legacy": false,
-      "breakdown": {
-        "signal_strength": 22.0,
-        "volume_confirmation": 17.4,
-        "source_diversity": 14.9,
-        "recency": 8.3,
-        "geopolitical_severity": 13.0
-      }
-    },
-    {
       "sector_key": "asia_pacific",
       "sector_label": "Asia Pacific Equity",
       "confidence": 82.0,
@@ -898,6 +845,59 @@
         "source_diversity": 14.9,
         "recency": 16.9,
         "geopolitical_severity": 11.4
+      }
+    },
+    {
+      "sector_key": "energy_oil",
+      "sector_label": "Energy / Oil & Gas",
+      "confidence": 77.0,
+      "severity": "CRITICAL",
+      "direction": "BEARISH",
+      "direction_score": -0.5,
+      "ml_sentiment_label": "NEUTRAL",
+      "ml_sentiment_score": 0.0,
+      "ml_sentiment_mode": "rules-only",
+      "article_count": 18,
+      "latest_at": "02 Oct 2026 19:00 UTC",
+      "headline": "WTI Whipsaws as Gulf Supply Improves and Middle East Risk Returns",
+      "regions": [
+        "europe",
+        "americas",
+        "asia_pacific",
+        "middle_east"
+      ],
+      "sources": [
+        "Defense News",
+        "Oilprice.com",
+        "US Top News and Analysis",
+        "Markets-Economic Times"
+      ],
+      "primary_etf": "XLE",
+      "top_etfs": [
+        "XLE",
+        "IXC",
+        "CPSEETF"
+      ],
+      "access_markets": [
+        "India-listed",
+        "International-listed"
+      ],
+      "india_etfs": [
+        "CPSEETF",
+        "PSUBNKBEES"
+      ],
+      "global_etfs": [
+        "XLE",
+        "IXC",
+        "USO"
+      ],
+      "is_legacy": false,
+      "breakdown": {
+        "signal_strength": 22.0,
+        "volume_confirmation": 18.0,
+        "source_diversity": 13.8,
+        "recency": 3.4,
+        "geopolitical_severity": 13.0
       }
     },
     {
@@ -1293,6 +1293,11 @@
   ],
   "articles": [
     {
+      "tag": "tag-bull",
+      "label": "Bullish",
+      "text": "Technology & AI / Semiconductors - 66 articles - HIGH / BULLISH - Amazon and Synopsys ink multi-year billion-dollar deal in multi-year IP agreement to accelerate AI chip design efforts"
+    },
+    {
       "tag": "tag-bear",
       "label": "Bearish",
       "text": "Healthcare & Pharma + India Equity Markets - 12 articles - HIGH / BEARISH - Jefferies is bullish on 6 healthcare stocks with upside potential of up to 46%. Own any?"
@@ -1303,14 +1308,14 @@
       "text": "Bonds & Fixed Income + Gold & Precious Metals + Banking & Financial Sector - 15 articles - CRITICAL / BEARISH - France\u2019s 10-year bond yield heads for biggest quarterly surge since 1987"
     },
     {
-      "tag": "tag-bull",
-      "label": "Bullish",
-      "text": "Technology & AI / Semiconductors - 66 articles - HIGH / BULLISH - Amazon and Synopsys ink multi-year billion-dollar deal in multi-year IP agreement to accelerate AI chip design efforts"
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Banking & Financial Sector + Gold & Precious Metals - 11 articles - HIGH / BEARISH - US Market: Wall Street rally faces fresh test as jobs, inflation data loom"
     },
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Banking & Financial Sector + Gold & Precious Metals - 11 articles - HIGH / BEARISH - US Market: Wall Street rally faces fresh test as jobs, inflation data loom"
+      "text": "India Equity Markets - 24 articles - HIGH / BEARISH - Bleak Winter! Why analysts are hinting at painful October even after 8 weeks of Nifty correction?"
     },
     {
       "tag": "tag-bull",
@@ -1325,17 +1330,12 @@
     {
       "tag": "tag-bear",
       "label": "Bearish",
-      "text": "Energy / Oil & Gas - 21 articles - CRITICAL / BEARISH - WTI Whipsaws as Gulf Supply Improves and Middle East Risk Returns"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
-      "text": "India Equity Markets + Healthcare & Pharma - 12 articles - HIGH / BEARISH - Stock market holiday today: Are NSE, BSE closed for Gandhi Jayanti? Check 2026 holiday list"
-    },
-    {
-      "tag": "tag-bear",
-      "label": "Bearish",
       "text": "Asia Pacific Equity - 13 articles - MEDIUM / BEARISH - Global Markets | Japan's Nikkei retreats from 6-week high as investors lock in gains"
+    },
+    {
+      "tag": "tag-bear",
+      "label": "Bearish",
+      "text": "Energy / Oil & Gas - 18 articles - CRITICAL / BEARISH - WTI Whipsaws as Gulf Supply Improves and Middle East Risk Returns"
     },
     {
       "tag": "tag-bear",
@@ -1471,34 +1471,34 @@
       "label": "Gold",
       "ticker": "GC=F",
       "region": "COMMOD",
-      "price": 4172.1,
+      "price": 4162.3,
       "currency": "USD",
-      "change": -30.2,
-      "change_pct": -0.72,
-      "change_str": "-0.72%",
+      "change": -40.0,
+      "change_pct": -0.95,
+      "change_str": "-0.95%",
       "direction": "down"
     },
     {
       "label": "Crude Oil",
       "ticker": "CL=F",
       "region": "COMMOD",
-      "price": 91.26,
+      "price": 91.11,
       "currency": "USD",
-      "change": -1.61,
-      "change_pct": -1.73,
-      "change_str": "-1.73%",
+      "change": -1.76,
+      "change_pct": -1.9,
+      "change_str": "-1.90%",
       "direction": "down"
     },
     {
       "label": "Bitcoin",
       "ticker": "BTC-USD",
       "region": "CRYPTO",
-      "price": 84602.89,
+      "price": 84635.56,
       "currency": "USD",
-      "change": -250.21,
-      "change_pct": -0.29,
-      "change_str": "-0.29%",
-      "direction": "down"
+      "change": 138.35,
+      "change_pct": 0.16,
+      "change_str": "+0.16%",
+      "direction": "up"
     },
     {
       "label": "USD Index",
@@ -1826,12 +1826,12 @@
     }
   },
   "logs": [
-    "2026-10-03 03:36:13 [INFO] AZALYST - status.json generated",
-    "2026-10-03 03:36:13 [INFO] PORTFOLIO - NAV USD 29,853.41 | Return +0.38%",
-    "2026-10-03 03:36:13 [INFO] SIGNALS - 17 active signal buckets in state",
-    "2026-10-03 03:36:13 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
-    "2026-10-03 03:36:13 [INFO] TRADER - Closed trades: 5",
-    "2026-10-03 03:36:13 [INFO] RISK - Partial profits realised: USD 11,612.14"
+    "2026-10-03 11:09:40 [INFO] AZALYST - status.json generated",
+    "2026-10-03 11:09:40 [INFO] PORTFOLIO - NAV USD 29,853.41 | Return +0.38%",
+    "2026-10-03 11:09:40 [INFO] SIGNALS - 17 active signal buckets in state",
+    "2026-10-03 11:09:40 [INFO] TRADER - Open positions: DBC, EWJ, CIBR, IBIT",
+    "2026-10-03 11:09:40 [INFO] TRADER - Closed trades: 5",
+    "2026-10-03 11:09:40 [INFO] RISK - Partial profits realised: USD 11,612.14"
   ],
-  "generated_at": "2026-10-03 03:36:10 UTC"
+  "generated_at": "2026-10-03 11:09:35 UTC"
 }
